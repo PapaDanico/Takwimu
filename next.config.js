@@ -4,6 +4,5 @@ const nextConfig = {
   distDir: 'dist',
   images: { unoptimized: true },
   trailingSlash: true,
-  assetPrefix: '.',
 }
 module.exports = nextConfig

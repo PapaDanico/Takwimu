@@ -1,0 +1,27 @@
+{
+  "county": "Siaya",
+  "code": 41,
+  "sub_counties": ["Alego Usonga", "Bondo", "Gem", "Rarieda", "Ugenya", "Ugunja"],
+  "own_source_revenue": {
+    "fiscal_year": "2024/25",
+    "unit": "KSh million",
+    "observations": [
+      {
+        "value": 436.68,
+        "source": "Controller of Budget county reports, as reported by Eastleigh Voice",
+        "source_url": "https://eastleighvoice.co.ke/controller%20of%20budget%20margaret%20nyakang'o/213397/county-own-source-revenues-under-pressure-as-siaya-posts-lowest-performance",
+        "retrieved": "2026-11-20",
+        "confidence": 4,
+        "status": "primary-reported"
+      },
+      {
+        "value": 946,
+        "source": "Siaya County Secretary statement, as reported by K24 Digital",
+        "source_url": "https://k24.digital/411/siaya-responds-after-being-ranked-lowest-in-own-revenue-collection/amp",
+        "retrieved": "2026-11-20",
+        "confidence": 2,
+        "status": "unverified"
+      }
+    ]
+  }
+}

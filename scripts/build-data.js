@@ -318,18 +318,6 @@ const files = {
       informal_share: LABOUR_DATA.informal_share,
       real_wage_index: LABOUR_DATA.real_wage_index,
     },
-    truth_gaps_count: CLAIMS.length,
-    disputed: CLAIMS.filter(c => c.status === "disputed").length,
-    stalled: CLAIMS.filter(c => c.status === "stalled").length,
-  },
-  'truth.json': {
-    gaps: CLAIMS,
-    count: CLAIMS.length,
-    disputed: CLAIMS.filter(c => c.status === "disputed").length,
-    stalled: CLAIMS.filter(c => c.status === "stalled").length,
-    progress: CLAIMS.filter(c => c.status === "progress").length,
-    notstarted: CLAIMS.filter(c => c.status === "notstarted").length,
-    timestamp: new Date().toISOString(),
   },
   'macro.json': { ...MACRO_DATA, _timestamp: new Date().toISOString() },
   'labour.json': { ...LABOUR_DATA, _timestamp: new Date().toISOString() },
@@ -340,8 +328,6 @@ const files = {
   'eac.json': { countries: EAC_COMPARISON, _timestamp: new Date().toISOString() },
   'counties.json': { counties: COUNTY_ABSORPTION, _timestamp: new Date().toISOString() },
   'soko.json': { commodities: SOKO_DATA, _timestamp: new Date().toISOString() },
-  'ahadi.json': { timeline: AHADI_TIMELINE, _timestamp: new Date().toISOString() },
-  'political-2027.json': { ...POLITICAL_2027, _timestamp: new Date().toISOString() },
   'gdp-trend.json': { data: GDP_TREND, _timestamp: new Date().toISOString() },
   'inflation-trend.json': { data: INFLATION_TREND, _timestamp: new Date().toISOString() },
   'sources.json': { sources: SOURCES, _timestamp: new Date().toISOString() },
@@ -352,4 +338,4 @@ Object.entries(files).forEach(([filename, data]) => {
   console.log(`✅ Generated public/data/${filename}`);
 });
 
-console.log(`\n📦 ${Object.keys(files).length} static JSON files ready for Cloudflare Pages`);
+console.log(`\n📦 ${Object.keys(files).length} static JSON files ready for static export`);

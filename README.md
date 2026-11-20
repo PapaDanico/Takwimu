@@ -1,131 +1,48 @@
-# TAKWIMU Intelligence Engine v2.0 — Cloudflare Pages Edition
+# Takwimu
 
-Kenya's verified socioeconomic data platform. Premium consultancy-grade design. Sheng + English bilingual. IMF, World Bank, China BRI, KNBS sources. Deployed on Cloudflare's global edge network.
+Civic education for Kenyan public finance and statistics, focused on trends. It starts with Siaya County and shows every figure with its source, retrieval date and confidence score. Disputed figures are shown side by side.
 
-## Why Cloudflare Pages?
+Design and plan: `docs/superpowers/specs/2026-11-20-takwimu-civic-education-design.md`. Workflow research: `docs/research/2026-11-20-workflows-research.md`. Visual concept: `docs/design/takwimu-concept.html`.
 
-- **Global CDN**: 300+ PoPs worldwide — sub-50ms latency for Kenyan users
-- **Static export**: No serverless cold starts. Instant page loads.
-- **Free tier**: Unlimited bandwidth, unlimited requests
-- **Edge caching**: JSON data files cached at 300+ locations
-- **PWA-ready**: Service workers + manifest for installable app experience
+## Stack
 
-## Deploy in 3 Steps
+Next.js 14 (static export), React, hosted on Netlify. No server runtime.
 
-### Option 1: Drag & Drop (Fastest)
+## Layout
 
-1. Run `npm run build` locally
-2. Go to [dash.cloudflare.com](https://dash.cloudflare.com) → Pages
-3. Create a project → Upload the `dist/` folder
-4. Done. Your site is live on `*.pages.dev`
+```
+app/            pages (home, method). app/_held/ is not routed (see below)
+lib/            shared code
+data/           versioned data with provenance (siaya.json)
+scripts/        validate-data.js (provenance checks), build-data.js (public JSON)
+public/         icons, manifest, generated data
+netlify.toml    build and headers
+.github/workflows/ci.yml   validate, typecheck, build on every PR
+```
 
-### Option 2: Git Integration (Recommended)
-
-1. Push this repo to GitHub
-2. In Cloudflare Dashboard → Pages → "Connect to Git"
-3. Select your repo
-4. Build settings:
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-5. Click "Save and Deploy"
-
-### Option 3: Wrangler CLI
+## Commands
 
 ```bash
 npm install
-npm run build
-npx wrangler pages deploy dist
+npm run validate   # fails if a figure lacks source, date, confidence
+npm run build      # validate, generate data, static export to dist/
+npm run dev
 ```
 
-## Architecture
+## Deploying to Netlify
 
-```
-Build Phase:
-  lib/data.js  →  scripts/build-data.js  →  public/data/*.json
+Connect the repository in Netlify. `netlify.toml` already sets the build command (`npm run build`) and publish directory (`dist`).
 
-Runtime (Cloudflare Edge):
-  dist/index.html      →  Dashboard (static)
-  dist/ukweli/index.html  →  Truth Gap (static)
-  dist/data/pulse.json    →  API data (static, edge-cached)
-  dist/data/truth.json    →  API data (static, edge-cached)
-  dist/data/*.json        →  All datasets (static, edge-cached)
-```
+## Held content
 
-## Data Sources
+`app/_held/ukweli/` holds the earlier "Truth Gap" page. It is not routed and its claims dataset is not published. Claims about named people need a primary document and a legal check before they go live. See the design doc.
 
-| Source | Tier | What it feeds |
-|--------|------|---------------|
-| KNBS | Official | GDP, inflation, sector growth, labour, wages, poverty |
-| CBK | Official | Policy rate, lending rate, FX, reserves, monetary stats |
-| Treasury | Official | Debt stock, debt service, budget, fiscal deficit |
-| IMF WEO Apr 2026 | Independent | GDP projections, inflation projections, SDR, quota |
-| World Bank | Independent | Per capita, governance indicators, ease of business, HDI |
-| China BRI Portal | Independent | SGR $3.2B loan, 30K jobs, 5.4M passengers, 172 countries |
-| AFDB | Independent | Youth unemployment, continental comparisons |
+## Data rules
 
-## Updating Data
+- Every figure has a source, a retrieval date, a confidence score (1 to 5) and a status.
+- The primary official figure is the headline. Conflicting figures are labelled and shown beside it.
+- `npm run validate` enforces this and runs in CI.
 
-Data is baked at build time. To refresh:
+## Licence
 
-```bash
-# Update lib/data.js with new figures
-# Then rebuild
-npm run build
-
-# Redeploy
-npx wrangler pages deploy dist
-```
-
-For automated updates, set up a GitHub Action:
-
-```yaml
-# .github/workflows/deploy.yml
-name: Deploy to Cloudflare Pages
-on:
-  schedule:
-    - cron: '0 6 * * *'  # Daily at 6 AM EAT
-  push:
-    branches: [main]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm run build
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: takwimu
-          directory: dist
-```
-
-## Verification Protocol
-
-```
-LAW CLAIMS:
-  1. Check gazette.go.ke
-  2. If gazetted → "Act of Parliament"
-  3. If announced only → "Announced, awaiting gazettement"
-  4. Never label "proposed" without gazette check
-
-PROJECT CLAIMS:
-  1. Check PPDC portal
-  2. Check implementing agency
-  3. Check historical announcements
-  4. If re-announced → "Stalled (re-announcement)"
-
-PRESIDENTIAL SPEECH:
-  1. Extract claim within 24 hours
-  2. Cross-reference gazette + PPDC + agency
-  3. Flag discrepancies within 48 hours
-```
-
-## License
-
-MIT — Built for Kenya. Deployed on Cloudflare.
+MIT. Source data belongs to its publishers; check each source's terms before reuse.
