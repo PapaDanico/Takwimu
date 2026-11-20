@@ -72,5 +72,18 @@ Success: a Siaya resident on a mid-range phone can find how their county's money
 ## Left to the builder
 Chart library (prefer lightweight), PDF parsing tooling, test framework, exact visual design (run design review against the dataviz and website-design guidance), CPI deflator source.
 
-## Open questions for the owner
-See builder check results appended below.
+## Decisions (owner said "your call" on all builder-check questions, 2026-11-20)
+All marked **[my call]**; the owner can overrule any of them.
+1. **v1 scope:** hand-curated Siaya module (about 10 verified metrics, last 5 fiscal years) plus national trends. Other counties and the automated pipeline follow in Phase 2. The pipeline is not a v1 launch dependency.
+2. **Review:** owner approves data PRs. The pipeline ships a review aid (source PDF page beside the extracted value). Nothing auto-merges. Kiswahili explainers are drafted by the assistant and shown as "unreviewed" until a human reviewer checks them.
+3. **Existing figures and Truth Gap:** figures that cannot be traced to a primary document are hidden at launch. Claims naming individuals stay off the site until the owner has seen them and a legal reviewer (to be named) has cleared them.
+4. **Infrastructure:** unknown. Phase 0 includes setting up the Cloudflare Pages project, API token, domain and GitHub Actions permissions together with the owner. Observed already: the repo has Cloudflare Workers Builds and Vercel checks attached to the repo and both fail on the broken build.
+5. **Conflicting sources:** the headline value is the primary official source (Controller of Budget for county spending and revenue). Other sources appear as labelled second observations. The 946M Siaya figure is from county officials via press and is unverified; the explainer says so.
+6. **Inflation adjustment:** national CPI from KNBS, latest year as base. County series use national CPI because no county CPI exists; the methodology page states this.
+7. **Performance and analytics:** first page load under about 150 KB, tested on throttled 3G. Cloudflare Web Analytics only.
+8. **Data rights:** every figure links to its source document. CSV downloads contain compiled series with attribution. Source terms are checked before any scheduled fetcher is enabled; until then fetchers are a manual-upload step.
+
+## Open items
+- Named legal reviewer for claims about individuals.
+- Named reviewer for Kiswahili text.
+- Whether Vercel and Cloudflare Workers Builds are both wanted. Phase 0 should keep one deploy target.
