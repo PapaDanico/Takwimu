@@ -2,6 +2,15 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 20 Nov 2026, sweep 10 (redesign)
+| Finding | How found | Status |
+|---|---|---|
+| New layout made the page 66 px wider than a 360 px phone because grid children took their content's minimum width | Layout check at 360 px, then an element-by-element overflow probe | Fixed: single `minmax(0, 1fr)` column and `min-width: 0` on children |
+| Gold wordmark, eyebrow and success tag failed contrast (axe: serious) because translucent header and tinted pills sit on darker backgrounds than the tokens were measured against | axe-core | Fixed: dedicated darker ink tokens for gold and mint text, and darker text on the gold chart bars (4.96 to 1) |
+| `aria-label` on the brand link did not match its visible text | axe-core | Fixed |
+| Last check: 0 violations in light and dark, no overflow at 360 and 1280 px, logical keyboard order | Full suite | Passing |
+| Data from the FY 2025/26 Controller of Budget annual report is not on the site. Press coverage reports Siaya at 26.94 per cent of its own-revenue target for FY 2025/26 | Web search | Open: the report host blocks automated downloads, so the figure could not be read from the document |
+
 ## 20 Nov 2026, sweep 9
 | Finding | How found | Status |
 |---|---|---|

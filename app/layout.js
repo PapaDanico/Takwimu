@@ -1,21 +1,27 @@
 import './globals.css';
-import Link from 'next/link';
+import siaya from '../data/siaya.json';
+import SiteHeader from '../components/SiteHeader';
+import SiteFooter from '../components/SiteFooter';
+import { shortDate } from '../lib/format';
 
 export const metadata = {
-  title: 'Takwimu | Public finance, explained',
-  description: "Kenya's public finance and statistics, explained with sources. Starting with Siaya County.",
+  title: 'Takwimu Counties | Public finance, made plain',
+  description: "Kenya's county budget, audit and revenue reports in plain language, starting with Siaya. Every figure names its source.",
   manifest: '/manifest.json',
+  icons: {
+    icon: [{ url: '/logo.svg', type: 'image/svg+xml' }, { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' }],
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0A1F3C',
+  themeColor: '#0A192F',
 };
 
-const ISSUES_URL = 'https://github.com/PapaDanico/Takwimu/issues/new';
-
 export default function RootLayout({ children }) {
+  const asOf = shortDate(siaya.own_source_revenue.observations[0].retrieved);
   return (
     <html lang="en">
       <head>
@@ -23,29 +29,14 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
         />
       </head>
       <body>
         <a className="skip" href="#main">Skip to content</a>
-        <div className="wrap">
-          <header className="top">
-            <Link href="/" className="brand"><b>TAKWIMU</b><span>Public finance, explained</span></Link>
-            <nav aria-label="Primary">
-              <Link href="/#siaya">Siaya</Link>
-              <Link href="/#trend">Trend</Link>
-              <Link href="/#spending">Spending</Link>
-              <Link href="/#audit">Audit</Link>
-              <Link href="/#learn">Learn</Link>
-              <Link href="/method/">Method</Link>
-            </nav>
-          </header>
-          {children}
-          <footer>
-            <div><b>Method and corrections.</b> Every figure names its source, retrieval date and a confidence score. Disputed figures are shown side by side, never merged. <Link href="/method/">Read how we work</Link>.</div>
-            <div><a href={ISSUES_URL}>Report an inaccuracy</a></div>
-          </footer>
-        </div>
+        <SiteHeader asOf={asOf} />
+        {children}
+        <SiteFooter asOf={asOf} />
       </body>
     </html>
   );
