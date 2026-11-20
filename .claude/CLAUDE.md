@@ -1,0 +1,13 @@
+# Takwimu
+
+Civic education platform for Kenyan public finance and statistics, focused on trends. Home county example: Siaya.
+
+- Stack: Next.js (static export) + React + Tailwind, TypeScript available. Deploy target: Cloudflare Pages only. Do not use Vercel.
+- Design spec (draft, awaiting owner approval): docs/superpowers/specs/2026-11-20-takwimu-civic-education-design.md
+- Do not build product code until the owner approves the spec.
+- Every figure needs source, publication date, period, unit and confidence. Show conflicting sources side by side.
+- No verdict labels on named individuals without a primary document and legal review.
+- Known issue: repo files are in the root but config expects app/, lib/, scripts/, public/data/. Build is broken until Phase 0 repairs the layout.
+
+# Rules
+Concise responses. Grep before Read. No unrequested extras.
