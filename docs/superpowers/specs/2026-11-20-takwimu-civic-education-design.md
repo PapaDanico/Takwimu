@@ -26,7 +26,7 @@ Success: a Siaya resident on a mid-range phone can find how their county's money
 - Publishing a source dispute as a "gotcha" instead of teaching why figures differ.
 
 ## Constraints
-- Static export on Cloudflare Pages (free tier). No server runtime.
+- Static export hosted on Netlify (owner's choice). No server runtime. Netlify's free tier has usage limits (bandwidth/build credits) that Cloudflare Pages did not; keep pages light and watch usage.
 - Source data is mostly PDFs and spreadsheets (Controller of Budget, Treasury, Auditor-General, KNBS), with no confirmed bulk or API access. Parsers will be brittle; human review is required.
 - Owner time is limited; pipeline must reduce, not add, upkeep.
 
@@ -62,7 +62,7 @@ Success: a Siaya resident on a mid-range phone can find how their county's money
 **UX:** charts with plain-language "what this means" lines, real versus nominal toggle, data table and CSV download per chart, accessible colour and text alternatives, low-bandwidth mode, share cards sized for WhatsApp.
 
 ## Phases
-0. Repair repo: restore layout, fix build, config and security upgrade, CI (build, lint, type-check, data validation), Cloudflare deploy workflow.
+0. Repair repo: restore layout, fix build, config and security upgrade, CI (build, lint, type-check, data validation), Netlify deploy via `netlify.toml` and deploy previews.
 1. Data foundation: schema, `sources.json`, migrate existing figures with real provenance, retire unverifiable numbers, validator.
 2. First pipeline: Controller of Budget county reports (Siaya first), then Treasury and KNBS; PR-based review.
 3. Siaya module and county selector; explainers and glossary; Kiswahili.
@@ -77,16 +77,16 @@ All marked **[my call]**; the owner can overrule any of them.
 1. **v1 scope:** hand-curated Siaya module (about 10 verified metrics, last 5 fiscal years) plus national trends. Other counties and the automated pipeline follow in Phase 2. The pipeline is not a v1 launch dependency.
 2. **Review:** owner approves data PRs. The pipeline ships a review aid (source PDF page beside the extracted value). Nothing auto-merges. Kiswahili explainers are drafted by the assistant and shown as "unreviewed" until a human reviewer checks them.
 3. **Existing figures and Truth Gap:** figures that cannot be traced to a primary document are hidden at launch. Claims naming individuals stay off the site until the owner has seen them and a legal reviewer (to be named) has cleared them.
-4. **Infrastructure:** unknown. Phase 0 includes setting up the Cloudflare Pages project, API token, domain and GitHub Actions permissions together with the owner. Observed already: the repo has Cloudflare Workers Builds and Vercel checks attached to the repo and both fail on the broken build.
+4. **Infrastructure:** unknown. Phase 0 includes connecting the repo to Netlify (site, domain, deploy previews) and checking GitHub Actions permissions together with the owner. Observed already: Cloudflare Workers Builds and Vercel checks are attached to the repo and fail; both integrations should be removed.
 5. **Conflicting sources:** the headline value is the primary official source (Controller of Budget for county spending and revenue). Other sources appear as labelled second observations. The 946M Siaya figure is from county officials via press and is unverified; the explainer says so.
 6. **Inflation adjustment:** national CPI from KNBS, latest year as base. County series use national CPI because no county CPI exists; the methodology page states this.
-7. **Performance and analytics:** first page load under about 150 KB, tested on throttled 3G. Cloudflare Web Analytics only.
+7. **Performance and analytics:** first page load under about 150 KB, tested on throttled 3G. privacy-respecting analytics only; Netlify Analytics or a cookieless alternative, vendor to be chosen in Phase 5.
 8. **Data rights:** every figure links to its source document. CSV downloads contain compiled series with attribution. Source terms are checked before any scheduled fetcher is enabled; until then fetchers are a manual-upload step.
 
 ## Owner constraint
-Do not use Vercel. Deploy target is Cloudflare Pages only. No Vercel config, dependencies or workflows will be added.
+Do not use Vercel. Deploy target is Netlify (owner decision, replaces the earlier Cloudflare Pages assumption). Add `netlify.toml`; remove `wrangler.toml`, `@cloudflare/next-on-pages` and the Cloudflare Workers Builds integration. No Vercel config will be added.
 
 ## Open items
 - Named legal reviewer for claims about individuals.
 - Named reviewer for Kiswahili text.
-- Owner removes the Vercel GitHub integration (it reports "Account is blocked" and fails every PR); the assistant cannot do this from here.
+- Owner removes the Vercel and Cloudflare Workers Builds GitHub integrations (it reports "Account is blocked" and fails every PR); the assistant cannot do this from here.
