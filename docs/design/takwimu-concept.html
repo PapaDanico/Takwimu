@@ -1,0 +1,172 @@
+<title>Takwimu Design Concept</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: editorial report. Action-title headlines, numbered exhibits with source lines, a quiet navy-and-gold identity carried over from Takwimu's existing palette. */
+:root {
+  --bg: #F5F7FA; --surface: #FFFFFF; --ink: #0A1F3C; --muted: #4F6079; --rule: #D5DCE6;
+  --navy: #0A1F3C; --gold: #B8901F; --gold-soft: #F3E9C8; --teal: #0E7C86; --alert: #B42318;
+  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --body: Inter, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0A0F1A; --surface: #111A2B; --ink: #E8EDF5; --muted: #9AA9BF; --rule: #25324A;
+  --navy: #E8EDF5; --gold: #D9B648; --gold-soft: #3A3115; --teal: #3FB8C3; --alert: #F97066; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0A0F1A; --surface: #111A2B; --ink: #E8EDF5; --muted: #9AA9BF; --rule: #25324A;
+  --navy: #E8EDF5; --gold: #D9B648; --gold-soft: #3A3115; --teal: #3FB8C3; --alert: #F97066; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1080px; margin: 0 auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+header.top { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; padding-block: 18px; border-bottom: 1px solid var(--rule); }
+.brand { display: flex; align-items: baseline; gap: 10px; }
+.brand b { font-family: var(--display); font-size: 24px; letter-spacing: .02em; }
+.brand span { font-size: 12px; color: var(--muted); }
+nav { display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 14px; color: var(--muted); }
+nav a { text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+nav a[aria-current] { color: var(--ink); border-color: var(--gold); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; background: var(--surface); }
+.seg button { font: inherit; font-size: 13px; padding: 6px 12px; background: none; border: 0; color: var(--muted); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--navy); color: var(--bg); }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 40px; padding-block: 56px 40px; align-items: end; }
+.hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 4.6vw, 52px); line-height: 1.12; margin: 14px 0 18px; text-wrap: balance; letter-spacing: -.01em; }
+.hero p.lede { color: var(--muted); font-size: 18px; max-width: 56ch; margin: 0; }
+.keyfacts { border-top: 3px solid var(--navy); padding-top: 14px; display: grid; gap: 14px; }
+.keyfacts div { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--rule); padding-bottom: 10px; font-size: 14px; }
+.keyfacts div span:first-child { color: var(--muted); }
+
+section { padding-block: 40px; border-top: 1px solid var(--rule); }
+section > .head { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; margin-bottom: 24px; }
+section h2 { font-family: var(--display); font-weight: 600; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.2; margin: 0; max-width: 30ch; text-wrap: balance; }
+.exhibit { background: var(--surface); border: 1px solid var(--rule); padding: 22px; }
+.exhibit .cap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: baseline; margin-bottom: 14px; }
+.exhibit .cap strong { font-size: 15px; }
+.exhibit .src { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); margin-top: 14px; padding-top: 10px; }
+svg { width: 100%; height: auto; display: block; }
+svg text { fill: var(--muted); font-family: var(--mono); font-size: 11px; }
+svg .lab { fill: var(--ink); font-weight: 500; }
+.tag { display: inline-block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border: 1px solid var(--rule); color: var(--muted); border-radius: 2px; }
+.tag.warn { color: var(--alert); border-color: var(--alert); }
+.tag.ok { color: var(--teal); border-color: var(--teal); }
+
+.cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--rule); padding: 20px; }
+.card h3 { font-family: var(--display); font-size: 18px; margin: 8px 0; }
+.card p { margin: 0; font-size: 14px; color: var(--muted); }
+.takeaway { background: var(--gold-soft); border-left: 4px solid var(--gold); padding: 16px 20px; margin-top: 20px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips span { border: 1px solid var(--rule); background: var(--surface); padding: 6px 12px; font-size: 14px; border-radius: 2px; }
+footer { padding-block: 32px 56px; border-top: 1px solid var(--navy); font-size: 13px; color: var(--muted); display: grid; gap: 8px; }
+.prov { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+.prov div { border-top: 2px solid var(--gold); padding-top: 8px; font-size: 13px; }
+.prov b { display: block; color: var(--ink); }
+@media (max-width: 760px) {
+  .hero, section > .head, .cols, .prov { grid-template-columns: minmax(0, 1fr); }
+  .hero { padding-block: 32px 24px; }
+  .exhibit { padding: 14px; }
+}
+@media (prefers-reduced-motion: no-preference) { .seg button { transition: background .15s, color .15s; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><b>TAKWIMU</b><span>Public finance, explained</span></div>
+    <nav aria-label="Primary">
+      <a href="#" aria-current="page" data-k="n1">Trends</a><a href="#" data-k="n2">Counties</a><a href="#" data-k="n3">Explainers</a><a href="#" data-k="n4">Claim check</a><a href="#" data-k="n5">Method</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <div class="eyebrow" data-k="eyebrow">Siaya County · Own-source revenue · FY 2024/25</div>
+      <h1 data-k="h1">Two official numbers for Siaya's own revenue differ by more than two to one. Here is why.</h1>
+      <p class="lede" data-k="lede">The Controller of Budget and the county report different totals for the same year. Takwimu shows both, names the source of each, and explains what could cause the gap.</p>
+    </div>
+    <div class="keyfacts mono" aria-label="Key facts">
+      <div><span>Controller of Budget</span><span>KSh 436.7M</span></div>
+      <div><span>County statement</span><span>KSh 946M</span></div>
+      <div><span>Ratio</span><span>2.2×</span></div>
+      <div><span>County figure status</span><span class="tag warn">Unverified</span></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="head"><div class="eyebrow">Exhibit 1</div><h2 data-k="h2a">The headline figure comes from the primary official report. The county's figure is shown beside it.</h2></div>
+    <div class="exhibit">
+      <div class="cap"><strong>Siaya own-source revenue, FY 2024/25, KSh million</strong><span class="tag warn">Sources disagree</span></div>
+      <svg viewBox="0 0 640 250" role="img" aria-label="Bar chart: Controller of Budget 436.7 million shillings, county statement 946 million shillings">
+        <g stroke="var(--rule)" stroke-width="1">
+          <line x1="70" x2="620" y1="200" y2="200"/><line x1="70" x2="620" y1="155" y2="155"/><line x1="70" x2="620" y1="110" y2="110"/><line x1="70" x2="620" y1="65" y2="65"/><line x1="70" x2="620" y1="20" y2="20"/>
+        </g>
+        <text x="62" y="204" text-anchor="end">0</text><text x="62" y="159" text-anchor="end">250</text><text x="62" y="114" text-anchor="end">500</text><text x="62" y="69" text-anchor="end">750</text><text x="62" y="24" text-anchor="end">1,000</text>
+        <rect x="150" y="121.4" width="140" height="78.6" fill="var(--navy)"/>
+        <rect x="390" y="29.7" width="140" height="170.3" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="5 4"/>
+        <text class="lab" x="220" y="114" text-anchor="middle">436.7</text><text class="lab" x="460" y="22" text-anchor="middle">946</text>
+        <text x="220" y="222" text-anchor="middle">Controller of Budget</text><text x="460" y="222" text-anchor="middle">County statement</text>
+        <text x="220" y="238" text-anchor="middle">primary report</text><text x="460" y="238" text-anchor="middle">per press, unverified</text>
+      </svg>
+      <div class="src">Source: Controller of Budget county reports, as reported by the Eastleigh Voice; Siaya County Secretary statement, as reported by K24 Digital. Retrieved 20 Nov 2026. Confidence: CoB 4/5, county 2/5 until the county's document is seen. Dashed bar means unverified.</div>
+    </div>
+    <div class="takeaway" data-k="take"><b>What to take from this:</b> a gap like this usually means the two figures count different things, such as cash collected against revenue billed, or different reporting dates. Check the definition before the number.</div>
+  </section>
+
+  <section>
+    <div class="head"><div class="eyebrow">Exhibit 2</div><h2 data-k="h2b">Trends should be read in real shillings, not only nominal ones.</h2></div>
+    <div class="exhibit">
+      <div class="cap"><strong>Own-source revenue, five fiscal years, KSh million</strong>
+        <span class="seg" role="group" aria-label="Basis"><button id="nom" aria-pressed="true">Nominal</button><button id="real" aria-pressed="false">Inflation-adjusted</button></span></div>
+      <svg id="trend" viewBox="0 0 640 250" role="img" aria-label="Line chart of an illustrative five-year trend"></svg>
+      <div class="src"><span class="tag">Layout sample</span> The line shape and values are placeholders to show the chart style. They are not Siaya data. Real series will carry source, date and confidence per point.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><div class="eyebrow">Learn</div><h2 data-k="h2c">Three ideas that make any county budget readable.</h2></div>
+    <div class="cols">
+      <div class="card"><span class="tag ok">Explainer</span><h3>Own-source revenue</h3><p>Money a county raises itself from fees, levies and licences, separate from what it receives from the national government.</p></div>
+      <div class="card"><span class="tag ok">Explainer</span><h3>Pending bills</h3><p>Money a county owes suppliers for work already done. Growing pending bills can signal spending beyond what is collected.</p></div>
+      <div class="card"><span class="tag ok">Explainer</span><h3>Audit opinion</h3><p>The Auditor-General's verdict on whether accounts are reliable. Read the basis for the opinion, not only its label.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><div class="eyebrow">County explorer</div><h2 data-k="h2d">Start with Siaya, then compare any of the 47 counties.</h2></div>
+    <div class="chips" aria-label="Siaya sub-counties"><span>Alego Usonga</span><span>Bondo</span><span>Gem</span><span>Rarieda</span><span>Ugenya</span><span>Ugunja</span></div>
+    <div class="prov">
+      <div><b>Source</b>Named on every figure</div><div><b>Period and date</b>Fiscal year, publication date</div><div><b>Confidence</b>1 to 5, with the reason</div><div><b>Disputes</b>Shown side by side</div>
+    </div>
+  </section>
+
+  <footer>
+    <div><b>Method and corrections.</b> Every figure links to its source document. Disputed figures are never merged. Errors are logged publicly and corrected within 48 hours.</div>
+    <div><a href="#">Report an inaccuracy on this page</a> · <a href="#">Glossary</a> · <a href="#">Dataset guides</a> · Licence for compiled series: to be confirmed after source terms are checked.</div>
+    <div>Concept design. All text and layout are a proposal for owner review. Only Exhibit 1 uses reported figures.</div>
+  </footer>
+</div>
+
+<script>
+var yrs = ["FY20/21", "FY21/22", "FY22/23", "FY23/24", "FY24/25"];
+var nominal = [520, 610, 680, 790, 880];
+var cpi = [1.00, 1.06, 1.15, 1.25, 1.33];
+function drawTrend(real) {
+  var vals = nominal.map(function (v, i) { return real ? v / cpi[i] : v; });
+  var pts = vals.map(function (v, i) { return [70 + i * 137.5, 200 - v * 0.18]; });
+  var g = "";
+  [0, 250, 500, 750, 1000].forEach(function (t) { var y = 200 - t * 0.18; g += '<line x1="70" x2="620" y1="' + y + '" y2="' + y + '" stroke="var(--rule)"/><text x="62" y="' + (y + 4) + '" text-anchor="end">' + t.toLocaleString() + '</text>'; });
+  var line = pts.map(function (p) { return p.join(","); }).join(" ");
+  var dots = pts.map(function (p, i) { return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="4" fill="var(--navy)"/><text class="lab" x="' + p[0] + '" y="' + (p[1] - 10) + '" text-anchor="middle">' + Math.round(vals[i]) + '</text><text x="' + p[0] + '" y="222" text-anchor="middle">' + yrs[i] + '</text>'; }).join("");
+  document.getElementById("trend").innerHTML = g + '<polyline points="' + line + '" fill="none" stroke="var(--navy)" stroke-width="2.5"/>' + dots;
+}
+document.getElementById("nom").onclick = function () { drawTrend(false); this.setAttribute("aria-pressed", true); document.getElementById("real").setAttribute("aria-pressed", false); };
+document.getElementById("real").onclick = function () { drawTrend(true); this.setAttribute("aria-pressed", true); document.getElementById("nom").setAttribute("aria-pressed", false); };
+drawTrend(false);
+</script>

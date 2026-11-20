@@ -13,7 +13,7 @@ Success: a Siaya resident on a mid-range phone can find how their county's money
 3. Explainers in plain language ("Where does a shilling go?", "Equitable share", "Pending bills", "Audit opinions") with a glossary.
 4. Every figure carries source, publication date, period, unit and confidence. Conflicting sources are shown side by side, never silently resolved.
 5. Fast on weak connections; installable PWA; WhatsApp share cards.
-6. English and Kiswahili as primary languages; Sheng as optional toggle. Dholuo glossary later. **[my call]**
+6. English only for v1 (owner: no Kiswahili needed). Sheng toggle from the existing prototype is out of scope until the owner asks for it.
 
 ## Non-goals
 - No live backend, database or user accounts in v1.
@@ -61,11 +61,20 @@ Success: a Siaya resident on a mid-range phone can find how their county's money
 
 **UX:** charts with plain-language "what this means" lines, real versus nominal toggle, data table and CSV download per chart, accessible colour and text alternatives, low-bandwidth mode, share cards sized for WhatsApp.
 
+## Benchmarks (research, 20 Nov 2026)
+What was actually read, and what was not.
+- **USAFacts** (founded by Steve Ballmer): only the About page was read. Facts confirmed there: government-only sources, privately funded, no advertising, free with no paywall. Its explainer pages, chart conventions and corrections policy were **not** read; do not assume them. Lesson taken: a stated sourcing rule. Critics have noted that its figures can be hard to trace, so Takwimu links each figure to its document.
+- **Vulekamali** (South Africa's National Treasury budget portal): homepage only. Confirmed: a "Learning" group (videos, glossary, dataset guides, FAQ) beside the data, a "Report inaccuracies on this page" form, and a Data Portal API. Lessons taken: plain-language route before tables, glossary and dataset guides next to figures, a visible report-an-error link.
+- **Our World in Data**: About page only. Confirmed: free non-profit, charts under a permissive Creative Commons licence, third-party data subject to its providers' terms. Chart-page layout was not read. Lesson taken: state licence and source terms next to every download.
+- **OpenSpending / Open Budget Survey explorer** (Open Knowledge Foundation, International Budget Partnership): search-result summaries only. Lessons: treemaps make allocations legible; a tabular data model that accepts CSV or Excel is a workable ingest format.
+- **Kenya context:** Open Budget Survey 2023 scores Kenya 55/100 on transparency, 31 on public participation and 57 on oversight. The Open Government Partnership notes budget data is published but hard to extract. A KNBS SDMX open-data portal is reported but unconfirmed; check its API documentation in Phase 1. No Controller of Budget API found.
+- **Gap to fill:** read USAFacts explainer pages, Our World in Data chart pages and Vulekamali department pages directly before final visual design.
+
 ## Phases
 0. Repair repo: restore layout, fix build, config and security upgrade, CI (build, lint, type-check, data validation), Netlify deploy via `netlify.toml` and deploy previews.
 1. Data foundation: schema, `sources.json`, migrate existing figures with real provenance, retire unverifiable numbers, validator.
 2. First pipeline: Controller of Budget county reports (Siaya first), then Treasury and KNBS; PR-based review.
-3. Siaya module and county selector; explainers and glossary; Kiswahili.
+3. Siaya module and county selector; explainers and glossary.
 4. Trust layer: methodology, corrections log, claim-check relaunch.
 5. Performance, PWA, offline, share cards, analytics (privacy-respecting).
 
@@ -75,7 +84,7 @@ Chart library (prefer lightweight), PDF parsing tooling, test framework, exact v
 ## Decisions (owner said "your call" on all builder-check questions, 2026-11-20)
 All marked **[my call]**; the owner can overrule any of them.
 1. **v1 scope:** hand-curated Siaya module (about 10 verified metrics, last 5 fiscal years) plus national trends. Other counties and the automated pipeline follow in Phase 2. The pipeline is not a v1 launch dependency.
-2. **Review:** owner approves data PRs. The pipeline ships a review aid (source PDF page beside the extracted value). Nothing auto-merges. Kiswahili explainers are drafted by the assistant and shown as "unreviewed" until a human reviewer checks them.
+2. **Review:** owner approves data PRs. The pipeline ships a review aid (source PDF page beside the extracted value). Nothing auto-merges. Explainers are drafted by the assistant and shown as "unreviewed" until a human reviewer checks them.
 3. **Existing figures and Truth Gap:** figures that cannot be traced to a primary document are hidden at launch. Claims naming individuals stay off the site until the owner has seen them and a legal reviewer (to be named) has cleared them.
 4. **Infrastructure:** unknown. Phase 0 includes connecting the repo to Netlify (site, domain, deploy previews) and checking GitHub Actions permissions together with the owner. Observed already: Cloudflare Workers Builds and Vercel checks are attached to the repo and fail; both integrations should be removed.
 5. **Conflicting sources:** the headline value is the primary official source (Controller of Budget for county spending and revenue). Other sources appear as labelled second observations. The 946M Siaya figure is from county officials via press and is unverified; the explainer says so.
@@ -88,5 +97,5 @@ Do not use Vercel. Deploy target is Netlify (owner decision, replaces the earlie
 
 ## Open items
 - Named legal reviewer for claims about individuals.
-- Named reviewer for Kiswahili text.
+- Named reviewer for explainer text.
 - Owner removes the Vercel and Cloudflare Workers Builds GitHub integrations (it reports "Account is blocked" and fails every PR); the assistant cannot do this from here.
