@@ -116,9 +116,60 @@ export default function Home() {
         </ol>
       </section>
 
-      <section id="audit">
+      <section id="spending">
         <div className="head">
           <div className="eyebrow">Exhibit 2</div>
+          <h2 className="question">How much of its budget did Siaya actually spend?</h2>
+        </div>
+        <figure className="exhibit" style={{ margin: 0 }}>
+          <div className="cap">
+            <strong>Siaya budget and spending, FY {siaya.budget.fiscal_year}</strong>
+            <span className="tag ok">Primary document</span>
+          </div>
+          <p className="units">KSh billion. The pale bar is the approved budget. The solid bar is what was spent.</p>
+          <svg viewBox="0 0 640 150" role="img" aria-label={siaya.budget.categories.map((c) => `${c.label}: spent ${c.spent} of ${c.budget} billion shillings, ${c.absorption_pct} per cent`).join('. ')}>
+            {siaya.budget.categories.map((c, i) => {
+              const scale = WIDTH / 6.02;
+              const y = 20 + i * 60;
+              const tw = c.budget * scale;
+              const sw = c.spent * scale;
+              return (
+                <g key={c.label}>
+                  <text className="lab" x="0" y={y + 12} style={{ fontFamily: 'var(--body)', fontSize: 13 }}>{c.label}</text>
+                  <text x="0" y={y + 28}>{c.spent} of {c.budget}</text>
+                  <path d={barPath(X0, y, tw, BAR_H)} fill="var(--rule)" />
+                  <path d={barPath(X0, y, sw, BAR_H)} fill="var(--chart)" />
+                  <text x={X0 + 10} y={y + 16} style={{ fill: 'var(--on-chart)', fontWeight: 600 }}>{c.absorption_pct}% spent</text>
+                </g>
+              );
+            })}
+          </svg>
+          <details className="tableview">
+            <summary>View as table</summary>
+            <div className="tablewrap">
+              <table className="data">
+                <thead><tr><th>Item</th><th>Budget</th><th>Spent</th><th>Share spent</th></tr></thead>
+                <tbody>
+                  {siaya.budget.categories.map((c) => (
+                    <tr key={c.label}><td>{c.label}</td><td className="mono">{c.budget}</td><td className="mono">{c.spent}</td><td className="mono">{c.absorption_pct}%</td></tr>
+                  ))}
+                  <tr><td>Total</td><td className="mono">{siaya.budget.approved_total}</td><td className="mono">{siaya.budget.total_spent}</td><td className="mono">{Math.round((siaya.budget.total_spent / siaya.budget.approved_total) * 100)}%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div className="src">
+            Source: <a href={siaya.budget.source_url}>{siaya.budget.source}</a>. <span className="updated">Retrieved {siaya.budget.retrieved}. Confidence {siaya.budget.confidence}/5.</span>
+            <br />
+            Notes: {siaya.budget.note} At 30 June 2024 the county reported KSh {siaya.budget.pending_bills.opening_30_jun_2024_billion} billion in pending bills and settled KSh {siaya.budget.pending_bills.settled_in_year_million} million of them during the year. Revenue arrears were KSh {siaya.budget.revenue_arrears_30_jun_2025_million} million at 30 June 2025.
+          </div>
+        </figure>
+        <div className="takeaway"><b>What to take from this:</b> development spending pays for projects such as roads and facilities. Recurrent spending pays for salaries and running costs. Siaya used a smaller share of its project budget (57 per cent) than of its recurrent budget (83 per cent).</div>
+      </section>
+
+      <section id="audit">
+        <div className="head">
+          <div className="eyebrow">Exhibit 3</div>
           <h2 className="question">What did the Auditor-General say about Siaya&apos;s accounts?</h2>
         </div>
         <div className="exhibit">

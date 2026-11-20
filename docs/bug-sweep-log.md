@@ -2,6 +2,13 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 20 Nov 2026, sweep 4
+| Finding | How found | Status |
+|---|---|---|
+| axe could not compute contrast for chart text over the hatch pattern | Computed WCAG contrast by hand for every text and background pair used: white on chart blue 6.27, dark ink on dark-theme blue 6.11, muted text 5.96 to 8.03, tags 4.95 to 7.34. All at least 4.5:1 | Closed (manual measurement) |
+| New spending exhibit could hide a data entry error | Validator now checks that each share spent matches spent/budget and that category spending sums to the total | Added |
+| Spending figures come from OCR text of the Controller of Budget PDF | Read the section and cross-checked totals | Open: confidence 4/5; confirm against the printed table |
+
 ## 20 Nov 2026, sweep 3
 | Finding | How found | Status |
 |---|---|---|

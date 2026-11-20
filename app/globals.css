@@ -5,6 +5,7 @@
   --body: Inter, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --chart: #2B5FAE;
+  --on-chart: #FFFFFF;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -12,6 +13,7 @@
     --bg: #0A0F1A; --surface: #111A2B; --ink: #E8EDF5; --muted: #9AA9BF; --rule: #25324A;
     --navy: #E8EDF5; --gold: #D9B648; --gold-soft: #3A3115; --teal: #3FB8C3; --alert: #F97066;
     --chart: #5B93E0;
+    --on-chart: #0A0F1A;
     color-scheme: dark;
   }
 }

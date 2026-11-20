@@ -23,6 +23,21 @@ if (osr.target) {
   });
 }
 
+const budget = siaya.budget;
+if (!budget) fail('siaya: missing budget block');
+else {
+  ['fiscal_year', 'source', 'source_url', 'retrieved', 'confidence', 'status', 'approved_total', 'total_spent'].forEach((k) => {
+    if (budget[k] === undefined || budget[k] === '') fail(`siaya budget: missing ${k}`);
+  });
+  (budget.categories || []).forEach((c, i) => {
+    if (!(c.budget > 0) || !(c.spent >= 0) || c.spent > c.budget) fail(`siaya budget category ${i}: spent must be between 0 and budget`);
+    const pct = Math.round((c.spent / c.budget) * 100);
+    if (Math.abs(pct - c.absorption_pct) > 1) fail(`siaya budget category ${i}: absorption_pct ${c.absorption_pct} does not match spent/budget (${pct})`);
+  });
+  const spentSum = (budget.categories || []).reduce((s, c) => s + c.spent, 0);
+  if (Math.abs(spentSum - budget.total_spent) > 0.05) fail(`siaya budget: category spending ${spentSum.toFixed(2)} does not sum to total_spent ${budget.total_spent}`);
+}
+
 const audit = siaya.audit;
 if (!audit) fail('siaya: missing audit block');
 else {

@@ -36,6 +36,28 @@
       "note": "The report states a performance of 47 per cent for Siaya. 436 of 1,043 is 42 per cent, so the report measures the target differently. That difference is not resolved."
     }
   },
+  "budget": {
+    "fiscal_year": "2024/25",
+    "unit": "KSh billion",
+    "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2024/25, section 3.38 (Siaya)",
+    "source_url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
+    "retrieved": "2026-11-20",
+    "confidence": 4,
+    "status": "primary-document",
+    "note": "Figures read from the OCR text of the PDF and checked against each other (2.76 of 4.87 is 57 per cent; 4.99 of 6.02 is 83 per cent). Check exact values in the printed tables.",
+    "approved_total": 10.94,
+    "categories": [
+      { "label": "Development", "budget": 4.87, "spent": 2.76, "absorption_pct": 57 },
+      { "label": "Recurrent", "budget": 6.02, "spent": 4.99, "absorption_pct": 83 }
+    ],
+    "total_spent": 7.75,
+    "pending_bills": {
+      "opening_30_jun_2024_billion": 1.12,
+      "settled_in_year_million": 577.7,
+      "note": "The county reported KSh 1.12 billion pending at 30 June 2024 and settled KSh 577.7 million during FY 2024/25. The closing balance at 30 June 2025 could not be read reliably from the OCR text and is not shown."
+    },
+    "revenue_arrears_30_jun_2025_million": 290
+  },
   "audit": {
     "fiscal_year": "2023/24",
     "entity": "County Executive of Siaya",
