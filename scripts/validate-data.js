@@ -17,11 +17,11 @@ if (!osr.observations || osr.observations.length < 1) fail('siaya: no OSR observ
 });
 if (!Array.isArray(siaya.sub_counties) || siaya.sub_counties.length !== 6) fail('siaya: expected 6 sub-counties');
 
-(osr.other_reports || []).forEach((o, i) => {
-  ['description', 'source', 'source_url', 'retrieved', 'confidence', 'status'].forEach((k) => {
-    if (o[k] === undefined || o[k] === '') fail(`siaya other_reports ${i}: missing ${k}`);
+if (osr.target) {
+  ['value', 'description', 'source', 'source_url', 'retrieved', 'confidence', 'status'].forEach((k) => {
+    if (osr.target[k] === undefined || osr.target[k] === '') fail(`siaya OSR target: missing ${k}`);
   });
-});
+}
 
 const audit = siaya.audit;
 if (!audit) fail('siaya: missing audit block');

@@ -2,6 +2,13 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 20 Nov 2026, sweep 3
+| Finding | How found | Status |
+|---|---|---|
+| The site described a Nation-reported figure of about KSh 1.04 billion as a third "total" for Siaya's own revenue. The Controller of Budget report shows KSh 1.04 billion is the **budgeted target**, not collections. Published error. | Downloaded and read the Controller of Budget FY 2024/25 report, section 3.38 | Fixed: the figure is now shown as the target, from the primary document. |
+| Headline revenue figure was labelled press-attributed | Same reading | Fixed: KSh 436 million now sourced to the Controller of Budget report itself (KSh 199 million health facility financing plus KSh 236 million other), confidence 4/5 because it was read from OCR text |
+| Controller of Budget states 47 per cent performance for Siaya, but 436 of 1,043 is 42 per cent | Arithmetic check | Open: shown on the page as unresolved |
+
 ## 20 Nov 2026, sweep 2
 | Finding | How found | Status |
 |---|---|---|

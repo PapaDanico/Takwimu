@@ -17,7 +17,7 @@ export default function Home() {
   const ratio = (county.value / primary.value).toFixed(1);
   const ticks = [0, 250, 500, 750, 1000];
   const rows = [
-    { o: primary, label: 'Controller of Budget', sub: 'as reported by press', y: 28, verified: true },
+    { o: primary, label: 'Controller of Budget', sub: 'FY 2024/25 report', y: 28, verified: true },
     { o: county, label: 'County statement', sub: 'per press, unverified', y: 84, verified: false },
   ];
 
@@ -32,7 +32,8 @@ export default function Home() {
         <div className="keyfacts mono" role="group" aria-label="Key facts">
           <div><span>Controller of Budget</span><span>KSh {fmt(primary.value)}M</span></div>
           <div><span>County statement</span><span>KSh {fmt(county.value)}M</span></div>
-          <div><span>Ratio</span><span>{ratio}×</span></div>
+          <div><span>Budgeted target</span><span>KSh {osr.target.value.toLocaleString('en-US')}M</span></div>
+          <div><span>Ratio, county to CoB</span><span>{ratio}×</span></div>
           <div><span>County figure</span><span className="tag warn">Unverified</span></div>
         </div>
       </div>
@@ -90,29 +91,27 @@ export default function Home() {
                       <td className="mono">{o.retrieved}</td>
                     </tr>
                   ))}
-                  {(osr.other_reports || []).map((o) => (
-                    <tr key={o.source}>
-                      <td><a href={o.source_url}>{o.source}</a>: {o.description}</td>
-                      <td className="mono">about 1,040</td>
-                      <td>{o.status}</td>
-                      <td className="mono">{o.confidence}/5</td>
-                      <td className="mono">{o.retrieved}</td>
-                    </tr>
-                  ))}
+                  <tr>
+                    <td><a href={osr.target.source_url}>Budgeted target (Controller of Budget)</a>: {osr.target.description}</td>
+                    <td className="mono">{osr.target.value.toLocaleString('en-US')}</td>
+                    <td>{osr.target.status}</td>
+                    <td className="mono">{osr.target.confidence}/5</td>
+                    <td className="mono">{osr.target.retrieved}</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
           </details>
           <div className="src">
-            Source: <a href={primary.source_url}>{primary.source}</a>; <a href={county.source_url}>{county.source}</a>. <span className="updated">Retrieved {primary.retrieved}.</span>
+            Sources: <a href={primary.source_url}>{primary.source}</a>; <a href={county.source_url}>{county.source}</a>. <span className="updated">Retrieved {primary.retrieved}.</span>
             <br />
-            Note: neither bar has been checked against the Controller of Budget&apos;s own table. The hatched bar is unverified. A third press report (see the table) gives about KSh 1,040 million in total, including KSh 400 million spent at source, so the figures may count different things. They are not averaged.
+            Notes: the solid bar is read from the Controller of Budget&apos;s own report (KSh {fmt(primary.value)} million: KSh 199 million from health facilities and KSh 236 million from other sources). The hatched bar is unverified. Siaya&apos;s budgeted target was about KSh {osr.target.value.toLocaleString('en-US')} million, including KSh 400 million spent at source. The report states a 47 per cent performance, which does not match 436 of 1,043, so the target is measured in a way we have not yet resolved. The figures are not averaged.
           </div>
         </figure>
         <div className="takeaway"><b>What to take from this:</b> a gap like this usually means the two figures count different things, such as cash collected against revenue billed, or different reporting dates. Check the definition before the number.</div>
         <ol className="steps" style={{ marginTop: 20 }} aria-label="How to read this chart">
           <li>Find the units under the title. Here they are millions of shillings.</li>
-          <li>Compare the two bars. The solid bar is the figure attributed to the Controller of Budget.</li>
+          <li>Compare the two bars. The solid bar comes from the Controller of Budget&apos;s own report.</li>
           <li>Open the source line to see where each figure comes from and when we retrieved it.</li>
         </ol>
       </section>
