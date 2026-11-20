@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <a className="skip" href="#main">Skip to content</a>
         <div className="wrap">
           <header className="top">
             <Link href="/" className="brand"><b>TAKWIMU</b><span>Public finance, explained</span></Link>
