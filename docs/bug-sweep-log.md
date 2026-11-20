@@ -2,6 +2,19 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 20 Nov 2026, sweep 11 (ten-year history and new pages)
+| Finding | How found | Status |
+|---|---|---|
+| FY 2016/17 report says recurrent spending was KSh 3.9bn in one sentence and 3.65bn in its table; its text also says spending rose 0.4 per cent when 4.93 to 5.63 is 14 per cent | Read the Siaya section, arithmetic | Table value used (adds to the total); both noted on Corrections |
+| FY 2015/16 own-source revenue: 127.93 (FY 2016/17 report) against 113.26 (FY 2018/19 chart). FY 2014/15: 143.33 against 142.88 | Compared reports | Both shown as alternates |
+| FY 2021/22 report prints 434.38 for both FY 2021/22 and FY 2020/21 | Arithmetic: the stated 30.5 per cent rise only works against 332.88 | Typo noted on the year |
+| Pending bills at 30 June 2021: 1,061m (FY 2020/21 report) against 602m (FY 2021/22 report) | Compared reports | Both shown |
+| FY 2022/23 approved budget: 8.60bn (its own report) against 8.50bn (quoted in the FY 2023/24 report) | Compared reports | Noted on the year |
+| FY 2015/16 report is a scan with no text layer | pdftotext returned nothing | Read pages 273 to 281 with RapidOCR; confidence 3 |
+| Validator extended: budget and spending parts add up, absorption recomputed, ten-year revenue series, audit opinions have links, sub-county 2009 population adds to the county census | Added | Passing |
+| Accessibility: 0 violations on all nine pages in light and dark. No overflow at 360 or 1280 px. Internal links and anchors resolve | axe-core, Playwright | Passing |
+| Open: FY 2019/20 county report (host returned 403), FY 2013/14 and 2014/15 reports, audit opinions before FY 2020/21 (Auditor-General site under maintenance), FY 2025/26 report, KNBS pages unreachable | Download attempts | Listed in Method and Data pages |
+
 ## 20 Nov 2026, sweep 10 (redesign)
 | Finding | How found | Status |
 |---|---|---|

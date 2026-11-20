@@ -3,9 +3,13 @@ import siaya from '../data/siaya.json';
 import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
 import { shortDate } from '../lib/format';
+import { SITE_URL } from '../lib/site';
 
 export const metadata = {
-  title: 'Takwimu Counties | Public finance, made plain',
+  metadataBase: new URL(SITE_URL),
+  title: { default: 'Takwimu Counties | Public finance, made plain', template: '%s | Takwimu Counties' },
+  openGraph: { type: 'website', siteName: 'Takwimu Counties', images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Takwimu Counties: Siaya County in plain numbers' }] },
+  twitter: { card: 'summary_large_image', images: ['/og.png'] },
   description: "Kenya's county budget, audit and revenue reports in plain language, starting with Siaya. Every figure names its source.",
   manifest: '/manifest.json',
   icons: {

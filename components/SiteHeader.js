@@ -2,22 +2,22 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { TrendingUp, Wallet, ShieldCheck, BookOpen, Info } from 'lucide-react';
+import { Home, MapPinned, Users, Lightbulb, BookOpen, Info } from 'lucide-react';
+import { ISSUES_URL } from '../lib/site';
 
 const NAV = [
-  { href: '/#siaya', label: 'Revenue', Icon: TrendingUp },
-  { href: '/#spending', label: 'Spending', Icon: Wallet },
-  { href: '/#audit', label: 'Audit', Icon: ShieldCheck },
-  { href: '/#learn', label: 'Learn', Icon: BookOpen },
-  { href: '/method/', label: 'Method', Icon: Info },
+  { href: '/', label: 'Overview', short: 'Home', Icon: Home },
+  { href: '/subcounties/', label: 'Sub-counties', short: 'Areas', Icon: MapPinned },
+  { href: '/profile/', label: 'County profile', short: 'Profile', Icon: Users },
+  { href: '/insights/', label: 'Insights', short: 'Insights', Icon: Lightbulb },
+  { href: '/learn/', label: 'Learn', short: 'Learn', Icon: BookOpen },
+  { href: '/method/', label: 'Method', short: 'Method', Icon: Info },
 ];
-
-const ISSUES_URL = 'https://github.com/PapaDanico/Takwimu/issues/new';
 
 export default function SiteHeader({ asOf }) {
   const pathname = usePathname() || '/';
   // Hash links belong to the home page, so only real routes can be "current".
-  const isCurrent = (href) => !href.includes('#') && pathname.replace(/\/$/, '') === href.replace(/\/$/, '');
+  const isCurrent = (href) => pathname.replace(/\/$/, '') === href.replace(/\/$/, '');
 
   return (
     <>
@@ -40,10 +40,10 @@ export default function SiteHeader({ asOf }) {
       </header>
 
       <nav className="bottom-nav" aria-label="Primary mobile">
-        {NAV.map(({ href, label, Icon }) => (
+        {NAV.map(({ href, short, Icon }) => (
           <Link key={href} href={href} aria-current={isCurrent(href) ? 'page' : undefined}>
             <Icon aria-hidden="true" />
-            {label}
+            {short}
           </Link>
         ))}
       </nav>

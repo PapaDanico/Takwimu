@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import siaya from '../data/siaya.json';
 import { fmt, shortDate } from '../lib/format';
 
@@ -340,10 +341,18 @@ export default function Home() {
       </section>
 
       <section className="card" aria-labelledby="where">
-        <h2 id="where">Where else can I look in Siaya?</h2>
-        <p className="lead">Sub-county pages and more trends are added only once their sources are verified.</p>
+        <h2 id="where">Go deeper</h2>
+        <p className="lead">This page shows the latest year. The pages below go back ten years and down to the six sub-counties.</p>
+        <ul className="toc">
+          <li><Link href="/insights/">Ten-year insights</Link></li>
+          <li><Link href="/subcounties/">Six sub-counties</Link></li>
+          <li><Link href="/profile/">County profile</Link></li>
+          <li><Link href="/learn/">Learn the terms</Link></li>
+          <li><Link href="/faq/">FAQ</Link></li>
+          <li><Link href="/data/">Download the data</Link></li>
+        </ul>
         <div className="chips-row" role="group" aria-label="Siaya sub-counties">
-          {siaya.sub_counties.map((s) => <span key={s}>{s}</span>)}
+          {siaya.sub_counties.map((s) => <Link key={s} href={`/subcounties/#${s.toLowerCase().replace(/\s+/g, '-')}`}>{s}</Link>)}
         </div>
       </section>
     </main>

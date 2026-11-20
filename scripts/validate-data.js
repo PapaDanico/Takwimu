@@ -77,6 +77,69 @@ else {
   });
 }
 
+// ---- sub-counties and county profile ----
+const sc = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'subcounties.json'), 'utf8'));
+const co = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'county.json'), 'utf8'));
+['source', 'source_url', 'retrieved', 'confidence', 'status'].forEach((k) => {
+  if (!sc[k]) fail(`subcounties: missing ${k}`);
+  if (!co[k]) fail(`county: missing ${k}`);
+});
+const subs = sc.sub_counties || [];
+if (subs.length !== 6) fail('subcounties: expected 6 sub-counties');
+const total = (f) => subs.reduce((sum, x) => sum + f(x), 0);
+const expectEq = (label, got, want) => { if (got !== want) fail(`${label}: sums to ${got}, expected ${want}`); };
+expectEq('subcounties population 2019', total((x) => x.population['2019']), co.population.census_2019);
+expectEq('subcounties population 2022', total((x) => x.population['2022']), co.population.projection_2022);
+expectEq('subcounties wards', total((x) => x.wards), 30);
+expectEq('subcounties villages', total((x) => x.villages), 98);
+expectEq('subcounties hospitals', total((x) => x.facilities.hospitals), 10);
+expectEq('subcounties maternity beds', total((x) => x.facilities.maternity_beds), 196);
+expectEq('subcounties youth friendly centres', total((x) => x.facilities.youth_friendly_centres), 7);
+expectEq('subcounties eligible voters', total((x) => x.eligible_voters_2022), 533595);
+subs.forEach((x) => {
+  ['2019', '2022'].forEach((y) => {
+    const calc = x.population[y] / x.area_km2;
+    if (Math.abs(calc - x.density_per_km2[y]) > 1.5) fail(`${x.name}: density ${y} is ${x.density_per_km2[y]}, population over area gives ${calc.toFixed(1)}`);
+  });
+  if (!(x.population['2027'] > x.population['2025'] && x.population['2025'] > x.population['2022'] && x.population['2022'] > x.population['2019'])) fail(`${x.name}: population projections must increase`);
+});
+expectEq('county sex split 2019', co.population.male_2019 + co.population.female_2019 + co.population.intersex_2019, co.population.census_2019);
+expectEq('county urban centres', co.population.urban_centres.reduce((a, b) => a + b.population, 0), co.population.urban_2022);
+const pctOk = (label, v) => { if (!(v >= 0 && v <= 100)) fail(`county ${label}: ${v} is not a percentage`); };
+['monetary_poverty_pct', 'multidimensional_poverty_pct'].forEach((k) => { pctOk(k + ' siaya', co.poverty_2020[k].siaya); pctOk(k + ' kenya', co.poverty_2020[k].kenya); });
+['hiv_prevalence_pct', 'antenatal_4th_visit_pct', 'facility_deliveries_pct', 'contraceptive_use_women_15_49_pct', 'full_immunisation_coverage_pct'].forEach((k) => { pctOk(k + ' siaya', co.health_2022[k].siaya); pctOk(k + ' kenya', co.health_2022[k].kenya); });
+
+// Ten-year history: every year must trace to a report, budget parts must add up, absorption must match the arithmetic.
+const hist = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'history.json'), 'utf8'));
+const near = (a, b, tol) => Math.abs(a - b) <= tol;
+const seen = new Set();
+hist.years.forEach((y) => {
+  const tag = `history ${y.fy}`;
+  if (seen.has(y.fy)) fail(`${tag}: duplicate year`);
+  seen.add(y.fy);
+  if (!hist.reports[y.report]) fail(`${tag}: report ${y.report} is not in the reports list`);
+  if (y.approved !== undefined) {
+    if (!near(y.recurrent_budget + y.development_budget, y.approved, 0.02)) fail(`${tag}: budget parts ${y.recurrent_budget} + ${y.development_budget} do not add to ${y.approved}`);
+    if (!near(y.recurrent_spent + y.development_spent, y.spent, 0.02)) fail(`${tag}: spending parts do not add to ${y.spent}`);
+    const dev = (y.development_spent / y.development_budget) * 100;
+    if (y.development_absorption_pct !== undefined && !near(dev, y.development_absorption_pct, 1.5)) fail(`${tag}: development absorption ${y.development_absorption_pct} but arithmetic gives ${dev.toFixed(1)}`);
+    const rec = (y.recurrent_spent / y.recurrent_budget) * 100;
+    if (y.recurrent_absorption_pct !== undefined && !near(rec, y.recurrent_absorption_pct, 1.5) && !y.caveat) fail(`${tag}: recurrent absorption ${y.recurrent_absorption_pct} but arithmetic gives ${rec.toFixed(1)}`);
+  }
+  if (y.osr_m !== undefined && y.osr_target_m !== undefined && y.osr_m > y.osr_target_m * 1.2) fail(`${tag}: own-source revenue is far above its target`);
+});
+hist.osr_series.points.forEach((p) => { if (!(p.value > 0) || !p.report) fail(`history OSR ${p.fy}: needs a positive value and a report`); });
+if (hist.osr_series.points.length < 10) fail('history: own-source revenue series is shorter than ten years');
+hist.audits.points.forEach((a) => {
+  if (!['Unqualified', 'Qualified', 'Adverse', 'Disclaimer'].includes(a.opinion)) fail(`history audit ${a.fy}: unknown opinion ${a.opinion}`);
+  if (!/^https:\/\//.test(a.url)) fail(`history audit ${a.fy}: missing source url`);
+});
+const p09 = hist.population.by_sub_county_2009.values;
+expectEq('history 2009 sub-counties add to the county census', Object.values(p09).reduce((a, b) => a + b, 0), hist.population.points.find((p) => p.year === 2009).value);
+subs.forEach((x) => { if (p09[x.id] === undefined) fail(`history: no 2009 population for ${x.id}`); });
+expectEq('history 2019 point matches county census', hist.population.points.find((p) => p.year === 2019).value, co.population.census_2019);
+Object.entries(hist.reports).forEach(([k, r]) => { if (!/^https:\/\//.test(r.url)) fail(`history report ${k}: missing https url`); });
+
 if (errors.length) {
   console.error('Data validation failed:\n- ' + errors.join('\n- '));
   process.exit(1);

@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "Siaya County: ten-year fiscal history",
+    "unit": "KSh billion unless stated; revenue and pending bills in KSh million",
+    "retrieved": "2026-11-20",
+    "basis": "Nominal (money of the day). Fiscal year runs 1 July to 30 June.",
+    "note": "Each year is read from the Controller of Budget annual county report for that year. Where two reports give different values for the same year, both are kept in 'alternates'.",
+    "gaps": [
+      "FY2013/14 and FY2014/15: budget and spending not shown. Only own-source revenue (both years) and total spending and absorption for FY2014/15 (quoted in the FY2015/16 report) are available.",
+      "FY2019/20: the full-year report could not be downloaded from here (host returned 403). Only own-source revenue is available, from the FY2020/21 report.",
+      "FY2023/24: budget, spending and pending bills not yet extracted into this file; own-source revenue is in data/siaya.json.",
+      "Audit opinions for FY2014/15 to FY2019/20 are missing for the reasons given under audits.",
+      "FY2025/26: Controller of Budget site is unreachable from the build environment."
+    ]
+  },
+  "reports": {
+    "2021/22": {"title": "County Governments Budget Implementation Review Report FY 2021/22", "section": "3.38 County Government of Siaya", "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178", "confidence": 3},
+    "2024/25": {"title": "County Governments Budget Implementation Review Report FY 2024/25", "section": "3.38 Siaya County", "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410", "confidence": 4},
+    "2023/24": {"title": "County Governments Budget Implementation Review Report FY 2023/24", "section": "3.38 County Government of Siaya", "url": "https://libraryir.parliament.go.ke/handle/123456789/28882", "confidence": 3},
+    "2022/23": {"title": "Annual County Governments Budget Implementation Review Report FY 2022/23", "section": "Siaya County", "url": "https://libraryir.parliament.go.ke/handle/123456789/25332", "confidence": 3},
+    "2015/16": {"title": "Annual County Governments Budget Implementation Review Report FY 2015/16", "section": "3.38 Siaya County", "url": "https://libraryir.parliament.go.ke/items/93f8527f-a405-49f9-a5c6-1135d4e056dd", "confidence": 3},
+    "2016/17": {"title": "Annual County Governments Budget Implementation Review Report FY 2016/17", "section": "3.38 Siaya County", "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6", "confidence": 4},
+    "2017/18": {"title": "Annual County Governments Budget Implementation Review Report FY 2017/18", "section": "3.38 Siaya County", "url": "https://libraryir.parliament.go.ke/items/29651287-6c3d-4dd9-b07a-cbeed4aa11d7", "confidence": 4},
+    "2018/19": {"title": "Annual County Governments Budget Implementation Review Report FY 2018/19", "section": "3.38 Siaya County", "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98", "confidence": 4},
+    "2020/21": {"title": "County Governments Budget Implementation Review Report FY 2020/21", "section": "3.39 Siaya County", "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c", "confidence": 4}
+  },
+  "years": [
+    {"fy": "2014/15", "spent": 4.17, "recurrent_absorption_pct": 78.8, "development_absorption_pct": 59.8, "osr_m": 143.33, "report": "2015/16",
+      "caveat": "Comparative figures quoted in the FY2015/16 report. The FY2014/15 report itself has not been read, so the budget and pending bills for this year are missing."},
+    {"fy": "2015/16", "approved": 6.95, "recurrent_budget": 3.72, "development_budget": 3.22, "spent": 4.93, "recurrent_spent": 3.10, "development_spent": 1.84, "recurrent_absorption_pct": 83.2, "development_absorption_pct": 57.0, "osr_m": 127.93, "osr_target_m": 343.31, "pending_development_m": 164.94, "pending_recurrent_m": 172.01, "report": "2015/16",
+      "caveat": "Page images were read with optical character recognition (the PDF has no text layer). Budget financing shows a local revenue target of KSh 434.91m while the revenue-stream table totals KSh 343.31m; we use the table total with the report's 37.3 per cent. Budget parts add to 6.94 against the stated 6.95."},
+    {"fy": "2016/17", "approved": 7.07, "recurrent_budget": 3.92, "development_budget": 3.15, "spent": 5.63, "recurrent_spent": 3.65, "development_spent": 1.98, "recurrent_absorption_pct": 93.1, "development_absorption_pct": 62.9, "osr_m": 172.84, "osr_target_m": 270, "pending_development_m": 150.04, "pending_recurrent_m": 127.55, "report": "2016/17",
+      "caveat": "The report text says recurrent spending was KSh 3.9bn in one sentence and KSh 3.65bn in its table. We use the table, which adds to the KSh 5.63bn total."},
+    {"fy": "2017/18", "approved": 6.85, "recurrent_budget": 4.30, "development_budget": 2.55, "spent": 4.11, "recurrent_spent": 3.33, "development_spent": 0.78, "recurrent_absorption_pct": 77.5, "development_absorption_pct": 30.5, "osr_m": 139.34, "osr_target_m": 270, "pending_development_m": 246.75, "pending_recurrent_m": 367.75, "report": "2017/18"},
+    {"fy": "2018/19", "approved": 8.44, "recurrent_budget": 4.71, "development_budget": 3.74, "spent": 5.70, "recurrent_spent": 4.53, "development_spent": 1.18, "recurrent_absorption_pct": 96.1, "development_absorption_pct": 31.5, "osr_m": 189.67, "osr_target_m": 325, "pending_development_m": 187.42, "pending_recurrent_m": 258.26, "report": "2018/19",
+      "caveat": "Budget components are rounded in the report and add to 8.45."},
+    {"fy": "2021/22", "approved": 8.97, "recurrent_budget": 5.62, "development_budget": 3.35, "spent": 7.11, "recurrent_spent": 5.23, "development_spent": 1.88, "recurrent_absorption_pct": 92.9, "development_absorption_pct": 56.2, "osr_m": 434.38, "osr_target_m": 445.45, "pending_development_m": 411.53, "pending_recurrent_m": 293.85, "report": "2021/22",
+      "caveat": "The report prints KSh 434.38m for both FY2021/22 and FY2020/21 in one sentence; the stated 30.5 per cent rise only works against KSh 332.88m, which is the FY2020/21 figure we use. The same report gives pending bills at 30 June 2021 as KSh 602.08m, against KSh 1,060.92m in the FY2020/21 report; the reports do not explain the difference, so both are shown."},
+    {"fy": "2022/23", "approved": 8.60, "recurrent_budget": 5.78, "development_budget": 2.83, "spent": 6.80, "recurrent_spent": 5.28, "development_spent": 1.52, "recurrent_absorption_pct": 91.4, "development_absorption_pct": 53.8, "osr_m": 402.23, "osr_target_m": 590.26, "pending_development_m": 364.09, "pending_recurrent_m": 397.20, "report": "2022/23",
+      "caveat": "Own-source revenue here excludes KSh 105.81m of appropriations-in-aid; including it the report's total is KSh 508.04m. Pending bills at 30 June 2023 (KSh 761.29m) are the opening stock quoted in the FY2023/24 report; the Auditor-General reports KSh 741.56m. The FY2023/24 report also quotes the FY2022/23 approved budget as KSh 8.50bn, against KSh 8.60bn in the FY2022/23 report."},
+    {"fy": "2023/24", "approved": 9.76, "recurrent_budget": 5.91, "development_budget": 3.85, "spent": 7.63, "recurrent_spent": 5.14, "development_spent": 2.49, "recurrent_absorption_pct": 85.8, "development_absorption_pct": 64.5, "osr_m": 610.74, "osr_target_m": 760.00, "report": "2023/24",
+      "caveat": "The scanned text of the recurrent budget is garbled; 5.91 is the approved total minus the development budget. On that figure recurrent absorption is 87.0 per cent, against the report's 85.8 per cent. The FY2024/25 report gives a different own-source revenue for this year (KSh 427.95m); see data/siaya.json. Pending bills: the FY2023/24 report gives KSh 303.91m outstanding at 30 June 2024 but says this excludes bills incurred in the year. The FY2024/25 report gives the stock at 30 June 2024 as KSh 1.12bn, which is the figure used here.", "pending_total_m": 1120},
+    {"fy": "2024/25", "approved": 10.94, "recurrent_budget": 6.07, "development_budget": 4.87, "spent": 7.75, "recurrent_spent": 4.99, "development_spent": 2.76, "recurrent_absorption_pct": 83, "development_absorption_pct": 57, "osr_m": 436.68, "report": "2024/25",
+      "caveat": "Figures are read from a scanned PDF with two OCR engines (see data/siaya.json). The report states 83 per cent recurrent absorption, but 4.99 of 6.07 is 82.2 per cent. Pending bills at 30 June 2025 could not be read reliably and are not shown. Own-source revenue includes health facility financing."},
+    {"fy": "2020/21", "approved": 8.22, "recurrent_budget": 4.84, "development_budget": 3.38, "spent": 6.95, "recurrent_spent": 4.71, "development_spent": 2.25, "recurrent_absorption_pct": 97.2, "development_absorption_pct": 66.4, "osr_m": 332.88, "osr_target_m": 420, "pending_development_m": 423.38, "pending_recurrent_m": 637.54, "report": "2020/21"}
+  ],
+  "audits": {
+    "label": "Auditor-General opinion on the County Executive of Siaya's accounts",
+    "note": "Opinions for FY2014/15 to FY2019/20 are not shown: the Parliament library holds no County Executive of Siaya report for those years and the Auditor-General's site was under maintenance when we tried. We do not fill the gap from press reports.",
+    "points": [
+      {"fy": "2020/21", "opinion": "Qualified", "reasons": "Bank reconciliation variances; unsupported retention monies; unaccounted transfers; unsupported training, hospitality and supplies spending", "headline": "Cash balance not confirmable: KSh 955.38m. Unsupported goods and services: KSh 230.38m", "confidence": 4, "url": "https://libraryir.parliament.go.ke/items/d53598b9-f890-49aa-ad98-f18cf9c5bd6b/full"},
+      {"fy": "2021/22", "opinion": "Adverse", "reasons": "Compensation of employees; use of goods and services; acquisition of assets; unsupported bank balances; pending bills", "headline": "Pending payables not confirmable: KSh 818.80m. Unsupported other personnel payments: KSh 308.30m", "confidence": 3, "url": "https://libraryir.parliament.go.ke/items/54119713-1b4e-46dd-b95d-5484c7aeb01f/full"},
+      {"fy": "2022/23", "opinion": "Qualified", "reasons": "Compensation of employees; use of goods and services; other grants and transfers; acquisition of assets; retention and deposits", "headline": "Compensation of employees queried: KSh 2,666.93m. Pending bills (emphasis of matter): KSh 741.56m", "confidence": 4, "url": "https://libraryir.parliament.go.ke/items/7e87be17-5566-48c8-ac76-d4658605ee6c/full"},
+      {"fy": "2023/24", "opinion": "Qualified", "reasons": "Compensation of employees; use of goods and services; other grants and transfers; bank balances; unsupported land acquisition; end-of-period cut-off", "headline": "Pending bills (emphasis of matter): over KSh 1,186.01m. Compensation of employees queried: KSh 2,872.52m", "confidence": 4, "url": "https://libraryir.parliament.go.ke/items/42bf64ec-74a8-44f6-be8f-5e1c79b0c407/full"}
+    ]
+  },
+  "osr_series": {
+    "label": "Own-source revenue by year (KSh million)",
+    "points": [
+      {"fy": "2013/14", "value": 99.78, "report": "FY2018/19 chart"},
+      {"fy": "2014/15", "value": 143.33, "report": "FY2015/16 text", "alternate": {"value": 142.88, "report": "FY2018/19 chart"}},
+      {"fy": "2015/16", "value": 127.93, "report": "FY2016/17 text", "alternate": {"value": 113.26, "report": "FY2018/19 chart"}},
+      {"fy": "2016/17", "value": 172.84, "report": "FY2016/17 table and FY2018/19 chart"},
+      {"fy": "2017/18", "value": 139.34, "report": "FY2017/18 text"},
+      {"fy": "2018/19", "value": 189.67, "report": "FY2018/19 text"},
+      {"fy": "2019/20", "value": 179.43, "report": "FY2020/21 text"},
+      {"fy": "2020/21", "value": 332.88, "report": "FY2020/21 table; the report attributes the rise to NHIF capitation and Linda Mama revenue streams"},
+      {"fy": "2021/22", "value": 434.38, "report": "FY2021/22 text and table"},
+      {"fy": "2022/23", "value": 402.23, "report": "FY2022/23 report; KSh 508.04m if appropriations-in-aid of KSh 105.81m are included"},
+      {"fy": "2023/24", "value": 610.74, "report": "FY2023/24 report", "alternate": {"value": 427.95, "report": "FY2024/25 report"}},
+      {"fy": "2024/25", "value": 436.68, "report": "FY2024/25 report, including health facility financing"}
+    ],
+    "conflicts": [
+      "FY2015/16: KSh 127.93m (FY2016/17 report text) against KSh 113.26m (FY2018/19 report chart). Both shown; the later chart is probably a restated figure but the reports do not say so."
+    ],
+    "source_page": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98",
+    "confidence": 4
+  },
+  "health": {
+    "label": "Health in Siaya: Kenya Demographic and Health Surveys 2014 and 2022",
+    "note": "The surveys are the only county-level health series that cover ten years. They are samples, so county values carry a margin of error; small changes should not be over-read. Annual routine health data were not retrievable.",
+    "indicators": [
+      {"id": "facility-delivery", "label": "Births in a health facility", "unit": "%", "v2014": 69.6, "v2022": 84.4, "better": "up", "confidence": 4, "sources": ["https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf", "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"], "note": "The county plan reports 98 per cent for facility deliveries, which is probably routine health-system data. The two measures are not the same; we show the survey figure."},
+      {"id": "skilled-birth", "label": "Births attended by a skilled provider", "unit": "%", "v2014": 70.4, "v2022": 94.9, "better": "up", "confidence": 4, "sources": ["https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf", "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"]},
+      {"id": "skilled-anc", "label": "Antenatal care from a skilled provider", "unit": "%", "v2014": 97.8, "v2022": 99.1, "better": "up", "confidence": 4, "sources": ["https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf", "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"]},
+      {"id": "stunting", "label": "Children under 5 who are stunted", "unit": "%", "v2014": 24.7, "v2022": 19.2, "better": "down", "confidence": 4, "sources": ["https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf", "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"]}
+    ],
+    "hiv": {
+      "label": "Adult HIV prevalence, Siaya (per cent of ages 15 to 49)",
+      "warning": "The National AIDS Control Council says estimates from different model vintages are not directly comparable. Most of the fall from the 2015 estimate to the 2025 estimate reflects re-modelling, not a measured drop. Do not read these as a trend.",
+      "points": [
+        {"year": 2013, "value": 23.7, "national": 6.04, "vintage": "NACC estimates 2015 vintage", "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf", "confidence": 4},
+        {"year": 2015, "value": 24.8, "national": 5.9, "vintage": "Kenya HIV County Profiles 2016", "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf", "confidence": 4},
+        {"year": 2017, "value": 21.0, "vintage": "NACC estimates report 2018", "confidence": 3},
+        {"year": 2025, "value": 10.3, "national": 3.22, "vintage": "NSDCC county profiles 2026", "confidence": 3}
+      ]
+    }
+  },
+  "poverty": {
+    "label": "Poverty in Siaya",
+    "note": "Two official sources give different monetary poverty rates for 2015/16 and we could not establish why, so both are shown. The multidimensional measure counts people lacking several basic needs at once and is not comparable with the monetary rate.",
+    "points": [
+      {"year": "2005/06", "measure": "Monetary poverty rate", "value": 35.3, "source": "Commission on Revenue Allocation fact sheet, second-hand from the household budget survey", "confidence": 3},
+      {"year": "2015/16", "measure": "Monetary poverty rate", "value": 33.8, "national": 36.1, "source": "Commission on Revenue Allocation fact sheet", "confidence": 3, "alternate": {"value": 33.1, "source": "KNBS Comprehensive Poverty Report 2020"}},
+      {"year": "2015/16", "measure": "Multidimensional poverty", "value": 68.8, "national": 53.0, "source": "KNBS Comprehensive Poverty Report 2020, as reproduced in the county plan", "confidence": 4}
+    ],
+    "gap": "A later county poverty estimate (the 2021 Kenya Poverty Report) could not be retrieved, so there is no recent monetary poverty figure on the site."
+  },
+  "population": {
+    "label": "Siaya County population: census and official projections",
+    "points": [
+      {"year": 2009, "value": 842304, "kind": "census", "source": "KNBS 2009 census, as reproduced in Siaya ADP 2015/16 and 2018/19", "confidence": 4},
+      {"year": 2012, "value": 886417, "kind": "projection", "alternate": 885762, "note": "885,762 in the text of the same plans; 886,417 in their constituency table", "confidence": 3},
+      {"year": 2015, "value": 932795, "kind": "projection", "confidence": 3},
+      {"year": 2017, "value": 965103, "kind": "projection", "confidence": 3},
+      {"year": 2019, "value": 993183, "kind": "census", "source": "KNBS 2019 census, as reproduced in the Siaya CIDP 2023-2027 (data/county.json)", "confidence": 4},
+      {"year": 2022, "value": 1040616, "kind": "projection", "source": "Siaya CIDP 2023-2027 (data/county.json)", "confidence": 3}
+    ],
+    "by_sub_county_2009": {
+      "source": "KNBS 2009 census by constituency, as reproduced in the Siaya County Annual Development Plans 2015/16 and 2018/19",
+      "confidence": 4,
+      "note": "Sub-counties match constituencies. The six values add to the county total of 842,304. The Siaya CIDP 2018-2022 gives different splits for Ugenya (108,934) and Ugunja (93,372) from ward sums, but the two together are 202,306 either way, so compare the pair when measuring growth.",
+      "values": {"alego-usonga": 187243, "ugenya": 113848, "gem": 160675, "bondo": 157522, "ugunja": 88458, "rarieda": 134558}
+    },
+    "note": "The 2019 census count and the 2022 to 2025 projections are in data/county.json. The 2009 census households and the sex split at county level were not retrievable (KNBS site unreachable from the build environment)."
+  }
+}

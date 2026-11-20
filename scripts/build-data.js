@@ -350,6 +350,7 @@ Object.entries(files)
   });
 
 // Siaya data is verified-with-status and carries its own provenance fields.
-const siayaSrc = path.join(__dirname, '..', 'data', 'siaya.json');
-fs.copyFileSync(siayaSrc, path.join(outDir, 'siaya.json'));
-console.log('Generated public/data/siaya.json');
+['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json'].forEach((f) => {
+  fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(outDir, f));
+  console.log('Generated public/data/' + f);
+});
