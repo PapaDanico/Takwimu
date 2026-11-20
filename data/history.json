@@ -6,7 +6,7 @@
     "basis": "Nominal (money of the day). Fiscal year runs 1 July to 30 June.",
     "note": "Each year is read from the Controller of Budget annual county report for that year. Where two reports give different values for the same year, both are kept in 'alternates'.",
     "gaps": [
-      "FY2013/14 and FY2014/15: budget and spending not shown. Only own-source revenue (both years) and total spending and absorption for FY2014/15 (quoted in the FY2015/16 report) are available.",
+      "FY2013/14: approved budget and pending bills not shown (only spending, absorption and revenue quoted in the FY2014/15 report). FY2014/15: pending recurrent bills were not reported.",
       "FY2019/20: the full-year report could not be downloaded from here (host returned 403). Only own-source revenue is available, from the FY2020/21 report.",
       "FY2023/24: budget, spending and pending bills not yet extracted into this file; own-source revenue is in data/siaya.json.",
       "Audit opinions for FY2014/15 to FY2019/20 are missing for the reasons given under audits.",
@@ -18,6 +18,7 @@
     "2024/25": {"title": "County Governments Budget Implementation Review Report FY 2024/25", "section": "3.38 Siaya County", "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410", "confidence": 4},
     "2023/24": {"title": "County Governments Budget Implementation Review Report FY 2023/24", "section": "3.38 County Government of Siaya", "url": "https://libraryir.parliament.go.ke/handle/123456789/28882", "confidence": 3},
     "2022/23": {"title": "Annual County Governments Budget Implementation Review Report FY 2022/23", "section": "Siaya County", "url": "https://libraryir.parliament.go.ke/handle/123456789/25332", "confidence": 3},
+    "2014/15": {"title": "Annual County Governments Budget Implementation Review Report FY 2014/15", "section": "Siaya County", "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1", "confidence": 4},
     "2015/16": {"title": "Annual County Governments Budget Implementation Review Report FY 2015/16", "section": "3.38 Siaya County", "url": "https://libraryir.parliament.go.ke/items/93f8527f-a405-49f9-a5c6-1135d4e056dd", "confidence": 3},
     "2016/17": {"title": "Annual County Governments Budget Implementation Review Report FY 2016/17", "section": "3.38 Siaya County", "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6", "confidence": 4},
     "2017/18": {"title": "Annual County Governments Budget Implementation Review Report FY 2017/18", "section": "3.38 Siaya County", "url": "https://libraryir.parliament.go.ke/items/29651287-6c3d-4dd9-b07a-cbeed4aa11d7", "confidence": 4},
@@ -25,8 +26,10 @@
     "2020/21": {"title": "County Governments Budget Implementation Review Report FY 2020/21", "section": "3.39 Siaya County", "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c", "confidence": 4}
   },
   "years": [
-    {"fy": "2014/15", "spent": 4.17, "recurrent_absorption_pct": 78.8, "development_absorption_pct": 59.8, "osr_m": 143.33, "report": "2015/16",
-      "caveat": "Comparative figures quoted in the FY2015/16 report. The FY2014/15 report itself has not been read, so the budget and pending bills for this year are missing."},
+    {"fy": "2013/14", "spent": 2.50, "recurrent_absorption_pct": 70.5, "development_absorption_pct": 31.8, "osr_m": 99.77, "report": "2014/15",
+      "caveat": "Comparative figures quoted in the FY2014/15 report. The FY2013/14 report itself has not been read, so the approved budget and pending bills for this year are missing. This was the first year of devolution."},
+    {"fy": "2014/15", "approved": 5.89, "recurrent_budget": 3.43, "development_budget": 2.45, "spent": 4.17, "recurrent_spent": 2.70, "development_spent": 1.47, "recurrent_absorption_pct": 78.7, "development_absorption_pct": 60.0, "osr_m": 143.33, "osr_target_m": 301.53, "pending_development_m": 800.34, "report": "2014/15",
+      "caveat": "Pending bills of KSh 800.34m are development bills only: the county had not worked out a recurrent figure when the report was written, so no total is plotted. The FY2015/16 report quotes absorption of 78.8 and 59.8 per cent for this year; we use this year's own report. Budget parts add to 5.88 against the stated 5.89."},
     {"fy": "2015/16", "approved": 6.95, "recurrent_budget": 3.72, "development_budget": 3.22, "spent": 4.93, "recurrent_spent": 3.10, "development_spent": 1.84, "recurrent_absorption_pct": 83.2, "development_absorption_pct": 57.0, "osr_m": 127.93, "osr_target_m": 343.31, "pending_development_m": 164.94, "pending_recurrent_m": 172.01, "report": "2015/16",
       "caveat": "Page images were read with optical character recognition (the PDF has no text layer). Budget financing shows a local revenue target of KSh 434.91m while the revenue-stream table totals KSh 343.31m; we use the table total with the report's 37.3 per cent. Budget parts add to 6.94 against the stated 6.95."},
     {"fy": "2016/17", "approved": 7.07, "recurrent_budget": 3.92, "development_budget": 3.15, "spent": 5.63, "recurrent_spent": 3.65, "development_spent": 1.98, "recurrent_absorption_pct": 93.1, "development_absorption_pct": 62.9, "osr_m": 172.84, "osr_target_m": 270, "pending_development_m": 150.04, "pending_recurrent_m": 127.55, "report": "2016/17",
@@ -57,8 +60,8 @@
   "osr_series": {
     "label": "Own-source revenue by year (KSh million)",
     "points": [
-      {"fy": "2013/14", "value": 99.78, "report": "FY2018/19 chart"},
-      {"fy": "2014/15", "value": 143.33, "report": "FY2015/16 text", "alternate": {"value": 142.88, "report": "FY2018/19 chart"}},
+      {"fy": "2013/14", "value": 99.77, "report": "FY2014/15 text", "alternate": {"value": 99.78, "report": "FY2018/19 chart (rounding)"}},
+      {"fy": "2014/15", "value": 143.33, "report": "FY2014/15 text and FY2015/16 text", "alternate": {"value": 142.88, "report": "FY2018/19 chart"}},
       {"fy": "2015/16", "value": 127.93, "report": "FY2016/17 text", "alternate": {"value": 113.26, "report": "FY2018/19 chart"}},
       {"fy": "2016/17", "value": 172.84, "report": "FY2016/17 table and FY2018/19 chart"},
       {"fy": "2017/18", "value": 139.34, "report": "FY2017/18 text"},

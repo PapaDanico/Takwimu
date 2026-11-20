@@ -13,7 +13,7 @@ Running log. Newest first. Each entry: what was found, how, status.
 | FY 2015/16 report is a scan with no text layer | pdftotext returned nothing | Read pages 273 to 281 with RapidOCR; confidence 3 |
 | Validator extended: budget and spending parts add up, absorption recomputed, ten-year revenue series, audit opinions have links, sub-county 2009 population adds to the county census | Added | Passing |
 | Accessibility: 0 violations on all nine pages in light and dark. No overflow at 360 or 1280 px. Internal links and anchors resolve | axe-core, Playwright | Passing |
-| Open: FY 2019/20 county report (host returned 403), FY 2013/14 and 2014/15 reports, audit opinions before FY 2020/21 (Auditor-General site under maintenance), FY 2025/26 report, KNBS pages unreachable | Download attempts | Listed in Method and Data pages |
+| Open: FY 2019/20 county report (host returned 403), FY 2013/14 report, audit opinions before FY 2020/21 (Auditor-General site under maintenance), FY 2025/26 report, KNBS pages unreachable | Download attempts | Listed in Method and Data pages |
 
 ## 20 Nov 2026, sweep 10 (redesign)
 | Finding | How found | Status |

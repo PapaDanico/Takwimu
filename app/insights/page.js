@@ -16,7 +16,7 @@ const bn = (v) => v.toFixed(2);
 const m = (v) => Math.round(v).toLocaleString('en-US');
 
 const withSpend = years.filter((y) => y.spent !== undefined);
-const first = withSpend[0];
+const first = withSpend.find((y) => y.fy === '2014/15');
 const last = withSpend[withSpend.length - 1];
 const realFirst = first.spent * deflator(first.fy);
 const realGrowth = ((last.spent / realFirst) - 1) * 100;
@@ -26,7 +26,7 @@ const dev = years.filter((y) => y.development_absorption_pct !== undefined);
 const devMax = dev.reduce((a, b) => (b.development_absorption_pct > a.development_absorption_pct ? b : a));
 const devMin = dev.reduce((a, b) => (b.development_absorption_pct < a.development_absorption_pct ? b : a));
 
-const pend = years.map((y) => ({ fy: y.fy, v: y.pending_total_m ?? (y.pending_development_m !== undefined ? y.pending_development_m + y.pending_recurrent_m : undefined) })).filter((p) => p.v !== undefined);
+const pend = years.map((y) => ({ fy: y.fy, v: y.pending_total_m ?? (y.pending_development_m !== undefined && y.pending_recurrent_m !== undefined ? y.pending_development_m + y.pending_recurrent_m : undefined) })).filter((p) => p.v !== undefined);
 const pendFirst = pend[0];
 const pendLast = pend[pend.length - 1];
 

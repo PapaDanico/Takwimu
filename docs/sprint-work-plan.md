@@ -50,5 +50,5 @@ All deliverables accepted, quality gates green, site deployed, and a short hando
 ## Ten-year requirement (added 20 Nov 2026)
 All series must go back at least ten years (FY 2014/15 to FY 2024/25) or say why not.
 - Done: budget, spending, absorption, own-source revenue (FY 2013/14 to 2024/25), pending bills, audit opinions FY 2020/21 to 2023/24, population 2009 to 2022 including sub-counties, health surveys 2014 and 2022, poverty 2005/06 and 2015/16, price index for real-terms views.
-- Open gaps (listed on the Method and Data pages): FY 2019/20 county report, FY 2013/14 and 2014/15 reports, audit opinions FY 2014/15 to 2019/20, FY 2025/26 report, later county poverty estimate.
+- Open gaps (listed on the Method and Data pages): FY 2019/20 county report, FY 2013/14 approved budget and pending bills, audit opinions FY 2014/15 to 2019/20, FY 2025/26 report, later county poverty estimate.
 - Pages built: Insights, Sub-counties, County profile, Learn, FAQ, Data, Method, Corrections.
