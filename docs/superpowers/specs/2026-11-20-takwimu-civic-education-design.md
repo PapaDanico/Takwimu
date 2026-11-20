@@ -53,7 +53,7 @@ Success: a Siaya resident on a mid-range phone can find how their county's money
 
 **Data model:** every metric is a series of `{period, value, unit, basis: nominal|real}` with `source_id`, `published`, `retrieved`, `doc_url`, `confidence` and optional `notes`. Disputed values are stored as multiple observations for one period, each with its own source.
 
-**Pipeline:** scheduled GitHub Action runs fetchers, parses new reports, validates (schema, unit sanity, period continuity, year-on-year jump flags), and opens a PR with a data diff. Merge triggers build and Cloudflare Pages deploy. Parser failures open an issue instead of publishing.
+**Pipeline:** scheduled GitHub Action runs fetchers, parses new reports, validates (schema, unit sanity, period continuity, year-on-year jump flags), and opens a PR with a data diff. Merge triggers the Netlify build and deploy. Parser failures open an issue instead of publishing.
 
 **Pages:** Home (headline trends and "what changed"); National trends; County explorer (default Siaya); Explainers and glossary; Claim check (the old Truth Gap, demoted, restricted to checkable claims with cited documents); Methodology and corrections.
 
@@ -69,6 +69,9 @@ What was actually read, and what was not.
 - **OpenSpending / Open Budget Survey explorer** (Open Knowledge Foundation, International Budget Partnership): search-result summaries only. Lessons: treemaps make allocations legible; a tabular data model that accepts CSV or Excel is a workable ingest format.
 - **Kenya context:** Open Budget Survey 2023 scores Kenya 55/100 on transparency, 31 on public participation and 57 on oversight. The Open Government Partnership notes budget data is published but hard to extract. A KNBS SDMX open-data portal is reported but unconfirmed; check its API documentation in Phase 1. No Controller of Budget API found.
 - **Gap to fill:** read USAFacts explainer pages, Our World in Data chart pages and Vulekamali department pages directly before final visual design.
+
+## Workflow design (see docs/research/2026-11-20-workflows-research.md)
+Source-watch (raw files stored and hashed), parse with confidence scores, schema-validate, open PR with a review aid, Netlify deploy preview, quality gates (type-check, schema, link check, Lighthouse budget, accessibility), and a freshness check that opens an issue when an expected release is overdue.
 
 ## Phases
 0. Repair repo: restore layout, fix build, config and security upgrade, CI (build, lint, type-check, data validation), Netlify deploy via `netlify.toml` and deploy previews.
