@@ -276,9 +276,9 @@ export default function Home() {
           <h2 className="question">What do these budget terms mean?</h2>
         </div>
         <div className="cols">
-          <div className="card"><span className="tag ok">Explainer</span><h3>Own-source revenue</h3><p>Money a county raises itself from fees, levies and licences, separate from what it receives from the national government.</p></div>
-          <div className="card"><span className="tag ok">Explainer</span><h3>Pending bills</h3><p>Money a county owes suppliers for work already done. Growing pending bills can signal spending beyond what is collected.</p></div>
-          <div className="card"><span className="tag ok">Explainer</span><h3>Audit opinion</h3><p>The Auditor-General&apos;s verdict on whether accounts are reliable. Read the basis for the opinion, not only its label.</p></div>
+          <div className="card"><span className="tag ok">Draft explainer</span><h3>Own-source revenue</h3><p>Money a county raises itself from fees, levies and licences, separate from what it receives from the national government.</p></div>
+          <div className="card"><span className="tag ok">Draft explainer</span><h3>Pending bills</h3><p>Money a county owes suppliers for work already done. Growing pending bills can signal spending beyond what is collected.</p></div>
+          <div className="card"><span className="tag ok">Draft explainer</span><h3>Audit opinion</h3><p>The Auditor-General&apos;s verdict on whether accounts are reliable. Read the basis for the opinion, not only its label.</p></div>
         </div>
       </section>
 
