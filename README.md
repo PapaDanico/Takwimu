@@ -2,7 +2,7 @@
 
 Civic education for Kenyan public finance and statistics, focused on trends. It starts with Siaya County and shows every figure with its source, retrieval date and confidence score. Disputed figures are shown side by side.
 
-Design and plan: `docs/superpowers/specs/2026-11-20-takwimu-civic-education-design.md`. Workflow research: `docs/research/2026-11-20-workflows-research.md`. Visual concept: `docs/design/takwimu-concept.html`.
+Development plan: `docs/development-plan.md`. Design: `docs/superpowers/specs/2026-11-20-takwimu-civic-education-design.md`. Workflow research: `docs/research/2026-11-20-workflows-research.md`. Visual concept: `docs/design/takwimu-concept.html`.
 
 ## Stack
 
