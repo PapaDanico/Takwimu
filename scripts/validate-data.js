@@ -59,6 +59,8 @@ else {
   });
   const sp = budget.stalled_projects;
   if (sp && (!(sp.count > 0) || !(sp.estimated_value_million > 0) || sp.paid_million > sp.estimated_value_million)) fail('siaya budget: stalled_projects needs count, value, and paid not above value');
+  const budgetSum = (budget.categories || []).reduce((sum, c) => sum + c.budget, 0);
+  if (Math.abs(budgetSum - budget.approved_total) > 0.02) fail(`siaya budget: category budgets ${budgetSum.toFixed(2)} do not sum to approved_total ${budget.approved_total}`);
   const spentSum = (budget.categories || []).reduce((s, c) => s + c.spent, 0);
   if (Math.abs(spentSum - budget.total_spent) > 0.05) fail(`siaya budget: category spending ${spentSum.toFixed(2)} does not sum to total_spent ${budget.total_spent}`);
 }

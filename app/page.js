@@ -201,7 +201,7 @@ export default function Home() {
           <p className="units">KSh billion. The pale bar is the approved budget. The solid bar is what was spent.</p>
           <svg viewBox="0 0 640 150" role="img" aria-label={siaya.budget.categories.map((c) => `${c.label}: spent ${c.spent} of ${c.budget} billion shillings, ${c.absorption_pct} per cent`).join('. ')}>
             {siaya.budget.categories.map((c, i) => {
-              const scale = WIDTH / 6.02;
+              const scale = WIDTH / Math.max(...siaya.budget.categories.map((x) => x.budget));
               const y = 20 + i * 60;
               const tw = c.budget * scale;
               const sw = c.spent * scale;
@@ -220,7 +220,7 @@ export default function Home() {
             <summary>View as table</summary>
             <div className="tablewrap">
               <table className="data">
-                <thead><tr><th>Item</th><th>Budget</th><th>Spent</th><th>Share spent</th></tr></thead>
+                <thead><tr><th>Item</th><th>Budget</th><th>Spent</th><th>Share spent (as stated)</th></tr></thead>
                 <tbody>
                   {siaya.budget.categories.map((c) => (
                     <tr key={c.label}><td>{c.label}</td><td className="mono">{c.budget}</td><td className="mono">{c.spent}</td><td className="mono">{c.absorption_pct}%</td></tr>

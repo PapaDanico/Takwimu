@@ -10,14 +10,15 @@ Done and verified locally (build, data validation, type check, layout checks at 
 
 Not done: national trends (no verified series), other counties, explainer pages, deployment, CI passing on GitHub, manual accessibility test.
 
-## Owner-only actions (blockers outside the code)
-| # | Action | Why |
-|---|---|---|
-| 1 | Disconnect the Vercel and Cloudflare Workers GitHub integrations | They fail on every commit and cannot be removed from the repo |
-| 2 | Open the failing `CI` run page and read the failing step | The job fails in seconds with no logs available to the assistant; same steps pass locally |
-| 3 | Connect the repo to Netlify and set the domain | `netlify.toml` is ready; nothing is deployed |
-| 4 | Check the Siaya figures against the printed Controller of Budget tables (section 3.38) | Figures were read from scanned text; confidence 4 of 5 |
-| 5 | Name a legal reviewer and an explainer reviewer | Needed before any claim about a named person or any "reviewed" label |
+## Status of blockers
+| Item | Status |
+|---|---|
+| Live site | Done: https://takwimu.netlify.app (Netlify site "takwimu"). Redeploys are run from the assistant session through the Netlify connector; there is no automatic deploy on push because linking a GitHub repo to Netlify needs a browser sign-in |
+| Vercel failing on every commit | Preview deployments switched off for the "takwimu" Vercel project |
+| Cloudflare Workers Builds failing | Not reachable from the available connectors. It fails on the old Cloudflare configuration, which is removed from the repo |
+| GitHub Actions `CI` job | Fails in about 3 seconds with no runner assigned, also on the first commit in the repo. Cause is account level. Local equivalents (validate, type check, build, layout and accessibility checks) pass |
+| Scanned figures checked | Done with a second OCR engine on rendered pages; one error found and fixed (recurrent budget) |
+| Reviewers for legal and explainer text | Policy set: claims about named people stay held back; explainers are factual definitions and are marked as unreviewed drafts until someone reviews them |
 
 ## Phases
 Each phase ends with: validate, type check, build, layout and axe checks passing, bug log updated.

@@ -111,7 +111,7 @@
     "retrieved": "2026-11-20",
     "confidence": 4,
     "status": "primary-document",
-    "note": "Figures read from the OCR text of the PDF and checked against each other (2.76 of 4.87 is 57 per cent; 4.99 of 6.02 is 83 per cent). Check exact values in the printed tables.",
+    "note": "Figures read from the scanned PDF with two OCR engines. They agree except the recurrent budget: the first read 6.02, the second read 6.07. 6.07 is used because 4.87 plus 6.07 equals the approved total of 10.94. The report states that recurrent spending was 83 per cent of the annual recurrent budget; 4.99 of 6.07 is 82.2 per cent, so the report may use a revised budget. The shares shown are the report's own statements. Check exact values in the printed tables.",
     "approved_total": 10.94,
     "categories": [
       {
@@ -122,7 +122,7 @@
       },
       {
         "label": "Recurrent",
-        "budget": 6.02,
+        "budget": 6.07,
         "spent": 4.99,
         "absorption_pct": 83
       }

@@ -2,6 +2,15 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 20 Nov 2026, sweep 9
+| Finding | How found | Status |
+|---|---|---|
+| Recurrent budget was entered as KSh 6.02 billion from one OCR engine. A second engine (RapidOCR on 200 dpi page renders) reads 6.07, and 4.87 + 6.07 = 10.94, the approved total | Independent re-read of pages 474, 476, 478 and 483 of the Controller of Budget FY 2024/25 PDF | Fixed: 6.07 used. The validator now requires category budgets to sum to the approved total. All other key figures (10.94, 4.87, 436.68, 427.95, 47 per cent, 290, 199, 236, 7.75, 2.76, 4.99, 57 and 83 per cent, 1.12, 577.7, 24.28, 3.07) were confirmed by both engines |
+| The report states 83 per cent recurrent absorption, but 4.99 of 6.07 is 82.2 per cent | Arithmetic | Noted on the page: the shares are the report's own statements and may use a revised budget |
+| Vercel project "takwimu" linked to this repo kept failing ("Account is blocked") | Vercel connector | Preview deployments switched off for that project |
+| No live site | Netlify connector | Netlify site "takwimu" created and deployed: https://takwimu.netlify.app (checked: pages, headers, data files, unverified files return 404) |
+| GitHub Actions job gets no runner (runner id 0, no steps, 3 second failure), also on the very first commit | GitHub API job record | Cause is account level (billing or Actions settings); cannot be changed from the repo or this environment |
+
 ## 20 Nov 2026, sweep 8
 | Finding | How found | Status |
 |---|---|---|
