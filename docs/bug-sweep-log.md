@@ -2,6 +2,13 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 20 Nov 2026, sweep 8
+| Finding | How found | Status |
+|---|---|---|
+| FY 2023/24 conflict: 610.74 million appears in the FY 2023/24 report and, per search summaries, in the county's plan and a Dawan Africa article, with the target of 760 million giving 80.4 per cent. 427.95 million appears only in the FY 2024/25 report (and a Nation article repeating it) | Web search plus reading both reports | Recorded in `data/siaya.json` as corroboration; 610.74 stays the plotted value, 427.95 shown as the alternate. Neither corroborating source was read directly |
+| County plan PDF link on siayaassembly.go.ke returns a not-found page | curl | Open |
+| The national county tables in both reports are not searchable for Siaya (names garbled in OCR) | grep | Open: needs a manual read |
+
 ## 20 Nov 2026, sweep 7
 | Finding | How found | Status |
 |---|---|---|
