@@ -105,7 +105,7 @@ export default function Home() {
           <div className="src">
             Sources: <a href={primary.source_url}>{primary.source}</a>; <a href={county.source_url}>{county.source}</a>. <span className="updated">Retrieved {primary.retrieved}.</span>
             <br />
-            Notes: the solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh 199 million from health facilities). It is up 2 per cent on KSh {fmt(osr.previous_year.value)} million in FY 2023/24 and is {osr.share_of_annual_target_pct} per cent of the annual target, which implies a target of about KSh 929 million. The budget financing counted about KSh {osr.target.value.toLocaleString('en-US')} million of own-source revenue, and the report does not explain the difference. The hatched bar is unverified, and it is close to the implied target, which may explain it but is not established. The figures are not averaged.
+            Notes: the solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh 199 million from health facilities). The report calls this 2 per cent more than KSh {fmt(osr.previous_year.value)} million in FY 2023/24, but the previous year&apos;s report gave KSh 610.74 million for that year (see Exhibit 2). It is {osr.share_of_annual_target_pct} per cent of the annual target, which implies a target of about KSh 929 million. The budget financing counted about KSh {osr.target.value.toLocaleString('en-US')} million of own-source revenue, and the report does not explain the difference. The hatched bar is unverified, and it is close to the implied target, which may explain it but is not established. The figures are not averaged.
           </div>
         </figure>
         <div className="takeaway"><b>What to take from this:</b> a gap like this usually means the two figures count different things, such as cash collected against revenue billed, or different reporting dates. Check the definition before the number.</div>
@@ -124,18 +124,18 @@ export default function Home() {
         <figure className="exhibit" style={{ margin: 0 }}>
           <div className="cap">
             <strong>Siaya own-source revenue, FY 2021/22 to FY 2024/25</strong>
-            <span className="tag warn">Definitions differ</span>
+            <span className="tag warn">Reports disagree</span>
           </div>
           <p className="units">Nominal KSh million, not adjusted for inflation.</p>
-          <svg viewBox="0 0 640 215" role="img" aria-label={`Line chart of Siaya own-source revenue in million shillings: ${osr.trend.points.map((p) => `${p.fiscal_year} ${p.value}`).join(', ')}`}>
+          <svg viewBox="0 0 640 230" role="img" aria-label={`Line chart of Siaya own-source revenue in million shillings: ${osr.trend.points.map((p) => `${p.fiscal_year} ${p.value}${p.alternate ? ` (a later report gives ${p.alternate.value})` : ''}`).join(', ')}`}>
             {[0, 200, 400, 600].map((t) => (
               <g key={t}>
-                <line x1="80" x2="600" y1={170 - t * 0.25} y2={170 - t * 0.25} stroke="var(--rule)" strokeWidth="1" />
-                <text x="72" y={174 - t * 0.25} textAnchor="end">{t}</text>
+                <line x1="80" x2="600" y1={185 - t * 0.25} y2={185 - t * 0.25} stroke="var(--rule)" strokeWidth="1" />
+                <text x="72" y={189 - t * 0.25} textAnchor="end">{t}</text>
               </g>
             ))}
             {(() => {
-              const pts = osr.trend.points.map((p, i) => ({ ...p, x: 120 + i * 140, y: 170 - p.value * 0.25 }));
+              const pts = osr.trend.points.map((p, i) => ({ ...p, x: 120 + i * 140, y: 185 - p.value * 0.25 }));
               const max = Math.max(...pts.map((p) => p.value));
               const last = pts.length - 1;
               return (
@@ -145,9 +145,16 @@ export default function Home() {
                     <g key={p.fiscal_year} tabIndex="0" className="bar">
                       <title>{`FY ${p.fiscal_year}: KSh ${p.value} million. Confidence ${p.confidence}/5.`}</title>
                       <circle cx={p.x} cy={p.y} r="12" fill="transparent" />
+                      {p.alternate && (
+                        <g>
+                          <line x1={p.x} x2={p.x} y1={p.y} y2={185 - p.alternate.value * 0.25} stroke="var(--chart)" strokeWidth="1" strokeDasharray="3 3" />
+                          <circle cx={p.x} cy={185 - p.alternate.value * 0.25} r="4" fill="var(--surface)" stroke="var(--chart)" strokeWidth="2" />
+                          <text x={p.x + 12} y={185 - p.alternate.value * 0.25 + 4}>{fmt(p.alternate.value)} in next report</text>
+                        </g>
+                      )}
                       <circle cx={p.x} cy={p.y} r="4" fill="var(--chart)" stroke="var(--surface)" strokeWidth="2" />
                       {(p.value === max || i === last) && <text className="lab" x={p.x} y={p.y - 12} textAnchor="middle">{fmt(p.value)}</text>}
-                      <text x={p.x} y="196" textAnchor="middle">{p.fiscal_year}</text>
+                      <text x={p.x} y="212" textAnchor="middle">{p.fiscal_year}</text>
                     </g>
                   ))}
                 </g>
@@ -163,9 +170,9 @@ export default function Home() {
                   {osr.trend.points.map((p) => (
                     <tr key={p.fiscal_year}>
                       <td className="mono">{p.fiscal_year}</td>
-                      <td className="mono">{fmt(p.value)}</td>
+                      <td className="mono">{fmt(p.value)}{p.alternate ? ` (and ${fmt(p.alternate.value)} in the next report)` : ''}</td>
                       <td className="mono">{p.confidence}/5</td>
-                      <td>{p.note}</td>
+                      <td>{p.note}{p.alternate ? ` ${p.alternate.note}` : ''}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -178,7 +185,7 @@ export default function Home() {
             Notes: {osr.trend.caveat}
           </div>
         </figure>
-        <div className="takeaway"><b>What to take from this:</b> the line is nearly flat across four years, between KSh 428 million and KSh 508 million, while the county budget is about KSh 11 billion. The FY 2022/23 peak includes appropriations-in-aid, so part of the later fall may be a change in what is counted, not in collections.</div>
+        <div className="takeaway"><b>What to take from this:</b> two Controller of Budget reports give different figures for the same year, FY 2023/24 (KSh 610.74 million and KSh 427.95 million). Whether Siaya&apos;s own revenue fell sharply in FY 2024/25 or rose 2 per cent depends on which figure is right. In the reports&apos; own breakdowns, health facility financing fell from KSh 388.53 million to KSh 199 million, while ordinary own-source revenue rose from KSh 222.10 million to KSh 236 million. Check which figures a report is comparing before drawing a trend.</div>
       </section>
 
       <section id="spending">

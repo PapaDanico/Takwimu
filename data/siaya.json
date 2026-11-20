@@ -1,7 +1,14 @@
 {
   "county": "Siaya",
   "code": 41,
-  "sub_counties": ["Alego Usonga", "Bondo", "Gem", "Rarieda", "Ugenya", "Ugunja"],
+  "sub_counties": [
+    "Alego Usonga",
+    "Bondo",
+    "Gem",
+    "Rarieda",
+    "Ugenya",
+    "Ugunja"
+  ],
   "own_source_revenue": {
     "fiscal_year": "2024/25",
     "unit": "KSh million",
@@ -13,7 +20,7 @@
         "retrieved": "2026-11-20",
         "confidence": 5,
         "status": "primary-document",
-        "note": "The report states: the county generated KSh 436.68 million from its revenue sources, including health facility financing (FIF). That was 2 per cent more than KSh 427.95 million in FY 2023/24 and 47 per cent of the annual target. Press reports give the same figure. The report also says the own-source revenue included KSh 290 million of arrears; how that splits the total is not clear from the text."
+        "note": "The report states: the county generated KSh 436.68 million from its revenue sources, including health facility financing (FIF), and that this was 47 per cent of the annual target. It says this is 2 per cent more than KSh 427.95 million in FY 2023/24, but the FY 2023/24 report gave KSh 610.74 million for that year (see the trend). Press reports give the same 436.68 figure. The report also says the own-source revenue included KSh 290 million of arrears; how that splits the total is not clear from the text."
       },
       {
         "value": 946,
@@ -32,11 +39,12 @@
       "source_url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
       "retrieved": "2026-11-20",
       "confidence": 4,
-      "status": "primary-document"
+      "status": "primary-document",
+      "note": "This comparator conflicts with the FY 2023/24 report, which gave KSh 610.74 million for FY 2023/24."
     },
     "trend": {
       "unit": "KSh million",
-      "caveat": "Each year comes from a different Controller of Budget report, and the reports count revenue slightly differently. FY 2022/23 is a total of own-source revenue (KSh 402.23 million) and appropriations-in-aid (KSh 105.81 million). FY 2023/24 and FY 2024/25 include health facility financing. Compare years with care.",
+      "caveat": "Each year comes from a Controller of Budget report, and the reports count revenue differently and do not always agree. The FY 2023/24 report gives KSh 610.74 million for FY 2023/24, but the FY 2024/25 report gives KSh 427.95 million for the same year. FY 2022/23 is own-source revenue (KSh 402.23 million) plus appropriations-in-aid (KSh 105.81 million). Compare years with care.",
       "points": [
         {
           "fiscal_year": "2021/22",
@@ -52,16 +60,25 @@
           "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2022/23, section on Siaya",
           "source_url": "https://libraryir.parliament.go.ke/items/e32e1bc2-b0b4-4af1-9d21-b27ab6fc5e34",
           "confidence": 4,
-          "components": [402.23, 105.81],
+          "components": [
+            402.23,
+            105.81
+          ],
           "note": "Own-source revenue KSh 402.23 million plus appropriations-in-aid KSh 105.81 million. The report says this was 17 per cent more than FY 2021/22."
         },
         {
           "fiscal_year": "2023/24",
-          "value": 427.95,
-          "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2024/25, section 3.38 (Siaya)",
-          "source_url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
+          "value": 610.74,
+          "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2023/24, section 3.38 (Siaya)",
+          "source_url": "https://libraryir.parliament.go.ke/items/96c1bec0-1702-40ff-96b0-f5fbfc26e684",
           "confidence": 4,
-          "note": "Quoted in the FY 2024/25 report as the previous year's figure."
+          "note": "As stated in its own year's report: the county generated KSh 610.74 million including health facility financing (FIF). Parts given: health FIF KSh 388.53 million and ordinary own-source revenue KSh 222.10 million, which add to 610.63 million. The report does not explain the 0.11 million difference.",
+          "alternate": {
+            "value": 427.95,
+            "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2024/25, section 3.38 (Siaya)",
+            "source_url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
+            "note": "The next year's report quotes KSh 427.95 million for FY 2023/24 and calls FY 2024/25 an increase of 2 per cent on it. Neither report explains the difference of about KSh 183 million."
+          }
         },
         {
           "fiscal_year": "2024/25",
@@ -96,8 +113,18 @@
     "note": "Figures read from the OCR text of the PDF and checked against each other (2.76 of 4.87 is 57 per cent; 4.99 of 6.02 is 83 per cent). Check exact values in the printed tables.",
     "approved_total": 10.94,
     "categories": [
-      { "label": "Development", "budget": 4.87, "spent": 2.76, "absorption_pct": 57 },
-      { "label": "Recurrent", "budget": 6.02, "spent": 4.99, "absorption_pct": 83 }
+      {
+        "label": "Development",
+        "budget": 4.87,
+        "spent": 2.76,
+        "absorption_pct": 57
+      },
+      {
+        "label": "Recurrent",
+        "budget": 6.02,
+        "spent": 4.99,
+        "absorption_pct": 83
+      }
     ],
     "total_spent": 7.75,
     "pending_bills": {

@@ -2,6 +2,15 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 20 Nov 2026, sweep 7
+| Finding | How found | Status |
+|---|---|---|
+| The published trend takeaway ("nearly flat, KSh 428 to 508 million") was wrong. The FY 2023/24 Controller of Budget report gives KSh 610.74 million for FY 2023/24, while the FY 2024/25 report quotes KSh 427.95 million for the same year | Downloaded and read the FY 2023/24 report, Siaya section | Fixed: the chart now shows both values for FY 2023/24 (solid and hollow markers), the tag reads "Reports disagree", and the takeaway describes the conflict instead of a trend |
+| FY 2024/25 exhibit note said revenue was "up 2 per cent" without the conflict | Same | Fixed: note now says the report calls it up 2 per cent on 427.95, but the previous report gave 610.74 |
+| In the reports' own breakdowns, health facility financing fell from KSh 388.53 million (FY 2023/24 report) to KSh 199 million (FY 2024/25 report); ordinary own-source revenue rose from KSh 222.10 million to KSh 236 million | Same | Added to the takeaway as reported facts |
+| Escaped apostrophes rendered as backslashes in JSX text | Source review after a scripted edit | Fixed |
+| FY 2023/24 parts add to 610.63 million against a stated 610.74 million | Arithmetic | Noted on the page; the report does not explain it |
+
 ## 20 Nov 2026, sweep 6
 | Finding | How found | Status |
 |---|---|---|
