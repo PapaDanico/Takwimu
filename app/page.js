@@ -5,7 +5,7 @@ const WIDTH = 440;
 const MAX = 1000;
 const BAR_H = 24;
 const xFor = (v) => X0 + (v / MAX) * WIDTH;
-const fmt = (v) => (Number.isInteger(v) ? String(v) : v.toFixed(1));
+const fmt = (v) => String(Number(v.toFixed(2)));
 
 // Bar with a 4px rounded data end and a square baseline edge.
 const barPath = (x, y, w, h) =>
@@ -32,7 +32,7 @@ export default function Home() {
         <div className="keyfacts mono" role="group" aria-label="Key facts">
           <div><span>Controller of Budget</span><span>KSh {fmt(primary.value)}M</span></div>
           <div><span>County statement</span><span>KSh {fmt(county.value)}M</span></div>
-          <div><span>Budgeted target</span><span>KSh {osr.target.value.toLocaleString('en-US')}M</span></div>
+          <div><span>Share of annual target</span><span>{osr.share_of_annual_target_pct}%</span></div>
           <div><span>Ratio, county to CoB</span><span>{ratio}×</span></div>
           <div><span>County figure</span><span className="tag warn">Unverified</span></div>
         </div>
@@ -92,7 +92,7 @@ export default function Home() {
                     </tr>
                   ))}
                   <tr>
-                    <td><a href={osr.target.source_url}>Budgeted target (Controller of Budget)</a>: {osr.target.description}</td>
+                    <td><a href={osr.target.source_url}>Own-source revenue in budget financing (Controller of Budget)</a>: {osr.target.description}</td>
                     <td className="mono">{osr.target.value.toLocaleString('en-US')}</td>
                     <td>{osr.target.status}</td>
                     <td className="mono">{osr.target.confidence}/5</td>
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="src">
             Sources: <a href={primary.source_url}>{primary.source}</a>; <a href={county.source_url}>{county.source}</a>. <span className="updated">Retrieved {primary.retrieved}.</span>
             <br />
-            Notes: the solid bar is read from the Controller of Budget&apos;s own report (KSh {fmt(primary.value)} million: KSh 199 million from health facilities and KSh 236 million from other sources). The hatched bar is unverified. Siaya&apos;s budgeted target was about KSh {osr.target.value.toLocaleString('en-US')} million, including KSh 400 million spent at source. The report states a 47 per cent performance, which does not match 436 of 1,043, so the target is measured in a way we have not yet resolved. The figures are not averaged.
+            Notes: the solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh 199 million from health facilities). It is up 2 per cent on KSh {fmt(osr.previous_year.value)} million in FY 2023/24 and is {osr.share_of_annual_target_pct} per cent of the annual target, which implies a target of about KSh 929 million. The budget financing counted about KSh {osr.target.value.toLocaleString('en-US')} million of own-source revenue, and the report does not explain the difference. The hatched bar is unverified, and it is close to the implied target, which may explain it but is not established. The figures are not averaged.
           </div>
         </figure>
         <div className="takeaway"><b>What to take from this:</b> a gap like this usually means the two figures count different things, such as cash collected against revenue billed, or different reporting dates. Check the definition before the number.</div>

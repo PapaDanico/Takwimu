@@ -2,6 +2,14 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 20 Nov 2026, sweep 5
+| Finding | How found | Status |
+|---|---|---|
+| Open question on 47 per cent versus 42 per cent | Read the revenue sentence in section 3.38: the county generated KSh 436.68 million including FIF, up 2 per cent on KSh 427.95 million in FY 2023/24, and 47 per cent of the annual target | Resolved: 47 per cent is of the annual target, which implies about KSh 929 million. The KSh 1,043 million is the own-source figure in budget financing. The report does not explain why they differ |
+| Previous page note said the solid figure was KSh 436 million (rounded) | Same reading | Fixed: exact 436.68, confidence 5 (OCR text matches press) |
+| County's KSh 946 million is close to the implied target (about KSh 929 million) | Arithmetic | Noted on the page as a possible explanation, not established |
+| Report also says OSR included KSh 290 million of arrears | Same reading | Open: how this splits the total is unclear |
+
 ## 20 Nov 2026, sweep 4
 | Finding | How found | Status |
 |---|---|---|

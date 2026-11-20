@@ -7,13 +7,13 @@
     "unit": "KSh million",
     "observations": [
       {
-        "value": 436,
+        "value": 436.68,
         "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2024/25, section 3.38 (Siaya)",
         "source_url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
         "retrieved": "2026-11-20",
-        "confidence": 4,
+        "confidence": 5,
         "status": "primary-document",
-        "note": "The report states total own-source revenue collection of KSh 436 million: KSh 199 million Facility Improvement Financing and KSh 236 million from other sources. Press reports give 436.68 million. Read from OCR text of the PDF, so check the exact figure in the printed table."
+        "note": "The report states: the county generated KSh 436.68 million from its revenue sources, including health facility financing (FIF). That was 2 per cent more than KSh 427.95 million in FY 2023/24 and 47 per cent of the annual target. Press reports give the same figure. The report also says the own-source revenue included KSh 290 million of arrears; how that splits the total is not clear from the text."
       },
       {
         "value": 946,
@@ -22,9 +22,19 @@
         "retrieved": "2026-11-20",
         "confidence": 2,
         "status": "unverified",
-        "note": "Other statements say the county raised over KSh 900 million. The county's own document has not been read, so what it counts is unknown."
+        "note": "Other statements say the county raised over KSh 900 million. The county's own document has not been read, so what it counts is unknown. The figure is close to the annual target implied by the Controller of Budget report (about KSh 929 million), which may explain it, but that is not established."
       }
     ],
+    "previous_year": {
+      "fiscal_year": "2023/24",
+      "value": 427.95,
+      "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2024/25, section 3.38 (Siaya)",
+      "source_url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
+      "retrieved": "2026-11-20",
+      "confidence": 4,
+      "status": "primary-document"
+    },
+    "share_of_annual_target_pct": 47,
     "target": {
       "value": 1043,
       "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2024/25, section 3.38 (Siaya)",
@@ -32,8 +42,8 @@
       "retrieved": "2026-11-20",
       "confidence": 4,
       "status": "primary-document",
-      "description": "Budgeted own-source revenue of about KSh 1.04 billion: KSh 643 million to be deposited into the County Revenue Fund and KSh 400 million as Appropriations-in-Aid spent at source.",
-      "note": "The report states a performance of 47 per cent for Siaya. 436 of 1,043 is 42 per cent, so the report measures the target differently. That difference is not resolved."
+      "description": "Own-source revenue counted in the approved budget financing: about KSh 1.04 billion, made up of KSh 643 million to be deposited into the County Revenue Fund and KSh 400 million as Appropriations-in-Aid spent at source.",
+      "note": "The report says Siaya collected 47 per cent of its annual target. 436.68 divided by 0.47 gives about KSh 929 million, which is lower than the KSh 1,043 million in the budget financing. The report does not explain the difference."
     }
   },
   "budget": {

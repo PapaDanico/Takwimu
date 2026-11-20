@@ -17,6 +17,14 @@ if (!osr.observations || osr.observations.length < 1) fail('siaya: no OSR observ
 });
 if (!Array.isArray(siaya.sub_counties) || siaya.sub_counties.length !== 6) fail('siaya: expected 6 sub-counties');
 
+if (osr.previous_year) {
+  ['fiscal_year', 'value', 'source', 'source_url', 'retrieved', 'confidence', 'status'].forEach((k) => {
+    if (osr.previous_year[k] === undefined || osr.previous_year[k] === '') fail(`siaya OSR previous_year: missing ${k}`);
+  });
+  const growth = ((osr.observations[0].value / osr.previous_year.value) - 1) * 100;
+  if (growth < 0 || growth > 5) fail(`siaya OSR: growth over previous year is ${growth.toFixed(1)}%, expected about 2% per the Controller of Budget report`);
+}
+if (osr.share_of_annual_target_pct !== undefined && !(osr.share_of_annual_target_pct > 0 && osr.share_of_annual_target_pct <= 100)) fail('siaya OSR: share_of_annual_target_pct must be between 0 and 100');
 if (osr.target) {
   ['value', 'description', 'source', 'source_url', 'retrieved', 'confidence', 'status'].forEach((k) => {
     if (osr.target[k] === undefined || osr.target[k] === '') fail(`siaya OSR target: missing ${k}`);

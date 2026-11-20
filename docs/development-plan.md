@@ -23,7 +23,7 @@ Not done: national trends (no verified series), other counties, explainer pages,
 Each phase ends with: validate, type check, build, layout and axe checks passing, bug log updated.
 
 ### Phase 1: Make Siaya trustworthy (now)
-1. Resolve the 47 per cent versus 42 per cent target question by reading the Controller of Budget table for Siaya revenue performance (printed page).
+1. Done: the 47 per cent is of the annual target (implied about KSh 929 million), and revenue is up 2 per cent on FY 2023/24. Still open: why the target differs from the KSh 1,043 million in budget financing, and how the KSh 290 million of arrears splits the total.
 2. Read Siaya's audit opinion for FY 2024/25 once published, and the County Assembly audit.
 3. Read the county's own revenue statement behind the KSh 946M claim; mark verified or explained.
 4. Add Siaya's five-year own-source revenue trend (the report has a chart FY 2019/20 to 2024/25) after verifying each point.
