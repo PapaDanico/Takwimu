@@ -34,6 +34,45 @@
       "confidence": 4,
       "status": "primary-document"
     },
+    "trend": {
+      "unit": "KSh million",
+      "caveat": "Each year comes from a different Controller of Budget report, and the reports count revenue slightly differently. FY 2022/23 is a total of own-source revenue (KSh 402.23 million) and appropriations-in-aid (KSh 105.81 million). FY 2023/24 and FY 2024/25 include health facility financing. Compare years with care.",
+      "points": [
+        {
+          "fiscal_year": "2021/22",
+          "value": 434.38,
+          "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2022/23, section on Siaya",
+          "source_url": "https://libraryir.parliament.go.ke/items/e32e1bc2-b0b4-4af1-9d21-b27ab6fc5e34",
+          "confidence": 3,
+          "note": "Quoted in the FY 2022/23 report as the previous year's figure. Read from OCR text."
+        },
+        {
+          "fiscal_year": "2022/23",
+          "value": 508.04,
+          "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2022/23, section on Siaya",
+          "source_url": "https://libraryir.parliament.go.ke/items/e32e1bc2-b0b4-4af1-9d21-b27ab6fc5e34",
+          "confidence": 4,
+          "components": [402.23, 105.81],
+          "note": "Own-source revenue KSh 402.23 million plus appropriations-in-aid KSh 105.81 million. The report says this was 17 per cent more than FY 2021/22."
+        },
+        {
+          "fiscal_year": "2023/24",
+          "value": 427.95,
+          "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2024/25, section 3.38 (Siaya)",
+          "source_url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
+          "confidence": 4,
+          "note": "Quoted in the FY 2024/25 report as the previous year's figure."
+        },
+        {
+          "fiscal_year": "2024/25",
+          "value": 436.68,
+          "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2024/25, section 3.38 (Siaya)",
+          "source_url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
+          "confidence": 5,
+          "note": "Includes health facility financing."
+        }
+      ]
+    },
     "share_of_annual_target_pct": 47,
     "target": {
       "value": 1043,

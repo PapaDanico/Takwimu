@@ -2,6 +2,13 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 20 Nov 2026, sweep 6
+| Finding | How found | Status |
+|---|---|---|
+| A four-year revenue line could imply a real fall from FY 2022/23 to FY 2023/24, but FY 2022/23 is a total that includes appropriations-in-aid (KSh 402.23M own-source plus KSh 105.81M) | Read the FY 2022/23 Controller of Budget report, Siaya section | Handled: the exhibit carries a "Definitions differ" tag, a caveat, and a takeaway that says part of the fall may be a change in what is counted |
+| Validator now also checks trend points: years increase, components sum to the total, last point equals the headline figure, a comparability caveat is present | Added | Done |
+| FY 2021/22 value (KSh 434.38M) read from OCR as the prior-year comparator | Read | Confidence 3 of 5; check the printed page |
+
 ## 20 Nov 2026, sweep 5
 | Finding | How found | Status |
 |---|---|---|

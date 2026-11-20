@@ -24,6 +24,21 @@ if (osr.previous_year) {
   const growth = ((osr.observations[0].value / osr.previous_year.value) - 1) * 100;
   if (growth < 0 || growth > 5) fail(`siaya OSR: growth over previous year is ${growth.toFixed(1)}%, expected about 2% per the Controller of Budget report`);
 }
+if (osr.trend) {
+  const pts = osr.trend.points || [];
+  if (pts.length < 2) fail('siaya OSR trend: needs at least 2 points');
+  if (!osr.trend.caveat) fail('siaya OSR trend: missing caveat about comparability');
+  pts.forEach((p, i) => {
+    ['fiscal_year', 'value', 'source', 'source_url', 'confidence'].forEach((k) => {
+      if (p[k] === undefined || p[k] === '') fail(`siaya OSR trend point ${i}: missing ${k}`);
+    });
+    if (!(p.value > 0)) fail(`siaya OSR trend point ${i}: value must be positive`);
+    if (p.components && Math.abs(p.components.reduce((s, v) => s + v, 0) - p.value) > 0.02) fail(`siaya OSR trend point ${i}: components do not sum to value`);
+    if (i > 0 && p.fiscal_year <= pts[i - 1].fiscal_year) fail(`siaya OSR trend point ${i}: years must increase`);
+  });
+  const last = pts[pts.length - 1];
+  if (last && last.value !== osr.observations[0].value) fail('siaya OSR trend: last point must equal the headline observation');
+}
 if (osr.share_of_annual_target_pct !== undefined && !(osr.share_of_annual_target_pct > 0 && osr.share_of_annual_target_pct <= 100)) fail('siaya OSR: share_of_annual_target_pct must be between 0 and 100');
 if (osr.target) {
   ['value', 'description', 'source', 'source_url', 'retrieved', 'confidence', 'status'].forEach((k) => {

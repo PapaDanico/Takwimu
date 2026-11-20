@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
             <Link href="/" className="brand"><b>TAKWIMU</b><span>Public finance, explained</span></Link>
             <nav aria-label="Primary">
               <Link href="/#siaya">Siaya</Link>
+              <Link href="/#trend">Trend</Link>
               <Link href="/#spending">Spending</Link>
               <Link href="/#audit">Audit</Link>
               <Link href="/#learn">Learn</Link>

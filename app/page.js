@@ -116,9 +116,74 @@ export default function Home() {
         </ol>
       </section>
 
-      <section id="spending">
+      <section id="trend">
         <div className="head">
           <div className="eyebrow">Exhibit 2</div>
+          <h2 className="question">Is Siaya collecting more of its own revenue over time?</h2>
+        </div>
+        <figure className="exhibit" style={{ margin: 0 }}>
+          <div className="cap">
+            <strong>Siaya own-source revenue, FY 2021/22 to FY 2024/25</strong>
+            <span className="tag warn">Definitions differ</span>
+          </div>
+          <p className="units">Nominal KSh million, not adjusted for inflation.</p>
+          <svg viewBox="0 0 640 215" role="img" aria-label={`Line chart of Siaya own-source revenue in million shillings: ${osr.trend.points.map((p) => `${p.fiscal_year} ${p.value}`).join(', ')}`}>
+            {[0, 200, 400, 600].map((t) => (
+              <g key={t}>
+                <line x1="80" x2="600" y1={170 - t * 0.25} y2={170 - t * 0.25} stroke="var(--rule)" strokeWidth="1" />
+                <text x="72" y={174 - t * 0.25} textAnchor="end">{t}</text>
+              </g>
+            ))}
+            {(() => {
+              const pts = osr.trend.points.map((p, i) => ({ ...p, x: 120 + i * 140, y: 170 - p.value * 0.25 }));
+              const max = Math.max(...pts.map((p) => p.value));
+              const last = pts.length - 1;
+              return (
+                <g>
+                  <polyline points={pts.map((p) => `${p.x},${p.y}`).join(' ')} fill="none" stroke="var(--chart)" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+                  {pts.map((p, i) => (
+                    <g key={p.fiscal_year} tabIndex="0" className="bar">
+                      <title>{`FY ${p.fiscal_year}: KSh ${p.value} million. Confidence ${p.confidence}/5.`}</title>
+                      <circle cx={p.x} cy={p.y} r="12" fill="transparent" />
+                      <circle cx={p.x} cy={p.y} r="4" fill="var(--chart)" stroke="var(--surface)" strokeWidth="2" />
+                      {(p.value === max || i === last) && <text className="lab" x={p.x} y={p.y - 12} textAnchor="middle">{fmt(p.value)}</text>}
+                      <text x={p.x} y="196" textAnchor="middle">{p.fiscal_year}</text>
+                    </g>
+                  ))}
+                </g>
+              );
+            })()}
+          </svg>
+          <details className="tableview">
+            <summary>View as table</summary>
+            <div className="tablewrap">
+              <table className="data">
+                <thead><tr><th>Fiscal year</th><th>KSh million</th><th>Confidence</th><th>What it includes</th></tr></thead>
+                <tbody>
+                  {osr.trend.points.map((p) => (
+                    <tr key={p.fiscal_year}>
+                      <td className="mono">{p.fiscal_year}</td>
+                      <td className="mono">{fmt(p.value)}</td>
+                      <td className="mono">{p.confidence}/5</td>
+                      <td>{p.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div className="src">
+            Sources: Controller of Budget county reports for <a href={osr.trend.points[1].source_url}>FY 2022/23</a> and <a href={osr.trend.points[3].source_url}>FY 2024/25</a>. <span className="updated">Retrieved {primary.retrieved}.</span>
+            <br />
+            Notes: {osr.trend.caveat}
+          </div>
+        </figure>
+        <div className="takeaway"><b>What to take from this:</b> the line is nearly flat across four years, between KSh 428 million and KSh 508 million, while the county budget is about KSh 11 billion. The FY 2022/23 peak includes appropriations-in-aid, so part of the later fall may be a change in what is counted, not in collections.</div>
+      </section>
+
+      <section id="spending">
+        <div className="head">
+          <div className="eyebrow">Exhibit 3</div>
           <h2 className="question">How much of its budget did Siaya actually spend?</h2>
         </div>
         <figure className="exhibit" style={{ margin: 0 }}>
@@ -169,7 +234,7 @@ export default function Home() {
 
       <section id="audit">
         <div className="head">
-          <div className="eyebrow">Exhibit 3</div>
+          <div className="eyebrow">Exhibit 4</div>
           <h2 className="question">What did the Auditor-General say about Siaya&apos;s accounts?</h2>
         </div>
         <div className="exhibit">
