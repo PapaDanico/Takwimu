@@ -34,6 +34,8 @@ else {
     const pct = Math.round((c.spent / c.budget) * 100);
     if (Math.abs(pct - c.absorption_pct) > 1) fail(`siaya budget category ${i}: absorption_pct ${c.absorption_pct} does not match spent/budget (${pct})`);
   });
+  const sp = budget.stalled_projects;
+  if (sp && (!(sp.count > 0) || !(sp.estimated_value_million > 0) || sp.paid_million > sp.estimated_value_million)) fail('siaya budget: stalled_projects needs count, value, and paid not above value');
   const spentSum = (budget.categories || []).reduce((s, c) => s + c.spent, 0);
   if (Math.abs(spentSum - budget.total_spent) > 0.05) fail(`siaya budget: category spending ${spentSum.toFixed(2)} does not sum to total_spent ${budget.total_spent}`);
 }

@@ -56,7 +56,13 @@
       "settled_in_year_million": 577.7,
       "note": "The county reported KSh 1.12 billion pending at 30 June 2024 and settled KSh 577.7 million during FY 2024/25. The closing balance at 30 June 2025 could not be read reliably from the OCR text and is not shown."
     },
-    "revenue_arrears_30_jun_2025_million": 290
+    "revenue_arrears_30_jun_2025_million": 290,
+    "stalled_projects": {
+      "count": 9,
+      "estimated_value_million": 24.28,
+      "paid_million": 3.07,
+      "note": "The county reported nine stalled development projects as of 30 June 2025. The project list in the PDF could not be read reliably, so individual projects are not shown."
+    }
   },
   "audit": {
     "fiscal_year": "2023/24",

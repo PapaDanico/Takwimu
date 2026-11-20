@@ -161,7 +161,7 @@ export default function Home() {
           <div className="src">
             Source: <a href={siaya.budget.source_url}>{siaya.budget.source}</a>. <span className="updated">Retrieved {siaya.budget.retrieved}. Confidence {siaya.budget.confidence}/5.</span>
             <br />
-            Notes: {siaya.budget.note} At 30 June 2024 the county reported KSh {siaya.budget.pending_bills.opening_30_jun_2024_billion} billion in pending bills and settled KSh {siaya.budget.pending_bills.settled_in_year_million} million of them during the year. Revenue arrears were KSh {siaya.budget.revenue_arrears_30_jun_2025_million} million at 30 June 2025.
+            Notes: {siaya.budget.note} At 30 June 2024 the county reported KSh {siaya.budget.pending_bills.opening_30_jun_2024_billion} billion in pending bills and settled KSh {siaya.budget.pending_bills.settled_in_year_million} million of them during the year. Revenue arrears were KSh {siaya.budget.revenue_arrears_30_jun_2025_million} million at 30 June 2025. The county reported {siaya.budget.stalled_projects.count} stalled development projects, estimated at KSh {siaya.budget.stalled_projects.estimated_value_million} million, of which KSh {siaya.budget.stalled_projects.paid_million} million had been paid.
           </div>
         </figure>
         <div className="takeaway"><b>What to take from this:</b> development spending pays for projects such as roads and facilities. Recurrent spending pays for salaries and running costs. Siaya used a smaller share of its project budget (57 per cent) than of its recurrent budget (83 per cent).</div>
