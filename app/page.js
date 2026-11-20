@@ -29,7 +29,7 @@ export default function Home() {
           <h1>Two reported numbers for Siaya&apos;s own revenue differ by more than two to one. Here is why that matters.</h1>
           <p className="lede">The Controller of Budget and the county give different totals for the same year. Takwimu shows both, names the source of each, and explains what could cause the gap.</p>
         </div>
-        <div className="keyfacts mono" aria-label="Key facts">
+        <div className="keyfacts mono" role="group" aria-label="Key facts">
           <div><span>Controller of Budget</span><span>KSh {fmt(primary.value)}M</span></div>
           <div><span>County statement</span><span>KSh {fmt(county.value)}M</span></div>
           <div><span>Ratio</span><span>{ratio}×</span></div>
@@ -125,7 +125,7 @@ export default function Home() {
           <div className="eyebrow">Siaya County</div>
           <h2 className="question">Where else can I look in Siaya?</h2>
         </div>
-        <div className="chips" aria-label="Siaya sub-counties">
+        <div className="chips" role="group" aria-label="Siaya sub-counties">
           {siaya.sub_counties.map((s) => <span key={s}>{s}</span>)}
         </div>
         <p style={{ color: 'var(--muted)', fontSize: 14, marginTop: 14 }}>Sub-county pages and more trends are added only once their sources are verified.</p>
