@@ -8,11 +8,11 @@
     "observations": [
       {
         "value": 436.68,
-        "source": "Controller of Budget county reports, as reported by Eastleigh Voice",
+        "source": "Attributed to the Controller of Budget, as reported by Eastleigh Voice",
         "source_url": "https://eastleighvoice.co.ke/controller%20of%20budget%20margaret%20nyakang'o/213397/county-own-source-revenues-under-pressure-as-siaya-posts-lowest-performance",
         "retrieved": "2026-11-20",
-        "confidence": 4,
-        "status": "primary-reported"
+        "confidence": 3,
+        "status": "press-attributed"
       },
       {
         "value": 946,
@@ -21,6 +21,43 @@
         "retrieved": "2026-11-20",
         "confidence": 2,
         "status": "unverified"
+      }
+    ],
+    "other_reports": [
+      {
+        "description": "Nation reported about KSh 1.04 billion in total: KSh 643 million deposited to the County Revenue Fund and KSh 400 million spent at source, at 47% of target.",
+        "source": "Nation, on the Controller of Budget report",
+        "source_url": "https://nation.africa/kenya/counties/siaya-ranks-lowest-in-own-source-revenue-collection-as-mandera-wajir-shine-cob-report-5197996",
+        "retrieved": "2026-11-20",
+        "confidence": 2,
+        "status": "unverified"
+      }
+    ]
+  },
+  "audit": {
+    "fiscal_year": "2023/24",
+    "entity": "County Executive of Siaya",
+    "opinion": "Qualified",
+    "source": "Report of the Auditor-General on County Executive of Siaya for the Year Ended 30 June, 2024",
+    "source_url": "https://libraryir.parliament.go.ke/items/42bf64ec-74a8-44f6-be8f-5e1c79b0c407/full",
+    "retrieved": "2026-11-20",
+    "confidence": 5,
+    "status": "primary-document",
+    "findings": [
+      {
+        "label": "Pending bills unsettled at time of audit",
+        "amount_kes": 1186014495,
+        "note": "Some bills date from 2015 to 2023. The Auditor-General noted this as an emphasis matter and said the opinion is not modified for it."
+      },
+      {
+        "label": "Compensation of employees (Statement of receipts and payments)",
+        "amount_kes": 2872515819,
+        "note": "KSh 14,509,755 was paid to 240 staff in June 2024 outside the payroll database (IPPD). This is part of the basis for the qualified opinion."
+      },
+      {
+        "label": "Projected own-source revenue in the FY 2023/24 budget",
+        "amount_kes": 760000000,
+        "note": "Out of projected revenues of KSh 9,761,123,387 in total."
       }
     ]
   }

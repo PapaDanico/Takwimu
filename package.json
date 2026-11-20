@@ -2,6 +2,7 @@
   "name": "takwimu",
   "version": "2.0.0",
   "private": true,
+  "engines": { "node": ">=18.17.0" },
   "scripts": {
     "validate": "node scripts/validate-data.js",
     "build": "node scripts/validate-data.js && node scripts/build-data.js && next build",

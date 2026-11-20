@@ -17,6 +17,24 @@ if (!osr.observations || osr.observations.length < 1) fail('siaya: no OSR observ
 });
 if (!Array.isArray(siaya.sub_counties) || siaya.sub_counties.length !== 6) fail('siaya: expected 6 sub-counties');
 
+(osr.other_reports || []).forEach((o, i) => {
+  ['description', 'source', 'source_url', 'retrieved', 'confidence', 'status'].forEach((k) => {
+    if (o[k] === undefined || o[k] === '') fail(`siaya other_reports ${i}: missing ${k}`);
+  });
+});
+
+const audit = siaya.audit;
+if (!audit) fail('siaya: missing audit block');
+else {
+  ['fiscal_year', 'entity', 'opinion', 'source', 'source_url', 'retrieved', 'confidence', 'status'].forEach((k) => {
+    if (audit[k] === undefined || audit[k] === '') fail(`siaya audit: missing ${k}`);
+  });
+  if (!['Unqualified', 'Qualified', 'Adverse', 'Disclaimer'].includes(audit.opinion)) fail('siaya audit: opinion must be Unqualified, Qualified, Adverse or Disclaimer');
+  (audit.findings || []).forEach((f, i) => {
+    if (!f.label || typeof f.amount_kes !== 'number' || f.amount_kes <= 0) fail(`siaya audit finding ${i}: needs label and positive amount_kes`);
+  });
+}
+
 if (errors.length) {
   console.error('Data validation failed:\n- ' + errors.join('\n- '));
   process.exit(1);

@@ -17,7 +17,7 @@ export default function Home() {
   const ratio = (county.value / primary.value).toFixed(1);
   const ticks = [0, 250, 500, 750, 1000];
   const rows = [
-    { o: primary, label: 'Controller of Budget', sub: 'primary report', y: 28, verified: true },
+    { o: primary, label: 'Controller of Budget', sub: 'as reported by press', y: 28, verified: true },
     { o: county, label: 'County statement', sub: 'per press, unverified', y: 84, verified: false },
   ];
 
@@ -26,8 +26,8 @@ export default function Home() {
       <div className="hero">
         <div>
           <div className="eyebrow">Siaya County · Own-source revenue · FY {osr.fiscal_year}</div>
-          <h1>Two reported numbers for Siaya&apos;s own revenue differ by more than two to one. Here is why that matters.</h1>
-          <p className="lede">The Controller of Budget and the county give different totals for the same year. Takwimu shows both, names the source of each, and explains what could cause the gap.</p>
+          <h1>Reported figures for Siaya&apos;s own revenue differ by more than two to one. Here is why that matters.</h1>
+          <p className="lede">The Controller of Budget and the county give different totals for the same year. Takwimu shows each, names its source, and explains what could cause the gap.</p>
         </div>
         <div className="keyfacts mono" role="group" aria-label="Key facts">
           <div><span>Controller of Budget</span><span>KSh {fmt(primary.value)}M</span></div>
@@ -90,6 +90,15 @@ export default function Home() {
                       <td className="mono">{o.retrieved}</td>
                     </tr>
                   ))}
+                  {(osr.other_reports || []).map((o) => (
+                    <tr key={o.source}>
+                      <td><a href={o.source_url}>{o.source}</a>: {o.description}</td>
+                      <td className="mono">about 1,040</td>
+                      <td>{o.status}</td>
+                      <td className="mono">{o.confidence}/5</td>
+                      <td className="mono">{o.retrieved}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -97,15 +106,46 @@ export default function Home() {
           <div className="src">
             Source: <a href={primary.source_url}>{primary.source}</a>; <a href={county.source_url}>{county.source}</a>. <span className="updated">Retrieved {primary.retrieved}.</span>
             <br />
-            Note: the hatched bar is unverified until the county&apos;s own document is seen. The two figures may count different things, so they are not averaged.
+            Note: neither bar has been checked against the Controller of Budget&apos;s own table. The hatched bar is unverified. A third press report (see the table) gives about KSh 1,040 million in total, including KSh 400 million spent at source, so the figures may count different things. They are not averaged.
           </div>
         </figure>
         <div className="takeaway"><b>What to take from this:</b> a gap like this usually means the two figures count different things, such as cash collected against revenue billed, or different reporting dates. Check the definition before the number.</div>
         <ol className="steps" style={{ marginTop: 20 }} aria-label="How to read this chart">
           <li>Find the units under the title. Here they are millions of shillings.</li>
-          <li>Compare the two bars. The solid bar is the primary official report.</li>
+          <li>Compare the two bars. The solid bar is the figure attributed to the Controller of Budget.</li>
           <li>Open the source line to see where each figure comes from and when we retrieved it.</li>
         </ol>
+      </section>
+
+      <section id="audit">
+        <div className="head">
+          <div className="eyebrow">Exhibit 2</div>
+          <h2 className="question">What did the Auditor-General say about Siaya&apos;s accounts?</h2>
+        </div>
+        <div className="exhibit">
+          <div className="cap">
+            <strong>{siaya.audit.entity}, FY {siaya.audit.fiscal_year}</strong>
+            <span className="tag warn">{siaya.audit.opinion} opinion</span>
+          </div>
+          <p className="units">A qualified opinion means the accounts are fair except for specific matters the auditor describes.</p>
+          <div className="tablewrap">
+            <table className="data">
+              <thead><tr><th>Item</th><th>KSh</th><th>What the report says</th></tr></thead>
+              <tbody>
+                {siaya.audit.findings.map((f) => (
+                  <tr key={f.label}>
+                    <td>{f.label}</td>
+                    <td className="mono">{f.amount_kes.toLocaleString('en-US')}</td>
+                    <td>{f.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="src">
+            Source: <a href={siaya.audit.source_url}>{siaya.audit.source}</a>, Office of the Auditor-General. Retrieved {siaya.audit.retrieved}. Confidence {siaya.audit.confidence}/5 (primary document). This is the most recent audit report read so far, not the latest published.
+          </div>
+        </div>
       </section>
 
       <section id="learn">

@@ -333,9 +333,23 @@ const files = {
   'sources.json': { sources: SOURCES, _timestamp: new Date().toISOString() },
 };
 
-Object.entries(files).forEach(([filename, data]) => {
-  fs.writeFileSync(path.join(outDir, filename), JSON.stringify(data, null, 2));
-  console.log(`✅ Generated public/data/${filename}`);
+// Only datasets with verified provenance are published. The remaining datasets above are
+// unverified hand-typed figures and stay unpublished until each is traced to a primary source.
+const PUBLISH = new Set(['sources.json']);
+
+// Remove files from earlier builds so unverified data cannot linger in public/data.
+fs.readdirSync(outDir).forEach((f) => {
+  if (f.endsWith('.json')) fs.unlinkSync(path.join(outDir, f));
 });
 
-console.log(`\n📦 ${Object.keys(files).length} static JSON files ready for static export`);
+Object.entries(files)
+  .filter(([filename]) => PUBLISH.has(filename))
+  .forEach(([filename, data]) => {
+    fs.writeFileSync(path.join(outDir, filename), JSON.stringify(data, null, 2));
+    console.log(`Generated public/data/${filename}`);
+  });
+
+// Siaya data is verified-with-status and carries its own provenance fields.
+const siayaSrc = path.join(__dirname, '..', 'data', 'siaya.json');
+fs.copyFileSync(siayaSrc, path.join(outDir, 'siaya.json'));
+console.log('Generated public/data/siaya.json');

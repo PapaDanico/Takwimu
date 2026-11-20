@@ -48,6 +48,8 @@ section h2 { font-family: var(--display); font-weight: 600; font-size: clamp(22p
 .exhibit .units { font-size: 13px; color: var(--muted); margin: -8px 0 14px; }
 .exhibit .updated { font-size: 12px; color: var(--muted); }
 .bar { transition: opacity .15s; }
+.bar:focus-visible { opacity: 1; outline: 2px solid var(--gold); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .bar { transition: none; } }
 .bars:hover .bar { opacity: .55; }
 .bars .bar:hover { opacity: 1; }
 details.tableview { margin-top: 14px; font-size: 14px; }

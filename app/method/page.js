@@ -10,7 +10,7 @@ export default function Method() {
       <h2>Sources</h2>
       <p>Every figure shows its source, the date we retrieved it and a confidence score from 1 to 5. Primary official documents, such as Controller of Budget and Auditor-General reports, take priority over press reports and statements.</p>
       <h2>Disagreements</h2>
-      <p>When two sources give different figures for the same period, both are shown side by side. The primary official figure is the headline. The other is labelled, with its source and status, and is never merged or averaged.</p>
+      <p>When two sources give different figures for the same period, both are shown side by side. The figure closest to the primary document is shown first. The others are labelled with their source and status, and are never merged or averaged. A figure is marked verified only after we have read it in the primary document itself.</p>
       <h2>Named people and parties</h2>
       <p>Takwimu does not label named individuals as wrong or misleading. Any claim tied to a person needs a primary document and a legal check first.</p>
       <h2>Corrections</h2>
