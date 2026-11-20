@@ -83,7 +83,10 @@ All marked **[my call]**; the owner can overrule any of them.
 7. **Performance and analytics:** first page load under about 150 KB, tested on throttled 3G. Cloudflare Web Analytics only.
 8. **Data rights:** every figure links to its source document. CSV downloads contain compiled series with attribution. Source terms are checked before any scheduled fetcher is enabled; until then fetchers are a manual-upload step.
 
+## Owner constraint
+Do not use Vercel. Deploy target is Cloudflare Pages only. No Vercel config, dependencies or workflows will be added.
+
 ## Open items
 - Named legal reviewer for claims about individuals.
 - Named reviewer for Kiswahili text.
-- Whether Vercel and Cloudflare Workers Builds are both wanted. Phase 0 should keep one deploy target.
+- Owner removes the Vercel GitHub integration (it reports "Account is blocked" and fails every PR); the assistant cannot do this from here.
