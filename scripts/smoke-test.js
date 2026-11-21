@@ -115,6 +115,8 @@ const srv = http.createServer((req, res) => {
     check(/Calculated by Takwimu Kenya from published figures/i.test(await pg.locator('#calc-label').innerText()) && /context, not causation/.test(await pg.locator('#context-not-causation').innerText()), 'analysis: calculated label and "context, not causation" shown');
     check(await pg.locator('table.calc tbody tr').count() >= anJson.records.filter((r) => r.family !== 'A5' || r.flags.count_kind !== 'category' || r.status === 'gap').length && await pg.locator('#gap-list li').count() === anJson.records.filter((r) => r.status === 'gap').length, 'analysis: every record with its calc_id; every gap listed with its reason');
     check(await pg.locator('main a[href="/counties/siaya/wards/"]').count() >= 1, 'analysis: climate finance links to the ward map');
+    // Sweep D24: own-source revenue composition, Siaya by document and all 47 counties, linked to the OSR dispute case.
+    check(await pg.locator('#osr-parts tbody tr').count() === anJson.records.filter((r) => r.family === 'A8' && r.status === 'value' && r.calc.op === 'ratio_pct').length && /388\.63/.test(await pg.locator('#osr-parts').innerText()) && await pg.locator('#osr-dispute-parts a[href="/data/#osr-2024-25-county-statement"]').count() === 1, 'analysis: OSR composition table (FIF 388.63 for FY 2023/24) and the dispute explained part by part');
     // Project register: eight-state legend, reported beside audit-found, one verified project, filters, finding links.
     const pJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-projects.json'), 'utf8'));
     await pg.goto(base + '/counties/siaya/projects/', { waitUntil: 'load' });
@@ -228,6 +230,8 @@ const srv = http.createServer((req, res) => {
   check(['downloaded', 'discovered', 'inaccessible', 'blocked'].every((s) => new RegExp(`${s}\\s+${libJson.documents.filter((d) => d.retrieval_status === s).length} of ${libJson.documents.length}`, 'i').test(pgText)), 'source library states the count for each retrieval status');
   await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
   check(await pg.locator('main a[href="/counties/siaya/sources/"]').count() >= 1, 'Siaya hub links to the source library');
+  // Sweep D4/D18/D24: disputed pending bills labelled with the range; printed 927.34 target; OSR composition card.
+  { const hub = await pg.locator('main').innerText(); check(/sources disagree \(KSh 303\.91M to/i.test(hub) && /927\.34/.test(hub) && !/929 million/.test(hub) && await pg.locator('#osr-mix a[href="/counties/siaya/analysis/#an-a8"]').count() === 1, 'Siaya hub: pending bills at 30 Jun 2024 marked as disputed with the range, printed target, OSR composition card'); }
   // Reports A-E: the hub links the index; the index links each report's page and PDF with edition, snapshot and
   // DRAFT status; every PDF is in the build.
   check(await pg.locator('main a[href="/reports/"]').count() >= 1, 'Siaya hub links to the reports index');
@@ -258,6 +262,7 @@ const srv = http.createServer((req, res) => {
   }
   // IMF World Economic Outlook section on /kenya/: two vintages selectable, projections labelled and dashed, a table view.
   await pg.goto(base + '/kenya/', { waitUntil: 'load' });
+  check(await pg.locator('#imf-wb tbody tr').count() === 4 && /Definitional difference/.test(await pg.locator('#imf-wb').innerText()) && /link and cite only, © IMF/.test(await pg.locator('#imf-wb').innerText()), '/kenya/: IMF and World Bank definitional differences side by side, IMF cited link-and-cite');
   {
     const sec = pg.locator('#imf');
     const vSel = sec.locator('select').first();
@@ -279,6 +284,9 @@ const srv = http.createServer((req, res) => {
   check(['do not collect', 'odpc.go.ke', 'netlify', 'local storage', 'whatsapp'].every((t) => privText.includes(t)) && !/consent|24 months|data request/.test(privText), 'privacy notice says no personal data is collected, names Netlify and the ODPC, and has no form-era terms');
   await pg.goto(base + '/terms/', { waitUntil: 'load' });
   check(/CC BY 4\.0/.test(await pg.locator('main').innerText()) && await pg.locator('#nonpartisan').count() === 1, 'terms name third-party licences and the non-partisan policy');
+  // Sweep D1/D2: per-publisher reuse table, IMF excluded from any grant, and no bulk copy of the IMF data in the build.
+  check(await pg.locator('#reuse-by-publisher tbody tr').count() >= 8 && /link and cite only/.test(await pg.locator('#reuse-by-publisher').innerText()) && /no blanket grant/i.test(await pg.locator('#copyright').innerText()), 'terms: per-publisher reuse table and no blanket grant for third-party data');
+  check(!fs.existsSync(path.join(root, 'data', 'datasets', 'imf-weo-kenya.csv')) && !fs.existsSync(path.join(root, 'data', 'datasets', 'imf-weo-kenya.json')) && !fs.existsSync(path.join(root, 'data', 'imf.json')), 'no CSV or JSON copy of the IMF WEO data is published (link and cite only)');
   // No email address is published: no mailto: with an address and no address-shaped text in any built page.
   const htmlFiles = [];
   const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).forEach((e) => { const f = path.join(d, e.name); if (e.isDirectory()) walk(f); else if (f.endsWith('.html')) htmlFiles.push(f); });
