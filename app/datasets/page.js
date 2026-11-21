@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ExploreHead from '../../components/ExploreHead';
 import DatasetCatalogue from '../../components/DatasetCatalogue';
 import SavedViews from '../../components/SavedViews';
-import { catalogue, SECTORS, nat } from '../../lib/explore';
+import { catalogue, SECTORS, nat, STATUS_VOCABULARY } from '../../lib/explore';
 import { shortDate } from '../../lib/format';
 
 export const metadata = {
@@ -36,6 +36,13 @@ export default function DatasetsPage() {
       <Suspense fallback={<Loading />}>
         <DatasetCatalogue datasets={datasets} sectors={SECTORS} sources={sources} years={years} />
       </Suspense>
+      <section className="card" id="status" aria-labelledby="status-h">
+        <h2 id="status-h">What the status means</h2>
+        <p className="lead">Each dataset has one status, worked out from what the data already records: the conflict register, the publisher&apos;s notes on modelled figures, and how the values were read. The most cautious one that applies is shown. The version is a short content hash of the data file, so a download can be matched to the file it came from; it is in every CSV row and in the downloaded file name.</p>
+        <dl className="status-list">
+          {STATUS_VOCABULARY.map((s) => <div key={s.status}><dt><span className={`ds-status st-${s.status}`}>{s.status}</span> <small>{datasets.filter((d) => d.status === s.status).length} dataset{datasets.filter((d) => d.status === s.status).length === 1 ? '' : 's'}</small></dt><dd>{s.definition}</dd></div>)}
+        </dl>
+      </section>
       <section className="card" id="saved" aria-labelledby="saved-h">
         <h2 id="saved-h">Saved views</h2>
         <p className="lead">Views you saved on this device, with their filters. They are kept in this browser only: no account, nothing sent to us.</p>

@@ -101,5 +101,25 @@ UNVERIFIED.forEach((u) => {
   });
 });
 
+// Dataset status and version stamp (lib/dataset-status.js): every dataset has a status from the vocabulary and the
+// short content hash of its data file; every open register case reaches at least one dataset; spot checks of the rules.
+{
+  const crypto = require('crypto'); const fsx = require('fs'); const pathx = require('path');
+  const { STATUSES, CASE_DATASETS } = require('../lib/dataset-status');
+  const reg = require('../data/conflicts.json');
+  if (STATUSES.join() !== 'unavailable,superseded,disputed,estimated,provisional,verified') fail(`status vocabulary changed: ${STATUSES.join()}`);
+  DATASETS.forEach((d) => {
+    if (!STATUSES.includes(d.status) || !d.status_reason) fail(`dataset ${d.id}: status "${d.status}" or its reason missing`);
+    const want = crypto.createHash('sha256').update(fsx.readFileSync(pathx.join(__dirname, '..', d.data_file))).digest('hex').slice(0, 10);
+    if (d.version !== want) fail(`dataset ${d.id}: version ${d.version} is not the content hash of ${d.data_file} (${want})`);
+    if (d.download_name !== `${d.id}-${d.version}`) fail(`dataset ${d.id}: download name does not carry the version`);
+  });
+  Object.keys(CASE_DATASETS).forEach((id) => { if (!reg.conflicts.some((c) => c.id === id)) fail(`dataset status: case ${id} is not in the register`); });
+  reg.conflicts.filter((c) => c.status === 'open').forEach((c) => { if (!DATASETS.some((d) => d.status === 'disputed' && d.status_reason.includes(c.id) && d.id !== 'source-conflicts')) fail(`dataset status: open case ${c.id} marks no dataset as disputed`); });
+  const st = (id) => (DATASETS.find((d) => d.id === id) || {}).status;
+  [['kenya-gdp-growth', 'verified'], ['kenya-unemployment', 'estimated'], ['kenya-deposit-rate-wb', 'disputed'], ['counties-absorption', 'disputed'], ['kenya-derived-measures', 'provisional'], ['cra-county-allocations-2026-27', 'provisional'], ['iebc-registered-voters-2022', 'disputed']].forEach(([id, want]) => { if (st(id) !== want) fail(`dataset status: ${id} is "${st(id)}", expected "${want}"`); });
+  if (!/not yet verified/.test(DATASETS.find((d) => d.id === 'counties-absorption').status_reason)) fail('dataset status: counties-absorption reason must name the cells not yet verified');
+}
+
 if (errors.length) { console.error('Explore unit tests failed:\n- ' + errors.join('\n- ')); process.exit(1); }
 console.log(`Explore unit tests passed (${natIndicators.length} national indicators, ${noted} noted county values, ${UNVERIFIED.length} cells shown as not yet verified).`);

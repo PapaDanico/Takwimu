@@ -34,7 +34,7 @@ export default function DatasetCatalogue({ datasets, sectors, sources, years }) 
   const shown = datasets.filter((d) => (!sector || d.sector === sector) && (!geo || d.geography === geo) && (!source || d.source === source)
     && (!year || d.years.includes(Number(year))) && words.every((w) => text(d).includes(w)));
   const active = [q, sector, geo, source, year].filter(Boolean).length;
-  const rows = shown.map((d) => ({ id: d.id, title: d.title, sector: d.sectorLabel, geography: GEO[d.geography], area: d.area, period: `${d.period.from} to ${d.period.to}`, unit: d.unit, source: d.source_detail, source_url: d.source_url, last_updated: d.last_updated, retrieved: d.retrieved, csv: d.files.csv, json: d.files.json }));
+  const rows = shown.map((d) => ({ id: d.id, title: d.title, sector: d.sectorLabel, geography: GEO[d.geography], area: d.area, period: `${d.period.from} to ${d.period.to}`, unit: d.unit, status: d.status, status_reason: d.status_reason, version: d.version, source: d.source_detail, source_url: d.source_url, last_updated: d.last_updated, retrieved: d.retrieved, csv: d.files.csv, json: d.files.json }));
 
   return (
     <>
@@ -98,15 +98,17 @@ export default function DatasetCatalogue({ datasets, sectors, sources, years }) 
                 <div className="tags"><span className="tag">{d.sectorLabel}</span><span className="tag">{GEO[d.geography]}</span><span className="tag">{d.source}</span></div>
                 <p>{d.description}</p>
                 <dl>
+                  <dt>Status</dt><dd><span className={`ds-status st-${d.status}`}>{d.status}</span> {d.status_reason}</dd>
                   <dt>Unit</dt><dd>{d.unit}</dd>
                   <dt>Coverage</dt><dd>{d.coverage}</dd>
                   <dt>Source</dt><dd><a href={d.source_url}>{d.source_detail}</a></dd>
                   <dt>Method</dt><dd>{d.method}</dd>
                   <dt>Last updated</dt><dd>{when(d.last_updated)} (source); retrieved {when(d.retrieved)}</dd>
+                  <dt>Version</dt><dd><code>{d.version}</code> (first 10 characters of the SHA-256 of {d.data_file})</dd>
                 </dl>
                 <div className="ds-links">
-                  <a className="file" href={d.files.csv} download aria-label={`${d.title}: download CSV`}>CSV</a>
-                  <a className="file" href={d.files.json} download aria-label={`${d.title}: download JSON`}>JSON</a>
+                  <a className="file" href={d.files.csv} download={`${d.download_name}.csv`} aria-label={`${d.title}: download CSV, version ${d.version}`}>CSV</a>
+                  <a className="file" href={d.files.json} download={`${d.download_name}.json`} aria-label={`${d.title}: download JSON, version ${d.version}`}>JSON</a>
                   {d.views.map((v) => <Link key={v.href} href={v.href}>{v.label}</Link>)}
                 </div>
               </li>

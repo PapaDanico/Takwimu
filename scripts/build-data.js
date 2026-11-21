@@ -360,7 +360,7 @@ Object.entries(files)
   const hist = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'history.json'), 'utf8'));
   const cpi = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'cpi.json'), 'utf8'));
   const q = (v) => (v === undefined || v === null ? '' : `"${String(v).replace(/"/g, '""')}"`);
-  const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'confidence_1_to_5', 'retrieved', 'period', 'caveat', 'source_id', 'pdf_page', 'printed_page', 'page_note']];
+  const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'confidence_1_to_5', 'retrieved', 'period', 'caveat', 'source_id', 'pdf_page', 'printed_page', 'page_note', 'dataset_version']];
   // Page reference columns: the manifest document id, PDF page and printed page where the figure was read.
   const pageCols = (r) => (r ? [r.source_id, r.page === null ? '' : r.page, r.printed_page, r.page === null ? r.page_note : (r.page_note || '')] : ['', '', '', '']);
   const got = hist.meta.retrieved;
@@ -393,14 +393,16 @@ Object.entries(files)
   // Every value in the conflict register, so no disagreeing figure is left out of the export.
   const conf = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'conflicts.json'), 'utf8'));
   conf.conflicts.forEach((c) => c.values.forEach((v) => rows.push([`conflict: ${c.measure}`, '', v.value, c.unit, `source value (${c.status})`, v.label, v.url, '', got, '', c.definitions])));
-  fs.writeFileSync(path.join(outDir, 'history.csv'), rows.map((r) => [...r, ...Array(Math.max(0, rows[0].length - r.length)).fill('')].map(q).join(',')).join('\n') + '\n');
+  // Every row carries the version stamp of history.json (short content hash, as in the dataset catalogue).
+  const ver = require('../lib/dataset-status').versionOf('history.json');
+  fs.writeFileSync(path.join(outDir, 'history.csv'), rows.map((r, i) => [...r, ...Array(Math.max(0, rows[0].length - 1 - r.length)).fill(''), ...(i ? [ver] : [])].map(q).join(',')).join('\n') + '\n');
   console.log(`Generated public/data/history.csv (${rows.length - 1} rows)`);
 }());
 
 // Dataset catalogue downloads (/datasets/): one CSV and one JSON per dataset, built from the same validated files
 // the Explore pages read (lib/explore.js). Each JSON carries the dataset's metadata with its rows.
 (function writeDatasets() {
-  const { DATASETS, catalogue } = require('../lib/explore');
+  const { DATASETS, catalogue, STATUS_VOCABULARY } = require('../lib/explore');
   const { toCSV } = require('../lib/csv');
   const dir = path.join(outDir, 'datasets');
   fs.rmSync(dir, { recursive: true, force: true });
@@ -410,9 +412,10 @@ Object.entries(files)
   DATASETS.forEach((d) => {
     if (!d.rows) return; // files that already exist in /data/ (history.csv, history.json)
     const rows = d.rows();
-    if (d.files.csv.startsWith('/data/datasets/')) { fs.writeFileSync(path.join(dir, `${d.id}.csv`), toCSV(rows, d.columns)); n += 1; }
+    // CSV rows carry the dataset version (short content hash of its data file) in a last column.
+    if (d.files.csv.startsWith('/data/datasets/')) { fs.writeFileSync(path.join(dir, `${d.id}.csv`), toCSV(rows.map((r) => ({ ...r, dataset_version: d.version })), d.columns ? [...d.columns, 'dataset_version'] : undefined)); n += 1; }
     if (d.files.json.startsWith('/data/datasets/')) { fs.writeFileSync(path.join(dir, `${d.id}.json`), JSON.stringify({ dataset: meta[d.id], rows }, null, 1) + '\n'); n += 1; }
   });
-  fs.writeFileSync(path.join(dir, 'catalogue.json'), JSON.stringify({ updated: '2026-11-21', datasets: catalogue() }, null, 1) + '\n');
+  fs.writeFileSync(path.join(dir, 'catalogue.json'), JSON.stringify({ updated: '2026-11-21', status_vocabulary: STATUS_VOCABULARY, datasets: catalogue() }, null, 1) + '\n');
   console.log(`Generated public/data/datasets/ (${n} files and catalogue.json, ${DATASETS.length} datasets)`);
 }());

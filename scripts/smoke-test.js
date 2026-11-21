@@ -98,7 +98,13 @@ const srv = http.createServer((req, res) => {
   await p2.goto(base + '/datasets/?geo=county&source=Controller%20of%20Budget', { waitUntil: 'networkidle' });
   check(await p2.locator('.ds-list > li').count() >= 4, 'datasets filters read from the address');
   const dsCsv = await p2.request.get(base + '/data/datasets/counties-absorption.csv');
-  check(dsCsv.ok() && (await dsCsv.text()).includes('"Siaya"'), 'dataset CSV served');
+  const dsCsvText = dsCsv.ok() ? await dsCsv.text() : '';
+  check(dsCsv.ok() && dsCsvText.includes('"Siaya"'), 'dataset CSV served');
+  const cat = await (await p2.request.get(base + '/data/datasets/catalogue.json')).json();
+  const absCat = cat.datasets.find((d) => d.id === 'counties-absorption');
+  check(cat.status_vocabulary.length === 6 && cat.datasets.every((d) => d.status && /^[0-9a-f]{10}$/.test(d.version)) && dsCsvText.split('\n')[0].endsWith('"dataset_version"') && dsCsvText.split('\n')[1].endsWith(`"${absCat.version}"`), 'catalogue gives every dataset a status and version; the CSV carries the version');
+  await p2.goto(base + '/datasets/?q=counties-absorption', { waitUntil: 'networkidle' });
+  check((await p2.locator('#counties-absorption a.file').first().getAttribute('download')) === `counties-absorption-${absCat.version}.csv` && /disputed/i.test(await p2.locator('#counties-absorption').innerText()) && await p2.locator('#status dt').count() === 6, '/datasets/ shows status, version and the six-term status list; downloads are named with the version');
   await p2.goto(base + '/trends/?i=siaya-spending&basis=real', { waitUntil: 'networkidle' });
   await p2.waitForURL(/\/kenya\/\?i=siaya-spending&basis=real#trends/, { timeout: 10000 }).catch(() => {});
   check(/\/kenya\/\?i=siaya-spending&basis=real#trends$/.test(p2.url()), 'old /trends/ links move to the Kenya dashboard trend explorer with their choices');

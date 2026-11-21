@@ -225,6 +225,14 @@ function checkSchema(schema, value, where, root, out) {
   out.forEach((m) => fail(`schema ${m}`));
 });
 
+// Dataset catalogue (lib/explore.js): status vocabulary, version stamp and files, against schemas/catalogue.schema.json.
+{
+  const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', 'catalogue.schema.json'), 'utf8'));
+  const out = [];
+  checkSchema(schema, require('../lib/explore').catalogue(), 'catalogue', schema, out);
+  out.forEach((m) => fail(`schema ${m}`));
+}
+
 // ---- Source manifest: every document history.json cites is listed; hashes are real or explicitly absent ----
 const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-manifest.json'), 'utf8'));
 const listed = new Map((manifest.documents || []).map((d) => [d.url, d]));
