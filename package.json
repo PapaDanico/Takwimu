@@ -4,8 +4,8 @@
   "private": true,
   "engines": { "node": ">=18.17.0" },
   "scripts": {
-    "validate": "node scripts/validate-data.js",
-    "build": "node scripts/validate-data.js && node scripts/build-data.js && next build",
+    "validate": "node scripts/test-analytics.js && node scripts/validate-data.js",
+    "build": "node scripts/test-analytics.js && node scripts/validate-data.js && node scripts/build-data.js && next build",
     "dev": "next dev",
     "typecheck": "tsc --noEmit"
   },

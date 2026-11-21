@@ -42,7 +42,7 @@ export default function Insights() {
       <PageHead eyebrow="Insights" title="Ten years of Siaya County finances" sub="Budget, spending, revenue, unpaid bills and audit opinions from the Controller of Budget and Auditor-General reports, FY 2014/15 to FY 2024/25. Gaps are marked, never filled in." path="/insights/" shareText="Ten years of Siaya County finances" />
 
       <nav aria-label="Sections on this page"><ul className="toc">
-        <li><a href="#spending">Spending</a></li><li><a href="#development">Development</a></li><li><a href="#pending">Pending bills</a></li><li><a href="#revenue">Revenue</a></li><li><a href="#audit">Audit</a></li><li><a href="#gaps">Gaps</a></li>
+        <li><a href="#spending">Spending</a></li><li><a href="#development">Development</a></li><li><a href="#pending">Pending bills</a></li><li><a href="#revenue">Revenue</a></li><li><a href="#audit">Audit</a></li><li><a href="#gaps">Gaps</a></li><li><a href="/analytics/">More analytics</a></li>
       </ul></nav>
 
       <section id="spending" className="card insight" aria-labelledby="spending-h">
