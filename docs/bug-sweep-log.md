@@ -106,5 +106,5 @@ Running log. Newest first. Each entry: what was found, how, status.
 ## Still to sweep
 - Manual screen-reader pass.
 - Real-device check on a low-end Android phone and a throttled connection.
-- Print stylesheet and share-card images.
+- Share-card images per page (one default card exists). Print stylesheet done: navigation hidden, links spelled out, cards kept whole; checked by rendering Insights, Analytics and Sub-counties to PDF.
 - `lib/data.js` and `lib/sheng.js` hold unverified figures and are only used by the held page; delete or migrate when the claims review is done.

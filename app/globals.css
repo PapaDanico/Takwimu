@@ -231,3 +231,22 @@ table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; lett
 .mini { margin: 18px 0 0; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .how ul, ul.how { list-style: disc; padding-left: 18px; }
+
+/* Print: plain black on white, no navigation, links spelled out, cards kept whole. */
+@media print {
+  :root { color-scheme: light; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  .site-header, .bottom-nav, .skip, .share, .toc, .footer-cols, .fold { display: none !important; }
+  .site-footer { background: #fff !important; margin-top: 16pt; padding-block: 8pt; border-top: 1px solid #999; }
+  .site-footer, .site-footer * { color: #000 !important; }
+  .page { padding-block: 0; gap: 14pt; display: block; }
+  .card, .scard { box-shadow: none !important; border: 1px solid #999 !important; break-inside: avoid; margin-bottom: 12pt; background: #fff !important; }
+  .bl-track, .bl-fill, .bl-mark { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .bl-track { background: #ddd !important; }
+  .bl-fill { background: #333 !important; }
+  .tablewrap { overflow: visible !important; }
+  table.data th, table.data td { border-bottom: 1px solid #bbb; }
+  a { color: #000 !important; text-decoration: underline; }
+  .page a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; word-break: break-all; }
+  h1, h2, h3 { break-after: avoid; }
+}
