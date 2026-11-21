@@ -7,6 +7,7 @@ import TableWrap from '../../components/TableWrap';
 import hist from '../../data/history.json';
 import reg from '../../data/conflicts.json';
 import manifest from '../../data/source-manifest.json';
+import { Provisional } from '../../components/ObsTable';
 
 const OPEN = [
   { q: 'The report states 47 per cent of the revenue target for FY 2024/25, but 436.68 of 1,043 is about 42 per cent.', note: 'Resolved in part: 47 per cent is measured against an annual target of about KSh 929 million, not the KSh 1,043 million in budget financing. The report does not explain why the two targets differ.' },
@@ -63,6 +64,7 @@ export default function DataPage() {
   return (
     <main id="main" className="wrap page">
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Ten-year series" title="Siaya ten-year series: sources and conflicts" sub="The Siaya series behind the ten-year pages, the source of every year and the register of conflicts between sources. Every file is plain JSON. Each figure carries its source and confidence, so you can check it or reuse it. Please cite the original publisher as well as Takwimu." path="/data/" shareText="Takwimu Kenya open data" />
+      <Provisional dataset={'history'}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
       <Abbrs list={['FIF', 'A-i-A']} />
       <nav className="card" aria-label="Data and method"><p style={{ margin: 0 }}>This section covers the data and how it is checked. <Link href="/method/">Read the method</Link> · <Link href="/datasets/">Search all datasets</Link></p></nav>
       <PageToc items={[['f-h', 'Files'], ['brief-dl-h', 'Printable brief'], ['c-h', 'Coverage'], ['pref-h', 'Where each figure was read'], ['supp-h', 'Other documents'], ['reg-h', 'Conflict register'], ['open', 'Open questions']]} />
@@ -87,7 +89,7 @@ export default function DataPage() {
       <section className="card" aria-labelledby="brief-dl-h">
         <h2 id="brief-dl-h">Printable brief</h2>
         <p className="lead">A one-page A4 summary of Siaya County finances, built from the same files: headline figures with source and confidence, ten years of spending, audit opinions and key caveats.</p>
-        <p><a className="file" href="/briefs/siaya-fiscal-brief.pdf" download>siaya-fiscal-brief.pdf</a> · <a href="/counties/siaya/brief/">View it as a web page</a></p>
+        <p><a className="file" href="/reports/siaya-fiscal-brief.pdf" download>siaya-fiscal-brief.pdf</a> · <a href="/counties/siaya/brief/">View it as a web page</a></p>
       </section>
       <section className="card" aria-labelledby="c-h">
         <h2 id="c-h">What the history file covers</h2>

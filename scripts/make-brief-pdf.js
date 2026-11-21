@@ -1,8 +1,8 @@
-// Renders the built brief page (dist/counties/siaya/brief/index.html) to public/briefs/siaya-fiscal-brief.pdf
+// Renders the built brief page (dist/counties/siaya/brief/index.html) to public/reports/siaya-fiscal-brief.pdf
 // with Chromium's print engine, then checks that the PDF is one A4 page with extractable text.
 // Playwright is NOT a project dependency: run with the global install, after `npm run build`:
 //   NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js
-// Then run `npm run build` again so dist/ carries the new PDF. Needs pdfinfo and pdftotext (poppler-utils).
+// Then run `npm run build` again so dist/ carries the new PDF (and the fallback copy at /briefs/; scripts/build-data.js). Needs pdfinfo and pdftotext (poppler-utils).
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -11,7 +11,7 @@ const { chromium } = require('playwright');
 
 const root = path.join(__dirname, '..');
 const dist = path.join(root, 'dist');
-const out = path.join(root, 'public', 'briefs', 'siaya-fiscal-brief.pdf');
+const out = path.join(root, 'public', 'reports', 'siaya-fiscal-brief.pdf');
 const route = '/counties/siaya/brief/';
 if (!fs.existsSync(path.join(dist, route, 'index.html'))) { console.error('Build first: dist/counties/siaya/brief/index.html is missing.'); process.exit(1); }
 
@@ -43,7 +43,9 @@ srv.listen(0, async () => {
     const pages = Number((info.match(/^Pages:\s+(\d+)/m) || [])[1]);
     const size = (info.match(/^Page size:\s+(.+)$/m) || [])[1] || '';
     const text = execFileSync('pdftotext', ['-layout', out, '-']).toString();
-    const must = ['Siaya County fiscal brief', 'Headline figures', 'Ten years of spending', 'Audit opinions', 'Key caveats', 'Sources.', '2024/25'];
+    // While the brief's figures are unreviewed the page carries the DRAFT and provisional notice; so must the PDF.
+    const draft = /data-draft="true"/.test(fs.readFileSync(path.join(dist, route, 'index.html'), 'utf8'));
+    const must = ['Siaya County fiscal brief', 'Headline figures', 'Ten years of spending', 'Audit opinions', 'Key caveats', 'Sources.', '2024/25', ...(draft ? ['DRAFT', 'Provisional: awaiting editorial review'] : [])];
     const missing = must.filter((s) => !text.toLowerCase().includes(s.toLowerCase()));
     console.log(`Wrote ${path.relative(root, out)}: ${pages} page(s), ${size}, ${text.length} characters of text.`);
     if (pages !== 1) { console.error('FAIL: the brief must fit on one page.'); code = 1; }

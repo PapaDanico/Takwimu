@@ -419,6 +419,7 @@ table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; lett
 .brief-eyebrow { margin: 0; font-size: 12px; font-weight: 700; color: var(--ink-muted); }
 .brief-sub { margin: 4px 0 0; font-size: 14px; color: var(--ink-soft); max-width: 46rem; }
 .brief-actions { margin: 8px 0 0; font-size: 14px; }
+.brief-draft { margin: 4px 0 0; font-size: 13px; color: var(--ink-soft); }
 .brief-actions a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .brief-tiles { display: grid; gap: 8px; margin: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); }
 .brief-tiles > div { border: 1px solid var(--rule); border-radius: 10px; padding: 8px 10px; min-width: 0; }
@@ -439,7 +440,7 @@ table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; lett
 .brief-foot { margin-top: 14px; padding-top: 8px; border-top: 3px solid var(--accent-line); font-size: 11px; color: var(--ink-muted); }
 .brief-foot p { margin: 0 0 4px; overflow-wrap: anywhere; }
 
-@page brief { size: A4; margin: 11mm 12mm; }
+@page brief { size: A4; margin: 9mm 11mm; }
 @media print {
   body:has(.brief) .site-footer { display: none !important; }
   .brief { page: brief; padding: 0; max-width: none; }
@@ -448,25 +449,27 @@ table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; lett
   .brief, .brief * { color: #000 !important; }
   .brief h1, .brief h2 { color: #07552D !important; }
   .brief-head { grid-template-columns: auto 1fr; gap: 12pt; align-items: center; padding-bottom: 6pt; border-bottom: 2pt solid #08762F; }
-  .brief-logo { width: 21mm; padding: 0; background: none; }
+  .brief-logo { width: 18mm; padding: 0; background: none; }
   .brief h2 { border-left: 2pt solid #F7931E; padding-left: 4pt; }
-  .brief h1 { font-size: 19pt; }
-  .brief-sub { font-size: 9.5pt; max-width: none; }
-  .brief h2 { font-size: 9pt; margin: 9pt 0 3pt; }
+  .brief h1 { font-size: 17pt; }
+  .brief-sub { font-size: 9pt; max-width: none; }
+  .brief-draft { font-size: 8pt; margin-top: 2pt; }
+  .brief-draft .tag { border: 1pt solid #000; padding: 0 3pt; font-weight: 700; }
+  .brief h2 { font-size: 9pt; margin: 7pt 0 3pt; }
   .brief-tiles { grid-template-columns: repeat(4, 1fr); gap: 5pt; }
   .brief-tiles > div { border-color: #999; padding: 4pt 6pt; break-inside: avoid; }
   .brief-tiles dt { font-size: 8pt; }
-  .brief-tiles dd { font-size: 8pt; }
+  .brief-tiles dd { font-size: 7.5pt; }
   .brief-tiles dd.v { font-size: 13pt; }
-  .brief-tiles dd.src { font-size: 7.5pt; }
-  .brief-cols { grid-template-columns: 1.35fr 1fr; gap: 0 14pt; align-items: start; }
+  .brief-tiles dd.src { font-size: 7pt; }
+  .brief-cols { grid-template-columns: 1.6fr 1fr; gap: 0 12pt; align-items: start; }
   .brief-list { columns: 2; column-gap: 14pt; }
   .brief-list li { break-inside: avoid; }
-  .brief-table { font-size: 8.5pt; }
-  .brief-table th, .brief-table td { padding: 1.5pt 3pt; border-bottom-color: #bbb; }
+  .brief-table { font-size: 8pt; }
+  .brief-table th, .brief-table td { padding: 1pt 3pt; border-bottom-color: #bbb; }
   .brief-table thead th { font-size: 7.5pt; }
-  .brief-note, .brief-list { font-size: 8pt; }
-  .brief-foot { font-size: 7.5pt; border-top: 1.5pt solid #08762F; margin-top: 8pt; }
+  .brief-note, .brief-list { font-size: 7.5pt; }
+  .brief-foot { font-size: 7pt; border-top: 1.5pt solid #08762F; margin-top: 6pt; }
 }
 
 /* Home hero: national map and the published row; county finder */

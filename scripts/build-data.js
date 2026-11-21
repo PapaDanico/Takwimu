@@ -451,3 +451,15 @@ Object.entries(files)
   fs.writeFileSync(path.join(dir, 'catalogue.json'), JSON.stringify({ updated: '2026-11-21', status_vocabulary: STATUS_VOCABULARY, datasets: catalogue() }, null, 1) + '\n');
   console.log(`Generated public/data/datasets/ (${n} files and catalogue.json, ${DATASETS.length} datasets)`);
 }());
+
+// The fiscal brief PDF moved to /reports/siaya-fiscal-brief.pdf (sweep N2). netlify.toml answers the old
+// /briefs/siaya-fiscal-brief.pdf with a 301; this byte-identical copy (gitignored, made from the new file on every
+// build, so it can never go stale) is the fallback on hosts without the redirect.
+(function briefFallback() {
+  const src = path.join(__dirname, '..', 'public', 'reports', 'siaya-fiscal-brief.pdf');
+  const dst = path.join(__dirname, '..', 'public', 'briefs', 'siaya-fiscal-brief.pdf');
+  if (!fs.existsSync(src)) throw new Error('public/reports/siaya-fiscal-brief.pdf is missing (run scripts/make-brief-pdf.js)');
+  fs.mkdirSync(path.dirname(dst), { recursive: true });
+  fs.copyFileSync(src, dst);
+  console.log('Generated public/briefs/siaya-fiscal-brief.pdf (fallback copy of /reports/siaya-fiscal-brief.pdf)');
+}());

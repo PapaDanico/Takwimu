@@ -5,3 +5,4 @@ public/data/
 *.tsbuildinfo
 .env*
 dist-synthetic/
+public/briefs/siaya-fiscal-brief.pdf
