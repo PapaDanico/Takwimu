@@ -227,13 +227,43 @@ function checkSchema(schema, value, where, root, out) {
     });
   }
 }
-['history', 'conflicts', 'subcounties', 'county', 'national', 'counties-cob', 'cbk', 'derived', 'ngo', 'political'].forEach((name) => {
+['history', 'conflicts', 'subcounties', 'county', 'national', 'counties-cob', 'cbk', 'derived', 'ngo', 'political', 'source-library'].forEach((name) => {
   const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', `${name}.schema.json`), 'utf8'));
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', `${name}.json`), 'utf8'));
   const out = [];
   checkSchema(schema, data, name, schema, out);
   out.forEach((m) => fail(`schema ${m}`));
 });
+
+const manifest0 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-manifest.json'), 'utf8'));
+// ---- Siaya Source Library (data/source-library.json): rules beyond the schema ----
+{
+  const lib = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-library.json'), 'utf8'));
+  const docs = lib.documents || [];
+  const ids = new Set(); const urls = new Map();
+  // The 27 sources of the research programme register (section 2), IDs kept as published.
+  const PROGRAMME = ['GOV-01', 'GOV-02', 'GOV-03', 'GOV-04', 'GOV-05', 'COB-01', 'OAG-01', 'OAG-02', 'KNBS-01', 'KNBS-02', 'KNBS-03', 'IBP-01', 'IBP-02', 'APRM-01', 'CLIM-01', 'CLIM-02', 'HEALTH-01', 'HEALTH-02', 'HEALTH-03', 'HEALTH-04', 'NGO-01', 'NGO-02', 'NGO-03', 'UN-01', 'UN-02', 'UN-03', 'MEDIA-01'];
+  docs.forEach((d) => {
+    const tag = `source-library ${d.document_id}`;
+    if (ids.has(d.document_id)) fail(`${tag}: duplicate document_id`);
+    ids.add(d.document_id);
+    [d.source_url, ...(d.also_at || [])].forEach((u) => { if (urls.has(u)) fail(`${tag}: address ${u} is already record ${urls.get(u)}`); else urls.set(u, d.document_id); });
+    const dl = d.retrieval_status === 'downloaded';
+    if (dl !== (typeof d.sha256 === 'string')) fail(`${tag}: sha256 must be present if and only if the document was downloaded`);
+    if (dl !== Number.isInteger(d.bytes)) fail(`${tag}: bytes must be present if and only if the document was downloaded`);
+    if (dl && !d.file_type) fail(`${tag}: a downloaded document needs its file_type`);
+    if (/not stated/i.test(d.licence) && d.redistribution_allowed !== false) fail(`${tag}: licence not stated, so redistribution_allowed must be false`);
+    if (d.redistribution_allowed && /not confirmed/i.test(d.licence)) fail(`${tag}: an unconfirmed licence cannot allow redistribution`);
+    if (d.redistribution_allowed && !d.redistribution_conditions) fail(`${tag}: say the conditions under which redistribution is allowed`);
+    if (!d.retrieval_note.trim()) fail(`${tag}: retrieval_note must say what happened`);
+    if (d.origin === 'programme register' && !PROGRAMME.includes(d.document_id)) fail(`${tag}: only the 27 register IDs may have origin "programme register"`);
+  });
+  docs.forEach((d) => { if (d.parent_id && !ids.has(d.parent_id)) fail(`source-library ${d.document_id}: parent_id ${d.parent_id} is not a record`); });
+  PROGRAMME.forEach((id) => { if (!ids.has(id)) fail(`source-library: programme source ${id} is missing`); });
+  manifest0.documents.forEach((d) => { if (!ids.has(d.id)) fail(`source-library: manifest document ${d.id} is missing`); });
+  // A manifest document keeps the hash recorded when its figures were read.
+  manifest0.documents.forEach((d) => { const r = docs.find((x) => x.document_id === d.id); if (r && d.sha256 && r.sha256 !== d.sha256) fail(`source-library ${d.id}: sha256 differs from source-manifest.json`); });
+}
 
 // Dataset catalogue (lib/explore.js): status vocabulary, version stamp and files, against schemas/catalogue.schema.json.
 {
