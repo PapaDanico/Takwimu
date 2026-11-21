@@ -1,0 +1,431 @@
+{
+  "meta": {
+    "title": "Siaya budget transparency and public participation: IBP Kenya CBTS 2021 and 2022, APRM Siaya County Review Report 2024",
+    "schema_version": 1,
+    "extracted": "2026-11-21",
+    "rule": "Each edition is kept separate; no score is carried forward from one edition to another. Every item carries source_id, page, edition and year. Findings are attributed to the publishing body, quoted briefly, with no verdicts. No individuals are named; offices only. Aggregates only (docs/data-protection-policy.md).",
+    "notes": "docs/siaya-governance-notes.md",
+    "page_convention": "page_pdf is the 1-based page in the PDF file whose SHA-256 is given under sources; page_printed is the number printed on the page where there is one."
+  },
+  "sources": [
+    {
+      "source_id": "IBP-02",
+      "title": "Kenya's County Budget Transparency Survey 2021: County Summaries",
+      "publisher": "International Budget Partnership Kenya",
+      "edition": "CBTS 2021",
+      "year": 2021,
+      "cover_date": "May 2022",
+      "period_assessed": "Budget documents for FY 2020/21",
+      "sha256": "78c791c3959279633e8158d37b1ccc2ff9376485c88e17bbf8d65eeba2a1498a",
+      "pdf_pages": 98,
+      "siaya_pages_pdf": [77, 78],
+      "printed_page_numbers": false
+    },
+    {
+      "source_id": "IBP-01",
+      "title": "Kenya's County Budget Transparency Survey 2022: Siaya County Summary",
+      "publisher": "International Budget Partnership Kenya",
+      "edition": "CBTS 2022",
+      "year": 2022,
+      "cover_date": "not stated (PDF metadata created 29 May 2023)",
+      "period_assessed": "Budget documents required to be published in FY 2021/22",
+      "sha256": "bf554ddbcdc16d5ac81a1540ef301e0d1d5a21913373faebb187b9d796f8bed1",
+      "pdf_pages": 2,
+      "siaya_pages_pdf": [1, 2],
+      "printed_page_numbers": false
+    },
+    {
+      "source_id": "APRM-01",
+      "title": "Siaya County Review Report 2024",
+      "publisher": "NEPAD/APRM Kenya Secretariat with the County Government of Siaya (County Peer Review Mechanism)",
+      "edition": "County Review Report 2024",
+      "year": 2024,
+      "cover_date": "2024 (PDF metadata created 2 Aug 2024; uploaded July 2025 per the address)",
+      "period_assessed": "Devolution period 2013 to 2022 (desk review); focus groups held 24-25 July 2023; validation April 2024",
+      "sha256": "ed805122ca8e2894246e59359373ad5916685400115788db51024d24f4413662",
+      "pdf_pages": 163,
+      "printed_page_numbers": true,
+      "printed_to_pdf_offset": 21
+    }
+  ],
+  "ibp_cbts": {
+    "method_note": "The CBTS checks whether ten key budget documents that the PFM Act requires counties to publish are available on the county's official website, then scores the comprehensiveness of the content of those found (revenue, expenditure, budget performance, non-financial information, public participation). The transparency index is out of 100. Public participation is evaluated only in three documents: Annual Development Plan, County Fiscal Strategy Paper and Approved Programme Based Budget.",
+    "score_range": { "min": 0, "max": 100, "unit": "points out of 100" },
+    "performance_scale": "81-100 A; 61-80 B; 41-60 C; 21-40 D; 0-20 E (IBP-01 p.1)",
+    "editions": [
+      {
+        "edition": "CBTS 2021",
+        "year": 2021,
+        "source_id": "IBP-02",
+        "documents_assessed": 10,
+        "items": [
+          {
+            "id": "cbts2021-index",
+            "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 77,
+            "measure": "Transparency index", "value": 45, "unit": "points out of 100",
+            "quote": "has a transparency index of 45/100 points in CBTS 2021",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2021-documents-count",
+            "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 77,
+            "measure": "Key budget documents publicly available", "value": 7, "of": 10, "unit": "documents",
+            "quote": "Siaya county published 7 out of 10 key budget documents",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2021-documents-list",
+            "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 77,
+            "measure": "Documents by status (Table 1, CBTS 2021 column)",
+            "published": ["County Quarterly Budget Implementation Report (latest quarter scored)", "Finance Act 2020", "Programme-Based Budget 2020/21", "Annual Development Plan 2020/21"],
+            "not_published": ["County Budget Review and Outlook Paper 2020", "County Fiscal Strategy Paper 2020", "Citizens Budget 2020/21"],
+            "note": "Table 1 lists document types, not the ten documents. Seven published = four types with the four quarterly implementation reports counted separately; the quarter-by-quarter split is shown only in the CBTS 2022 edition's grid (IBP-01 p.1), not in this edition.",
+            "confidence": "medium"
+          },
+          {
+            "id": "cbts2021-comprehensiveness",
+            "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 77,
+            "measure": "Comprehensiveness score by document (Table 1)", "unit": "points out of 100",
+            "scores": [
+              { "document": "County Quarterly Budget Implementation Report", "value": 67 },
+              { "document": "Finance Act", "value": 60 },
+              { "document": "Programme-Based Budget", "value": 56 },
+              { "document": "Annual Development Plan", "value": 55 },
+              { "document": "County Budget Review and Outlook Paper", "value": null, "reason": "Not Published" },
+              { "document": "County Fiscal Strategy Paper", "value": null, "reason": "Not Published" },
+              { "document": "Citizens Budget", "value": null, "reason": "Not Published" }
+            ],
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2021-share-available-series",
+            "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 77,
+            "measure": "Proportion of budget documents publicly available, as charted in this edition (Figure 1)", "unit": "percent",
+            "series": [
+              { "survey": "CBTS 2017", "value": 44 },
+              { "survey": "CBTS 2018", "value": 20 },
+              { "survey": "CBTS 2019", "value": 29 },
+              { "survey": "CBTS 2020", "value": 27 },
+              { "survey": "CBTS 2021", "value": 70 }
+            ],
+            "score_range": { "min": 0, "max": 100 },
+            "note": "Bar labels matched to years by position. The CBTS 2020 bar (27) does not match the two documents shown as available in CBTS 2020 elsewhere (Table 1 here; grid in IBP-01). Shown as published; not reconciled.",
+            "confidence": "medium"
+          },
+          {
+            "id": "cbts2021-participation",
+            "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 78,
+            "measure": "Public participation information in evaluated documents", "value": null, "unit": "points out of 100",
+            "reason": "No Siaya-specific participation score is printed. The line '40/100 points ... 60/100 points' under 'Documentation of public participation' appears identically on many county pages and is treated as a template artefact, not a Siaya figure.",
+            "quote": "Siaya had two of these but had no information on public participation and no section in the budget document with information on the public participation",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2021-county-response",
+            "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 78,
+            "measure": "County response to draft survey results",
+            "quote": "Siaya county provided feedback and made five more budget documents publicly available",
+            "note": "The same item says the county did not give feedback on the accuracy of the comprehensiveness results. Text on this page overlaps in the PDF; the quote is reassembled from the overlapping layers.",
+            "confidence": "medium"
+          },
+          {
+            "id": "cbts2021-recommendation-feedback",
+            "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 78,
+            "measure": "Survey recommendation on participation feedback",
+            "quote": "provide a section with feedback on the priorities provided by the public during the public engagement forums in the published budget documents",
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "edition": "CBTS 2022",
+        "year": 2022,
+        "source_id": "IBP-01",
+        "documents_assessed": 10,
+        "items": [
+          {
+            "id": "cbts2022-index",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1,
+            "measure": "Transparency index", "value": 48, "unit": "points out of 100",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2022-national-average",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1,
+            "measure": "National average transparency index (all counties)", "value": 41, "unit": "points out of 100",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2022-rank",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1,
+            "measure": "Siaya rank among counties", "value": 20, "of": 47, "unit": "rank",
+            "note": "Printed as '20th'; the denominator 47 is the number of counties, not printed on the page.",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2022-index-earlier-rounds",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1,
+            "measure": "Transparency index for earlier rounds, as reprinted in this edition", "unit": "points out of 100",
+            "series": [
+              { "survey": "CBTS 2020", "value": 23 },
+              { "survey": "CBTS 2021", "value": 45 }
+            ],
+            "score_range": { "min": 0, "max": 100 },
+            "note": "Retrospective figures reprinted by the 2022 edition. CBTS 2021 (45) matches IBP-02 p.77. CBTS 2020 (23) is not printed for Siaya in the 2021 edition's text.",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2022-documents-count",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1,
+            "measure": "Key budget documents publicly available", "value": 8, "of": 10, "unit": "documents",
+            "quote": "Siaya County published 8 out of 10 key budget documents in CBTS 2022.",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2022-documents-list",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1,
+            "measure": "Documents by status (availability grid, CBTS 2022 column)",
+            "published": ["Annual Development Plan", "Approved Programme-Based Budget", "County Fiscal Strategy Paper", "Citizens Budget", "County Quarterly Budget Implementation Report Q1", "County Quarterly Budget Implementation Report Q2", "County Quarterly Budget Implementation Report Q3", "Finance Act"],
+            "not_published": ["County Budget Review and Outlook Paper", "County Quarterly Budget Implementation Report Q4"],
+            "note": "The grid uses coloured icons, not text; status read by sampling icon colour against the legend. The count (8) and the two gaps match the printed text on p.1 and p.2.",
+            "confidence": "medium"
+          },
+          {
+            "id": "cbts2022-documents-grid-earlier-rounds",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1,
+            "measure": "Availability grid for earlier rounds, as reprinted in this edition",
+            "rounds": [
+              { "survey": "CBTS 2020", "published": ["Annual Development Plan", "County Fiscal Strategy Paper"], "published_count": 2 },
+              { "survey": "CBTS 2021", "published": ["Annual Development Plan", "Approved Programme-Based Budget", "County Quarterly Budget Implementation Report Q1", "County Quarterly Budget Implementation Report Q2", "County Quarterly Budget Implementation Report Q3", "County Quarterly Budget Implementation Report Q4", "Finance Act"], "published_count": 7 }
+            ],
+            "note": "Read from icon colour, as above. The CBTS 2021 column (7) matches IBP-02 p.77.",
+            "confidence": "medium"
+          },
+          {
+            "id": "cbts2022-comprehensiveness",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1,
+            "measure": "Comprehensiveness score by document (CBTS 2022 column)", "unit": "points out of 100",
+            "scores": [
+              { "document": "Annual Development Plan", "value": 42 },
+              { "document": "County Fiscal Strategy Paper", "value": 50 },
+              { "document": "Approved Programme-Based Budget", "value": 50 },
+              { "document": "Citizens Budget", "value": 19 },
+              { "document": "Finance Act", "value": 60 },
+              { "document": "County Quarterly Budget Implementation Report", "value": 21 },
+              { "document": "County Budget Review and Outlook Paper", "value": null, "reason": "Not Published" }
+            ],
+            "note": "Cells matched to rows and columns by position in the PDF text layer.",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2022-participation-score",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1,
+            "measure": "Information on public participation in its documents", "value": 0, "unit": "points out of 100",
+            "quote": "Siaya County scored 0 out of 100 points on the level of information provided on public participation",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2022-participation-finding",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 2,
+            "measure": "Public participation finding",
+            "quote": "Siaya county provided no information on public participation in County Fiscal Strategy Paper, Annual Development Plan, and approved Programme Based Budget, which were evaluated.",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2022-observation-documents",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 2,
+            "measure": "Observation on document publication",
+            "quote": "the county has not published the County Budget Review and Outlook Paper in the last three surveys",
+            "confidence": "high"
+          },
+          {
+            "id": "cbts2022-recommendation-feedback",
+            "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 2,
+            "measure": "Survey recommendation on participation feedback",
+            "quote": "Siaya county should provide the section with feedback on public participation with justifications.",
+            "confidence": "high"
+          }
+        ]
+      }
+    ],
+    "conflicts": [
+      {
+        "id": "cbts-cbrop-2020",
+        "topic": "Was the County Budget Review and Outlook Paper available in CBTS 2020?",
+        "positions": [
+          { "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 77, "says": "Text: the county 'stopped publishing the County Budget Review and Outlook Paper previously published in the CBTS 2020'." },
+          { "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 77, "says": "Table 1: CBTS 2020 column 'Not Published' for the CBROP." },
+          { "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 2, "says": "Not published 'in the last three surveys' (2020, 2021, 2022)." }
+        ],
+        "resolution": "Unresolved; shown side by side."
+      },
+      {
+        "id": "cbts-pbb-2020-comprehensiveness",
+        "topic": "Approved Programme-Based Budget comprehensiveness, CBTS 2020",
+        "positions": [
+          { "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1, "says": "The CBTS 2020 cell holds both '46' and 'Not Published', overlapping." },
+          { "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 77, "says": "Programme-Based Budget, CBTS 2020: 'Not Published'." }
+        ],
+        "resolution": "Unresolved; no 2020 PBB score recorded."
+      },
+      {
+        "id": "cbts-2020-share-available",
+        "topic": "Share of documents available in CBTS 2020",
+        "positions": [
+          { "source_id": "IBP-02", "edition": "CBTS 2021", "year": 2021, "page_pdf": 77, "says": "Figure 1 bar: 27 percent." },
+          { "source_id": "IBP-01", "edition": "CBTS 2022", "year": 2022, "page_pdf": 1, "says": "Grid: two of ten documents available (20 percent if each counts equally)." }
+        ],
+        "resolution": "Unresolved; IBP does not state how the percentage is weighted."
+      }
+    ]
+  },
+  "aprm": {
+    "source_id": "APRM-01",
+    "edition": "County Review Report 2024",
+    "year": 2024,
+    "method_note": "A County Peer Review Mechanism report led by the county's research team with the NEPAD/APRM Kenya Secretariat: desk review of county documents 2013-2022, focus group discussions in all wards (24-25 July 2023), self-assessment questionnaires to County Assembly and executive offices, analysis with KNBS, and sub-county validation (April 2024). The 'County progress report' sections are the county's own account; 'Key findings' and 'Areas of concern' come from the engagements.",
+    "perception_score_range": { "min": 0, "max": 10, "unit": "score out of 10 (ward perception)" },
+    "findings": [
+      {
+        "id": "aprm-summary",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "xvii", "page_pdf": 17,
+        "theme": "participation", "section": "Executive summary",
+        "quote": "the performance of Siaya County in the function of public participation promotion was generally higher compared to all other functions",
+        "also": "Areas needing improvement listed as 'institutional frameworks, feedback mechanisms, reporting and funding of public participation'."
+      },
+      {
+        "id": "aprm-progress-framework",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "64", "page_pdf": 85,
+        "theme": "participation", "section": "3.14 b) County progress report (county's own account)",
+        "quote": "enacted the Public Participation (PP) and Petitions Act, 2015; established and operationalized the Public Participation and Petitions directorate",
+        "also": "Reports regular public forums since 2013, mainly at ward level; digital channels; draft public participation guidelines; sign language interpreters at forums."
+      },
+      {
+        "id": "aprm-progress-grievance",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "65", "page_pdf": 86,
+        "theme": "feedback", "section": "3.14 b) County progress report (county's own account)",
+        "quote": "captured on the Complaint register which tracks handling until dispensed",
+        "also": "The department reports a quarterly tracking report for each case."
+      },
+      {
+        "id": "aprm-progress-civic-sessions",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "65", "page_pdf": 86,
+        "theme": "civic_education", "section": "3.14 b) County progress report (county's own account)",
+        "value": 48, "unit": "civic education sessions",
+        "quote": "48 civic education sessions were conducted in FY 2018/2029",
+        "note": "'2018/2029' is printed as such [sic]; the intended year is not stated. Conducted with civil society partners named in the report."
+      },
+      {
+        "id": "aprm-ward-perception",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "65", "page_pdf": 86,
+        "theme": "participation", "section": "3.14 c) Key findings from county engagements",
+        "measure": "Ward perception score, promotion of public participation",
+        "wards_above_5": 27,
+        "highest": { "ward": "West Uyoma", "value": 7.8 },
+        "second": { "ward": "South Gem", "value": 7.73 },
+        "lowest": { "ward": "West Yimbo", "value": 3.42 },
+        "unit": "score out of 10",
+        "quote": "a majority of the wards (27 wards) scored above 5 out of 10",
+        "note": "Text cites 'Figure 11'; the chart below it is captioned 'Figure 17'. Perception scores from focus groups, not a measured outcome."
+      },
+      {
+        "id": "aprm-concern-turnout",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "66", "page_pdf": 87,
+        "theme": "participation", "section": "3.14 d) Areas of concern",
+        "quote": "there are often low turnouts at public participation forums",
+        "also": "Attributed in the report to expectation of fare reimbursement, lack of awareness, apathy or mistrust."
+      },
+      {
+        "id": "aprm-concern-civic-gap",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "66", "page_pdf": 87,
+        "theme": "civic_education", "section": "3.14 d) Areas of concern",
+        "quote": "There is a gap in civic education and awareness-raising initiatives"
+      },
+      {
+        "id": "aprm-concern-civic-programme",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "66", "page_pdf": 87,
+        "theme": "civic_education", "section": "3.14 d) Areas of concern",
+        "quote": "There was a lack of operational civic education programme notably curriculum, training manual/module, and IEC materials"
+      },
+      {
+        "id": "aprm-concern-resources",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "66", "page_pdf": 87,
+        "theme": "participation", "section": "3.14 d) Areas of concern",
+        "quote": "faced resource constraints that limited their ability to effectively engage citizens",
+        "also": "Refers to the county's public participation directorate and to civil society organisations."
+      },
+      {
+        "id": "aprm-concern-input-considered",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "66", "page_pdf": 87,
+        "theme": "feedback", "section": "3.14 d) Areas of concern",
+        "quote": "There was a general perception that public input was not adequately considered in final governmental decisions"
+      },
+      {
+        "id": "aprm-concern-mechanisms",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "66", "page_pdf": 87,
+        "theme": "participation", "section": "3.14 d) Areas of concern",
+        "quote": "were weak and lacked effectiveness and were, therefore, underutilized",
+        "also": "Refers to public forums, ward development committees and participatory budgeting."
+      },
+      {
+        "id": "aprm-concern-policy",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "66-67", "page_pdf": 87,
+        "theme": "participation", "section": "3.14 d) Areas of concern",
+        "quote": "Lack of county public participation policy, guidelines, non-establishment of citizen participation framework/structures"
+      },
+      {
+        "id": "aprm-concern-information",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "67", "page_pdf": 88,
+        "theme": "transparency", "section": "3.14 d) Areas of concern",
+        "quote": "Lack of transparent and accessible information about county government activities, policies, and decision-making processes as required by law was observed."
+      },
+      {
+        "id": "aprm-concern-feedback",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "67", "page_pdf": 88,
+        "theme": "feedback", "section": "3.14 d) Areas of concern",
+        "quote": "There are limited feedback mechanisms for citizens to provide feedback on government decisions, policies, and services"
+      },
+      {
+        "id": "aprm-concern-civic-space",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "67", "page_pdf": 88,
+        "theme": "participation", "section": "3.14 d) Areas of concern",
+        "quote": "CSOs in Siaya County have sometimes faced challenges from county government authorities, including bureaucratic hurdles and political interference",
+        "note": "A finding attributed to the report; it names no office or person and gives no cases. Not verified by Takwimu."
+      },
+      {
+        "id": "aprm-concern-announcements",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "67", "page_pdf": 88,
+        "theme": "participation", "section": "3.14 d) Areas of concern",
+        "quote": "only a small number of citizens at the local level access the newspapers",
+        "also": "Context: announcements for participation sessions are made in newspapers."
+      },
+      {
+        "id": "aprm-recommendations",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "67-68", "page_pdf": 88,
+        "theme": "feedback", "section": "3.14 e) Recommendations",
+        "quote": "Establish County Citizen Participation Structures/Committees at all levels and feedback mechanism",
+        "also": "Other recommendations: a county public participation policy and amendment of the 2015 Act; a civic education curriculum, manual and materials; documents provided 'preferably 7 working days prior'; participation from village level; announcements on local and vernacular radio."
+      },
+      {
+        "id": "aprm-cpoa-targets",
+        "source_id": "APRM-01", "edition": "County Review Report 2024", "year": 2024, "page_printed": "123-124", "page_pdf": 144,
+        "theme": "civic_education", "section": "Annex 2: County Programme of Action, 14. Public Participation",
+        "measure": "Planned targets and costs (plans, not results)",
+        "unit": "count; cost in KSh million",
+        "rows": [
+          { "output": "Citizen forum structures/committees established", "kpi": "No. of committees formed and inducted", "targets": { "2025/26": 37, "2026/27": 98 }, "total_cost_ksh_million": 7 },
+          { "output": "Feedback mechanism established", "kpi": "No. of reports", "targets": { "2025/26": 4, "2026/27": 4, "2027/28": 4 }, "total_cost_ksh_million": 0.4 },
+          { "output": "Civic education trainings/sessions undertaken", "kpi": "No. of training reports", "targets": { "2025/26": 31, "2026/27": 30 }, "total_cost_ksh_million": 9.5 }
+        ],
+        "note": "Read from a wide table whose columns wrap across the page; years and cells matched by position (medium confidence). Year columns 2023/24 and 2024/25 show 0 for these rows."
+      }
+    ]
+  },
+  "caveats": [
+    "Survey timing: each CBTS edition checks county websites at a point after the fiscal year it covers. A document posted after the check counts as not published. The 2021 edition says the county made five more documents public after seeing draft results (IBP-02 p.78), so the round's final figures may reflect documents published in response to the survey.",
+    "Editions are not merged. The 2022 edition reprints earlier-round figures; these are kept inside the 2022 block and marked as reprinted, not used to fill the 2021 block.",
+    "IBP-01 p.1 prints '70/100' beside the heading 'How comprehensive is the content of budget documents'; its meaning is not explained on the page, so it is not recorded as a score.",
+    "The APRM report is a self-assessment process run by the county with the APRM Secretariat; 'County progress report' text is the county's own account. Ward scores are perceptions from focus groups.",
+    "APRM-01 p.4 dates the finalisation workshop 'April 15th to 19th, 2014', which is inconsistent with the 2023-2024 timeline; recorded as printed, not used."
+  ]
+}

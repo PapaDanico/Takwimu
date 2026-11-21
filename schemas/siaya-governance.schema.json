@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/siaya-governance.schema.json",
+  "title": "Siaya transparency and participation (data/siaya-governance.json)",
+  "type": "object",
+  "required": ["meta", "sources", "ibp_cbts", "aprm", "caveats"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": { "type": "object", "required": ["title", "schema_version", "extracted", "rule"] },
+    "sources": {
+      "type": "array", "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["source_id", "title", "publisher", "edition", "year", "sha256"],
+        "properties": {
+          "source_id": { "type": "string", "pattern": "^[A-Z]+-[0-9]+$" },
+          "year": { "type": "integer", "minimum": 2000, "maximum": 2100 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    },
+    "ibp_cbts": {
+      "type": "object",
+      "required": ["method_note", "score_range", "editions", "conflicts"],
+      "properties": {
+        "score_range": {
+          "type": "object", "required": ["min", "max", "unit"],
+          "properties": { "min": { "type": "number" }, "max": { "type": "number" } }
+        },
+        "editions": {
+          "type": "array", "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["edition", "year", "source_id", "documents_assessed", "items"],
+            "properties": {
+              "year": { "type": "integer" },
+              "documents_assessed": { "type": "integer", "minimum": 1 },
+              "items": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/item" } }
+            }
+          }
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "object", "required": ["id", "topic", "positions", "resolution"],
+            "properties": { "positions": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/cited" } } }
+          }
+        }
+      }
+    },
+    "aprm": {
+      "type": "object",
+      "required": ["source_id", "edition", "year", "method_note", "perception_score_range", "findings"],
+      "properties": {
+        "findings": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "allOf": [
+              { "$ref": "#/$defs/item" },
+              {
+                "type": "object", "required": ["page_printed", "theme", "section"],
+                "properties": { "theme": { "enum": ["participation", "civic_education", "feedback", "transparency"] } }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "caveats": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+  },
+  "$defs": {
+    "cited": {
+      "type": "object",
+      "required": ["source_id", "edition", "year", "page_pdf"],
+      "properties": {
+        "source_id": { "type": "string", "pattern": "^[A-Z]+-[0-9]+$" },
+        "edition": { "type": "string" },
+        "year": { "type": "integer", "minimum": 2000, "maximum": 2100 },
+        "page_pdf": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "item": {
+      "allOf": [
+        { "$ref": "#/$defs/cited" },
+        {
+          "type": "object", "required": ["id"],
+          "properties": {
+            "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+            "value": { "type": ["number", "null"] },
+            "confidence": { "enum": ["high", "medium", "low"] }
+          }
+        }
+      ]
+    }
+  }
+}
