@@ -23,7 +23,7 @@ function Loading() {
       <p className="loading" role="status">Loading the catalogue…</p>
       <noscript>
         <ul className="ds-list">
-          {datasets.map((d) => <li key={d.id} className="ds"><h3>{d.title}</h3><p>{d.description}</p><div className="ds-links"><a className="file" href={d.files.csv}>CSV</a><a className="file" href={d.files.json}>JSON</a></div></li>)}
+          {datasets.map((d) => <li key={d.id} className="ds"><h3>{d.title}</h3><p>{d.description}</p><div className="ds-links">{d.files.csv ? <><a className="file" href={d.files.csv}>CSV</a><a className="file" href={d.files.json}>JSON</a></> : <span>Link and cite only: no download</span>}</div></li>)}
         </ul>
       </noscript>
     </section>

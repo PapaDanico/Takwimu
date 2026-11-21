@@ -108,8 +108,8 @@ export default function DatasetCatalogue({ datasets, sectors, sources, years }) 
                   <dt>Version</dt><dd><code>{d.version}</code> (first 10 characters of the SHA-256 of {d.data_file})</dd>
                 </dl>
                 <div className="ds-links">
-                  <a className="file" href={d.files.csv} download={`${d.download_name}.csv`} aria-label={`${d.title}: download CSV, version ${d.version}`}>CSV</a>
-                  <a className="file" href={d.files.json} download={`${d.download_name}.json`} aria-label={`${d.title}: download JSON, version ${d.version}`}>JSON</a>
+                  {d.files.csv ? <a className="file" href={d.files.csv} download={`${d.download_name}.csv`} aria-label={`${d.title}: download CSV, version ${d.version}`}>CSV</a> : <span className="muted">No download: the publisher&rsquo;s terms are link and cite only</span>}
+                  {d.files.json ? <a className="file" href={d.files.json} download={`${d.download_name}.json`} aria-label={`${d.title}: download JSON, version ${d.version}`}>JSON</a> : null}
                   {d.views.map((v) => <Link key={v.href} href={v.href}>{v.label}</Link>)}
                 </div>
               </li>

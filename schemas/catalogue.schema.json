@@ -11,7 +11,7 @@
       "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
       "source_url": { "type": "string", "pattern": "^https://" },
       "years": { "type": "array", "items": { "type": "integer" } },
-      "files": { "type": "object", "required": ["csv", "json"], "properties": { "csv": { "type": "string", "pattern": "^/data/.+\\.csv$" }, "json": { "type": "string", "pattern": "^/data/.+\\.json$" } } },
+      "files": { "type": "object", "description": "Empty when the publisher is link and cite only (no bulk download, sweep D1)", "properties": { "csv": { "type": "string", "pattern": "^/data/.+\\.csv$" }, "json": { "type": "string", "pattern": "^/data/.+\\.json$" } } },
       "data_file": { "type": "string", "pattern": "^data/[a-z0-9-]+\\.json$" },
       "version": { "type": "string", "pattern": "^[0-9a-f]{10}$" },
       "download_name": { "type": "string", "pattern": "^[a-z0-9-]+-[0-9a-f]{10}$" },
