@@ -9,7 +9,6 @@ Civic education platform for Kenyan public finance and statistics, focused on tr
 - No verdict labels on named individuals without a primary document and legal review.
 - Series must go back 10 years: data/history.json (budget, spend, revenue, audits, population, health) plus data/cpi.json; gaps are listed, never filled. Validator checks sums.
 - Layout repaired 2026-11-20 (app/, lib/, scripts/, data/, public/). app/_held/ukweli is intentionally not routed. Build, validate and typecheck pass.
-
 - Deploy to Netlify only for major releases (owner, 21 Nov 2026): commit and push often, deploy once per milestone. Production comes from branch claude/eager-rubin-7bpcgq by CLI upload, not from main (see docs/architecture-map.md). vercel.json disables Vercel Git deploys; Cloudflare and GitHub Actions failures on the PR are external noise (owner must disconnect).
 - Build gates: schemas/ (JSON Schema), data/source-manifest.json (SHA-256 of cited PDFs), scripts/test-reconciliation.js (one test per conflict case); npm run verify:repro must print Reproducible. Brief PDF: rebuild, then NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js (Playwright stays global).
 - National (Takwimu Kenya, 21 Nov 2026): lib/counties.js lists all 47 counties; only Siaya is published (/counties/siaya/ hub; its pages keep their old URLs). Other counties get in-preparation pages. Maps: components/KenyaMap.js and SiayaMap.js use geoBoundaries outlines in data/*.json (scripts/make-*-map.js, one-off).
