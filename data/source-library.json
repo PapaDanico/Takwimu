@@ -290,19 +290,21 @@
    "redistribution_allowed": false,
    "document_id": "GOV-03",
    "origin": "programme register",
-   "title": "County Budget Review and Outlook Paper FY 2024/25",
+   "title": "County Budget Review and Outlook Paper for FY 2024/25",
    "publisher": "County Government of Siaya",
    "document_type": "County budget review and outlook paper",
-   "publication_date": "not stated",
-   "reference_period": "FY 2024/25",
-   "source_url": "https://siaya.go.ke/siaya/download/county-budget-review-and-outlook-paper-for-fy-2024_2025/",
+   "publication_date": "2025-09",
+   "reference_period": "Review of FY 2024/25 (cover dated September 2025)",
+   "source_url": "https://siaya.go.ke/documents/county-budget-review-and-outlook-paper-2024_2025/",
    "geographic_coverage": "Siaya",
    "siaya_relevance": "Direct",
    "research_use": "Revenue, expenditure, outlook and fiscal assumptions",
-   "sha256": null,
-   "bytes": null,
-   "retrieval_status": "inaccessible",
-   "retrieval_note": "HTTP 404 (page not found) on two attempts. The paper may have moved; search the county documents section before the next check."
+   "sha256": "8dd26cf1995be1a428ff39c9a9609e5339e366a3394b3631cdd6cdcac47b11b0",
+   "bytes": 918411,
+   "retrieval_status": "downloaded",
+   "retrieval_note": "Retry on 21 Nov 2026: the register address (https://siaya.go.ke/siaya/download/county-budget-review-and-outlook-paper-for-fy-2024_2025/) still returns HTTP 404. The county site search found the paper at its documents page, which links download id 30799; that file was downloaded as a valid PDF (45 pages, %PDF- header and %%EOF trailer). Cover: Department of Finance and Economic Planning, County Budget Review and Outlook Paper for FY 2024/25, September 2025. No publisher checksum to verify against. Not yet read for figures.",
+   "file_url": "https://siaya.go.ke/?cgdp_download=30799",
+   "file_type": "PDF"
   },
   {
    "review_status": "not reviewed",
@@ -366,7 +368,7 @@
    "sha256": null,
    "bytes": null,
    "retrieval_status": "blocked",
-   "retrieval_note": "First attempt: connection reset. Second attempt: HTTP 200, but the page is a bot-verification screen (\"Please wait while your request is being verified\"), not the list. The same reports are held by the Parliament of Kenya library and are recorded under cob-report-… below."
+   "retrieval_note": "First attempt: connection reset. Second attempt: HTTP 200, but the page is a bot-verification screen (\"Please wait while your request is being verified\"), not the list. The same reports are held by the Parliament of Kenya library and are recorded under cob-report-… below. Retry on 21 Nov 2026: the TLS connection failed (curl error 35) for cob.go.ke and www.cob.go.ke, so the page could not be read; no other official address for the list was found. The reports themselves remain available from the Parliament of Kenya library (records below)."
   },
   {
    "review_status": "not reviewed",
@@ -387,7 +389,7 @@
    "sha256": null,
    "bytes": null,
    "retrieval_status": "inaccessible",
-   "retrieval_note": "HTTP 503 on two attempts: the site shows an \"Under Maintenance\" page. Retry at the next check."
+   "retrieval_note": "HTTP 503 on two attempts: the site shows an \"Under Maintenance\" page. Retry at the next check. Retry on 21 Nov 2026: still HTTP 503 (\"Under Maintenance\")."
   },
   {
    "review_status": "not reviewed",
@@ -408,7 +410,7 @@
    "sha256": null,
    "bytes": null,
    "retrieval_status": "inaccessible",
-   "retrieval_note": "HTTP 503 on two attempts (\"Under Maintenance\"). Several Siaya audit reports are held by the Parliament of Kenya library and are recorded under audit-… below."
+   "retrieval_note": "HTTP 503 on two attempts (\"Under Maintenance\"). Several Siaya audit reports are held by the Parliament of Kenya library and are recorded under audit-… below. Retry on 21 Nov 2026: still HTTP 503 (\"Under Maintenance\")."
   },
   {
    "review_status": "not reviewed",
@@ -521,7 +523,34 @@
    "sha256": null,
    "bytes": null,
    "retrieval_status": "inaccessible",
-   "retrieval_note": "Secure connection failed on two attempts: the site's certificate could not be verified (curl error 60, unable to get local issuer certificate). Verification was not turned off. Retry, or ask KNBS for the Siaya abstract."
+   "retrieval_note": "Secure connection failed on two attempts: the site's certificate could not be verified (curl error 60, unable to get local issuer certificate). Verification was not turned off. Retry, or ask KNBS for the Siaya abstract. Retry on 21 Nov 2026: https failed again with curl error 60, and the http:// address redirects to https and fails the same way. Verification was not turned off. The KNBS repository (repository.knbs.or.ke, official) holds a Siaya County Statistical Abstract 2015, recorded as KNBS-03-SIAYA-2015; no later Siaya abstract was found there."
+  },
+  {
+   "review_status": "not reviewed",
+   "last_checked_at": "2026-11-21",
+   "licence": "CC BY-NC 4.0 (stated in the repository record)",
+   "redistribution_allowed": true,
+   "document_id": "KNBS-03-SIAYA-2015",
+   "origin": "linked from a programme source",
+   "parent_id": "KNBS-03",
+   "title": "Siaya County Statistical Abstract 2015",
+   "publisher": "Kenya National Bureau of Statistics",
+   "document_type": "County statistical abstract",
+   "publication_date": "2015",
+   "reference_period": "not stated (two-year series per the abstract)",
+   "source_url": "https://repository.knbs.or.ke/server/api/core/bitstreams/8d50c7f5-b6c2-4c90-b5d3-a85b8dd7392c/content",
+   "also_at": [
+    "https://repository.knbs.or.ke/handle/knbs-ke-repo/1523"
+   ],
+   "geographic_coverage": "Siaya",
+   "siaya_relevance": "Direct",
+   "research_use": "Demographic, service and administrative series",
+   "sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
+   "bytes": 722813,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "redistribution_conditions": "Non-commercial use only, with attribution",
+   "retrieval_note": "Found on 21 Nov 2026 through the KNBS repository search because the KNBS portal page (KNBS-03) fails certificate verification; it is not linked from that page as read. Downloaded as a valid PDF; its MD5 matched the checksum the repository publishes (3dfc22912a022806ab83694b3c3354de). Not yet read for figures."
   },
   {
    "review_status": "not reviewed",
@@ -608,7 +637,7 @@
    "sha256": null,
    "bytes": null,
    "retrieval_status": "inaccessible",
-   "retrieval_note": "Secure connection failed on two attempts: the site's certificate could not be verified (curl error 60). Verification was not turned off. Retry, or ask the county climate change unit for a copy."
+   "retrieval_note": "Secure connection failed on two attempts: the site's certificate could not be verified (curl error 60). Verification was not turned off. Retry, or ask the county climate change unit for a copy. Retry on 21 Nov 2026: https (with and without www) failed again with curl error 60; the http:// address redirects to https and fails the same way. Verification was not turned off. No other official copy was found."
   },
   {
    "review_status": "not reviewed",
@@ -629,7 +658,7 @@
    "sha256": null,
    "bytes": null,
    "retrieval_status": "inaccessible",
-   "retrieval_note": "HTTP 404 (page not found) on two attempts. The article may have moved."
+   "retrieval_note": "HTTP 404 (page not found) on two attempts. The article may have moved. Retry on 21 Nov 2026: still HTTP 404. The county site's post search (wp-json, by slug and by keywords) returned no matching article, so it was not found at another address."
   },
   {
    "review_status": "not reviewed",
@@ -672,7 +701,7 @@
    "sha256": null,
    "bytes": null,
    "retrieval_status": "inaccessible",
-   "retrieval_note": "HTTP 404 (page not found) on two attempts. The article may have moved."
+   "retrieval_note": "HTTP 404 (page not found) on two attempts. The article may have moved. Retry on 21 Nov 2026: still HTTP 404. The county site's post search (wp-json, by slug and by keywords) returned no matching article, so it was not found at another address."
   },
   {
    "review_status": "not reviewed",
@@ -2294,7 +2323,7 @@
    "sha256": null,
    "bytes": null,
    "retrieval_status": "blocked",
-   "retrieval_note": "HTTP 403: the site served a bot-check page (\"Just a moment...\"). The same series is available through the World Bank API (worldbank-wdi-api)."
+   "retrieval_note": "HTTP 403: the site served a bot-check page (\"Just a moment...\"). The same series is available through the World Bank API (worldbank-wdi-api). Retry on 21 Nov 2026: HTTP 403 bot check again. The same series was read from the official World Bank API instead (api.worldbank.org/v2/country/KEN/indicator/FP.CPI.TOTL, HTTP 200, 66 observations, lastupdated 2026-11-11), which is covered by record worldbank-wdi-api."
   },
   {
    "review_status": "not reviewed",
