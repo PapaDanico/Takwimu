@@ -4,7 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const root = process.argv[2];
 const SITEMAP = [...require('fs').readFileSync(require('path').join(process.argv[2], 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname);
-const axeSrc = fs.readFileSync(path.join(__dirname, 'node_modules', 'axe-core', 'axe.min.js'), 'utf8');
+// axe-core is resolved like Playwright: from NODE_PATH (global install) or a local node_modules.
+const axeSrc = fs.readFileSync(require.resolve('axe-core/axe.min.js', { paths: [__dirname, ...(process.env.NODE_PATH || '').split(':').filter(Boolean)] }), 'utf8');
 const srv = http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
   if (p.endsWith('/')) p += 'index.html';
