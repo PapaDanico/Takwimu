@@ -22,7 +22,7 @@ Evidence-based baseline before the design-system overhaul and fiscal intelligenc
 | Schema | JSON Schema files in `schemas/` for `history`, `conflicts`, `subcounties` and `county`, checked at build by a small hand-written validator in `scripts/validate-data.js` (type, required, properties, additionalProperties, items, enum, minimum, maximum, pattern, local $ref; no new dependency). A test edit (bad status, extra field, string boolean) failed the build with three schema errors | Done (step 2). Page/table reference per observation still open |
 | Per-figure source | Report per year, `field_source` overrides, `derived` flags; CSV carries source, URL, confidence, retrieval date, period | Partial: page and table references are not recorded per figure |
 | Supersession | Conflict register keeps both values with `supersedes` and `verification_state` | OK, no reviewer yet |
-| Source snapshots | Not stored; no checksums | Gap |
+| Source snapshots | `data/source-manifest.json` lists all 16 documents cited in `history.json` (10 Controller of Budget reports, 6 Auditor-General reports) with title, link, fiscal year, retrieval date, file URL, size, library MD5 and SHA-256. All 16 were downloaded on 21 Nov 2026 from the Parliament library DSpace bitstreams (4.2 GB); each MD5 matched the library's published checksum before the SHA-256 was recorded. `validate-data.js` fails the build if a cited report or audit URL is missing, or a hash is malformed or lacks `access: "unavailable on <date>"` when null. PDFs are not stored in the repo (size) | Done (step 3). Per-observation link to manifest entry still open |
 | Negative results | `docs/source-access-log.md` | OK |
 
 ## 4. Reconciliation tests

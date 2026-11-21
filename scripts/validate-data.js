@@ -209,6 +209,26 @@ function checkSchema(schema, value, where, root, out) {
   out.forEach((m) => fail(`schema ${m}`));
 });
 
+// ---- Source manifest: every document history.json cites is listed; hashes are real or explicitly absent ----
+const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-manifest.json'), 'utf8'));
+const listed = new Map((manifest.documents || []).map((d) => [d.url, d]));
+Object.entries(hist.reports).forEach(([k, r]) => { if (!listed.has(r.url)) fail(`source-manifest: report ${k} (${r.url}) is not listed`); });
+hist.audits.points.forEach((a) => { if (!listed.has(a.url)) fail(`source-manifest: audit ${a.fy} (${a.url}) is not listed`); });
+const mids = new Set();
+(manifest.documents || []).forEach((d) => {
+  const tag = `source-manifest ${d.id}`;
+  if (mids.has(d.id)) fail(`${tag}: duplicate id`);
+  mids.add(d.id);
+  ['id', 'kind', 'fiscal_year', 'title', 'url', 'retrieved', 'access'].forEach((k) => { if (!d[k]) fail(`${tag}: missing ${k}`); });
+  if (!/^https:\/\//.test(d.url || '')) fail(`${tag}: url must be https`);
+  if (d.sha256 === null) {
+    if (!/^unavailable on \d{4}-\d{2}-\d{2}$/.test(d.access || '')) fail(`${tag}: a null sha256 needs access "unavailable on <date>"`);
+  } else {
+    if (!/^[0-9a-f]{64}$/.test(d.sha256 || '')) fail(`${tag}: sha256 must be 64 hex characters or null`);
+    if (d.access !== 'downloaded' || !d.hashed_on || !(d.bytes > 0) || !/^[0-9a-f]{32}$/.test(d.md5_library || '')) fail(`${tag}: a hash needs access "downloaded", hashed_on, bytes and md5_library`);
+  }
+});
+
 if (errors.length) {
   console.error('Data validation failed:\n- ' + errors.join('\n- '));
   process.exit(1);

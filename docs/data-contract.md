@@ -17,4 +17,4 @@ Each case has: id, measure, unit, at least two sourced values (label, value, htt
 - Exports (`public/data/history.csv`, `history.json`, `conflicts.json`) are built from these same files.
 
 ## Not yet in place
-Geography versioning, price-basis fields on every observation, source file checksums, and a reviewer workflow. These need an owner decision on who reviews.
+Geography versioning, price-basis fields on every observation, and a reviewer workflow. (Source file checksums are in `data/source-manifest.json` since 21 Nov 2026.) These need an owner decision on who reviews.

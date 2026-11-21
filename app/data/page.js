@@ -25,6 +25,7 @@ const FILES = [
   { file: 'county.json', asof: '20 Nov 2026', what: 'County population, households, urban centres, age groups, poverty and health indicators', source: 'Siaya County Integrated Development Plan 2023 to 2027', conf: '4' },
   { file: 'cpi.json', asof: '20 Nov 2026', what: 'Kenya consumer price index, calendar and fiscal-year averages', source: 'World Bank, series FP.CPI.TOTL', conf: '4' },
   { file: 'siaya-boundaries.json', asof: '21 Nov 2026', what: 'Simplified outlines of the six Siaya sub-counties, as map paths, with their licence and source', source: 'geoBoundaries (IEBC boundaries via OCHA), CC BY 3.0 IGO', conf: '4' },
+  { file: 'source-manifest.json', asof: '21 Nov 2026', what: 'Source documents behind the ten-year series: title, link, fiscal year, retrieval date and a SHA-256 checksum of the exact PDF downloaded, so anyone can confirm they hold the same file', source: 'Parliament of Kenya library copies of Controller of Budget and Auditor-General reports', conf: 'n/a' },
   { file: 'sources.json', asof: '20 Nov 2026', what: 'Source register', source: 'Takwimu', conf: 'n/a' },
 ];
 
