@@ -56,3 +56,22 @@ An outside assessment of the live site was supplied as a handover. It is an asse
 6. FY2019/20 and FY2025/26 reports, audit opinions FY2014/15 to FY2018/19, and the payroll series, when sources are reachable.
 7. End-to-end tests in CI, Lighthouse and Core Web Vitals measurement, security headers review.
 8. Peer counties (three to five) with standardised definitions.
+
+## Second-pass recommendations (21 Nov 2026): triage
+
+| Item | Status |
+|---|---|
+| Repo and deploy mapping (P0) | Done: `docs/architecture-map.md`; live deploy `6b00f585a910acddb221ccd0` from commit `cd1f7c8` |
+| FY2023/24 OSR 610.74 vs 427.95; component sum 610.63 vs 610.74 | Recorded in `data/conflicts.json` and the Siaya data note |
+| FY2024/25 recurrent 82.2 vs 83 per cent | Recorded; page-image check of the denominator still open |
+| FY2024/25 pending bills: opening 1.12bn, settled 577.7m, closing unknown | Recorded as not calculable; no closing stock derived |
+| Pending-bills disagreements FY2020/21, 2022/23, 2023/24 | Recorded (`pending-2021`, `pending-2023`, `pending-2024`) |
+| Number and unit formatting | Done |
+| Chart table alternative, keyboard, tooltip | Done; touch tooltip and screen-reader announcements need device testing |
+| Export matches display and keeps source metadata | Done for CSV; no schema version or licence field yet |
+| Navigation regrouping | Deferred (needs redirects) |
+| Typed contracts, supersession links, reviewer fields | Next release (largest P0 item) |
+| Playwright E2E, Lighthouse, security headers | Next release |
+| Fiscal Health Monitor, Pending Bills roll-forward, Audit tracker, peers, scenarios | Later releases, one module per release, only with source evidence |
+
+Recommended order: (1) data contracts with supersession and reviewer fields; (2) E2E tests and headers; (3) Fiscal Health Monitor from data already held; (4) retry the missing reports (FY2019/20, FY2025/26, audits FY2014/15 to FY2018/19) and record negative outcomes.
