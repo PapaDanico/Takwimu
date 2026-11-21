@@ -34,7 +34,7 @@ export default function SiayaEducation() {
 
       <section className="card gold" aria-labelledby="ed-read">
         <h2 id="ed-read">How to read this page</h2>
-        <Provisional>Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-education">Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>
         <ul className="how">
           <li id="devolved-vs-national"><b>Two levels of government.</b> Under the Constitution&rsquo;s Fourth Schedule the county runs pre-primary education (ECDE), village polytechnics (vocational training centres) and its own bursary fund. Primary and secondary schools, teachers employed by the Teachers Service Commission, national technical institutes and CDF bursaries are national functions. The two are shown in separate sections.</li>
           <li><b>Each source is its own vintage.</b> The Ministry&rsquo;s 2014 and 2019 booklets, the KNBS abstract and the county plan are never merged; where they differ, both values are shown.</li>
@@ -50,7 +50,7 @@ export default function SiayaEducation() {
           ariaLabel="Siaya pre-primary (ECDE) enrolment by source and year, pupils"
           series={[{ name: 'Pre-primary enrolment, pupils', color: 1, values: ppTotal.map((o) => o.value) }]} />
         <p className="src">The CIDP&rsquo;s end-2022 figure (81,771) equals its own projected population aged 3 to 5 for 2022, so it may not be an enrolment count (inconsistency 7 below).</p>
-        <ObsTable caption="Siaya county (devolved) education functions, every value" id="devolved" rows={sorted('devolved').map(row)} />
+        <ObsTable dataset="siaya-education" caption="Siaya county (devolved) education functions, every value" id="devolved" rows={sorted('devolved').map(row)} />
       </section>
 
       <section className="card" aria-labelledby="ed-nat">
@@ -60,7 +60,7 @@ export default function SiayaEducation() {
           ariaLabel="Siaya primary and secondary enrolment, Ministry of Education booklets 2014 and 2019, pupils"
           series={[{ name: 'Ministry booklet 2014', color: 1, values: [enrol('primary_enrolment', 'MOE-BESB-2014'), enrol('secondary_enrolment', 'MOE-BESB-2014')].map((o) => (o ? o.value : null)) },
             { name: 'Ministry booklet 2019', color: 2, values: [enrol('primary_enrolment', 'MOE-BESB-2019'), enrol('secondary_enrolment', 'MOE-BESB-2019')].map((o) => (o ? o.value : null)) }]} />
-        <ObsTable caption="National education functions in Siaya, every value" id="national" rows={sorted('national').map(row)} />
+        <ObsTable dataset="siaya-education" caption="National education functions in Siaya, every value" id="national" rows={sorted('national').map(row)} />
       </section>
 
       <section className="card" aria-labelledby="ed-conf">
@@ -71,7 +71,7 @@ export default function SiayaEducation() {
             <li key={c.id} className="conflict" id={c.id}>
               <p><b>{c.description}</b></p>
               <p>How it is handled: {c.handling}</p>
-              <ObsTable caption={`${c.id}: values side by side`} rows={c.observations.map((id) => row(byId[id]))} showNote={false} />
+              <ObsTable dataset="siaya-education" caption={`${c.id}: values side by side`} rows={c.observations.map((id) => row(byId[id]))} showNote={false} />
             </li>
           ))}
         </ol>

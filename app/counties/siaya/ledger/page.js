@@ -1,3 +1,4 @@
+import { Provisional } from '../../../../components/ObsTable';
 import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
@@ -22,7 +23,7 @@ export default function SiayaLedger() {
 
       <section className="card gold" aria-labelledby="led-read">
         <h2 id="led-read">How to read this page</h2>
-        <p className="provisional"><span className="tag warn">Provisional: awaiting editorial review</span> Values were transcribed by Takwimu from the documents and have not yet been checked by a reviewer.</p>
+        <Provisional dataset="siaya-fiscal-ledger">Values were transcribed by Takwimu from the documents and have not yet been checked by a reviewer.</Provisional>
         <p id="why-differ"><b>Why the figures differ.</b> Official documents often give different figures for the same year because they describe different things: an original or a supplementary budget, a full year or part of one, own-source revenue with or without hospital income (FIF) and other appropriations-in-aid (A-i-A), and money counted when it moves (cash) or when it is owed (accrual). A difference is therefore a question to put to the documents, not evidence that any figure is wrong.</p>
         <ul className="how">
           <li id="no-averaging"><b>No averaging and no verdicts.</b> Every value is shown as its source printed it, with the page it was read from. None is averaged, preferred or corrected here, and a missing value is never shown as zero.</li>

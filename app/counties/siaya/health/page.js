@@ -43,7 +43,7 @@ export default function SiayaHealth() {
 
       <section className="card gold" aria-labelledby="hl-read">
         <h2 id="hl-read">How to read this page</h2>
-        <Provisional>Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-health">Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>
         <ul className="how">
           <li><b>Estimates are not measurements.</b> County HIV figures are modelled estimates. The national HIV council says estimates from different model rounds are not directly comparable, so each round is shown on its own and no trend line is drawn across them.</li>
           <li><b>Surveys are samples.</b> KDHS county values rest on small samples and carry a margin of error; small differences should not be over-read.</li>
@@ -58,16 +58,16 @@ export default function SiayaHealth() {
         <ColumnChart labels={hivRounds.map((o) => `${o.period.split(' ')[0]} (${short(o.source_id)})`)} unit="%" yFormat="one"
           ariaLabel="Siaya HIV prevalence by estimate round, per cent; each bar is a separate round, not a trend"
           series={[{ name: 'HIV prevalence, per cent', color: 1, values: hivRounds.map((o) => o.value) }]} />
-        <ObsTable caption="Siaya HIV prevalence by estimate round" id="hiv-rounds" rows={hivRounds.map((o) => row(o))} />
+        <ObsTable dataset="siaya-health" caption="Siaya HIV prevalence by estimate round" id="hiv-rounds" rows={hivRounds.map((o) => row(o))} />
         <h3>Values that are not county estimate rounds</h3>
         <p className="lead">The sentinel-site value describes a surveillance area inside Siaya in 2003-04, for ages 13 to 34; it is not representative of the county. The press figure names no source and matches no round held.</p>
-        <ObsTable caption="Siaya HIV prevalence: sentinel-site and press values" id="hiv-other" rows={hivOther.map((o) => row(o))} />
+        <ObsTable dataset="siaya-health" caption="Siaya HIV prevalence: sentinel-site and press values" id="hiv-other" rows={hivOther.map((o) => row(o))} />
       </section>
 
       <section className="card" aria-labelledby="hl-hivp">
         <h2 id="hl-hivp">New infections, treatment and mother-to-child transmission</h2>
         <p className="lead">Each value with its round or data system. Counts of new infections from different rounds are not comparable either.</p>
-        <ObsTable caption="Siaya HIV incidence, new infections, treatment and transmission" rows={obs.filter((o) => hivMeasures.includes(o.measure)).map((o) => row(o))} />
+        <ObsTable dataset="siaya-health" caption="Siaya HIV incidence, new infections, treatment and transmission" rows={obs.filter((o) => hivMeasures.includes(o.measure)).map((o) => row(o))} />
       </section>
 
       <section className="card" aria-labelledby="hl-kdhs">
@@ -76,14 +76,14 @@ export default function SiayaHealth() {
         <ColumnChart labels={KDHS.map(([, l]) => l)} unit="%" yFormat="one"
           ariaLabel="Siaya maternal and child health indicators, KDHS 2014 and KDHS 2022, per cent"
           series={[{ name: 'KDHS 2014', color: 1, values: KDHS.map(([m]) => (kd(m, 'KDHS-2014') || {}).value ?? null) }, { name: 'KDHS 2022', color: 2, values: KDHS.map(([m]) => (kd(m, 'KDHS-2022-KIR') || {}).value ?? null) }]} />
-        <ObsTable caption="Siaya maternal care, immunisation and stunting, all sources" rows={obs.filter((o) => ['skilled-anc', 'skilled-delivery', 'facility-delivery', 'immunisation-full', 'immunisation-basic', 'immunisation-coverage-admin', 'stunting', 'itn-use-under5', 'iptp3'].includes(o.measure)).map((o) => row(o))} />
+        <ObsTable dataset="siaya-health" caption="Siaya maternal care, immunisation and stunting, all sources" rows={obs.filter((o) => ['skilled-anc', 'skilled-delivery', 'facility-delivery', 'immunisation-full', 'immunisation-basic', 'immunisation-coverage-admin', 'stunting', 'itn-use-under5', 'iptp3'].includes(o.measure)).map((o) => row(o))} />
         <p className="src">Immunisation is not charted: KDHS 2014 &ldquo;fully vaccinated&rdquo; and KDHS 2022 &ldquo;national schedule&rdquo; cover different antigens.</p>
       </section>
 
       <section className="card" aria-labelledby="hl-tb">
         <h2 id="hl-tb">TB and malaria</h2>
         <p className="lead">No survey has measured malaria prevalence for Siaya since KDHS 2022 dropped malaria testing; the figures below are plan and press figures with their named originals.</p>
-        <ObsTable caption="Siaya TB and malaria indicators by source" rows={obs.filter((o) => /^tb-|^malaria/.test(o.measure)).map((o) => row(o))} />
+        <ObsTable dataset="siaya-health" caption="Siaya TB and malaria indicators by source" rows={obs.filter((o) => /^tb-|^malaria/.test(o.measure)).map((o) => row(o))} />
       </section>
 
       <section className="card" aria-labelledby="hl-hw">
@@ -92,13 +92,13 @@ export default function SiayaHealth() {
         <ColumnChart labels={subs} unit="people per nurse" yFormat="int"
           ariaLabel="People per nurse by Siaya sub-county, 2022, as printed in the CIDP 2023-2027"
           series={[{ name: 'People per nurse', color: 1, values: subs.map((s) => obs.find((o) => o.measure === 'population-per-nurse' && o.geography_detail === s).value) }]} />
-        <ObsTable caption="People per health worker by Siaya sub-county" rows={obs.filter((o) => hw.includes(o.measure)).map((o) => row(o, `${o.label}, ${o.geography_detail}`))} />
+        <ObsTable dataset="siaya-health" caption="People per health worker by Siaya sub-county" rows={obs.filter((o) => hw.includes(o.measure)).map((o) => row(o, `${o.label}, ${o.geography_detail}`))} />
       </section>
 
       <section className="card" aria-labelledby="hl-press">
         <h2 id="hl-press">Figures reported in county news articles</h2>
         <p className="lead">These are secondary reports: the articles name no dataset, and one could not be retrieved (it is quoted from the research programme). They are leads to check, not established figures.</p>
-        <ObsTable caption="Siaya health figures from county news articles (secondary reports)" id="press" rows={obs.filter(SECONDARY_ONLY).map((o) => row(o))} />
+        <ObsTable dataset="siaya-health" caption="Siaya health figures from county news articles (secondary reports)" id="press" rows={obs.filter(SECONDARY_ONLY).map((o) => row(o))} />
       </section>
 
       <section className="card" aria-labelledby="hl-conf">
@@ -108,7 +108,7 @@ export default function SiayaHealth() {
           <div key={c.measure} className="conflict">
             <h3>{c.measure.replace(/-/g, ' ')}</h3>
             <p>{c.note}</p>
-            <ObsTable caption={`${c.measure}: values side by side`} rows={c.observation_ids.map((id) => row(byId[id]))} showNote={false} />
+            <ObsTable dataset="siaya-health" caption={`${c.measure}: values side by side`} rows={c.observation_ids.map((id) => row(byId[id]))} showNote={false} />
           </div>
         ))}
       </section>

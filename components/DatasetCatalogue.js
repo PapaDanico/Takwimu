@@ -34,7 +34,7 @@ export default function DatasetCatalogue({ datasets, sectors, sources, years }) 
   const shown = datasets.filter((d) => (!sector || d.sector === sector) && (!geo || d.geography === geo) && (!source || d.source === source)
     && (!year || d.years.includes(Number(year))) && words.every((w) => text(d).includes(w)));
   const active = [q, sector, geo, source, year].filter(Boolean).length;
-  const rows = shown.map((d) => ({ id: d.id, title: d.title, sector: d.sectorLabel, geography: GEO[d.geography], area: d.area, period: `${d.period.from} to ${d.period.to}`, unit: d.unit, status: d.status, status_reason: d.status_reason, version: d.version, source: d.source_detail, source_url: d.source_url, last_updated: d.last_updated, retrieved: d.retrieved, csv: d.files.csv, json: d.files.json }));
+  const rows = shown.map((d) => ({ id: d.id, title: d.title, sector: d.sectorLabel, geography: GEO[d.geography], area: d.area, period: `${d.period.from} to ${d.period.to}`, unit: d.unit, status: d.status, status_reason: d.status_reason, review_approved: d.review ? d.review.approved : '', review_pending: d.review ? d.review.pending : '', review_rejected: d.review ? d.review.rejected : '', version: d.version, source: d.source_detail, source_url: d.source_url, last_updated: d.last_updated, retrieved: d.retrieved, csv: d.files.csv, json: d.files.json }));
 
   return (
     <>
@@ -99,6 +99,7 @@ export default function DatasetCatalogue({ datasets, sectors, sources, years }) 
                 <p>{d.description}</p>
                 <dl>
                   <dt>Status</dt><dd><span className={`ds-status st-${d.status}`}>{d.status}</span> {d.status_reason}</dd>
+                  <dt>Review</dt><dd data-review-counts={d.id}>{d.review ? `${d.review.approved.toLocaleString('en-US')} approved, ${d.review.pending.toLocaleString('en-US')} pending, ${d.review.rejected.toLocaleString('en-US')} rejected (of ${d.review.total.toLocaleString('en-US')} values)` : 'Not itemised for editorial review yet.'}</dd>
                   <dt>Unit</dt><dd>{d.unit}</dd>
                   <dt>Coverage</dt><dd>{d.coverage}</dd>
                   <dt>Source</dt><dd><a href={d.source_url}>{d.source_detail}</a></dd>

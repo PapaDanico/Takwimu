@@ -24,7 +24,7 @@ export default function SiayaProjects() {
 
       <section className="card gold" aria-labelledby="pr-read">
         <h2 id="pr-read">How to read this page</h2>
-        <Provisional>The register was compiled by Takwimu from the reports (some pages read by OCR) and has not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-projects">The register was compiled by Takwimu from the reports (some pages read by OCR) and has not yet been checked by a reviewer.</Provisional>
         <ul className="how">
           <li id="verified-rule"><b>Reported is not verified.</b> &ldquo;Completed (reported)&rdquo; means the county reported completion. Only a project whose completion the Auditor-General confirmed on inspection is shown as independently verified: in this register that is {verified.map((p) => <span key={p.id}><code>{p.id}</code> ({p.name})</span>)} alone. Takwimu has made no site visits.</li>
           <li><b>Not exhaustive.</b> The reports list mainly the highest-spending and stalled projects, so many projects are not here.</li>

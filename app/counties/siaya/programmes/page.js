@@ -63,7 +63,7 @@ export default function SiayaProgrammes() {
 
       <section className="card gold" aria-labelledby="pg-read">
         <h2 id="pg-read">How to read this page</h2>
-        <Provisional>Records were compiled by Takwimu from county documents, the World Bank projects database and IATI files and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-programmes">Records were compiled by Takwimu from county documents, the World Bank projects database and IATI files and have not yet been checked by a reviewer.</Provisional>
         <ul className="how">
           <li id="pooled-rule"><b>Pooled amounts are never Siaya amounts.</b> A programme that covers several counties or the whole country publishes one total. That total is shown on its own row, marked &ldquo;Pooled total&rdquo;, and is never added to any Siaya figure: how much of it reached Siaya is not published.</li>
           <li><b>Evidence types.</b> {Object.entries(EV_DEF).map(([k, v]) => <span key={k}><Badge t={k} /> {v} </span>)}</li>

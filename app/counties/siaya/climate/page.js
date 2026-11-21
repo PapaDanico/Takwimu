@@ -36,7 +36,7 @@ export default function SiayaClimate() {
 
       <section className="card gold" aria-labelledby="cl-read">
         <h2 id="cl-read">How to read this page</h2>
-        <Provisional>Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-climate">Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>
         <ul className="how">
           <li id="no-ranking"><b>The PCRA prints no ranking of wards.</b> The Participatory Climate Risk Assessment (2023) lists hazards and hotspots ward by ward as participants described them. It does not rank wards by severity, and serial numbers in its tables are not ranks. Hotspots below are copied exactly as printed.</li>
           <li id="money-kinds"><b>Four kinds of money, never mixed.</b> An allocation is a plan, a receipt is cash received, a transfer is money moved into a fund and expenditure is money spent. None of them is an outcome. They are shown in separate tables and never added together.</li>
@@ -70,7 +70,7 @@ export default function SiayaClimate() {
         <p className="src">No hazard is recorded for these wards: the report prints no ward table for them, and some appear only in its annex. That is a gap, not an absence of risk. Find any ward on the <Link href="/counties/siaya/wards/">ward map</Link>.</p>
         <h3>County and sub-county hazard statements</h3>
         <p className="lead">The PCRA&rsquo;s county hazard list and the only ranking words it uses, quoted as printed.</p>
-        <ObsTable caption="PCRA county and sub-county hazard statements as printed" rows={otherHazards.map((o) => ({ ...row(o, `${o.measure}: ${o.hazard || ''}`), value: null, value_text: o.rank_as_printed }))} />
+        <ObsTable dataset="siaya-climate" caption="PCRA county and sub-county hazard statements as printed" rows={otherHazards.map((o) => ({ ...row(o, `${o.measure}: ${o.hazard || ''}`), value: null, value_text: o.rank_as_printed }))} />
       </section>
 
       <section className="card" aria-labelledby="cl-water">
@@ -93,7 +93,7 @@ export default function SiayaClimate() {
           </table>
         </TableWrap>
         <h3>Every coverage value</h3>
-        <ObsTable caption="Siaya water and sanitation coverage values, all sources" rows={obs.filter((o) => o.kind === 'coverage').map((o) => row(o))} />
+        <ObsTable dataset="siaya-climate" caption="Siaya water and sanitation coverage values, all sources" rows={obs.filter((o) => o.kind === 'coverage').map((o) => row(o))} />
       </section>
 
       <section className="card" aria-labelledby="cl-money">
@@ -103,7 +103,7 @@ export default function SiayaClimate() {
           <div key={k} id={`money-${k}`}>
             <h3>{title}</h3>
             <p className="lead">{def}</p>
-            <ObsTable caption={`Siaya climate and water money: ${k}`} rows={obs.filter((o) => o.kind === k).map((o) => row(o))} />
+            <ObsTable dataset="siaya-climate" caption={`Siaya climate and water money: ${k}`} rows={obs.filter((o) => o.kind === k).map((o) => row(o))} />
           </div>
         ))}
         {c.comparisons.filter((x) => x.id !== 'water-access-definitions').map((x) => <p key={x.id} className="src"><b>{x.topic}.</b> {x.note}</p>)}

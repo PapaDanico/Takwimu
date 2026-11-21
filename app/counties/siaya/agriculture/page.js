@@ -37,7 +37,7 @@ export default function SiayaAgriculture() {
 
       <section className="card gold" aria-labelledby="ag-read">
         <h2 id="ag-read">How to read this page</h2>
-        <Provisional>Values were transcribed by Takwimu from the KNBS Siaya County Statistical Abstract 2015 and the CIDP 2023-2027 and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-agriculture">Values were transcribed by Takwimu from the KNBS Siaya County Statistical Abstract 2015 and the CIDP 2023-2027 and have not yet been checked by a reviewer.</Provisional>
         <ul className="how">
           <li id="observed-vs-targets"><b>Observed values and targets are separate.</b> {observed.length} values are reported as counted or achieved; {planned.length} are plan targets. Targets appear only in their own section and are never shown as results.</li>
           <li><b>Some printed units are unreliable.</b> Where a table&rsquo;s unit cannot be right as printed (for example tonnes equal to bag counts), the value is kept with confidence 1 and is not charted.</li>
@@ -59,17 +59,17 @@ export default function SiayaAgriculture() {
           ariaLabel="Siaya livestock numbers by type, 2013 and 2014"
           series={['2013', '2014'].map((y, i) => ({ name: y, color: i + 1, values: LIVE.map((c) => (head(c, y) || {}).value ?? null) }))} />
         <h3>Crops</h3>
-        <ObsTable caption="Siaya crops, observed values" id="obs-crops" rows={group(/^(area_cropped|production|production_value|mechanised_area)$/).map(row)} />
+        <ObsTable dataset="siaya-agriculture" caption="Siaya crops, observed values" id="obs-crops" rows={group(/^(area_cropped|production|production_value|mechanised_area)$/).map(row)} />
         <h3>Livestock and bees</h3>
-        <ObsTable caption="Siaya livestock, observed values" rows={group(/^livestock_population$/).map(row)} />
+        <ObsTable dataset="siaya-agriculture" caption="Siaya livestock, observed values" rows={group(/^livestock_population$/).map(row)} />
         <h3>Fisheries and irrigation</h3>
-        <ObsTable caption="Siaya fisheries and irrigation, observed values" rows={group(/^(fish|aquaculture|irrigated|jetties)/).map(row)} />
+        <ObsTable dataset="siaya-agriculture" caption="Siaya fisheries and irrigation, observed values" rows={group(/^(fish|aquaculture|irrigated|jetties)/).map(row)} />
       </section>
 
       <section className="card" aria-labelledby="ag-tgt">
         <h2 id="ag-tgt">Targets in the county plans (not results)</h2>
         <p className="lead">Targets and cost estimates printed in the CIDP 2023-2027 and its review of 2018-2022. They describe intentions; they are not counts, and none has been checked against a result.</p>
-        <ObsTable caption="Siaya agriculture plan targets (not observed values)" id="targets" rows={planned.map(row)} />
+        <ObsTable dataset="siaya-agriculture" caption="Siaya agriculture plan targets (not observed values)" id="targets" rows={planned.map(row)} />
       </section>
 
       <section className="card" aria-labelledby="ag-conf">
@@ -79,7 +79,7 @@ export default function SiayaAgriculture() {
           <div key={c.id} className="conflict" id={c.id}>
             <h3>{c.topic}</h3>
             <p>{c.note}</p>
-            <ObsTable caption={`${c.topic}: values side by side`} rows={c.values.map((id) => row(byId[id]))} />
+            <ObsTable dataset="siaya-agriculture" caption={`${c.topic}: values side by side`} rows={c.values.map((id) => row(byId[id]))} />
           </div>
         ))}
       </section>

@@ -11,6 +11,9 @@ const { natIndicators } = require('../lib/explore');
 const NAT_WITH_VALUES = natIndicators.filter((x) => x.hasValues).length;
 const NAT_PF = natIndicators.filter((x) => x.hasValues && x.sector === 'public finance').length;
 const path = require('path');
+// Review records (data/reviews.json): no value may show "Approved" unless one is in force (none yet).
+const rvs = require('../lib/review-status');
+const REVIEW_APPROVED = rvs.DATASET_IDS.reduce((n, d) => n + rvs.counts(d).approved, 0);
 const toml = fs.readFileSync(path.join(__dirname, '..', 'netlify.toml'), 'utf8');
 const csp = (toml.match(/Content-Security-Policy = "([^"]+)"/) || [])[1];
 const root = path.resolve(process.argv[2] || path.join(__dirname, '..', 'dist'));
@@ -51,6 +54,8 @@ const srv = http.createServer((req, res) => {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200 && (await pg.locator('main h1').count()) === 1, `${u} loads with one h1`);
     check(/Provisional: awaiting editorial review/i.test(await pg.locator('main .provisional').first().innerText()), `${u}: labelled "Provisional: awaiting editorial review"`);
+    if (slug !== 'wards') check(/Editorial review of [\d,]+ values?: \d[\d,]* approved, [\d,]+ pending, \d[\d,]* rejected/.test(await pg.locator('main .provisional .review-counts').first().innerText()), `${u}: shows review counts (approved, pending, rejected)`);
+    check(REVIEW_APPROVED > 0 || await pg.locator('main [data-review="approved"]').count() === 0, `${u}: no "Approved" tag without an approved review record`);
     const figs = pg.locator('main figure.chart');
     const n = await figs.count();
     let tv = 0;
@@ -308,6 +313,9 @@ const srv = http.createServer((req, res) => {
   check(cat.status_vocabulary.length === 6 && cat.datasets.every((d) => d.status && /^[0-9a-f]{10}$/.test(d.version)) && dsCsvText.split('\n')[0].endsWith('"dataset_version"') && dsCsvText.split('\n')[1].endsWith(`"${absCat.version}"`), 'catalogue gives every dataset a status and version; the CSV carries the version');
   await p2.goto(base + '/datasets/?q=counties-absorption', { waitUntil: 'networkidle' });
   check((await p2.locator('#counties-absorption a.file').first().getAttribute('download')) === `counties-absorption-${absCat.version}.csv` && /disputed/i.test(await p2.locator('#counties-absorption').innerText()) && await p2.locator('#status dt').count() === 6, '/datasets/ shows status, version and the six-term status list; downloads are named with the version');
+  const absReview = absCat.review;
+  check(Boolean(absReview) && new RegExp(`${absReview.approved} approved, ${absReview.pending.toLocaleString('en-US')} pending, ${absReview.rejected} rejected`).test(await p2.locator('#counties-absorption [data-review-counts]').innerText()) && cat.datasets.filter((d) => d.review).length >= 16 && /Editorial review of/.test(absCat.status_reason), '/datasets/ and catalogue.json show review counts (approved, pending, rejected) per dataset');
+  check(await p2.locator('#review').count() === 1 && (REVIEW_APPROVED > 0 || await p2.locator('main [data-review="approved"]').count() === 0), '/datasets/ explains editorial review; nothing shown as approved without a record');
   await p2.goto(base + '/trends/?i=siaya-spending&basis=real', { waitUntil: 'networkidle' });
   await p2.waitForURL(/\/kenya\/\?i=siaya-spending&basis=real#trends/, { timeout: 10000 }).catch(() => {});
   check(/\/kenya\/\?i=siaya-spending&basis=real#trends$/.test(p2.url()), 'old /trends/ links move to the Kenya dashboard trend explorer with their choices');
