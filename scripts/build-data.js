@@ -360,7 +360,9 @@ Object.entries(files)
 (function writeProjects() {
   const { publicCopy, WITHHELD } = require('../lib/projects');
   const raw = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-projects.json'), 'utf8'));
-  const names = raw.projects.map((p) => p.contract && p.contract.contractor && p.contract.contractor.name).filter(Boolean);
+  // A public utility that is also a programme implementer in the atlas is checked by field only, not by name.
+  const progText = fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-programmes.json'), 'utf8');
+  const names = raw.projects.map((p) => p.contract && p.contract.contractor && p.contract.contractor.name).filter(Boolean).filter((nm) => !progText.includes(nm));
   const out = JSON.stringify(publicCopy(), null, 1) + '\n';
   const leak = WITHHELD.filter((k) => out.includes(`"${k}"`)).concat(names.filter((nm) => out.includes(nm)));
   if (leak.length) throw new Error(`siaya-projects public copy still contains withheld fields or names: ${leak.join(', ')}`);

@@ -45,7 +45,7 @@ const srv = http.createServer((req, res) => {
   check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'Fiscal Pulse chart has a table view');
   // Siaya topic pages (health, education, agriculture, wards, climate, analysis): each loads, carries the provisional
   // label, is linked from the hub, and every chart has a table view that opens with rows.
-  const TOPICS = { health: 2 + 1, education: 2, agriculture: 2, wards: 0, climate: 0, analysis: 3 };
+  const TOPICS = { health: 2 + 1, education: 2, agriculture: 2, wards: 0, climate: 0, analysis: 3, projects: 1, programmes: 1 };
   for (const [slug, charts] of Object.entries(TOPICS)) {
     const u = `/counties/siaya/${slug}/`;
     const r = await pg.goto(base + u, { waitUntil: 'load' });
@@ -109,10 +109,47 @@ const srv = http.createServer((req, res) => {
     check(/Calculated by Takwimu Kenya from published figures/i.test(await pg.locator('#calc-label').innerText()) && /context, not causation/.test(await pg.locator('#context-not-causation').innerText()), 'analysis: calculated label and "context, not causation" shown');
     check(await pg.locator('table.calc tbody tr').count() >= anJson.records.filter((r) => r.family !== 'A5' || r.flags.count_kind !== 'category' || r.status === 'gap').length && await pg.locator('#gap-list li').count() === anJson.records.filter((r) => r.status === 'gap').length, 'analysis: every record with its calc_id; every gap listed with its reason');
     check(await pg.locator('main a[href="/counties/siaya/wards/"]').count() >= 1, 'analysis: climate finance links to the ward map');
+    // Project register: eight-state legend, reported beside audit-found, one verified project, filters, finding links.
+    const pJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-projects.json'), 'utf8'));
+    await pg.goto(base + '/counties/siaya/projects/', { waitUntil: 'load' });
+    const usedStates = [...new Set(pJson.projects.map((x) => x.status))];
+    check(usedStates.length === 8 && await pg.locator('#status-legend dt').count() === 8, 'projects: status legend lists the eight states in use');
+    check(await pg.locator('main li.ds').count() === pJson.projects.length && new RegExp(`Showing ${pJson.projects.length} of ${pJson.projects.length}`).test(await pg.locator('#pr-count').innerText()), 'projects: every project is listed');
+    const ver = pg.locator('main li.ds .tags .tag', { hasText: /^completed-independently-verified$/ });
+    check(await ver.count() === 1 && await pg.locator('li#SIA-P-038 .tags .tag', { hasText: /^completed-independently-verified$/ }).count() === 1, 'projects: only SIA-P-038 is shown as independently verified');
+    const opoda = await pg.locator('li#SIA-P-018').innerText();
+    check(/Reported by the county/i.test(opoda) && /Found by the Auditor-General/i.test(opoda) && /100%/.test(opoda) && /20%/.test(opoda), 'projects: Opoda road shows the county report (100%) beside the audit finding (20%)');
+    check(/Found by the Auditor-General/i.test(await pg.locator('li#SIA-P-036').innerText()), 'projects: Bondo mortuary shows reported and audit-found status side by side');
+    check(await pg.locator('main li.ds a[href^="/counties/siaya/audits/#f-"]').count() >= 1, 'projects: audit finding ids link to the audit findings page');
+    const selects = pg.locator('main .controls select');
+    await selects.nth(1).selectOption('north-sakwa');
+    const nsk = pJson.projects.filter((x) => x.location.ward_ids.includes('north-sakwa')).length;
+    check(await pg.locator('main li.ds').count() === nsk && await selects.nth(1).locator('option').count() === 31, 'projects: the ward filter uses the 30 registry wards and narrows the list');
+    await selects.nth(1).selectOption('');
+    await selects.nth(2).selectOption('suspended');
+    check(await pg.locator('main li.ds').count() === pJson.projects.filter((x) => x.status === 'suspended').length, 'projects: the status filter narrows the list');
+    await selects.nth(2).selectOption('');
+    await selects.nth(0).selectOption('health');
+    check(await pg.locator('main li.ds').count() === pJson.projects.filter((x) => x.sector === 'health').length, 'projects: the sector filter narrows the list');
+    // Owner decision: contractor company names never reach the published site.
+    // A public utility also named as a programme implementer in the atlas is checked by field only, not by name.
+    const progText = fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-programmes.json'), 'utf8');
+    const names = pJson.projects.map((x) => x.contract.contractor && x.contract.contractor.name).filter(Boolean).filter((nm) => !progText.includes(nm));
+    const walkDist = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walkDist(path.join(d, e.name)) : [path.join(d, e.name)]));
+    const leaks = walkDist(root).filter((f) => /\.(html|json|csv|txt|js)$/.test(f)).filter((f) => { const s = fs.readFileSync(f, 'utf8'); return /"contractor(_note)?"\s*:/.test(s) || /\bcontractor(_note)?,/.test(s.split('\n')[0] || '') || names.some((nm) => s.includes(nm)); });
+    check(names.length >= 1 && leaks.length === 0, `no contractor field or contractor name reaches dist (withheld pending review)${leaks.length ? `: ${leaks.slice(0, 5).join(', ')}` : ''}`);
+    // Programme atlas: Siaya-specific and pooled separated, pooled never summed, evidence badges, screened-out list.
+    const gJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-programmes.json'), 'utf8'));
+    await pg.goto(base + '/counties/siaya/programmes/', { waitUntil: 'load' });
+    const spec = gJson.programmes.filter((x) => ['siaya_specific', 'siaya_wards_listed'].includes(x.geography.class));
+    check(await pg.locator('#pg-specific tbody tr').count() === spec.length && await pg.locator('#pg-pooled tbody tr').count() === gJson.programmes.length - spec.length, 'programmes: Siaya-specific and multi-county or national programmes in separate tables');
+    check(!/Pooled total/i.test(await pg.locator('#pg-specific').innerText()) && await pg.locator('#pg-pooled .tag', { hasText: /Pooled total/i }).count() === gJson.programmes.filter((x) => !['siaya_specific', 'siaya_wards_listed'].includes(x.geography.class)).reduce((s, x) => s + x.amounts.filter((a) => a.pooled).length, 0), 'programmes: every pooled amount is labelled and none appears among Siaya-specific amounts');
+    check(gJson.summary.siaya_development_partner_grants_kes.every((x) => x.record_ids.every((id) => spec.some((s) => s.id === id))), 'programmes: Siaya totals are built only from Siaya-specific records (pooled never summed)');
+    check(await pg.locator('main .tag', { hasText: /^(Planned|Self-reported|Independently evaluated)$/ }).count() >= gJson.programmes.length && await pg.locator('#screened li').count() === gJson.screened_out.length, 'programmes: evidence-type badges on every record; screened-out reports listed');
     await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
-    check(await Promise.all(Object.keys(TOPICS).map((s) => pg.locator(`main a[href="/counties/siaya/${s}/"]`).count())).then((c) => c.every((x) => x >= 1)), 'Siaya hub links to health, education, agriculture, wards, climate and analysis');
+    check(await Promise.all(Object.keys(TOPICS).map((s) => pg.locator(`main a[href="/counties/siaya/${s}/"]`).count())).then((c) => c.every((x) => x >= 1)), 'Siaya hub links to the eight Siaya topic pages');
     const sm = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-    check(Object.keys(TOPICS).every((s) => sm.includes(`/counties/siaya/${s}/`)), 'sitemap lists the six Siaya topic pages');
+    check(Object.keys(TOPICS).every((s) => sm.includes(`/counties/siaya/${s}/`)), 'sitemap lists the eight Siaya topic pages');
   }
   // Siaya's economy (data/siaya-economy.json): two line charts and a column chart, each with a table view; revisions side by side.
   await pg.goto(base + '/counties/siaya/economy/', { waitUntil: 'load' });
