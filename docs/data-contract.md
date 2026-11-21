@@ -1,6 +1,6 @@
-# Data contract (version 1.3)
+# Data contract (version 1.4)
 
-Applies to `data/history.json` and `data/conflicts.json`. Enforced by `scripts/validate-data.js` at build time, including the JSON Schemas in `schemas/` (also for `subcounties.json` and `county.json`).
+Applies to `data/history.json`, `data/conflicts.json`, `data/national.json` and `data/counties-cob.json`. Enforced by `scripts/validate-data.js` at build time, including the JSON Schemas in `schemas/` (also for `subcounties.json` and `county.json`).
 
 ## Observations (history.json)
 Each year carries: fiscal year, figures, `report` (default source), optional `field_source` (a different report for one field), optional `derived` (fields computed rather than printed), `caveat`. Each report has title, URL and confidence (1 to 5, an explanation of source quality and extraction, not a probability of accuracy). Gaps are listed in `meta.gaps`, never filled.
@@ -24,6 +24,15 @@ Each case has: id, measure, unit, at least two sourced values (label, value, htt
 - `verification_state`: `resolved_by_source`, `unresolved_no_reviewer` or `reviewed`. A `reviewed` case must name `reviewer` and `reviewed_on`. No case is reviewed yet.
 - `page_image_checked`: true only when the figure was checked against the page image, not only the extracted text. Currently false for all.
 - `supersedes`: id of an earlier case this one restates, or null.
+
+## National indicators (national.json, since 21 Nov 2026)
+Fourteen World Bank World Development Indicators series for Kenya, 2010 to 2025, retrieved from the API on 21 Nov 2026 (`source_id: worldbank-wdi-api` in the manifest; a live API, so not hashed). Each indicator has code, name, unit, sector, the API's source note, original source, `api_url`, `last_updated`, retrieval date, a note on modelled or estimated data, `missing_years` and one value per year. The validator fails if years are not consecutive, if a null year is not in `missing_years` (or a listed year has a value), or if a percentage (other than gross enrolment) is outside 0 to 100. Gaps (central government debt, the IMF series that could not be reached, net enrolment, the redefined poverty line) are in `meta.gaps`. Stored values keep the World Bank unit; pages divide some by a scale for display (population in million people, remittances in US$ billion), and `scripts/test-explore.js` fails the build if a display unit and its scale disagree or a download changes the raw value or unit.
+
+## 47-county tables (counties-cob.json, since 21 Nov 2026)
+Two years (FY 2023/24 and FY 2024/25) of the Controller of Budget annual county reports, chapter 2: own-source revenue (Table 2.1), budget, spending and absorption (Table 2.5 or 2.3), pending bills (Table 2.9 or 2.5). Every value carries `table`, `pdf_page`, `printed_page`, `read: "ocr"`, the raw printed string and the OCR confidence. A null value has `status` (`blank` or `doubtful`) and a `note`; a doubtful value keeps its raw reading. The `derived` block (percentages computed from amounts) is for reference and is never shown as a value. The validator checks the schema, that each year's `source_id`, link and SHA-256 match the manifest, that the 47 counties match `lib/counties.js`, that the printed page is the PDF page minus the year's offset, that the 47 rows sum to the printed total (within 0.5 KSh m), that row parts add up (recurrent plus development, ordinary plus FIF/A-i-A, Executive plus Assembly), that printed percentages agree with the printed amounts (within 1.5 points), and that Siaya's rows equal `history.json` within its rounding or the difference is in the register (`budget-2024-25`, `recurrent-absorption-2024-25`, `recurrent-absorption-2023-24`, `development-absorption-2023-24`, `pending-close-2025`, `pending-2024`, `budget-financing-osr-2024-25`). Plotted Siaya values are unchanged. Imported once by `scripts/import-staging.js`.
+
+## Explore pages and downloads
+`lib/explore.js` reads these files for /datasets/, /kenya/, /compare/, /trends/ and /stories/ and for the build's downloads in `public/data/datasets/` (one CSV and JSON per dataset plus `catalogue.json`). Views download exactly the rows they show. Comparisons do not order counties by value when any reading for that indicator and year is doubtful. Story numbers are computed from the data in `lib/stories.js`.
 
 ## Rules
 - Original observations are never overwritten when a later report restates them; both stay in the register.
