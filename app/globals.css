@@ -613,3 +613,8 @@ table.data td.num { font-family: var(--mono); font-variant-numeric: tabular-nums
 .card h3 { margin: 18px 0 4px; font-size: 15px; font-weight: 700; color: var(--ink); }
 ul.plain { margin: 0 0 4px; padding-left: 18px; list-style: disc; }
 small.cite { display: inline-block; margin-top: 2px; font-size: 12px; color: var(--ink-muted); }
+/* Fiscal reconciliation (/counties/siaya/ledger/): several values in one cell, one per source reading. */
+.lv { min-width: 14rem; }
+.lv + .lv { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--rule); }
+.lv small { display: block; }
+.cm td { text-align: center; white-space: nowrap; }

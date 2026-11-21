@@ -33,7 +33,7 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/economy/', '/counties/siaya/governance/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/economy/', '/counties/siaya/governance/', '/counties/siaya/audits/', '/counties/siaya/ledger/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/']) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
@@ -64,6 +64,37 @@ const srv = http.createServer((req, res) => {
   check(await pg.locator('.conflict').count() === govJson.ibp_cbts.conflicts.length && govJson.ibp_cbts.conflicts.every((c) => c.resolution.startsWith('Unresolved')) && await pg.locator('.conflict table tbody tr').count() === govJson.ibp_cbts.conflicts.reduce((s, c) => s + c.positions.length, 0), 'governance: the IBP inconsistencies are shown side by side and unresolved');
   check(['participation', 'civic_education', 'feedback'].every((t) => govJson.aprm.findings.filter((f) => f.theme === t).length > 0) && await pg.locator('#aprm-participation li, #aprm-civic_education li, #aprm-feedback li, #aprm-transparency li').count() === govJson.aprm.findings.length, 'governance: every APRM finding is shown, grouped by theme, with its page');
   check(/not current practice/.test(await pg.locator('#survey-date').innerText()) && /Findings are not verdicts/.test(await pg.locator('#not-verdicts').innerText()), 'governance: says scores describe availability at the survey date and findings are not verdicts');
+  // Audit findings (data/siaya-audits.json): opinions by year and entity, chart with table view, filterable findings, carried-forward matters, gaps.
+  const audJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-audits.json'), 'utf8'));
+  await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
+  check(await pg.locator('main a[href="/counties/siaya/audits/"]').count() >= 1 && await pg.locator('main a[href="/counties/siaya/ledger/"]').count() >= 1, 'Siaya hub links to audit findings and fiscal reconciliation');
+  await pg.goto(base + '/counties/siaya/audits/', { waitUntil: 'load' });
+  const opHead = await pg.locator('#opinions thead').innerText();
+  const opText = await pg.locator('#opinions').innerText();
+  check(/County Executive/i.test(opHead) && /County Assembly/i.test(opHead) && audJson.opinions.filter((o) => o.opinion).every((o) => opText.includes(o.opinion)), 'audits: every opinion as printed, Executive and Assembly in separate columns');
+  check(/findings, not convictions/.test(await pg.locator('#not-convictions').innerText()) && /unavailable on 21 Nov 2026/.test(await pg.locator('#oag-unavailable').innerText()) && /2016\/17/.test(await pg.locator('#no-report').innerText()), 'audits: says findings are not convictions, the Auditor-General site was unavailable, and lists years with no report');
+  check(await pg.locator('main li.ds').count() === audJson.findings.length && new RegExp(`Showing ${audJson.findings.length} of ${audJson.findings.length}`).test(await pg.locator('#aud-count').innerText()), 'audits: every finding is listed');
+  const audChart = pg.locator('main figure.chart');
+  check(await audChart.count() === 1 && await audChart.locator('details.tableview').count() === 1, 'audits: one category chart with a table view');
+  const audSel = pg.locator('main select');
+  await audSel.nth(0).selectOption('2023/24'); await audSel.nth(1).selectOption('county_assembly');
+  const asm2324 = audJson.findings.filter((f) => f.fy === '2023/24' && f.entity === 'county_assembly').length;
+  check(await pg.locator('main li.ds').count() === asm2324 && new RegExp(`Showing ${asm2324} of`).test(await pg.locator('#aud-count').innerText()), 'audits: filtering by year and entity narrows the list');
+  await audSel.nth(2).selectOption('payroll');
+  check(await pg.locator('main li.ds').count() === audJson.findings.filter((f) => f.fy === '2023/24' && f.entity === 'county_assembly' && f.category === 'payroll').length, 'audits: filtering by category narrows the list');
+  check(await pg.locator('section[aria-labelledby="aud-carry"] details').count() >= 2 && await pg.locator('#carry-prior + ul li').count() === audJson.findings.filter((f) => f.unresolved_prior_year.flag).length, 'audits: carried-forward unresolved matters are listed per the reports');
+  check(!/\b(Hon\.|H\.E\.|Mr\.|Mrs\.|Ms\.|Dr\.|M\/s)\s/.test(await pg.locator('main').innerText()), 'audits: no honorific (no individual named)');
+  // Fiscal reconciliation (data/siaya-fiscal-ledger.json): completeness matrix, sources side by side, open discrepancy cases.
+  const ledJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-fiscal-ledger.json'), 'utf8'));
+  await pg.goto(base + '/counties/siaya/ledger/', { waitUntil: 'load' });
+  check(await pg.locator('#completeness tbody tr').count() === Object.keys(ledJson.measures).length && await pg.locator('#completeness thead th').count() === ledJson.years.length + 1, 'ledger: completeness matrix has every measure and year');
+  check(/No averaging and no verdicts/.test(await pg.locator('#no-averaging').innerText()) && /cash/.test(await pg.locator('#why-differ').innerText()) && /FIF/.test(await pg.locator('#why-differ').innerText()), 'ledger: says no averaging or verdicts and explains why figures differ');
+  check(await pg.locator('#case-summary tfoot').innerText().then((t) => new RegExp(`${ledJson.discrepancies.length}\\s*$`).test(t.trim())), 'ledger: case summary accounts for every open case');
+  const osrCases = ledJson.discrepancies.filter((d) => d.indicator_id === 'osr_total_actual').length;
+  check(await pg.locator('#led-case-list > li').count() === osrCases && await pg.locator('#led-table a[href*="#page="]').count() >= 1, 'ledger: own-source revenue shows every source with page links and its open cases');
+  await pg.locator('main select').first().selectOption('equitable_share_received');
+  const esText = await pg.locator('#led-table').innerText();
+  check(/6,680/.test(esText) && !/5,680/.test(esText) && await pg.locator('#led-case-list > li').count() === ledJson.discrepancies.filter((d) => d.indicator_id === 'equitable_share_received').length, 'ledger: choosing a measure switches the table and cases (FY 2023/24 equitable share shows the printed 6,680)');
   // Siaya Source Library: one card per record in data/source-library.json, client-side search and filters, no form fields beyond the search box.
   const libJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-library.json'), 'utf8'));
   await pg.goto(base + '/counties/siaya/sources/', { waitUntil: 'networkidle' });
