@@ -2,7 +2,7 @@
 // (see model.js) or a count of records listed in the same report. Findings and interpretation are kept in
 // separate blocks so the renderer can print them under separate headings. No contractor names, no personal data.
 import {
-  DATA, P, get, find, each, fig, registry, snapshot, dataDate, ECON_SRC, source,
+  DATA, P, get, find, each, fig, registry, snapshot, dataDate, ECON_SRC, source, held,
 } from './model';
 
 const L = DATA['siaya-fiscal-ledger.json'];
@@ -208,7 +208,7 @@ function reportA() {
       { type: 'records', caption: 'Projects with an Auditor-General finding (contractors are not named)', columns: PROJECT_COLS, rows: projectRows((p) => p.audit_finding_ids.length) },
     ], interpretation: ['Status is the latest status any document records; only one project has independent verification of completion.'] },
     { id: 'governance', title: 'Governance and audit', findings: [
-      { type: 'figs', caption: 'County Budget Transparency Survey (IBP Kenya)', rows: GOV.ibp_cbts.editions.flatMap((e, i) => e.items.map((it, j) => [it, j]).filter(([it]) => typeof it.value === 'number').map(([it, j]) => ({ f: fig('siaya-governance.json', P('ibp_cbts', 'editions', i, 'items', j, 'value'), { label: `${it.measure} (${it.edition})`, period: String(it.year), confidence: it.confidence }) }))) },
+      { type: 'figs', caption: 'County Budget Transparency Survey (IBP Kenya)', rows: GOV.ibp_cbts.editions.flatMap((e, i) => e.items.map((it, j) => [it, j]).filter(([, j]) => typeof held('siaya-governance.json', P('ibp_cbts', 'editions', i, 'items', j, 'value')) === 'number').map(([it, j]) => ({ f: fig('siaya-governance.json', P('ibp_cbts', 'editions', i, 'items', j, 'value'), { label: `${it.measure} (${it.edition})`, period: String(it.year), confidence: it.confidence }) }))) },
       { type: 'figs', caption: 'Auditor-General opinions', rows: opinions },
     ], interpretation: ['Transparency scores are document-availability scores, not measures of budget quality. Audit opinions describe the accounts, not individuals.'] },
     { id: 'partners', title: 'NGO, CSO and donor ecosystem', findings: [
@@ -322,7 +322,7 @@ function reportC() {
   return [
     { id: 'summary', title: 'Summary', findings: [
       { type: 'chart', kind: 'column', title: 'Maternal and child health indicators, KDHS 2014 and 2022 (per cent)', unit: '%', labels: kdhs.map((k) => k.label),
-        series: [{ name: 'KDHS 2014', figs: kdhs.map((k, i) => (k.v2014 != null ? kdhsFig(i, 'v2014') : null)) }, { name: 'KDHS 2022', figs: kdhs.map((k, i) => (k.v2022 != null ? kdhsFig(i, 'v2022') : null)) }] },
+        series: [{ name: 'KDHS 2014', figs: kdhs.map((k, i) => (held('history.json', P('health', 'indicators', i, 'v2014')) != null ? kdhsFig(i, 'v2014') : null)) }, { name: 'KDHS 2022', figs: kdhs.map((k, i) => (held('history.json', P('health', 'indicators', i, 'v2022')) != null ? kdhsFig(i, 'v2022') : null)) }] },
     ], interpretation: ['Survey indicators moved in the expected direction between the two surveys. Routine annual health data were not retrievable, so year-to-year trends cannot be shown.'] },
     { id: 'disease', title: 'Disease trends', findings: [
       { type: 'figs', caption: 'HIV: prevalence, incidence, new infections and treatment (model vintages are not comparable)', rows: grp(/^(hiv|art)-/) },
@@ -365,7 +365,7 @@ function reportD() {
     { id: 'sectors', title: 'Economic sectors (Gross County Product)', findings: [
       { type: 'figs', caption: 'Gross value added by activity, 2024, current prices (KNBS GCP 2025; 2024 provisional)', rows: latest('GCP2025', '2024') },
       { type: 'figs', caption: 'Growth', rows: each('siaya-economy.json', '/observations', (o) => o.indicator === 'real_growth_avg').map(([o, p]) => ({ f: econFig(o, p) })) },
-      { type: 'pairs', caption: 'Revisions to gross value added by activity between editions', aLabel: 'GCP 2024 edition', bLabel: 'GCP 2025 edition', rows: econRevisions((r) => r.indicator === 'gva_by_activity' && Math.abs(r.difference_pct || 0) >= 5) },
+      { type: 'pairs', caption: 'Revisions to gross value added by activity between editions', aLabel: 'GCP 2024 edition', bLabel: 'GCP 2025 edition', rows: econRevisions((r) => r.indicator === 'gva_by_activity' && Math.abs(held('siaya-economy.json', `/revisions/${ECON.revisions.indexOf(r)}/difference_pct`) || 0) >= 5) },
     ], interpretation: ['Agriculture, forestry and fishing is the largest activity in the county accounts. Sector size alone says nothing about profitability or investability.'] },
     { id: 'value-chains', title: 'Value chains: agriculture, livestock and fisheries', findings: [
       { type: 'figs', caption: 'Production, area and value as printed (two sources, different years and units)', rows: each('siaya-agriculture.json', '/observations', (o) => o.status === 'observed').map(([o, p]) => ({ f: agriFig(o, p) })) },

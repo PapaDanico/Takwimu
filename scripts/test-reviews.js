@@ -278,30 +278,49 @@ if (dist && process.argv.includes('--synthetic')) {
       ok(pub.editorial_review && pub.editorial_review.values[id] && pub.editorial_review.values[id].state === 'REJECTED', `synthetic: /data/${d}.json does not list ${id} as rejected`);
       const item = rs.refsOf(d, pub).find((x) => x.id === id);
       ok(Boolean(item), `synthetic: /data/${d}.json has no record ${id}`);
-      if (item && item.ref) Object.keys(item.ref[1]).forEach((fk) => { const v = item.ref[0][fk]; ok(v === null || v === undefined || (Array.isArray(v) && !v.length), `synthetic: /data/${d}.json ${id}.${fk} still holds the rejected value`); });
+      if (item && item.ref) Object.keys(item.ref[1]).forEach((fk) => { const v = item.ref[0][fk]; ok(v === null || v === undefined || (Array.isArray(v) && (!v.length || v.every((x) => x && typeof x === 'object' && (x.value === null || x.value === undefined) && !('reported_completion_pct' in x && x.reported_completion_pct !== null)))), `synthetic: /data/${d}.json ${id}.${fk} still holds the rejected value`); });
     });
-    // 3. Dataset downloads: rows marked withdrawn carry no value, and every rejected dataset has such rows.
+    // 3. Dataset downloads (CSV, and JSON where the dataset has its own): withdrawn rows carry no value, every rejected
+    // dataset has such rows, and each CSV has a review_status column.
     const dlDir = path.join(outDir, 'data', 'datasets');
     const VALUE_COLS = ['value', 'result', 'amounts', 'amounts_as_printed', 'original_text', 'value_as_printed', 'raw_reading'];
+    const parseCsv = (text) => {
+      const rows = []; let row = []; let cell = ''; let q = false;
+      for (let i = 0; i < text.length; i += 1) {
+        const ch = text[i];
+        if (q) { if (ch === '"' && text[i + 1] === '"') { cell += '"'; i += 1; } else if (ch === '"') q = false; else cell += ch; }
+        else if (ch === '"') q = true; else if (ch === ',') { row.push(cell); cell = ''; } else if (ch === '\n') { row.push(cell); rows.push(row); row = []; cell = ''; } else if (ch !== '\r') cell += ch;
+      }
+      if (cell || row.length) { row.push(cell); rows.push(row); }
+      const [head, ...body] = rows;
+      return { head, rows: body.map((r) => Object.fromEntries(head.map((h, i) => [h, r[i]]))) };
+    };
+    // Downloads of itemised (reviewed) datasets; national WDI series are not in the register.
+    const REVIEWED_DL = new Set(['siaya-fiscal-ledger', 'siaya-audit-findings', 'siaya-economy', 'siaya-governance', 'siaya-health', 'siaya-education', 'siaya-agriculture', 'siaya-climate', 'siaya-analysis', 'siaya-projects', 'siaya-programmes', 'counties-budget-spending', 'counties-absorption', 'counties-own-source-revenue', 'counties-pending-bills']);
     const withdrawnIn = {};
-    fs.readdirSync(dlDir).filter((f) => f.endsWith('.json') && f !== 'catalogue.json').forEach((f) => {
-      const rows = JSON.parse(fs.readFileSync(path.join(dlDir, f), 'utf8')).rows || [];
-      const csv = fs.existsSync(path.join(dlDir, f.replace(/\.json$/, '.csv'))) ? fs.readFileSync(path.join(dlDir, f.replace(/\.json$/, '.csv')), 'utf8') : '';
-      rows.filter((r) => /^Withdrawn after editorial review/.test(r.review_status || '') || /withdrawn after editorial review/.test(r.status || '')).forEach((r) => {
-        withdrawnIn[f] = (withdrawnIn[f] || 0) + 1;
-        VALUE_COLS.forEach((c) => { if (c in r) ok(r[c] === null || r[c] === '' || (Array.isArray(r[c]) && !r[c].length), `synthetic: download ${f} row withdrawn but ${c} = ${JSON.stringify(r[c]).slice(0, 40)}`); });
+    const isWithdrawn = (r) => /^Withdrawn after editorial review/.test(r.review_status || '') || /withdrawn after editorial review/.test(r.status || '');
+    fs.readdirSync(dlDir).filter((f) => f.endsWith('.csv')).forEach((f) => {
+      const { head, rows } = parseCsv(fs.readFileSync(path.join(dlDir, f), 'utf8'));
+      const id = f.replace(/\.csv$/, '');
+      if (REVIEWED_DL.has(id)) ok(head.includes('review_status'), `synthetic: download ${f} has no review_status column`);
+      const jf = path.join(dlDir, `${id}.json`);
+      const jrows = fs.existsSync(jf) ? JSON.parse(fs.readFileSync(jf, 'utf8')).rows || [] : [];
+      [...rows, ...jrows].filter(isWithdrawn).forEach((r) => {
+        withdrawnIn[id] = (withdrawnIn[id] || 0) + 1;
+        VALUE_COLS.forEach((c) => { if (c in r) ok(r[c] === null || r[c] === '' || (Array.isArray(r[c]) && !r[c].length), `synthetic: download ${id} row withdrawn but ${c} = ${JSON.stringify(r[c]).slice(0, 40)}`); });
       });
-      if (withdrawnIn[f]) ok(/review_status/.test(csv.split('\n')[0]), `synthetic: ${f.replace(/\.json$/, '.csv')} has no review_status column`);
     });
     const DL = { 'siaya-fiscal-ledger': 'siaya-fiscal-ledger', 'siaya-audits': 'siaya-audit-findings', 'siaya-economy': 'siaya-economy', 'siaya-governance': 'siaya-governance', 'siaya-health': 'siaya-health', 'siaya-education': 'siaya-education', 'siaya-agriculture': 'siaya-agriculture', 'siaya-climate': 'siaya-climate', 'siaya-analysis': 'siaya-analysis', 'siaya-projects': 'siaya-projects', 'siaya-programmes': 'siaya-programmes' };
     ids.forEach(([d, id]) => {
       if (!DL[d] || (d === 'siaya-audits' && id.startsWith('opinion:'))) return;
-      ok(Boolean(withdrawnIn[`${DL[d]}.json`]), `synthetic: download ${DL[d]} has no withdrawn row for ${d} ${id}`);
+      ok(Boolean(withdrawnIn[DL[d]]), `synthetic: download ${DL[d]} has no withdrawn row for ${d} ${id}`);
     });
+    const COB_DL = { budget: 'counties-budget-spending', absorption: 'counties-absorption', osr: 'counties-own-source-revenue', pb: 'counties-pending-bills' };
+    if (ids.some(([d]) => d === 'counties-cob')) ok(Object.values(COB_DL).some((x) => withdrawnIn[x]), 'synthetic: no county download marks the rejected county value as withdrawn');
     // 4. history.csv says withdrawn and has no value for a rejected history value.
     const hcsv = fs.readFileSync(path.join(outDir, 'data', 'history.csv'), 'utf8').split('\n');
     ok(/review_status/.test(hcsv[0]), 'synthetic: history.csv has no review_status column');
-    if (ids.some(([d]) => d === 'history')) ok(hcsv.some((l) => /"Withdrawn after editorial review/.test(l)), 'synthetic: history.csv does not mark the rejected history value');
+    if (ids.some(([d, id]) => d === 'history' && /^(years|osr|audits|in_year):/.test(id))) ok(hcsv.some((l) => /"Withdrawn after editorial review/.test(l)), 'synthetic: history.csv does not mark the rejected history value');
     hcsv.filter((l) => /"Withdrawn after editorial review/.test(l)).forEach((l) => ok(/^"[^"]*","[^"]*",(""|,)/.test(l) || /^"[^"]*","[^"]*",,/.test(l), `synthetic: history.csv row withdrawn but holds a value: ${l.slice(0, 80)}`));
     console.log(`test-reviews --synthetic: ${chosen.length} values rejected in memory across ${new Set(ids.map(([d]) => d)).size} datasets (${expected.size - chosen.length} calculations withheld with them); every page, download and data file checked in ${out}/`);
   } finally {

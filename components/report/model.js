@@ -5,7 +5,7 @@
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
-import { masked, badge, idAt } from '../../lib/review-status';
+import { masked, badge, idAt, original } from '../../lib/review-status';
 import geography from '../../data/siaya-geography.json';
 import library from '../../data/source-library.json';
 import registry from './reports.json';
@@ -61,11 +61,18 @@ export const each = (file, arrPath, pred = () => true) => get(file, arrPath).map
 // an approved record in force names its observation (and the source hash still matches). Until then every figure
 // is provisional. An input of a calculation that was rejected is withheld like the value itself.
 const WITHHELD_INPUT = { state: 'rejected', label: 'Withdrawn after editorial review', reason: 'This input was withdrawn after editorial review.', hide: true, approved: false, href: null, fromRecord: true };
-export function reviewOf(file, ptr, rec) {
+export function reviewOf(file, ptr, rec, value) {
   const id = idAt(file, ptr);
   const b = id ? badge(file.replace(/\.json$/, ''), id) : null;
-  if (rec && rec.withheld) return { ...WITHHELD_INPUT, key: b ? b.key : `${file.replace(/\.json$/, '')}:${ptr}` };
+  if (b && b.hide) return b;
+  if (rec && rec.withheld && (value === null || value === undefined)) return { ...WITHHELD_INPUT, key: b ? b.key : `${file.replace(/\.json$/, '')}:${ptr}` };
   return b;
+}
+// The value as held before masking, so builders keep a row whose value was withdrawn (it then prints as withdrawn).
+export function held(file, ptr) {
+  let v = original(file.replace(/\.json$/, ''));
+  for (const raw of ptr.split('/').slice(1)) { const k = raw.replace(/~1/g, '/').replace(/~0/g, '~'); if (v == null) return undefined; v = v[k]; }
+  return v;
 }
 export const PROVISIONAL = 'Provisional: awaiting editorial review';
 
@@ -87,8 +94,8 @@ export function fig(file, ptr, o = {}) {
     confidence: pick(o.confidence, rec.confidence, null),
     note: o.note || null,
     suppress: !!(o.suppressSmall && typeof value === 'number' && value < 10 && /^(persons|people|patients|cases|deaths|children|youth|students|pupils|trainees|women|men|beneficiaries)/i.test(String(pick(o.unit, rec.unit, '')))),
-    review: reviewOf(file, ptr, rec),
-    reviewed: Boolean((reviewOf(file, ptr, rec) || {}).approved),
+    review: reviewOf(file, ptr, rec, value),
+    reviewed: Boolean((reviewOf(file, ptr, rec, value) || {}).approved),
   };
 }
 
