@@ -142,10 +142,12 @@ const srv = http.createServer((req, res) => {
     // Owner decision: contractor company names never reach the published site.
     // A public utility also named as a programme implementer in the atlas is checked by field only, not by name.
     const progText = fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-programmes.json'), 'utf8');
+    // Sweep D22: no contractor name is kept in the data at all; only contractor_reference (document and page).
     const names = pJson.projects.map((x) => x.contract.contractor && x.contract.contractor.name).filter(Boolean).filter((nm) => !progText.includes(nm));
+    const company = /\b[A-Z][A-Za-z&]+(?: (?:[A-Z][A-Za-z&]+|and|of|&))* (?:Limited|Ltd\.?|PLC)\b/;
     const walkDist = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walkDist(path.join(d, e.name)) : [path.join(d, e.name)]));
-    const leaks = walkDist(root).filter((f) => /\.(html|json|csv|txt|js)$/.test(f)).filter((f) => { const s = fs.readFileSync(f, 'utf8'); return /"contractor(_note)?"\s*:/.test(s) || /\bcontractor(_note)?,/.test(s.split('\n')[0] || '') || names.some((nm) => s.includes(nm)); });
-    check(names.length >= 1 && leaks.length === 0, `no contractor field or contractor name reaches dist (withheld pending review)${leaks.length ? `: ${leaks.slice(0, 5).join(', ')}` : ''}`);
+    const leaks = walkDist(root).filter((f) => /\.(html|json|csv|txt|js)$/.test(f)).filter((f) => { const s = fs.readFileSync(f, 'utf8'); return /"contractor(_note)?"\s*:/.test(s) || /\bcontractor(_note)?,/.test(s.split('\n')[0] || '') || names.some((nm) => s.includes(nm)) || (/siaya-projects/.test(f) && company.test(s)); });
+    check(names.length === 0 && pJson.projects.some((x) => x.contract.contractor_reference) && leaks.length === 0, `no contractor field or contractor name reaches dist (withheld pending review)${leaks.length ? `: ${leaks.slice(0, 5).join(', ')}` : ''}`);
     // Programme atlas: Siaya-specific and pooled separated, pooled never summed, evidence badges, screened-out list.
     const gJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-programmes.json'), 'utf8'));
     await pg.goto(base + '/counties/siaya/programmes/', { waitUntil: 'load' });
@@ -262,7 +264,7 @@ const srv = http.createServer((req, res) => {
   }
   // IMF World Economic Outlook section on /kenya/: two vintages selectable, projections labelled and dashed, a table view.
   await pg.goto(base + '/kenya/', { waitUntil: 'load' });
-  check(await pg.locator('#imf-wb tbody tr').count() === 4 && /Definitional difference/.test(await pg.locator('#imf-wb').innerText()) && /link and cite only, © IMF/.test(await pg.locator('#imf-wb').innerText()), '/kenya/: IMF and World Bank definitional differences side by side, IMF cited link-and-cite');
+  check(await pg.locator('#imf-wb tbody tr').count() === 4 && /Definitional difference/i.test(await pg.locator('#imf-wb').innerText()) && /link and cite only, © IMF/.test(await pg.locator('#imf-wb').innerText()), '/kenya/: IMF and World Bank definitional differences side by side, IMF cited link-and-cite');
   {
     const sec = pg.locator('#imf');
     const vSel = sec.locator('select').first();
