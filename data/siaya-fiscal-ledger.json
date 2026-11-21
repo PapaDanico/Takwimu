@@ -2529,7 +2529,7 @@
    "original_text": "In the FY 2023/24, the County received Kshs.6.68 billion as an equitable share",
    "read_method": "ocr-tesseract",
    "confidence": 3,
-   "note": "The PDF text layer misreads this as \"Kshs.5.68 billion\"; tesseract at 300 dpi reads 6.68, which also matches the county Q4 report (6,681,977,903)",
+   "note": "The PDF text layer misreads this as \"Kshs.5.68 billion\"; tesseract at 300 dpi reads 6.68, which also matches the county Q4 report (6,681,977,903). Re-checked on 21 Nov 2026 at 600 dpi: the sentence reads 6.68 and Table 3.258 on the same page prints 6,681,978,904 (92.0 per cent of allocation; the four subtotals add to the printed 8,634,352,209). See conflict equitable-share-received-2023-24.",
    "source_kind": "controller_of_budget",
    "scope": "county government (executive and assembly)"
   },

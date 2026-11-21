@@ -180,6 +180,17 @@ test('re-read development-absorption-2023-24: every printed place reads 64.6, so
   ok(near((2487.20 / 3851.88) * 100, 64.6, 0.05), 'amounts should give 64.6');
   ok(year('2023/24').development_absorption_pct === 64.6 && listed('development-absorption-2023-24', 64.5), 'series shows 64.6, register keeps 64.5');
 });
+// Equitable share received FY 2023/24 (correction check, 21 Nov 2026): the text layer reads 5.68bn, the page prints 6.68bn.
+test('conflict equitable-share-received-2023-24: the ledger holds the printed 6.68bn, never the text-layer 5.68bn', () => {
+  const c = conflict('equitable-share-received-2023-24');
+  ok(c.status === 'resolved' && c.verification_state === 'resolved_by_source' && listed(c.id, 5680) && listed(c.id, 6680) && listed(c.id, 6681.98), 'register must keep 5680, 6680 and 6681.98, resolved by source');
+  const ledger = read('siaya-fiscal-ledger.json');
+  const es = ledger.observations.filter((o) => o.measure === 'equitable_share_received' && o.fy === '2023/24');
+  const l094 = es.find((o) => o.id === 'L094');
+  ok(l094 && l094.value === 6680 && /6\.68 billion/.test(l094.original_text), 'L094 must hold 6,680 as printed');
+  ok(es.every((o) => !near(o.unit === 'KSh billion' ? o.value * 1000 : o.value, 5680, 1)), 'no ledger value may be the text-layer 5,680');
+  ok(near(6681978904 + 477543935 + 610737745 + 864091625, 8634352209, 0) && near((6681978904 / 7263019559) * 100, 92.0, 0.05), 'Table 3.258 sums and the printed 92.0 per cent');
+});
 test('re-read recurrent-absorption-2023-24: 85.8 is a misreading, the report prints 86.8 and 87.0, so the case stays open', () => {
   const c = conflict('recurrent-absorption-2023-24');
   ok(c.status === 'open' && c.verification_state === 'unresolved_no_reviewer', 'two printed values: case must stay open');

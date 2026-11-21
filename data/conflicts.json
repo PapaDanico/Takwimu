@@ -535,7 +535,7 @@
         },
         {
           "label": "Same report, Table 2.3 (all 47 counties), Siaya row (PDF p. 30, printed p. 7), both re-reading methods",
-          "value": 87.0,
+          "value": 87,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
         }
       ],
@@ -711,7 +711,7 @@
         },
         {
           "label": "Same report, Table 2.9 (pending bills of all 47 counties at 30 June 2025), Siaya row: County Executive recurrent 832.9 plus development 1,057.0; County Assembly blank (PDF p. 58, printed p. 15, RapidOCR)",
-          "value": 1890.0,
+          "value": 1890,
           "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
         }
       ],
@@ -804,6 +804,60 @@
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false
+    },
+    {
+      "id": "equitable-share-received-2023-24",
+      "measure": "Equitable share received by Siaya County, FY 2023/24, as read from the scanned Controller of Budget report",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.2, PDF text layer (PDF p. 511, printed p. 488): a misreading of the scan (\"Kshs.5.68 billion\")",
+          "value": 5680,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same sentence read with tesseract at 300 dpi and again at 600 dpi: \"Kshs.6.68 billion\" (the value held in the fiscal ledger, observation L094)",
+          "value": 6680,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Table 3.258 on the same page, equitable share row, actual receipts, tesseract at 600 dpi: 6,681,978,904 (92.0 per cent of the 7,263,019,559 allocation)",
+          "value": 6681.98,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "A reading conflict, not two sources: the PDF is a scan and its embedded text layer reads 5.68 where the page prints 6.68. The table on the same page prints receipts of 6,681,978,904, and the county Q4 report for FY 2023/24 gives 6,681,977,903.",
+      "hypothesis": "Resolved by the printed document: the text layer misread 6.68 as 5.68. Checked by two independent machine readings and the table arithmetic, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "No published figure changes: the value 5.68 billion was never used on the site. The fiscal ledger holds 6,680 (observation L094) and has done since it was first published on 21 Nov 2026. This entry records the misreading and the check made on 21 Nov 2026 so the text-layer value is not reintroduced.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "tesseract 5 (psm 6) on a 300 dpi render of PDF p. 511 (fiscal ledger step)",
+        "method_b": "tesseract 5 (default page segmentation) on a 600 dpi greyscale render of PDF p. 511 (correction check)",
+        "readings": [
+          {
+            "where": "section 3.38.2 text, PDF p. 511",
+            "method_a": "the County received Kshs.6.68 billion as an equitable share",
+            "method_b": "In the FY 2023/24, the County received Kshs.6.68 billion as an equitable share of the revenue raised nationally"
+          },
+          {
+            "where": "Table 3.258, equitable share row, PDF p. 511",
+            "method_a": "not read",
+            "method_b": "A Equitable Share of Revenue Raised Nationally 7, 263, 019, 559 6, 681, 978, 904 92.0"
+          },
+          {
+            "where": "Table 3.258, total receipts (sum of the four subtotals), PDF p. 511",
+            "method_a": "not read",
+            "method_b": "6,681,978,904 + 477,543,935 + 610,737,745 + 864,091,625 = 8,634,352,209; the page reads \"...634352.209\" in the total row and \"Kshs.8.63 billion\" in the text"
+          }
+        ],
+        "check": "6,681,978,904 / 7,263,019,559 = 92.0 per cent, as printed; 5.68 billion would be 78.2 per cent. The four subtotals add to 8,634,352,209, which matches the printed total and the 8.63 billion in the text only if the equitable share is 6.68 billion.",
+        "outcome": "Every printed place reads 6.68 billion (6,681,978,904): resolved. The text-layer reading 5.68 is kept here only as a record.",
+        "page_image_checked": false
+      }
     }
   ]
 }
