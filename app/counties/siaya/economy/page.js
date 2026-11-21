@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Abbrs from '../../../components/Abbrs';
-import PageToc from '../../../components/PageToc';
+import Abbrs from '../../../../components/Abbrs';
+import PageToc from '../../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { LineChart, ColumnChart } from '../../../../components/Charts';

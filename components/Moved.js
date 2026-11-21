@@ -4,7 +4,7 @@ import Link from 'next/link';
 // answers first; this page serves the static export everywhere else: an inline script that keeps the query string and
 // the hash, then a meta refresh, a link and rel=canonical (set by movedMetadata in the page's metadata).
 export function movedMetadata(title, to) {
-  return { title: `${title} (moved)`, description: `This page moved to ${to}.`, robots: { index: false }, alternates: { canonical: to } };
+  return { title: `${title} (moved)`, description: `This page moved to ${to}.`, robots: { index: false }, alternates: { canonical: to.split('#')[0] } };
 }
 
 export default function Moved({ title, to, label, clientTo }) {

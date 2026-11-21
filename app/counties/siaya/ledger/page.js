@@ -1,5 +1,5 @@
 import { Provisional } from '../../../../components/ObsTable';
-import Abbrs from '../../../components/Abbrs';
+import Abbrs from '../../../../components/Abbrs';
 import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';

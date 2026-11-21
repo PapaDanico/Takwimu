@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import PageToc from '../../../components/PageToc';
+import PageToc from '../../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import ProjectExplorer from '../../../../components/ProjectExplorer';
 import { stateLabel } from '../../../../lib/labels';

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import PageToc from '../../../components/PageToc';
+import PageToc from '../../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';

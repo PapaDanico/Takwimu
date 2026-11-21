@@ -1,5 +1,5 @@
 import { Provisional } from '../../../../components/ObsTable';
-import PageToc from '../../../components/PageToc';
+import PageToc from '../../../../components/PageToc';
 import Reviewed from '../../../../components/Reviewed';
 import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';

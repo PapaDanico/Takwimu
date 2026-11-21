@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Abbrs from '../../../components/Abbrs';
+import Abbrs from '../../../../components/Abbrs';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { LineChart } from '../../../../components/Charts';

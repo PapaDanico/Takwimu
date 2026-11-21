@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import PageToc from '../../../components/PageToc';
+import PageToc from '../../../../components/PageToc';
 import siaya from '../../../../data/siaya.json';
 import hist from '../../../../data/history.json';
 import reg from '../../../../data/conflicts.json';

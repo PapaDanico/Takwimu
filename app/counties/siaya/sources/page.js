@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Abbrs from '../../../components/Abbrs';
+import Abbrs from '../../../../components/Abbrs';
 import PageHead from '../../../../components/PageHead';
 import SourceLibrary from '../../../../components/SourceLibrary';
 import { STATUS, COVERAGE } from '../../../../lib/source-library';

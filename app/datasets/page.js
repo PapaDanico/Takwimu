@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import Abbrs from '../components/Abbrs';
+import Abbrs from '../../components/Abbrs';
 import Link from 'next/link';
 import ExploreHead from '../../components/ExploreHead';
 import PageToc from '../../components/PageToc';

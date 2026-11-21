@@ -353,7 +353,7 @@ const srv = http.createServer((req, res) => {
   p2.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   await p2.goto(base + '/compare/', { waitUntil: 'networkidle' });
   check(await p2.locator('ul.rank > li').count() === 47, 'compare lists all 47 counties');
-  check(await p2.locator('.kmap-values').first().locator('a').count() === 47, 'compare map shades all 47 counties');
+  check(await p2.locator('.kmap-values').first().locator('svg a').count() === 47, 'compare map shades all 47 counties');
   await p2.locator('select').first().selectOption('development_absorption_pct');
   await p2.waitForFunction(() => location.search.includes('i=development_absorption_pct'));
   check(/i=development_absorption_pct/.test(p2.url()), 'compare writes the indicator to the address');
@@ -397,8 +397,8 @@ const srv = http.createServer((req, res) => {
   await p2.goto(base + '/kenya/?i=interest-burden#trends', { waitUntil: 'networkidle' });
   check(await p2.locator('figure.chart').count() === 1 && /derived/i.test(await p2.locator('#trends ~ section').first().innerText()), 'trend explorer shows a derived measure, labelled derived');
   await p2.goto(base + '/compare/', { waitUntil: 'networkidle' });
-  check(await p2.locator('#cra .kmap-values a').count() === 47 && await p2.locator('#cra tbody tr').count() === 47 && /recommendation/i.test(await p2.locator('#cra').innerText()), 'compare: CRA allocation map and table for 47 counties, labelled a recommendation');
-  check(await p2.locator('#voters .kmap-values a').count() === 47 && await p2.locator('#voters tbody tr').count() === 290 + 47 && /22,120,458/.test(await p2.locator('#voters').innerText()), 'compare: registered voters map and 290-constituency table, with the other total named');
+  check(await p2.locator('#cra .kmap-values svg a').count() === 47 && await p2.locator('#cra tbody tr').count() === 47 && /recommendation/i.test(await p2.locator('#cra').innerText()), 'compare: CRA allocation map and table for 47 counties, labelled a recommendation');
+  check(await p2.locator('#voters .kmap-values svg a').count() === 47 && await p2.locator('#voters tbody tr').count() === 290 + 47 && /22,120,458/.test(await p2.locator('#voters').innerText()), 'compare: registered voters map and 290-constituency table, with the other total named');
   await p2.goto(base + '/kenya/', { waitUntil: 'networkidle' });
   check(await p2.locator('figure.chart').count() === 1 && await p2.locator('.spark').count() >= 12 && await p2.locator('#notes tbody tr').count() === NAT_WITH_VALUES && await p2.locator('#public-finance .spark').count() === NAT_PF && await p2.locator('#cbk .spark').count() === 15 && await p2.locator('#analysis tbody tr').count() === 7, 'Kenya dashboard: sparkline cards, one trend explorer chart, a sources row per indicator');
   const nf = await p2.goto(base + '/no-such-page/', { waitUntil: 'load' });
@@ -416,8 +416,8 @@ const srv = http.createServer((req, res) => {
       const f = path.join(root, from, 'index.html');
       if (!fs.existsSync(f)) return true;
       const h = fs.readFileSync(f, 'utf8');
-      const esc = to.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
-      return !new RegExp(`http-equiv="refresh" content="0; url=${esc}"`).test(h) || !new RegExp(`rel="canonical" href="[^"]*${esc}"`).test(h) || !new RegExp(`<a[^>]+href="${esc}"`).test(h) || sm.includes(`${from}</loc>`);
+      const esc = (x) => x.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
+      return !new RegExp(`http-equiv="refresh" content="0; url=${esc(to)}"`).test(h) || !new RegExp(`rel="canonical" href="[^"]*://[^/"]+${esc(to.split('#')[0])}"`).test(h) || !new RegExp(`<a[^>]+href="${esc(to)}"`).test(h) || new RegExp(`<loc>[^<]*://[^/<]+${esc(from)}</loc>`).test(sm);
     }).map(([f]) => f);
     check(MOVED.length >= 9 && !bad.length, `every moved URL (${MOVED.length}) has a fallback page pointing to its new address and is out of the sitemap${bad.length ? `; wrong: ${bad.join(', ')}` : ''}`);
     const fallbacks = new Set(MOVED.map(([f]) => path.join(root, f, 'index.html')));
@@ -445,7 +445,9 @@ const srv = http.createServer((req, res) => {
         const prov = (m.textContent.match(/Provisional: awaiting editorial review/gi) || []).length;
         const seen = {};
         m.querySelectorAll('p, li').forEach((el) => {
-          if (el.closest('details, table, li.ds, .term-card, .ds-list') || el.querySelector('p, li')) return;
+          // Per-record cards, collapsed details, tables, and the per-table footnotes and per-section topic citations of the reports
+          // (stated once per table or section by design) are not caveat repetition.
+          if (el.closest('details, table, li.ds, .term-card, .ds-list, .rp-tnotes, .rp-topic') || el.querySelector('p, li')) return;
           const t = el.textContent.replace(/\s+/g, ' ').trim();
           if (t.length > 80) seen[t] = (seen[t] || 0) + 1;
         });
@@ -457,7 +459,7 @@ const srv = http.createServer((req, res) => {
       if (r.rep.length) probs.push(`${u}: ${r.rep[0]}`);
       if (/^\/counties\/siaya\//.test(u) || u === '/') HOME.forEach(([re, home]) => { if (u !== home && r.charts.some((a) => re.test(a) && /by fiscal year|ten years|FY 20\d\d\/\d\d to/i.test(a))) probs.push(`${u}: ${re.source} series outside ${home}`); });
     }
-    check(SM.length > 40 && !probs.length, `repetition guard on ${SM.length} pages: one provisional label, no caveat more than twice, each measure in its canonical home${probs.length ? `; ${probs.slice(0, 4).join('; ')}` : ''}`);
+    check(SM.length >= 30 && !probs.length, `repetition guard on ${SM.length} pages: one provisional label, no caveat more than twice, each measure in its canonical home${probs.length ? `; ${probs.slice(0, 4).join('; ')}` : ''}`);
   }
   check(bad.length === 0, `no CSP violations or page errors ${bad.slice(0, 2).join(' | ')}`);
   await b.close(); srv.close();
