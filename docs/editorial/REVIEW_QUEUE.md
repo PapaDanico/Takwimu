@@ -8,13 +8,13 @@ Procedure: [review-sop.md](review-sop.md). Every value below is public and label
 
 | Dataset | Values | Approved | Pending | Rejected | Disputed | Superseded | Unanchored |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| siaya-fiscal-ledger | 299 | 0 | 299 | 0 | 111 | 0 | 7 |
-| siaya-audits | 276 | 0 | 276 | 0 | 0 | 0 | 2 |
+| siaya-fiscal-ledger | 299 | 0 | 299 | 0 | 111 | 0 | 0 |
+| siaya-audits | 276 | 0 | 276 | 0 | 0 | 0 | 0 |
 | siaya-health | 78 | 0 | 78 | 0 | 27 | 0 | 3 |
 | siaya-projects | 118 | 0 | 118 | 0 | 23 | 0 | 0 |
 | counties-cob | 4324 | 0 | 4324 | 0 | 0 | 0 | 0 |
-| history | 179 | 0 | 179 | 0 | 0 | 0 | 12 |
-| siaya-analysis | 324 | 0 | 324 | 0 | 0 | 0 | 91 |
+| history | 179 | 0 | 179 | 0 | 0 | 0 | 10 |
+| siaya-analysis | 324 | 0 | 324 | 0 | 0 | 0 | 24 |
 | siaya-economy | 154 | 0 | 154 | 0 | 0 | 0 | 0 |
 | siaya-governance | 38 | 0 | 38 | 0 | 0 | 0 | 0 |
 | siaya-education | 215 | 0 | 215 | 0 | 31 | 0 | 0 |
@@ -22,7 +22,7 @@ Procedure: [review-sop.md](review-sop.md). Every value below is public and label
 | siaya-climate | 87 | 0 | 87 | 0 | 0 | 0 | 0 |
 | imf | 430 | 0 | 430 | 0 | 0 | 0 | 430 |
 | siaya-programmes | 73 | 0 | 73 | 0 | 0 | 0 | 0 |
-| **All** | **6700** | **0** | **6700** | **0** | **215** | **0** | **545** |
+| **All** | **6700** | **0** | **6700** | **0** | **215** | **0** | **467** |
 
 Review records in force: 0 (of 0 in the file).
 
@@ -36,7 +36,7 @@ Not itemised (registers and map layers, not measured values):
 
 | Dataset | Pending | Disputed | Unanchored | What |
 |---|---:|---:|---:|---|
-| siaya-fiscal-ledger | 111 | 111 | 2 | fiscal discrepancy (open case in the ledger) |
+| siaya-fiscal-ledger | 111 | 111 | 0 | fiscal discrepancy (open case in the ledger) |
 | siaya-projects | 23 | 23 | 0 | fiscal discrepancy (project amounts differ between documents) |
 | counties-cob | 92 | 0 | 0 | fiscal discrepancy (Siaya row against data/history.json) |
 | history | 120 | 0 | 0 | fiscal value (ten-year series; register cases) |
@@ -45,7 +45,7 @@ Not itemised (registers and map layers, not measured values):
 |---|---|---|---|---|
 | siaya-fiscal-ledger | `L025` | budget_total, FY 2023/24 | cob-report-2023-24 | disputed |
 | siaya-fiscal-ledger | `L037` | budget_total, FY 2023/24 | cob-report-2023-24 | disputed |
-| siaya-fiscal-ledger | `L044` | budget_total, FY 2019/20 | siaya-brop-2019-20 | disputed, unanchored |
+| siaya-fiscal-ledger | `L044` | budget_total, FY 2019/20 | siaya-brop-2019-20 | disputed |
 | siaya-fiscal-ledger | `L045` | budget_total, FY 2019/20 | senate-cpac-2019-20 | disputed |
 | siaya-fiscal-ledger | `L047` | budget_total, FY 2023/24 | GOV-02-FY2023-24-Q4 | disputed |
 | siaya-fiscal-ledger | `L048` | budget_total, FY 2023/24 | GOV-02-FY2023-24-Q4 | disputed |
@@ -69,7 +69,7 @@ Not itemised (registers and map layers, not measured values):
 | siaya-fiscal-ledger | `L138` | osr_total_actual, FY 2023/24 | cob-report-2023-24 | disputed |
 | siaya-fiscal-ledger | `L140` | osr_total_actual, FY 2024/25 | cob-report-2024-25 | disputed |
 | siaya-fiscal-ledger | `L143` | osr_total_actual, FY 2015/16 | cob-report-2018-19 | disputed |
-| siaya-fiscal-ledger | `L144` | osr_total_actual, FY 2019/20 | siaya-brop-2019-20 | disputed, unanchored |
+| siaya-fiscal-ledger | `L144` | osr_total_actual, FY 2019/20 | siaya-brop-2019-20 | disputed |
 | siaya-fiscal-ledger | `L145` | osr_total_actual, FY 2023/24 | cob-report-2024-25 | disputed |
 | siaya-fiscal-ledger | `L149` | osr_total_actual, FY 2023/24 | cob-report-2023-24 | disputed |
 | siaya-fiscal-ledger | `L153` | osr_total_actual, FY 2024/25 | cob-report-2024-25 | disputed |
@@ -394,14 +394,14 @@ Not itemised (registers and map layers, not measured values):
 
 | Dataset | Pending | Disputed | Unanchored | What |
 |---|---:|---:|---:|---|
-| history | 8 | 0 | 2 | audit opinion |
-| siaya-audits | 276 | 0 | 2 | audit finding; audit opinion |
+| history | 8 | 0 | 0 | audit opinion |
+| siaya-audits | 276 | 0 | 0 | audit finding; audit opinion |
 
 | Dataset | Record id | Value | Source document(s) | State |
 |---|---|---|---|---|
 | history | `audits:2013/14` | Audit opinion, FY 2013/14: Disclaimer | audit-2013-14 | pending |
-| history | `audits:2014/15` | Audit opinion, FY 2014/15: Adverse | senate-fiduciary-annexes-2018 | pending, unanchored |
-| history | `audits:2015/16` | Audit opinion, FY 2015/16: Qualified | senate-fiduciary-annexes-2018 | pending, unanchored |
+| history | `audits:2014/15` | Audit opinion, FY 2014/15: Adverse | senate-fiduciary-annexes-2018 | pending |
+| history | `audits:2015/16` | Audit opinion, FY 2015/16: Qualified | senate-fiduciary-annexes-2018 | pending |
 | history | `audits:2019/20` | Audit opinion, FY 2019/20: Qualified | audit-2019-20 | pending |
 | history | `audits:2020/21` | Audit opinion, FY 2020/21: Qualified | audit-2020-21 | pending |
 | history | `audits:2021/22` | Audit opinion, FY 2021/22: Adverse | audit-2021-22 | pending |
@@ -674,8 +674,8 @@ Not itemised (registers and map layers, not measured values):
 | siaya-audits | `opinion:county_assembly:2023/24` | county_assembly, FY 2023/24: Qualified Opinion | audit-asm-2023-24 | pending |
 | siaya-audits | `opinion:county_assembly:2024/25` | county_assembly, FY 2024/25: Qualified Opinion | audit-asm-2024-25 | pending |
 | siaya-audits | `opinion:county_executive:2013/14` | county_executive, FY 2013/14: null | audit-fo-2013-14 | pending |
-| siaya-audits | `opinion:county_executive:2014/15` | county_executive, FY 2014/15: Adverse | senate-fiduciary-annexes-2018 | pending, unanchored |
-| siaya-audits | `opinion:county_executive:2015/16` | county_executive, FY 2015/16: Qualified | senate-fiduciary-annexes-2018 | pending, unanchored |
+| siaya-audits | `opinion:county_executive:2014/15` | county_executive, FY 2014/15: Adverse | senate-fiduciary-annexes-2018 | pending |
+| siaya-audits | `opinion:county_executive:2015/16` | county_executive, FY 2015/16: Qualified | senate-fiduciary-annexes-2018 | pending |
 | siaya-audits | `opinion:county_executive:2019/20` | county_executive, FY 2019/20: Qualified Opinion | audit-2019-20 | pending |
 | siaya-audits | `opinion:county_executive:2020/21` | county_executive, FY 2020/21: Qualified Opinion | audit-2020-21 | pending |
 | siaya-audits | `opinion:county_executive:2021/22` | county_executive, FY 2021/22: Adverse Opinion | audit-2021-22 | pending |
@@ -786,8 +786,8 @@ Not itemised (registers and map layers, not measured values):
 |---|---:|---:|---:|---|
 | counties-cob | 4232 | 0 | 0 | county fiscal value (OCR) |
 | history | 34 | 0 | 0 | fiscal value (in-year); fiscal value |
-| siaya-analysis | 324 | 0 | 91 | calculation by Takwimu |
-| siaya-fiscal-ledger | 188 | 0 | 5 | fiscal value |
+| siaya-analysis | 324 | 0 | 24 | calculation by Takwimu |
+| siaya-fiscal-ledger | 188 | 0 | 0 | fiscal value |
 | siaya-projects | 95 | 0 | 0 | project record |
 
 Full list for one dataset: `node scripts/review-queue.js --dataset <dataset>`.

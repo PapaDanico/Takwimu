@@ -10,7 +10,7 @@ Every value Takwimu transcribed, read by OCR or calculated starts in the state `
 
 with the side states `INACCESSIBLE`, `LICENCE_RESTRICTED`, `DISPUTED`, `SUPERSEDED`, `RETRACTED` and `REJECTED`. The build checks (schemas, sums, reconciliation tests) take a value as far as `RECONCILED`. Nothing moves past `REVIEW_PENDING` without a record in `data/reviews.json`. There is no direct step from extracted to approved.
 
-The state of each value is worked out by `lib/review-status.js`; nobody types it into the data files. A value shows **"Approved"** only when an `approved` record names it **and** the `source_sha256` in that record equals the hash of the source document as the repository holds it now. If the document is replaced, the value returns to the queue on its own.
+The state of each value is worked out by `lib/review-status.js`; nobody types it into the data files. A value shows **"Approved"** only when an `approved` record names it **and** the `source_sha256` in that record equals the hash of the source document as the repository holds it now. If the document is replaced, an approved value returns to the queue on its own. A rejection holds whatever the hash: a changed or missing source never brings a withdrawn value back. A calculation, or a value derived from others (recurrent budget, absorption rates), is approved only when every input is approved, and is withheld when any input is rejected.
 
 | Decision | What the site does |
 |---|---|
@@ -49,7 +49,7 @@ To change a decision, never edit or delete the old record: add a new record whos
 | `dataset` | Data file stem: `siaya-fiscal-ledger`, `siaya-audits`, `siaya-health`, `siaya-projects`, `counties-cob`, `history`, `siaya-analysis`, `siaya-economy`, `siaya-governance`, `siaya-education`, `siaya-agriculture`, `siaya-climate`, `siaya-programmes`, `imf`. |
 | `record_ids` | The observation ids as listed in the queue. |
 | `source_document_id` | The document checked; it must be a source of every listed value. |
-| `source_sha256` | The SHA-256 of the document version checked. |
+| `source_sha256` | The SHA-256 of the document version checked. `null` is allowed only for a rejection, dispute or supersession of a value whose source has no stored copy; an approval always needs the hash. |
 | `pages_checked` | Optional: PDF pages opened. |
 | `reviewer_role` | A role from the vocabulary. |
 | `reviewer_is_not_extractor` | Always `true` (see the independence rule). |

@@ -83,6 +83,26 @@ walk(data.decisions, 'reviews.decisions');
 });
 
 // ---- every record resolves ----
+// Hash rules: only an approval needs the document's stored hash (and, while in force, an equal one); a rejection,
+// dispute or supersession holds without one, so a value whose source was never downloaded can still be withdrawn.
+function recordHashProblems(r, resolver, inForce) {
+  const out = [];
+  const current = resolver.sourceHash(r.dataset, r.source_document_id);
+  if (r.decision !== 'approved') return out;
+  if (!current) out.push(`source document ${r.source_document_id} has no stored SHA-256, so nothing can be approved against it`);
+  // A record still in force must match the document as held now; a superseded one keeps the hash it was made on.
+  else if (inForce && current !== r.source_sha256) out.push(`source_sha256 does not match the current hash of ${r.source_document_id}; re-review and add a superseding record`);
+  return out;
+}
+{
+  // Self-test: a rejection of an unanchored value passes; an approval of it does not.
+  const d = rs.DATASET_IDS.find((x) => rs.observations(x).some((i) => i.sources.length && i.sources.every((q) => !rs.sourceHash(x, q))));
+  const it = d && rs.observations(d).find((i) => i.sources.length && i.sources.every((q) => !rs.sourceHash(d, q)));
+  if (it) {
+    ok(recordHashProblems({ dataset: d, source_document_id: it.sources[0], source_sha256: null, decision: 'rejected' }, rs, true).length === 0, 'self-test: a rejection of an unanchored value is refused');
+    ok(recordHashProblems({ dataset: d, source_document_id: it.sources[0], source_sha256: null, decision: 'approved' }, rs, true).length === 1, 'self-test: an approval of an unanchored value is allowed');
+  }
+}
 const ids = new Set();
 data.decisions.forEach((r) => {
   const tag = `review ${r.id}`;
@@ -94,10 +114,7 @@ data.decisions.forEach((r) => {
     ok(Boolean(obs[id]), `${tag}: ${r.dataset} has no observation ${id}`);
     if (obs[id]) ok(obs[id].sources.includes(r.source_document_id), `${tag}: ${id} does not cite ${r.source_document_id} (it cites ${obs[id].sources.join(', ') || 'no document'})`);
   });
-  const current = rs.sourceHash(r.dataset, r.source_document_id);
-  ok(Boolean(current), `${tag}: source document ${r.source_document_id} has no stored SHA-256, so nothing can be reviewed against it`);
-  // A record still in force must match the document as held now; a superseded one keeps the hash it was made on.
-  if (current && rs.inForce.some((x) => x.id === r.id)) ok(current === r.source_sha256, `${tag}: source_sha256 does not match the current hash of ${r.source_document_id}; re-review and add a superseding record`);
+  recordHashProblems(r, rs, rs.inForce.some((x) => x.id === r.id)).forEach((m) => ok(false, `${tag}: ${m}`));
   ok(new Set(r.record_ids).size === r.record_ids.length, `${tag}: duplicate record id`);
   ok(!(r.decision === 'disputed') || Boolean(r.conflict_id), `${tag}: a disputed decision names the conflict case (conflict_id)`);
   ok(r.date <= data.meta.updated, `${tag}: dated after meta.updated`);
@@ -246,8 +263,12 @@ if (dist && process.argv.includes('--synthetic')) {
   const ids = chosen.map((k) => { const i = k.indexOf(':'); return [k.slice(0, i), k.slice(i + 1)]; });
   if (process.env.TAKWIMU_DEBUG) fs.writeSync(2, `${chosen.join('\n')}\n`);
   // Calculations whose inputs include a chosen value are expected to be withheld too.
+  // Derived values (calculations, and history values computed from others) follow their inputs, to a fixed point.
   const expected = new Set(chosen);
-  rs.observations('siaya-analysis').forEach((o) => { if ((o.inputs || []).some((x) => expected.has(`${x.dataset}:${x.id}`))) expected.add(`siaya-analysis:${o.id}`); });
+  for (let grew = true; grew;) {
+    grew = false;
+    rs.DATASET_IDS.forEach((d) => rs.observations(d).forEach((o) => { if (!expected.has(`${d}:${o.id}`) && (o.inputs || []).some((x) => expected.has(`${x.dataset}:${x.id}`))) { expected.add(`${d}:${o.id}`); grew = true; } }));
+  }
   const out = 'dist-synthetic';
   const outDir = path.join(root, out);
   const env = { ...process.env, TAKWIMU_SYNTHETIC_REJECTIONS: JSON.stringify(ids.map(([d, id]) => `${d}|${id}`)), TAKWIMU_DIST: out, NEXT_TELEMETRY_DISABLED: '1' };
@@ -283,7 +304,9 @@ if (dist && process.argv.includes('--synthetic')) {
     // 3. Dataset downloads (CSV, and JSON where the dataset has its own): withdrawn rows carry no value, every rejected
     // dataset has such rows, and each CSV has a review_status column.
     const dlDir = path.join(outDir, 'data', 'datasets');
+    // A project's status and an audit finding's title and category are the value of the record.
     const VALUE_COLS = ['value', 'result', 'amounts', 'amounts_as_printed', 'original_text', 'value_as_printed', 'raw_reading'];
+    const RECORD_VALUE_COLS = { 'siaya-projects': ['status', 'status_doc', 'status_page', 'status_evidence_type'], 'siaya-audit-findings': ['title', 'category'] };
     const parseCsv = (text) => {
       const rows = []; let row = []; let cell = ''; let q = false;
       for (let i = 0; i < text.length; i += 1) {
@@ -307,7 +330,7 @@ if (dist && process.argv.includes('--synthetic')) {
       const jrows = fs.existsSync(jf) ? JSON.parse(fs.readFileSync(jf, 'utf8')).rows || [] : [];
       [...rows, ...jrows].filter(isWithdrawn).forEach((r) => {
         withdrawnIn[id] = (withdrawnIn[id] || 0) + 1;
-        VALUE_COLS.forEach((c) => { if (c in r) ok(r[c] === null || r[c] === '' || (Array.isArray(r[c]) && !r[c].length), `synthetic: download ${id} row withdrawn but ${c} = ${JSON.stringify(r[c]).slice(0, 40)}`); });
+        [...VALUE_COLS, ...(RECORD_VALUE_COLS[id] || [])].forEach((c) => { if (c in r) ok(r[c] === null || r[c] === '' || (Array.isArray(r[c]) && !r[c].length), `synthetic: download ${id} row withdrawn but ${c} = ${JSON.stringify(r[c]).slice(0, 40)}`); });
       });
     });
     const DL = { 'siaya-fiscal-ledger': 'siaya-fiscal-ledger', 'siaya-audits': 'siaya-audit-findings', 'siaya-economy': 'siaya-economy', 'siaya-governance': 'siaya-governance', 'siaya-health': 'siaya-health', 'siaya-education': 'siaya-education', 'siaya-agriculture': 'siaya-agriculture', 'siaya-climate': 'siaya-climate', 'siaya-analysis': 'siaya-analysis', 'siaya-projects': 'siaya-projects', 'siaya-programmes': 'siaya-programmes' };
