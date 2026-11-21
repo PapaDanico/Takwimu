@@ -75,7 +75,8 @@ const srv = http.createServer((req, res) => {
   await p2.waitForFunction(() => location.search.includes('i=development_absorption_pct'));
   check(/i=development_absorption_pct/.test(p2.url()), 'compare writes the indicator to the address');
   check(await p2.locator('input[type=radio][value=high]').isDisabled() && /not by value/.test(await p2.locator('.notice').first().innerText()), 'doubtful readings switch the list to A to Z and disable ordering by value');
-  check(/Not available/.test(await p2.locator('ul.rank').innerText()), 'missing values say "Not available" with the reason');
+  const rankText = await p2.locator('ul.rank').innerText();
+  check(/Not yet verified: /.test(rankText) && !/Makueni\s*\n?\s*7?1(\.\d)?%/.test(rankText), 'readings the OCR re-read did not confirm say "Not yet verified" with the reason, not a number');
   check(/No county chosen yet/.test(await p2.locator('#side-h ~ .empty').innerText()), 'side by side shows an empty state with no county chosen');
   const add = p2.locator('select').last();
   for (const s of ['siaya', 'kisumu']) { await add.selectOption(s); await p2.getByRole('button', { name: 'Add', exact: true }).click(); }

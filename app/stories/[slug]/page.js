@@ -43,7 +43,7 @@ function Absorption({ story }) {
       </section>
       <section className="card" aria-labelledby="s2">
         <h2 id="s2">Counties by share of development budget spent, FY {a.prev} and FY {a.latest}</h2>
-        <p className="lead">Number of counties in each band. {a.dev.of - a.dev.n} counties have no FY {a.latest} figure because the cell was not read ({a.dev.missing.map((r) => r.name).join(', ')}).</p>
+        <p className="lead">Number of counties in each band. {a.dev.of - a.dev.n} counties have no FY {a.latest} figure shown ({a.dev.missing.map((r) => `${r.name}: ${r.status === 'unverified' ? 'not yet verified, the two OCR re-readings did not confirm the printed figure' : 'not read'}`).join('; ')}).</p>
         <ColumnChart labels={bands.map((b) => b[2])} series={[{ name: `FY ${a.prev}`, color: 1, values: count(a.devPrev) }, { name: `FY ${a.latest}`, color: 2, values: count(a.dev) }]} yFormat="int" unit="counties" ariaLabel="Number of counties by share of development budget spent, two years" />
         <div className="toolbar"><DownloadView name="takwimu-story-absorption" label="Download the chart data" meta={{ title: 'Counties by share of development budget spent', source: a.src.title }} rows={[a.prev, a.latest].flatMap((fy) => bands.map((b, i) => ({ fiscal_year: fy, band: b[2], counties: count(fy === a.latest ? a.dev : a.devPrev)[i], measure: 'development_absorption_pct (as printed)' })))} /></div>
       </section>
@@ -114,7 +114,7 @@ function OwnRevenue({ story }) {
         <h2 id="s3">Method and sources</h2>
         <ul className="how">
           <li>Totals are the printed total rows of the Controller of Budget tables; the 47 county rows add up to them within rounding. Values were read by OCR from scanned pages.</li>
-          <li>The share of target for all counties is computed here from the printed totals (collected divided by target). The table&apos;s own printed percentage for the total {o.printedTotalPct.value === null ? `could not be read reliably (OCR read "${o.printedTotalPct.raw}")` : `is ${o.printedTotalPct.value}`}.</li>
+          <li>The share of target for all counties is computed here from the printed totals (collected divided by target). The table&apos;s own printed percentage for the total {o.printedTotalPct.value === null ? (o.printedTotalPct.status === 'unverified' ? `is not yet verified. ${o.printedTotalPct.note}` : 'could not be read reliably.') : `is ${o.printedTotalPct.value}.`}</li>
           <li>County shares are as printed; {o.perf.of - o.perf.n} counties ({o.perf.missing.map((r) => r.name).join(', ')}) are left out because their reading did not agree with the printed amounts.</li>
           <li>Nominal shillings; the two years are not adjusted for prices here.</li>
         </ul>
