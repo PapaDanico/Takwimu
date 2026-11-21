@@ -53,7 +53,9 @@ const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '
 const by = Object.fromEntries(years.map((y) => [y.fy, y]));
 const short = (fy) => fy.slice(2);
 const SHORT = FYS.map(short);
-const col = (fn) => FYS.map((fy) => (by[fy] ? fn(by[fy]) ?? null : null));
+// A year missing a field (e.g. FY 2019/20 has no spending) is a gap: any non-finite result becomes null, never NaN.
+const finiteOrNull = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
+const col = (fn) => FYS.map((fy) => (by[fy] ? finiteOrNull(fn(by[fy])) : null));
 const pendOf = (y) => y.pending_total_m ?? (y.pending_development_m !== undefined && y.pending_recurrent_m !== undefined ? y.pending_development_m + y.pending_recurrent_m : undefined);
 const osrByFy = Object.fromEntries(hist.osr_series.points.map((p) => [p.fy, p]));
 const cur = by['2024/25'];

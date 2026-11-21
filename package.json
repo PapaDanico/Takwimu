@@ -7,7 +7,7 @@
   },
   "scripts": {
     "validate": "node scripts/test-analytics.js && node scripts/validate-data.js && node scripts/test-reconciliation.js",
-    "build": "node scripts/test-analytics.js && node scripts/validate-data.js && node scripts/test-reconciliation.js && node scripts/build-data.js && next build",
+    "build": "node scripts/test-analytics.js && node scripts/validate-data.js && node scripts/test-reconciliation.js && node scripts/build-data.js && next build && node scripts/check-built-html.js dist",
     "dev": "next dev",
     "typecheck": "tsc --noEmit",
     "smoke": "node scripts/smoke-test.js dist",

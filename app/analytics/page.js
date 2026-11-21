@@ -72,7 +72,8 @@ const realYoY = spendYears.slice(1).map((y, i) => {
 
 const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
 const SHORT = FYS.map((f) => f.slice(2));
-const fillBy = (rows, f) => FYS.map((fy) => { const r = rows.find((x) => x.fy === fy); return r ? f(r) : null; });
+// Missing inputs give a gap (null), never NaN.
+const fillBy = (rows, f) => FYS.map((fy) => { const r = rows.find((x) => x.fy === fy); const v = r ? f(r) : null; return typeof v === 'number' && Number.isFinite(v) ? v : null; });
 const pendTotal = (y) => (y.pending_total_m !== undefined ? y.pending_total_m : (y.pending_recurrent_m !== undefined && y.pending_development_m !== undefined ? y.pending_recurrent_m + y.pending_development_m : null));
 const lastPP = perPerson[perPerson.length - 1];
 const firstPP = perPerson.find((p) => p.fy === '2014/15');
