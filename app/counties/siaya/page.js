@@ -8,6 +8,7 @@ export const metadata = {
 };
 import siaya from '../../../data/siaya.json';
 import hist from '../../../data/history.json';
+import analysis from '../../../data/siaya-analysis.json';
 import { fmt, shortDate } from '../../../lib/format';
 
 const X0 = 160;
@@ -34,6 +35,9 @@ function Tile({ label, value, unit, note, tone, dashed, tag }) {
 const IY = hist.in_year;
 const IY_MEASURES = IY.periods.flatMap((p) => p.figures).filter((f, i, a) => a.findIndex((x) => x.measure === f.measure) === i);
 const IY_CONFLICT = { payables_assembly_opening: 'in-year-assembly-payables-2025', revenue_arrears_close: 'in-year-revenue-arrears-2025' };
+// Own-source revenue composition (calculated on /counties/siaya/analysis/, family A8).
+const A8 = (id) => analysis.records.find((r) => r.calc_id === id) || {};
+const OSR_MIX = { cob2425: A8('SIA-A8-2024-25-cob-report-2024-25'), cty2425: A8('SIA-A8-2024-25-GOV-02-FY2024-25-Q4'), cob2324: A8('SIA-A8-2023-24-cob-report-2023-24'), rank2425: A8('SIA-A8-counties-2024-25-fif-share-rank'), rank2324: A8('SIA-A8-counties-2023-24-fif-share-rank'), dFif: A8('SIA-A8-2024-25-difference-fif'), dOrd: A8('SIA-A8-2024-25-difference-ordinary') };
 const iyValue = (f) => (f.unit === '%' ? `${f.value}%` : `${f.unit} ${f.value.toLocaleString('en-US')}`);
 
 export default function Home() {
@@ -186,6 +190,16 @@ export default function Home() {
           <li>Compare the two bars. The solid bar comes from the Controller of Budget&apos;s own report.</li>
           <li>Open the source line to see where each figure comes from and when we retrieved it.</li>
         </ol>
+      </section>
+
+      <section className="card" id="osr-mix" aria-labelledby="osr-mix-h">
+        <h2 id="osr-mix-h">How own-source revenue is made up</h2>
+        <p className="lead">Part of Siaya&apos;s own-source revenue is Facility Improvement Financing (FIF): money its hospitals and health facilities collect, lawful own-source revenue under the Facility Improvement Financing Act, 2023. The rest is ordinary revenue such as fees, licences and levies.</p>
+        <ul className="how">
+          <li>FY 2024/25: FIF is {OSR_MIX.cob2425.result}% of own-source revenue in the Controller of Budget&apos;s Table 2.1 and {OSR_MIX.cty2425.result}% in the county&apos;s Q4 report. The two documents differ by KSh {OSR_MIX.dFif.result} million in FIF and KSh {OSR_MIX.dOrd.result} million in ordinary revenue, so the gap between KSh 436.68 million and KSh 757.57 million lies in hospital and health facility receipts, not in ordinary revenue (case <a href="/data/#osr-2024-25-county-statement">osr-2024-25-county-statement</a>).</li>
+          <li>FY 2023/24: FIF is {OSR_MIX.cob2324.result}% (Controller of Budget). Among counties with a printed value, Siaya&apos;s FIF share is position {OSR_MIX.rank2324.result} of {OSR_MIX.rank2324.flags && OSR_MIX.rank2324.flags.n_counties} in FY 2023/24 and {OSR_MIX.rank2425.result} of {OSR_MIX.rank2425.flags && OSR_MIX.rank2425.flags.n_counties} in FY 2024/25 (1 = highest share).</li>
+        </ul>
+        <p className="src">Calculated by Takwimu Kenya from published figures; provisional, awaiting editorial review. Every input, page and the all-county table: <Link href="/counties/siaya/analysis/#an-a8">Siaya analysis, own-source revenue composition</Link>.</p>
       </section>
 
       <section className="card" id="trend" aria-labelledby="trendh">

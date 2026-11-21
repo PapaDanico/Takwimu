@@ -42,14 +42,14 @@
       "required": ["calc_id", "family", "status", "title", "formula", "calc", "inputs", "beside", "result", "unit", "period", "source_ids", "comparability_notes", "caveat", "flags", "checks", "gap_reason", "confidence", "label"],
       "additionalProperties": false,
       "properties": {
-        "calc_id": { "type": "string", "pattern": "^SIA-A[1-7]-[A-Za-z0-9-]+$" },
-        "family": { "type": "string", "enum": ["A1", "A2", "A3", "A4", "A5", "A6", "A7"] },
+        "calc_id": { "type": "string", "pattern": "^SIA-A[1-8]-[A-Za-z0-9-]+$" },
+        "family": { "type": "string", "enum": ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8"] },
         "status": { "type": "string", "enum": ["value", "gap"] },
         "title": { "type": "string", "pattern": "." },
         "formula": { "type": "string", "pattern": "." },
         "calc": {
           "type": ["object", "null"],
-          "properties": { "op": { "type": "string", "enum": ["linear", "ratio_pct", "real_per_capita", "count", "count_distinct"] }, "dp": { "type": "integer", "minimum": 0, "maximum": 6 } }
+          "properties": { "op": { "type": "string", "enum": ["linear", "ratio_pct", "real_per_capita", "count", "count_distinct", "share_rank"] }, "dp": { "type": "integer", "minimum": 0, "maximum": 6 } }
         },
         "inputs": { "type": "array", "items": { "$ref": "#/$defs/input" } },
         "beside": { "type": "array", "items": { "$ref": "#/$defs/input" } },

@@ -6373,24 +6373,14 @@
    "pdf_page": 478,
    "printed_page": 435,
    "read_method": "ocr-rapidocr",
-   "original_text": null,
+   "original_text": "Kshs.1.12 billion",
    "confidence": 3,
-   "reused_from": {
-    "file": "data/history.json",
-    "path": [
-     "years",
-     {
-      "fy": "2023/24"
-     },
-     "pending_total_m"
-    ]
-   },
    "note": "stock at 30 June 2024 in the FY 2024/25 report (text layer reads \"Kshs.l.l2 billion\")",
    "stock_point": "opening_of_next_year",
    "scope": "county executive",
    "basis": "Stock at 30 June 2024 quoted in the FY 2024/25 report text (\"Kshs.1.12 billion\")",
    "source_kind": "controller_of_budget",
-   "table": null
+   "table": "Section 3.38.5 Settlement of Pending Bills (text), FY 2024/25 report"
   },
   {
    "id": "L253",
@@ -11175,7 +11165,7 @@
    "claim_b": {
     "observation_id": "L252",
     "value_ksh_m": 1120,
-    "printed": null
+    "printed": "Kshs.1.12 billion"
    },
    "source_a": {
     "source_id": "cob-report-2023-24",
@@ -11428,7 +11418,7 @@
    "claim_a": {
     "observation_id": "L252",
     "value_ksh_m": 1120,
-    "printed": null
+    "printed": "Kshs.1.12 billion"
    },
    "claim_b": {
     "observation_id": "L255",
@@ -11464,7 +11454,7 @@
    "claim_a": {
     "observation_id": "L252",
     "value_ksh_m": 1120,
-    "printed": null
+    "printed": "Kshs.1.12 billion"
    },
    "claim_b": {
     "observation_id": "L269",
@@ -11501,7 +11491,7 @@
    "claim_a": {
     "observation_id": "L252",
     "value_ksh_m": 1120,
-    "printed": null
+    "printed": "Kshs.1.12 billion"
    },
    "claim_b": {
     "observation_id": "L271",

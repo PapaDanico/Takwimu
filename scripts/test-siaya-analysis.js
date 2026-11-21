@@ -80,6 +80,7 @@ function chain(ds, recordPath) {
 function anchor(inp, ch) {
   const rec = ch[ch.length - 1];
   if (inp.dataset === 'data/history.json' && rec.provenance && rec.provenance[inp.field]) return { source_id: rec.provenance[inp.field].source_id, page: rec.provenance[inp.field].page ?? null };
+  if (rec.pages && rec.pages[inp.field]) return { source_id: null, page: rec.pages[inp.field].pdf_page };
   let source = null; let page = null;
   ch.forEach((o) => {
     if (o && typeof o === 'object' && !Array.isArray(o)) {
@@ -124,18 +125,26 @@ function recompute(calc, inputs) {
       return (toMillion(e.value, e.unit) * 1e6 / by('population')[0].value) * (by('cpi_base')[0].value / by('cpi_period')[0].value);
     }
     case 'count': return inputs.filter((i) => i.role === 'item' && i.value === calc.match).length;
+    case 'share_rank': { const t = shares(inputs); return t.findIndex((x) => x.code === calc.target_code) + 1; }
     case 'count_distinct': return new Set(inputs.filter((i) => i.role === 'item').map((i) => i.value)).size;
     default: return NaN;
   }
 }
 
+// Independent re-implementation for A8 (FIF share of own-source revenue per county, highest first, ties by code).
+function shares(inputs) {
+  const by = new Map();
+  inputs.forEach((i) => { if (!by.has(i.county_code)) by.set(i.county_code, {}); by.get(i.county_code)[i.role] = i.value; });
+  return [...by.entries()].map(([code, v]) => ({ code, share: round((v.fif / v.total) * 100, 2) })).sort((a, b) => b.share - a.share || a.code - b.code);
+}
 const ids = new Set();
 const audits = read('data/siaya-audits.json');
 const climate = read('data/siaya-climate.json');
 const ledger = read('data/siaya-fiscal-ledger.json');
 const obsLedger = Object.fromEntries(ledger.observations.map((o) => [o.id, o]));
 const VERDICT = /\b(corrupt\w*|fraud\w*|theft|stole\w*|embezzl\w*|misappropriat\w*|looted|fail(ed|ure|ing)?|success\w*|improv\w*|worse\w*|better|good|bad|poor(ly)?|mismanag\w*|wasted?)\b|reduction in (total )?liabilit/i;
-const textOf = (r) => [r.title, r.formula, r.caveat, r.gap_reason || '', ...r.comparability_notes].join(' \n ');
+// The name of the Act and of the fund ("Facility Improvement Financing", "Facility Improvement Fund") is not a verdict.
+const textOf = (r) => [r.title, r.formula, r.caveat, r.gap_reason || '', ...r.comparability_notes].join(' \n ').replace(/Facility Improvement (Financing|Fund)/g, 'FIF');
 
 data.records.forEach((r) => {
   const w = r.calc_id;
@@ -216,14 +225,31 @@ data.records.forEach((r) => {
     ok(want3 === r.result, `${w}: dataset gives ${want3} wards, record says ${r.result}`);
     ok(r.beside.every((b) => b.kind === 'allocation'), `${w}: allocation, receipt or expenditure mixed in the financing shown beside`);
   }
+  if (r.family === 'A8' && r.calc.op === 'share_rank') {
+    const t = shares(r.inputs); const me = t.find((x) => x.code === 41);
+    ok(sources.size === 1, `${w}: the 47-county table must come from one report`);
+    ok(r.inputs.every((i) => i.dataset === 'data/counties-cob.json' && Number.isInteger(i.county_code) && new RegExp(`counties\\[code=${i.county_code}\\]`).test(i.record)), `${w}: every input names its county row`);
+    ok(t.every((x) => r.inputs.filter((i) => i.county_code === x.code).length === 2), `${w}: each county needs one FIF and one total input`);
+    const sorted = t.map((x) => x.share).sort((a, b) => a - b); const n = t.length;
+    const median = n % 2 ? sorted[(n - 1) / 2] : round((sorted[n / 2 - 1] + sorted[n / 2]) / 2, 2);
+    ok(r.flags.n_counties === n && r.flags.siaya_share_pct === me.share && r.flags.median_share_pct === median && r.flags.counties_with_lower_share === t.filter((x) => x.share < me.share).length, `${w}: flags do not recompute`);
+    ok(n + r.flags.excluded_counties === 47, `${w}: ranked plus excluded counties must be 47`);
+  }
+  if (r.family === 'A8' && r.calc.op === 'ratio_pct') ok(r.calc.numerator_roles.join() === 'fif' && (r.calc.denominator_roles.join() === 'ordinary,fif' || r.calc.denominator_roles.join() === 'total'), `${w}: FIF share must be FIF over ordinary+FIF, or over the printed total`);
   if (r.family === 'A6') ok(r.flags.context_not_causation === true && /not causation/i.test(r.caveat), `${w}: missing the context-not-causation flag`);
 });
 
 // ---- whole-file checks ----
 ok(data.meta.label === LABEL, 'meta.label missing');
 ok(data.meta.counts.records === data.records.length, 'meta.counts.records is wrong');
-['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7'].forEach((f) => ok(data.records.some((r) => r.family === f), `no records for family ${f}`));
+['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8'].forEach((f) => ok(data.records.some((r) => r.family === f), `no records for family ${f}`));
 ok(data.records.every((r) => r.family !== 'A6' || r.flags.context_not_causation === true), 'A6 records must all carry context_not_causation');
+// Sweep D6/D14/D24: FY 2023/24 FIF uses the printed 388.63; population inputs carry their page.
+{
+  const r = data.records.find((x) => x.calc_id === 'SIA-A8-2023-24-cob-report-2023-24');
+  ok(r && r.status === 'value' && r.inputs.some((i) => i.role === 'fif' && i.value === 388.626776) && !committed.includes('388.53'), 'A8 FY 2023/24 CoB record must use FIF 388,626,776 (printed 388.63)');
+  data.records.filter((x) => x.family === 'A1' && x.status === 'value').forEach((x) => { const pop = x.inputs.find((i) => i.role === 'population'); ok(Number.isInteger(pop.pdf_page), `${x.calc_id}: population input has no page`); });
+}
 const ops = new Set(data.records.filter((r) => r.calc).map((r) => r.calc.op));
 ok(![...ops].some((o) => /mean|avg|average/i.test(o)), 'no averaging operation is allowed');
 

@@ -105,7 +105,8 @@ expectEq('subcounties villages', total((x) => x.villages), 98);
 expectEq('subcounties hospitals', total((x) => x.facilities.hospitals), 10);
 expectEq('subcounties maternity beds', total((x) => x.facilities.maternity_beds), 196);
 expectEq('subcounties youth friendly centres', total((x) => x.facilities.youth_friendly_centres), 7);
-expectEq('subcounties eligible voters', total((x) => x.eligible_voters_2022), 533595);
+expectEq('subcounties registered voters', total((x) => x.registered_voters_2022), 533595);
+if (subs.some((x) => 'eligible_voters_2022' in x)) fail('subcounties: use the IEBC term "registered voters", not "eligible voters"');
 subs.forEach((x) => {
   ['2019', '2022'].forEach((y) => {
     const calc = x.population[y] / x.area_km2;
@@ -115,6 +116,10 @@ subs.forEach((x) => {
 });
 expectEq('county sex split 2019', co.population.male_2019 + co.population.female_2019 + co.population.intersex_2019, co.population.census_2019);
 expectEq('county urban centres', co.population.urban_centres.reduce((a, b) => a + b.population, 0), co.population.urban_2022);
+// Urban plus rural is printed 3,487 below the 2022 total: the note must state the printed difference, nothing is adjusted.
+{ const d = co.population.projection_2022 - co.population.urban_2022 - co.population.rural_2022; if (d !== 0 && !(co.population.urban_rural_note || '').includes(d.toLocaleString('en-US'))) fail(`county: urban + rural differs from the 2022 total by ${d}; urban_rural_note must state it`); }
+// Population inputs carry their CIDP page (sweep D14).
+['census_2019', 'projection_2022', 'urban_2022', 'rural_2022'].forEach((k) => { if (!(co.population.pages && co.population.pages[k] && co.population.pages[k].pdf_page)) fail(`county population ${k}: no page recorded`); });
 const pctOk = (label, v) => { if (!(v >= 0 && v <= 100)) fail(`county ${label}: ${v} is not a percentage`); };
 ['monetary_poverty_pct', 'multidimensional_poverty_pct'].forEach((k) => { pctOk(k + ' siaya', co.poverty_2020[k].siaya); pctOk(k + ' kenya', co.poverty_2020[k].kenya); });
 ['hiv_prevalence_pct', 'antenatal_4th_visit_pct', 'facility_deliveries_pct', 'contraceptive_use_women_15_49_pct', 'full_immunisation_coverage_pct'].forEach((k) => { pctOk(k + ' siaya', co.health_2022[k].siaya); pctOk(k + ' kenya', co.health_2022[k].kenya); });
@@ -272,6 +277,19 @@ const manifest0 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 
   const out = [];
   checkSchema(schema, require('../lib/explore').catalogue(), 'catalogue', schema, out);
   out.forEach((m) => fail(`schema ${m}`));
+}
+
+// ---- One rule site-wide (sweep D17): a cell printed as '-' is stored as null with a note "shown as '-'", never as 0 ----
+{
+  const DASH = /(shown|printed) as (\\?"-\\?"|'-')/;
+  const walk = (v, where) => {
+    if (Array.isArray(v)) return v.forEach((x, i) => walk(x, `${where}[${i}]`));
+    if (!v || typeof v !== 'object') return;
+    const note = [v.note, v.notes].filter((x) => typeof x === 'string').join(' ');
+    if (DASH.test(note) && !/variance|not zero-filled/.test(note)) Object.entries(v).forEach(([k, x]) => { if (x === 0) fail(`${where}.${k}: printed as '-' but stored as 0 (store null with the note)`); });
+    Object.entries(v).forEach(([k, x]) => walk(x, `${where}.${k}`));
+  };
+  fs.readdirSync(path.join(__dirname, '..', 'data')).filter((f) => f.endsWith('.json') && f !== 'siaya-analysis.json').forEach((f) => walk(JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', f), 'utf8')), f));
 }
 
 // ---- Source manifest: every document history.json cites is listed; hashes are real or explicitly absent ----
@@ -540,8 +558,10 @@ if (Object.keys(xder.measures).some((k) => /2017/.test(k))) fail('derived: the a
   v.county_totals_summed_from_constituencies.forEach((c) => { const s2 = v.rows.filter((r) => r.county_code === c.county_code).reduce((t, r) => t + r.registered_voters, 0); if (s2 !== c.registered_voters) fail(`political ${c.county}: county total ${c.registered_voters} is not the sum ${s2}`); });
   if (new Set(v.rows.map((r) => r.county_code)).size !== 47) fail('political: constituencies must cover 47 counties');
   const cr = xpol.iebc_candidates_2022_by_position.rows; const ct = cr.find((r) => r.position === 'Total');
-  ['party_sponsored', 'independent', 'total'].forEach((k) => { const s2 = cr.filter((r) => r !== ct).reduce((t, r) => t + r[k], 0); if (s2 !== ct[k]) fail(`political candidates ${k}: rows add to ${s2}, total ${ct[k]}`); });
-  cr.forEach((r) => { if (r.party_sponsored + r.independent !== r.total && !(regHas('candidates-2022-woman-member', r.total) && r.total - r.party_sponsored - r.independent === 1)) fail(`political candidates ${r.position}: parts do not add up and the difference is not in the register`); });
+  // A cell printed as '-' is null (never 0); it counts as nothing in a sum.
+  const n0 = (v) => (v === null ? 0 : v);
+  ['party_sponsored', 'independent', 'total'].forEach((k) => { const s2 = cr.filter((r) => r !== ct).reduce((t, r) => t + n0(r[k]), 0); if (s2 !== ct[k]) fail(`political candidates ${k}: rows add to ${s2}, total ${ct[k]}`); });
+  cr.forEach((r) => { if (n0(r.party_sponsored) + n0(r.independent) !== r.total && !(regHas('candidates-2022-woman-member', r.total) && r.total - r.party_sponsored - r.independent === 1)) fail(`political candidates ${r.position}: parts do not add up and the difference is not in the register`); });
   if (xpol.iebc_presidential_2017_aug_form34c_totals) fail('political: the annulled August 2017 results are left out by rule');
   if (!regHas('registered-voters-2022', v.checks.published_total) || !regHas('registered-voters-2022', 22120458)) fail('political: registered-voters-2022 must list both totals');
 }

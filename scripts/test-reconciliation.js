@@ -113,14 +113,20 @@ test('conflict osr-2023-24: Siaya hub states the later report value as previous 
 
 // Pending bills.
 caseTest('pending-2021', 1060.92, 602.08, pendOf(year('2020/21')));
-caseTest('pending-2023', 761.29, 741.56, pendOf(year('2022/23')));
-caseTest('pending-2024', 1120, 303.91, pendOf(year('2023/24')));
-test('conflict pending-2023: figure is sourced from the FY 2023/24 report', () => {
-  const fs = year('2022/23').field_source || {};
-  ok(fs.pending_recurrent_m === '2023/24' && fs.pending_development_m === '2023/24', 'field_source should point to 2023/24');
+caseTest('pending-2023', 873.38, 761.29, pendOf(year('2022/23')));
+caseTest('pending-2024', 303.91, 1120, pendOf(year('2023/24')));
+// Own-year rule (sweep D5): each year's stock is the closing stock printed in that year's own report.
+test('conflict pending-2023: own-year rule, the FY 2022/23 report closing stock is the series value', () => {
+  ok(!(year('2022/23').field_source || {}).pending_total_m && year('2022/23').provenance.pending_total_m.source_id === 'cob-report-2022-23', 'FY 2022/23 pending bills must come from the FY 2022/23 report');
 });
-test('conflict pending-2024: figure is sourced from the FY 2024/25 report', () => {
-  ok((year('2023/24').field_source || {}).pending_total_m === '2024/25', 'field_source should point to 2024/25');
+test('conflict pending-2024: own-year rule, the FY 2023/24 report closing stock is the series value', () => {
+  ok(!(year('2023/24').field_source || {}).pending_total_m && year('2023/24').provenance.pending_total_m.source_id === 'cob-report-2023-24', 'FY 2023/24 pending bills must come from the FY 2023/24 report');
+});
+test('pending bills: every year in the series follows the own-year rule', () => {
+  hist.years.filter((y) => pendOf(y) !== undefined).forEach((y) => {
+    const fsrc = y.field_source || {};
+    ['pending_total_m', 'pending_recurrent_m', 'pending_development_m'].forEach((k) => ok(!fsrc[k], `${y.fy} ${k} comes from another year's report`));
+  });
 });
 
 caseTest('pending-2022', 705.38, 840.67, pendOf(year('2021/22')));
@@ -160,7 +166,7 @@ hist.pending_rollforward.years.forEach((r) => {
   ok(r.adjustments.status === 'not published', 'adjustments must stay "not published"');
 }));
 test('rollforward: closing stocks match the series where both come from the same report', () => {
-  ['2015/16', '2016/17', '2017/18', '2018/19', '2020/21', '2021/22'].forEach((fy) => ok(near(rfRow(fy).closing.value, pendOf(year(fy)), 0.011), `${fy}: ${rfRow(fy).closing.value} vs ${pendOf(year(fy))}`));
+  ['2015/16', '2016/17', '2017/18', '2018/19', '2020/21', '2021/22', '2022/23', '2023/24'].forEach((fy) => ok(near(rfRow(fy).closing.value, pendOf(year(fy)), 0.011), `${fy}: ${rfRow(fy).closing.value} vs ${pendOf(year(fy))}`));
 });
 
 // Budget, spending and absorption.
@@ -244,12 +250,12 @@ test('conflict pending-close-2025: Table 2.9 value 1,890.0 is a third value; sti
   ok(conflict('pending-close-2025').values.length === 3, 'the case should hold three values');
   ok(pendOf(year('2024/25')) === undefined, 'FY 2024/25 pending bills must stay a gap in the series');
 });
-test('conflict pending-2023: FY 2022/23 Table 2.6 value 873.37 is listed; the series keeps 761.29', () => {
+test('conflict pending-2023: FY 2022/23 Table 2.6 value 873.37 is listed; the series keeps the chapter 873.38', () => {
   const pb = cobSiaya('2022/23', 'pb_grand_total').value;
   ok(near(pb, 873.37, 0.005) && listed('pending-2023', 873.37), 'Table 2.6 873.37 must be in the case');
   const parts = ['pb_exec_recurrent', 'pb_exec_development', 'pb_assembly_recurrent', 'pb_assembly_development'].reduce((t, k) => t + cobSiaya('2022/23', k).value, 0);
   ok(near(parts, pb, 0.01), 'the four printed parts should add to the grand total');
-  ok(near(year('2022/23').pending_recurrent_m + year('2022/23').pending_development_m, 761.29, 0.005), 'series parts changed');
+  ok(near(pendOf(year('2022/23')), 873.38, 0.005), 'series value changed');
 });
 test('conflict pending-close-2022: FY 2021/22 Table 2.6 value 751.99 is listed; the series keeps 705.38', () => {
   ok(near(cobSiaya('2021/22', 'pb_grand_total').value, 751.99, 0.005) && listed('pending-close-2022', 751.99), 'Table 2.6 751.99 must be in the case');
@@ -391,6 +397,13 @@ test('conflict q1-2025-26-development-spending: the printed text says no develop
 test('in-year money figures are all in KSh million (no KSh bn beside KSh m in one row)', () => {
   hist.in_year.periods.forEach((p) => p.figures.forEach((f) => ok(f.unit === 'KSh m' || f.unit === '%', `${p.id} ${f.measure}: unit ${f.unit}`)));
   ok(iy('q1', 'approved_budget').value === 12790 && iy('h1', 'spending_total').value === 2500, 'converted values wrong');
+});
+
+test('conflict osr-2024-25-county-statement: the case explains the gap part by part from the analysis records (sweep D24)', () => {
+  const c = conflict('osr-2024-25-county-statement');
+  const an = read('siaya-analysis.json').records; const r = (id) => an.find((x) => x.calc_id === id);
+  ok(r('SIA-A8-2024-25-difference-fif').result === 321.23 && r('SIA-A8-2024-25-difference-ordinary').result === -0.34 && r('SIA-A8-2024-25-difference-total').result === 320.89, 'analysis differences changed');
+  ok(/236\.50/.test(c.definitions) && /236\.84/.test(c.definitions) && /521\.07/.test(c.definitions) && /199\.84/.test(c.definitions) && /#an-a8/.test(c.definitions), 'case must give the ordinary and FIF parts and link the analysis');
 });
 
 // Every register case has a test above, and no test points at a case that was removed.

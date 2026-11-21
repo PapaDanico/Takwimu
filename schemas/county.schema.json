@@ -26,6 +26,8 @@
       "required": ["census_2019", "male_2019", "female_2019", "intersex_2019", "projection_2022", "urban_2022", "rural_2022", "households", "average_household_size", "female_headed_households_pct", "national_female_headed_households_pct", "urban_centres", "age_groups_2022"],
       "additionalProperties": false,
       "properties": {
+        "urban_rural_note": { "type": "string", "minLength": 20 },
+        "pages": { "type": "object", "description": "PDF and printed page of each population field in the CIDP (sweep D14)", "additionalProperties": { "type": "object", "required": ["pdf_page", "printed_page"], "additionalProperties": false, "properties": { "pdf_page": { "type": "integer", "minimum": 1 }, "printed_page": { "type": "integer", "minimum": 1 } } } },
         "census_2019": { "type": "integer", "minimum": 0 },
         "male_2019": { "type": "integer", "minimum": 0 },
         "female_2019": { "type": "integer", "minimum": 0 },

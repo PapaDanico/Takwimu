@@ -4,7 +4,7 @@
 // R-003, R-005):
 //   A1 real per-capita county expenditure     A2 transfer dependency      A3 execution (absorption) rates
 //   A4 pending bills: stocks and changes      A5 audit recurrence         A6 budget beside service (context only)
-//   A7 climate financing beside PCRA risk
+//   A7 climate financing beside PCRA risk  A8 own-source revenue composition: ordinary OSR and health FIF/A-i-A
 // Rules: numerator and denominator always come from the same source document; values are never averaged across
 // sources; a missing or non-comparable input gives a gap record with its reason, never a filled value. Output is
 // deterministic (no clock, sorted keys), so a re-run must reproduce the committed file byte for byte.
@@ -82,6 +82,17 @@ function cobIn(fy, field, role) {
     scope: 'county government (executive and assembly)', confidence: 3,
   };
 }
+function cobIn2(fy, code, field, role) {
+  const y = COB.years.find((r) => r.fy === fy);
+  const c = y.counties.find((r) => r.code === code);
+  const f = c[field];
+  return {
+    role, county_code: code, county: c.name, dataset: 'data/counties-cob.json', record: `years[fy=${fy}].counties[code=${code}].${field}`, field: 'value', value: f.value, unit: f.unit,
+    measure: field, period: `FY ${fy}`, source_id: y.source_id, source_kind: 'controller_of_budget', source_title: y.source.title,
+    source_publication_date: null, table: f.table, pdf_page: f.pdf_page, printed_page: f.printed_page ?? null, basis: 'as printed in the cross-county table',
+    scope: `${c.name} county government`, confidence: 3,
+  };
+}
 function cpiIn(fy, role) {
   return {
     role, dataset: 'data/cpi.json', record: 'fiscal_year', field: fy, value: CPI.fiscal_year[fy], unit: 'index (2010 = 100)', measure: 'cpi_fiscal_year',
@@ -101,8 +112,8 @@ function histPopIn(year) {
   return {
     role: 'population', dataset: 'data/history.json', record: `population.points[year=${year}]`, field: 'value', value: p.value, unit: 'persons',
     measure: `population_${p.kind}`, population_kind: p.kind, period: String(year), source_id: 'county-ADP (as cited in history.json)', source_kind: 'county',
-    source_title: p.source || 'Projection as reproduced in Siaya County Annual Development Plans 2015/16 and 2018/19 (history.json population)',
-    source_publication_date: null, table: null, pdf_page: null, printed_page: null, page_note: 'history.json records no page for this point',
+    source_title: p.document || p.source || 'Projection as reproduced in Siaya County Annual Development Plans 2015/16 and 2018/19 (history.json population)',
+    source_publication_date: null, table: null, pdf_page: p.pdf_page ?? null, printed_page: p.printed_page ?? null, ...(p.pdf_page ? {} : { page_note: 'page not recorded in history.json' }),
     basis: p.note || null, scope: 'Siaya County', confidence: p.confidence,
   };
 }
@@ -110,8 +121,8 @@ function countyPopIn(field, kind) {
   return {
     role: 'population', dataset: 'data/county.json', record: 'population', field, value: CTY.population[field], unit: 'persons',
     measure: `population_${kind}`, population_kind: kind, period: field.slice(-4), source_id: 'GOV-01 (CIDP 2023-2027)', source_kind: 'county',
-    source_title: CTY.source, source_publication_date: null, table: null, pdf_page: null, printed_page: null,
-    page_note: 'county.json records no page', basis: kind === 'census' ? 'KNBS 2019 census count as reproduced in the CIDP' : 'Projection as printed in the CIDP',
+    source_title: CTY.source, source_publication_date: null, table: null,
+    ...((CTY.population.pages || {})[field] ? { pdf_page: CTY.population.pages[field].pdf_page, printed_page: CTY.population.pages[field].printed_page } : { pdf_page: null, printed_page: null, page_note: 'page not recorded in county.json' }), basis: kind === 'census' ? 'KNBS 2019 census count as reproduced in the CIDP' : 'Projection as printed in the CIDP',
     scope: 'Siaya County', confidence: CTY.confidence,
   };
 }
@@ -171,9 +182,17 @@ function evaluate(calc, inputs) {
     const g = (r) => inputs.find((i) => i.role === r);
     return round(((toMillion(g('expenditure').value, g('expenditure').unit) * 1e6) / g('population').value) * (g('cpi_base').value / g('cpi_period').value), calc.dp);
   }
+  if (calc.op === 'share_rank') return shareTable(inputs).findIndex((r) => r.code === calc.target_code) + 1;
   if (calc.op === 'count') return inputs.filter((i) => i.role === 'item' && i.value === calc.match).length;
   if (calc.op === 'count_distinct') return new Set(inputs.filter((i) => i.role === 'item').map((i) => i.value)).size;
   throw new Error(`unknown op ${calc.op}`);
+}
+
+// A8 47-county table: FIF/A-i-A share of total own-source revenue for each county code, highest first (ties by code).
+function shareTable(inputs) {
+  const by = {};
+  inputs.forEach((i) => { by[i.county_code] = by[i.county_code] || {}; by[i.county_code][i.role] = i.value; });
+  return Object.entries(by).map(([code, v]) => ({ code: Number(code), share: round((100 * v.fif) / v.total, 2) })).sort((a, b) => b.share - a.share || a.code - b.code);
 }
 
 // Pick one reading among several from the SAME source document for the same measure and year. Readings that agree
@@ -531,6 +550,89 @@ push({ calc_id: 'SIA-A7-pcra-other-years', family: 'A7', status: 'gap', title: '
   beside: [climateIn('cbrop-flloca-ccri-estimate-2024-25', 'allocation'), climateIn('q4-flloca-fund-budget-2025-26', 'allocation')], unit: 'wards', period: 'FY 2024/25 and FY 2025/26', caveat: A7_CAVEAT,
   gap_reason: 'The only ward risk assessment held is the 2023 PCRA; it is not paired with later years\' financing.', flags: { allocation_receipt_expenditure_kept_separate: true } });
 
+
+// =====================================================================================================================
+// A8. Own-source revenue composition (owner request, sweep D24): ordinary own-source revenue and health Facility
+// Improvement Financing (FIF) / appropriations-in-aid, by fiscal year and source document, and the FIF share of total
+// own-source revenue for all 47 counties (Controller of Budget Table 2.1, FY 2023/24 and FY 2024/25). FIF is lawful
+// own-source revenue (Facility Improvement Financing Act, 2023); the share describes composition only.
+// =====================================================================================================================
+const A8_CAVEAT = 'Describes how own-source revenue is made up; it is not a judgement of collection. FIF is own-source revenue under the Facility Improvement Financing Act, 2023 (hospital and health facility receipts, including SHA/SHIF, Linda Mama and NHIF where the source includes them). Sources differ in what they put in each part; each document is a separate record.';
+L.years.forEach((fy) => {
+  sourcesFor(['osr_fif_aia_actual', 'osr_total_actual', 'osr_ordinary_actual'], fy).forEach((sid) => {
+    const key = `SIA-A8-${slug(fy)}-${slug(sid)}`;
+    const common = { calc_id: key, family: 'A8', title: `FIF/A-i-A share of own-source revenue, FY ${fy} (${sid})`, unit: '% of own-source revenue', period: `FY ${fy}`,
+      formula: 'FIF/A-i-A collected divided by (ordinary own-source revenue + FIF/A-i-A) from the same document, times 100; where the document gives no ordinary figure, FIF/A-i-A divided by its printed total own-source revenue.', caveat: A8_CAVEAT };
+    const fifIds = ledgerBy('osr_fif_aia_actual', fy, sid); const ordIds = ledgerBy('osr_ordinary_actual', fy, sid); const totIds = ledgerBy('osr_total_actual', fy, sid);
+    if (!fifIds.length) return push({ ...common, status: 'gap', inputs: totIds.length ? [ledgerIn(pickSameSource(totIds).id || totIds[0], 'total')] : [],
+      gap_reason: 'This document prints one own-source revenue figure for the year and does not give health FIF/A-i-A separately, so its composition cannot be stated.' });
+    const picks = [pickSameSource(fifIds), pickSameSource(ordIds), pickSameSource(totIds)];
+    const bad = picks.find((x) => x.conflict);
+    if (bad) return push({ ...common, status: 'gap', gap_reason: `The same document gives different figures for one part (${bad.ids.join(', ')}: ${bad.values_ksh_m.join(' vs ')} KSh million); no figure is chosen.` });
+    const [fp, op, tp] = picks;
+    const fif = ledgerIn(fp.id, 'fif');
+    let inputs; let calc; const beside = []; const notes = [];
+    if (!op.none) {
+      const ord = ledgerIn(op.id, 'ordinary');
+      inputs = [ord, fif]; calc = { op: 'ratio_pct', numerator_roles: ['fif'], denominator_roles: ['ordinary', 'fif'], to_unit: 'KSh million', dp: 2 };
+      notes.push(`Ordinary own-source revenue KSh ${round(toMillion(ord.value, ord.unit), 2)} million; FIF/A-i-A KSh ${round(toMillion(fif.value, fif.unit), 2)} million.`);
+      if (!tp.none) {
+        const tot = ledgerIn(tp.id, 'printed_total'); beside.push(tot);
+        const diff = round(toMillion(ord.value, ord.unit) + toMillion(fif.value, fif.unit) - toMillion(tot.value, tot.unit), 2);
+        notes.push(`Printed total KSh ${round(toMillion(tot.value, tot.unit), 2)} million; the two parts add to ${diff === 0 ? 'the printed total' : `${diff > 0 ? '+' : ''}${diff} million against the printed total`}.`);
+      }
+    } else if (!tp.none) {
+      const tot = ledgerIn(tp.id, 'total');
+      inputs = [fif, tot]; calc = { op: 'ratio_pct', numerator_roles: ['fif'], denominator_roles: ['total'], to_unit: 'KSh million', dp: 2 };
+      notes.push(`This document gives no ordinary own-source revenue figure; the denominator is its printed total of KSh ${round(toMillion(tot.value, tot.unit), 2)} million.`);
+    } else {
+      return push({ ...common, status: 'gap', inputs: [fif], gap_reason: 'This document gives FIF/A-i-A but neither ordinary own-source revenue nor a total for the same year.' });
+    }
+    [fp, op, tp].forEach((x) => { if (x.equivalents && x.equivalents.length) notes.push(`Same figure at other rounding in the same document: ${x.equivalents.join(', ')}.`); });
+    if (fif.basis) notes.push(`What the FIF/A-i-A part covers, as the source states it: ${fif.basis}.`);
+    notes.push(`Source kind: ${fif.source_kind}. Other documents for the same year are separate records and are not averaged.`);
+    push({ ...common, status: 'value', inputs, beside, calc, result: evaluate(calc, inputs), comparability_notes: notes, flags: { source_kind: fif.source_kind, denominator: calc.denominator_roles.join('+') } });
+  });
+});
+// FY 2024/25: the Controller of Budget (Table 2.1, 436.68) and the county's Q4 report (Table 4, 757.57) differ (case
+// osr-2024-25-county-statement). Differences between the two documents, part by part; no figure is combined or chosen.
+[['total', 'osr_total_actual', 'L153', 'L166'], ['ordinary', 'osr_ordinary_actual', 'L154', 'L167'], ['fif', 'osr_fif_aia_actual', 'L155', 'L168']].forEach(([part, measure, cobId, ctyId]) => {
+  const a = ledgerIn(cobId, 'cob'); const b = ledgerIn(ctyId, 'county');
+  if (a.measure !== measure || b.measure !== measure || a.period !== 'FY 2024/25' || b.period !== 'FY 2024/25') throw new Error(`A8 gap decomposition: ${cobId}/${ctyId} are not ${measure} FY 2024/25`);
+  const calc = { op: 'linear', coefficients: { county: 1, cob: -1 }, to_unit: 'KSh million', dp: 2 };
+  const words = { total: 'total own-source revenue', ordinary: 'ordinary own-source revenue', fif: 'FIF/A-i-A (hospital and health facility receipts)' }[part];
+  push({ calc_id: `SIA-A8-2024-25-difference-${part}`, family: 'A8', status: 'value', title: `Difference in ${words}, FY 2024/25: county Q4 report minus Controller of Budget`,
+    formula: `County Q4 report (Table 4) ${words} minus the Controller of Budget Table 2.1 figure for the same year, KSh million. A difference between two documents, not a combined figure.`,
+    inputs: [b, a], calc, result: evaluate(calc, [b, a]), unit: 'KSh million', period: 'FY 2024/25',
+    comparability_notes: [`Controller of Budget KSh ${a.value} million (PDF p. ${a.pdf_page}); county Q4 report KSh ${round(b.value, 2)} million (PDF p. ${b.pdf_page}).`, 'See conflict case osr-2024-25-county-statement: both figures are kept and neither is chosen.'],
+    caveat: A8_CAVEAT, flags: { comparison_across_documents: true, part, conflict_case: 'osr-2024-25-county-statement' } });
+});
+// All 47 counties: FIF/A-i-A share of total own-source revenue, Controller of Budget Table 2.1, and Siaya's place in it.
+['2023/24', '2024/25'].forEach((fy) => {
+  const y = COB.years.find((r) => r.fy === fy);
+  const inputs = []; const excluded = [];
+  [...y.counties].sort((a, b) => a.code - b.code).forEach((c) => {
+    const f = c.fif_aia_actual; const tot = c.total_osr_actual; const ord = c.ordinary_osr_actual;
+    if (!f || typeof f.value !== 'number' || !tot || typeof tot.value !== 'number' || tot.value <= 0) return excluded.push(`${c.name}: ${!f || typeof f.value !== 'number' ? `FIF/A-i-A ${f ? f.status || 'not read' : 'not read'}` : `total ${tot ? tot.status || 'not read' : 'not read'}`}`);
+    if (ord && typeof ord.value === 'number' && Math.abs(ord.value + f.value - tot.value) > Math.max(0.01 * tot.value, 0.02)) return excluded.push(`${c.name}: printed parts (${ord.value} + ${f.value}) do not add to the printed total ${tot.value} within 1%`);
+    inputs.push({ ...cobIn2(fy, c.code, 'fif_aia_actual', 'fif') }, { ...cobIn2(fy, c.code, 'total_osr_actual', 'total') });
+  });
+  const calc = { op: 'share_rank', target_code: 41, dp: 0, order: 'highest share first' };
+  const table = shareTable(inputs); const n = table.length; const me = table.find((r) => r.code === 41);
+  const sorted = table.map((r) => r.share).sort((a, b) => a - b);
+  const median = n % 2 ? sorted[(n - 1) / 2] : round((sorted[n / 2 - 1] + sorted[n / 2]) / 2, 2);
+  const below = table.filter((r) => r.share < me.share).length;
+  push({ calc_id: `SIA-A8-counties-${slug(fy)}-fif-share-rank`, family: 'A8', status: 'value', title: `Siaya's place among ${n} counties by FIF/A-i-A share of own-source revenue, FY ${fy}`,
+    formula: 'For each county in Controller of Budget Table 2.1: FIF/A-i-A actual divided by total own-source revenue actual, times 100 (2 decimals). Counties are ordered from the highest share; the result is Siaya\'s position (1 = highest share).',
+    inputs, calc, result: evaluate(calc, inputs), unit: `position of ${n} (1 = highest FIF share)`, period: `FY ${fy}`,
+    comparability_notes: [
+      `Siaya: FIF/A-i-A ${me.share}% of own-source revenue. Middle value (median) across the ${n} counties: ${median}%. ${below} of the other counties have a lower share.`,
+      excluded.length ? `Not ranked (no usable printed value): ${excluded.join('; ')}.` : 'All 47 counties have printed values.',
+      'Counties record different things as FIF/A-i-A (some include SHA/SHIF reimbursements, others only facility fees); the table prints what each county reported.',
+    ],
+    caveat: A8_CAVEAT, flags: { n_counties: n, siaya_share_pct: me.share, median_share_pct: median, counties_with_lower_share: below, excluded_counties: excluded.length } });
+});
+
 // ---------- assemble ----------
 records.sort((a, b) => a.calc_id.localeCompare(b.calc_id));
 const out = {
@@ -546,6 +648,7 @@ const out = {
       A5: 'Audit recurrence: findings by category, stated carry-overs, next-year unresolved lists, repeated named items',
       A6: 'Budget-to-service context (context, not causation)',
       A7: 'Climate financing beside PCRA risk; allocation, receipt and expenditure kept separate (R-005)',
+      A8: 'Own-source revenue composition: ordinary OSR and health FIF/A-i-A by source document, and the FIF share for all 47 counties (sweep D24)',
     },
     conventions: {
       money: 'Results in KSh million unless the unit says otherwise; KSh billion inputs are multiplied by 1,000 and KSh inputs divided by 1,000,000.',
@@ -560,7 +663,7 @@ const out = {
       records: records.length,
       values: records.filter((r) => r.status === 'value').length,
       gaps: records.filter((r) => r.status === 'gap').length,
-      by_family: Object.fromEntries(['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7'].map((f) => [f, { values: records.filter((r) => r.family === f && r.status === 'value').length, gaps: records.filter((r) => r.family === f && r.status === 'gap').length }])),
+      by_family: Object.fromEntries(['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8'].map((f) => [f, { values: records.filter((r) => r.family === f && r.status === 'value').length, gaps: records.filter((r) => r.family === f && r.status === 'gap').length }])),
       printed_rate_mismatches_gt_1_point: records.filter((r) => r.flags && r.flags.printed_mismatch_gt_1_point).length,
     },
     notes_file: 'docs/siaya-analysis-notes.md',

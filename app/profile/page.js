@@ -53,6 +53,7 @@ export default function Profile() {
           <li><span>Female-headed households</span><span>{co.population.female_headed_households_pct}% (Kenya {co.population.national_female_headed_households_pct}%)</span></li>
           <li><span>Urban population (2022 projection)</span><span>{n(co.population.urban_2022)} of {n(co.population.projection_2022)}</span></li>
         </ul>
+        <p className="how"><b>Urban and rural.</b> {co.population.urban_rural_note}</p>
         {pop.some((p) => p.alternate) && <p className="how"><b>Note.</b> The 2012 projection appears as 886,417 in the county plans' constituency table and 885,762 in their text. We show the table value.</p>}
       </section>
 

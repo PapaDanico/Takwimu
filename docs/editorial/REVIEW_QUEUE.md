@@ -13,8 +13,8 @@ Procedure: [review-sop.md](review-sop.md). Every value below is public and label
 | siaya-health | 78 | 0 | 78 | 0 | 27 | 0 | 3 |
 | siaya-projects | 118 | 0 | 118 | 0 | 23 | 0 | 0 |
 | counties-cob | 4324 | 0 | 4324 | 0 | 0 | 0 | 0 |
-| history | 179 | 0 | 179 | 0 | 0 | 0 | 10 |
-| siaya-analysis | 324 | 0 | 324 | 0 | 0 | 0 | 24 |
+| history | 178 | 0 | 178 | 0 | 0 | 0 | 10 |
+| siaya-analysis | 355 | 0 | 355 | 0 | 0 | 0 | 24 |
 | siaya-economy | 154 | 0 | 154 | 0 | 0 | 0 | 0 |
 | siaya-governance | 38 | 0 | 38 | 0 | 0 | 0 | 0 |
 | siaya-education | 215 | 0 | 215 | 0 | 31 | 0 | 0 |
@@ -22,7 +22,7 @@ Procedure: [review-sop.md](review-sop.md). Every value below is public and label
 | siaya-climate | 87 | 0 | 87 | 0 | 0 | 0 | 0 |
 | imf | 430 | 0 | 430 | 0 | 0 | 0 | 430 |
 | siaya-programmes | 73 | 0 | 73 | 0 | 0 | 0 | 0 |
-| **All** | **6700** | **0** | **6700** | **0** | **215** | **0** | **467** |
+| **All** | **6730** | **0** | **6730** | **0** | **215** | **0** | **467** |
 
 Review records in force: 0 (of 0 in the file).
 
@@ -32,14 +32,14 @@ Not itemised (registers and map layers, not measured values):
 - `siaya-wards-geo`: A boundary map layer, checked as one file (resource hash in the file).
 - `siaya-boundaries`: A simplified boundary drawing for the map, not measured values.
 
-## Priority 1: fiscal discrepancies (346)
+## Priority 1: fiscal discrepancies (345)
 
 | Dataset | Pending | Disputed | Unanchored | What |
 |---|---:|---:|---:|---|
 | siaya-fiscal-ledger | 111 | 111 | 0 | fiscal discrepancy (open case in the ledger) |
 | siaya-projects | 23 | 23 | 0 | fiscal discrepancy (project amounts differ between documents) |
 | counties-cob | 92 | 0 | 0 | fiscal discrepancy (Siaya row against data/history.json) |
-| history | 120 | 0 | 0 | fiscal value (ten-year series; register cases) |
+| history | 119 | 0 | 0 | fiscal value (ten-year series; register cases) |
 
 | Dataset | Record id | Value | Source document(s) | State |
 |---|---|---|---|---|
@@ -363,8 +363,7 @@ Not itemised (registers and map layers, not measured values):
 | history | `years:2022/23:development_spent` | development_spent, FY 2022/23 | cob-report-2022-23 | pending |
 | history | `years:2022/23:osr_m` | osr_m, FY 2022/23 | cob-report-2022-23 | pending |
 | history | `years:2022/23:osr_target_m` | osr_target_m, FY 2022/23 | cob-report-2022-23 | pending |
-| history | `years:2022/23:pending_development_m` | pending_development_m, FY 2022/23 | cob-report-2023-24 | pending |
-| history | `years:2022/23:pending_recurrent_m` | pending_recurrent_m, FY 2022/23 | cob-report-2023-24 | pending |
+| history | `years:2022/23:pending_total_m` | pending_total_m, FY 2022/23 | cob-report-2022-23 | pending |
 | history | `years:2022/23:recurrent_absorption_pct` | recurrent_absorption_pct, FY 2022/23 | cob-report-2022-23 | pending |
 | history | `years:2022/23:recurrent_budget` | recurrent_budget, FY 2022/23 | cob-report-2022-23 | pending |
 | history | `years:2022/23:recurrent_spent` | recurrent_spent, FY 2022/23 | cob-report-2022-23 | pending |
@@ -375,7 +374,7 @@ Not itemised (registers and map layers, not measured values):
 | history | `years:2023/24:development_spent` | development_spent, FY 2023/24 | cob-report-2023-24 | pending |
 | history | `years:2023/24:osr_m` | osr_m, FY 2023/24 | cob-report-2023-24 | pending |
 | history | `years:2023/24:osr_target_m` | osr_target_m, FY 2023/24 | cob-report-2023-24 | pending |
-| history | `years:2023/24:pending_total_m` | pending_total_m, FY 2023/24 | cob-report-2024-25 | pending |
+| history | `years:2023/24:pending_total_m` | pending_total_m, FY 2023/24 | cob-report-2023-24 | pending |
 | history | `years:2023/24:recurrent_absorption_pct` | recurrent_absorption_pct, FY 2023/24 | cob-report-2023-24 | pending |
 | history | `years:2023/24:recurrent_budget` | recurrent_budget, FY 2023/24 | cob-report-2023-24 | pending |
 | history | `years:2023/24:recurrent_spent` | recurrent_spent, FY 2023/24 | cob-report-2023-24 | pending |
@@ -780,13 +779,13 @@ Not itemised (registers and map layers, not measured values):
 | siaya-health | `tb-inc-health01` | TB incidence, not stated (article of May 2026) | HEALTH-01 | pending |
 | siaya-health | `tbhiv-2023-ntld` | TB patients co-infected with HIV, 2023 | NTLD-AR-2023 | pending |
 
-## Priority 4: other fiscal values and calculations (4873)
+## Priority 4: other fiscal values and calculations (4904)
 
 | Dataset | Pending | Disputed | Unanchored | What |
 |---|---:|---:|---:|---|
 | counties-cob | 4232 | 0 | 0 | county fiscal value (OCR) |
 | history | 34 | 0 | 0 | fiscal value (in-year); fiscal value |
-| siaya-analysis | 324 | 0 | 24 | calculation by Takwimu |
+| siaya-analysis | 355 | 0 | 24 | calculation by Takwimu |
 | siaya-fiscal-ledger | 188 | 0 | 0 | fiscal value |
 | siaya-projects | 95 | 0 | 0 | project record |
 

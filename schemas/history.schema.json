@@ -50,6 +50,9 @@
           "items": {
             "type": "string"
           }
+        },
+        "pending_rule": {
+          "type": "string"
         }
       }
     },
@@ -703,6 +706,18 @@
                 "type": "integer",
                 "minimum": 1,
                 "maximum": 5
+              },
+              "document": {
+                "type": "string",
+                "description": "Document, table and page the point was read from (sweep D14, 21 Nov 2026)"
+              },
+              "pdf_page": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "printed_page": {
+                "type": "integer",
+                "minimum": 1
               }
             }
           }

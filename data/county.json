@@ -10,6 +10,11 @@
     "census_2019": 993183, "male_2019": 471669, "female_2019": 521496, "intersex_2019": 18,
     "projection_2022": 1040616,
     "urban_2022": 90178, "rural_2022": 946951,
+    "urban_rural_note": "The plan prints urban 90,178 and rural 946,951 for 2022 (PDF p. 204, printed p. 185). They add to 1,037,129, which is 3,487 fewer than the 2022 total of 1,040,616 printed in the same plan (PDF p. 28 and 202). The plan does not explain the difference; no figure is adjusted.",
+    "pages": {
+      "census_2019": { "pdf_page": 28, "printed_page": 9 }, "male_2019": { "pdf_page": 28, "printed_page": 9 }, "female_2019": { "pdf_page": 28, "printed_page": 9 },
+      "projection_2022": { "pdf_page": 28, "printed_page": 9 }, "urban_2022": { "pdf_page": 204, "printed_page": 185 }, "rural_2022": { "pdf_page": 204, "printed_page": 185 }
+    },
     "households": 245139, "average_household_size": 4.245, "female_headed_households_pct": 47.7, "national_female_headed_households_pct": 38.2,
     "urban_centres": [
       { "name": "Siaya", "population": 34714 }, { "name": "Bondo", "population": 23777 },
