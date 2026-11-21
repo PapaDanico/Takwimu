@@ -134,7 +134,7 @@ export default function SiteFooter({ asOf }) {
             {LEGAL.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
           </nav>
           <div className="footer-credit">
-            <img src="/brand/danico-ventures.webp" alt="Danico Ventures Ltd" width="32" height="32" />
+            <img src="/brand/danico-ventures-96.webp" srcSet="/brand/danico-ventures-96.webp 1x, /brand/danico-ventures.webp 2x" alt="Danico Ventures Ltd" width="40" height="40" />
             <p>© {new Date().getFullYear()} Takwimu, a Danico Ventures Ltd product · Built in Kenya</p>
           </div>
         </div>

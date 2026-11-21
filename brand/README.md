@@ -11,6 +11,7 @@ Tagline, exactly: **Turning Data into Progress.**
 | One-colour mark | `takwimu-mark-mono.svg` | Provisional |
 | Wordmark (TAKWIMU / KENYA with red rules, orange I) | HTML and CSS in `SiteHeader` and `SiteFooter` | Interim typed treatment. The custom glyphs (triangular orange A counter, angular K and W) still need hand-built vector paths and sign-off |
 | Open Graph 1200 x 630 | `public/og.png` | Cropped from the supplied social landscape mockup |
+| Danico Ventures Ltd logo (new, 21 Nov 2026) | `danico-ventures-master.png`, `public/brand/danico-ventures*.webp` | The supplied PDF holds a 2048 px raster image, not vector paths, so this is a raster asset with its dark background. A vector master is still needed for print |
 | Reference artwork | `reference-*.png` | Raster references only, not masters |
 
 ## Rules carried into the site

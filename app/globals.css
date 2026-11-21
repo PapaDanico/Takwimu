@@ -97,7 +97,7 @@ a { color: inherit; }
 .footer-base p + p { margin-top: 16px; color: color-mix(in srgb, #E3D8BE 62%, transparent); }
 .footer-base strong { color: #FDFBF5; }
 .footer-credit { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
-.footer-credit img { width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0; box-shadow: 0 0 0 1px color-mix(in srgb, #E3D8BE 22%, transparent); }
+.footer-credit img { width: 40px; height: 40px; border-radius: 9px; flex-shrink: 0; box-shadow: 0 0 0 1px color-mix(in srgb, #E3D8BE 22%, transparent); }
 .footer-base .footer-credit p { margin: 0; color: color-mix(in srgb, #E3D8BE 62%, transparent); }
 
 /* Page */
