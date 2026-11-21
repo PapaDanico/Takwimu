@@ -11,8 +11,8 @@ const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500', '700'],
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: 'Takwimu Counties | Public finance, made plain', template: '%s | Takwimu Counties' },
-  openGraph: { type: 'website', siteName: 'Takwimu Counties', images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Takwimu Counties: Siaya County in plain numbers' }] },
+  title: { default: 'Takwimu Kenya | Public finance, made plain', template: '%s | Takwimu Kenya' },
+  openGraph: { type: 'website', siteName: 'Takwimu Kenya', images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Takwimu Kenya: Siaya County in plain numbers' }] },
   twitter: { card: 'summary_large_image', images: ['/og.png'] },
   description: "Kenya's county budget, audit and revenue reports in plain language, starting with Siaya. Every figure names its source.",
   manifest: '/manifest.json',

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { COUNTIES } from '../lib/counties';
 
 const ISSUES_URL = 'https://github.com/PapaDanico/Takwimu/issues/new';
 
@@ -13,7 +14,9 @@ const COLUMNS = [
     heading: 'Explore',
     links: [
       { href: '/', label: 'Overview' },
-      { href: '/insights/', label: 'Ten-year insights' },
+      { href: '/counties/', label: 'All 47 counties' },
+      { href: '/counties/siaya/', label: 'Siaya County' },
+      { href: '/insights/', label: 'Siaya ten-year insights' },
       { href: '/analytics/', label: 'Analytics' },
       { href: '/subcounties/', label: 'Sub-counties' },
       { href: '/profile/', label: 'County profile' },
@@ -79,12 +82,12 @@ export default function SiteFooter({ asOf }) {
           <div>
             <div className="footer-brand">
               <img src="/logo.svg" alt="" width="40" height="40" />
-              <b>Takwimu <i>Counties</i></b>
+              <b>Takwimu <i>Kenya</i></b>
             </div>
             <p className="tagline">Public finance, made plain</p>
             <p className="footer-about">
               A free tool that turns Kenya&apos;s county budget, audit and revenue reports into plain
-              language, starting with Siaya. Every figure names its source, so any citizen can check it.
+              language for all 47 counties, starting with Siaya. Every figure names its source, so any citizen can check it.
             </p>
             <div className="chips">
               <a className="chip gold" href={ISSUES_URL}>Report an inaccuracy</a>
@@ -111,12 +114,19 @@ export default function SiteFooter({ asOf }) {
           </div>
         </div>
 
+        <nav className="footer-counties" aria-label="All counties">
+          <h3>Counties</h3>
+          <ul>
+            {COUNTIES.map((c) => <li key={c.slug}><Link href={`/counties/${c.slug}/`}>{c.name}</Link></li>)}
+          </ul>
+        </nav>
+
         <div className="footer-base">
           <p>
             Takwimu explains public documents for education and is <strong>not legal, financial or
             audit advice</strong>. It is not affiliated with, or endorsed by, the Controller of Budget,
-            the Office of the Auditor-General, the Kenya National Bureau of Statistics or Siaya County
-            Government. Figures are read from published reports and may be delayed, rounded or
+            the Office of the Auditor-General, the Kenya National Bureau of Statistics or any
+            county government. Figures are read from published reports and may be delayed, rounded or
             misread from scanned pages. Check any number against the source document before relying
             on it. Last checked {asOf}.
           </p>

@@ -2,7 +2,7 @@ import PageHead from '../../components/PageHead';
 
 export const metadata = {
   title: 'Learn: budget, audit and statistics terms in plain English',
-  description: 'Plain-language explainers for the budget, audit and statistics terms used on Takwimu Counties.',
+  description: 'Plain-language explainers for the budget, audit and statistics terms used on Takwimu Kenya.',
 };
 
 const GROUPS = [

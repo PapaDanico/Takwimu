@@ -28,7 +28,7 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/']) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);

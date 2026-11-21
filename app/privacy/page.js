@@ -3,7 +3,7 @@ import { SITE_URL, ISSUES_URL } from '../../lib/site';
 
 export const metadata = {
   title: 'Privacy notice',
-  description: 'What personal data Takwimu Counties collects (very little), why, who processes it, how long it is kept and your rights under the Kenya Data Protection Act, 2019.',
+  description: 'What personal data Takwimu Kenya collects (very little), why, who processes it, how long it is kept and your rights under the Kenya Data Protection Act, 2019.',
 };
 
 const UPDATED = '21 November 2026';
@@ -19,7 +19,7 @@ const NOT_COLLECTED = [
 
 const SECTIONS = [
   { id: 'who', title: '1. Who we are', body: [
-    'Takwimu Counties is a free civic-education website run by Danico Ventures Ltd, a company in Kenya, which decides how and why any personal data connected with the Site is used (the "data controller" under the Kenya Data Protection Act, 2019).',
+    'Takwimu Kenya is a free civic-education website run by Danico Ventures Ltd, a company in Kenya, which decides how and why any personal data connected with the Site is used (the "data controller" under the Kenya Data Protection Act, 2019).',
     `This notice covers ${SITE_URL.replace('https://', '')} (the "Site"). It explains what personal data is involved when you visit, in plain language. It should be read with our Terms of use.`,
   ] },
   { id: 'collect', title: '2. What personal data is involved', body: [
@@ -69,7 +69,7 @@ const SECTIONS = [
 export default function Privacy() {
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Legal" title="Privacy notice" sub={`What personal data Takwimu Counties collects (very little), why, and your rights. Version 1.0, last updated ${UPDATED}.`} path="/privacy/" shareText="Takwimu Counties: privacy notice" />
+      <PageHead eyebrow="Legal" title="Privacy notice" sub={`What personal data Takwimu Kenya collects (very little), why, and your rights. Version 1.0, last updated ${UPDATED}.`} path="/privacy/" shareText="Takwimu Kenya: privacy notice" />
       <nav aria-label="Sections on this page"><ul className="toc">
         {SECTIONS.map((s) => <li key={s.id}><a href={`#${s.id}`}>{s.title.replace(/^\d+\.\s/, '')}</a></li>)}
       </ul></nav>

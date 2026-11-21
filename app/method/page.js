@@ -5,7 +5,7 @@ import cpi from '../../data/cpi.json';
 
 export const metadata = {
   title: 'Method: sources, confidence and verification',
-  description: 'How Takwimu Counties collects, checks, scores and corrects the numbers it publishes.',
+  description: 'How Takwimu Kenya collects, checks, scores and corrects the numbers it publishes.',
 };
 
 const ISSUES_URL = 'https://github.com/PapaDanico/Takwimu/issues/new';
@@ -30,7 +30,7 @@ const SOURCES = [
 export default function Method() {
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Method" title="How Takwimu handles numbers" sub="What we publish, where it comes from, how we check it, and what we do when two sources disagree." path="/method/" shareText="How Takwimu Counties handles numbers" />
+      <PageHead eyebrow="Method" title="How Takwimu handles numbers" sub="What we publish, where it comes from, how we check it, and what we do when two sources disagree." path="/method/" shareText="How Takwimu Kenya handles numbers" />
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#sources">Sources</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#checks">Checks</a></li><li><a href="#conflicts">Disagreements</a></li><li><a href="#prices">Prices</a></li><li><a href="#years">Fiscal years</a></li><li><a href="#people">Named people</a></li><li><a href="#gaps">Gaps</a></li>
       </ul></nav>

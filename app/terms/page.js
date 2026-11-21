@@ -3,14 +3,14 @@ import { SITE_URL, ISSUES_URL } from '../../lib/site';
 
 export const metadata = {
   title: 'Terms of use',
-  description: 'The terms that apply when you use Takwimu Counties: purpose, accuracy, reuse, acceptable use, liability and governing law.',
+  description: 'The terms that apply when you use Takwimu Kenya: purpose, accuracy, reuse, acceptable use, liability and governing law.',
 };
 
 const UPDATED = '21 November 2026';
 
 const SECTIONS = [
   { id: 'about', title: '1. About these terms', body: [
-    'Takwimu Counties ("Takwimu", "we", "us") is a free civic-education website that explains Kenya\'s county budget, audit and statistics reports in plain language, starting with Siaya County. It is a product of Danico Ventures Ltd, a company in Kenya.',
+    'Takwimu Kenya ("Takwimu", "we", "us") is a free civic-education website that explains Kenya\'s county budget, audit and statistics reports in plain language, starting with Siaya County. It is a product of Danico Ventures Ltd, a company in Kenya.',
     `By opening or using ${SITE_URL.replace('https://', '')} or any page, file or feature on it (the "Site"), you agree to these terms. If you do not agree, please do not use the Site.`,
     'We may change these terms. The date at the top of this page shows the latest version. Using the Site after a change means you accept the new version.',
   ] },
@@ -30,7 +30,7 @@ const SECTIONS = [
   ] },
   { id: 'copyright', title: '5. Copyright, reuse and attribution', body: [
     'Our original text, charts, explainers, layout, logo and the Takwimu name belong to Danico Ventures Ltd or its licensors. The Danico Ventures Ltd name and logo belong to that company and may not be used without its permission.',
-    'You may reuse our original text, charts and the data files on the Data page, for personal, educational, journalistic, research or commercial purposes, provided you (a) credit "Takwimu Counties (takwimu.netlify.app), based on [the original publisher]" and (b) do not suggest that we or the original publishers endorse you or your use. If you change the material, say so.',
+    'You may reuse our original text, charts and the data files on the Data page, for personal, educational, journalistic, research or commercial purposes, provided you (a) credit "Takwimu Kenya (takwimu.netlify.app), based on [the original publisher]" and (b) do not suggest that we or the original publishers endorse you or your use. If you change the material, say so.',
     'The underlying figures and documents come from public bodies and other publishers. Their own terms apply to their publications. Citing a figure from our Data page does not replace citing the original report, which you should also name.',
     'Do not copy the Site in a way that hides its sources, confidence scores, caveats or corrections, or that presents our estimates as official statistics.',
   ] },
@@ -66,7 +66,7 @@ const SECTIONS = [
 export default function Terms() {
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Legal" title="Terms of use" sub={`Plain-language terms for using Takwimu Counties. Version 1.0, last updated ${UPDATED}.`} path="/terms/" shareText="Takwimu Counties: terms of use" />
+      <PageHead eyebrow="Legal" title="Terms of use" sub={`Plain-language terms for using Takwimu Kenya. Version 1.0, last updated ${UPDATED}.`} path="/terms/" shareText="Takwimu Kenya: terms of use" />
       <nav aria-label="Sections on this page"><ul className="toc">
         {SECTIONS.map((s) => <li key={s.id}><a href={`#${s.id}`}>{s.title.replace(/^\d+\.\s/, '')}</a></li>)}
       </ul></nav>

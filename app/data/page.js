@@ -13,7 +13,7 @@ const OPEN = [
 
 export const metadata = {
   title: 'Data downloads and sources',
-  description: 'Download the JSON data behind Takwimu Counties, with the source and confidence of each file.',
+  description: 'Download the JSON data behind Takwimu Kenya, with the source and confidence of each file.',
 };
 
 const FILES = [
@@ -32,7 +32,7 @@ export default function DataPage() {
   const rows = hist.years.length;
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Data" title="Data downloads and sources" sub="Every file is plain JSON. Each figure carries its source and confidence, so you can check it or reuse it. Please cite the original publisher as well as Takwimu." path="/data/" shareText="Takwimu Counties open data" />
+      <PageHead eyebrow="Data" title="Data downloads and sources" sub="Every file is plain JSON. Each figure carries its source and confidence, so you can check it or reuse it. Please cite the original publisher as well as Takwimu." path="/data/" shareText="Takwimu Kenya open data" />
       <section className="card" aria-labelledby="f-h">
         <h2 id="f-h">Files</h2>
         <div className="tablewrap">
