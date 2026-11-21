@@ -360,7 +360,8 @@ Object.entries(files)
   const hist = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'history.json'), 'utf8'));
   const cpi = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'cpi.json'), 'utf8'));
   const q = (v) => (v === undefined || v === null ? '' : `"${String(v).replace(/"/g, '""')}"`);
-  const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'caveat']];
+  const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'confidence_1_to_5', 'retrieved', 'period', 'caveat']];
+  const got = hist.meta.retrieved;
   const field = [
     ['approved_budget', 'approved', 'KSh billion'], ['recurrent_budget', 'recurrent_budget', 'KSh billion'], ['development_budget', 'development_budget', 'KSh billion'],
     ['spent', 'spent', 'KSh billion'], ['recurrent_spent', 'recurrent_spent', 'KSh billion'], ['development_spent', 'development_spent', 'KSh billion'],
@@ -369,15 +370,23 @@ Object.entries(files)
   ];
   const years = [...hist.years].sort((a, b) => a.fy.localeCompare(b.fy));
   years.forEach((y) => {
-    const rep = hist.reports[y.report] || {};
-    field.forEach(([name, key, unit]) => { if (y[key] !== undefined) rows.push([name, y.fy, y[key], unit, 'reported', rep.title, rep.url, y.caveat]); });
-    if (y.spent !== undefined && cpi.fiscal_year[y.fy]) rows.push(['spent_real_2024_25_prices', y.fy, +(y.spent * (cpi.fiscal_year['2024/25'] / cpi.fiscal_year[y.fy])).toFixed(3), 'KSh billion', 'derived (approximate)', 'World Bank CPI, fiscal-year average', cpi.meta.source_url, cpi.meta.method]);
+    const period = y.fy === '2013/14' ? '16 months to 30 June 2014' : `FY ${y.fy}`;
+    field.forEach(([name, key, unit]) => {
+      if (y[key] === undefined) return;
+      const rep = hist.reports[(y.field_source && y.field_source[key]) || y.report] || {};
+      const basis = (y.derived || []).includes(key) ? 'derived (total minus development)' : 'reported';
+      rows.push([name, y.fy, y[key], unit, basis, rep.title, rep.url, rep.confidence, got, period, y.caveat]);
+    });
+    if (y.spent !== undefined && cpi.fiscal_year[y.fy]) rows.push(['spent_real_2024_25_prices', y.fy, +(y.spent * (cpi.fiscal_year['2024/25'] / cpi.fiscal_year[y.fy])).toFixed(3), 'KSh billion', 'derived (approximate)', 'World Bank CPI, fiscal-year average', cpi.meta.source_url, '', got, period, cpi.meta.method]);
   });
   hist.osr_series.points.forEach((p) => {
-    rows.push(['own_source_revenue', p.fy, p.value, 'KSh million', 'reported', p.report, '', '']);
-    if (p.alternate) rows.push(['own_source_revenue', p.fy, p.alternate.value, 'KSh million', 'alternate (other report)', p.alternate.report, '', 'Reports disagree; see conflicts.json']);
+    rows.push(['own_source_revenue', p.fy, p.value, 'KSh million', 'reported', p.report, '', '', got, `FY ${p.fy}`, '']);
+    if (p.alternate) rows.push(['own_source_revenue', p.fy, p.alternate.value, 'KSh million', 'alternate (other report)', p.alternate.report, '', '', got, `FY ${p.fy}`, 'Reports disagree; see conflicts.json']);
   });
-  hist.audits.points.forEach((a) => rows.push(['audit_opinion', a.fy, a.opinion, 'category', 'reported', a.period || '', a.url, a.reasons]));
+  hist.audits.points.forEach((a) => rows.push(['audit_opinion', a.fy, a.opinion, 'category', 'reported', 'Auditor-General report on the County Executive accounts', a.url, a.confidence, got, a.period || `FY ${a.fy}`, a.reasons]));
+  // Every value in the conflict register, so no disagreeing figure is left out of the export.
+  const conf = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'conflicts.json'), 'utf8'));
+  conf.conflicts.forEach((c) => c.values.forEach((v) => rows.push([`conflict: ${c.measure}`, '', v.value, c.unit, `source value (${c.status})`, v.label, v.url, '', got, '', c.definitions])));
   fs.writeFileSync(path.join(outDir, 'history.csv'), rows.map((r) => r.map(q).join(',')).join('\n') + '\n');
   console.log(`Generated public/data/history.csv (${rows.length - 1} rows)`);
 }());

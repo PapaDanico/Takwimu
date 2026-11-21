@@ -76,10 +76,10 @@ const fillBy = (rows, f) => FYS.map((fy) => { const r = rows.find((x) => x.fy ==
 const lastPP = perPerson[perPerson.length - 1];
 const firstPP = perPerson.find((p) => p.fy === '2014/15');
 const kpis = [
-  { label: 'Real spending growth', value: `${one(growthRows[0].real)}%`, unit: 'a year', delta: `Nominal ${one(growthRows[0].nom)}% a year`, spark: spendYears.map((y) => y.spent * defl(y.fy)) },
+  { label: 'Real spending growth', value: `${one(growthRows[0].real)}%`, unit: 'a year', delta: `Nominal ${one(growthRows[0].nom)}% a year`, spark: fillBy(spendYears, (y) => y.spent * defl(y.fy)) },
   { label: 'Population growth', value: `${one(popGrowth)}%`, unit: 'a year', delta: 'Estimate, FY 2014/15 to 2024/25' },
-  { label: 'Real spending per person', value: n0(lastPP.v), unit: 'KSh', delta: `${one((lastPP.v / firstPP.v - 1) * 100)}% since FY 2014/15`, tone: lastPP.v >= firstPP.v ? 'up' : 'down', spark: perPerson.map((p) => p.v) },
-  { label: 'Unspent budget, ten years', value: bn(unspentReal), unit: 'KSh bn', delta: `${BASE} prices`, spark: unspent.map((u) => u.pct) },
+  { label: 'Real spending per person', value: n0(lastPP.v), unit: 'KSh', delta: `${one((lastPP.v / firstPP.v - 1) * 100)}% since FY 2014/15`, tone: lastPP.v >= firstPP.v ? 'up' : 'down', spark: fillBy(perPerson, (p) => p.v) },
+  { label: 'Unspent budget, ten years', value: bn(unspentReal), unit: 'KSh bn', delta: `${BASE} prices`, spark: fillBy(unspent, (u) => u.pct) },
 ];
 
 export default function Analytics() {

@@ -155,7 +155,11 @@ reg.conflicts.forEach((c) => {
   if (c.values && c.values.length >= 2 && c.values[0].value === c.values[1].value) fail(`conflicts ${c.id}: the values do not differ`);
 });
 // Every conflict flagged in the history file must appear in the register.
-['osr-2023-24', 'osr-2015-16', 'pending-2021'].forEach((id) => { if (!ids.has(id)) fail(`conflicts: ${id} is missing from the register`); });
+const required = ['osr-2023-24', 'osr-2015-16', 'pending-2021', 'pending-2023', 'pending-2024'];
+((hist.osr_series && hist.osr_series.points) || []).forEach((pt) => {
+  if (pt.alternate && !ids.has(`osr-${pt.fy.replace('/', '-')}`)) fail(`conflicts: OSR alternate for ${pt.fy} has no register entry`);
+});
+required.forEach((id) => { if (!ids.has(id)) fail(`conflicts: ${id} is missing from the register`); });
 
 if (errors.length) {
   console.error('Data validation failed:\n- ' + errors.join('\n- '));

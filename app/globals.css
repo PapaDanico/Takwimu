@@ -272,8 +272,8 @@ table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; lett
 /* Charts: line, column and donut. Marks are thin, grid is quiet, text uses text tokens. */
 .chart { margin: 14px 0 0; min-width: 0; }
 .chart-frame { position: relative; }
-.chart svg { display: block; max-width: 100%; overflow: visible; }
-.chart svg rect[tabindex]:focus { outline: none; fill: var(--sand-200); fill-opacity: .5; }
+.chart svg { display: block; max-width: 100%; height: auto; overflow: visible; }
+.chart svg rect[tabindex]:focus { outline: none; }
 .chart svg rect[tabindex]:focus-visible { outline: 2px solid var(--gold-600); outline-offset: -2px; }
 .legend { list-style: none; margin: 0 0 6px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 12px; font-weight: 600; color: var(--ink-soft); }
 .legend li { display: inline-flex; align-items: center; gap: 7px; }

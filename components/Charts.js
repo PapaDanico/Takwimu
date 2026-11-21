@@ -1,8 +1,8 @@
 'use client';
 // SVG line and column charts. Sized to their container so text stays readable on a phone.
 // Props are plain data (no functions) so server pages can pass them. Every chart ships a table view,
-// keyboard-focusable hit areas and a tooltip, and never relies on colour alone: series are also told
-// apart by direct labels (wide screens), a legend, and line dash or marker style.
+// keyboard-focusable hit areas and a tooltip. Series are told apart by a legend, direct labels (wide screens)
+// and, where a chart sets it, line dash; the table view always gives the exact values.
 import { useEffect, useRef, useState } from 'react';
 
 const FORMATS = {
@@ -12,14 +12,23 @@ const FORMATS = {
   pct0: (v) => `${Math.round(v)}%`,
   pct1: (v) => `${v.toFixed(1)}%`,
 };
+FORMATS.auto = (v) => v.toLocaleString('en-US', { maximumFractionDigits: 2 });
+FORMATS.autopct = (v) => `${v.toLocaleString('en-US', { maximumFractionDigits: 1 })}%`;
 const fmt = (kind, v) => (FORMATS[kind] || FORMATS.int)(v);
+// Axis ticks use the short format; tables, tooltips and screen-reader text keep the full published precision.
+const VALUE_FMT = { int: 'auto', one: 'auto', two: 'auto', pct0: 'autopct', pct1: 'autopct' };
+const valueKind = (yFormat, valueFormat) => valueFormat || VALUE_FMT[yFormat] || 'auto';
 
-const niceMax = (max) => {
-  if (max <= 0) return 1;
-  const pow = 10 ** Math.floor(Math.log10(max));
-  const f = max / pow;
-  const step = f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10;
-  return step * pow;
+// Choose a tick step near max/4, then round the top of the axis up to a whole number of steps.
+const niceScale = (max, fixed) => {
+  if (fixed) return { yMax: fixed, ticks: [0, 1, 2, 3, 4].map((i) => (fixed / 4) * i) };
+  if (max <= 0) return { yMax: 1, ticks: [0, 0.25, 0.5, 0.75, 1] };
+  const raw = max / 4;
+  const pow = 10 ** Math.floor(Math.log10(raw));
+  const f = raw / pow;
+  const step = (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * pow;
+  const n = Math.max(Math.ceil(max / step - 1e-9), 1);
+  return { yMax: step * n, ticks: Array.from({ length: n + 1 }, (_, i) => step * i) };
 };
 
 function useWidth() {
@@ -151,13 +160,12 @@ function Axes({ L, ticks, yMax, yFormat, labels, xAt }) {
   );
 }
 
-export function LineChart({ labels, series, yFormat = 'int', unit = '', ariaLabel, caption, yMaxFixed, refLine }) {
+export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine }) {
   const [ref, width] = useWidth();
   const [at, setAt] = useState(null);
   const L = layout(width, labels, false);
   const all = series.flatMap((s) => [...s.values, ...(s.alt || [])]).filter((v) => v != null);
-  const yMax = yMaxFixed || niceMax(Math.max(...all, refLine ? refLine.value : 0));
-  const ticks = [0, 1, 2, 3, 4].map((i) => (yMax / 4) * i);
+  const { yMax, ticks } = niceScale(Math.max(...all, refLine ? refLine.value : 0), yMaxFixed);
   const xAt = (i) => M.l + (labels.length === 1 ? L.plotW / 2 : (i / (labels.length - 1)) * L.plotW);
   const yAt = (v) => M.t + L.plotH - (v / yMax) * L.plotH;
   const slot = L.plotW / Math.max(labels.length - 1, 1);
@@ -173,7 +181,7 @@ export function LineChart({ labels, series, yFormat = 'int', unit = '', ariaLabe
     <figure className="chart" ref={ref}>
       <Legend series={series.map((s) => ({ ...s, kind: 'line' }))} />
       <div className="chart-frame" onMouseLeave={() => setAt(null)}>
-        <svg width={width} height={L.h} role="group" aria-label={ariaLabel}>
+        <svg width={width} height={L.h} viewBox={`0 0 ${width} ${L.h}`} role="group" aria-label={ariaLabel}>
           <Axes L={L} ticks={ticks} yMax={yMax} yFormat={yFormat} labels={labels} xAt={xAt} />
           {refLine && (
             <g>
@@ -198,24 +206,23 @@ export function LineChart({ labels, series, yFormat = 'int', unit = '', ariaLabe
           {L.wide && ends.map((e) => <text key={e.name} x={e.x + 10} y={e.y} style={{ fill: 'var(--ink)', fontWeight: 700, fontFamily: 'var(--sans)' }}>{e.name}</text>)}
           {labels.map((l, i) => (
             <rect key={l} x={xAt(i) - slot / 2} y={M.t} width={slot} height={L.plotH} fill="transparent" tabIndex={0} role="img"
-              aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? 'no data' : fmt(yFormat, s.values[i])}`).join(', ')}`}
+              aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? 'no data' : fmt(valueKind(yFormat, valueFormat), s.values[i])}`).join(', ')}`}
               onMouseEnter={() => setAt({ i, x: xAt(i) })} onFocus={() => setAt({ i, x: xAt(i) })} onBlur={() => setAt(null)} />
           ))}
         </svg>
-        <Tooltip at={at} width={width} labels={labels} series={series} yFormat={yFormat} unit={unit} />
+        <Tooltip at={at} width={width} labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} />
       </div>
-      <TableView labels={labels} series={series} yFormat={yFormat} unit={unit} caption={caption || ariaLabel} />
+      <TableView labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} caption={caption || ariaLabel} />
     </figure>
   );
 }
 
-export function ColumnChart({ labels, series, yFormat = 'int', unit = '', ariaLabel, caption, yMaxFixed, refLine }) {
+export function ColumnChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine }) {
   const [ref, width] = useWidth();
   const [at, setAt] = useState(null);
   const L = layout(width, labels, true);
   const all = series.flatMap((s) => s.values).filter((v) => v != null);
-  const yMax = yMaxFixed || niceMax(Math.max(...all, refLine ? refLine.value : 0));
-  const ticks = [0, 1, 2, 3, 4].map((i) => (yMax / 4) * i);
+  const { yMax, ticks } = niceScale(Math.max(...all, refLine ? refLine.value : 0), yMaxFixed);
   const slotW = L.plotW / labels.length;
   const xCenter = (i) => M.l + slotW * i + slotW / 2;
   const groupW = Math.min(slotW * 0.78, 56 * series.length);
@@ -231,7 +238,7 @@ export function ColumnChart({ labels, series, yFormat = 'int', unit = '', ariaLa
     <figure className="chart" ref={ref}>
       <Legend series={series.map((s) => ({ ...s, kind: 'column' }))} />
       <div className="chart-frame" onMouseLeave={() => setAt(null)}>
-        <svg width={width} height={L.h} role="group" aria-label={ariaLabel}>
+        <svg width={width} height={L.h} viewBox={`0 0 ${width} ${L.h}`} role="group" aria-label={ariaLabel}>
           <Axes L={L} ticks={ticks} yMax={yMax} yFormat={yFormat} labels={labels} xAt={xCenter} />
           {refLine && (
             <g>
@@ -248,13 +255,13 @@ export function ColumnChart({ labels, series, yFormat = 'int', unit = '', ariaLa
           }))}
           {labels.map((l, i) => (
             <rect key={`h${l}`} x={M.l + slotW * i} y={M.t} width={slotW} height={L.plotH} fill="transparent" tabIndex={0} role="img"
-              aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? 'no data' : fmt(yFormat, s.values[i])}`).join(', ')}`}
+              aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? 'no data' : fmt(valueKind(yFormat, valueFormat), s.values[i])}`).join(', ')}`}
               onMouseEnter={() => setAt({ i, x: xCenter(i) })} onFocus={() => setAt({ i, x: xCenter(i) })} onBlur={() => setAt(null)} />
           ))}
         </svg>
-        <Tooltip at={at} width={width} labels={labels} series={series} yFormat={yFormat} unit={unit} />
+        <Tooltip at={at} width={width} labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} />
       </div>
-      <TableView labels={labels} series={series} yFormat={yFormat} unit={unit} caption={caption || ariaLabel} />
+      <TableView labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} caption={caption || ariaLabel} />
     </figure>
   );
 }

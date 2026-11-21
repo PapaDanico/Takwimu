@@ -11,21 +11,37 @@
       "measure": "Own-source revenue, FY 2023/24",
       "unit": "KSh million",
       "values": [
-        { "label": "FY 2023/24 report", "value": 610.74, "url": "https://libraryir.parliament.go.ke/handle/123456789/28882" },
-        { "label": "FY 2024/25 report (quoted as prior year)", "value": 427.95, "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410" }
+        {
+          "label": "FY 2023/24 report",
+          "value": 610.74,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "FY 2024/25 report (quoted as prior year)",
+          "value": 427.95,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
       ],
       "definitions": "The FY 2023/24 report splits its figure into health facility financing (KSh 388.53m) and ordinary own-source revenue (KSh 222.10m). The FY 2024/25 report does not give a split for the prior year.",
       "hypothesis": "The later report may restate the year or count a different scope. The gap is not explained by facility income alone: 610.74 minus 388.53 is 222.21, not 427.95.",
       "status": "open",
-      "effect": "610.74 is plotted as the main value and 427.95 as the other report's value. Trend statements about FY 2023/24 and FY 2024/25 are therefore marked as unreliable."
+      "effect": "610.74 is plotted as the main value and 427.95 as the other report's value (hollow marker). The Insights page states the disagreement beside the chart; treat the FY 2023/24 and FY 2024/25 own-source revenue comparison as uncertain."
     },
     {
       "id": "osr-2015-16",
       "measure": "Own-source revenue, FY 2015/16",
       "unit": "KSh million",
       "values": [
-        { "label": "FY 2016/17 report (text)", "value": 127.93, "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6" },
-        { "label": "FY 2018/19 report (chart)", "value": 113.26, "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98" }
+        {
+          "label": "FY 2016/17 report (text)",
+          "value": 127.93,
+          "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6"
+        },
+        {
+          "label": "FY 2018/19 report (chart)",
+          "value": 113.26,
+          "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+        }
       ],
       "definitions": "Both are described as the county's own revenue for the year. The FY 2015/16 report itself gives 127.93, of which 120.44 was deposited into the County Revenue Fund.",
       "hypothesis": "The later chart may be a restated series that excludes revenue spent at source.",
@@ -37,8 +53,16 @@
       "measure": "Own-source revenue, FY 2014/15",
       "unit": "KSh million",
       "values": [
-        { "label": "FY 2014/15 report", "value": 143.33, "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1" },
-        { "label": "FY 2018/19 report (chart)", "value": 142.88, "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98" }
+        {
+          "label": "FY 2014/15 report",
+          "value": 143.33,
+          "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1"
+        },
+        {
+          "label": "FY 2018/19 report (chart)",
+          "value": 142.88,
+          "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+        }
       ],
       "definitions": "Both describe the county's own revenue for the year.",
       "hypothesis": "The difference is small and may be rounding or a minor restatement.",
@@ -50,21 +74,37 @@
       "measure": "Pending bills at 30 June 2021",
       "unit": "KSh million",
       "values": [
-        { "label": "FY 2020/21 report", "value": 1060.92, "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c" },
-        { "label": "FY 2021/22 report (opening stock)", "value": 602.08, "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178" }
+        {
+          "label": "FY 2020/21 report",
+          "value": 1060.92,
+          "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+        },
+        {
+          "label": "FY 2021/22 report (opening stock)",
+          "value": 602.08,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        }
       ],
       "definitions": "The FY 2020/21 report states recurrent KSh 637.54m plus development KSh 423.38m. The FY 2021/22 report states recurrent KSh 250.51m plus development KSh 351.58m as the stock outstanding on the same date.",
       "hypothesis": "The later report may count only bills verified as eligible, or use a different cut-off. The reports do not say.",
       "status": "open",
-      "effect": "The pending-bills chart plots each year's own report. The rise in pending bills over ten years should be read as a direction, not as exact steps."
+      "effect": "Each year's pending-bills column uses the figure from that year's report where one is readable, and the register lists every case where another report differs. The rise over ten years should be read as a direction, not as exact steps."
     },
     {
       "id": "budget-financing-osr-2024-25",
       "measure": "Own-source revenue target, FY 2024/25",
       "unit": "KSh million",
       "values": [
-        { "label": "Budget financing table (own-source target)", "value": 1043, "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410" },
-        { "label": "Implied by the stated 47 per cent (436.68 / 0.47)", "value": 929, "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410" }
+        {
+          "label": "Budget financing table (own-source target)",
+          "value": 1043,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Implied by the stated 47 per cent (436.68 / 0.47)",
+          "value": 929,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
       ],
       "definitions": "KSh 436.68m collected against 1,043m would be 41.9 per cent, but the report states 47 per cent.",
       "hypothesis": "The two figures may measure different concepts (for example, budget financing versus the annual revenue target). The report does not explain.",
@@ -76,21 +116,37 @@
       "measure": "Recurrent budget spent, FY 2024/25",
       "unit": "per cent",
       "values": [
-        { "label": "Report states", "value": 83, "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410" },
-        { "label": "Recomputed (4.99 / 6.07)", "value": 82.2, "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410" }
+        {
+          "label": "Report states",
+          "value": 83,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Recomputed (4.99 / 6.07)",
+          "value": 82.2,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
       ],
       "definitions": "The recomputed value uses the approved recurrent budget of KSh 6.07bn.",
       "hypothesis": "The report may use a revised budget as its denominator.",
       "status": "open",
-      "effect": "Both values are available in the data; charts use the stated percentage and the page notes the difference."
+      "effect": "The report's stated 83 per cent is used and the recomputed 82.2 per cent is recorded here and in the year's note on the Data page."
     },
     {
       "id": "recurrent-spend-2016-17",
       "measure": "Recurrent spending, FY 2016/17",
       "unit": "KSh billion",
       "values": [
-        { "label": "Report text", "value": 3.9, "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6" },
-        { "label": "Report table", "value": 3.65, "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6" }
+        {
+          "label": "Report text",
+          "value": 3.9,
+          "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6"
+        },
+        {
+          "label": "Report table",
+          "value": 3.65,
+          "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6"
+        }
       ],
       "definitions": "Within the same report. The table figure, with development spending of KSh 1.98bn, adds to the stated total of KSh 5.63bn.",
       "hypothesis": "The text may be a typographical error or use a different measure.",
@@ -102,13 +158,84 @@
       "measure": "Approved budget, FY 2022/23",
       "unit": "KSh billion",
       "values": [
-        { "label": "FY 2022/23 report", "value": 8.6, "url": "https://libraryir.parliament.go.ke/handle/123456789/25332" },
-        { "label": "FY 2023/24 report (quoted as prior year)", "value": 8.5, "url": "https://libraryir.parliament.go.ke/handle/123456789/28882" }
+        {
+          "label": "FY 2022/23 report",
+          "value": 8.6,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        },
+        {
+          "label": "FY 2023/24 report (quoted as prior year)",
+          "value": 8.5,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
       ],
       "definitions": "Both are described as the approved supplementary budget for FY 2022/23.",
       "hypothesis": "The later report may quote a different supplementary budget or round differently.",
       "status": "open",
       "effect": "The FY 2022/23 report's own figure is used. The difference changes budget-spent shares by under one percentage point."
+    },
+    {
+      "id": "pending-2023",
+      "measure": "Pending bills at 30 June 2023",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2023/24 report (opening stock)",
+          "value": 761.29,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Auditor-General report, FY 2022/23",
+          "value": 741.56,
+          "url": "https://libraryir.parliament.go.ke/items/7e87be17-5566-48c8-ac76-d4658605ee6c/full"
+        }
+      ],
+      "definitions": "The Controller of Budget figure is the opening stock quoted in the FY 2023/24 report. The Auditor-General reports the amount as an emphasis-of-matter item in the FY 2022/23 audit.",
+      "hypothesis": "Different cut-off dates or verification of bills. The reports do not say.",
+      "status": "open",
+      "effect": "The chart plots 761.29, quoted from the later report because the FY 2022/23 report was not readable for this item. The difference is about 3 per cent."
+    },
+    {
+      "id": "pending-2024",
+      "measure": "Pending bills at 30 June 2024",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2024/25 report (opening stock)",
+          "value": 1120,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "FY 2023/24 report",
+          "value": 303.91,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "The FY 2023/24 report states KSh 303.91m outstanding at 30 June 2024 but says this excludes bills incurred during the year. The FY 2024/25 report gives the stock at 30 June 2024 as KSh 1.12 billion.",
+      "hypothesis": "The difference of about 3.7 times is probably a definition difference (bills incurred in the year included or not). The reports do not confirm this.",
+      "status": "open",
+      "effect": "The chart and headline use 1,120 from the FY 2024/25 report. Because of the gap, the FY 2023/24 jump in pending bills is shown with this caveat and should not be read as a precise rise."
+    },
+    {
+      "id": "osr-2013-14",
+      "measure": "Own-source revenue, FY 2013/14",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2014/15 report text",
+          "value": 99.77,
+          "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1"
+        },
+        {
+          "label": "FY 2018/19 report (chart)",
+          "value": 99.78,
+          "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+        }
+      ],
+      "definitions": "Both describe the county's own revenue for the 16 months to 30 June 2014.",
+      "hypothesis": "The difference of KSh 0.01 million is rounding.",
+      "status": "resolved",
+      "effect": "Immaterial. 99.77 is plotted."
     }
   ]
 }

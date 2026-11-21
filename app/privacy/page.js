@@ -34,7 +34,7 @@ const SECTIONS = [
   ] },
   { id: 'processors', title: '4. Who processes it for us', body: [
     'The Site is hosted by Netlify, Inc., a cloud hosting company. Netlify receives the technical request data described above in order to serve pages to you and to protect its network. Netlify has its own privacy notice at https://www.netlify.com/privacy/, which applies to its handling of that data.',
-    'Netlify operates internationally, so technical request data may be processed outside Kenya, including in the United States. We rely on Netlify\'s contractual and security commitments for those transfers. We have not added any analytics or tracking to the Site\'s code.',
+    'Netlify operates internationally, so technical request data may be processed outside Kenya, including in the United States. Those transfers are governed by Netlify\'s own terms and privacy policy, which we have not separately negotiated. We have not added any analytics or tracking to the Site\'s code.',
     'The source code for the Site is stored on GitHub (https://github.com/PapaDanico/Takwimu). GitHub does not receive data from your visit to the Site.',
   ] },
   { id: 'cookies', title: '5. Cookies and similar technologies', body: [
@@ -51,7 +51,7 @@ const SECTIONS = [
   ] },
   { id: 'rights', title: '8. Your rights', body: [
     'Under the Kenya Data Protection Act, 2019, you have the right to be informed about the use of your personal data; to access it; to object to its processing; to have inaccurate data corrected; to have data deleted where the law allows; and to receive a copy of data you gave us in a usable format.',
-    'Because we do not hold personal data that identifies you, there is usually nothing for us to show or delete. If you believe we hold data about you, or you want to use any of these rights, contact us (section 11) and we will respond within the time the law requires. For technical logs held by Netlify, you can also contact Netlify.',
+    'Because we do not hold personal data that identifies you, there is usually nothing for us to show or delete. If you believe we hold data about you, or you want to use any of these rights, contact us (section 11) and we will respond as soon as we can and within the time the Data Protection Act, 2019 requires. For technical logs held by Netlify, you can also contact Netlify.',
     'You also have the right to complain to the Office of the Data Protection Commissioner of Kenya (https://www.odpc.go.ke) if you think your data has been mishandled.',
   ] },
   { id: 'children', title: '9. Children', body: [
@@ -62,7 +62,7 @@ const SECTIONS = [
   ] },
   { id: 'contact', title: '11. Changes to this notice and contact', body: [
     `We may update this notice if the Site or the law changes, for example if we ever add analytics, a form or an account feature. If we do, we will update this page and its date before the change takes effect. This version was last updated on ${UPDATED}.`,
-    `To ask a question about this notice or to use your rights, open an issue at ${ISSUES_URL.replace('/new', '')} (issues are public: do not include personal details; say you would like a private reply and we will arrange one).`,
+    `To ask a question about this notice or to use your rights, open an issue at ${ISSUES_URL.replace('/new', '')} (issues are public and need a GitHub account: do not include personal details). A private contact address is not yet published; until one is, a request that needs privacy cannot be handled through this route.`,
   ] },
 ];
 

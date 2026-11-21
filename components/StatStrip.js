@@ -9,11 +9,17 @@ function Spark({ values }) {
   const H = 30;
   const x = (i) => (i / (values.length - 1)) * (W - 6) + 3;
   const y = (v) => H - 4 - ((v - min) / (max - min || 1)) * (H - 8);
-  const line = values.map((v, i) => (v == null ? null : `${x(i)},${y(v)}`)).filter(Boolean).join(' ');
+  // Split at missing years so a gap is shown as a gap, never joined.
+  const segs = [];
+  let cur = [];
+  values.forEach((v, i) => { if (v == null) { if (cur.length) segs.push(cur); cur = []; } else cur.push(`${x(i)},${y(v)}`); });
+  if (cur.length) segs.push(cur);
   const lastI = values.reduce((a, v, i) => (v != null ? i : a), 0);
   return (
     <svg className="spark" width={W} height={H} viewBox={`0 0 ${W} ${H}`} aria-hidden="true">
-      <polyline points={line} fill="none" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" style={{ stroke: 'var(--s1)' }} />
+      {segs.map((seg, k) => (seg.length > 1
+        ? <polyline key={k} points={seg.join(' ')} fill="none" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" style={{ stroke: 'var(--s1)' }} />
+        : null))}
       <circle cx={x(lastI)} cy={y(values[lastI])} r="3" strokeWidth="2" style={{ fill: 'var(--s1)', stroke: 'var(--surface)' }} />
     </svg>
   );
