@@ -284,6 +284,20 @@ test('conflict budget-financing-osr-2024-25: Table 2.1 target 927.34 is listed a
   ok(cobSiaya('2024/25', 'osr_performance_pct').value === 47 && near((436.68 / 927.34) * 100, 47.1, 0.05), 'Table 2.1 should print 47');
   ok(siaya.own_source_revenue.target.value === 1043, 'the Siaya hub keeps the budget financing target');
 });
+// FY 2024/25 own-source revenue: the county statement (Kenya News Agency, MEDIA-01) and the county's Q4 report beside the
+// Controller of Budget figure. Nothing from the county side is plotted; the series and the hub keep 436.68.
+caseTest('osr-2024-25-county-statement', 436.68, 946.8934404, osrPoint('2024/25').value, 1e-9);
+test('conflict osr-2024-25-county-statement: Controller of Budget Table 2.1 total, county report and hub agree on what is listed and shown', () => {
+  const c = conflict('osr-2024-25-county-statement');
+  ok(c.status === 'open' && c.verification_state === 'unresolved_no_reviewer', 'case must stay open with no reviewer');
+  ok(cobSiaya('2024/25', 'total_osr_actual').value === 436.68 && near(siaya.own_source_revenue.observations[0].value, 436.68, 1e-9), 'Table 2.1 and the hub should read 436.68');
+  ok(listed('osr-2024-25-county-statement', 757.570621) && near(236.502391 + 521.068230, 757.570621, 1e-6), 'county Q4 report: CRF plus A-i-A should be listed as 757.57');
+  // The fifteen revenue streams in the Kenya News Agency article add up to the stated total (KSh).
+  const streams = [19150691, 3439365, 151563105.5, 4701280, 10248810, 6169641, 11671066, 25608268, 33462668.4, 17629219, 14243660, 643174553, 2063050, 2128550, 1639513.5];
+  ok(near(streams.reduce((t, v) => t + v, 0), 946893440.4, 0.01), 'article streams should add to KSh 946,893,440.40');
+  ok(near((946893440.4 / 1044061306) * 100, 90.7, 0.05) && /90\.6%/.test(c.definitions) && /47%/.test(c.definitions), 'the stated 90.6 and 47 per cent are quoted, not recomputed');
+  ok(/the county government/.test(c.definitions) && !/secretary|governor|official/i.test(JSON.stringify(c)), 'the case attributes the statement to the county government, not to a person or office holder');
+});
 
 // Every register case has a test above, and no test points at a case that was removed.
 test('every conflict in the register has a test', () => {
