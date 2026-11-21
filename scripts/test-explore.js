@@ -121,5 +121,28 @@ UNVERIFIED.forEach((u) => {
   if (!/not yet verified/.test(DATASETS.find((d) => d.id === 'counties-absorption').status_reason)) fail('dataset status: counties-absorption reason must name the cells not yet verified');
 }
 
+// Siaya Fiscal Pulse (lib/pulse.js): three insights whose figures equal history.json, carry a page and a source PDF,
+// hold as worded, and are not the subject of an open conflict register case.
+{
+  const { insights } = require('../lib/pulse');
+  const hist = require('../data/history.json');
+  const regp = require('../data/conflicts.json');
+  const p = insights();
+  if (p.items.length !== 3) fail(`pulse: expected three insights, found ${p.items.length}`);
+  p.items.forEach((it) => {
+    if (it.holds === false) fail(`pulse ${it.id}: the wording no longer holds for the data`);
+    it.figures.forEach((f) => {
+      const y = hist.years.find((x) => x.fy === f.fy);
+      if (y[f.key] !== f.value) fail(`pulse ${it.id}: ${f.key} FY ${f.fy} ${f.value} is not history.json ${y[f.key]}`);
+      if (!f.page || !/^https:\/\//.test(f.pdf_url) || !f.confidence || f.unit !== 'KSh billion' || !f.period) fail(`pulse ${it.id}: FY ${f.fy} ${f.key} lacks page, PDF link, confidence, unit or period`);
+      if ((y.derived || []).includes(f.key)) fail(`pulse ${it.id}: FY ${f.fy} ${f.key} is derived, not printed`);
+      const fyTag = `FY ${f.fy}`;
+      regp.conflicts.filter((c) => c.status === 'open' && c.measure.includes(fyTag) && /spending|expenditure/i.test(c.measure)).forEach((c) => fail(`pulse ${it.id}: open case ${c.id} concerns ${fyTag} spending`));
+    });
+  });
+  if (p.chart.series.some((s) => s.values.length !== p.chart.labels.length)) fail('pulse: chart series and labels differ in length');
+  p.gaps.forEach((fy) => { if (p.chart.series.some((s) => s.values[p.chart.labels.indexOf(`FY ${fy}`)] !== null)) fail(`pulse: gap FY ${fy} is filled in the chart`); });
+}
+
 if (errors.length) { console.error('Explore unit tests failed:\n- ' + errors.join('\n- ')); process.exit(1); }
 console.log(`Explore unit tests passed (${natIndicators.length} national indicators, ${noted} noted county values, ${UNVERIFIED.length} cells shown as not yet verified).`);

@@ -33,11 +33,16 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/']) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
   }
+  await pg.goto(base + '/counties/siaya/pulse/', { waitUntil: 'load' });
+  check(await pg.locator('main section h2[id^=pulse-]').count() === 5 && await pg.locator('main ul.how li a[href$="/content"]').count() >= 6 && await pg.locator('figure.chart').count() === 1 && await pg.locator('a[href="/counties/siaya/brief/"]').count() >= 1, 'Siaya Fiscal Pulse: three findings with source PDF links, one chart and a link to the brief');
+  const pulseDet = pg.locator('details.tableview').first();
+  await pulseDet.locator('summary').click();
+  check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'Fiscal Pulse chart has a table view');
   await pg.goto(base + '/insights/', { waitUntil: 'load' });
   const charts = await pg.locator('figure.chart').count();
   check(charts >= 5, `insights shows charts (${charts})`);
