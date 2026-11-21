@@ -747,6 +747,7 @@
       "contract": {
         "reference": null,
         "contractor": {
+          "withheld_pending_review": true,
           "name": "Kenya Power and Lighting Company",
           "basis": "named in the Auditor-General report (audit-2023-24, p. 53); a public utility"
         },
@@ -853,6 +854,7 @@
       "contract": {
         "reference": null,
         "contractor": {
+          "withheld_pending_review": true,
           "name": "Fast Choice Limited",
           "basis": "named in the Auditor-General report (audit-2023-24, p. 54)"
         },
@@ -3106,6 +3108,7 @@
         "reference": "CGS/SCM/TCSA/OT/2023-2024/017",
         "reference_as_printed": "CGS/SCM/TCSA/OT12023-2024/017 (OCR)",
         "contractor": {
+          "withheld_pending_review": true,
           "name": "Paco Investment Limited",
           "basis": "named in the Auditor-General report (audit-2023-24, p. 55); OCR reads \"Paco lnvestment Limited\""
         },

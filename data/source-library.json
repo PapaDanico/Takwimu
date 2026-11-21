@@ -3005,6 +3005,33 @@
    "research_use": "Cross-check of ward geometry (not drawn)",
    "cited_by": "siaya-wards-geo.json crosscheck",
    "retrieval_note": "Downloaded 21 Nov 2026 (17,402,535 bytes). HDX caveat: \"not an official administrative layer from the authorities\". Disagrees with the primary layer in Bondo and Rarieda; geometry not used or republished."
+  },
+  {
+   "review_status": "figures in use, not specialist-reviewed",
+   "last_checked_at": "2026-11-21",
+   "licence": "© County Government of Siaya, all rights reserved (site footer); no reuse licence stated: link and cite only",
+   "redistribution_allowed": false,
+   "document_id": "GOV-04-CADP-PP",
+   "origin": "linked from a programme source",
+   "parent_id": "GOV-04",
+   "title": "Report on Public Participation in the Siaya County Annual Development Plan (CADP) 2025-2026",
+   "publisher": "County Government of Siaya (Department of Finance and Economic Planning, Directorate of Public Participation and Petitions)",
+   "document_type": "Public participation report",
+   "publication_date": "2024-09",
+   "reference_period": "CADP FY 2025/26",
+   "source_url": "https://siaya.go.ke/?cgdp_download=31438",
+   "also_at": [
+    "https://siaya.go.ke/documents/report-on-public-participation-in-the-siaya-county-annual-development-plan-cadp-2025-2026/"
+   ],
+   "geographic_coverage": "Siaya",
+   "siaya_relevance": "Direct",
+   "research_use": "Two named projects in the project register (Hawinga ECD, Wagai multi-media centre); ward proposals not entered",
+   "sha256": "fa62a517b5ecf037a8c0022753bd6946dd0279a62a7fee8d240ff49da86da5f7",
+   "bytes": 2497369,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "cited_by": "siaya-projects.json (GOV-04-CADP-PP)",
+   "retrieval_note": "Link and cite only: the report includes personal contact details (phone numbers appear in its text); never republish or extract them. Downloaded 21 Nov 2026 from the county documents page as a valid PDF (96 pages; PDF created 22 Sep 2024) because the download link on the GOV-04 notice page does not work. No checksum stated. The ADP 2025/26 itself was not obtained."
   }
  ]
 }

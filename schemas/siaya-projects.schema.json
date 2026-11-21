@@ -72,9 +72,9 @@
     },
     "contractor": {
       "type": ["object", "null"],
-      "required": ["name", "basis"],
+      "required": ["withheld_pending_review", "name", "basis"],
       "additionalProperties": false,
-      "properties": { "name": { "type": "string", "minLength": 3 }, "basis": { "type": "string", "minLength": 10 } }
+      "properties": { "withheld_pending_review": { "const": true, "description": "Owner decision 21 Nov 2026: company names are kept in this repository file only and removed from everything published (lib/projects.js publicCopy)." }, "name": { "type": "string", "minLength": 3 }, "basis": { "type": "string", "minLength": 10 } }
     },
     "project": {
       "type": "object",

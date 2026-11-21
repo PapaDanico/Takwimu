@@ -350,10 +350,23 @@ Object.entries(files)
   });
 
 // Siaya data is verified-with-status and carries its own provenance fields.
-['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json', 'siaya-boundaries.json', 'source-manifest.json', 'source-library.json', 'national.json', 'counties-cob.json', 'siaya-economy.json', 'siaya-governance.json', 'siaya-audits.json', 'siaya-fiscal-ledger.json', 'siaya-health.json', 'siaya-education.json', 'siaya-agriculture.json', 'siaya-geography.json', 'siaya-climate.json', 'siaya-wards-geo.json', 'siaya-analysis.json'].forEach((f) => {
+['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json', 'siaya-boundaries.json', 'source-manifest.json', 'source-library.json', 'national.json', 'counties-cob.json', 'siaya-economy.json', 'siaya-governance.json', 'siaya-audits.json', 'siaya-fiscal-ledger.json', 'siaya-health.json', 'siaya-education.json', 'siaya-agriculture.json', 'siaya-geography.json', 'siaya-climate.json', 'siaya-wards-geo.json', 'siaya-analysis.json', 'siaya-programmes.json'].forEach((f) => {
   fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(outDir, f));
   console.log('Generated public/data/' + f);
 });
+
+// Project register: published from lib/projects.js publicCopy(), which removes every contractor field. Owner decision
+// (21 Nov 2026): contractor company names stay in data/siaya-projects.json only, pending editorial review.
+(function writeProjects() {
+  const { publicCopy, WITHHELD } = require('../lib/projects');
+  const raw = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-projects.json'), 'utf8'));
+  const names = raw.projects.map((p) => p.contract && p.contract.contractor && p.contract.contractor.name).filter(Boolean);
+  const out = JSON.stringify(publicCopy(), null, 1) + '\n';
+  const leak = WITHHELD.filter((k) => out.includes(`"${k}"`)).concat(names.filter((nm) => out.includes(nm)));
+  if (leak.length) throw new Error(`siaya-projects public copy still contains withheld fields or names: ${leak.join(', ')}`);
+  fs.writeFileSync(path.join(outDir, 'siaya-projects.json'), out);
+  console.log('Generated public/data/siaya-projects.json (contractor fields withheld)');
+}());
 
 // CSV export of the ten-year series, built from the same validated file the charts use.
 (function writeHistoryCsv() {
