@@ -234,7 +234,15 @@ table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; lett
 
 /* Print: plain black on white, no navigation, links spelled out, cards kept whole. */
 @media print {
-  :root { color-scheme: light; }
+  /* Restore the light tokens even when the reader's colour preference is dark. */
+  :root {
+    --sand-50: #FDFBF5; --sand-100: #F7F2E7; --sand-200: #EFE7D5; --sand-300: #E3D8BE; --sand-400: #CBBD9C;
+    --ink: #0A192F; --ink-soft: #31445F; --ink-muted: #5C687A; --ink-faint: #6A6555;
+    --gold-700: #B45309; --gold-600: #D97706; --mint-700: #047857; --red-600: #DC2626; --red-700: #B91C1C;
+    --chart: #B07410; --on-chart: #050D1A; --gold-ink: #92400E; --mint-ink: #065F46; --track: var(--sand-300);
+    --shadow-card: none;
+    color-scheme: light;
+  }
   body { background: #fff !important; color: #000 !important; font-size: 11pt; }
   .site-header, .bottom-nav, .skip, .share, .toc, .footer-cols, .fold { display: none !important; }
   .site-footer { background: #fff !important; margin-top: 16pt; padding-block: 8pt; border-top: 1px solid #999; }
