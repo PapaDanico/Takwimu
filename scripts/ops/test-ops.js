@@ -74,6 +74,9 @@ function startServer() {
   const OLD = Buffer.from('%PDF-1.4 old body\n%%EOF\n');
   const NEW = Buffer.from('%PDF-1.4 new body, longer\n%%EOF\n');
   const SAME = Buffer.from('%PDF-1.4 same body\n%%EOF\n');
+  // Same length as OLD2, different bytes: only the hash shows the change (size and, on a later run, ETag agree).
+  const OLD2 = Buffer.from('%PDF-1.4 aaaa body\n%%EOF\n');
+  const NEW2 = Buffer.from('%PDF-1.4 bbbb body\n%%EOF\n');
   const hits = [];
   const server = http.createServer((req, res) => {
     hits.push({ method: req.method, url: req.url, ua: req.headers['user-agent'], range: req.headers.range, at: Date.now() });
@@ -103,11 +106,12 @@ function startServer() {
       case '/changed.pdf': return ranged(NEW, { ETag: '"v2"' });
       case '/same.pdf': return ranged(SAME, { ETag: '"s2"' });
       case '/stable.pdf': return ranged(SAME, { ETag: '"st"' });
+      case '/changed-same-size.pdf': return ranged(NEW2, { ETag: '"c2"' });
       case '/private/doc': return send(200, Buffer.from('should not be fetched'));
       default: return send(404, Buffer.from(''));
     }
   });
-  return new Promise((resolve) => server.listen(0, '127.0.0.1', () => resolve({ server, hits, base: `http://127.0.0.1:${server.address().port}`, OLD, NEW, SAME })));
+  return new Promise((resolve) => server.listen(0, '127.0.0.1', () => resolve({ server, hits, base: `http://127.0.0.1:${server.address().port}`, OLD, NEW, SAME, OLD2, NEW2 })));
 }
 
 function runCli(argv) {
@@ -141,6 +145,7 @@ async function testCheckSources(tmp) {
       { document_id: 'L-WAF', source_url: `${s.base}/waf`, retrieval_status: 'discovered', sha256: null, bytes: null, last_checked_at: '2026-11-21' },
       { document_id: 'L-ZIPPAGE', source_url: `${s.base}/zip-page`, file_type: 'ZIP', retrieval_status: 'downloaded', sha256: sha('zip bytes'), bytes: 9, last_checked_at: '2026-11-21' },
       { document_id: 'L-STABLE', source_url: `${s.base}/stable.pdf`, retrieval_status: 'downloaded', sha256: sha(s.SAME), bytes: s.SAME.length, last_checked_at: '2026-11-21' },
+      { document_id: 'L-CHSAME', source_url: `${s.base}/changed-same-size.pdf`, retrieval_status: 'downloaded', sha256: sha(s.OLD2), bytes: s.OLD2.length, last_checked_at: '2026-11-21' },
     ] };
     const man = { meta: {}, documents: [
       { id: 'm-same', url: `${s.base}/ok`, file_url: `${s.base}/same.pdf`, sha256: sha(s.SAME), bytes: s.SAME.length, hashed_on: '2026-11-21', retrieved: '2026-11-21', access: 'downloaded' },
@@ -149,7 +154,7 @@ async function testCheckSources(tmp) {
     const stateF = path.join(tmp, 'state.json'); const outF = path.join(tmp, 'health.md');
     fs.writeFileSync(libF, JSON.stringify(lib)); fs.writeFileSync(manF, JSON.stringify(man));
     // Previous run saw a different ETag for same.pdf, so it must be re-downloaded and found unchanged by hash.
-    fs.writeFileSync(stateF, JSON.stringify({ urls: { [`${s.base}/same.pdf`]: { etag: '"s1"' }, [`${s.base}/stable.pdf`]: { etag: '"st"' } } }));
+    fs.writeFileSync(stateF, JSON.stringify({ urls: { [`${s.base}/same.pdf`]: { etag: '"s1"' }, [`${s.base}/stable.pdf`]: { etag: '"st"' }, [`${s.base}/changed-same-size.pdf`]: { etag: '"c1"' } } }));
     const libBefore = fs.readFileSync(libF, 'utf8');
     const dlRoot = path.join(tmp, 'dl'); fs.mkdirSync(dlRoot);
     const r = await runCli([path.join(__dirname, 'check-sources.js'), '--library', libF, '--manifest', manF, '--out', outF, '--state', stateF,
@@ -178,9 +183,40 @@ async function testCheckSources(tmp) {
     ok(times.slice(1).every((t, i) => t - times[i] >= 120), 'one request per interval per host');
     ok(fs.readFileSync(libF, 'utf8') === libBefore, 'data file not modified');
     ok(fs.readdirSync(dlRoot).length === 0, 'download directories removed');
+    ok(state[`${s.base}/changed-same-size.pdf`].integrity === 'changed', `same-size change detected by SHA-256 (${state[`${s.base}/changed-same-size.pdf`].integrity})`);
+    // A second run with the state the first one wrote: the data file still records the old hash, so both documents
+    // are still reported as changed (the state's headers now match, which must not hide the change).
+    const r2 = await runCli([path.join(__dirname, 'check-sources.js'), '--library', libF, '--manifest', manF, '--out', path.join(tmp, 'health2.md'), '--state', stateF,
+      '--tmp-root', dlRoot, '--interval-ms', '150', '--timeout', '10', '--today', '2026-11-22']);
+    ok(r2.code === 0, `check-sources second run exit ${r2.code}: ${r2.err}`);
+    const state2 = JSON.parse(fs.readFileSync(stateF, 'utf8')).urls;
+    ['/changed.pdf', '/changed-same-size.pdf'].forEach((u) => ok(state2[`${s.base}${u}`].integrity === 'changed', `${u} still changed on the next run while data/ records the old hash (${state2[`${s.base}${u}`].integrity})`));
+    ok(state2[`${s.base}/changed-same-size.pdf`].sha256 === sha(s.NEW2), 'next run keeps the new SHA-256');
+    ok(/\| Changed \(new SHA-256\) \| 2 \|/.test(fs.readFileSync(path.join(tmp, 'health2.md'), 'utf8')), 'second report still lists both changed documents');
     const md = fs.readFileSync(outF, 'utf8');
-    ['# Source health', '## Summary', '## Changed documents', '## Broken', '## Moved', '## Unchanged and OK', '| Changed (new SHA-256) | 1 |', '| Broken (4xx, 5xx, timeout or connection error) | 1 |', '| Moved (2xx after a redirect to another address) | 1 |', '| Blocked (401, 403, 429 or a bot-check challenge) | 2 |', '## Blocked'].forEach((h) => ok(md.includes(h), `source report has "${h}"`));
+    ['# Source health', '## Summary', '## Changed documents', '## Broken', '## Moved', '## Unchanged and OK', '| Changed (new SHA-256) | 2 |', '| Broken (4xx, 5xx, timeout or connection error) | 1 |', '| Moved (2xx after a redirect to another address) | 1 |', '| Blocked (401, 403, 429 or a bot-check challenge) | 2 |', '## Blocked'].forEach((h) => ok(md.includes(h), `source report has "${h}"`));
   } finally { s.server.close(); }
+}
+
+// ---------- backup drill: local HEAD must equal the pushed head ----------
+function testBackupDrill(tmp) {
+  const { execFileSync, spawnSync } = require('child_process');
+  const env = { ...process.env, GIT_AUTHOR_NAME: 'drill test', GIT_AUTHOR_EMAIL: 'drill@example.invalid', GIT_COMMITTER_NAME: 'drill test', GIT_COMMITTER_EMAIL: 'drill@example.invalid' };
+  const git = (cwd, ...args) => execFileSync('git', args, { cwd, env, stdio: ['ignore', 'pipe', 'pipe'] }).toString().trim();
+  const origin = path.join(tmp, 'origin.git'); const work = path.join(tmp, 'work');
+  git(tmp, 'init', '-q', '--bare', origin);
+  git(tmp, 'clone', '-q', origin, work);
+  fs.writeFileSync(path.join(work, 'a.txt'), 'one\n');
+  git(work, 'add', 'a.txt'); git(work, 'commit', '-q', '-m', 'one'); git(work, 'push', '-q', 'origin', 'HEAD:refs/heads/drill-test');
+  git(work, 'checkout', '-q', '-b', 'drill-test');
+  fs.writeFileSync(path.join(work, 'a.txt'), 'two\n');
+  git(work, 'commit', '-q', '-am', 'two (not pushed)');
+  const run = () => spawnSync('bash', [path.join(__dirname, 'backup-drill.sh'), 'drill-test'], { env: { ...env, DRILL_REPO: work, DRILL_HEADS_ONLY: '1' }, encoding: 'utf8', timeout: 60000 });
+  const r1 = run();
+  ok(r1.status === 1 && /local HEAD [0-9a-f]{7,} differs from the pushed head/.test(r1.stdout), `backup drill fails when local HEAD is not pushed (exit ${r1.status}: ${(r1.stdout + r1.stderr).trim().slice(-200)})`);
+  git(work, 'push', '-q', 'origin', 'HEAD:refs/heads/drill-test');
+  const r2 = run();
+  ok(r2.status === 0 && /heads match/.test(r2.stdout), `backup drill passes the head check once pushed (exit ${r2.status}: ${(r2.stdout + r2.stderr).trim().slice(-200)})`);
 }
 
 (async () => {
@@ -188,6 +224,7 @@ async function testCheckSources(tmp) {
   try {
     testFreshness(tmp);
     await testCheckSources(tmp);
+    testBackupDrill(tmp);
     console.log(`test-ops: ${passed} checks passed`);
   } catch (e) {
     console.error(`test-ops FAILED after ${passed} checks: ${e.message}`);

@@ -204,7 +204,13 @@ async function checkAll(targets, o, prevState) {
         if (!prev && r.last_modified && hashed.checked && new Date(r.last_modified) > new Date(`${hashed.checked}T23:59:59Z`)) reasons.push(`Last-Modified ${r.last_modified} is after the recorded check ${hashed.checked}`);
         if (o.rehashAll && !reasons.length) reasons.push('--rehash-all');
         rec.integrity = { recorded_sha256: hashed.sha256, recorded_bytes: hashed.bytes, reasons };
-        if (!reasons.length) {
+        // A change found on an earlier run stays reported until the data file records the new hash: compare the hash
+        // the last run computed with the one in data/, not only this run's headers with the last run's.
+        const known = !reasons.length && prev && prev.sha256 && prev.sha256 !== hashed.sha256 && prev.integrity === 'changed';
+        if (known) {
+          reasons.push('an earlier run found a new SHA-256; data/ still records the old one');
+          Object.assign(rec.integrity, { new_sha256: prev.sha256, new_bytes: prev.content_length ?? null, result: 'changed' });
+        } else if (!reasons.length) {
           rec.integrity.result = r.content_length && hashed.bytes != null ? 'unchanged (headers)' : 'not rechecked (no size or validator header)';
         } else if (r.content_length != null && r.content_length > o.maxDownload) {
           rec.integrity.result = 'needs manual hash (file larger than the download limit)';
