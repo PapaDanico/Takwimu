@@ -33,7 +33,7 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/economy/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/economy/', '/counties/siaya/governance/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/']) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
@@ -54,6 +54,16 @@ const srv = http.createServer((req, res) => {
   check(/County output is not county government revenue/.test(await pg.locator('#not-revenue').innerText()) && /No share of national GDP is published/.test(await pg.locator('main').innerText()), "Siaya's economy states that county output is not government revenue and that no GDP share is published");
   await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
   check(await pg.locator('main a[href="/counties/siaya/economy/"]').count() >= 1, "Siaya hub links to Siaya's economy");
+  check(await pg.locator('main a[href="/counties/siaya/governance/"]').count() >= 1, 'Siaya hub links to budget transparency and public participation');
+  // Budget transparency and public participation (data/siaya-governance.json): two CBTS editions side by side, three unresolved inconsistencies, APRM findings by theme.
+  const govJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-governance.json'), 'utf8'));
+  await pg.goto(base + '/counties/siaya/governance/', { waitUntil: 'load' });
+  const cbtsHead = await pg.locator('#cbts thead').innerText();
+  const cbtsText = await pg.locator('#cbts').innerText();
+  check(/CBTS 2021/.test(cbtsHead) && /CBTS 2022/.test(cbtsHead) && /45 out of 100/.test(cbtsText) && /48 out of 100/.test(cbtsText) && /7 of 10/.test(cbtsText) && /8 of 10/.test(cbtsText) && /No score printed for Siaya/.test(cbtsText), 'governance: CBTS 2021 and 2022 side by side, with index, documents of 10 and the missing 2021 participation score stated');
+  check(await pg.locator('.conflict').count() === govJson.ibp_cbts.conflicts.length && govJson.ibp_cbts.conflicts.every((c) => c.resolution.startsWith('Unresolved')) && await pg.locator('.conflict table tbody tr').count() === govJson.ibp_cbts.conflicts.reduce((s, c) => s + c.positions.length, 0), 'governance: the IBP inconsistencies are shown side by side and unresolved');
+  check(['participation', 'civic_education', 'feedback'].every((t) => govJson.aprm.findings.filter((f) => f.theme === t).length > 0) && await pg.locator('#aprm-participation li, #aprm-civic_education li, #aprm-feedback li, #aprm-transparency li').count() === govJson.aprm.findings.length, 'governance: every APRM finding is shown, grouped by theme, with its page');
+  check(/not current practice/.test(await pg.locator('#survey-date').innerText()) && /Findings are not verdicts/.test(await pg.locator('#not-verdicts').innerText()), 'governance: says scores describe availability at the survey date and findings are not verdicts');
   // Siaya Source Library: one card per record in data/source-library.json, client-side search and filters, no form fields beyond the search box.
   const libJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-library.json'), 'utf8'));
   await pg.goto(base + '/counties/siaya/sources/', { waitUntil: 'networkidle' });
