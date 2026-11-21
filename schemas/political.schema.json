@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/political.schema.json",
+  "title": "IEBC registered voters and candidates (data/political.json)",
+  "type": "object",
+  "required": ["meta", "iebc_registered_voters_2022_by_constituency", "iebc_candidates_2022_by_position", "institutional_counts", "not_staged", "licence_terms"],
+  "properties": {
+    "meta": { "type": "object", "required": ["title", "retrieved", "schema_version", "rule"] },
+    "iebc_registered_voters_2022_by_constituency": {
+      "type": "object", "required": ["source", "unit", "rows", "county_totals_summed_from_constituencies", "checks", "conflict"],
+      "properties": {
+        "source": { "type": "object", "required": ["title", "publisher", "url", "sha256", "source_id"] },
+        "rows": { "type": "array", "minItems": 290, "items": { "type": "object", "required": ["county_code", "county", "const_code", "constituency", "registered_voters"], "additionalProperties": false, "properties": { "county_code": { "type": "string" }, "county": { "type": "string" }, "const_code": { "type": "string" }, "constituency": { "type": "string" }, "registered_voters": { "type": "integer", "minimum": 0 } } } }
+      }
+    },
+    "iebc_candidates_2022_by_position": { "type": "object", "required": ["source", "unit", "rows"] }
+  }
+}

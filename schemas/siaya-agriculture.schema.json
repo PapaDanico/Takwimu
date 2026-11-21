@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/siaya-agriculture.schema.json",
+  "title": "Siaya agriculture, livestock, fisheries and irrigation by source (data/siaya-agriculture.json)",
+  "type": "object",
+  "required": ["meta", "sources", "observations", "conflicts", "gaps"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "county", "county_code", "retrieved", "schema_version", "rule", "definitions"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "county": { "enum": ["Siaya"] },
+        "county_code": { "type": "integer" },
+        "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "schema_version": { "type": "string" },
+        "rule": { "type": "string" },
+        "definitions": { "type": "object", "additionalProperties": { "type": "string" } }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source_id", "publisher", "title", "publication_date", "reference_period", "url", "sha256", "bytes", "pdf_pages", "printed_page_offset", "licence", "in_source_library"],
+        "additionalProperties": false,
+        "properties": {
+          "source_id": { "type": "string" },
+          "publisher": { "type": "string" },
+          "title": { "type": "string" },
+          "publication_date": { "type": "string", "pattern": "^\\d{4}" },
+          "pdf_created": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "reference_period": { "type": "string", "pattern": "^\\d{4}-\\d{4}$" },
+          "url": { "type": "string", "pattern": "^https://" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "pdf_pages": { "type": "integer", "minimum": 1 },
+          "printed_page_offset": { "type": "integer" },
+          "licence": { "type": "string" },
+          "in_source_library": { "type": "boolean" }
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "source_id", "table", "pdf_page", "printed_page", "period", "indicator", "commodity", "unit", "value", "value_as_printed", "status", "provisional", "confidence"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "source_id": { "type": "string" },
+          "table": { "type": "string" },
+          "pdf_page": { "type": "integer", "minimum": 1 },
+          "printed_page": { "type": "integer", "minimum": 1 },
+          "period": { "type": "string", "pattern": "^\\d{4}(-\\d{4})?( mid-term)?$" },
+          "indicator": { "enum": ["area_cropped", "production", "production_value", "yield", "livestock_population", "fish_ponds", "fish_landed_quantity", "fish_landed_value", "aquaculture_quantity", "aquaculture_value", "fish_production", "fish_production_value", "fish_landing_sites", "jetties", "fishers", "fishing_craft", "irrigated_area", "mechanised_area", "scheme_area_expansion", "scheme_cost_estimate"] },
+          "commodity": { "type": "string", "pattern": "^[a-z_]+$" },
+          "scheme": { "type": "string" },
+          "unit": { "enum": ["ha", "acres", "tonnes", "thousand_tonnes", "kg", "bags", "t_per_ha", "number", "KSh", "KSh_thousand", "KSh_million"] },
+          "value": { "type": ["number", "null"] },
+          "value_as_printed": { "type": "string" },
+          "status": { "enum": ["observed", "target", "projection"] },
+          "provisional": { "type": "boolean" },
+          "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "topic", "values", "note"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "topic": { "type": "string" },
+          "values": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "reason"],
+        "additionalProperties": false,
+        "properties": { "item": { "type": "string" }, "reason": { "type": "string" } }
+      }
+    }
+  }
+}

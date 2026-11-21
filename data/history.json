@@ -1,0 +1,2217 @@
+{
+  "meta": {
+    "title": "Siaya County: ten-year fiscal history",
+    "unit": "KSh billion unless stated; revenue and pending bills in KSh million",
+    "retrieved": "2026-11-20",
+    "basis": "Nominal (money of the day). Fiscal year runs 1 July to 30 June.",
+    "note": "Each year is read from the Controller of Budget annual county report for that year. Where two reports give different values for the same year, both are kept in 'alternates'.",
+    "gaps": [
+      "FY2013/14: approved budget and pending bills not shown (only spending, absorption and revenue quoted in the FY2014/15 report). FY2014/15: pending recurrent bills were not reported.",
+      "FY2019/20: the Controller of Budget annual county report for this year is not in the Parliament library and cob.go.ke was unreachable (21 Nov 2026), so its approved budget and recurrent/development split, spending, absorption, own-source revenue target and pending bills are missing. Own-source revenue (KSh 179.43m) comes from the FY2020/21 report. The Senate report on that CoB report names Siaya only without figures. Figures from the county's own Budget Review and Outlook Paper and other documents are listed under supplementary and are not used in the series.",
+      "Audit opinions for FY2016/17 to FY2018/19 are missing for the reasons given under audits.",
+      "FY2025/26: only in-year reports (first quarter and first half) were found; they are kept under in_year and are not a full year. The annual FY2025/26 report's Part 2, which holds Siaya, is not in the Parliament library."
+    ]
+  },
+  "reports": {
+    "2021/22": {
+      "title": "County Governments Budget Implementation Review Report FY 2021/22",
+      "section": "3.38 County Government of Siaya",
+      "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178",
+      "confidence": 3
+    },
+    "2024/25": {
+      "title": "County Governments Budget Implementation Review Report FY 2024/25",
+      "section": "3.38 Siaya County",
+      "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
+      "confidence": 4
+    },
+    "2023/24": {
+      "title": "County Governments Budget Implementation Review Report FY 2023/24",
+      "section": "3.38 County Government of Siaya",
+      "url": "https://libraryir.parliament.go.ke/handle/123456789/28882",
+      "confidence": 3
+    },
+    "2022/23": {
+      "title": "Annual County Governments Budget Implementation Review Report FY 2022/23",
+      "section": "Siaya County",
+      "url": "https://libraryir.parliament.go.ke/handle/123456789/25332",
+      "confidence": 3
+    },
+    "2014/15": {
+      "title": "Annual County Governments Budget Implementation Review Report FY 2014/15",
+      "section": "Siaya County",
+      "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1",
+      "confidence": 4
+    },
+    "2015/16": {
+      "title": "Annual County Governments Budget Implementation Review Report FY 2015/16",
+      "section": "3.38 Siaya County",
+      "url": "https://libraryir.parliament.go.ke/items/93f8527f-a405-49f9-a5c6-1135d4e056dd",
+      "confidence": 3
+    },
+    "2016/17": {
+      "title": "Annual County Governments Budget Implementation Review Report FY 2016/17",
+      "section": "3.38 Siaya County",
+      "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6",
+      "confidence": 4
+    },
+    "2017/18": {
+      "title": "Annual County Governments Budget Implementation Review Report FY 2017/18",
+      "section": "3.38 Siaya County",
+      "url": "https://libraryir.parliament.go.ke/items/29651287-6c3d-4dd9-b07a-cbeed4aa11d7",
+      "confidence": 4
+    },
+    "2018/19": {
+      "title": "Annual County Governments Budget Implementation Review Report FY 2018/19",
+      "section": "3.38 Siaya County",
+      "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98",
+      "confidence": 4
+    },
+    "2020/21": {
+      "title": "County Governments Budget Implementation Review Report FY 2020/21",
+      "section": "3.39 Siaya County",
+      "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c",
+      "confidence": 4
+    }
+  },
+  "years": [
+    {
+      "fy": "2013/14",
+      "spent": 2.5,
+      "recurrent_absorption_pct": 70.5,
+      "development_absorption_pct": 31.8,
+      "osr_m": 99.77,
+      "report": "2014/15",
+      "caveat": "Comparative figures quoted in the FY2014/15 report. The FY2013/14 report itself has not been read, so the approved budget and pending bills for this year are missing. This was the first year of devolution.",
+      "provenance": {
+        "spent": {
+          "source_id": "cob-report-2014-15",
+          "page": 249,
+          "read": "PDF text layer"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2014-15",
+          "page": 249,
+          "read": "PDF text layer"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2014-15",
+          "page": 249,
+          "read": "PDF text layer"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2014-15",
+          "page": 248,
+          "read": "PDF text layer"
+        }
+      }
+    },
+    {
+      "fy": "2014/15",
+      "approved": 5.89,
+      "recurrent_budget": 3.43,
+      "development_budget": 2.45,
+      "spent": 4.17,
+      "recurrent_spent": 2.7,
+      "development_spent": 1.47,
+      "recurrent_absorption_pct": 78.7,
+      "development_absorption_pct": 60.0,
+      "osr_m": 143.33,
+      "osr_target_m": 301.53,
+      "pending_development_m": 800.34,
+      "report": "2014/15",
+      "caveat": "Pending bills of KSh 800.34m are development bills only: the county had not worked out a recurrent figure when the report was written, so no total is plotted. The FY2015/16 report quotes absorption of 78.8 and 59.8 per cent for this year; we use this year's own report. Budget parts add to 5.88 against the stated 5.89.",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2014-15",
+          "page": 248,
+          "read": "PDF text layer"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2014-15",
+          "page": 248,
+          "read": "PDF text layer"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2014-15",
+          "page": 248,
+          "read": "PDF text layer"
+        },
+        "spent": {
+          "source_id": "cob-report-2014-15",
+          "page": 249,
+          "read": "PDF text layer"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2014-15",
+          "page": 249,
+          "read": "PDF text layer"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2014-15",
+          "page": 249,
+          "read": "PDF text layer",
+          "page_note": "text layer reads \"Kshs.l.47 billion\" (letter l for 1)"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2014-15",
+          "page": 249,
+          "read": "PDF text layer"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2014-15",
+          "page": 249,
+          "read": "PDF text layer"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2014-15",
+          "page": 248,
+          "read": "PDF text layer"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2014-15",
+          "page": 248,
+          "read": "PDF text layer",
+          "page_note": "text layer reads \"Kshs.30l.53 million\" (letter l for 1)"
+        },
+        "pending_development_m": {
+          "source_id": "cob-report-2014-15",
+          "page": 249,
+          "read": "PDF text layer"
+        }
+      }
+    },
+    {
+      "fy": "2015/16",
+      "approved": 6.95,
+      "recurrent_budget": 3.72,
+      "development_budget": 3.22,
+      "spent": 4.93,
+      "recurrent_spent": 3.1,
+      "development_spent": 1.84,
+      "recurrent_absorption_pct": 83.2,
+      "development_absorption_pct": 57.0,
+      "osr_m": 127.93,
+      "osr_target_m": 343.31,
+      "pending_development_m": 164.94,
+      "pending_recurrent_m": 172.01,
+      "report": "2015/16",
+      "caveat": "Page images were read with optical character recognition (the PDF has no text layer). Budget financing shows a local revenue target of KSh 434.91m while the revenue-stream table totals KSh 343.31m; we use the table total with the report's 37.3 per cent. Budget parts add to 6.94 against the stated 6.95.",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2015-16",
+          "page": 275,
+          "printed_page": 253,
+          "read": "RapidOCR"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2015-16",
+          "page": 275,
+          "printed_page": 253,
+          "read": "RapidOCR"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2015-16",
+          "page": 275,
+          "printed_page": 253,
+          "read": "RapidOCR"
+        },
+        "spent": {
+          "source_id": "cob-report-2015-16",
+          "page": 277,
+          "printed_page": 255,
+          "read": "RapidOCR"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2015-16",
+          "page": 278,
+          "printed_page": 256,
+          "read": "RapidOCR"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2015-16",
+          "page": 278,
+          "printed_page": 256,
+          "read": "RapidOCR"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2015-16",
+          "page": 278,
+          "printed_page": 256,
+          "read": "RapidOCR"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2015-16",
+          "page": 278,
+          "printed_page": 256,
+          "read": "RapidOCR"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2015-16",
+          "page": 275,
+          "printed_page": 253,
+          "read": "RapidOCR"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2015-16",
+          "page": 276,
+          "printed_page": 254,
+          "read": "RapidOCR",
+          "page_note": "revenue-stream table total, printed as 343,309,926"
+        },
+        "pending_development_m": {
+          "source_id": "cob-report-2015-16",
+          "page": 278,
+          "printed_page": 256,
+          "read": "RapidOCR"
+        },
+        "pending_recurrent_m": {
+          "source_id": "cob-report-2015-16",
+          "page": 278,
+          "printed_page": 256,
+          "read": "RapidOCR"
+        }
+      }
+    },
+    {
+      "fy": "2016/17",
+      "approved": 7.07,
+      "recurrent_budget": 3.92,
+      "development_budget": 3.15,
+      "spent": 5.63,
+      "recurrent_spent": 3.65,
+      "development_spent": 1.98,
+      "recurrent_absorption_pct": 93.1,
+      "development_absorption_pct": 62.9,
+      "osr_m": 172.84,
+      "osr_target_m": 270,
+      "pending_development_m": 150.04,
+      "pending_recurrent_m": 127.55,
+      "report": "2016/17",
+      "caveat": "The report text says recurrent spending was KSh 3.9bn in one sentence and KSh 3.65bn in its table. We use the table, which adds to the KSh 5.63bn total.",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2016-17",
+          "page": 275,
+          "printed_page": 253,
+          "read": "PDF text layer"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2016-17",
+          "page": 275,
+          "printed_page": 253,
+          "read": "PDF text layer"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2016-17",
+          "page": 275,
+          "printed_page": 253,
+          "read": "PDF text layer"
+        },
+        "spent": {
+          "source_id": "cob-report-2016-17",
+          "page": 276,
+          "printed_page": 254,
+          "read": "PDF text layer"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2016-17",
+          "page": 277,
+          "printed_page": 255,
+          "read": "PDF text layer"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2016-17",
+          "page": 276,
+          "printed_page": 254,
+          "read": "PDF text layer"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2016-17",
+          "page": 277,
+          "printed_page": 255,
+          "read": "PDF text layer"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2016-17",
+          "page": 277,
+          "printed_page": 255,
+          "read": "PDF text layer"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2016-17",
+          "page": 275,
+          "printed_page": 253,
+          "read": "PDF text layer"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2016-17",
+          "page": 275,
+          "printed_page": 253,
+          "read": "PDF text layer"
+        },
+        "pending_development_m": {
+          "source_id": "cob-report-2016-17",
+          "page": 276,
+          "printed_page": 254,
+          "read": "PDF text layer"
+        },
+        "pending_recurrent_m": {
+          "source_id": "cob-report-2016-17",
+          "page": 276,
+          "printed_page": 254,
+          "read": "PDF text layer"
+        }
+      }
+    },
+    {
+      "fy": "2017/18",
+      "approved": 6.85,
+      "recurrent_budget": 4.3,
+      "development_budget": 2.55,
+      "spent": 4.11,
+      "recurrent_spent": 3.33,
+      "development_spent": 0.78,
+      "recurrent_absorption_pct": 77.5,
+      "development_absorption_pct": 30.5,
+      "osr_m": 139.34,
+      "osr_target_m": 270,
+      "pending_development_m": 246.75,
+      "pending_recurrent_m": 367.75,
+      "report": "2017/18",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2017-18",
+          "page": 268,
+          "printed_page": 247,
+          "read": "PDF text layer"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2017-18",
+          "page": 268,
+          "printed_page": 247,
+          "read": "PDF text layer",
+          "page_note": "printed as \"Kshs.4.3 billion\""
+        },
+        "development_budget": {
+          "source_id": "cob-report-2017-18",
+          "page": 268,
+          "printed_page": 247,
+          "read": "PDF text layer"
+        },
+        "spent": {
+          "source_id": "cob-report-2017-18",
+          "page": 270,
+          "printed_page": 249,
+          "read": "PDF text layer"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2017-18",
+          "page": 270,
+          "printed_page": 249,
+          "read": "PDF text layer"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2017-18",
+          "page": 270,
+          "printed_page": 249,
+          "read": "PDF text layer",
+          "page_note": "printed as \"Kshs.777.57 million\""
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2017-18",
+          "page": 270,
+          "printed_page": 249,
+          "read": "PDF text layer"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2017-18",
+          "page": 270,
+          "printed_page": 249,
+          "read": "PDF text layer"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2017-18",
+          "page": 269,
+          "printed_page": 248,
+          "read": "PDF text layer"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2017-18",
+          "page": 268,
+          "printed_page": 247,
+          "read": "PDF text layer"
+        },
+        "pending_development_m": {
+          "source_id": "cob-report-2017-18",
+          "page": 270,
+          "printed_page": 249,
+          "read": "PDF text layer"
+        },
+        "pending_recurrent_m": {
+          "source_id": "cob-report-2017-18",
+          "page": 270,
+          "printed_page": 249,
+          "read": "PDF text layer"
+        }
+      }
+    },
+    {
+      "fy": "2018/19",
+      "approved": 8.44,
+      "recurrent_budget": 4.71,
+      "development_budget": 3.74,
+      "spent": 5.7,
+      "recurrent_spent": 4.53,
+      "development_spent": 1.18,
+      "recurrent_absorption_pct": 96.1,
+      "development_absorption_pct": 31.5,
+      "osr_m": 189.67,
+      "osr_target_m": 325,
+      "pending_development_m": 187.42,
+      "pending_recurrent_m": 258.26,
+      "report": "2018/19",
+      "caveat": "Budget components are rounded in the report and add to 8.45.",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2018-19",
+          "page": 269,
+          "printed_page": 246,
+          "read": "PDF text layer"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2018-19",
+          "page": 269,
+          "printed_page": 246,
+          "read": "PDF text layer"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2018-19",
+          "page": 269,
+          "printed_page": 246,
+          "read": "PDF text layer"
+        },
+        "spent": {
+          "source_id": "cob-report-2018-19",
+          "page": 271,
+          "printed_page": 248,
+          "read": "PDF text layer",
+          "page_note": "printed as \"Kshs.5.7 billion\""
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2018-19",
+          "page": 271,
+          "printed_page": 248,
+          "read": "PDF text layer"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2018-19",
+          "page": 271,
+          "printed_page": 248,
+          "read": "PDF text layer"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2018-19",
+          "page": 271,
+          "printed_page": 248,
+          "read": "PDF text layer"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2018-19",
+          "page": 271,
+          "printed_page": 248,
+          "read": "PDF text layer"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2018-19",
+          "page": 269,
+          "printed_page": 246,
+          "read": "PDF text layer"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2018-19",
+          "page": 269,
+          "printed_page": 246,
+          "read": "PDF text layer"
+        },
+        "pending_development_m": {
+          "source_id": "cob-report-2018-19",
+          "page": 271,
+          "printed_page": 248,
+          "read": "PDF text layer"
+        },
+        "pending_recurrent_m": {
+          "source_id": "cob-report-2018-19",
+          "page": 271,
+          "printed_page": 248,
+          "read": "PDF text layer"
+        }
+      }
+    },
+    {
+      "fy": "2019/20",
+      "osr_m": 179.43,
+      "report": "2020/21",
+      "caveat": "Only own-source revenue is known: KSh 179.43m, quoted as the FY2019/20 comparison figure in the FY2020/21 report (PDF p. 374). The FY2019/20 report itself was not found, so budget, spending, absorption and pending bills are gaps. The county's Budget Review and Outlook Paper gives KSh 184.25m (see the conflict register); it is not used here.",
+      "provenance": {
+        "osr_m": {
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer",
+          "page_note": "FY 2019/20 comparison figure in the FY 2020/21 report"
+        }
+      }
+    },
+    {
+      "fy": "2020/21",
+      "approved": 8.22,
+      "recurrent_budget": 4.84,
+      "development_budget": 3.38,
+      "spent": 6.95,
+      "recurrent_spent": 4.71,
+      "development_spent": 2.25,
+      "recurrent_absorption_pct": 97.2,
+      "development_absorption_pct": 66.4,
+      "osr_m": 332.88,
+      "osr_target_m": 420,
+      "pending_development_m": 423.38,
+      "pending_recurrent_m": 637.54,
+      "report": "2020/21",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2020-21",
+          "page": 372,
+          "read": "PDF text layer"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2020-21",
+          "page": 372,
+          "read": "PDF text layer"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2020-21",
+          "page": 372,
+          "read": "PDF text layer"
+        },
+        "spent": {
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2020-21",
+          "page": 372,
+          "read": "PDF text layer"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2020-21",
+          "page": 372,
+          "read": "PDF text layer"
+        },
+        "pending_development_m": {
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer"
+        },
+        "pending_recurrent_m": {
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer"
+        }
+      }
+    },
+    {
+      "fy": "2021/22",
+      "approved": 8.97,
+      "recurrent_budget": 5.62,
+      "development_budget": 3.35,
+      "spent": 7.11,
+      "recurrent_spent": 5.23,
+      "development_spent": 1.88,
+      "recurrent_absorption_pct": 92.9,
+      "development_absorption_pct": 56.2,
+      "osr_m": 434.38,
+      "osr_target_m": 445.45,
+      "pending_development_m": 411.53,
+      "pending_recurrent_m": 293.85,
+      "report": "2021/22",
+      "caveat": "The report prints KSh 434.38m for both FY2021/22 and FY2020/21 in one sentence; the stated 30.5 per cent rise only works against KSh 332.88m, which is the FY2020/21 figure we use. The same report gives pending bills at 30 June 2021 as KSh 602.08m, against KSh 1,060.92m in the FY2020/21 report; the reports do not explain the difference, so both are shown.",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2021-22",
+          "page": 407,
+          "printed_page": 383,
+          "read": "PDF text layer"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2021-22",
+          "page": 407,
+          "printed_page": 383,
+          "read": "PDF text layer"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2021-22",
+          "page": 407,
+          "printed_page": 383,
+          "read": "PDF text layer"
+        },
+        "spent": {
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2021-22",
+          "page": 411,
+          "printed_page": 387,
+          "read": "PDF text layer"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2021-22",
+          "page": 408,
+          "printed_page": 384,
+          "read": "PDF text layer"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2021-22",
+          "page": 407,
+          "printed_page": 383,
+          "read": "PDF text layer"
+        },
+        "pending_development_m": {
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "page_note": "Table 3.251, column E (text layer reads \"4l 1,529,000.36\")"
+        },
+        "pending_recurrent_m": {
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "page_note": "Table 3.251, column E"
+        }
+      }
+    },
+    {
+      "fy": "2022/23",
+      "field_source": {
+        "pending_recurrent_m": "2023/24",
+        "pending_development_m": "2023/24"
+      },
+      "approved": 8.6,
+      "recurrent_budget": 5.78,
+      "development_budget": 2.83,
+      "spent": 6.8,
+      "recurrent_spent": 5.28,
+      "development_spent": 1.52,
+      "recurrent_absorption_pct": 91.4,
+      "development_absorption_pct": 53.8,
+      "osr_m": 402.23,
+      "osr_target_m": 590.26,
+      "pending_development_m": 364.09,
+      "pending_recurrent_m": 397.2,
+      "report": "2022/23",
+      "caveat": "Own-source revenue here excludes KSh 105.81m of appropriations-in-aid; including it the report's total is KSh 508.04m. Pending bills at 30 June 2023 (KSh 761.29m) are the opening stock quoted in the FY2023/24 report; the Auditor-General reports KSh 741.56m. The FY2023/24 report also quotes the FY2022/23 approved budget as KSh 8.50bn, against KSh 8.60bn in the FY2022/23 report.",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2022-23",
+          "page": 575,
+          "printed_page": 549,
+          "read": "PDF text layer"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2022-23",
+          "page": 575,
+          "printed_page": 549,
+          "read": "PDF text layer"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2022-23",
+          "page": 575,
+          "printed_page": 549,
+          "read": "PDF text layer"
+        },
+        "spent": {
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "PDF text layer"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "PDF text layer"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "RapidOCR"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "PDF text layer"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2022-23",
+          "page": 583,
+          "printed_page": 557,
+          "read": "RapidOCR",
+          "page_note": "department table total (1,520.28 of 2,827.00); the text on PDF p. 578 prints 53.4 per cent (both confirmed by two re-readings on 21 Nov 2026). See conflict development-absorption-2022-23"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2022-23",
+          "page": 575,
+          "printed_page": 549,
+          "read": "PDF text layer"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2022-23",
+          "page": 575,
+          "printed_page": 549,
+          "read": "PDF text layer"
+        },
+        "pending_development_m": {
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "PDF text layer",
+          "page_note": "opening stock for FY 2023/24 in the FY 2023/24 report"
+        },
+        "pending_recurrent_m": {
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "PDF text layer",
+          "page_note": "opening stock for FY 2023/24 in the FY 2023/24 report"
+        }
+      }
+    },
+    {
+      "fy": "2023/24",
+      "field_source": {
+        "pending_total_m": "2024/25"
+      },
+      "derived": [
+        "recurrent_budget"
+      ],
+      "approved": 9.76,
+      "recurrent_budget": 5.91,
+      "development_budget": 3.85,
+      "spent": 7.63,
+      "recurrent_spent": 5.14,
+      "development_spent": 2.49,
+      "recurrent_absorption_pct": 86.8,
+      "development_absorption_pct": 64.6,
+      "osr_m": 610.74,
+      "osr_target_m": 760.0,
+      "report": "2023/24",
+      "caveat": "The scanned text of the recurrent budget is garbled; 5.91 is the approved total minus the development budget. On that figure recurrent absorption is 87.0 per cent (Table 2.3 also prints 87.0), against 86.8 per cent in the county chapter. The PDF text layer had misread these as 85.8 and 64.5; two re-readings on 21 Nov 2026 give 86.8 and 64.6. The FY2024/25 report gives a different own-source revenue for this year (KSh 427.95m); see data/siaya.json. Pending bills: the FY2023/24 report gives KSh 303.91m outstanding at 30 June 2024 but says this excludes bills incurred in the year. The FY2024/25 report gives the stock at 30 June 2024 as KSh 1.12bn, which is the figure used here.",
+      "pending_total_m": 1120,
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2023-24",
+          "page": 510,
+          "printed_page": 487,
+          "read": "PDF text layer"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2023-24",
+          "page": 510,
+          "printed_page": 487,
+          "read": "RapidOCR",
+          "page_note": "kept as derived in the series; RapidOCR of this page reads \"Kshs.5.91 billion\" and the department table total on PDF p. 517 reads 5,909.25 million"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2023-24",
+          "page": 510,
+          "printed_page": 487,
+          "read": "PDF text layer"
+        },
+        "spent": {
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "PDF text layer"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "RapidOCR"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "PDF text layer"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "RapidOCR",
+          "page_note": "two RapidOCR re-readings (400 and 600 dpi) of this line read 86.8, as does the department table total (PDF p. 517); the PDF text layer had read 85.8. Table 2.3 (PDF p. 30) prints 87.0. See conflict recurrent-absorption-2023-24"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "RapidOCR",
+          "page_note": "two RapidOCR re-readings (400 and 600 dpi) of this line read 64.6, as do the department table total (PDF p. 517) and Table 2.3 (PDF p. 30); the PDF text layer had read 64.5. See conflict development-absorption-2023-24"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2023-24",
+          "page": 511,
+          "printed_page": 488,
+          "read": "RapidOCR"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2023-24",
+          "page": 511,
+          "printed_page": 488,
+          "read": "PDF text layer"
+        },
+        "pending_total_m": {
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "RapidOCR",
+          "page_note": "stock at 30 June 2024 in the FY 2024/25 report (text layer reads \"Kshs.l.l2 billion\")"
+        }
+      }
+    },
+    {
+      "fy": "2024/25",
+      "approved": 10.94,
+      "recurrent_budget": 6.07,
+      "development_budget": 4.87,
+      "spent": 7.75,
+      "recurrent_spent": 4.99,
+      "development_spent": 2.76,
+      "recurrent_absorption_pct": 83,
+      "development_absorption_pct": 57,
+      "osr_m": 436.68,
+      "report": "2024/25",
+      "caveat": "Figures are read from a scanned PDF with two OCR engines (see data/siaya.json). The report states 83 per cent recurrent absorption, but 4.99 of 6.07 is 82.2 per cent. Pending bills at 30 June 2025 are not plotted: the report's Table 3.457 (KSh 545.95m, with new bills left blank) and its text (KSh 1.12bn) disagree; both are in the conflict register and the roll-forward. Own-source revenue includes health facility financing.",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2024-25",
+          "page": 474,
+          "printed_page": 431,
+          "read": "PDF text layer"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2024-25",
+          "page": 474,
+          "printed_page": 431,
+          "read": "RapidOCR"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2024-25",
+          "page": 474,
+          "printed_page": 431,
+          "read": "PDF text layer"
+        },
+        "spent": {
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "PDF text layer"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "RapidOCR"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "PDF text layer"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "PDF text layer"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "PDF text layer"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2024-25",
+          "page": 476,
+          "printed_page": 433,
+          "read": "PDF text layer"
+        }
+      }
+    }
+  ],
+  "audits": {
+    "label": "Auditor-General opinion on the County Executive of Siaya's accounts",
+    "note": "Opinions for FY2014/15 and FY2015/16 come from a Senate committee compilation of Auditor-General opinions (annexes to the Senate fiduciary risk report, November 2018), not from the audit reports themselves, so they are graded lower; the FY2014/15 opinion may cover the County Executive and County Assembly together. Opinions for FY2016/17 to FY2018/19 are not shown: the Parliament library holds no County Executive of Siaya audit report for those years and the Auditor-General's site was unreachable when we tried. A civil-society summary gives an opinion for FY2016/17, but it is not a primary document, so it is not shown. FY2019/20 comes from a Senate committee report that quotes the audit, so it is graded lower. The first entry covers 16 months, not a full fiscal year, and the whole county government (executive and assembly together); the later entries cover the County Executive only.",
+    "points": [
+      {
+        "fy": "2013/14",
+        "period": "16 months to 30 June 2014",
+        "opinion": "Disclaimer",
+        "reasons": "The auditor could not obtain enough evidence for an opinion: the statements omit assets and liabilities inherited from the defunct local authorities",
+        "headline": "Acquisition of assets KSh 495.33m; pending bills disclosed KSh 169.29m",
+        "confidence": 4,
+        "url": "https://libraryir.parliament.go.ke/items/0de4cae4-165f-4483-83ff-93a27ff5beaf/full",
+        "source_id": "audit-2013-14",
+        "page": 4,
+        "read": "PDF text layer",
+        "page_note": "Basis for Disclaimer of Opinion; acquisition of assets and pending bills on the same page"
+      },
+      {
+        "fy": "2014/15",
+        "source": "Senate committee compilation of Auditor-General opinions (Annexes to Fiduciary Report, November 2018)",
+        "opinion": "Adverse",
+        "reasons": "Not given in the source: the Senate compilation lists the opinion and query amounts only, not the auditor's basis for opinion",
+        "headline": "Total amount queried KSh 3,513m against a revenue share of KSh 5,012m (Senate annex, PDF p. 4; column headings for the other amounts are misaligned, so they are not shown)",
+        "confidence": 3,
+        "url": "https://www.parliament.go.ke/sites/default/files/2018-11/Annexes%20to%20Fiduciary%20Report.pdf",
+        "caveat": "Source is a Senate committee compilation of Auditor-General opinions (table 'Summary of audit querries for 2014/2015', Siaya row), not the audit report. The Senate report says 2014/15 opinions were for the County Assembly and County Executive combined, so this may not be the County Executive's own opinion.",
+        "source_id": "senate-fiduciary-annexes-2018",
+        "page": 4,
+        "read": "PDF text layer",
+        "page_note": "table \"Summary of audit querries for 2014/2015\", Siaya row"
+      },
+      {
+        "fy": "2015/16",
+        "source": "Senate committee compilation of Auditor-General opinions (Annexes to Fiduciary Report, November 2018)",
+        "opinion": "Qualified",
+        "reasons": "Not given in the source: the Senate compilation lists the opinion and query amounts only, not the auditor's basis for opinion",
+        "headline": "Queried amounts include pending bills KSh 1,153.98m and unsupported expenditure KSh 392.32m (Senate annex, table 'County Executives Fiduciary Risks 2015/2016', row 38, PDF p. 2)",
+        "confidence": 3,
+        "url": "https://www.parliament.go.ke/sites/default/files/2018-11/Annexes%20to%20Fiduciary%20Report.pdf",
+        "caveat": "Source is a Senate committee compilation of Auditor-General opinions, not the audit report itself.",
+        "source_id": "senate-fiduciary-annexes-2018",
+        "page": 2,
+        "read": "PDF text layer",
+        "page_note": "table \"County Executives Fiduciary Risks 2015/2016\", row 38"
+      },
+      {
+        "fy": "2019/20",
+        "opinion": "Qualified",
+        "reasons": "Unexplained adjustment of budgeted exchequer releases; fixed assets register; other queries listed in the Senate committee report",
+        "headline": "Budget reduced by KSh 341.58m with no explanation, so accuracy of the statements could not be confirmed",
+        "confidence": 3,
+        "url": "https://libraryir.parliament.go.ke/items/bcfb5ba2-6dc2-4d1b-9147-7c7ff6038ad3",
+        "source_id": "audit-2019-20",
+        "page": 518,
+        "printed_page": 517,
+        "read": "PDF text layer",
+        "page_note": "Qualified Opinion and the KSh 341,576,215 adjustment, as quoted in the Senate committee report"
+      },
+      {
+        "fy": "2020/21",
+        "opinion": "Qualified",
+        "reasons": "Bank reconciliation variances; unsupported retention monies; unaccounted transfers; unsupported training, hospitality and supplies spending",
+        "headline": "Cash balance not confirmable: KSh 955.38m. Unsupported goods and services: KSh 230.38m",
+        "confidence": 4,
+        "url": "https://libraryir.parliament.go.ke/items/d53598b9-f890-49aa-ad98-f18cf9c5bd6b/full",
+        "source_id": "audit-2020-21",
+        "page": 33,
+        "read": "PDF text layer",
+        "page_note": "opinion; cash balance on PDF p. 34 to 35, goods and services on PDF p. 36"
+      },
+      {
+        "fy": "2021/22",
+        "opinion": "Adverse",
+        "reasons": "Compensation of employees; use of goods and services; acquisition of assets; unsupported bank balances; pending bills",
+        "headline": "Pending payables not confirmable: KSh 818.80m. Unsupported other personnel payments: KSh 308.30m",
+        "confidence": 3,
+        "url": "https://libraryir.parliament.go.ke/items/54119713-1b4e-46dd-b95d-5484c7aeb01f/full",
+        "source_id": "audit-2021-22",
+        "page": 45,
+        "read": "PDF text layer",
+        "page_note": "Basis for Adverse Opinion and other personnel payments; pending payables on PDF p. 48"
+      },
+      {
+        "fy": "2022/23",
+        "opinion": "Qualified",
+        "reasons": "Compensation of employees; use of goods and services; other grants and transfers; acquisition of assets; retention and deposits",
+        "headline": "Compensation of employees queried: KSh 2,666.93m. Pending bills (emphasis of matter): KSh 741.56m",
+        "confidence": 4,
+        "url": "https://libraryir.parliament.go.ke/items/7e87be17-5566-48c8-ac76-d4658605ee6c/full",
+        "source_id": "audit-2022-23",
+        "page": 39,
+        "read": "PDF text layer",
+        "page_note": "opinion; compensation of employees on PDF p. 40, pending bills (KSh 741,559,698) on PDF p. 44"
+      },
+      {
+        "fy": "2023/24",
+        "opinion": "Qualified",
+        "reasons": "Compensation of employees; use of goods and services; other grants and transfers; bank balances; unsupported land acquisition; end-of-period cut-off",
+        "headline": "Pending bills (emphasis of matter): over KSh 1,186.01m. Compensation of employees queried: KSh 2,872.52m",
+        "confidence": 4,
+        "url": "https://libraryir.parliament.go.ke/items/42bf64ec-74a8-44f6-be8f-5e1c79b0c407/full",
+        "source_id": "audit-2023-24",
+        "page": 44,
+        "read": "PDF text layer",
+        "page_note": "opinion; compensation of employees on PDF p. 45, pending bills (over KSh 1,186,014,495) on PDF p. 50"
+      }
+    ]
+  },
+  "osr_series": {
+    "label": "Own-source revenue by year (KSh million)",
+    "points": [
+      {
+        "fy": "2013/14",
+        "value": 99.77,
+        "report": "FY2014/15 text",
+        "alternate": {
+          "value": 99.78,
+          "report": "FY2018/19 chart (rounding)",
+          "source_id": "cob-report-2018-19",
+          "page": 270,
+          "printed_page": 247,
+          "read": "PDF text layer",
+          "page_note": "chart value"
+        },
+        "source_id": "cob-report-2014-15",
+        "page": 248,
+        "read": "PDF text layer"
+      },
+      {
+        "fy": "2014/15",
+        "value": 143.33,
+        "report": "FY2014/15 text and FY2015/16 text",
+        "alternate": {
+          "value": 142.88,
+          "report": "FY2018/19 chart",
+          "source_id": "cob-report-2018-19",
+          "page": 270,
+          "printed_page": 247,
+          "read": "PDF text layer",
+          "page_note": "chart value"
+        },
+        "source_id": "cob-report-2014-15",
+        "page": 248,
+        "read": "PDF text layer"
+      },
+      {
+        "fy": "2015/16",
+        "value": 127.93,
+        "report": "FY2016/17 text",
+        "alternate": {
+          "value": 113.26,
+          "report": "FY2018/19 chart",
+          "source_id": "cob-report-2018-19",
+          "page": 270,
+          "printed_page": 247,
+          "read": "PDF text layer",
+          "page_note": "chart value"
+        },
+        "source_id": "cob-report-2016-17",
+        "page": 276,
+        "printed_page": 254,
+        "read": "PDF text layer"
+      },
+      {
+        "fy": "2016/17",
+        "value": 172.84,
+        "report": "FY2016/17 table and FY2018/19 chart",
+        "source_id": "cob-report-2016-17",
+        "page": 275,
+        "printed_page": 253,
+        "read": "PDF text layer",
+        "page_note": "also in the FY 2018/19 report chart, PDF p. 270"
+      },
+      {
+        "fy": "2017/18",
+        "value": 139.34,
+        "report": "FY2017/18 text",
+        "source_id": "cob-report-2017-18",
+        "page": 269,
+        "printed_page": 248,
+        "read": "PDF text layer"
+      },
+      {
+        "fy": "2018/19",
+        "value": 189.67,
+        "report": "FY2018/19 text",
+        "source_id": "cob-report-2018-19",
+        "page": 269,
+        "printed_page": 246,
+        "read": "PDF text layer"
+      },
+      {
+        "fy": "2019/20",
+        "value": 179.43,
+        "report": "FY2020/21 text",
+        "alternate": {
+          "value": 184.25,
+          "report": "Siaya County Budget Review and Outlook Paper FY2019/20 (county document)",
+          "source_id": "siaya-brop-2019-20",
+          "page": 15,
+          "read": "PDF text layer",
+          "page_note": "printed as 184,249,748"
+        },
+        "source_id": "cob-report-2020-21",
+        "page": 374,
+        "read": "PDF text layer"
+      },
+      {
+        "fy": "2020/21",
+        "value": 332.88,
+        "report": "FY2020/21 table; the report attributes the rise to NHIF capitation and Linda Mama revenue streams",
+        "source_id": "cob-report-2020-21",
+        "page": 372,
+        "read": "PDF text layer",
+        "page_note": "stated in the revenue text; the revenue table was not located"
+      },
+      {
+        "fy": "2021/22",
+        "value": 434.38,
+        "report": "FY2021/22 text and table",
+        "source_id": "cob-report-2021-22",
+        "page": 408,
+        "printed_page": 384,
+        "read": "PDF text layer"
+      },
+      {
+        "fy": "2022/23",
+        "value": 402.23,
+        "report": "FY2022/23 report; KSh 508.04m if appropriations-in-aid of KSh 105.81m are included",
+        "source_id": "cob-report-2022-23",
+        "page": 575,
+        "printed_page": 549,
+        "read": "PDF text layer"
+      },
+      {
+        "fy": "2023/24",
+        "value": 610.74,
+        "report": "FY2023/24 report",
+        "alternate": {
+          "value": 427.95,
+          "report": "FY2024/25 report",
+          "source_id": "cob-report-2024-25",
+          "page": 476,
+          "printed_page": 433,
+          "read": "PDF text layer"
+        },
+        "source_id": "cob-report-2023-24",
+        "page": 511,
+        "printed_page": 488,
+        "read": "RapidOCR"
+      },
+      {
+        "fy": "2024/25",
+        "value": 436.68,
+        "report": "FY2024/25 report, including health facility financing",
+        "source_id": "cob-report-2024-25",
+        "page": 476,
+        "printed_page": 433,
+        "read": "PDF text layer"
+      }
+    ],
+    "conflicts": [
+      "FY2015/16: KSh 127.93m (FY2016/17 report text) against KSh 113.26m (FY2018/19 report chart). Both shown; the later chart is probably a restated figure but the reports do not say so."
+    ],
+    "source_page": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98",
+    "confidence": 4
+  },
+  "pending_rollforward": {
+    "label": "Pending bills roll-forward by fiscal year (KSh million)",
+    "identity": "opening stock + new bills - payments - write-offs or adjustments = closing stock",
+    "note": "Each term is shown only where the year's Controller of Budget report publishes it, with its page. A term the report does not publish is marked \"not published\"; the closing stock is never worked out from the other terms, and a missing term is never filled. Values are rounded to KSh 0.01 million from the printed figures. Closing stocks for FY 2015/16 to FY 2020/21 are the sum of the published recurrent and development parts.",
+    "years": [
+      {
+        "fy": "2014/15",
+        "source_id": "cob-report-2014-15",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "status": "not published",
+          "note": "Only development bills were published (KSh 800.34m, PDF p. 249); the county had not worked out a recurrent figure, so no total is published."
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2015/16",
+        "source_id": "cob-report-2015-16",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 336.95,
+          "parts": {
+            "recurrent": 172.01,
+            "development": 164.94
+          },
+          "source_id": "cob-report-2015-16",
+          "page": 278,
+          "printed_page": 256,
+          "read": "RapidOCR",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2016/17",
+        "source_id": "cob-report-2016-17",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 277.59,
+          "parts": {
+            "recurrent": 127.55,
+            "development": 150.04
+          },
+          "source_id": "cob-report-2016-17",
+          "page": 276,
+          "printed_page": 254,
+          "read": "PDF text layer",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2017/18",
+        "source_id": "cob-report-2017-18",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 614.5,
+          "parts": {
+            "recurrent": 367.75,
+            "development": 246.75
+          },
+          "source_id": "cob-report-2017-18",
+          "page": 270,
+          "printed_page": 249,
+          "read": "PDF text layer",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2018/19",
+        "source_id": "cob-report-2018-19",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 445.68,
+          "parts": {
+            "recurrent": 258.26,
+            "development": 187.42
+          },
+          "source_id": "cob-report-2018-19",
+          "page": 271,
+          "printed_page": 248,
+          "read": "PDF text layer",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2019/20",
+        "source_id": null,
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "status": "not published"
+        },
+        "note": "The Controller of Budget annual report for this year was not found, so no term is published here. The Senate committee report quoting the audit gives KSh 222.33m at 30 June 2020 (see Other documents on the Data page); it is a different source and is not used in this table."
+      },
+      {
+        "fy": "2020/21",
+        "source_id": "cob-report-2020-21",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 1060.92,
+          "parts": {
+            "recurrent": 637.54,
+            "development": 423.38
+          },
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid. The FY 2021/22 report gives KSh 602.08m for the same date (conflict pending-2021)."
+      },
+      {
+        "fy": "2021/22",
+        "source_id": "cob-report-2021-22",
+        "opening": {
+          "value": 602.08,
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "note": "Table 3.251, column A"
+        },
+        "new_bills": {
+          "value": 598.75,
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "note": "Table 3.251, column D"
+        },
+        "payments": {
+          "value": 495.45,
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "note": "Table 3.251, column B"
+        },
+        "adjustments": {
+          "status": "not published",
+          "note": "Table 3.251 has no write-off or adjustment column."
+        },
+        "closing": {
+          "value": 705.38,
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "note": "Table 3.251, column E"
+        },
+        "note": "The key observations of the same report (PDF p. 407) give KSh 789.96m at 30 June 2022 (conflict pending-close-2022). The opening stock differs from the FY 2020/21 report's closing stock (conflict pending-2021)."
+      },
+      {
+        "fy": "2022/23",
+        "source_id": "cob-report-2022-23",
+        "opening": {
+          "value": 840.67,
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "RapidOCR"
+        },
+        "new_bills": {
+          "value": 543.68,
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "RapidOCR"
+        },
+        "payments": {
+          "value": 510.97,
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "RapidOCR"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 873.38,
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "RapidOCR",
+          "note": "\"inclusive of FY 2022/23 pending bills\""
+        },
+        "note": "The opening stock differs from the FY 2021/22 report's closing stock for the same date (conflict pending-2022). The FY 2023/24 report gives KSh 761.29m at 30 June 2023 (conflict pending-2023)."
+      },
+      {
+        "fy": "2023/24",
+        "source_id": "cob-report-2023-24",
+        "opening": {
+          "value": 761.29,
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "RapidOCR"
+        },
+        "new_bills": {
+          "status": "not published",
+          "note": "The report says the closing figure does not include bills incurred in the year."
+        },
+        "payments": {
+          "value": 457.34,
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "RapidOCR"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 303.91,
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "RapidOCR",
+          "note": "excludes bills incurred in FY 2023/24; County Assembly bills of KSh 12.67m are reported separately"
+        },
+        "note": "The closing figure leaves out the year's new bills, so it is not the full stock. The FY 2024/25 report gives KSh 1,123.65m at 1 July 2024 (conflict pending-2024)."
+      },
+      {
+        "fy": "2024/25",
+        "source_id": "cob-report-2024-25",
+        "opening": {
+          "value": 1123.65,
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "RapidOCR",
+          "note": "Table 3.457, County Executive, printed 1,123,648,608"
+        },
+        "new_bills": {
+          "status": "not published",
+          "note": "Table 3.457 has a column for bills incurred in FY 2024/25, but it is blank."
+        },
+        "payments": {
+          "value": 577.7,
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "RapidOCR",
+          "note": "Table 3.457, printed 577,698,205"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 545.95,
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "RapidOCR",
+          "note": "Table 3.457, printed 545,950,403"
+        },
+        "note": "County Executive only. The text below the table says the outstanding bills at 30 June 2025 were KSh 1.12 billion, but its ageing table totals the opening stock (conflict pending-close-2025). The text gives recurrent KSh 488m and development KSh 635m; the table puts the same amounts the other way round."
+      }
+    ]
+  },
+  "health": {
+    "label": "Health in Siaya: Kenya Demographic and Health Surveys 2014 and 2022",
+    "note": "The surveys are the only county-level health series that cover ten years. They are samples, so county values carry a margin of error; small changes should not be over-read. We show no confidence intervals because we have not computed them from the survey tables. Annual routine health data were not retrievable.",
+    "indicators": [
+      {
+        "id": "facility-delivery",
+        "label": "Births in a health facility",
+        "unit": "%",
+        "v2014": 69.6,
+        "v2022": 84.4,
+        "better": "up",
+        "confidence": 4,
+        "sources": [
+          "https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf",
+          "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"
+        ],
+        "note": "The county plan reports 98 per cent for facility deliveries, which is probably routine health-system data. The two measures are not the same; we show the survey figure."
+      },
+      {
+        "id": "skilled-birth",
+        "label": "Births attended by a skilled provider",
+        "unit": "%",
+        "v2014": 70.4,
+        "v2022": 94.9,
+        "better": "up",
+        "confidence": 4,
+        "sources": [
+          "https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf",
+          "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"
+        ]
+      },
+      {
+        "id": "skilled-anc",
+        "label": "Antenatal care from a skilled provider",
+        "unit": "%",
+        "v2014": 97.8,
+        "v2022": 99.1,
+        "better": "up",
+        "confidence": 4,
+        "sources": [
+          "https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf",
+          "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"
+        ]
+      },
+      {
+        "id": "stunting",
+        "label": "Children under 5 who are stunted",
+        "unit": "%",
+        "v2014": 24.7,
+        "v2022": 19.2,
+        "better": "down",
+        "confidence": 4,
+        "sources": [
+          "https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf",
+          "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"
+        ]
+      }
+    ],
+    "hiv": {
+      "label": "Adult HIV prevalence, Siaya (per cent; the age band is as printed by each estimate round)",
+      "warning": "The National AIDS Control Council says estimates from different model vintages are not directly comparable. Most of the fall from the 2015 estimate to the 2025 estimate reflects re-modelling, not a measured drop. Do not read these as a trend.",
+      "points": [
+        {
+          "year": 2013,
+          "value": 23.7,
+          "national": 6.04,
+          "age_group": "15-49",
+          "vintage": "Kenya HIV Estimates, 2013 column, as quoted in the Siaya County HIV and AIDS Strategic Plan",
+          "document": "Siaya County HIV and AIDS Strategic Plan (2015/16 - 2018/2019), Table 1: HIV epidemic situation in Siaya County, PDF page 16 (printed page 4)",
+          "note": "The plan's own text on the same page gives 21.4% for 2013 and 23.7% for 2014, while its Table 1 prints 23.7% under 2013. The table value is kept; the year is flagged as uncertain, not corrected.",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf",
+          "confidence": 4
+        },
+        {
+          "year": 2015,
+          "value": 24.8,
+          "national": 5.9,
+          "age_group": "15-49",
+          "vintage": "Kenya HIV Estimates 2015, as quoted in the Siaya County HIV and AIDS Strategic Plan",
+          "document": "Siaya County HIV and AIDS Strategic Plan (2015/16 - 2018/2019), Table 1: HIV epidemic situation in Siaya County, PDF page 16 (printed page 4); the executive summary cites Kenya HIV Estimates, 2015 for 24.8%",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf",
+          "confidence": 4
+        },
+        {
+          "year": 2017,
+          "value": 21.0,
+          "age_group": "15-49",
+          "vintage": "NACC estimates report 2018",
+          "confidence": 3
+        },
+        {
+          "year": 2025,
+          "value": 10.3,
+          "national": 3.22,
+          "age_group": "Overall (age range not printed; the same page gives men 15+ 7.62% and women 15+ 12.67%)",
+          "vintage": "NSDCC county profiles 2026 (Kenya HIV Estimates 2025)",
+          "document": "NSDCC County Profiles 2026, Siaya County HIV Burden 2026: HIV Prevalence, PDF page 84 (printed page 79), labelled \"Overall\"",
+          "note": "Corrected on 21 Nov 2026: this point was labelled ages 15 to 49, but the page prints 10.3% as \"Overall\" with the sex split for ages 15 and over; it does not say 15 to 49. See conflict hiv-2025-age-label.",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2026/07/Nsdcc-County-Profiles-2026.pdf",
+          "confidence": 3
+        }
+      ]
+    }
+  },
+  "poverty": {
+    "label": "Poverty in Siaya",
+    "note": "Two official sources give different monetary poverty rates for 2015/16 and we could not establish why, so both are shown. The multidimensional measure counts people lacking several basic needs at once and is not comparable with the monetary rate.",
+    "points": [
+      {
+        "year": "2005/06",
+        "measure": "Monetary poverty rate",
+        "value": 35.3,
+        "source": "Commission on Revenue Allocation fact sheet, second-hand from the household budget survey",
+        "confidence": 3
+      },
+      {
+        "year": "2015/16",
+        "measure": "Monetary poverty rate",
+        "value": 33.8,
+        "national": 36.1,
+        "source": "Commission on Revenue Allocation fact sheet",
+        "confidence": 3,
+        "alternate": {
+          "value": 33.1,
+          "source": "KNBS Comprehensive Poverty Report 2020"
+        }
+      },
+      {
+        "year": "2015/16",
+        "measure": "Multidimensional poverty",
+        "value": 68.8,
+        "national": 53.0,
+        "source": "KNBS Comprehensive Poverty Report 2020, as reproduced in the county plan",
+        "confidence": 4
+      }
+    ],
+    "gap": "A later county poverty estimate (the 2021 Kenya Poverty Report) could not be retrieved, so there is no recent monetary poverty figure on the site."
+  },
+  "population": {
+    "label": "Siaya County population: census and official projections",
+    "points": [
+      {
+        "year": 2009,
+        "value": 842304,
+        "kind": "census",
+        "source": "KNBS 2009 census, as reproduced in Siaya ADP 2015/16 and 2018/19",
+        "confidence": 4
+      },
+      {
+        "year": 2012,
+        "value": 886417,
+        "kind": "projection",
+        "alternate": 885762,
+        "note": "885,762 in the text of the same plans; 886,417 in their constituency table",
+        "confidence": 3
+      },
+      {
+        "year": 2015,
+        "value": 932795,
+        "kind": "projection",
+        "confidence": 3
+      },
+      {
+        "year": 2017,
+        "value": 965103,
+        "kind": "projection",
+        "confidence": 3
+      },
+      {
+        "year": 2019,
+        "value": 993183,
+        "kind": "census",
+        "source": "KNBS 2019 census, as reproduced in the Siaya CIDP 2023-2027 (data/county.json)",
+        "confidence": 4
+      },
+      {
+        "year": 2022,
+        "value": 1040616,
+        "kind": "projection",
+        "source": "Siaya CIDP 2023-2027 (data/county.json)",
+        "confidence": 3
+      }
+    ],
+    "by_sub_county_2009": {
+      "source": "KNBS 2009 census by constituency, as reproduced in the Siaya County Annual Development Plans 2015/16 and 2018/19",
+      "confidence": 4,
+      "note": "Sub-counties match constituencies. The six values add to the county total of 842,304. The Siaya CIDP 2018-2022 gives different splits for Ugenya (108,934) and Ugunja (93,372) from ward sums, but the two together are 202,306 either way, so compare the pair when measuring growth.",
+      "values": {
+        "alego-usonga": 187243,
+        "ugenya": 113848,
+        "gem": 160675,
+        "bondo": 157522,
+        "ugunja": 88458,
+        "rarieda": 134558
+      }
+    },
+    "note": "The 2019 census count and the 2022 to 2025 projections are in data/county.json. The 2009 census households and the sex split at county level were not retrievable (KNBS site unreachable from the build environment)."
+  },
+  "in_year": {
+    "label": "FY 2025/26 so far: in-year Controller of Budget reports",
+    "fy": "2025/26",
+    "comparability": "In-year, not comparable with full years",
+    "note": "Cumulative figures from the start of the fiscal year (1 July 2025) to the end of each period. They are partial-year figures, so they are not part of the ten-year series and must not be compared with full-year values. Read from scanned PDFs (page images re-read with RapidOCR where stated); not yet checked by a reviewer.",
+    "periods": [
+      {
+        "id": "q1",
+        "label": "First quarter",
+        "period": "1 July to 30 September 2025",
+        "end": "2025-09-30",
+        "report": {
+          "title": "County Governments Budget Implementation Review Report for the First Quarter of FY 2025/26 (November 2025)",
+          "section": "3.38 Siaya County, PDF p. 525 to 536 (printed p. 479 to 490)",
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        },
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "approved_budget",
+            "label": "Approved budget, FY 2025/26",
+            "value": 12.79,
+            "unit": "KSh bn",
+            "pdf_page": 525,
+            "printed_page": 479,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "revenue_received",
+            "label": "Revenue available in the period",
+            "value": 2.38,
+            "unit": "KSh bn",
+            "pdf_page": 525,
+            "printed_page": 479,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "equitable_share_received",
+            "label": "Equitable share received",
+            "value": 1.24,
+            "unit": "KSh bn",
+            "pdf_page": 525,
+            "printed_page": 479,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "osr_collected",
+            "label": "Own-source revenue collected, incl. facility improvement fund",
+            "value": 178,
+            "unit": "KSh m",
+            "pdf_page": 525,
+            "printed_page": 479,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "osr_share_of_target",
+            "label": "Own-source revenue as share of annual target",
+            "value": 6,
+            "unit": "%",
+            "pdf_page": 528,
+            "printed_page": 482,
+            "read": "OCR layer"
+          },
+          {
+            "measure": "spending_total",
+            "label": "Spending",
+            "value": 712,
+            "unit": "KSh m",
+            "pdf_page": 529,
+            "printed_page": 483,
+            "read": "OCR layer"
+          },
+          {
+            "measure": "spending_development",
+            "label": "Development spending",
+            "value": 0,
+            "unit": "KSh m",
+            "pdf_page": 529,
+            "printed_page": 483,
+            "read": "OCR layer"
+          },
+          {
+            "measure": "revenue_arrears_close",
+            "label": "Revenue arrears at end of period",
+            "value": 332,
+            "unit": "KSh m",
+            "as_of": "2025-09-30",
+            "pdf_page": 529,
+            "printed_page": 483,
+            "read": "OCR layer"
+          },
+          {
+            "measure": "payables_assembly_opening",
+            "label": "County Assembly trade payables at 1 July 2025",
+            "value": 39.29,
+            "unit": "KSh m",
+            "as_of": "2025-07-01",
+            "pdf_page": 530,
+            "printed_page": 484,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "payables_total_close",
+            "label": "Trade payables at end of period, Executive and Assembly",
+            "value": 1971.81,
+            "unit": "KSh m",
+            "as_of": "2025-09-30",
+            "pdf_page": 530,
+            "printed_page": 484,
+            "read": "RapidOCR"
+          }
+        ],
+        "source_id": "cob-q1-2025-26"
+      },
+      {
+        "id": "h1",
+        "label": "First half",
+        "period": "1 July to 31 December 2025",
+        "end": "2025-12-31",
+        "report": {
+          "title": "County Governments Budget Implementation Review Report, First Half of FY 2025/26 (February 2026), Part II",
+          "section": "3.38 Siaya County, PDF p. 218 to 233 (printed p. 593 to 608). The library catalogues the file as 'First Nine Months'; every page footer reads 'First Half of FY 2025/26'",
+          "url": "https://libraryir.parliament.go.ke/items/b78c5768-fc91-4c90-ae0f-d45ae647dc17"
+        },
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "approved_budget",
+            "label": "Approved budget, FY 2025/26",
+            "value": 12.79,
+            "unit": "KSh bn",
+            "pdf_page": 218,
+            "printed_page": 593,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "revenue_received",
+            "label": "Revenue available in the period",
+            "value": 4.48,
+            "unit": "KSh bn",
+            "pdf_page": 218,
+            "printed_page": 593,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "equitable_share_received",
+            "label": "Equitable share received",
+            "value": 3.21,
+            "unit": "KSh bn",
+            "pdf_page": 218,
+            "printed_page": 593,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "osr_collected",
+            "label": "Own-source revenue collected, incl. facility improvement fund",
+            "value": 302,
+            "unit": "KSh m",
+            "pdf_page": 218,
+            "printed_page": 593,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "osr_share_of_target",
+            "label": "Own-source revenue as share of annual target",
+            "value": 9.7,
+            "unit": "%",
+            "pdf_page": 221,
+            "printed_page": 596,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "spending_total",
+            "label": "Spending",
+            "value": 2.5,
+            "unit": "KSh bn",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "spending_development",
+            "label": "Development spending",
+            "value": 320,
+            "unit": "KSh m",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "revenue_arrears_close",
+            "label": "Revenue arrears at end of period",
+            "value": 953.73,
+            "unit": "KSh m",
+            "as_of": "2025-12-31",
+            "pdf_page": 222,
+            "printed_page": 597,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "payables_assembly_opening",
+            "label": "County Assembly trade payables at 1 July 2025",
+            "value": 72,
+            "unit": "KSh m",
+            "as_of": "2025-07-01",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "payables_total_close",
+            "label": "Trade payables at end of period, Executive and Assembly",
+            "value": 1636.14,
+            "unit": "KSh m",
+            "as_of": "2025-12-31",
+            "pdf_page": 224,
+            "printed_page": 599,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "development_absorption",
+            "label": "Development spending as share of annual development budget",
+            "value": 6,
+            "unit": "%",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "recurrent_absorption",
+            "label": "Recurrent spending as share of annual recurrent budget",
+            "value": 32,
+            "unit": "%",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          }
+        ],
+        "source_id": "cob-h1-2025-26"
+      }
+    ],
+    "conflicts": [
+      "in-year-assembly-payables-2025",
+      "in-year-revenue-arrears-2025"
+    ]
+  },
+  "supplementary": {
+    "label": "Other primary documents for FY 2019/20 (not used in the ten-year series)",
+    "note": "The Controller of Budget annual report for FY 2019/20 was not found. These documents give some figures for the year. They are listed so readers can check them, but they are not used to fill the series: the county's own paper is not an independent review, and the audit and later-report figures measure different things. Where they disagree with another source, both values are in the conflict register.",
+    "documents": [
+      {
+        "id": "siaya-brop-2019-20",
+        "fy": "2019/20",
+        "title": "Siaya County Treasury, County Budget Review and Outlook Paper FY 2019/2020 (September 2020)",
+        "kind": "County document",
+        "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf",
+        "read": "PDF text layer",
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "original_budget",
+            "label": "Original budget",
+            "value": 9223.35,
+            "unit": "KSh m",
+            "pdf_page": 11
+          },
+          {
+            "measure": "final_budget",
+            "label": "Supplementary (final) budget, after a cut of KSh 341.58m",
+            "value": 8881.77,
+            "unit": "KSh m",
+            "pdf_page": 11
+          },
+          {
+            "measure": "receipts",
+            "label": "Total receipts",
+            "value": 8101.69,
+            "unit": "KSh m",
+            "pdf_page": 11
+          },
+          {
+            "measure": "spending_total",
+            "label": "Spending, total",
+            "value": 6814.85,
+            "unit": "KSh m",
+            "pdf_page": 20
+          },
+          {
+            "measure": "spending_recurrent",
+            "label": "Spending, recurrent (compensation of employees 2,808.81; operations and maintenance 1,851.03)",
+            "value": 4659.84,
+            "unit": "KSh m",
+            "pdf_page": 20
+          },
+          {
+            "measure": "spending_development",
+            "label": "Spending, development",
+            "value": 2155.01,
+            "unit": "KSh m",
+            "pdf_page": 20
+          },
+          {
+            "measure": "absorption_total",
+            "label": "Absorption, total (recurrent 95, development 54)",
+            "value": 77,
+            "unit": "%",
+            "pdf_page": 20
+          },
+          {
+            "measure": "osr",
+            "label": "Own-source revenue (target KSh 420m; 43.87 per cent of target)",
+            "value": 184.25,
+            "unit": "KSh m",
+            "pdf_page": 15
+          },
+          {
+            "measure": "pending_bills_paid",
+            "label": "Unbudgeted pending bills paid",
+            "value": 324.83,
+            "unit": "KSh m",
+            "pdf_page": 20
+          }
+        ],
+        "source_id": "siaya-brop-2019-20"
+      },
+      {
+        "id": "cob-annual-2020-21-comparatives",
+        "fy": "2019/20",
+        "title": "Controller of Budget, County Governments Budget Implementation Review Report FY 2020/21 (September 2021), figures quoted for FY 2019/20",
+        "kind": "Controller of Budget report",
+        "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c",
+        "read": "RapidOCR",
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "osr",
+            "label": "Own-source revenue, FY 2019/20",
+            "value": 179.43,
+            "unit": "KSh m",
+            "pdf_page": 374
+          },
+          {
+            "measure": "cash_bf",
+            "label": "Balance brought forward from FY 2019/20, actual (budgeted 1,235.99)",
+            "value": 1186.27,
+            "unit": "KSh m",
+            "pdf_page": 373
+          },
+          {
+            "measure": "statutory_deductions_outstanding",
+            "label": "Employee statutory deductions outstanding at close of FY 2019/20",
+            "value": 316.86,
+            "unit": "KSh m",
+            "pdf_page": 375
+          },
+          {
+            "measure": "covid_funds_bf",
+            "label": "COVID-19 funds brought forward from FY 2019/20",
+            "value": 140.28,
+            "unit": "KSh m",
+            "pdf_page": 375
+          }
+        ],
+        "source_id": "cob-report-2020-21"
+      },
+      {
+        "id": "cob-h1-2020-21",
+        "fy": "2019/20",
+        "title": "Controller of Budget, County Governments Budget Implementation Review Report, First Half of FY 2020/21",
+        "kind": "Controller of Budget report",
+        "url": "https://libraryir.parliament.go.ke/items/f8bd1f52-a92c-4012-a04a-ae528af00862",
+        "read": "RapidOCR",
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "cash_bf",
+            "label": "Balance brought forward from FY 2019/20",
+            "value": 1840.12,
+            "unit": "KSh m",
+            "pdf_page": 319
+          }
+        ],
+        "source_id": "cob-h1-2020-21"
+      },
+      {
+        "id": "senate-cpac-2019-20",
+        "fy": "2019/20",
+        "title": "Senate County Public Accounts Committee, Reports of the Auditor-General on the Financial Statements of (among others) Siaya County Executive 2019-2020 (February 2024), Chapter Twelve",
+        "kind": "Senate committee report quoting the Auditor-General",
+        "url": "https://libraryir.parliament.go.ke/items/6533ab5f-fd9c-4570-ad59-922be3bb9ba1",
+        "read": "PDF text layer",
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "final_budget",
+            "label": "Final budget under exchequer releases, per the audit basis for opinion",
+            "value": 8106.98,
+            "unit": "KSh m",
+            "pdf_page": 517
+          },
+          {
+            "measure": "pending_bills_close",
+            "label": "Pending bills at 30 June 2020 (down from KSh 386.79m at 30 June 2019; audit figure, not CoB)",
+            "value": 222.33,
+            "unit": "KSh m",
+            "pdf_page": 523
+          }
+        ],
+        "source_id": "senate-cpac-2019-20"
+      }
+    ],
+    "not_found": "Senate, Report on the County Governments' Budget Implementation Review Report for FY 2019/20 (April 2021) names Siaya only among seven counties whose own-source revenue was below half its target, with no amounts (PDF p. 19 and 27): https://libraryir.parliament.go.ke/items/a33fe8b9-af9a-4519-a135-cc80521756ea"
+  }
+}

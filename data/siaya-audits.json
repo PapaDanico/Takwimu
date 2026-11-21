@@ -1,0 +1,7178 @@
+{
+ "meta": {
+  "title": "Siaya County: Auditor-General findings tracker",
+  "schema_version": 1,
+  "extracted": "2026-11-21",
+  "currency": "KSh, nominal, as printed",
+  "rule": "Findings are the auditor's findings, not legal conclusions. Titles are short neutral paraphrases. No individuals are named; offices and entities only. Loaded words appear only inside report_heading, quoted and marked.",
+  "entities": {
+   "county_executive": "County Executive of Siaya",
+   "county_assembly": "County Assembly of Siaya",
+   "county_government": "County Government of Siaya (executive and assembly together; FY 2013/14 16-month audit only)"
+  },
+  "recurrence_rule": "Recurrence is counted per category and year. A finding is linked to an earlier one only when the report says it is unresolved from a prior year, the next report lists it as unresolved, or the same named contract or requirement reappears (same_items). Counts per category are not evidence that a specific finding recurred.",
+  "amounts_rule": "Amounts are as printed in KSh (decimals kept where printed). Each amount carries the report's own label; amounts within one finding are not summed.",
+  "pages": "PDF page numbers of the downloaded file, not printed page numbers.",
+  "method": "Read by hand from the PDF text layer (pdftotext) or, for FY 2024/25, tesseract OCR of page images. Amounts that were illegible are left out with a note.",
+  "notes_file": "docs/siaya-audits-notes.md"
+ },
+ "documents": [
+  {
+   "doc_id": "audit-2013-14",
+   "entity": "county_government",
+   "fy": "2013/14",
+   "period": "16 months, 1 March 2013 to 30 June 2014",
+   "title": "Report of the Auditor General on the Financial Statements of County Government of Siaya for the sixteen (16) months Period Ended 30 June 2014",
+   "report_date": "2015-06-03",
+   "date_page": 6,
+   "url": "https://libraryir.parliament.go.ke/items/0de4cae4-165f-4483-83ff-93a27ff5beaf/full",
+   "bytes": 22547811,
+   "sha256": "8e1191c33527c39d7080b97a6661857a002bd6c76e8d04bcc19a22aca7bfa7ed",
+   "text_source": "PDF text layer",
+   "confidence": 4,
+   "in_manifest": true,
+   "note": "Covers the whole county government (executive and assembly together).",
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-20",
+   "date_note": "",
+   "md5_library": null
+  },
+  {
+   "doc_id": "audit-fo-2013-14",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "period": "1 July 2013 to 30 June 2014",
+   "title": "Report of the Auditor-General on the Financial Operations of Siaya County Executive and Assembly for the Period 1st July 2013 to 30 June 2014",
+   "report_date": "2015-05-25",
+   "date_page": 17,
+   "url": "https://libraryir.parliament.go.ke/items/a9ed06a1-4d51-423e-8a08-2ffaee6171b4",
+   "bytes": 23657347,
+   "sha256": "8777dd0be31ece70da63464f04f03d1f0e8a370e6e1e8ee0014c4f3df9d82800",
+   "md5_library": "6644fa0fa20f91cc8432694539196bbc",
+   "text_source": "PDF text layer",
+   "confidence": 3,
+   "in_manifest": false,
+   "note": "A review of financial operations, not an audit of financial statements: no audit opinion is printed. Despite the library title, the file holds the County Executive report only (heading on PDF p. 6); no County Assembly section was found. Cover letter not used.",
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-21",
+   "date_note": ""
+  },
+  {
+   "doc_id": "audit-2019-20",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "period": "year to 30 June 2020",
+   "title": "Reports of the Auditor General on the Financial Statements of Tharaka Nithi, Homa Bay, Kakamega, Kirinyaga, Makueni, Meru, Bomet, Murang'a, Nandi, Nyamira, Nyeri, Siaya, Vihiga, Wajir and Samburu 2019-2020",
+   "report_date": null,
+   "date_note": "The file is a Senate committee report that quotes the audit; the audit signature date is not reproduced.",
+   "date_page": null,
+   "url": "https://libraryir.parliament.go.ke/items/bcfb5ba2-6dc2-4d1b-9147-7c7ff6038ad3",
+   "bytes": 774680831,
+   "sha256": "487daede734a71897a15185dc90ff179e69196bbd5d249b16ee0057c17e472e4",
+   "text_source": "PDF text layer",
+   "confidence": 3,
+   "in_manifest": true,
+   "note": "Senate committee report quoting the Auditor-General, so graded lower. Only the quoted audit paragraphs are used, not committee observations or recommendations.",
+   "issuer": "Senate County Public Accounts Committee, quoting the Office of the Auditor-General",
+   "retrieved": "2026-11-20",
+   "md5_library": null
+  },
+  {
+   "doc_id": "audit-2020-21",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "period": "year to 30 June 2021",
+   "title": "Report of the Auditor-General on County Executive of Siaya for the Year Ended 30 June 2021",
+   "report_date": "2022-06-30",
+   "date_page": 47,
+   "url": "https://libraryir.parliament.go.ke/items/d53598b9-f890-49aa-ad98-f18cf9c5bd6b/full",
+   "bytes": 135174648,
+   "sha256": "45a4bd1d40704369a109a82a02bac38304de0bf2e0b05dfd0632e2391b5e0a6b",
+   "text_source": "PDF text layer",
+   "confidence": 4,
+   "in_manifest": true,
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-20",
+   "note": "",
+   "date_note": "",
+   "md5_library": null
+  },
+  {
+   "doc_id": "audit-2021-22",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "period": "year to 30 June 2022",
+   "title": "Report of the Auditor-General on County Executive of Siaya for the Year Ended 30 June 2022",
+   "report_date": null,
+   "date_note": "Signed \"12 April\" (PDF p. 60); the year is cut off in the text layer. The library record dates the item 2023.",
+   "date_page": 60,
+   "url": "https://libraryir.parliament.go.ke/items/54119713-1b4e-46dd-b95d-5484c7aeb01f/full",
+   "bytes": 239363442,
+   "sha256": "5066633d5c1201362b6a8520460b8d64918ea901294066ffb28a4b26142d2be7",
+   "text_source": "PDF text layer",
+   "confidence": 4,
+   "in_manifest": true,
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-20",
+   "note": "",
+   "md5_library": null
+  },
+  {
+   "doc_id": "audit-2022-23",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "period": "year to 30 June 2023",
+   "title": "Report of the Auditor-General on County Executive of Siaya for the Year Ended 30 June 2023.",
+   "report_date": "2024-02-14",
+   "date_page": 55,
+   "url": "https://libraryir.parliament.go.ke/items/7e87be17-5566-48c8-ac76-d4658605ee6c/full",
+   "bytes": 200673030,
+   "sha256": "9eb4ed9e61ac1d512142b0a0d6c0df3f6e10535da9f0f0995f4b58bb4b0101e3",
+   "text_source": "PDF text layer",
+   "confidence": 4,
+   "in_manifest": true,
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-20",
+   "note": "",
+   "date_note": "",
+   "md5_library": null
+  },
+  {
+   "doc_id": "audit-2023-24",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "period": "year to 30 June 2024",
+   "title": "Report of the Auditor-General on County Executive of Siaya for the Year Ended 30 June, 2024",
+   "report_date": "2024-12-27",
+   "date_page": 59,
+   "url": "https://libraryir.parliament.go.ke/items/42bf64ec-74a8-44f6-be8f-5e1c79b0c407/full",
+   "bytes": 105704200,
+   "sha256": "d467556765db30e52a70ea38d1cb5ffe0dd56022100ec72d240409571fdfbc48",
+   "text_source": "PDF text layer",
+   "confidence": 4,
+   "in_manifest": true,
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-20",
+   "note": "",
+   "date_note": "",
+   "md5_library": null
+  },
+  {
+   "doc_id": "audit-2024-25",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "period": "year to 30 June 2025",
+   "title": "Report of the Auditor-General on County Executive of Siaya for the Year Ended 30 June 2025",
+   "report_date": "2025-12-09",
+   "date_page": 64,
+   "url": "https://libraryir.parliament.go.ke/items/a8d4bb86-fc16-43f1-b109-97514df5e868",
+   "bytes": 51617536,
+   "sha256": "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe",
+   "md5_library": "e3e910ded9b5d3a222e229e517f60e0d",
+   "text_source": "OCR (tesseract) of page images; the PDF has no text layer",
+   "confidence": 3,
+   "in_manifest": false,
+   "note": "First year on the accrual basis (transitional IPSAS), so totals are not directly comparable with earlier cash-basis years.",
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-21",
+   "date_note": ""
+  },
+  {
+   "doc_id": "audit-asm-2020-21",
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "period": "year to 30 June 2021",
+   "title": "Report of the Auditor-General on County Assembly Of Siaya for the Year Ended 30 June 2021",
+   "report_date": "2022-06-30",
+   "date_page": 34,
+   "url": "https://libraryir.parliament.go.ke/items/1e24d0bc-cbea-4778-8bb4-204f018830b6",
+   "bytes": 98363044,
+   "sha256": "429cf207e32f9fd9ecad1237b144978a15d7e05cf42bcf9ca77c7824459572f9",
+   "md5_library": "e6969dd0af22f0599542d8150fb8d635",
+   "text_source": "PDF text layer",
+   "confidence": 4,
+   "in_manifest": false,
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-21",
+   "note": "",
+   "date_note": ""
+  },
+  {
+   "doc_id": "audit-asm-2022-23",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "period": "year to 30 June 2023",
+   "title": "Report of the Auditor-General on County Assembly of Siaya for the Year Ended 30 June 2023",
+   "report_date": "2024-02-14",
+   "date_page": 58,
+   "url": "https://libraryir.parliament.go.ke/items/2ffcd198-5520-4407-abcf-a3bba6ebc66e",
+   "bytes": 73378014,
+   "sha256": "f29e0ab2e2893169a6c79fbeb9511bd5d089a568936b75dd8a13920c89dfd6ca",
+   "md5_library": "7a49d8ff25a9cd12e0199abfa0d0b16f",
+   "text_source": "PDF text layer",
+   "confidence": 4,
+   "in_manifest": false,
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-21",
+   "note": "",
+   "date_note": ""
+  },
+  {
+   "doc_id": "audit-asm-2023-24",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "period": "year to 30 June 2024",
+   "title": "Report of the Auditor-General on County Assembly of Siaya for the Year Ended 30 June, 2024",
+   "report_date": "2024-12-27",
+   "date_page": 60,
+   "url": "https://libraryir.parliament.go.ke/items/d97ee62e-564b-4a6b-a84a-b66cba4b9883",
+   "bytes": 40122423,
+   "sha256": "4854ae471a643b06f170b333f383a312e0eb7f77d454b0a03246d32466dac3b5",
+   "md5_library": "2c1c6338048e86ceb7be61942cfa1c96",
+   "text_source": "PDF text layer",
+   "confidence": 4,
+   "in_manifest": false,
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-21",
+   "note": "",
+   "date_note": ""
+  },
+  {
+   "doc_id": "audit-asm-2024-25",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "period": "year to 30 June 2025",
+   "title": "Report of the Auditor-General on County Assembly of Siaya for the Year Ended 30 June 2025",
+   "report_date": "2025-12-19",
+   "date_page": 60,
+   "url": "https://libraryir.parliament.go.ke/items/25843839-3e3e-45b6-a5cd-af79d6f80a36",
+   "bytes": 33639942,
+   "sha256": "625a8d0dff5cb142020c8c500161611d25a1b8bab5098fb9b2b121ceb458056c",
+   "md5_library": "096d1356e567a7986b10402db329f120",
+   "text_source": "OCR (tesseract) of page images; the PDF has no text layer",
+   "confidence": 3,
+   "in_manifest": false,
+   "note": "First year on the accrual basis (transitional IPSAS).",
+   "issuer": "Office of the Auditor-General",
+   "retrieved": "2026-11-21",
+   "date_note": ""
+  }
+ ],
+ "opinions": [
+  {
+   "entity": "county_government",
+   "fy": "2013/14",
+   "opinion": "Disclaimer of Opinion",
+   "doc_id": "audit-2013-14",
+   "page": 6,
+   "confidence": 4,
+   "history": "matches",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "opinion": null,
+   "opinion_note": "Financial operations review: no opinion printed",
+   "doc_id": "audit-fo-2013-14",
+   "page": 6,
+   "confidence": 3,
+   "history": "not in history"
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2014/15",
+   "opinion": "Adverse",
+   "doc_id": "senate-fiduciary-annexes-2018",
+   "page": 4,
+   "confidence": 3,
+   "history": "matches",
+   "opinion_note": "Reused from data/history.json: Senate compilation, not the audit report; may cover executive and assembly together. No findings are recorded for this year."
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2015/16",
+   "opinion": "Qualified",
+   "doc_id": "senate-fiduciary-annexes-2018",
+   "page": 2,
+   "confidence": 3,
+   "history": "matches",
+   "opinion_note": "Reused from data/history.json: Senate compilation, not the audit report. No findings are recorded for this year."
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "opinion": "Qualified Opinion",
+   "doc_id": "audit-2019-20",
+   "page": 518,
+   "confidence": 3,
+   "history": "matches",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "opinion": "Qualified Opinion",
+   "doc_id": "audit-2020-21",
+   "page": 33,
+   "confidence": 4,
+   "history": "matches",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "opinion": "Adverse Opinion",
+   "doc_id": "audit-2021-22",
+   "page": 45,
+   "confidence": 4,
+   "history": "matches",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "opinion": "Qualified Opinion",
+   "doc_id": "audit-2022-23",
+   "page": 39,
+   "confidence": 4,
+   "history": "matches",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "opinion": "Qualified Opinion",
+   "doc_id": "audit-2023-24",
+   "page": 44,
+   "confidence": 4,
+   "history": "matches",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "opinion": "Qualified Opinion",
+   "doc_id": "audit-2024-25",
+   "page": 47,
+   "confidence": 3,
+   "history": "not in history",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "opinion": "Qualified Opinion",
+   "doc_id": "audit-asm-2020-21",
+   "page": 28,
+   "confidence": 4,
+   "history": "not in history",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "opinion": "Qualified Opinion",
+   "doc_id": "audit-asm-2022-23",
+   "page": 51,
+   "confidence": 4,
+   "history": "not in history",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "opinion": "Qualified Opinion",
+   "doc_id": "audit-asm-2023-24",
+   "page": 53,
+   "confidence": 4,
+   "history": "not in history",
+   "opinion_note": ""
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "opinion": "Qualified Opinion",
+   "doc_id": "audit-asm-2024-25",
+   "page": 53,
+   "confidence": 3,
+   "history": "not in history",
+   "opinion_note": ""
+  }
+ ],
+ "findings": [
+  {
+   "id": "audit-2013-14-01",
+   "entity": "county_government",
+   "fy": "2013/14",
+   "doc_id": "audit-2013-14",
+   "page": 4,
+   "paragraph": "1.0",
+   "section": "basis_for_disclaimer",
+   "title": "Statements omit assets and liabilities inherited from the defunct local authorities",
+   "category": "financial_reporting",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2013-14-02",
+   "entity": "county_government",
+   "fy": "2013/14",
+   "doc_id": "audit-2013-14",
+   "page": 4,
+   "paragraph": "2.0",
+   "section": "basis_for_disclaimer",
+   "title": "Revenue figure could not be confirmed (next-year receipt included; devolved-function revenue left out)",
+   "category": "revenue",
+   "amounts": [
+    {
+     "value": 4024406380,
+     "unit": "KSh",
+     "label": "revenue figure not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2013-14-03",
+   "entity": "county_government",
+   "fy": "2013/14",
+   "doc_id": "audit-2013-14",
+   "page": 5,
+   "paragraph": "3.0",
+   "section": "basis_for_disclaimer",
+   "title": "Compensation of employees differs from payroll and National Treasury records",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 44071973,
+     "unit": "KSh",
+     "label": "unexplained difference"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2013-14-04",
+   "entity": "county_government",
+   "fy": "2013/14",
+   "doc_id": "audit-2013-14",
+   "page": 5,
+   "paragraph": "4.0",
+   "section": "basis_for_disclaimer",
+   "title": "No supporting schedules for goods and services",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 645134054,
+     "unit": "KSh",
+     "label": "expenditure not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2013-14-05",
+   "entity": "county_government",
+   "fy": "2013/14",
+   "doc_id": "audit-2013-14",
+   "page": 5,
+   "paragraph": "5.0",
+   "section": "basis_for_disclaimer",
+   "title": "Scholarship and education grants not broken down",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 31554000,
+     "unit": "KSh",
+     "label": "grants not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2013-14-06",
+   "entity": "county_government",
+   "fy": "2013/14",
+   "doc_id": "audit-2013-14",
+   "page": 5,
+   "paragraph": "6.0",
+   "section": "basis_for_disclaimer",
+   "title": "No fixed assets register or breakdown for asset purchases",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 495330325,
+     "unit": "KSh",
+     "label": "acquisition of assets not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2013-14-07",
+   "entity": "county_government",
+   "fy": "2013/14",
+   "doc_id": "audit-2013-14",
+   "page": 6,
+   "paragraph": "7.0",
+   "section": "basis_for_disclaimer",
+   "title": "Budget and contingency reserves recorded as spending without support",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 14422187,
+     "unit": "KSh",
+     "label": "other payments not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2013-14-08",
+   "entity": "county_government",
+   "fy": "2013/14",
+   "doc_id": "audit-2013-14",
+   "page": 6,
+   "paragraph": "8.0",
+   "section": "basis_for_disclaimer",
+   "title": "Imprests not surrendered by year end",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 71249797,
+     "unit": "KSh",
+     "label": "outstanding imprests"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-01",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 8,
+   "paragraph": "1.1",
+   "section": "financial_operations",
+   "title": "Cash shortages found at two county hospital cash offices",
+   "category": "cash_and_bank",
+   "amounts": [
+    {
+     "value": 11971312,
+     "unit": "KSh",
+     "label": "shortage, Siaya County Referral Hospital"
+    },
+    {
+     "value": 711699,
+     "unit": "KSh",
+     "label": "shortage, Bondo Sub-County Hospital"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-02",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 9,
+   "paragraph": "1.4",
+   "section": "financial_operations",
+   "title": "Three IFMIS/G-Pay payments to firms were recalled; part was not recovered",
+   "category": "cash_and_bank",
+   "amounts": [
+    {
+     "value": 84591775,
+     "unit": "KSh",
+     "label": "three payments"
+    },
+    {
+     "value": 4237471,
+     "unit": "KSh",
+     "label": "not recovered"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": "",
+   "report_heading": {
+    "text": "Fraudulent Transactions Through IFMIS/G-Pay Account",
+    "quoted": true
+   }
+  },
+  {
+   "id": "audit-fo-2013-14-03",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 9,
+   "paragraph": "2.1",
+   "section": "financial_operations",
+   "title": "ECD classroom contracts let without tender adverts or evaluation committees",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 167878693,
+     "unit": "KSh",
+     "label": "cost of ECD classrooms project"
+    },
+    {
+     "value": 9980231,
+     "unit": "KSh",
+     "label": "retention held without a separate bank account"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-04",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 10,
+   "paragraph": "2.6",
+   "section": "financial_operations",
+   "title": "Solar street-lighting masts paid in full without inspection and acceptance",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 13431744,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-05",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 10,
+   "paragraph": "2.7",
+   "section": "financial_operations",
+   "title": "Vehicles and ambulances bought above budget without a supplementary budget",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 69451030,
+     "unit": "KSh",
+     "label": "over-expenditure"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-06",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 12,
+   "paragraph": "3.2",
+   "section": "financial_operations",
+   "title": "Unsold subsidised seed spoiled in storage",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 6392595,
+     "unit": "KSh",
+     "label": "loss on unsold seed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-07",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 12,
+   "paragraph": "3.3",
+   "section": "financial_operations",
+   "title": "Payment vouchers missing for refurbishment and furniture spending",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 8158143,
+     "unit": "KSh",
+     "label": "vouchers not produced"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-08",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 13,
+   "paragraph": "3.5",
+   "section": "financial_operations",
+   "title": "Travel and subsistence spending without journey evidence",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 12807076,
+     "unit": "KSh",
+     "label": "Executive, not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-09",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 14,
+   "paragraph": "3.9",
+   "section": "financial_operations",
+   "title": "Firm paid to prepare defunct local authorities' accounts without explained selection",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 4150000,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-10",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 16,
+   "paragraph": "3.13",
+   "section": "financial_operations",
+   "title": "Contributions paid to the Council of Governors",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 7500890,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-fo-2013-14-11",
+   "entity": "county_executive",
+   "fy": "2013/14",
+   "doc_id": "audit-fo-2013-14",
+   "page": 17,
+   "paragraph": "4.2",
+   "section": "financial_operations",
+   "title": "Tractor-hire revenue not reconciled with spending on the scheme",
+   "category": "revenue",
+   "amounts": [
+    {
+     "value": 13000000,
+     "unit": "KSh",
+     "label": "allocation for the scheme"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": "The spending figure is not legible in the text layer, so only the allocation is recorded."
+  },
+  {
+   "id": "audit-2019-20-01",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 518,
+   "paragraph": "1.0",
+   "section": "financial_statements",
+   "title": "Unexplained negative adjustment to budgeted exchequer releases",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 341576215,
+     "unit": "KSh",
+     "label": "adjustment"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-02",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 520,
+   "paragraph": "2.0",
+   "section": "financial_statements",
+   "title": "Fixed asset additions and balances do not reconcile",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 181547678,
+     "unit": "KSh",
+     "label": "unreconciled additions"
+    },
+    {
+     "value": 3769527365,
+     "unit": "KSh",
+     "label": "unexplained comparative difference"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-03",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 523,
+   "paragraph": "3.0",
+   "section": "financial_statements",
+   "title": "Compensation of employees differs from supporting schedule",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 36495000,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-04",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 523,
+   "paragraph": "4.0",
+   "section": "financial_statements",
+   "title": "Transfers to other government units differ from schedules",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 223979049,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-05",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 524,
+   "paragraph": "5.0",
+   "section": "financial_statements",
+   "title": "Pending bills balance could not be confirmed",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 222333808,
+     "unit": "KSh",
+     "label": "pending bills at 30 June 2020"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-06",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 526,
+   "paragraph": "1.0",
+   "section": "other_matter",
+   "title": "Budgetary control and performance",
+   "category": "budget_control",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-07",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 526,
+   "paragraph": "2.0",
+   "section": "other_matter",
+   "title": "Late exchequer releases",
+   "category": "other",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-08",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 527,
+   "paragraph": "1.0",
+   "section": "lawfulness",
+   "title": "Payment to the Council of Governors",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 1250000,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-09",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 528,
+   "paragraph": "2.0",
+   "section": "lawfulness",
+   "title": "Imprests issued in 2018/19 not surrendered",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 7035768,
+     "unit": "KSh",
+     "label": "not surrendered"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Imprests issued in FY 2018/19 were still not surrendered at 30 June 2020"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-10",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 530,
+   "paragraph": "4.0",
+   "section": "lawfulness",
+   "title": "Regional diversity requirement in staffing not met",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-11",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 532,
+   "paragraph": "5.0",
+   "section": "lawfulness",
+   "title": "37 employees with net pay below one-third of basic pay",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-12",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 532,
+   "paragraph": "6.0",
+   "section": "lawfulness",
+   "title": "Compensation of employees at 38% of revenue",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 2326451400,
+     "unit": "KSh",
+     "label": "compensation of employees"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2019-20-13",
+   "entity": "county_executive",
+   "fy": "2019/20",
+   "doc_id": "audit-2019-20",
+   "page": 533,
+   "paragraph": "7.1",
+   "section": "lawfulness",
+   "title": "Tractors bought in 2014 lying idle (14 of 22)",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 15383574,
+     "unit": "KSh",
+     "label": "cost of tractors"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-01",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 34,
+   "paragraph": "1",
+   "section": "financial_statements",
+   "title": "Bank reconciliations differ from bank certificates",
+   "category": "cash_and_bank",
+   "amounts": [
+    {
+     "value": 955384150,
+     "unit": "KSh",
+     "label": "cash and cash equivalents not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-02",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 35,
+   "paragraph": "2",
+   "section": "financial_statements",
+   "title": "Prior-year error corrected without restating comparatives",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 2286976,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-03",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 35,
+   "paragraph": "3",
+   "section": "financial_statements",
+   "title": "Retention monies not backed by bank balance",
+   "category": "cash_and_bank",
+   "amounts": [
+    {
+     "value": 9939747,
+     "unit": "KSh",
+     "label": "unexplained shortfall"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-04",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 35,
+   "paragraph": "4",
+   "section": "financial_statements",
+   "title": "Transfers to the emergency fund and youth polytechnics not accounted for",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 538130277,
+     "unit": "KSh",
+     "label": "other grants and transfers not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-05",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 35,
+   "paragraph": "5",
+   "section": "financial_statements",
+   "title": "Intangible asset purchase not supported",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 4594990,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-06",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 36,
+   "paragraph": "6.1",
+   "section": "financial_statements",
+   "title": "Training payments without supporting documents",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 135349979,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-07",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 36,
+   "paragraph": "6.2",
+   "section": "financial_statements",
+   "title": "Hospitality payments without supporting documents",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 48180638,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-08",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 36,
+   "paragraph": "6.3",
+   "section": "financial_statements",
+   "title": "Office and general supplies payments without details of goods",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 46847895,
+     "unit": "KSh",
+     "label": "not supported"
+    },
+    {
+     "value": 230378512,
+     "unit": "KSh",
+     "label": "total of paragraphs 6.1 to 6.3 not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-09",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 36,
+   "paragraph": "1",
+   "section": "other_matter",
+   "title": "Revenue shortfall against budget; transfers with no budget provision",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 1424058911,
+     "unit": "KSh",
+     "label": "underfunding (17%)"
+    },
+    {
+     "value": 538130277,
+     "unit": "KSh",
+     "label": "spent without budget provision"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-10",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 37,
+   "paragraph": "2",
+   "section": "other_matter",
+   "title": "Late exchequer releases (33% in the fourth quarter)",
+   "category": "other",
+   "amounts": [
+    {
+     "value": 1940303250,
+     "unit": "KSh",
+     "label": "released in the fourth quarter"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-11",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 37,
+   "paragraph": "3",
+   "section": "other_matter",
+   "title": "Pending bills carried forward, some outstanding since 2014",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 601738508,
+     "unit": "KSh",
+     "label": "pending bills"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states some bills have been outstanding since 2014"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-12",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 38,
+   "paragraph": "1",
+   "section": "lawfulness",
+   "title": "Haudinga sheltered workshop incomplete a year after due date",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 5407305,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-13",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 38,
+   "paragraph": "2",
+   "section": "lawfulness",
+   "title": "Nyasanda sheltered workshop works not done",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 1500000,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-14",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 38,
+   "paragraph": "3",
+   "section": "lawfulness",
+   "title": "Nyamnina youth polytechnic incomplete",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 2908328,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-15",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 39,
+   "paragraph": "4.1",
+   "section": "lawfulness",
+   "title": "Odera Akang'o campus renovation incomplete",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 5067399,
+     "unit": "KSh",
+     "label": "paid in the year"
+    },
+    {
+     "value": 33955486,
+     "unit": "KSh",
+     "label": "certified to date"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-16",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 39,
+   "paragraph": "4.2",
+   "section": "lawfulness",
+   "title": "Generator delivered in 2018 not commissioned",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 1678003,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-17",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 39,
+   "paragraph": "5",
+   "section": "lawfulness",
+   "title": "Obaga West Asembo health centre laboratory variation not supported",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 1295372,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-18",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 40,
+   "paragraph": "6",
+   "section": "lawfulness",
+   "title": "Road maintenance paid with no evidence of works",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 10305315,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-19",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 40,
+   "paragraph": "7",
+   "section": "lawfulness",
+   "title": "Siaya slaughterhouse rehabilitation incomplete",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 3999999,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-20",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 40,
+   "paragraph": "8",
+   "section": "lawfulness",
+   "title": "Migwena sports stadium contract terminated; award for works paid",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 6966833,
+     "unit": "KSh",
+     "label": "paid under the award"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-21",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 41,
+   "paragraph": "9",
+   "section": "lawfulness",
+   "title": "Siaya County Stadium incomplete 23 months after completion date",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 80254180,
+     "unit": "KSh",
+     "label": "paid to main contractor in the year"
+    },
+    {
+     "value": 394661767,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "siaya-county-stadium",
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-22",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 41,
+   "paragraph": "10",
+   "section": "lawfulness",
+   "title": "X-ray machine at Madiany Sub-County Hospital not commissioned",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 2500000,
+     "unit": "KSh",
+     "label": "paid in the year"
+    },
+    {
+     "value": 4500000,
+     "unit": "KSh",
+     "label": "amount the report says may not give value for money"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": "The report gives a contract sum of KSh 4,150,000 and a paid amount of KSh 2,500,000 but concludes on KSh 4,500,000; all are as printed."
+  },
+  {
+   "id": "audit-2020-21-23",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 42,
+   "paragraph": "11",
+   "section": "lawfulness",
+   "title": "Vocational training centres understaffed",
+   "category": "other",
+   "amounts": [
+    {
+     "value": 24097920,
+     "unit": "KSh",
+     "label": "grants disbursed to 18 centres"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-24",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 42,
+   "paragraph": "12",
+   "section": "lawfulness",
+   "title": "Imprests not surrendered; second imprests issued",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 13923575,
+     "unit": "KSh",
+     "label": "still outstanding at audit"
+    },
+    {
+     "value": 9620975,
+     "unit": "KSh",
+     "label": "second imprests issued"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-25",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 42,
+   "paragraph": "13",
+   "section": "lawfulness",
+   "title": "159 employees with net pay below one-third of basic pay",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-26",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 42,
+   "paragraph": "14",
+   "section": "lawfulness",
+   "title": "78 employees past retirement age on the payroll",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-27",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 43,
+   "paragraph": "15",
+   "section": "lawfulness",
+   "title": "Payment to the Lake Region Economic Bloc without legal basis",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 2000000,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-28",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 43,
+   "paragraph": "1",
+   "section": "internal_controls",
+   "title": "No approved risk management policy; no IT security or recovery plans",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-29",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 44,
+   "paragraph": "2",
+   "section": "internal_controls",
+   "title": "Eight staff acting for more than six months",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-30",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 44,
+   "paragraph": "3",
+   "section": "internal_controls",
+   "title": "Valuation roll not started",
+   "category": "revenue",
+   "amounts": [
+    {
+     "value": 4018481,
+     "unit": "KSh",
+     "label": "estimated cost in procurement plan"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-31",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 44,
+   "paragraph": "4",
+   "section": "internal_controls",
+   "title": "No policy on recruitment of casual workers",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2020-21-32",
+   "entity": "county_executive",
+   "fy": "2020/21",
+   "doc_id": "audit-2020-21",
+   "page": 44,
+   "paragraph": "5",
+   "section": "internal_controls",
+   "title": "Payments to 20 employees outside the payroll system",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 5642979,
+     "unit": "KSh",
+     "label": "paid outside IPPD"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-01",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 45,
+   "paragraph": "1.1",
+   "section": "financial_statements",
+   "title": "Temporary staff wages rose without approval or needs assessment",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 23167050,
+     "unit": "KSh",
+     "label": "without needs assessment"
+    },
+    {
+     "value": 360506813,
+     "unit": "KSh",
+     "label": "temporary wages"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-02",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 45,
+   "paragraph": "1.2",
+   "section": "financial_statements",
+   "title": "Other personnel payments not supported",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 308302691,
+     "unit": "KSh",
+     "label": "not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-03",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 45,
+   "paragraph": "1.3",
+   "section": "financial_statements",
+   "title": "Basic salaries differ from the payroll system",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 24404826,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-04",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 46,
+   "paragraph": "2.1",
+   "section": "financial_statements",
+   "title": "Domestic travel paid to county accounts instead of payees",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 111976000,
+     "unit": "KSh",
+     "label": "paid to the County Government"
+    },
+    {
+     "value": 3200000,
+     "unit": "KSh",
+     "label": "paid to the Emergency Fund account"
+    },
+    {
+     "value": 4674800,
+     "unit": "KSh",
+     "label": "air travel not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-05",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 46,
+   "paragraph": "2.2",
+   "section": "financial_statements",
+   "title": "Foreign travel not supported",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 2605396,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-06",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 46,
+   "paragraph": "2.3",
+   "section": "financial_statements",
+   "title": "Training paid through imprest not supported",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 12341576,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-07",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 46,
+   "paragraph": "2.4",
+   "section": "financial_statements",
+   "title": "Hospitality paid through imprest not supported",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 53581947,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-08",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 46,
+   "paragraph": "2.5",
+   "section": "financial_statements",
+   "title": "Specialised materials: ledger variance and missing vouchers",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 6416438,
+     "unit": "KSh",
+     "label": "variance"
+    },
+    {
+     "value": 40144243,
+     "unit": "KSh",
+     "label": "vouchers not provided"
+    },
+    {
+     "value": 350000000,
+     "unit": "KSh",
+     "label": "imprest payments without documents"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-09",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 47,
+   "paragraph": "2.6",
+   "section": "financial_statements",
+   "title": "Operating expenses paid through imprest not supported",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 46500000,
+     "unit": "KSh",
+     "label": "paid through imprest"
+    },
+    {
+     "value": 18696392,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-10",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 47,
+   "paragraph": "2.7",
+   "section": "financial_statements",
+   "title": "Rent payments for office space queried",
+   "category": "other",
+   "amounts": [
+    {
+     "value": 7570564,
+     "unit": "KSh",
+     "label": "rentals of produced assets (total)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-11",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 47,
+   "paragraph": "2.8",
+   "section": "financial_statements",
+   "title": "Vehicle maintenance payments not supported",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 7646627,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-12",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 47,
+   "paragraph": "2.9",
+   "section": "financial_statements",
+   "title": "Legal fees without fee notes or competitive selection",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 9766800,
+     "unit": "KSh",
+     "label": "legal fees"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-13",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 48,
+   "paragraph": "3.1",
+   "section": "financial_statements",
+   "title": "Asset purchases without payment vouchers",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 72315850,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-14",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 48,
+   "paragraph": "3.2",
+   "section": "financial_statements",
+   "title": "Studies and land purchase amounts differ from IFMIS and sector records",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 23075750,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-15",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 48,
+   "paragraph": "4",
+   "section": "financial_statements",
+   "title": "Bank balances: stale cheques and bursary fund variance",
+   "category": "cash_and_bank",
+   "amounts": [
+    {
+     "value": 1294402,
+     "unit": "KSh",
+     "label": "unreconciled variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-16",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 48,
+   "paragraph": "5.1",
+   "section": "financial_statements",
+   "title": "Pending bills differ from supporting schedules",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 80047749,
+     "unit": "KSh",
+     "label": "variance"
+    },
+    {
+     "value": 818803232,
+     "unit": "KSh",
+     "label": "pending bills not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-17",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 49,
+   "paragraph": "5.2",
+   "section": "financial_statements",
+   "title": "Pending bills taskforce figure not supported",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 1036248598,
+     "unit": "KSh",
+     "label": "taskforce figure"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-18",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 49,
+   "paragraph": "1",
+   "section": "other_matter",
+   "title": "Underfunding and spending without budget provision",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 1085355017,
+     "unit": "KSh",
+     "label": "underfunding (12%)"
+    },
+    {
+     "value": 420084756,
+     "unit": "KSh",
+     "label": "without budget provision"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-19",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 49,
+   "paragraph": "2",
+   "section": "other_matter",
+   "title": "Prior-year matters unresolved",
+   "category": "other",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states issues from the previous year remain unresolved"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-20",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 50,
+   "paragraph": "1.1",
+   "section": "lawfulness",
+   "title": "Imprest transfers expensed on issue",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 1075025345,
+     "unit": "KSh",
+     "label": "transferred and expensed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-21",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 50,
+   "paragraph": "1.2",
+   "section": "lawfulness",
+   "title": "Imprests surrendered late or outstanding over a year",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 661840,
+     "unit": "KSh",
+     "label": "outstanding for more than a year"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states some imprests were outstanding for more than a year"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-22",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 50,
+   "paragraph": "2",
+   "section": "lawfulness",
+   "title": "14 employees past retirement age on the payroll",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-23",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 51,
+   "paragraph": "3",
+   "section": "lawfulness",
+   "title": "119 officers with net pay below one-third of basic pay",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 1508608,
+     "unit": "KSh",
+     "label": "net salaries"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-24",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 51,
+   "paragraph": "4",
+   "section": "lawfulness",
+   "title": "Recruitment without approved establishment or plan",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-25",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 51,
+   "paragraph": "5",
+   "section": "lawfulness",
+   "title": "ERP system still in development 14 months after contract",
+   "category": "ict",
+   "amounts": [
+    {
+     "value": 21600000,
+     "unit": "KSh",
+     "label": "paid"
+    },
+    {
+     "value": 72420000,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "erp-system",
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-26",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 51,
+   "paragraph": "6",
+   "section": "lawfulness",
+   "title": "Siaya County Stadium: six extensions, variation and expired performance bond",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 57999787,
+     "unit": "KSh",
+     "label": "paid in the year"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "siaya-county-stadium",
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-27",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 52,
+   "paragraph": "7",
+   "section": "lawfulness",
+   "title": "Construction contracts concentrated among few contractors",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 500892638,
+     "unit": "KSh",
+     "label": "paid to three contractors"
+    },
+    {
+     "value": 327000412,
+     "unit": "KSh",
+     "label": "roads sector, two contractors"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-28",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 52,
+   "paragraph": "8.1",
+   "section": "lawfulness",
+   "title": "Road contracts concentrated: 57% of spending to 11 contractors",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 605289909,
+     "unit": "KSh",
+     "label": "paid to 11 contractors"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-29",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 53,
+   "paragraph": "8.2",
+   "section": "lawfulness",
+   "title": "Kwaweya-Yenga-Nyalula-Udura-Kolum road: 3 km not graded or gravelled",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 7722584,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-30",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 53,
+   "paragraph": "8.3",
+   "section": "lawfulness",
+   "title": "Damaged culvert on Boro-Katondi road after repairs",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 14659268,
+     "unit": "KSh",
+     "label": "contract sum, three roads"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": "The paid amount is partly illegible in the text layer, so the contract sum is recorded."
+  },
+  {
+   "id": "audit-2021-22-31",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 53,
+   "paragraph": "8.4",
+   "section": "lawfulness",
+   "title": "Siaya Bus Park incomplete; extension not evaluated",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 23014867,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "siaya-bus-park",
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-32",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 54,
+   "paragraph": "9",
+   "section": "lawfulness",
+   "title": "Five ECD classrooms incomplete, including Kirindo Primary",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 19124181,
+     "unit": "KSh",
+     "label": "total contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "kirindo-ecd",
+   "note": "The paid amount is illegible in the text layer, so the contract sum is recorded."
+  },
+  {
+   "id": "audit-2021-22-33",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 54,
+   "paragraph": "10",
+   "section": "lawfulness",
+   "title": "Nine boreholes not equipped",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 29040488,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": "The paid amount is illegible in the text layer, so the contract sum is recorded."
+  },
+  {
+   "id": "audit-2021-22-34",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 54,
+   "paragraph": "11",
+   "section": "lawfulness",
+   "title": "Madiany ginnery power house not operational",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 10237191,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-35",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 54,
+   "paragraph": "12",
+   "section": "lawfulness",
+   "title": "Kagwa laboratory completed but not used",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 4326869,
+     "unit": "KSh",
+     "label": "cost"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-36",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 55,
+   "paragraph": "13",
+   "section": "lawfulness",
+   "title": "Transformer at Ambira Sub-County Hospital not installed; X-ray unused",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 2324054,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-37",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 55,
+   "paragraph": "14",
+   "section": "lawfulness",
+   "title": "Commitments made after 31 May included in pending bills",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 77122956,
+     "unit": "KSh",
+     "label": "late commitments"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-38",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 55,
+   "paragraph": "15",
+   "section": "lawfulness",
+   "title": "Purchases made outside the e-procurement system",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 6276158,
+     "unit": "KSh",
+     "label": "spent"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-39",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 56,
+   "paragraph": "1",
+   "section": "internal_controls",
+   "title": "Businesses not mapped for permit monitoring",
+   "category": "revenue",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-40",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 56,
+   "paragraph": "2",
+   "section": "internal_controls",
+   "title": "Own-source revenue collection not automated",
+   "category": "revenue",
+   "amounts": [
+    {
+     "value": 446379627,
+     "unit": "KSh",
+     "label": "own-source revenue"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-41",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 56,
+   "paragraph": "3",
+   "section": "internal_controls",
+   "title": "No casual recruitment policy; 5,679 casual workers",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-42",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 56,
+   "paragraph": "4",
+   "section": "internal_controls",
+   "title": "23 disciplinary cases not determined, some since 2014",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states some cases date back to 2014"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-43",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 56,
+   "paragraph": "5",
+   "section": "internal_controls",
+   "title": "Emergency non-pharmaceutical supplies without tender opening or store records",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 26290000,
+     "unit": "KSh",
+     "label": "supplies"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-44",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 57,
+   "paragraph": "6",
+   "section": "internal_controls",
+   "title": "Non-current assets not insured",
+   "category": "assets",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2021-22-45",
+   "entity": "county_executive",
+   "fy": "2021/22",
+   "doc_id": "audit-2021-22",
+   "page": 57,
+   "paragraph": "7",
+   "section": "internal_controls",
+   "title": "No risk management policy",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-01",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 40,
+   "paragraph": "1",
+   "section": "financial_statements",
+   "title": "Salary arrears paid more than once to 562 employees without justification",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 77924317,
+     "unit": "KSh",
+     "label": "arrears"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-02",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 40,
+   "paragraph": "2.1",
+   "section": "financial_statements",
+   "title": "Domestic travel differs from the ledger",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 10566926,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-03",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 41,
+   "paragraph": "2.2",
+   "section": "financial_statements",
+   "title": "Training vote paid Assembly members' hotel budget-review meeting",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 7903000,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-04",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 42,
+   "paragraph": "2.3",
+   "section": "financial_statements",
+   "title": "Insurance paid above the contracted premium",
+   "category": "other",
+   "amounts": [
+    {
+     "value": 22389287,
+     "unit": "KSh",
+     "label": "paid above premium"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-05",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 42,
+   "paragraph": "2.4",
+   "section": "financial_statements",
+   "title": "Specialised materials differ from supporting documents",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 6047739,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-06",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 42,
+   "paragraph": "2.5",
+   "section": "financial_statements",
+   "title": "Other operating expenses differ from records",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 609420,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-07",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 43,
+   "paragraph": "2.6",
+   "section": "financial_statements",
+   "title": "1,103 IFMIS transactions voided without Controller of Budget approval",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 874756305,
+     "unit": "KSh",
+     "label": "voided"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-08",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 43,
+   "paragraph": "3",
+   "section": "financial_statements",
+   "title": "Emergency fund transfers differ across records",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 70000000,
+     "unit": "KSh",
+     "label": "per Note 7"
+    },
+    {
+     "value": 22328126,
+     "unit": "KSh",
+     "label": "per records"
+    },
+    {
+     "value": 73200000,
+     "unit": "KSh",
+     "label": "per Emergency Fund records"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-09",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 43,
+   "paragraph": "4",
+   "section": "financial_statements",
+   "title": "Asset acquisition differs from the ledger",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 5600224,
+     "unit": "KSh",
+     "label": "variance, civil works"
+    },
+    {
+     "value": 760261,
+     "unit": "KSh",
+     "label": "variance, other"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-10",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 44,
+   "paragraph": "5",
+   "section": "financial_statements",
+   "title": "Retention and deposits block figure unsupported",
+   "category": "cash_and_bank",
+   "amounts": [
+    {
+     "value": 1097272,
+     "unit": "KSh",
+     "label": "unsupported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states the same balance appeared in the prior year"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-11",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 44,
+   "paragraph": "1",
+   "section": "emphasis_of_matter",
+   "title": "Pending bills differ from schedules; part overdue beyond 60 days",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 741559698,
+     "unit": "KSh",
+     "label": "pending bills"
+    },
+    {
+     "value": 24551196,
+     "unit": "KSh",
+     "label": "variance"
+    },
+    {
+     "value": 421007070,
+     "unit": "KSh",
+     "label": "overdue more than 60 days"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-12",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 45,
+   "paragraph": "2",
+   "section": "emphasis_of_matter",
+   "title": "Pending staff payables opening balance differs from the prior audit",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 126257213,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-13",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 45,
+   "paragraph": "3",
+   "section": "emphasis_of_matter",
+   "title": "Underfunding of 12% of the budget",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 894682192,
+     "unit": "KSh",
+     "label": "underfunding"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-14",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 45,
+   "paragraph": "1",
+   "section": "other_matter",
+   "title": "Prior-year matters unresolved",
+   "category": "other",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states issues from the previous year remain unresolved"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-15",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 46,
+   "paragraph": "1",
+   "section": "lawfulness",
+   "title": "Wage bill at 42% of revenue, above the 35% ceiling",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 2666925706,
+     "unit": "KSh",
+     "label": "compensation of employees"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-16",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 46,
+   "paragraph": "2.1",
+   "section": "lawfulness",
+   "title": "Kirindo Primary ECD block stalled",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 2570332,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "kirindo-ecd",
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-17",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 46,
+   "paragraph": "2.2",
+   "section": "lawfulness",
+   "title": "Siaya Bus Park contract terminated at the contractor's request",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 17582978,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "siaya-bus-park",
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-18",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 47,
+   "paragraph": "2.3.1",
+   "section": "lawfulness",
+   "title": "Ukwala modern market incomplete; contractor left site",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 4252545,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-19",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 47,
+   "paragraph": "2.3.2",
+   "section": "lawfulness",
+   "title": "Nyadorera modern market incomplete",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 8532406,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-20",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 47,
+   "paragraph": "2.3.3",
+   "section": "lawfulness",
+   "title": "Akala and Ramba market fencing and gravelling queried",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 7715774,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-21",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 48,
+   "paragraph": "3",
+   "section": "lawfulness",
+   "title": "Aila borehole contract relocated; no drilling at the site",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 4479975,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-22",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 48,
+   "paragraph": "4",
+   "section": "lawfulness",
+   "title": "Siaya County Stadium cost revised up 24% without evaluation",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 94055056,
+     "unit": "KSh",
+     "label": "variation"
+    },
+    {
+     "value": 394661767,
+     "unit": "KSh",
+     "label": "original contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "siaya-county-stadium",
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-23",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 49,
+   "paragraph": "5",
+   "section": "lawfulness",
+   "title": "ERP system paid in part but not complete",
+   "category": "ict",
+   "amounts": [
+    {
+     "value": 28000000,
+     "unit": "KSh",
+     "label": "paid"
+    },
+    {
+     "value": 72420000,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "erp-system",
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-24",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 49,
+   "paragraph": "6",
+   "section": "lawfulness",
+   "title": "Land bought for a research centre not fenced or beaconed",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 32900005,
+     "unit": "KSh",
+     "label": "cost"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-25",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 49,
+   "paragraph": "7",
+   "section": "lawfulness",
+   "title": "28 employees re-designated outside job-group rules",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-26",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 49,
+   "paragraph": "8",
+   "section": "lawfulness",
+   "title": "Tax arrears to KRA outstanding over two years",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 142262146,
+     "unit": "KSh",
+     "label": "owed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states the obligation had been outstanding for over two years"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-27",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 50,
+   "paragraph": "9",
+   "section": "lawfulness",
+   "title": "118 employees paid without observing the one-third rule",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-28",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 50,
+   "paragraph": "10",
+   "section": "lawfulness",
+   "title": "87% of staff from one community, above the one-third limit",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-29",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 51,
+   "paragraph": "1",
+   "section": "internal_controls",
+   "title": "Farm inputs distributed without store records",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 113402681,
+     "unit": "KSh",
+     "label": "cost of inputs"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-30",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 51,
+   "paragraph": "2",
+   "section": "internal_controls",
+   "title": "ICT asset register incomplete",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 9280798,
+     "unit": "KSh",
+     "label": "items bought in the year"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-31",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 51,
+   "paragraph": "3",
+   "section": "internal_controls",
+   "title": "Imprests outstanding over 300 days; imprests issued on the last day of the year",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 47838660,
+     "unit": "KSh",
+     "label": "outstanding over 300 days"
+    },
+    {
+     "value": 9218750,
+     "unit": "KSh",
+     "label": "issued on 30 June 2023"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-32",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 52,
+   "paragraph": "4",
+   "section": "internal_controls",
+   "title": "No audit committee",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2022-23-33",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-2022-23",
+   "page": 52,
+   "paragraph": "5",
+   "section": "internal_controls",
+   "title": "Court awards unpaid",
+   "category": "other",
+   "amounts": [
+    {
+     "value": 32219224,
+     "unit": "KSh",
+     "label": "unpaid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-01",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 45,
+   "paragraph": "1",
+   "section": "financial_statements",
+   "title": "Salaries paid outside the payroll system to 240 staff",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 14509755,
+     "unit": "KSh",
+     "label": "paid outside IPPD"
+    },
+    {
+     "value": 2872515819,
+     "unit": "KSh",
+     "label": "compensation of employees"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-02",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 46,
+   "paragraph": "2.1.1",
+   "section": "financial_statements",
+   "title": "19 staff each paid over KSh 2m in travel allowances",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 51744232,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": "Leading digit read as 5 from \"S1,744,232\" in the text layer."
+  },
+  {
+   "id": "audit-2023-24-03",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 46,
+   "paragraph": "2.1.2",
+   "section": "financial_statements",
+   "title": "Transport companies hired without clear selection",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 70751623,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-04",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 46,
+   "paragraph": "2.1.3",
+   "section": "financial_statements",
+   "title": "Travel allowance paid to the county government account",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 3360000,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-05",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 46,
+   "paragraph": "2.1.4",
+   "section": "financial_statements",
+   "title": "Executive paid Assembly members' sitting allowances",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 2903600,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-06",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 47,
+   "paragraph": "2.2",
+   "section": "financial_statements",
+   "title": "Training without needs assessments",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 14596631,
+     "unit": "KSh",
+     "label": "training expenses"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-07",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 47,
+   "paragraph": "2.3",
+   "section": "financial_statements",
+   "title": "Legal fees and an out-of-court settlement not supported",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 34662766,
+     "unit": "KSh",
+     "label": "legal fees"
+    },
+    {
+     "value": 26000000,
+     "unit": "KSh",
+     "label": "settlement"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-08",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 48,
+   "paragraph": "3.1",
+   "section": "financial_statements",
+   "title": "Transfers differ from IFMIS records",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 108017085,
+     "unit": "KSh",
+     "label": "largest difference (aggregation and industrial park)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-09",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 48,
+   "paragraph": "3.2",
+   "section": "financial_statements",
+   "title": "Payments to companies recorded as transfers",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 178246942,
+     "unit": "KSh",
+     "label": "paid to third parties"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-10",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 48,
+   "paragraph": "4.0",
+   "section": "financial_statements",
+   "title": "Bank reconciliations include July 2024 receipts",
+   "category": "cash_and_bank",
+   "amounts": [
+    {
+     "value": 392025630,
+     "unit": "KSh",
+     "label": "recurrent account"
+    },
+    {
+     "value": 230096435,
+     "unit": "KSh",
+     "label": "development account"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-11",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 49,
+   "paragraph": "5.0",
+   "section": "financial_statements",
+   "title": "Land parcels bought without supporting documents",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 32970000,
+     "unit": "KSh",
+     "label": "nine parcels"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-12",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 49,
+   "paragraph": "6.0",
+   "section": "financial_statements",
+   "title": "Exchequer receipts of 2 to 5 July 2024 counted in the year",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 710018028,
+     "unit": "KSh",
+     "label": "outside cut-off"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-13",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 49,
+   "paragraph": "7.0",
+   "section": "financial_statements",
+   "title": "1,500 IFMIS transactions voided without explanation",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 560626783,
+     "unit": "KSh",
+     "label": "voided"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-14",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 50,
+   "paragraph": "1",
+   "section": "emphasis_of_matter",
+   "title": "Underfunding of 18% of the budget",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 1526848377,
+     "unit": "KSh",
+     "label": "underfunding"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-15",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 50,
+   "paragraph": "2",
+   "section": "emphasis_of_matter",
+   "title": "Pending bills unsettled beyond 60 days",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 1186014495,
+     "unit": "KSh",
+     "label": "pending bills (over)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-16",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 50,
+   "paragraph": "1",
+   "section": "other_matter",
+   "title": "Prior-year matters unresolved",
+   "category": "other",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states issues from the previous year remain unresolved"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-17",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 51,
+   "paragraph": "1",
+   "section": "lawfulness",
+   "title": "Rent for official residences; residences not built",
+   "category": "other",
+   "amounts": [
+    {
+     "value": 3600000,
+     "unit": "KSh",
+     "label": "rent"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-18",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 51,
+   "paragraph": "2",
+   "section": "lawfulness",
+   "title": "Staff medical insurance premium paid at 52%",
+   "category": "other",
+   "amounts": [
+    {
+     "value": 105040484,
+     "unit": "KSh",
+     "label": "paid"
+    },
+    {
+     "value": 201970162,
+     "unit": "KSh",
+     "label": "contract premium"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-19",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 52,
+   "paragraph": "3",
+   "section": "lawfulness",
+   "title": "245 employees with net pay below one-third of basic pay",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-20",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 52,
+   "paragraph": "4",
+   "section": "lawfulness",
+   "title": "89% of permanent staff from one community",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-21",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 52,
+   "paragraph": "5",
+   "section": "lawfulness",
+   "title": "Imprests not surrendered; nine staff given second imprests",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 5307721,
+     "unit": "KSh",
+     "label": "issued in the year, not surrendered"
+    },
+    {
+     "value": 520050,
+     "unit": "KSh",
+     "label": "from 2022/23"
+    },
+    {
+     "value": 1297900,
+     "unit": "KSh",
+     "label": "second imprests"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states KSh 520,050 relates to FY 2022/23"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-22",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 52,
+   "paragraph": "6",
+   "section": "lawfulness",
+   "title": "22 of 23 oversight committee recommendations not implemented",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Recommendations were on the FY 2021/22 audit report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-23",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 53,
+   "paragraph": "7",
+   "section": "lawfulness",
+   "title": "County buildings not insured",
+   "category": "assets",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-24",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 53,
+   "paragraph": "8",
+   "section": "lawfulness",
+   "title": "Payments to the Council of Governors and the Lake Region Economic Bloc",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 3000000,
+     "unit": "KSh",
+     "label": "Council of Governors"
+    },
+    {
+     "value": 1500000,
+     "unit": "KSh",
+     "label": "Lake Region Economic Bloc"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-25",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 53,
+   "paragraph": "9.1",
+   "section": "lawfulness",
+   "title": "Stadium power connection paid but not installed",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 1336721,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-26",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 54,
+   "paragraph": "9.2",
+   "section": "lawfulness",
+   "title": "Stadium seats: advance paid without inspection; fewer seats installed",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 5020222,
+     "unit": "KSh",
+     "label": "advance"
+    },
+    {
+     "value": 25101114,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-27",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 54,
+   "paragraph": "9.3",
+   "section": "lawfulness",
+   "title": "Migwena perimeter wall delayed",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 33841097,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-28",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 55,
+   "paragraph": "9.4",
+   "section": "lawfulness",
+   "title": "Migwena washroom and electrification works delayed",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 4350440,
+     "unit": "KSh",
+     "label": "paid"
+    },
+    {
+     "value": 18630456,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-29",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 55,
+   "paragraph": "9.5",
+   "section": "lawfulness",
+   "title": "Siaya County Stadium: 24% cost increase and nine extensions",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 94055056,
+     "unit": "KSh",
+     "label": "variation"
+    },
+    {
+     "value": 488716823,
+     "unit": "KSh",
+     "label": "revised contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": "siaya-county-stadium",
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-30",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 55,
+   "paragraph": "9.6",
+   "section": "lawfulness",
+   "title": "Aggregation and industrial park works behind schedule",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 483688922.23,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": "aggregation-park",
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-31",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 56,
+   "paragraph": "9.7",
+   "section": "lawfulness",
+   "title": "Yala cattle ring incomplete",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 4500962.55,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-32",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 56,
+   "paragraph": "9.8",
+   "section": "lawfulness",
+   "title": "Akala health centre toilets and bathrooms incomplete",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 3215578.8,
+     "unit": "KSh",
+     "label": "contract sum"
+    },
+    {
+     "value": 1000000,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-33",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 57,
+   "paragraph": "9.9",
+   "section": "lawfulness",
+   "title": "X-ray machine at Got Agulu Hospital idle for lack of a radiographer",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 14760000,
+     "unit": "KSh",
+     "label": "spent"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2023-24-34",
+   "entity": "county_executive",
+   "fy": "2023/24",
+   "doc_id": "audit-2023-24",
+   "page": 57,
+   "paragraph": "1",
+   "section": "internal_controls",
+   "title": "No risk assessment report",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-01",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 48,
+   "paragraph": "1",
+   "section": "financial_statements",
+   "title": "Employee costs differ from payroll summaries",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 420325972,
+     "unit": "KSh",
+     "label": "unreconciled variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-02",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 48,
+   "paragraph": "2",
+   "section": "financial_statements",
+   "title": "Salary arrears not reconciled",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 99694941,
+     "unit": "KSh",
+     "label": "arrears paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-03",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 49,
+   "paragraph": "3",
+   "section": "financial_statements",
+   "title": "Payment to an insurance broker not supported",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 30000000,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-04",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 49,
+   "paragraph": "4",
+   "section": "financial_statements",
+   "title": "Executive paid Assembly members' meeting allowances",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 1713600,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-05",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 49,
+   "paragraph": "5",
+   "section": "financial_statements",
+   "title": "Security and cleaning payables not supported",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 14925862,
+     "unit": "KSh",
+     "label": "unsupported"
+    },
+    {
+     "value": 1889967165.44,
+     "unit": "KSh",
+     "label": "trade and other payables"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-06",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 49,
+   "paragraph": "6",
+   "section": "financial_statements",
+   "title": "Transitional IPSAS reporting template not followed",
+   "category": "financial_reporting",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-07",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 50,
+   "paragraph": "7",
+   "section": "financial_statements",
+   "title": "Transfers from the County Revenue Fund differ",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 24377123.11,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-08",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 50,
+   "paragraph": "1",
+   "section": "emphasis_of_matter",
+   "title": "Underfunding of 22% of the budget",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 2143204703,
+     "unit": "KSh",
+     "label": "underfunding"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-09",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 50,
+   "paragraph": "2",
+   "section": "emphasis_of_matter",
+   "title": "Payables brought forward, some ten years old",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 184615904,
+     "unit": "KSh",
+     "label": "brought forward"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states some payables date back ten years"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-10",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 51,
+   "paragraph": "1",
+   "section": "other_matter",
+   "title": "Climate change fund grant not received",
+   "category": "other",
+   "amounts": [
+    {
+     "value": 137000000,
+     "unit": "KSh",
+     "label": "budget estimate"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-11",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 51,
+   "paragraph": "2",
+   "section": "other_matter",
+   "title": "30 prior-year matters unresolved (Appendix 1)",
+   "category": "other",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report lists 30 FY 2023/24 matters as unresolved (PDF p. 63-65)"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-12",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 52,
+   "paragraph": "1",
+   "section": "lawfulness",
+   "title": "Climate change regulations not operationalised",
+   "category": "other",
+   "amounts": [
+    {
+     "value": 132573505,
+     "unit": "KSh",
+     "label": "Climate Change Fund"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-13",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 52,
+   "paragraph": "2",
+   "section": "lawfulness",
+   "title": "Persons with disabilities 0.56% of staff",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-14",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 53,
+   "paragraph": "3",
+   "section": "lawfulness",
+   "title": "Offices lack disability access",
+   "category": "assets",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-15",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 53,
+   "paragraph": "4",
+   "section": "lawfulness",
+   "title": "Staffing does not meet the National Cohesion and Integration Act",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-16",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 53,
+   "paragraph": "5",
+   "section": "lawfulness",
+   "title": "30% procurement reservation not met",
+   "category": "procurement",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-17",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 53,
+   "paragraph": "6",
+   "section": "lawfulness",
+   "title": "No value-for-money assessment of a framework contract",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 20536439,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-18",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 54,
+   "paragraph": "7",
+   "section": "lawfulness",
+   "title": "Aggregation and industrial park construction",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 483688922,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "aggregation-park",
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-19",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 54,
+   "paragraph": "8",
+   "section": "lawfulness",
+   "title": "Maranyona ECD block incomplete",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 4134669,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-20",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 55,
+   "paragraph": "9",
+   "section": "lawfulness",
+   "title": "ECD tender variation not evaluated (Nyandheho)",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 265542,
+     "unit": "KSh",
+     "label": "variation"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-21",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 55,
+   "paragraph": "10",
+   "section": "lawfulness",
+   "title": "Nyabera ECD block stalled",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 4307957,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-22",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 55,
+   "paragraph": "11",
+   "section": "lawfulness",
+   "title": "Theatre equipment at Siaya hospital not installed",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 22974650,
+     "unit": "KSh",
+     "label": "cost"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-23",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 56,
+   "paragraph": "12",
+   "section": "lawfulness",
+   "title": "Completed facilities idle (including Malunga maternity block)",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 4400000,
+     "unit": "KSh",
+     "label": "Malunga contract"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-24",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 56,
+   "paragraph": "13",
+   "section": "lawfulness",
+   "title": "House allowances paid above grade entitlement",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 22331251,
+     "unit": "KSh",
+     "label": "overpaid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-25",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 57,
+   "paragraph": "14",
+   "section": "lawfulness",
+   "title": "Staff above the approved establishment in Job Groups A and B",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-26",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 57,
+   "paragraph": "15",
+   "section": "lawfulness",
+   "title": "No human resource plans or policies",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-27",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 57,
+   "paragraph": "16",
+   "section": "lawfulness",
+   "title": "449 employees without personal numbers",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-28",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 58,
+   "paragraph": "17",
+   "section": "lawfulness",
+   "title": "608 appointments without recruitment records",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-29",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 58,
+   "paragraph": "18",
+   "section": "lawfulness",
+   "title": "Appointment and posting letters not provided",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-30",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 58,
+   "paragraph": "19",
+   "section": "lawfulness",
+   "title": "Modern ECDE centre in Bondo: advance payment queried",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 10931825,
+     "unit": "KSh",
+     "label": "advance (20%)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-31",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 59,
+   "paragraph": "20",
+   "section": "lawfulness",
+   "title": "Bondo mortuary cold room delayed",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 54685880,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-32",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 59,
+   "paragraph": "21",
+   "section": "lawfulness",
+   "title": "Imprests not surrendered",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 4551674,
+     "unit": "KSh",
+     "label": "outstanding"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-33",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 59,
+   "paragraph": "22",
+   "section": "lawfulness",
+   "title": "Wage bill at 43% of receipts",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 2975810506.58,
+     "unit": "KSh",
+     "label": "employee costs"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-34",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 60,
+   "paragraph": "23",
+   "section": "lawfulness",
+   "title": "Liabilities at 27% of revenue, above the 20% limit",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 1891436239.44,
+     "unit": "KSh",
+     "label": "total liabilities"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-35",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 60,
+   "paragraph": "1",
+   "section": "internal_controls",
+   "title": "2,323 IFMIS transactions voided",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 4081328220,
+     "unit": "KSh",
+     "label": "voided"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-36",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 60,
+   "paragraph": "2",
+   "section": "internal_controls",
+   "title": "Weaknesses in the legal department",
+   "category": "governance",
+   "amounts": [
+    {
+     "value": 25505473,
+     "unit": "KSh",
+     "label": "legal fees"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-37",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 61,
+   "paragraph": "3",
+   "section": "internal_controls",
+   "title": "Internal audit understaffed",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-38",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 61,
+   "paragraph": "4",
+   "section": "internal_controls",
+   "title": "No IT strategic plan or steering committee",
+   "category": "ict",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-2024-25-39",
+   "entity": "county_executive",
+   "fy": "2024/25",
+   "doc_id": "audit-2024-25",
+   "page": 62,
+   "paragraph": "5",
+   "section": "internal_controls",
+   "title": "Staff member paid as both casual and permanent",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2020-21-01",
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "doc_id": "audit-asm-2020-21",
+   "page": 29,
+   "paragraph": "1.1",
+   "section": "financial_statements",
+   "title": "Cash-flow adjustments not supported",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 14809796,
+     "unit": "KSh",
+     "label": "adjustments"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2020-21-02",
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "doc_id": "audit-asm-2020-21",
+   "page": 29,
+   "paragraph": "1.2",
+   "section": "financial_statements",
+   "title": "Opening balances differ from prior audited balances",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 83496,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2020-21-03",
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "doc_id": "audit-asm-2020-21",
+   "page": 30,
+   "paragraph": "2.0",
+   "section": "financial_statements",
+   "title": "Committee meetings held outside the county",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 5811600,
+     "unit": "KSh",
+     "label": "hotel and subsistence"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2020-21-04",
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "doc_id": "audit-asm-2020-21",
+   "page": 30,
+   "paragraph": "1.0",
+   "section": "other_matter",
+   "title": "Underfunding of 32% of the budget",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 249727050,
+     "unit": "KSh",
+     "label": "underfunding"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2020-21-05",
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "doc_id": "audit-asm-2020-21",
+   "page": 31,
+   "paragraph": "1",
+   "section": "lawfulness",
+   "title": "Second imprests issued before earlier ones were accounted for",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 98517964,
+     "unit": "KSh",
+     "label": "multiple imprests"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2020-21-06",
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "doc_id": "audit-asm-2020-21",
+   "page": 31,
+   "paragraph": "2",
+   "section": "lawfulness",
+   "title": "88% of staff from one community",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2020-21-07",
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "doc_id": "audit-asm-2020-21",
+   "page": 31,
+   "paragraph": "3",
+   "section": "lawfulness",
+   "title": "Penalties for late tax remittance; pension fund interest claim",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 249866,
+     "unit": "KSh",
+     "label": "interest and penalties"
+    },
+    {
+     "value": 3242630,
+     "unit": "KSh",
+     "label": "interest claimed by LAPFUND"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states the pension interest accrued over several years"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2020-21-08",
+   "entity": "county_assembly",
+   "fy": "2020/21",
+   "doc_id": "audit-asm-2020-21",
+   "page": 31,
+   "paragraph": "4",
+   "section": "lawfulness",
+   "title": "Payment to the County Assemblies Forum",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 5000000,
+     "unit": "KSh",
+     "label": "paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-01",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 52,
+   "paragraph": "1",
+   "section": "financial_statements",
+   "title": "Ward office operations charged to compensation of employees",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 6318000,
+     "unit": "KSh",
+     "label": "misclassified"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "assembly-ward-office-misposting",
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-02",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 52,
+   "paragraph": "2",
+   "section": "financial_statements",
+   "title": "Subsistence allowance not supported",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 770500,
+     "unit": "KSh",
+     "label": "not supported"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-03",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 53,
+   "paragraph": "3",
+   "section": "financial_statements",
+   "title": "Training accommodation allowances without evidence of training",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 60209610,
+     "unit": "KSh",
+     "label": "accommodation allowances"
+    },
+    {
+     "value": 66525460,
+     "unit": "KSh",
+     "label": "training not confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-04",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 53,
+   "paragraph": "4",
+   "section": "financial_statements",
+   "title": "Fixed assets register incomplete; additions not tagged",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 879710278,
+     "unit": "KSh",
+     "label": "fixed assets"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-05",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 53,
+   "paragraph": "1",
+   "section": "emphasis_of_matter",
+   "title": "Underfunding of 21% of the budget",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 278415976,
+     "unit": "KSh",
+     "label": "underfunding"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-06",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 54,
+   "paragraph": "1",
+   "section": "lawfulness",
+   "title": "Ward boreholes and water kiosks contract incomplete",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 64836353,
+     "unit": "KSh",
+     "label": "paid"
+    },
+    {
+     "value": 117133552,
+     "unit": "KSh",
+     "label": "contract sum"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-07",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 54,
+   "paragraph": "2",
+   "section": "lawfulness",
+   "title": "87% of staff from one community",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-08",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 54,
+   "paragraph": "3",
+   "section": "lawfulness",
+   "title": "County Assembly Fund not established",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "assembly-fund",
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-09",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 55,
+   "paragraph": "4",
+   "section": "lawfulness",
+   "title": "Late remittance of statutory deductions",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-10",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 55,
+   "paragraph": "5",
+   "section": "lawfulness",
+   "title": "Eight employees with net pay below one-third of basic pay",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-11",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 55,
+   "paragraph": "6",
+   "section": "lawfulness",
+   "title": "No data backup system",
+   "category": "ict",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2022-23-12",
+   "entity": "county_assembly",
+   "fy": "2022/23",
+   "doc_id": "audit-asm-2022-23",
+   "page": 56,
+   "paragraph": "1",
+   "section": "internal_controls",
+   "title": "Ward office salaries paid outside the payroll system",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 16274350,
+     "unit": "KSh",
+     "label": "paid manually"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-01",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 54,
+   "paragraph": "1",
+   "section": "financial_statements",
+   "title": "Ward office operations charged to compensation of employees",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 6528600,
+     "unit": "KSh",
+     "label": "misclassified"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": "assembly-ward-office-misposting",
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-02",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 54,
+   "paragraph": "2",
+   "section": "financial_statements",
+   "title": "Legal services without procurement records",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 9270180,
+     "unit": "KSh",
+     "label": "legal fees"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-03",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 55,
+   "paragraph": "1",
+   "section": "emphasis_of_matter",
+   "title": "Underfunding of 12% of the budget",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 140106553,
+     "unit": "KSh",
+     "label": "underfunding"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-04",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 55,
+   "paragraph": "1",
+   "section": "other_matter",
+   "title": "Prior-year matters unresolved",
+   "category": "other",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report states issues from the previous year remain unresolved"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-05",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 56,
+   "paragraph": "1.1",
+   "section": "lawfulness",
+   "title": "Fuel framework contract with four suppliers instead of seven",
+   "category": "procurement",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-06",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 56,
+   "paragraph": "1.2",
+   "section": "lawfulness",
+   "title": "Ward meeting halls, boreholes and water kiosks stalled",
+   "category": "projects",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-07",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 57,
+   "paragraph": "2.1",
+   "section": "lawfulness",
+   "title": "94% of staff from one community",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-08",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 57,
+   "paragraph": "2.2",
+   "section": "lawfulness",
+   "title": "Officers with net pay below one-third of basic pay",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-09",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 57,
+   "paragraph": "2.3",
+   "section": "lawfulness",
+   "title": "Officer acting for more than six months",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-10",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 57,
+   "paragraph": "3.0",
+   "section": "lawfulness",
+   "title": "Pending bills outstanding beyond 60 days",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 15205456,
+     "unit": "KSh",
+     "label": "pending bills"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-11",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 57,
+   "paragraph": "4.0",
+   "section": "lawfulness",
+   "title": "County Assembly Fund not established",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": "assembly-fund",
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-12",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 58,
+   "paragraph": "5.0",
+   "section": "lawfulness",
+   "title": "Late remittance of statutory deductions",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 4736772,
+     "unit": "KSh",
+     "label": "PAYE"
+    },
+    {
+     "value": 79720,
+     "unit": "KSh",
+     "label": "NSSF"
+    },
+    {
+     "value": 284350,
+     "unit": "KSh",
+     "label": "NHIF"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-13",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 58,
+   "paragraph": "6.0",
+   "section": "lawfulness",
+   "title": "ICT steering committee met twice; projects without its recommendation",
+   "category": "ict",
+   "amounts": [
+    {
+     "value": 130649517,
+     "unit": "KSh",
+     "label": "ICT projects"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2023-24-14",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-asm-2023-24",
+   "page": 59,
+   "paragraph": "1",
+   "section": "internal_controls",
+   "title": "Internal audit issued one report in the year",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": true,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-01",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 54,
+   "paragraph": "1",
+   "section": "financial_statements",
+   "title": "Ward office operations charged to compensation of employees",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 8845200,
+     "unit": "KSh",
+     "label": "misclassified"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": "assembly-ward-office-misposting",
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-02",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 54,
+   "paragraph": "2",
+   "section": "financial_statements",
+   "title": "Property and equipment not depreciated; ward hall land without ownership documents",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 144656958,
+     "unit": "KSh",
+     "label": "property, plant and equipment"
+    },
+    {
+     "value": 7197092,
+     "unit": "KSh",
+     "label": "East Yimbo ward hall"
+    },
+    {
+     "value": 7589949,
+     "unit": "KSh",
+     "label": "South Uyoma ward hall"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-03",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 54,
+   "paragraph": "3",
+   "section": "financial_statements",
+   "title": "Transitional IPSAS reporting template not followed",
+   "category": "financial_reporting",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-04",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 55,
+   "paragraph": "4",
+   "section": "financial_statements",
+   "title": "Transfers from the County Revenue Fund differ",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 23734012.24,
+     "unit": "KSh",
+     "label": "variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-05",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 55,
+   "paragraph": "1",
+   "section": "emphasis_of_matter",
+   "title": "Underfunding of 10% of the budget",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 99668295,
+     "unit": "KSh",
+     "label": "underfunding"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-06",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 55,
+   "paragraph": "1",
+   "section": "other_matter",
+   "title": "13 prior-year matters unresolved",
+   "category": "other",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Report lists 13 FY 2023/24 matters as unresolved (PDF p. 56)"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-07",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 57,
+   "paragraph": "1",
+   "section": "lawfulness",
+   "title": "93.3% of staff from one community",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-08",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 57,
+   "paragraph": "2",
+   "section": "lawfulness",
+   "title": "Officers with net pay below one-third of basic pay",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-09",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 57,
+   "paragraph": "3",
+   "section": "lawfulness",
+   "title": "Persons with disabilities 1.49% of staff",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-10",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 57,
+   "paragraph": "4",
+   "section": "lawfulness",
+   "title": "Training needs assessment not done every two years",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-11",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 57,
+   "paragraph": "5",
+   "section": "lawfulness",
+   "title": "Procurement capacity building levy not deducted",
+   "category": "procurement",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-12",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 58,
+   "paragraph": "6",
+   "section": "lawfulness",
+   "title": "Stores not kept or reported as required",
+   "category": "assets",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  },
+  {
+   "id": "audit-asm-2024-25-13",
+   "entity": "county_assembly",
+   "fy": "2024/25",
+   "doc_id": "audit-asm-2024-25",
+   "page": 58,
+   "paragraph": "7",
+   "section": "lawfulness",
+   "title": "No vehicle and equipment maintenance register",
+   "category": "assets",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "note": ""
+  }
+ ],
+ "same_items": [
+  {
+   "key": "siaya-county-stadium",
+   "entity": "county_executive",
+   "basis": "Same contract (signed 30 August 2018, KSh 394,661,767) reported again",
+   "finding_ids": [
+    "audit-2020-21-21",
+    "audit-2021-22-26",
+    "audit-2022-23-22",
+    "audit-2023-24-29"
+   ],
+   "years": [
+    "2020/21",
+    "2021/22",
+    "2022/23",
+    "2023/24"
+   ]
+  },
+  {
+   "key": "siaya-bus-park",
+   "entity": "county_executive",
+   "basis": "Same contract (KSh 23,014,867) reported again",
+   "finding_ids": [
+    "audit-2021-22-31",
+    "audit-2022-23-17"
+   ],
+   "years": [
+    "2021/22",
+    "2022/23"
+   ]
+  },
+  {
+   "key": "erp-system",
+   "entity": "county_executive",
+   "basis": "Same ERP contract (KSh 72,420,000) reported again",
+   "finding_ids": [
+    "audit-2021-22-25",
+    "audit-2022-23-23"
+   ],
+   "years": [
+    "2021/22",
+    "2022/23"
+   ]
+  },
+  {
+   "key": "kirindo-ecd",
+   "entity": "county_executive",
+   "basis": "Same ECD classroom at Kirindo Primary School reported again",
+   "finding_ids": [
+    "audit-2021-22-32",
+    "audit-2022-23-16"
+   ],
+   "years": [
+    "2021/22",
+    "2022/23"
+   ]
+  },
+  {
+   "key": "aggregation-park",
+   "entity": "county_executive",
+   "basis": "Same aggregation and industrial park contract (about KSh 483.69m) reported again",
+   "finding_ids": [
+    "audit-2023-24-30",
+    "audit-2024-25-18"
+   ],
+   "years": [
+    "2023/24",
+    "2024/25"
+   ]
+  },
+  {
+   "key": "assembly-fund",
+   "entity": "county_assembly",
+   "basis": "Same requirement (County Assembly Fund, County Assembly Act 2017 s.34) reported again",
+   "finding_ids": [
+    "audit-asm-2022-23-08",
+    "audit-asm-2023-24-11"
+   ],
+   "years": [
+    "2022/23",
+    "2023/24"
+   ]
+  },
+  {
+   "key": "assembly-ward-office-misposting",
+   "entity": "county_assembly",
+   "basis": "Same misposting (ward and general office operations charged to compensation of employees) reported again",
+   "finding_ids": [
+    "audit-asm-2022-23-01",
+    "audit-asm-2023-24-01",
+    "audit-asm-2024-25-01"
+   ],
+   "years": [
+    "2022/23",
+    "2023/24",
+    "2024/25"
+   ]
+  }
+ ],
+ "recurrence_by_category": {
+  "county_government": {
+   "financial_reporting": {
+    "2013/14": 2
+   },
+   "revenue": {
+    "2013/14": 1
+   },
+   "payroll": {
+    "2013/14": 1
+   },
+   "unsupported_expenditure": {
+    "2013/14": 1
+   },
+   "transfers": {
+    "2013/14": 1
+   },
+   "assets": {
+    "2013/14": 1
+   },
+   "imprest": {
+    "2013/14": 1
+   }
+  },
+  "county_executive": {
+   "cash_and_bank": {
+    "2013/14": 2,
+    "2020/21": 2,
+    "2021/22": 1,
+    "2022/23": 1,
+    "2023/24": 1
+   },
+   "procurement": {
+    "2013/14": 3,
+    "2021/22": 5,
+    "2023/24": 1,
+    "2024/25": 3
+   },
+   "budget_control": {
+    "2013/14": 1,
+    "2019/20": 2,
+    "2020/21": 1,
+    "2021/22": 1,
+    "2022/23": 1,
+    "2023/24": 1,
+    "2024/25": 2
+   },
+   "assets": {
+    "2013/14": 1,
+    "2019/20": 2,
+    "2020/21": 2,
+    "2021/22": 3,
+    "2022/23": 3,
+    "2023/24": 3,
+    "2024/25": 3
+   },
+   "unsupported_expenditure": {
+    "2013/14": 2,
+    "2020/21": 4,
+    "2021/22": 8,
+    "2022/23": 1,
+    "2023/24": 5,
+    "2024/25": 2
+   },
+   "transfers": {
+    "2013/14": 1,
+    "2019/20": 2,
+    "2020/21": 2,
+    "2022/23": 1,
+    "2023/24": 2,
+    "2024/25": 1
+   },
+   "revenue": {
+    "2013/14": 1,
+    "2020/21": 1,
+    "2021/22": 2
+   },
+   "payroll": {
+    "2019/20": 4,
+    "2020/21": 5,
+    "2021/22": 8,
+    "2022/23": 5,
+    "2023/24": 3,
+    "2024/25": 12
+   },
+   "pending_bills": {
+    "2019/20": 1,
+    "2020/21": 1,
+    "2021/22": 3,
+    "2022/23": 3,
+    "2023/24": 1,
+    "2024/25": 2
+   },
+   "other": {
+    "2019/20": 1,
+    "2020/21": 2,
+    "2021/22": 2,
+    "2022/23": 3,
+    "2023/24": 3,
+    "2024/25": 3
+   },
+   "imprest": {
+    "2019/20": 1,
+    "2020/21": 1,
+    "2021/22": 2,
+    "2022/23": 1,
+    "2023/24": 1,
+    "2024/25": 1
+   },
+   "financial_reporting": {
+    "2020/21": 1,
+    "2021/22": 1,
+    "2022/23": 5,
+    "2023/24": 3,
+    "2024/25": 2
+   },
+   "projects": {
+    "2020/21": 9,
+    "2021/22": 7,
+    "2022/23": 7,
+    "2023/24": 8,
+    "2024/25": 5
+   },
+   "governance": {
+    "2020/21": 1,
+    "2021/22": 1,
+    "2022/23": 1,
+    "2023/24": 2,
+    "2024/25": 2
+   },
+   "ict": {
+    "2021/22": 1,
+    "2022/23": 1,
+    "2024/25": 1
+   }
+  },
+  "county_assembly": {
+   "financial_reporting": {
+    "2020/21": 2,
+    "2022/23": 1,
+    "2023/24": 1,
+    "2024/25": 2
+   },
+   "unsupported_expenditure": {
+    "2020/21": 1,
+    "2022/23": 2
+   },
+   "budget_control": {
+    "2020/21": 1,
+    "2022/23": 1,
+    "2023/24": 1,
+    "2024/25": 1
+   },
+   "imprest": {
+    "2020/21": 1
+   },
+   "payroll": {
+    "2020/21": 2,
+    "2022/23": 4,
+    "2023/24": 4,
+    "2024/25": 4
+   },
+   "transfers": {
+    "2020/21": 1,
+    "2024/25": 1
+   },
+   "assets": {
+    "2022/23": 1,
+    "2024/25": 3
+   },
+   "projects": {
+    "2022/23": 1,
+    "2023/24": 1
+   },
+   "governance": {
+    "2022/23": 1,
+    "2023/24": 2
+   },
+   "ict": {
+    "2022/23": 1,
+    "2023/24": 1
+   },
+   "procurement": {
+    "2023/24": 2,
+    "2024/25": 1
+   },
+   "other": {
+    "2023/24": 1,
+    "2024/25": 1
+   },
+   "pending_bills": {
+    "2023/24": 1
+   }
+  }
+ },
+ "gaps": [
+  {
+   "entity": "county_executive",
+   "fy": "2014/15",
+   "status": "opinion only",
+   "reason": "Only a Senate compilation of opinions was found; no audit report, so no findings."
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2015/16",
+   "status": "opinion only",
+   "reason": "Only a Senate compilation of opinions was found; no audit report, so no findings."
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2016/17",
+   "status": "missing",
+   "reason": "No County Executive audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503 on 20 and 21 Nov 2026."
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2017/18",
+   "status": "missing",
+   "reason": "As for 2016/17."
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2018/19",
+   "status": "missing",
+   "reason": "As for 2016/17."
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2013/14",
+   "status": "missing",
+   "reason": "The FY 2013/14 financial operations file is titled for the executive and assembly but holds the executive report only; the 16-month audit covers the county government as a whole."
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2014/15",
+   "status": "missing",
+   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2015/16",
+   "status": "missing",
+   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2016/17",
+   "status": "missing",
+   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2017/18",
+   "status": "missing",
+   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2018/19",
+   "status": "missing",
+   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2019/20",
+   "status": "missing",
+   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2021/22",
+   "status": "missing",
+   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+  }
+ ],
+ "caveats": [
+  "FY 2024/25 reports use transitional accrual IPSAS; earlier years are cash basis.",
+  "OCR (FY 2024/25) and the FY 2019/20 committee report are graded 3; text-layer audit reports are graded 4.",
+  "The FY 2014/15 and 2015/16 opinions are reused from data/history.json and come from a Senate compilation.",
+  "Category counts depend on how the auditor split paragraphs, so a rise in count is not by itself a worsening."
+ ]
+}

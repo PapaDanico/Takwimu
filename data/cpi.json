@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "title": "Kenya consumer price index",
+    "source": "World Bank, World Development Indicators, FP.CPI.TOTL (Consumer price index, 2010 = 100), Kenya",
+    "source_url": "https://data.worldbank.org/indicator/FP.CPI.TOTL?locations=KE",
+    "retrieved": "2026-11-20",
+    "confidence": 4,
+    "method": "Fiscal-year index is the simple average of the two calendar-year indices that the fiscal year spans (for example FY2015/16 = average of 2015 and 2016). This is an approximation: it ignores the timing of spending within the year.",
+    "base": "FY2024/25 = 100 in the real-terms view",
+    "status": "approximate"
+  },
+  "calendar_year": {
+    "2010": 100,
+    "2011": 114.022,
+    "2012": 124.715,
+    "2013": 131.846,
+    "2014": 140.914,
+    "2015": 150.19,
+    "2016": 159.647,
+    "2017": 172.428,
+    "2018": 180.515,
+    "2019": 189.973,
+    "2020": 200.241,
+    "2021": 212.472,
+    "2022": 228.747,
+    "2023": 246.295,
+    "2024": 257.353,
+    "2025": 267.826
+  },
+  "fiscal_year": {
+    "2013/14": 136.38,
+    "2014/15": 145.55,
+    "2015/16": 154.92,
+    "2016/17": 166.04,
+    "2017/18": 176.47,
+    "2018/19": 185.24,
+    "2019/20": 195.11,
+    "2020/21": 206.36,
+    "2021/22": 220.61,
+    "2022/23": 237.52,
+    "2023/24": 251.82,
+    "2024/25": 262.59
+  }
+}

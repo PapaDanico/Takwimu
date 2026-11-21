@@ -1,0 +1,2461 @@
+{
+ "meta": {
+  "title": "Kenya: IEBC registered voters 2022 by constituency and candidates by position (institution and geography level)",
+  "retrieved": "2026-11-21",
+  "schema_version": "1.0",
+  "rule": "Geography- and institution-level facts only. No candidate-level votes, no scores or ratings of individuals. Candidate vote columns present in source files were deliberately not extracted."
+ },
+ "generated": "2026-11-21",
+ "iebc_registered_voters_2022_by_constituency": {
+  "source": {
+   "title": "Registered Voters per Constituency for the 2022 General Election",
+   "publisher": "Independent Electoral and Boundaries Commission (IEBC)",
+   "url": "https://www.iebc.or.ke/docs/rov_per_constituency.pdf",
+   "sha256": "6affa5b6677abea44aaed2d66fe7b4b9165771efe67dd63856c68b1238b0aefb",
+   "retrieved": "2026-11-21",
+   "location": "pages 1-7",
+   "source_id": "iebc-rov-2022"
+  },
+  "unit": "persons (registered voters)",
+  "rows": [
+   {
+    "county_code": "001",
+    "county": "MOMBASA",
+    "const_code": "001",
+    "constituency": "CHANGAMWE",
+    "registered_voters": 93561
+   },
+   {
+    "county_code": "001",
+    "county": "MOMBASA",
+    "const_code": "002",
+    "constituency": "JOMVU",
+    "registered_voters": 75085
+   },
+   {
+    "county_code": "001",
+    "county": "MOMBASA",
+    "const_code": "003",
+    "constituency": "KISAUNI",
+    "registered_voters": 135276
+   },
+   {
+    "county_code": "001",
+    "county": "MOMBASA",
+    "const_code": "004",
+    "constituency": "NYALI",
+    "registered_voters": 124253
+   },
+   {
+    "county_code": "001",
+    "county": "MOMBASA",
+    "const_code": "005",
+    "constituency": "LIKONI",
+    "registered_voters": 94764
+   },
+   {
+    "county_code": "001",
+    "county": "MOMBASA",
+    "const_code": "006",
+    "constituency": "MVITA",
+    "registered_voters": 118974
+   },
+   {
+    "county_code": "002",
+    "county": "KWALE",
+    "const_code": "007",
+    "constituency": "MSAMBWENI",
+    "registered_voters": 82261
+   },
+   {
+    "county_code": "002",
+    "county": "KWALE",
+    "const_code": "008",
+    "constituency": "LUNGALUNGA",
+    "registered_voters": 64854
+   },
+   {
+    "county_code": "002",
+    "county": "KWALE",
+    "const_code": "009",
+    "constituency": "MATUGA",
+    "registered_voters": 83015
+   },
+   {
+    "county_code": "002",
+    "county": "KWALE",
+    "const_code": "010",
+    "constituency": "KINANGO",
+    "registered_voters": 98123
+   },
+   {
+    "county_code": "003",
+    "county": "KILIFI",
+    "const_code": "011",
+    "constituency": "KILIFI NORTH",
+    "registered_voters": 116742
+   },
+   {
+    "county_code": "003",
+    "county": "KILIFI",
+    "const_code": "012",
+    "constituency": "KILIFI SOUTH",
+    "registered_voters": 97696
+   },
+   {
+    "county_code": "003",
+    "county": "KILIFI",
+    "const_code": "013",
+    "constituency": "KALOLENI",
+    "registered_voters": 73009
+   },
+   {
+    "county_code": "003",
+    "county": "KILIFI",
+    "const_code": "014",
+    "constituency": "RABAI",
+    "registered_voters": 59165
+   },
+   {
+    "county_code": "003",
+    "county": "KILIFI",
+    "const_code": "015",
+    "constituency": "GANZE",
+    "registered_voters": 67257
+   },
+   {
+    "county_code": "003",
+    "county": "KILIFI",
+    "const_code": "016",
+    "constituency": "MALINDI",
+    "registered_voters": 94605
+   },
+   {
+    "county_code": "003",
+    "county": "KILIFI",
+    "const_code": "017",
+    "constituency": "MAGARINI",
+    "registered_voters": 80128
+   },
+   {
+    "county_code": "004",
+    "county": "TANA RIVER",
+    "const_code": "018",
+    "constituency": "GARSEN",
+    "registered_voters": 55453
+   },
+   {
+    "county_code": "004",
+    "county": "TANA RIVER",
+    "const_code": "019",
+    "constituency": "GALOLE",
+    "registered_voters": 39965
+   },
+   {
+    "county_code": "004",
+    "county": "TANA RIVER",
+    "const_code": "020",
+    "constituency": "BURA",
+    "registered_voters": 45678
+   },
+   {
+    "county_code": "005",
+    "county": "LAMU",
+    "const_code": "021",
+    "constituency": "LAMU EAST",
+    "registered_voters": 22047
+   },
+   {
+    "county_code": "005",
+    "county": "LAMU",
+    "const_code": "022",
+    "constituency": "LAMU WEST",
+    "registered_voters": 59406
+   },
+   {
+    "county_code": "006",
+    "county": "TAITA TAVETA",
+    "const_code": "023",
+    "constituency": "TAVETA",
+    "registered_voters": 41031
+   },
+   {
+    "county_code": "006",
+    "county": "TAITA TAVETA",
+    "const_code": "024",
+    "constituency": "WUNDANYI",
+    "registered_voters": 35008
+   },
+   {
+    "county_code": "006",
+    "county": "TAITA TAVETA",
+    "const_code": "025",
+    "constituency": "MWATATE",
+    "registered_voters": 44411
+   },
+   {
+    "county_code": "006",
+    "county": "TAITA TAVETA",
+    "const_code": "026",
+    "constituency": "VOI",
+    "registered_voters": 61377
+   },
+   {
+    "county_code": "007",
+    "county": "GARISSA",
+    "const_code": "027",
+    "constituency": "GARISSA TOWNSHIP",
+    "registered_voters": 53253
+   },
+   {
+    "county_code": "007",
+    "county": "GARISSA",
+    "const_code": "028",
+    "constituency": "BALAMBALA",
+    "registered_voters": 26085
+   },
+   {
+    "county_code": "007",
+    "county": "GARISSA",
+    "const_code": "029",
+    "constituency": "LAGDERA",
+    "registered_voters": 26949
+   },
+   {
+    "county_code": "007",
+    "county": "GARISSA",
+    "const_code": "030",
+    "constituency": "DADAAB",
+    "registered_voters": 38185
+   },
+   {
+    "county_code": "007",
+    "county": "GARISSA",
+    "const_code": "031",
+    "constituency": "FAFI",
+    "registered_voters": 27335
+   },
+   {
+    "county_code": "007",
+    "county": "GARISSA",
+    "const_code": "032",
+    "constituency": "IJARA",
+    "registered_voters": 29666
+   },
+   {
+    "county_code": "008",
+    "county": "WAJIR",
+    "const_code": "033",
+    "constituency": "WAJIR NORTH",
+    "registered_voters": 33927
+   },
+   {
+    "county_code": "008",
+    "county": "WAJIR",
+    "const_code": "034",
+    "constituency": "WAJIR EAST",
+    "registered_voters": 35794
+   },
+   {
+    "county_code": "008",
+    "county": "WAJIR",
+    "const_code": "035",
+    "constituency": "TARBAJ",
+    "registered_voters": 25267
+   },
+   {
+    "county_code": "008",
+    "county": "WAJIR",
+    "const_code": "036",
+    "constituency": "WAJIR WEST",
+    "registered_voters": 31334
+   },
+   {
+    "county_code": "008",
+    "county": "WAJIR",
+    "const_code": "037",
+    "constituency": "ELDAS",
+    "registered_voters": 23359
+   },
+   {
+    "county_code": "008",
+    "county": "WAJIR",
+    "const_code": "038",
+    "constituency": "WAJIR SOUTH",
+    "registered_voters": 58077
+   },
+   {
+    "county_code": "009",
+    "county": "MANDERA",
+    "const_code": "039",
+    "constituency": "MANDERA WEST",
+    "registered_voters": 37637
+   },
+   {
+    "county_code": "009",
+    "county": "MANDERA",
+    "const_code": "040",
+    "constituency": "BANISSA",
+    "registered_voters": 32703
+   },
+   {
+    "county_code": "009",
+    "county": "MANDERA",
+    "const_code": "041",
+    "constituency": "MANDERA NORTH",
+    "registered_voters": 45216
+   },
+   {
+    "county_code": "009",
+    "county": "MANDERA",
+    "const_code": "042",
+    "constituency": "MANDERA SOUTH",
+    "registered_voters": 34691
+   },
+   {
+    "county_code": "009",
+    "county": "MANDERA",
+    "const_code": "043",
+    "constituency": "MANDERA EAST",
+    "registered_voters": 48219
+   },
+   {
+    "county_code": "009",
+    "county": "MANDERA",
+    "const_code": "044",
+    "constituency": "LAFEY",
+    "registered_voters": 18564
+   },
+   {
+    "county_code": "010",
+    "county": "MARSABIT",
+    "const_code": "045",
+    "constituency": "MOYALE",
+    "registered_voters": 66402
+   },
+   {
+    "county_code": "010",
+    "county": "MARSABIT",
+    "const_code": "046",
+    "constituency": "NORTH HORR",
+    "registered_voters": 36855
+   },
+   {
+    "county_code": "010",
+    "county": "MARSABIT",
+    "const_code": "047",
+    "constituency": "SAKU",
+    "registered_voters": 30209
+   },
+   {
+    "county_code": "010",
+    "county": "MARSABIT",
+    "const_code": "048",
+    "constituency": "LAISAMIS",
+    "registered_voters": 33446
+   },
+   {
+    "county_code": "011",
+    "county": "ISIOLO",
+    "const_code": "049",
+    "constituency": "ISIOLO NORTH",
+    "registered_voters": 67323
+   },
+   {
+    "county_code": "011",
+    "county": "ISIOLO",
+    "const_code": "050",
+    "constituency": "ISIOLO SOUTH",
+    "registered_voters": 22181
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "const_code": "051",
+    "constituency": "IGEMBE SOUTH",
+    "registered_voters": 77126
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "const_code": "052",
+    "constituency": "IGEMBE CENTRAL",
+    "registered_voters": 93434
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "const_code": "053",
+    "constituency": "IGEMBE NORTH",
+    "registered_voters": 77050
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "const_code": "054",
+    "constituency": "TIGANIA WEST",
+    "registered_voters": 70283
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "const_code": "055",
+    "constituency": "TIGANIA EAST",
+    "registered_voters": 83527
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "const_code": "056",
+    "constituency": "NORTH IMENTI",
+    "registered_voters": 96241
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "const_code": "057",
+    "constituency": "BUURI",
+    "registered_voters": 82341
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "const_code": "058",
+    "constituency": "CENTRAL IMENTI",
+    "registered_voters": 76495
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "const_code": "059",
+    "constituency": "SOUTH IMENTI",
+    "registered_voters": 115642
+   },
+   {
+    "county_code": "013",
+    "county": "THARAKA - NITHI",
+    "const_code": "060",
+    "constituency": "MAARA",
+    "registered_voters": 73248
+   },
+   {
+    "county_code": "013",
+    "county": "THARAKA - NITHI",
+    "const_code": "061",
+    "constituency": "CHUKA/IGAMBANG'OMBE",
+    "registered_voters": 84674
+   },
+   {
+    "county_code": "013",
+    "county": "THARAKA - NITHI",
+    "const_code": "062",
+    "constituency": "THARAKA",
+    "registered_voters": 74010
+   },
+   {
+    "county_code": "014",
+    "county": "EMBU",
+    "const_code": "063",
+    "constituency": "MANYATTA",
+    "registered_voters": 106588
+   },
+   {
+    "county_code": "014",
+    "county": "EMBU",
+    "const_code": "064",
+    "constituency": "RUNYENJES",
+    "registered_voters": 95326
+   },
+   {
+    "county_code": "014",
+    "county": "EMBU",
+    "const_code": "065",
+    "constituency": "MBEERE SOUTH",
+    "registered_voters": 77264
+   },
+   {
+    "county_code": "014",
+    "county": "EMBU",
+    "const_code": "066",
+    "constituency": "MBEERE NORTH",
+    "registered_voters": 55124
+   },
+   {
+    "county_code": "015",
+    "county": "KITUI",
+    "const_code": "067",
+    "constituency": "MWINGI NORTH",
+    "registered_voters": 68829
+   },
+   {
+    "county_code": "015",
+    "county": "KITUI",
+    "const_code": "068",
+    "constituency": "MWINGI WEST",
+    "registered_voters": 57138
+   },
+   {
+    "county_code": "015",
+    "county": "KITUI",
+    "const_code": "069",
+    "constituency": "MWINGI CENTRAL",
+    "registered_voters": 74231
+   },
+   {
+    "county_code": "015",
+    "county": "KITUI",
+    "const_code": "070",
+    "constituency": "KITUI WEST",
+    "registered_voters": 59047
+   },
+   {
+    "county_code": "015",
+    "county": "KITUI",
+    "const_code": "071",
+    "constituency": "KITUI RURAL",
+    "registered_voters": 55000
+   },
+   {
+    "county_code": "015",
+    "county": "KITUI",
+    "const_code": "072",
+    "constituency": "KITUI CENTRAL",
+    "registered_voters": 77764
+   },
+   {
+    "county_code": "015",
+    "county": "KITUI",
+    "const_code": "073",
+    "constituency": "KITUI EAST",
+    "registered_voters": 65377
+   },
+   {
+    "county_code": "015",
+    "county": "KITUI",
+    "const_code": "074",
+    "constituency": "KITUI SOUTH",
+    "registered_voters": 75372
+   },
+   {
+    "county_code": "016",
+    "county": "MACHAKOS",
+    "const_code": "075",
+    "constituency": "MASINGA",
+    "registered_voters": 68879
+   },
+   {
+    "county_code": "016",
+    "county": "MACHAKOS",
+    "const_code": "076",
+    "constituency": "YATTA",
+    "registered_voters": 82397
+   },
+   {
+    "county_code": "016",
+    "county": "MACHAKOS",
+    "const_code": "077",
+    "constituency": "KANGUNDO",
+    "registered_voters": 60796
+   },
+   {
+    "county_code": "016",
+    "county": "MACHAKOS",
+    "const_code": "078",
+    "constituency": "MATUNGULU",
+    "registered_voters": 75841
+   },
+   {
+    "county_code": "016",
+    "county": "MACHAKOS",
+    "const_code": "079",
+    "constituency": "KATHIANI",
+    "registered_voters": 60224
+   },
+   {
+    "county_code": "016",
+    "county": "MACHAKOS",
+    "const_code": "080",
+    "constituency": "MAVOKO",
+    "registered_voters": 132163
+   },
+   {
+    "county_code": "016",
+    "county": "MACHAKOS",
+    "const_code": "081",
+    "constituency": "MACHAKOS TOWN",
+    "registered_voters": 117367
+   },
+   {
+    "county_code": "016",
+    "county": "MACHAKOS",
+    "const_code": "082",
+    "constituency": "MWALA",
+    "registered_voters": 89898
+   },
+   {
+    "county_code": "017",
+    "county": "MAKUENI",
+    "const_code": "083",
+    "constituency": "MBOONI",
+    "registered_voters": 96029
+   },
+   {
+    "county_code": "017",
+    "county": "MAKUENI",
+    "const_code": "084",
+    "constituency": "KILOME",
+    "registered_voters": 59178
+   },
+   {
+    "county_code": "017",
+    "county": "MAKUENI",
+    "const_code": "085",
+    "constituency": "KAITI",
+    "registered_voters": 65188
+   },
+   {
+    "county_code": "017",
+    "county": "MAKUENI",
+    "const_code": "086",
+    "constituency": "MAKUENI",
+    "registered_voters": 102712
+   },
+   {
+    "county_code": "017",
+    "county": "MAKUENI",
+    "const_code": "087",
+    "constituency": "KIBWEZI WEST",
+    "registered_voters": 91554
+   },
+   {
+    "county_code": "017",
+    "county": "MAKUENI",
+    "const_code": "088",
+    "constituency": "KIBWEZI EAST",
+    "registered_voters": 64740
+   },
+   {
+    "county_code": "018",
+    "county": "NYANDARUA",
+    "const_code": "089",
+    "constituency": "KINANGOP",
+    "registered_voters": 115547
+   },
+   {
+    "county_code": "018",
+    "county": "NYANDARUA",
+    "const_code": "090",
+    "constituency": "KIPIPIRI",
+    "registered_voters": 54628
+   },
+   {
+    "county_code": "018",
+    "county": "NYANDARUA",
+    "const_code": "091",
+    "constituency": "OL KALOU",
+    "registered_voters": 72997
+   },
+   {
+    "county_code": "018",
+    "county": "NYANDARUA",
+    "const_code": "092",
+    "constituency": "OL JOROK",
+    "registered_voters": 60147
+   },
+   {
+    "county_code": "018",
+    "county": "NYANDARUA",
+    "const_code": "093",
+    "constituency": "NDARAGWA",
+    "registered_voters": 57846
+   },
+   {
+    "county_code": "019",
+    "county": "NYERI",
+    "const_code": "094",
+    "constituency": "TETU",
+    "registered_voters": 54986
+   },
+   {
+    "county_code": "019",
+    "county": "NYERI",
+    "const_code": "095",
+    "constituency": "KIENI",
+    "registered_voters": 114573
+   },
+   {
+    "county_code": "019",
+    "county": "NYERI",
+    "const_code": "096",
+    "constituency": "MATHIRA",
+    "registered_voters": 104492
+   },
+   {
+    "county_code": "019",
+    "county": "NYERI",
+    "const_code": "097",
+    "constituency": "OTHAYA",
+    "registered_voters": 61879
+   },
+   {
+    "county_code": "019",
+    "county": "NYERI",
+    "const_code": "098",
+    "constituency": "MUKURWEINI",
+    "registered_voters": 58534
+   },
+   {
+    "county_code": "019",
+    "county": "NYERI",
+    "const_code": "099",
+    "constituency": "NYERI TOWN",
+    "registered_voters": 87168
+   },
+   {
+    "county_code": "020",
+    "county": "KIRINYAGA",
+    "const_code": "100",
+    "constituency": "MWEA",
+    "registered_voters": 131714
+   },
+   {
+    "county_code": "020",
+    "county": "KIRINYAGA",
+    "const_code": "101",
+    "constituency": "GICHUGU",
+    "registered_voters": 92495
+   },
+   {
+    "county_code": "020",
+    "county": "KIRINYAGA",
+    "const_code": "102",
+    "constituency": "NDIA",
+    "registered_voters": 69743
+   },
+   {
+    "county_code": "020",
+    "county": "KIRINYAGA",
+    "const_code": "103",
+    "constituency": "KIRINYAGA CENTRAL",
+    "registered_voters": 82049
+   },
+   {
+    "county_code": "021",
+    "county": "MURANG'A",
+    "const_code": "104",
+    "constituency": "KANGEMA",
+    "registered_voters": 52002
+   },
+   {
+    "county_code": "021",
+    "county": "MURANG'A",
+    "const_code": "105",
+    "constituency": "MATHIOYA",
+    "registered_voters": 58102
+   },
+   {
+    "county_code": "021",
+    "county": "MURANG'A",
+    "const_code": "106",
+    "constituency": "KIHARU",
+    "registered_voters": 119389
+   },
+   {
+    "county_code": "021",
+    "county": "MURANG'A",
+    "const_code": "107",
+    "constituency": "KIGUMO",
+    "registered_voters": 82609
+   },
+   {
+    "county_code": "021",
+    "county": "MURANG'A",
+    "const_code": "108",
+    "constituency": "MARAGWA",
+    "registered_voters": 102383
+   },
+   {
+    "county_code": "021",
+    "county": "MURANG'A",
+    "const_code": "109",
+    "constituency": "KANDARA",
+    "registered_voters": 105148
+   },
+   {
+    "county_code": "021",
+    "county": "MURANG'A",
+    "const_code": "110",
+    "constituency": "GATANGA",
+    "registered_voters": 101296
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "111",
+    "constituency": "GATUNDU SOUTH",
+    "registered_voters": 79860
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "112",
+    "constituency": "GATUNDU NORTH",
+    "registered_voters": 71810
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "113",
+    "constituency": "JUJA",
+    "registered_voters": 134638
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "114",
+    "constituency": "THIKA TOWN",
+    "registered_voters": 156018
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "115",
+    "constituency": "RUIRU",
+    "registered_voters": 172088
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "116",
+    "constituency": "GITHUNGURI",
+    "registered_voters": 104592
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "117",
+    "constituency": "KIAMBU",
+    "registered_voters": 86986
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "118",
+    "constituency": "KIAMBAA",
+    "registered_voters": 104268
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "119",
+    "constituency": "KABETE",
+    "registered_voters": 91775
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "120",
+    "constituency": "KIKUYU",
+    "registered_voters": 98758
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "121",
+    "constituency": "LIMURU",
+    "registered_voters": 93019
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "const_code": "122",
+    "constituency": "LARI",
+    "registered_voters": 81196
+   },
+   {
+    "county_code": "023",
+    "county": "TURKANA",
+    "const_code": "123",
+    "constituency": "TURKANA NORTH",
+    "registered_voters": 42937
+   },
+   {
+    "county_code": "023",
+    "county": "TURKANA",
+    "const_code": "124",
+    "constituency": "TURKANA WEST",
+    "registered_voters": 42673
+   },
+   {
+    "county_code": "023",
+    "county": "TURKANA",
+    "const_code": "125",
+    "constituency": "TURKANA CENTRAL",
+    "registered_voters": 55971
+   },
+   {
+    "county_code": "023",
+    "county": "TURKANA",
+    "const_code": "126",
+    "constituency": "LOIMA",
+    "registered_voters": 36515
+   },
+   {
+    "county_code": "023",
+    "county": "TURKANA",
+    "const_code": "127",
+    "constituency": "TURKANA SOUTH",
+    "registered_voters": 40432
+   },
+   {
+    "county_code": "023",
+    "county": "TURKANA",
+    "const_code": "128",
+    "constituency": "TURKANA EAST",
+    "registered_voters": 20000
+   },
+   {
+    "county_code": "024",
+    "county": "WEST POKOT",
+    "const_code": "129",
+    "constituency": "KAPENGURIA",
+    "registered_voters": 66540
+   },
+   {
+    "county_code": "024",
+    "county": "WEST POKOT",
+    "const_code": "130",
+    "constituency": "SIGOR",
+    "registered_voters": 43934
+   },
+   {
+    "county_code": "024",
+    "county": "WEST POKOT",
+    "const_code": "131",
+    "constituency": "KACHELIBA",
+    "registered_voters": 51146
+   },
+   {
+    "county_code": "024",
+    "county": "WEST POKOT",
+    "const_code": "132",
+    "constituency": "POKOT SOUTH",
+    "registered_voters": 58406
+   },
+   {
+    "county_code": "025",
+    "county": "SAMBURU",
+    "const_code": "133",
+    "constituency": "SAMBURU WEST",
+    "registered_voters": 43390
+   },
+   {
+    "county_code": "025",
+    "county": "SAMBURU",
+    "const_code": "134",
+    "constituency": "SAMBURU NORTH",
+    "registered_voters": 29830
+   },
+   {
+    "county_code": "025",
+    "county": "SAMBURU",
+    "const_code": "135",
+    "constituency": "SAMBURU EAST",
+    "registered_voters": 26794
+   },
+   {
+    "county_code": "026",
+    "county": "TRANS NZOIA",
+    "const_code": "136",
+    "constituency": "KWANZA",
+    "registered_voters": 75839
+   },
+   {
+    "county_code": "026",
+    "county": "TRANS NZOIA",
+    "const_code": "137",
+    "constituency": "ENDEBESS",
+    "registered_voters": 50688
+   },
+   {
+    "county_code": "026",
+    "county": "TRANS NZOIA",
+    "const_code": "138",
+    "constituency": "SABOTI",
+    "registered_voters": 87384
+   },
+   {
+    "county_code": "026",
+    "county": "TRANS NZOIA",
+    "const_code": "139",
+    "constituency": "KIMININI",
+    "registered_voters": 93240
+   },
+   {
+    "county_code": "026",
+    "county": "TRANS NZOIA",
+    "const_code": "140",
+    "constituency": "CHERANGANY",
+    "registered_voters": 91830
+   },
+   {
+    "county_code": "027",
+    "county": "UASIN GISHU",
+    "const_code": "141",
+    "constituency": "SOY",
+    "registered_voters": 92702
+   },
+   {
+    "county_code": "027",
+    "county": "UASIN GISHU",
+    "const_code": "142",
+    "constituency": "TURBO",
+    "registered_voters": 120202
+   },
+   {
+    "county_code": "027",
+    "county": "UASIN GISHU",
+    "const_code": "143",
+    "constituency": "MOIBEN",
+    "registered_voters": 77877
+   },
+   {
+    "county_code": "027",
+    "county": "UASIN GISHU",
+    "const_code": "144",
+    "constituency": "AINABKOI",
+    "registered_voters": 62606
+   },
+   {
+    "county_code": "027",
+    "county": "UASIN GISHU",
+    "const_code": "145",
+    "constituency": "KAPSERET",
+    "registered_voters": 74809
+   },
+   {
+    "county_code": "027",
+    "county": "UASIN GISHU",
+    "const_code": "146",
+    "constituency": "KESSES",
+    "registered_voters": 77942
+   },
+   {
+    "county_code": "028",
+    "county": "ELGEYO/MARAKWET",
+    "const_code": "147",
+    "constituency": "MARAKWET EAST",
+    "registered_voters": 43672
+   },
+   {
+    "county_code": "028",
+    "county": "ELGEYO/MARAKWET",
+    "const_code": "148",
+    "constituency": "MARAKWET WEST",
+    "registered_voters": 58568
+   },
+   {
+    "county_code": "028",
+    "county": "ELGEYO/MARAKWET",
+    "const_code": "149",
+    "constituency": "KEIYO NORTH",
+    "registered_voters": 49247
+   },
+   {
+    "county_code": "028",
+    "county": "ELGEYO/MARAKWET",
+    "const_code": "150",
+    "constituency": "KEIYO SOUTH",
+    "registered_voters": 62397
+   },
+   {
+    "county_code": "029",
+    "county": "NANDI",
+    "const_code": "151",
+    "constituency": "TINDERET",
+    "registered_voters": 51446
+   },
+   {
+    "county_code": "029",
+    "county": "NANDI",
+    "const_code": "152",
+    "constituency": "ALDAI",
+    "registered_voters": 78005
+   },
+   {
+    "county_code": "029",
+    "county": "NANDI",
+    "const_code": "153",
+    "constituency": "NANDI HILLS",
+    "registered_voters": 57910
+   },
+   {
+    "county_code": "029",
+    "county": "NANDI",
+    "const_code": "154",
+    "constituency": "CHESUMEI",
+    "registered_voters": 74201
+   },
+   {
+    "county_code": "029",
+    "county": "NANDI",
+    "const_code": "155",
+    "constituency": "EMGWEN",
+    "registered_voters": 66940
+   },
+   {
+    "county_code": "029",
+    "county": "NANDI",
+    "const_code": "156",
+    "constituency": "MOSOP",
+    "registered_voters": 77786
+   },
+   {
+    "county_code": "030",
+    "county": "BARINGO",
+    "const_code": "157",
+    "constituency": "TIATY",
+    "registered_voters": 39059
+   },
+   {
+    "county_code": "030",
+    "county": "BARINGO",
+    "const_code": "158",
+    "constituency": "BARINGO NORTH",
+    "registered_voters": 50287
+   },
+   {
+    "county_code": "030",
+    "county": "BARINGO",
+    "const_code": "159",
+    "constituency": "BARINGO CENTRAL",
+    "registered_voters": 45920
+   },
+   {
+    "county_code": "030",
+    "county": "BARINGO",
+    "const_code": "160",
+    "constituency": "BARINGO SOUTH",
+    "registered_voters": 42791
+   },
+   {
+    "county_code": "030",
+    "county": "BARINGO",
+    "const_code": "161",
+    "constituency": "MOGOTIO",
+    "registered_voters": 38922
+   },
+   {
+    "county_code": "030",
+    "county": "BARINGO",
+    "const_code": "162",
+    "constituency": "ELDAMA RAVINE",
+    "registered_voters": 64074
+   },
+   {
+    "county_code": "031",
+    "county": "LAIKIPIA",
+    "const_code": "163",
+    "constituency": "LAIKIPIA WEST",
+    "registered_voters": 118865
+   },
+   {
+    "county_code": "031",
+    "county": "LAIKIPIA",
+    "const_code": "164",
+    "constituency": "LAIKIPIA EAST",
+    "registered_voters": 96395
+   },
+   {
+    "county_code": "031",
+    "county": "LAIKIPIA",
+    "const_code": "165",
+    "constituency": "LAIKIPIA NORTH",
+    "registered_voters": 47752
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "166",
+    "constituency": "MOLO",
+    "registered_voters": 77027
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "167",
+    "constituency": "NJORO",
+    "registered_voters": 113274
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "168",
+    "constituency": "NAIVASHA",
+    "registered_voters": 157128
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "169",
+    "constituency": "GILGIL",
+    "registered_voters": 95654
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "170",
+    "constituency": "KURESOI SOUTH",
+    "registered_voters": 66168
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "171",
+    "constituency": "KURESOI NORTH",
+    "registered_voters": 70663
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "172",
+    "constituency": "SUBUKIA",
+    "registered_voters": 55599
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "173",
+    "constituency": "RONGAI",
+    "registered_voters": 84625
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "174",
+    "constituency": "BAHATI",
+    "registered_voters": 97040
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "175",
+    "constituency": "NAKURU TOWN WEST",
+    "registered_voters": 112127
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "const_code": "176",
+    "constituency": "NAKURU TOWN EAST",
+    "registered_voters": 125551
+   },
+   {
+    "county_code": "033",
+    "county": "NAROK",
+    "const_code": "177",
+    "constituency": "KILGORIS",
+    "registered_voters": 76883
+   },
+   {
+    "county_code": "033",
+    "county": "NAROK",
+    "const_code": "178",
+    "constituency": "EMURUA DIKIRR",
+    "registered_voters": 44040
+   },
+   {
+    "county_code": "033",
+    "county": "NAROK",
+    "const_code": "179",
+    "constituency": "NAROK NORTH",
+    "registered_voters": 88665
+   },
+   {
+    "county_code": "033",
+    "county": "NAROK",
+    "const_code": "180",
+    "constituency": "NAROK EAST",
+    "registered_voters": 46535
+   },
+   {
+    "county_code": "033",
+    "county": "NAROK",
+    "const_code": "181",
+    "constituency": "NAROK SOUTH",
+    "registered_voters": 76065
+   },
+   {
+    "county_code": "033",
+    "county": "NAROK",
+    "const_code": "182",
+    "constituency": "NAROK WEST",
+    "registered_voters": 66596
+   },
+   {
+    "county_code": "034",
+    "county": "KAJIADO",
+    "const_code": "183",
+    "constituency": "KAJIADO NORTH",
+    "registered_voters": 134880
+   },
+   {
+    "county_code": "034",
+    "county": "KAJIADO",
+    "const_code": "184",
+    "constituency": "KAJIADO CENTRAL",
+    "registered_voters": 65823
+   },
+   {
+    "county_code": "034",
+    "county": "KAJIADO",
+    "const_code": "185",
+    "constituency": "KAJIADO EAST",
+    "registered_voters": 116336
+   },
+   {
+    "county_code": "034",
+    "county": "KAJIADO",
+    "const_code": "186",
+    "constituency": "KAJIADO WEST",
+    "registered_voters": 75173
+   },
+   {
+    "county_code": "034",
+    "county": "KAJIADO",
+    "const_code": "187",
+    "constituency": "KAJIADO SOUTH",
+    "registered_voters": 71061
+   },
+   {
+    "county_code": "035",
+    "county": "KERICHO",
+    "const_code": "188",
+    "constituency": "KIPKELION EAST",
+    "registered_voters": 63679
+   },
+   {
+    "county_code": "035",
+    "county": "KERICHO",
+    "const_code": "189",
+    "constituency": "KIPKELION WEST",
+    "registered_voters": 52960
+   },
+   {
+    "county_code": "035",
+    "county": "KERICHO",
+    "const_code": "190",
+    "constituency": "AINAMOI",
+    "registered_voters": 85024
+   },
+   {
+    "county_code": "035",
+    "county": "KERICHO",
+    "const_code": "191",
+    "constituency": "BURETI",
+    "registered_voters": 95320
+   },
+   {
+    "county_code": "035",
+    "county": "KERICHO",
+    "const_code": "192",
+    "constituency": "BELGUT",
+    "registered_voters": 75175
+   },
+   {
+    "county_code": "035",
+    "county": "KERICHO",
+    "const_code": "193",
+    "constituency": "SIGOWET/SOIN",
+    "registered_voters": 55909
+   },
+   {
+    "county_code": "036",
+    "county": "BOMET",
+    "const_code": "194",
+    "constituency": "SOTIK",
+    "registered_voters": 86681
+   },
+   {
+    "county_code": "036",
+    "county": "BOMET",
+    "const_code": "195",
+    "constituency": "CHEPALUNGU",
+    "registered_voters": 80140
+   },
+   {
+    "county_code": "036",
+    "county": "BOMET",
+    "const_code": "196",
+    "constituency": "BOMET EAST",
+    "registered_voters": 63640
+   },
+   {
+    "county_code": "036",
+    "county": "BOMET",
+    "const_code": "197",
+    "constituency": "BOMET CENTRAL",
+    "registered_voters": 71409
+   },
+   {
+    "county_code": "036",
+    "county": "BOMET",
+    "const_code": "198",
+    "constituency": "KONOIN",
+    "registered_voters": 75115
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "199",
+    "constituency": "LUGARI",
+    "registered_voters": 86908
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "200",
+    "constituency": "LIKUYANI",
+    "registered_voters": 72449
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "201",
+    "constituency": "MALAVA",
+    "registered_voters": 94417
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "202",
+    "constituency": "LURAMBI",
+    "registered_voters": 89627
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "203",
+    "constituency": "NAVAKHOLO",
+    "registered_voters": 64743
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "204",
+    "constituency": "MUMIAS WEST",
+    "registered_voters": 53317
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "205",
+    "constituency": "MUMIAS EAST",
+    "registered_voters": 50568
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "206",
+    "constituency": "MATUNGU",
+    "registered_voters": 73930
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "207",
+    "constituency": "BUTERE",
+    "registered_voters": 70224
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "208",
+    "constituency": "KHWISERO",
+    "registered_voters": 55091
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "209",
+    "constituency": "SHINYALU",
+    "registered_voters": 76978
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "const_code": "210",
+    "constituency": "IKOLOMANI",
+    "registered_voters": 56299
+   },
+   {
+    "county_code": "038",
+    "county": "VIHIGA",
+    "const_code": "211",
+    "constituency": "VIHIGA",
+    "registered_voters": 52289
+   },
+   {
+    "county_code": "038",
+    "county": "VIHIGA",
+    "const_code": "212",
+    "constituency": "SABATIA",
+    "registered_voters": 70875
+   },
+   {
+    "county_code": "038",
+    "county": "VIHIGA",
+    "const_code": "213",
+    "constituency": "HAMISI",
+    "registered_voters": 80384
+   },
+   {
+    "county_code": "038",
+    "county": "VIHIGA",
+    "const_code": "214",
+    "constituency": "LUANDA",
+    "registered_voters": 56310
+   },
+   {
+    "county_code": "038",
+    "county": "VIHIGA",
+    "const_code": "215",
+    "constituency": "EMUHAYA",
+    "registered_voters": 50185
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "const_code": "216",
+    "constituency": "MT. ELGON",
+    "registered_voters": 76159
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "const_code": "217",
+    "constituency": "SIRISIA",
+    "registered_voters": 48717
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "const_code": "218",
+    "constituency": "KABUCHAI",
+    "registered_voters": 67221
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "const_code": "219",
+    "constituency": "BUMULA",
+    "registered_voters": 82047
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "const_code": "220",
+    "constituency": "KANDUYI",
+    "registered_voters": 118333
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "const_code": "221",
+    "constituency": "WEBUYE EAST",
+    "registered_voters": 48950
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "const_code": "222",
+    "constituency": "WEBUYE WEST",
+    "registered_voters": 58632
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "const_code": "223",
+    "constituency": "KIMILILI",
+    "registered_voters": 61587
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "const_code": "224",
+    "constituency": "TONGAREN",
+    "registered_voters": 84952
+   },
+   {
+    "county_code": "040",
+    "county": "BUSIA",
+    "const_code": "225",
+    "constituency": "TESO NORTH",
+    "registered_voters": 59795
+   },
+   {
+    "county_code": "040",
+    "county": "BUSIA",
+    "const_code": "226",
+    "constituency": "TESO SOUTH",
+    "registered_voters": 71268
+   },
+   {
+    "county_code": "040",
+    "county": "BUSIA",
+    "const_code": "227",
+    "constituency": "NAMBALE",
+    "registered_voters": 50545
+   },
+   {
+    "county_code": "040",
+    "county": "BUSIA",
+    "const_code": "228",
+    "constituency": "MATAYOS",
+    "registered_voters": 67708
+   },
+   {
+    "county_code": "040",
+    "county": "BUSIA",
+    "const_code": "229",
+    "constituency": "BUTULA",
+    "registered_voters": 67377
+   },
+   {
+    "county_code": "040",
+    "county": "BUSIA",
+    "const_code": "230",
+    "constituency": "FUNYULA",
+    "registered_voters": 54031
+   },
+   {
+    "county_code": "040",
+    "county": "BUSIA",
+    "const_code": "231",
+    "constituency": "BUDALANGI",
+    "registered_voters": 46032
+   },
+   {
+    "county_code": "041",
+    "county": "SIAYA",
+    "const_code": "232",
+    "constituency": "UGENYA",
+    "registered_voters": 69027
+   },
+   {
+    "county_code": "041",
+    "county": "SIAYA",
+    "const_code": "233",
+    "constituency": "UGUNJA",
+    "registered_voters": 60114
+   },
+   {
+    "county_code": "041",
+    "county": "SIAYA",
+    "const_code": "234",
+    "constituency": "ALEGO USONGA",
+    "registered_voters": 122002
+   },
+   {
+    "county_code": "041",
+    "county": "SIAYA",
+    "const_code": "235",
+    "constituency": "GEM",
+    "registered_voters": 93568
+   },
+   {
+    "county_code": "041",
+    "county": "SIAYA",
+    "const_code": "236",
+    "constituency": "BONDO",
+    "registered_voters": 104035
+   },
+   {
+    "county_code": "041",
+    "county": "SIAYA",
+    "const_code": "237",
+    "constituency": "RARIEDA",
+    "registered_voters": 84849
+   },
+   {
+    "county_code": "042",
+    "county": "KISUMU",
+    "const_code": "238",
+    "constituency": "KISUMU EAST",
+    "registered_voters": 93177
+   },
+   {
+    "county_code": "042",
+    "county": "KISUMU",
+    "const_code": "239",
+    "constituency": "KISUMU WEST",
+    "registered_voters": 82927
+   },
+   {
+    "county_code": "042",
+    "county": "KISUMU",
+    "const_code": "240",
+    "constituency": "KISUMU CENTRAL",
+    "registered_voters": 130149
+   },
+   {
+    "county_code": "042",
+    "county": "KISUMU",
+    "const_code": "241",
+    "constituency": "SEME",
+    "registered_voters": 62045
+   },
+   {
+    "county_code": "042",
+    "county": "KISUMU",
+    "const_code": "242",
+    "constituency": "NYANDO",
+    "registered_voters": 80757
+   },
+   {
+    "county_code": "042",
+    "county": "KISUMU",
+    "const_code": "243",
+    "constituency": "MUHORONI",
+    "registered_voters": 79765
+   },
+   {
+    "county_code": "042",
+    "county": "KISUMU",
+    "const_code": "244",
+    "constituency": "NYAKACH",
+    "registered_voters": 77934
+   },
+   {
+    "county_code": "043",
+    "county": "HOMA BAY",
+    "const_code": "245",
+    "constituency": "KASIPUL",
+    "registered_voters": 67513
+   },
+   {
+    "county_code": "043",
+    "county": "HOMA BAY",
+    "const_code": "246",
+    "constituency": "KABONDO KASIPUL",
+    "registered_voters": 59910
+   },
+   {
+    "county_code": "043",
+    "county": "HOMA BAY",
+    "const_code": "247",
+    "constituency": "KARACHUONYO",
+    "registered_voters": 94181
+   },
+   {
+    "county_code": "043",
+    "county": "HOMA BAY",
+    "const_code": "248",
+    "constituency": "RANGWE",
+    "registered_voters": 58886
+   },
+   {
+    "county_code": "043",
+    "county": "HOMA BAY",
+    "const_code": "249",
+    "constituency": "HOMA BAY TOWN",
+    "registered_voters": 58335
+   },
+   {
+    "county_code": "043",
+    "county": "HOMA BAY",
+    "const_code": "250",
+    "constituency": "NDHIWA",
+    "registered_voters": 96734
+   },
+   {
+    "county_code": "043",
+    "county": "HOMA BAY",
+    "const_code": "251",
+    "constituency": "SUBA NORTH",
+    "registered_voters": 60674
+   },
+   {
+    "county_code": "043",
+    "county": "HOMA BAY",
+    "const_code": "252",
+    "constituency": "SUBA SOUTH",
+    "registered_voters": 54838
+   },
+   {
+    "county_code": "044",
+    "county": "MIGORI",
+    "const_code": "253",
+    "constituency": "RONGO",
+    "registered_voters": 59181
+   },
+   {
+    "county_code": "044",
+    "county": "MIGORI",
+    "const_code": "254",
+    "constituency": "AWENDO",
+    "registered_voters": 55972
+   },
+   {
+    "county_code": "044",
+    "county": "MIGORI",
+    "const_code": "255",
+    "constituency": "SUNA EAST",
+    "registered_voters": 54465
+   },
+   {
+    "county_code": "044",
+    "county": "MIGORI",
+    "const_code": "256",
+    "constituency": "SUNA WEST",
+    "registered_voters": 56686
+   },
+   {
+    "county_code": "044",
+    "county": "MIGORI",
+    "const_code": "257",
+    "constituency": "URIRI",
+    "registered_voters": 65063
+   },
+   {
+    "county_code": "044",
+    "county": "MIGORI",
+    "const_code": "258",
+    "constituency": "NYATIKE",
+    "registered_voters": 73432
+   },
+   {
+    "county_code": "044",
+    "county": "MIGORI",
+    "const_code": "259",
+    "constituency": "KURIA WEST",
+    "registered_voters": 62244
+   },
+   {
+    "county_code": "044",
+    "county": "MIGORI",
+    "const_code": "260",
+    "constituency": "KURIA EAST",
+    "registered_voters": 41976
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "const_code": "261",
+    "constituency": "BONCHARI",
+    "registered_voters": 64630
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "const_code": "262",
+    "constituency": "SOUTH MUGIRANGO",
+    "registered_voters": 79004
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "const_code": "263",
+    "constituency": "BOMACHOGE BORABU",
+    "registered_voters": 56991
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "const_code": "264",
+    "constituency": "BOBASI",
+    "registered_voters": 106060
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "const_code": "265",
+    "constituency": "BOMACHOGE CHACHE",
+    "registered_voters": 49301
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "const_code": "266",
+    "constituency": "NYARIBARI MASABA",
+    "registered_voters": 68593
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "const_code": "267",
+    "constituency": "NYARIBARI CHACHE",
+    "registered_voters": 88553
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "const_code": "268",
+    "constituency": "KITUTU CHACHE NORTH",
+    "registered_voters": 56970
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "const_code": "269",
+    "constituency": "KITUTU CHACHE SOUTH",
+    "registered_voters": 66908
+   },
+   {
+    "county_code": "046",
+    "county": "NYAMIRA",
+    "const_code": "270",
+    "constituency": "KITUTU MASABA",
+    "registered_voters": 106269
+   },
+   {
+    "county_code": "046",
+    "county": "NYAMIRA",
+    "const_code": "271",
+    "constituency": "WEST MUGIRANGO",
+    "registered_voters": 88199
+   },
+   {
+    "county_code": "046",
+    "county": "NYAMIRA",
+    "const_code": "272",
+    "constituency": "NORTH MUGIRANGO",
+    "registered_voters": 64750
+   },
+   {
+    "county_code": "046",
+    "county": "NYAMIRA",
+    "const_code": "273",
+    "constituency": "BORABU",
+    "registered_voters": 64065
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "274",
+    "constituency": "WESTLANDS",
+    "registered_voters": 160739
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "275",
+    "constituency": "DAGORETTI NORTH",
+    "registered_voters": 157659
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "276",
+    "constituency": "DAGORETTI SOUTH",
+    "registered_voters": 114930
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "277",
+    "constituency": "LANGATA",
+    "registered_voters": 145649
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "278",
+    "constituency": "KIBRA",
+    "registered_voters": 128282
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "279",
+    "constituency": "ROYSAMBU",
+    "registered_voters": 153772
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "280",
+    "constituency": "KASARANI",
+    "registered_voters": 155250
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "281",
+    "constituency": "RUARAKA",
+    "registered_voters": 124482
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "282",
+    "constituency": "EMBAKASI SOUTH",
+    "registered_voters": 167953
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "283",
+    "constituency": "EMBAKASI NORTH",
+    "registered_voters": 113344
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "284",
+    "constituency": "EMBAKASI CENTRAL",
+    "registered_voters": 145892
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "285",
+    "constituency": "EMBAKASI EAST",
+    "registered_voters": 154599
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "286",
+    "constituency": "EMBAKASI WEST",
+    "registered_voters": 141878
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "287",
+    "constituency": "MAKADARA",
+    "registered_voters": 129627
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "288",
+    "constituency": "KAMUKUNJI",
+    "registered_voters": 128516
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "289",
+    "constituency": "STAREHE",
+    "registered_voters": 169575
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "const_code": "290",
+    "constituency": "MATHARE",
+    "registered_voters": 123163
+   }
+  ],
+  "county_totals_summed_from_constituencies": [
+   {
+    "county_code": "001",
+    "county": "MOMBASA",
+    "registered_voters": 641913,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "002",
+    "county": "KWALE",
+    "registered_voters": 328253,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "003",
+    "county": "KILIFI",
+    "registered_voters": 588602,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "004",
+    "county": "TANA RIVER",
+    "registered_voters": 141096,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "005",
+    "county": "LAMU",
+    "registered_voters": 81453,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "006",
+    "county": "TAITA TAVETA",
+    "registered_voters": 181827,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "007",
+    "county": "GARISSA",
+    "registered_voters": 201473,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "008",
+    "county": "WAJIR",
+    "registered_voters": 207758,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "009",
+    "county": "MANDERA",
+    "registered_voters": 217030,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "010",
+    "county": "MARSABIT",
+    "registered_voters": 166912,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "011",
+    "county": "ISIOLO",
+    "registered_voters": 89504,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "012",
+    "county": "MERU",
+    "registered_voters": 772139,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "013",
+    "county": "THARAKA - NITHI",
+    "registered_voters": 231932,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "014",
+    "county": "EMBU",
+    "registered_voters": 334302,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "015",
+    "county": "KITUI",
+    "registered_voters": 532758,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "016",
+    "county": "MACHAKOS",
+    "registered_voters": 687565,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "017",
+    "county": "MAKUENI",
+    "registered_voters": 479401,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "018",
+    "county": "NYANDARUA",
+    "registered_voters": 361165,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "019",
+    "county": "NYERI",
+    "registered_voters": 481632,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "020",
+    "county": "KIRINYAGA",
+    "registered_voters": 376001,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "021",
+    "county": "MURANG'A",
+    "registered_voters": 620929,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "022",
+    "county": "KIAMBU",
+    "registered_voters": 1275008,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "023",
+    "county": "TURKANA",
+    "registered_voters": 238528,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "024",
+    "county": "WEST POKOT",
+    "registered_voters": 220026,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "025",
+    "county": "SAMBURU",
+    "registered_voters": 100014,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "026",
+    "county": "TRANS NZOIA",
+    "registered_voters": 398981,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "027",
+    "county": "UASIN GISHU",
+    "registered_voters": 506138,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "028",
+    "county": "ELGEYO/MARAKWET",
+    "registered_voters": 213884,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "029",
+    "county": "NANDI",
+    "registered_voters": 406288,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "030",
+    "county": "BARINGO",
+    "registered_voters": 281053,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "031",
+    "county": "LAIKIPIA",
+    "registered_voters": 263012,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "032",
+    "county": "NAKURU",
+    "registered_voters": 1054856,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "033",
+    "county": "NAROK",
+    "registered_voters": 398784,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "034",
+    "county": "KAJIADO",
+    "registered_voters": 463273,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "035",
+    "county": "KERICHO",
+    "registered_voters": 428067,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "036",
+    "county": "BOMET",
+    "registered_voters": 376985,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "037",
+    "county": "KAKAMEGA",
+    "registered_voters": 844551,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "038",
+    "county": "VIHIGA",
+    "registered_voters": 310043,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "039",
+    "county": "BUNGOMA",
+    "registered_voters": 646598,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "040",
+    "county": "BUSIA",
+    "registered_voters": 416756,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "041",
+    "county": "SIAYA",
+    "registered_voters": 533595,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "042",
+    "county": "KISUMU",
+    "registered_voters": 606754,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "043",
+    "county": "HOMA BAY",
+    "registered_voters": 551071,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "044",
+    "county": "MIGORI",
+    "registered_voters": 469019,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "045",
+    "county": "KISII",
+    "registered_voters": 637010,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "046",
+    "county": "NYAMIRA",
+    "registered_voters": 323283,
+    "derived": "sum of constituency rows"
+   },
+   {
+    "county_code": "047",
+    "county": "NAIROBI CITY",
+    "registered_voters": 2415310,
+    "derived": "sum of constituency rows"
+   }
+  ],
+  "checks": {
+   "constituencies": 290,
+   "counties": 47,
+   "sum_of_rows": 22102532,
+   "published_total": 22102532,
+   "sum_equals_published_total": true
+  },
+  "conflict": "National total in this file is 22,102,532 (Kenyan constituencies only). Media and IEBC notices cite 22,120,458 for the full register; the 17,926 difference is not explained in this file (possibly diaspora and prison registrations, unverified). Show both with sources."
+ },
+ "iebc_candidates_2022_by_position": {
+  "source": {
+   "title": "IEBC Annual Report 2022-2023",
+   "publisher": "IEBC",
+   "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf",
+   "sha256": "54f715f1e83f2c2d576e3e7b96fd8a017c3037fe677bdf47917c4ef6fdcd39ec",
+   "retrieved": "2026-11-21",
+   "location": "Table 21: Number of Candidates in the 2022 GE",
+   "source_id": "iebc-annual-report-2022-23"
+  },
+  "unit": "candidates (count)",
+  "rows": [
+   {
+    "position": "President",
+    "party_sponsored": 4,
+    "independent": 0,
+    "total": 4,
+    "note": "independent shown as \"-\""
+   },
+   {
+    "position": "Member of the National Assembly",
+    "party_sponsored": 1580,
+    "independent": 555,
+    "total": 2135
+   },
+   {
+    "position": "Member of County Assembly",
+    "party_sponsored": 9197,
+    "independent": 3801,
+    "total": 12998
+   },
+   {
+    "position": "Senate",
+    "party_sponsored": 288,
+    "independent": 54,
+    "total": 342
+   },
+   {
+    "position": "County Governor",
+    "party_sponsored": 213,
+    "independent": 53,
+    "total": 266
+   },
+   {
+    "position": "County Woman Member of the National Assembly",
+    "party_sponsored": 292,
+    "independent": 68,
+    "total": 361,
+    "note": "As printed: party-sponsored plus independent is one less than the printed total (see conflict candidates-2022-woman-member)."
+   },
+   {
+    "position": "Total",
+    "party_sponsored": 11574,
+    "independent": 4531,
+    "total": 16106,
+    "note": "As printed: party-sponsored plus independent is one less than the printed total (see conflict candidates-2022-woman-member)."
+   }
+  ],
+  "checks": {
+   "note": "Each column adds to the printed Total row. In two rows (County Woman Member of the National Assembly, Total) party-sponsored plus independent is one less than the printed total; listed in the conflict register."
+  }
+ },
+ "institutional_counts": {
+  "counties": {
+   "value": 47,
+   "basis": "distinct county codes in IEBC 2022 ROV-per-constituency file"
+  },
+  "constituencies": {
+   "value": 290,
+   "basis": "rows in IEBC 2022 ROV-per-constituency file"
+  },
+  "county_assembly_wards": {
+   "value": null,
+   "basis": "not staged: IEBC ward-level register file not located on iebc.or.ke in this pass"
+  }
+ },
+ "county_equitable_share": "see ngo.json -> cra (CRA FY2026/27 recommendation Table 6.2 per county; Table 5.1 county allocation totals FY2013/14-2025/26)",
+ "equalisation_fund": "see ngo.json -> cra.equalisation_fund_fy2013_14_to_2026_27 (national totals). Marginalised-areas list (CRA Second Policy) not staged.",
+ "not_staged": [
+  {
+   "item": "NG-CDF allocation per constituency",
+   "status": "Parliament library PDF 'Proposed Budget Ceiling for Each Constituency for the 2024-2025 Financial Year' downloaded (raw/pol/ngcdf/ceiling_2024-25.pdf, sha256 6563859ccd4da2abc86a054142d5f96f08bcc5177b7b445db8740cb435a6ea32, https://libraryir.parliament.go.ke/server/api/core/bitstreams/b22639c0-9a33-41a1-8d71-dc2b021d50c4/content). It is a scan; OCR text is garbled (e.g. 't88.4t4.052.t9'), so values were NOT extracted. Mzalendo republishes per-constituency figures (secondary)."
+  },
+  {
+   "item": "2022 presidential/governor results by county",
+   "status": "IEBC 2022 Form 34C only as scanned forms on forms.iebc.or.ke (reported ~900 MB); not staged"
+  },
+  {
+   "item": "2017 registered voters per constituency as separate file",
+   "status": "registered voters column of the Aug 2017 Form 34C is staged instead"
+  },
+  {
+   "item": "KNBS 2019 census population by county / sub-county",
+   "status": "www.knbs.or.ke TLS failure through proxy (curl 60); not bypassed"
+  },
+  {
+   "item": "Constitutional seat numbers (Art. 89, 97, 98, 177)",
+   "status": "Kenya Law pages returned HTTP 202 empty / 403; not staged"
+  },
+  {
+   "item": "Bills passed per session (Parliament/Mzalendo)",
+   "status": "not located in this pass"
+  },
+  {
+   "item": "IEBC gazette with candidate nomination lists (oL58gti6SK.pdf)",
+   "status": "downloaded then deleted: contains national ID numbers and dates of birth of individuals (personal data, out of scope)"
+  },
+  {
+   "item": "IEBC presidential election of 8 August 2017, Form 34C totals by county and constituency",
+   "status": "Left out of the site (owner rule: publish only with caveats or leave out). That election was annulled by the Supreme Court on 1 September 2017; the copy found is unsigned; its 48 county rows add to 19,611,457 registered and 15,114,574 valid votes against a national total row of 19,611,423 and 15,114,622."
+  }
+ ],
+ "licence_terms": {
+  "IEBC": "No reuse licence stated on the PDFs; public statutory publications. Cite IEBC.",
+  "Parliament library (DSpace)": "license.txt is the DSpace sample licence placeholder (raw/pol/ngcdf/license.txt); no explicit reuse terms"
+ }
+}

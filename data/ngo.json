@@ -1,0 +1,1002 @@
+{
+ "meta": {
+  "title": "Commission on Revenue Allocation county allocations and revenue sharing; International Budget Partnership Open Budget Survey (Kenya)",
+  "retrieved": "2026-11-21",
+  "schema_version": "1.0",
+  "rule": "Each value labelled with its true publisher. CRA is a constitutional commission, included here because the owner listed it."
+ },
+ "generated": "2026-11-21",
+ "cra": {
+  "county_allocations_fy2026_27": {
+   "source": {
+    "title": "CRA Recommendation on the Basis for Equitable Sharing of Revenue between the National and County Governments for FY 2026/27",
+    "publisher": "Commission on Revenue Allocation (CRA), constitutional commission (public body, not an NGO)",
+    "url": "https://cra.go.ke/wp-content/uploads/2026/02/CRA-Recommendation-on-The-Basis-for-Equitable-Sharing-Of-Revenue-FY-2026-27.pdf",
+    "sha256": "38189f669f7014cfd11d0cc7d7215332667772b5cc32a7ccb083ad9976b8498a",
+    "retrieved": "2026-11-21",
+    "status_note": "RECOMMENDATION to Parliament (Feb 2026). Not the enacted County Allocation of Revenue Act; enacted figures may differ.",
+    "location": "Table 6.2, p.44-45 (Allocation to County Governments for FY 2026/27, Ksh Million)",
+    "source_id": "cra-recommendation-2026-27"
+   },
+   "unit": "KSh million (factor column: percent share)",
+   "rows": [
+    {
+     "no": 1,
+     "county": "Baringo",
+     "allocation_2025_26": 7084.0,
+     "baseline_2026_27": 6684.0,
+     "fourth_basis_allocation_factor_pct": 1.73,
+     "fourth_basis_allocation_2026_27": 1161.0,
+     "total_allocation_2026_27": 7845.0
+    },
+    {
+     "no": 2,
+     "county": "Bomet",
+     "allocation_2025_26": 7447.0,
+     "baseline_2026_27": 7015.0,
+     "fourth_basis_allocation_factor_pct": 1.87,
+     "fourth_basis_allocation_2026_27": 1255.0,
+     "total_allocation_2026_27": 8270.0
+    },
+    {
+     "no": 3,
+     "county": "Bungoma",
+     "allocation_2025_26": 11838.0,
+     "baseline_2026_27": 11171.0,
+     "fourth_basis_allocation_factor_pct": 2.89,
+     "fourth_basis_allocation_2026_27": 1940.0,
+     "total_allocation_2026_27": 13110.0
+    },
+    {
+     "no": 4,
+     "county": "Busia",
+     "allocation_2025_26": 7957.0,
+     "baseline_2026_27": 7515.0,
+     "fourth_basis_allocation_factor_pct": 1.91,
+     "fourth_basis_allocation_2026_27": 1283.0,
+     "total_allocation_2026_27": 8798.0
+    },
+    {
+     "no": 5,
+     "county": "Elgeyo/Marakwet",
+     "allocation_2025_26": 5515.0,
+     "baseline_2026_27": 5198.0,
+     "fourth_basis_allocation_factor_pct": 1.37,
+     "fourth_basis_allocation_2026_27": 920.0,
+     "total_allocation_2026_27": 6118.0
+    },
+    {
+     "no": 6,
+     "county": "Embu",
+     "allocation_2025_26": 6077.0,
+     "baseline_2026_27": 5742.0,
+     "fourth_basis_allocation_factor_pct": 1.45,
+     "fourth_basis_allocation_2026_27": 976.0,
+     "total_allocation_2026_27": 6717.0
+    },
+    {
+     "no": 7,
+     "county": "Garissa",
+     "allocation_2025_26": 8878.0,
+     "baseline_2026_27": 8290.0,
+     "fourth_basis_allocation_factor_pct": 2.54,
+     "fourth_basis_allocation_2026_27": 1706.0,
+     "total_allocation_2026_27": 9996.0
+    },
+    {
+     "no": 8,
+     "county": "Homa Bay",
+     "allocation_2025_26": 8646.0,
+     "baseline_2026_27": 8170.0,
+     "fourth_basis_allocation_factor_pct": 2.06,
+     "fourth_basis_allocation_2026_27": 1384.0,
+     "total_allocation_2026_27": 9554.0
+    },
+    {
+     "no": 9,
+     "county": "Isiolo",
+     "allocation_2025_26": 5631.0,
+     "baseline_2026_27": 5295.0,
+     "fourth_basis_allocation_factor_pct": 1.46,
+     "fourth_basis_allocation_2026_27": 976.0,
+     "total_allocation_2026_27": 6271.0
+    },
+    {
+     "no": 10,
+     "county": "Kajiado",
+     "allocation_2025_26": 8894.0,
+     "baseline_2026_27": 8345.0,
+     "fourth_basis_allocation_factor_pct": 2.38,
+     "fourth_basis_allocation_2026_27": 1596.0,
+     "total_allocation_2026_27": 9941.0
+    },
+    {
+     "no": 11,
+     "county": "Kakamega",
+     "allocation_2025_26": 13675.0,
+     "baseline_2026_27": 12981.0,
+     "fourth_basis_allocation_factor_pct": 3.01,
+     "fourth_basis_allocation_2026_27": 2018.0,
+     "total_allocation_2026_27": 14999.0
+    },
+    {
+     "no": 12,
+     "county": "Kericho",
+     "allocation_2025_26": 7179.0,
+     "baseline_2026_27": 6738.0,
+     "fourth_basis_allocation_factor_pct": 1.91,
+     "fourth_basis_allocation_2026_27": 1279.0,
+     "total_allocation_2026_27": 8017.0
+    },
+    {
+     "no": 13,
+     "county": "Kiambu",
+     "allocation_2025_26": 13072.0,
+     "baseline_2026_27": 12294.0,
+     "fourth_basis_allocation_factor_pct": 3.37,
+     "fourth_basis_allocation_2026_27": 2262.0,
+     "total_allocation_2026_27": 14556.0
+    },
+    {
+     "no": 14,
+     "county": "Kilifi",
+     "allocation_2025_26": 12813.0,
+     "baseline_2026_27": 12170.0,
+     "fourth_basis_allocation_factor_pct": 2.79,
+     "fourth_basis_allocation_2026_27": 1870.0,
+     "total_allocation_2026_27": 14040.0
+    },
+    {
+     "no": 15,
+     "county": "Kirinyaga",
+     "allocation_2025_26": 6152.0,
+     "baseline_2026_27": 5821.0,
+     "fourth_basis_allocation_factor_pct": 1.43,
+     "fourth_basis_allocation_2026_27": 961.0,
+     "total_allocation_2026_27": 6782.0
+    },
+    {
+     "no": 16,
+     "county": "Kisii",
+     "allocation_2025_26": 9820.0,
+     "baseline_2026_27": 9306.0,
+     "fourth_basis_allocation_factor_pct": 2.23,
+     "fourth_basis_allocation_2026_27": 1493.0,
+     "total_allocation_2026_27": 10799.0
+    },
+    {
+     "no": 17,
+     "county": "Kisumu",
+     "allocation_2025_26": 8902.0,
+     "baseline_2026_27": 8405.0,
+     "fourth_basis_allocation_factor_pct": 2.15,
+     "fourth_basis_allocation_2026_27": 1443.0,
+     "total_allocation_2026_27": 9849.0
+    },
+    {
+     "no": 18,
+     "county": "Kitui",
+     "allocation_2025_26": 11504.0,
+     "baseline_2026_27": 10886.0,
+     "fourth_basis_allocation_factor_pct": 2.68,
+     "fourth_basis_allocation_2026_27": 1795.0,
+     "total_allocation_2026_27": 12681.0
+    },
+    {
+     "no": 19,
+     "county": "Kwale",
+     "allocation_2025_26": 9079.0,
+     "baseline_2026_27": 8625.0,
+     "fourth_basis_allocation_factor_pct": 1.96,
+     "fourth_basis_allocation_2026_27": 1317.0,
+     "total_allocation_2026_27": 9942.0
+    },
+    {
+     "no": 20,
+     "county": "Laikipia",
+     "allocation_2025_26": 6104.0,
+     "baseline_2026_27": 5759.0,
+     "fourth_basis_allocation_factor_pct": 1.5,
+     "fourth_basis_allocation_2026_27": 1003.0,
+     "total_allocation_2026_27": 6762.0
+    },
+    {
+     "no": 21,
+     "county": "Lamu",
+     "allocation_2025_26": 3858.0,
+     "baseline_2026_27": 3626.0,
+     "fourth_basis_allocation_factor_pct": 1.0,
+     "fourth_basis_allocation_2026_27": 672.0,
+     "total_allocation_2026_27": 4298.0
+    },
+    {
+     "no": 22,
+     "county": "Machakos",
+     "allocation_2025_26": 10179.0,
+     "baseline_2026_27": 9597.0,
+     "fourth_basis_allocation_factor_pct": 2.52,
+     "fourth_basis_allocation_2026_27": 1691.0,
+     "total_allocation_2026_27": 11288.0
+    },
+    {
+     "no": 23,
+     "county": "Makueni",
+     "allocation_2025_26": 8976.0,
+     "baseline_2026_27": 8497.0,
+     "fourth_basis_allocation_factor_pct": 2.08,
+     "fourth_basis_allocation_2026_27": 1392.0,
+     "total_allocation_2026_27": 9889.0
+    },
+    {
+     "no": 24,
+     "county": "Mandera",
+     "allocation_2025_26": 12265.0,
+     "baseline_2026_27": 11691.0,
+     "fourth_basis_allocation_factor_pct": 2.34,
+     "fourth_basis_allocation_2026_27": 1568.0,
+     "total_allocation_2026_27": 13259.0
+    },
+    {
+     "no": 25,
+     "county": "Marsabit",
+     "allocation_2025_26": 8106.0,
+     "baseline_2026_27": 7597.0,
+     "fourth_basis_allocation_factor_pct": 2.2,
+     "fourth_basis_allocation_2026_27": 1476.0,
+     "total_allocation_2026_27": 9073.0
+    },
+    {
+     "no": 26,
+     "county": "Meru",
+     "allocation_2025_26": 10554.0,
+     "baseline_2026_27": 9944.0,
+     "fourth_basis_allocation_factor_pct": 2.64,
+     "fourth_basis_allocation_2026_27": 1772.0,
+     "total_allocation_2026_27": 11716.0
+    },
+    {
+     "no": 27,
+     "county": "Migori",
+     "allocation_2025_26": 8884.0,
+     "baseline_2026_27": 8385.0,
+     "fourth_basis_allocation_factor_pct": 2.16,
+     "fourth_basis_allocation_2026_27": 1450.0,
+     "total_allocation_2026_27": 9835.0
+    },
+    {
+     "no": 28,
+     "county": "Mombasa",
+     "allocation_2025_26": 8383.0,
+     "baseline_2026_27": 7900.0,
+     "fourth_basis_allocation_factor_pct": 2.1,
+     "fourth_basis_allocation_2026_27": 1406.0,
+     "total_allocation_2026_27": 9305.0
+    },
+    {
+     "no": 29,
+     "county": "Murang’a",
+     "allocation_2025_26": 7969.0,
+     "baseline_2026_27": 7512.0,
+     "fourth_basis_allocation_factor_pct": 1.98,
+     "fourth_basis_allocation_2026_27": 1330.0,
+     "total_allocation_2026_27": 8842.0
+    },
+    {
+     "no": 30,
+     "county": "Nairobi City",
+     "allocation_2025_26": 21417.0,
+     "baseline_2026_27": 20179.0,
+     "fourth_basis_allocation_factor_pct": 5.37,
+     "fourth_basis_allocation_2026_27": 3602.0,
+     "total_allocation_2026_27": 23781.0
+    },
+    {
+     "no": 31,
+     "county": "Nakuru",
+     "allocation_2025_26": 14455.0,
+     "baseline_2026_27": 13667.0,
+     "fourth_basis_allocation_factor_pct": 3.42,
+     "fourth_basis_allocation_2026_27": 2291.0,
+     "total_allocation_2026_27": 15958.0
+    },
+    {
+     "no": 32,
+     "county": "Nandi",
+     "allocation_2025_26": 7772.0,
+     "baseline_2026_27": 7346.0,
+     "fourth_basis_allocation_factor_pct": 1.84,
+     "fourth_basis_allocation_2026_27": 1237.0,
+     "total_allocation_2026_27": 8583.0
+    },
+    {
+     "no": 33,
+     "county": "Narok",
+     "allocation_2025_26": 9770.0,
+     "baseline_2026_27": 9242.0,
+     "fourth_basis_allocation_factor_pct": 2.29,
+     "fourth_basis_allocation_2026_27": 1535.0,
+     "total_allocation_2026_27": 10777.0
+    },
+    {
+     "no": 34,
+     "county": "Nyamira",
+     "allocation_2025_26": 6073.0,
+     "baseline_2026_27": 5732.0,
+     "fourth_basis_allocation_factor_pct": 1.48,
+     "fourth_basis_allocation_2026_27": 993.0,
+     "total_allocation_2026_27": 6724.0
+    },
+    {
+     "no": 35,
+     "county": "Nyandarua",
+     "allocation_2025_26": 6663.0,
+     "baseline_2026_27": 6308.0,
+     "fourth_basis_allocation_factor_pct": 1.54,
+     "fourth_basis_allocation_2026_27": 1030.0,
+     "total_allocation_2026_27": 7338.0
+    },
+    {
+     "no": 36,
+     "county": "Nyeri",
+     "allocation_2025_26": 6896.0,
+     "baseline_2026_27": 6519.0,
+     "fourth_basis_allocation_factor_pct": 1.64,
+     "fourth_basis_allocation_2026_27": 1097.0,
+     "total_allocation_2026_27": 7615.0
+    },
+    {
+     "no": 37,
+     "county": "Samburu",
+     "allocation_2025_26": 6337.0,
+     "baseline_2026_27": 5995.0,
+     "fourth_basis_allocation_factor_pct": 1.48,
+     "fourth_basis_allocation_2026_27": 993.0,
+     "total_allocation_2026_27": 6988.0
+    },
+    {
+     "no": 38,
+     "county": "Siaya",
+     "allocation_2025_26": 7754.0,
+     "baseline_2026_27": 7301.0,
+     "fourth_basis_allocation_factor_pct": 1.96,
+     "fourth_basis_allocation_2026_27": 1316.0,
+     "total_allocation_2026_27": 8618.0
+    },
+    {
+     "no": 39,
+     "county": "Taita Taveta",
+     "allocation_2025_26": 5760.0,
+     "baseline_2026_27": 5438.0,
+     "fourth_basis_allocation_factor_pct": 1.4,
+     "fourth_basis_allocation_2026_27": 937.0,
+     "total_allocation_2026_27": 6374.0
+    },
+    {
+     "no": 40,
+     "county": "Tana River",
+     "allocation_2025_26": 7222.0,
+     "baseline_2026_27": 6825.0,
+     "fourth_basis_allocation_factor_pct": 1.72,
+     "fourth_basis_allocation_2026_27": 1155.0,
+     "total_allocation_2026_27": 7979.0
+    },
+    {
+     "no": 41,
+     "county": "Tharaka Nithi",
+     "allocation_2025_26": 5058.0,
+     "baseline_2026_27": 4771.0,
+     "fourth_basis_allocation_factor_pct": 1.24,
+     "fourth_basis_allocation_2026_27": 834.0,
+     "total_allocation_2026_27": 5605.0
+    },
+    {
+     "no": 42,
+     "county": "Trans Nzoia",
+     "allocation_2025_26": 7991.0,
+     "baseline_2026_27": 7541.0,
+     "fourth_basis_allocation_factor_pct": 1.95,
+     "fourth_basis_allocation_2026_27": 1309.0,
+     "total_allocation_2026_27": 8850.0
+    },
+    {
+     "no": 43,
+     "county": "Turkana",
+     "allocation_2025_26": 13893.0,
+     "baseline_2026_27": 13213.0,
+     "fourth_basis_allocation_factor_pct": 2.94,
+     "fourth_basis_allocation_2026_27": 1973.0,
+     "total_allocation_2026_27": 15186.0
+    },
+    {
+     "no": 44,
+     "county": "Uasin Gishu",
+     "allocation_2025_26": 8977.0,
+     "baseline_2026_27": 8472.0,
+     "fourth_basis_allocation_factor_pct": 2.19,
+     "fourth_basis_allocation_2026_27": 1466.0,
+     "total_allocation_2026_27": 9939.0
+    },
+    {
+     "no": 45,
+     "county": "Vihiga",
+     "allocation_2025_26": 6009.0,
+     "baseline_2026_27": 5665.0,
+     "fourth_basis_allocation_factor_pct": 1.49,
+     "fourth_basis_allocation_2026_27": 1000.0,
+     "total_allocation_2026_27": 6664.0
+    },
+    {
+     "no": 46,
+     "county": "Wajir",
+     "allocation_2025_26": 10508.0,
+     "baseline_2026_27": 9903.0,
+     "fourth_basis_allocation_factor_pct": 2.62,
+     "fourth_basis_allocation_2026_27": 1756.0,
+     "total_allocation_2026_27": 11659.0
+    },
+    {
+     "no": 47,
+     "county": "West Pokot",
+     "allocation_2025_26": 7002.0,
+     "baseline_2026_27": 6610.0,
+     "fourth_basis_allocation_factor_pct": 1.7,
+     "fourth_basis_allocation_2026_27": 1140.0,
+     "total_allocation_2026_27": 7750.0
+    }
+   ],
+   "checks": {
+    "column_sums_vs_published_total": [
+     {
+      "column": "allocation_2025_26",
+      "sum_of_47": 414998.0,
+      "published_total": 415000.0,
+      "diff": -2.0
+     },
+     {
+      "column": "baseline_2026_27",
+      "sum_of_47": 391886.0,
+      "published_total": 391885.0,
+      "diff": 1.0
+     },
+     {
+      "column": "fourth_basis_allocation_factor_pct",
+      "sum_of_47": 99.98,
+      "published_total": 100.0,
+      "diff": -0.02
+     },
+     {
+      "column": "fourth_basis_allocation_2026_27",
+      "sum_of_47": 67059.0,
+      "published_total": 67055.0,
+      "diff": 4.0
+     },
+     {
+      "column": "total_allocation_2026_27",
+      "sum_of_47": 458940.0,
+      "published_total": 458940.0,
+      "diff": 0.0
+     }
+    ],
+    "rows_where_baseline_plus_4th_basis_ne_total(>1m)": []
+   }
+  },
+  "fourth_basis_weights": {
+   "source": {
+    "title": "CRA Recommendation on the Basis for Equitable Sharing of Revenue between the National and County Governments for FY 2026/27",
+    "publisher": "Commission on Revenue Allocation (CRA), constitutional commission (public body, not an NGO)",
+    "url": "https://cra.go.ke/wp-content/uploads/2026/02/CRA-Recommendation-on-The-Basis-for-Equitable-Sharing-Of-Revenue-FY-2026-27.pdf",
+    "sha256": "38189f669f7014cfd11d0cc7d7215332667772b5cc32a7ccb083ad9976b8498a",
+    "retrieved": "2026-11-21",
+    "status_note": "RECOMMENDATION to Parliament (Feb 2026). Not the enacted County Allocation of Revenue Act; enacted figures may differ.",
+    "location": "Table 6.1 Fourth Basis Framework, p.44",
+    "source_id": "cra-recommendation-2026-27"
+   },
+   "unit": "percent weight",
+   "weights": {
+    "population": 45,
+    "basic_share": 35,
+    "geographical_size": 8,
+    "poverty": 12
+   }
+  },
+  "vertical_sharing_fy2013_14_to_2026_27": {
+   "source": {
+    "title": "CRA Recommendation on the Basis for Equitable Sharing of Revenue between the National and County Governments for FY 2026/27",
+    "publisher": "Commission on Revenue Allocation (CRA), constitutional commission (public body, not an NGO)",
+    "url": "https://cra.go.ke/wp-content/uploads/2026/02/CRA-Recommendation-on-The-Basis-for-Equitable-Sharing-Of-Revenue-FY-2026-27.pdf",
+    "sha256": "38189f669f7014cfd11d0cc7d7215332667772b5cc32a7ccb083ad9976b8498a",
+    "retrieved": "2026-11-21",
+    "status_note": "RECOMMENDATION to Parliament (Feb 2026). Not the enacted County Allocation of Revenue Act; enacted figures may differ.",
+    "location": "Table 5.1, p.30 (source of data stated: National Treasury, DORA, CRA)",
+    "source_id": "cra-recommendation-2026-27"
+   },
+   "unit": "KSh billion (pct_increment: percent; shortfall negative = below target)",
+   "rows": {
+    "2013/14": {
+     "projected_ordinary_revenue": 939.0,
+     "actual_ordinary_revenue": 919.0,
+     "pct_increment": null,
+     "revenue_shortfall": -20.0,
+     "county_allocation": 190.0,
+     "national_government_allocation": 729.0,
+     "flag": null
+    },
+    "2014/15": {
+     "projected_ordinary_revenue": 1040.0,
+     "actual_ordinary_revenue": 1032.0,
+     "pct_increment": 12.3,
+     "revenue_shortfall": -8.0,
+     "county_allocation": 227.0,
+     "national_government_allocation": 805.0,
+     "flag": null
+    },
+    "2015/16": {
+     "projected_ordinary_revenue": 1256.0,
+     "actual_ordinary_revenue": 1153.0,
+     "pct_increment": 11.7,
+     "revenue_shortfall": -104.0,
+     "county_allocation": 260.0,
+     "national_government_allocation": 893.0,
+     "flag": null
+    },
+    "2016/17": {
+     "projected_ordinary_revenue": 1394.0,
+     "actual_ordinary_revenue": 1307.0,
+     "pct_increment": 13.4,
+     "revenue_shortfall": -87.0,
+     "county_allocation": 280.0,
+     "national_government_allocation": 1026.0,
+     "flag": null
+    },
+    "2017/18": {
+     "projected_ordinary_revenue": 1561.0,
+     "actual_ordinary_revenue": 1365.0,
+     "pct_increment": 4.5,
+     "revenue_shortfall": -196.0,
+     "county_allocation": 302.0,
+     "national_government_allocation": 1063.0,
+     "flag": null
+    },
+    "2018/19": {
+     "projected_ordinary_revenue": 1701.0,
+     "actual_ordinary_revenue": 1500.0,
+     "pct_increment": 9.9,
+     "revenue_shortfall": -201.0,
+     "county_allocation": 314.0,
+     "national_government_allocation": 1186.0,
+     "flag": null
+    },
+    "2019/20": {
+     "projected_ordinary_revenue": 1871.0,
+     "actual_ordinary_revenue": 1573.0,
+     "pct_increment": 4.9,
+     "revenue_shortfall": -298.0,
+     "county_allocation": 317.0,
+     "national_government_allocation": 1257.0,
+     "flag": null
+    },
+    "2020/21": {
+     "projected_ordinary_revenue": 1857.0,
+     "actual_ordinary_revenue": 1562.0,
+     "pct_increment": -0.7,
+     "revenue_shortfall": -295.0,
+     "county_allocation": 317.0,
+     "national_government_allocation": 1246.0,
+     "flag": null
+    },
+    "2021/22": {
+     "projected_ordinary_revenue": 1776.0,
+     "actual_ordinary_revenue": 1918.0,
+     "pct_increment": 22.8,
+     "revenue_shortfall": 142.0,
+     "county_allocation": 370.0,
+     "national_government_allocation": 1548.0,
+     "flag": null
+    },
+    "2022/23": {
+     "projected_ordinary_revenue": 2142.0,
+     "actual_ordinary_revenue": 2041.0,
+     "pct_increment": 6.4,
+     "revenue_shortfall": -101.0,
+     "county_allocation": 370.0,
+     "national_government_allocation": 1671.0,
+     "flag": null
+    },
+    "2023/24": {
+     "projected_ordinary_revenue": 2461.0,
+     "actual_ordinary_revenue": 2289.0,
+     "pct_increment": 12.1,
+     "revenue_shortfall": -172.0,
+     "county_allocation": 385.0,
+     "national_government_allocation": 1904.0,
+     "flag": null
+    },
+    "2024/25": {
+     "projected_ordinary_revenue": 2631.0,
+     "actual_ordinary_revenue": 2420.0,
+     "pct_increment": 5.7,
+     "revenue_shortfall": -211.0,
+     "county_allocation": 387.0,
+     "national_government_allocation": 2033.0,
+     "flag": null
+    },
+    "2025/26": {
+     "projected_ordinary_revenue": 2640.0,
+     "actual_ordinary_revenue": 2640.0,
+     "pct_increment": 9.1,
+     "revenue_shortfall": null,
+     "county_allocation": 415.0,
+     "national_government_allocation": 2225.0,
+     "flag": "projected (marked * in source)"
+    },
+    "2026/27": {
+     "projected_ordinary_revenue": 2982.0,
+     "actual_ordinary_revenue": null,
+     "pct_increment": 13.0,
+     "revenue_shortfall": null,
+     "county_allocation": null,
+     "national_government_allocation": null,
+     "flag": "projection; only projected revenue and % increment given (** in source)"
+    }
+   }
+  },
+  "equalisation_fund_fy2013_14_to_2026_27": {
+   "source": {
+    "title": "CRA Recommendation on the Basis for Equitable Sharing of Revenue between the National and County Governments for FY 2026/27",
+    "publisher": "Commission on Revenue Allocation (CRA), constitutional commission (public body, not an NGO)",
+    "url": "https://cra.go.ke/wp-content/uploads/2026/02/CRA-Recommendation-on-The-Basis-for-Equitable-Sharing-Of-Revenue-FY-2026-27.pdf",
+    "sha256": "38189f669f7014cfd11d0cc7d7215332667772b5cc32a7ccb083ad9976b8498a",
+    "retrieved": "2026-11-21",
+    "status_note": "RECOMMENDATION to Parliament (Feb 2026). Not the enacted County Allocation of Revenue Act; enacted figures may differ.",
+    "location": "Table 5.3, p.33 (source of data stated: National Assembly PAC Reports)",
+    "source_id": "cra-recommendation-2026-27"
+   },
+   "unit": "KSh billion",
+   "rows": {
+    "2013/14": {
+     "audited_accounts_revenue_ksh_bn": 529.3,
+     "fy_of_audited_accounts": "2009/10",
+     "equalisation_fund_ksh_bn": 2.65
+    },
+    "2014/15": {
+     "audited_accounts_revenue_ksh_bn": 529.3,
+     "fy_of_audited_accounts": "2009/10",
+     "equalisation_fund_ksh_bn": 2.65
+    },
+    "2015/16": {
+     "audited_accounts_revenue_ksh_bn": 776.9,
+     "fy_of_audited_accounts": "2012/13",
+     "equalisation_fund_ksh_bn": 3.88
+    },
+    "2016/17": {
+     "audited_accounts_revenue_ksh_bn": 935.6,
+     "fy_of_audited_accounts": "2013/14",
+     "equalisation_fund_ksh_bn": 4.68
+    },
+    "2017/18": {
+     "audited_accounts_revenue_ksh_bn": 935.6,
+     "fy_of_audited_accounts": "2013/14",
+     "equalisation_fund_ksh_bn": 4.68
+    },
+    "2018/19": {
+     "audited_accounts_revenue_ksh_bn": 935.6,
+     "fy_of_audited_accounts": "2013/14",
+     "equalisation_fund_ksh_bn": 4.68
+    },
+    "2019/20": {
+     "audited_accounts_revenue_ksh_bn": 1038.0,
+     "fy_of_audited_accounts": "2014/15",
+     "equalisation_fund_ksh_bn": 5.19
+    },
+    "2020/21": {
+     "audited_accounts_revenue_ksh_bn": 1357.7,
+     "fy_of_audited_accounts": "2017/18",
+     "equalisation_fund_ksh_bn": 6.79
+    },
+    "2021/22": {
+     "audited_accounts_revenue_ksh_bn": 1357.7,
+     "fy_of_audited_accounts": "2017/18",
+     "equalisation_fund_ksh_bn": 6.79
+    },
+    "2022/23": {
+     "audited_accounts_revenue_ksh_bn": 1413.7,
+     "fy_of_audited_accounts": "2018/19",
+     "equalisation_fund_ksh_bn": 7.07
+    },
+    "2023/24": {
+     "audited_accounts_revenue_ksh_bn": 1673.7,
+     "fy_of_audited_accounts": "2019/20",
+     "equalisation_fund_ksh_bn": 8.37
+    },
+    "2024/25": {
+     "audited_accounts_revenue_ksh_bn": 1673.7,
+     "fy_of_audited_accounts": "2019/20",
+     "equalisation_fund_ksh_bn": 8.37
+    },
+    "2025/26": {
+     "audited_accounts_revenue_ksh_bn": 1920.4,
+     "fy_of_audited_accounts": "2021/22",
+     "equalisation_fund_ksh_bn": 9.6
+    },
+    "2026/27": {
+     "audited_accounts_revenue_ksh_bn": 1920.4,
+     "fy_of_audited_accounts": "2021/22",
+     "equalisation_fund_ksh_bn": 9.6
+    }
+   },
+   "checks": {
+    "0.5pct_of_audited_revenue_matches(rounded 0.01)": true,
+    "mismatches": []
+   }
+  }
+ },
+ "ibp_open_budget_survey_kenya": {
+  "source": {
+   "title": "Open Budget Survey - Full Historical Dataset 2006-2025 (OBS_Full_Timeseries_2006_2025.xlsx)",
+   "publisher": "International Budget Partnership (IBP)",
+   "url": "https://internationalbudget.org/sites/default/files/2026-09/OBS_Full_Timeseries_2006_2025.xlsx",
+   "landing_page": "https://internationalbudget.org/open-budget-survey/data-documents",
+   "sha256": "88add42b35ded7896553c7ebd1d94194cd9307dc7d4cdc5dfa741149e0474fd8",
+   "retrieved": "2026-11-21",
+   "location": "sheet 'OBS_Data_AllYears', rows with ISO = KEN",
+   "citation_requested": "International Budget Partnership (2025). Open Budget Survey Dataset.",
+   "also_downloaded": {
+    "url": "https://internationalbudget.org/sites/default/files/2026-09/IBP_OBS2025_Global_Data_Launch.xlsx",
+    "sha256": "e07170082ca692766d2174cb82806f67740c54dad993fc026b38ec21e1795a1e",
+    "source_id": "ibp-obs-2025-launch"
+   },
+   "source_id": "ibp-obs-2006-2025"
+  },
+  "unit": "score 0-100",
+  "scope": "national government of Kenya (institution), not individuals",
+  "comparability": "Per the workbook's Comparability_Notes: oversight and participation scores not comparable before 2017; individual question scores not comparable before 2017; use the Comp. flags for OBI trends",
+  "rows": [
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2006,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 48.18,
+    "OBI (rounded)": 48,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 33.33,
+    "SAI Oversight": 45.75,
+    "Oversight (Overall)": null,
+    "IFI Oversight (unscored)": null,
+    "Public Participation": null,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   },
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2008,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 57.66,
+    "OBI (rounded)": 58,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 36,
+    "SAI Oversight": 49.9,
+    "Oversight (Overall)": null,
+    "IFI Oversight (unscored)": null,
+    "Public Participation": null,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   },
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2010,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 49.29,
+    "OBI (rounded)": 49,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 58.33,
+    "SAI Oversight": 56.6,
+    "Oversight (Overall)": null,
+    "IFI Oversight (unscored)": null,
+    "Public Participation": null,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   },
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2012,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 49.13,
+    "OBI (rounded)": 49,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 63.64,
+    "SAI Oversight": 83.25,
+    "Oversight (Overall)": null,
+    "IFI Oversight (unscored)": null,
+    "Public Participation": 38.83,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   },
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2015,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 48,
+    "OBI (rounded)": 48,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 48.55,
+    "SAI Oversight": 66.5,
+    "Oversight (Overall)": null,
+    "IFI Oversight (unscored)": null,
+    "Public Participation": 33.38,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   },
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2017,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 46.16,
+    "OBI (rounded)": 46,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 41.67,
+    "SAI Oversight": 66.67,
+    "Oversight (Overall)": 50,
+    "IFI Oversight (unscored)": 41.75,
+    "Public Participation": 14.78,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   },
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2019,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 49.83,
+    "OBI (rounded)": 50,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 38.92,
+    "SAI Oversight": 72.17,
+    "Oversight (Overall)": 50,
+    "IFI Oversight (unscored)": 50,
+    "Public Participation": 20.33,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   },
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2021,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 50.14,
+    "OBI (rounded)": 50,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 44.5,
+    "SAI Oversight": 72.17,
+    "Oversight (Overall)": 53.72,
+    "IFI Oversight (unscored)": 58.25,
+    "Public Participation": 31.44,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   },
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2023,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 54.72,
+    "OBI (rounded)": 55,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 47.25,
+    "SAI Oversight": 77.67,
+    "Oversight (Overall)": 57.39,
+    "IFI Oversight (unscored)": 66.75,
+    "Public Participation": 31.44,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   },
+   {
+    "Country": "Kenya",
+    "ISO": "KEN",
+    "Year": 2025,
+    "Region": "Sub-Saharan Africa",
+    "OBI (unrounded)": 55.65,
+    "OBI (rounded)": 56,
+    "OBI Category": "Limited (41-60)",
+    "Legislative Oversight": 44.42,
+    "SAI Oversight": 77.67,
+    "Oversight (Overall)": 55.5,
+    "IFI Oversight (unscored)": 58.25,
+    "Public Participation": 44.44,
+    "Comp. 2006–2012": 0,
+    "Comp. 2012–2015": 1,
+    "Comp. 2015–2017": 1,
+    "Comp. 2017–2019": 1,
+    "Comp. 2019–2021": 1,
+    "Comp. 2021–2023": 1,
+    "Comp. 2023–2025": 1
+   }
+  ]
+ },
+ "not_staged": [
+  {
+   "source": "IBP Kenya / Bajeti Hub County Budget Transparency Survey (CBTS) 2022-2025, county scores",
+   "status": "no machine-readable county table found in search; 2022 report PDF exists at https://internationalbudget.org/wp-content/uploads/Kenya-County-Budget-Transparency-Survey-2022-web.pdf (not downloaded); news reports give conflicting 2024 averages (64 vs 61)",
+   "next_step": "download CBTS 2025 report from Bajeti Hub and extract annex table"
+  },
+  {
+   "source": "FSD Kenya / CBK / KNBS FinAccess county-level analysis (finaccess.knbs.or.ke)",
+   "status": "site reachable (HTTP 200); county page is an embedded Tableau dashboard; datasets are Google Drive / Harvard Dataverse links (doi:10.7910/DVN/JSPE9W) - not downloaded in this pass",
+   "next_step": "fetch Dataverse files (microdata; county estimates would need weighting = derivation, so prefer a published county table)"
+  },
+  {
+   "source": "Twaweza / Uwezo learning assessments",
+   "status": "uwezo.net unreachable (connection failed, HTTP 000); twaweza.org reachable but not searched for county tables in this pass"
+  },
+  {
+   "source": "Okoa Uchumi (okoauchumi.org)",
+   "status": "unreachable (HTTP 000)"
+  },
+  {
+   "source": "Africa Check",
+   "status": "HTTP 403 to automated client; not retried (policy)"
+  },
+  {
+   "source": "KNBS (www.knbs.or.ke) incl. county poverty (KIHBS/KCHSP) and 2019 census volumes",
+   "status": "TLS failure: curl (60) unable to get local issuer certificate through the proxy; not bypassed"
+  },
+  {
+   "source": "Institute of Public Finance Kenya, National Taxpayers Association, Development Initiatives, KIPPRA, Afrobarometer, opendata.go.ke, UNICEF/UNDP Kenya",
+   "status": "home pages reachable (HTTP 200); no dataset located/downloaded in this pass (time-boxed); see README"
+  },
+  {
+   "source": "CRA Third Basis Technical Report 2021",
+   "status": "downloaded (raw/ngo/cra/CRA_Third-Basis-Technical_Report_2021.pdf, sha256 293c037b4da93061d464c7ab2444452bcfda5aadf2f5f682c6ffb9db4faab847); county figures appear only in charts, not extracted"
+  }
+ ]
+}
