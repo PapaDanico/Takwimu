@@ -70,11 +70,12 @@
         "unresolved_reason": { "type": "string", "minLength": 5 }
       }
     },
-    "contractor": {
+    "contractor_reference": {
       "type": ["object", "null"],
-      "required": ["withheld_pending_review", "name", "basis"],
+      "description": "Owner decision 21 Nov 2026 (sweep D22): no contractor name is kept anywhere in the repository. Where an audit report names one, only the document and page are recorded.",
+      "required": ["doc", "page", "note"],
       "additionalProperties": false,
-      "properties": { "withheld_pending_review": { "const": true, "description": "Owner decision 21 Nov 2026: company names are kept in this repository file only and removed from everything published (lib/projects.js publicCopy)." }, "name": { "type": "string", "minLength": 3 }, "basis": { "type": "string", "minLength": 10 } }
+      "properties": { "doc": { "$ref": "#/$defs/doc_id" }, "page": { "$ref": "#/$defs/page" }, "note": { "const": "named in the audit report; withheld pending review" } }
     },
     "project": {
       "type": "object",
@@ -111,12 +112,12 @@
         "amounts": { "type": "array", "items": { "$ref": "#/$defs/amount" } },
         "contract": {
           "type": "object",
-          "required": ["reference", "contractor", "signed", "start", "expected_completion"],
+          "required": ["reference", "contractor_reference", "signed", "start", "expected_completion"],
           "additionalProperties": false,
           "properties": {
             "reference": { "type": ["string", "null"] },
             "reference_as_printed": { "type": "string" },
-            "contractor": { "$ref": "#/$defs/contractor" },
+            "contractor_reference": { "$ref": "#/$defs/contractor_reference" },
             "contractor_note": { "type": "string" },
             "signed": { "type": ["string", "null"] },
             "start": { "type": ["string", "null"] },

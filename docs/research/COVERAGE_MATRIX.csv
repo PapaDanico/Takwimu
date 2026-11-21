@@ -101,6 +101,22 @@ analysis,A6,not stated,county: Siaya,gap (no source),siaya-analysis,0,1
 analysis,A7,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,3
 analysis,A7,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,3,0
 analysis,A7,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2013/14,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2014/15,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2015/16,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2016/17,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2017/18,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2018/19,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2019/20,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2020/21,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2021/22,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2022/23,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A8,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A8,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2024/25,county: Siaya,takwimu_calculation,siaya-analysis,7,0
+analysis,A8,FY 2025/26,county: Siaya,takwimu_calculation,siaya-analysis,1,0
 audit,,FY 2013/14,county: Siaya,auditor_general,history,1,0
 audit,,FY 2014/15,county: Siaya,parliament,history,1,0
 audit,,FY 2015/16,county: Siaya,parliament,history,1,0
@@ -767,7 +783,7 @@ public_finance,,FY 2022/23,county: Samburu,controller_of_budget,counties-cob,15,
 public_finance,,FY 2022/23,county: Samburu,gap (no source),counties-cob,0,8
 public_finance,,FY 2022/23,county: Siaya,auditor_general,siaya-fiscal-ledger,3,0
 public_finance,,FY 2022/23,county: Siaya,controller_of_budget,counties-cob,17,0
-public_finance,,FY 2022/23,county: Siaya,controller_of_budget,history,17,0
+public_finance,,FY 2022/23,county: Siaya,controller_of_budget,history,16,0
 public_finance,,FY 2022/23,county: Siaya,controller_of_budget,siaya-fiscal-ledger,26,0
 public_finance,,FY 2022/23,county: Siaya,county_government,siaya-fiscal-ledger,2,0
 public_finance,,FY 2022/23,county: Siaya,gap (no source),counties-cob,0,6

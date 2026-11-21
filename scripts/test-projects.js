@@ -209,11 +209,18 @@ test('names and contractors', () => {
     else if (v && typeof v === 'object') Object.entries(v).forEach(([k, x]) => walk(x, `${where}.${k}`));
   };
   walk(data, 'siaya-projects');
+  // Owner decision (sweep D22, 21 Nov 2026): no contractor names anywhere in repository data. A project whose audit
+  // report names a contractor keeps only a reference to the document and page.
   data.projects.forEach((p) => {
-    const c = p.contract.contractor;
-    if (!c) return;
-    if (!/(Limited|Ltd\.?|Company|Corporation|PLC|Authority)$/.test(c.name)) fail(`${p.id}: contractor "${c.name}" is not a company name`);
-    if (!/named in the Auditor-General report|named in an official/.test(c.basis)) fail(`${p.id}: contractor needs the official publication that names it`);
+    if ('contractor' in p.contract) fail(`${p.id}: contract.contractor must not exist (use contractor_reference)`);
+    const r = p.contract.contractor_reference;
+    if (r === undefined) fail(`${p.id}: contractor_reference missing (null when no contractor is named)`);
+    if (r && !(docs.has(r.doc) && Number.isInteger(r.page) && /withheld pending review/.test(r.note))) fail(`${p.id}: contractor_reference needs doc, page and the withheld note`);
+  });
+  const COMPANY = /\b[A-Z][A-Za-z&]+(?: (?:[A-Z][A-Za-z&]+|and|of|&))* (?:Limited|Ltd\.?|PLC|Company|Corporation)\b/;
+  ['siaya-projects.json', 'siaya-audits.json'].forEach((f) => {
+    const m = fs.readFileSync(path.join(__dirname, '..', 'data', f), 'utf8').match(COMPANY);
+    if (m) fail(`data/${f}: contains a company name ("${m[0]}"); contractor names are withheld`);
   });
 });
 
