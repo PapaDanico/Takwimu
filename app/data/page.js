@@ -1,6 +1,7 @@
 import PageHead from '../../components/PageHead';
 import hist from '../../data/history.json';
 import reg from '../../data/conflicts.json';
+import manifest from '../../data/source-manifest.json';
 
 const OPEN = [
   { q: 'The report states 47 per cent of the revenue target for FY 2024/25, but 436.68 of 1,043 is about 42 per cent.', note: 'Resolved in part: 47 per cent is measured against an annual target of about KSh 929 million, not the KSh 1,043 million in budget financing. The report does not explain why the two targets differ.' },
@@ -10,6 +11,28 @@ const OPEN = [
   { q: 'Audit opinions for FY 2014/15 to FY 2018/19 are missing.', note: 'The Auditor-General\'s site was unavailable and the Parliament library does not hold those reports. Search summaries suggest FY 2017/18 and FY 2018/19 were qualified, but we could not open the reports, so they are not shown.' },
   { q: 'The FY 2019/20 full-year county report could not be downloaded.', note: 'Only own-source revenue for that year is shown, taken from the FY 2020/21 report.' },
 ];
+
+const DOCS = Object.fromEntries(manifest.documents.map((d) => [d.id, d]));
+const FIELD = {
+  approved: 'Approved budget (KSh bn)', recurrent_budget: 'Recurrent budget (KSh bn)', development_budget: 'Development budget (KSh bn)',
+  spent: 'Spending (KSh bn)', recurrent_spent: 'Recurrent spending (KSh bn)', development_spent: 'Development spending (KSh bn)',
+  recurrent_absorption_pct: 'Recurrent absorption (%)', development_absorption_pct: 'Development absorption (%)',
+  osr_m: 'Own-source revenue (KSh m)', osr_target_m: 'Own-source revenue target (KSh m)',
+  pending_development_m: 'Pending bills, development (KSh m)', pending_recurrent_m: 'Pending bills, recurrent (KSh m)', pending_total_m: 'Pending bills, total (KSh m)',
+};
+const pageText = (r) => (r.page === null ? 'Not located' : `PDF p. ${r.page}${r.printed_page ? ` (printed p. ${r.printed_page})` : ''}`);
+function RefRows({ rows }) {
+  return rows.map(([key, label, value, r]) => (
+    <tr key={key}>
+      <th scope="row">{label}</th>
+      <td>{value}</td>
+      <td><a href={DOCS[r.source_id].url}>{DOCS[r.source_id].title}</a></td>
+      <td>{pageText(r)}</td>
+      <td>{r.read}{r.page_note ? `. ${r.page_note}` : ''}</td>
+    </tr>
+  ));
+}
+const REF_HEAD = <thead><tr><th scope="col">Figure</th><th scope="col">Value</th><th scope="col">Document</th><th scope="col">Page</th><th scope="col">How read, note</th></tr></thead>;
 
 export const metadata = {
   title: 'Data downloads and sources',
@@ -65,6 +88,43 @@ export default function DataPage() {
         </ul>
         <h3 className="mini">Gaps</h3>
         <ul className="steps">{hist.meta.gaps.map((g) => <li key={g}>{g}</li>)}</ul>
+      </section>
+      <section className="card" id="page-references" aria-labelledby="pref-h">
+        <h2 id="pref-h">Where each figure was read</h2>
+        <p className="lead">Every figure in the ten-year series, the audit opinions and the own-source revenue series names the document it came from (with its checksum in source-manifest.json) and the page where we found it. PDF page counts from the first page of the file; printed page is the number on the page, given only where the report numbers its pages consistently. A figure we could not find again is marked not located rather than given a guessed page.</p>
+        {hist.years.map((y) => (
+          <details key={y.fy} className="refs">
+            <summary>FY {y.fy}: {Object.keys(y.provenance).length} figures</summary>
+            <div className="tablewrap" tabIndex={0} role="region" aria-label={`Page references, FY ${y.fy}`}>
+              <table className="data">
+                <caption className="sr-only">Page references for FY {y.fy}</caption>
+                {REF_HEAD}
+                <tbody><RefRows rows={Object.entries(y.provenance).map(([k, r]) => [k, FIELD[k] || k, y[k], r])} /></tbody>
+              </table>
+            </div>
+          </details>
+        ))}
+        <details className="refs">
+          <summary>Audit opinions: {hist.audits.points.length} years</summary>
+          <div className="tablewrap" tabIndex={0} role="region" aria-label="Page references, audit opinions">
+            <table className="data">
+              <caption className="sr-only">Page references for audit opinions</caption>
+              {REF_HEAD}
+              <tbody><RefRows rows={hist.audits.points.map((a) => [a.fy, `Audit opinion, FY ${a.fy}`, a.opinion, a])} /></tbody>
+            </table>
+          </div>
+        </details>
+        <details className="refs">
+          <summary>Own-source revenue series: {hist.osr_series.points.length} years and {hist.osr_series.points.filter((p) => p.alternate).length} alternates</summary>
+          <div className="tablewrap" tabIndex={0} role="region" aria-label="Page references, own-source revenue">
+            <table className="data">
+              <caption className="sr-only">Page references for the own-source revenue series</caption>
+              {REF_HEAD}
+              <tbody><RefRows rows={hist.osr_series.points.flatMap((p) => [[p.fy, `Own-source revenue, FY ${p.fy} (KSh m)`, p.value, p], ...(p.alternate ? [[`${p.fy}-alt`, `Own-source revenue, FY ${p.fy}, alternate (KSh m)`, p.alternate.value, p.alternate]] : [])])} /></tbody>
+            </table>
+          </div>
+        </details>
+        <p className="how">FY {hist.in_year.fy} in-year figures and the FY 2019/20 documents below carry their PDF pages in their own tables.</p>
       </section>
       <section className="card" id="other-documents" aria-labelledby="supp-h">
         <h2 id="supp-h">{hist.supplementary.label}</h2>

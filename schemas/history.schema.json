@@ -4,20 +4,53 @@
   "title": "Siaya ten-year fiscal history (data/history.json)",
   "description": "Checked at build by scripts/validate-data.js (subset: type, required, properties, additionalProperties, items, enum, minimum, maximum, pattern, minItems).",
   "type": "object",
-  "required": ["meta", "reports", "years", "audits", "osr_series", "health", "poverty", "population"],
+  "required": [
+    "meta",
+    "reports",
+    "years",
+    "audits",
+    "osr_series",
+    "health",
+    "poverty",
+    "population"
+  ],
   "additionalProperties": false,
   "properties": {
     "meta": {
       "type": "object",
-      "required": ["title", "unit", "retrieved", "basis", "note", "gaps"],
+      "required": [
+        "title",
+        "unit",
+        "retrieved",
+        "basis",
+        "note",
+        "gaps"
+      ],
       "additionalProperties": false,
       "properties": {
-        "title": { "type": "string" },
-        "unit": { "type": "string" },
-        "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-        "basis": { "type": "string" },
-        "note": { "type": "string" },
-        "gaps": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+        "title": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "retrieved": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "basis": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "gaps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
     "reports": {
@@ -25,13 +58,29 @@
       "description": "Controller of Budget annual reports, keyed by fiscal year (e.g. 2024/25).",
       "additionalProperties": {
         "type": "object",
-        "required": ["title", "section", "url", "confidence"],
+        "required": [
+          "title",
+          "section",
+          "url",
+          "confidence"
+        ],
         "additionalProperties": false,
         "properties": {
-          "title": { "type": "string" },
-          "section": { "type": "string" },
-          "url": { "type": "string", "pattern": "^https://" },
-          "confidence": { "type": "integer", "minimum": 1, "maximum": 5 }
+          "title": {
+            "type": "string"
+          },
+          "section": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "confidence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          }
         }
       }
     },
@@ -40,57 +89,199 @@
       "minItems": 10,
       "items": {
         "type": "object",
-        "required": ["fy", "report"],
+        "required": [
+          "fy",
+          "report",
+          "provenance"
+        ],
         "additionalProperties": false,
         "properties": {
-          "fy": { "type": "string", "pattern": "^\\d{4}/\\d{2}$" },
-          "report": { "type": "string", "pattern": "^\\d{4}/\\d{2}$" },
-          "approved": { "type": "number", "minimum": 0 },
-          "recurrent_budget": { "type": "number", "minimum": 0 },
-          "development_budget": { "type": "number", "minimum": 0 },
-          "spent": { "type": "number", "minimum": 0 },
-          "recurrent_spent": { "type": "number", "minimum": 0 },
-          "development_spent": { "type": "number", "minimum": 0 },
-          "recurrent_absorption_pct": { "type": "number", "minimum": 0, "maximum": 100 },
-          "development_absorption_pct": { "type": "number", "minimum": 0, "maximum": 100 },
-          "osr_m": { "type": "number", "minimum": 0 },
-          "osr_target_m": { "type": "number", "minimum": 0 },
-          "pending_recurrent_m": { "type": "number", "minimum": 0 },
-          "pending_development_m": { "type": "number", "minimum": 0 },
-          "pending_total_m": { "type": "number", "minimum": 0 },
+          "fy": {
+            "type": "string",
+            "pattern": "^\\d{4}/\\d{2}$"
+          },
+          "report": {
+            "type": "string",
+            "pattern": "^\\d{4}/\\d{2}$"
+          },
+          "approved": {
+            "type": "number",
+            "minimum": 0
+          },
+          "recurrent_budget": {
+            "type": "number",
+            "minimum": 0
+          },
+          "development_budget": {
+            "type": "number",
+            "minimum": 0
+          },
+          "spent": {
+            "type": "number",
+            "minimum": 0
+          },
+          "recurrent_spent": {
+            "type": "number",
+            "minimum": 0
+          },
+          "development_spent": {
+            "type": "number",
+            "minimum": 0
+          },
+          "recurrent_absorption_pct": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "development_absorption_pct": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "osr_m": {
+            "type": "number",
+            "minimum": 0
+          },
+          "osr_target_m": {
+            "type": "number",
+            "minimum": 0
+          },
+          "pending_recurrent_m": {
+            "type": "number",
+            "minimum": 0
+          },
+          "pending_development_m": {
+            "type": "number",
+            "minimum": 0
+          },
+          "pending_total_m": {
+            "type": "number",
+            "minimum": 0
+          },
           "field_source": {
             "type": "object",
             "description": "Field name to the report key it was read from, when not the year's default report.",
-            "additionalProperties": { "type": "string", "pattern": "^\\d{4}/\\d{2}$" }
+            "additionalProperties": {
+              "type": "string",
+              "pattern": "^\\d{4}/\\d{2}$"
+            }
           },
-          "derived": { "type": "array", "items": { "type": "string" } },
-          "caveat": { "type": "string" }
+          "derived": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "caveat": {
+            "type": "string"
+          },
+          "provenance": {
+            "type": "object",
+            "description": "Field name to its source document and page.",
+            "additionalProperties": {
+              "$ref": "#/$defs/provenance"
+            }
+          }
         }
       }
     },
     "audits": {
       "type": "object",
-      "required": ["label", "note", "points"],
+      "required": [
+        "label",
+        "note",
+        "points"
+      ],
       "additionalProperties": false,
       "properties": {
-        "label": { "type": "string" },
-        "note": { "type": "string" },
+        "label": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
         "points": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["fy", "opinion", "reasons", "headline", "confidence", "url"],
+            "required": [
+              "fy",
+              "opinion",
+              "reasons",
+              "headline",
+              "confidence",
+              "url",
+              "source_id",
+              "page",
+              "read"
+            ],
             "additionalProperties": false,
             "properties": {
-              "fy": { "type": "string", "pattern": "^\\d{4}/\\d{2}$" },
-              "period": { "type": "string" },
-              "opinion": { "type": "string", "enum": ["Unqualified", "Qualified", "Adverse", "Disclaimer"] },
-              "reasons": { "type": "string" },
-              "headline": { "type": "string" },
-              "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
-              "url": { "type": "string", "pattern": "^https://" },
-              "caveat": { "type": "string" },
-              "source": { "type": "string" }
+              "fy": {
+                "type": "string",
+                "pattern": "^\\d{4}/\\d{2}$"
+              },
+              "period": {
+                "type": "string"
+              },
+              "opinion": {
+                "type": "string",
+                "enum": [
+                  "Unqualified",
+                  "Qualified",
+                  "Adverse",
+                  "Disclaimer"
+                ]
+              },
+              "reasons": {
+                "type": "string"
+              },
+              "headline": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https://"
+              },
+              "caveat": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "id of a document in data/source-manifest.json"
+              },
+              "page": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 1,
+                "description": "PDF page where the figure was found; null when not located"
+              },
+              "printed_page": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "read": {
+                "type": "string",
+                "enum": [
+                  "RapidOCR",
+                  "OCR layer",
+                  "PDF text layer"
+                ]
+              },
+              "page_note": {
+                "type": "string"
+              }
             }
           }
         }
@@ -98,81 +289,268 @@
     },
     "osr_series": {
       "type": "object",
-      "required": ["label", "points", "conflicts", "source_page", "confidence"],
+      "required": [
+        "label",
+        "points",
+        "conflicts",
+        "source_page",
+        "confidence"
+      ],
       "additionalProperties": false,
       "properties": {
-        "label": { "type": "string" },
+        "label": {
+          "type": "string"
+        },
         "points": {
           "type": "array",
           "minItems": 10,
           "items": {
             "type": "object",
-            "required": ["fy", "value", "report"],
+            "required": [
+              "fy",
+              "value",
+              "report",
+              "source_id",
+              "page",
+              "read"
+            ],
             "additionalProperties": false,
             "properties": {
-              "fy": { "type": "string", "pattern": "^\\d{4}/\\d{2}$" },
-              "value": { "type": "number", "minimum": 0 },
-              "report": { "type": "string" },
+              "fy": {
+                "type": "string",
+                "pattern": "^\\d{4}/\\d{2}$"
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0
+              },
+              "report": {
+                "type": "string"
+              },
               "alternate": {
                 "type": "object",
-                "required": ["value", "report"],
+                "required": [
+                  "value",
+                  "report",
+                  "source_id",
+                  "page",
+                  "read"
+                ],
                 "additionalProperties": false,
-                "properties": { "value": { "type": "number", "minimum": 0 }, "report": { "type": "string" } }
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "report": {
+                    "type": "string"
+                  },
+                  "source_id": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9-]+$",
+                    "description": "id of a document in data/source-manifest.json"
+                  },
+                  "page": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 1,
+                    "description": "PDF page where the figure was found; null when not located"
+                  },
+                  "printed_page": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "read": {
+                    "type": "string",
+                    "enum": [
+                      "RapidOCR",
+                      "OCR layer",
+                      "PDF text layer"
+                    ]
+                  },
+                  "page_note": {
+                    "type": "string"
+                  }
+                }
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "id of a document in data/source-manifest.json"
+              },
+              "page": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 1,
+                "description": "PDF page where the figure was found; null when not located"
+              },
+              "printed_page": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "read": {
+                "type": "string",
+                "enum": [
+                  "RapidOCR",
+                  "OCR layer",
+                  "PDF text layer"
+                ]
+              },
+              "page_note": {
+                "type": "string"
               }
             }
           }
         },
-        "conflicts": { "type": "array", "items": { "type": "string" } },
-        "source_page": { "type": "string", "pattern": "^https://" },
-        "confidence": { "type": "integer", "minimum": 1, "maximum": 5 }
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_page": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "confidence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        }
       }
     },
     "health": {
       "type": "object",
-      "required": ["label", "note", "indicators", "hiv"],
+      "required": [
+        "label",
+        "note",
+        "indicators",
+        "hiv"
+      ],
       "additionalProperties": false,
       "properties": {
-        "label": { "type": "string" },
-        "note": { "type": "string" },
+        "label": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
         "indicators": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["id", "label", "unit", "v2014", "v2022", "better", "confidence", "sources"],
+            "required": [
+              "id",
+              "label",
+              "unit",
+              "v2014",
+              "v2022",
+              "better",
+              "confidence",
+              "sources"
+            ],
             "additionalProperties": false,
             "properties": {
-              "id": { "type": "string" },
-              "label": { "type": "string" },
-              "unit": { "type": "string" },
-              "v2014": { "type": "number", "minimum": 0 },
-              "v2022": { "type": "number", "minimum": 0 },
-              "better": { "type": "string", "enum": ["up", "down"] },
-              "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
-              "sources": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^https://" } },
-              "note": { "type": "string" }
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "unit": {
+                "type": "string"
+              },
+              "v2014": {
+                "type": "number",
+                "minimum": 0
+              },
+              "v2022": {
+                "type": "number",
+                "minimum": 0
+              },
+              "better": {
+                "type": "string",
+                "enum": [
+                  "up",
+                  "down"
+                ]
+              },
+              "confidence": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "sources": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^https://"
+                }
+              },
+              "note": {
+                "type": "string"
+              }
             }
           }
         },
         "hiv": {
           "type": "object",
-          "required": ["label", "warning", "points"],
+          "required": [
+            "label",
+            "warning",
+            "points"
+          ],
           "additionalProperties": false,
           "properties": {
-            "label": { "type": "string" },
-            "warning": { "type": "string" },
+            "label": {
+              "type": "string"
+            },
+            "warning": {
+              "type": "string"
+            },
             "points": {
               "type": "array",
               "items": {
                 "type": "object",
-                "required": ["year", "value", "vintage", "confidence"],
+                "required": [
+                  "year",
+                  "value",
+                  "vintage",
+                  "confidence"
+                ],
                 "additionalProperties": false,
                 "properties": {
-                  "year": { "type": "integer", "minimum": 2000 },
-                  "value": { "type": "number", "minimum": 0, "maximum": 100 },
-                  "national": { "type": "number", "minimum": 0, "maximum": 100 },
-                  "vintage": { "type": "string" },
-                  "url": { "type": "string", "pattern": "^https://" },
-                  "confidence": { "type": "integer", "minimum": 1, "maximum": 5 }
+                  "year": {
+                    "type": "integer",
+                    "minimum": 2000
+                  },
+                  "value": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "national": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "vintage": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string",
+                    "pattern": "^https://"
+                  },
+                  "confidence": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5
+                  }
                 }
               }
             }
@@ -182,69 +560,172 @@
     },
     "poverty": {
       "type": "object",
-      "required": ["label", "note", "points", "gap"],
+      "required": [
+        "label",
+        "note",
+        "points",
+        "gap"
+      ],
       "additionalProperties": false,
       "properties": {
-        "label": { "type": "string" },
-        "note": { "type": "string" },
+        "label": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
         "points": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["year", "measure", "value", "source", "confidence"],
+            "required": [
+              "year",
+              "measure",
+              "value",
+              "source",
+              "confidence"
+            ],
             "additionalProperties": false,
             "properties": {
-              "year": { "type": "string" },
-              "measure": { "type": "string" },
-              "value": { "type": "number", "minimum": 0, "maximum": 100 },
-              "national": { "type": "number", "minimum": 0, "maximum": 100 },
-              "source": { "type": "string" },
-              "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+              "year": {
+                "type": "string"
+              },
+              "measure": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "national": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "source": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
               "alternate": {
                 "type": "object",
-                "required": ["value", "source"],
+                "required": [
+                  "value",
+                  "source"
+                ],
                 "additionalProperties": false,
-                "properties": { "value": { "type": "number", "minimum": 0, "maximum": 100 }, "source": { "type": "string" } }
+                "properties": {
+                  "value": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "source": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
         },
-        "gap": { "type": "string" }
+        "gap": {
+          "type": "string"
+        }
       }
     },
     "population": {
       "type": "object",
-      "required": ["label", "points", "by_sub_county_2009", "note"],
+      "required": [
+        "label",
+        "points",
+        "by_sub_county_2009",
+        "note"
+      ],
       "additionalProperties": false,
       "properties": {
-        "label": { "type": "string" },
-        "note": { "type": "string" },
+        "label": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
         "points": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["year", "value", "kind", "confidence"],
+            "required": [
+              "year",
+              "value",
+              "kind",
+              "confidence"
+            ],
             "additionalProperties": false,
             "properties": {
-              "year": { "type": "integer", "minimum": 1999 },
-              "value": { "type": "integer", "minimum": 0 },
-              "kind": { "type": "string", "enum": ["census", "projection"] },
-              "source": { "type": "string" },
-              "alternate": { "type": "integer", "minimum": 0 },
-              "note": { "type": "string" },
-              "confidence": { "type": "integer", "minimum": 1, "maximum": 5 }
+              "year": {
+                "type": "integer",
+                "minimum": 1999
+              },
+              "value": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "census",
+                  "projection"
+                ]
+              },
+              "source": {
+                "type": "string"
+              },
+              "alternate": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "note": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              }
             }
           }
         },
         "by_sub_county_2009": {
           "type": "object",
-          "required": ["source", "confidence", "note", "values"],
+          "required": [
+            "source",
+            "confidence",
+            "note",
+            "values"
+          ],
           "additionalProperties": false,
           "properties": {
-            "source": { "type": "string" },
-            "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
-            "note": { "type": "string" },
-            "values": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+            "source": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "note": {
+              "type": "string"
+            },
+            "values": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
           }
         }
       }
@@ -252,34 +733,108 @@
     "in_year": {
       "type": "object",
       "description": "Partial-year (in-year) Controller of Budget figures. Never part of the ten-year series in years.",
-      "required": ["label", "fy", "comparability", "note", "periods", "conflicts"],
+      "required": [
+        "label",
+        "fy",
+        "comparability",
+        "note",
+        "periods",
+        "conflicts"
+      ],
       "additionalProperties": false,
       "properties": {
-        "label": { "type": "string" },
-        "fy": { "type": "string", "pattern": "^\\d{4}/\\d{2}$" },
-        "comparability": { "type": "string", "enum": ["In-year, not comparable with full years"] },
-        "note": { "type": "string" },
-        "conflicts": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" } },
+        "label": {
+          "type": "string"
+        },
+        "fy": {
+          "type": "string",
+          "pattern": "^\\d{4}/\\d{2}$"
+        },
+        "comparability": {
+          "type": "string",
+          "enum": [
+            "In-year, not comparable with full years"
+          ]
+        },
+        "note": {
+          "type": "string"
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          }
+        },
         "periods": {
           "type": "array",
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["id", "label", "period", "end", "report", "confidence", "figures"],
+            "required": [
+              "id",
+              "label",
+              "period",
+              "end",
+              "report",
+              "confidence",
+              "figures",
+              "source_id"
+            ],
             "additionalProperties": false,
             "properties": {
-              "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
-              "label": { "type": "string" },
-              "period": { "type": "string" },
-              "end": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$"
+              },
+              "label": {
+                "type": "string"
+              },
+              "period": {
+                "type": "string"
+              },
+              "end": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
               "report": {
                 "type": "object",
-                "required": ["title", "section", "url"],
+                "required": [
+                  "title",
+                  "section",
+                  "url"
+                ],
                 "additionalProperties": false,
-                "properties": { "title": { "type": "string" }, "section": { "type": "string" }, "url": { "type": "string", "pattern": "^https://" } }
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "section": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string",
+                    "pattern": "^https://"
+                  }
+                }
               },
-              "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
-              "figures": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/figure" } }
+              "confidence": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "figures": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/$defs/figure"
+                }
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "id of a document in data/source-manifest.json"
+              }
             }
           }
         }
@@ -288,28 +843,84 @@
     "supplementary": {
       "type": "object",
       "description": "Figures from other primary documents for years whose Controller of Budget report is missing. Listed, never used to fill the series.",
-      "required": ["label", "note", "documents", "not_found"],
+      "required": [
+        "label",
+        "note",
+        "documents",
+        "not_found"
+      ],
       "additionalProperties": false,
       "properties": {
-        "label": { "type": "string" },
-        "note": { "type": "string" },
-        "not_found": { "type": "string" },
+        "label": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "not_found": {
+          "type": "string"
+        },
         "documents": {
           "type": "array",
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["id", "fy", "title", "kind", "url", "read", "confidence", "figures"],
+            "required": [
+              "id",
+              "fy",
+              "title",
+              "kind",
+              "url",
+              "read",
+              "confidence",
+              "figures",
+              "source_id"
+            ],
             "additionalProperties": false,
             "properties": {
-              "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
-              "fy": { "type": "string", "pattern": "^\\d{4}/\\d{2}$" },
-              "title": { "type": "string" },
-              "kind": { "type": "string" },
-              "url": { "type": "string", "pattern": "^https://" },
-              "read": { "type": "string", "enum": ["RapidOCR", "OCR layer", "PDF text layer"] },
-              "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
-              "figures": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/figure" } }
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$"
+              },
+              "fy": {
+                "type": "string",
+                "pattern": "^\\d{4}/\\d{2}$"
+              },
+              "title": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https://"
+              },
+              "read": {
+                "type": "string",
+                "enum": [
+                  "RapidOCR",
+                  "OCR layer",
+                  "PDF text layer"
+                ]
+              },
+              "confidence": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "figures": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/$defs/figure"
+                }
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "id of a document in data/source-manifest.json"
+              }
             }
           }
         }
@@ -319,17 +930,94 @@
   "$defs": {
     "figure": {
       "type": "object",
-      "required": ["measure", "label", "value", "unit", "pdf_page"],
+      "required": [
+        "measure",
+        "label",
+        "value",
+        "unit",
+        "pdf_page"
+      ],
       "additionalProperties": false,
       "properties": {
-        "measure": { "type": "string", "pattern": "^[a-z0-9_]+$" },
-        "label": { "type": "string" },
-        "value": { "type": "number", "minimum": 0 },
-        "unit": { "type": "string", "enum": ["KSh m", "KSh bn", "%"] },
-        "as_of": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-        "pdf_page": { "type": "integer", "minimum": 1 },
-        "printed_page": { "type": "integer", "minimum": 1 },
-        "read": { "type": "string", "enum": ["RapidOCR", "OCR layer", "PDF text layer"] }
+        "measure": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "KSh m",
+            "KSh bn",
+            "%"
+          ]
+        },
+        "as_of": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "pdf_page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "printed_page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "read": {
+          "type": "string",
+          "enum": [
+            "RapidOCR",
+            "OCR layer",
+            "PDF text layer"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Where one observation was read: manifest document and page. page null requires page_note 'not located'.",
+      "required": [
+        "source_id",
+        "page",
+        "read"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "id of a document in data/source-manifest.json"
+        },
+        "page": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "description": "PDF page where the figure was found; null when not located"
+        },
+        "printed_page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "read": {
+          "type": "string",
+          "enum": [
+            "RapidOCR",
+            "OCR layer",
+            "PDF text layer"
+          ]
+        },
+        "page_note": {
+          "type": "string"
+        }
       }
     }
   }

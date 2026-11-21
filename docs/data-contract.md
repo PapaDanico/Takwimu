@@ -1,4 +1,4 @@
-# Data contract (version 1.2)
+# Data contract (version 1.3)
 
 Applies to `data/history.json` and `data/conflicts.json`. Enforced by `scripts/validate-data.js` at build time, including the JSON Schemas in `schemas/` (also for `subcounties.json` and `county.json`).
 
@@ -6,6 +6,9 @@ Applies to `data/history.json` and `data/conflicts.json`. Enforced by `scripts/v
 Each year carries: fiscal year, figures, `report` (default source), optional `field_source` (a different report for one field), optional `derived` (fields computed rather than printed), `caveat`. Each report has title, URL and confidence (1 to 5, an explanation of source quality and extraction, not a probability of accuracy). Gaps are listed in `meta.gaps`, never filled.
 
 Audit points may carry `source` (when the opinion comes from a compilation, not the audit report) and `caveat`.
+
+## Page references (since 21 Nov 2026)
+Every observation names the document it was read from and the page: each year's `provenance` maps every figure field to a reference; audit points, own-source revenue points and their alternates carry the reference directly. A reference has `source_id` (an id in `data/source-manifest.json`), `page` (PDF page, counted from the first page of the file), optional `printed_page` (only where at least three pages of the section show the same offset between PDF and printed numbers), `read` (`PDF text layer`, `OCR layer` or `RapidOCR`) and optional `page_note`. A figure that could not be found again has `page: null` and `page_note: "not located"`; a page is never guessed. In-year periods and supplementary documents carry `source_id`; their figures keep `pdf_page`. The validator fails if a figure has no reference, if `source_id` is not in the manifest, if the manifest document's link differs from the report or audit link the observation cites, if a null page lacks "not located", or if a reference exists for a gap. The CSV export carries `source_id`, `pdf_page`, `printed_page` and `page_note` on every row that has them; the Data page lists them per year.
 
 ## In-year figures (history.json `in_year`, since 21 Nov 2026)
 Partial-year Controller of Budget figures (FY 2025/26 first quarter and first half). Each period names its report, section and confidence; each figure has measure, value, unit, PDF and printed page, how it was read and, for balances, `as_of`. `comparability` is fixed to "In-year, not comparable with full years". The validator fails if the in-year fiscal year also appears in `years`, or if an in-year conflict id is not in the register. Pages show these apart from the ten-year series, never on the same chart.

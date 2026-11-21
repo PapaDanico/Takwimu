@@ -360,7 +360,9 @@ Object.entries(files)
   const hist = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'history.json'), 'utf8'));
   const cpi = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'cpi.json'), 'utf8'));
   const q = (v) => (v === undefined || v === null ? '' : `"${String(v).replace(/"/g, '""')}"`);
-  const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'confidence_1_to_5', 'retrieved', 'period', 'caveat']];
+  const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'confidence_1_to_5', 'retrieved', 'period', 'caveat', 'source_id', 'pdf_page', 'printed_page', 'page_note']];
+  // Page reference columns: the manifest document id, PDF page and printed page where the figure was read.
+  const pageCols = (r) => (r ? [r.source_id, r.page === null ? '' : r.page, r.printed_page, r.page === null ? r.page_note : (r.page_note || '')] : ['', '', '', '']);
   const got = hist.meta.retrieved;
   const field = [
     ['approved_budget', 'approved', 'KSh billion'], ['recurrent_budget', 'recurrent_budget', 'KSh billion'], ['development_budget', 'development_budget', 'KSh billion'],
@@ -375,22 +377,22 @@ Object.entries(files)
       if (y[key] === undefined) return;
       const rep = hist.reports[(y.field_source && y.field_source[key]) || y.report] || {};
       const basis = (y.derived || []).includes(key) ? 'derived (total minus development)' : 'reported';
-      rows.push([name, y.fy, y[key], unit, basis, rep.title, rep.url, rep.confidence, got, period, y.caveat]);
+      rows.push([name, y.fy, y[key], unit, basis, rep.title, rep.url, rep.confidence, got, period, y.caveat, ...pageCols((y.provenance || {})[key])]);
     });
     if (y.spent !== undefined && cpi.fiscal_year[y.fy]) rows.push(['spent_real_2024_25_prices', y.fy, +(y.spent * (cpi.fiscal_year['2024/25'] / cpi.fiscal_year[y.fy])).toFixed(3), 'KSh billion', 'derived (approximate)', 'World Bank CPI, fiscal-year average', cpi.meta.source_url, '', got, period, cpi.meta.method]);
   });
   hist.osr_series.points.forEach((p) => {
-    rows.push(['own_source_revenue', p.fy, p.value, 'KSh million', 'reported', p.report, '', '', got, `FY ${p.fy}`, '']);
-    if (p.alternate) rows.push(['own_source_revenue', p.fy, p.alternate.value, 'KSh million', 'alternate (other report)', p.alternate.report, '', '', got, `FY ${p.fy}`, 'Reports disagree; see conflicts.json']);
+    rows.push(['own_source_revenue', p.fy, p.value, 'KSh million', 'reported', p.report, '', '', got, `FY ${p.fy}`, '', ...pageCols(p)]);
+    if (p.alternate) rows.push(['own_source_revenue', p.fy, p.alternate.value, 'KSh million', 'alternate (other report)', p.alternate.report, '', '', got, `FY ${p.fy}`, 'Reports disagree; see conflicts.json', ...pageCols(p.alternate)]);
   });
-  hist.audits.points.forEach((a) => rows.push(['audit_opinion', a.fy, a.opinion, 'category', 'reported', a.source || 'Auditor-General report on the County Executive accounts', a.url, a.confidence, got, a.period || `FY ${a.fy}`, [a.reasons, a.caveat].filter(Boolean).join(' ')]));
+  hist.audits.points.forEach((a) => rows.push(['audit_opinion', a.fy, a.opinion, 'category', 'reported', a.source || 'Auditor-General report on the County Executive accounts', a.url, a.confidence, got, a.period || `FY ${a.fy}`, [a.reasons, a.caveat].filter(Boolean).join(' '), ...pageCols(a)]));
   // In-year (partial-year) figures: labelled so they are never mistaken for full-year values.
-  if (hist.in_year) hist.in_year.periods.forEach((p) => p.figures.forEach((f) => rows.push([`in_year_${f.measure}`, hist.in_year.fy, f.value, f.unit, `in-year: ${hist.in_year.comparability}`, `${p.report.title}, PDF p. ${f.pdf_page}`, p.report.url, p.confidence, got, f.as_of ? `${p.period} (at ${f.as_of})` : p.period, f.label])));
+  if (hist.in_year) hist.in_year.periods.forEach((p) => p.figures.forEach((f) => rows.push([`in_year_${f.measure}`, hist.in_year.fy, f.value, f.unit, `in-year: ${hist.in_year.comparability}`, `${p.report.title}, PDF p. ${f.pdf_page}`, p.report.url, p.confidence, got, f.as_of ? `${p.period} (at ${f.as_of})` : p.period, f.label, p.source_id, f.pdf_page, f.printed_page, ''])));
   // Figures from other documents for years whose Controller of Budget report is missing: listed, not used in the series.
-  if (hist.supplementary) hist.supplementary.documents.forEach((d) => d.figures.forEach((f) => rows.push([`other_source_${f.measure}`, d.fy, f.value, f.unit, `other document (${d.kind}); not used in the series`, `${d.title}, PDF p. ${f.pdf_page}`, d.url, d.confidence, got, `FY ${d.fy}`, f.label])));
+  if (hist.supplementary) hist.supplementary.documents.forEach((d) => d.figures.forEach((f) => rows.push([`other_source_${f.measure}`, d.fy, f.value, f.unit, `other document (${d.kind}); not used in the series`, `${d.title}, PDF p. ${f.pdf_page}`, d.url, d.confidence, got, `FY ${d.fy}`, f.label, d.source_id, f.pdf_page, f.printed_page, ''])));
   // Every value in the conflict register, so no disagreeing figure is left out of the export.
   const conf = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'conflicts.json'), 'utf8'));
   conf.conflicts.forEach((c) => c.values.forEach((v) => rows.push([`conflict: ${c.measure}`, '', v.value, c.unit, `source value (${c.status})`, v.label, v.url, '', got, '', c.definitions])));
-  fs.writeFileSync(path.join(outDir, 'history.csv'), rows.map((r) => r.map(q).join(',')).join('\n') + '\n');
+  fs.writeFileSync(path.join(outDir, 'history.csv'), rows.map((r) => [...r, ...Array(Math.max(0, rows[0].length - r.length)).fill('')].map(q).join(',')).join('\n') + '\n');
   console.log(`Generated public/data/history.csv (${rows.length - 1} rows)`);
 }());

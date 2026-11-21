@@ -157,6 +157,8 @@ svg .lab { fill: var(--ink); font-weight: 600; }
 .bar:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 details.tableview { margin-top: 12px; font-size: 14px; }
 details.tableview summary { cursor: pointer; color: var(--ink-muted); font-weight: 600; font-size: 13px; }
+details.refs { border-bottom: 1px solid var(--rule); }
+details.refs summary { cursor: pointer; font-weight: 700; font-size: 15px; min-height: 44px; display: flex; align-items: center; }
 .tablewrap { overflow-x: auto; }
 .data caption:not(.sr-only) { caption-side: top; text-align: left; padding: 4px 0 6px; font-size: 13px; color: var(--ink-soft); }
 table.data { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }

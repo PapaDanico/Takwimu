@@ -244,6 +244,34 @@ const mids = new Set();
   }
 });
 
+// ---- Per-observation provenance: every figure names a manifest document and a page (or says it was not located) ----
+const byId = new Map((manifest.documents || []).map((d) => [d.id, d]));
+const checkRef = (r, where, url) => {
+  if (!r || !r.source_id) return fail(`provenance ${where}: missing source_id`);
+  const d = byId.get(r.source_id);
+  if (!d) return fail(`provenance ${where}: source_id ${r.source_id} is not in data/source-manifest.json`);
+  if (url && d.url !== url) fail(`provenance ${where}: source_id ${r.source_id} is ${d.url}, but the observation cites ${url}`);
+  if (r.page === null && r.page_note !== 'not located') fail(`provenance ${where}: page null needs page_note "not located"`);
+  if (r.page !== null && !(Number.isInteger(r.page) && r.page >= 1)) fail(`provenance ${where}: page must be a positive integer or null`);
+  if (r.printed_page !== undefined && r.page === null) fail(`provenance ${where}: printed_page without a PDF page`);
+};
+const META = new Set(['fy', 'report', 'caveat', 'field_source', 'derived', 'provenance']);
+hist.years.forEach((y) => {
+  const pv = y.provenance || {};
+  Object.keys(y).filter((k) => !META.has(k)).forEach((k) => {
+    const rep = hist.reports[(y.field_source && y.field_source[k]) || y.report];
+    checkRef(pv[k], `${y.fy} ${k}`, rep && rep.url);
+  });
+  Object.keys(pv).forEach((k) => { if (y[k] === undefined) fail(`provenance ${y.fy}: entry for ${k}, which has no value (gaps are never filled)`); });
+});
+hist.audits.points.forEach((a) => checkRef(a, `audit ${a.fy}`, a.url));
+hist.osr_series.points.forEach((p) => { checkRef(p, `osr ${p.fy}`); if (p.alternate) checkRef(p.alternate, `osr ${p.fy} alternate`); });
+if (hist.in_year) hist.in_year.periods.forEach((p) => {
+  checkRef({ source_id: p.source_id, page: 1 }, `in-year ${p.id}`, p.report.url);
+  p.figures.forEach((f) => { if (!Number.isInteger(f.pdf_page)) fail(`provenance in-year ${p.id} ${f.measure}: missing pdf_page`); });
+});
+if (hist.supplementary) hist.supplementary.documents.forEach((d) => checkRef({ source_id: d.source_id, page: 1 }, `supplementary ${d.id}`, d.url));
+
 if (errors.length) {
   console.error('Data validation failed:\n- ' + errors.join('\n- '));
   process.exit(1);

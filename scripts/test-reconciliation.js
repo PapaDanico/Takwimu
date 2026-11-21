@@ -125,6 +125,13 @@ test('conflict recurrent-absorption-2024-25: recomputed value matches the regist
   const y = year('2024/25');
   ok(near((y.recurrent_spent / y.recurrent_budget) * 100, 82.2, 0.05), 'recomputed share is not 82.2');
 });
+caseTest('development-absorption-2022-23', 53.8, 53.4, year('2022/23').development_absorption_pct, 1e-9);
+caseTest('recurrent-absorption-2023-24', 85.8, 86.8, year('2023/24').recurrent_absorption_pct, 1e-9);
+caseTest('development-absorption-2023-24', 64.5, 64.6, year('2023/24').development_absorption_pct, 1e-9);
+test('conflict recurrent-absorption-2023-24: provenance points the reader to the register', () => {
+  ['recurrent_absorption_pct', 'development_absorption_pct'].forEach((k) => ok(/See conflict/.test(year('2023/24').provenance[k].page_note || ''), `${k} page_note should name the conflict`));
+  ok(/See conflict development-absorption-2022-23/.test(year('2022/23').provenance.development_absorption_pct.page_note || ''), '2022/23 page_note should name the conflict');
+});
 caseTest('budget-financing-osr-2024-25', 1043, 929, siaya.own_source_revenue.target.value, 1e-9);
 test('conflict budget-financing-osr-2024-25: stated 47 per cent is quoted, not recomputed', () => {
   ok(siaya.own_source_revenue.share_of_annual_target_pct === 47, 'share_of_annual_target_pct should be the stated 47');

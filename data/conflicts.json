@@ -390,6 +390,78 @@
       "supersedes": null,
       "page_image_checked": false,
       "effect": "Both values are shown side by side, with their dates, in the in-year table on the Siaya hub. Do not read the rise from 332 to 953.73 as new arrears of the same kind."
+    },
+    {
+      "id": "development-absorption-2022-23",
+      "measure": "Development absorption, FY 2022/23 (share of the annual development budget spent)",
+      "unit": "per cent",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2022/23 report, department table total (PDF p. 583, printed p. 557, RapidOCR)",
+          "value": 53.8,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        },
+        {
+          "label": "Same report, text of section 3.38.4 (PDF p. 578, printed p. 552, text layer and RapidOCR agree)",
+          "value": 53.4,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        }
+      ],
+      "definitions": "Same report, same measure. The table total is 1,520.28 of 2,827.00 million, which is 53.8 per cent; the text says 53.4 per cent.",
+      "hypothesis": "Hypothesis: a typing slip in the text. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The series keeps 53.8 (the table total, which matches the arithmetic). The text value is listed here."
+    },
+    {
+      "id": "recurrent-absorption-2023-24",
+      "measure": "Recurrent absorption, FY 2023/24 (share of the annual recurrent budget spent), as read from the scanned report",
+      "unit": "per cent",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.4, PDF text layer (PDF p. 513, printed p. 490)",
+          "value": 85.8,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same line read with RapidOCR at 200 to 400 dpi, and the department table total (PDF p. 517, printed p. 494)",
+          "value": 86.8,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "A reading conflict, not two sources: the PDF is a scan, and its embedded text layer and RapidOCR read the printed figure differently. The department table (5,138.67 of 5,909.25 million) gives 87.0 per cent by arithmetic.",
+      "hypothesis": "Hypothesis: the text layer misread 86.8 as 85.8, since two RapidOCR reads and the table agree on 86.8. Not confirmed against the page image.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The series still shows 85.8 until a reviewer checks the page image; both readings are listed here."
+    },
+    {
+      "id": "development-absorption-2023-24",
+      "measure": "Development absorption, FY 2023/24 (share of the annual development budget spent), as read from the scanned report",
+      "unit": "per cent",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.4, PDF text layer (PDF p. 513, printed p. 490)",
+          "value": 64.5,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same line read with RapidOCR at 200 to 400 dpi, and the department table total (PDF p. 517, printed p. 494)",
+          "value": 64.6,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "A reading conflict, not two sources (see recurrent-absorption-2023-24). The table (2,487.20 of 3,851.88 million) gives 64.6 per cent by arithmetic.",
+      "hypothesis": "Hypothesis: the text layer misread 64.6 as 64.5. Not confirmed against the page image.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The series still shows 64.5 until a reviewer checks the page image; both readings are listed here."
     }
   ]
 }
