@@ -11,13 +11,13 @@ const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500', '700'],
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: 'Takwimu Kenya | Public finance, made plain', template: '%s | Takwimu Kenya' },
-  openGraph: { type: 'website', siteName: 'Takwimu Kenya', images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Takwimu Kenya: Siaya County in plain numbers' }] },
+  title: { default: 'Takwimu Kenya | Turning Data into Progress.', template: '%s | Takwimu Kenya' },
+  openGraph: { type: 'website', siteName: 'Takwimu Kenya', images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Takwimu Kenya: Turning Data into Progress.' }] },
   twitter: { card: 'summary_large_image', images: ['/og.png'] },
   description: "Kenya's county budget, audit and revenue reports in plain language, starting with Siaya. Every figure names its source.",
   manifest: '/manifest.json',
   icons: {
-    icon: [{ url: '/logo.svg', type: 'image/svg+xml' }, { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' }],
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }, { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' }, { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' }, { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' }],
     apple: '/apple-touch-icon.png',
   },
 };

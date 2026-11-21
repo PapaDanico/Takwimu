@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main id="main" className="wrap page">
       <section className="hero card" aria-labelledby="hero-h">
-        <p className="eyebrow">Takwimu Kenya</p>
+        <p className="eyebrow">Takwimu Kenya · <em>Turning Data into Progress.</em></p>
         <h1 id="hero-h">Kenya&apos;s public finances and statistics, county by county, made plain</h1>
         <p className="lead">Budgets, spending, own revenue, unpaid bills, audit opinions and population, with the source, date and confidence beside every figure. Where two official reports disagree, we show both.</p>
         <p><Link className="btn" href="/counties/siaya/">Start with Siaya County</Link> <Link className="btn ghost" href="/counties/">Browse all 47 counties</Link></p>

@@ -81,10 +81,10 @@ export default function SiteFooter({ asOf }) {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <img src="/logo.svg" alt="" width="40" height="40" />
-              <b>Takwimu <i>Kenya</i></b>
+              <img src="/logo.svg" alt="" width="48" height="48" />
+              <span className="wordmark" aria-hidden="true"><span className="wm-main">TAKW<span className="wm-i">I</span>MU</span><span className="wm-sub">KENYA</span></span><span className="sr-only">Takwimu Kenya</span>
             </div>
-            <p className="tagline">Public finance, made plain</p>
+            <p className="tagline">Turning Data into Progress.</p>
             <p className="footer-about">
               A free tool that turns Kenya&apos;s county budget, audit and revenue reports into plain
               language for all 47 counties, starting with Siaya. Every figure names its source, so any citizen can check it.

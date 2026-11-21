@@ -45,7 +45,7 @@ a { color: inherit; }
 .site-header { position: sticky; top: 0; z-index: 40; border-bottom: 1px solid var(--rule); background: color-mix(in srgb, var(--sand-100) 90%, transparent); backdrop-filter: blur(8px); }
 .site-header .row { display: flex; align-items: center; gap: 8px; padding-block: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-.brand img { width: 36px; height: 36px; border-radius: 12px; display: block; }
+.brand img { width: 40px; height: 40px; display: block; }
 .brand b { font-weight: 800; font-size: 17px; letter-spacing: -.01em; white-space: nowrap; }
 .brand b i { font-style: normal; color: var(--gold-ink); }
 .nav { display: none; margin-left: 28px; gap: 4px; }
@@ -386,3 +386,15 @@ table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; lett
 .kmap-sw.live { background: var(--s1); }
 .kmap-sw.soon { background: var(--track); opacity: .7; }
 .eyebrow a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Takwimu Kenya brand (provisional tokens from Brand Suite v1.0, 21 Nov 2026) */
+:root { --brand-forest: #07552D; --brand-green: #08762F; --brand-red: #D71920; --brand-charcoal: #17191C; --brand-orange: #F7931E; }
+.wordmark { display: inline-grid; line-height: 1; gap: 3px; }
+.wm-main { font-weight: 800; font-size: 19px; letter-spacing: .04em; color: var(--brand-forest); }
+.wm-i { color: var(--brand-orange); }
+.wm-sub { display: flex; align-items: center; gap: 6px; font-size: 9.5px; font-weight: 700; letter-spacing: .42em; color: var(--brand-charcoal); padding-left: .2em; }
+.wm-sub::before, .wm-sub::after { content: ''; height: 2px; flex: 1; min-width: 8px; background: var(--brand-red); }
+.site-footer .wm-main { color: #FFFFFF; }
+.site-footer .wm-sub { color: #FDFBF5; }
+.site-footer .wm-i { color: var(--brand-orange); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .site-header .wm-main { color: #6FCF8E; } :root:not([data-theme="light"]) .site-header .wm-sub { color: #E8E6E1; } }

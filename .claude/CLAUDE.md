@@ -13,6 +13,7 @@ Civic education platform for Kenyan public finance and statistics, focused on tr
 - Deploy to Netlify only for major releases (owner, 21 Nov 2026): commit and push often, deploy once per milestone. Production comes from branch claude/eager-rubin-7bpcgq by CLI upload, not from main (see docs/architecture-map.md).
 - Hosting is Netlify only; vercel.json disables Vercel Git deploys. Cloudflare Workers Builds and GitHub Actions failures on the PR are external noise (owner must disconnect).
 - National (Takwimu Kenya, 21 Nov 2026): lib/counties.js lists all 47 counties; only Siaya is published (/counties/siaya/ hub; its pages keep their old URLs). Other counties get in-preparation pages. Maps: components/KenyaMap.js and SiayaMap.js use geoBoundaries outlines in data/*.json (scripts/make-*-map.js, one-off).
+- Brand: brand/README.md (Takwimu Kenya, tagline "Turning Data into Progress."); mark from scripts/make-brand-mark.js; wordmark is interim CSS, custom glyph vectors pending sign-off.
 - Charts: components/Charts.js (line, column), Donut.js; palette --s1..--s6 validated; every chart needs a table view.
 
 # Rules

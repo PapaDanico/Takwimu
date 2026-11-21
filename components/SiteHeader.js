@@ -43,8 +43,8 @@ export default function SiteHeader({ asOf }) {
       <header className="site-header">
         <div className="wrap row">
           <Link href="/" className="brand">
-            <img src="/logo.svg" alt="" width="36" height="36" />
-            <b>Takwimu <i>Kenya</i></b>
+            <img src="/logo.svg" alt="" width="40" height="40" />
+            <span className="wordmark" aria-hidden="true"><span className="wm-main">TAKW<span className="wm-i">I</span>MU</span><span className="wm-sub">KENYA</span></span><span className="sr-only">Takwimu Kenya</span>
           </Link>
           <nav className="nav" aria-label="Primary">
             {NAV.map(({ href, label }) => (

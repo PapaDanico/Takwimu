@@ -1,13 +1,19 @@
 {
   "name": "Takwimu Kenya",
   "short_name": "Takwimu",
-  "description": "Kenya's public finance and statistics, explained with sources. Starting with Siaya County.",
+  "description": "Kenya's public finance and statistics, county by county, with sources. Turning Data into Progress.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F7F2E7",
-  "theme_color": "#0A192F",
+  "background_color": "#FFFFFF",
+  "theme_color": "#07552D",
   "orientation": "portrait",
   "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
     {
       "src": "/icon-192.png",
       "sizes": "192x192",
