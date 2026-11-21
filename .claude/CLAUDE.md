@@ -11,6 +11,7 @@ Civic education platform for Kenyan public finance and statistics, focused on tr
 - Layout repaired 2026-11-20 (app/, lib/, scripts/, data/, public/). app/_held/ukweli is intentionally not routed. Build, validate and typecheck pass.
 
 - Deploy to Netlify only for major releases (owner, 21 Nov 2026): commit and push often, deploy once per milestone. Production comes from branch claude/eager-rubin-7bpcgq by CLI upload, not from main (see docs/architecture-map.md).
+- Hosting is Netlify only; vercel.json disables Vercel Git deploys. Cloudflare Workers Builds and GitHub Actions failures on the PR are external noise (owner must disconnect).
 - Charts: components/Charts.js (line, column), Donut.js; palette --s1..--s6 validated; every chart needs a table view.
 
 # Rules
