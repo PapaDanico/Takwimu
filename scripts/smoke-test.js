@@ -1,6 +1,10 @@
 // End-to-end smoke test: serves dist/ with the production CSP and checks routes, charts, table views,
-// keyboard focus, downloads and CSP violations. Usage: node scripts/smoke-test.js [dist-dir]
-const { chromium } = require('playwright');
+// keyboard focus, downloads and CSP violations. Needs Playwright installed outside the project. Usage: node scripts/smoke-test.js [dist-dir]
+let chromium;
+try { ({ chromium } = require('playwright')); } catch (e) {
+  console.error('Playwright is not installed. It is deliberately not a project dependency, so Netlify builds stay light.\nInstall it outside the project (npm i -g playwright && npx playwright install chromium) and run again with NODE_PATH set to the global modules.');
+  process.exit(2);
+}
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
