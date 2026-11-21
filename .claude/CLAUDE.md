@@ -12,7 +12,7 @@ Civic education platform for Kenyan public finance and statistics, focused on tr
 - Deploy to Netlify only for major releases (owner, 21 Nov 2026): commit and push often, deploy once per milestone. Production comes from branch claude/eager-rubin-7bpcgq by CLI upload, not from main (see docs/architecture-map.md). vercel.json disables Vercel Git deploys; Cloudflare and GitHub Actions failures on the PR are external noise (owner must disconnect).
 - Build gates: schemas/ (JSON Schema), data/source-manifest.json (SHA-256 of cited PDFs), scripts/test-reconciliation.js (one test per conflict case); npm run verify:repro must print Reproducible. Brief PDF: rebuild, then NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js (Playwright stays global).
 - National (Takwimu Kenya, 21 Nov 2026): lib/counties.js lists all 47 counties; only Siaya is published (/counties/siaya/ hub; its pages keep their old URLs). Other counties get in-preparation pages. Maps: components/KenyaMap.js and SiayaMap.js use geoBoundaries outlines in data/*.json (scripts/make-*-map.js, one-off).
-- Brand: brand/README.md (Takwimu Kenya, tagline "Turning Data into Progress."); mark from scripts/make-brand-mark.js; wordmark is interim CSS, custom glyph vectors pending sign-off.
+- Brand: brand/README.md (Takwimu Kenya, tagline "Turning Data into Progress."). Site uses the owner's supplied artwork: horizontal lockup in header, full logo in footer and PDF, symbol for icons. Owner SVG exports are empty, so PNGs are used; the old rebuilt mark and CSS wordmark are not used.
 - Charts: components/Charts.js (line, column), Donut.js; palette --s1..--s6 validated; every chart needs a table view.
 
 # Rules
