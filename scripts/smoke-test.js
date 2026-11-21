@@ -73,6 +73,7 @@ const srv = http.createServer((req, res) => {
   const opText = await pg.locator('#opinions').innerText();
   check(/County Executive/i.test(opHead) && /County Assembly/i.test(opHead) && audJson.opinions.filter((o) => o.opinion).every((o) => opText.includes(o.opinion)), 'audits: every opinion as printed, Executive and Assembly in separate columns');
   check(/findings, not convictions/.test(await pg.locator('#not-convictions').innerText()) && /unavailable on 21 Nov 2026/.test(await pg.locator('#oag-unavailable').innerText()) && /2016\/17/.test(await pg.locator('#no-report').innerText()), 'audits: says findings are not convictions, the Auditor-General site was unavailable, and lists years with no report');
+  check(/Provisional: awaiting editorial review/.test(await pg.locator('main .provisional').innerText()), 'audits: labelled provisional, awaiting editorial review');
   check(await pg.locator('main li.ds').count() === audJson.findings.length && new RegExp(`Showing ${audJson.findings.length} of ${audJson.findings.length}`).test(await pg.locator('#aud-count').innerText()), 'audits: every finding is listed');
   const audChart = pg.locator('main figure.chart');
   check(await audChart.count() === 1 && await audChart.locator('details.tableview').count() === 1, 'audits: one category chart with a table view');
@@ -89,6 +90,7 @@ const srv = http.createServer((req, res) => {
   await pg.goto(base + '/counties/siaya/ledger/', { waitUntil: 'load' });
   check(await pg.locator('#completeness tbody tr').count() === Object.keys(ledJson.measures).length && await pg.locator('#completeness thead th').count() === ledJson.years.length + 1, 'ledger: completeness matrix has every measure and year');
   check(/No averaging and no verdicts/.test(await pg.locator('#no-averaging').innerText()) && /cash/.test(await pg.locator('#why-differ').innerText()) && /FIF/.test(await pg.locator('#why-differ').innerText()), 'ledger: says no averaging or verdicts and explains why figures differ');
+  check(/Provisional: awaiting editorial review/.test(await pg.locator('main .provisional').innerText()), 'ledger: labelled provisional, awaiting editorial review');
   check(await pg.locator('#case-summary tfoot').innerText().then((t) => new RegExp(`${ledJson.discrepancies.length}\\s*$`).test(t.trim())), 'ledger: case summary accounts for every open case');
   const osrCases = ledJson.discrepancies.filter((d) => d.indicator_id === 'osr_total_actual').length;
   check(await pg.locator('#led-case-list > li').count() === osrCases && await pg.locator('#led-table a[href*="#page="]').count() >= 1, 'ledger: own-source revenue shows every source with page links and its open cases');
