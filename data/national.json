@@ -10,6 +10,7 @@
   "rule": "Values are as served by the World Bank API on the retrieval date. Missing years are listed in missing_years and are never filled. Modelled or estimated series say so in modelled_or_estimated_note.",
   "gaps": [
    "GC.DOD.TOTL.GD.ZS (central government debt % GDP): World Bank API returns no values for Kenya in any year (all null).",
+   "Total public debt is not covered: the four external debt series (DT.DOD.DECT.CD, DT.DOD.DPPG.CD, DT.DOD.DECT.GN.ZS, DT.TDS.DECT.EX.ZS, International Debt Statistics) count only debt owed to non-residents, so they are not total or central government debt, which also includes domestic debt.",
    "IMF DataMapper GGXWDG_NGDP (general government gross debt % GDP) not retrieved: API returned HTTP 429 then Access Denied / Blob not found from this environment (raw/wb/imf_GGXWDG_NGDP_FAILED_response.txt).",
    "SE.PRM.NENR (net primary enrolment) has values only to 2012; SE.PRM.ENRR (gross) included as the usable series.",
    "SI.POV.DDAY: series redefined by World Bank to $3.00/day 2021 PPP; the $2.15/day line is no longer served under this code. Only survey years have values."
@@ -1257,6 +1258,346 @@
     {
      "year": 2025,
      "value": 5113701649.81261
+    }
+   ],
+   "source_id": "worldbank-wdi-api"
+  },
+  {
+   "code": "DT.DOD.DECT.CD",
+   "name": "External debt stocks, total (DOD, current US$)",
+   "unit": "current US$",
+   "sector": "public finance",
+   "source": "World Bank, World Development Indicators",
+   "original_source": "International Debt Statistics, World Bank (WB)",
+   "api_url": "https://api.worldbank.org/v2/country/KEN/indicator/DT.DOD.DECT.CD?format=json&per_page=100",
+   "last_updated": "2026-11-11",
+   "retrieved": "2026-11-21",
+   "source_note": "Total external debt is debt owed to nonresidents repayable in currency, goods, or services. Total external debt is the sum of public, publicly guaranteed, and private nonguaranteed long-term debt, use of IMF credit, and short-term debt. Short-term debt includes all debt having an original maturity of one year or less and interest in arrears on long-term debt. Data are in current U.S. dollars.",
+   "modelled_or_estimated_note": null,
+   "years_with_values": [
+    2010,
+    2025
+   ],
+   "missing_years": [],
+   "series": [
+    {
+     "year": 2010,
+     "value": 8885235532.9
+    },
+    {
+     "year": 2011,
+     "value": 10042095566.4
+    },
+    {
+     "year": 2012,
+     "value": 11832175543.2
+    },
+    {
+     "year": 2013,
+     "value": 13775500738.7
+    },
+    {
+     "year": 2014,
+     "value": 16914050483.1
+    },
+    {
+     "year": 2015,
+     "value": 19787973122.7
+    },
+    {
+     "year": 2016,
+     "value": 21066817343.3
+    },
+    {
+     "year": 2017,
+     "value": 26956140287
+    },
+    {
+     "year": 2018,
+     "value": 31439139873.7
+    },
+    {
+     "year": 2019,
+     "value": 34975437296.6
+    },
+    {
+     "year": 2020,
+     "value": 38054145679.5
+    },
+    {
+     "year": 2021,
+     "value": 41249059717.1
+    },
+    {
+     "year": 2022,
+     "value": 41608772147.9
+    },
+    {
+     "year": 2023,
+     "value": 42976166339.2
+    },
+    {
+     "year": 2024,
+     "value": 43023047666.5
+    },
+    {
+     "year": 2025,
+     "value": 46313111751.7
+    }
+   ],
+   "source_id": "worldbank-wdi-api"
+  },
+  {
+   "code": "DT.DOD.DPPG.CD",
+   "name": "External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",
+   "unit": "current US$",
+   "sector": "public finance",
+   "source": "World Bank, World Development Indicators",
+   "original_source": "International Debt Statistics, World Bank (WB)",
+   "api_url": "https://api.worldbank.org/v2/country/KEN/indicator/DT.DOD.DPPG.CD?format=json&per_page=100",
+   "last_updated": "2026-11-11",
+   "retrieved": "2026-11-21",
+   "source_note": "Public and publicly guaranteed debt comprises long-term external obligations of public debtors, including the national government,  Public Corporations, State Owned Enterprises, Development Banks and Other Mixed Enterprises, political subdivisions (or an agency of either), autonomous public bodies, and external obligations of private debtors that are guaranteed for repayment by a public entity. Data are in current U.S. dollars.",
+   "modelled_or_estimated_note": null,
+   "years_with_values": [
+    2010,
+    2025
+   ],
+   "missing_years": [],
+   "series": [
+    {
+     "year": 2010,
+     "value": 7027126295.2
+    },
+    {
+     "year": 2011,
+     "value": 7650035167.6
+    },
+    {
+     "year": 2012,
+     "value": 8962499572.4
+    },
+    {
+     "year": 2013,
+     "value": 9769963161.5
+    },
+    {
+     "year": 2014,
+     "value": 13302548244.8
+    },
+    {
+     "year": 2015,
+     "value": 15150116013.5
+    },
+    {
+     "year": 2016,
+     "value": 17155762688.7
+    },
+    {
+     "year": 2017,
+     "value": 22404102438.5
+    },
+    {
+     "year": 2018,
+     "value": 26993371500
+    },
+    {
+     "year": 2019,
+     "value": 30819435387
+    },
+    {
+     "year": 2020,
+     "value": 33549265986.9
+    },
+    {
+     "year": 2021,
+     "value": 35257619421.9
+    },
+    {
+     "year": 2022,
+     "value": 35089302981.2
+    },
+    {
+     "year": 2023,
+     "value": 35929852693.8
+    },
+    {
+     "year": 2024,
+     "value": 35684778487.4
+    },
+    {
+     "year": 2025,
+     "value": 38751061226.4
+    }
+   ],
+   "source_id": "worldbank-wdi-api"
+  },
+  {
+   "code": "DT.DOD.DECT.GN.ZS",
+   "name": "External debt stocks (% of GNI)",
+   "unit": "% of GNI",
+   "sector": "public finance",
+   "source": "World Bank, World Development Indicators",
+   "original_source": "International Debt Statistics, World Bank (WB)",
+   "api_url": "https://api.worldbank.org/v2/country/KEN/indicator/DT.DOD.DECT.GN.ZS?format=json&per_page=100",
+   "last_updated": "2026-11-11",
+   "retrieved": "2026-11-21",
+   "source_note": "Total external debt stocks to gross national income. Total external debt is debt owed to nonresidents repayable in currency, goods, or services. Total external debt is the sum of public, publicly guaranteed, and private nonguaranteed long-term debt, use of IMF credit, and short-term debt. Short-term debt includes all debt having an original maturity of one year or less and interest in arrears on long-term debt. GNI (formerly GNP) is the sum of value added by all resident producers plus any product taxes (less subsidies) not included in the valuation of output plus net receipts of primary income (compensation of employees and property income) from abroad.",
+   "modelled_or_estimated_note": null,
+   "years_with_values": [
+    2010,
+    2025
+   ],
+   "missing_years": [],
+   "series": [
+    {
+     "year": 2010,
+     "value": 22.2953111640431
+    },
+    {
+     "year": 2011,
+     "value": 23.9314455090232
+    },
+    {
+     "year": 2012,
+     "value": 23.5760157767792
+    },
+    {
+     "year": 2013,
+     "value": 25.277644789086
+    },
+    {
+     "year": 2014,
+     "value": 27.9202667405422
+    },
+    {
+     "year": 2015,
+     "value": 31.3124938753918
+    },
+    {
+     "year": 2016,
+     "value": 28.5439594035185
+    },
+    {
+     "year": 2017,
+     "value": 33.4961001513557
+    },
+    {
+     "year": 2018,
+     "value": 34.6199213171852
+    },
+    {
+     "year": 2019,
+     "value": 35.4096901832028
+    },
+    {
+     "year": 2020,
+     "value": 38.0611071104584
+    },
+    {
+     "year": 2021,
+     "value": 38.1319124923465
+    },
+    {
+     "year": 2022,
+     "value": 36.9234670590499
+    },
+    {
+     "year": 2023,
+     "value": 40.7151227271972
+    },
+    {
+     "year": 2024,
+     "value": 36.561067893175
+    },
+    {
+     "year": 2025,
+     "value": 34.6119556510127
+    }
+   ],
+   "source_id": "worldbank-wdi-api"
+  },
+  {
+   "code": "DT.TDS.DECT.EX.ZS",
+   "name": "Total debt service (% of exports of goods, services and primary income)",
+   "unit": "% of exports of goods, services and primary income",
+   "sector": "public finance",
+   "source": "World Bank, World Development Indicators",
+   "original_source": "International Debt Statistics, World Bank (WB)",
+   "api_url": "https://api.worldbank.org/v2/country/KEN/indicator/DT.TDS.DECT.EX.ZS?format=json&per_page=100",
+   "last_updated": "2026-11-11",
+   "retrieved": "2026-11-21",
+   "source_note": "Total debt service to exports of goods, services and primary income. Total debt service is the sum of principal repayments and interest actually paid in currency, goods, or services on long-term debt, interest paid on short-term debt, and repayments (repurchases and charges) to the IMF.",
+   "modelled_or_estimated_note": null,
+   "years_with_values": [
+    2010,
+    2025
+   ],
+   "missing_years": [],
+   "series": [
+    {
+     "year": 2010,
+     "value": 4.40619610677069
+    },
+    {
+     "year": 2011,
+     "value": 4.31690093772418
+    },
+    {
+     "year": 2012,
+     "value": 4.64950399732896
+    },
+    {
+     "year": 2013,
+     "value": 4.73075851377233
+    },
+    {
+     "year": 2014,
+     "value": 11.3620048229322
+    },
+    {
+     "year": 2015,
+     "value": 8.33006022652782
+    },
+    {
+     "year": 2016,
+     "value": 11.1262636591623
+    },
+    {
+     "year": 2017,
+     "value": 14.6432485664109
+    },
+    {
+     "year": 2018,
+     "value": 23.6995543715772
+    },
+    {
+     "year": 2019,
+     "value": 38.4273497164857
+    },
+    {
+     "year": 2020,
+     "value": 24.2919145639572
+    },
+    {
+     "year": 2021,
+     "value": 16.7823271082296
+    },
+    {
+     "year": 2022,
+     "value": 18.131973804652
+    },
+    {
+     "year": 2023,
+     "value": 21.3421318478191
+    },
+    {
+     "year": 2024,
+     "value": 27.410166145035
+    },
+    {
+     "year": 2025,
+     "value": 22.6345968778716
     }
    ],
    "source_id": "worldbank-wdi-api"

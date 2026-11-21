@@ -17,7 +17,7 @@ export const metadata = {
 };
 
 const series = trendSeries();
-const ORDER = ['economy', 'people', 'health', 'education', 'infrastructure'];
+const ORDER = ['economy', 'people', 'health', 'education', 'infrastructure', 'public finance'];
 const show = (v, dec) => v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
 const inds = natIndicators.filter((x) => x.hasValues);
 const scaled = (x) => x.series.map((p) => (p.value === null ? null : p.value / x.div));
@@ -43,7 +43,7 @@ export default function KenyaPage() {
           <SaveView title="Kenya dashboard" />
           <PrintButton />
         </div>
-        <p className="hint" style={{ marginTop: 10 }}>Jump to: {ORDER.map((s, i) => <span key={s}>{i ? ' · ' : ''}<a href={`#${s}`}>{SECTORS[s]}</a></span>)} · <a href="#counties">Counties together</a> · <a href="#trends">Trend explorer</a> · <a href="#notes">Sources and notes</a></p>
+        <p className="hint" style={{ marginTop: 10 }}>Jump to: {ORDER.map((s, i) => <span key={s}>{i ? ' · ' : ''}<a href={`#${s.replace(' ', '-')}`}>{SECTORS[s]}</a></span>)} · <a href="#counties">Counties together</a> · <a href="#trends">Trend explorer</a> · <a href="#notes">Sources and notes</a></p>
       </section>
 
       <section className="card" id="counties" aria-labelledby="counties-h">
@@ -57,8 +57,8 @@ export default function KenyaPage() {
         const list = inds.filter((x) => x.sector === sec);
         if (!list.length) return null;
         return (
-          <section key={sec} className="card" id={sec} aria-labelledby={`${sec}-h`}>
-            <h2 id={`${sec}-h`}>{SECTORS[sec]}</h2>
+          <section key={sec} className="card" id={sec.replace(' ', '-')} aria-labelledby={`${sec.replace(' ', '-')}-h`}>
+            <h2 id={`${sec.replace(' ', '-')}-h`}>{SECTORS[sec]}</h2>
             <div style={{ marginTop: 14 }}>
               <StatStrip label={`${SECTORS[sec]}: latest values`} items={list.map((x) => ({ label: x.short, value: show(x.last.value / x.div, x.dec), unit: x.dispUnit, note: `${x.last.year}; ${x.first.year}: ${show(x.first.value / x.div, x.dec)}`, spark: scaled(x) }))} />
             </div>

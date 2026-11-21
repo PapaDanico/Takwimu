@@ -45,7 +45,7 @@ export default function DatasetsPage() {
         <h2 id="gaps-h">Not available</h2>
         <p className="lead">Series we looked for and could not publish. They are listed so the gap is visible, not filled.</p>
         <ul className="how">
-          <li><b>Central government debt as a share of GDP.</b> The World Bank series (GC.DOD.TOTL.GD.ZS) has no values for Kenya in any year, and the IMF&apos;s series could not be reached on {shortDate(nat.meta.retrieved)} (the service refused the request). No debt figure is shown.</li>
+          <li><b>Central government debt as a share of GDP.</b> The World Bank series (GC.DOD.TOTL.GD.ZS) has no values for Kenya in any year, and the IMF&apos;s series could not be reached on {shortDate(nat.meta.retrieved)} (the service refused the request). No figure for total public debt is shown. The external debt series in the catalogue count only debt owed to lenders outside Kenya, so they are not total public debt.</li>
           <li><b>Net primary enrolment.</b> Only 2012 has a value from 2010 on; the gross enrolment series is listed beside it.</li>
           <li><b>Poverty.</b> The World Bank now measures this at $3.00 a day in 2021 prices, and only survey years have values.</li>
           <li><b>2025 values.</b> Under-5 mortality, life expectancy and access to electricity have no 2025 value yet.</li>

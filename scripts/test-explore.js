@@ -28,6 +28,18 @@ const range = (slug, lo, hi) => { const t = trends.find((s) => s.slug === slug);
 range('population', 40, 60);
 range('remittances', 0.5, 10);
 range('gdp-per-person', 500, 5000);
+range('external-debt-stocks', 5, 80);
+range('external-debt-public', 5, 80);
+range('external-debt-gni', 5, 80);
+range('external-debt-service', 1, 60);
+// External debt is never presented as total public debt.
+natIndicators.filter((x) => /^DT\./.test(x.code)).forEach((x) => {
+  if (!/external/i.test(x.name) && !/external/i.test(x.short)) fail(`${x.code}: name must say external`);
+  if (!/not total public debt|Domestic debt service is not included/.test(x.note || '')) fail(`${x.code}: note must say it is not total public debt`);
+  if (x.sector !== 'public finance') fail(`${x.code}: sector should be public finance`);
+});
+if (natIndicators.find((x) => x.code === 'GC.DOD.TOTL.GD.ZS').hasValues) fail('central government debt now has values: review the gap note');
+if (!nat.meta.gaps.some((g) => /not total or central government debt/.test(g))) fail('national gaps must say external debt is not total public debt');
 // Every county value with a note in counties-cob.json keeps it in the compare output (screen and downloads):
 // a published value keeps it as a caveat, a missing value as its reason. Notes on one value of a row and group
 // (a reporting date) also reach the other values of that group.

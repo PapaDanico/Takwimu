@@ -99,7 +99,7 @@ const srv = http.createServer((req, res) => {
   await p2.goto(base + '/kenya/?i=nonsense', { waitUntil: 'networkidle' });
   check(/do not have/.test(await p2.locator('.invalid').innerText()), 'trends explains an unknown indicator');
   await p2.goto(base + '/kenya/', { waitUntil: 'networkidle' });
-  check(await p2.locator('figure.chart').count() === 1 && await p2.locator('.spark').count() >= 12 && await p2.locator('#notes tbody tr').count() === 13, 'Kenya dashboard: sparkline cards, one trend explorer chart, a sources row per indicator');
+  check(await p2.locator('figure.chart').count() === 1 && await p2.locator('.spark').count() >= 12 && await p2.locator('#notes tbody tr').count() === 17 && await p2.locator('#public-finance .spark').count() === 4, 'Kenya dashboard: sparkline cards, one trend explorer chart, a sources row per indicator');
   const nf = await p2.goto(base + '/no-such-page/', { waitUntil: 'load' });
   const nfHtml = fs.readFileSync(path.join(root, '404.html'), 'utf8');
   check(/That page is not here/.test(nfHtml) && /href="\/explore\/"/.test(nfHtml), 'friendly 404 with Home and Explore links');

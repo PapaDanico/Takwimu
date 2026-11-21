@@ -397,7 +397,7 @@
       "fiscal_year": "2010-2025",
       "title": "World Bank, World Development Indicators API, Kenya (country code KEN)",
       "url": "https://api.worldbank.org/v2/country/KEN/indicator/",
-      "referenced_by": "national.json (14 indicators; each indicator gives its full api_url)",
+      "referenced_by": "national.json (18 indicators; each indicator gives its full api_url)",
       "retrieved": "2026-11-21",
       "file_url": "https://api.worldbank.org/v2/country/KEN/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=100",
       "bytes": null,
