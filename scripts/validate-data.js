@@ -166,6 +166,18 @@ const required = ['osr-2023-24', 'osr-2015-16', 'pending-2021', 'pending-2023', 
 });
 required.forEach((id) => { if (!ids.has(id)) fail(`conflicts: ${id} is missing from the register`); });
 
+// In-year figures: partial-year values must never enter the ten-year series, and their conflicts must be registered.
+if (hist.in_year) {
+  const iy = hist.in_year;
+  if (hist.years.some((y) => y.fy === iy.fy)) fail(`history in_year: ${iy.fy} must not also be a full year in years`);
+  iy.conflicts.forEach((id) => { if (!ids.has(id)) fail(`history in_year: conflict ${id} is not in the register`); });
+  iy.periods.forEach((p) => {
+    const ms = p.figures.map((f) => f.measure);
+    if (new Set(ms).size !== ms.length) fail(`history in_year ${p.id}: duplicate measure`);
+    p.figures.filter((f) => f.unit === '%').forEach((f) => { if (f.value > 100) fail(`history in_year ${p.id} ${f.measure}: not a percentage`); });
+  });
+}
+
 // ---- JSON Schema (schemas/*.schema.json) ----
 // Minimal hand-written checker for the subset the schemas use: type (incl. integer and type lists), required,
 // properties, additionalProperties (false or a schema), items, minItems, enum, minimum, maximum, pattern, local $ref.
@@ -214,6 +226,8 @@ const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', '
 const listed = new Map((manifest.documents || []).map((d) => [d.url, d]));
 Object.entries(hist.reports).forEach(([k, r]) => { if (!listed.has(r.url)) fail(`source-manifest: report ${k} (${r.url}) is not listed`); });
 hist.audits.points.forEach((a) => { if (!listed.has(a.url)) fail(`source-manifest: audit ${a.fy} (${a.url}) is not listed`); });
+if (hist.in_year) hist.in_year.periods.forEach((p) => { if (!listed.has(p.report.url)) fail(`source-manifest: in-year ${p.id} (${p.report.url}) is not listed`); });
+if (hist.supplementary) hist.supplementary.documents.forEach((d) => { if (!listed.has(d.url)) fail(`source-manifest: supplementary ${d.id} (${d.url}) is not listed`); });
 const mids = new Set();
 (manifest.documents || []).forEach((d) => {
   const tag = `source-manifest ${d.id}`;
@@ -222,7 +236,8 @@ const mids = new Set();
   ['id', 'kind', 'fiscal_year', 'title', 'url', 'retrieved', 'access'].forEach((k) => { if (!d[k]) fail(`${tag}: missing ${k}`); });
   if (!/^https:\/\//.test(d.url || '')) fail(`${tag}: url must be https`);
   if (d.sha256 === null) {
-    if (!/^unavailable on \d{4}-\d{2}-\d{2}$/.test(d.access || '')) fail(`${tag}: a null sha256 needs access "unavailable on <date>"`);
+    // Null hash: either the file could not be fetched, or it was fetched from a site that publishes no checksum to verify it against.
+    if (!/^unavailable on \d{4}-\d{2}-\d{2}$|^downloaded \d{4}-\d{2}-\d{2}; not hashed: .{10,}$/.test(d.access || '')) fail(`${tag}: a null sha256 needs access "unavailable on <date>" or "downloaded <date>; not hashed: <reason>"`);
   } else {
     if (!/^[0-9a-f]{64}$/.test(d.sha256 || '')) fail(`${tag}: sha256 must be 64 hex characters or null`);
     if (d.access !== 'downloaded' || !d.hashed_on || !(d.bytes > 0) || !/^[0-9a-f]{32}$/.test(d.md5_library || '')) fail(`${tag}: a hash needs access "downloaded", hashed_on, bytes and md5_library`);

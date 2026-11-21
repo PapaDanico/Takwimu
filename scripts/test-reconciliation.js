@@ -49,6 +49,58 @@ osrCase('osr-2013-14', '2013/14', 99.77, 99.78);
 osrCase('osr-2014-15', '2014/15', 143.33, 142.88);
 osrCase('osr-2015-16', '2015/16', 127.93, 113.26);
 osrCase('osr-2023-24', '2023/24', 610.74, 427.95);
+osrCase('osr-2019-20', '2019/20', 179.43, 184.25);
+test('conflict osr-2019-20: the year row uses the Controller of Budget value, not the county paper', () => {
+  ok(near(year('2019/20').osr_m, 179.43, 1e-9), 'years 2019/20 osr_m should be 179.43');
+});
+
+// FY 2019/20 figures from other documents: both values recorded in the supplementary block, none plotted.
+const supp = (docId, measure) => {
+  const d = (hist.supplementary.documents || []).find((x) => x.id === docId);
+  ok(d, `no supplementary document ${docId}`);
+  const f = d.figures.find((x) => x.measure === measure);
+  ok(f, `${docId} has no ${measure}`);
+  return f.value;
+};
+const listedCase = (id, a, b, notPlotted) => test(`conflict ${id}`, () => {
+  const vals = conflict(id).values.map((v) => v.value);
+  ok(vals.length >= 2 && near(vals[0], a, 1e-9) && near(vals[1], b, 1e-9), `register values ${vals} should be ${a} and ${b}`);
+  ok(a !== b, 'the two values do not differ');
+  notPlotted();
+});
+listedCase('cash-bf-2019-20', 1186.27, 1840.12, () => {
+  ok(near(supp('cob-annual-2020-21-comparatives', 'cash_bf'), 1186.27, 1e-9) && near(supp('cob-h1-2020-21', 'cash_bf'), 1840.12, 1e-9), 'both values must be listed');
+});
+listedCase('final-budget-2019-20', 8881.77, 8106.98, () => {
+  ok(near(supp('siaya-brop-2019-20', 'final_budget'), 8881.77, 1e-9) && near(supp('senate-cpac-2019-20', 'final_budget'), 8106.98, 1e-9), 'both values must be listed');
+  ok(year('2019/20').approved === undefined, 'FY 2019/20 approved budget must stay a gap (no Controller of Budget figure)');
+  ok(near(9223.35 - 341.58, 8881.77, 0.01), 'county paper: original minus cut should be the final budget');
+});
+test('FY 2019/20 stays a gap except own-source revenue', () => {
+  const y = year('2019/20');
+  ['approved', 'spent', 'recurrent_absorption_pct', 'development_absorption_pct', 'osr_target_m', 'pending_total_m'].forEach((k) => ok(y[k] === undefined, `${k} must not be filled`));
+});
+
+// FY 2025/26 in-year figures: both reports' values shown side by side; never a full year in the series.
+const iy = (period, measure) => {
+  const p = hist.in_year.periods.find((x) => x.id === period);
+  ok(p, `no in-year period ${period}`);
+  const f = p.figures.find((x) => x.measure === measure);
+  ok(f, `${period} has no ${measure}`);
+  return f;
+};
+listedCase('in-year-assembly-payables-2025', 39.29, 72, () => {
+  ok(near(iy('q1', 'payables_assembly_opening').value, 39.29, 1e-9) && near(iy('h1', 'payables_assembly_opening').value, 72, 1e-9), 'in-year table must carry both values');
+  ok(iy('q1', 'payables_assembly_opening').as_of === iy('h1', 'payables_assembly_opening').as_of, 'both values are for the same date');
+});
+listedCase('in-year-revenue-arrears-2025', 332, 953.73, () => {
+  ok(near(iy('q1', 'revenue_arrears_close').value, 332, 1e-9) && near(iy('h1', 'revenue_arrears_close').value, 953.73, 1e-9), 'in-year table must carry both values');
+});
+test('in-year: FY 2025/26 is not a full year and carries the comparability label', () => {
+  ok(!hist.years.some((y) => y.fy === hist.in_year.fy), 'FY 2025/26 must not be in years');
+  ok(hist.in_year.comparability === 'In-year, not comparable with full years', 'label changed');
+  hist.in_year.conflicts.forEach((id) => conflict(id));
+});
 test('conflict osr-2023-24: Siaya hub states the later report value as previous year', () => {
   ok(near(siaya.own_source_revenue.previous_year.value, 427.95, 1e-9), 'previous_year should quote the FY 2024/25 report');
 });

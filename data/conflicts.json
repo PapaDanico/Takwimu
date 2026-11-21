@@ -270,6 +270,126 @@
       "verification_state": "resolved_by_source",
       "supersedes": null,
       "page_image_checked": false
+    },
+    {
+      "id": "osr-2019-20",
+      "measure": "Own-source revenue, FY 2019/20",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2020/21 report (quoted as prior year, PDF p. 374)",
+          "value": 179.43,
+          "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+        },
+        {
+          "label": "Siaya County Budget Review and Outlook Paper FY 2019/20 (county document, PDF p. 15)",
+          "value": 184.25,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf"
+        }
+      ],
+      "definitions": "The county paper gives KSh 184,249,748 against a target of KSh 420m (43.87 per cent). The Controller of Budget figure is a comparison figure in the next year's report; that report does not say what it includes.",
+      "hypothesis": "Hypothesis: the two may count different revenue streams or be cut at different dates. The county paper is not an independent review.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "179.43 (Controller of Budget) is plotted as the main value and 184.25 as the other source's value (hollow marker). The county paper's other FY 2019/20 figures are listed but not plotted."
+    },
+    {
+      "id": "cash-bf-2019-20",
+      "measure": "Cash balance brought forward from FY 2019/20 into FY 2020/21",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2020/21 annual report, Table 3.215, actual (PDF p. 373)",
+          "value": 1186.27,
+          "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+        },
+        {
+          "label": "Controller of Budget First Half FY 2020/21 report (PDF p. 319)",
+          "value": 1840.12,
+          "url": "https://libraryir.parliament.go.ke/items/f8bd1f52-a92c-4012-a04a-ae528af00862"
+        }
+      ],
+      "definitions": "The annual report gives KSh 1,186,274,440 actual against KSh 1,235,985,311 budgeted. The first-half report gives KSh 1,840,119,055 as both budget and actual.",
+      "hypothesis": "Hypothesis: the first-half figure may be an early estimate later restated, or the two may count different accounts. Neither report explains the difference.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Neither value is plotted; FY 2019/20 has no cash or balance series. Both are listed on the Data page."
+    },
+    {
+      "id": "final-budget-2019-20",
+      "measure": "Final budget, FY 2019/20",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Siaya County Budget Review and Outlook Paper FY 2019/20, supplementary budget (county document, PDF p. 11)",
+          "value": 8881.77,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf"
+        },
+        {
+          "label": "Auditor-General basis for opinion FY 2019/20, as reproduced by the Senate County Public Accounts Committee (PDF p. 517)",
+          "value": 8106.98,
+          "url": "https://libraryir.parliament.go.ke/items/6533ab5f-fd9c-4570-ad59-922be3bb9ba1"
+        }
+      ],
+      "definitions": "Both documents describe a cut of KSh 341,576,215. The county paper applies it to an original budget of KSh 9,223,350,139 (giving 8,881,773,924). The audit gives a final budget of KSh 8,106,977,580 under exchequer releases and calls the cut unsupported.",
+      "hypothesis": "Hypothesis: the audit figure may be budgeted exchequer releases only, excluding items such as the balance brought forward, so it may not be the whole budget. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Neither value is plotted: the Controller of Budget figure for FY 2019/20 is missing and stays a gap in the ten-year series."
+    },
+    {
+      "id": "in-year-assembly-payables-2025",
+      "measure": "County Assembly trade payables at 1 July 2025 (opening balance, FY 2025/26)",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget First Quarter FY 2025/26 report, Table 3.436 (PDF p. 530)",
+          "value": 39.29,
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        },
+        {
+          "label": "Controller of Budget First Half FY 2025/26 report, text (PDF p. 223)",
+          "value": 72,
+          "url": "https://libraryir.parliament.go.ke/items/b78c5768-fc91-4c90-ae0f-d45ae647dc17"
+        }
+      ],
+      "definitions": "Same date, same entity. The first-quarter table gives KSh 39,285,727; the first-half text gives \"Kshs.72 million\". Executive opening payables agree (KSh 1.89bn and 1.88bn).",
+      "hypothesis": "Hypothesis: the first-half report may include a later restatement or a different class of Assembly payables. Not confirmed; both read from scanned pages.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Both values are shown side by side in the in-year table on the Siaya hub. In-year figures are not part of the ten-year series."
+    },
+    {
+      "id": "in-year-revenue-arrears-2025",
+      "measure": "Revenue arrears owed to the county, latest in-year figure, FY 2025/26",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget First Quarter FY 2025/26 report, at 30 September 2025 (PDF p. 529)",
+          "value": 332,
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        },
+        {
+          "label": "Controller of Budget First Half FY 2025/26 report, Table 3.561, at 31 December 2025 (PDF p. 222)",
+          "value": 953.73,
+          "url": "https://libraryir.parliament.go.ke/items/b78c5768-fc91-4c90-ae0f-d45ae647dc17"
+        }
+      ],
+      "definitions": "Different dates and a different scope. The first-quarter figure covers ordinary own-source revenue and facility improvement fund arrears only. The first-half figure adds KSh 620.36m of equitable share due for December; its own-source (KSh 45m) and facility fund (KSh 287m) parts are the same as at 30 September (derived: 45 plus 287 is 332).",
+      "hypothesis": "Hypothesis: the jump is mostly the newly included equitable share, and the unchanged own-source and facility fund parts may have been carried forward rather than re-counted. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Both values are shown side by side, with their dates, in the in-year table on the Siaya hub. Do not read the rise from 332 to 953.73 as new arrears of the same kind."
     }
   ]
 }

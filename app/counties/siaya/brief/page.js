@@ -68,6 +68,7 @@ export default function SiayaBrief() {
         <div className="brief-cols">
           <section aria-labelledby="brief-ten-h">
             <h2 id="brief-ten-h">Ten years of spending</h2>
+            <div className="tablewrap" role="region" aria-label="Ten years of spending, scrollable table" tabIndex={0}>
             <table className="brief-table">
               <caption className="sr-only">Siaya County budget, spending, own-source revenue and pending bills by fiscal year</caption>
               <thead>
@@ -91,6 +92,7 @@ export default function SiayaBrief() {
                 })}
               </tbody>
             </table>
+            </div>
             <p className="brief-note">— means not published or not retrieved; gaps are never filled. Spent % is computed (spent ÷ budget). FY 2013/14 covers 16 months. FY 2019/20: report not retrievable, only own revenue known.</p>
           </section>
 
@@ -103,7 +105,7 @@ export default function SiayaBrief() {
                 {audits.map((a) => <tr key={a.fy}><th scope="row">{a.fy}</th><td>{a.opinion}</td><td>{a.confidence}</td></tr>)}
               </tbody>
             </table>
-            <p className="brief-note">FY 2014/15 to 2018/19 not shown: reports not found or not openable. FY 2013/14 is the whole county government; later years the County Executive.</p>
+            <p className="brief-note">FY 2014/15 and 2015/16: Senate compilation of Auditor-General opinions, not the reports; FY 2014/15 may cover Executive and Assembly together. FY 2016/17 to 2018/19 not shown: reports not found. FY 2013/14 is the whole county government; later years the County Executive.</p>
 
             <h2 id="brief-cav-h">Key caveats</h2>
             <ul className="brief-list" aria-labelledby="brief-cav-h">

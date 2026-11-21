@@ -31,6 +31,11 @@ function Tile({ label, value, unit, note, tone, dashed, tag }) {
 }
 
 const TEN_BY = Object.fromEntries(hist.years.map((y) => [y.fy, y]));
+// FY 2025/26 in-year (partial-year) figures: shown apart from the ten-year series, never charted with it.
+const IY = hist.in_year;
+const IY_MEASURES = IY.periods.flatMap((p) => p.figures).filter((f, i, a) => a.findIndex((x) => x.measure === f.measure) === i);
+const IY_CONFLICT = { payables_assembly_opening: 'in-year-assembly-payables-2025', revenue_arrears_close: 'in-year-revenue-arrears-2025' };
+const iyValue = (f) => (f.unit === '%' ? `${f.value}%` : `${f.unit} ${f.value.toLocaleString('en-US')}`);
 const TEN_LABELS = ['13/14', '14/15', '15/16', '16/17', '17/18', '18/19', '19/20', '20/21', '21/22', '22/23', '23/24', '24/25'];
 
 export default function Home() {
@@ -361,6 +366,36 @@ export default function Home() {
             { name: 'Spent', color: 2, values: TEN_LABELS.map((l) => (TEN_BY['20' + l.slice(0, 2) + '/' + l.slice(3)] || {}).spent ?? null) },
           ]}
         />
+      </section>
+
+      <section className="card" id="in-year" aria-labelledby="inyh">
+        <p className="eyebrow">FY {IY.fy} · <span className="tag warn">{IY.comparability}</span></p>
+        <h2 id="inyh">FY {IY.fy} so far</h2>
+        <p className="lead">Running totals from 1 July 2025, from the Controller of Budget&apos;s quarterly and half-year reports. A part of the year is not a full year: do not compare these with the ten-year figures above.</p>
+        <div className="tablewrap">
+          <table className="data">
+            <caption className="sr-only">Siaya County FY {IY.fy} in-year figures by reporting period, with the two reports side by side</caption>
+            <thead>
+              <tr><th scope="col">Measure</th>{IY.periods.map((p) => <th scope="col" key={p.id}>{p.label}<small style={{ display: 'block', fontWeight: 500 }}>{p.period}</small></th>)}</tr>
+            </thead>
+            <tbody>
+              {IY_MEASURES.map((m) => (
+                <tr key={m.measure}>
+                  <th scope="row">{m.label}{IY_CONFLICT[m.measure] && <> <a className="tag warn" href={`/data/#${IY_CONFLICT[m.measure]}`}>Reports differ</a></>}</th>
+                  {IY.periods.map((p) => {
+                    const f = p.figures.find((x) => x.measure === m.measure);
+                    return <td key={p.id} className="mono">{f ? iyValue(f) : '—'}{f && f.as_of ? <small style={{ display: 'block' }}>at {shortDate(f.as_of)}</small> : null}</td>;
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="src">
+          Sources: {IY.periods.map((p, i) => <span key={p.id}>{i ? '; ' : ''}<a href={p.report.url}>{p.report.title}</a>, section {p.report.section}, confidence {p.confidence}/5</span>)}. Page numbers for each figure are in the <Link href="/data/">data files</Link>. — means the report gives no figure.
+          <br />
+          Notes: {IY.note} The two reports disagree on the Assembly&apos;s opening unpaid bills, and their revenue-arrears totals cover different things; both values are shown and explained in the <Link href="/data/#conflicts">conflict register</Link>.
+        </div>
       </section>
 
       <section className="card" id="learn" aria-labelledby="learnh">

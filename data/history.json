@@ -7,9 +7,9 @@
     "note": "Each year is read from the Controller of Budget annual county report for that year. Where two reports give different values for the same year, both are kept in 'alternates'.",
     "gaps": [
       "FY2013/14: approved budget and pending bills not shown (only spending, absorption and revenue quoted in the FY2014/15 report). FY2014/15: pending recurrent bills were not reported.",
-      "FY2019/20: the full-year report could not be downloaded from here (host returned 403). Only own-source revenue is available, from the FY2020/21 report.",
-      "Audit opinions for FY2014/15 to FY2018/19 are missing for the reasons given under audits.",
-      "FY2025/26: Controller of Budget site is unreachable from the build environment."
+      "FY2019/20: the Controller of Budget annual county report for this year is not in the Parliament library and cob.go.ke was unreachable (21 Nov 2026), so its approved budget and recurrent/development split, spending, absorption, own-source revenue target and pending bills are missing. Own-source revenue (KSh 179.43m) comes from the FY2020/21 report. The Senate report on that CoB report names Siaya only without figures. Figures from the county's own Budget Review and Outlook Paper and other documents are listed under supplementary and are not used in the series.",
+      "Audit opinions for FY2016/17 to FY2018/19 are missing for the reasons given under audits.",
+      "FY2025/26: only in-year reports (first quarter and first half) were found; they are kept under in_year and are not a full year. The annual FY2025/26 report's Part 2, which holds Siaya, is not in the Parliament library."
     ]
   },
   "reports": {
@@ -36,6 +36,8 @@
     {"fy": "2017/18", "approved": 6.85, "recurrent_budget": 4.30, "development_budget": 2.55, "spent": 4.11, "recurrent_spent": 3.33, "development_spent": 0.78, "recurrent_absorption_pct": 77.5, "development_absorption_pct": 30.5, "osr_m": 139.34, "osr_target_m": 270, "pending_development_m": 246.75, "pending_recurrent_m": 367.75, "report": "2017/18"},
     {"fy": "2018/19", "approved": 8.44, "recurrent_budget": 4.71, "development_budget": 3.74, "spent": 5.70, "recurrent_spent": 4.53, "development_spent": 1.18, "recurrent_absorption_pct": 96.1, "development_absorption_pct": 31.5, "osr_m": 189.67, "osr_target_m": 325, "pending_development_m": 187.42, "pending_recurrent_m": 258.26, "report": "2018/19",
       "caveat": "Budget components are rounded in the report and add to 8.45."},
+    {"fy": "2019/20", "osr_m": 179.43, "report": "2020/21", "caveat": "Only own-source revenue is known: KSh 179.43m, quoted as the FY2019/20 comparison figure in the FY2020/21 report (PDF p. 374). The FY2019/20 report itself was not found, so budget, spending, absorption and pending bills are gaps. The county's Budget Review and Outlook Paper gives KSh 184.25m (see the conflict register); it is not used here."},
+    {"fy": "2020/21", "approved": 8.22, "recurrent_budget": 4.84, "development_budget": 3.38, "spent": 6.95, "recurrent_spent": 4.71, "development_spent": 2.25, "recurrent_absorption_pct": 97.2, "development_absorption_pct": 66.4, "osr_m": 332.88, "osr_target_m": 420, "pending_development_m": 423.38, "pending_recurrent_m": 637.54, "report": "2020/21"},
     {"fy": "2021/22", "approved": 8.97, "recurrent_budget": 5.62, "development_budget": 3.35, "spent": 7.11, "recurrent_spent": 5.23, "development_spent": 1.88, "recurrent_absorption_pct": 92.9, "development_absorption_pct": 56.2, "osr_m": 434.38, "osr_target_m": 445.45, "pending_development_m": 411.53, "pending_recurrent_m": 293.85, "report": "2021/22",
       "caveat": "The report prints KSh 434.38m for both FY2021/22 and FY2020/21 in one sentence; the stated 30.5 per cent rise only works against KSh 332.88m, which is the FY2020/21 figure we use. The same report gives pending bills at 30 June 2021 as KSh 602.08m, against KSh 1,060.92m in the FY2020/21 report; the reports do not explain the difference, so both are shown."},
     {"fy": "2022/23", "field_source": {"pending_recurrent_m": "2023/24", "pending_development_m": "2023/24"}, "approved": 8.60, "recurrent_budget": 5.78, "development_budget": 2.83, "spent": 6.80, "recurrent_spent": 5.28, "development_spent": 1.52, "recurrent_absorption_pct": 91.4, "development_absorption_pct": 53.8, "osr_m": 402.23, "osr_target_m": 590.26, "pending_development_m": 364.09, "pending_recurrent_m": 397.20, "report": "2022/23",
@@ -43,14 +45,15 @@
     {"fy": "2023/24", "field_source": {"pending_total_m": "2024/25"}, "derived": ["recurrent_budget"], "approved": 9.76, "recurrent_budget": 5.91, "development_budget": 3.85, "spent": 7.63, "recurrent_spent": 5.14, "development_spent": 2.49, "recurrent_absorption_pct": 85.8, "development_absorption_pct": 64.5, "osr_m": 610.74, "osr_target_m": 760.00, "report": "2023/24",
       "caveat": "The scanned text of the recurrent budget is garbled; 5.91 is the approved total minus the development budget. On that figure recurrent absorption is 87.0 per cent, against the report's 85.8 per cent. The FY2024/25 report gives a different own-source revenue for this year (KSh 427.95m); see data/siaya.json. Pending bills: the FY2023/24 report gives KSh 303.91m outstanding at 30 June 2024 but says this excludes bills incurred in the year. The FY2024/25 report gives the stock at 30 June 2024 as KSh 1.12bn, which is the figure used here.", "pending_total_m": 1120},
     {"fy": "2024/25", "approved": 10.94, "recurrent_budget": 6.07, "development_budget": 4.87, "spent": 7.75, "recurrent_spent": 4.99, "development_spent": 2.76, "recurrent_absorption_pct": 83, "development_absorption_pct": 57, "osr_m": 436.68, "report": "2024/25",
-      "caveat": "Figures are read from a scanned PDF with two OCR engines (see data/siaya.json). The report states 83 per cent recurrent absorption, but 4.99 of 6.07 is 82.2 per cent. Pending bills at 30 June 2025 could not be read reliably and are not shown. Own-source revenue includes health facility financing."},
-    {"fy": "2020/21", "approved": 8.22, "recurrent_budget": 4.84, "development_budget": 3.38, "spent": 6.95, "recurrent_spent": 4.71, "development_spent": 2.25, "recurrent_absorption_pct": 97.2, "development_absorption_pct": 66.4, "osr_m": 332.88, "osr_target_m": 420, "pending_development_m": 423.38, "pending_recurrent_m": 637.54, "report": "2020/21"}
+      "caveat": "Figures are read from a scanned PDF with two OCR engines (see data/siaya.json). The report states 83 per cent recurrent absorption, but 4.99 of 6.07 is 82.2 per cent. Pending bills at 30 June 2025 could not be read reliably and are not shown. Own-source revenue includes health facility financing."}
   ],
   "audits": {
     "label": "Auditor-General opinion on the County Executive of Siaya's accounts",
-    "note": "Opinions for FY2014/15 to FY2018/19 are not shown: the Parliament library holds no County Executive of Siaya audit report for those years and the Auditor-General's site was under maintenance when we tried. Search summaries suggest FY2017/18 and FY2018/19 were qualified, but we could not open those reports, so they are not shown. FY2019/20 comes from a Senate committee report that quotes the audit, so it is graded lower. The first entry covers 16 months, not a full fiscal year, and the whole county government (executive and assembly together); the later entries cover the County Executive only.",
+    "note": "Opinions for FY2014/15 and FY2015/16 come from a Senate committee compilation of Auditor-General opinions (annexes to the Senate fiduciary risk report, November 2018), not from the audit reports themselves, so they are graded lower; the FY2014/15 opinion may cover the County Executive and County Assembly together. Opinions for FY2016/17 to FY2018/19 are not shown: the Parliament library holds no County Executive of Siaya audit report for those years and the Auditor-General's site was unreachable when we tried. A civil-society summary gives an opinion for FY2016/17, but it is not a primary document, so it is not shown. FY2019/20 comes from a Senate committee report that quotes the audit, so it is graded lower. The first entry covers 16 months, not a full fiscal year, and the whole county government (executive and assembly together); the later entries cover the County Executive only.",
     "points": [
       {"fy": "2013/14", "period": "16 months to 30 June 2014", "opinion": "Disclaimer", "reasons": "The auditor could not obtain enough evidence for an opinion: the statements omit assets and liabilities inherited from the defunct local authorities", "headline": "Acquisition of assets KSh 495.33m; pending bills disclosed KSh 169.29m", "confidence": 4, "url": "https://libraryir.parliament.go.ke/items/0de4cae4-165f-4483-83ff-93a27ff5beaf/full"},
+      {"fy": "2014/15", "source": "Senate committee compilation of Auditor-General opinions (Annexes to Fiduciary Report, November 2018)", "opinion": "Adverse", "reasons": "Not given in the source: the Senate compilation lists the opinion and query amounts only, not the auditor's basis for opinion", "headline": "Total amount queried KSh 3,513m against a revenue share of KSh 5,012m (Senate annex, PDF p. 4; column headings for the other amounts are misaligned, so they are not shown)", "confidence": 3, "url": "https://www.parliament.go.ke/sites/default/files/2018-11/Annexes%20to%20Fiduciary%20Report.pdf", "caveat": "Source is a Senate committee compilation of Auditor-General opinions (table 'Summary of audit querries for 2014/2015', Siaya row), not the audit report. The Senate report says 2014/15 opinions were for the County Assembly and County Executive combined, so this may not be the County Executive's own opinion."},
+      {"fy": "2015/16", "source": "Senate committee compilation of Auditor-General opinions (Annexes to Fiduciary Report, November 2018)", "opinion": "Qualified", "reasons": "Not given in the source: the Senate compilation lists the opinion and query amounts only, not the auditor's basis for opinion", "headline": "Queried amounts include pending bills KSh 1,153.98m and unsupported expenditure KSh 392.32m (Senate annex, table 'County Executives Fiduciary Risks 2015/2016', row 38, PDF p. 2)", "confidence": 3, "url": "https://www.parliament.go.ke/sites/default/files/2018-11/Annexes%20to%20Fiduciary%20Report.pdf", "caveat": "Source is a Senate committee compilation of Auditor-General opinions, not the audit report itself."},
       {"fy": "2019/20", "opinion": "Qualified", "reasons": "Unexplained adjustment of budgeted exchequer releases; fixed assets register; other queries listed in the Senate committee report", "headline": "Budget reduced by KSh 341.58m with no explanation, so accuracy of the statements could not be confirmed", "confidence": 3, "url": "https://libraryir.parliament.go.ke/items/bcfb5ba2-6dc2-4d1b-9147-7c7ff6038ad3"},
       {"fy": "2020/21", "opinion": "Qualified", "reasons": "Bank reconciliation variances; unsupported retention monies; unaccounted transfers; unsupported training, hospitality and supplies spending", "headline": "Cash balance not confirmable: KSh 955.38m. Unsupported goods and services: KSh 230.38m", "confidence": 4, "url": "https://libraryir.parliament.go.ke/items/d53598b9-f890-49aa-ad98-f18cf9c5bd6b/full"},
       {"fy": "2021/22", "opinion": "Adverse", "reasons": "Compensation of employees; use of goods and services; acquisition of assets; unsupported bank balances; pending bills", "headline": "Pending payables not confirmable: KSh 818.80m. Unsupported other personnel payments: KSh 308.30m", "confidence": 3, "url": "https://libraryir.parliament.go.ke/items/54119713-1b4e-46dd-b95d-5484c7aeb01f/full"},
@@ -67,7 +70,7 @@
       {"fy": "2016/17", "value": 172.84, "report": "FY2016/17 table and FY2018/19 chart"},
       {"fy": "2017/18", "value": 139.34, "report": "FY2017/18 text"},
       {"fy": "2018/19", "value": 189.67, "report": "FY2018/19 text"},
-      {"fy": "2019/20", "value": 179.43, "report": "FY2020/21 text"},
+      {"fy": "2019/20", "value": 179.43, "report": "FY2020/21 text", "alternate": {"value": 184.25, "report": "Siaya County Budget Review and Outlook Paper FY2019/20 (county document)"}},
       {"fy": "2020/21", "value": 332.88, "report": "FY2020/21 table; the report attributes the rise to NHIF capitation and Linda Mama revenue streams"},
       {"fy": "2021/22", "value": 434.38, "report": "FY2021/22 text and table"},
       {"fy": "2022/23", "value": 402.23, "report": "FY2022/23 report; KSh 508.04m if appropriations-in-aid of KSh 105.81m are included"},
@@ -127,5 +130,412 @@
       "values": {"alego-usonga": 187243, "ugenya": 113848, "gem": 160675, "bondo": 157522, "ugunja": 88458, "rarieda": 134558}
     },
     "note": "The 2019 census count and the 2022 to 2025 projections are in data/county.json. The 2009 census households and the sex split at county level were not retrievable (KNBS site unreachable from the build environment)."
+  },
+  "in_year": {
+    "label": "FY 2025/26 so far: in-year Controller of Budget reports",
+    "fy": "2025/26",
+    "comparability": "In-year, not comparable with full years",
+    "note": "Cumulative figures from the start of the fiscal year (1 July 2025) to the end of each period. They are partial-year figures, so they are not part of the ten-year series and must not be compared with full-year values. Read from scanned PDFs (page images re-read with RapidOCR where stated); not yet checked by a reviewer.",
+    "periods": [
+      {
+        "id": "q1",
+        "label": "First quarter",
+        "period": "1 July to 30 September 2025",
+        "end": "2025-09-30",
+        "report": {
+          "title": "County Governments Budget Implementation Review Report for the First Quarter of FY 2025/26 (November 2025)",
+          "section": "3.38 Siaya County, PDF p. 525 to 536 (printed p. 479 to 490)",
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        },
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "approved_budget",
+            "label": "Approved budget, FY 2025/26",
+            "value": 12.79,
+            "unit": "KSh bn",
+            "pdf_page": 525,
+            "printed_page": 479,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "revenue_received",
+            "label": "Revenue available in the period",
+            "value": 2.38,
+            "unit": "KSh bn",
+            "pdf_page": 525,
+            "printed_page": 479,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "equitable_share_received",
+            "label": "Equitable share received",
+            "value": 1.24,
+            "unit": "KSh bn",
+            "pdf_page": 525,
+            "printed_page": 479,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "osr_collected",
+            "label": "Own-source revenue collected, incl. facility improvement fund",
+            "value": 178,
+            "unit": "KSh m",
+            "pdf_page": 525,
+            "printed_page": 479,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "osr_share_of_target",
+            "label": "Own-source revenue as share of annual target",
+            "value": 6,
+            "unit": "%",
+            "pdf_page": 528,
+            "printed_page": 482,
+            "read": "OCR layer"
+          },
+          {
+            "measure": "spending_total",
+            "label": "Spending",
+            "value": 712,
+            "unit": "KSh m",
+            "pdf_page": 529,
+            "printed_page": 483,
+            "read": "OCR layer"
+          },
+          {
+            "measure": "spending_development",
+            "label": "Development spending",
+            "value": 0,
+            "unit": "KSh m",
+            "pdf_page": 529,
+            "printed_page": 483,
+            "read": "OCR layer"
+          },
+          {
+            "measure": "revenue_arrears_close",
+            "label": "Revenue arrears at end of period",
+            "value": 332,
+            "unit": "KSh m",
+            "as_of": "2025-09-30",
+            "pdf_page": 529,
+            "printed_page": 483,
+            "read": "OCR layer"
+          },
+          {
+            "measure": "payables_assembly_opening",
+            "label": "County Assembly trade payables at 1 July 2025",
+            "value": 39.29,
+            "unit": "KSh m",
+            "as_of": "2025-07-01",
+            "pdf_page": 530,
+            "printed_page": 484,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "payables_total_close",
+            "label": "Trade payables at end of period, Executive and Assembly",
+            "value": 1971.81,
+            "unit": "KSh m",
+            "as_of": "2025-09-30",
+            "pdf_page": 530,
+            "printed_page": 484,
+            "read": "RapidOCR"
+          }
+        ]
+      },
+      {
+        "id": "h1",
+        "label": "First half",
+        "period": "1 July to 31 December 2025",
+        "end": "2025-12-31",
+        "report": {
+          "title": "County Governments Budget Implementation Review Report, First Half of FY 2025/26 (February 2026), Part II",
+          "section": "3.38 Siaya County, PDF p. 218 to 233 (printed p. 593 to 608). The library catalogues the file as 'First Nine Months'; every page footer reads 'First Half of FY 2025/26'",
+          "url": "https://libraryir.parliament.go.ke/items/b78c5768-fc91-4c90-ae0f-d45ae647dc17"
+        },
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "approved_budget",
+            "label": "Approved budget, FY 2025/26",
+            "value": 12.79,
+            "unit": "KSh bn",
+            "pdf_page": 218,
+            "printed_page": 593,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "revenue_received",
+            "label": "Revenue available in the period",
+            "value": 4.48,
+            "unit": "KSh bn",
+            "pdf_page": 218,
+            "printed_page": 593,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "equitable_share_received",
+            "label": "Equitable share received",
+            "value": 3.21,
+            "unit": "KSh bn",
+            "pdf_page": 218,
+            "printed_page": 593,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "osr_collected",
+            "label": "Own-source revenue collected, incl. facility improvement fund",
+            "value": 302,
+            "unit": "KSh m",
+            "pdf_page": 218,
+            "printed_page": 593,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "osr_share_of_target",
+            "label": "Own-source revenue as share of annual target",
+            "value": 9.7,
+            "unit": "%",
+            "pdf_page": 221,
+            "printed_page": 596,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "spending_total",
+            "label": "Spending",
+            "value": 2.5,
+            "unit": "KSh bn",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "spending_development",
+            "label": "Development spending",
+            "value": 320,
+            "unit": "KSh m",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "revenue_arrears_close",
+            "label": "Revenue arrears at end of period",
+            "value": 953.73,
+            "unit": "KSh m",
+            "as_of": "2025-12-31",
+            "pdf_page": 222,
+            "printed_page": 597,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "payables_assembly_opening",
+            "label": "County Assembly trade payables at 1 July 2025",
+            "value": 72,
+            "unit": "KSh m",
+            "as_of": "2025-07-01",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "payables_total_close",
+            "label": "Trade payables at end of period, Executive and Assembly",
+            "value": 1636.14,
+            "unit": "KSh m",
+            "as_of": "2025-12-31",
+            "pdf_page": 224,
+            "printed_page": 599,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "development_absorption",
+            "label": "Development spending as share of annual development budget",
+            "value": 6,
+            "unit": "%",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          },
+          {
+            "measure": "recurrent_absorption",
+            "label": "Recurrent spending as share of annual recurrent budget",
+            "value": 32,
+            "unit": "%",
+            "pdf_page": 223,
+            "printed_page": 598,
+            "read": "RapidOCR"
+          }
+        ]
+      }
+    ],
+    "conflicts": [
+      "in-year-assembly-payables-2025",
+      "in-year-revenue-arrears-2025"
+    ]
+  },
+  "supplementary": {
+    "label": "Other primary documents for FY 2019/20 (not used in the ten-year series)",
+    "note": "The Controller of Budget annual report for FY 2019/20 was not found. These documents give some figures for the year. They are listed so readers can check them, but they are not used to fill the series: the county's own paper is not an independent review, and the audit and later-report figures measure different things. Where they disagree with another source, both values are in the conflict register.",
+    "documents": [
+      {
+        "id": "siaya-brop-2019-20",
+        "fy": "2019/20",
+        "title": "Siaya County Treasury, County Budget Review and Outlook Paper FY 2019/2020 (September 2020)",
+        "kind": "County document",
+        "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf",
+        "read": "PDF text layer",
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "original_budget",
+            "label": "Original budget",
+            "value": 9223.35,
+            "unit": "KSh m",
+            "pdf_page": 11
+          },
+          {
+            "measure": "final_budget",
+            "label": "Supplementary (final) budget, after a cut of KSh 341.58m",
+            "value": 8881.77,
+            "unit": "KSh m",
+            "pdf_page": 11
+          },
+          {
+            "measure": "receipts",
+            "label": "Total receipts",
+            "value": 8101.69,
+            "unit": "KSh m",
+            "pdf_page": 11
+          },
+          {
+            "measure": "spending_total",
+            "label": "Spending, total",
+            "value": 6814.85,
+            "unit": "KSh m",
+            "pdf_page": 20
+          },
+          {
+            "measure": "spending_recurrent",
+            "label": "Spending, recurrent (compensation of employees 2,808.81; operations and maintenance 1,851.03)",
+            "value": 4659.84,
+            "unit": "KSh m",
+            "pdf_page": 20
+          },
+          {
+            "measure": "spending_development",
+            "label": "Spending, development",
+            "value": 2155.01,
+            "unit": "KSh m",
+            "pdf_page": 20
+          },
+          {
+            "measure": "absorption_total",
+            "label": "Absorption, total (recurrent 95, development 54)",
+            "value": 77,
+            "unit": "%",
+            "pdf_page": 20
+          },
+          {
+            "measure": "osr",
+            "label": "Own-source revenue (target KSh 420m; 43.87 per cent of target)",
+            "value": 184.25,
+            "unit": "KSh m",
+            "pdf_page": 15
+          },
+          {
+            "measure": "pending_bills_paid",
+            "label": "Unbudgeted pending bills paid",
+            "value": 324.83,
+            "unit": "KSh m",
+            "pdf_page": 20
+          }
+        ]
+      },
+      {
+        "id": "cob-annual-2020-21-comparatives",
+        "fy": "2019/20",
+        "title": "Controller of Budget, County Governments Budget Implementation Review Report FY 2020/21 (September 2021), figures quoted for FY 2019/20",
+        "kind": "Controller of Budget report",
+        "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c",
+        "read": "RapidOCR",
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "osr",
+            "label": "Own-source revenue, FY 2019/20",
+            "value": 179.43,
+            "unit": "KSh m",
+            "pdf_page": 374
+          },
+          {
+            "measure": "cash_bf",
+            "label": "Balance brought forward from FY 2019/20, actual (budgeted 1,235.99)",
+            "value": 1186.27,
+            "unit": "KSh m",
+            "pdf_page": 373
+          },
+          {
+            "measure": "statutory_deductions_outstanding",
+            "label": "Employee statutory deductions outstanding at close of FY 2019/20",
+            "value": 316.86,
+            "unit": "KSh m",
+            "pdf_page": 375
+          },
+          {
+            "measure": "covid_funds_bf",
+            "label": "COVID-19 funds brought forward from FY 2019/20",
+            "value": 140.28,
+            "unit": "KSh m",
+            "pdf_page": 375
+          }
+        ]
+      },
+      {
+        "id": "cob-h1-2020-21",
+        "fy": "2019/20",
+        "title": "Controller of Budget, County Governments Budget Implementation Review Report, First Half of FY 2020/21",
+        "kind": "Controller of Budget report",
+        "url": "https://libraryir.parliament.go.ke/items/f8bd1f52-a92c-4012-a04a-ae528af00862",
+        "read": "RapidOCR",
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "cash_bf",
+            "label": "Balance brought forward from FY 2019/20",
+            "value": 1840.12,
+            "unit": "KSh m",
+            "pdf_page": 319
+          }
+        ]
+      },
+      {
+        "id": "senate-cpac-2019-20",
+        "fy": "2019/20",
+        "title": "Senate County Public Accounts Committee, Reports of the Auditor-General on the Financial Statements of (among others) Siaya County Executive 2019-2020 (February 2024), Chapter Twelve",
+        "kind": "Senate committee report quoting the Auditor-General",
+        "url": "https://libraryir.parliament.go.ke/items/6533ab5f-fd9c-4570-ad59-922be3bb9ba1",
+        "read": "PDF text layer",
+        "confidence": 3,
+        "figures": [
+          {
+            "measure": "final_budget",
+            "label": "Final budget under exchequer releases, per the audit basis for opinion",
+            "value": 8106.98,
+            "unit": "KSh m",
+            "pdf_page": 517
+          },
+          {
+            "measure": "pending_bills_close",
+            "label": "Pending bills at 30 June 2020 (down from KSh 386.79m at 30 June 2019; audit figure, not CoB)",
+            "value": 222.33,
+            "unit": "KSh m",
+            "pdf_page": 523
+          }
+        ]
+      }
+    ],
+    "not_found": "Senate, Report on the County Governments' Budget Implementation Review Report for FY 2019/20 (April 2021) names Siaya only among seven counties whose own-source revenue was below half its target, with no amounts (PDF p. 19 and 27): https://libraryir.parliament.go.ke/items/a33fe8b9-af9a-4519-a135-cc80521756ea"
   }
 }

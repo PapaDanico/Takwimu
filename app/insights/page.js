@@ -98,7 +98,7 @@ export default function Insights() {
         <h3 className="chart-title">Where the {label(BASE)} budget went</h3>
         <p className="chart-sub">Share of the approved budget of KSh {bn(cur.approved)} billion.</p>
         <Donut ariaLabel={`How the ${label(BASE)} approved budget was used`} centerValue={`${Math.round((cur.spent / cur.approved) * 100)}%`} centerLabel="of budget spent" format={bn} unit=" bn" items={[{ label: 'Recurrent spending', value: cur.recurrent_spent, color: 1 }, { label: 'Development spending', value: cur.development_spent, color: 3 }, { label: 'Not spent', value: cur.approved - cur.spent, color: 4 }]} />
-        <p className="how"><b>How we calculated this.</b> Spending is nominal from each year's Controller of Budget report. Real values multiply by the ratio of the {label(BASE)} price index to that year's index. Each fiscal-year index is the average of the two calendar-year World Bank consumer price indices it spans, so the real view is approximate. FY 2019/20 is missing because that report could not be downloaded.</p>
+        <p className="how"><b>How we calculated this.</b> Spending is nominal from each year's Controller of Budget report. Real values multiply by the ratio of the {label(BASE)} price index to that year's index. Each fiscal-year index is the average of the two calendar-year World Bank consumer price indices it spans, so the real view is approximate. FY 2019/20 is missing because that report was not found; only its own-source revenue is known.</p>
       </section>
 
       <section id="development" className="card insight" aria-labelledby="dev-h">
@@ -137,7 +137,7 @@ export default function Insights() {
       <section id="audit" className="card insight" aria-labelledby="audit-h">
         <p className="eyebrow">Insight 5</p>
         <h2 id="audit-h">{noneClean ? 'Auditors have not given the County Executive a clean opinion in any year we can read' : 'Audit opinions vary by year'}</h2>
-        <p className="finding">{audits.length} years of Auditor-General opinions are available: {auditSummary}. An adverse opinion means the auditor found the accounts materially misstated; a disclaimer means the auditor could not form an opinion. An opinion describes the accounts, not the quality of services. Years between FY 2013/14 and FY 2019/20 are mostly missing; see the note below.</p>
+        <p className="finding">{audits.length} years of Auditor-General opinions are available: {auditSummary}. An adverse opinion means the auditor found the accounts materially misstated; a disclaimer means the auditor could not form an opinion. An opinion describes the accounts, not the quality of services. FY 2016/17 to FY 2018/19 are missing, and FY 2014/15 and FY 2015/16 come from a Senate compilation rather than the audit reports; see the note below.</p>
         <div className="tablewrap">
           <table className="data">
             <caption className="sr-only">Auditor-General opinions on the County Executive of Siaya</caption>
@@ -147,7 +147,7 @@ export default function Insights() {
                 <tr key={a.fy}>
                   <th scope="row">FY {a.fy}</th>
                   <td><span className={`tag ${a.opinion === 'Adverse' ? 'warn' : ''}`}>{a.opinion}</span></td>
-                  <td>{a.reasons}. <a href={a.url}>Report</a>{a.period ? <small style={{ display: "block" }}>Period: {a.period}</small> : null}</td>
+                  <td>{a.reasons}. <a href={a.url}>{a.source ? 'Senate compilation' : 'Report'}</a>{a.period ? <small style={{ display: "block" }}>Period: {a.period}</small> : null}{a.caveat ? <small style={{ display: "block" }}>Caveat: {a.caveat}</small> : null}</td>
                   <td>{a.confidence} of 5</td>
                 </tr>
               ))}

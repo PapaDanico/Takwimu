@@ -383,7 +383,11 @@ Object.entries(files)
     rows.push(['own_source_revenue', p.fy, p.value, 'KSh million', 'reported', p.report, '', '', got, `FY ${p.fy}`, '']);
     if (p.alternate) rows.push(['own_source_revenue', p.fy, p.alternate.value, 'KSh million', 'alternate (other report)', p.alternate.report, '', '', got, `FY ${p.fy}`, 'Reports disagree; see conflicts.json']);
   });
-  hist.audits.points.forEach((a) => rows.push(['audit_opinion', a.fy, a.opinion, 'category', 'reported', 'Auditor-General report on the County Executive accounts', a.url, a.confidence, got, a.period || `FY ${a.fy}`, a.reasons]));
+  hist.audits.points.forEach((a) => rows.push(['audit_opinion', a.fy, a.opinion, 'category', 'reported', a.source || 'Auditor-General report on the County Executive accounts', a.url, a.confidence, got, a.period || `FY ${a.fy}`, [a.reasons, a.caveat].filter(Boolean).join(' ')]));
+  // In-year (partial-year) figures: labelled so they are never mistaken for full-year values.
+  if (hist.in_year) hist.in_year.periods.forEach((p) => p.figures.forEach((f) => rows.push([`in_year_${f.measure}`, hist.in_year.fy, f.value, f.unit, `in-year: ${hist.in_year.comparability}`, `${p.report.title}, PDF p. ${f.pdf_page}`, p.report.url, p.confidence, got, f.as_of ? `${p.period} (at ${f.as_of})` : p.period, f.label])));
+  // Figures from other documents for years whose Controller of Budget report is missing: listed, not used in the series.
+  if (hist.supplementary) hist.supplementary.documents.forEach((d) => d.figures.forEach((f) => rows.push([`other_source_${f.measure}`, d.fy, f.value, f.unit, `other document (${d.kind}); not used in the series`, `${d.title}, PDF p. ${f.pdf_page}`, d.url, d.confidence, got, `FY ${d.fy}`, f.label])));
   // Every value in the conflict register, so no disagreeing figure is left out of the export.
   const conf = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'conflicts.json'), 'utf8'));
   conf.conflicts.forEach((c) => c.values.forEach((v) => rows.push([`conflict: ${c.measure}`, '', v.value, c.unit, `source value (${c.status})`, v.label, v.url, '', got, '', c.definitions])));

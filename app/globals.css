@@ -148,6 +148,7 @@ svg .lab { fill: var(--ink); font-weight: 600; }
 details.tableview { margin-top: 12px; font-size: 14px; }
 details.tableview summary { cursor: pointer; color: var(--ink-muted); font-weight: 600; font-size: 13px; }
 .tablewrap { overflow-x: auto; }
+.data caption:not(.sr-only) { caption-side: top; text-align: left; padding: 4px 0 6px; font-size: 13px; color: var(--ink-soft); }
 table.data { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
 table.data th, table.data td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
