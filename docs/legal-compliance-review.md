@@ -1,47 +1,34 @@
 # Kenya Data Protection Act, 2019: self-review of Takwimu Kenya
 
-**Self-review against the Act, not legal advice.** Section numbers were checked on 21 Nov 2026 against the text of the Act (No. 24 of 2019) published by the ODPC (odpc.go.ke); their interpretation still needs an advocate. Prepared 21 Nov 2026 from the Site as built on branch claude/eager-rubin-7bpcgq. It records where each requirement is met on the Site and what remains for the owner. A Kenyan advocate should confirm it before any paid service starts.
+**Self-review against the Act, not legal advice.** Section numbers were checked on 21 Nov 2026 against the text of the Act (No. 24 of 2019) published by the ODPC (odpc.go.ke); their interpretation still needs an advocate. Updated 21 Nov 2026 from the Site as built on branch claude/eager-rubin-7bpcgq.
 
-## What personal data the Site handles
+## Owner decision (21 Nov 2026): the Site collects no personal data
 
-- Browsing: technical request data (IP address, time, page, user agent, referrer), processed by Netlify to serve the Site. The code has no analytics, tracking, advertising or cookies (checked by grep on 21 Nov 2026; the `/analytics/` pages are calculations from public budget data, not visitor analytics).
-- "Save this view": stored only in the visitor's own browser `localStorage` (lib/saved-views.js); never sent to us.
-- "Request a brief" form (`/briefs/request/`, Netlify Forms `brief-request`): request type, name, organisation (optional for data requests), role (optional), email, county or constituency (optional for data requests), free-text need, consent, plus an empty honeypot field. Stored by Netlify; notifications go to the owner's private inbox. No email address is published on the Site (smoke test checks every built page).
+The "Request a brief" Netlify form (`brief-request`) and its thank-you page were removed, and Netlify form handling was disabled for the site. `/briefs/request/` now describes the brief service with no form, no input fields and no email address; a direct contact route will be published there later.
 
-## Checklist
+## What the Site handles now
 
-| Requirement | Section of the Act | Where it is met on the Site | Status |
-|---|---|---|---|
-| Identify the data controller and how to contact it | s.29(e) (duty to notify) | Privacy notice §1: Takwimu Kenya, a service of Danico Ventures Ltd | Met |
-| Lawful basis for processing | s.30 | Privacy §3: consent for form data; legitimate interest for technical logs | Met |
-| Valid, recorded, withdrawable consent | s.32 | Required consent checkbox linking to /privacy/; submission stores consent; Privacy §3 explains withdrawal | Met |
-| Inform data subjects before collection (purpose, recipients, transfers, rights, retention) | s.29 | Privacy §2–§8, linked from the form's consent box and the form footnote | Met |
-| Purpose limitation | s.25(c) | Privacy §3: used only to reply; no mailing list, marketing, sharing or profiling | Met |
-| Data minimisation | s.25(d) | Form asks only for reply details; role optional; organisation and place optional for data requests; no ID, phone or political affiliation fields | Met |
-| Accuracy | s.25(f) | Correction right offered via data request option | Met |
-| Storage limitation / retention | s.25(g), s.39 | Privacy §4: 24 months, then deletion from Netlify and inbox | Met on paper; owner must apply it (see actions) |
-| Security of personal data | s.41–42 | HTTPS, static site, access limited to the team's accounts; Privacy §10 | Partly met: owner to confirm 2FA on Netlify and email accounts |
-| Breach notification | s.43 | Privacy §10 commits to notify the ODPC and, where required, the data subject | Met on paper; owner needs a breach procedure |
-| Data subject rights: informed, access, object, correction, deletion | s.26, s.40 | Privacy §8; form option "A data request" | Met |
-| Data portability | s.38 | Privacy §8 offers a copy in a usable format | Met |
-| No automated decision-making / profiling | s.35 | Privacy "In short" and §3: none | Met |
-| Use of a processor on our behalf | s.25, s.41 (safeguards apply to processors) | Privacy §5 names Netlify as processor; relies on Netlify's standard terms | Partly met: owner to accept Netlify's Data Processing Addendum |
-| Cross-border transfer | s.25(h), s.48–50 | Privacy §5: transfer to the US stated; safeguards stated honestly (consent plus provider's standard terms; no adequacy decision; no negotiated terms) | Partly met: see actions |
-| Sensitive personal data (incl. political opinion) | s.44–47 | Not requested; form asks visitors not to include details about other people. Note: a request from a party office may reveal affiliation; it is used only to reply | Met; keep under review |
-| Children's data | s.33 | Privacy §9: form meant for adults; no knowing collection from children | Met |
-| Right to complain to the regulator | s.56 | Privacy §8: ODPC, odpc.go.ke | Met |
-| No sale of personal data | s.37 (commercial use) | Privacy "In short" and §5 | Met |
-| Cookies / tracking statement consistent with the code | s.29 | Privacy §6 matches the code (no cookies, no analytics; localStorage only for Saved views) | Met |
-| Registration as data controller/processor | s.18–19; Data Protection (Registration of Data Controllers and Data Processors) Regulations, 2021 | Not on the Site | Open: owner action |
-| Non-partisan service, paid work does not change figures | Not the Act (credibility safeguard; docs/monetisation-plan.md) | /briefs/request/ and Terms §6 | Met |
-| Third-party data licences | Not the Act (copyright) | Terms §5: World Bank WDI CC BY 4.0; CoB, OAG, KNBS, CRA, IEBC, CBK public documents under their own terms | Met; advocate to confirm each body's reuse terms |
-| No warranty, corrections policy | Not the Act (consumer and contract law) | Terms §3 (no warranty), §13 (corrections policy) | Met |
+- No forms, accounts, analytics, tracking, advertising or cookies (checked by grep of app/, components/ and lib/ on 21 Nov 2026; the smoke test fails if any built page has a Netlify form, a POST form, a text, email, tel, password, hidden or file input, or a textarea). The remaining inputs are search boxes, selects and radios used to filter public data on /datasets/, /explore/, /kenya/ and /compare/; they are never sent anywhere.
+- "Save this view": kept only in the visitor's own browser `localStorage` (lib/saved-views.js); never sent to us.
+- Technical request data (IP address, time, page, browser): processed by the host, Netlify, to serve and protect the Site under Netlify's own privacy policy. We do not receive or use it.
+- "Report an inaccuracy" links to public GitHub issues; GitHub's terms apply. The Site sends GitHub nothing.
+
+## What this means under the Act
+
+With no collection by the Site, its own duties under the Act are minimal: the Privacy notice (version 2.0) states plainly that nothing is collected, explains Saved views, names Netlify and GitHub, and mentions the right to complain to the ODPC (s.56). The earlier consent, retention, data-request and cross-border-transfer arrangements for form data no longer apply and were removed from the notice.
+
+Whether Takwimu Kenya / Danico Ventures Ltd still needs to register with the ODPC as a data controller or processor (s.18 and the Data Protection (Registration of Data Controllers and Data Processors) Regulations, 2021, whose thresholds turn on turnover, staff numbers and purpose of processing) depends on the business's wider activities, such as client records for paid briefs, not on the Site alone. This is not settled here and must be confirmed by a Kenyan advocate.
 
 ## Owner actions
 
-1. **ODPC registration.** Check whether Takwimu Kenya / Danico Ventures Ltd must register as a data controller (and, if relevant, processor) under the Data Protection (Registration of Data Controllers and Data Processors) Regulations, 2021. The thresholds depend on turnover, staff numbers and the purpose of processing; register before charging for briefs if required. Register at odpc.go.ke.
-2. **Lawyer sign-off before charging.** Have a Kenyan advocate review the Privacy notice, the Terms, this checklist and the client terms for paid briefs before any invoice is sent.
-3. **Netlify setup.** Enable form detection for the site (deploys are CLI uploads; Netlify detects the `brief-request` form from the uploaded HTML at deploy time), set the form notification to the private inbox (never published on the Site), and accept Netlify's Data Processing Addendum. Turn on two-factor sign-in for Netlify and the inbox.
-4. **Retention.** Put a recurring reminder to delete submissions (Netlify and inbox) older than 24 months.
-5. **Breach procedure.** Write a short internal note: who checks, how to notify the ODPC within 72 hours, and how to tell affected people.
-6. **Data requests.** Answer data requests within the time the Act and the Data Protection (General) Regulations, 2021 set; keep a simple log of each request and reply.
+1. **Advocate review.** Have a Kenyan advocate confirm this review, the Privacy notice, the Terms and the ODPC registration question before any paid brief is invoiced.
+2. **Contact route.** Before publishing a contact route on /briefs/request/, decide how enquiries will be handled; any route that collects personal data (a form, or a published inbox) brings back notice, consent, retention, security and transfer duties, and this review and the Privacy notice must be updated first.
+3. **Netlify.** Keep form handling disabled; turn on two-factor sign-in for the Netlify account.
+
+## Not the Act, kept for credibility
+
+| Point | Where |
+|---|---|
+| Non-partisan service: same offer to every party and independent candidate; paid work never changes a published figure (docs/monetisation-plan.md) | /briefs/request/ and Terms §6 |
+| Third-party data licences (World Bank WDI CC BY 4.0; CoB, OAG, KNBS, CRA, IEBC, CBK under their own terms) | Terms §5; advocate to confirm each body's reuse terms |
+| No warranty, corrections policy | Terms §3, §13 |

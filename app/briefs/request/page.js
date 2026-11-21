@@ -3,71 +3,28 @@ import PageHead from '../../../components/PageHead';
 
 export const metadata = {
   title: 'Request a brief',
-  description: 'Ask Takwimu Kenya for a sourced county or constituency brief. The same service is open to every party, independent candidate and organisation, and paid work never changes a published figure.',
+  description: 'Takwimu Kenya prepares sourced county and constituency briefs. The same offer is open to every party and independent candidate, and paid work never changes a published figure.',
 };
 
-// A static Netlify Forms form: Netlify reads it from the built HTML at deploy time and stores submissions.
-// No email address is published anywhere on the Site; replies come from the owner's inbox once a request arrives.
+// No form and no contact address on purpose: the Site collects no personal data (owner decision, 21 Nov 2026).
 export default function RequestBrief() {
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Briefs" title="Request a brief" sub="Tell us what you need to know about a county or constituency, and we will prepare a brief built on the same sourced figures you see on this site." />
+      <PageHead eyebrow="Briefs" title="Request a brief" sub="Takwimu Kenya prepares briefs on a county or constituency, built on the same sourced figures you see on this site." />
 
       <section className="card legal" aria-labelledby="offer-h">
-        <h2 id="offer-h">What we offer, and how we work</h2>
-        <p>A brief brings together population, allocations, budget execution, unpaid bills, audit opinions and trends for a place you care about, with the source, date, unit and confidence of every figure.</p>
+        <h2 id="offer-h">What a brief is</h2>
+        <p>A constituency or county brief brings together population, allocations, budget execution, unpaid bills, audit opinions and ten-year trends for one place, with the source, date, unit and confidence of every figure. See the <Link href="/counties/siaya/brief/">sample Siaya brief</Link>.</p>
         <ul className="how">
-          <li><b>Open to everyone on the same terms.</b> The same service is offered to every political party, independent candidate, public office, organisation and citizen. We do not take sides and we do not rate named individuals.</li>
+          <li><b>The same offer to everyone.</b> Every political party and independent candidate, and any office, organisation or citizen, is offered the same service on the same terms. We do not take sides and we do not rate named individuals.</li>
           <li><b>Paid work never changes a published figure.</b> A figure, ranking or caveat on this site stays as the evidence shows it, whoever asks or pays. Clients have no say over what we publish.</li>
-          <li><b>Free facts stay free.</b> Everything already on the site remains open to all. A brief saves you time; it does not unlock different numbers.</li>
+          <li><b>Free facts stay free.</b> Everything on the site remains open to all. A brief saves you time; it does not unlock different numbers.</li>
         </ul>
       </section>
 
-      <section className="card" aria-labelledby="form-h">
-        <h2 id="form-h">Your request</h2>
-        <p className="lead">We ask only for what we need to reply. Fields marked optional can be left blank. You can also use this form to ask to see, correct or delete personal data we hold about you.</p>
-        <form className="req-form" name="brief-request" method="POST" action="/briefs/request/thanks/" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="brief-request" />
-          <p hidden><label>Leave this empty: <input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
-          <div className="field">
-            <label htmlFor="rq-type">What is this about?</label>
-            <select id="rq-type" name="request-type" required defaultValue="brief">
-              <option value="brief">A brief for a county or constituency</option>
-              <option value="data-request">A data request about my personal data (access, correction, deletion or objection)</option>
-            </select>
-          </div>
-          <div className="field">
-            <label htmlFor="rq-name">Your name</label>
-            <input id="rq-name" type="text" name="name" autoComplete="name" required maxLength={120} />
-          </div>
-          <div className="field">
-            <label htmlFor="rq-org">Organisation or office (optional for a data request)</label>
-            <input id="rq-org" type="text" name="organisation" autoComplete="organization" maxLength={160} />
-          </div>
-          <div className="field">
-            <label htmlFor="rq-role">Your role (optional)</label>
-            <input id="rq-role" type="text" name="role" autoComplete="organization-title" maxLength={120} />
-          </div>
-          <div className="field">
-            <label htmlFor="rq-email">Email, so we can reply</label>
-            <input id="rq-email" type="email" name="email" autoComplete="email" required maxLength={200} />
-          </div>
-          <div className="field">
-            <label htmlFor="rq-place">County or constituency (optional for a data request)</label>
-            <input id="rq-place" type="text" name="place" maxLength={120} />
-          </div>
-          <div className="field">
-            <label htmlFor="rq-need">What you need</label>
-            <textarea id="rq-need" name="need" rows={6} required maxLength={3000} aria-describedby="rq-need-hint" />
-            <p className="hint" id="rq-need-hint">For a brief: the topics, years and format you have in mind, and any date you are working to. For a data request: which right you want to use and the earlier request it concerns. Please do not include personal details about other people.</p>
-          </div>
-          <div className="consent">
-            <input id="rq-consent" type="checkbox" name="consent" value="yes" required />
-            <label htmlFor="rq-consent">I agree that Takwimu Kenya may use these details to reply to this request, as set out in the <Link href="/privacy/">privacy notice</Link>.</label>
-          </div>
-          <p><button className="btn-s" type="submit">Send request</button></p>
-        </form>
-        <p className="src">Requests are stored by our host, Netlify, and read only by the Takwimu team. See the <Link href="/privacy/">privacy notice</Link> for how long we keep them and your rights. To report a mistake in a figure instead, use the &quot;Report an inaccuracy&quot; link at the foot of every page.</p>
+      <section className="card legal" aria-labelledby="how-h">
+        <h2 id="how-h">How to ask for one</h2>
+        <p>A direct contact route will be published here soon. This site does not collect personal data, so there is no form on it. To report a mistake in a figure, use the &quot;Report an inaccuracy&quot; link at the foot of every page.</p>
       </section>
     </main>
   );

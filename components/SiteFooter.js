@@ -29,7 +29,7 @@ const COLUMNS = [
       { href: '/method/', label: 'How we handle numbers' },
       { href: '/method/#sources', label: 'Where the data comes from' },
       { href: '/data/#conflicts', label: 'Where sources disagree' },
-      { href: '/briefs/request/', label: 'Request a brief' },
+      { href: '/briefs/request/', label: 'About our briefs' },
     ],
   },
   {

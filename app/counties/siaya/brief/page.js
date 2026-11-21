@@ -50,7 +50,7 @@ export default function SiayaBrief() {
             <nav aria-label="Breadcrumb"><p className="brief-eyebrow"><Link href="/counties/">Counties</Link> · <Link href="/counties/siaya/">Siaya</Link> · Fiscal brief</p></nav>
             <h1 id="brief-h">Siaya County fiscal brief</h1>
             <p className="brief-sub">Ten years of budget, spending, revenue, unpaid bills and audit opinions, read from the Controller of Budget and Auditor-General reports. Nominal shillings; fiscal years run July to June.</p>
-            <p className="brief-actions"><a href="/briefs/siaya-fiscal-brief.pdf" download>Download this brief as PDF</a> · <Link href="/briefs/request/">Request a brief for your county or constituency</Link> · <Link href="/counties/siaya/">Back to Siaya</Link></p>
+            <p className="brief-actions"><a href="/briefs/siaya-fiscal-brief.pdf" download>Download this brief as PDF</a> · <Link href="/briefs/request/">About briefs for your county or constituency</Link> · <Link href="/counties/siaya/">Back to Siaya</Link></p>
           </div>
         </header>
 
