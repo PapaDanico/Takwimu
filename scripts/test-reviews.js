@@ -216,9 +216,11 @@ if (dist && process.argv.includes('--synthetic')) {
       if (!e.name.endsWith('.html')) return;
       const html = fs.readFileSync(p, 'utf8');
       const rel = `/${path.relative(base, path.dirname(p)).split(path.sep).join('/')}/`.replace(/^\/\.?\//, '/');
-      for (const m of html.matchAll(/<[a-z]+\b[^>]*\bdata-obs="([^"]+)"[^>]*>/g)) {
-        const st = (m[0].match(/data-obs-state="([^"]+)"/) || [])[1] || '';
-        ((out[m[1]] = out[m[1]] || {})[rel] = out[m[1]][rel] || []).push({ state: st, after: html.slice(m.index + m[0].length, m.index + m[0].length + 400) });
+      for (const m of html.matchAll(/ data-obs="([^"]+)"/g)) {
+        const start = html.lastIndexOf('<', m.index); const end = html.indexOf('>', m.index);
+        const tag = html.slice(start, end + 1);
+        const st = (tag.match(/data-obs-state="([^"]+)"/) || [])[1] || '';
+        ((out[m[1]] = out[m[1]] || {})[rel] = out[m[1]][rel] || []).push({ state: st, after: html.slice(end + 1, end + 401) });
       }
     });
     walkHtml(base);
@@ -242,6 +244,7 @@ if (dist && process.argv.includes('--synthetic')) {
     chosen.push(...pick);
   });
   const ids = chosen.map((k) => { const i = k.indexOf(':'); return [k.slice(0, i), k.slice(i + 1)]; });
+  if (process.env.TAKWIMU_DEBUG) fs.writeSync(2, `${chosen.join('\n')}\n`);
   // Calculations whose inputs include a chosen value are expected to be withheld too.
   const expected = new Set(chosen);
   rs.observations('siaya-analysis').forEach((o) => { if ((o.inputs || []).some((x) => expected.has(`${x.dataset}:${x.id}`))) expected.add(`siaya-analysis:${o.id}`); });
