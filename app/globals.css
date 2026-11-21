@@ -489,15 +489,21 @@ table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; lett
 .field { display: grid; gap: 6px; min-width: 0; }
 .field > label, .field > legend, .field-l { font-size: 13px; font-weight: 700; color: var(--ink); padding: 0; }
 fieldset.field { border: 0; margin: 0; padding: 0; }
-.field select, .field input[type="search"], .field input[type="text"] { width: 100%; min-height: 44px; padding: 8px 12px; font: inherit; font-size: 16px; color: var(--ink); background: var(--sand-200); border: 1px solid var(--sand-400); border-radius: 10px; }
+.field select, .field input[type="search"], .field input[type="text"], .field input[type="email"], .field textarea { width: 100%; min-height: 44px; padding: 8px 12px; font: inherit; font-size: 16px; color: var(--ink); background: var(--sand-200); border: 1px solid var(--sand-400); border-radius: 10px; }
 .field input::placeholder { color: var(--ink-muted); opacity: 1; }
-.field select:focus-visible, .field input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.field select:focus-visible, .field input:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .radios { display: flex; flex-wrap: wrap; gap: 6px; }
 .radios label { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--sand-50); font-size: 13px; font-weight: 600; cursor: pointer; }
 .radios label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
 .radios input { accent-color: var(--accent); width: 16px; height: 16px; margin: 0; }
 .radios input:disabled + span { color: var(--ink-faint); }
 .hint { margin: 0; font-size: 12px; color: var(--ink-muted); }
+.req-form { display: grid; gap: 14px; max-width: 36rem; margin-top: 14px; }
+.field textarea { resize: vertical; min-height: 120px; }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink-soft); }
+.consent input { accent-color: var(--accent); width: 20px; height: 20px; margin: 2px 0 0; flex: none; }
+.consent a { color: var(--accent); }
+.req-form .btn-s { min-height: 44px; padding: 8px 20px; font-size: 15px; }
 .invalid { margin: 6px 0 0; padding: 8px 12px; border-radius: 10px; border-left: 4px solid var(--gold-600); background: color-mix(in srgb, var(--gold-500) 12%, var(--sand-50)); font-size: 13px; color: var(--ink); }
 .notice { margin: 12px 0 0; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--rule); background: var(--sand-200); font-size: 13px; color: var(--ink-soft); }
 .empty { margin: 12px 0 0; padding: 18px; border: 1px dashed var(--sand-400); border-radius: 14px; text-align: center; color: var(--ink-soft); font-size: 14px; }

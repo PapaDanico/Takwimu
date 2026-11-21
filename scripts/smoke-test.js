@@ -33,7 +33,7 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/', '/briefs/request/thanks/']) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
@@ -43,6 +43,21 @@ const srv = http.createServer((req, res) => {
   const pulseDet = pg.locator('details.tableview').first();
   await pulseDet.locator('summary').click();
   check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'Fiscal Pulse chart has a table view');
+  // Request a brief: a static Netlify Forms form (detected from the built HTML), with a honeypot and required consent.
+  const reqHtml = fs.readFileSync(path.join(root, 'briefs', 'request', 'index.html'), 'utf8');
+  const formTag = (reqHtml.match(/<form[^>]*name="brief-request"[^>]*>/) || [''])[0];
+  check(/data-netlify="true"/.test(formTag) && /netlify-honeypot="bot-field"/.test(formTag) && /method="POST"/i.test(formTag) && /action="\/briefs\/request\/thanks\/"/.test(formTag)
+    && /<input type="hidden" name="form-name" value="brief-request"\/?>/.test(reqHtml) && /name="bot-field"/.test(reqHtml), 'brief request form is a Netlify form with honeypot, form-name and a thank-you action');
+  await pg.goto(base + '/briefs/request/', { waitUntil: 'load' });
+  const consent = pg.locator('form[name="brief-request"] input[type=checkbox][name=consent]');
+  check(await consent.count() === 1 && await consent.evaluate((e) => e.required) && await pg.locator('form[name="brief-request"] .consent a[href="/privacy/"]').count() === 1, 'brief request: consent checkbox is required and links to the privacy notice');
+  check(/script-src[^;]*;[\s\S]*form-action 'self'/.test(csp), 'CSP form-action allows the form to post to the Site');
+  // No email address is published: no mailto: with an address and no address-shaped text in any built page.
+  const htmlFiles = [];
+  const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).forEach((e) => { const f = path.join(d, e.name); if (e.isDirectory()) walk(f); else if (f.endsWith('.html')) htmlFiles.push(f); });
+  walk(root);
+  const leaks = htmlFiles.filter((f) => { const h = fs.readFileSync(f, 'utf8'); return /mailto:(?!\?)/i.test(h) || /[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}/.test(h); });
+  check(htmlFiles.length > 20 && leaks.length === 0, `no email address in any built page (${htmlFiles.length} checked${leaks.length ? '; found in ' + leaks.slice(0, 3).map((f) => path.relative(root, f)).join(', ') : ''})`);
   await pg.goto(base + '/insights/', { waitUntil: 'load' });
   const charts = await pg.locator('figure.chart').count();
   check(charts >= 5, `insights shows charts (${charts})`);

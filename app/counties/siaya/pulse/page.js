@@ -50,7 +50,7 @@ export default function SiayaPulse() {
           <li>The findings describe what was spent. They are not a judgement of the county government or of any person.</li>
           <li>Confidence (1 to 5) describes the quality of the source and of the reading, not a probability that a figure is right.</li>
         </ul>
-        <p className="src">More: the <Link href="/counties/siaya/brief/">one-page Siaya fiscal brief</Link> (<a href="/briefs/siaya-fiscal-brief.pdf" download>PDF</a>), <Link href="/insights/">ten-year insights</Link> and <Link href="/counties/siaya/">Siaya County hub</Link>.</p>
+        <p className="src">More: the <Link href="/counties/siaya/brief/">one-page Siaya fiscal brief</Link> (<a href="/briefs/siaya-fiscal-brief.pdf" download>PDF</a>), <Link href="/insights/">ten-year insights</Link> and <Link href="/counties/siaya/">Siaya County hub</Link>. Need a brief like this for another county or constituency? <Link href="/briefs/request/">Request a brief</Link>.</p>
       </section>
     </main>
   );
