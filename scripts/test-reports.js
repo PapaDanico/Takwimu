@@ -5,7 +5,8 @@
 // charts, sections), embeds every font, and its text contains the snapshot ID (recomputed here from the data files
 // and the review state, so a stale PDF fails) and the review-state counts of the figures on the page, the source
 // appendix and, while any figure is unreviewed, the DRAFT mark on every page; the provisional label is printed at
-// most once per page plus once per exception (UX sweep U3); neither the PDF nor the page shows "NaN" or "undefined";
+// most once per page plus once per exception (UX sweep U3); neither the PDF nor the page shows "NaN", "undefined" or
+// "[object Object]";
 // no company name other than a programme implementer or funder appears and no figure reads a contractor field; in
 // print layout no table, cell or chart is wider than the printed column; every figure on the HTML page resolves to a
 // record in its data file with the same value and carries the page and grade of its source observation (D9); every
@@ -59,7 +60,7 @@ const allowedUndefined = new Set();
 fs.readdirSync(path.join(root, 'data')).filter((f) => f.endsWith('.json')).forEach((f) => {
   (fs.readFileSync(path.join(root, 'data', f), 'utf8').match(/[A-Za-z,]+ undefined\b/g) || []).forEach((m) => allowedUndefined.add(m));
 });
-const strayUndefined = (text) => (text.replace(/\s+/g, ' ').match(/[A-Za-z,]+ undefined\b|^undefined\b|[^A-Za-z, ]undefined\b/g) || []).filter((m) => !allowedUndefined.has(m));
+const strayUndefined = (text) => [...text.replace(/\s+/g, ' ').matchAll(/(?:([A-Za-z,]+) )?\bundefined\b/g)].map((m) => m[0]).filter((m) => !allowedUndefined.has(m));
 
 const TYPES = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.woff2': 'font/woff2', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.json': 'application/json' };
 const srv = http.createServer((req, res) => {
@@ -108,6 +109,7 @@ function checkPdf(r, expectSnap, draft, dom) {
   const rawText = execFileSync('pdftotext', [pdf, '-']).toString();
   const stray = strayUndefined(rawText);
   if (stray.length) fail(r.slug, `PDF text contains "undefined" (${stray.slice(0, 3).join(' | ')})`);
+  if (rawText.includes('[object Object]')) fail(r.slug, `PDF text contains "[object Object]" ${rawText.split('[object Object]').length - 1} times`);
   companyLeaks(rawText).forEach((m) => fail(r.slug, `PDF names a company that is not a programme implementer or funder: ${m}`));
   return pages;
 }
@@ -193,6 +195,7 @@ srv.listen(0, async () => {
       if (/\bNaN\b/.test(dom.text)) fail(r.slug, 'page text contains "NaN"');
       const stray = strayUndefined(dom.text);
       if (stray.length) fail(r.slug, `page text contains "undefined" (${stray.slice(0, 3).join(' | ')})`);
+      if (dom.text.includes('[object Object]')) fail(r.slug, `page text contains "[object Object]" ${dom.text.split('[object Object]').length - 1} times`);
       const pages = checkPdf(r, expectSnap, dom.draft, dom);
       summary.push(`${r.letter} ${r.slug}: ${pages} pages, ${dom.figs.length} figures resolved, review state ${dom.state.join('/')}, snapshot ${expectSnap}${dom.draft ? ', DRAFT' : ''}`);
     }

@@ -4,6 +4,7 @@
 // when its review state is an exception (approved, disputed, superseded, withdrawn). A note, unit, source, page or
 // confidence shared by every row of a table is stated once under the caption; notes that differ are footnoted.
 // How to read the reports, the method, the confidence scales and the licence live once at /reports/method/.
+import { Fragment } from 'react';
 import ReportChart from './ReportChart';
 import { PROVISIONAL } from './model';
 import { conflictNote } from './rules';
@@ -90,7 +91,7 @@ function TableNotes({ shared, common, fn }) {
   if (!shared.length && !common.length && !fn.length) return null;
   return (
     <div className="rp-tnotes">
-      {common.length || shared.length ? <p><strong>Every row:</strong> {[...common, ...shared].join('; ')}.</p> : null}
+      {common.length || shared.length ? <p><strong>Every row:</strong> {[...common, ...shared].map((x, k) => <Fragment key={k}>{k ? '; ' : ''}{x}</Fragment>)}.</p> : null}
       {fn.length ? <ol>{fn.map((n, i) => <li key={i} id={undefined}>{n}.</li>)}</ol> : null}
     </div>
   );
