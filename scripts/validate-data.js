@@ -160,7 +160,8 @@ reg.conflicts.forEach((c) => {
   if (!['open', 'resolved'].includes(c.status)) fail(`conflicts ${c.id}: status must be open or resolved`);
   if (!Array.isArray(c.values) || c.values.length < 2) fail(`conflicts ${c.id}: needs at least two values`);
   (c.values || []).forEach((v, i) => {
-    if (!(typeof v.value === 'number' && v.label && /^https:\/\//.test(v.url))) fail(`conflicts ${c.id} value ${i}: needs a number, a label and an https url`);
+    if (!((typeof v.value === 'number' || (typeof v.value === 'string' && v.value.trim())) && v.label && /^https:\/\//.test(v.url))) fail(`conflicts ${c.id} value ${i}: needs a number (or a text value for a label, citation or licence case), a label and an https url`);
+    if (typeof v.value === 'string' && !c.values.every((x) => typeof x.value === 'string')) fail(`conflicts ${c.id}: values must be all numbers or all text`);
   });
   if (c.values && c.values.length >= 2 && c.values[0].value === c.values[1].value) fail(`conflicts ${c.id}: the values do not differ`);
 });

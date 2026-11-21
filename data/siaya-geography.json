@@ -874,7 +874,7 @@
    "boundary_year_represented": "2020",
    "licence": "Public Domain",
    "build_date": "2023-12-12",
-   "note": "Licence and upstream are as stated in the geoBoundaries ADM1 metadata. The file meta states CC BY 3.0 IGO and IEBC via OCHA ROSEA, which differs; see docs/siaya-geography-notes.md."
+   "note": "Licence and upstream are as stated in the geoBoundaries ADM1 metadata. The file meta stated CC BY 3.0 IGO and IEBC via OCHA ROSEA until 21 Nov 2026, when it was corrected to match (conflict kenya-counties-map-licence)."
   },
   {
    "file": null,

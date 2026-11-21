@@ -1662,15 +1662,16 @@
       }
     ],
     "hiv": {
-      "label": "Adult HIV prevalence, Siaya (per cent of ages 15 to 49)",
+      "label": "Adult HIV prevalence, Siaya (per cent; the age band is as printed by each estimate round)",
       "warning": "The National AIDS Control Council says estimates from different model vintages are not directly comparable. Most of the fall from the 2015 estimate to the 2025 estimate reflects re-modelling, not a measured drop. Do not read these as a trend.",
       "points": [
         {
           "year": 2013,
           "value": 23.7,
           "national": 6.04,
+          "age_group": "15-49",
           "vintage": "Kenya HIV Estimates, 2013 column, as quoted in the Siaya County HIV and AIDS Strategic Plan",
-          "document": "Siaya County HIV and AIDS Strategic Plan (2015/16 - 2018/2019), Table 1: HIV epidemic situation in Siaya County, PDF page 16 (printed page 3)",
+          "document": "Siaya County HIV and AIDS Strategic Plan (2015/16 - 2018/2019), Table 1: HIV epidemic situation in Siaya County, PDF page 16 (printed page 4)",
           "note": "The plan's own text on the same page gives 21.4% for 2013 and 23.7% for 2014, while its Table 1 prints 23.7% under 2013. The table value is kept; the year is flagged as uncertain, not corrected.",
           "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf",
           "confidence": 4
@@ -1679,14 +1680,16 @@
           "year": 2015,
           "value": 24.8,
           "national": 5.9,
+          "age_group": "15-49",
           "vintage": "Kenya HIV Estimates 2015, as quoted in the Siaya County HIV and AIDS Strategic Plan",
-          "document": "Siaya County HIV and AIDS Strategic Plan (2015/16 - 2018/2019), Table 1: HIV epidemic situation in Siaya County, PDF page 16 (printed page 3); the executive summary cites Kenya HIV Estimates, 2015 for 24.8%",
+          "document": "Siaya County HIV and AIDS Strategic Plan (2015/16 - 2018/2019), Table 1: HIV epidemic situation in Siaya County, PDF page 16 (printed page 4); the executive summary cites Kenya HIV Estimates, 2015 for 24.8%",
           "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf",
           "confidence": 4
         },
         {
           "year": 2017,
           "value": 21.0,
+          "age_group": "15-49",
           "vintage": "NACC estimates report 2018",
           "confidence": 3
         },
@@ -1694,7 +1697,11 @@
           "year": 2025,
           "value": 10.3,
           "national": 3.22,
-          "vintage": "NSDCC county profiles 2026",
+          "age_group": "Overall (age range not printed; the same page gives men 15+ 7.62% and women 15+ 12.67%)",
+          "vintage": "NSDCC county profiles 2026 (Kenya HIV Estimates 2025)",
+          "document": "NSDCC County Profiles 2026, Siaya County HIV Burden 2026: HIV Prevalence, PDF page 84 (printed page 79), labelled \"Overall\"",
+          "note": "Corrected on 21 Nov 2026: this point was labelled ages 15 to 49, but the page prints 10.3% as \"Overall\" with the sex split for ages 15 and over; it does not say 15 to 49. See conflict hiv-2025-age-label.",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2026/07/Nsdcc-County-Profiles-2026.pdf",
           "confidence": 3
         }
       ]

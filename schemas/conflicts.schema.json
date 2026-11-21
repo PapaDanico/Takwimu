@@ -84,7 +84,8 @@
                   "type": "string"
                 },
                 "value": {
-                  "type": "number"
+                  "type": ["number", "string"],
+                  "description": "A number, or a short text for cases about a label, citation or licence (no arithmetic is done on text values)"
                 },
                 "url": {
                   "type": "string",

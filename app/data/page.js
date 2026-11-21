@@ -160,10 +160,10 @@ export default function DataPage() {
                 <table className="data">
                   <caption className="sr-only">{c.measure}: values by source</caption>
                   <thead><tr><th scope="col">Source</th><th scope="col">Value ({c.unit})</th></tr></thead>
-                  <tbody>{c.values.map((v) => <tr key={v.label}><th scope="row"><a href={v.url}>{v.label}</a></th><td>{v.value.toLocaleString('en-US')}</td></tr>)}</tbody>
+                  <tbody>{c.values.map((v) => <tr key={v.label}><th scope="row"><a href={v.url}>{v.label}</a></th><td>{typeof v.value === 'number' ? v.value.toLocaleString('en-US') : v.value}</td></tr>)}</tbody>
                 </table>
               </TableWrap>
-              <p><b>Difference:</b> {Math.abs(c.values[0].value - c.values[1].value).toLocaleString('en-US', { maximumFractionDigits: 2 })} {c.unit} ({((Math.abs(c.values[0].value - c.values[1].value) / c.values[0].value) * 100).toFixed(1)}% of the first value)</p>
+              {typeof c.values[0].value === 'number' ? <p><b>Difference:</b> {Math.abs(c.values[0].value - c.values[1].value).toLocaleString('en-US', { maximumFractionDigits: 2 })} {c.unit} ({((Math.abs(c.values[0].value - c.values[1].value) / c.values[0].value) * 100).toFixed(1)}% of the first value)</p> : <p><b>Difference:</b> a label, citation or licence, not an amount.</p>}
               <p><b>Definitions:</b> {c.definitions}</p>
               <p><b>Hypothesis, not established:</b> {c.hypothesis}</p>
               <p><b>Effect on the site:</b> {c.effect}</p>

@@ -858,6 +858,78 @@
         "outcome": "Every printed place reads 6.68 billion (6,681,978,904): resolved. The text-layer reading 5.68 is kept here only as a record.",
         "page_image_checked": false
       }
+    },
+    {
+      "id": "hiv-2025-age-label",
+      "measure": "Age band of the Siaya HIV prevalence estimate for 2025 (10.3%), as labelled in data/history.json and as printed by NSDCC",
+      "unit": "age band (text)",
+      "values": [
+        {
+          "label": "data/history.json until 21 Nov 2026: series label \"per cent of ages 15 to 49\", applied to the 2025 point",
+          "value": "ages 15 to 49",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2026/07/Nsdcc-County-Profiles-2026.pdf"
+        },
+        {
+          "label": "NSDCC County Profiles 2026, Siaya County HIV Burden 2026, PDF p. 84 (printed p. 79): 10.3% labelled \"Overall\", with Men (15+) 7.62% and Women (15+) 12.67% beside it",
+          "value": "Overall (age range not printed; sex split for ages 15 and over)",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2026/07/Nsdcc-County-Profiles-2026.pdf"
+        }
+      ],
+      "definitions": "A labelling error, not two sources: the value 10.3% is the same in both. The 2013, 2015 and 2017 points are 15-49 estimates; the 2025 round prints an overall figure and a 15+ split, and does not say 15-49.",
+      "hypothesis": "Resolved by the printed document: the page text layer (pdftotext, 21 Nov 2026) reads \"10.3%\" above \"Overall\" and \"Men (15+)\", \"Women (15+)\"; no \"15-49\" appears on the page. Checked by machine reading of the text layer, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "data/history.json now gives each HIV point its own age_group; the 2025 point reads \"Overall\" and cites PDF p. 84 (printed p. 79). The series label no longer says 15 to 49. No value changed."
+    },
+    {
+      "id": "hiv-scasp-printed-page",
+      "measure": "Printed page of Table 1 (HIV epidemic situation in Siaya County) in the Siaya County HIV and AIDS Strategic Plan 2015/16-2018/19, cited for the 2013 and 2015 HIV points",
+      "unit": "printed page (text)",
+      "values": [
+        {
+          "label": "data/history.json and data/source-library.json until 21 Nov 2026: \"PDF page 16 (printed page 3)\"",
+          "value": "printed page 3",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf"
+        },
+        {
+          "label": "The same PDF page 16: its footer reads \"4 SIAYA COUNTY HIV & AIDS Strategic Plan ((2015/16 – 2018/2019)\"",
+          "value": "printed page 4",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf"
+        }
+      ],
+      "definitions": "A citation error: PDF page 16 is correct, the printed page number was wrong. The values 23.7% (2013) and 24.8% (2015) are unchanged.",
+      "hypothesis": "Resolved by the printed document: the footer of PDF page 16 (pdftotext, 21 Nov 2026; file SHA-256 3bc1885d…b873) reads 4. Not checked by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The 2013 and 2015 HIV points and the library record now cite PDF page 16 (printed page 4). No value changed."
+    },
+    {
+      "id": "kenya-counties-map-licence",
+      "measure": "Licence and upstream source of the county boundary layer behind data/kenya-counties-map.json (geoBoundaries gbOpen KEN ADM1, boundaryID KEN-ADM1-32016919)",
+      "unit": "licence (text)",
+      "values": [
+        {
+          "label": "data/kenya-counties-map.json meta until 21 Nov 2026 (and scripts/make-kenya-map.js): \"CC BY 3.0 IGO\", \"IEBC via OCHA ROSEA\"",
+          "value": "CC BY 3.0 IGO",
+          "url": "https://www.geoboundaries.org/api/current/gbOpen/KEN/ADM1/"
+        },
+        {
+          "label": "geoBoundaries API record for KEN ADM1: boundaryLicense \"Public Domain\", boundarySource \"RCMRD GeoPortal, Africa GeoPortal\", licenseSource rcmrd.africageoportal.com",
+          "value": "Public Domain",
+          "url": "https://www.geoboundaries.org/api/current/gbOpen/KEN/ADM1/"
+        }
+      ],
+      "definitions": "The map file carried the licence and upstream of the ADM2 (constituency) layer, which is CC BY 3.0 IGO from IEBC via OCHA ROSEA. The ADM1 (county) layer it is built from states Public Domain from RCMRD.",
+      "hypothesis": "Resolved by the source: the geoBoundaries ADM1 API record retrieved on 21 Nov 2026 (source-library record geoboundaries-ken-adm1, SHA-256 fd14563e…1da7) states Public Domain. Attribution to geoBoundaries and RCMRD is kept as good practice.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "data/kenya-counties-map.json and scripts/make-kenya-map.js now state Public Domain and the RCMRD upstream; the Kenya map credit line follows. The map shapes are unchanged."
     }
   ]
 }

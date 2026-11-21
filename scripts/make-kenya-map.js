@@ -43,6 +43,6 @@ src.features.forEach((f) => {
   areas.push({ slug: slug(f.properties.shapeName), name: f.properties.shapeName, d, bbox: [bx0, by0, bx1, by1].map((v) => +v.toFixed(1)), cx: +(ax / at).toFixed(1), cy: +(ay / at).toFixed(1) });
 });
 areas.sort((a, b) => a.slug.localeCompare(b.slug));
-const out = { meta: { source: 'geoBoundaries gbOpen Kenya ADM1 (county boundaries, IEBC via OCHA ROSEA), simplified', source_url: 'https://www.geoboundaries.org/api/current/gbOpen/KEN/ADM1/', licence: 'CC BY 3.0 IGO', retrieved: '2026-11-21', projection: 'Equirectangular scaled by cos(latitude of centre); for display, not for measuring area or distance', width: W, height: H }, areas };
+const out = { meta: { source: 'geoBoundaries gbOpen Kenya ADM1 (boundaryID KEN-ADM1-32016919; upstream RCMRD GeoPortal, Africa GeoPortal), simplified', source_url: 'https://www.geoboundaries.org/api/current/gbOpen/KEN/ADM1/', licence: 'Public Domain', retrieved: '2026-11-21', projection: 'Equirectangular scaled by cos(latitude of centre); for display, not for measuring area or distance', width: W, height: H }, areas };
 fs.writeFileSync(path.join(__dirname, '..', 'data', 'kenya-counties-map.json'), JSON.stringify(out));
 console.log(areas.length, 'counties', W, H, fs.statSync(path.join(__dirname, '..', 'data', 'kenya-counties-map.json')).size, 'bytes');

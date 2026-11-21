@@ -12,6 +12,8 @@ const cob = read('counties-cob.json');
 // Siaya's row in the 47-county tables (Controller of Budget, chapter 2).
 const cobSiaya = (fy, k) => { const y = cob.years.find((x) => x.fy === fy); ok(y, `no ${fy} in counties-cob.json`); const c = y.counties.find((x) => x.slug === 'siaya'); ok(c && c[k], `no Siaya ${k} for ${fy}`); return c[k]; };
 const listed = (id, v) => conflict(id).values.some((x) => near(x.value, v, 1e-9));
+// Text-valued cases (a label, citation or licence): the value starts with the given text.
+const listed2 = (c, text) => c.values.some((x) => typeof x.value === 'string' && x.value.startsWith(text));
 
 const results = [];
 const test = (name, fn) => {
@@ -310,6 +312,35 @@ test('conflict osr-2024-25-county-statement: Controller of Budget Table 2.1 tota
   ok(near(streams.reduce((t, v) => t + v, 0), 946893440.4, 0.01), 'article streams should add to KSh 946,893,440.40');
   ok(near((946893440.4 / 1044061306) * 100, 90.7, 0.05) && /90\.6%/.test(c.definitions) && /47%/.test(c.definitions), 'the stated 90.6 and 47 per cent are quoted, not recomputed');
   ok(/the county government/.test(c.definitions) && !/secretary|governor|official/i.test(JSON.stringify(c)), 'the case attributes the statement to the county government, not to a person or office holder');
+});
+
+// Corrections of 21 Nov 2026 (label, citation and licence cases; text values, resolved by the source).
+test('conflict hiv-2025-age-label: the 2025 HIV point is labelled Overall, not 15 to 49, and cites its page', () => {
+  const c = conflict('hiv-2025-age-label');
+  ok(c.status === 'resolved' && c.verification_state === 'resolved_by_source' && listed2(c, 'ages 15 to 49') && listed2(c, 'Overall'), 'register must keep both labels, resolved by source');
+  const hiv = hist.health.hiv;
+  const p = hiv.points.find((x) => x.year === 2025);
+  ok(p && p.value === 10.3 && /^Overall/.test(p.age_group) && /PDF page 84 \(printed page 79\)/.test(p.document) && /Nsdcc-County-Profiles-2026/.test(p.url), '2025 point: Overall, PDF p. 84 (printed p. 79), profiles URL');
+  ok(!/15 to 49|15-49/.test(hiv.label), 'the series label must not say 15 to 49 for every point');
+  ok(hiv.points.every((x) => x.age_group), 'every HIV point names its age band');
+  const h = read('siaya-health.json').observations.find((o) => o.id === 'hiv-prev-2025-profiles');
+  ok(h && h.value === p.value && h.pdf_page === 84 && h.printed_page === 79, 'matches the health dataset reading');
+});
+test('conflict hiv-scasp-printed-page: Table 1 of the HIV strategic plan is PDF page 16, printed page 4', () => {
+  const c = conflict('hiv-scasp-printed-page');
+  ok(c.status === 'resolved' && listed2(c, 'printed page 3') && listed2(c, 'printed page 4'), 'register must keep both page labels');
+  hist.health.hiv.points.filter((x) => x.year === 2013 || x.year === 2015).forEach((x) => ok(/PDF page 16 \(printed page 4\)/.test(x.document) && !/printed page 3/.test(x.document), `${x.year}: should cite printed page 4`));
+  const lib = read('source-library.json').documents.find((d) => d.document_id === 'nacc-siaya-hiv-plan');
+  ok(lib && !/printed page 3\)/.test(lib.cited_by), 'library record should not cite printed page 3');
+});
+test('conflict kenya-counties-map-licence: the county map states the ADM1 licence (Public Domain), not the ADM2 one', () => {
+  const c = conflict('kenya-counties-map-licence');
+  ok(c.status === 'resolved' && listed2(c, 'CC BY 3.0 IGO') && listed2(c, 'Public Domain'), 'register must keep both licences');
+  const m = read('kenya-counties-map.json').meta;
+  ok(m.licence === 'Public Domain' && /KEN-ADM1-32016919/.test(m.source) && /RCMRD/.test(m.source) && !/OCHA/.test(m.source), 'map meta must state Public Domain and the RCMRD upstream');
+  const layer = read('siaya-geography.json').spatial_layers.find((l) => l.file === 'data/kenya-counties-map.json');
+  ok(layer && layer.licence === m.licence, 'geography registry and map meta must agree');
+  ok(/licence: 'Public Domain'/.test(fs.readFileSync(path.join(__dirname, 'make-kenya-map.js'), 'utf8')), 'the map generator must write the same licence');
 });
 
 // Every register case has a test above, and no test points at a case that was removed.

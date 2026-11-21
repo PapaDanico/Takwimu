@@ -2269,7 +2269,7 @@
    "publication_date": "not stated",
    "reference_period": "FY 2015/16 to FY 2018/19",
    "source_url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf",
-   "cited_by": "history.json HIV prevalence points for 2013 (23.7%) and 2015 (24.8%), both from Table 1 of this plan (PDF page 16, printed page 3), which attributes them to the Kenya HIV Estimates",
+   "cited_by": "history.json HIV prevalence points for 2013 (23.7%) and 2015 (24.8%), both from Table 1 of this plan (PDF page 16, printed page 4; the footer reads 4, corrected on 21 Nov 2026 from 3), which attributes them to the Kenya HIV Estimates",
    "geographic_coverage": "Siaya",
    "siaya_relevance": "Direct",
    "research_use": "HIV prevalence estimates and county HIV planning",
@@ -2347,7 +2347,7 @@
    "file_type": "JSON",
    "retrieval_status": "downloaded",
    "redistribution_conditions": "None stated",
-   "retrieval_note": "HTTP 200; the hash is of the API record (metadata and download links), not of the boundary file. The API now states Public Domain, while kenya-counties-map.json records CC BY 3.0 IGO; the stricter terms are kept on the site until reviewed."
+   "retrieval_note": "HTTP 200; the hash is of the API record (metadata and download links), not of the boundary file. The API states Public Domain (licence source rcmrd.africageoportal.com; upstream RCMRD GeoPortal, Africa GeoPortal). kenya-counties-map.json recorded CC BY 3.0 IGO via IEBC and OCHA ROSEA, which is the ADM2 layer's licence; corrected to Public Domain on 21 Nov 2026 (conflict kenya-counties-map-licence)."
   },
   {
    "review_status": "not reviewed",

@@ -539,6 +539,9 @@
                     "minimum": 0,
                     "maximum": 100
                   },
+                  "age_group": {
+                    "type": "string"
+                  },
                   "vintage": {
                     "type": "string"
                   },
