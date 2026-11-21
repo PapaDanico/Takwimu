@@ -22,7 +22,10 @@ const fail = (slug, msg) => fails.push(`${slug}: ${msg}`);
 const sha = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 const snapshotOf = (inputs) => sha([...inputs].sort().map((f) => `data/${f}:${sha(fs.readFileSync(path.join(root, 'data', f)))}`).join('\n')).slice(0, 12);
 const dataCache = {};
-const data = (f) => (dataCache[f] = dataCache[f] || JSON.parse(fs.readFileSync(path.join(root, 'data', f), 'utf8')));
+// Figures resolve against the data as published: through lib/review-status.js masked(), so a value rejected in
+// editorial review must appear withheld (null) on the page, never with its old value.
+const rs = require('../lib/review-status');
+const data = (f) => (dataCache[f] = dataCache[f] || (rs.DATASET_IDS.includes(f.replace(/\.json$/, '')) ? rs.masked(f.replace(/\.json$/, '')) : JSON.parse(fs.readFileSync(path.join(root, 'data', f), 'utf8'))));
 const resolve = (file, ptr) => {
   let v = data(file);
   for (const raw of ptr.split('/').slice(1)) {

@@ -15,11 +15,18 @@ const fmtValue = (f) => {
 const dataValue = (f) => (f.suppress ? undefined : typeof f.value === 'object' && f.value !== null ? JSON.stringify(f.value) : String(f.value));
 const pageOf = (f) => (f.page == null ? 'Not stated' : `${typeof f.page === 'number' ? 'PDF p. ' : ''}${f.page}${f.printed != null && f.printed !== f.page ? ` (printed ${f.printed})` : ''}`);
 const confOf = (f) => (f.confidence == null ? 'Not graded' : typeof f.confidence === 'number' ? `${f.confidence} of 5` : String(f.confidence));
-const statusOf = (f) => (f.reviewed ? 'Reviewed' : PROVISIONAL);
+const statusOf = (f) => (f.review ? f.review.label : PROVISIONAL);
 
+// A figure rejected in editorial review (lib/review-status.js) prints the withdrawal and its rationale, not the value.
 export function Fig({ f }) {
+  const b = f.review;
+  const obs = b ? { 'data-obs': b.key, 'data-obs-state': b.state } : {};
+  if (b && b.hide) {
+    return <span className="fig withheld" data-file={f.file} data-ptr={f.ptr} data-value={dataValue(f)} {...obs}>{b.label}: {b.reason}</span>;
+  }
   return (
-    <span className={`fig${f.reviewed ? '' : ' prov'}`} data-file={f.file} data-ptr={f.ptr} data-value={dataValue(f)} data-suppressed={f.suppress ? 'true' : undefined}>
+    <span className={`fig${f.reviewed ? '' : ' prov'}`} data-file={f.file} data-ptr={f.ptr} data-value={dataValue(f)} data-suppressed={f.suppress ? 'true' : undefined} {...obs}
+      {...(b && b.approved ? { 'data-review': 'approved', 'data-record': b.key } : {})}>
       {fmtValue(f)}{f.unit && typeof f.value === 'number' && !f.suppress ? (f.unit === '%' ? '%' : ` ${f.unit}`) : ''}
     </span>
   );
