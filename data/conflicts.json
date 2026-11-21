@@ -1144,6 +1144,102 @@
         "outcome": "A stated zero: kept.",
         "page_image_checked": false
       }
+    },
+    {
+      "id": "imf-wb-gdp-per-capita-2025",
+      "measure": "Kenya GDP per person, current US dollars, 2025",
+      "unit": "US$ per person",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: NGDPDPC, actual (link and cite only; © IMF)",
+          "value": 2547.501903,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.NGDPDPC.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "World Bank WDI NY.GDP.PCAP.CD (CC BY 4.0)",
+          "value": 2362.860912,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/NY.GDP.PCAP.CD?format=json&per_page=100"
+        }
+      ],
+      "definitions": "Both are nominal GDP in current US dollars divided by population. The IMF figure is 7.8 per cent above the World Bank figure (IMF minus WB, in per cent of WB); the IMF is 6.7 to 9.1 per cent higher in every year 2010-2025, while total GDP in US dollars agrees within 1 per cent, so the difference sits in the population denominator.",
+      "hypothesis": "Definitional: the IMF and the World Bank divide by different population estimates (the World Bank uses UN population estimates; the IMF uses its own WEO population series). Not confirmed by either publisher.",
+      "status": "open",
+      "effect": "Both values are shown side by side on /kenya/ with a definitional note (sweep D13, 21 Nov 2026); neither is chosen and they are never averaged. The IMF series is labelled as the IMF's measure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-wb-revenue-gdp-2023",
+      "measure": "Kenya government revenue as a share of GDP, 2023",
+      "unit": "per cent of GDP",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: GGR_NGDP, actual (link and cite only; © IMF)",
+          "value": 16.989571,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.GGR_NGDP.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "World Bank WDI GC.REV.XGRT.GD.ZS (CC BY 4.0)",
+          "value": 18.638829,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/GC.REV.XGRT.GD.ZS?format=json&per_page=100"
+        }
+      ],
+      "definitions": "IMF WEO general government revenue (GGR_NGDP) against World Bank WDI central government revenue excluding grants (GC.REV.XGRT.GD.ZS); they differ by -1.65 points (IMF minus WB). The gap is -0.5 to -3.3 points in 2014-2023.",
+      "hypothesis": "Definitional: different coverage (general government against central government), treatment of grants and the fiscal-year basis. The two are different measures, not two readings of one figure.",
+      "status": "open",
+      "effect": "Both values are shown side by side on /kenya/ with a definitional note (sweep D13, 21 Nov 2026); neither is chosen and they are never averaged. The IMF series is labelled as the IMF's measure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-wb-expense-gdp-2023",
+      "measure": "Kenya government spending as a share of GDP, 2023",
+      "unit": "per cent of GDP",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: GGX_NGDP, actual (link and cite only; © IMF)",
+          "value": 22.604177,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.GGX_NGDP.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "World Bank WDI GC.XPN.TOTL.GD.ZS (CC BY 4.0)",
+          "value": 27.844641,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/GC.XPN.TOTL.GD.ZS?format=json&per_page=100"
+        }
+      ],
+      "definitions": "IMF WEO general government total expenditure (GGX_NGDP) against World Bank WDI central government expense (GC.XPN.TOTL.GD.ZS); they differ by -5.24 points (IMF minus WB). The gap runs from -5.2 to +5.6 points across 2014-2023.",
+      "hypothesis": "Definitional: expenditure (including net acquisition of non-financial assets) against expense (excluding it), and general against central government. Different measures.",
+      "status": "open",
+      "effect": "Both values are shown side by side on /kenya/ with a definitional note (sweep D13, 21 Nov 2026); neither is chosen and they are never averaged. The IMF series is labelled as the IMF's measure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-wb-gdp-usd-2024",
+      "measure": "Kenya GDP in current US dollars, 2024",
+      "unit": "US$ billion",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: NGDPD, actual (link and cite only; © IMF)",
+          "value": 119.364085,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.NGDPD.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "World Bank WDI NY.GDP.MKTP.CD (CC BY 4.0)",
+          "value": 120.397538,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/NY.GDP.MKTP.CD?format=json&per_page=100"
+        }
+      ],
+      "definitions": "IMF WEO GDP in US dollars (NGDPD) against World Bank WDI GDP in current US dollars (NY.GDP.MKTP.CD, divided by 1,000,000,000); they differ by -0.86 per cent (IMF minus WB). Years 2011, 2023 and 2024 differ by 0.66 to 0.86 per cent; other years agree more closely.",
+      "hypothesis": "Hypothesis: a different exchange-rate conversion or vintage of the national accounts. Not confirmed.",
+      "status": "open",
+      "effect": "Both values are shown side by side on /kenya/ with a definitional note (sweep D13, 21 Nov 2026); neither is chosen and they are never averaged. The IMF series is labelled as the IMF's measure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
     }
   ]
 }

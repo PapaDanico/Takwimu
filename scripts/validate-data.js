@@ -262,6 +262,11 @@ const manifest0 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 
     if (d.redistribution_allowed && /not confirmed/i.test(d.licence)) fail(`${tag}: an unconfirmed licence cannot allow redistribution`);
     if (d.redistribution_allowed && !d.redistribution_conditions) fail(`${tag}: say the conditions under which redistribution is allowed`);
     if (!d.retrieval_note.trim()) fail(`${tag}: retrieval_note must say what happened`);
+    // Reuse model (sweep D2): figure reuse and document redistribution are separate; the old flag equals the new one.
+    if (d.document_redistribution !== d.redistribution_allowed) fail(`${tag}: document_redistribution and redistribution_allowed must agree`);
+    if (/International Monetary Fund/.test(d.publisher) && (d.data_reuse !== 'link and cite only' || d.document_redistribution)) fail(`${tag}: IMF material is link and cite only`);
+    if (/Controller of Budget|Central Bank of Kenya|Kenya National Bureau of Statistics|Independent Electoral|Commission on Revenue Allocation|National Treasury|County Government of Siaya|Auditor-General/.test(d.publisher) && (d.data_reuse !== 'figures may be reused with citation' || d.document_redistribution)) fail(`${tag}: Kenyan public statistics: figures with citation, document not redistributed`);
+    if (d.document_id === 'worldbank-wdi-api' && !(d.data_reuse === 'figures may be reused with citation' && d.document_redistribution && /CC BY 4\.0/.test(d.licence))) fail(`${tag}: World Bank WDI is CC BY 4.0`);
     if (d.origin === 'programme register' && !PROGRAMME.includes(d.document_id)) fail(`${tag}: only the 27 register IDs may have origin "programme register"`);
   });
   docs.forEach((d) => { if (d.parent_id && !ids.has(d.parent_id)) fail(`source-library ${d.document_id}: parent_id ${d.parent_id} is not a record`); });
@@ -269,6 +274,21 @@ const manifest0 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 
   manifest0.documents.forEach((d) => { if (!ids.has(d.id)) fail(`source-library: manifest document ${d.id} is missing`); });
   // A manifest document keeps the hash recorded when its figures were read.
   manifest0.documents.forEach((d) => { const r = docs.find((x) => x.document_id === d.id); if (r && d.sha256 && r.sha256 !== d.sha256) fail(`source-library ${d.id}: sha256 differs from source-manifest.json`); });
+}
+
+// Bulk downloads only where the publisher's terms allow figure reuse (sweep D2/D1): a catalogue dataset with CSV or JSON
+// files must not draw on a source whose data_reuse is "link and cite only" or "permission required" (matched by host).
+{
+  const lib = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-library.json'), 'utf8')).documents;
+  const host = (u) => { try { return new URL(u).hostname; } catch (e) { return null; } };
+  const { DATASETS } = require('../lib/explore');
+  DATASETS.forEach((ds) => {
+    const files = ds.files ? Object.values(ds.files).filter(Boolean) : [];
+    if (!files.length) return;
+    const blocked = lib.filter((x) => host(x.source_url) && host(x.source_url) === host(ds.source_url) && x.data_reuse !== 'figures may be reused with citation');
+    const sameHostAllowed = lib.some((x) => host(x.source_url) === host(ds.source_url) && x.data_reuse === 'figures may be reused with citation');
+    if (blocked.length && !sameHostAllowed) fail(`catalogue ${ds.id}: offers ${files.join(', ')} but its source is "${blocked[0].data_reuse}" (${blocked[0].document_id}); remove the bulk download`);
+  });
 }
 
 // Dataset catalogue (lib/explore.js): status vocabulary, version stamp and files, against schemas/catalogue.schema.json.

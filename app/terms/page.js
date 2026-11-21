@@ -1,5 +1,7 @@
 import PageHead from '../../components/PageHead';
 import { SITE_URL, ISSUES_URL } from '../../lib/site';
+import TableWrap from '../../components/TableWrap';
+import library from '../../data/source-library.json';
 
 export const metadata = {
   title: 'Terms of use',
@@ -7,6 +9,30 @@ export const metadata = {
 };
 
 const UPDATED = '21 November 2026';
+
+// Per-publisher reuse terms, from data/source-library.json (data_reuse, document_redistribution). One row per publisher
+// group; where documents of one group differ, the most restrictive term is shown.
+const GROUPS = [
+  ['Controller of Budget, Auditor-General, Senate', /Controller of Budget|Auditor-General|Senate of Kenya/],
+  ['Kenya National Bureau of Statistics (KNBS)', /Kenya National Bureau of Statistics/],
+  ['Central Bank of Kenya', /Central Bank of Kenya/],
+  ['IEBC and the Commission on Revenue Allocation', /Independent Electoral|Commission on Revenue Allocation/],
+  ['County Government of Siaya', /County Government of Siaya/],
+  ['Ministries, NACC/NSDCC, WASREB, Kenya News Agency and other national public bodies', /Ministry of|National AIDS Control|National Syndemic|Water Services Regulatory|Kenya News Agency|climatefinanceken/],
+  ['World Bank (World Development Indicators)', /^World Bank$/],
+  ['International Monetary Fund (World Economic Outlook and reports)', /International Monetary Fund/],
+  ['International Budget Partnership (Open Budget Survey)', /International Budget Partnership/],
+  ['APRM Kenya', /APRM/],
+  ['Humanitarian Data Exchange and geoBoundaries (Creative Commons or public domain)', /Humanitarian Data Exchange|HDX|geoBoundaries/],
+  ['NGOs, UN agencies, research and media publishers', /./],
+];
+const RANK = { 'permission required': 0, 'link and cite only': 1, 'figures may be reused with citation': 2 };
+const REUSE_ROWS = GROUPS.map(([name, re]) => {
+  const docs = library.documents.filter((d) => re.test(d.publisher) && !GROUPS.slice(0, GROUPS.findIndex((g) => g[0] === name)).some(([, r]) => r.test(d.publisher)));
+  if (!docs.length) return null;
+  const terms = [...new Set(docs.map((d) => d.data_reuse))].sort((a, b) => RANK[a] - RANK[b]);
+  return { name, n: docs.length, reuse: terms, redistribute: docs.every((d) => d.document_redistribution) ? 'Yes, under the stated licence' : docs.some((d) => d.document_redistribution) ? 'Some, under their stated licence' : 'No', basis: docs.find((d) => d.data_reuse === terms[0]).reuse_basis };
+}).filter(Boolean);
 
 const SECTIONS = [
   { id: 'about', title: '1. About these terms', body: [
@@ -30,11 +56,12 @@ const SECTIONS = [
   ] },
   { id: 'copyright', title: '5. Copyright, reuse and attribution', body: [
     'Our original text, charts, explainers, layout, logo and the Takwimu name belong to Danico Ventures Ltd or its licensors. The Danico Ventures Ltd name and logo belong to that company and may not be used without its permission.',
-    'You may reuse our original text, charts and the data files on the Data page, for personal, educational, journalistic, research or commercial purposes, provided you (a) credit "Takwimu Kenya (takwimu.netlify.app), based on [the original publisher]" and (b) do not suggest that we or the original publishers endorse you or your use. If you change the material, say so.',
-    'The underlying figures and documents come from public bodies and other publishers, and stay under their publishers\' own licences and terms; our licence above covers only our own work. In particular: World Bank World Development Indicators are published under the Creative Commons Attribution 4.0 International licence (CC BY 4.0), so reuse must credit "World Bank, World Development Indicators". Reports of the Controller of Budget, the Office of the Auditor-General, the Kenya National Bureau of Statistics (KNBS), the Commission on Revenue Allocation, the Independent Electoral and Boundaries Commission and the Central Bank of Kenya are public documents published by those bodies; reuse them under the terms each body sets, and name the body and the report.',
-    'Citing a figure from our Data page does not replace citing the original report, which you should also name.',
+    'You may reuse our own original text, explanations and calculations (figures labelled "Calculated by Takwimu Kenya from published figures"), including commercially, provided you (a) credit "Takwimu Kenya (takwimu.netlify.app), based on [the original publisher]" and (b) do not suggest that we or the original publishers endorse you or your use. If you change the material, say so. This grant covers only our own work.',
+    'There is no blanket grant, commercial or otherwise, for third-party data. The figures and documents behind the Site stay under their publishers\' own terms, set out publisher by publisher in the table below. Kenyan public statistics (Controller of Budget, Auditor-General, KNBS, CBK, IEBC, CRA, the National Treasury and county governments) may be reused as figures with the body and report named, but the documents themselves are not republished here. World Bank World Development Indicators are CC BY 4.0: credit "World Bank, World Development Indicators".',
+    'IMF World Economic Outlook figures are excluded from any reuse grant on this Site: the IMF\'s terms are link and cite only. They are shown on /kenya/#imf with the vintage and a link, "Source: IMF World Economic Outlook, © IMF", and no CSV or JSON copy is offered. To reuse them, go to the IMF.',
+    'Bulk downloads (CSV and JSON on the datasets page) are offered only for datasets whose publishers allow the figures to be reused with citation. Citing a figure from our Data page does not replace citing the original report, which you should also name.',
     'Do not copy the Site in a way that hides its sources, confidence scores, caveats or corrections, or that presents our estimates as official statistics.',
-  ] },
+  ], table: true },
   { id: 'nonpartisan', title: '6. Non-partisan use and briefs', body: [
     'Takwimu Kenya is strictly non-partisan. It does not support or oppose any party, candidate, officeholder or campaign, and the same briefs and services are offered on the same terms to every party, independent candidate, public office and organisation.',
     'Paid work never changes a published figure, ranking or caveat, and no client has a say over what the Site publishes. A brief prepared for a client uses the same sources and method as the Site, and the same corrections policy (section 13).',
@@ -73,7 +100,7 @@ const SECTIONS = [
 export default function Terms() {
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Legal" title="Terms of use" sub={`Plain-language terms for using Takwimu Kenya. Version 1.1, last updated ${UPDATED}.`} path="/terms/" shareText="Takwimu Kenya: terms of use" />
+      <PageHead eyebrow="Legal" title="Terms of use" sub={`Plain-language terms for using Takwimu Kenya. Version 1.2, last updated ${UPDATED}.`} path="/terms/" shareText="Takwimu Kenya: terms of use" />
       <nav aria-label="Sections on this page"><ul className="toc">
         {SECTIONS.map((s) => <li key={s.id}><a href={`#${s.id}`}>{s.title.replace(/^\d+\.\s/, '')}</a></li>)}
       </ul></nav>
@@ -81,10 +108,10 @@ export default function Terms() {
         <h2>In short</h2>
         <ul className="steps">
           <li>Takwimu explains public documents. It is not advice and not an official source. Check numbers against the original report.</li>
-          <li>You may reuse our text, charts and data with credit to Takwimu and the original publisher.</li>
+          <li>You may reuse our own text and calculations with credit to Takwimu and the original publisher. Third-party data stays under each publisher&apos;s terms (table in section 5); there is no blanket grant for it.</li>
           <li>Please use the Site lawfully and gently. Tell us about mistakes so we can fix and log them.</li>
           <li>Takwimu is non-partisan: the same service is open to everyone, and paid work never changes a published figure.</li>
-          <li>Third-party data stays under its publishers&apos; licences, such as CC BY 4.0 for World Bank data.</li>
+          <li>IMF World Economic Outlook figures are link and cite only and are not covered by any reuse grant here; World Bank data are CC BY 4.0.</li>
           <li>These terms are governed by Kenyan law. The full text follows.</li>
         </ul>
       </section>
@@ -92,6 +119,15 @@ export default function Terms() {
         <section key={s.id} id={s.id} className="card legal" aria-labelledby={`${s.id}-h`}>
           <h2 id={`${s.id}-h`}>{s.title}</h2>
           {s.body.map((para, i) => <p key={i}>{para}</p>)}
+          {s.table ? (
+            <TableWrap label="Reuse terms by publisher">
+              <table className="data" id="reuse-by-publisher">
+                <caption>Reuse terms by publisher, from the source library ({library.documents.length} documents)</caption>
+                <thead><tr><th scope="col">Publisher</th><th scope="col">The figures</th><th scope="col">The documents</th><th scope="col">Basis</th></tr></thead>
+                <tbody>{REUSE_ROWS.map((r) => <tr key={r.name}><th scope="row">{r.name}<small style={{ display: 'block', fontWeight: 400 }}>{r.n} documents</small></th><td>{r.reuse.join('; ')}</td><td>{r.redistribute}</td><td>{r.basis}</td></tr>)}</tbody>
+              </table>
+            </TableWrap>
+          ) : null}
         </section>
       ))}
     </main>

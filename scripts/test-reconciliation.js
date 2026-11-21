@@ -353,19 +353,30 @@ test('conflict kenya-counties-map-licence: the county map states the ADM1 licenc
 // debt ratios and the end-of-period inflation rate that differ by more than 0.5 points. Definitional differences
 // (GDP per capita, revenue and expenditure against the World Bank) are notes in docs/imf-notes.md, not cases.
 const imf = read('imf.json');
-const imfCase = (id, ind, yr) => test(`conflict ${id}: IMF ${ind} ${yr} and the CBK value are both listed and differ by more than 0.5 points`, () => {
+const imfCase = (id, ind, yr) => test(`conflict ${id}: IMF ${ind} ${yr} and the comparison value are both listed and differ by more than 0.5 (points or per cent)`, () => {
   const c = imf.comparisons.find((x) => x.imf_indicator === ind && x.year === yr && x.vintage === imf.vintages[0].vintage);
   ok(c && c.candidate_conflict && c.imf_type === 'actual', `${ind} ${yr} is no longer a candidate in data/imf.json`);
   ok(listed(id, c.imf_value) && listed(id, c.other_value), 'both values must be in the case');
-  ok(near(c.imf_value - c.other_value, c.difference, 1e-6) && Math.abs(c.difference) > 0.5, 'difference changed');
+  const diff = c.difference_basis === 'percent' ? ((c.imf_value - c.other_value) / c.other_value) * 100 : c.imf_value - c.other_value;
+  ok(near(diff, c.difference, 1e-3) && Math.abs(c.difference) > 0.5, `difference changed (${diff} vs ${c.difference})`);
   const v = imf.vintages[0].values.find((x) => x.indicator === ind && x.year === yr);
   ok(v && near(v.value, c.imf_value, 1e-9) && v.type === 'actual', 'the IMF series value must equal the listed value');
 });
 imfCase('imf-debt-cbk-2023', 'GGXWDG_NGDP', 2023);
 imfCase('imf-debt-cbk-2025', 'GGXWDG_NGDP', 2025);
 imfCase('imf-inflation-eop-cbk-2019', 'PCPIEPCH', 2019);
-test('IMF definitional differences stay out of the register', () => {
-  ok(!reg.conflicts.some((c) => /IMF/.test(c.values.map((v) => v.label).join(' ')) && /per capita|revenue|expenditure/i.test(c.measure)), 'GDP per capita, revenue and expenditure differences are definitional: notes, not cases');
+// IMF against the World Bank (sweep D13): the substantive definitional differences are register cases, labelled as
+// definitional, and shown side by side on /kenya/.
+imfCase('imf-wb-gdp-per-capita-2025', 'NGDPDPC', 2025);
+imfCase('imf-wb-revenue-gdp-2023', 'GGR_NGDP', 2023);
+imfCase('imf-wb-expense-gdp-2023', 'GGX_NGDP', 2023);
+imfCase('imf-wb-gdp-usd-2024', 'NGDPD', 2024);
+test('IMF against World Bank cases are labelled definitional, open, and name both measures', () => {
+  ['imf-wb-gdp-per-capita-2025', 'imf-wb-revenue-gdp-2023', 'imf-wb-expense-gdp-2023', 'imf-wb-gdp-usd-2024'].forEach((id) => {
+    const c = conflict(id);
+    ok(c.status === 'open' && /IMF/.test(c.values[0].label) && /World Bank WDI/.test(c.values[1].label), `${id}: labels`);
+    ok(/Definitional|Hypothesis/.test(c.hypothesis) && /\/kenya\//.test(c.effect), `${id}: must be labelled definitional (or a hypothesis) and point to /kenya/`);
+  });
 });
 
 // Data-integrity corrections of 21 Nov 2026 (sweep D6, D15, D16, D12): each checked against the printed page.

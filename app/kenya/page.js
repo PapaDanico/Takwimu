@@ -12,8 +12,12 @@ import { natIndicators, nat, SECTORS, COB_YEARS, cobTotal, cobSource, trendSerie
 import { shortDate } from '../../lib/format';
 import ImfView from '../../components/ImfView';
 import { imfViewData } from '../../lib/imf';
+import reg from '../../data/conflicts.json';
 
 const imfData = imfViewData();
+// IMF against the World Bank: definitional differences, both values side by side (sweep D13).
+const IMF_WB = ['imf-wb-gdp-per-capita-2025', 'imf-wb-gdp-usd-2024', 'imf-wb-revenue-gdp-2023', 'imf-wb-expense-gdp-2023'].map((id) => reg.conflicts.find((c) => c.id === id)).filter(Boolean);
+const imfV0 = imfData.vintages[0];
 
 export const metadata = {
   title: 'Kenya dashboard',
@@ -125,6 +129,18 @@ export default function KenyaPage() {
         <p className="src">Sources: {obs.source.citation_requested} (<a href={obs.source.landing_page}>Open Budget Survey data</a>); scores before 2017 are not comparable for oversight and participation. IEBC, <a href={extra.VOTERS.source.url}>registered voters per constituency, 2022</a> and <a href={cand.source.url}>Annual Report 2022-23</a>, Table 21. The IEBC states no reuse licence for these files. The August 2017 presidential results are not shown: that election was annulled, and the copy found is unsigned and does not add up. Registered voters by constituency are on <Link href="/compare/#voters">Compare counties</Link>.</p>
       </section>
       <ImfView data={imfData} />
+      <section className="card" id="imf-wb" aria-labelledby="imf-wb-h">
+        <h2 id="imf-wb-h">IMF and World Bank figures that differ by definition</h2>
+        <p className="lead">The IMF and the World Bank publish some measures that look the same but are defined differently, so their values differ. Both are shown; neither is chosen and they are never averaged.</p>
+        <TableWrap label="IMF and World Bank values side by side">
+          <table className="data">
+            <caption className="sr-only">IMF World Economic Outlook and World Bank WDI values for the same measure and year, with the reason they differ</caption>
+            <thead><tr><th scope="col">Measure</th><th scope="col" className="num">IMF WEO</th><th scope="col" className="num">World Bank WDI</th><th scope="col">Why they differ</th></tr></thead>
+            <tbody>{IMF_WB.map((c) => <tr key={c.id}><th scope="row">{c.measure}<small style={{ display: 'block', fontWeight: 400 }}>{c.unit}</small></th><td className="num">{show(c.values[0].value, 2)}</td><td className="num">{show(c.values[1].value, 2)}</td><td><span className="tag warn">Definitional difference</span> {c.definitions} {c.hypothesis} <a href={`/data/#${c.id}`}>Case {c.id}</a>.</td></tr>)}</tbody>
+          </table>
+        </TableWrap>
+        <p className="src">Source: IMF World Economic Outlook, {imfV0.vintage} (published {shortDate(imfV0.published)}), <a href="https://www.imf.org/en/Publications/WEO">imf.org</a>; link and cite only, © IMF (no copy of the IMF data is offered for download). World Bank, World Development Indicators, CC BY 4.0.</p>
+      </section>
 
       <section className="card" id="trends" aria-labelledby="trends-h">
         <h2 id="trends-h">Trend explorer</h2>
