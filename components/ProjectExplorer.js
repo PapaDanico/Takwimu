@@ -4,6 +4,7 @@
 // only: nothing is stored or sent. Contractor names are not in the data passed here (withheld pending review).
 import { useId, useState } from 'react';
 import { ColumnChart } from './Charts';
+import Reviewed from './Reviewed';
 
 const n = (v) => (typeof v === 'number' ? v.toLocaleString('en-US') : v);
 const Ev = ({ e }) => (
@@ -59,10 +60,11 @@ export default function ProjectExplorer({ projects, states, sectors, wards }) {
             <h4>{p.name}</h4>
             <div className="tags">
               <span className="ds-status"><code>{p.id}</code></span>
-              <span className={`tag ${p.status === 'completed-independently-verified' ? 'good' : 'warn'}`}>{p.status}</span>
+              {p.review && p.review.hide ? null : <span className={`tag ${p.status === 'completed-independently-verified' ? 'good' : 'warn'}`}>{p.status}</span>}
               <span className="ds-status">{sectors[p.sector]}</span>
               <span className="ds-status">{p.wards.length ? p.wards.map((w) => w.name).join(', ') : p.countywide ? 'County-wide' : `Place as printed: ${p.places.join('; ')}`}</span>
             </div>
+            <Reviewed b={p.review} as="div">{() => (<>
             <p className="src">Status from {p.status_source.url ? <a href={p.status_source.url} rel="noopener">{p.status_source.doc}</a> : p.status_source.doc}, PDF p. {p.status_source.page} ({p.status_source.type}). Latest evidence {p.last}.{p.status === 'completed-reported' ? ' Completion is as reported by the county; no independent check is recorded.' : ''}{p.status_note ? ` ${p.status_note}` : ''}</p>
             <div className="side">
               <div><h5>Reported by the county or the Controller of Budget</h5>{p.reported.length ? <ul>{p.reported.map((e, i) => <Ev key={i} e={e} />)}</ul> : <p className="muted">No county report recorded.</p>}</div>
@@ -75,6 +77,7 @@ export default function ProjectExplorer({ projects, states, sectors, wards }) {
                 <ul>{p.amounts.map((a, i) => <li key={i}>{a.kind}: {a.unit} {n(a.value)} (FY {a.fy}; &ldquo;{a.label}&rdquo;) <small className="cite">{a.url ? <a href={a.url} rel="noopener">{a.doc}</a> : a.doc}, PDF p. {a.page}</small></li>)}</ul>
               </details>
             ) : null}
+            </>)}</Reviewed>
           </li>
         ))}
       </ol>

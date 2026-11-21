@@ -4,7 +4,10 @@ import TableWrap from '../../../../components/TableWrap';
 import { ColumnChart } from '../../../../components/Charts';
 import { Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
-import g from '../../../../data/siaya-programmes.json';
+import { masked, badge } from '../../../../lib/review-status';
+import Reviewed from '../../../../components/Reviewed';
+
+const g = masked('siaya-programmes');
 
 export const metadata = {
   title: 'NGO and development partner atlas',
@@ -24,7 +27,8 @@ const n = (v) => (typeof v === 'number' ? v.toLocaleString('en-US') : v);
 const Src = ({ s }) => { const r = source(s.source_id); return <small className="cite">{r.url ? <a href={r.url} rel="noopener">{r.title}</a> : r.title}, {typeof s.page === 'number' ? `PDF p. ${s.page}` : s.page}{s.locator ? `; ${s.locator}` : ''}</small>; };
 const Badge = ({ t }) => <span className={`tag ${t === 'independently_evaluated' ? 'good' : 'warn'}`}>{EVIDENCE[t]}</span>;
 const period = (p) => `${p.period.start || '?'} to ${p.period.end || 'not stated'}`;
-const totals = g.summary.siaya_development_partner_grants_kes;
+// A Siaya total that includes a programme rejected in editorial review is withheld, not recomputed.
+const totals = g.summary.siaya_development_partner_grants_kes.map((t) => { const bad = t.record_ids.map((id) => badge('siaya-programmes', id)).find((b) => b && b.hide); return bad ? { ...t, total: null, withheld: bad } : t; });
 const fys = [...new Set(totals.map((t) => t.period))];
 
 function Programme({ p, isPooled }) {
@@ -34,9 +38,9 @@ function Programme({ p, isPooled }) {
       <td>{p.implementing_organisation}<br /><small>Funder: {p.funder || 'not stated'} ({p.funder_basis})</small></td>
       <td>{period(p)}<br /><Badge t={p.evidence_type} /></td>
       <td>
-        {p.amounts.length ? <ul className="inputs">{p.amounts.map((a, i) => (
+        <Reviewed b={badge('siaya-programmes', p.id)}>{() => (p.amounts.length ? <ul className="inputs">{p.amounts.map((a, i) => (
           <li key={i}>{a.kind}: {a.value === null ? <span className="muted">{a.value_as_printed ? `printed "${a.value_as_printed}"` : 'not printed'} (not zero)</span> : `${a.currency} ${n(a.value)}`} ({a.period}){a.pooled ? <> <span className="tag warn">Pooled total: not a Siaya figure</span></> : null}<br /><Src s={a.source} /></li>
-        ))}</ul> : <span className="muted">No amount recorded</span>}
+        ))}</ul> : <span className="muted">No amount recorded</span>)}</Reviewed>
         {isPooled && p.geography.note ? <small>{p.geography.note}</small> : null}
         {!isPooled && p.geography.wards_as_printed && p.geography.wards_as_printed.length ? <small>Places as printed: {p.geography.wards_as_printed.join(', ')}</small> : null}
         <br /><small>Sources: {p.sources.map((s, i) => <span key={i}>{i ? '; ' : ''}<Src s={s} /></span>)}</small>
@@ -88,7 +92,7 @@ export default function SiayaProgrammes() {
                   <th scope="row">{r.period}, {r.kind}</th>
                   <td>KSh {n(r.printed_total)}<br /><Src s={r.source} /></td>
                   <td><small>{(r.excluded_lines || []).map((x) => `${x.line} ${n(x.value)}`).join('; ')}</small></td>
-                  <td>{t ? `KSh ${n(t.total)}` : 'not reported'}<br /><small>{t ? t.record_ids.join(', ') : ''}</small></td>
+                  <td>{t && t.withheld ? `Withheld: ${t.withheld.reason}` : t ? `KSh ${n(t.total)}` : 'not reported'}<br /><small>{t ? t.record_ids.join(', ') : ''}</small></td>
                 </tr>
               ); })}
             </tbody>

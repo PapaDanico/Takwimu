@@ -4,13 +4,16 @@ import SourceLibrary from '../../../../components/SourceLibrary';
 import { STATUS, COVERAGE } from '../../../../lib/source-library';
 import lib from '../../../../data/source-library.json';
 import { shortDate } from '../../../../lib/format';
+import { bySource } from '../../../../lib/review-status';
 
 export const metadata = {
   title: 'Siaya Source Library',
   description: 'Every document Takwimu Kenya uses or plans to consult for Siaya County: publisher, period, relevance, licence, whether a copy was retrieved, and a link to the original.',
 };
 
-const docs = lib.documents;
+// Each document carries the editorial review state of the values that cite it (lib/review-status.js), with any value
+// withdrawn after review listed with its rationale.
+const docs = lib.documents.map((d) => { const r = bySource(d.document_id); return r ? { ...d, values_review: r } : d; });
 const n = (f) => docs.filter(f).length;
 const byStatus = Object.keys(STATUS).map((k) => [k, n((d) => d.retrieval_status === k)]);
 const ORIGIN = [

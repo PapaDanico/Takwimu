@@ -152,7 +152,7 @@ export default function CompareView({ data }) {
                 {ordered.map((r) => (
                   <tr key={r.slug}>
                     <th scope="row">{r.name}</th>
-                    {r.value === null ? <td className="na">{naText(r)}</td> : <td className="num">{fmtNum(f, r.value)}</td>}
+                    {r.value === null ? <td className="na" data-obs={`counties-cob:${fy}:${r.slug}:${key}`} data-obs-state={r.st === 'withdrawn' ? 'rejected' : undefined}>{naText(r)}</td> : <td className="num" data-obs={`counties-cob:${fy}:${r.slug}:${key}`}>{fmtNum(f, r.value)}</td>}
                     <td>{r.st === 'unverified' ? 'Not yet verified' : r.raw || '(blank)'}</td>
                     <td>{r.pdf}, {r.printed}</td>
                     <td>{r.conf === null || r.conf === undefined ? 'n/a' : r.conf.toFixed(2)}</td>
@@ -200,7 +200,7 @@ export default function CompareView({ data }) {
                       <th scope="row">{field.label} <small>({field.kind === 'pct' ? '%' : 'KSh m'})</small></th>
                       {sel.map((s) => {
                         const c = cellOf(data, fy, field.key, data.counties.findIndex((x) => x.slug === s));
-                        return c.value === null ? <td key={s} className="na">{c.st === 'unverified' ? 'Not yet verified' : c.st === 'doubtful' ? 'Doubtful reading' : c.st === 'not_in_table' ? 'Not in this year\u2019s table' : 'Blank in table'}<small>{c.st === 'unverified' && c.note ? `${c.note} ` : ''}p. {c.pdf}</small></td> : <td key={s} className="num">{fmtNum(field, c.value)}<small>p. {c.pdf}{caveat(c) ? `. ${caveat(c)}` : ''}</small></td>;
+                        return c.value === null ? <td key={s} className="na" data-obs-state={c.st === 'withdrawn' ? 'rejected' : undefined}>{c.st === 'withdrawn' ? c.note : c.st === 'unverified' ? 'Not yet verified' : c.st === 'doubtful' ? 'Doubtful reading' : c.st === 'not_in_table' ? 'Not in this year\u2019s table' : 'Blank in table'}<small>{c.st === 'unverified' && c.note ? `${c.note} ` : ''}p. {c.pdf}</small></td> : <td key={s} className="num">{fmtNum(field, c.value)}<small>p. {c.pdf}{caveat(c) ? `. ${caveat(c)}` : ''}</small></td>;
                       })}
                     </tr>
                   ))}

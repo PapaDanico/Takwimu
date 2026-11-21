@@ -351,7 +351,12 @@ Object.entries(files)
 
 // Siaya data is verified-with-status and carries its own provenance fields.
 ['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json', 'siaya-boundaries.json', 'source-manifest.json', 'source-library.json', 'national.json', 'counties-cob.json', 'siaya-economy.json', 'siaya-governance.json', 'siaya-audits.json', 'siaya-fiscal-ledger.json', 'siaya-health.json', 'siaya-education.json', 'siaya-agriculture.json', 'siaya-geography.json', 'siaya-climate.json', 'siaya-wards-geo.json', 'siaya-analysis.json', 'siaya-programmes.json'].forEach((f) => {
-  fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(outDir, f));
+  // Files with itemised observations are published through lib/review-status.js: rejected values removed, and an
+  // editorial_review block with the state of every value that is not simply pending. The others are copied as held.
+  const rs = require('../lib/review-status');
+  const stem = f.replace(/\.json$/, '');
+  if (rs.DATASET_IDS.includes(stem)) fs.writeFileSync(path.join(outDir, f), JSON.stringify(rs.publishedCopy(stem), null, 1) + '\n');
+  else fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(outDir, f));
   console.log('Generated public/data/' + f);
 });
 
@@ -363,7 +368,7 @@ Object.entries(files)
   // A public utility that is also a programme implementer in the atlas is checked by field only, not by name.
   const progText = fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-programmes.json'), 'utf8');
   const names = raw.projects.map((p) => p.contract && p.contract.contractor && p.contract.contractor.name).filter(Boolean).filter((nm) => !progText.includes(nm));
-  const out = JSON.stringify(publicCopy(), null, 1) + '\n';
+  const out = JSON.stringify({ ...publicCopy(), editorial_review: require('../lib/review-status').publishedCopy('siaya-projects').editorial_review }, null, 1) + '\n';
   const leak = WITHHELD.filter((k) => out.includes(`"${k}"`)).concat(names.filter((nm) => out.includes(nm)));
   if (leak.length) throw new Error(`siaya-projects public copy still contains withheld fields or names: ${leak.join(', ')}`);
   fs.writeFileSync(path.join(outDir, 'siaya-projects.json'), out);
@@ -372,10 +377,14 @@ Object.entries(files)
 
 // CSV export of the ten-year series, built from the same validated file the charts use.
 (function writeHistoryCsv() {
-  const hist = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'history.json'), 'utf8'));
+  // Read through lib/review-status.js: a rejected value is removed, and every row says its review state.
+  const rs = require('../lib/review-status');
+  const hist = rs.masked('history');
   const cpi = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'cpi.json'), 'utf8'));
   const q = (v) => (v === undefined || v === null ? '' : `"${String(v).replace(/"/g, '""')}"`);
-  const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'confidence_1_to_5', 'retrieved', 'period', 'caveat', 'source_id', 'pdf_page', 'printed_page', 'page_note', 'dataset_version']];
+  const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'confidence_1_to_5', 'retrieved', 'period', 'caveat', 'source_id', 'pdf_page', 'printed_page', 'page_note', 'dataset_version', 'review_status']];
+  const rid = [null]; // review id of each row (lib/review-status.js), for the review_status column
+  const add = (id, row) => { rows.push(row); rid.push(id); };
   // Page reference columns: the manifest document id, PDF page and printed page where the figure was read.
   const pageCols = (r) => (r ? [r.source_id, r.page === null ? '' : r.page, r.printed_page, r.page === null ? r.page_note : (r.page_note || '')] : ['', '', '', '']);
   const got = hist.meta.retrieved;
@@ -392,25 +401,26 @@ Object.entries(files)
       if (y[key] === undefined) return;
       const rep = hist.reports[(y.field_source && y.field_source[key]) || y.report] || {};
       const basis = (y.derived || []).includes(key) ? 'derived (total minus development)' : 'reported';
-      rows.push([name, y.fy, y[key], unit, basis, rep.title, rep.url, rep.confidence, got, period, y.caveat, ...pageCols((y.provenance || {})[key])]);
+      add(`years:${y.fy}:${key}`, [name, y.fy, y[key], unit, basis, rep.title, rep.url, rep.confidence, got, period, y.caveat, ...pageCols((y.provenance || {})[key])]);
     });
-    if (y.spent !== undefined && cpi.fiscal_year[y.fy]) rows.push(['spent_real_2024_25_prices', y.fy, +(y.spent * (cpi.fiscal_year['2024/25'] / cpi.fiscal_year[y.fy])).toFixed(3), 'KSh billion', 'derived (approximate)', 'World Bank CPI, fiscal-year average', cpi.meta.source_url, '', got, period, cpi.meta.method]);
+    if (y.spent !== undefined && y.spent !== null && cpi.fiscal_year[y.fy]) add(`years:${y.fy}:spent`, ['spent_real_2024_25_prices', y.fy, +(y.spent * (cpi.fiscal_year['2024/25'] / cpi.fiscal_year[y.fy])).toFixed(3), 'KSh billion', 'derived (approximate)', 'World Bank CPI, fiscal-year average', cpi.meta.source_url, '', got, period, cpi.meta.method]);
   });
   hist.osr_series.points.forEach((p) => {
-    rows.push(['own_source_revenue', p.fy, p.value, 'KSh million', 'reported', p.report, '', '', got, `FY ${p.fy}`, '', ...pageCols(p)]);
-    if (p.alternate) rows.push(['own_source_revenue', p.fy, p.alternate.value, 'KSh million', 'alternate (other report)', p.alternate.report, '', '', got, `FY ${p.fy}`, 'Reports disagree; see conflicts.json', ...pageCols(p.alternate)]);
+    add(`osr:${p.fy}`, ['own_source_revenue', p.fy, p.value, 'KSh million', 'reported', p.report, '', '', got, `FY ${p.fy}`, '', ...pageCols(p)]);
+    if (p.alternate) add(null, ['own_source_revenue', p.fy, p.alternate.value, 'KSh million', 'alternate (other report)', p.alternate.report, '', '', got, `FY ${p.fy}`, 'Reports disagree; see conflicts.json', ...pageCols(p.alternate)]);
   });
-  hist.audits.points.forEach((a) => rows.push(['audit_opinion', a.fy, a.opinion, 'category', 'reported', a.source || 'Auditor-General report on the County Executive accounts', a.url, a.confidence, got, a.period || `FY ${a.fy}`, [a.reasons, a.caveat].filter(Boolean).join(' '), ...pageCols(a)]));
+  hist.audits.points.forEach((a) => add(`audits:${a.fy}`, ['audit_opinion', a.fy, a.opinion, 'category', 'reported', a.source || 'Auditor-General report on the County Executive accounts', a.url, a.confidence, got, a.period || `FY ${a.fy}`, [a.reasons, a.caveat].filter(Boolean).join(' '), ...pageCols(a)]));
   // In-year (partial-year) figures: labelled so they are never mistaken for full-year values.
-  if (hist.in_year) hist.in_year.periods.forEach((p) => p.figures.forEach((f) => rows.push([`in_year_${f.measure}`, hist.in_year.fy, f.value, f.unit, `in-year: ${hist.in_year.comparability}`, `${p.report.title}, PDF p. ${f.pdf_page}`, p.report.url, p.confidence, got, f.as_of ? `${p.period} (at ${f.as_of})` : p.period, f.label, p.source_id, f.pdf_page, f.printed_page, ''])));
+  if (hist.in_year) hist.in_year.periods.forEach((p) => p.figures.forEach((f) => add(`in_year:${p.id}:${f.measure}`, [`in_year_${f.measure}`, hist.in_year.fy, f.value, f.unit, `in-year: ${hist.in_year.comparability}`, `${p.report.title}, PDF p. ${f.pdf_page}`, p.report.url, p.confidence, got, f.as_of ? `${p.period} (at ${f.as_of})` : p.period, f.label, p.source_id, f.pdf_page, f.printed_page, ''])));
   // Figures from other documents for years whose Controller of Budget report is missing: listed, not used in the series.
-  if (hist.supplementary) hist.supplementary.documents.forEach((d) => d.figures.forEach((f) => rows.push([`other_source_${f.measure}`, d.fy, f.value, f.unit, `other document (${d.kind}); not used in the series`, `${d.title}, PDF p. ${f.pdf_page}`, d.url, d.confidence, got, `FY ${d.fy}`, f.label, d.source_id, f.pdf_page, f.printed_page, ''])));
+  if (hist.supplementary) hist.supplementary.documents.forEach((d) => d.figures.forEach((f) => add(null, [`other_source_${f.measure}`, d.fy, f.value, f.unit, `other document (${d.kind}); not used in the series`, `${d.title}, PDF p. ${f.pdf_page}`, d.url, d.confidence, got, `FY ${d.fy}`, f.label, d.source_id, f.pdf_page, f.printed_page, ''])));
   // Every value in the conflict register, so no disagreeing figure is left out of the export.
   const conf = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'conflicts.json'), 'utf8'));
-  conf.conflicts.forEach((c) => c.values.forEach((v) => rows.push([`conflict: ${c.measure}`, '', v.value, c.unit, `source value (${c.status})`, v.label, v.url, '', got, '', c.definitions])));
+  conf.conflicts.forEach((c) => c.values.forEach((v) => add(null, [`conflict: ${c.measure}`, '', v.value, c.unit, `source value (${c.status})`, v.label, v.url, '', got, '', c.definitions])));
   // Every row carries the version stamp of history.json (short content hash, as in the dataset catalogue).
   const ver = require('../lib/dataset-status').versionOf('history.json');
-  fs.writeFileSync(path.join(outDir, 'history.csv'), rows.map((r, i) => [...r, ...Array(Math.max(0, rows[0].length - 1 - r.length)).fill(''), ...(i ? [ver] : [])].map(q).join(',')).join('\n') + '\n');
+  const status = (i) => { const r = rid[i] ? rs.review('history', rid[i]) : null; return r ? (r.hide ? `${r.label}: ${r.reason}` : r.label) : ''; };
+  fs.writeFileSync(path.join(outDir, 'history.csv'), rows.map((r, i) => [...r, ...Array(Math.max(0, rows[0].length - 2 - r.length)).fill(''), ...(i ? [ver, status(i)] : [])].map(q).join(',')).join('\n') + '\n');
   console.log(`Generated public/data/history.csv (${rows.length - 1} rows)`);
 }());
 

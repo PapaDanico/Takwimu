@@ -2,6 +2,7 @@ import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { governance, aprmPage } from '../../../../lib/governance';
+import Reviewed from '../../../../components/Reviewed';
 
 export const metadata = {
   title: 'Budget transparency and public participation',
@@ -18,15 +19,15 @@ export default function SiayaGovernance() {
   const [e21, e22] = g.editions;
   const rows = [
     ['Documents assessed', (e) => <>{e.doc.period_assessed}. Cover date: {e.doc.cover_date}.</>],
-    ['Transparency index', (e) => <><b>{e.index.value} out of 100</b><br /><Src item={e.index} doc={e.doc} />{e.nationalAverage ? <><br />National average {e.nationalAverage.value}; Siaya ranked {e.rank.value}th of {e.rank.of} (<Src item={e.rank} doc={e.doc} />)</> : null}</>],
-    ['Key documents published', (e) => <><b>{e.count.value} of {e.count.of}</b><br /><Src item={e.count} doc={e.doc} /></>],
-    ['Published', (e) => <><List items={e.list.published} /><Src item={e.list} doc={e.doc} /></>],
-    ['Not published', (e) => <><List items={e.list.not_published} /><Src item={e.list} doc={e.doc} /></>],
-    ['Content score by document', (e) => <><ul className="plain">{e.comp.scores.map((s) => <li key={s.document}>{s.document}: {s.value == null ? s.reason.toLowerCase() : `${s.value} of 100`}</li>)}</ul><Src item={e.comp} doc={e.doc} /></>],
-    ['Public participation score', (e) => (e.participation.value == null
+    ['Transparency index', (e) => <><Reviewed b={e.index.review}><b>{e.index.value} out of 100</b></Reviewed><br /><Src item={e.index} doc={e.doc} />{e.nationalAverage ? <><br />National average <Reviewed b={e.nationalAverage.review}>{e.nationalAverage.value}</Reviewed>; Siaya ranked <Reviewed b={e.rank.review}>{e.rank.value}th of {e.rank.of}</Reviewed> (<Src item={e.rank} doc={e.doc} />)</> : null}</>],
+    ['Key documents published', (e) => <><Reviewed b={e.count.review}><b>{e.count.value} of {e.count.of}</b></Reviewed><br /><Src item={e.count} doc={e.doc} /></>],
+    ['Published', (e) => <><Reviewed b={e.list.review} as="div"><List items={e.list.published} /></Reviewed><Src item={e.list} doc={e.doc} /></>],
+    ['Not published', (e) => <><Reviewed b={e.list.review} as="div"><List items={e.list.not_published} /></Reviewed><Src item={e.list} doc={e.doc} /></>],
+    ['Content score by document', (e) => <><Reviewed b={e.comp.review} as="div"><ul className="plain">{e.comp.scores.map((s) => <li key={s.document}>{s.document}: {s.value == null ? s.reason.toLowerCase() : `${s.value} of 100`}</li>)}</ul></Reviewed><Src item={e.comp} doc={e.doc} /></>],
+    ['Public participation score', (e) => <Reviewed b={e.participation.review}>{() => (e.participation.value == null
       ? <><b>No score printed for Siaya in this edition.</b> The survey notes: &ldquo;{e.participation.quote}&rdquo;<br /><Src item={e.participation} doc={e.doc} /></>
-      : <><b>{e.participation.value} out of 100</b>{e.participationFinding ? <> &ldquo;{e.participationFinding.quote}&rdquo;</> : null}<br /><Src item={e.participation} doc={e.doc} /></>)],
-    ['Survey recommendation', (e) => (e.recommendation ? <>&ldquo;{e.recommendation.quote}&rdquo;<br /><Src item={e.recommendation} doc={e.doc} /></> : <>None printed</>)],
+      : <><b>{e.participation.value} out of 100</b>{e.participationFinding ? <> &ldquo;{e.participationFinding.quote}&rdquo;</> : null}<br /><Src item={e.participation} doc={e.doc} /></>)}</Reviewed>],
+    ['Survey recommendation', (e) => (e.recommendation ? <><Reviewed b={e.recommendation.review}>&ldquo;{e.recommendation.quote}&rdquo;</Reviewed><br /><Src item={e.recommendation} doc={e.doc} /></> : <>None printed</>)],
   ];
   return (
     <main id="main" className="wrap page">
@@ -87,9 +88,9 @@ export default function SiayaGovernance() {
             <ul className="how">
               {grp.findings.map((f) => (
                 <li key={f.id}>
-                  {f.quote ? <>&ldquo;{f.quote}&rdquo;</> : <b>{f.measure}:</b>}
+                  <Reviewed b={f.review}>{() => <>{f.quote ? <>&ldquo;{f.quote}&rdquo;</> : <b>{f.measure}:</b>}
                   {f.rows ? <> {f.rows.map((r) => `${r.output} (${Object.entries(r.targets).map(([y, v]) => `${v} in ${y}`).join(', ')})`).join('; ')}.</> : null}
-                  {f.also ? <> {f.also}</> : null}
+                  {f.also ? <> {f.also}</> : null}</>}</Reviewed>
                   {f.note ? <> Note: {f.note}</> : null}
                   <br /><small className="cite">{f.section}, {aprmPage(f)}</small>
                 </li>

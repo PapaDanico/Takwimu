@@ -3,7 +3,8 @@ import PageHead from '../../../../components/PageHead';
 import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
-import e from '../../../../data/siaya-education.json';
+import { masked } from '../../../../lib/review-status';
+const e = masked('siaya-education');
 
 export const metadata = {
   title: 'Education in Siaya',

@@ -3,6 +3,7 @@ import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { LineChart, ColumnChart } from '../../../../components/Charts';
 import { economy } from '../../../../lib/economy';
+import Reviewed from '../../../../components/Reviewed';
 
 export const metadata = {
   title: 'Siaya’s economy',
@@ -29,15 +30,15 @@ export default function SiayaEconomy() {
         <h2 id="eco-what">What this measures, and what it does not</h2>
         <ul className="how">
           <li id="not-revenue"><b>County output is not county government revenue.</b> Gross County Product (GCP) is the value added by every farm, business, school, clinic and public office located in Siaya. It is not the county government’s revenue, budget or spending, which are on the <Link href="/counties/siaya/">Siaya County hub</Link>.</li>
-          <li><b>No share of national GDP is published.</b> Neither edition gives Siaya’s share of Kenya’s GDP. What KNBS publishes is Siaya’s share of the value added by all 47 counties together: {s25.value}% on average over {s25.period} (<Cite c={s25.cite} />) and {s24.value}% over {s24.period} (<Cite c={s24.cite} />).</li>
-          <li><b>Annual real growth is not published.</b> KNBS gives only an average for each five-year window, read from a chart: {g25.value}% a year for {g25.period} (<Cite c={g25.cite} />) and {g24.value}% a year for {g24.period} (<Cite c={g24.cite} />). The windows and editions differ, so the two averages are not a trend, and KNBS does not state how the average is computed. No year-by-year rate is calculated here.</li>
+          <li><b>No share of national GDP is published.</b> Neither edition gives Siaya’s share of Kenya’s GDP. What KNBS publishes is Siaya’s share of the value added by all 47 counties together: <Reviewed b={s25.review}>{s25.value}%</Reviewed> on average over {s25.period} (<Cite c={s25.cite} />) and <Reviewed b={s24.review}>{s24.value}%</Reviewed> over {s24.period} (<Cite c={s24.cite} />).</li>
+          <li><b>Annual real growth is not published.</b> KNBS gives only an average for each five-year window, read from a chart: <Reviewed b={g25.review}>{g25.value}%</Reviewed> a year for {g25.period} (<Cite c={g25.cite} />) and <Reviewed b={g24.review}>{g24.value}%</Reviewed> a year for {g24.period} (<Cite c={g24.cite} />). The windows and editions differ, so the two averages are not a trend, and KNBS does not state how the average is computed. No year-by-year rate is calculated here.</li>
           <li>These figures describe the county economy. They are not a judgement of the county government or of any person.</li>
         </ul>
       </section>
 
       <section className="card" aria-labelledby="eco-current">
         <h2 id="eco-current">Total output at current prices</h2>
-        <p className="lead">GCP in KSh million, at the prices of each year, so part of the rise is inflation. In {e.latestYear} the GCP 2025 edition puts Siaya’s output at KSh {n(e.latestTotal.value)} million{e.latestTotal.provisional ? ' (provisional)' : ''}. Each edition is its own line; the table view gives every value.</p>
+        <p className="lead">GCP in KSh million, at the prices of each year, so part of the rise is inflation. In {e.latestYear} the GCP 2025 edition puts Siaya’s output at <Reviewed b={e.latestTotal.review}>{() => <>KSh {n(e.latestTotal.value)} million</>}</Reviewed>{e.latestTotal.provisional ? ' (provisional)' : ''}. Each edition is its own line; the table view gives every value.</p>
         <LineChart labels={e.years} unit="KSh million" yFormat="int" naText="Not in this edition"
           ariaLabel={`Siaya Gross County Product at current prices, ${e.years[0]} to ${e.years[e.years.length - 1]}, KSh million, by KNBS edition`}
           series={e.current.map((s, i) => ({ name: s.name, color: i + 1, dash: i === 1, values: s.values }))} />
@@ -55,7 +56,7 @@ export default function SiayaEconomy() {
 
       <section className="card" aria-labelledby="eco-sectors">
         <h2 id="eco-sectors">What Siaya produced in {e.latestYear}, by activity</h2>
-        <p className="lead">Gross value added by economic activity, current prices, KSh million, largest first. Agriculture, forestry and fishing is the largest at KSh {n(e.activities[0].value)} million. Not shown in the chart: an adjustment for financial services (FISIM) of KSh {n(e.fisim.value)} million; with it, the activities add to the printed GCP of KSh {n(e.annex.value)} million.</p>
+        <p className="lead">Gross value added by economic activity, current prices, KSh million, largest first. Agriculture, forestry and fishing is the largest at <Reviewed b={e.activities[0].review}>{() => <>KSh {n(e.activities[0].value)} million</>}</Reviewed>. Not shown in the chart: an adjustment for financial services (FISIM) of <Reviewed b={e.fisim.review}>{() => <>KSh {n(e.fisim.value)} million</>}</Reviewed>; with it, the activities add to the printed GCP of <Reviewed b={e.annex.review}>{() => <>KSh {n(e.annex.value)} million</>}</Reviewed>.</p>
         <ColumnChart labels={e.activities.map((a) => a.short)} unit="KSh million" yFormat="int"
           ariaLabel={`Siaya gross value added by economic activity, ${e.latestYear}, current prices, KSh million`}
           series={[{ name: `Value added, ${e.latestYear}`, color: 1, values: e.activities.map((a) => a.value) }]} />
@@ -74,9 +75,9 @@ export default function SiayaEconomy() {
                 <tr key={`${r.price_basis}${r.period}`}>
                   <th scope="row">{r.period}</th>
                   <td>{r.price_basis === 'current' ? 'Current' : 'Constant 2016'}</td>
-                  <td>{n(r.earlier_value)}<br /><small>{r.earlier.table.split(':')[0]}, {r.earlier.page}, confidence {r.earlier.confidence}</small></td>
-                  <td>{n(r.later_value)}<br /><small>{r.later.table.split(':')[0]}, {r.later.page}, confidence {r.later.confidence}</small></td>
-                  <td>{signed(r.difference)} ({r.difference_pct > 0 ? '+' : ''}{r.difference_pct.toFixed(1)}%)</td>
+                  <td><Reviewed b={r.earlierReview}>{() => n(r.earlier_value)}</Reviewed><br /><small>{r.earlier.table.split(':')[0]}, {r.earlier.page}, confidence {r.earlier.confidence}</small></td>
+                  <td><Reviewed b={r.laterReview}>{() => n(r.later_value)}</Reviewed><br /><small>{r.later.table.split(':')[0]}, {r.later.page}, confidence {r.later.confidence}</small></td>
+                  <td>{r.withheld ? <span className="muted withheld">Withheld: {r.withheld.reason}</span> : <>{signed(r.difference)} ({r.difference_pct > 0 ? '+' : ''}{r.difference_pct.toFixed(1)}%)</>}</td>
                 </tr>
               ))}
             </tbody>

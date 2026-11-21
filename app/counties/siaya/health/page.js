@@ -3,7 +3,8 @@ import PageHead from '../../../../components/PageHead';
 import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
-import h from '../../../../data/siaya-health.json';
+import { masked } from '../../../../lib/review-status';
+const h = masked('siaya-health');
 
 export const metadata = {
   title: 'Health in Siaya',

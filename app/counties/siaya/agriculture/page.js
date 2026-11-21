@@ -3,7 +3,8 @@ import PageHead from '../../../../components/PageHead';
 import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
-import a from '../../../../data/siaya-agriculture.json';
+import { masked } from '../../../../lib/review-status';
+const a = masked('siaya-agriculture');
 
 export const metadata = {
   title: 'Agriculture in Siaya',

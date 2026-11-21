@@ -3,6 +3,7 @@
 // category for the chosen year and entity, with a table view. Choices are held in memory only: nothing is stored or sent.
 import { useId, useState } from 'react';
 import { ColumnChart } from './Charts';
+import Reviewed from './Reviewed';
 
 export default function AuditExplorer({ findings, entities, categories, years }) {
   const uid = useId();
@@ -62,7 +63,7 @@ export default function AuditExplorer({ findings, entities, categories, years })
               <dl>
                 <dt>Report</dt><dd><a href={f.url} rel="noopener">{f.doc}</a>, PDF p. {f.page}, paragraph {f.paragraph}</dd>
                 <dt>Section</dt><dd>{f.section}{f.heading ? <> (the report&rsquo;s own heading: &ldquo;{f.heading}&rdquo;)</> : null}</dd>
-                <dt>Amounts as printed</dt><dd>{f.amounts.length ? f.amounts.join('; ') : 'None printed'}</dd>
+                <dt>Amounts as printed</dt><Reviewed b={f.review} as="dd">{f.amounts.length ? f.amounts.join('; ') : 'None printed'}</Reviewed>
                 {f.prior ? <><dt>Earlier year</dt><dd>The report says this dates from an earlier year: {f.prior}</dd></> : null}
                 {f.next ? <><dt>Next report</dt><dd>Listed as unresolved in the following year&rsquo;s report</dd></> : null}
                 {f.note ? <><dt>Note</dt><dd>{f.note}</dd></> : null}

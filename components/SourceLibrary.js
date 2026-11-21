@@ -69,6 +69,7 @@ export default function SourceLibrary({ documents }) {
                 {d.sha256 ? <><dt>File</dt><dd>{d.file_type}, {sizeOf(d.bytes)}, SHA-256 <code title={d.sha256}>{short(d.sha256)}</code></dd></> : null}
                 <dt>Licence</dt><dd>{d.licence}{d.redistribution_conditions ? ` (${d.redistribution_conditions})` : ''}</dd>
                 <dt>Review</dt><dd>{d.review_status}</dd>
+                {d.values_review ? <><dt>Values</dt><dd>{d.values_review.total} values on this site cite this document: {d.values_review.approved} approved, {d.values_review.pending} provisional (awaiting editorial review), {d.values_review.rejected} withdrawn{d.values_review.disputed ? `, ${d.values_review.disputed} disputed` : ''}.{d.values_review.withdrawn.map((w) => <span key={w.key} className="withheld" data-obs={w.key} data-obs-state="rejected"> Withdrawn: <code>{w.key}</code> ({w.reason})</span>)}</dd></> : null}
               </dl>
               <div className="ds-links">
                 <a href={d.source_url} rel="noopener" aria-label={`Original: ${d.title}`}>Original</a>

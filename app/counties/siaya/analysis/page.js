@@ -4,7 +4,11 @@ import TableWrap from '../../../../components/TableWrap';
 import { LineChart } from '../../../../components/Charts';
 import CalcTable from '../../../../components/CalcTable';
 import { Provisional, ReviewCounts } from '../../../../components/ObsTable';
-import a from '../../../../data/siaya-analysis.json';
+import { masked, badge } from '../../../../lib/review-status';
+import Reviewed from '../../../../components/Reviewed';
+
+// Masked: a result is withheld (null) when the calculation or any of its inputs was rejected in editorial review.
+const a = masked('siaya-analysis');
 
 export const metadata = {
   title: 'Siaya analysis',
@@ -45,7 +49,7 @@ const a3DevSeries = [['Recalculated, Controller of Budget reports', true], ['Rec
 const printedOf = (r) => (r.beside || []).filter((b) => b.role === 'printed_rate').map((b) => b.value);
 const Cell = ({ rs }) => (rs.length ? rs.map((r) => (
   <div key={r.calc_id}>
-    {r.status === 'gap' ? <span className="muted">Gap</span> : <b>{r.result}%</b>}
+    {r.status === 'gap' ? <span className="muted">Gap</span> : <Reviewed b={badge('siaya-analysis', r.calc_id)}>{() => <b>{r.result}%</b>}</Reviewed>}
     {printedOf(r).length ? <> · printed {uniq(printedOf(r)).join(' and ')}%</> : null}
     <br /><small><code>{r.calc_id}</code></small>
   </div>
@@ -132,7 +136,7 @@ export default function SiayaAnalysis() {
             <thead><tr><th scope="col">Category</th>{a5Cols.map((c) => { const [e, fy] = c.split('|'); return <th key={c} scope="col">{fy}<br /><small>{ENT[e] || e}</small></th>; })}</tr></thead>
             <tbody>
               {a5Cats.map((cat) => (
-                <tr key={cat}><th scope="row">{cat.replace(/_/g, ' ')}</th>{a5Cols.map((c) => { const [e, fy] = c.split('|'); const r = a5Cat.find((x) => x.flags.category === cat && x.flags.entity === e && x.flags.fy === fy); return <td key={c} title={r ? r.calc_id : undefined}>{r ? r.result : '·'}</td>; })}</tr>
+                <tr key={cat}><th scope="row">{cat.replace(/_/g, ' ')}</th>{a5Cols.map((c) => { const [e, fy] = c.split('|'); const r = a5Cat.find((x) => x.flags.category === cat && x.flags.entity === e && x.flags.fy === fy); return r ? <Reviewed key={c} as="td" title={r.calc_id} b={badge('siaya-analysis', r.calc_id)}>{r.result}</Reviewed> : <td key={c}>·</td>; })}</tr>
               ))}
             </tbody>
           </table>

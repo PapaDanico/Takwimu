@@ -3,7 +3,9 @@ import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import ObsTable, { Cite, Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
-import c from '../../../../data/siaya-climate.json';
+import { masked, badge } from '../../../../lib/review-status';
+import Reviewed from '../../../../components/Reviewed';
+const c = masked('siaya-climate');
 
 export const metadata = {
   title: 'Climate, water and resilience',
@@ -57,7 +59,7 @@ export default function SiayaClimate() {
                 <tr key={o.id}>
                   <th scope="row">{o.ward_register_name}<br /><small>{o.sub_county}{o.spelling_note ? `; ${o.spelling_note}` : ''}</small></th>
                   <td>{o.hazard}</td>
-                  <td>{o.hotspots_as_printed}</td>
+                  <Reviewed b={badge('siaya-climate', o.id)} as="td">{o.hotspots_as_printed}</Reviewed>
                   <td><small>{o.rank_as_printed}</small></td>
                   <td><Cite id={o.source_id} page={o.pdf_page} printed={o.printed_page} confidence={o.confidence} /></td>
                 </tr>
@@ -84,7 +86,7 @@ export default function SiayaClimate() {
               {water.observation_ids.map((id) => { const o = byId[id]; return (
                 <tr key={id}>
                   <th scope="row">{o.measure}<br /><small>{o.period}; {o.area_as_printed}</small></th>
-                  <td>{o.value === null ? o.value_text : `${o.value.toLocaleString('en-US')} ${o.unit}`}</td>
+                  <Reviewed b={badge('siaya-climate', id)} as="td">{() => (o.value === null ? o.value_text : `${o.value.toLocaleString('en-US')} ${o.unit}`)}</Reviewed>
                   <td><small>{o.definition}</small></td>
                   <td><Cite id={o.source_id} table={o.table} page={o.pdf_page} printed={o.printed_page} confidence={o.confidence} /></td>
                 </tr>

@@ -5,22 +5,26 @@
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
-import history from '../../data/history.json';
-import ledger from '../../data/siaya-fiscal-ledger.json';
-import economy from '../../data/siaya-economy.json';
-import health from '../../data/siaya-health.json';
-import education from '../../data/siaya-education.json';
-import agriculture from '../../data/siaya-agriculture.json';
-import climate from '../../data/siaya-climate.json';
-import projects from '../../data/siaya-projects.json';
-import governance from '../../data/siaya-governance.json';
-import programmes from '../../data/siaya-programmes.json';
-import audits from '../../data/siaya-audits.json';
-import analysis from '../../data/siaya-analysis.json';
+import { masked, badge, idAt } from '../../lib/review-status';
 import geography from '../../data/siaya-geography.json';
-import cob from '../../data/counties-cob.json';
 import library from '../../data/source-library.json';
 import registry from './reports.json';
+
+// Every data file with itemised observations is read through lib/review-status.js masked(): a value rejected in
+// editorial review (or derived from a rejected input) is already null here, and fig() carries its review badge.
+const history = masked('history');
+const ledger = masked('siaya-fiscal-ledger');
+const economy = masked('siaya-economy');
+const health = masked('siaya-health');
+const education = masked('siaya-education');
+const agriculture = masked('siaya-agriculture');
+const climate = masked('siaya-climate');
+const projects = masked('siaya-projects');
+const governance = masked('siaya-governance');
+const programmes = masked('siaya-programmes');
+const audits = masked('siaya-audits');
+const analysis = masked('siaya-analysis');
+const cob = masked('counties-cob');
 
 export const DATA = {
   'history.json': history, 'siaya-fiscal-ledger.json': ledger, 'siaya-economy.json': economy, 'siaya-health.json': health,
@@ -53,9 +57,16 @@ export function find(file, arrPath, pred) {
 }
 export const each = (file, arrPath, pred = () => true) => get(file, arrPath).map((r, i) => [r, `${arrPath}/${i}`]).filter(([r]) => pred(r));
 
-// A figure is reviewed only when its record carries an approval with a reviewer and a date (owner rule,
-// 21 Nov 2026). No record in the data files has one yet, so every figure is provisional.
-export const isReviewed = (rec) => !!(rec && rec.review && rec.review.decision === 'approved' && rec.review.reviewer && rec.review.reviewed_at);
+// A figure's review state comes from data/reviews.json through lib/review-status.js: it counts as reviewed only when
+// an approved record in force names its observation (and the source hash still matches). Until then every figure
+// is provisional. An input of a calculation that was rejected is withheld like the value itself.
+const WITHHELD_INPUT = { state: 'rejected', label: 'Withdrawn after editorial review', reason: 'This input was withdrawn after editorial review.', hide: true, approved: false, href: null, fromRecord: true };
+export function reviewOf(file, ptr, rec) {
+  const id = idAt(file, ptr);
+  const b = id ? badge(file.replace(/\.json$/, ''), id) : null;
+  if (rec && rec.withheld) return { ...WITHHELD_INPUT, key: b ? b.key : `${file.replace(/\.json$/, '')}:${ptr}` };
+  return b;
+}
 export const PROVISIONAL = 'Provisional: awaiting editorial review';
 
 // fig(file, pointer-to-value, overrides). Metadata comes from the record that holds the value unless overridden.
@@ -76,7 +87,8 @@ export function fig(file, ptr, o = {}) {
     confidence: pick(o.confidence, rec.confidence, null),
     note: o.note || null,
     suppress: !!(o.suppressSmall && typeof value === 'number' && value < 10 && /^(persons|people|patients|cases|deaths|children|youth|students|pupils|trainees|women|men|beneficiaries)/i.test(String(pick(o.unit, rec.unit, '')))),
-    reviewed: isReviewed(o.reviewRec || rec),
+    review: reviewOf(file, ptr, rec),
+    reviewed: Boolean((reviewOf(file, ptr, rec) || {}).approved),
   };
 }
 

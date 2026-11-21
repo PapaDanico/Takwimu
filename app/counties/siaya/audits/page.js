@@ -1,4 +1,5 @@
 import { Provisional } from '../../../../components/ObsTable';
+import Reviewed from '../../../../components/Reviewed';
 import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
@@ -14,7 +15,8 @@ const a = audits();
 const years = YEARS.filter((fy) => a.findings.some((f) => f.fy === fy));
 const entities = Object.fromEntries(Object.entries(ENTITY).filter(([k]) => a.findings.some((f) => f.entity === k)));
 const Cite = ({ c }) => (c.url ? <small className="cite"><a href={c.url} rel="noopener">{c.doc}</a>{c.page ? `, PDF p. ${c.page}` : ''}{c.confidence ? `, confidence ${c.confidence}` : ''}</small> : null);
-const Opinion = ({ c }) => {
+const Opinion = ({ c }) => (c.review ? <Reviewed b={c.review}>{() => <OpinionText c={c} />}</Reviewed> : <OpinionText c={c} />);
+const OpinionText = ({ c }) => {
   if (c.opinion) return <><b>{c.opinion}</b>{c.findings ? ` · ${c.findings} findings recorded` : ''}<br /><Cite c={c} />{c.note ? <><br /><small>{c.note}</small></> : null}</>;
   if (c.url) return <>{c.note || 'No opinion printed'}{c.findings ? ` · ${c.findings} findings recorded` : ''}<br /><Cite c={c} /></>;
   return <span className="muted">No report found{c.reason ? <><br /><small>{c.reason}</small></> : null}</span>;
@@ -49,7 +51,7 @@ export default function SiayaAudits() {
             <thead><tr><th scope="col">Fiscal year</th><th scope="col">County Executive</th><th scope="col">County Assembly</th></tr></thead>
             <tbody>
               {a.whole.map((w) => (
-                <tr key={`w${w.fy}`}><th scope="row">FY {w.fy}, whole county government (16 months)</th><td colSpan={2}><b>{w.opinion}</b> · {w.findings} findings recorded<br /><Cite c={{ ...w, confidence: null }} /></td></tr>
+                <tr key={`w${w.fy}`}><th scope="row">FY {w.fy}, whole county government (16 months)</th><td colSpan={2}><Reviewed b={w.review}>{() => <><b>{w.opinion}</b> · {w.findings} findings recorded<br /><Cite c={{ ...w, confidence: null }} /></>}</Reviewed></td></tr>
               ))}
               {a.opinions.map((r) => <tr key={r.fy}><th scope="row">FY {r.fy}</th><td><Opinion c={r.executive} /></td><td><Opinion c={r.assembly} /></td></tr>)}
             </tbody>
@@ -99,14 +101,14 @@ export default function SiayaAudits() {
             {e.groups.map((g) => (
               <details key={g.fy}>
                 <summary>FY {g.fy}: {g.items.length} matters listed as unresolved in the FY {`${+g.fy.slice(0, 4) + 1}/${String(+g.fy.slice(5) + 1).padStart(2, '0')}`} report</summary>
-                <ul className="how">{g.items.map((f) => <li key={f.id}>{f.title} <small className="cite">(<a href={f.url} rel="noopener">FY {f.fy} report</a>, PDF p. {f.page}, paragraph {f.paragraph})</small></li>)}</ul>
+                <ul className="how">{g.items.map((f) => <li key={f.id}><Reviewed b={f.review}>{f.title}</Reviewed> <small className="cite">(<a href={f.url} rel="noopener">FY {f.fy} report</a>, PDF p. {f.page}, paragraph {f.paragraph})</small></li>)}</ul>
               </details>
             ))}
           </div>
         ))}
         <h3 id="carry-prior">Matters the report says date from an earlier year</h3>
         <ul className="how">
-          {a.carried.prior.map((f) => <li key={f.id}><b>{ENTITY[f.entity]}, FY {f.fy}:</b> {f.title}. <small>The report says: {f.prior}.</small> <small className="cite">(<a href={f.url} rel="noopener">report</a>, PDF p. {f.page})</small></li>)}
+          {a.carried.prior.map((f) => <li key={f.id}><b>{ENTITY[f.entity]}, FY {f.fy}:</b> <Reviewed b={f.review}>{f.title}</Reviewed>. <small>The report says: {f.prior}.</small> <small className="cite">(<a href={f.url} rel="noopener">report</a>, PDF p. {f.page})</small></li>)}
         </ul>
         <h3 id="carry-same">The same contract or requirement reported in more than one year</h3>
         <ul className="how">

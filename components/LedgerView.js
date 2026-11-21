@@ -4,6 +4,7 @@
 // chosen. The choice is held in memory only: nothing is stored or sent.
 import { useId, useState } from 'react';
 import TableWrap from './TableWrap';
+import Reviewed from './Reviewed';
 
 const num = (v) => v.toLocaleString('en-US', { maximumFractionDigits: 2 });
 const amount = (o) => (o.unit === 'KSh billion' ? `KSh ${num(o.value)} billion` : `KSh ${num(o.value)} million`);
@@ -12,7 +13,7 @@ const pages = (o) => `PDF p. ${o.pdf_page}${o.printed_page ? ` (printed p. ${o.p
 function Value({ o }) {
   return (
     <div className="lv">
-      <b>{amount(o)}</b>
+      <Reviewed b={o.review}>{() => <b>{amount(o)}</b>}</Reviewed>
       <small className="cite"> <a href={o.url} rel="noopener">{o.source}</a>, {pages(o)}{o.table ? `, ${o.table}` : ''}. {o.read}, confidence {o.confidence}.</small>
       {o.version ? <small> Budget version: {o.version}.</small> : null}
       {o.basis ? <small> Basis: {o.basis}.</small> : null}
@@ -61,11 +62,11 @@ export default function LedgerView({ measures, kinds, values, cases, initial }) 
         <ol className="ds-list" id="led-case-list">
           {open.map((c) => (
             <li key={c.id} className="ds" id={c.id}>
-              <h4>{c.period}: {num(c.a_m)} against {num(c.b_m)} (KSh million)</h4>
+              <h4>{c.period}: {c.withheld ? 'amounts withheld' : <>{num(c.a_m)} against {num(c.b_m)} (KSh million)</>}</h4>
               <dl>
-                <dt>Claim A</dt><dd>{amount(c.a)}, <a href={c.a.url} rel="noopener">{c.a.source}</a>, {pages(c.a)}{c.a.printed ? <> (printed: &ldquo;{c.a.printed}&rdquo;)</> : null}</dd>
-                <dt>Claim B</dt><dd>{amount(c.b)}, <a href={c.b.url} rel="noopener">{c.b.source}</a>, {pages(c.b)}{c.b.printed ? <> (printed: &ldquo;{c.b.printed}&rdquo;)</> : null}</dd>
-                <dt>Difference</dt><dd>KSh {num(c.diff)} million, {num(c.pct)} per cent of the smaller value</dd>
+                <dt>Claim A</dt><dd><Reviewed b={c.a.review}>{() => amount(c.a)}</Reviewed>, <a href={c.a.url} rel="noopener">{c.a.source}</a>, {pages(c.a)}{c.a.printed ? <> (printed: &ldquo;{c.a.printed}&rdquo;)</> : null}</dd>
+                <dt>Claim B</dt><dd><Reviewed b={c.b.review}>{() => amount(c.b)}</Reviewed>, <a href={c.b.url} rel="noopener">{c.b.source}</a>, {pages(c.b)}{c.b.printed ? <> (printed: &ldquo;{c.b.printed}&rdquo;)</> : null}</dd>
+                <dt>Difference</dt><dd>{c.withheld ? `Withheld: ${c.withheld.reason}` : <>KSh {num(c.diff)} million, {num(c.pct)} per cent of the smaller value</>}</dd>
                 <dt>Possible basis mismatch</dt><dd><ul className="plain">{c.basis.map((b) => <li key={b}>{b}</li>)}</ul></dd>
                 <dt>Status</dt><dd>Open, not yet reviewed. Both values stand.</dd>
               </dl>
