@@ -43,6 +43,77 @@ const srv = http.createServer((req, res) => {
   const pulseDet = pg.locator('details.tableview').first();
   await pulseDet.locator('summary').click();
   check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'Fiscal Pulse chart has a table view');
+  // Siaya topic pages (health, education, agriculture, wards, climate, analysis): each loads, carries the provisional
+  // label, is linked from the hub, and every chart has a table view that opens with rows.
+  const TOPICS = { health: 2 + 1, education: 2, agriculture: 2, wards: 0, climate: 0, analysis: 3 };
+  for (const [slug, charts] of Object.entries(TOPICS)) {
+    const u = `/counties/siaya/${slug}/`;
+    const r = await pg.goto(base + u, { waitUntil: 'load' });
+    check(r.status() === 200 && (await pg.locator('main h1').count()) === 1, `${u} loads with one h1`);
+    check(/Provisional: awaiting editorial review/i.test(await pg.locator('main .provisional').first().innerText()), `${u}: labelled "Provisional: awaiting editorial review"`);
+    const figs = pg.locator('main figure.chart');
+    const n = await figs.count();
+    let tv = 0;
+    for (let i = 0; i < n; i += 1) {
+      const det = figs.nth(i).locator('details.tableview');
+      if (await det.count() === 1) { await det.locator('summary').click(); if (await det.locator('table.data tbody tr').count() >= 1) tv += 1; }
+    }
+    check(n === charts && tv === n, `${u}: ${charts} chart(s), each with a table view that opens with rows (found ${n}, ${tv} with tables)`);
+    check(await pg.locator('main td a[href^="https://"], main small.cite a[href^="https://"]').count() >= 1, `${u}: values link to their source documents`);
+  }
+  {
+    const hJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-health.json'), 'utf8'));
+    await pg.goto(base + '/counties/siaya/health/', { waitUntil: 'load' });
+    const other = await pg.locator('#hiv-other').innerText();
+    check(/Sentinel site: not county-representative/i.test(other) && /Secondary report/i.test(other), 'health: the sentinel-site value is flagged as not county-representative and the press figure as a secondary report');
+    check(await pg.locator('#hiv-rounds tbody tr').count() === hJson.observations.filter((o) => o.measure === 'hiv-prevalence' && o.geography === 'county' && o.confidence > 1).length && !/Sentinel/i.test(await pg.locator('#hiv-rounds').innerText()), 'health: HIV estimate rounds are listed one per row, without the sentinel-site value');
+    check(await pg.locator('#press tbody tr').count() >= 3 && await pg.locator('main .conflict').count() === hJson.conflicts.length, 'health: press figures listed as secondary reports; every conflict set shown side by side');
+    const eJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-education.json'), 'utf8'));
+    await pg.goto(base + '/counties/siaya/education/', { waitUntil: 'load' });
+    check(await pg.locator('#devolved tbody tr').count() === eJson.observations.filter((o) => o.function === 'devolved').length && await pg.locator('#national tbody tr').count() === eJson.observations.filter((o) => o.function === 'national').length, 'education: devolved and national functions in separate tables, every value listed');
+    check(await pg.locator('ol.conflicts > li.conflict').count() === 10, 'education: the ten source inconsistencies are shown side by side');
+    const aJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-agriculture.json'), 'utf8'));
+    await pg.goto(base + '/counties/siaya/agriculture/', { waitUntil: 'load' });
+    const tg = await pg.locator('#targets tbody tr').count();
+    check(tg === aJson.observations.filter((o) => o.status !== 'observed').length && !/Target, not observed/i.test(await pg.locator('#obs-crops').innerText()) && await pg.locator('#targets .tag').count() === tg, 'agriculture: targets only in their own labelled table, never with observed values');
+    check(await pg.locator('main .conflict').count() === aJson.conflicts.length, 'agriculture: unit conflicts shown side by side');
+    await pg.goto(base + '/counties/siaya/wards/', { waitUntil: 'load' });
+    check(await pg.locator('#constituencies tbody tr').count() === 6 && await pg.locator('#wards tbody tr').count() === 30, 'wards: registry lists 6 constituencies and 30 wards');
+    check(/not an official IEBC map/.test(await pg.locator('#ward-layer').innerText()) && /boundary changes since 2016 are not shown/.test(await pg.locator('#ward-layer').innerText()), 'wards: states the boundaries are the 2016 HDX layer, not an official IEBC map');
+    const wm = pg.locator('figure.wmap');
+    check(await wm.locator('path.wmap-ward').count() === 30, 'ward map: 30 ward shapes render');
+    const vb0 = await wm.locator('svg.wmap-svg').getAttribute('viewBox');
+    await wm.getByRole('button', { name: 'Zoom in' }).click();
+    const vb1 = await wm.locator('svg.wmap-svg').getAttribute('viewBox');
+    await wm.getByRole('button', { name: 'Zoom out' }).click();
+    const vb2 = await wm.locator('svg.wmap-svg').getAttribute('viewBox');
+    await wm.getByRole('button', { name: 'Zoom in' }).click();
+    await wm.getByRole('button', { name: 'Reset map view' }).click();
+    const vb3 = await wm.locator('svg.wmap-svg').getAttribute('viewBox');
+    check(vb1 !== vb0 && vb2 !== vb1 && vb3 === vb0, 'ward map: zoom in, zoom out and reset change the view');
+    const ward = wm.locator('path.wmap-ward').first();
+    await ward.focus();
+    check(await ward.evaluate((el) => el === document.activeElement && el.tabIndex >= 0) && /ward/i.test((await ward.getAttribute('aria-label')) || ''), 'ward map: a ward is keyboard-focusable with an accessible name');
+    await wm.locator('details.tableview summary').click();
+    check(await wm.locator('details.tableview table.data tbody tr').count() === 30 && /American Red Cross via HDX, CC BY, 2016/.test(await wm.innerText()), 'ward map: table view lists 30 wards; attribution shown');
+    const cJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-climate.json'), 'utf8'));
+    await pg.goto(base + '/counties/siaya/climate/', { waitUntil: 'load' });
+    check(/prints no ranking of wards/.test(await pg.locator('#no-ranking').innerText()) && await pg.locator('#no-table + ul li').count() === 7, 'climate: says the PCRA prints no ward ranking and lists the 7 wards with no table');
+    check(await pg.locator('#hotspots tbody tr').count() === cJson.observations.filter((o) => /^pcra-ward-/.test(o.series)).length && await pg.locator('#water-side tbody tr').count() >= 4, 'climate: every ward hotspot as printed; water figures side by side with definitions');
+    check(await pg.locator('div[id^="money-"]').count() === 4 && /never added together/.test(await pg.locator('#money-kinds').innerText()), 'climate: allocation, receipt, transfer and expenditure in separate tables');
+    check(/Flood impact counts/.test(await pg.locator('#gaps').innerText()) && /adaptation outcomes/.test(await pg.locator('#gaps').innerText()) && /Climate-tagged/.test(await pg.locator('#gaps').innerText()), 'climate: gaps listed (flood impact counts, adaptation outcomes, climate tagging)');
+    const mainC = await pg.locator('main').innerText();
+    check(!/(?:\+?254|\b0)[\s-]?7\d{2}[\s-]?\d{3}[\s-]?\d{3}\b/.test(mainC), 'climate: no phone numbers on the page (PCRA Annex 1 personal data never shown)');
+    const anJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-analysis.json'), 'utf8'));
+    await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
+    check(/Calculated by Takwimu Kenya from published figures/i.test(await pg.locator('#calc-label').innerText()) && /context, not causation/.test(await pg.locator('#context-not-causation').innerText()), 'analysis: calculated label and "context, not causation" shown');
+    check(await pg.locator('table.calc tbody tr').count() >= anJson.records.filter((r) => r.family !== 'A5' || r.flags.count_kind !== 'category' || r.status === 'gap').length && await pg.locator('#gap-list li').count() === anJson.records.filter((r) => r.status === 'gap').length, 'analysis: every record with its calc_id; every gap listed with its reason');
+    check(await pg.locator('main a[href="/counties/siaya/wards/"]').count() >= 1, 'analysis: climate finance links to the ward map');
+    await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
+    check(await Promise.all(Object.keys(TOPICS).map((s) => pg.locator(`main a[href="/counties/siaya/${s}/"]`).count())).then((c) => c.every((x) => x >= 1)), 'Siaya hub links to health, education, agriculture, wards, climate and analysis');
+    const sm = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+    check(Object.keys(TOPICS).every((s) => sm.includes(`/counties/siaya/${s}/`)), 'sitemap lists the six Siaya topic pages');
+  }
   // Siaya's economy (data/siaya-economy.json): two line charts and a column chart, each with a table view; revisions side by side.
   await pg.goto(base + '/counties/siaya/economy/', { waitUntil: 'load' });
   const ecoCharts = pg.locator('main figure.chart');

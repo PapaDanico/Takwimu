@@ -37,10 +37,15 @@ npm run build         # tests + validation + data publishing + next build + buil
 npm run typecheck     # tsc --noEmit
 NODE_PATH=$(npm root -g) node scripts/smoke-test.js dist   # end-to-end smoke test (global Playwright)
 npm run verify:repro  # two builds must be identical; prints "Reproducible"
+npm run qa:axe        # axe-core accessibility check of every sitemap page in dist/, light and dark (must report 0 violations)
+npm run qa:crawl      # crawl of every sitemap page: status, one h1, title, description, broken internal links
+npm run qa:overflow   # no horizontal overflow at phone and desktop widths
 npm run dev
 ```
 
-`npm run build` runs, in order: `test-analytics`, `validate-data` (provenance fields, JSON Schemas, sums, source-manifest SHA-256), `test-reconciliation` (one test per conflict case), `test-explore` (units), `test-derived`, `test-economy`, `test-governance`, `test-audits`, `test-fiscal-ledger`, `build-data`, `next build`, `check-built-html` (no `NaN`; gaps stay gaps). There is no hosted CI: run every gate locally before an upload.
+`npm run build` runs, in order: `test-analytics`, `validate-data` (provenance fields, JSON Schemas, sums, source-manifest SHA-256), `test-reconciliation` (one test per conflict case), `test-explore` (units), `test-derived`, `test-economy`, `test-governance`, `test-audits`, `test-fiscal-ledger`, `test-health`, `test-education`, `test-agriculture`, `test-geography`, `test-wards-geo`, `test-climate` (also checks that no phone or ID number from the PCRA's participant annex is extracted), `test-siaya-analysis`, `build-data`, `next build`, `check-built-html` (no `NaN`; gaps stay gaps). There is no hosted CI: run every gate locally before an upload.
+
+The `qa:*` scripts and the smoke test use Playwright (and axe-core for `qa:axe`) installed globally, not as project dependencies; the npm scripts set `NODE_PATH=$(npm root -g)` themselves, so install them once with `npm i -g playwright axe-core && npx playwright install chromium`. Run them after `npm run build`; they serve `dist/` locally.
 
 Brief PDF: after a build, `NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js`, then build again.
 
