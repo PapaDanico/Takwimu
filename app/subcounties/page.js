@@ -2,6 +2,7 @@ import PageHead from '../../components/PageHead';
 import BarList from '../../components/BarList';
 import { ColumnChart } from '../../components/Charts';
 import Donut from '../../components/Donut';
+import SiayaMap from '../../components/SiayaMap';
 import DataStamp from '../../components/DataStamp';
 import { shortDate } from '../../lib/format';
 import { SITE_UPDATED } from '../../lib/site';
@@ -45,6 +46,12 @@ export default function SubCounties() {
         <p className="finding">Growth between the two censuses ranges across the county. Faster growth means more demand for classrooms, clinics and water in that sub-county.</p>
         <BarList label="Population growth 2009 to 2019 by sub-county" unit="%" format={(v) => v.toFixed(1)} items={byGrowth.map((r) => ({ label: r.name, value: r.growth, sub: `${n(r.p09)} to ${n(r.population['2019'])}` }))} />
         <p className="how"><b>Note.</b> {hist.population.by_sub_county_2009.note}</p>
+      </section>
+
+      <section id="map" className="card" aria-labelledby="map-h">
+        <h2 id="map-h">Map of Siaya County</h2>
+        <p className="lead">The six sub-counties shaded by how many people live on each square kilometre at the 2019 census. Darker means more crowded. Bondo and Rarieda include shoreline on Lake Victoria; the lake itself is not drawn.</p>
+        <SiayaMap title="People per square kilometre, 2019" unit="per km²" ariaLabel="Map of Siaya County showing 2019 population density by sub-county" values={Object.fromEntries(sc.sub_counties.map((r) => [r.id, r.density_per_km2['2019']]))} />
       </section>
 
       <section id="size" className="card" aria-labelledby="s-h">
