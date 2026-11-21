@@ -38,7 +38,7 @@ const iyValue = (f) => (f.unit === '%' ? `${f.value}%` : `${f.unit} ${f.value.to
 
 export default function Home() {
   const osr = siaya.own_source_revenue;
-  const [primary, county] = osr.observations;
+  const [primary, county, report] = osr.observations;
   const budget = siaya.budget;
   const audit = siaya.audit;
   const [dev, rec] = budget.categories;
@@ -49,8 +49,9 @@ export default function Home() {
   const settledPct = Math.round((budget.pending_bills.settled_in_year_million / (budget.pending_bills.opening_30_jun_2024_billion * 1000)) * 100);
   const asOf = shortDate(primary.retrieved);
   const rows = [
-    { o: primary, label: 'Controller of Budget', sub: 'FY 2024/25 report', y: 28, verified: true },
-    { o: county, label: 'County statement', sub: 'per press, unverified', y: 84, verified: false },
+    { o: primary, label: 'Controller of Budget', sub: 'FY 2024/25 report', y: 20, verified: true },
+    { o: report, label: 'County Q4 report', sub: 'Treasury, Table 4', y: 72, verified: true },
+    { o: county, label: 'County statement', sub: 'per press, unverified', y: 124, verified: false },
   ];
   const auditAmber = audit.opinion !== 'Unqualified';
 
@@ -105,7 +106,7 @@ export default function Home() {
         <div className="tiles">
           <Tile label="Collected" value={fmt(primary.value)} unit="KSh million" note="Stated by the Controller of Budget, including KSh 199 million from health facilities." />
           <Tile label="Share of annual target" value={`${share}%`} tone="warn" note="The report states this. It implies a target of about KSh 929 million." />
-          <Tile label="County statement" value={fmt(county.value)} unit="KSh million" dashed tag="Unverified" note="Reported in the press. Not yet seen in a county document." />
+          <Tile label="County statement" value={fmt(county.value)} unit="KSh million" dashed tag="Unverified" note={`Reported in the press. The county's own Q4 report gives KSh ${fmt(report.value)} million instead.`} />
           <Tile label="Share of approved budget" value={`${ofBudgetPct.toFixed(1)}%`} note={`Derived: ${fmt(primary.value)} million divided by the KSh ${budget.approved_total} billion approved budget.`} />
         </div>
 
@@ -115,7 +116,7 @@ export default function Home() {
             <span className="tag warn">Sources disagree</span>
           </div>
           <p className="units">Nominal KSh million.</p>
-          <svg viewBox="0 0 640 160" role="img" aria-label={`Bar chart: Controller of Budget reports ${primary.value} million shillings. County statement says ${county.value} million shillings, unverified.`}>
+          <svg viewBox="0 0 640 212" role="img" aria-label={`Bar chart: Controller of Budget reports ${fmt(primary.value)} million shillings. The county's fourth-quarter report gives ${fmt(report.value)} million shillings. County statement in the press says ${fmt(county.value)} million shillings, unverified.`}>
             <defs>
               <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
                 <rect width="6" height="6" fill="var(--sand-50)" />
@@ -124,8 +125,8 @@ export default function Home() {
             </defs>
             {ticks.map((t) => (
               <g key={t}>
-                <line x1={xFor(t)} x2={xFor(t)} y1="10" y2="124" stroke="var(--rule)" strokeWidth="1" />
-                <text x={xFor(t)} y="142" textAnchor="middle">{t.toLocaleString('en-US')}</text>
+                <line x1={xFor(t)} x2={xFor(t)} y1="10" y2="176" stroke="var(--rule)" strokeWidth="1" />
+                <text x={xFor(t)} y="194" textAnchor="middle">{t.toLocaleString('en-US')}</text>
               </g>
             ))}
             <g className="bars">
@@ -169,12 +170,14 @@ export default function Home() {
             </TableWrap>
           </details>
           <div className="src">
-            Sources: <a href={primary.source_url}>{primary.source}</a>; <a href={county.source_url}>{county.source}</a>. Retrieved {asOf}.
+            Sources: <a href={primary.source_url}>{primary.source}</a>; <a href={report.source_url}>{report.source}</a> (PDF page 6, read from the text layer, retrieved {shortDate(report.retrieved)}); <a href={county.source_url}>{county.source}</a>. Retrieved {asOf}.
             <br />
-            Notes: the solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh 199 million from health facilities).
+            Notes: the first solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh 199 million from health facilities).
             The report calls this 2 per cent more than KSh {fmt(osr.previous_year.value)} million in FY 2023/24, but the previous year&apos;s report gave KSh 610.74 million for that year (see the trend below).
             It is {share} per cent of the annual target, which implies a target of about KSh 929 million. The budget financing counted about KSh {osr.target.value.toLocaleString('en-US')} million of own-source revenue, and the report does not explain the difference.
-            The hatched bar is unverified, and it is close to the implied target, which may explain it but is not established. The figures are not averaged.
+            The second solid bar is the county treasury&apos;s own fourth-quarter report: KSh 236.50 million into the County Revenue Fund plus KSh 521.07 million collected and spent at source, mostly at health facilities, against a target of KSh 1,044 million. It is unaudited.
+            The hatched bar is the county statement reported in the press. It does not match the county&apos;s own report, and what it counts is not established.
+            The three figures are shown side by side, not averaged, and we do not say which is right. See the <Link href="/data/#conflicts">conflict register</Link>, case osr-2024-25-county-statement.
           </div>
         </figure>
         <div className="takeaway"><b>What this means:</b> a gap like this usually means the two figures count different things, such as cash collected against revenue billed, or different reporting dates. Check the definition before the number.</div>

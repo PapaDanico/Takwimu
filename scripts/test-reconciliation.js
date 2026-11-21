@@ -292,6 +292,8 @@ test('conflict osr-2024-25-county-statement: Controller of Budget Table 2.1 tota
   ok(c.status === 'open' && c.verification_state === 'unresolved_no_reviewer', 'case must stay open with no reviewer');
   ok(cobSiaya('2024/25', 'total_osr_actual').value === 436.68 && near(siaya.own_source_revenue.observations[0].value, 436.68, 1e-9), 'Table 2.1 and the hub should read 436.68');
   ok(listed('osr-2024-25-county-statement', 757.570621) && near(236.502391 + 521.068230, 757.570621, 1e-6), 'county Q4 report: CRF plus A-i-A should be listed as 757.57');
+  const rep = siaya.own_source_revenue.observations.find((o) => /Table 4/.test(o.source));
+  ok(rep && rep.source_url === 'https://siaya.go.ke/?cgdp_download=31530' && near(rep.value, 757.570621, 1e-9) && /page 6/.test(rep.page), 'the hub should show the county Q4 report total beside the Controller of Budget figure, with its page');
   // The fifteen revenue streams in the Kenya News Agency article add up to the stated total (KSh).
   const streams = [19150691, 3439365, 151563105.5, 4701280, 10248810, 6169641, 11671066, 25608268, 33462668.4, 17629219, 14243660, 643174553, 2063050, 2128550, 1639513.5];
   ok(near(streams.reduce((t, v) => t + v, 0), 946893440.4, 0.01), 'article streams should add to KSh 946,893,440.40');

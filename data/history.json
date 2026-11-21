@@ -1669,7 +1669,9 @@
           "year": 2013,
           "value": 23.7,
           "national": 6.04,
-          "vintage": "NACC estimates 2015 vintage",
+          "vintage": "Kenya HIV Estimates, 2013 column, as quoted in the Siaya County HIV and AIDS Strategic Plan",
+          "document": "Siaya County HIV and AIDS Strategic Plan (2015/16 - 2018/2019), Table 1: HIV epidemic situation in Siaya County, PDF page 16 (printed page 3)",
+          "note": "The plan's own text on the same page gives 21.4% for 2013 and 23.7% for 2014, while its Table 1 prints 23.7% under 2013. The table value is kept; the year is flagged as uncertain, not corrected.",
           "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf",
           "confidence": 4
         },
@@ -1677,7 +1679,8 @@
           "year": 2015,
           "value": 24.8,
           "national": 5.9,
-          "vintage": "Kenya HIV County Profiles 2016",
+          "vintage": "Kenya HIV Estimates 2015, as quoted in the Siaya County HIV and AIDS Strategic Plan",
+          "document": "Siaya County HIV and AIDS Strategic Plan (2015/16 - 2018/2019), Table 1: HIV epidemic situation in Siaya County, PDF page 16 (printed page 3); the executive summary cites Kenya HIV Estimates, 2015 for 24.8%",
           "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf",
           "confidence": 4
         },

@@ -24,12 +24,27 @@
       },
       {
         "value": 946,
-        "source": "Siaya County Secretary statement, as reported by K24 Digital",
+        "source": "Siaya County Government statement, as reported by K24 Digital",
         "source_url": "https://k24.digital/411/siaya-responds-after-being-ranked-lowest-in-own-revenue-collection/amp",
         "retrieved": "2026-11-20",
         "confidence": 2,
         "status": "unverified",
-        "note": "Other statements say the county raised over KSh 900 million. The county's own document has not been read, so what it counts is unknown. The figure is close to the annual target implied by the Controller of Budget report (about KSh 929 million), which may explain it, but that is not established."
+        "period": "FY 2024/25 (July 2024 to June 2025)",
+        "unit": "KSh million",
+        "note": "Press report of a county statement. Kenya News Agency (20 September 2025) gives the statement's exact figure, KSh 946,893,440.40 against a target of KSh 1,044,061,306. The county's own fourth-quarter budget implementation report gives a different total, KSh 757.57 million (next row), so the statement's figure is not found in that county document; what it counts is not established. See conflict case osr-2024-25-county-statement."
+      },
+      {
+        "value": 757.570621,
+        "source": "County Government of Siaya, County Treasury, Budget Implementation Report for 4th Quarter ending June 2025, Table 4 (Summary of OSR performance), Total OSR row",
+        "source_url": "https://siaya.go.ke/?cgdp_download=31530",
+        "retrieved": "2026-11-21",
+        "confidence": 4,
+        "status": "primary-document",
+        "period": "FY 2024/25, year to 30 June 2025",
+        "unit": "KSh million",
+        "page": "Table 4 runs over PDF pages 4 to 6 (printed Page 4 to 6 of 8); the Total OSR row is on PDF page 6. The same total appears in Table 2 on PDF page 3.",
+        "read_method": "Read from the PDF's text layer (pdftotext); the file is not a scan, so no OCR was needed. SHA-256 348d0bb6f96e1154e630adf2c0a47ac6c40fe13a2dd37c640234bb9dfee81393 (source library record GOV-02-FY2024-25-Q4).",
+        "note": "Total OSR KSh 757,570,621: KSh 236,502,391 into the County Revenue Fund plus KSh 521,068,230 appropriations-in-aid (hospital revenue including SHA/SHIF 430,448,878; Linda Mama 6,335,232; NHIF/capitation 77,452,520; liquor licensing 6,831,600). Against original estimates of KSh 1,044,061,306; supplementary estimates were KSh 1,669,374,897. The report states 68 per cent of target; 757.57 of 1,044.06 is 72.6 per cent and of 1,669.37 is 45.4 per cent, so the stated 68 is quoted, not recomputed. Unaudited county report. Shown beside the Controller of Budget figure and the press statement; the three are not averaged and Takwimu does not say which is right."
       }
     ],
     "previous_year": {

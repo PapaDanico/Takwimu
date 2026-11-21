@@ -189,7 +189,7 @@
    "bytes": 393730,
    "file_type": "PDF",
    "retrieval_status": "downloaded",
-   "retrieval_note": "The cover prints \"June 31st, 2025\". Gives own-source revenue for FY 2024/25 of KSh 757,570,621 against a target of KSh 1,044,061,306 (Table 4); used in conflict case osr-2024-25-county-statement. Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against."
+   "retrieval_note": "The cover prints \"June 31st, 2025\". Gives own-source revenue for FY 2024/25 of KSh 757,570,621 against a target of KSh 1,044,061,306 (Table 4, Total OSR row on PDF page 6; also Table 2, PDF page 3). Read on 2026-11-21 from the text layer (not a scan, no OCR). Used in conflict case osr-2024-25-county-statement and recorded in data/siaya.json beside the Controller of Budget figure and the press statement. Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against."
   },
   {
    "review_status": "not reviewed",
@@ -2240,7 +2240,7 @@
    "publication_date": "not stated",
    "reference_period": "FY 2015/16 to FY 2018/19",
    "source_url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf",
-   "cited_by": "history.json HIV prevalence points (labelled \"NACC estimates 2015 vintage\" and \"Kenya HIV County Profiles 2016\")",
+   "cited_by": "history.json HIV prevalence points for 2013 (23.7%) and 2015 (24.8%), both from Table 1 of this plan (PDF page 16, printed page 3), which attributes them to the Kenya HIV Estimates",
    "geographic_coverage": "Siaya",
    "siaya_relevance": "Direct",
    "research_use": "HIV prevalence estimates and county HIV planning",
@@ -2249,7 +2249,7 @@
    "file_type": "PDF",
    "retrieval_status": "downloaded",
    "redistribution_conditions": "Non-commercial use only, with the source acknowledged",
-   "retrieval_note": "Downloaded as a valid PDF. The cover title is the county HIV and AIDS strategic plan, while history.json labels the link by estimate vintage; worth checking at the next review that the cited figures come from this file."
+   "retrieval_note": "Downloaded as a valid PDF. The file is the Siaya County HIV and AIDS Strategic Plan, not an estimates report; history.json labels were corrected on 2026-11-21 to name it. Checked from the text layer: Table 1 (PDF page 16) prints adult (15-49) prevalence 23.7% (2013) and 24.8% (2015), with Kenya 6.04% and 5.9%, matching history.json, so no figure came from a different document. Flag: the text beside Table 1 gives 21.4% for 2013 and 23.7% for 2014, so the plan is inconsistent about the year of the 23.7% value."
   },
   {
    "review_status": "not reviewed",

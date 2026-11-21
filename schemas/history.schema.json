@@ -542,6 +542,12 @@
                   "vintage": {
                     "type": "string"
                   },
+                  "document": {
+                    "type": "string"
+                  },
+                  "note": {
+                    "type": "string"
+                  },
                   "url": {
                     "type": "string",
                     "pattern": "^https://"
