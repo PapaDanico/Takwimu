@@ -14,7 +14,7 @@ export const metadata = {
 const obs = e.observations;
 const byId = Object.fromEntries(obs.map((o) => [o.id, o]));
 const SRC = { 'MOE-BESB-2019': 'Ministry booklet 2019', 'MOE-BESB-2014': 'Ministry booklet 2014', 'KNBS-ABS-2015': 'KNBS abstract 2015', 'CIDP-2023-2027': 'CIDP 2023-2027', 'KDHS-2022': 'KDHS 2022', 'KDHS-2014': 'KDHS 2014', 'CBIRR-FY2025-26-Q4': 'County Q4 report FY 2025/26', 'BROP-FY2024-25': 'CBROP FY 2024/25' };
-const TYPE = { plan_target: 'Plan target, not achieved', projection: 'Projection, not counted', approved_estimate: 'Budget plan, not spending', baseline: 'Plan baseline', provisional: 'Provisional (source marks *)', survey_estimate: 'Survey estimate' };
+const TYPE = { plan_target: 'Plan target, not achieved', projection: 'Projection, not counted', approved_estimate: 'Budget plan, not spending', baseline: 'Plan baseline', provisional: 'Provisional (source marks *)', survey_estimate: 'Survey estimate', unclear: 'Unclear: equals the projected 3-5 population, not shown as enrolment' };
 const label = (o) => [o.indicator.replace(/_/g, ' '), o.level && o.level !== o.indicator ? o.level : '', o.sector && o.sector !== 'all' ? o.sector : '', o.sex && o.sex !== 'total' ? o.sex : ''].filter(Boolean).join(', ');
 const row = (o) => ({
   key: o.id, label: label(o), value: o.value, value_text: o.value === null ? 'not printed (shown as a gap)' : null, unit: o.unit, period: o.period, source_id: o.source_id, table: o.table,
@@ -22,7 +22,7 @@ const row = (o) => ({
 });
 const sorted = (fn) => obs.filter((o) => o.function === fn).sort((a, b) => a.indicator.localeCompare(b.indicator) || String(a.period).localeCompare(String(b.period)));
 // Pre-primary enrolment, all pupils (public and private), one bar per source and year as printed.
-const ppTotal = obs.filter((o) => o.indicator === 'pre_primary_enrolment' && o.sex === 'total' && o.sector === 'all' && o.value_type !== 'projection');
+const ppTotal = obs.filter((o) => o.indicator === 'pre_primary_enrolment' && o.sex === 'total' && o.sector === 'all' && o.value_type !== 'projection' && o.value_type !== 'unclear');
 const enrol = (ind, src) => obs.find((o) => o.indicator === ind && o.sex === 'total' && o.sector === 'all' && o.source_id === src);
 const fnCount = (fn) => obs.filter((o) => o.function === fn).length;
 

@@ -92,7 +92,7 @@ export default function SubCounties() {
                 <li><span>Growth 2009 to 2019</span><span>{r.growth.toFixed(1)}%</span></li>
                 <li><span>Area</span><span>{n(r.area_km2)} km²</span></li>
                 <li><span>Wards</span><span>{r.wards}</span></li>
-                <li><span>Registered voters 2022</span><span>{n(r.eligible_voters_2022)}</span></li>
+                <li><span>Registered voters 2022</span><span>{n(r.registered_voters_2022)}</span></li>
                 <li><span>Hospitals / health centres / dispensaries</span><span>{r.facilities.hospitals} / {r.facilities.health_centres} / {r.facilities.dispensaries}</span></li>
                 <li><span>People per doctor</span><span>{n(r.people_per_health_worker.doctor)}</span></li>
                 <li><span>People per nurse</span><span>{n(r.people_per_health_worker.nurse)}</span></li>

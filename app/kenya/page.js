@@ -119,7 +119,7 @@ export default function KenyaPage() {
           <table className="data">
             <caption>Candidates by elective position, 2022 general election</caption>
             <thead><tr><th scope="col">Position</th><th scope="col" className="num">Party-sponsored</th><th scope="col" className="num">Independent</th><th scope="col" className="num">Total</th></tr></thead>
-            <tbody>{cand.rows.map((r) => <tr key={r.position}><th scope="row">{r.position}</th><td className="num">{r.party_sponsored.toLocaleString('en-US')}</td><td className="num">{r.independent.toLocaleString('en-US')}</td><td className="num">{r.total.toLocaleString('en-US')}</td></tr>)}</tbody>
+            <tbody>{cand.rows.map((r) => <tr key={r.position}><th scope="row">{r.position}</th><td className="num">{r.party_sponsored.toLocaleString('en-US')}</td><td className="num">{r.independent === null ? <span title="Shown as '-' in the IEBC table">-</span> : r.independent.toLocaleString('en-US')}</td><td className="num">{r.total.toLocaleString('en-US')}</td></tr>)}</tbody>
           </table>
         </TableWrap>
         <p className="src">Sources: {obs.source.citation_requested} (<a href={obs.source.landing_page}>Open Budget Survey data</a>); scores before 2017 are not comparable for oversight and participation. IEBC, <a href={extra.VOTERS.source.url}>registered voters per constituency, 2022</a> and <a href={cand.source.url}>Annual Report 2022-23</a>, Table 21. The IEBC states no reuse licence for these files. The August 2017 presidential results are not shown: that election was annulled, and the copy found is unsigned and does not add up. Registered voters by constituency are on <Link href="/compare/#voters">Compare counties</Link>.</p>

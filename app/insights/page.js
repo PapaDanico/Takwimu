@@ -10,6 +10,7 @@ import { SITE_UPDATED } from '../../lib/site';
 import hist from '../../data/history.json';
 import cpi from '../../data/cpi.json';
 import manifest from '../../data/source-manifest.json';
+import ledger from '../../data/siaya-fiscal-ledger.json';
 
 const RF = hist.pending_rollforward;
 const RF_TERMS = [['opening', 'Opening stock'], ['new_bills', 'New bills'], ['payments', 'Payments'], ['adjustments', 'Write-offs or adjustments'], ['closing', 'Closing stock']];
@@ -47,6 +48,8 @@ const devMin = dev.reduce((a, b) => (b.development_absorption_pct < a.developmen
 const pend = years.map((y) => ({ fy: y.fy, v: y.pending_total_m ?? (y.pending_development_m !== undefined && y.pending_recurrent_m !== undefined ? y.pending_development_m + y.pending_recurrent_m : undefined) })).filter((p) => p.v !== undefined);
 const pendFirst = pend[0];
 const pendLast = pend[pend.length - 1];
+// Years whose year-end stock has an open discrepancy in the fiscal ledger (another document gives a different stock).
+const PEND_DISPUTED = new Set(ledger.discrepancies.filter((d) => d.indicator_id === 'pending_bills_close' && d.status === 'open').map((d) => d.period.replace('FY ', '')));
 
 const osr = hist.osr_series.points;
 const osrFirst = osr[0];
@@ -75,7 +78,7 @@ const cur = by['2024/25'];
 const kpis = [
   { label: 'Spent, FY 2024/25', value: bn(cur.spent), unit: 'KSh bn', delta: `${Math.round(nomGrowth)}% above FY 2014/15`, note: 'Nominal', spark: col((y) => y.spent) },
   { label: 'Real change in ten years', value: `${realGrowth >= 0 ? '+' : ''}${Math.round(realGrowth)}%`, delta: 'After adjusting for prices', tone: realGrowth >= 0 ? 'up' : 'down', note: `${label(first.fy)} to ${label(last.fy)}`, spark: col((y) => realOf(y.spent, y.fy)) },
-  { label: 'Pending bills', value: m(pendLast.v), unit: 'KSh m', delta: `at end of ${label(pendLast.fy)}`, tone: 'down', note: 'Unpaid for goods and services delivered', spark: col(pendOf) },
+  { label: 'Pending bills', value: m(pendLast.v), unit: 'KSh m', delta: `at end of ${label(pendLast.fy)}${PEND_DISPUTED.has(pendLast.fy) ? '; sources disagree' : ''}`, note: 'As printed in that year’s own report', spark: col(pendOf) },
   { label: 'Latest audit opinion', value: audits[audits.length - 1].opinion, delta: `FY ${audits[audits.length - 1].fy}`, note: 'County Executive accounts' },
 ];
 
@@ -112,7 +115,7 @@ export default function Insights() {
         <h3 className="chart-title">Where the {label(BASE)} budget went</h3>
         <p className="chart-sub">Share of the approved budget of KSh {bn(cur.approved)} billion.</p>
         <Donut ariaLabel={`How the ${label(BASE)} approved budget was used`} centerValue={`${Math.round((cur.spent / cur.approved) * 100)}%`} centerLabel="of budget spent" format={bn} unit=" bn" items={[{ label: 'Recurrent spending', value: cur.recurrent_spent, color: 1 }, { label: 'Development spending', value: cur.development_spent, color: 3 }, { label: 'Not spent', value: cur.approved - cur.spent, color: 4 }]} />
-        <p className="how"><b>How we calculated this.</b> Spending is nominal, from each year's Controller of Budget report; real values are at {label(BASE)} prices, worked out as set out in the <Link href="/method/#prices">method</Link>. FY 2019/20 is missing because that report was not found; only its own-source revenue is known.</p>
+        <p className="how"><b>How we calculated this.</b> Spending is nominal, from each year's Controller of Budget report; real values are at {label(BASE)} prices, worked out as set out in the <Link href="/method/#prices">method</Link>. FY 2019/20: Controller of Budget report not found, so the series has no spending for that year; the county&apos;s own and the Senate&apos;s figures for it are on the <Link href="/counties/siaya/ledger/">fiscal reconciliation ledger</Link>.</p>
       </section>
 
       <section id="development" className="card insight" aria-labelledby="dev-h">
@@ -127,10 +130,11 @@ export default function Insights() {
 
       <section id="pending" className="card insight" aria-labelledby="pending-h">
         <p className="eyebrow">Insight 3</p>
-        <h2 id="pending-h">Pending bills rose from KSh {m(pendFirst.v)} million to KSh {m(pendLast.v)} million</h2>
-        <p className="finding">Pending bills are money owed for goods and services already delivered. The reported stock was KSh {m(pendFirst.v)} million at the end of {label(pendFirst.fy)} and KSh {m(pendLast.v)} million at the end of {label(pendLast.fy)}. The reports use slightly different definitions, and two reports disagree about the stock at 30 June 2021, so read the direction rather than each step.</p>
+        <h2 id="pending-h">Pending bills at year end, as each year&apos;s own report prints them: KSh {m(pendFirst.v)} million ({label(pendFirst.fy)}) to KSh {m(pendLast.v)} million ({label(pendLast.fy)})</h2>
+        <p className="finding">Pending bills are money owed for goods and services already delivered. One rule is used for every year: the closing stock printed in that year&apos;s own Controller of Budget report. Other documents often give a different stock for the same date; {PEND_DISPUTED.size} years have an open discrepancy in the <Link href="/counties/siaya/ledger/">fiscal reconciliation ledger</Link> ({[...PEND_DISPUTED].sort().map(label).join(', ')}). The FY 2023/24 figure covers the County Executive only and excludes bills incurred in the year, so it is not the full stock. Read the direction with care rather than each step.</p>
         <h3 className="chart-title">Pending bills at year end, KSh million</h3>
-        <ColumnChart labels={SHORT} yFormat="int" unit="KSh m" ariaLabel="Pending bills at the end of each fiscal year, KSh million" series={[{ name: 'Pending bills', color: 2, values: col(pendOf) }]} />
+        <ColumnChart labels={SHORT} yFormat="int" unit="KSh m" ariaLabel="Pending bills at the end of each fiscal year, KSh million, as printed in each year's own report" series={[{ name: 'Pending bills', color: 2, values: col(pendOf) }]} />
+        <ul className="how" id="pending-disputed">{FYS.filter((fy) => by[fy] && pendOf(by[fy]) !== undefined).map((fy) => <li key={fy}><b>{label(fy)}:</b> KSh {m(pendOf(by[fy]))} million{PEND_DISPUTED.has(fy) ? <> <span className="tag warn">Sources disagree</span> (open ledger discrepancy)</> : null}</li>)}</ul>
         <h3 className="chart-title" id="rollforward-h">How the stock changes each year: the roll-forward</h3>
         <p className="chart-sub">{RF.identity.replace(/^./, (c) => c.toUpperCase())}. KSh million. Each term comes from that year&apos;s Controller of Budget report, with its page.</p>
         <div className="tablewrap" id="rollforward" tabIndex={0} role="region" aria-labelledby="rollforward-h">
@@ -150,7 +154,7 @@ export default function Insights() {
         </div>
         <p className="how"><b>Reading the roll-forward.</b> {RF.note} {RF.years.filter(rfComplete).length} of {RF.years.length} years have every term published. In FY 2021/22 and FY 2022/23 the published terms add up with no adjustment reported, but the reports do not say there were none, so those years stay incomplete.</p>
         <ul className="steps rf-notes">{RF.years.map((r) => <li key={r.fy}><b>{label(r.fy)}.</b> {r.note}</li>)}</ul>
-        <p className="how"><b>Conflict.</b> At 30 June 2021 the FY 2020/21 report gives KSh 1,061 million, while the FY 2021/22 report gives KSh 602 million for the same date. We plot each year's figure from the report that gives it (FY 2022/23 and FY 2023/24 come from the following year's report) and show both values here. The FY 2023/24 column (KSh 1,120 million, from the FY 2024/25 report) differs by about 3.7 times from the KSh 304 million in the FY 2023/24 report, which excludes bills incurred in the year; the Data page lists this and two smaller differences (FY 2022/23). Years without a column (FY 2013/14, FY 2014/15 and FY 2019/20) could not be read or were incomplete; FY 2024/25 has no column because its report gives two different year-end stocks (see the roll-forward above).</p>
+        <p className="how"><b>Conflict.</b> At 30 June 2021 the FY 2020/21 report gives KSh 1,061 million, while the FY 2021/22 report gives KSh 602 million for the same date. Every column is the stock printed in that year&apos;s own report. The FY 2023/24 column (KSh 304 million, County Executive only, excluding bills incurred in the year) is about a quarter of the KSh 1,120 million the FY 2024/25 report gives for the same date; the FY 2022/23 column (KSh 873 million) differs from the KSh 761 million the next report quotes. The Data page lists these cases. Years without a column (FY 2013/14, FY 2014/15 and FY 2019/20) could not be read or were incomplete; FY 2024/25 has no column because its report gives two different year-end stocks (see the roll-forward above).</p>
       </section>
 
       <section id="revenue" className="card insight" aria-labelledby="rev-h">

@@ -36,7 +36,7 @@ export default function SiayaPulse() {
 
       <section className="card" aria-labelledby="pulse-chart">
         <h2 id="pulse-chart">Spending by fiscal year</h2>
-        <p className="lead">Total, recurrent and development spending, KSh billion, nominal.{p.gaps.length ? ` FY ${p.gaps.join(' and FY ')} has no figure: that year’s report was not found, and the gap is left open.` : ''} The table view gives every value.</p>
+        <p className="lead">Total, recurrent and development spending, KSh billion, nominal.{p.gaps.length ? <> FY {p.gaps.join(' and FY ')}: Controller of Budget report not found, so the series has no figure and the gap is left open; county and Senate figures for the year are on the <Link href="/counties/siaya/ledger/">fiscal reconciliation ledger</Link>.</> : ''} The table view gives every value.</p>
         <LineChart labels={p.chart.labels} unit="KSh bn" yFormat="one" naText="No figure in the source reports"
           ariaLabel={`Siaya County total, recurrent and development spending, FY ${p.first} to FY ${p.latest}, KSh billion`}
           series={p.chart.series.map((s, i) => ({ name: s.name, color: i + 1, dash: i === 2, values: s.values }))} />

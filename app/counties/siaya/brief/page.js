@@ -2,6 +2,7 @@ import Link from 'next/link';
 import siaya from '../../../../data/siaya.json';
 import hist from '../../../../data/history.json';
 import reg from '../../../../data/conflicts.json';
+import ledger from '../../../../data/siaya-fiscal-ledger.json';
 import { fmt, shortDate } from '../../../../lib/format';
 import { SITE_URL, SITE_UPDATED } from '../../../../lib/site';
 
@@ -18,6 +19,8 @@ const OSR_BY_FY = Object.fromEntries(hist.osr_series.points.map((p) => [p.fy, p]
 const pendOf = (y) => (y ? y.pending_total_m ?? (y.pending_development_m !== undefined && y.pending_recurrent_m !== undefined ? y.pending_development_m + y.pending_recurrent_m : undefined) : undefined);
 const num = (v, d = 2) => (v === undefined ? '—' : Number(v).toLocaleString('en-US', { maximumFractionDigits: d }));
 const conflict = (id) => reg.conflicts.find((c) => c.id === id);
+// Years whose year-end pending-bills stock has an open discrepancy in the fiscal ledger.
+const PEND_DISPUTED = new Set(ledger.discrepancies.filter((d) => d.indicator_id === 'pending_bills_close' && d.status === 'open').map((d) => d.period.replace('FY ', '')));
 const lbl = (v) => v.label.replace(' (', ', ').replace(/\)$/, '');
 
 export default function SiayaBrief() {
@@ -37,7 +40,7 @@ export default function SiayaBrief() {
   const heads = [
     { k: `Approved budget, FY ${budget.fiscal_year}`, v: `KSh ${fmt(budget.approved_total)} bn`, m: `KSh ${fmt(budget.total_spent)} bn spent (${spentPct}% of budget)`, src: 'Controller of Budget, FY 2024/25 report', c: budget.confidence },
     { k: `Own-source revenue, FY ${osr.fiscal_year}`, v: `KSh ${fmt(primary.value)} m`, m: `The report states ${osr.share_of_annual_target_pct}% of the annual target`, src: 'Controller of Budget, FY 2024/25 report', c: primary.confidence },
-    { k: 'Pending bills, 30 June 2024', v: `KSh ${fmt(pb.opening_30_jun_2024_billion)} bn`, m: `KSh ${fmt(pb.settled_in_year_million)} m settled in FY 2024/25; the report gives two closing figures (see the conflict register)`, src: 'Controller of Budget, FY 2024/25 report', c: budget.confidence },
+    { k: 'Pending bills, 30 June 2024: sources disagree', v: `KSh ${fmt(pb.opening_30_jun_2024_billion)} bn`, m: `FY 2024/25 report opening stock; the FY 2023/24 report gives KSh 303.91 m for the same date (County Executive, excluding the year's new bills). KSh ${fmt(pb.settled_in_year_million)} m settled in FY 2024/25`, src: 'Controller of Budget, FY 2024/25 and FY 2023/24 reports', c: budget.confidence },
     { k: `Audit opinion, FY ${audit.fiscal_year}`, v: audit.opinion, m: audit.entity, src: 'Auditor-General', c: audit.confidence },
   ];
 
@@ -88,15 +91,15 @@ export default function SiayaBrief() {
                       <td>{num(y && y.approved)}</td>
                       <td>{num(y && y.spent)}</td>
                       <td>{num(share, 0)}</td>
-                      <td>{num(o && o.value, 0)}</td>
-                      <td>{num(pendOf(y), 0)}</td>
+                      <td>{num(o && o.value, 0)}{fy === '2022/23' ? '†' : ''}</td>
+                      <td>{num(pendOf(y), 0)}{pendOf(y) !== undefined && PEND_DISPUTED.has(fy) ? '*' : ''}</td>
                     </tr>
                   );
                 })}
               </tbody>
             </table>
             </div>
-            <p className="brief-note">— means not published or not retrieved; gaps are never filled. Spent % is computed (spent ÷ budget). FY 2013/14 covers 16 months. FY 2019/20: report not retrievable, only own revenue known.</p>
+            <p className="brief-note">— means not published or not retrieved; gaps are never filled. Spent % is computed (spent ÷ budget). FY 2013/14 covers 16 months. FY 2019/20: Controller of Budget report not found; county and Senate figures are on takwimu.netlify.app/counties/siaya/ledger/. Pending bills: the closing stock printed in each year&apos;s own report; * another document gives a different stock for that date (open ledger discrepancy). † FY 2022/23 own revenue is ordinary own-source revenue (402.23 m) without 105.81 m of appropriations-in-aid; with them the report gives 508.04 m.</p>
           </section>
 
           <section aria-labelledby="brief-audit-h">
@@ -116,7 +119,7 @@ export default function SiayaBrief() {
           <h2 id="brief-cav-h">Key caveats</h2>
           <ul className="brief-list" aria-labelledby="brief-cav-h">
             <li>{openCases} disagreements between reports are open in the conflict register; none has been reviewed by a specialist.</li>
-            <li>Pending bills at 30 June 2024: KSh {num(pend24.values[0].value)} m ({lbl(pend24.values[0])}) against KSh {num(pend24.values[1].value)} m ({lbl(pend24.values[1])}). The FY 2024/25 figure is used.</li>
+            <li>Pending bills at 30 June 2024: KSh {num(pend24.values[0].value)} m ({lbl(pend24.values[0])}) against KSh {num(pend24.values[1].value)} m ({lbl(pend24.values[1])}). The ten-year table uses each year&apos;s own report (303.91 m for FY 2023/24).</li>
             <li>Own revenue FY 2023/24: KSh {num(osr24.values[0].value)} m against KSh {num(osr24.values[1].value)} m in the next report.</li>
             <li>Pending bills at 30 June 2021: KSh {num(pend21.values[0].value)} m against KSh {num(pend21.values[1].value)} m. Read the ten-year rise as a direction, not exact steps.</li>
             <li>Figures are nominal and many were read from scanned PDFs. Confidence (1 to 5) grades source quality and extraction, not the chance a figure is right.</li>

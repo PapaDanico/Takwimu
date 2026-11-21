@@ -2357,9 +2357,9 @@
    {
     "position": "President",
     "party_sponsored": 4,
-    "independent": 0,
+    "independent": null,
     "total": 4,
-    "note": "independent shown as \"-\""
+    "note": "independent shown as '-' in the IEBC table (stored as null, not 0)"
    },
    {
     "position": "Member of the National Assembly",

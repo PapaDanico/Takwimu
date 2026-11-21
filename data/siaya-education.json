@@ -2579,11 +2579,11 @@
    "period": "2022 (end of CIDP 2018-2022)",
    "value": 81771,
    "unit": "pupils",
-   "value_type": "actual",
+   "value_type": "unclear",
    "table": "Section 2.3.4 (text)",
    "pdf_page": 44,
    "confidence": 1,
-   "note": "Identical to the CIDP's own projected 3-5 population for 2022 (81,771, page 35); likely a population figure used as enrolment. Listed under conflicts.",
+   "note": "Unclear what this counts: the CIDP prints 81,771 as end-2022 ECE gross enrolment (PDF p. 44), the same number as its own projected 3-5 population for 2022 (81,771, page 35). Likely a population figure used as enrolment; not shown as enrolment. Listed under conflicts (edu-c07).",
    "printed_page": 25
   },
   {

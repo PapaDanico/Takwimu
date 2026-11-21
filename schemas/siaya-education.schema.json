@@ -63,7 +63,7 @@
           "value": { "type": ["number", "null"] },
           "printed_value": { "type": "string" },
           "unit": { "type": "string" },
-          "value_type": { "enum": ["actual", "provisional", "baseline", "plan_target", "approved_estimate", "projection", "survey_estimate"] },
+          "value_type": { "enum": ["actual", "provisional", "baseline", "plan_target", "approved_estimate", "projection", "survey_estimate", "unclear"] },
           "table": { "type": "string", "minLength": 3 },
           "pdf_page": { "type": "integer", "minimum": 1 },
           "printed_page": { "type": ["integer", "null"] },

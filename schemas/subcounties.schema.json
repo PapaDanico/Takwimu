@@ -18,7 +18,7 @@
       "minItems": 6,
       "items": {
         "type": "object",
-        "required": ["id", "name", "area_km2", "area_admin_km2", "wards", "villages", "population", "density_per_km2", "eligible_voters_2022", "facilities", "people_per_health_worker"],
+        "required": ["id", "name", "area_km2", "area_admin_km2", "wards", "villages", "population", "density_per_km2", "registered_voters_2022", "facilities", "people_per_health_worker"],
         "additionalProperties": false,
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z-]+$" },
@@ -45,7 +45,7 @@
             "additionalProperties": false,
             "properties": { "2019": { "type": "number", "minimum": 0 }, "2022": { "type": "number", "minimum": 0 } }
           },
-          "eligible_voters_2022": { "type": "integer", "minimum": 0 },
+          "registered_voters_2022": { "type": "integer", "minimum": 0 },
           "facilities": {
             "type": "object",
             "required": ["hospitals", "health_centres", "dispensaries", "private_clinics", "nursing_homes", "maternity_beds", "youth_friendly_centres"],
