@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageToc from '../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';
@@ -33,6 +34,7 @@ export default function SiayaEducation() {
         sub="Schools, pupils, teachers, vocational training and bursaries in Siaya County, from the Ministry of Education, KNBS, the county government and national surveys. What the county runs is shown apart from what the national government runs."
         path="/counties/siaya/education/" shareText="Education in Siaya: by source and by level of government" />
 
+      <PageToc items={[['ed-dev', 'County functions'], ['ed-nat', 'National functions'], ['ed-conf', 'Inconsistencies'], ['ed-gaps', 'Not published']]} />
       <section className="card gold" aria-labelledby="ed-read">
         <h2 id="ed-read">How to read this page</h2>
         <Provisional dataset="siaya-education">Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>

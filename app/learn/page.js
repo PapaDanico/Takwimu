@@ -1,3 +1,4 @@
+import { ABBR } from '../../lib/abbreviations';
 import PageHead from '../../components/PageHead';
 
 export const metadata = {
@@ -50,6 +51,11 @@ const GROUPS = [
       { id: 'sub-county', term: 'Sub-county, constituency and ward', def: 'In Siaya each of the six sub-counties matches one constituency. Constituencies are divided into wards, the smallest elected unit. Siaya has 30 wards.' },
       { id: 'multidimensional-poverty', term: 'Multidimensional poverty', def: 'A measure of people who lack several basic needs at once, such as education, health, housing, water and sanitation, not only money.' },
     ],
+  },
+  {
+    id: 'abbreviations',
+    title: 'Abbreviations',
+    terms: Object.entries(ABBR).filter(([, a]) => a.def).map(([k, a]) => ({ id: a.id, term: `${k}: ${a.full}`, def: a.def })),
   },
 ];
 

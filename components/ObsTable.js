@@ -7,8 +7,10 @@ import Reviewed from './Reviewed';
 
 const num = (v) => (typeof v === 'number' ? v.toLocaleString('en-US', { maximumFractionDigits: 3 }) : v);
 
-export function Cite({ id, table, page, printed, pageNote, confidence }) {
+export function Cite({ id, table, page, printed, pageNote, confidence, bare }) {
   const s = source(id);
+  // bare: the table states the source once (owner decision U3), so the row carries only its page and confidence.
+  if (bare) return <small className="cite">{table ? `${table}, ` : ''}{pageRef(page, printed, pageNote)}{confidence ? `, confidence ${confidence} of 5` : ''}</small>;
   return (
     <small className="cite">
       {s.url ? <a href={s.url} rel="noopener">{s.title}</a> : s.title}
@@ -32,12 +34,18 @@ function ValueCell({ r, dataset }) {
 
 // rows: [{ key, label, value, value_text, unit, period, source_id, table, pdf_page, printed_page, page_note, confidence, note, tag }]
 export default function ObsTable({ caption, rows, id, labelHead = 'Measure', showNote = true, dataset }) {
+  // Said once per table, not on every row (owner decision U3): a source, table or note shared by every row.
+  const one = (k) => (rows.length > 2 && rows.every((r) => r[k] === rows[0][k]) ? rows[0][k] : undefined);
+  const src = one('source_id');
+  const tbl = src ? one('table') : undefined;
+  const note = showNote ? one('note') : undefined;
+  const s = src ? source(src) : null;
   return (
     <TableWrap label={caption}>
       <table className="data obs" id={id}>
         <caption className="sr-only">{caption}</caption>
         <thead>
-          <tr><th scope="col">{labelHead}</th><th scope="col">Value</th><th scope="col">Period</th><th scope="col">Source, page and confidence</th></tr>
+          <tr><th scope="col">{labelHead}</th><th scope="col">Value</th><th scope="col">Period</th><th scope="col">{src ? 'Page and confidence' : 'Source, page and confidence'}</th></tr>
         </thead>
         <tbody>
           {rows.map((r) => (
@@ -46,12 +54,15 @@ export default function ObsTable({ caption, rows, id, labelHead = 'Measure', sho
               <ValueCell r={r} dataset={dataset} />
               <td>{r.period}</td>
               <td>
-                <Cite id={r.source_id} table={r.table} page={r.pdf_page} printed={r.printed_page} pageNote={r.page_note} confidence={r.confidence} />
-                {showNote && r.note ? <><br /><small>{r.note}</small></> : null}
+                <Cite id={r.source_id} table={tbl ? undefined : r.table} page={r.pdf_page} printed={r.printed_page} pageNote={r.page_note} confidence={r.confidence} bare={Boolean(src)} />
+                {showNote && r.note && !note ? <><br /><small>{r.note}</small></> : null}
               </td>
             </tr>
           ))}
         </tbody>
+        {src ? (
+          <tfoot><tr><td colSpan={4}><small className="cite">Source for every row: {s.url ? <a href={s.url} rel="noopener">{s.title}</a> : s.title}{tbl ? `, ${tbl}` : ''}.{note ? ` ${note}` : ''}</small></td></tr></tfoot>
+        ) : null}
       </table>
     </TableWrap>
   );

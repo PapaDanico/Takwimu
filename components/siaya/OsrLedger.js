@@ -48,7 +48,7 @@ export default function OsrLedger() {
   const rows = [
     { o: primary, label: 'Controller of Budget', sub: 'FY 2024/25 report', y: 20, verified: true },
     { o: report, label: 'County Q4 report', sub: 'Treasury, Table 4', y: 72, verified: true },
-    { o: county, label: 'County statement', sub: 'per press, unverified', y: 124, verified: false },
+    { o: county, label: 'County statement', sub: 'news report (secondary)', y: 124, verified: false },
   ];
   return (
     <>
@@ -61,7 +61,7 @@ export default function OsrLedger() {
         <div className="tiles">
           <Tile label="Collected" value={fmt(primary.value)} unit="KSh million" note="Stated by the Controller of Budget, including KSh 199 million from health facilities." />
           <Tile label="Share of annual target" value={`${share}%`} tone="warn" note="The report states this. Its Table 2.1 (PDF p. 46) prints the target: KSh 927.34 million." />
-          <Tile label="County statement" value={fmt(county.value)} unit="KSh million" dashed tag="Unverified" note={`Reported in the press. The county's own Q4 report gives KSh ${fmt(report.value)} million instead.`} />
+          <Tile label="County statement" value={fmt(county.value)} unit="KSh million" dashed tag="News report (secondary)" note={`Reported in the press. The county's own Q4 report gives KSh ${fmt(report.value)} million instead.`} />
           <Tile label="Share of approved budget" value={`${ofBudgetPct.toFixed(1)}%`} note={`Derived: ${fmt(primary.value)} million divided by the KSh ${budget.approved_total} billion approved budget.`} />
         </div>
 
@@ -87,7 +87,7 @@ export default function OsrLedger() {
             <g className="bars">
               {rows.map(({ o, label, sub, y, verified }) => (
                 <g key={label} className="bar">
-                  <title>{`${label}: KSh ${o.value} million. Confidence ${o.confidence}/5. ${verified ? 'Primary report.' : 'Unverified.'}`}</title>
+                  <title>{`${label}: KSh ${o.value} million. Confidence ${o.confidence} of 5. ${verified ? 'Primary report.' : 'Unverified.'}`}</title>
                   <text className="lab" x="0" y={y + 12} style={{ fontFamily: 'var(--sans)', fontSize: 13 }}>{label}</text>
                   <text x="0" y={y + 28}>{sub}</text>
                   <path d={barPath(X0, y, xFor(o.value) - X0, BAR_H)} fill={verified ? 'var(--chart)' : 'url(#hatch)'} />
@@ -106,10 +106,10 @@ export default function OsrLedger() {
                 <tbody>
                   {osr.observations.map((o) => (
                     <tr key={o.source}>
-                      <td><a href={o.source_url}>{o.source}</a></td>
+                      <td><a href={o.source_url}>{o.source}</a>{o === county ? <> <span className="tag warn">News report (secondary)</span></> : null}</td>
                       <td className="mono">{fmt(o.value)}</td>
                       <td>{o.status}</td>
-                      <td className="mono">{o.confidence}/5</td>
+                      <td className="mono">{o.confidence} of 5</td>
                       <td className="mono">{shortDate(o.retrieved)}</td>
                     </tr>
                   ))}
@@ -117,7 +117,7 @@ export default function OsrLedger() {
                     <td><a href={osr.target.source_url}>Own-source revenue in budget financing (Controller of Budget)</a>: {osr.target.description}</td>
                     <td className="mono">{osr.target.value.toLocaleString('en-US')}</td>
                     <td>{osr.target.status}</td>
-                    <td className="mono">{osr.target.confidence}/5</td>
+                    <td className="mono">{osr.target.confidence} of 5</td>
                     <td className="mono">{shortDate(osr.target.retrieved)}</td>
                   </tr>
                 </tbody>
@@ -150,7 +150,7 @@ export default function OsrLedger() {
           <li>FY 2024/25: FIF is {OSR_MIX.cob2425.result}% of own-source revenue in the Controller of Budget&apos;s Table 2.1 and {OSR_MIX.cty2425.result}% in the county&apos;s Q4 report. The two documents differ by KSh {OSR_MIX.dFif.result} million in FIF and KSh {OSR_MIX.dOrd.result} million in ordinary revenue, so the gap between KSh 436.68 million and KSh 757.57 million lies in hospital and health facility receipts, not in ordinary revenue (case <a href="/data/#osr-2024-25-county-statement">osr-2024-25-county-statement</a>).</li>
           <li>FY 2023/24: FIF is {OSR_MIX.cob2324.result}% (Controller of Budget). Among counties with a printed value, Siaya&apos;s FIF share is position {OSR_MIX.rank2324.result} of {OSR_MIX.rank2324.flags && OSR_MIX.rank2324.flags.n_counties} in FY 2023/24 and {OSR_MIX.rank2425.result} of {OSR_MIX.rank2425.flags && OSR_MIX.rank2425.flags.n_counties} in FY 2024/25 (1 = highest share).</li>
         </ul>
-        <p className="src">Calculated by Takwimu Kenya from published figures; provisional, awaiting editorial review. Every input, page and the all-county table: <Link href="/counties/siaya/analysis/#an-a8">Siaya analysis, own-source revenue composition</Link>.</p>
+        <p className="src">Calculated by Takwimu Kenya from published figures. Every input, page and the all-county table: <Link href="/counties/siaya/analysis/#an-a8">Siaya analysis, own-source revenue composition</Link>.</p>
       </section>
 
       <section className="card" id="osr-ten" aria-labelledby="osr-ten-h">

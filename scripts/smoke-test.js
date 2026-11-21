@@ -37,19 +37,21 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/economy/', '/counties/siaya/governance/', '/counties/siaya/audits/', '/counties/siaya/ledger/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/', '/reports/', ...REPORT_SLUGS.map((x) => `/reports/${x}/`)]) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/analysis/', '/counties/siaya/insights/', '/counties/siaya/people/', '/counties/siaya/economy/', '/counties/siaya/governance/', '/counties/siaya/audits/', '/counties/siaya/ledger/', '/counties/siaya/sources/', '/counties/kisumu/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/reports/', '/reports/method/', ...REPORT_SLUGS.map((x) => `/reports/${x}/`)]) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
   }
-  await pg.goto(base + '/counties/siaya/pulse/', { waitUntil: 'load' });
-  check(await pg.locator('main section h2[id^=pulse-]').count() === 5 && await pg.locator('main ul.how li a[href$="/content"]').count() >= 6 && await pg.locator('figure.chart').count() === 1 && await pg.locator('a[href="/counties/siaya/brief/"]').count() >= 1, 'Siaya Fiscal Pulse: three findings with source PDF links, one chart and a link to the brief');
-  const pulseDet = pg.locator('details.tableview').first();
+  // Latest year (formerly the Fiscal Pulse, owner decision U2): three findings with source PDF links, one chart with a table view.
+  await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
+  check(await pg.locator('#latest #pulse-findings > li').count() === 3 && await pg.locator('#latest ul.how li a[href$="/content"]').count() >= 6 && await pg.locator('#latest figure.chart').count() === 1 && await pg.locator('#latest-parts tbody tr').count() === 3, 'Siaya analysis, latest year: three findings with source PDF links, one chart and the FY 2024/25 parts');
+  const pulseDet = pg.locator('#latest details.tableview').first();
   await pulseDet.locator('summary').click();
-  check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'Fiscal Pulse chart has a table view');
+  check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'latest-year chart has a table view');
   // Siaya topic pages (health, education, agriculture, wards, climate, analysis): each loads, carries the provisional
   // label, is linked from the hub, and every chart has a table view that opens with rows.
-  const TOPICS = { health: 2 + 1, education: 2, agriculture: 2, wards: 0, climate: 0, analysis: 3, projects: 1, programmes: 1 };
+  // analysis: latest year, share spent, unspent, pending (2), A1, A2, A3; health: + survey results moved from /profile/; wards: + sub-county populations.
+  const TOPICS = { health: 2 + 1 + 1, education: 2, agriculture: 2, wards: 1, climate: 0, analysis: 8, projects: 1, programmes: 1 };
   for (const [slug, charts] of Object.entries(TOPICS)) {
     const u = `/counties/siaya/${slug}/`;
     const r = await pg.goto(base + u, { waitUntil: 'load' });
@@ -123,14 +125,19 @@ const srv = http.createServer((req, res) => {
     const usedStates = [...new Set(pJson.projects.map((x) => x.status))];
     check(usedStates.length === 8 && await pg.locator('#status-legend dt').count() === 8, 'projects: status legend lists the eight states in use');
     check(await pg.locator('main li.ds').count() === pJson.projects.length && new RegExp(`Showing ${pJson.projects.length} of ${pJson.projects.length}`).test(await pg.locator('#pr-count').innerText()), 'projects: every project is listed');
-    const ver = pg.locator('main li.ds .tags .tag', { hasText: /^completed-independently-verified$/ });
-    check(await ver.count() === 1 && await pg.locator('li#SIA-P-038 .tags .tag', { hasText: /^completed-independently-verified$/ }).count() === 1, 'projects: only SIA-P-038 is shown as independently verified');
-    const opoda = await pg.locator('li#SIA-P-018').innerText();
+    const ver = pg.locator('main li.ds .tags .tag[data-state="completed-independently-verified"]');
+    check(await ver.count() === 1 && await pg.locator('li#SIA-P-038 .tags .tag[data-state="completed-independently-verified"]', { hasText: /^Completed, independently verified$/ }).count() === 1, 'projects: only SIA-P-038 is shown as independently verified, with a reader label');
+    const opoda = await pg.locator('li#SIA-P-018').textContent();
     check(/Reported by the county/i.test(opoda) && /Found by the Auditor-General/i.test(opoda) && /100%/.test(opoda) && /20%/.test(opoda), 'projects: Opoda road shows the county report (100%) beside the audit finding (20%)');
-    check(/Found by the Auditor-General/i.test(await pg.locator('li#SIA-P-036').innerText()), 'projects: Bondo mortuary shows reported and audit-found status side by side');
+    check(/Found by the Auditor-General/i.test(await pg.locator('li#SIA-P-036').textContent()), 'projects: Bondo mortuary shows reported and audit-found status side by side');
     check(await pg.locator('main li.ds a[href^="/counties/siaya/audits/#f-"]').count() >= 1, 'projects: audit finding ids link to the audit findings page');
+    await pg.goto(base + '/counties/siaya/projects/?status=suspended', { waitUntil: 'networkidle' });
+    check(await pg.locator('main li.ds').count() === pJson.projects.filter((x) => x.status === 'suspended').length && await pg.locator('main .controls select').nth(2).inputValue() === 'suspended', 'projects: the status filter is read from the address');
+    await pg.goto(base + '/counties/siaya/projects/', { waitUntil: 'networkidle' });
     const selects = pg.locator('main .controls select');
     await selects.nth(1).selectOption('north-sakwa');
+    await pg.waitForFunction(() => location.search.includes('ward=north-sakwa'), null, { timeout: 5000 }).catch(() => {});
+    check(/ward=north-sakwa/.test(pg.url()), 'projects: the ward filter is written to the address');
     const nsk = pJson.projects.filter((x) => x.location.ward_ids.includes('north-sakwa')).length;
     check(await pg.locator('main li.ds').count() === nsk && await selects.nth(1).locator('option').count() === 31, 'projects: the ward filter uses the 30 registry wards and narrows the list');
     await selects.nth(1).selectOption('');
@@ -233,7 +240,11 @@ const srv = http.createServer((req, res) => {
   await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
   check(await pg.locator('main a[href="/counties/siaya/sources/"]').count() >= 1, 'Siaya hub links to the source library');
   // Sweep D4/D18/D24: disputed pending bills labelled with the range; printed 927.34 target; OSR composition card.
-  { const hub = await pg.locator('main').innerText(); check(/sources disagree \(KSh 303\.91M to/i.test(hub) && /927\.34/.test(hub) && !/929 million/.test(hub) && await pg.locator('#osr-mix a[href="/counties/siaya/analysis/#an-a8"]').count() === 1, 'Siaya hub: pending bills at 30 Jun 2024 marked as disputed with the range, printed target, OSR composition card'); }
+  { const hub = await pg.locator('main').innerText(); check(/sources disagree \(KSh 303\.91M to/i.test(hub) && await pg.locator('#key a[href="/counties/siaya/ledger/#osr-latest"]').count() === 1 && await pg.locator('#key a[href="/counties/siaya/analysis/#spent"]').count() === 1, 'Siaya hub: pending bills at 30 Jun 2024 marked as disputed with the range; one summary tile each for own-source revenue and share of budget spent, linked to their homes'); }
+  // Own-source revenue's canonical home is the ledger (owner decision U1): FY 2024/25 sources side by side, composition, ten years.
+  await pg.goto(base + '/counties/siaya/ledger/', { waitUntil: 'load' });
+  { const led = await pg.locator('main').innerText(); check(/927\.34/.test(led) && !/929 million/.test(led) && await pg.locator('#osr-mix a[href="/counties/siaya/analysis/#an-a8"]').count() === 1 && await pg.locator('#osr-latest .tag', { hasText: 'News report (secondary)' }).count() >= 1 && await pg.locator('#osr-ten figure.chart').count() === 1, 'ledger: own-source revenue FY 2024/25 sources side by side (printed target, news report labelled secondary), composition card and ten-year chart'); }
+  await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
   // Reports A-E: the hub links the index; the index links each report's page and PDF with edition, snapshot and
   // DRAFT status; every PDF is in the build.
   check(await pg.locator('main a[href="/reports/"]').count() >= 1, 'Siaya hub links to the reports index');
@@ -278,9 +289,9 @@ const srv = http.createServer((req, res) => {
   }
   // No personal data is collected (owner, 21 Nov 2026): /briefs/request/ describes the service with no form; the thanks page is gone.
   check(!fs.existsSync(path.join(root, 'briefs', 'request', 'thanks')), '/briefs/request/thanks/ is not built');
-  await pg.goto(base + '/briefs/request/', { waitUntil: 'load' });
-  check(await pg.locator('main form, main input, main textarea').count() === 0 && await pg.locator('main a[href="https://wa.me/message/GPPIKMENXJVWO1"]').count() === 1, 'request a brief page has no form or fields and links to the Danico Ventures WhatsApp chat');
-  check(await pg.locator('header a.report[href="https://wa.me/message/GPPIKMENXJVWO1"]').count() === 1 && await pg.locator('a[href*="github.com"]').count() === 0, 'report-an-error links go to the WhatsApp chat, none to GitHub');
+  await pg.goto(base + '/reports/', { waitUntil: 'load' });
+  check(await pg.locator('main form, main input, main textarea').count() === 0 && await pg.locator('#briefs a[href="https://wa.me/message/GPPIKMENXJVWO1"]').count() === 1 && await pg.locator('#brief a[href="/briefs/siaya-fiscal-brief.pdf"]').count() === 1 && await pg.locator('#brief a[href="/counties/siaya/brief/"]').count() === 1, 'Publications: the brief and its PDF, and "About our briefs" with no form or fields and a link to the Danico Ventures WhatsApp chat');
+  check(await pg.locator('header a.report[href="https://wa.me/message/GPPIKMENXJVWO1"]', { hasText: 'Report an error' }).count() === 1 && await pg.locator('footer a[href="https://wa.me/message/GPPIKMENXJVWO1"]', { hasText: 'Report an error' }).count() === 1 && await pg.locator('a[href*="github.com"]').count() === 0, '"Report an error" in the header and the footer goes to the WhatsApp chat, none to GitHub');
   await pg.goto(base + '/privacy/', { waitUntil: 'load' });
   const privText = (await pg.locator('main').innerText()).toLowerCase();
   check(['do not collect', 'odpc.go.ke', 'netlify', 'local storage', 'whatsapp'].every((t) => privText.includes(t)) && !/consent|24 months|data request/.test(privText), 'privacy notice says no personal data is collected, names Netlify and the ODPC, and has no form-era terms');
@@ -298,14 +309,20 @@ const srv = http.createServer((req, res) => {
   // No form that collects personal data: no Netlify form, no POST/action form, no textarea, and inputs only of the filter types used by datasets/explore/compare.
   const dataForms = htmlFiles.filter((f) => { const h = fs.readFileSync(f, 'utf8'); return /data-netlify|netlify-honeypot|<textarea/i.test(h) || /<form[^>]*\s(method|action)=/i.test(h) || (h.match(/<input\b[^>]*>/gi) || []).some((t) => !/type="(search|radio|checkbox)"/i.test(t)); });
   check(dataForms.length === 0, `no built page has a Netlify form, posting form, textarea or personal-data input${dataForms.length ? ' (found in ' + dataForms.slice(0, 3).map((f) => path.relative(root, f)).join(', ') + ')' : ''}`);
-  await pg.goto(base + '/insights/', { waitUntil: 'load' });
+  await pg.goto(base + '/counties/siaya/insights/', { waitUntil: 'load' });
+  check(await pg.locator('main figure.chart').count() >= 2 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#spent"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#pending"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/ledger/#osr-ten"]').count() === 1 && await pg.locator('#gaps a[href="/method/#known-gaps"]').count() === 1, 'Siaya insights: ten-year narrative with one summary tile each for share spent, pending bills and own-source revenue, linked to their homes; gaps link to the method');
+  check(/County Executive, FY \d{4}\/\d{2} to FY \d{4}\/\d{2}: \d+ unqualified, \d+ qualified, \d+ adverse, \d+ disclaimer/.test(await pg.locator('#audit-h').innerText()), 'Siaya insights: the audit headline counts each opinion type over the year range (no verdict)');
+  await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
   const charts = await pg.locator('figure.chart').count();
-  check(charts >= 5, `insights shows charts (${charts})`);
+  check(charts >= 5, `Siaya analysis shows charts (${charts})`);
   const det = pg.locator('details.tableview').first();
   await det.locator('summary').click();
   check(await det.locator('table.data tbody tr').count() >= 10, 'table view opens with rows');
-  await pg.locator('svg rect[tabindex]').first().focus();
-  check(await pg.locator('.ctip').count() === 1, 'keyboard focus shows a tooltip');
+  // A chart is one tab stop (owner decision U7): no mark is focusable; the chart is, and the arrow keys move the tooltip.
+  check(await pg.locator('figure.chart svg [tabindex]').count() === 0 && await pg.locator('figure.chart svg.chart-svg[tabindex="0"]').count() === charts, 'every chart is a single tab stop (no focusable marks)');
+  await pg.locator('figure.chart svg.chart-svg').first().focus();
+  await pg.keyboard.press('ArrowRight');
+  check(await pg.locator('.ctip').count() === 1, 'keyboard focus on a chart and the arrow keys show a tooltip');
   check(!(await pg.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)), 'no horizontal overflow at 390px');
   const rfRows = await pg.locator('#rollforward tbody tr').count();
   const rfNp = await pg.locator('#rollforward .rf-np').count();
@@ -318,9 +335,12 @@ const srv = http.createServer((req, res) => {
   await pg.locator('.bottom-nav a[href="/learn/"]').click();
   await pg.waitForFunction(() => location.pathname.startsWith('/learn'), null, { timeout: 10000 }).catch(() => {});
   check(txtType === 'text/x-component' && (await pg.evaluate(() => window.__noReload === true)), 'netlify.toml serves route payloads as text/x-component, so links navigate without a full reload');
+  // Gap paragraphs live once, at /method/#known-gaps (owner decision U3); the Data page links there.
+  await pg.goto(base + '/method/', { waitUntil: 'load' });
+  const gapText = await pg.locator('#known-gaps').innerText();
+  check(['FinAccess', 'Uwezo', 'NG-CDF', 'KNBS 2019 census'].every((g) => new RegExp(`Known gap: [^\\n]*${g}[^\\n]*\\n+[^\\n]*Retry quarterly`).test(gapText)), 'Method lists FinAccess, Uwezo, NG-CDF and KNBS census as known gaps, each with a reason and "Retry quarterly"');
   await pg.goto(base + '/data/', { waitUntil: 'load' });
-  const gapText = await pg.locator('#gaps').innerText();
-  check(['FinAccess', 'Uwezo', 'NG-CDF', 'KNBS 2019 census'].every((g) => new RegExp(`Known gap: [^\\n]*${g}[^\\n]*\\n+[^\\n]*Retry quarterly`).test(gapText)), 'Data page lists FinAccess, Uwezo, NG-CDF and KNBS census as known gaps, each with a reason and "Retry quarterly"');
+  check(!/Known gap:/.test(await pg.locator('main').innerText()) && await pg.locator('main a[href="/method/#known-gaps"]').count() >= 1, 'Data page links the known gaps instead of repeating them');
   const csv = await pg.request.get(base + '/data/history.csv');
   check(csv.ok() && (await csv.text()).startsWith('"indicator"'), 'history.csv served with header');
   const conf = await (await pg.request.get(base + '/data/conflicts.json')).json();
@@ -383,9 +403,62 @@ const srv = http.createServer((req, res) => {
   check(await p2.locator('figure.chart').count() === 1 && await p2.locator('.spark').count() >= 12 && await p2.locator('#notes tbody tr').count() === NAT_WITH_VALUES && await p2.locator('#public-finance .spark').count() === NAT_PF && await p2.locator('#cbk .spark').count() === 15 && await p2.locator('#analysis tbody tr').count() === 7, 'Kenya dashboard: sparkline cards, one trend explorer chart, a sources row per indicator');
   const nf = await p2.goto(base + '/no-such-page/', { waitUntil: 'load' });
   const nfHtml = fs.readFileSync(path.join(root, '404.html'), 'utf8');
-  check(/That page is not here/.test(nfHtml) && /href="\/explore\/"/.test(nfHtml), 'friendly 404 with Home and Explore links');
+  check(/That page is not here/.test(nfHtml) && /href="\/datasets\/"/.test(nfHtml) && !/href="\/explore\/"/.test(nfHtml), 'friendly 404 with Home and data links (no retired URL)');
   check((await pg.context().cookies()).length === 0 && (await ctx2.cookies()).length === 0, 'no cookies are set on any page visited (no personal data collected)');
   await ctx2.close();
+  // Moved and merged pages (owner decisions U2/U6): every 301 in netlify.toml has a static fallback page at the old path
+  // (meta refresh, link and rel=canonical to the new address), the old path is not in the sitemap, and no built page
+  // links to a retired address.
+  {
+    const MOVED = [...toml.matchAll(/\[\[redirects\]\]\s*from = "([^"]+\/)"\s*to = "([^"]+)"/g)].map((m) => [m[1], m[2]]).filter(([f]) => f !== '/corrections/*');
+    const sm = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+    const bad = MOVED.filter(([from, to]) => {
+      const f = path.join(root, from, 'index.html');
+      if (!fs.existsSync(f)) return true;
+      const h = fs.readFileSync(f, 'utf8');
+      const esc = to.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
+      return !new RegExp(`http-equiv="refresh" content="0; url=${esc}"`).test(h) || !new RegExp(`rel="canonical" href="[^"]*${esc}"`).test(h) || !new RegExp(`<a[^>]+href="${esc}"`).test(h) || sm.includes(`${from}</loc>`);
+    }).map(([f]) => f);
+    check(MOVED.length >= 9 && !bad.length, `every moved URL (${MOVED.length}) has a fallback page pointing to its new address and is out of the sitemap${bad.length ? `; wrong: ${bad.join(', ')}` : ''}`);
+    const fallbacks = new Set(MOVED.map(([f]) => path.join(root, f, 'index.html')));
+    const linking = htmlFiles.filter((f) => !fallbacks.has(f)).filter((f) => { const h = fs.readFileSync(f, 'utf8'); return MOVED.some(([from]) => h.includes(`href="${from}"`) || h.includes(`href="${from}#`) || h.includes(`href="${from}?`) || h.includes(`"href":"${from}"`)); });
+    check(!linking.length, `no built page links to a retired URL${linking.length ? ` (found in ${linking.slice(0, 4).map((f) => path.relative(root, f)).join(', ')})` : ''}`);
+    await pg.goto(base + '/analytics/', { waitUntil: 'load' });
+    await pg.waitForURL(/\/counties\/siaya\/analysis\/$/, { timeout: 10000 }).catch(() => {});
+    check(/\/counties\/siaya\/analysis\/$/.test(pg.url()), 'opening /analytics/ moves the reader to Siaya analysis');
+    await pg.goto(base + '/briefs/request/', { waitUntil: 'load' });
+    await pg.waitForURL(/\/reports\/#briefs$/, { timeout: 10000 }).catch(() => {});
+    check(/\/reports\/#briefs$/.test(pg.url()), 'opening /briefs/request/ moves the reader to About our briefs on Publications');
+  }
+  // Repetition guard (owner decision U3): on every page in the sitemap, the provisional label at most once (per-row marks
+  // are only for approved, disputed or withdrawn values), no caveat paragraph more than twice, and each measure in its
+  // canonical home: ten-year charts of the share of budget spent and of pending bills only on /counties/siaya/analysis/,
+  // and of own-source revenue only on /counties/siaya/ledger/ (other Siaya pages carry one summary tile and a link).
+  {
+    const SM = [...fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname).filter((u) => !/^\/counties\/(?!siaya)[a-z-]+\/$/.test(u) || u === '/counties/kisumu/');
+    const HOME = [[/budget spent|absorption/i, '/counties/siaya/analysis/'], [/pending bills/i, '/counties/siaya/analysis/'], [/own-source revenue/i, '/counties/siaya/ledger/']];
+    const probs = [];
+    for (const u of SM) {
+      await pg.goto(base + u, { waitUntil: 'load' });
+      const r = await pg.evaluate(() => {
+        const m = document.querySelector('main');
+        const prov = (m.textContent.match(/Provisional: awaiting editorial review/gi) || []).length;
+        const seen = {};
+        m.querySelectorAll('p, li').forEach((el) => {
+          if (el.closest('details, table, li.ds, .term-card, .ds-list') || el.querySelector('p, li')) return;
+          const t = el.textContent.replace(/\s+/g, ' ').trim();
+          if (t.length > 80) seen[t] = (seen[t] || 0) + 1;
+        });
+        const rep = Object.entries(seen).filter(([, n]) => n > 2).map(([t, n]) => `${n}x "${t.slice(0, 50)}"`);
+        const charts = [...m.querySelectorAll('figure.chart svg[aria-label]')].map((x) => x.getAttribute('aria-label'));
+        return { prov, rep, charts };
+      });
+      if (r.prov > 1) probs.push(`${u}: provisional label ${r.prov} times`);
+      if (r.rep.length) probs.push(`${u}: ${r.rep[0]}`);
+      if (/^\/counties\/siaya\//.test(u) || u === '/') HOME.forEach(([re, home]) => { if (u !== home && r.charts.some((a) => re.test(a) && /by fiscal year|ten years|FY 20\d\d\/\d\d to/i.test(a))) probs.push(`${u}: ${re.source} series outside ${home}`); });
+    }
+    check(SM.length > 40 && !probs.length, `repetition guard on ${SM.length} pages: one provisional label, no caveat more than twice, each measure in its canonical home${probs.length ? `; ${probs.slice(0, 4).join('; ')}` : ''}`);
+  }
   check(bad.length === 0, `no CSP violations or page errors ${bad.slice(0, 2).join(' | ')}`);
   await b.close(); srv.close();
   process.exit(failed ? 1 : 0);

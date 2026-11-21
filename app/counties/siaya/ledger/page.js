@@ -1,9 +1,11 @@
 import { Provisional } from '../../../../components/ObsTable';
+import Abbrs from '../../../components/Abbrs';
 import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import LedgerView from '../../../../components/LedgerView';
 import { ledger } from '../../../../lib/ledger';
+import { plainDeep } from '../../../../lib/plain';
 import OsrLedger, { OSR_TOC } from '../../../../components/siaya/OsrLedger';
 
 export const metadata = {
@@ -11,7 +13,8 @@ export const metadata = {
   description: 'Siaya County fiscal figures from the Controller of Budget, the County Government, the Auditor-General and the Senate, side by side by year with page links, FY 2013/14 to FY 2025/26: which values exist, and where the sources differ.',
 };
 
-const l = ledger();
+// Reader wording (own-source revenue, share of budget spent) for text from the data file; values unchanged.
+const l = plainDeep(ledger());
 const sup = (i) => <sup><a href={`#gap-${i + 1}`} aria-label={`reason ${i + 1}`}>{i + 1}</a></sup>;
 
 export default function SiayaLedger() {
@@ -21,6 +24,7 @@ export default function SiayaLedger() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Reconciliation" title="Fiscal reconciliation"
         sub="Siaya County’s budget, revenue, spending, pending bills and wage bill as each official source reports them, side by side, so that you can see where the documents agree and where they differ."
         path="/counties/siaya/ledger/" shareText="Siaya: fiscal figures from every source, side by side" />
+      <Abbrs list={['FIF', 'A-i-A']} />
 
       <section className="card gold" aria-labelledby="led-read">
         <h2 id="led-read">How to read this page</h2>

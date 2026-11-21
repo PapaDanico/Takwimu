@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Abbrs from '../../../components/Abbrs';
+import PageToc from '../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { ColumnChart } from '../../../../components/Charts';
@@ -64,7 +66,9 @@ export default function SiayaProgrammes() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Partners" title="NGO and development partner atlas"
         sub="Programmes run or funded by development partners, NGOs and national agencies in Siaya County since 2016, with who implements them, who pays, and how strong the evidence is. Money booked by the county for Siaya is kept apart from totals for programmes that cover many counties."
         path="/counties/siaya/programmes/" shareText="Siaya development partner and NGO atlas" />
+      <Abbrs list={['FLLoCA', 'IATI']} />
 
+      <PageToc items={[['pg-spec', 'Siaya-specific'], ['pg-pool', 'Multi-county and national'], ['pg-screen', 'Screened out'], ['pg-gaps', 'Not captured']]} />
       <section className="card gold" aria-labelledby="pg-read">
         <h2 id="pg-read">How to read this page</h2>
         <Provisional dataset="siaya-programmes">Records were compiled by Takwimu from county documents, the World Bank projects database and IATI files and have not yet been checked by a reviewer.</Provisional>

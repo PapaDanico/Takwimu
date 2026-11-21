@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Abbrs from '../../../components/Abbrs';
 import PageHead from '../../../../components/PageHead';
 import SourceLibrary from '../../../../components/SourceLibrary';
 import { STATUS, COVERAGE } from '../../../../lib/source-library';
@@ -28,6 +29,7 @@ export default function SiayaSources() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Source library" title="Siaya Source Library"
         sub={`${docs.length} documents on Siaya County's public finances, development, health and governance: who published each one, the period it covers, how it relates to Siaya, its licence, and whether we were able to retrieve it. Last checked ${shortDate(lib.meta.updated)}.`}
         path="/counties/siaya/sources/" shareText="Siaya Source Library: the documents behind Takwimu's Siaya figures" />
+      <Abbrs list={['PCRA']} />
 
       <section className="card" aria-labelledby="lib-counts">
         <h2 id="lib-counts">Where the library stands</h2>

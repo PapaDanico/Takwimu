@@ -1,6 +1,8 @@
 import { Suspense } from 'react';
+import Abbrs from '../components/Abbrs';
 import Link from 'next/link';
 import ExploreHead from '../../components/ExploreHead';
+import PageToc from '../../components/PageToc';
 import DatasetCatalogue from '../../components/DatasetCatalogue';
 import SavedViews from '../../components/SavedViews';
 import { catalogue, SECTORS, nat, STATUS_VOCABULARY } from '../../lib/explore';
@@ -35,6 +37,8 @@ export default function DatasetsPage() {
     <main id="main" className="wrap page">
       <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Datasets" title="Datasets"
         sub={`${datasets.length} datasets, national and county, each with its source, unit, coverage, method and the date it was last updated. Every one downloads as CSV and JSON.`} />
+      <Abbrs list={['PCRA', 'FLLoCA', 'IATI', 'CBTS', 'GCP', 'FIF', 'A-i-A']} />
+      <PageToc items={[['find-h', 'Find a dataset'], ['list-h', 'Datasets'], ['status-h', 'What the status means'], ['saved-h', 'Saved views'], ['gaps-h', 'Not available']]} />
       <Suspense fallback={<Loading />}>
         <DatasetCatalogue datasets={datasets} sectors={SECTORS} sources={sources} years={years} />
       </Suspense>

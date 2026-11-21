@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Abbrs from '../../../components/Abbrs';
+import PageToc from '../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { governance, aprmPage } from '../../../../lib/governance';
@@ -34,7 +36,9 @@ export default function SiayaGovernance() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Transparency" title="Budget transparency and public participation"
         sub="How many of Siaya County’s key budget documents were publicly available, how much they said about public participation, and what a county peer review found about participation, civic education and feedback."
         path="/counties/siaya/governance/" shareText="Siaya: budget transparency and public participation" />
+      <Abbrs list={['CBTS']} />
 
+      <PageToc items={[['gov-cbts', 'Budget transparency survey'], ['gov-conf', 'Where editions disagree'], ['gov-aprm', 'County peer review'], ['gov-cav', 'Caveats']]} />
       <section className="card gold" aria-labelledby="gov-read">
         <h2 id="gov-read">How to read this page</h2>
         <ul className="how">

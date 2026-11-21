@@ -1,4 +1,5 @@
 import { Provisional } from '../../../../components/ObsTable';
+import PageToc from '../../../components/PageToc';
 import Reviewed from '../../../../components/Reviewed';
 import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
@@ -31,6 +32,7 @@ export default function SiayaAudits() {
         sub="What the Auditor-General reported on the accounts of the County Executive and the County Assembly of Siaya: the opinion for each year, the findings by category, and the matters later reports list as still unresolved."
         path="/counties/siaya/audits/" shareText="Siaya: Auditor-General audit findings" />
 
+      <PageToc items={[['aud-op', 'Opinions by year'], ['aud-gaps', 'Years with no report'], ['aud-find', 'Findings'], ['aud-matrix', 'By category and year'], ['aud-carry', 'Carried forward'], ['aud-cav', 'Caveats']]} />
       <section className="card gold" aria-labelledby="aud-read">
         <h2 id="aud-read">How to read this page</h2>
         <Provisional dataset="siaya-audits">Findings were transcribed by Takwimu from the reports and have not yet been checked by a reviewer.</Provisional>

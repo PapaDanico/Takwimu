@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Abbrs from '../../../components/Abbrs';
+import PageToc from '../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { LineChart, ColumnChart } from '../../../../components/Charts';
@@ -25,7 +27,9 @@ export default function SiayaEconomy() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Economy" title="Siaya’s economy"
         sub="The value of everything produced in Siaya County each year, as measured by the Kenya National Bureau of Statistics (KNBS) in its Gross County Product reports. Two editions are shown side by side; neither replaces the other here."
         path="/counties/siaya/economy/" shareText="Siaya’s economy: Gross County Product from KNBS" />
+      <Abbrs list={['GCP']} />
 
+      <PageToc items={[['eco-what', 'What this measures'], ['eco-current', 'Current prices'], ['eco-constant', 'Constant prices'], ['eco-sectors', 'By activity'], ['eco-rev', 'Revisions'], ['eco-gaps', 'Not published']]} />
       <section className="card gold" aria-labelledby="eco-what">
         <h2 id="eco-what">What this measures, and what it does not</h2>
         <ul className="how">

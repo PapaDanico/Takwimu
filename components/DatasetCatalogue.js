@@ -100,6 +100,9 @@ export default function DatasetCatalogue({ datasets, sectors, sources, years }) 
                 <dl>
                   <dt>Status</dt><dd><span className={`ds-status st-${d.status}`}>{d.status}</span> {d.status_reason}</dd>
                   <dt>Review</dt><dd data-review-counts={d.id}>{d.review ? `${d.review.approved.toLocaleString('en-US')} approved, ${d.review.pending.toLocaleString('en-US')} pending, ${d.review.rejected.toLocaleString('en-US')} rejected (of ${d.review.total.toLocaleString('en-US')} values)` : 'Not itemised for editorial review yet.'}</dd>
+                </dl>
+                <details className="ds-tech"><summary>Unit, coverage, source, method and version</summary>
+                <dl>
                   <dt>Unit</dt><dd>{d.unit}</dd>
                   <dt>Coverage</dt><dd>{d.coverage}</dd>
                   <dt>Source</dt><dd><a href={d.source_url}>{d.source_detail}</a></dd>
@@ -107,6 +110,7 @@ export default function DatasetCatalogue({ datasets, sectors, sources, years }) 
                   <dt>Last updated</dt><dd>{when(d.last_updated)} (source); retrieved {when(d.retrieved)}</dd>
                   <dt>Version</dt><dd><code>{d.version}</code> (first 10 characters of the SHA-256 of {d.data_file})</dd>
                 </dl>
+                </details>
                 <div className="ds-links">
                   {d.files.csv ? <a className="file" href={d.files.csv} download={`${d.download_name}.csv`} aria-label={`${d.title}: download CSV, version ${d.version}`}>CSV</a> : <span className="muted">No download: the publisher&rsquo;s terms are link and cite only</span>}
                   {d.files.json ? <a className="file" href={d.files.json} download={`${d.download_name}.json`} aria-label={`${d.title}: download JSON, version ${d.version}`}>JSON</a> : null}

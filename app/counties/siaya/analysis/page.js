@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Abbrs from '../../../components/Abbrs';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { LineChart } from '../../../../components/Charts';
@@ -6,10 +7,13 @@ import CalcTable from '../../../../components/CalcTable';
 import { Provisional, ReviewCounts } from '../../../../components/ObsTable';
 import { masked, badge } from '../../../../lib/review-status';
 import Reviewed from '../../../../components/Reviewed';
+import { plainDeep } from '../../../../lib/plain';
 import { LatestYear, SpentTenYear, Unspent, PendingTenYear, Growth, Limits, TREND_TOC } from '../../../../components/siaya/AnalysisTrends';
 
 // Masked: a result is withheld (null) when the calculation or any of its inputs was rejected in editorial review.
-const a = masked('siaya-analysis');
+const a0 = masked('siaya-analysis');
+// Reader wording (own-source revenue, share of budget spent) for text from the data file; values unchanged.
+const a = { ...a0, records: plainDeep(a0.records) };
 
 export const metadata = {
   title: 'Siaya analysis',
@@ -86,6 +90,7 @@ export default function SiayaAnalysis() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Analysis" title="Siaya analysis"
         sub="The canonical home for Siaya’s share of budget spent, pending bills and real spending per person: the latest year, ten-year series, and measures worked out from figures the reports print, such as reliance on transfers and audit findings that recur."
         path="/counties/siaya/analysis/" shareText="Siaya analysis: calculated from published figures" />
+      <Abbrs list={['PCRA', 'FLLoCA', 'FIF', 'A-i-A']} />
 
       <section className="card gold" aria-labelledby="an-read">
         <h2 id="an-read">How to read this page</h2>

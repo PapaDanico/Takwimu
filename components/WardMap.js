@@ -56,8 +56,8 @@ const HOME = { k: 1, cx: W / 2, cy: H / 2 };
 
 const CSS = `
 .wmap{margin:0}
-.wmap-stage{position:relative;border:1px solid var(--rule);border-radius:14px;background:var(--surface);overflow:hidden}
-.wmap-svg{display:block;width:100%;height:auto;cursor:grab;user-select:none;-webkit-user-select:none}
+.wmap-stage{position:relative;border:1px solid var(--rule);border-radius:14px;background:var(--surface);overflow:hidden;max-width:720px}
+.wmap-svg{display:block;width:100%;height:auto;max-height:80vh;cursor:grab;user-select:none;-webkit-user-select:none}
 .wmap-svg.drag{cursor:grabbing}
 .wmap-svg:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
 .wmap-ward{stroke:var(--surface);stroke-width:1;transition:fill .12s}
@@ -77,7 +77,8 @@ const CSS = `
 .wmap-ctl button:disabled{opacity:.45;cursor:default}
 .wmap-tip{position:absolute;transform:translate(-50%,calc(-100% - 10px));pointer-events:none;background:var(--ink);color:var(--surface);border-radius:8px;padding:6px 10px;font-size:12px;line-height:1.4;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .wmap-tip b{display:block;font-size:13px}
-.wmap-help{margin:8px 0 0;font-size:12px;color:var(--ink-muted)}
+.wmap-help{margin:0 0 8px;font-size:13px;color:var(--ink-soft);max-width:720px}
+.wmap-detail{margin:8px 0 0;max-width:720px;border:1px solid var(--rule);border-radius:10px;padding:8px 12px;font-size:14px;background:var(--surface)}
 .wmap-legend{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:8px;font-size:12px;color:var(--ink-soft)}
 .wmap-sw{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:6px;vertical-align:-2px;border:1px solid var(--rule)}
 .wmap-attr{margin-top:8px;font-size:12px;color:var(--ink-muted)}
@@ -99,6 +100,8 @@ export default function WardMap({
   const gesture = useRef(null);
   const [view, setView] = useState(HOME);
   const [active, setActive] = useState(null);
+  // Click, Enter or Space on a ward shows its details below the map (owner decision U7).
+  const [sel, setSel] = useState(null);
   const [dragging, setDragging] = useState(false);
 
   const valOf = useCallback((w) => {
@@ -190,6 +193,10 @@ export default function WardMap({
   return (
     <figure className="wmap">
       <style>{CSS}</style>
+      <p id={helpId} className="wmap-help">
+        Drag to move the map, or use the arrow keys when it is selected. Zoom with the buttons or the + and − keys; 0 resets. Ward names appear when zoomed in. Tab moves between wards; click a ward or press Enter to see its details below the map.
+      </p>
+
       <div className="wmap-stage">
         <svg
           ref={svgRef}
@@ -231,6 +238,8 @@ export default function WardMap({
                 aria-label={describe(w)}
                 onPointerEnter={() => setActive(w.id)}
                 onPointerLeave={(e) => { const el = e.currentTarget; setActive((a) => (a === w.id && document.activeElement !== el ? null : a)); }}
+                onClick={() => setSel(w.id)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); setSel(w.id); } }}
                 onFocus={() => onWardFocus(w)}
                 onBlur={() => setActive((a) => (a === w.id ? null : a))}
               />
@@ -255,9 +264,9 @@ export default function WardMap({
           </div>
         ) : null}
       </div>
-      <p id={helpId} className="wmap-help">
-        Drag to move the map, or use the arrow keys when it is selected. Zoom with the buttons or the + and − keys; 0 resets. Ward names appear when zoomed in. Tab moves between wards.
-      </p>
+      <div className="wmap-detail" role="status" aria-live="polite">
+        {(() => { const w = WARDS.find((x) => x.id === sel); return w ? <><b>{w.name}</b> ward, {w.con} constituency, IEBC code {w.code}{values ? <>. {valueLabel ? `${valueLabel}: ` : ''}{fmtV(valOf(w))}</> : null}.</> : 'Select a ward to see its name, constituency and IEBC code here.'; })()}
+      </div>
       {values ? (
         <div className="wmap-legend">
           {valueLabel ? <b>{valueLabel}</b> : null}

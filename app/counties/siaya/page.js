@@ -165,7 +165,7 @@ export default function Home() {
           </table>
         </TableWrap>
         <div className="src">
-          Sources: {IY.periods.map((p, i) => <span key={p.id}>{i ? '; ' : ''}<a href={p.report.url}>{p.report.title}</a>, section {p.report.section}, confidence {p.confidence}/5</span>)}. Page numbers for each figure are in the <Link href="/data/">data files</Link>. — means the report gives no figure.
+          Sources: {IY.periods.map((p, i) => <span key={p.id}>{i ? '; ' : ''}<a href={p.report.url}>{p.report.title}</a>, section {p.report.section}, confidence {p.confidence} of 5</span>)}. Page numbers for each figure are in the <Link href="/data/">data files</Link>. — means the report gives no figure.
           <br />
           Notes: {IY.note} The two reports disagree on the Assembly&apos;s opening unpaid bills, and their revenue-arrears totals cover different things; both values are shown and explained in the <Link href="/data/#conflicts">conflict register</Link>.
         </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageToc from '../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';
@@ -36,6 +37,7 @@ export default function SiayaAgriculture() {
         sub="Crops, livestock, fish and irrigation in Siaya County as printed by the Kenya National Bureau of Statistics and the county development plan. What was counted is kept apart from what the plan aims to reach."
         path="/counties/siaya/agriculture/" shareText="Agriculture in Siaya: observed values and plan targets" />
 
+      <PageToc items={[['ag-obs', 'Observed'], ['ag-tgt', 'Targets'], ['ag-conf', 'Conflicts'], ['ag-gaps', 'Not published']]} />
       <section className="card gold" aria-labelledby="ag-read">
         <h2 id="ag-read">How to read this page</h2>
         <Provisional dataset="siaya-agriculture">Values were transcribed by Takwimu from the KNBS Siaya County Statistical Abstract 2015 and the CIDP 2023-2027 and have not yet been checked by a reviewer.</Provisional>

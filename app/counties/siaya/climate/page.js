@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Abbrs from '../../../components/Abbrs';
+import PageToc from '../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import ObsTable, { Cite, Provisional } from '../../../../components/ObsTable';
@@ -35,7 +37,9 @@ export default function SiayaClimate() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Climate" title="Climate, water and resilience"
         sub="Where residents of Siaya told the county’s climate risk assessment that floods and drought hit, how many people have safe water and sanitation by each official definition, and what climate money has been planned, received, transferred and spent."
         path="/counties/siaya/climate/" shareText="Siaya climate, water and resilience: by source" />
+      <Abbrs list={['PCRA', 'FLLoCA']} />
 
+      <PageToc items={[['cl-haz', 'Hotspots by ward'], ['cl-water', 'Water and sanitation'], ['cl-money', 'Climate and water money'], ['cl-gaps', 'Not published']]} />
       <section className="card gold" aria-labelledby="cl-read">
         <h2 id="cl-read">How to read this page</h2>
         <Provisional dataset="siaya-climate">Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>

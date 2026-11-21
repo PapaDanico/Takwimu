@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageToc from '../../../components/PageToc';
 import siaya from '../../../../data/siaya.json';
 import hist from '../../../../data/history.json';
 import reg from '../../../../data/conflicts.json';
@@ -57,6 +58,7 @@ export default function SiayaBrief() {
           </div>
         </header>
 
+        <PageToc items={[['brief-head-h', 'Headline figures'], ['brief-ten-h', 'Ten years of spending'], ['brief-audit-h', 'Audit opinions'], ['brief-cav-h', 'Key caveats']]} />
         <section aria-labelledby="brief-head-h">
           <h2 id="brief-head-h">Headline figures</h2>
           <dl className="brief-tiles">

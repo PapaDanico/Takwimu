@@ -1,8 +1,10 @@
 'use client';
 // Development projects for /counties/siaya/projects/: filter by sector, ward (from the ward registry) and status.
 // Each project shows what the county reported beside what the Auditor-General found. Choices are held in memory
-// only: nothing is stored or sent. Contractor names are not in the data passed here (withheld pending review).
-import { useId, useState } from 'react';
+// only, and in the address (?sector=&ward=&status=) so a view can be shared: nothing is stored or sent. Contractor names are not in the data passed here (withheld pending review).
+import { useEffect, useId, useState } from 'react';
+import { readParams, writeParams } from '../lib/url-state';
+import { stateLabel } from '../lib/labels';
 import { ColumnChart } from './Charts';
 import Reviewed from './Reviewed';
 
@@ -19,6 +21,10 @@ export default function ProjectExplorer({ projects, states, sectors, wards }) {
   const [sector, setSector] = useState('');
   const [ward, setWard] = useState('');
   const [status, setStatus] = useState('');
+  // Filters follow the address, as on /compare/ (owner decision U7): read once after load, written on every change.
+  const [ready, setReady] = useState(false);
+  useEffect(() => { const q = readParams(['sector', 'ward', 'status']); setSector(q.sector); setWard(q.ward); setStatus(q.status); setReady(true); }, []);
+  useEffect(() => { if (ready) writeParams({ sector, ward, status }); }, [ready, sector, ward, status]);
   const base = projects.filter((p) => (!sector || p.sector === sector) && (!ward || p.wards.some((w) => w.id === ward)));
   const shown = base.filter((p) => !status || p.status === status);
   // A project withdrawn in editorial review has no status (lib/projects.js): it is listed, never counted by status.
@@ -47,12 +53,12 @@ export default function ProjectExplorer({ projects, states, sectors, wards }) {
           <label htmlFor={`${uid}-st`}>Status</label>
           <select id={`${uid}-st`} value={status} onChange={(e) => setStatus(e.target.value)}>
             <option value="">All statuses</option>
-            {states.map((s) => <option key={s.state} value={s.state}>{s.state}</option>)}
+            {states.map((s) => <option key={s.state} value={s.state}>{stateLabel(s.state)}</option>)}
           </select>
         </div>
       </div>
       <h3>Projects by status: {scope}</h3>
-      <ColumnChart labels={states.map((s) => s.state)} unit="projects" yFormat="int" ariaLabel={`Number of projects by status, ${scope}`} caption={`Projects by status, ${scope}`}
+      <ColumnChart labels={states.map((s) => stateLabel(s.state))} unit="projects" yFormat="int" ariaLabel={`Number of projects by status, ${scope}`} caption={`Projects by status, ${scope}`}
         series={[{ name: 'Projects', color: 1, values: states.map((s) => base.filter((p) => p.status === s.state).length) }]} />
       <p className="count" role="status" aria-live="polite" id="pr-count">Showing {shown.length} of {projects.length} projects{withdrawn ? `; ${withdrawn} withdrawn after review ${withdrawn === 1 ? 'is' : 'are'} not counted by status` : ''}</p>
       {ward ? <p className="src">A ward filter shows only projects whose printed place matches a ward name in the registry; projects printed with a town, facility or county-wide location are not included.</p> : null}
@@ -62,17 +68,19 @@ export default function ProjectExplorer({ projects, states, sectors, wards }) {
             <h4>{p.name}</h4>
             <div className="tags">
               <span className="ds-status"><code>{p.id}</code></span>
-              {p.review && p.review.hide ? null : <span className={`tag ${p.status === 'completed-independently-verified' ? 'good' : 'warn'}`}>{p.status}</span>}
+              {p.review && p.review.hide ? null : <span className={`tag ${p.status === 'completed-independently-verified' ? 'good' : 'warn'}`} data-state={p.status}>{stateLabel(p.status)}</span>}
               <span className="ds-status">{sectors[p.sector]}</span>
               <span className="ds-status">{p.wards.length ? p.wards.map((w) => w.name).join(', ') : p.countywide ? 'County-wide' : `Place as printed: ${p.places.join('; ')}`}</span>
             </div>
             <Reviewed b={p.review} as="div">{() => (<>
             <p className="src">Status from {p.status_source.url ? <a href={p.status_source.url} rel="noopener">{p.status_source.doc}</a> : p.status_source.doc}, PDF p. {p.status_source.page} ({p.status_source.type}). Latest evidence {p.last}.{p.status === 'completed-reported' ? ' Completion is as reported by the county; no independent check is recorded.' : ''}{p.status_note ? ` ${p.status_note}` : ''}</p>
+            <details className="pr-evidence"><summary>Reported beside audit-found{p.conflicts.length ? ', where sources differ' : ''}</summary>
             <div className="side">
               <div><h5>Reported by the county or the Controller of Budget</h5>{p.reported.length ? <ul>{p.reported.map((e, i) => <Ev key={i} e={e} />)}</ul> : <p className="muted">No county report recorded.</p>}</div>
               <div><h5>Found by the Auditor-General</h5>{p.audit.length ? <ul>{p.audit.map((e, i) => <Ev key={i} e={e} />)}</ul> : <p className="muted">No audit evidence recorded.</p>}</div>
             </div>
             {p.conflicts.length ? <><h5>Where the sources differ</h5><ul>{p.conflicts.map((c) => <li key={c}>{c}</li>)}</ul></> : null}
+            </details>
             {p.findings.length ? <p className="src">Audit findings: {p.findings.map((f, i) => <span key={f}>{i ? ', ' : ''}<a href={`/counties/siaya/audits/#f-${f}`}>{f}</a></span>)}</p> : null}
             {p.amounts.length ? (
               <details><summary>Amounts as printed ({p.amounts.length})</summary>

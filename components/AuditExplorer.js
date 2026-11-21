@@ -1,7 +1,8 @@
 'use client';
 // Audit findings for /counties/siaya/audits/: filter by year, entity and category; the column chart counts findings by
-// category for the chosen year and entity, with a table view. Choices are held in memory only: nothing is stored or sent.
-import { useId, useState } from 'react';
+// category for the chosen year and entity, with a table view. Choices are held in memory and in the address (?fy=&entity=&category=) so a view can be shared: nothing is stored or sent.
+import { useEffect, useId, useState } from 'react';
+import { readParams, writeParams } from '../lib/url-state';
 import { ColumnChart } from './Charts';
 import Reviewed from './Reviewed';
 
@@ -10,6 +11,10 @@ export default function AuditExplorer({ findings, entities, categories, years })
   const [fy, setFy] = useState('');
   const [entity, setEntity] = useState('');
   const [cat, setCat] = useState('');
+  // Filters follow the address, as on /compare/ (owner decision U7): read once after load, written on every change.
+  const [ready, setReady] = useState(false);
+  useEffect(() => { const q = readParams(['fy', 'entity', 'category']); setFy(q.fy); setEntity(q.entity); setCat(q.category); setReady(true); }, []);
+  useEffect(() => { if (ready) writeParams({ fy, entity, category: cat }); }, [ready, fy, entity, cat]);
   const base = findings.filter((f) => (!fy || f.fy === fy) && (!entity || f.entity === entity));
   const shown = base.filter((f) => !cat || f.category === cat);
   const cats = Object.keys(categories).filter((k) => findings.some((f) => f.category === k));
@@ -64,6 +69,8 @@ export default function AuditExplorer({ findings, entities, categories, years })
                 <span className="ds-status">FY {f.fy}</span>
                 {f.category ? <span className="ds-status">{categories[f.category]}</span> : null}
               </div>
+              <p className="src"><a href={f.url} rel="noopener">{f.doc}</a>, PDF p. {f.page}, paragraph {f.paragraph}</p>
+              <details className="aud-detail"><summary>Section, amounts and follow-up</summary>
               <dl>
                 <dt>Report</dt><dd><a href={f.url} rel="noopener">{f.doc}</a>, PDF p. {f.page}, paragraph {f.paragraph}</dd>
                 <dt>Section</dt><dd>{f.section}{f.heading ? <> (the report&rsquo;s own heading: &ldquo;{f.heading}&rdquo;)</> : null}</dd>
@@ -72,6 +79,7 @@ export default function AuditExplorer({ findings, entities, categories, years })
                 {f.next ? <><dt>Next report</dt><dd>Listed as unresolved in the following year&rsquo;s report</dd></> : null}
                 {f.note ? <><dt>Note</dt><dd>{f.note}</dd></> : null}
               </dl>
+              </details>
             </li>
           ))}
         </ol>

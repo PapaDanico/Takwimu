@@ -161,6 +161,21 @@ function Axes({ L, ticks, yMax, yFormat, labels, xAt }) {
   );
 }
 
+// A chart is one tab stop (owner decision U7): focus the chart, then Left/Right (or Home/End) move between years and the
+// tooltip (role=status) reads the values out. The table view under every chart has every value.
+function keyNav(n, at, setAt, xOf) {
+  return {
+    tabIndex: 0,
+    onFocus: () => { if (!at) setAt({ i: 0, x: xOf(0) }); },
+    onBlur: () => setAt(null),
+    onKeyDown: (e) => {
+      const cur = at ? at.i : -1;
+      const next = { ArrowRight: Math.min(n - 1, cur + 1), ArrowLeft: Math.max(0, cur - 1), Home: 0, End: n - 1 }[e.key];
+      if (next !== undefined) { e.preventDefault(); setAt({ i: next, x: xOf(next) }); } else if (e.key === 'Escape') setAt(null);
+    },
+  };
+}
+
 export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine, naText }) {
   const [ref, width] = useWidth();
   const [at, setAt] = useState(null);
@@ -182,7 +197,7 @@ export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit =
     <figure className="chart" ref={ref}>
       <Legend series={series.map((s) => ({ ...s, kind: 'line' }))} />
       <div className="chart-frame" onMouseLeave={() => setAt(null)}>
-        <svg width={width} height={L.h} viewBox={`0 0 ${width} ${L.h}`} role="group" aria-label={ariaLabel}>
+        <svg width={width} height={L.h} viewBox={`0 0 ${width} ${L.h}`} role="group" aria-label={`${ariaLabel}. Use the left and right arrow keys to read each year.`} className="chart-svg" {...keyNav(labels.length, at, setAt, xAt)}>
           <Axes L={L} ticks={ticks} yMax={yMax} yFormat={yFormat} labels={labels} xAt={xAt} />
           {refLine && (
             <g>
@@ -206,9 +221,9 @@ export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit =
           })}
           {L.wide && ends.map((e) => <text key={e.name} x={e.x + 10} y={e.y} style={{ fill: 'var(--ink)', fontWeight: 700, fontFamily: 'var(--sans)' }}>{e.name}</text>)}
           {labels.map((l, i) => (
-            <rect key={l} x={xAt(i) - slot / 2} y={M.t} width={slot} height={L.plotH} fill="transparent" tabIndex={0} role="img"
+            <rect key={l} x={xAt(i) - slot / 2} y={M.t} width={slot} height={L.plotH} fill="transparent" role="img"
               aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? (naText || 'no data') : fmt(valueKind(yFormat, valueFormat), s.values[i])}`).join(', ')}`}
-              onMouseEnter={() => setAt({ i, x: xAt(i) })} onFocus={() => setAt({ i, x: xAt(i) })} onBlur={() => setAt(null)} />
+              onMouseEnter={() => setAt({ i, x: xAt(i) })} />
           ))}
         </svg>
         <Tooltip at={at} width={width} labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} />
@@ -239,7 +254,7 @@ export function ColumnChart({ labels, series, yFormat = 'int', valueFormat, unit
     <figure className="chart" ref={ref}>
       <Legend series={series.map((s) => ({ ...s, kind: 'column' }))} />
       <div className="chart-frame" onMouseLeave={() => setAt(null)}>
-        <svg width={width} height={L.h} viewBox={`0 0 ${width} ${L.h}`} role="group" aria-label={ariaLabel}>
+        <svg width={width} height={L.h} viewBox={`0 0 ${width} ${L.h}`} role="group" aria-label={`${ariaLabel}. Use the left and right arrow keys to read each year.`} className="chart-svg" {...keyNav(labels.length, at, setAt, xCenter)}>
           <Axes L={L} ticks={ticks} yMax={yMax} yFormat={yFormat} labels={labels} xAt={xCenter} />
           {refLine && (
             <g>
@@ -255,9 +270,9 @@ export function ColumnChart({ labels, series, yFormat = 'int', valueFormat, unit
             return <path key={`${l}${s.name}`} d={bar(x, barW, yAt(v))} style={{ fill: `var(--s${s.color})` }} />;
           }))}
           {labels.map((l, i) => (
-            <rect key={`h${l}`} x={M.l + slotW * i} y={M.t} width={slotW} height={L.plotH} fill="transparent" tabIndex={0} role="img"
+            <rect key={`h${l}`} x={M.l + slotW * i} y={M.t} width={slotW} height={L.plotH} fill="transparent" role="img"
               aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? (naText || 'no data') : fmt(valueKind(yFormat, valueFormat), s.values[i])}`).join(', ')}`}
-              onMouseEnter={() => setAt({ i, x: xCenter(i) })} onFocus={() => setAt({ i, x: xCenter(i) })} onBlur={() => setAt(null)} />
+              onMouseEnter={() => setAt({ i, x: xCenter(i) })} />
           ))}
         </svg>
         <Tooltip at={at} width={width} labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} />

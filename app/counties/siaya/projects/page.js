@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import PageToc from '../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import ProjectExplorer from '../../../../components/ProjectExplorer';
+import { stateLabel } from '../../../../lib/labels';
 import { Provisional } from '../../../../components/ObsTable';
 import { projectRows, STATES, SECTOR, pub } from '../../../../lib/projects';
 import geo from '../../../../data/siaya-geography.json';
@@ -22,6 +24,7 @@ export default function SiayaProjects() {
         sub={`${rows.length} county development projects named in the county’s plans and budget reports, the Controller of Budget’s reports and the Auditor-General’s reports, with what each source says about progress. Where the county’s report and the auditor’s inspection differ, both are shown.`}
         path="/counties/siaya/projects/" shareText="Siaya development project register" />
 
+      <PageToc items={[['pr-ex', 'Two examples'], ['pr-find', 'Projects'], ['pr-gaps', 'Not in the register']]} />
       <section className="card gold" aria-labelledby="pr-read">
         <h2 id="pr-read">How to read this page</h2>
         <Provisional dataset="siaya-projects">The register was compiled by Takwimu from the reports (some pages read by OCR) and has not yet been checked by a reviewer.</Provisional>
@@ -33,7 +36,7 @@ export default function SiayaProjects() {
         </ul>
         <h3>The eight status states used</h3>
         <dl className="legend-list" id="status-legend">
-          {STATES.map((s) => <div key={s.state}><dt><span className={`tag ${s.state === 'completed-independently-verified' ? 'good' : 'warn'}`}>{s.state}</span> ({s.count})</dt><dd>{s.rule}</dd></div>)}
+          {STATES.map((s) => <div key={s.state}><dt><span className={`tag ${s.state === 'completed-independently-verified' ? 'good' : 'warn'}`} data-state={s.state}>{stateLabel(s.state)}</span> ({s.count})</dt><dd>{s.rule}</dd></div>)}
         </dl>
       </section>
 

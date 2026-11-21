@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import Abbrs from '../components/Abbrs';
+import PageToc from '../components/PageToc';
+import { plain } from '../../lib/plain';
 import PageHead from '../../components/PageHead';
 import TableWrap from '../../components/TableWrap';
 import hist from '../../data/history.json';
@@ -60,7 +63,10 @@ export default function DataPage() {
   return (
     <main id="main" className="wrap page">
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Ten-year series" title="Siaya ten-year series: sources and conflicts" sub="The Siaya series behind the ten-year pages, the source of every year and the register of conflicts between sources. Every file is plain JSON. Each figure carries its source and confidence, so you can check it or reuse it. Please cite the original publisher as well as Takwimu." path="/data/" shareText="Takwimu Kenya open data" />
+      <Abbrs list={['FIF', 'A-i-A']} />
       <nav className="card" aria-label="Data and method"><p style={{ margin: 0 }}>This section covers the data and how it is checked. <Link href="/method/">Read the method</Link> · <Link href="/datasets/">Search all datasets</Link></p></nav>
+      <PageToc items={[['f-h', 'Files'], ['brief-dl-h', 'Printable brief'], ['c-h', 'Coverage'], ['pref-h', 'Where each figure was read'], ['supp-h', 'Other documents'], ['reg-h', 'Conflict register'], ['open', 'Open questions']]} />
+
       <section className="card" aria-labelledby="f-h">
         <h2 id="f-h">Files</h2>
         <TableWrap label="Data files">
@@ -160,9 +166,10 @@ export default function DataPage() {
                 </table>
               </TableWrap>
               {typeof c.values[0].value === 'number' ? <p><b>Difference:</b> {Math.abs(c.values[0].value - c.values[1].value).toLocaleString('en-US', { maximumFractionDigits: 2 })} {c.unit} ({((Math.abs(c.values[0].value - c.values[1].value) / c.values[0].value) * 100).toFixed(1)}% of the first value)</p> : <p><b>Difference:</b> a label, citation or licence, not an amount.</p>}
-              <p><b>Definitions:</b> {c.definitions}</p>
-              <p><b>Hypothesis, not established:</b> {c.hypothesis}</p>
-              <p><b>Effect on the site:</b> {c.effect}</p>
+              <p><b>Definitions:</b> {plain(c.definitions)}</p>
+              <p><b>Hypothesis, not established:</b> {plain(c.hypothesis)}</p>
+              {/* A caveat shared by several cases is stated once, at its first case (owner decision U3). */}
+              {(() => { const first = reg.conflicts.find((x) => x.effect === c.effect); return first.id === c.id ? <p><b>Effect on the site:</b> {plain(c.effect)}</p> : <p><b>Effect on the site:</b> as for case <a href={`#${first.id}`}>{first.id}</a>.</p>; })()}
             </article>
           ))}
         </div>

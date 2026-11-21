@@ -66,7 +66,14 @@ export default function KenyaPage() {
           <SaveView title="Kenya dashboard" />
           <PrintButton />
         </div>
-        <p className="hint" style={{ marginTop: 10 }}>Jump to: {ORDER.map((s, i) => <span key={s}>{i ? ' · ' : ''}<a href={`#${s.replace(' ', '-')}`}>{SECTORS[s]}</a></span>)} · <a href="#counties">Counties together</a> · <a href="#analysis">Analysis</a> · <a href="#governance">Governance and elections</a> · <a href="#trends">Trend explorer</a> · <a href="#notes">Sources and notes</a></p>
+        <nav aria-label="Sections on this page" style={{ marginTop: 10 }}><ul className="toc">
+          <li><a href="#trends">Trend explorer</a></li><li><a href="#counties">Counties together</a></li>
+          {ORDER.map((s) => <li key={s}><a href={`#${s.replace(' ', '-')}`}>{SECTORS[s]}</a></li>)}
+          <li><a href="#analysis">Analysis</a></li>
+          <li><a href="#governance">Governance and elections</a></li>
+          <li><a href="#imf">IMF outlook</a></li>
+          <li><a href="#notes">Sources and notes</a></li>
+        </ul></nav>
       </section>
 
       <section className="card" id="counties" aria-labelledby="counties-h">
