@@ -15,6 +15,12 @@ const COLUMNS = [
     heading: 'Explore',
     links: [
       { href: '/', label: 'Home' },
+      { href: '/explore/', label: 'Explore the data' },
+      { href: '/datasets/', label: 'Datasets' },
+      { href: '/kenya/', label: 'Kenya dashboard' },
+      { href: '/compare/', label: 'Compare counties' },
+      { href: '/trends/', label: 'Trends' },
+      { href: '/stories/', label: 'Data stories' },
       { href: '/counties/', label: 'All 47 counties' },
       { href: '/data/', label: 'Open data' },
     ],

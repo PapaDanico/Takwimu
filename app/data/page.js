@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PageHead from '../../components/PageHead';
 import TableWrap from '../../components/TableWrap';
 import hist from '../../data/history.json';
@@ -58,6 +59,7 @@ export default function DataPage() {
   return (
     <main id="main" className="wrap page">
       <PageHead eyebrow="Data" title="Data downloads and sources" sub="Every file is plain JSON. Each figure carries its source and confidence, so you can check it or reuse it. Please cite the original publisher as well as Takwimu." path="/data/" shareText="Takwimu Kenya open data" />
+      <nav className="card" aria-label="Data and method"><p style={{ margin: 0 }}>This section covers the data and how it is checked. <Link href="/method/">Read the method</Link> · <Link href="/datasets/">Search all datasets</Link> · <Link href="/explore/">Explore the data</Link></p></nav>
       <section className="card" aria-labelledby="f-h">
         <h2 id="f-h">Files</h2>
         <TableWrap label="Data files">

@@ -66,7 +66,7 @@ function Legend({ series }) {
   );
 }
 
-function TableView({ labels, series, yFormat, unit, caption }) {
+function TableView({ labels, series, yFormat, unit, caption, naText = 'No data' }) {
   return (
     <details className="tableview">
       <summary>View as table</summary>
@@ -80,7 +80,7 @@ function TableView({ labels, series, yFormat, unit, caption }) {
                 <th scope="row">{l}</th>
                 {series.map((s) => (
                   <td key={s.name}>
-                    {s.values[i] == null ? 'No data' : fmt(yFormat, s.values[i])}
+                    {s.values[i] == null ? naText : fmt(yFormat, s.values[i])}
                     {s.alt && s.alt[i] != null ? <small> (other report: {fmt(yFormat, s.alt[i])})</small> : null}
                   </td>
                 ))}
@@ -161,7 +161,7 @@ function Axes({ L, ticks, yMax, yFormat, labels, xAt }) {
   );
 }
 
-export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine }) {
+export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine, naText }) {
   const [ref, width] = useWidth();
   const [at, setAt] = useState(null);
   const L = layout(width, labels, false);
@@ -213,7 +213,7 @@ export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit =
         </svg>
         <Tooltip at={at} width={width} labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} />
       </div>
-      <TableView labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} caption={caption || ariaLabel} />
+      <TableView labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} caption={caption || ariaLabel} naText={naText} />
     </figure>
   );
 }

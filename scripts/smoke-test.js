@@ -30,7 +30,7 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/trends/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/']) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
@@ -59,6 +59,49 @@ const srv = http.createServer((req, res) => {
   check(csv.ok() && (await csv.text()).startsWith('"indicator"'), 'history.csv served with header');
   const conf = await (await pg.request.get(base + '/data/conflicts.json')).json();
   check(conf.conflicts.length >= 10 && conf.conflicts.every((c) => c.verification_state), 'conflicts.json has verification states');
+
+  // Explore pages (phase 2): URL state, ordered list and map, side by side, empty states, saved views, downloads.
+  const ctx2 = await b.newContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true });
+  const p2 = await ctx2.newPage();
+  p2.on('pageerror', (e) => bad.push(String(e)));
+  p2.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
+  await p2.goto(base + '/compare/', { waitUntil: 'networkidle' });
+  check(await p2.locator('ul.rank > li').count() === 47, 'compare lists all 47 counties');
+  check(await p2.locator('.kmap-values a').count() === 47, 'compare map shades all 47 counties');
+  await p2.locator('select').first().selectOption('osr_performance_pct');
+  await p2.waitForFunction(() => location.search.includes('i=osr_performance_pct'));
+  check(/i=osr_performance_pct/.test(p2.url()), 'compare writes the indicator to the address');
+  check(await p2.locator('input[type=radio][value=high]').isDisabled() && /not by value/.test(await p2.locator('.notice').first().innerText()), 'doubtful readings switch the list to A to Z and disable ordering by value');
+  check(/Not available/.test(await p2.locator('ul.rank').innerText()), 'missing values say "Not available" with the reason');
+  check(/No county chosen yet/.test(await p2.locator('#side-h ~ .empty').innerText()), 'side by side shows an empty state with no county chosen');
+  const add = p2.locator('select').last();
+  for (const s of ['siaya', 'kisumu']) { await add.selectOption(s); await p2.getByRole('button', { name: 'Add', exact: true }).click(); }
+  check(/c=siaya(%2C|,)kisumu/.test(p2.url()) && await p2.locator('#side-h ~ div table tbody tr').count() >= 10, 'two counties side by side, in the address');
+  await p2.goto(base + '/compare/?c=siaya,kisumu,nakuru,kakamega,busia', { waitUntil: 'networkidle' });
+  check(/At most 4 counties/.test(await p2.locator('.invalid').first().innerText()), 'more than four counties gives a validation message');
+  const [dl] = await Promise.all([p2.waitForEvent('download'), p2.getByRole('group', { name: 'Download this list' }).getByRole('button', { name: 'CSV' }).click()]);
+  const dlText = fs.readFileSync(await dl.path(), 'utf8');
+  check(dlText.split('\n').filter(Boolean).length === 48 && dlText.startsWith('"fiscal_year"'), 'compare list downloads as CSV with 47 rows');
+  await p2.getByRole('button', { name: 'Save this view' }).click();
+  await p2.goto(base + '/datasets/?q=zzzz', { waitUntil: 'networkidle' });
+  check(/No dataset matches/.test(await p2.locator('main').innerText()), 'datasets search shows an empty state');
+  check(await p2.locator('#saved .saved-list li').count() === 1, 'saved view appears in the Saved views list');
+  await p2.locator('#saved button', { hasText: 'Remove' }).click();
+  check(await p2.locator('#saved .saved-list li').count() === 0, 'saved view can be removed');
+  await p2.goto(base + '/datasets/?geo=county&source=Controller%20of%20Budget', { waitUntil: 'networkidle' });
+  check(await p2.locator('.ds-list > li').count() >= 4, 'datasets filters read from the address');
+  const dsCsv = await p2.request.get(base + '/data/datasets/counties-absorption.csv');
+  check(dsCsv.ok() && (await dsCsv.text()).includes('"Siaya"'), 'dataset CSV served');
+  await p2.goto(base + '/trends/?i=siaya-spending&basis=real', { waitUntil: 'networkidle' });
+  check(await p2.locator('input[type=radio]').nth(1).isChecked() && await p2.locator('figure.chart').count() === 1, 'trends reads indicator and real basis from the address');
+  await p2.goto(base + '/trends/?i=nonsense', { waitUntil: 'networkidle' });
+  check(/do not have/.test(await p2.locator('.invalid').innerText()), 'trends explains an unknown indicator');
+  await p2.goto(base + '/kenya/', { waitUntil: 'networkidle' });
+  check(await p2.locator('figure.chart').count() >= 13 && await p2.locator('.spark').count() >= 12, 'Kenya dashboard shows trend charts and sparklines (one series has a single value, so no line)');
+  const nf = await p2.goto(base + '/no-such-page/', { waitUntil: 'load' });
+  const nfHtml = fs.readFileSync(path.join(root, '404.html'), 'utf8');
+  check(/That page is not here/.test(nfHtml) && /href="\/explore\/"/.test(nfHtml), 'friendly 404 with Home and Explore links');
+  await ctx2.close();
   check(bad.length === 0, `no CSP violations or page errors ${bad.slice(0, 2).join(' | ')}`);
   await b.close(); srv.close();
   process.exit(failed ? 1 : 0);

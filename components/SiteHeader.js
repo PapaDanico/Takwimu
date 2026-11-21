@@ -3,19 +3,21 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
-import { Home, Map, BookOpen, Database, Info } from 'lucide-react';
+import { Home, Map, BookOpen, Database, Compass } from 'lucide-react';
 import { COUNTIES } from '../lib/counties';
 import { ISSUES_URL } from '../lib/site';
 
 // County pages that live outside /counties/ keep their old URLs; they belong to the Counties section.
 const COUNTY_PAGES = ['/counties', '/insights', '/analytics', '/subcounties', '/profile'];
+// Sections that cover more than one route.
+const SECTION = { '/explore': ['/explore', '/datasets', '/kenya', '/compare', '/trends', '/stories'], '/data': ['/data', '/method'] };
 
 const NAV = [
   { href: '/', label: 'Home', short: 'Home', Icon: Home },
+  { href: '/explore/', label: 'Explore', short: 'Explore', Icon: Compass },
   { href: '/counties/', label: 'Counties', short: 'Counties', Icon: Map },
   { href: '/learn/', label: 'Learn', short: 'Learn', Icon: BookOpen },
-  { href: '/data/', label: 'Data', short: 'Data', Icon: Database },
-  { href: '/method/', label: 'Method', short: 'Method', Icon: Info },
+  { href: '/data/', label: 'Data & Method', short: 'Data', Icon: Database },
 ];
 
 export default function SiteHeader({ asOf }) {
@@ -27,6 +29,7 @@ export default function SiteHeader({ asOf }) {
     const h = href.replace(/\/$/, '') || '/';
     if (h === '/') return p === '/';
     if (h === '/counties') return COUNTY_PAGES.some((x) => p.startsWith(x));
+    if (SECTION[h]) return SECTION[h].some((x) => p.startsWith(x));
     return p.startsWith(h);
   };
   // Close the county menu after navigating, on Escape, and on a click outside it.
