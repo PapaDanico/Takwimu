@@ -73,7 +73,7 @@ export default function Method() {
         <h2 id="cn-h">When sources disagree</h2>
         <p>Both values are shown side by side with their sources. We never average them or pick a winner without evidence. Current examples:</p>
         <ul className="steps">{hist.osr_series.conflicts.map((c) => <li key={c}>{c}</li>)}<li>FY 2023/24 own-source revenue: KSh 610.74 million (FY 2023/24 report) against KSh 427.95 million (FY 2024/25 report).</li><li>Pending bills at 30 June 2021: KSh 1,061 million (FY 2020/21 report) against KSh 602 million (FY 2021/22 report).</li></ul>
-        <p>All open items are on the <Link href="/corrections/">corrections page</Link>.</p>
+        <p>All open items are on the <Link href="/data/#conflicts">Data page</Link>.</p>
       </section>
 
       <section id="prices" className="card" aria-labelledby="pr-h">

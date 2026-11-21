@@ -173,7 +173,7 @@ export default function Analytics() {
           <li>We do not compute correlations between series. Almost every money series rises with prices and population, which would make unrelated series look linked.</li>
           <li>These are county totals from official reports. They do not show which sub-counties or services gained or lost.</li>
           <li>Years with missing reports are left out, not estimated. See the gaps on the Method page.</li>
-          <li>Different reports sometimes disagree. Where they do, we use the report for that year and note the conflict on the Corrections page.</li>
+          <li>Different reports sometimes disagree. Where they do, we use the report for that year and note the conflict on the Data page.</li>
         </ul>
       </section>
     </main>

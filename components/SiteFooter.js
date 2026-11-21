@@ -6,7 +6,6 @@ const LEGAL = [
   { href: '/terms/', label: 'Terms of use' },
   { href: '/privacy/', label: 'Privacy notice' },
   { href: '/faq/', label: 'FAQ' },
-  { href: '/corrections/', label: 'Corrections' },
 ];
 
 const COLUMNS = [
@@ -34,7 +33,7 @@ const COLUMNS = [
       { href: '/method/', label: 'How we handle numbers' },
       { href: '/method/#sources', label: 'Where the data comes from' },
       { href: '/data/', label: 'Download the data' },
-      { href: '/corrections/', label: 'Corrections log' },
+      { href: '/data/#conflicts', label: 'Where sources disagree' },
       { href: ISSUES_URL, label: 'Report an inaccuracy' },
     ],
   },

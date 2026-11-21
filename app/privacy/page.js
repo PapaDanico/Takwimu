@@ -43,11 +43,11 @@ const SECTIONS = [
   ] },
   { id: 'sharing', title: '6. Sharing buttons, links and reports you send us', body: [
     'The "share" buttons are ordinary links. They open WhatsApp, your email program or another app on your device with a ready-made message containing the page address. We do not see, store or receive the message, the recipient or whether you send it. What happens next is covered by that app\'s own privacy notice.',
-    `If you report a mistake at ${ISSUES_URL.replace('/new', '')}, your report is hosted by GitHub, is public, and may be seen, copied and indexed by anyone. Do not put personal information, contact details or confidential material in it. We use what you write only to check and correct the Site, and we may quote or link it on the Corrections page without your personal details.`,
+    `If you report a mistake at ${ISSUES_URL.replace('/new', '')}, your report is hosted by GitHub, is public, and may be seen, copied and indexed by anyone. Do not put personal information, contact details or confidential material in it. We use what you write only to check and correct the Site.`,
   ] },
   { id: 'retention', title: '7. How long data is kept', body: [
     'We do not keep a copy of visitor technical data ourselves. Netlify keeps request logs for the periods set out in its own notice and terms, after which they are deleted or anonymised.',
-    'Public issue reports remain on GitHub until deleted by you or by GitHub, or until the repository is changed. Corrections we log publish only the date, the page and the fix.',
+    'Public issue reports remain on GitHub until deleted by you or by GitHub, or until the repository is changed.',
   ] },
   { id: 'rights', title: '8. Your rights', body: [
     'Under the Kenya Data Protection Act, 2019, you have the right to be informed about the use of your personal data; to access it; to object to its processing; to have inaccurate data corrected; to have data deleted where the law allows; and to receive a copy of data you gave us in a usable format.',

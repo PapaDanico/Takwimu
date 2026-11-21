@@ -21,7 +21,7 @@ const SECTIONS = [
   { id: 'disclaimer', title: '3. No advice and no guarantee of accuracy', body: [
     'Nothing on the Site is legal, financial, investment, tax, accounting or audit advice, and nothing on the Site is a finding of wrongdoing by any person or body. Do not make decisions, allegations or investments only because of something you read here.',
     'We take care to read figures from primary documents and we give a source, a retrieval date and a confidence score for each series in the data tables, the data files and the notes beside charts; headline tiles and summary charts draw on those same series. Even so, many source documents are scanned images that must be read by text-recognition software, official reports sometimes disagree with each other, and our own work can contain mistakes. Figures may be delayed, rounded, restated by the publisher, or misread.',
-    'The Site is provided "as is" and "as available". To the fullest extent the law allows, we do not promise that it is complete, current, error-free or uninterrupted. Always check a number against the source document before you rely on it. If you find a mistake, tell us (section 12) and we will log and fix it on the Corrections page.',
+    'The Site is provided "as is" and "as available". To the fullest extent the law allows, we do not promise that it is complete, current, error-free or uninterrupted. Always check a number against the source document before you rely on it. If you find a mistake, tell us (section 12) and we will check it and fix it.',
     'Analytics, per-person figures, price-adjusted ("real") figures and charts are our own calculations from published data. They are estimates and are labelled as such. Explainers marked as drafts have not yet been reviewed by a subject specialist.',
   ] },
   { id: 'people', title: '4. People and organisations named on the Site', body: [
@@ -59,7 +59,7 @@ const SECTIONS = [
   ] },
   { id: 'contact', title: '12. Contact and corrections', body: [
     `The quickest way to reach us is to open an issue at ${ISSUES_URL.replace('/new', '')}. Please give the page address, the figure or text concerned, and a link to the document that shows the right value. Issues on that service are public, so do not include personal information or anything confidential.`,
-    'Corrections we make are listed with the date on the Corrections page.',
+    'Where official reports disagree, the Data page lists each case with its sources.',
   ] },
 ];
 
