@@ -1,5 +1,10 @@
 import Link from 'next/link';
 import KenyaMap from '../../../components/KenyaMap';
+
+export const metadata = {
+  title: 'Siaya County',
+  description: 'Siaya County public finances: revenue, spending, unpaid bills and audit opinions, with sources and confidence for every figure.',
+};
 import siaya from '../../../data/siaya.json';
 import hist from '../../../data/history.json';
 import { ColumnChart } from '../../../components/Charts';

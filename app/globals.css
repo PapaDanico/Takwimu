@@ -385,3 +385,4 @@ table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; lett
 .kmap-sw { display: inline-block; width: 14px; height: 14px; border-radius: 3px; }
 .kmap-sw.live { background: var(--s1); }
 .kmap-sw.soon { background: var(--track); opacity: .7; }
+.eyebrow a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }

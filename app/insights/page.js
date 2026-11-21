@@ -68,7 +68,7 @@ const kpis = [
 export default function Insights() {
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Insights" title="Ten years of Siaya County finances" sub="Budget, spending, revenue, unpaid bills and audit opinions from the Controller of Budget and Auditor-General reports, FY 2014/15 to FY 2024/25. Gaps are marked, never filled in." path="/insights/" shareText="Ten years of Siaya County finances" />
+      <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Insights" title="Ten years of Siaya County finances" sub="Budget, spending, revenue, unpaid bills and audit opinions from the Controller of Budget and Auditor-General reports, FY 2014/15 to FY 2024/25. Gaps are marked, never filled in." path="/insights/" shareText="Ten years of Siaya County finances" />
       <DataStamp period={`FY 2014/15 to FY ${FYS[FYS.length - 1]} (July 2014 to June 2025); FY 2013/14 (16 months) shown where available`} checked={shortDate(hist.meta.retrieved)} updated={shortDate(SITE_UPDATED)} completeness={`Spending for ${years.filter((y) => y.spent !== undefined).length} of ${FYS.length} years; budget for ${years.filter((y) => y.approved !== undefined).length}; audit opinions for ${hist.audits.points.length}. Missing years are left blank, never filled.`} />
 
       <nav aria-label="Sections on this page"><ul className="toc">

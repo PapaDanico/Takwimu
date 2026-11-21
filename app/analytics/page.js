@@ -87,7 +87,7 @@ export default function Analytics() {
   const sp = growthRows[0];
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Analytics" title="Growth, spread and per-person views" sub="Statistics computed from the ten-year Siaya series. Every figure here is derived, so each section says how. Nothing is forecast." path="/analytics/" shareText="Siaya County finances: growth, spread and per-person analytics" />
+      <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Analytics" title="Growth, spread and per-person views" sub="Statistics computed from the ten-year Siaya series. Every figure here is derived, so each section says how. Nothing is forecast." path="/analytics/" shareText="Siaya County finances: growth, spread and per-person analytics" />
       <DataStamp period={`FY 2014/15 to FY 2024/25 (ten years); FY 2013/14 shown where available`} checked={shortDate(hist.meta.retrieved)} updated={shortDate(SITE_UPDATED)} completeness={`${spendYears.length} years of spending; FY 2019/20 missing and not interpolated. Per-person values are estimates.`} />
 
       <nav aria-label="Sections on this page"><ul className="toc">

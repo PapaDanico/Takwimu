@@ -24,7 +24,7 @@ const age = (co.population.age_groups_2022 || []).filter((g) => !/Youth|Labour/.
 export default function Profile() {
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="County profile" title="Siaya County: people, poverty and health" sub={`Siaya had ${n(pc.value)} people at the 2019 census, up from ${n(p0.value)} in 2009. That is growth of about ${cagr.toFixed(1)} per cent a year.`} path="/profile/" shareText="Siaya County profile: population, poverty and health" />
+      <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="County profile" title="Siaya County: people, poverty and health" sub={`Siaya had ${n(pc.value)} people at the 2019 census, up from ${n(p0.value)} in 2009. That is growth of about ${cagr.toFixed(1)} per cent a year.`} path="/profile/" shareText="Siaya County profile: population, poverty and health" />
       <DataStamp period="Census 2009 and 2019; surveys 2014 and 2022; poverty 2005/06 and 2015/16" checked={shortDate(co.retrieved)} updated={shortDate(SITE_UPDATED)} completeness="Survey years only: no annual health or poverty series is available." />
 
       <nav aria-label="Sections on this page"><ul className="toc">

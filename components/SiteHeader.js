@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useRef } from 'react';
 import { Home, Map, MapPinned, BookOpen, Info } from 'lucide-react';
 import { COUNTIES } from '../lib/counties';
 import { ISSUES_URL } from '../lib/site';
+
+const SIAYA_PAGES = ['/counties/siaya', '/insights', '/analytics', '/subcounties', '/profile'];
 
 const NAV = [
   { href: '/', label: 'Overview', short: 'Home', Icon: Home },
@@ -17,7 +20,23 @@ const NAV = [
 export default function SiteHeader({ asOf }) {
   const pathname = usePathname() || '/';
   // Hash links belong to the home page, so only real routes can be "current".
-  const isCurrent = (href) => (href === '/' ? pathname === '/' : pathname.replace(/\/$/, '').startsWith(href.replace(/\/$/, '')) && !(href === '/counties/' && pathname.startsWith('/counties/siaya')));
+  const menu = useRef(null);
+  const p = pathname.replace(/\/$/, '') || '/';
+  const isCurrent = (href) => {
+    const h = href.replace(/\/$/, '') || '/';
+    if (h === '/') return p === '/';
+    if (h === '/counties/siaya') return SIAYA_PAGES.some((x) => p.startsWith(x));
+    if (h === '/counties') return p.startsWith('/counties') && !p.startsWith('/counties/siaya');
+    return p.startsWith(h);
+  };
+  // Close the county menu after navigating, on Escape, and on a click outside it.
+  useEffect(() => { if (menu.current) menu.current.open = false; }, [pathname]);
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape' && menu.current && menu.current.open) { menu.current.open = false; menu.current.querySelector('summary').focus(); } };
+    const onClick = (e) => { if (menu.current && menu.current.open && !menu.current.contains(e.target)) menu.current.open = false; };
+    document.addEventListener('keydown', onKey); document.addEventListener('click', onClick);
+    return () => { document.removeEventListener('keydown', onKey); document.removeEventListener('click', onClick); };
+  }, []);
 
   return (
     <>
@@ -32,7 +51,7 @@ export default function SiteHeader({ asOf }) {
               <Link key={href} href={href} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</Link>
             ))}
           </nav>
-          <details className="county-menu">
+          <details className="county-menu" ref={menu}>
             <summary>Find a county</summary>
             <ul>{COUNTIES.map((c) => <li key={c.slug}><Link href={`/counties/${c.slug}/`}>{c.name}</Link></li>)}</ul>
           </details>

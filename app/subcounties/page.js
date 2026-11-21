@@ -33,7 +33,7 @@ const slowest = byGrowth[byGrowth.length - 1];
 export default function SubCounties() {
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Sub-counties" title="Six sub-counties, ten years of change" sub={`Siaya's six sub-counties match its six constituencies. Population grew ${((total19 / total09 - 1) * 100).toFixed(1)} per cent between the 2009 and 2019 censuses, from ${n(total09)} to ${n(total19)} people.`} path="/subcounties/" shareText="Siaya sub-counties: population and health" />
+      <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Sub-counties" title="Six sub-counties, ten years of change" sub={`Siaya's six sub-counties match its six constituencies. Population grew ${((total19 / total09 - 1) * 100).toFixed(1)} per cent between the 2009 and 2019 censuses, from ${n(total09)} to ${n(total19)} people.`} path="/subcounties/" shareText="Siaya sub-counties: population and health" />
       <DataStamp period="Censuses of 2009 and 2019; projections to 2027" checked={shortDate(sc.retrieved)} updated={shortDate(SITE_UPDATED)} completeness="6 of 6 sub-counties. Facility and staff counts carry no reference date." />
 
       <nav aria-label="Sections on this page"><ul className="toc">
