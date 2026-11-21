@@ -60,7 +60,7 @@ export default function Home() {
     <main id="main" className="wrap page">
       <header>
         <nav aria-label="Breadcrumb"><p className="eyebrow"><Link href="/counties/">Counties</Link> · Siaya · County 41 · FY {osr.fiscal_year}</p></nav>
-        <h1>Siaya fiscal context</h1>
+        <h1>Siaya County finances at a glance</h1>
         <p className="page-sub">
           Revenue, spending, unpaid bills and audit in one view, with every figure traced to the
           document it came from.
@@ -258,7 +258,7 @@ export default function Home() {
       </section>
 
       <section className="card" id="spending" aria-labelledby="spend">
-        <h2 id="spend">How much of its budget did Siaya actually spend?</h2>
+        <h2 id="spend">How much of the approved budget was spent?</h2>
         <p className="lead">Development spending pays for projects such as roads and facilities. Recurrent spending pays for salaries and running costs.</p>
         <div className="tiles">
           <Tile label="Approved budget" value={`KSh ${budget.approved_total}B`} note="What the county assembly approved for FY 2024/25." />
@@ -313,7 +313,7 @@ export default function Home() {
       </section>
 
       <section className="card" id="obligations" aria-labelledby="obl">
-        <h2 id="obl">Unpaid bills, arrears and stalled projects</h2>
+        <h2 id="obl">Pending bills, arrears and stalled projects</h2>
         <p className="lead">What the county owes, what is owed to it, and what has stopped midway.</p>
         <div className="tiles">
           <Tile label="Pending bills at 30 June 2024" value={`KSh ${budget.pending_bills.opening_30_jun_2024_billion}B`} tone="warn" note="Bills the county owed suppliers for work already done." />

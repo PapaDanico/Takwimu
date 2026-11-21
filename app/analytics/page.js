@@ -136,7 +136,7 @@ export default function Analytics() {
 
       <section id="spread" className="card insight" aria-labelledby="sp-h">
         <p className="eyebrow">Spread</p>
-        <h2 id="sp-h">Development spending is far more erratic than recurrent spending</h2>
+        <h2 id="sp-h">Development spending varies far more from year to year than recurrent spending</h2>
         <p className="finding">The coefficient of variation (spread relative to the average) is {one(spread[0].cv * 100)} per cent for development absorption and {one(spread[1].cv * 100)} per cent for recurrent. The mean and median are shown together; a gap between them signals skew.</p>
         <div className="tablewrap">
           <table className="data">
@@ -157,7 +157,7 @@ export default function Analytics() {
 
       <section id="unspent" className="card insight" aria-labelledby="un-h">
         <p className="eyebrow">Unspent budget</p>
-        <h2 id="un-h">Across {unspent.length} years, about KSh {bn(unspentReal)} billion of approved budget went unspent, in {BASE} prices</h2>
+        <h2 id="un-h">Across {unspent.length} years, about KSh {bn(unspentReal)} billion of approved budget remained unspent, in {BASE} prices</h2>
         <p className="finding">This is approved budget minus spending, year by year. Unspent money is not always lost: some rolls over as cash balance. It shows how much planned spending was not paid out in the year. It does not show which projects were or were not delivered.</p>
         <ColumnChart labels={SHORT} yFormat="one" unit="%" ariaLabel="Unspent approved budget as a share of the budget, by fiscal year" series={[{ name: 'Unspent, % of approved budget', color: 4, values: fillBy(unspent, (u) => u.pct) }]} />
       </section>
@@ -170,7 +170,7 @@ export default function Analytics() {
 
       <section id="health" className="card insight" aria-labelledby="fh-h">
         <p className="eyebrow">Fiscal health indicators</p>
-        <h2 id="fh-h">Two warning lights: revenue against its target, and unpaid bills against a year of spending</h2>
+        <h2 id="fh-h">Two indicators to watch: revenue against its target, and pending bills against a year of spending</h2>
         <p className="finding">These are separate indicators, not a score, and the county is not ranked against anyone. Revenue realisation asks how much of the own-source revenue target was collected. The pending-bills ratio asks how large the unpaid bills at year end were compared with one year of spending. Higher is better for the first and lower is better for the second.</p>
         <h3 className="chart-title">Own-source revenue as a share of target, and pending bills as a share of annual spending, per cent</h3>
         <LineChart labels={SHORT} yFormat="pct0" unit="%" ariaLabel="Own-source revenue as a share of its target and pending bills as a share of annual spending, by fiscal year" series={[{ name: 'Revenue vs target', color: 1, values: fillBy(years, (y) => (y.osr_m !== undefined && y.osr_target_m ? (y.osr_m / y.osr_target_m) * 100 : null)) }, { name: 'Pending bills vs spending', color: 3, dash: true, values: fillBy(years, (y) => { const p = pendTotal(y); return p !== null && y.spent ? (p / (y.spent * 1000)) * 100 : null; }) }]} />

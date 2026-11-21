@@ -25,7 +25,7 @@ export default function CountyPending({ params }) {
   const c = bySlug(params.slug);
   return (
     <main id="main" className="wrap page">
-      <PageHead county={{ slug: c.slug, name: c.name }} eyebrow={`County ${String(c.code).padStart(2, '0')}`} title={`${c.name} County: in preparation`} sub="This county is not published yet. We do not show estimates or national averages in its place." path={`/counties/${c.slug}/`} shareText={`${c.name} County on Takwimu Kenya`} />
+      <PageHead county={{ slug: c.slug, name: c.name }} eyebrow={`County ${String(c.code).padStart(2, '0')}`} title={`${c.name} County: in preparation`} sub="This county page is being prepared. Until its figures meet the same evidence standard as every published county, we show no estimates or national averages in their place." path={`/counties/${c.slug}/`} shareText={`${c.name} County on Takwimu Kenya`} />
       <section className="card" aria-labelledby="loc-h">
         <h2 id="loc-h">Where {c.name} is</h2>
         <KenyaMap focus={c.slug} ariaLabel={`Map of Kenya with ${c.name} County highlighted`} />
@@ -33,12 +33,12 @@ export default function CountyPending({ params }) {
       <section className="card" aria-labelledby="need-h">
         <h2 id="need-h">What a published county page needs</h2>
         <ul className="steps">{NEEDED.map((n) => <li key={n}>{n}</li>)}</ul>
-        <p className="how">Each figure carries its source, retrieval date, confidence rating and any conflict between reports, exactly as for Siaya. Gaps are listed, never filled.</p>
+        <p className="how">Each figure carries its source, retrieval date, confidence rating and any conflict between reports, exactly as for every published county. Gaps are listed, never filled. If you hold a primary document for this county, you can help: report it through the link in the footer.</p>
       </section>
       <section className="card" aria-labelledby="meanwhile-h">
-        <h2 id="meanwhile-h">Meanwhile</h2>
+        <h2 id="meanwhile-h">While you wait</h2>
         <ul className="steps">
-          <li><Link href="/counties/siaya/">See what a published county looks like: Siaya</Link></li>
+          <li><Link href="/counties/siaya/">See an example of a published county page</Link></li>
           <li><Link href="/learn/">Learn how county budgets, audits and statistics work</Link></li>
           <li><Link href="/method/">How we check every figure</Link></li>
           <li><Link href="/counties/">Back to all 47 counties</Link></li>

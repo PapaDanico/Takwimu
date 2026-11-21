@@ -90,7 +90,7 @@ export default function Insights() {
 
       <section id="spending" className="card insight" aria-labelledby="spending-h">
         <p className="eyebrow">Insight 1</p>
-        <h2 id="spending-h">Spending is up {Math.round(nomGrowth)} per cent in shillings, but only about {Math.round(realGrowth)} per cent after prices</h2>
+        <h2 id="spending-h">Spending rose {Math.round(nomGrowth)} per cent in shillings and about {Math.round(realGrowth)} per cent after prices</h2>
         <p className="finding">
           The county spent KSh {bn(first.spent)} billion in {label(first.fy)} and KSh {bn(last.spent)} billion in {label(last.fy)}. Prices rose over the same period, so the same {label(first.fy)} spending is worth about KSh {bn(realFirst)} billion in {label(BASE)} prices. In real terms the county spends {realGrowth >= 0 ? 'about' : 'about'} {Math.abs(Math.round(realGrowth))} per cent {realGrowth >= 0 ? 'more' : 'less'} than ten years ago, while its population grew.
         </p>
@@ -114,7 +114,7 @@ export default function Insights() {
 
       <section id="development" className="card insight" aria-labelledby="dev-h">
         <p className="eyebrow">Insight 2</p>
-        <h2 id="dev-h">The development budget is rarely fully spent: it ranged from {devMin.development_absorption_pct} to {devMax.development_absorption_pct} per cent</h2>
+        <h2 id="dev-h">Development spending ranged from {devMin.development_absorption_pct} to {devMax.development_absorption_pct} per cent of its budget</h2>
         <p className="finding">Absorption is the share of the approved budget actually spent. The lowest year was {label(devMin.fy)} at {devMin.development_absorption_pct} per cent and the highest was {label(devMax.fy)} at {devMax.development_absorption_pct} per cent. Recurrent spending (salaries and running costs) usually uses most of its budget. Low spending does not by itself show whether projects were delivered: payments can fall in a later year, and a qualified audit opinion is about the accounts, not about misconduct.</p>
         <h3 className="chart-title">Share of each budget spent, per cent</h3>
         <p className="chart-sub">Recurrent spending sits near the top; development spending swings widely.</p>
@@ -124,7 +124,7 @@ export default function Insights() {
 
       <section id="pending" className="card insight" aria-labelledby="pending-h">
         <p className="eyebrow">Insight 3</p>
-        <h2 id="pending-h">Unpaid bills grew from KSh {m(pendFirst.v)} million to KSh {m(pendLast.v)} million</h2>
+        <h2 id="pending-h">Pending bills rose from KSh {m(pendFirst.v)} million to KSh {m(pendLast.v)} million</h2>
         <p className="finding">Pending bills are money owed for goods and services already delivered. The reported stock was KSh {m(pendFirst.v)} million at the end of {label(pendFirst.fy)} and KSh {m(pendLast.v)} million at the end of {label(pendLast.fy)}. The reports use slightly different definitions, and two reports disagree about the stock at 30 June 2021, so read the direction rather than each step.</p>
         <h3 className="chart-title">Pending bills at year end, KSh million</h3>
         <ColumnChart labels={SHORT} yFormat="int" unit="KSh m" ariaLabel="Pending bills at the end of each fiscal year, KSh million" series={[{ name: 'Pending bills', color: 2, values: col(pendOf) }]} />
@@ -166,7 +166,7 @@ export default function Insights() {
 
       <section id="audit" className="card insight" aria-labelledby="audit-h">
         <p className="eyebrow">Insight 5</p>
-        <h2 id="audit-h">{noneClean ? 'Auditors have not given the County Executive a clean opinion in any year we can read' : 'Audit opinions vary by year'}</h2>
+        <h2 id="audit-h">{noneClean ? 'Every audit opinion we can read for the County Executive is qualified, adverse or a disclaimer' : 'Audit opinions vary by year'}</h2>
         <p className="finding">{audits.length} years of Auditor-General opinions are available: {auditSummary}. An adverse opinion means the auditor found the accounts materially misstated; a disclaimer means the auditor could not form an opinion. An opinion describes the accounts, not the quality of services. FY 2016/17 to FY 2018/19 are missing, and FY 2014/15 and FY 2015/16 come from a Senate compilation rather than the audit reports; see the note below.</p>
         <div className="tablewrap">
           <table className="data">

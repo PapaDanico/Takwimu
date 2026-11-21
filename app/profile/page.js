@@ -65,7 +65,7 @@ export default function Profile() {
 
       <section id="poverty" className="card insight" aria-labelledby="pv-h">
         <p className="eyebrow">Poverty</p>
-        <h2 id="pv-h">About a third of people are poor by income; more than two in three lack several basic needs</h2>
+        <h2 id="pv-h">About a third of residents live below the income poverty line; more than two in three lack several basic needs</h2>
         <p className="finding">{hist.poverty.note}</p>
         <div className="tablewrap">
           <table className="data">

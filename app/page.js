@@ -35,6 +35,7 @@ export default function Home() {
           <li><b>Honest uncertainty.</b> Confidence ratings, a conflict register, and no verdicts on named people.</li>
           <li><b>Open data.</b> Every chart has a table, and the datasets download as CSV and JSON.</li>
         </ul>
+        <p className="lead">Our purpose is simple: informed citizens, and counties and citizens working from the same facts, so that public money builds shared progress.</p>
         <p>You can check every figure against its source. <Link href="/method/">Read the method</Link>, <Link href="/learn/">learn the terms</Link> or <a href="https://github.com/PapaDanico/Takwimu/issues/new">report an inaccuracy</a>.</p>
       </section>
     </main>

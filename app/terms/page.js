@@ -10,7 +10,7 @@ const UPDATED = '21 November 2026';
 
 const SECTIONS = [
   { id: 'about', title: '1. About these terms', body: [
-    'Takwimu Kenya ("Takwimu", "we", "us") is a free civic-education website that explains Kenya\'s county budget, audit and statistics reports in plain language, starting with Siaya County. It is a product of Danico Ventures Ltd, a company in Kenya.',
+    'Takwimu Kenya ("Takwimu", "we", "us") is a free civic-education website that explains the budget, audit and statistics reports of Kenya\'s 47 counties in plain language, publishing each county once its data meets the same evidence standard. It is a product of Danico Ventures Ltd, a company in Kenya.',
     `By opening or using ${SITE_URL.replace('https://', '')} or any page, file or feature on it (the "Site"), you agree to these terms. If you do not agree, please do not use the Site.`,
     'We may change these terms. The date at the top of this page shows the latest version. Using the Site after a change means you accept the new version.',
   ] },

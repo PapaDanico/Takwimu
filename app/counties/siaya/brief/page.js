@@ -37,7 +37,7 @@ export default function SiayaBrief() {
   const heads = [
     { k: `Approved budget, FY ${budget.fiscal_year}`, v: `KSh ${fmt(budget.approved_total)} bn`, m: `KSh ${fmt(budget.total_spent)} bn spent (${spentPct}% of budget)`, src: 'Controller of Budget, FY 2024/25 report', c: budget.confidence },
     { k: `Own-source revenue, FY ${osr.fiscal_year}`, v: `KSh ${fmt(primary.value)} m`, m: `The report states ${osr.share_of_annual_target_pct}% of the annual target`, src: 'Controller of Budget, FY 2024/25 report', c: primary.confidence },
-    { k: 'Pending bills, 30 June 2024', v: `KSh ${fmt(pb.opening_30_jun_2024_billion)} bn`, m: `KSh ${fmt(pb.settled_in_year_million)} m settled in FY 2024/25; closing balance not readable`, src: 'Controller of Budget, FY 2024/25 report', c: budget.confidence },
+    { k: 'Pending bills, 30 June 2024', v: `KSh ${fmt(pb.opening_30_jun_2024_billion)} bn`, m: `KSh ${fmt(pb.settled_in_year_million)} m settled in FY 2024/25; the report gives two closing figures (see the conflict register)`, src: 'Controller of Budget, FY 2024/25 report', c: budget.confidence },
     { k: `Audit opinion, FY ${audit.fiscal_year}`, v: audit.opinion, m: audit.entity, src: 'Auditor-General', c: audit.confidence },
   ];
 
