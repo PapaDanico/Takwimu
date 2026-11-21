@@ -10,7 +10,8 @@ Evidence-based baseline before the design-system overhaul and fiscal intelligenc
 | Check | Finding | Status |
 |---|---|---|
 | Lockfile | `package-lock.json` committed | OK |
-| Node version | Netlify builds on Node 20 (`netlify.toml`); local checks ran on Node 22 | Gap: pin one version (`.nvmrc` + `engines`) and test on it |
+| Node version | `.nvmrc` pins 20, `engines` is `>=20 <21`; Netlify builds on Node 20; local checks ran on Node 22 | OK |
+| Byte-identical output | `npm run verify:repro` builds twice and compares SHA-256 of every file in `dist/` (BUILD_ID masked). Two causes fixed: footer year from `new Date()` (now `SITE_UPDATED`), and webpack listing merged duplicate chunk ids in compile order (sorted by a plugin in `next.config.js`). Result: `Reproducible: 4938075e…` | Done (step 1) |
 | Build gates | `npm run build` = unit tests, data validation, data publishing, `next build` | OK |
 | Network at build | None needed: map outlines and data are committed | OK |
 | CI | GitHub Actions has no runner (account level); Cloudflare build is unrelated noise | Gap: owner-level, outside the code |

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { COUNTIES } from '../lib/counties';
+import { SITE_UPDATED } from '../lib/site';
 
 const ISSUES_URL = 'https://github.com/PapaDanico/Takwimu/issues/new';
 
@@ -135,7 +136,7 @@ export default function SiteFooter({ asOf }) {
           </nav>
           <div className="footer-credit">
             <img src="/brand/danico-ventures-96.webp" srcSet="/brand/danico-ventures-96.webp 1x, /brand/danico-ventures.webp 2x" alt="Danico Ventures Ltd" width="40" height="40" />
-            <p>© {new Date().getFullYear()} Takwimu, a Danico Ventures Ltd product · Built in Kenya</p>
+            <p>© {SITE_UPDATED.slice(0, 4)} Takwimu, a Danico Ventures Ltd product · Built in Kenya</p>
           </div>
         </div>
       </div>
