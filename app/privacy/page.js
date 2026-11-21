@@ -19,11 +19,11 @@ const SECTIONS = [
   { id: 'host', title: '3. Our host, Netlify', body: [
     'Like every website, the Site cannot be delivered without technical request data: your internet (IP) address, the date and time, the page requested and your browser type. Our host, Netlify, Inc., processes this data to serve the Site and protect it from abuse, under its own privacy policy at https://www.netlify.com/privacy/. We do not receive it from Netlify, combine it with anything or use it to identify anyone.',
   ] },
-  { id: 'github', title: '4. Reporting a mistake through GitHub', body: [
-    `The "Report an inaccuracy" link opens ${ISSUES_URL.replace('/new', '')} on GitHub. Using it is your choice; GitHub's own terms and privacy statement apply, and reports there are public. Do not put personal information in them.`,
+  { id: 'report', title: '4. Reporting a mistake', body: [
+    'The "Report an inaccuracy" link opens a WhatsApp chat with Danico Ventures Ltd. Using it is your choice; what you share is handled as set out in section 5. Please send only the page, the figure and the source, not personal information.',
     'The "share" buttons are ordinary links that open an app on your device with a ready-made message. We do not see the message or whether you send it.',
   ] },
-  { id: 'whatsapp', title: '5. Asking for a brief on WhatsApp', body: [
+  { id: 'whatsapp', title: '5. Contacting us on WhatsApp', body: [
     'The "Request a brief" page links to WhatsApp so you can message Danico Ventures Ltd, which runs Takwimu Kenya. The Site does not pass anything to WhatsApp; the chat starts only if you choose to open it. WhatsApp is run by Meta under its own terms and privacy policy.',
     'Your name, phone number and what you write in the chat reach us through WhatsApp. We use them only to reply to your request and agree any brief, we do not add you to a mailing list, share your details or use them for profiling, and we delete the chat when the request is closed unless the law requires us to keep records of a paid service. You may ask us in the same chat to see, correct or delete what you shared.',
   ] },

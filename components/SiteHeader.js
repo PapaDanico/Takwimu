@@ -62,7 +62,7 @@ export default function SiteHeader({ asOf }) {
           </details>
           <div className="header-right">
             <span className="status" title="Date the figures were last checked against their sources">Checked {asOf}</span>
-            <a className="report" href={ISSUES_URL}>Report an error</a>
+            <a className="report" href={ISSUES_URL} target="_blank" rel="noopener noreferrer">Report an error</a>
           </div>
         </div>
       </header>

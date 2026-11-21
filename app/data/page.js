@@ -182,7 +182,7 @@ export default function DataPage() {
             </article>
           ))}
         </div>
-        <p className="how">To report an inaccuracy, open an issue at <a href="https://github.com/PapaDanico/Takwimu/issues">github.com/PapaDanico/Takwimu/issues</a> with the page, the figure and the document that shows the right value.</p>
+        <p className="how">To report an inaccuracy, <a href="https://wa.me/message/GPPIKMENXJVWO1" target="_blank" rel="noopener noreferrer">message us on WhatsApp</a> with the page, the figure and the document that shows the right value.</p>
       </section>
     </main>
   );

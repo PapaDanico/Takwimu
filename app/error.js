@@ -14,7 +14,7 @@ export default function Error({ reset }) {
           <button type="button" className="btn-s ghost" onClick={() => window.history.back()}>Back</button>
           <Link className="btn-s ghost" href="/">Home</Link>
         </p>
-        <p className="muted">If it keeps happening, please <a href="https://github.com/PapaDanico/Takwimu/issues/new">report it</a> and say which page and what you chose.</p>
+        <p className="muted">If it keeps happening, please <a href="https://wa.me/message/GPPIKMENXJVWO1" target="_blank" rel="noopener noreferrer">report it on WhatsApp</a> and say which page and what you chose.</p>
       </section>
     </main>
   );

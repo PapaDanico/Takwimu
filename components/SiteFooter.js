@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SITE_UPDATED } from '../lib/site';
 
-const ISSUES_URL = 'https://github.com/PapaDanico/Takwimu/issues/new';
+import { ISSUES_URL } from '../lib/site';
 
 const COLUMNS = [
   {
@@ -82,7 +82,7 @@ export default function SiteFooter({ asOf }) {
               counties into plain language. Every figure names its source, so you can check it.
             </p>
             <div className="chips">
-              <a className="chip gold" href={ISSUES_URL}>Report an inaccuracy</a>
+              <a className="chip gold" href={ISSUES_URL} target="_blank" rel="noopener noreferrer">Report an inaccuracy</a>
             </div>
           </div>
 

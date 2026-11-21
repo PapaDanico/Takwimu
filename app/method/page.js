@@ -9,7 +9,7 @@ export const metadata = {
   description: 'How Takwimu Kenya collects, checks, scores and corrects the numbers it publishes.',
 };
 
-const ISSUES_URL = 'https://github.com/PapaDanico/Takwimu/issues/new';
+import { ISSUES_URL } from '../../lib/site';
 
 const RUBRIC = [
   { score: 5, meaning: 'Read directly from the primary document and confirmed a second way (for example a second reading of the page, or a matching total).' },
@@ -95,7 +95,7 @@ export default function Method() {
       <section id="gaps" className="card" aria-labelledby="gp-h">
         <h2 id="gp-h">Known gaps</h2>
         <ul className="steps">{hist.meta.gaps.map((g) => <li key={g}>{g}</li>)}<li>{hist.poverty.gap}</li><li>County health series between 2014 and 2022 are not shown; only the two survey years are available.</li></ul>
-        <p className="how">Found a mistake? <a href={ISSUES_URL}>Report it</a>.</p>
+        <p className="how">Found a mistake? <a href={ISSUES_URL} target="_blank" rel="noopener noreferrer">Report it on WhatsApp</a>.</p>
       </section>
     </main>
   );
