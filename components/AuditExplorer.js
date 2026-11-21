@@ -69,7 +69,7 @@ export default function AuditExplorer({ findings, entities, categories, years })
                 <span className="ds-status">FY {f.fy}</span>
                 {f.category ? <span className="ds-status">{categories[f.category]}</span> : null}
               </div>
-              <p className="src"><a href={f.url} rel="noopener">{f.doc}</a>, PDF p. {f.page}, paragraph {f.paragraph}</p>
+              <p className="src">{f.doc}, PDF p. {f.page}, paragraph {f.paragraph}</p>
               <details className="aud-detail"><summary>Section, amounts and follow-up</summary>
               <dl>
                 <dt>Report</dt><dd><a href={f.url} rel="noopener">{f.doc}</a>, PDF p. {f.page}, paragraph {f.paragraph}</dd>

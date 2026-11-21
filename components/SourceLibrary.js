@@ -65,7 +65,7 @@ export default function SourceLibrary({ documents }) {
                 <dt>Period</dt><dd>{d.reference_period}</dd>
                 <dt>Published</dt><dd>{d.publication_date}</dd>
               </dl>
-              <details className="lib-tech"><summary>Relevance, retrieval, licence and technical details</summary>
+              <details className="lib-tech"><summary>Links, relevance, retrieval, licence and technical details</summary>
               <dl>
                 <dt>Relevance</dt><dd>{d.siaya_relevance}. {d.research_use}.</dd>
                 <dt>Retrieval</dt><dd>{d.retrieval_note} Checked {d.last_checked_at}.</dd>
@@ -74,12 +74,12 @@ export default function SourceLibrary({ documents }) {
                 <dt>Review</dt><dd>{d.review_status}</dd>
                 {d.values_review ? <><dt>Values</dt><dd>{d.values_review.total} values on this site cite this document: {d.values_review.approved} approved, {d.values_review.pending} provisional (awaiting editorial review), {d.values_review.rejected} withdrawn{d.values_review.disputed ? `, ${d.values_review.disputed} disputed` : ''}.{d.values_review.withdrawn.map((w) => <span key={w.key} className="withheld" data-obs={w.key} data-obs-state="rejected"> Withdrawn: <code>{w.key}</code> ({w.reason})</span>)}</dd></> : null}
               </dl>
-              </details>
               <div className="ds-links">
                 <a href={d.source_url} rel="noopener" aria-label={`Original: ${d.title}`}>Original</a>
                 {d.file_url ? <a href={d.file_url} rel="noopener" aria-label={`File at the publisher: ${d.title}`}>File at the publisher</a> : null}
                 {(d.also_at || []).map((u) => <a key={u} href={u} rel="noopener" aria-label={`Same file, other address: ${d.title}`}>Same file, other address</a>)}
               </div>
+              </details>
             </li>
           ))}
         </ul>

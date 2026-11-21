@@ -79,7 +79,7 @@ export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 
             <span className="kmap-key"><i className="kmap-sw soon" /> In preparation</span>
           </>
         )}
-        {boundaryNote ? <span id="boundaries">Boundaries: {geo.meta.source}, {geo.meta.licence}, simplified for display. Not for measuring area or distance.</span> : <a href="/counties/#boundaries">About the map boundaries</a>}
+        {boundaryNote ? <span id="boundaries">Boundaries: {geo.meta.source}, {geo.meta.licence}, simplified for display. Not for measuring area or distance.</span> : <a className="kmap-blink" href="/counties/#boundaries">About the map boundaries</a>}
       </figcaption>
     </figure>
   );

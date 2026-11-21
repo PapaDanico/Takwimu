@@ -638,3 +638,4 @@ small.cite { display: inline-block; margin-top: 2px; font-size: 12px; color: var
 .pr-evidence, .aud-detail, .lib-tech, .ds-tech { margin-top: 8px; }
 .pr-evidence > summary, .aud-detail > summary, .lib-tech > summary, .ds-tech > summary { cursor: pointer; font-size: 13px; font-weight: 600; min-height: 32px; display: flex; align-items: center; }
 .abbr-line { font-size: 13px; color: var(--ink-soft); margin: 8px 0 0; max-width: 60rem; }
+.kmap-blink { display: inline-flex; align-items: center; min-height: 24px; padding-inline: 2px; }
