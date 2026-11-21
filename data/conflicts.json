@@ -693,6 +693,88 @@
       "supersedes": null,
       "page_image_checked": false,
       "effect": "The FY 2024/25 year-end stock stays out of the chart, as before. The roll-forward shows the table value with this register case; the year is incomplete because new bills are not published. The county comparison shows the Table 2.9 value 1,890.0 with this case; the ten-year series still has no FY 2024/25 pending-bills value."
+    },
+    {
+      "id": "registered-voters-2022",
+      "measure": "Registered voters, 2022 general election, Kenya",
+      "unit": "voters",
+      "values": [
+        {
+          "label": "IEBC, Registered Voters per Constituency for the 2022 General Election: national total (290 constituency rows add to it)",
+          "value": 22102532,
+          "url": "https://www.iebc.or.ke/docs/rov_per_constituency.pdf"
+        },
+        {
+          "label": "Figure IEBC cites elsewhere for the full register (quoted in notices and media; not in this file)",
+          "value": 22120458,
+          "url": "https://www.iebc.or.ke/"
+        }
+      ],
+      "definitions": "The constituency file covers the 290 constituencies in Kenya. The larger figure is cited for the whole register.",
+      "hypothesis": "Hypothesis: the 17,926 difference is voters registered in the diaspora and in prisons, who are not in any constituency. Not confirmed: the file does not say.",
+      "status": "open",
+      "effect": "The compare page and the Kenya dashboard show 22,102,532 (the file the constituency figures come from) and name the other figure beside it.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "deposit-rate-cbk-wdi",
+      "measure": "Commercial bank deposit interest rate, Kenya, 2024 (annual)",
+      "unit": "per cent a year",
+      "values": [
+        {
+          "label": "Central Bank of Kenya, weighted average deposit rate: mean of the 12 monthly values (derived)",
+          "value": 10.8275,
+          "url": "https://www.centralbank.go.ke/statistics/interest-rates/"
+        },
+        {
+          "label": "World Bank WDI FR.INR.DPST (IMF International Financial Statistics)",
+          "value": 11.98,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/FR.INR.DPST?format=json&per_page=100"
+        }
+      ],
+      "definitions": "Both describe deposit rates in Kenya for 2024. The CBK figure is the mean of its monthly weighted averages; the World Bank series comes from the IMF. The gap is 1.16 points in 2024 and up to 3.67 points (2012) over 2010 to 2024; the lending rates of the two sources agree within 0.08 points in every year.",
+      "hypothesis": "Hypothesis: the two use different deposit categories or weights. Not confirmed; neither file says.",
+      "status": "open",
+      "effect": "Both series are shown, each labelled with its source; neither is used to correct the other. The derived real deposit rate uses the CBK series.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "candidates-2022-woman-member",
+      "measure": "Candidates for County Woman Member of the National Assembly, 2022 general election",
+      "unit": "candidates",
+      "values": [
+        {
+          "label": "IEBC Annual Report 2022-23, Table 21, printed total for the position",
+          "value": 361,
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        },
+        {
+          "label": "Same table: party-sponsored (292) plus independent (68)",
+          "value": 360,
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        },
+        {
+          "label": "Same table, printed grand total",
+          "value": 16106,
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        },
+        {
+          "label": "Same table: party-sponsored total (11,574) plus independent total (4,531)",
+          "value": 16105,
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        }
+      ],
+      "definitions": "One table, one row: its two parts add to one less than its printed total. The table total row has the same gap (11,574 plus 4,531 is 16,105, against 16,106 printed), while each column adds to its printed total.",
+      "hypothesis": "Hypothesis: a typing slip in one of the two parts. Not confirmed.",
+      "status": "open",
+      "effect": "The Kenya dashboard and the dataset show the table as printed; this case is noted beside it.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
     }
   ]
 }

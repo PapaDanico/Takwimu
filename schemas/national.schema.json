@@ -33,7 +33,7 @@
           "code": { "type": "string", "pattern": "^[A-Z0-9.]+$" },
           "name": { "type": "string" },
           "unit": { "type": "string" },
-          "sector": { "type": "string", "enum": ["economy", "people", "health", "education", "infrastructure", "public finance"] },
+          "sector": { "type": "string", "enum": ["economy", "money and banking", "people", "health", "education", "infrastructure", "environment", "public finance"] },
           "source": { "type": "string", "enum": ["World Bank, World Development Indicators"] },
           "original_source": { "type": "string" },
           "api_url": { "type": "string", "pattern": "^https://api\\.worldbank\\.org/v2/country/KEN/indicator/" },
@@ -44,6 +44,7 @@
           "years_with_values": { "type": ["array", "null"], "items": { "type": "integer" } },
           "missing_years": { "type": "array", "items": { "type": "integer" } },
           "source_id": { "type": "string" },
+          "raw_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
           "series": {
             "type": "array",
             "minItems": 1,

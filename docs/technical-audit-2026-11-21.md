@@ -83,6 +83,13 @@ Evidence-based baseline before the design-system overhaul and fiscal intelligenc
 - Gates on the final tree (after sweep 14): build (validation, reconciliation 101 tests, explore units and 60 noted county values, NaN check on 71 pages), smoke 72 of 72, axe 0 violations on 136 page-scheme runs plus 30 interactive states at 360 and 1280 px, overflow 0 of 408 (320 to 1280 px), crawl 68 pages and 101 internal links with 0 issues, print contrast 0 low-contrast on the new pages in both schemes, typecheck clean, `Reproducible: 085063f4...`.
 - Not done: county data before FY 2023/24; per-person county figures (no county population series loaded); a reviewer check of OCR readings against page images; a vector Danico logo.
 
+## CBK, more World Bank series, derived measures, CRA, IBP and IEBC (21 Nov 2026)
+- Integrated the verified staging (all 28 downloaded files re-hashed: 0 mismatches). New data files `cbk.json`, `derived.json`, `ngo.json`, `political.json` with schemas; `national.json` now 53 indicators.
+- Site: 75 datasets (sectors economy, money and banking, public finance, people, health, education, infrastructure, environment, governance and elections; geography national, county, constituency); Kenya dashboard sections Central Bank of Kenya, Analysis (7 derived measures with formula table) and Governance and elections; trend explorer 85 series; compare page CRA allocation map and table and registered-voters map with a 290-constituency table.
+- Checks found two errors in the staging notes: the CBK and World Bank deposit rates differ by up to 3.67 points (2012), not 1.2; the lending rates agree within 0.08 points, not 0.001. And IEBC Table 21 rows do not all add: woman member 292 + 68 = 360 against 361 printed, total 16,105 against 16,106. Both recorded in the register.
+- Left out: August 2017 presidential totals (annulled election, unsigned copy, county rows off by 34 registered and 48 valid votes) and the 2017 turnout measures derived from them.
+- vercel.json removed (owner deleted the Vercel project).
+
 ## 47-county tables extended to FY 2022/23 and FY 2021/22 (21 Nov 2026)
 - Sources: CoB FY 2022/23 report (750 pages, SHA-256 385285d5... matches the manifest; Tables 2.2, 2.4, 2.6 on PDF pp. 29-30, 33-35, 37-38; printed page = PDF page - 26) and FY 2021/22 report (516 pages, SHA-256 e62e1a59... matches; Tables 2.2, 2.4, 2.6 on PDF pp. 27-28, 30-31, 34-35; printed page = PDF page - 24). Both are scans with no text layer.
 - Method: 300 dpi RapidOCR (angle classifier off); wrapped county names (Bungo-/ma, Elgeyo/Marak-/wet) joined; numbers assigned to the nearest county row and to columns by clustering right edges. All 47 counties and the total row found in all six tables.

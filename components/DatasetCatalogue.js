@@ -9,7 +9,7 @@ import SaveView from './SaveView';
 import { shortDate } from '../lib/format';
 
 const MAX_Q = 80;
-const GEO = { national: 'National (Kenya)', county: 'County' };
+const GEO = { national: 'National (Kenya)', county: 'County', constituency: 'Constituency' };
 const when = (s) => (/^\d{4}-\d{2}-\d{2}$/.test(s) ? shortDate(s) : /^\d{4}-\d{2}$/.test(s) ? shortDate(`${s}-01`).replace(/^1 /, '') : s);
 
 export default function DatasetCatalogue({ datasets, sectors, sources, years }) {

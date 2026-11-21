@@ -252,6 +252,30 @@ test('47-county FY 2022/23 and 2021/22: Siaya budget, spending, absorption and o
   });
   ok(cobSiaya('2022/23', 'total_osr_actual').status === 'not_in_table', 'FY 2022/23 total OSR (with FIF) is not printed and must stay empty');
 });
+// National and electoral sources (21 Nov 2026).
+const xpol = require('../data/political.json'); const xder = require('../data/derived.json');
+test('conflict registered-voters-2022: the constituency file adds to 22,102,532; 22,120,458 is listed beside it', () => {
+  const v = xpol.iebc_registered_voters_2022_by_constituency;
+  ok(v.rows.reduce((t, r) => t + r.registered_voters, 0) === 22102532, 'the 290 rows should add to 22,102,532');
+  ok(listed('registered-voters-2022', 22102532) && listed('registered-voters-2022', 22120458), 'both totals must be in the case');
+  ok(22120458 - 22102532 === 17926, 'gap changed');
+});
+test('conflict deposit-rate-cbk-wdi: CBK annual mean and World Bank deposit rate for 2024 are both listed, lending rates agree', () => {
+  const d = xder.side_by_side_conflicts.deposit_rate_annual.rows['2024'];
+  ok(listed('deposit-rate-cbk-wdi', d.a) && listed('deposit-rate-cbk-wdi', Number(d.b.toFixed(2))), 'both 2024 values must be listed');
+  const monthly = Object.entries(require('../data/cbk.json').series.deposit_rate.monthly).filter(([k]) => k.startsWith('2024-')).map(([, v]) => v);
+  ok(monthly.length === 12 && near(monthly.reduce((t, v) => t + v, 0) / 12, d.a, 0.001), 'CBK annual mean should be the mean of 12 months');
+  const gaps = Object.values(xder.side_by_side_conflicts.deposit_rate_annual.rows).map((r) => r.diff_a_minus_b).filter((x) => x !== null);
+  ok(near(Math.max(...gaps.map(Math.abs)), 3.665, 0.001), 'largest gap should be 3.67 points (2012)');
+  const lend = Object.values(xder.side_by_side_conflicts.lending_rate_annual.rows).map((r) => r.diff_a_minus_b).filter((x) => x !== null);
+  ok(Math.max(...lend.map(Math.abs)) < 0.08, 'lending rates should agree within 0.08 points');
+});
+test('conflict candidates-2022-woman-member: printed parts add to one less than the printed totals', () => {
+  const rows = xpol.iebc_candidates_2022_by_position.rows; const w = rows.find((r) => /Woman/.test(r.position)); const t = rows.find((r) => r.position === 'Total');
+  ok(w.party_sponsored + w.independent === 360 && w.total === 361 && listed('candidates-2022-woman-member', 361) && listed('candidates-2022-woman-member', 360), 'woman member row changed');
+  ok(t.party_sponsored + t.independent === 16105 && t.total === 16106, 'total row changed');
+  ok(rows.filter((r) => r !== t).reduce((s, r) => s + r.total, 0) === t.total, 'column of totals should add to the printed total');
+});
 test('conflict pending-2024: Table 2.5 of the FY 2023/24 report matches the listed 303.91', () => {
   ok(near(cobSiaya('2023/24', 'pb_grand_total').value, 303.91, 0.005) && listed('pending-2024', 303.91), 'Table 2.5 should read 303.91');
 });

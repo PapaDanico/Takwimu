@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/cbk.schema.json",
+  "title": "Central Bank of Kenya statistics (data/cbk.json)",
+  "type": "object",
+  "required": ["meta", "generated", "publisher", "period", "series", "files", "checks", "gaps"],
+  "properties": {
+    "meta": { "type": "object", "required": ["title", "retrieved", "schema_version", "publisher", "rule"] },
+    "series": { "type": "object", "additionalProperties": { "$ref": "#/$defs/series" } },
+    "gaps": { "type": "object", "required": ["null_cells", "not_staged", "doubtful"] }
+  },
+  "$defs": {
+    "source": { "type": "object", "required": ["url", "sha256", "retrieved", "source_id"], "properties": { "url": { "type": "string", "pattern": "^https://" }, "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" } } },
+    "series": {
+      "type": "object",
+      "required": ["name", "unit", "frequency", "source"],
+      "properties": { "name": { "type": "string" }, "unit": { "type": "string" }, "frequency": { "type": "string" }, "source": { "type": ["object", "array"] } }
+    }
+  }
+}

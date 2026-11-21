@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/ngo.schema.json",
+  "title": "CRA and IBP figures (data/ngo.json)",
+  "type": "object",
+  "required": ["meta", "cra", "ibp_open_budget_survey_kenya", "not_staged"],
+  "properties": {
+    "meta": { "type": "object", "required": ["title", "retrieved", "schema_version", "rule"] },
+    "cra": {
+      "type": "object",
+      "required": ["county_allocations_fy2026_27", "fourth_basis_weights", "vertical_sharing_fy2013_14_to_2026_27", "equalisation_fund_fy2013_14_to_2026_27"],
+      "properties": {
+        "county_allocations_fy2026_27": {
+          "type": "object", "required": ["source", "unit", "rows", "checks"],
+          "properties": {
+            "source": { "$ref": "#/$defs/crasource" },
+            "rows": { "type": "array", "minItems": 47, "items": { "type": "object", "required": ["county", "allocation_2025_26", "baseline_2026_27", "fourth_basis_allocation_factor_pct", "fourth_basis_allocation_2026_27", "total_allocation_2026_27"] } }
+          }
+        }
+      }
+    },
+    "ibp_open_budget_survey_kenya": {
+      "type": "object", "required": ["source", "unit", "scope", "comparability", "rows"],
+      "properties": { "source": { "type": "object", "required": ["title", "publisher", "url", "sha256", "source_id", "citation_requested"] } }
+    }
+  },
+  "$defs": {
+    "crasource": { "type": "object", "required": ["title", "publisher", "url", "sha256", "source_id", "status_note", "location"], "properties": { "publisher": { "type": "string", "pattern": "constitutional commission" }, "status_note": { "type": "string", "pattern": "RECOMMENDATION" } } }
+  }
+}

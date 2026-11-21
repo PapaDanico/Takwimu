@@ -7,6 +7,9 @@ try { ({ chromium } = require('playwright')); } catch (e) {
 }
 const http = require('http');
 const fs = require('fs');
+const { natIndicators } = require('../lib/explore');
+const NAT_WITH_VALUES = natIndicators.filter((x) => x.hasValues).length;
+const NAT_PF = natIndicators.filter((x) => x.hasValues && x.sector === 'public finance').length;
 const path = require('path');
 const toml = fs.readFileSync(path.join(__dirname, '..', 'netlify.toml'), 'utf8');
 const csp = (toml.match(/Content-Security-Policy = "([^"]+)"/) || [])[1];
@@ -67,7 +70,7 @@ const srv = http.createServer((req, res) => {
   p2.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   await p2.goto(base + '/compare/', { waitUntil: 'networkidle' });
   check(await p2.locator('ul.rank > li').count() === 47, 'compare lists all 47 counties');
-  check(await p2.locator('.kmap-values a').count() === 47, 'compare map shades all 47 counties');
+  check(await p2.locator('.kmap-values').first().locator('a').count() === 47, 'compare map shades all 47 counties');
   await p2.locator('select').first().selectOption('development_absorption_pct');
   await p2.waitForFunction(() => location.search.includes('i=development_absorption_pct'));
   check(/i=development_absorption_pct/.test(p2.url()), 'compare writes the indicator to the address');
@@ -98,8 +101,13 @@ const srv = http.createServer((req, res) => {
   check(await p2.locator('#trends ~ section input[type=radio]').nth(1).isChecked() && await p2.locator('figure.chart').count() === 1, 'trend explorer reads indicator and real basis from the address');
   await p2.goto(base + '/kenya/?i=nonsense', { waitUntil: 'networkidle' });
   check(/do not have/.test(await p2.locator('.invalid').innerText()), 'trends explains an unknown indicator');
+  await p2.goto(base + '/kenya/?i=interest-burden#trends', { waitUntil: 'networkidle' });
+  check(await p2.locator('figure.chart').count() === 1 && /derived/i.test(await p2.locator('#trends ~ section').first().innerText()), 'trend explorer shows a derived measure, labelled derived');
+  await p2.goto(base + '/compare/', { waitUntil: 'networkidle' });
+  check(await p2.locator('#cra .kmap-values a').count() === 47 && await p2.locator('#cra tbody tr').count() === 47 && /recommendation/i.test(await p2.locator('#cra').innerText()), 'compare: CRA allocation map and table for 47 counties, labelled a recommendation');
+  check(await p2.locator('#voters .kmap-values a').count() === 47 && await p2.locator('#voters tbody tr').count() === 290 + 47 && /22,120,458/.test(await p2.locator('#voters').innerText()), 'compare: registered voters map and 290-constituency table, with the other total named');
   await p2.goto(base + '/kenya/', { waitUntil: 'networkidle' });
-  check(await p2.locator('figure.chart').count() === 1 && await p2.locator('.spark').count() >= 12 && await p2.locator('#notes tbody tr').count() === 17 && await p2.locator('#public-finance .spark').count() === 4, 'Kenya dashboard: sparkline cards, one trend explorer chart, a sources row per indicator');
+  check(await p2.locator('figure.chart').count() === 1 && await p2.locator('.spark').count() >= 12 && await p2.locator('#notes tbody tr').count() === NAT_WITH_VALUES && await p2.locator('#public-finance .spark').count() === NAT_PF && await p2.locator('#cbk .spark').count() === 15 && await p2.locator('#analysis tbody tr').count() === 7, 'Kenya dashboard: sparkline cards, one trend explorer chart, a sources row per indicator');
   const nf = await p2.goto(base + '/no-such-page/', { waitUntil: 'load' });
   const nfHtml = fs.readFileSync(path.join(root, '404.html'), 'utf8');
   check(/That page is not here/.test(nfHtml) && /href="\/explore\/"/.test(nfHtml), 'friendly 404 with Home and Explore links');

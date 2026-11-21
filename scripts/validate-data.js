@@ -217,7 +217,7 @@ function checkSchema(schema, value, where, root, out) {
     });
   }
 }
-['history', 'conflicts', 'subcounties', 'county', 'national', 'counties-cob'].forEach((name) => {
+['history', 'conflicts', 'subcounties', 'county', 'national', 'counties-cob', 'cbk', 'derived', 'ngo', 'political'].forEach((name) => {
   const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', `${name}.schema.json`), 'utf8'));
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', `${name}.json`), 'utf8'));
   const out = [];
@@ -244,7 +244,9 @@ const mids = new Set();
     if (!/^unavailable on \d{4}-\d{2}-\d{2}$|^downloaded \d{4}-\d{2}-\d{2}; not hashed: .{10,}$/.test(d.access || '')) fail(`${tag}: a null sha256 needs access "unavailable on <date>" or "downloaded <date>; not hashed: <reason>"`);
   } else {
     if (!/^[0-9a-f]{64}$/.test(d.sha256 || '')) fail(`${tag}: sha256 must be 64 hex characters or null`);
-    if (d.access !== 'downloaded' || !d.hashed_on || !(d.bytes > 0) || !/^[0-9a-f]{32}$/.test(d.md5_library || '')) fail(`${tag}: a hash needs access "downloaded", hashed_on, bytes and md5_library`);
+    // The Parliament library publishes an MD5 for each file; other publishers do not, so md5_library is required only there.
+    const lib = /libraryir\.parliament\.go\.ke/.test(d.url || '');
+    if (d.access !== 'downloaded' || !d.hashed_on || !(d.bytes > 0) || (lib && !/^[0-9a-f]{32}$/.test(d.md5_library || ''))) fail(`${tag}: a hash needs access "downloaded", hashed_on, bytes${lib ? ' and md5_library' : ''}`);
   }
 });
 
@@ -432,8 +434,69 @@ nat.indicators.forEach((x) => {
   nulls.forEach((y) => { if (!listed.has(y)) fail(`${tag}: ${y} has no value but is not in missing_years`); });
   x.missing_years.forEach((y) => { const p = x.series.find((q) => q.year === y); if (p && p.value !== null) fail(`${tag}: ${y} is listed as missing but has a value`); });
   x.series.forEach((p) => { if (p.value !== null && !Number.isFinite(p.value)) fail(`${tag} ${p.year}: not a finite number`); });
-  if (/%/.test(x.unit) && !/change|gross/.test(x.unit)) x.series.forEach((p) => { if (p.value !== null && (p.value < 0 || p.value > 100)) fail(`${tag} ${p.year}: ${p.value} is not a percentage`); });
+  if (/%/.test(x.unit) && !/change|gross|negative/.test(x.unit)) x.series.forEach((p) => { if (p.value !== null && (p.value < 0 || p.value > 100)) fail(`${tag} ${p.year}: ${p.value} is not a percentage`); });
 });
+
+// ---- CBK, derived, CRA/IBP and IEBC files: every source is in the manifest with the same hash; totals add up ----
+const extraFile = (f) => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', f), 'utf8'));
+const xcbk = extraFile('cbk.json'); const xder = extraFile('derived.json'); const xngo = extraFile('ngo.json'); const xpol = extraFile('political.json');
+const srcCheck = (o, where) => {
+  if (Array.isArray(o)) return o.forEach((x, i) => srcCheck(x, `${where}[${i}]`));
+  if (!o || typeof o !== 'object') return;
+  if (o.url && o.sha256) {
+    const d = byId.get(o.source_id);
+    if (!d) fail(`${where}: source ${o.url} has no source_id in the manifest`);
+    else if (d.sha256 !== o.sha256 || d.url !== o.url) fail(`${where}: source ${o.source_id} differs from the manifest (url or sha256)`);
+  }
+  Object.entries(o).forEach(([k, v]) => { if (v && typeof v === 'object') srcCheck(v, `${where}.${k}`); });
+};
+srcCheck(xcbk, 'cbk'); srcCheck(xngo, 'ngo'); srcCheck(xpol, 'political');
+{
+  const S = xcbk.series; const m = (k) => S[k].monthly;
+  Object.keys(m('public_debt_total')).forEach((ym) => {
+    const d = m('public_debt_domestic')[ym]; const e = m('public_debt_external')[ym]; const t = m('public_debt_total')[ym];
+    if ([d, e, t].every((v) => typeof v === 'number') && Math.abs(d + e - t) > 1) fail(`cbk public debt ${ym}: domestic + external = ${(d + e).toFixed(1)}, total ${t}`);
+  });
+  Object.entries(S).forEach(([k, s]) => {
+    const obj = s.monthly || s.monthly_cumulative;
+    if (!obj) return;
+    const keys = Object.keys(obj);
+    keys.forEach((ym, i) => { if (i && !/^\d{4}-\d{2}$/.test(ym)) fail(`cbk ${k}: bad month ${ym}`); });
+    const nulls = keys.filter((ym) => obj[ym] === null);
+    const listed = (xcbk.gaps.null_cells[k] || []);
+    nulls.forEach((ym) => { if (!listed.includes(ym)) fail(`cbk ${k} ${ym}: null but not listed in gaps.null_cells`); });
+    if (s.fiscal_year && s.monthly_cumulative) Object.entries(s.fiscal_year).forEach(([fy, v]) => { const june = s.monthly_cumulative[`${Number(fy.slice(0, 4)) + 1}-06`]; if (june !== undefined && june !== v) fail(`cbk ${k} FY ${fy}: ${v} is not the June cumulative ${june}`); });
+  });
+}
+Object.entries(xder.measures).forEach(([k, d]) => { if (d.derived !== true || !d.formula || !(d.inputs || []).length) fail(`derived ${k}: needs derived: true, a formula and its inputs`); });
+if (Object.keys(xder.measures).some((k) => /2017/.test(k))) fail('derived: the annulled August 2017 election must not be used');
+{
+  const ca = xngo.cra.county_allocations_fy2026_27;
+  const names = ca.rows.map((r) => r.county.toLowerCase().replace(/[^a-z]/g, ''));
+  COUNTIES.forEach((c) => { if (!names.includes(c.name.toLowerCase().replace(/[^a-z]/g, ''))) fail(`ngo CRA: ${c.name} missing`); });
+  ca.rows.forEach((r) => { if (Math.abs(r.baseline_2026_27 + r.fourth_basis_allocation_2026_27 - r.total_allocation_2026_27) > 1) fail(`ngo CRA ${r.county}: baseline + Fourth Basis is not the total`); });
+  const tot = ca.rows.reduce((t, r) => t + r.total_allocation_2026_27, 0);
+  const pub = ca.checks.column_sums_vs_published_total.find((x) => x.column === 'total_allocation_2026_27').published_total;
+  if (Math.abs(tot - pub) > 0.5) fail(`ngo CRA: 47 totals add to ${tot}, published ${pub}`);
+  Object.entries(xngo.cra.equalisation_fund_fy2013_14_to_2026_27.rows).forEach(([fy, r]) => { if (r.equalisation_fund_ksh_bn !== null && Math.abs(r.audited_accounts_revenue_ksh_bn * 0.005 - r.equalisation_fund_ksh_bn) > 0.06) fail(`ngo Equalisation Fund ${fy}: not 0.5 per cent of audited revenue`); });
+  if (!/International Budget Partnership/.test(xngo.ibp_open_budget_survey_kenya.source.citation_requested)) fail('ngo IBP: the requested citation must be kept');
+}
+{
+  const v = xpol.iebc_registered_voters_2022_by_constituency;
+  const sum = v.rows.reduce((t, r) => t + r.registered_voters, 0);
+  if (v.rows.length !== 290 || sum !== v.checks.published_total) fail(`political: ${v.rows.length} constituencies add to ${sum}, published ${v.checks.published_total}`);
+  v.county_totals_summed_from_constituencies.forEach((c) => { const s2 = v.rows.filter((r) => r.county_code === c.county_code).reduce((t, r) => t + r.registered_voters, 0); if (s2 !== c.registered_voters) fail(`political ${c.county}: county total ${c.registered_voters} is not the sum ${s2}`); });
+  if (new Set(v.rows.map((r) => r.county_code)).size !== 47) fail('political: constituencies must cover 47 counties');
+  const cr = xpol.iebc_candidates_2022_by_position.rows; const ct = cr.find((r) => r.position === 'Total');
+  ['party_sponsored', 'independent', 'total'].forEach((k) => { const s2 = cr.filter((r) => r !== ct).reduce((t, r) => t + r[k], 0); if (s2 !== ct[k]) fail(`political candidates ${k}: rows add to ${s2}, total ${ct[k]}`); });
+  cr.forEach((r) => { if (r.party_sponsored + r.independent !== r.total && !(regHas('candidates-2022-woman-member', r.total) && r.total - r.party_sponsored - r.independent === 1)) fail(`political candidates ${r.position}: parts do not add up and the difference is not in the register`); });
+  if (xpol.iebc_presidential_2017_aug_form34c_totals) fail('political: the annulled August 2017 results are left out by rule');
+  if (!regHas('registered-voters-2022', v.checks.published_total) || !regHas('registered-voters-2022', 22120458)) fail('political: registered-voters-2022 must list both totals');
+}
+{
+  const dep = xder.side_by_side_conflicts.deposit_rate_annual.rows['2024'];
+  if (!regHas('deposit-rate-cbk-wdi', dep.a) || !regHas('deposit-rate-cbk-wdi', Number(dep.b.toFixed(2)))) fail('derived: deposit-rate-cbk-wdi must list the CBK and World Bank 2024 values');
+}
 
 if (errors.length) {
   console.error('Data validation failed:\n- ' + errors.join('\n- '));
