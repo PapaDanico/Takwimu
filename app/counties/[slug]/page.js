@@ -25,7 +25,7 @@ export default function CountyPending({ params }) {
   const c = bySlug(params.slug);
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow={`County ${String(c.code).padStart(2, '0')}`} title={`${c.name} County: in preparation`} sub="This county is not published yet. We do not show estimates or national averages in its place." path={`/counties/${c.slug}/`} shareText={`${c.name} County on Takwimu Kenya`} />
+      <PageHead county={{ slug: c.slug, name: c.name }} eyebrow={`County ${String(c.code).padStart(2, '0')}`} title={`${c.name} County: in preparation`} sub="This county is not published yet. We do not show estimates or national averages in its place." path={`/counties/${c.slug}/`} shareText={`${c.name} County on Takwimu Kenya`} />
       <section className="card" aria-labelledby="loc-h">
         <h2 id="loc-h">Where {c.name} is</h2>
         <KenyaMap focus={c.slug} ariaLabel={`Map of Kenya with ${c.name} County highlighted`} />

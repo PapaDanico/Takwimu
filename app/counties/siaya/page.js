@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <main id="main" className="wrap page">
       <header>
-        <p className="eyebrow"><Link href="/counties/">All counties</Link> · County 41 · Siaya · FY {osr.fiscal_year}</p>
+        <nav aria-label="Breadcrumb"><p className="eyebrow"><Link href="/counties/">Counties</Link> · Siaya · County 41 · FY {osr.fiscal_year}</p></nav>
         <h1>Siaya fiscal context</h1>
         <p className="page-sub">
           Revenue, spending, unpaid bills and audit in one view, with every figure traced to the

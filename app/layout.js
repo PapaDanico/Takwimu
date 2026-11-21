@@ -14,7 +14,7 @@ export const metadata = {
   title: { default: 'Takwimu Kenya | Turning Data into Progress.', template: '%s | Takwimu Kenya' },
   openGraph: { type: 'website', siteName: 'Takwimu Kenya', images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Takwimu Kenya: Turning Data into Progress.' }] },
   twitter: { card: 'summary_large_image', images: ['/og.png'] },
-  description: "Kenya's county budget, audit and revenue reports in plain language, starting with Siaya. Every figure names its source.",
+  description: "Budget, audit and revenue reports for Kenya's 47 counties in plain language. Every figure names its source, so you can check it.",
   manifest: '/manifest.json',
   icons: {
     icon: [{ url: '/favicon-16.png', sizes: '16x16', type: 'image/png' }, { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' }, { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' }],

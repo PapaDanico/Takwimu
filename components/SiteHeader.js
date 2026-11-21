@@ -3,17 +3,18 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
-import { Home, Map, MapPinned, BookOpen, Info } from 'lucide-react';
+import { Home, Map, BookOpen, Database, Info } from 'lucide-react';
 import { COUNTIES } from '../lib/counties';
 import { ISSUES_URL } from '../lib/site';
 
-const SIAYA_PAGES = ['/counties/siaya', '/insights', '/analytics', '/subcounties', '/profile'];
+// County pages that live outside /counties/ keep their old URLs; they belong to the Counties section.
+const COUNTY_PAGES = ['/counties', '/insights', '/analytics', '/subcounties', '/profile'];
 
 const NAV = [
-  { href: '/', label: 'Overview', short: 'Home', Icon: Home },
+  { href: '/', label: 'Home', short: 'Home', Icon: Home },
   { href: '/counties/', label: 'Counties', short: 'Counties', Icon: Map },
-  { href: '/counties/siaya/', label: 'Siaya', short: 'Siaya', Icon: MapPinned },
   { href: '/learn/', label: 'Learn', short: 'Learn', Icon: BookOpen },
+  { href: '/data/', label: 'Data', short: 'Data', Icon: Database },
   { href: '/method/', label: 'Method', short: 'Method', Icon: Info },
 ];
 
@@ -25,8 +26,7 @@ export default function SiteHeader({ asOf }) {
   const isCurrent = (href) => {
     const h = href.replace(/\/$/, '') || '/';
     if (h === '/') return p === '/';
-    if (h === '/counties/siaya') return SIAYA_PAGES.some((x) => p.startsWith(x));
-    if (h === '/counties') return p.startsWith('/counties') && !p.startsWith('/counties/siaya');
+    if (h === '/counties') return COUNTY_PAGES.some((x) => p.startsWith(x));
     return p.startsWith(h);
   };
   // Close the county menu after navigating, on Escape, and on a click outside it.

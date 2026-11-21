@@ -1,25 +1,31 @@
 import Link from 'next/link';
-import { COUNTIES } from '../lib/counties';
+import { COUNTIES, PUBLISHED } from '../lib/counties';
 import KenyaMap from '../components/KenyaMap';
+import CountyFinder from '../components/CountyFinder';
 
 export default function Home() {
   return (
     <main id="main" className="wrap page">
       <section className="hero card" aria-labelledby="hero-h">
         <p className="eyebrow">Takwimu Kenya · <em>Turning Data into Progress.</em></p>
-        <h1 id="hero-h">Kenya&apos;s public finances and statistics, county by county, made plain</h1>
-        <p className="lead">Budgets, spending, own revenue, unpaid bills, audit opinions and population, with the source, date and confidence beside every figure. Where two official reports disagree, we show both.</p>
-        <p><Link className="btn" href="/counties/siaya/">Start with Siaya County</Link> <Link className="btn ghost" href="/counties/">Browse all 47 counties</Link></p>
+        <h1 id="hero-h">Kenya&apos;s 47 counties, in plain numbers you can check</h1>
+        <p className="lead">Budgets, spending, own revenue, unpaid bills, audit opinions and population for every county, with the source, date and confidence beside each figure. Where two official reports disagree, you see both.</p>
+        <p className="coverage"><b>{PUBLISHED.length} of {COUNTIES.length} counties published so far.</b> More are added as each meets the same evidence standard.</p>
+        <div className="hero-grid">
+          <KenyaMap />
+          <div>
+            <h2 className="mini" id="published-h">Published so far</h2>
+            <ul className="published-row" aria-labelledby="published-h">
+              {PUBLISHED.map((c) => <li key={c.slug}><Link className="county-card live" href={`/counties/${c.slug}/`}><span className="county-code">{String(c.code).padStart(2, '0')}</span><b>{c.name}</b><small>Published</small></Link></li>)}
+            </ul>
+            <p><Link className="btn" href="/counties/">Browse all 47 counties</Link></p>
+          </div>
+        </div>
       </section>
       <section className="card" aria-labelledby="pick-h">
         <h2 id="pick-h">Find your county</h2>
-        <p className="lead">Siaya is published first. The other 46 are added one at a time, each only when its data meets the same standard.</p>
-        <KenyaMap />
-        <ul className="county-grid">
-          {COUNTIES.map((c) => (
-            <li key={c.slug}><Link href={`/counties/${c.slug}/`} className={`county-card${c.published ? ' live' : ''}`}><span className="county-code">{String(c.code).padStart(2, '0')}</span><b>{c.name}</b><small>{c.published ? 'Published' : 'In preparation'}</small></Link></li>
-          ))}
-        </ul>
+        <p className="lead">Choose a county on the map above, or type its name below. Each county page shows what is published and what is still being checked.</p>
+        <CountyFinder />
       </section>
       <section className="card" aria-labelledby="how-h">
         <h2 id="how-h">How it works</h2>
@@ -29,7 +35,7 @@ export default function Home() {
           <li><b>Honest uncertainty.</b> Confidence ratings, a conflict register, and no verdicts on named people.</li>
           <li><b>Open data.</b> Every chart has a table, and the datasets download as CSV and JSON.</li>
         </ul>
-        <p><Link href="/method/">Read the method</Link> or <Link href="/learn/">learn the terms</Link>.</p>
+        <p>You can check every figure against its source. <Link href="/method/">Read the method</Link>, <Link href="/learn/">learn the terms</Link> or <a href="https://github.com/PapaDanico/Takwimu/issues/new">report an inaccuracy</a>.</p>
       </section>
     </main>
   );

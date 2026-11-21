@@ -14,13 +14,9 @@ const COLUMNS = [
   {
     heading: 'Explore',
     links: [
-      { href: '/', label: 'Overview' },
+      { href: '/', label: 'Home' },
       { href: '/counties/', label: 'All 47 counties' },
-      { href: '/counties/siaya/', label: 'Siaya County' },
-      { href: '/insights/', label: 'Siaya ten-year insights' },
-      { href: '/analytics/', label: 'Analytics' },
-      { href: '/subcounties/', label: 'Sub-counties' },
-      { href: '/profile/', label: 'County profile' },
+      { href: '/data/', label: 'Open data' },
     ],
   },
   {
@@ -87,8 +83,8 @@ export default function SiteFooter({ asOf }) {
             </div>
             <p className="tagline sr-only">Turning Data into Progress.</p>
             <p className="footer-about">
-              A free tool that turns Kenya&apos;s county budget, audit and revenue reports into plain
-              language for all 47 counties, starting with Siaya. Every figure names its source, so any citizen can check it.
+              A free, independent tool that turns the budget, audit and revenue reports of Kenya&apos;s 47
+              counties into plain language. Every figure names its source, so you can check it.
             </p>
             <div className="chips">
               <a className="chip gold" href={ISSUES_URL}>Report an inaccuracy</a>
