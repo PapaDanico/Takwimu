@@ -154,6 +154,11 @@ reg.conflicts.forEach((c) => {
   });
   if (c.values && c.values.length >= 2 && c.values[0].value === c.values[1].value) fail(`conflicts ${c.id}: the values do not differ`);
 });
+reg.conflicts.forEach((c) => {
+  if (!['resolved_by_source', 'unresolved_no_reviewer', 'reviewed'].includes(c.verification_state)) fail(`conflicts ${c.id}: verification_state missing or unknown`);
+  if (c.verification_state === 'reviewed' && !(c.reviewer && c.reviewed_on)) fail(`conflicts ${c.id}: a reviewed case needs reviewer and reviewed_on`);
+  if (typeof c.page_image_checked !== 'boolean') fail(`conflicts ${c.id}: page_image_checked must be true or false`);
+});
 // Every conflict flagged in the history file must appear in the register.
 const required = ['osr-2023-24', 'osr-2015-16', 'pending-2021', 'pending-2023', 'pending-2024'];
 ((hist.osr_series && hist.osr_series.points) || []).forEach((pt) => {
