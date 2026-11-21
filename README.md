@@ -17,7 +17,6 @@ data/           versioned data with provenance (siaya.json)
 scripts/        validate-data.js (provenance checks), build-data.js (public JSON)
 public/         icons, manifest, generated data
 netlify.toml    build and headers
-.github/workflows/ci.yml   validate, typecheck, build on every PR
 ```
 
 ## Commands

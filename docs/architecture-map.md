@@ -37,4 +37,4 @@ Consequences and rules:
 In the Netlify dashboard, open Deploys, pick the previous deploy and publish it. No code change is needed.
 
 ## Known integration noise
-GitHub Actions gets no runner (account level), Cloudflare Workers Builds and Vercel previews are connected to the repository but are not deploy targets. These show red on pull request 1 and should be disconnected by the repository owner.
+GitHub Actions got no runner (account level), so the workflow was removed on 21 Nov 2026; the gates run locally before each commit and deploy. Cloudflare Workers Builds and Vercel previews are connected to the repository but are not deploy targets. These show red on pull request 1 and should be disconnected by the repository owner.
