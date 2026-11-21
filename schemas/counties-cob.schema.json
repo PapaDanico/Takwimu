@@ -80,9 +80,10 @@
         "method_a": { "$ref": "#/$defs/reading" },
         "method_b": { "$ref": "#/$defs/reading" },
         "check": { "type": "string" },
-        "outcome": { "type": "string", "pattern": "^(accepted|not accepted): " },
+        "outcome": { "type": "string", "pattern": "^(accepted|not accepted|printed error): " },
         "page_image_checked": { "type": "boolean", "enum": [false] },
-        "first_pass": { "type": "string" }
+        "first_pass": { "type": "string" },
+        "method_c": { "type": "object", "required": ["how", "reading", "row"], "additionalProperties": false, "properties": { "how": { "type": "string" }, "reading": { "type": "string" }, "row": { "type": "string" } } }
       }
     },
     "reading": {

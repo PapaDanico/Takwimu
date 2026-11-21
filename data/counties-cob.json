@@ -204,9 +204,8 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "status": "doubtful",
-      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave 77 and nothing (the printed amounts give 76.7 per cent). Left empty.",
+      "value": 77,
+      "note": "Confirmed on 21 Nov 2026 by a third reading with a different OCR engine; the full printed row is consistent.",
       "raw": "77 / (none)",
       "reread": {
        "on": "2026-11-21",
@@ -220,10 +219,15 @@
         "reading": "",
         "conf": null
        },
-       "check": "expenditure_total / approved_budget_total = 76.71 per cent; reading 77 differs by 0.29 points",
-       "outcome": "not accepted: the two readings disagree",
+       "check": "expenditure_total / approved_budget_total = 76.71 per cent; reading 77 differs by 0.29 points Third reading: every printed amount in the row reproduces the row's three printed percentages to within 0.5 points.",
+       "outcome": "accepted: the third reading gives 77, agrees with one earlier re-reading and agrees with the printed amounts, and the whole row is consistent (21 Nov 2026)",
        "page_image_checked": false,
-       "first_pass": "not read (cell left blank by the first pass)"
+       "first_pass": "not read (cell left blank by the first pass)",
+       "method_c": {
+        "how": "Tesseract 5.3.4 (a different OCR engine), page segmentation mode 4, on the whole PDF page rendered at 600 dpi greyscale; the full table row was read",
+        "reading": "77",
+        "row": "Mombasa 11,838.09 5,521.91 17,360.00 9,885.76 3,430.47 13,316.23 84 62 77"
+       }
       }
      },
      "pb_exec_recurrent": {
@@ -4123,9 +4127,8 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "status": "doubtful",
-      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave 71 and 7 (the printed amounts give 71.3 per cent). Left empty.",
+      "value": 71,
+      "note": "Confirmed on 21 Nov 2026 by a third reading with a different OCR engine; the full printed row is consistent.",
       "raw": "71 / 7",
       "reread": {
        "on": "2026-11-21",
@@ -4139,10 +4142,15 @@
         "reading": "7",
         "conf": 0.315
        },
-       "check": "development_expenditure / development_budget = 71.27 per cent; reading 71 differs by 0.27 points",
-       "outcome": "not accepted: the two readings disagree",
+       "check": "development_expenditure / development_budget = 71.27 per cent; reading 71 differs by 0.27 points Third reading: every printed amount in the row reproduces the row's three printed percentages to within 0.5 points.",
+       "outcome": "accepted: the third reading gives 71, agrees with one earlier re-reading and agrees with the printed amounts, and the whole row is consistent (21 Nov 2026)",
        "page_image_checked": false,
-       "first_pass": "not read (cell left blank by the first pass)"
+       "first_pass": "not read (cell left blank by the first pass)",
+       "method_c": {
+        "how": "Tesseract 5.3.4 (a different OCR engine), page segmentation mode 4, on the whole PDF page rendered at 600 dpi greyscale; the full table row was read",
+        "reading": "71",
+        "row": "Makueni 7,901.91 3,678.31 11,580.21 7,460.73 2,621.37 10,082.10 94 71 87"
+       }
       }
      },
      "overall_absorption_pct": {
@@ -5124,9 +5132,8 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "status": "doubtful",
-      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave nothing and 71 (the printed amounts give 70.8 per cent). Left empty.",
+      "value": 71,
+      "note": "Confirmed on 21 Nov 2026 by a third reading with a different OCR engine; the full printed row is consistent.",
       "raw": "(none) / 71",
       "reread": {
        "on": "2026-11-21",
@@ -5140,10 +5147,15 @@
         "reading": "71",
         "conf": 0.621
        },
-       "check": "development_expenditure / development_budget = 70.81 per cent",
-       "outcome": "not accepted: the two readings disagree",
+       "check": "development_expenditure / development_budget = 70.81 per cent Third reading: every printed amount in the row reproduces the row's three printed percentages to within 0.5 points.",
+       "outcome": "accepted: the third reading gives 71, agrees with one earlier re-reading and agrees with the printed amounts, and the whole row is consistent (21 Nov 2026)",
        "page_image_checked": false,
-       "first_pass": "not read (cell left blank by the first pass)"
+       "first_pass": "not read (cell left blank by the first pass)",
+       "method_c": {
+        "how": "Tesseract 5.3.4 (a different OCR engine), page segmentation mode 4, on the whole PDF page rendered at 600 dpi greyscale; the full table row was read",
+        "reading": "71",
+        "row": "Murang'a 7,525.45 3,218.20 10,743.65 6,905.96 2,278.76 9,184.72 92 71 85"
+       }
       }
      },
      "overall_absorption_pct": {
@@ -6106,9 +6118,8 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "status": "doubtful",
-      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave 1 and 71 (the printed amounts give 71.1 per cent). Left empty.",
+      "value": 71,
+      "note": "Confirmed on 21 Nov 2026 by a third reading with a different OCR engine; the full printed row is consistent.",
       "raw": "1 / 71",
       "reread": {
        "on": "2026-11-21",
@@ -6122,10 +6133,15 @@
         "reading": "71",
         "conf": 0.627
        },
-       "check": "development_expenditure / development_budget = 71.13 per cent; reading 1 differs by 70.13 points",
-       "outcome": "not accepted: the two readings disagree",
+       "check": "development_expenditure / development_budget = 71.13 per cent; reading 1 differs by 70.13 points Third reading: every printed amount in the row reproduces the row's three printed percentages to within 0.5 points.",
+       "outcome": "accepted: the third reading gives 71, agrees with one earlier re-reading and agrees with the printed amounts, and the whole row is consistent (21 Nov 2026)",
        "page_image_checked": false,
-       "first_pass": "not read (cell left blank by the first pass)"
+       "first_pass": "not read (cell left blank by the first pass)",
+       "method_c": {
+        "how": "Tesseract 5.3.4 (a different OCR engine), page segmentation mode 4, on the whole PDF page rendered at 600 dpi greyscale; the full table row was read",
+        "reading": "71",
+        "row": "Samburu 5,137.23 2,244.98 7,382.22 4,910.67 1,596.79 6,507.46 96 71 88"
+       }
       }
      },
      "overall_absorption_pct": {
@@ -6365,9 +6381,8 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "status": "doubtful",
-      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave 77 and nothing (the printed amounts give 77.5 per cent). Left empty.",
+      "value": 77,
+      "note": "Confirmed on 21 Nov 2026 by a third reading with a different OCR engine; the full printed row is consistent. The report text on the same page also prints \"Trans Nzoia (77 per cent)\" among the highest development absorption rates.",
       "raw": "77 / (none)",
       "reread": {
        "on": "2026-11-21",
@@ -6381,10 +6396,15 @@
         "reading": "",
         "conf": null
        },
-       "check": "development_expenditure / development_budget = 77.45 per cent; reading 77 differs by 0.45 points",
-       "outcome": "not accepted: the two readings disagree",
+       "check": "development_expenditure / development_budget = 77.45 per cent; reading 77 differs by 0.45 points Third reading: every printed amount in the row reproduces the row's three printed percentages to within 0.5 points. The report text on the same page also prints \"Trans Nzoia (77 per cent)\" among the highest development absorption rates.",
+       "outcome": "accepted: the third reading gives 77, agrees with one earlier re-reading and agrees with the printed amounts, and the whole row is consistent (21 Nov 2026)",
        "page_image_checked": false,
-       "first_pass": "not read (cell left blank by the first pass)"
+       "first_pass": "not read (cell left blank by the first pass)",
+       "method_c": {
+        "how": "Tesseract 5.3.4 (a different OCR engine), page segmentation mode 4, on the whole PDF page rendered at 600 dpi greyscale; the full table row was read",
+        "reading": "77",
+        "row": "Trans Nzoia 6,111.99 4,343.03 10,455.02 5,911.24 3,363.86 9,275.11 97 77 89"
+       }
       }
      },
      "overall_absorption_pct": {
@@ -11677,7 +11697,7 @@
      "ocr_conf": 0.755,
      "ocr_reading": "4,145",
      "status": "doubtful",
-     "note": "Both re-readings give 4,145 and 4145: the printed cell holds 4,145, which is not a percentage of the printed amounts (76.8 per cent). Hypothesis: the column was summed (the 47 printed county values add to 4,143). Not confirmed. Left empty.",
+     "note": "The report prints 4,145 in this cell (three readings by two OCR engines agree). That is not a percentage: the printed amounts give 76.8 per cent (KSh 67,297.56 million collected against a target of KSh 87,669.66 million). This appears to be an error in the publication. Both are shown; neither is used as the printed value.",
      "reread": {
       "on": "2026-11-21",
       "method_a": {
@@ -11691,9 +11711,14 @@
        "conf": 0.774
       },
       "check": "total_osr_actual / total_osr_target = 76.76 per cent; reading 4145 differs by 4068.24 points",
-      "outcome": "not accepted: both readings agree but differ from the printed amounts by more than 0.5 points",
+      "outcome": "printed error: three readings by two OCR engines agree that the cell prints 4,145, which is not a percentage; the printed amounts give 76.8 per cent (21 Nov 2026)",
       "page_image_checked": false,
-      "first_pass": "4,145"
+      "first_pass": "4,145",
+      "method_c": {
+       "how": "Tesseract 5.3.4 (a different OCR engine), page segmentation mode 4, on the whole PDF page rendered at 600 dpi greyscale; the full table row was read",
+       "reading": "4145",
+       "row": "Total 66,902.48 20,767.18 87,669.66 42,710.21 24,587.35 67,297.56 4145"
+      }
      }
     },
     "recurrent_budget": {
@@ -25281,7 +25306,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 14000.0,
+      "value": 14000,
       "raw": "14,000.00",
       "ocr_conf": 0.775
      },
@@ -26170,7 +26195,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 131.0,
+      "value": 131,
       "raw": "131,000,000",
       "ocr_conf": 0.778,
       "printed_unit": "KSh",
@@ -26666,7 +26691,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 100.0,
+      "value": 100,
       "raw": "100,000,000",
       "ocr_conf": 0.847,
       "printed_unit": "KSh",
@@ -26735,7 +26760,7 @@
      },
      "derived": {
       "osr_performance_pct": 81.4,
-      "recurrent_absorption_pct": 94.0,
+      "recurrent_absorption_pct": 94,
       "development_absorption_pct": 56.8,
       "overall_absorption_pct": 82.8
      },
@@ -26805,7 +26830,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 94.0,
+      "value": 94,
       "raw": "94.0",
       "ocr_conf": 0.729
      },
@@ -26915,7 +26940,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 100.0,
+      "value": 100,
       "raw": "100,000,000",
       "ocr_conf": 0.798,
       "printed_unit": "KSh",
@@ -26986,7 +27011,7 @@
       "osr_performance_pct": 46.7,
       "recurrent_absorption_pct": 96.6,
       "development_absorption_pct": 76.5,
-      "overall_absorption_pct": 91.0
+      "overall_absorption_pct": 91
      },
      "recurrent_budget": {
       "table": "Table 2.4: County Budget Allocation, Expenditure and Absorption Rate in FY 2022/23",
@@ -27074,7 +27099,7 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": 91.0,
+      "value": 91,
       "raw": "91.0",
       "ocr_conf": 0.8
      },
@@ -27411,7 +27436,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 170.0,
+      "value": 170,
       "raw": "170,000,000",
       "ocr_conf": 0.835,
       "printed_unit": "KSh",
@@ -27481,7 +27506,7 @@
      "derived": {
       "osr_performance_pct": 34.5,
       "recurrent_absorption_pct": 97.9,
-      "development_absorption_pct": 71.0,
+      "development_absorption_pct": 71,
       "overall_absorption_pct": 86.3
      },
      "recurrent_budget": {
@@ -27560,7 +27585,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "%",
-      "value": 71.0,
+      "value": 71,
       "raw": "71.0",
       "ocr_conf": 0.661
      },
@@ -27728,9 +27753,9 @@
      },
      "derived": {
       "osr_performance_pct": 85.2,
-      "recurrent_absorption_pct": 92.0,
+      "recurrent_absorption_pct": 92,
       "development_absorption_pct": 70.2,
-      "overall_absorption_pct": 85.0
+      "overall_absorption_pct": 85
      },
      "recurrent_budget": {
       "table": "Table 2.4: County Budget Allocation, Expenditure and Absorption Rate in FY 2022/23",
@@ -27798,7 +27823,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 92.0,
+      "value": 92,
       "raw": "92.0",
       "ocr_conf": 0.703
      },
@@ -27818,7 +27843,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 85.0,
+      "value": 85,
       "raw": "85.0",
       "ocr_conf": 0.734
      },
@@ -27906,7 +27931,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 600.0,
+      "value": 600,
       "raw": "600,000,000",
       "ocr_conf": 0.837,
       "printed_unit": "KSh",
@@ -28223,7 +28248,7 @@
       "osr_performance_pct": 63.2,
       "recurrent_absorption_pct": 93.6,
       "development_absorption_pct": 69.4,
-      "overall_absorption_pct": 88.0
+      "overall_absorption_pct": 88
      },
      "recurrent_budget": {
       "table": "Table 2.4: County Budget Allocation, Expenditure and Absorption Rate in FY 2022/23",
@@ -28311,7 +28336,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "%",
-      "value": 88.0,
+      "value": 88,
       "raw": "88.0",
       "ocr_conf": 0.696
      },
@@ -28530,7 +28555,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 6114.0,
+      "value": 6114,
       "raw": "6,114.00",
       "ocr_conf": 0.79
      },
@@ -28649,7 +28674,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 420.0,
+      "value": 420,
       "raw": "420,000,000",
       "ocr_conf": 0.818,
       "printed_unit": "KSh",
@@ -29143,7 +29168,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 670.0,
+      "value": 670,
       "raw": "670,000,000",
       "ocr_conf": 0.863,
       "printed_unit": "KSh",
@@ -29392,7 +29417,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 660.0,
+      "value": 660,
       "raw": "660,000,000",
       "ocr_conf": 0.773,
       "printed_unit": "KSh",
@@ -29640,7 +29665,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 800.0,
+      "value": 800,
       "raw": "800,000,000",
       "ocr_conf": 0.807,
       "printed_unit": "KSh",
@@ -29710,7 +29735,7 @@
      "derived": {
       "osr_performance_pct": 76.3,
       "recurrent_absorption_pct": 96.2,
-      "development_absorption_pct": 75.0,
+      "development_absorption_pct": 75,
       "overall_absorption_pct": 89.8
      },
      "recurrent_budget": {
@@ -29789,7 +29814,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "%",
-      "value": 75.0,
+      "value": 75,
       "raw": "75.0",
       "ocr_conf": 0.577
      },
@@ -30633,7 +30658,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 198.0,
+      "value": 198,
       "raw": "198,000,000",
       "ocr_conf": 0.786,
       "printed_unit": "KSh",
@@ -30880,7 +30905,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 170.0,
+      "value": 170,
       "raw": "170,000,000",
       "ocr_conf": 0.84,
       "printed_unit": "KSh",
@@ -30950,7 +30975,7 @@
      "derived": {
       "osr_performance_pct": 75.4,
       "recurrent_absorption_pct": 98.5,
-      "development_absorption_pct": 89.0,
+      "development_absorption_pct": 89,
       "overall_absorption_pct": 95.4
      },
      "recurrent_budget": {
@@ -31029,7 +31054,7 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": 89.0,
+      "value": 89,
       "raw": "89.0",
       "ocr_conf": 0.72
      },
@@ -31445,7 +31470,7 @@
      },
      "derived": {
       "osr_performance_pct": 81.5,
-      "recurrent_absorption_pct": 94.0,
+      "recurrent_absorption_pct": 94,
       "development_absorption_pct": 64.6,
       "overall_absorption_pct": 83.3
      },
@@ -31515,7 +31540,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "%",
-      "value": 94.0,
+      "value": 94,
       "raw": "94.0",
       "ocr_conf": 0.759
      },
@@ -31692,7 +31717,7 @@
      },
      "derived": {
       "osr_performance_pct": 66.9,
-      "recurrent_absorption_pct": 98.0,
+      "recurrent_absorption_pct": 98,
       "development_absorption_pct": 71.3,
       "overall_absorption_pct": 87.8
      },
@@ -31762,7 +31787,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "%",
-      "value": 98.0,
+      "value": 98,
       "raw": "98.0",
       "ocr_conf": 0.734
      },
@@ -32433,7 +32458,7 @@
      },
      "derived": {
       "osr_performance_pct": 80.9,
-      "recurrent_absorption_pct": 100.0,
+      "recurrent_absorption_pct": 100,
       "development_absorption_pct": 62.6,
       "overall_absorption_pct": 84.3
      },
@@ -32503,7 +32528,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 100.0,
+      "value": 100,
       "raw": "100.0",
       "ocr_conf": 0.716
      },
@@ -32859,7 +32884,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 2280.0,
+      "value": 2280,
       "raw": "2,280,000,000",
       "ocr_conf": 0.791,
       "printed_unit": "KSh",
@@ -33525,7 +33550,7 @@
       "printed_page": 11,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 494.0,
+      "value": 494,
       "raw": "494,000,000",
       "ocr_conf": 0.831,
       "printed_unit": "KSh"
@@ -33536,7 +33561,7 @@
       "printed_page": 11,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 821.0,
+      "value": 821,
       "raw": "821,000,000",
       "ocr_conf": 0.856,
       "printed_unit": "KSh"
@@ -33587,7 +33612,7 @@
       "printed_page": 11,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 1315.0,
+      "value": 1315,
       "raw": "1,315,000,000",
       "ocr_conf": 0.864,
       "printed_unit": "KSh"
@@ -33850,7 +33875,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 300.0,
+      "value": 300,
       "raw": "300,000,000",
       "ocr_conf": 0.866,
       "printed_unit": "KSh",
@@ -34433,7 +34458,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 1937.0,
+      "value": 1937,
       "raw": "1,937.00",
       "ocr_conf": 0.88
      },
@@ -34592,7 +34617,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 500.0,
+      "value": 500,
       "raw": "500,000,000",
       "ocr_conf": 0.863,
       "printed_unit": "KSh",
@@ -34663,7 +34688,7 @@
       "osr_performance_pct": 75.9,
       "recurrent_absorption_pct": 89.4,
       "development_absorption_pct": 61.5,
-      "overall_absorption_pct": 81.0
+      "overall_absorption_pct": 81
      },
      "recurrent_budget": {
       "table": "Table 2.4: County Budget Allocation, Expenditure and Absorption Rate in FY 2022/23",
@@ -34751,7 +34776,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 81.0,
+      "value": 81,
       "raw": "81.0",
       "ocr_conf": 0.8
      },
@@ -35159,7 +35184,7 @@
       "osr_performance_pct": 68.1,
       "recurrent_absorption_pct": 91.4,
       "development_absorption_pct": 53.8,
-      "overall_absorption_pct": 79.0
+      "overall_absorption_pct": 79
      },
      "recurrent_budget": {
       "table": "Table 2.4: County Budget Allocation, Expenditure and Absorption Rate in FY 2022/23",
@@ -35177,7 +35202,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 2827.0,
+      "value": 2827,
       "raw": "2,827.00",
       "ocr_conf": 0.878
      },
@@ -35197,7 +35222,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 5279.0,
+      "value": 5279,
       "raw": "5,279.00",
       "ocr_conf": 0.801
      },
@@ -35247,7 +35272,7 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "%",
-      "value": 79.0,
+      "value": 79,
       "raw": "79.0",
       "ocr_conf": 0.712
      },
@@ -35833,7 +35858,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 600.0,
+      "value": 600,
       "raw": "600000,000",
       "ocr_conf": 0.852,
       "printed_unit": "KSh",
@@ -36045,7 +36070,7 @@
       "printed_page": 11,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 50.0,
+      "value": 50,
       "raw": "50,000,000",
       "ocr_conf": 0.819,
       "printed_unit": "KSh"
@@ -36082,7 +36107,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 650.0,
+      "value": 650,
       "raw": "650,000,000",
       "ocr_conf": 0.833,
       "printed_unit": "KSh",
@@ -36331,7 +36356,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 432.0,
+      "value": 432,
       "raw": "432,000,000",
       "ocr_conf": 0.808,
       "printed_unit": "KSh",
@@ -36966,7 +36991,7 @@
      "printed_page": 9,
      "read": "ocr",
      "unit": "%",
-     "value": 61.0,
+     "value": 61,
      "raw": "61.0",
      "ocr_conf": 0.701
     },
@@ -37062,21 +37087,21 @@
       "field": "ordinary_osr_target",
       "sum_of_47": 57373.52,
       "stated_total": 57373.523623,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "ordinary_osr_actual",
       "sum_of_47": 37809.04,
       "stated_total": 37809.038922,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "recurrent_budget",
       "sum_of_47": 354635.28,
       "stated_total": 354635.28,
-      "difference": -0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
@@ -37090,7 +37115,7 @@
       "field": "approved_budget_total",
       "sum_of_47": 515177.52,
       "stated_total": 515177.52,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
@@ -37104,7 +37129,7 @@
       "field": "development_expenditure",
       "sum_of_47": 97980.28,
       "stated_total": 97980.28,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
@@ -37125,28 +37150,28 @@
       "field": "pb_exec_development",
       "sum_of_47": 31904.91,
       "stated_total": 31904.907894,
-      "difference": -0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "pb_assembly_recurrent",
       "sum_of_47": 1018.93,
       "stated_total": 1018.933772,
-      "difference": -0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "pb_assembly_development",
       "sum_of_47": 639.43,
       "stated_total": 639.429699,
-      "difference": -0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "pb_grand_total",
       "sum_of_47": 164764.67,
       "stated_total": 164764.672557,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      }
     ],
@@ -37443,28 +37468,28 @@
       "field": "development_spent (KSh bn)",
       "history_json": 1.52,
       "this_table": 1.5203,
-      "difference": 0.0,
+      "difference": 0,
       "match": true
      },
      {
       "field": "recurrent_absorption_pct",
       "history_json": 91.4,
       "this_table": 91.4,
-      "difference": 0.0,
+      "difference": 0,
       "match": true
      },
      {
       "field": "development_absorption_pct",
       "history_json": 53.8,
       "this_table": 53.8,
-      "difference": 0.0,
+      "difference": 0,
       "match": true
      },
      {
       "field": "osr_m (KSh m)",
       "history_json": 402.23,
       "this_table": 402.2296,
-      "difference": -0.0,
+      "difference": 0,
       "match": true
      },
      {
@@ -37588,7 +37613,7 @@
      "derived": {
       "osr_performance_pct": 72.8,
       "recurrent_absorption_pct": 69.2,
-      "development_absorption_pct": 37.0,
+      "development_absorption_pct": 37,
       "overall_absorption_pct": 53.7
      },
      "recurrent_budget": {
@@ -37667,7 +37692,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 37.0,
+      "value": 37,
       "raw": "37.0",
       "ocr_conf": 0.79
      },
@@ -37788,7 +37813,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 438.0,
+      "value": 438,
       "raw": "438,000,000",
       "ocr_conf": 0.886,
       "printed_unit": "KSh",
@@ -38079,12 +38104,12 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "%",
-      "value": 74.0,
+      "value": 74,
       "raw": "74.0",
       "ocr_conf": 0.8
      },
      "derived": {
-      "osr_performance_pct": 74.0,
+      "osr_performance_pct": 74,
       "recurrent_absorption_pct": 86.9,
       "development_absorption_pct": 35.4,
       "overall_absorption_pct": 67.7
@@ -38165,9 +38190,8 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "status": "doubtful",
-      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave ′ 4 and 374 (the printed amounts give 35.4 per cent). Left empty.",
+      "value": 35.4,
+      "note": "Confirmed on 21 Nov 2026 by a third reading with a different OCR engine; the full printed row is consistent. The report text on PDF page 31 lists Kilifi among the 17 counties below 50 per cent development absorption.",
       "raw": "′ 4 / 374",
       "reread": {
        "on": "2026-11-21",
@@ -38181,10 +38205,15 @@
         "reading": "374",
         "conf": 0.352
        },
-       "check": "development_expenditure / development_budget = 35.45 per cent",
-       "outcome": "not accepted: the two readings disagree",
+       "check": "development_expenditure / development_budget = 35.45 per cent Third reading: every printed amount in the row reproduces the row's three printed percentages to within 0.5 points. The report text on PDF page 31 lists Kilifi among the 17 counties below 50 per cent development absorption.",
+       "outcome": "accepted: the third reading gives 35.4, agrees with the printed amounts, and the whole row is consistent (21 Nov 2026)",
        "page_image_checked": false,
-       "first_pass": "not read (cell left blank by the first pass)"
+       "first_pass": "not read (cell left blank by the first pass)",
+       "method_c": {
+        "how": "Tesseract 5.3.4 (a different OCR engine), page segmentation mode 4, on the whole PDF page rendered at 600 dpi greyscale; the full table row was read",
+        "reading": "35.4",
+        "row": "Kilifi 9,981.52 5,971.31 15,952.83 8,678.39 2,116.78 10,795.17 86.9 35.4 67.7"
+       }
       }
      },
      "overall_absorption_pct": {
@@ -38550,7 +38579,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 120.0,
+      "value": 120,
       "raw": "120,000,000",
       "ocr_conf": 0.854,
       "printed_unit": "KSh",
@@ -38848,7 +38877,7 @@
      "derived": {
       "osr_performance_pct": 70.1,
       "recurrent_absorption_pct": 96.3,
-      "development_absorption_pct": 33.0,
+      "development_absorption_pct": 33,
       "overall_absorption_pct": 74.3
      },
      "recurrent_budget": {
@@ -38927,7 +38956,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 33.0,
+      "value": 33,
       "raw": "33.0",
       "ocr_conf": 0.673
      },
@@ -39049,7 +39078,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 150.0,
+      "value": 150,
       "raw": "150,000,000",
       "ocr_conf": 0.858,
       "printed_unit": "KSh",
@@ -39299,7 +39328,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 100.0,
+      "value": 100,
       "raw": "100,000,000",
       "ocr_conf": 0.899,
       "printed_unit": "KSh",
@@ -39596,7 +39625,7 @@
      "derived": {
       "osr_performance_pct": 66.4,
       "recurrent_absorption_pct": 96.5,
-      "development_absorption_pct": 74.0,
+      "development_absorption_pct": 74,
       "overall_absorption_pct": 87.3
      },
      "recurrent_budget": {
@@ -39675,7 +39704,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 74.0,
+      "value": 74,
       "raw": "74.0",
       "ocr_conf": 0.652
      },
@@ -39793,7 +39822,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 170.0,
+      "value": 170,
       "raw": "170,000,000",
       "ocr_conf": 0.91,
       "printed_unit": "KSh",
@@ -39862,7 +39891,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 4586.0,
+      "value": 4586,
       "raw": "4,586.00",
       "ocr_conf": 0.861
      },
@@ -40379,7 +40408,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 7422.0,
+      "value": 7422,
       "raw": "7,422.00",
       "ocr_conf": 0.884
      },
@@ -40482,7 +40511,7 @@
       "printed_page": 10,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 28.0,
+      "value": 28,
       "raw": "28,000,000",
       "ocr_conf": 0.836,
       "printed_unit": "KSh"
@@ -40493,7 +40522,7 @@
       "printed_page": 10,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 28.0,
+      "value": 28,
       "raw": "28,000,000",
       "ocr_conf": 0.901,
       "printed_unit": "KSh"
@@ -40540,7 +40569,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 350.0,
+      "value": 350,
       "raw": "350,000,000",
       "ocr_conf": 0.849,
       "printed_unit": "KSh",
@@ -40791,7 +40820,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 900.0,
+      "value": 900,
       "raw": "900,000,000",
       "ocr_conf": 0.914,
       "printed_unit": "KSh",
@@ -41041,7 +41070,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 800.0,
+      "value": 800,
       "raw": "800,000,000",
       "ocr_conf": 0.823,
       "printed_unit": "KSh",
@@ -41792,7 +41821,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 990.0,
+      "value": 990,
       "raw": "990,000,000",
       "ocr_conf": 0.849,
       "printed_unit": "KSh",
@@ -42043,7 +42072,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 1000.0,
+      "value": 1000,
       "raw": "1,000,000,000",
       "ocr_conf": 0.85,
       "printed_unit": "KSh",
@@ -42293,7 +42322,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 485.0,
+      "value": 485,
       "raw": "485,000,000",
       "ocr_conf": 0.878,
       "printed_unit": "KSh",
@@ -42541,7 +42570,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 1580.0,
+      "value": 1580,
       "raw": "1,580,000,000",
       "ocr_conf": 0.816,
       "printed_unit": "KSh",
@@ -43040,7 +43069,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 180.0,
+      "value": 180,
       "raw": "180,000,000",
       "ocr_conf": 0.909,
       "printed_unit": "KSh",
@@ -43290,7 +43319,7 @@
       "printed_page": 4,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 170.0,
+      "value": 170,
       "raw": "170,000,000",
       "ocr_conf": 0.797,
       "printed_unit": "KSh",
@@ -43835,7 +43864,7 @@
      "derived": {
       "osr_performance_pct": 71.8,
       "recurrent_absorption_pct": 99.2,
-      "development_absorption_pct": 64.0,
+      "development_absorption_pct": 64,
       "overall_absorption_pct": 83.9
      },
      "recurrent_budget": {
@@ -43914,7 +43943,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 64.0,
+      "value": 64,
       "raw": "64.0",
       "ocr_conf": 0.681
      },
@@ -44327,12 +44356,12 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "%",
-      "value": 61.0,
+      "value": 61,
       "raw": "61.0",
       "ocr_conf": 0.66
      },
      "derived": {
-      "osr_performance_pct": 61.0,
+      "osr_performance_pct": 61,
       "recurrent_absorption_pct": 94.8,
       "development_absorption_pct": 55.9,
       "overall_absorption_pct": 77.8
@@ -45082,7 +45111,7 @@
       "osr_performance_pct": 68.1,
       "recurrent_absorption_pct": 87.7,
       "development_absorption_pct": 47.6,
-      "overall_absorption_pct": 70.0
+      "overall_absorption_pct": 70
      },
      "recurrent_budget": {
       "table": "Table 2.4: County Budget Allocation, Expenditure and Absorption Rate for the FY 2021/22",
@@ -45170,7 +45199,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 70.0,
+      "value": 70,
       "raw": "70.0",
       "ocr_conf": 0.8
      },
@@ -45281,7 +45310,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 1980.0,
+      "value": 1980,
       "raw": "1,980,000,000",
       "ocr_conf": 0.886,
       "printed_unit": "KSh",
@@ -46106,7 +46135,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 8404.0,
+      "value": 8404,
       "raw": "8,404.00",
       "ocr_conf": 0.766
      },
@@ -46275,7 +46304,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 260.0,
+      "value": 260,
       "raw": "260,000,000",
       "ocr_conf": 0.914,
       "printed_unit": "KSh",
@@ -46522,7 +46551,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 1600.0,
+      "value": 1600,
       "raw": "1,600,000,000",
       "ocr_conf": 0.894,
       "printed_unit": "KSh",
@@ -47068,7 +47097,7 @@
      "derived": {
       "osr_performance_pct": 49.3,
       "recurrent_absorption_pct": 86.2,
-      "development_absorption_pct": 44.0,
+      "development_absorption_pct": 44,
       "overall_absorption_pct": 73.1
      },
      "recurrent_budget": {
@@ -47147,7 +47176,7 @@
       "printed_page": 6,
       "read": "ocr",
       "unit": "%",
-      "value": 44.0,
+      "value": 44,
       "raw": "44.0",
       "ocr_conf": 0.613
      },
@@ -47309,13 +47338,13 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "%",
-      "value": 30.0,
+      "value": 30,
       "raw": "30.0",
       "ocr_conf": 0.8
      },
      "derived": {
-      "osr_performance_pct": 30.0,
-      "recurrent_absorption_pct": 86.0,
+      "osr_performance_pct": 30,
+      "recurrent_absorption_pct": 86,
       "development_absorption_pct": 33.8,
       "overall_absorption_pct": 62.8
      },
@@ -47385,7 +47414,7 @@
       "printed_page": 6,
       "read": "ocr",
       "unit": "%",
-      "value": 86.0,
+      "value": 86,
       "raw": "86.0",
       "ocr_conf": 0.753
      },
@@ -48264,7 +48293,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 350.0,
+      "value": 350,
       "raw": "350,000,000",
       "ocr_conf": 0.854,
       "printed_unit": "KSh",
@@ -48313,7 +48342,7 @@
      },
      "derived": {
       "osr_performance_pct": 110.5,
-      "recurrent_absorption_pct": 99.0,
+      "recurrent_absorption_pct": 99,
       "development_absorption_pct": 56.4,
       "overall_absorption_pct": 83.7
      },
@@ -48383,7 +48412,7 @@
       "printed_page": 7,
       "read": "ocr",
       "unit": "%",
-      "value": 99.0,
+      "value": 99,
       "raw": "99.0",
       "ocr_conf": 0.767
      },
@@ -48515,7 +48544,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 700.0,
+      "value": 700,
       "raw": "700,000,000",
       "ocr_conf": 0.863,
       "printed_unit": "KSh",
@@ -48766,7 +48795,7 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 295.0,
+      "value": 295,
       "raw": "295,000,000",
       "ocr_conf": 0.873,
       "printed_unit": "KSh",
@@ -48915,7 +48944,7 @@
       "printed_page": 10,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 120.0,
+      "value": 120,
       "raw": "120,000,000",
       "ocr_conf": 0.906,
       "printed_unit": "KSh"
@@ -48926,7 +48955,7 @@
       "printed_page": 10,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 360.0,
+      "value": 360,
       "raw": "360,000,000",
       "ocr_conf": 0.866,
       "printed_unit": "KSh"
@@ -48937,7 +48966,7 @@
       "printed_page": 10,
       "read": "ocr",
       "unit": "KSh million",
-      "value": 480.0,
+      "value": 480,
       "raw": "480,000,000",
       "ocr_conf": 0.78,
       "printed_unit": "KSh"
@@ -49324,7 +49353,7 @@
      "printed_page": 7,
      "read": "ocr",
      "unit": "KSh million",
-     "value": 193529.0,
+     "value": 193529,
      "raw": "193,529.00",
      "ocr_conf": 0.823
     },
@@ -49482,35 +49511,35 @@
       "field": "total_osr_target",
       "sum_of_47": 60422.38,
       "stated_total": 60422.38418,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "total_osr_actual",
       "sum_of_47": 35907.64,
       "stated_total": 35907.638989,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "recurrent_budget",
       "sum_of_47": 342212.74,
       "stated_total": 342212.74,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "development_budget",
-      "sum_of_47": 193529.0,
-      "stated_total": 193529.0,
-      "difference": 0.0,
+      "sum_of_47": 193529,
+      "stated_total": 193529,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "approved_budget_total",
       "sum_of_47": 535741.71,
       "stated_total": 535741.71,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
@@ -49538,49 +49567,49 @@
       "field": "pb_exec_recurrent",
       "sum_of_47": 21451.28,
       "stated_total": 21451.283548,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "pb_exec_development",
       "sum_of_47": 130230.46,
       "stated_total": 130230.464996,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "pb_exec_subtotal",
       "sum_of_47": 151681.75,
       "stated_total": 151681.748544,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "pb_assembly_recurrent",
       "sum_of_47": 722.14,
       "stated_total": 722.143361,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "pb_assembly_development",
       "sum_of_47": 612.88,
       "stated_total": 612.884399,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "pb_assembly_subtotal",
       "sum_of_47": 1335.03,
       "stated_total": 1335.02776,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      },
      {
       "field": "pb_grand_total",
       "sum_of_47": 153016.78,
       "stated_total": 153016.776304,
-      "difference": 0.0,
+      "difference": 0,
       "result": "pass (within rounding)"
      }
     ],
@@ -49969,7 +49998,7 @@
       "field": "approved (KSh bn)",
       "history_json": 8.97,
       "this_table": 8.9703,
-      "difference": 0.0,
+      "difference": 0,
       "match": true
      },
      {
@@ -50004,21 +50033,21 @@
       "field": "development_spent (KSh bn)",
       "history_json": 1.88,
       "this_table": 1.8798,
-      "difference": -0.0,
+      "difference": 0,
       "match": true
      },
      {
       "field": "recurrent_absorption_pct",
       "history_json": 92.9,
       "this_table": 92.9,
-      "difference": 0.0,
+      "difference": 0,
       "match": true
      },
      {
       "field": "development_absorption_pct",
       "history_json": 56.2,
       "this_table": 56.2,
-      "difference": 0.0,
+      "difference": 0,
       "match": true
      },
      {

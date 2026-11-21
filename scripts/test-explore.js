@@ -73,7 +73,10 @@ const { toCSV } = require('../lib/csv');
 const found = [];
 cob.years.forEach((y) => [...y.counties, y.total_row].forEach((row) => Object.entries(row).forEach(([k, c]) => { if (isUnverifiedCell(c)) found.push(`${y.fy}|${row.name}|${k}`); })));
 const listed = UNVERIFIED.map((u) => `${u.fy}|${u.county}|${u.key}`);
-if (listed.length !== 7) fail(`unverified: expected the seven cells named on 21 Nov 2026, list has ${listed.length}`);
+if (listed.length !== 0) fail(`unverified: expected none since the 21 Nov 2026 third reading, list has ${listed.length}`);
+// The six confirmed cells now show their printed value; the printed total is a publication error shown with the computed rate.
+[['2024/25', 'Makueni', 'development_absorption_pct', 71], ['2024/25', "Murang'a", 'development_absorption_pct', 71], ['2024/25', 'Samburu', 'development_absorption_pct', 71], ['2024/25', 'Trans Nzoia', 'development_absorption_pct', 77], ['2024/25', 'Mombasa', 'overall_absorption_pct', 77], ['2021/22', 'Kilifi', 'development_absorption_pct', 35.4]].forEach(([fy, n, k, v]) => { const r = cobRows(fy, k).find((x) => x.name === n); if (!r || r.value !== v || r.status !== 'read') fail(`third reading ${fy} ${n} ${k}: expected ${v} shown as read, got ${r && r.value} (${r && r.status})`); });
+{ const t = cobTotal('2024/25', 'osr_performance_pct'); if (t.value !== null || !/4,145/.test(t.note || '') || !/76\.8/.test(t.note || '')) fail('printed OSR total: must stay empty and show 4,145 beside the computed 76.8 per cent'); }
 if (found.sort().join() !== [...listed].sort().join()) fail(`unverified: data marks ${found.join(', ')}; list has ${listed.join(', ')}`);
 const dsRows = Object.fromEntries(DATASETS.filter((d) => d.rows && d.id.startsWith('counties-')).map((d) => [d.id, d.rows()]));
 UNVERIFIED.forEach((u) => {
@@ -118,7 +121,7 @@ UNVERIFIED.forEach((u) => {
   reg.conflicts.filter((c) => c.status === 'open').forEach((c) => { if (!DATASETS.some((d) => d.status === 'disputed' && d.status_reason.includes(c.id) && d.id !== 'source-conflicts')) fail(`dataset status: open case ${c.id} marks no dataset as disputed`); });
   const st = (id) => (DATASETS.find((d) => d.id === id) || {}).status;
   [['kenya-gdp-growth', 'verified'], ['kenya-unemployment', 'estimated'], ['kenya-deposit-rate-wb', 'disputed'], ['counties-absorption', 'disputed'], ['kenya-derived-measures', 'provisional'], ['cra-county-allocations-2026-27', 'provisional'], ['iebc-registered-voters-2022', 'disputed']].forEach(([id, want]) => { if (st(id) !== want) fail(`dataset status: ${id} is "${st(id)}", expected "${want}"`); });
-  if (!/not yet verified/.test(DATASETS.find((d) => d.id === 'counties-absorption').status_reason)) fail('dataset status: counties-absorption reason must name the cells not yet verified');
+  if (UNVERIFIED.length && !/not yet verified/.test(DATASETS.find((d) => d.id === 'counties-absorption').status_reason)) fail('dataset status: counties-absorption reason must name the cells not yet verified');
 }
 
 // Siaya Fiscal Pulse (lib/pulse.js): three insights whose figures equal history.json, carry a page and a source PDF,

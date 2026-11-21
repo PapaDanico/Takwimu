@@ -1,5 +1,15 @@
 // Fails the build when a figure lacks provenance. Run: npm run validate
 const fs = require('fs');
+// A third-reading row: its first six amounts are the printed budget and spending (rec, dev, total; rec, dev, total) and the
+// last three numbers are the printed absorption rates; each must equal the stored amounts and reproduce the rates (0.5 points).
+function rowConsistent(row, text) {
+  const n = (text.match(/\d[\d,]*(?:\.\d+)?/g) || []).map((t) => Number(t.replace(/,/g, '')));
+  if (n.length < 9) return false;
+  const [rb, db, tb, re, de, te] = n.slice(0, 6); const [rp, dp, tp] = n.slice(-3);
+  const keys = ['recurrent_budget', 'development_budget', 'approved_budget_total', 'recurrent_expenditure', 'development_expenditure', 'expenditure_total'];
+  if (keys.some((k, i) => !row[k] || Math.abs(row[k].value - [rb, db, tb, re, de, te][i]) > 0.01)) return false;
+  return Math.abs((re / rb) * 100 - rp) <= 0.5 && Math.abs((de / db) * 100 - dp) <= 0.5 && Math.abs((te / tb) * 100 - tp) <= 0.5;
+}
 const path = require('path');
 const errors = [];
 const fail = (m) => errors.push(m);
@@ -358,7 +368,10 @@ cob.years.forEach((yr) => {
         const accepted = r.outcome.startsWith('accepted');
         if (accepted !== (cell.value !== null)) fail(`${rt} ${k}: re-read outcome "${r.outcome}" does not match value ${cell.value}`);
         if (accepted) {
-          if (digits(r.method_a.reading) !== cell.value || digits(r.method_b.reading) !== cell.value) fail(`${rt} ${k}: accepted value ${cell.value} is not what both readings give`);
+          // Two agreeing readings, or a third reading by a different engine whose full printed row reproduces the row's printed percentages.
+          const byTwo = digits(r.method_a.reading) === cell.value && digits(r.method_b.reading) === cell.value;
+          const byThird = r.method_c && Number(r.method_c.reading) === cell.value && rowConsistent(row, r.method_c.row);
+          if (!byTwo && !byThird) fail(`${rt} ${k}: accepted value ${cell.value} is not what both readings give, nor confirmed by a consistent third reading`);
           const pc = PCTS.find(([p]) => p === k);
           if (!pc) fail(`${rt} ${k}: re-read is only defined for percentages`);
           else if (Math.abs((val(row, pc[1]) / val(row, pc[2])) * 100 - cell.value) > 0.5) fail(`${rt} ${k}: accepted re-read ${cell.value} is more than 0.5 points from the printed amounts`);

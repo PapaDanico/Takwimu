@@ -114,7 +114,7 @@ function OwnRevenue({ story }) {
         <h2 id="s3">Method and sources</h2>
         <ul className="how">
           <li>Totals are the printed total rows of the Controller of Budget tables; the 47 county rows add up to them within rounding. Values were read by OCR from scanned pages.</li>
-          <li>The share of target for all counties is computed here from the printed totals (collected divided by target). The table&apos;s own printed percentage for the total {o.printedTotalPct.value === null ? (o.printedTotalPct.status === 'unverified' ? `is not yet verified. ${o.printedTotalPct.note}` : 'could not be read reliably.') : `is ${o.printedTotalPct.value}.`}</li>
+          <li>The share of target for all counties is computed here from the printed totals (collected divided by target). The table&apos;s own printed percentage for the total {o.printedTotalPct.value === null ? (o.printedTotalPct.status === 'unverified' ? `is not yet verified. ${o.printedTotalPct.note}` : o.printedTotalPct.note ? `is not used. ${o.printedTotalPct.note}` : 'could not be read reliably.') : `is ${o.printedTotalPct.value}.`}</li>
           <li>County shares are as printed; {o.perf.of - o.perf.n} counties ({o.perf.missing.map((r) => r.name).join(', ')}) are left out because their reading did not agree with the printed amounts.</li>
           <li>Nominal shillings; the two years are not adjusted for prices here.</li>
         </ul>
