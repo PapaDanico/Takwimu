@@ -73,6 +73,7 @@ const realYoY = spendYears.slice(1).map((y, i) => {
 const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
 const SHORT = FYS.map((f) => f.slice(2));
 const fillBy = (rows, f) => FYS.map((fy) => { const r = rows.find((x) => x.fy === fy); return r ? f(r) : null; });
+const pendTotal = (y) => (y.pending_total_m !== undefined ? y.pending_total_m : (y.pending_recurrent_m !== undefined && y.pending_development_m !== undefined ? y.pending_recurrent_m + y.pending_development_m : null));
 const lastPP = perPerson[perPerson.length - 1];
 const firstPP = perPerson.find((p) => p.fy === '2014/15');
 const kpis = [
@@ -164,6 +165,19 @@ export default function Analytics() {
         <h2 id="pd-h">Pending bills in months of spending</h2>
         <p className="lead">The year-end stock of unpaid bills divided by average monthly spending: roughly how many months of spending the unpaid bills equal.</p>
         <ColumnChart labels={SHORT} yFormat="one" unit="months" ariaLabel="Pending bills in months of spending, by fiscal year" series={[{ name: 'Months of spending', color: 2, values: fillBy(pending, (p) => p.months) }]} />
+      </section>
+
+      <section id="health" className="card insight" aria-labelledby="fh-h">
+        <p className="eyebrow">Fiscal health indicators</p>
+        <h2 id="fh-h">Two warning lights: revenue against its target, and unpaid bills against a year of spending</h2>
+        <p className="finding">These are separate indicators, not a score, and the county is not ranked against anyone. Revenue realisation asks how much of the own-source revenue target was collected. The pending-bills ratio asks how large the unpaid bills at year end were compared with one year of spending. Higher is better for the first and lower is better for the second.</p>
+        <h3 className="chart-title">Own-source revenue as a share of target, and pending bills as a share of annual spending, per cent</h3>
+        <LineChart labels={SHORT} yFormat="pct0" unit="%" ariaLabel="Own-source revenue as a share of its target and pending bills as a share of annual spending, by fiscal year" series={[{ name: 'Revenue vs target', color: 1, values: fillBy(years, (y) => (y.osr_m !== undefined && y.osr_target_m ? (y.osr_m / y.osr_target_m) * 100 : null)) }, { name: 'Pending bills vs spending', color: 3, dash: true, values: fillBy(years, (y) => { const p = pendTotal(y); return p !== null && y.spent ? (p / (y.spent * 1000)) * 100 : null; }) }]} />
+        <ul className="how">
+          <li><b>Revenue vs target</b> = own-source revenue collected divided by the target in the same report, per cent. The definition of own-source revenue changed over the period (for example the inclusion of health facility income from FY 2020/21), the FY 2022/23 figure excludes appropriations-in-aid, and FY 2023/24 has two values from different reports, so compare years with care. FY 2024/25 has no comparable target in our data.</li>
+          <li><b>Pending bills vs spending</b> = recurrent plus development pending bills at year end (or the reported total) divided by spending for the year. FY 2023/24 uses the KSh 1,120 million figure from the FY 2024/25 report, which is about 3.7 times the KSh 304 million in the FY 2023/24 report, so that point is the least certain. Years where only part of the pending bills could be read are left blank.</li>
+          <li>Wage bill, transfer dependence and rolling changes are not shown because we do not yet hold comparable series for them. Gaps are never filled.</li>
+        </ul>
       </section>
 
       <section id="limits" className="card" aria-labelledby="li-h">
