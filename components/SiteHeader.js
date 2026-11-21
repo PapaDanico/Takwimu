@@ -42,9 +42,11 @@ export default function SiteHeader({ asOf }) {
     <>
       <header className="site-header">
         <div className="wrap row">
+          {/* Owner's horizontal lockup from 768 px; below that its KENYA line is too small to read, so the symbol plus the name.
+              Only one of the two is displayed, so the link's accessible name is "Takwimu Kenya" exactly once at every width. */}
           <Link href="/" className="brand">
-            <img src="/logo.png" alt="" width="40" height="40" />
-            <span className="wordmark" aria-hidden="true"><span className="wm-main">TAKW<span className="wm-i">I</span>MU</span><span className="wm-sub">KENYA</span></span><span className="sr-only">Takwimu Kenya</span>
+            <span className="brand-lockup"><img src="/brand/takwimu-horizontal-96.png" srcSet="/brand/takwimu-horizontal-96.png 323w, /brand/takwimu-horizontal-192.png 646w" sizes="162px" alt="Takwimu Kenya" width="162" height="48" /></span>
+            <span className="brand-compact"><span className="brand-symbol"><img src="/logo.png" alt="" width="34" height="34" /></span><span className="brand-name">Takwimu Kenya</span></span>
           </Link>
           <nav className="nav" aria-label="Primary">
             {NAV.map(({ href, label }) => (

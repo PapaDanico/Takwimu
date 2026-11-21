@@ -81,11 +81,11 @@ export default function SiteFooter({ asOf }) {
       <div className="wrap">
         <div className="footer-grid">
           <div>
+            {/* Owner's full logo, tagline included, on a light panel: its dark green does not read on the dark footer. */}
             <div className="footer-brand">
-              <img src="/logo.png" alt="" width="48" height="48" />
-              <span className="wordmark" aria-hidden="true"><span className="wm-main">TAKW<span className="wm-i">I</span>MU</span><span className="wm-sub">KENYA</span></span><span className="sr-only">Takwimu Kenya</span>
+              <img className="footer-logo" src="/brand/takwimu-logo.png" alt="Takwimu Kenya" width="200" height="189" />
             </div>
-            <p className="tagline">Turning Data into Progress.</p>
+            <p className="tagline sr-only">Turning Data into Progress.</p>
             <p className="footer-about">
               A free tool that turns Kenya&apos;s county budget, audit and revenue reports into plain
               language for all 47 counties, starting with Siaya. Every figure names its source, so any citizen can check it.

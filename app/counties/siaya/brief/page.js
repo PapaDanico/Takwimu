@@ -45,10 +45,13 @@ export default function SiayaBrief() {
     <main id="main" className="wrap brief">
       <article className="brief-sheet" aria-labelledby="brief-h">
         <header className="brief-head">
-          <p className="brief-eyebrow">Takwimu Kenya · County 41 · Fiscal brief</p>
-          <h1 id="brief-h">Siaya County fiscal brief</h1>
-          <p className="brief-sub">Ten years of budget, spending, revenue, unpaid bills and audit opinions, read from the Controller of Budget and Auditor-General reports. Nominal shillings; fiscal years run July to June.</p>
-          <p className="brief-actions"><a href="/briefs/siaya-fiscal-brief.pdf" download>Download this brief as PDF</a> · <Link href="/counties/siaya/">Back to Siaya</Link></p>
+          <img className="brief-logo" src="/brand/takwimu-logo.png" alt="Takwimu Kenya" width="96" height="91" />
+          <div>
+            <p className="brief-eyebrow">County 41 · Fiscal brief</p>
+            <h1 id="brief-h">Siaya County fiscal brief</h1>
+            <p className="brief-sub">Ten years of budget, spending, revenue, unpaid bills and audit opinions, read from the Controller of Budget and Auditor-General reports. Nominal shillings; fiscal years run July to June.</p>
+            <p className="brief-actions"><a href="/briefs/siaya-fiscal-brief.pdf" download>Download this brief as PDF</a> · <Link href="/counties/siaya/">Back to Siaya</Link></p>
+          </div>
         </header>
 
         <section aria-labelledby="brief-head-h">
@@ -106,21 +109,23 @@ export default function SiayaBrief() {
               </tbody>
             </table>
             <p className="brief-note">FY 2014/15 and 2015/16: Senate compilation of Auditor-General opinions, not the reports; FY 2014/15 may cover Executive and Assembly together. FY 2016/17 to 2018/19 not shown: reports not found. FY 2013/14 is the whole county government; later years the County Executive.</p>
-
-            <h2 id="brief-cav-h">Key caveats</h2>
-            <ul className="brief-list" aria-labelledby="brief-cav-h">
-              <li>{openCases} disagreements between reports are open in the conflict register; none has been reviewed by a specialist.</li>
-              <li>Pending bills at 30 June 2024: KSh {num(pend24.values[0].value)} m ({lbl(pend24.values[0])}) against KSh {num(pend24.values[1].value)} m ({lbl(pend24.values[1])}). The FY 2024/25 figure is used.</li>
-              <li>Own revenue FY 2023/24: KSh {num(osr24.values[0].value)} m against KSh {num(osr24.values[1].value)} m in the next report.</li>
-              <li>Pending bills at 30 June 2021: KSh {num(pend21.values[0].value)} m against KSh {num(pend21.values[1].value)} m. Read the ten-year rise as a direction, not exact steps.</li>
-              <li>Figures are nominal and many were read from scanned PDFs. Confidence (1 to 5) grades source quality and extraction, not the chance a figure is right.</li>
-            </ul>
           </section>
         </div>
 
+        <section aria-labelledby="brief-cav-h">
+          <h2 id="brief-cav-h">Key caveats</h2>
+          <ul className="brief-list" aria-labelledby="brief-cav-h">
+            <li>{openCases} disagreements between reports are open in the conflict register; none has been reviewed by a specialist.</li>
+            <li>Pending bills at 30 June 2024: KSh {num(pend24.values[0].value)} m ({lbl(pend24.values[0])}) against KSh {num(pend24.values[1].value)} m ({lbl(pend24.values[1])}). The FY 2024/25 figure is used.</li>
+            <li>Own revenue FY 2023/24: KSh {num(osr24.values[0].value)} m against KSh {num(osr24.values[1].value)} m in the next report.</li>
+            <li>Pending bills at 30 June 2021: KSh {num(pend21.values[0].value)} m against KSh {num(pend21.values[1].value)} m. Read the ten-year rise as a direction, not exact steps.</li>
+            <li>Figures are nominal and many were read from scanned PDFs. Confidence (1 to 5) grades source quality and extraction, not the chance a figure is right.</li>
+          </ul>
+        </section>
+
         <footer className="brief-foot">
           <p><b>Sources.</b> Controller of Budget, County Governments Budget Implementation Review Reports FY 2014/15 to FY 2024/25 (Parliament of Kenya library), latest: {latestReport.url.replace('https://', '')}. Auditor-General reports on the County Executive of Siaya, latest: {audit.source_url.replace('https://', '')}. Full list, checksums and the conflict register: {SITE_URL.replace('https://', '')}/data/.</p>
-          <p><b>Prepared</b> {shortDate(SITE_UPDATED)} from data retrieved {shortDate(hist.meta.retrieved)}. Takwimu Kenya, a Danico Ventures Ltd product. Independent; not affiliated with any government body. Education only, not legal, financial or audit advice. Check figures against the source documents.</p>
+          <p><b>Prepared</b> {shortDate(SITE_UPDATED)} from data retrieved {shortDate(hist.meta.retrieved)}. Takwimu Kenya: Turning Data into Progress. A Danico Ventures Ltd product. Independent; not affiliated with any government body. Education only, not legal, financial or audit advice. Check figures against the source documents.</p>
         </footer>
       </article>
     </main>
