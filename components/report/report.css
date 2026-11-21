@@ -27,6 +27,7 @@
 .rp-toc h2 { font-size: 12pt; border: 0; }
 .rp-toc ol { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 14pt; font-size: 10pt; }
 .rp-toc li { break-inside: avoid; margin-bottom: 2pt; }
+@media screen { .rp-toc a { display: inline-block; min-height: 24px; line-height: 24px; } }
 .rp-howto { font-size: 9.5pt; color: #31445F; border-left: 2pt solid #F7931E; padding-left: 6pt; }
 .rp-section { margin-top: 16pt; }
 .rp-findings > h3 { color: #07552D; }
