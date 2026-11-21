@@ -46,7 +46,7 @@
         "cited_by": { "type": "string" },
         "sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
         "bytes": { "type": ["integer", "null"], "minimum": 1 },
-        "file_type": { "type": "string", "enum": ["PDF", "HTML", "CSV", "XLSX", "JSON"] },
+        "file_type": { "type": "string", "enum": ["PDF", "HTML", "CSV", "XLSX", "JSON", "ZIP"] },
         "licence": { "type": "string" },
         "redistribution_allowed": { "type": "boolean" },
         "redistribution_conditions": { "type": "string" },

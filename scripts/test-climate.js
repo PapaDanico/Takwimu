@@ -162,6 +162,27 @@ ok(data.gaps.length > 0 && data.gaps.every((g) => filled(g.topic) && filled(g.re
 const banned = /national_id|phone|email|date_of_birth|participant/i;
 ok(!banned.test(Object.keys(Object.assign({}, ...obs)).join(' ')), 'observation fields look like individual-level data');
 ok(!/\b07\d{8}\b|\b07\d{2} \d{3} \d{3}\b/.test(JSON.stringify(data)), 'file contains something that looks like a phone number');
+// The PCRA (CLIM-01) Annex 1 lists participants with national ID and phone numbers. No extracted text may carry
+// either: every string field is checked for Kenyan mobile numbers (07xx/01xx, +254/254, with or without spaces or
+// dashes) and for bare 7-8 digit runs (the length of a national ID number; printed amounts use thousands separators).
+const strings = [];
+const collect = (n, where) => {
+  if (typeof n === 'string') strings.push([where, n]);
+  else if (Array.isArray(n)) n.forEach((x, i) => collect(x, `${where}[${i}]`));
+  else if (n && typeof n === 'object') Object.entries(n).forEach(([k, x]) => collect(x, `${where}.${k}`));
+};
+collect(data, 'data');
+const PHONE = /(?:\+?254|\b0)[\s-]?[17]\d{2}[\s-]?\d{3}[\s-]?\d{3}\b/;
+const ID_NO = /(?<![\d,.\/-])\d{7,8}(?![\d,.\/-])/;
+// Fields that hold digests or addresses, not extracted text.
+const NOT_TEXT = /\.(sha256|url|register_url|library_dir)$/;
+strings.filter(([w]) => !NOT_TEXT.test(w)).forEach(([w, s]) => {
+  ok(!PHONE.test(s), `${w}: looks like a phone number (personal data must not be extracted from CLIM-01 Annex 1)`);
+  ok(!ID_NO.test(s), `${w}: contains a bare 7-8 digit number, the form of a national ID number (personal data must not be extracted)`);
+});
+ok(!/annex 1\b/i.test(JSON.stringify(obs)) || obs.every((o) => !/annex 1\b/i.test(o.source_section || '') && !/annex 1\b/i.test(o.table || '')), 'no value may be read from PCRA Annex 1 (participants list)');
+// The self-test: the patterns catch the forms they are meant to catch.
+ok(PHONE.test('call 0712 345 678') && PHONE.test('+254712345678') && PHONE.test('0112-345-678') && ID_NO.test('ID 23456789') && !ID_NO.test('KSh 30,222,034') && !ID_NO.test('137000000'), 'personal-data patterns fail their self-test');
 
 if (errors.length) {
   errors.forEach((m) => console.error(`FAIL ${m}`));

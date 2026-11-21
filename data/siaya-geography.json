@@ -877,10 +877,15 @@
    "note": "Licence and upstream are as stated in the geoBoundaries ADM1 metadata. The file meta stated CC BY 3.0 IGO and IEBC via OCHA ROSEA until 21 Nov 2026, when it was corrected to match (conflict kenya-counties-map-licence)."
   },
   {
-   "file": null,
+   "file": "data/siaya-wards-geo.json",
    "level": "ward (30 units)",
-   "source": null,
-   "note": "No ward boundary layer is in the repository. Ward Explorer maps must not draw ward shapes until a licensed IEBC 2012 ward layer is acquired."
+   "source": "HDX dataset Administrative Wards in Kenya 1450 (kenya_wards.zip), source-library record HDX-ARC-WARDS-2016",
+   "upstream": "American Red Cross, abstracted from National Land Commission/IEBC and Survey of Kenya sources (HDX caveat)",
+   "boundary_year_represented": "2016",
+   "licence": "CC BY",
+   "build_date": "2026-11-21",
+   "source_sha256": "13e0dee1a1c731fbb2eb03f0c28468d202fdc174279a104064f05740cc281206",
+   "note": "Added 21 Nov 2026 (replaces the earlier entry that said no ward layer existed). HDX dataset date 2016-03-31; the 30 wards match the IEBC 2012 delimitation and this registry one to one. Not an official IEBC map; boundary changes since 2016 are not shown. Simplified for display (docs/siaya-wards-map-notes.md). Attribution: Ward boundaries: American Red Cross via HDX, CC BY, 2016."
   }
  ]
 }
