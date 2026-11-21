@@ -36,6 +36,14 @@ const osrLast = osr[osr.length - 1];
 const osrRealFirst = osrFirst.value * deflator(osrFirst.fy);
 const osrRealMultiple = osrLast.value / osrRealFirst;
 
+const audits = hist.audits.points;
+const nOp = (o) => audits.filter((a) => a.opinion === o);
+const auditSummary = ['Qualified', 'Adverse', 'Disclaimer', 'Unqualified']
+  .filter((o) => nOp(o).length)
+  .map((o) => `${nOp(o).length} ${o.toLowerCase()}${nOp(o).length && o !== 'Qualified' && o !== 'Unqualified' ? ` (${nOp(o).map((a) => `FY ${a.fy}`).join(', ')})` : ''}`)
+  .join(', ');
+const noneClean = nOp('Unqualified').length === 0;
+
 export default function Insights() {
   return (
     <main id="main" className="wrap page">
@@ -102,8 +110,8 @@ export default function Insights() {
 
       <section id="audit" className="card insight" aria-labelledby="audit-h">
         <p className="eyebrow">Insight 5</p>
-        <h2 id="audit-h">Auditors have not given the County Executive a clean opinion in any year we can read</h2>
-        <p className="finding">Four years of Auditor-General opinions are available. Three were qualified and one, FY 2021/22, was adverse, which means the auditor found the accounts materially misstated. An opinion describes the accounts, not the quality of services. Earlier years could not be obtained.</p>
+        <h2 id="audit-h">{noneClean ? 'Auditors have not given the County Executive a clean opinion in any year we can read' : 'Audit opinions vary by year'}</h2>
+        <p className="finding">{audits.length} years of Auditor-General opinions are available: {auditSummary}. An adverse opinion means the auditor found the accounts materially misstated; a disclaimer means the auditor could not form an opinion. An opinion describes the accounts, not the quality of services. Years between FY 2013/14 and FY 2019/20 are mostly missing; see the note below.</p>
         <div className="tablewrap">
           <table className="data">
             <caption className="sr-only">Auditor-General opinions on the County Executive of Siaya</caption>
@@ -113,7 +121,7 @@ export default function Insights() {
                 <tr key={a.fy}>
                   <th scope="row">FY {a.fy}</th>
                   <td><span className={`tag ${a.opinion === 'Adverse' ? 'warn' : ''}`}>{a.opinion}</span></td>
-                  <td>{a.reasons}. <a href={a.url}>Report</a></td>
+                  <td>{a.reasons}. <a href={a.url}>Report</a>{a.period ? <small style={{ display: "block" }}>Period: {a.period}</small> : null}</td>
                   <td>{a.confidence} of 5</td>
                 </tr>
               ))}

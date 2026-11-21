@@ -9,7 +9,7 @@
       "FY2013/14: approved budget and pending bills not shown (only spending, absorption and revenue quoted in the FY2014/15 report). FY2014/15: pending recurrent bills were not reported.",
       "FY2019/20: the full-year report could not be downloaded from here (host returned 403). Only own-source revenue is available, from the FY2020/21 report.",
       "FY2023/24: budget, spending and pending bills not yet extracted into this file; own-source revenue is in data/siaya.json.",
-      "Audit opinions for FY2014/15 to FY2019/20 are missing for the reasons given under audits.",
+      "Audit opinions for FY2014/15 to FY2018/19 are missing for the reasons given under audits.",
       "FY2025/26: Controller of Budget site is unreachable from the build environment."
     ]
   },
@@ -49,8 +49,10 @@
   ],
   "audits": {
     "label": "Auditor-General opinion on the County Executive of Siaya's accounts",
-    "note": "Opinions for FY2014/15 to FY2019/20 are not shown: the Parliament library holds no County Executive of Siaya report for those years and the Auditor-General's site was under maintenance when we tried. We do not fill the gap from press reports.",
+    "note": "Opinions for FY2014/15 to FY2018/19 are not shown: the Parliament library holds no County Executive of Siaya audit report for those years and the Auditor-General's site was under maintenance when we tried. Search summaries suggest FY2017/18 and FY2018/19 were qualified, but we could not open those reports, so they are not shown. FY2019/20 comes from a Senate committee report that quotes the audit, so it is graded lower. The first entry covers 16 months, not a full fiscal year, and the whole county government (executive and assembly together); the later entries cover the County Executive only.",
     "points": [
+      {"fy": "2013/14", "period": "16 months to 30 June 2014", "opinion": "Disclaimer", "reasons": "The auditor could not obtain enough evidence for an opinion: the statements omit assets and liabilities inherited from the defunct local authorities", "headline": "Acquisition of assets KSh 495.33m; pending bills disclosed KSh 169.29m", "confidence": 4, "url": "https://libraryir.parliament.go.ke/items/0de4cae4-165f-4483-83ff-93a27ff5beaf/full"},
+      {"fy": "2019/20", "opinion": "Qualified", "reasons": "Unexplained adjustment of budgeted exchequer releases; fixed assets register; other queries listed in the Senate committee report", "headline": "Budget reduced by KSh 341.58m with no explanation, so accuracy of the statements could not be confirmed", "confidence": 3, "url": "https://libraryir.parliament.go.ke/items/bcfb5ba2-6dc2-4d1b-9147-7c7ff6038ad3"},
       {"fy": "2020/21", "opinion": "Qualified", "reasons": "Bank reconciliation variances; unsupported retention monies; unaccounted transfers; unsupported training, hospitality and supplies spending", "headline": "Cash balance not confirmable: KSh 955.38m. Unsupported goods and services: KSh 230.38m", "confidence": 4, "url": "https://libraryir.parliament.go.ke/items/d53598b9-f890-49aa-ad98-f18cf9c5bd6b/full"},
       {"fy": "2021/22", "opinion": "Adverse", "reasons": "Compensation of employees; use of goods and services; acquisition of assets; unsupported bank balances; pending bills", "headline": "Pending payables not confirmable: KSh 818.80m. Unsupported other personnel payments: KSh 308.30m", "confidence": 3, "url": "https://libraryir.parliament.go.ke/items/54119713-1b4e-46dd-b95d-5484c7aeb01f/full"},
       {"fy": "2022/23", "opinion": "Qualified", "reasons": "Compensation of employees; use of goods and services; other grants and transfers; acquisition of assets; retention and deposits", "headline": "Compensation of employees queried: KSh 2,666.93m. Pending bills (emphasis of matter): KSh 741.56m", "confidence": 4, "url": "https://libraryir.parliament.go.ke/items/7e87be17-5566-48c8-ac76-d4658605ee6c/full"},

@@ -19,6 +19,7 @@ const OPEN = [
   { q: 'Own-source revenue for FY 2015/16 is KSh 127.93 million in the FY 2016/17 report and KSh 113.26 million in the FY 2018/19 report.', note: 'Both are shown. The reports do not say whether the later figure is a restatement.' },
   { q: 'FY 2016/17 recurrent spending is KSh 3.9 billion in one sentence of the report and KSh 3.65 billion in its table.', note: 'We use the table, which adds to the KSh 5.63 billion total.' },
   { q: 'The FY 2025/26 Controller of Budget report could not be reached from our build environment.', note: 'Press coverage reports Siaya at 26.94 per cent of its own-revenue target. We have not shown it because we could not read the document.' },
+  { q: 'Audit opinions for FY 2014/15 to FY 2018/19 are missing.', note: 'The Auditor-General\'s site was unavailable and the Parliament library does not hold those reports. Search summaries suggest FY 2017/18 and FY 2018/19 were qualified, but we could not open the reports, so they are not shown.' },
   { q: 'The FY 2019/20 full-year county report could not be downloaded.', note: 'Only own-source revenue for that year is shown, taken from the FY 2020/21 report.' },
 ];
 
