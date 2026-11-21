@@ -81,7 +81,7 @@ export default function SiteFooter({ asOf }) {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <img src="/logo.svg" alt="" width="48" height="48" />
+              <img src="/logo.png" alt="" width="48" height="48" />
               <span className="wordmark" aria-hidden="true"><span className="wm-main">TAKW<span className="wm-i">I</span>MU</span><span className="wm-sub">KENYA</span></span><span className="sr-only">Takwimu Kenya</span>
             </div>
             <p className="tagline">Turning Data into Progress.</p>

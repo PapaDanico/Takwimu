@@ -305,7 +305,7 @@ if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 const files = {
   'pulse.json': {
     type: "national",
-    timestamp: new Date().toISOString(),
+    timestamp: '2026-11-21',
     macro: {
       gdp_growth: MACRO_DATA.gdp_growth,
       inflation: MACRO_DATA.inflation,
@@ -319,18 +319,18 @@ const files = {
       real_wage_index: LABOUR_DATA.real_wage_index,
     },
   },
-  'macro.json': { ...MACRO_DATA, _timestamp: new Date().toISOString() },
-  'labour.json': { ...LABOUR_DATA, _timestamp: new Date().toISOString() },
-  'sectors.json': { ...SECTOR_DATA, _timestamp: new Date().toISOString() },
-  'china-bri.json': { ...CHINA_BRI_DATA, _timestamp: new Date().toISOString() },
-  'imf.json': { ...IMF_DATA, _timestamp: new Date().toISOString() },
-  'worldbank.json': { ...WB_DATA, _timestamp: new Date().toISOString() },
-  'eac.json': { countries: EAC_COMPARISON, _timestamp: new Date().toISOString() },
-  'counties.json': { counties: COUNTY_ABSORPTION, _timestamp: new Date().toISOString() },
-  'soko.json': { commodities: SOKO_DATA, _timestamp: new Date().toISOString() },
-  'gdp-trend.json': { data: GDP_TREND, _timestamp: new Date().toISOString() },
-  'inflation-trend.json': { data: INFLATION_TREND, _timestamp: new Date().toISOString() },
-  'sources.json': { sources: SOURCES, _timestamp: new Date().toISOString() },
+  'macro.json': { ...MACRO_DATA, _timestamp: '2026-11-21' },
+  'labour.json': { ...LABOUR_DATA, _timestamp: '2026-11-21' },
+  'sectors.json': { ...SECTOR_DATA, _timestamp: '2026-11-21' },
+  'china-bri.json': { ...CHINA_BRI_DATA, _timestamp: '2026-11-21' },
+  'imf.json': { ...IMF_DATA, _timestamp: '2026-11-21' },
+  'worldbank.json': { ...WB_DATA, _timestamp: '2026-11-21' },
+  'eac.json': { countries: EAC_COMPARISON, _timestamp: '2026-11-21' },
+  'counties.json': { counties: COUNTY_ABSORPTION, _timestamp: '2026-11-21' },
+  'soko.json': { commodities: SOKO_DATA, _timestamp: '2026-11-21' },
+  'gdp-trend.json': { data: GDP_TREND, _timestamp: '2026-11-21' },
+  'inflation-trend.json': { data: INFLATION_TREND, _timestamp: '2026-11-21' },
+  'sources.json': { sources: SOURCES, _timestamp: '2026-11-21' },
 };
 
 // Only datasets with verified provenance are published. The remaining datasets above are

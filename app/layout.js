@@ -17,7 +17,7 @@ export const metadata = {
   description: "Kenya's county budget, audit and revenue reports in plain language, starting with Siaya. Every figure names its source.",
   manifest: '/manifest.json',
   icons: {
-    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }, { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' }, { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' }, { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' }],
+    icon: [{ url: '/favicon-16.png', sizes: '16x16', type: 'image/png' }, { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' }, { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' }],
     apple: '/apple-touch-icon.png',
   },
 };
