@@ -2,6 +2,7 @@
 // <Fig>, which carries data-file and data-ptr so scripts/test-reports.js can resolve it against the data file.
 import { LineChart, ColumnChart } from '../Charts';
 import { PROVISIONAL } from './model';
+import { conflictNote } from './rules';
 
 const num = (v) => v.toLocaleString('en-US', { maximumFractionDigits: 6 });
 const fmtValue = (f) => {
@@ -115,7 +116,7 @@ function Conflicts({ caption, groups, bib }) {
           <thead><tr><th scope="col">Value as held</th><th scope="col">Indicator</th><th scope="col">Source and page</th><th scope="col">Period</th><th scope="col">Confidence</th></tr></thead>
           <tbody>
             {g.figs.map((f, j) => <tr key={j}><td className="v"><Fig f={f} /></td><th scope="row">{f.label}</th><td><Cite f={f} bib={bib} />; {pageOf(f)}</td><td>{f.period || 'Not stated'}</td><td>{confOf(f)}</td></tr>)}
-            <tr className="cnote"><td colSpan={5}>{g.note} All values above are {PROVISIONAL.toLowerCase()}; none has been chosen over another.</td></tr>
+            <tr className="cnote"><td colSpan={5}>{g.note} {conflictNote(g.figs)}</td></tr>
           </tbody>
         </table>
       ))}
@@ -240,7 +241,7 @@ export default function Report({ r }) {
 
       <section id="snapshot" className="rp-section rp-appendix" aria-labelledby="snapshot-h">
         <h2 id="snapshot-h">{n0 + appendices.length}. Snapshot, method and licence</h2>
-        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> is the first 12 hex digits of a SHA-256 digest over the names and digests of the input files below. Rebuilding from the same files gives the same ID.</p>
+        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> is the first 12 hex digits of a SHA-256 digest over the names and digests of the input files below, the editorial review register, the source documents it is checked against, and the review state of every value. Rebuilding from the same files gives the same ID; a new review decision changes it.</p>
         <table className="rp-table snap">
           <colgroup><col style={{ width: '32%' }} /><col style={{ width: '68%' }} /></colgroup>
           <thead><tr><th scope="col">Input file</th><th scope="col">SHA-256</th></tr></thead>

@@ -2,14 +2,13 @@
 // Run after `npm run build` and the PDF script:
 //   NODE_PATH=$(npm root -g) node scripts/test-reports.js [distDir]
 // For each report: the PDF exists, is A4, has a page count in the expected range, embeds every font, and its text
-// contains the snapshot ID (recomputed here from the data files, so a stale PDF fails), the source appendix and,
+// contains the snapshot ID (recomputed here from the data files and the review state, so a stale PDF fails), the source appendix and,
 // while any figure is unreviewed, the DRAFT mark; neither the PDF nor the page shows "NaN" or "undefined"; no
 // withheld contractor name appears; in print layout no table, cell or chart is wider than the printed column; every
 // figure on the HTML page resolves to a record in its data file with the same value; every citation link resolves.
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 const { chromium } = require('playwright');
 const registry = require('../components/report/reports.json');
@@ -19,8 +18,9 @@ const dist = path.resolve(process.argv[2] || path.join(root, 'dist'));
 const fails = [];
 const fail = (slug, msg) => fails.push(`${slug}: ${msg}`);
 
-const sha = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
-const snapshotOf = (inputs) => sha([...inputs].sort().map((f) => `data/${f}:${sha(fs.readFileSync(path.join(root, 'data', f)))}`).join('\n')).slice(0, 12);
+// The snapshot covers the input files, the review register, the documents it is checked against and the review state
+// of every value (components/report/snapshot.js), so a PDF printed before a review decision fails here.
+const snapshotOf = (inputs) => require('../components/report/snapshot').snapshot(inputs, root).id;
 const dataCache = {};
 // Figures resolve against the data as published: through lib/review-status.js masked(), so a value rejected in
 // editorial review must appear withheld (null) on the page, never with its old value.

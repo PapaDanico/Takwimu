@@ -345,6 +345,19 @@ if (dist && process.argv.includes('--synthetic')) {
     ok(/review_status/.test(hcsv[0]), 'synthetic: history.csv has no review_status column');
     if (ids.some(([d, id]) => d === 'history' && /^(years|osr|audits|in_year):/.test(id))) ok(hcsv.some((l) => /"Withdrawn after editorial review/.test(l)), 'synthetic: history.csv does not mark the rejected history value');
     hcsv.filter((l) => /"Withdrawn after editorial review/.test(l)).forEach((l) => ok(/^"[^"]*","[^"]*",(""|,)/.test(l) || /^"[^"]*","[^"]*",,/.test(l), `synthetic: history.csv row withdrawn but holds a value: ${l.slice(0, 80)}`));
+    // 5. Report PDFs: the snapshot ID printed on every report page (and in its PDF) covers the review state, so the
+    // synthetic rejections change it, and the PDFs printed from the real register no longer match those pages.
+    const snapOf = (base, slug) => { const f = path.join(base, 'reports', slug, 'index.html'); return fs.existsSync(f) ? (fs.readFileSync(f, 'utf8').match(/data-snapshot="([0-9a-f]{12})"/) || [])[1] : null; };
+    require('../components/report/reports.json').reports.forEach((r) => {
+      const real = snapOf(dir, r.slug); const syn = snapOf(outDir, r.slug);
+      ok(Boolean(real && syn) && real !== syn, `synthetic: report ${r.slug} keeps snapshot ${real} after the review state changed, so its PDF would not be caught as stale`);
+      const pdf = path.join(dir, 'reports', `${r.slug}.pdf`);
+      if (syn && fs.existsSync(pdf)) {
+        let text = '';
+        try { text = execFileSync('pdftotext', [pdf, '-'], { stdio: ['ignore', 'pipe', 'ignore'] }).toString(); } catch (e) { text = ''; }
+        if (text) ok(!text.includes(syn), `synthetic: the built PDF of ${r.slug} already carries the synthetic snapshot ${syn}`);
+      }
+    });
     console.log(`test-reviews --synthetic: ${chosen.length} values rejected in memory across ${new Set(ids.map(([d]) => d)).size} datasets (${expected.size - chosen.length} calculations withheld with them); every page, download and data file checked in ${out}/`);
   } finally {
     keep.forEach(([f, buf]) => { if (buf === null) fs.rmSync(path.join(root, f), { force: true }); else fs.writeFileSync(path.join(root, f), buf); });

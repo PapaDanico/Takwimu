@@ -2,9 +2,7 @@
 // A figure (fig) carries the file, a JSON Pointer to the value, the value itself and the record's own source, page,
 // period, unit and confidence. Nothing is typed in by hand: scripts/test-reports.js resolves every pointer on the
 // built HTML page against the data file and fails if the value differs. Server and build only.
-import crypto from 'crypto';
-import fs from 'fs';
-import path from 'path';
+import { snapshot as snapshotOf } from './snapshot';
 import { masked, badge, idAt, original } from '../../lib/review-status';
 import geography from '../../data/siaya-geography.json';
 import library from '../../data/source-library.json';
@@ -94,8 +92,8 @@ export function fig(file, ptr, o = {}) {
     confidence: pick(o.confidence, rec.confidence, null),
     note: o.note || null,
     suppress: !!(o.suppressSmall && typeof value === 'number' && value < 10 && /^(persons|people|patients|cases|deaths|children|youth|students|pupils|trainees|women|men|beneficiaries)/i.test(String(pick(o.unit, rec.unit, '')))),
-    review: reviewOf(file, ptr, rec, value),
-    reviewed: Boolean((reviewOf(file, ptr, rec, value) || {}).approved),
+    review: o.review || reviewOf(file, ptr, rec, value),
+    reviewed: Boolean((o.review || reviewOf(file, ptr, rec, value) || {}).approved),
   };
 }
 
@@ -133,14 +131,10 @@ geography.sources.forEach((d) => addSrc(d.id, d, 'siaya-geography.json'));
 export const source = (id) => SRC[id] || null;
 export const ECON_SRC = Object.fromEntries(economy.sources.map((s) => [s.vintage, s.document_id]));
 
-// Snapshot ID: SHA-256 over the names and SHA-256 digests of the report's input files, first 12 hex digits.
-// The same data gives the same ID on every build; any change to an input file changes it.
-const fileHash = (f) => crypto.createHash('sha256').update(fs.readFileSync(path.join(process.cwd(), 'data', f))).digest('hex');
-export function snapshot(inputs) {
-  const files = [...inputs].sort().map((f) => ({ file: `data/${f}`, sha256: fileHash(f) }));
-  const id = crypto.createHash('sha256').update(files.map((x) => `${x.file}:${x.sha256}`).join('\n')).digest('hex').slice(0, 12);
-  return { id, files };
-}
+// Snapshot ID (components/report/snapshot.js): SHA-256 over the input files, the review register, the documents it
+// is checked against and the review state of every value, first 12 hex digits. The same data and register give the
+// same ID on every build; any change to an input file or a review state changes it.
+export const snapshot = (inputs) => snapshotOf(inputs, process.cwd());
 // Report date: the latest compile or retrieval date recorded in the input files (not the clock, so builds repeat).
 export function dataDate(inputs) {
   const ds = inputs.map((f) => {

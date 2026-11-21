@@ -4,6 +4,8 @@
 import {
   DATA, P, get, find, each, fig, registry, snapshot, dataDate, ECON_SRC, source, held,
 } from './model';
+import { badge } from '../../lib/review-status';
+import { latestOpinion, smallCountSentence } from './rules';
 
 const L = DATA['siaya-fiscal-ledger.json'];
 const ECON = DATA['siaya-economy.json'];
@@ -163,7 +165,7 @@ function reportA() {
         ['Gross County Product in 2024 at current prices: ', gcp24, ' (KNBS GCP 2025; KNBS marks 2024 provisional).'],
         ['Approved budget for FY 2024/25 as the Controller of Budget reports it: ', latestBudget[lastI], '; total expenditure in the same report: ', latestSpend[lastI], '.'],
         ['Own-source revenue for FY 2024/25 in the Controller of Budget report: ', osr[lastI], '. Other documents give different totals for the same year; all are listed in section 3 and in Report B.'],
-        ['Latest audit opinion held: ', opinions[opinions.length - 1].f, '.'],
+        ['Latest audit opinion held for the County Executive: ', opinions[latestOpinion(AUD.opinions, 'county_executive')].f, '.'],
         ['Programme records in the partner atlas: ', progFig('/summary/record_count', 'Programme records', { unit: 'records' }), ', of which ', progFig('/summary/by_geography_class/siaya_specific', 'Siaya-specific records', { unit: 'records' }), ' are Siaya-specific.'],
       ] },
     ], interpretation: [
@@ -319,7 +321,7 @@ function reportC() {
   }) }));
   const kdhsFig = (i, k) => fig('history.json', P('health', 'indicators', i, k), { label: `${kdhs[i].label} (${k === 'v2014' ? 'KDHS 2014' : 'KDHS 2022'})`, period: k === 'v2014' ? '2014' : '2022', source: k === 'v2014' ? 'KDHS-2014' : 'KDHS-2022-KIR', unit: kdhs[i].unit });
   const health = PROG.programmes.map((p, i) => [p, i]).filter(([p]) => p.sector === 'health');
-  return [
+  const sections = [
     { id: 'summary', title: 'Summary', findings: [
       { type: 'chart', kind: 'column', title: 'Maternal and child health indicators, KDHS 2014 and 2022 (per cent)', unit: '%', labels: kdhs.map((k) => k.label),
         series: [{ name: 'KDHS 2014', figs: kdhs.map((k, i) => (held('history.json', P('health', 'indicators', i, 'v2014')) != null ? kdhsFig(i, 'v2014') : null)) }, { name: 'KDHS 2022', figs: kdhs.map((k, i) => (held('history.json', P('health', 'indicators', i, 'v2022')) != null ? kdhsFig(i, 'v2022') : null)) }] },
@@ -348,10 +350,12 @@ function reportC() {
         rows: health.map(([p, i]) => [p.id, p.title, p.implementing_organisation, p.funder, words(p.geography.class), fig('siaya-programmes.json', P('programmes', i, 'evidence_type'), { label: 'Evidence type', source: p.sources[0] && p.sources[0].source_id, page: p.sources[0] && p.sources[0].page, period: p.period && `${p.period.start || '?'} to ${p.period.end || '?'}`, confidence: `tier ${p.tier}` })]) },
     ], interpretation: ['Self-reported results are the implementer’s own account; only independently evaluated outcomes are treated as evaluated.'] },
     { id: 'equity', title: 'Geographic equity and small cells', findings: [
-      { type: 'p', text: 'All health figures here are aggregates for the county or a sub-county. Any count of people below 10 would be suppressed; none of the values held is a count of that size. No patient-level or facility-level personal data are held.' },
+      { type: 'p', text: '' }, // set below from the figures of this report
     ], interpretation: [] },
     { id: 'conflicts', title: 'Conflicting values', findings: [{ type: 'conflicts', caption: 'Health: values that disagree, shown together', groups: healthConflicts() }], interpretation: [] },
   ];
+  sections.find((x) => x.id === 'equity').findings[0].text = smallCountSentence(figsOf(sections));
+  return sections;
 }
 
 // ---------- Report D: Development and investment opportunities ----------
@@ -366,7 +370,7 @@ function reportD() {
       { type: 'figs', caption: 'Gross value added by activity, 2024, current prices (KNBS GCP 2025; 2024 provisional)', rows: latest('GCP2025', '2024') },
       { type: 'figs', caption: 'Growth', rows: each('siaya-economy.json', '/observations', (o) => o.indicator === 'real_growth_avg').map(([o, p]) => ({ f: econFig(o, p) })) },
       { type: 'pairs', caption: 'Revisions to gross value added by activity between editions', aLabel: 'GCP 2024 edition', bLabel: 'GCP 2025 edition', rows: econRevisions((r) => r.indicator === 'gva_by_activity' && Math.abs(held('siaya-economy.json', `/revisions/${ECON.revisions.indexOf(r)}/difference_pct`) || 0) >= 5) },
-    ], interpretation: ['Agriculture, forestry and fishing is the largest activity in the county accounts. Sector size alone says nothing about profitability or investability.'] },
+    ], interpretation: [`${largestActivity('GCP2025', '2024')} Sector size alone says nothing about profitability or investability.`] },
     { id: 'value-chains', title: 'Value chains: agriculture, livestock and fisheries', findings: [
       { type: 'figs', caption: 'Production, area and value as printed (two sources, different years and units)', rows: each('siaya-agriculture.json', '/observations', (o) => o.status === 'observed').map(([o, p]) => ({ f: agriFig(o, p) })) },
       { type: 'figs', caption: 'County plan targets (plans, not outcomes)', rows: each('siaya-agriculture.json', '/observations', (o) => o.status === 'target').map(([o, p]) => ({ f: agriFig(o, p) })) },
@@ -391,11 +395,25 @@ function reportD() {
   ];
 }
 
+// The largest activity among the values held (a withdrawn value is null in the masked data and never named).
+function largestActivity(vintage, year) {
+  const rows = ECON.observations.filter((o) => o.indicator === 'gva_by_activity' && o.vintage === vintage && o.period === year && o.sector !== 'fisim');
+  const top = rows.filter((o) => typeof o.value === 'number').sort((a, b) => b.value - a.value)[0];
+  if (!top) return '';
+  return `${rows.some((o) => (badge('siaya-economy', o.id) || {}).hide) ? 'Among the values shown, ' : ''}${top.sector_label} is the largest activity in the county accounts.`;
+}
+
 // ---------- Report E: Programme atlas ----------
 function reportE() {
   const rows = PROG.programmes.map((p, i) => [p, i]);
   const evFig = (p, i) => fig('siaya-programmes.json', P('programmes', i, 'evidence_type'), { label: 'Evidence type', source: p.sources[0] && p.sources[0].source_id, page: p.sources[0] && p.sources[0].page, period: p.period && `${p.period.start || '?'} to ${p.period.end || '?'}`, confidence: `tier ${p.tier}` });
-  const grants = PROG.summary.siaya_development_partner_grants_kes.map((g, i) => ({ f: progFig(P('summary', 'siaya_development_partner_grants_kes', i, 'total'), `Development partner grants to the county, ${g.kind}`, { unit: g.currency, period: g.period, source: 'GOV-03', note: `Sum of ${g.record_ids.length} Siaya-specific records (${g.record_ids.join(', ')})` }) }));
+  // A total that sums a programme record withdrawn in editorial review is withheld (the masked total is null), as on
+  // the programmes page.
+  const grantHeld = (g) => g.record_ids.map((id) => badge('siaya-programmes', id)).find((b) => b && b.hide) || null;
+  const grants = PROG.summary.siaya_development_partner_grants_kes.map((g, i) => ({ f: progFig(P('summary', 'siaya_development_partner_grants_kes', i, 'total'), `Development partner grants to the county, ${g.kind}`, {
+    unit: g.currency, period: g.period, source: 'GOV-03', note: `Sum of ${g.record_ids.length} Siaya-specific records (${g.record_ids.join(', ')})`,
+    review: grantHeld(g) ? { ...grantHeld(g), key: `siaya-programmes:summary-grants-${i}`, reason: `Withheld: record ${grantHeld(g).key.split(':')[1]}, which this total sums, was withdrawn after editorial review. ${grantHeld(g).reason}` } : undefined,
+  }) }));
   const evals = rows.filter(([p]) => p.evaluation && p.evaluation.by);
   const outcomes = (ev) => rows.filter(([p]) => p.evidence_type === ev).flatMap(([p, i]) => (p.outputs_outcomes_as_stated || []).map((s, j) => [p.id, p.title, words(s.kind),
     fig('siaya-programmes.json', P('programmes', i, 'outputs_outcomes_as_stated', j, 'text'), { label: 'Statement', source: s.source && s.source.source_id, page: s.source && s.source.page, period: p.period && `${p.period.start || '?'} to ${p.period.end || '?'}`, confidence: `tier ${p.tier}` }),

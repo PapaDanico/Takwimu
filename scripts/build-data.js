@@ -381,7 +381,8 @@ Object.entries(files)
   const rs = require('../lib/review-status');
   const hist = rs.masked('history');
   const cpi = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'cpi.json'), 'utf8'));
-  const q = (v) => (v === undefined || v === null ? '' : `"${String(v).replace(/"/g, '""')}"`);
+  // Same quoting as every other download (lib/csv.js): text a spreadsheet would run as a formula gets an apostrophe.
+  const q = require('../lib/csv').cell;
   const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'confidence_1_to_5', 'retrieved', 'period', 'caveat', 'source_id', 'pdf_page', 'printed_page', 'page_note', 'dataset_version', 'review_status']];
   const rid = [null]; // review id of each row (lib/review-status.js), for the review_status column
   const add = (id, row) => { rows.push(row); rid.push(id); };

@@ -184,6 +184,15 @@ section('1', () => {
   ok(a.id !== b.id, '1: the snapshot ID changes when a review state changes');
 });
 
+// 19. history.csv uses the shared CSV cell (formula guard; numbers stay numeric).
+section('19', () => {
+  const csv = require('../lib/csv');
+  ok(typeof csv.cell === 'function' && csv.cell('=1+1') === '"\'=1+1"' && csv.cell(-1.5) === '"-1.5"' && csv.cell('-2') === '"-2"' && csv.cell(null) === '', '19: lib/csv.js cell() guards formulas and keeps numbers');
+  const src = fs.readFileSync(path.join(root, 'scripts/build-data.js'), 'utf8');
+  const body = src.slice(src.indexOf('function writeHistoryCsv'), src.indexOf('}());', src.indexOf('function writeHistoryCsv')));
+  ok(/require\('\.\.\/lib\/csv'\)\.cell/.test(body) && !/const q = \(v\) => \(v === undefined/.test(body), '19: history.csv quotes cells with lib/csv.js cell(), not its own unguarded quoting');
+});
+
 fresh();
 delete process.env.TAKWIMU_SYNTHETIC_REJECTIONS;
 if (errors.length) {
