@@ -33,7 +33,7 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/economy/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/']) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
@@ -43,6 +43,17 @@ const srv = http.createServer((req, res) => {
   const pulseDet = pg.locator('details.tableview').first();
   await pulseDet.locator('summary').click();
   check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'Fiscal Pulse chart has a table view');
+  // Siaya's economy (data/siaya-economy.json): two line charts and a column chart, each with a table view; revisions side by side.
+  await pg.goto(base + '/counties/siaya/economy/', { waitUntil: 'load' });
+  const ecoCharts = pg.locator('main figure.chart');
+  check(await ecoCharts.count() === 3 && await pg.locator('main figure.chart details.tableview').count() === 3, "Siaya's economy: total (current and constant prices) and sector charts, each with a table view");
+  for (let i = 0; i < 3; i += 1) await ecoCharts.nth(i).locator('details.tableview summary').click();
+  check(await ecoCharts.nth(0).locator('table.data tbody tr').count() === 6 && await ecoCharts.nth(1).locator('table.data tbody tr').count() === 6 && await ecoCharts.nth(2).locator('table.data tbody tr').count() === 18, "Siaya's economy: table views open with every year and every activity");
+  const revHead = await pg.locator('#revisions thead').innerText();
+  check(/GCP 2024 edition/i.test(revHead) && /GCP 2025 edition/i.test(revHead) && await pg.locator('#revisions tbody tr').count() === 8, "Siaya's economy: revisions table shows both editions for the overlapping years");
+  check(/County output is not county government revenue/.test(await pg.locator('#not-revenue').innerText()) && /No share of national GDP is published/.test(await pg.locator('main').innerText()), "Siaya's economy states that county output is not government revenue and that no GDP share is published");
+  await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
+  check(await pg.locator('main a[href="/counties/siaya/economy/"]').count() >= 1, "Siaya hub links to Siaya's economy");
   // Siaya Source Library: one card per record in data/source-library.json, client-side search and filters, no form fields beyond the search box.
   const libJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-library.json'), 'utf8'));
   await pg.goto(base + '/counties/siaya/sources/', { waitUntil: 'networkidle' });

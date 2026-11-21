@@ -65,7 +65,7 @@ export default function Home() {
           document it came from.
         </p>
         <ul className="toc" aria-label="Siaya County pages">
-          <li><Link href="/insights/">Ten-year insights</Link></li><li><Link href="/analytics/">Analytics</Link></li><li><Link href="/subcounties/">Sub-counties and map</Link></li><li><Link href="/profile/">County profile</Link></li><li><Link href="/data/">Data</Link></li><li><Link href="/counties/siaya/pulse/">Fiscal Pulse</Link></li><li><Link href="/counties/siaya/brief/">One-page brief</Link></li><li><Link href="/counties/siaya/sources/">Source library</Link></li>
+          <li><Link href="/insights/">Ten-year insights</Link></li><li><Link href="/analytics/">Analytics</Link></li><li><Link href="/subcounties/">Sub-counties and map</Link></li><li><Link href="/profile/">County profile</Link></li><li><Link href="/data/">Data</Link></li><li><Link href="/counties/siaya/pulse/">Fiscal Pulse</Link></li><li><Link href="/counties/siaya/economy/">Siaya’s economy</Link></li><li><Link href="/counties/siaya/brief/">One-page brief</Link></li><li><Link href="/counties/siaya/sources/">Source library</Link></li>
         </ul>
         <p className="asof"><a href="/briefs/siaya-fiscal-brief.pdf" download>Download the one-page fiscal brief (PDF, A4)</a></p>
         <p className="asof"><span className="tag good">Checked {asOf}</span> against the Controller of Budget and Auditor-General reports</p>
