@@ -101,7 +101,7 @@ for (const f of FILES) {
   check(f + ' every record has ' + width + ' fields', bad === -1, 'record ' + bad);
   parsed[f] = { header: rows[0], rows: rows.slice(1) };
   const formula = [];
-  for (const r of rows) for (const c of r) if (/^[=+\-@\t\r]/.test(c)) formula.push(c.slice(0, 40));
+  for (const r of rows) for (const c of r) if (/^[=+\-@\t\r]/.test(c) && !/^-?\d+(\.\d+)?$/.test(c)) formula.push(c.slice(0, 40));
   check(f + ' no formula-leading cells', formula.length === 0, formula.slice(0, 3).join(' | '));
 }
 

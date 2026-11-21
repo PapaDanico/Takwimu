@@ -57,7 +57,7 @@ function cellText(v) {
 
 function csvCell(v) {
   let s = cellText(v);
-  if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+  if (/^[=+\-@\t\r]/.test(s) && !/^-?\d+(\.\d+)?$/.test(s)) s = "'" + s; // plain numbers (including negatives) stay numeric
   if (/[",\r\n]/.test(s) || /^\s|\s$/.test(s)) s = '"' + s.replace(/"/g, '""') + '"';
   return s;
 }
