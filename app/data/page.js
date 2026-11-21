@@ -12,6 +12,11 @@ const OPEN = [
   { q: 'The FY 2025/26 Controller of Budget report could not be reached from our build environment.', note: 'Press coverage reports Siaya at 26.94 per cent of its own-revenue target. We have not shown it because we could not read the document.' },
   { q: 'Audit opinions for FY 2014/15 to FY 2018/19 are missing.', note: 'The Auditor-General\'s site was unavailable and the Parliament library does not hold those reports. Search summaries suggest FY 2017/18 and FY 2018/19 were qualified, but we could not open the reports, so they are not shown.' },
   { q: 'The FY 2019/20 full-year county report could not be downloaded.', note: 'Only own-source revenue for that year is shown, taken from the FY 2020/21 report.' },
+  // Sources looked for and not obtained (21 Nov 2026); the reasons are in data/ngo.json and data/political.json (not_staged).
+  { q: 'Known gap: FinAccess county data (FSD Kenya, Central Bank of Kenya and KNBS).', note: 'The FinAccess site was reachable, but its county figures are only in an embedded dashboard and the downloadable files are survey microdata. County estimates from microdata would need survey weighting by us, which would be our estimate rather than a published figure, so none is shown. Retry quarterly for a published county table.' },
+  { q: 'Known gap: Uwezo learning assessments (Twaweza).', note: 'uwezo.net could not be reached (the connection failed on 21 Nov 2026), and no county table has been found elsewhere yet. No figure is shown. Retry quarterly.' },
+  { q: 'Known gap: NG-CDF allocations per constituency.', note: 'The Parliament library copy of the proposed 2024/25 ceiling for each constituency is a scanned document, and its OCR text is garbled, so no value was taken from it. A secondary website republishes figures, but it is not the primary document. No figure is shown. Retry quarterly for a text copy or a reliable re-read.' },
+  { q: 'Known gap: KNBS 2019 census tables (population by county and sub-county).', note: 'The KNBS website failed the secure (TLS) connection from our build environment, and that check was not bypassed. Siaya\'s 2019 count on this site is the one reproduced in the county\'s CIDP 2023-2027, which is named as its source. Retry quarterly.' },
 ];
 
 const DOCS = Object.fromEntries(manifest.documents.map((d) => [d.id, d]));

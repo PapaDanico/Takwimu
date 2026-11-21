@@ -58,6 +58,9 @@ const srv = http.createServer((req, res) => {
   await pg.locator('.bottom-nav a[href="/learn/"]').click();
   await pg.waitForFunction(() => location.pathname.startsWith('/learn'), null, { timeout: 10000 }).catch(() => {});
   check(txtType === 'text/x-component' && (await pg.evaluate(() => window.__noReload === true)), 'netlify.toml serves route payloads as text/x-component, so links navigate without a full reload');
+  await pg.goto(base + '/data/', { waitUntil: 'load' });
+  const gapText = await pg.locator('#gaps').innerText();
+  check(['FinAccess', 'Uwezo', 'NG-CDF', 'KNBS 2019 census'].every((g) => new RegExp(`Known gap: [^\\n]*${g}[^\\n]*\\n+[^\\n]*Retry quarterly`).test(gapText)), 'Data page lists FinAccess, Uwezo, NG-CDF and KNBS census as known gaps, each with a reason and "Retry quarterly"');
   const csv = await pg.request.get(base + '/data/history.csv');
   check(csv.ok() && (await csv.text()).startsWith('"indicator"'), 'history.csv served with header');
   const conf = await (await pg.request.get(base + '/data/conflicts.json')).json();
