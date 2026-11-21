@@ -25,7 +25,9 @@ export const metadata = {
 };
 
 const BASE = '2024/25';
-const deflator = (fy) => cpi.fiscal_year[BASE] / cpi.fiscal_year[fy];
+const deflator = (fy) => (cpi.fiscal_year[fy] ? cpi.fiscal_year[BASE] / cpi.fiscal_year[fy] : null);
+// Real value, or null (a gap) when the value or that year's price index is missing.
+const realOf = (v, fy) => (v == null || deflator(fy) === null ? null : v * deflator(fy));
 const years = [...hist.years].sort((a, b) => a.fy.localeCompare(b.fy));
 const label = (fy) => `FY ${fy}`;
 const bn = (v) => v.toFixed(2);
@@ -34,7 +36,7 @@ const m = (v) => Math.round(v).toLocaleString('en-US');
 const withSpend = years.filter((y) => y.spent !== undefined);
 const first = withSpend.find((y) => y.fy === '2014/15');
 const last = withSpend[withSpend.length - 1];
-const realFirst = first.spent * deflator(first.fy);
+const realFirst = realOf(first.spent, first.fy);
 const realGrowth = ((last.spent / realFirst) - 1) * 100;
 const nomGrowth = ((last.spent / first.spent) - 1) * 100;
 
@@ -49,7 +51,7 @@ const pendLast = pend[pend.length - 1];
 const osr = hist.osr_series.points;
 const osrFirst = osr[0];
 const osrLast = osr[osr.length - 1];
-const osrRealFirst = osrFirst.value * deflator(osrFirst.fy);
+const osrRealFirst = realOf(osrFirst.value, osrFirst.fy);
 const osrRealMultiple = osrLast.value / osrRealFirst;
 
 const audits = hist.audits.points;
@@ -72,7 +74,7 @@ const osrByFy = Object.fromEntries(hist.osr_series.points.map((p) => [p.fy, p]))
 const cur = by['2024/25'];
 const kpis = [
   { label: 'Spent, FY 2024/25', value: bn(cur.spent), unit: 'KSh bn', delta: `${Math.round(nomGrowth)}% above FY 2014/15`, note: 'Nominal', spark: col((y) => y.spent) },
-  { label: 'Real change in ten years', value: `${realGrowth >= 0 ? '+' : ''}${Math.round(realGrowth)}%`, delta: 'After adjusting for prices', tone: realGrowth >= 0 ? 'up' : 'down', note: `${label(first.fy)} to ${label(last.fy)}`, spark: col((y) => y.spent * deflator(y.fy)) },
+  { label: 'Real change in ten years', value: `${realGrowth >= 0 ? '+' : ''}${Math.round(realGrowth)}%`, delta: 'After adjusting for prices', tone: realGrowth >= 0 ? 'up' : 'down', note: `${label(first.fy)} to ${label(last.fy)}`, spark: col((y) => realOf(y.spent, y.fy)) },
   { label: 'Pending bills', value: m(pendLast.v), unit: 'KSh m', delta: `at end of ${label(pendLast.fy)}`, tone: 'down', note: 'Unpaid for goods and services delivered', spark: col(pendOf) },
   { label: 'Latest audit opinion', value: audits[audits.length - 1].opinion, delta: `FY ${audits[audits.length - 1].fy}`, note: 'County Executive accounts' },
 ];
@@ -104,7 +106,7 @@ export default function Insights() {
           <div>
             <h3 className="chart-title">Nominal and real spending, KSh billion</h3>
             <p className="chart-sub">The dashed line removes the effect of rising prices ({label(BASE)} prices).</p>
-            <LineChart labels={SHORT} yFormat="one" unit="KSh bn" ariaLabel="Nominal and real spending by fiscal year, KSh billion" series={[{ name: 'Nominal', color: 1, values: col((y) => y.spent) }, { name: 'Real', color: 2, dash: true, values: col((y) => y.spent * deflator(y.fy)) }]} />
+            <LineChart labels={SHORT} yFormat="one" unit="KSh bn" ariaLabel="Nominal and real spending by fiscal year, KSh billion" series={[{ name: 'Nominal', color: 1, values: col((y) => y.spent) }, { name: 'Real', color: 2, dash: true, values: col((y) => realOf(y.spent, y.fy)) }]} />
           </div>
         </div>
         <h3 className="chart-title">Where the {label(BASE)} budget went</h3>
@@ -157,7 +159,7 @@ export default function Insights() {
         <p className="finding">The county's own revenue rose from KSh {m(osrFirst.value)} million in {label(osrFirst.fy)} to KSh {m(osrLast.value)} million in {label(osrLast.fy)}. Adjusting for prices, {label(osrFirst.fy)} is worth about KSh {m(osrRealFirst)} million in {label(BASE)} money. The FY 2020/21 report attributes that year's jump to enhanced collection of NHIF capitation and Linda Mama revenue, so the series is not like for like. Four years show a second value from another report.</p>
         <h3 className="chart-title">Own-source revenue, KSh million</h3>
         <p className="chart-sub">Hollow markers show the other report&apos;s value where two reports disagree.</p>
-        <LineChart labels={SHORT} yFormat="int" unit="KSh m" ariaLabel="Own-source revenue by fiscal year, KSh million, nominal and real" series={[{ name: 'Nominal', color: 1, values: FYS.map((fy) => (osrByFy[fy] ? osrByFy[fy].value : null)), alt: FYS.map((fy) => (osrByFy[fy] && osrByFy[fy].alternate ? osrByFy[fy].alternate.value : null)) }, { name: 'Real', color: 2, dash: true, values: FYS.map((fy) => (osrByFy[fy] ? osrByFy[fy].value * deflator(fy) : null)) }]} />
+        <LineChart labels={SHORT} yFormat="int" unit="KSh m" ariaLabel="Own-source revenue by fiscal year, KSh million, nominal and real" series={[{ name: 'Nominal', color: 1, values: FYS.map((fy) => (osrByFy[fy] ? osrByFy[fy].value : null)), alt: FYS.map((fy) => (osrByFy[fy] && osrByFy[fy].alternate ? osrByFy[fy].alternate.value : null)) }, { name: 'Real', color: 2, dash: true, values: FYS.map((fy) => (osrByFy[fy] ? realOf(osrByFy[fy].value, fy) : null)) }]} />
         <ul className="how">
           {hist.osr_series.conflicts.map((c) => <li key={c}>{c}</li>)}
           <li>FY 2023/24: KSh 610.74 million in the FY 2023/24 report against KSh 427.95 million in the FY 2024/25 report. The hollow marker shows the alternate value.</li>

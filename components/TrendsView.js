@@ -2,7 +2,7 @@
 // Trends: choose an indicator and see how it changed, in shillings of each year (nominal) or after prices (real)
 // where a price adjustment applies. Choices live in the address (?i=&basis=).
 import Link from 'next/link';
-import { useId } from 'react';
+import { useId, useEffect } from 'react';
 import { LineChart } from './Charts';
 import DownloadView from './DownloadView';
 import SaveView from './SaveView';
@@ -14,6 +14,12 @@ const show = (v, dec) => v.toLocaleString('en-US', { minimumFractionDigits: dec,
 
 export default function TrendsView({ series, baseFy }) {
   const [sp, set] = useUrlParams();
+  // Old /trends/ links redirect here without the #trends fragment: bring the chosen trend into view.
+  useEffect(() => {
+    if (window.location.hash || !new URLSearchParams(window.location.search).get('i')) return;
+    const el = document.getElementById('trends');
+    if (el) el.scrollIntoView();
+  }, []);
   const uid = useId();
   const problems = [];
   const qi = sp.get('i');

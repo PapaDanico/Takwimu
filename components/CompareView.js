@@ -37,7 +37,7 @@ export default function CompareView({ data }) {
   const sortWanted = ['high', 'low', 'name'].includes(qs) ? qs : 'high';
   const rawSel = (sp.get('c') || '').split(',').filter(Boolean);
   const validSel = [...new Set(rawSel.filter((s) => data.counties.some((c) => c.slug === s)))];
-  if (rawSel.length !== validSel.length) problems.push('Some counties in the link were not recognised and were left out.');
+  if (rawSel.some((s) => !data.counties.some((c) => c.slug === s))) problems.push('Some counties in the link were not recognised and were left out.');
   const sel = validSel.slice(0, MAX_SEL);
   if (validSel.length > MAX_SEL) problems.push(`At most ${MAX_SEL} counties can be compared side by side; the first ${MAX_SEL} in the link are shown.`);
 
