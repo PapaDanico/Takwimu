@@ -27,7 +27,7 @@ Evidence-based baseline before the design-system overhaul and fiscal intelligenc
 
 ## 4. Reconciliation tests
 - `scripts/test-analytics.js` (statistics helpers) and `scripts/validate-data.js` run on every build. Known contradictory values (OSR FY2023/24, pending bills 2021/2023/2024, recurrent absorption FY2024/25) are enforced in the register.
-- Gap: tests are scripts, not a test framework; no fixtures per contradictory case beyond the register checks.
+- Done (step 4): `scripts/test-reconciliation.js`, run by `npm run validate` and `npm run build`, has one explicit test per register case (11 cases): both values present, they differ, and the data the pages read uses the value the register's `effect` says is plotted (OSR alternates kept; pending bills use the Insights page's total rule). Plus arithmetic identities per year (budget and spending parts, development and recurrent absorption recompute) and the FY 2024/25 category sums: 62 tests pass. A meta-test fails if a register case has no test. Mutation check: setting FY 2016/17 recurrent spending to the text value 3.9 failed two tests. Still scripts, not a test framework (no new dependency).
 
 ## 5. Interface quality (measured on the built site, 59 pages)
 | Check | Result |
