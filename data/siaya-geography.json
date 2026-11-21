@@ -1,0 +1,886 @@
+{
+ "meta": {
+  "title": "Siaya County geographic registry: county, constituencies, county assembly wards and sub-county naming systems",
+  "compiled": "2026-11-21",
+  "official_name_rule": "Ward and constituency names follow IEBC spelling in title case, as printed in Gazette Notice 13904 of 26 September 2025; for the three Ugunja wards (absent from that notice) the IEBC 2017 results report spelling is used. Codes are IEBC codes, kept as strings with their printed width.",
+  "boundary_vintage": "IEBC delimitation of constituencies and county assembly wards, 2012 (in force for the 2013, 2017 and 2022 general elections). No 2024/2025 IEBC boundary review result was located; the September 2025 gazette notice still uses the 2012 codes and names.",
+  "confidence": 4,
+  "note": "Two naming systems are recorded separately and never merged: IEBC constituencies (electoral) and sub-counties as named by the county government and by KNBS census tables. In Siaya they share names one to one, but boundary equivalence is asserted by name only; it has not been checked against a KNBS enumeration-area map."
+ },
+ "sources": [
+  {
+   "id": "IEBC-GN-13904-2025",
+   "title": "Kenya Gazette Special Issue Vol. CXXVII No. 201, Gazette Notice No. 13904: Registration Centres (Elections (Registration of Voters) Regulations, 2012), First Schedule",
+   "publisher": "Independent Electoral and Boundaries Commission",
+   "published": "2025-09-26",
+   "url": "https://www.iebc.or.ke/uploads/resources/r9lwR44tQK.pdf",
+   "sha256": "2139bcda649c5a62d3a362c004a7d5c4d688e8226c5e3abddc6406ce67526661",
+   "retrieved": "2026-11-21",
+   "pages": "PDF pages 296-303 (Siaya, county code 041)",
+   "used_for": "county, constituency and ward codes and names (27 of 30 wards)",
+   "limitation": "Ugunja constituency (233) and its wards 1160-1162 are not listed; the notice says areas with ongoing by-elections are excluded from registration, which is consistent with this, but the notice does not name the excluded areas."
+  },
+  {
+   "id": "IEBC-2017-RESULTS",
+   "title": "IEBC report: results of the 8 August 2017 General Election and the 26 October 2017 Fresh Presidential Election, section 1.7 Member of County Assembly results",
+   "publisher": "Independent Electoral and Boundaries Commission",
+   "published": "2020-05-25 (PDF creation date; report undated)",
+   "url": "https://www.iebc.or.ke/uploads/resources/siEABKREDq.pdf",
+   "sha256": "6469ab334994c87932807ab463b638cce7e63ae8204da3f22d696fb65d3c5cb7",
+   "retrieved": "2026-11-21",
+   "pages": "PDF pages 546-552 (printed page 546 of 685 onwards)",
+   "used_for": "all 30 ward codes and names, including Ugunja 1160-1162",
+   "limitation": "Names printed in upper case."
+  },
+  {
+   "id": "IEBC-ROV-2022",
+   "title": "Registered voters per constituency for the 2022 General Election",
+   "publisher": "Independent Electoral and Boundaries Commission",
+   "published": "2022",
+   "url": "https://www.iebc.or.ke/docs/rov_per_constituency.pdf",
+   "retrieved": "2026-11-21",
+   "pages": "page 6 of 7, rows 041/232-237",
+   "used_for": "constituency codes 232-237 (cross-check, including Ugunja 233)",
+   "sha256": "6affa5b6677abea44aaed2d66fe7b4b9165771efe67dd63856c68b1238b0aefb"
+  },
+  {
+   "id": "CIDP-2023-27",
+   "title": "Siaya County Integrated Development Plan 2023-2027, Table 3 (County Administrative Units, source IEBC), Table 4 (Political Units), Table 5 (Population projections by sub-county, source KNBS)",
+   "publisher": "County Government of Siaya",
+   "published": "2024-01-24 (print file date)",
+   "url": "https://maarifa.cog.go.ke/sites/default/files/2024-06/SIAYA%20CIDP-2023-2027.pdf",
+   "retrieved": "2026-11-20",
+   "pages": "printed pages 7-9",
+   "used_for": "county-government sub-county labels, KNBS-figure sub-county labels as reproduced, ward spelling variants"
+  },
+  {
+   "id": "KNBS-KPHC-2019-VOL1",
+   "title": "2019 Kenya Population and Housing Census Volume I: Population by County and Sub-County",
+   "publisher": "Kenya National Bureau of Statistics",
+   "published": "2019-11-04",
+   "url": "https://www.knbs.or.ke/wp-content/uploads/2023/09/2019-Kenya-population-and-Housing-Census-Volume-1-Population-By-County-And-Sub-County.pdf",
+   "retrieved": null,
+   "used_for": "not used",
+   "limitation": "Not acquired: the KNBS server failed TLS verification (incomplete certificate chain) and a second fetch returned HTTP 503 on 2026-11-21. KNBS sub-county labels below are as reproduced in CIDP-2023-27 Table 5, not read from the census volume."
+  }
+ ],
+ "county": {
+  "id": "siaya",
+  "name": "Siaya",
+  "iebc_county_code": "041",
+  "constitution_first_schedule_number": 41,
+  "aliases": [
+   {
+    "name": "SIAYA",
+    "seen_in": "IEBC-2017-RESULTS, IEBC-ROV-2022 (upper case)"
+   },
+   {
+    "name": "Siaya County",
+    "seen_in": "common usage"
+   }
+  ],
+  "constituency_ids": [
+   "ugenya",
+   "ugunja",
+   "alego-usonga",
+   "gem",
+   "bondo",
+   "rarieda"
+  ]
+ },
+ "constituencies": [
+  {
+   "id": "ugenya",
+   "name": "Ugenya",
+   "iebc_constituency_code": "232",
+   "parent": "siaya",
+   "aliases": [
+    {
+     "name": "UGENYA",
+     "seen_in": "IEBC-2017-RESULTS, IEBC-ROV-2022 (upper case)"
+    }
+   ],
+   "ward_ids": [
+    "west-ugenya",
+    "ukwala",
+    "north-ugenya",
+    "east-ugenya"
+   ]
+  },
+  {
+   "id": "ugunja",
+   "name": "Ugunja",
+   "iebc_constituency_code": "233",
+   "parent": "siaya",
+   "aliases": [
+    {
+     "name": "UGUNJA",
+     "seen_in": "IEBC-2017-RESULTS, IEBC-ROV-2022 (upper case)"
+    }
+   ],
+   "ward_ids": [
+    "sidindi",
+    "sigomere",
+    "ugunja"
+   ]
+  },
+  {
+   "id": "alego-usonga",
+   "name": "Alego Usonga",
+   "iebc_constituency_code": "234",
+   "parent": "siaya",
+   "aliases": [
+    {
+     "name": "ALEGO USONGA",
+     "seen_in": "IEBC-2017-RESULTS, IEBC-ROV-2022 (upper case)"
+    },
+    {
+     "name": "Alego-Usonga",
+     "seen_in": "CIDP-2023-27 Table 4"
+    },
+    {
+     "name": "Siaya / Alego Usonga",
+     "seen_in": "CIDP-2023-27 Table 3 (county sub-county label)"
+    },
+    {
+     "name": "Siaya (Alego Usonga)",
+     "seen_in": "CIDP-2023-27 Table 5 (KNBS figures)"
+    },
+    {
+     "name": "Siaya",
+     "seen_in": "CIDP-2023-27 population table; also the county name, so never resolve it to the constituency without context"
+    }
+   ],
+   "ward_ids": [
+    "usonga",
+    "west-alego",
+    "central-alego",
+    "siaya-township",
+    "north-alego",
+    "south-east-alego"
+   ]
+  },
+  {
+   "id": "gem",
+   "name": "Gem",
+   "iebc_constituency_code": "235",
+   "parent": "siaya",
+   "aliases": [
+    {
+     "name": "GEM",
+     "seen_in": "IEBC-2017-RESULTS, IEBC-ROV-2022 (upper case)"
+    },
+    {
+     "name": "Gem (Wagai and Yala)",
+     "seen_in": "CIDP-2023-27 Tables 3 and 4"
+    }
+   ],
+   "ward_ids": [
+    "north-gem",
+    "west-gem",
+    "central-gem",
+    "yala-township",
+    "east-gem",
+    "south-gem"
+   ]
+  },
+  {
+   "id": "bondo",
+   "name": "Bondo",
+   "iebc_constituency_code": "236",
+   "parent": "siaya",
+   "aliases": [
+    {
+     "name": "BONDO",
+     "seen_in": "IEBC-2017-RESULTS, IEBC-ROV-2022 (upper case)"
+    }
+   ],
+   "ward_ids": [
+    "west-yimbo",
+    "central-sakwa",
+    "south-sakwa",
+    "yimbo-east",
+    "west-sakwa",
+    "north-sakwa"
+   ]
+  },
+  {
+   "id": "rarieda",
+   "name": "Rarieda",
+   "iebc_constituency_code": "237",
+   "parent": "siaya",
+   "aliases": [
+    {
+     "name": "RARIEDA",
+     "seen_in": "IEBC-2017-RESULTS, IEBC-ROV-2022 (upper case)"
+    }
+   ],
+   "ward_ids": [
+    "east-asembo",
+    "west-asembo",
+    "north-uyoma",
+    "south-uyoma",
+    "west-uyoma"
+   ]
+  }
+ ],
+ "wards": [
+  {
+   "id": "west-ugenya",
+   "name": "West Ugenya",
+   "iebc_ward_code": "1156",
+   "iebc_constituency_code": "232",
+   "parent": "ugenya",
+   "source_names": {
+    "IEBC-2017-RESULTS": "WEST UGENYA",
+    "IEBC-GN-13904-2025": "West Ugenya",
+    "CIDP-2023-27": "West Ugenya"
+   },
+   "aliases": [
+    {
+     "name": "WEST UGENYA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "ukwala",
+   "name": "Ukwala",
+   "iebc_ward_code": "1157",
+   "iebc_constituency_code": "232",
+   "parent": "ugenya",
+   "source_names": {
+    "IEBC-2017-RESULTS": "UKWALA",
+    "IEBC-GN-13904-2025": "Ukwala",
+    "CIDP-2023-27": "Ukwala"
+   },
+   "aliases": [
+    {
+     "name": "UKWALA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "north-ugenya",
+   "name": "North Ugenya",
+   "iebc_ward_code": "1158",
+   "iebc_constituency_code": "232",
+   "parent": "ugenya",
+   "source_names": {
+    "IEBC-2017-RESULTS": "NORTH UGENYA",
+    "IEBC-GN-13904-2025": "North Ugenya",
+    "CIDP-2023-27": "North Ugenya"
+   },
+   "aliases": [
+    {
+     "name": "NORTH UGENYA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "east-ugenya",
+   "name": "East Ugenya",
+   "iebc_ward_code": "1159",
+   "iebc_constituency_code": "232",
+   "parent": "ugenya",
+   "source_names": {
+    "IEBC-2017-RESULTS": "EAST UGENYA",
+    "IEBC-GN-13904-2025": "East Ugenya",
+    "CIDP-2023-27": "East Ugenya"
+   },
+   "aliases": [
+    {
+     "name": "EAST UGENYA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "sidindi",
+   "name": "Sidindi",
+   "iebc_ward_code": "1160",
+   "iebc_constituency_code": "233",
+   "parent": "ugunja",
+   "source_names": {
+    "IEBC-2017-RESULTS": "SIDINDI",
+    "IEBC-GN-13904-2025": null,
+    "CIDP-2023-27": "Sidindi"
+   },
+   "aliases": [
+    {
+     "name": "SIDINDI",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "sigomere",
+   "name": "Sigomere",
+   "iebc_ward_code": "1161",
+   "iebc_constituency_code": "233",
+   "parent": "ugunja",
+   "source_names": {
+    "IEBC-2017-RESULTS": "SIGOMERE",
+    "IEBC-GN-13904-2025": null,
+    "CIDP-2023-27": "Sigomere"
+   },
+   "aliases": [
+    {
+     "name": "SIGOMERE",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "ugunja",
+   "name": "Ugunja",
+   "iebc_ward_code": "1162",
+   "iebc_constituency_code": "233",
+   "parent": "ugunja",
+   "source_names": {
+    "IEBC-2017-RESULTS": "UGUNJA",
+    "IEBC-GN-13904-2025": null,
+    "CIDP-2023-27": "Ugunja"
+   },
+   "aliases": [
+    {
+     "name": "UGUNJA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "usonga",
+   "name": "Usonga",
+   "iebc_ward_code": "1163",
+   "iebc_constituency_code": "234",
+   "parent": "alego-usonga",
+   "source_names": {
+    "IEBC-2017-RESULTS": "USONGA",
+    "IEBC-GN-13904-2025": "Usonga",
+    "CIDP-2023-27": "Usonga"
+   },
+   "aliases": [
+    {
+     "name": "USONGA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "west-alego",
+   "name": "West Alego",
+   "iebc_ward_code": "1164",
+   "iebc_constituency_code": "234",
+   "parent": "alego-usonga",
+   "source_names": {
+    "IEBC-2017-RESULTS": "WEST ALEGO",
+    "IEBC-GN-13904-2025": "West Alego",
+    "CIDP-2023-27": "West Alego"
+   },
+   "aliases": [
+    {
+     "name": "WEST ALEGO",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "central-alego",
+   "name": "Central Alego",
+   "iebc_ward_code": "1165",
+   "iebc_constituency_code": "234",
+   "parent": "alego-usonga",
+   "source_names": {
+    "IEBC-2017-RESULTS": "CENTRAL ALEGO",
+    "IEBC-GN-13904-2025": "Central Alego",
+    "CIDP-2023-27": "Central Alego"
+   },
+   "aliases": [
+    {
+     "name": "CENTRAL ALEGO",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "siaya-township",
+   "name": "Siaya Township",
+   "iebc_ward_code": "1166",
+   "iebc_constituency_code": "234",
+   "parent": "alego-usonga",
+   "source_names": {
+    "IEBC-2017-RESULTS": "SIAYA TOWNSHIP",
+    "IEBC-GN-13904-2025": "Siaya Township",
+    "CIDP-2023-27": "Township"
+   },
+   "aliases": [
+    {
+     "name": "SIAYA TOWNSHIP",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    },
+    {
+     "name": "Township",
+     "seen_in": "CIDP-2023-27 Table 4"
+    }
+   ]
+  },
+  {
+   "id": "north-alego",
+   "name": "North Alego",
+   "iebc_ward_code": "1167",
+   "iebc_constituency_code": "234",
+   "parent": "alego-usonga",
+   "source_names": {
+    "IEBC-2017-RESULTS": "NORTH ALEGO",
+    "IEBC-GN-13904-2025": "North Alego",
+    "CIDP-2023-27": "North Alego"
+   },
+   "aliases": [
+    {
+     "name": "NORTH ALEGO",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "south-east-alego",
+   "name": "South East Alego",
+   "iebc_ward_code": "1168",
+   "iebc_constituency_code": "234",
+   "parent": "alego-usonga",
+   "source_names": {
+    "IEBC-2017-RESULTS": "SOUTH EAST ALEGO",
+    "IEBC-GN-13904-2025": "South East Alego",
+    "CIDP-2023-27": "South East Alego"
+   },
+   "aliases": [
+    {
+     "name": "SOUTH EAST ALEGO",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    },
+    {
+     "name": "South-East Alego",
+     "seen_in": "common hyphenated spelling; not seen in the cited sources"
+    }
+   ]
+  },
+  {
+   "id": "north-gem",
+   "name": "North Gem",
+   "iebc_ward_code": "1169",
+   "iebc_constituency_code": "235",
+   "parent": "gem",
+   "source_names": {
+    "IEBC-2017-RESULTS": "NORTH GEM",
+    "IEBC-GN-13904-2025": "North Gem",
+    "CIDP-2023-27": "North Gem"
+   },
+   "aliases": [
+    {
+     "name": "NORTH GEM",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "west-gem",
+   "name": "West Gem",
+   "iebc_ward_code": "1170",
+   "iebc_constituency_code": "235",
+   "parent": "gem",
+   "source_names": {
+    "IEBC-2017-RESULTS": "WEST GEM",
+    "IEBC-GN-13904-2025": "West Gem",
+    "CIDP-2023-27": "West Gem"
+   },
+   "aliases": [
+    {
+     "name": "WEST GEM",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "central-gem",
+   "name": "Central Gem",
+   "iebc_ward_code": "1171",
+   "iebc_constituency_code": "235",
+   "parent": "gem",
+   "source_names": {
+    "IEBC-2017-RESULTS": "CENTRAL GEM",
+    "IEBC-GN-13904-2025": "Central Gem",
+    "CIDP-2023-27": "Central Gem"
+   },
+   "aliases": [
+    {
+     "name": "CENTRAL GEM",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "yala-township",
+   "name": "Yala Township",
+   "iebc_ward_code": "1172",
+   "iebc_constituency_code": "235",
+   "parent": "gem",
+   "source_names": {
+    "IEBC-2017-RESULTS": "YALA TOWNSHIP",
+    "IEBC-GN-13904-2025": "Yala Township",
+    "CIDP-2023-27": "Yala Township"
+   },
+   "aliases": [
+    {
+     "name": "YALA TOWNSHIP",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "east-gem",
+   "name": "East Gem",
+   "iebc_ward_code": "1173",
+   "iebc_constituency_code": "235",
+   "parent": "gem",
+   "source_names": {
+    "IEBC-2017-RESULTS": "EAST GEM",
+    "IEBC-GN-13904-2025": "East Gem",
+    "CIDP-2023-27": "East Gem"
+   },
+   "aliases": [
+    {
+     "name": "EAST GEM",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "south-gem",
+   "name": "South Gem",
+   "iebc_ward_code": "1174",
+   "iebc_constituency_code": "235",
+   "parent": "gem",
+   "source_names": {
+    "IEBC-2017-RESULTS": "SOUTH GEM",
+    "IEBC-GN-13904-2025": "South Gem",
+    "CIDP-2023-27": "South Gem"
+   },
+   "aliases": [
+    {
+     "name": "SOUTH GEM",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "west-yimbo",
+   "name": "West Yimbo",
+   "iebc_ward_code": "1175",
+   "iebc_constituency_code": "236",
+   "parent": "bondo",
+   "source_names": {
+    "IEBC-2017-RESULTS": "WEST YIMBO",
+    "IEBC-GN-13904-2025": "West Yimbo",
+    "CIDP-2023-27": "West Yimbo"
+   },
+   "aliases": [
+    {
+     "name": "WEST YIMBO",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "central-sakwa",
+   "name": "Central Sakwa",
+   "iebc_ward_code": "1176",
+   "iebc_constituency_code": "236",
+   "parent": "bondo",
+   "source_names": {
+    "IEBC-2017-RESULTS": "CENTRAL SAKWA",
+    "IEBC-GN-13904-2025": "Central Sakwa",
+    "CIDP-2023-27": "Central Sakwa"
+   },
+   "aliases": [
+    {
+     "name": "CENTRAL SAKWA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "south-sakwa",
+   "name": "South Sakwa",
+   "iebc_ward_code": "1177",
+   "iebc_constituency_code": "236",
+   "parent": "bondo",
+   "source_names": {
+    "IEBC-2017-RESULTS": "SOUTH SAKWA",
+    "IEBC-GN-13904-2025": "South Sakwa",
+    "CIDP-2023-27": "South Sakwa"
+   },
+   "aliases": [
+    {
+     "name": "SOUTH SAKWA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "yimbo-east",
+   "name": "Yimbo East",
+   "iebc_ward_code": "1178",
+   "iebc_constituency_code": "236",
+   "parent": "bondo",
+   "source_names": {
+    "IEBC-2017-RESULTS": "YIMBO EAST",
+    "IEBC-GN-13904-2025": "Yimbo East",
+    "CIDP-2023-27": "East Yimbo"
+   },
+   "aliases": [
+    {
+     "name": "YIMBO EAST",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    },
+    {
+     "name": "East Yimbo",
+     "seen_in": "CIDP-2023-27 Table 4, AUDIT-ASM (data/siaya-audits.json)"
+    },
+    {
+     "name": "Yimbo-East",
+     "seen_in": "hyphenated variant; not seen in the cited sources"
+    }
+   ]
+  },
+  {
+   "id": "west-sakwa",
+   "name": "West Sakwa",
+   "iebc_ward_code": "1179",
+   "iebc_constituency_code": "236",
+   "parent": "bondo",
+   "source_names": {
+    "IEBC-2017-RESULTS": "WEST SAKWA",
+    "IEBC-GN-13904-2025": "West Sakwa",
+    "CIDP-2023-27": "West Sakwa"
+   },
+   "aliases": [
+    {
+     "name": "WEST SAKWA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "north-sakwa",
+   "name": "North Sakwa",
+   "iebc_ward_code": "1180",
+   "iebc_constituency_code": "236",
+   "parent": "bondo",
+   "source_names": {
+    "IEBC-2017-RESULTS": "NORTH SAKWA",
+    "IEBC-GN-13904-2025": "North Sakwa",
+    "CIDP-2023-27": "North Sakwa"
+   },
+   "aliases": [
+    {
+     "name": "NORTH SAKWA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "east-asembo",
+   "name": "East Asembo",
+   "iebc_ward_code": "1181",
+   "iebc_constituency_code": "237",
+   "parent": "rarieda",
+   "source_names": {
+    "IEBC-2017-RESULTS": "EAST ASEMBO",
+    "IEBC-GN-13904-2025": "East Asembo",
+    "CIDP-2023-27": "East Asembo"
+   },
+   "aliases": [
+    {
+     "name": "EAST ASEMBO",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "west-asembo",
+   "name": "West Asembo",
+   "iebc_ward_code": "1182",
+   "iebc_constituency_code": "237",
+   "parent": "rarieda",
+   "source_names": {
+    "IEBC-2017-RESULTS": "WEST ASEMBO",
+    "IEBC-GN-13904-2025": "West Asembo",
+    "CIDP-2023-27": "West Asembo"
+   },
+   "aliases": [
+    {
+     "name": "WEST ASEMBO",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "north-uyoma",
+   "name": "North Uyoma",
+   "iebc_ward_code": "1183",
+   "iebc_constituency_code": "237",
+   "parent": "rarieda",
+   "source_names": {
+    "IEBC-2017-RESULTS": "NORTH UYOMA",
+    "IEBC-GN-13904-2025": "North Uyoma",
+    "CIDP-2023-27": "North Uyoma"
+   },
+   "aliases": [
+    {
+     "name": "NORTH UYOMA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "south-uyoma",
+   "name": "South Uyoma",
+   "iebc_ward_code": "1184",
+   "iebc_constituency_code": "237",
+   "parent": "rarieda",
+   "source_names": {
+    "IEBC-2017-RESULTS": "SOUTH UYOMA",
+    "IEBC-GN-13904-2025": "South Uyoma",
+    "CIDP-2023-27": "South Uyoma"
+   },
+   "aliases": [
+    {
+     "name": "SOUTH UYOMA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  },
+  {
+   "id": "west-uyoma",
+   "name": "West Uyoma",
+   "iebc_ward_code": "1185",
+   "iebc_constituency_code": "237",
+   "parent": "rarieda",
+   "source_names": {
+    "IEBC-2017-RESULTS": "WEST UYOMA",
+    "IEBC-GN-13904-2025": "West Uyoma",
+    "CIDP-2023-27": "West Uyoma"
+   },
+   "aliases": [
+    {
+     "name": "WEST UYOMA",
+     "seen_in": "IEBC-2017-RESULTS (upper case)"
+    }
+   ]
+  }
+ ],
+ "sub_county_systems": [
+  {
+   "system": "county-government",
+   "label": "Sub-counties used by the County Government of Siaya for service delivery",
+   "source": "CIDP-2023-27 Table 3",
+   "units": [
+    {
+     "name": "Siaya / Alego Usonga",
+     "constituency_id": "alego-usonga",
+     "wards": 6
+    },
+    {
+     "name": "Gem (Wagai and Yala)",
+     "constituency_id": "gem",
+     "wards": 6,
+     "note": "The CIDP and data/subcounties.json say Gem is administratively split into Gem Wagai and Gem Yala; those two units are not given ward lists or codes in the cited sources."
+    },
+    {
+     "name": "Ugenya",
+     "constituency_id": "ugenya",
+     "wards": 4
+    },
+    {
+     "name": "Ugunja",
+     "constituency_id": "ugunja",
+     "wards": 3
+    },
+    {
+     "name": "Bondo",
+     "constituency_id": "bondo",
+     "wards": 6
+    },
+    {
+     "name": "Rarieda",
+     "constituency_id": "rarieda",
+     "wards": 5
+    }
+   ],
+   "equivalence": "asserted by name in the CIDP; boundaries not independently checked"
+  },
+  {
+   "system": "knbs-census-2019",
+   "label": "Sub-counties in KNBS 2019 census tables, as reproduced by the county",
+   "source": "CIDP-2023-27 Table 5 (source KNBS); KNBS-KPHC-2019-VOL1 not acquired",
+   "units": [
+    {
+     "name": "Siaya (Alego Usonga)",
+     "constituency_id": "alego-usonga"
+    },
+    {
+     "name": "Gem",
+     "constituency_id": "gem"
+    },
+    {
+     "name": "Ugenya",
+     "constituency_id": "ugenya"
+    },
+    {
+     "name": "Ugunja",
+     "constituency_id": "ugunja"
+    },
+    {
+     "name": "Bondo",
+     "constituency_id": "bondo"
+    },
+    {
+     "name": "Rarieda",
+     "constituency_id": "rarieda"
+    }
+   ],
+   "equivalence": "name match only; KNBS sub-county boundaries are national-government administrative units and may differ from IEBC constituencies. Verify against Volume I before treating census sub-county figures as constituency figures."
+  }
+ ],
+ "spatial_layers": [
+  {
+   "file": "data/siaya-boundaries.json",
+   "level": "constituency (6 units)",
+   "source": "geoBoundaries gbOpen KEN ADM2, boundaryID KEN-ADM2-3690345",
+   "upstream": "IEBC, OCHA ROSEA (HDX ken-administrative-boundaries)",
+   "boundary_year_represented": "2020",
+   "licence": "CC BY 3.0 IGO",
+   "build_date": "2023-12-12",
+   "note": "geoBoundaries labels this layer \"Sub-Counties\" but its 290 units are IEBC constituencies. Simplified for display."
+  },
+  {
+   "file": "data/kenya-counties-map.json",
+   "level": "county (47 units)",
+   "source": "geoBoundaries gbOpen KEN ADM1, boundaryID KEN-ADM1-32016919",
+   "upstream": "RCMRD GeoPortal, Africa GeoPortal",
+   "boundary_year_represented": "2020",
+   "licence": "Public Domain",
+   "build_date": "2023-12-12",
+   "note": "Licence and upstream are as stated in the geoBoundaries ADM1 metadata. The file meta states CC BY 3.0 IGO and IEBC via OCHA ROSEA, which differs; see docs/siaya-geography-notes.md."
+  },
+  {
+   "file": null,
+   "level": "ward (30 units)",
+   "source": null,
+   "note": "No ward boundary layer is in the repository. Ward Explorer maps must not draw ward shapes until a licensed IEBC 2012 ward layer is acquired."
+  }
+ ]
+}
