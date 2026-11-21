@@ -25,17 +25,24 @@ export default function RequestBrief() {
 
       <section className="card" aria-labelledby="form-h">
         <h2 id="form-h">Your request</h2>
-        <p className="lead">We ask only for what we need to reply. Fields marked optional can be left blank.</p>
+        <p className="lead">We ask only for what we need to reply. Fields marked optional can be left blank. You can also use this form to ask to see, correct or delete personal data we hold about you.</p>
         <form className="req-form" name="brief-request" method="POST" action="/briefs/request/thanks/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="brief-request" />
           <p hidden><label>Leave this empty: <input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
+          <div className="field">
+            <label htmlFor="rq-type">What is this about?</label>
+            <select id="rq-type" name="request-type" required defaultValue="brief">
+              <option value="brief">A brief for a county or constituency</option>
+              <option value="data-request">A data request about my personal data (access, correction, deletion or objection)</option>
+            </select>
+          </div>
           <div className="field">
             <label htmlFor="rq-name">Your name</label>
             <input id="rq-name" type="text" name="name" autoComplete="name" required maxLength={120} />
           </div>
           <div className="field">
-            <label htmlFor="rq-org">Organisation or office</label>
-            <input id="rq-org" type="text" name="organisation" autoComplete="organization" required maxLength={160} />
+            <label htmlFor="rq-org">Organisation or office (optional for a data request)</label>
+            <input id="rq-org" type="text" name="organisation" autoComplete="organization" maxLength={160} />
           </div>
           <div className="field">
             <label htmlFor="rq-role">Your role (optional)</label>
@@ -46,13 +53,13 @@ export default function RequestBrief() {
             <input id="rq-email" type="email" name="email" autoComplete="email" required maxLength={200} />
           </div>
           <div className="field">
-            <label htmlFor="rq-place">County or constituency</label>
-            <input id="rq-place" type="text" name="place" required maxLength={120} />
+            <label htmlFor="rq-place">County or constituency (optional for a data request)</label>
+            <input id="rq-place" type="text" name="place" maxLength={120} />
           </div>
           <div className="field">
             <label htmlFor="rq-need">What you need</label>
             <textarea id="rq-need" name="need" rows={6} required maxLength={3000} aria-describedby="rq-need-hint" />
-            <p className="hint" id="rq-need-hint">For example the topics, years and format you have in mind, and any date you are working to. Please do not include personal details about other people.</p>
+            <p className="hint" id="rq-need-hint">For a brief: the topics, years and format you have in mind, and any date you are working to. For a data request: which right you want to use and the earlier request it concerns. Please do not include personal details about other people.</p>
           </div>
           <div className="consent">
             <input id="rq-consent" type="checkbox" name="consent" value="yes" required />

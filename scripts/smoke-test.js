@@ -51,6 +51,12 @@ const srv = http.createServer((req, res) => {
   await pg.goto(base + '/briefs/request/', { waitUntil: 'load' });
   const consent = pg.locator('form[name="brief-request"] input[type=checkbox][name=consent]');
   check(await consent.count() === 1 && await consent.evaluate((e) => e.required) && await pg.locator('form[name="brief-request"] .consent a[href="/privacy/"]').count() === 1, 'brief request: consent checkbox is required and links to the privacy notice');
+  check(await pg.locator('form[name="brief-request"] select[name="request-type"] option[value="data-request"]').count() === 1, 'brief request form offers a data request option for data subject rights');
+  await pg.goto(base + '/privacy/', { waitUntil: 'load' });
+  const privText = await pg.locator('main').innerText();
+  check(['odpc.go.ke', '24 months', 'section 26', 'sections 48 to 50', 'consent', 'data request'].every((t) => privText.toLowerCase().includes(t.toLowerCase())), 'privacy notice covers consent, retention, cross-border transfer, rights, the data request route and the ODPC');
+  await pg.goto(base + '/terms/', { waitUntil: 'load' });
+  check(/CC BY 4\.0/.test(await pg.locator('main').innerText()) && await pg.locator('#nonpartisan').count() === 1, 'terms name third-party licences and the non-partisan policy');
   check(/script-src[^;]*;[\s\S]*form-action 'self'/.test(csp), 'CSP form-action allows the form to post to the Site');
   // No email address is published: no mailto: with an address and no address-shaped text in any built page.
   const htmlFiles = [];
