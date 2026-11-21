@@ -1,12 +1,18 @@
 // Print-optimised report renderer. Server component: renders the blocks that build.js returns. Every value is a
 // <Fig>, which carries data-file and data-ptr so scripts/test-reports.js can resolve it against the data file.
-import { LineChart, ColumnChart } from '../Charts';
+// Repetition rules (UX sweep U3): the provisional state is stated once on the cover; a figure carries a mark only
+// when its review state is an exception (approved, disputed, superseded, withdrawn). A note, unit, source, page or
+// confidence shared by every row of a table is stated once under the caption; notes that differ are footnoted.
+// How to read the reports, the method, the confidence scales and the licence live once at /reports/method/.
+import ReportChart from './ReportChart';
 import { PROVISIONAL } from './model';
 import { conflictNote } from './rules';
 
+export const METHOD_HREF = '/reports/method/';
 const num = (v) => v.toLocaleString('en-US', { maximumFractionDigits: 6 });
 const fmtValue = (f) => {
   if (f.suppress) return 'Suppressed (fewer than 10)';
+  if (f.display) return f.display;
   if (f.value === null || f.value === undefined || f.value === '') return 'Not published';
   if (typeof f.value === 'number') return num(f.value);
   if (typeof f.value === 'boolean') return f.value ? 'Yes' : 'No';
@@ -15,20 +21,39 @@ const fmtValue = (f) => {
 };
 const dataValue = (f) => (f.suppress ? undefined : typeof f.value === 'object' && f.value !== null ? JSON.stringify(f.value) : String(f.value));
 const pageOf = (f) => (f.page == null ? 'Not stated' : `${typeof f.page === 'number' ? 'PDF p. ' : ''}${f.page}${f.printed != null && f.printed !== f.page ? ` (printed ${f.printed})` : ''}`);
-const confOf = (f) => (f.confidence == null ? 'Not graded' : typeof f.confidence === 'number' ? `${f.confidence} of 5` : String(f.confidence));
-const statusOf = (f) => (f.review ? f.review.label : PROVISIONAL);
+// Confidence: the 1-5 rubric of /method/ prints "N of 5". A file that grades on its own scale keeps its grade and
+// names the scale (no mapping to 1-5 is defined; /reports/method/#confidence lists the scales).
+export function confOf(f) {
+  const c = f.confidence;
+  if (c == null) return 'Not graded';
+  if (typeof c === 'number') return `${c} of 5`;
+  const s = String(c);
+  let m = s.match(/^tier ([A-D])$/);
+  if (m) return `source tier ${m[1]} (scale A to D)`;
+  if (/^(high|medium|low)$/.test(s)) return `${s} (scale high, medium, low)`;
+  m = s.match(/^OCR(?: \(score ([\d.]+)\))?$/);
+  if (m) return m[1] ? `OCR score ${m[1]} (scale 0 to 1)` : 'OCR reading, not scored';
+  if (/^(compiled count|count compiled by Takwimu)$/.test(s)) return 'count compiled by Takwimu, not graded';
+  return s;
+}
+const confWord = (f) => (typeof f.confidence === 'number' ? `confidence ${confOf(f)}` : confOf(f));
+const MARK = { approved: 'Approved', disputed: 'Disputed', superseded: 'Superseded' };
+const exception = (f) => (f.review && !f.review.hide && MARK[f.review.state] ? f.review.state : null);
 
 // A figure rejected in editorial review (lib/review-status.js) prints the withdrawal and its rationale, not the value.
 export function Fig({ f }) {
   const b = f.review;
   const obs = b ? { 'data-obs': b.key, 'data-obs-state': b.state } : {};
+  const trace = { 'data-file': f.file, 'data-ptr': f.ptr, 'data-value': dataValue(f), 'data-page': f.page == null ? '' : String(f.page), 'data-conf': f.confidence == null ? '' : String(f.confidence), ...(f.obs ? { 'data-src-file': f.obs.file, 'data-src-ptr': f.obs.ptr } : {}) };
   if (b && b.hide) {
-    return <span className="fig withheld" data-file={f.file} data-ptr={f.ptr} data-value={dataValue(f)} {...obs}>{b.label}: {b.reason}</span>;
+    return <span className="fig withheld" {...trace} {...obs}>{b.label}: {b.reason}</span>;
   }
+  const ex = exception(f);
   return (
-    <span className={`fig${f.reviewed ? '' : ' prov'}`} data-file={f.file} data-ptr={f.ptr} data-value={dataValue(f)} data-suppressed={f.suppress ? 'true' : undefined} {...obs}
+    <span className={`fig${f.reviewed ? '' : ' prov'}${f.display ? ' unclear' : ''}`} {...trace} data-suppressed={f.suppress ? 'true' : undefined} {...obs}
       {...(b && b.approved ? { 'data-review': 'approved', 'data-record': b.key } : {})}>
-      {fmtValue(f)}{f.unit && typeof f.value === 'number' && !f.suppress ? (f.unit === '%' ? '%' : ` ${f.unit}`) : ''}
+      {fmtValue(f)}{f.unit && typeof f.value === 'number' && !f.suppress && !f.display ? (f.unit === '%' ? '%' : ` ${f.unit}`) : ''}
+      {ex ? <span className={`rp-mark ${ex}`}>{MARK[ex]}</span> : null}
     </span>
   );
 }
@@ -43,40 +68,70 @@ function FigCell({ f, bib }) {
   return (
     <>
       <Fig f={f} />
-      <small className="cite">
-        <Cite f={f} bib={bib} />; {pageOf(f)}; {f.period || 'period not stated'}; confidence {confOf(f)}. <em>{statusOf(f)}</em>
-      </small>
+      <small className="cite"><Cite f={f} bib={bib} />; {pageOf(f)}; {f.period || 'period not stated'}; {confWord(f)}.</small>
     </>
   );
 }
 const cell = (c, bib) => (c && typeof c === 'object' && c.ptr ? <FigCell f={c} bib={bib} /> : c == null ? '' : String(c));
 
 function Mixed({ parts, bib }) {
-  return <>{parts.map((p, i) => (p && typeof p === 'object' && p.ptr ? <span key={i}><Fig f={p} /> <small className="cite">[<Cite f={p} bib={bib} />, {pageOf(p)}; {statusOf(p)}]</small></span> : <span key={i}>{p}</span>))}</>;
+  return <>{parts.map((p, i) => (p && typeof p === 'object' && p.ptr ? <span key={i}><Fig f={p} /> <small className="cite">[<Cite f={p} bib={bib} />, {pageOf(p)}; {confWord(p)}]</small></span> : <span key={i}>{p}</span>))}</>;
 }
+
+// Notes of a table: parts shared by every row are stated once; the rest get footnote numbers.
+function noteIndex(figs) {
+  const parts = figs.map((f) => (f.notes || []).map((n) => String(n).trim().replace(/\.$/, '')).filter(Boolean));
+  const shared = figs.length > 1 ? (parts[0] || []).filter((n) => parts.every((p) => p.includes(n))) : [];
+  const fn = [];
+  const marks = parts.map((p) => p.filter((n) => !shared.includes(n)).map((n) => { let k = fn.indexOf(n); if (k < 0) { fn.push(n); k = fn.length - 1; } return k + 1; }));
+  return { shared, fn, marks };
+}
+function TableNotes({ shared, common, fn }) {
+  if (!shared.length && !common.length && !fn.length) return null;
+  return (
+    <div className="rp-tnotes">
+      {common.length || shared.length ? <p><strong>Every row:</strong> {[...common, ...shared].join('; ')}.</p> : null}
+      {fn.length ? <ol>{fn.map((n, i) => <li key={i} id={undefined}>{n}.</li>)}</ol> : null}
+    </div>
+  );
+}
+
+const COLS = [
+  { key: 'period', head: 'Period', w: 12, text: (f) => f.period || 'Not stated', render: (f) => f.period || 'Not stated' },
+  { key: 'source', head: 'Source', w: 15, text: (f) => f.source || 'Not stated', render: (f, bib) => <Cite f={f} bib={bib} />, cls: 'src' },
+  { key: 'page', head: 'Page', w: 11, text: (f) => pageOf(f), render: (f) => pageOf(f) },
+  { key: 'conf', head: 'Confidence', w: 13, text: (f) => confOf(f), render: (f) => confOf(f) },
+];
 
 function FigTable({ caption, rows, bib }) {
   if (!rows.length) return <p className="rp-empty">{caption}: no values held.</p>;
+  const figs = rows.map((r) => r.f);
+  const { shared, fn, marks } = noteIndex(figs);
+  // A column whose text is the same on every row is stated once under the caption instead.
+  const same = (c) => rows.length > 1 && figs.every((f) => c.text(f) === c.text(figs[0]));
+  const cols = COLS.filter((c) => !same(c));
+  const common = COLS.filter(same).map((c) => (c.key === 'source'
+    ? <span key="s">source <Cite f={figs[0]} bib={bib} /></span>
+    : `${c.key === 'conf' ? 'confidence' : c.head.toLowerCase()} ${c.text(figs[0])}`));
+  const rest = 100 - cols.reduce((a, c) => a + c.w, 0);
   return (
-    <table className="rp-table figs">
-      <caption>{caption}</caption>
-      <colgroup><col style={{ width: '25%' }} /><col style={{ width: '13%' }} /><col style={{ width: '11%' }} /><col style={{ width: '11%' }} /><col style={{ width: '12%' }} /><col style={{ width: '9%' }} /><col style={{ width: '7%' }} /><col style={{ width: '12%' }} /></colgroup>
-      <thead><tr><th scope="col">Indicator</th><th scope="col">Value</th><th scope="col">Unit</th><th scope="col">Period</th><th scope="col">Source</th><th scope="col">Page</th><th scope="col">Confidence</th><th scope="col">Review status</th></tr></thead>
-      <tbody>
-        {rows.map(({ f, label }, i) => (
-          <tr key={i}>
-            <th scope="row">{label || f.label}{f.note ? <small className="note">{f.note}</small> : null}</th>
-            <td className="v"><Fig f={f} /></td>
-            <td>{f.unit || '–'}</td>
-            <td>{f.period || 'Not stated'}</td>
-            <td className="src"><Cite f={f} bib={bib} /></td>
-            <td>{pageOf(f)}</td>
-            <td>{confOf(f)}</td>
-            <td className="st">{statusOf(f)}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="rp-tblock">
+      <table className="rp-table figs">
+        <caption>{caption}</caption>
+        <colgroup><col style={{ width: `${rest * 0.62}%` }} /><col style={{ width: `${rest * 0.38}%` }} />{cols.map((c) => <col key={c.key} style={{ width: `${c.w}%` }} />)}</colgroup>
+        <thead><tr><th scope="col">Indicator</th><th scope="col">Value</th>{cols.map((c) => <th key={c.key} scope="col">{c.head}</th>)}</tr></thead>
+        <tbody>
+          {rows.map(({ f, label }, i) => (
+            <tr key={i}>
+              <th scope="row">{label || f.label}{marks[i].length ? <sup className="fn">{marks[i].join(',')}</sup> : null}</th>
+              <td className="v"><Fig f={f} /></td>
+              {cols.map((c) => <td key={c.key} className={c.cls}>{c.render(f, bib)}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <TableNotes shared={shared} common={common.length ? [<span key="c">{common.map((x, k) => <span key={k}>{k ? '; ' : ''}{x}</span>)}</span>] : []} fn={fn} />
+    </div>
   );
 }
 
@@ -125,14 +180,8 @@ function Conflicts({ caption, groups, bib }) {
 }
 
 function Chart({ b }) {
-  const series = b.series.map((s, k) => ({ name: s.name, color: k + 1, values: s.figs.map((f) => (f && typeof f.value === 'number' ? f.value * (f.scale || 1) : null)) }));
-  const C = b.kind === 'column' ? ColumnChart : LineChart;
-  return (
-    <div className="rp-chart">
-      <p className="rp-cap">{b.title}</p>
-      <C labels={b.labels} series={series} unit={b.unit} yFormat="int" ariaLabel={b.title} caption={b.title} />
-    </div>
-  );
+  const series = b.series.map((s) => ({ name: s.name, values: s.figs.map((f) => (f && typeof f.value === 'number' ? f.value * (f.scale || 1) : null)) }));
+  return <ReportChart kind={b.kind} title={b.title} labels={b.labels} series={series} unit={b.unit} />;
 }
 
 function Block({ b, bib }) {
@@ -144,11 +193,19 @@ function Block({ b, bib }) {
     case 'pairs': return <Pairs caption={b.caption} rows={b.rows} aLabel={b.aLabel} bLabel={b.bLabel} bib={bib} />;
     case 'conflicts': return <Conflicts caption={b.caption} groups={b.groups} bib={bib} />;
     case 'chart': {
-      const rows = b.series.flatMap((s) => s.figs.map((f, i) => (f ? { f, label: `${s.name}, ${b.labels[i]}${f.scale && f.scale !== 1 ? ' (chart shows the value in KSh million)' : ''}` } : null))).filter(Boolean);
+      // The unit is printed with each value; a value the chart rescales says so once, as a note.
+      const rows = b.series.flatMap((s) => s.figs.map((f, i) => (f ? { f: f.scale && f.scale !== 1 ? { ...f, notes: [...(f.notes || []), 'The chart shows this value in KSh million'] } : f, label: `${s.name}, ${b.labels[i]}` } : null))).filter(Boolean);
       return <><Chart b={b} /><FigTable caption={`Table for the chart: ${b.title}`} rows={rows} bib={bib} /></>;
     }
     default: return null;
   }
+}
+
+function Topics({ list }) {
+  if (!list || !list.length) return null;
+  return (
+    <p className="rp-topic">Canonical topic page{list.length > 1 ? 's' : ''}: {list.map((t, i) => <span key={t.href}>{i ? '; ' : ''}<a href={t.href}>{t.label}</a> <span className="rp-url">(takwimu.netlify.app{t.href})</span></span>)}.</p>
+  );
 }
 
 export default function Report({ r }) {
@@ -160,22 +217,30 @@ export default function Report({ r }) {
     { id: 'bibliography', title: 'Bibliography and document versions' },
     { id: 'snapshot', title: 'Snapshot, method and licence' },
   ];
+  const st = r.reviewState;
   return (
-    <main id="main" className="rp" data-report={r.meta.slug} data-snapshot={r.snapshot.id} data-draft={r.draft ? 'true' : 'false'}>
+    <main id="main" className="rp" data-report={r.meta.slug} data-snapshot={r.snapshot.id} data-draft={r.draft ? 'true' : 'false'}
+      data-review-state={`${st.provisional}/${st.approved}/${st.disputed}/${st.superseded}/${st.withdrawn}`}>
       {r.draft ? <div className="rp-watermark" aria-hidden="true">DRAFT</div> : null}
       <header className="rp-cover">
         <img className="rp-logo" src="/brand/takwimu-logo.png" alt="Takwimu Kenya" width="160" height="151" />
         <p className="rp-kicker">Takwimu Kenya · Report {r.meta.letter}</p>
         <h1>{r.meta.title}</h1>
         <p className="rp-sub">{r.meta.subtitle}</p>
-        {r.draft ? <p className="rp-draft">DRAFT: {r.unreviewed} figures in this report are “{PROVISIONAL}”. This watermark stays until every included figure has a review record.</p> : null}
+        <div className={r.draft ? 'rp-draft' : 'rp-reviewed'} role="note">
+          {r.draft
+            ? <p><strong>DRAFT.</strong> Every figure in this report is “{PROVISIONAL}” unless it carries a mark. This notice replaces a label on each figure; the watermark stays until every included figure has a review record.</p>
+            : <p>Every figure in this report has an approved review record.</p>}
+          <p className="rp-state">Review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn.</p>
+          <p className="rp-legend-marks">Marks: <span className="rp-mark approved">Approved</span> approved in editorial review; <span className="rp-mark disputed">Disputed</span> the data file records a conflict for this value (both readings are kept); <span className="rp-mark superseded">Superseded</span> replaced by a later reading; a withdrawn value prints the withdrawal and its reason instead of the number.</p>
+        </div>
         <dl className="rp-meta">
           <div><dt>Edition</dt><dd>{r.edition}</dd></div>
           <div><dt>Date</dt><dd>{r.date} (latest compile date of the input data files)</dd></div>
           <div><dt>Reference period</dt><dd>{r.referencePeriod}</dd></div>
           <div><dt>Snapshot ID</dt><dd className="mono">{r.snapshot.id}</dd></div>
           <div><dt>Geography</dt><dd>Siaya County (county code 41), Kenya</dd></div>
-          <div><dt>Licence</dt><dd>Takwimu text: reuse with credit (see the last appendix). Source documents keep their publishers’ terms.</dd></div>
+          <div><dt>Licence</dt><dd>Takwimu text: reuse with credit (<a href={`${METHOD_HREF}#licence`}>terms</a>). Source documents keep their publishers’ terms.</dd></div>
         </dl>
         <nav className="rp-toc" aria-label="Contents">
           <h2>Contents</h2>
@@ -184,12 +249,13 @@ export default function Report({ r }) {
             {appendices.map((a, i) => <li key={a.id}><a href={`#${a.id}`}>{n0 + i + 1}. {a.title}</a></li>)}
           </ol>
         </nav>
-        <p className="rp-howto">How to read this report: each section gives <strong>Findings</strong> (values as the documents print them, with source, page, period, unit and confidence) and then, separately, <strong>Interpretation</strong> (Takwimu’s reading, which is not a finding). Where documents disagree, the values are shown together and none is chosen.</p>
+        <p className="rp-howto">How to read this report, the method, the confidence scales and the licence are set out once for all five reports at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>. In short: <strong>Findings</strong> are values as the documents print them; <strong>Interpretation</strong> is Takwimu’s reading, not a finding; where documents disagree all values are shown and none is chosen.</p>
       </header>
 
       {r.sections.map((s, i) => (
         <section key={s.id} id={s.id} className="rp-section" aria-labelledby={`${s.id}-h`}>
           <h2 id={`${s.id}-h`}>{i + 1}. {s.title}</h2>
+          <Topics list={s.topics} />
           <div className="rp-findings">
             <h3>Findings</h3>
             {s.findings.map((b, k) => <Block key={k} b={b} bib={bib} />)}
@@ -205,7 +271,7 @@ export default function Report({ r }) {
 
       <section id="gaps" className="rp-section rp-appendix" aria-labelledby="gaps-h">
         <h2 id="gaps-h">{n0 + 1}. Data gaps</h2>
-        <p>Gaps are listed, never filled. A missing value is never shown as zero.</p>
+        <p>Gaps in the input files of this report, listed and never filled (see <a href={`${METHOD_HREF}#gaps`}>how gaps are handled</a>).</p>
         <table className="rp-table gaps">
           <colgroup><col style={{ width: '30%' }} /><col style={{ width: '52%' }} /><col style={{ width: '18%' }} /></colgroup>
           <thead><tr><th scope="col">Item</th><th scope="col">Reason</th><th scope="col">Data file</th></tr></thead>
@@ -217,7 +283,7 @@ export default function Report({ r }) {
 
       <section id="bibliography" className="rp-section rp-appendix" aria-labelledby="bibliography-h">
         <h2 id="bibliography-h">{n0 + appendices.length - 1}. Bibliography and document versions</h2>
-        <p>Every document cited by a figure in this report. The SHA-256 digest identifies the exact file version read; “not recorded” means the file was not captured.</p>
+        <p>Every document cited by a figure in this report, with the SHA-256 digest of the file version read (<a href={`${METHOD_HREF}#bibliography`}>conventions</a>).</p>
         <table className="rp-table bib">
           <colgroup><col style={{ width: '14%' }} /><col style={{ width: '34%' }} /><col style={{ width: '22%' }} /><col style={{ width: '18%' }} /><col style={{ width: '12%' }} /></colgroup>
           <thead><tr><th scope="col">Key</th><th scope="col">Title, publisher, date</th><th scope="col">SHA-256</th><th scope="col">URL</th><th scope="col">Licence</th></tr></thead>
@@ -241,16 +307,12 @@ export default function Report({ r }) {
 
       <section id="snapshot" className="rp-section rp-appendix" aria-labelledby="snapshot-h">
         <h2 id="snapshot-h">{n0 + appendices.length}. Snapshot, method and licence</h2>
-        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> is the first 12 hex digits of a SHA-256 digest over the names and digests of the input files below, the editorial review register, the source documents it is checked against, and the review state of every value. Rebuilding from the same files gives the same ID; a new review decision changes it.</p>
+        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> identifies the input files below and the review state of every value at the time of printing (review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn). How it is computed, the method, the confidence scales and the licence are at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>. This report contains no personal data and names no contractor or individual.</p>
         <table className="rp-table snap">
           <colgroup><col style={{ width: '32%' }} /><col style={{ width: '68%' }} /></colgroup>
           <thead><tr><th scope="col">Input file</th><th scope="col">SHA-256</th></tr></thead>
           <tbody>{r.snapshot.files.map((f) => <tr key={f.file}><th scope="row" className="mono">{f.file}</th><td className="mono hash">{f.sha256}</td></tr>)}</tbody>
         </table>
-        <h3>Method</h3>
-        <p>Every value is read at build time from the data file named above; no value is typed into the report. Values keep the unit, period and page the source prints. Confidence is the grade recorded in the data file (1 to 5 unless the file uses its own scale). Figures calculated by Takwimu are labelled as such and give their formula. A figure is reviewed only when its record carries an editorial review record; until then it is marked “{PROVISIONAL}” and the report carries a DRAFT watermark.</p>
-        <h3>Licence</h3>
-        <p>Takwimu Kenya’s original text, tables and charts in this report may be reused for personal, educational, journalistic, research or commercial purposes with the credit “Takwimu Kenya (takwimu.netlify.app), based on [the original publisher]”, without suggesting endorsement; say so if you change the material. The underlying documents and figures remain under their publishers’ own licences, listed in the bibliography. This report contains no personal data and names no contractor or individual.</p>
       </section>
     </main>
   );

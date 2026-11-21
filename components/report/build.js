@@ -25,11 +25,36 @@ const FYS = L.years;
 const fyLabel = (fy) => (fy ? `FY ${fy}` : fy);
 const words = (s) => String(s || '').replace(/_/g, ' ');
 const cap = (s) => { const w = words(s); return w.charAt(0).toUpperCase() + w.slice(1); };
+// Reader terminology (UX sweep U4): "share of budget spent (absorption rate)", never "execution rate"; "own-source
+// revenue", never "OSR" (quoted source table names keep their wording: notes are not passed through this).
+const term = (t) => String(t || '').replace(/\bexecution rate\b/gi, (m) => (m[0] === 'E' ? 'Share of budget spent (absorption rate)' : 'share of budget spent (absorption rate)')).replace(/\bOSR\b/g, 'own-source revenue');
+const minConf = (xs) => { const n = xs.map((x) => x && x.confidence).filter((c) => typeof c === 'number'); return n.length ? Math.min(...n) : null; };
+const obsAt = (file, arrPath, id) => { const hit = each(file, arrPath, (o) => o.id === id)[0]; return hit ? { file, ptr: hit[1], rec: hit[0] } : null; };
+
+// Canonical topic pages (UX sweep U1/U6): each report section cites the site page that holds the full series.
+const TOPIC = {
+  people: { href: '/counties/siaya/people/', label: 'Siaya people (population, poverty, demographics)' },
+  economy: { href: '/counties/siaya/economy/', label: 'Siaya economy' },
+  analysis: { href: '/counties/siaya/analysis/', label: 'Siaya fiscal analysis (share of budget spent, pending bills, real per-capita spending)' },
+  ledger: { href: '/counties/siaya/ledger/', label: 'Siaya fiscal ledger (every source value, own-source revenue)' },
+  audits: { href: '/counties/siaya/audits/', label: 'Siaya audits' },
+  projects: { href: '/counties/siaya/projects/', label: 'Siaya project register' },
+  health: { href: '/counties/siaya/health/', label: 'Siaya health' },
+  education: { href: '/counties/siaya/education/', label: 'Siaya education' },
+  agriculture: { href: '/counties/siaya/agriculture/', label: 'Siaya agriculture and fisheries' },
+  climate: { href: '/counties/siaya/climate/', label: 'Siaya climate, water and environment' },
+  wards: { href: '/counties/siaya/wards/', label: 'Siaya wards and sub-counties' },
+  governance: { href: '/counties/siaya/governance/', label: 'Siaya governance' },
+  programmes: { href: '/counties/siaya/programmes/', label: 'Siaya programmes (NGO, CSO and donor)' },
+  compare: { href: '/compare/', label: 'Compare counties' },
+};
+const topics = (...keys) => keys.map((k) => TOPIC[k]);
+export { TOPIC };
 
 // ---------- Figure builders, one per data file shape ----------
 const ledgerFig = (o, ptr) => fig('siaya-fiscal-ledger.json', `${ptr}/value`, {
   label: L.measures[o.measure].label, period: fyLabel(o.fy),
-  note: [o.budget_version ? `Budget version: ${o.budget_version}` : null, o.scope ? `Scope: ${o.scope}` : null, o.read_method ? `Read: ${o.read_method}` : null].filter(Boolean).join('. '),
+  notes: [o.budget_version ? `Budget version: ${o.budget_version}` : null, o.scope ? `Scope: ${o.scope}` : null, o.read_method ? `Read: ${o.read_method}` : null],
 });
 const ledgerRows = (measure) => each('siaya-fiscal-ledger.json', '/observations', (o) => o.measure === measure)
   .sort((a, b) => FYS.indexOf(a[0].fy) - FYS.indexOf(b[0].fy))
@@ -44,30 +69,34 @@ const ledgerSeries = (measure) => FYS.map((fy) => {
 
 const healthFig = (o, ptr, extra = {}) => fig('siaya-health.json', `${ptr}/value`, {
   label: `${o.label}${o.age_group ? ` (${o.age_group})` : ''}${o.geography_detail ? `, ${o.geography_detail}` : ''}`,
-  note: [o.method, o.status, o.sentinel_site ? 'Sentinel site: not county-representative' : null].filter(Boolean).join('. '),
+  notes: [o.method, o.status, o.sentinel_site ? 'Sentinel site: not county-representative' : null],
   suppressSmall: true, ...extra,
 });
 const healthRows = (pred) => each('siaya-health.json', '/observations', pred).map(([o, ptr]) => ({ f: healthFig(o, ptr) }));
 
 const econFig = (o, ptr, label) => fig('siaya-economy.json', `${ptr}/value`, {
   label: label || `${o.indicator === 'gcp_total' ? 'Gross County Product' : cap(o.indicator)}${o.sector_label ? `: ${o.sector_label}` : ''} (${words(o.price_basis)} prices, ${o.vintage})`,
-  source: ECON_SRC[o.vintage], note: [o.table, o.provisional ? 'KNBS marks the year provisional' : null].filter(Boolean).join('. '),
+  source: ECON_SRC[o.vintage], notes: [o.table, o.provisional ? 'KNBS marks the year provisional' : null],
 });
 
 const eduFig = (o, ptr) => fig('siaya-education.json', `${ptr}/value`, {
   label: `${cap(o.indicator)}${o.level ? `, ${o.level}` : ''}${o.sex && o.sex !== 'total' ? `, ${o.sex}` : ''}${o.sector && o.sector !== 'all' ? `, ${o.sector}` : ''}`,
-  note: [o.table, o.value_type].filter(Boolean).join('. '),
+  notes: [o.table, o.value_type === 'unclear' ? null : o.value_type],
+  // D21: a value the file marks "unclear" (cidp-ecde-enrol-end equals the plan's projected 3-5 population, case
+  // edu-c07) is never printed as an enrolment.
+  ...(o.value_type === 'unclear' ? { display: 'Unclear: equals the projected 3-5 population; not shown as enrolment' } : {}),
 });
 const agriFig = (o, ptr) => fig('siaya-agriculture.json', `${ptr}/value`, {
   label: `${cap(o.indicator)}${o.commodity ? `: ${words(o.commodity)}` : ''}${o.status === 'target' ? ' (target)' : ''}`,
-  unit: words(o.unit), note: o.table,
+  unit: words(o.unit), notes: [o.table],
 });
 const climFig = (o, ptr) => fig('siaya-climate.json', `${ptr}/value`, {
   label: `${cap(o.measure)}${o.geography ? `, ${o.geography}` : ''}${o.area_as_printed ? ` (${o.area_as_printed})` : ''}`, note: o.definition || o.table,
 });
+// A calculation carries the page of its first input and the lowest confidence of its inputs (D9).
 const analysisFig = (r, ptr) => fig('siaya-analysis.json', `${ptr}/result`, {
-  label: r.title, source: r.source_ids[0], page: r.inputs[0] ? r.inputs[0].pdf_page : null,
-  note: `${r.label}. Formula: ${r.formula}`,
+  label: term(r.title), source: r.source_ids[0], page: r.inputs[0] ? r.inputs[0].pdf_page : null, printed: r.inputs[0] ? r.inputs[0].printed_page : null,
+  confidence: minConf(r.inputs), notes: [term(r.label), `Formula: ${r.formula}`, 'Confidence: the lowest of its inputs'],
 });
 const analysisRows = (pred) => each('siaya-analysis.json', '/records', (r) => pred(r) && r.status === 'value').map(([r, ptr]) => ({ f: analysisFig(r, ptr) }));
 const analysisGaps = (pred) => each('siaya-analysis.json', '/records', (r) => pred(r) && r.status === 'gap')
@@ -76,12 +105,12 @@ const analysisGaps = (pred) => each('siaya-analysis.json', '/records', (r) => pr
 const progAmountFig = (p, i, a, j) => fig('siaya-programmes.json', P('programmes', i, 'amounts', j, 'value'), {
   rec: a, label: `${p.title}: ${words(a.kind)}${a.pooled ? ' (pooled total, not a Siaya figure)' : ''}`,
   unit: a.currency, period: a.period, source: a.source && a.source.source_id, page: a.source && a.source.page,
-  confidence: `tier ${p.tier}`, note: [a.scope ? `Scope: ${words(a.scope)}` : null, a.note].filter(Boolean).join('. '),
+  confidence: `tier ${p.tier}`, notes: [a.scope ? `Scope: ${words(a.scope)}` : null, a.note],
 });
 const progFig = (ptr, label, o = {}) => fig('siaya-programmes.json', ptr, { label, source: 'Takwimu programme atlas summary (data/siaya-programmes.json)', confidence: 'compiled count', ...o });
 
 const auditOpinionRows = () => each('siaya-audits.json', '/opinions').map(([o, ptr]) => ({
-  f: fig('siaya-audits.json', `${ptr}/opinion`, { label: `Audit opinion, ${words(o.entity)}`, period: fyLabel(o.fy), note: o.opinion_note || (o.history ? `Matches earlier record: ${o.history}` : '') }),
+  f: fig('siaya-audits.json', `${ptr}/opinion`, { label: `Audit opinion, ${words(o.entity)}`, period: fyLabel(o.fy), notes: [o.opinion_note || (o.history ? `Matches earlier record: ${o.history}` : '')] }),
 }));
 
 // Conflict groups: an id list resolved against an observation array, all values shown together.
@@ -93,21 +122,31 @@ const healthConflicts = () => HEALTH.conflicts.map((c) => ({ topic: c.measure, n
 const eduConflicts = () => EDU.conflicts.map((c) => ({ topic: `${c.id}: ${words(c.type)}`, note: `${c.description} Handling: ${c.handling}`, figs: groupFigs('siaya-education.json', c.observations, eduFig) }));
 const agriConflicts = () => AGRI.conflicts.map((c) => ({ topic: c.topic, note: c.note, figs: groupFigs('siaya-agriculture.json', c.values, agriFig) }));
 const climConflicts = () => CLIM.comparisons.map((c) => ({ topic: c.topic, note: c.note, figs: groupFigs('siaya-climate.json', c.observation_ids, climFig) }));
-const econRevisions = (pred = () => true) => each('siaya-economy.json', '/revisions', pred).map(([r, ptr]) => ({
-  label: `${r.indicator === 'gcp_total' ? 'Gross County Product' : cap(r.indicator)}${r.sector ? `: ${words(r.sector)}` : ''} (${words(r.price_basis)})`,
-  period: r.period,
-  a: fig('siaya-economy.json', `${ptr}/earlier_value`, { label: r.earlier_vintage, source: ECON_SRC[r.earlier_vintage], period: r.period, confidence: null }),
-  b: fig('siaya-economy.json', `${ptr}/later_value`, { label: r.later_vintage, source: ECON_SRC[r.later_vintage], period: r.period, confidence: null }),
-  diff: fig('siaya-economy.json', `${ptr}/difference_pct`, { unit: '%', label: 'Revision', period: r.period, source: ECON_SRC[r.later_vintage] }),
-}));
-const ledgerPairs = (pred = () => true) => each('siaya-fiscal-ledger.json', '/discrepancies', pred).map(([d, ptr]) => ({
-  label: L.measures[d.indicator_id] ? L.measures[d.indicator_id].label : d.indicator_id,
-  period: d.period,
-  a: fig('siaya-fiscal-ledger.json', `${ptr}/claim_a/value_ksh_m`, { unit: 'KSh million', period: d.period, source: d.source_a.source_id, page: d.source_a.pdf_page, confidence: null, reviewRec: d }),
-  b: fig('siaya-fiscal-ledger.json', `${ptr}/claim_b/value_ksh_m`, { unit: 'KSh million', period: d.period, source: d.source_b.source_id, page: d.source_b.pdf_page, confidence: null, reviewRec: d }),
-  diff: fig('siaya-fiscal-ledger.json', `${ptr}/difference/pct_of_smaller`, { unit: '% of the smaller value', period: d.period, source: d.source_b.source_id, page: d.source_b.pdf_page, reviewRec: d }),
-  note: (d.possible_basis_mismatch || []).join(' '),
-}));
+// D9: each side of a pair carries the page and confidence of the observation it repeats.
+const fromObs = (h) => (h ? { obs: { file: h.file, ptr: h.ptr }, page: h.rec.pdf_page ?? h.rec.page_pdf ?? h.rec.page, printed: h.rec.printed_page ?? h.rec.page_printed, confidence: h.rec.confidence } : {});
+const econRevisions = (pred = () => true) => each('siaya-economy.json', '/revisions', pred).map(([r, ptr]) => {
+  const ea = obsAt('siaya-economy.json', '/observations', r.earlier_id);
+  const la = obsAt('siaya-economy.json', '/observations', r.later_id);
+  return {
+    label: `${r.indicator === 'gcp_total' ? 'Gross County Product' : cap(r.indicator)}${r.sector ? `: ${words(r.sector)}` : ''} (${words(r.price_basis)})`,
+    period: r.period,
+    a: fig('siaya-economy.json', `${ptr}/earlier_value`, { label: r.earlier_vintage, source: ECON_SRC[r.earlier_vintage], period: r.period, ...fromObs(ea) }),
+    b: fig('siaya-economy.json', `${ptr}/later_value`, { label: r.later_vintage, source: ECON_SRC[r.later_vintage], period: r.period, ...fromObs(la) }),
+    diff: fig('siaya-economy.json', `${ptr}/difference_pct`, { unit: '%', label: 'Revision', period: r.period, source: ECON_SRC[r.later_vintage], confidence: minConf([ea && ea.rec, la && la.rec]) }),
+  };
+});
+const ledgerPairs = (pred = () => true) => each('siaya-fiscal-ledger.json', '/discrepancies', pred).map(([d, ptr]) => {
+  const oa = obsAt('siaya-fiscal-ledger.json', '/observations', d.claim_a.observation_id);
+  const ob = obsAt('siaya-fiscal-ledger.json', '/observations', d.claim_b.observation_id);
+  return {
+    label: L.measures[d.indicator_id] ? L.measures[d.indicator_id].label : d.indicator_id,
+    period: d.period,
+    a: fig('siaya-fiscal-ledger.json', `${ptr}/claim_a/value_ksh_m`, { unit: 'KSh million', period: d.period, source: d.source_a.source_id, ...fromObs(oa), page: d.source_a.pdf_page ?? (oa && oa.rec.pdf_page) }),
+    b: fig('siaya-fiscal-ledger.json', `${ptr}/claim_b/value_ksh_m`, { unit: 'KSh million', period: d.period, source: d.source_b.source_id, ...fromObs(ob), page: d.source_b.pdf_page ?? (ob && ob.rec.pdf_page) }),
+    diff: fig('siaya-fiscal-ledger.json', `${ptr}/difference/pct_of_smaller`, { unit: '% of the smaller value', period: d.period, source: d.source_b.source_id, page: d.source_b.pdf_page, confidence: minConf([oa && oa.rec, ob && ob.rec]) }),
+    note: (d.possible_basis_mismatch || []).join(' '),
+  };
+});
 
 // Gap lists, kept as each file words them.
 const GAPS = {
@@ -128,10 +167,13 @@ const gapsOf = (files) => files.filter((f) => GAPS[f]).flatMap((f) => GAPS[f]().
 // Project rows: name, sector, status and its source; no contractor field is read.
 const projectRows = (pred) => PROJ.projects.map((p, i) => [p, i]).filter(([p]) => pred(p)).map(([p, i]) => {
   const budget = p.amounts.map((a, j) => [a, j]).filter(([a]) => /budget|contract_sum|estimate/.test(a.kind)).pop();
+  // D9: the grade of the evidence entry for the same document and page.
+  const evConf = (doc, page) => { const e = (p.evidence || []).find((x) => x.doc_id === doc && x.page === page) || (p.evidence || []).find((x) => x.doc_id === doc); return e ? e.confidence : null; };
+  const ss = p.status_source || {};
   return [
     p.id, p.name, words(p.sector),
-    fig('siaya-projects.json', P('projects', i, 'status'), { label: 'Status', source: p.status_source && p.status_source.doc_id, page: p.status_source && p.status_source.page, period: p.last_evidence_date, confidence: null }),
-    budget ? fig('siaya-projects.json', P('projects', i, 'amounts', budget[1], 'value'), { rec: budget[0], label: words(budget[0].kind), unit: budget[0].unit, period: fyLabel(budget[0].fy), source: budget[0].doc_id, page: budget[0].page, confidence: null }) : 'None held',
+    fig('siaya-projects.json', P('projects', i, 'status'), { label: 'Status', source: ss.doc_id, page: ss.page, period: p.last_evidence_date, confidence: evConf(ss.doc_id, ss.page) }),
+    budget ? fig('siaya-projects.json', P('projects', i, 'amounts', budget[1], 'value'), { rec: budget[0], label: words(budget[0].kind), unit: budget[0].unit, period: fyLabel(budget[0].fy), source: budget[0].doc_id, page: budget[0].page, confidence: evConf(budget[0].doc_id, budget[0].page) }) : 'None held',
   ];
 });
 const PROJECT_COLS = ['ID', 'Project (as printed)', 'Sector', 'Status (evidence)', 'Latest budget or contract amount'];
@@ -159,7 +201,7 @@ function reportA() {
   const hazards = each('siaya-climate.json', '/observations', (o) => /pcra-ward-(flood|drought)/.test(o.series));
   const sum = PROG.summary;
   return [
-    { id: 'summary', title: 'Executive summary', findings: [
+    { id: 'summary', title: 'Executive summary', topics: topics('economy', 'ledger', 'audits', 'programmes'), findings: [
       { type: 'list', items: [
         ['Population at the 2019 census: ', census2019, ' (KNBS, as reproduced in the county plan). Projections are listed separately and are not census counts.'],
         ['Gross County Product in 2024 at current prices: ', gcp24, ' (KNBS GCP 2025; KNBS marks 2024 provisional).'],
@@ -170,9 +212,8 @@ function reportA() {
       ] },
     ], interpretation: [
       'The documents held describe a county whose budget is financed mostly by national transfers, with a large and disputed pending-bills stock and repeated audit findings. Service indicators come from surveys and plans of different vintages, so they show direction more reliably than levels.',
-      'Every figure in this compendium is provisional until an editor reviews it against the page image. Where documents disagree, all values are shown and none is chosen.',
     ] },
-    { id: 'demography', title: 'Demographics and economy', findings: [
+    { id: 'demography', title: 'Demographics and economy', topics: topics('people', 'wards'), findings: [
       { type: 'figs', caption: 'Population: census counts and official projections (projections are not counts)', rows: pop.map((f) => ({ f })) },
       { type: 'chart', kind: 'line', title: 'Gross County Product, KSh million, by price basis (KNBS GCP 2025)', unit: 'KSh million', labels: gcpYears,
         series: [{ name: 'Current prices', figs: gcpS('GCP2025', 'current') }, { name: 'Constant 2016 prices', figs: gcpS('GCP2025', 'constant_2016') }] },
@@ -181,7 +222,7 @@ function reportA() {
     ], interpretation: [
       'KNBS revises earlier years in each edition; the two editions are kept side by side and the later one is used only where a single series is needed. A share of county GVA is not a share of national GDP.',
     ] },
-    { id: 'finance', title: 'Public finance', findings: [
+    { id: 'finance', title: 'Public finance', topics: topics('analysis', 'ledger'), findings: [
       { type: 'chart', kind: 'column', title: 'Approved budget and total expenditure, KSh million (Controller of Budget reports)', unit: 'KSh million', labels: FYS.map(fyLabel),
         series: [{ name: 'Approved budget', figs: latestBudget }, { name: 'Total expenditure', figs: latestSpend }] },
       { type: 'chart', kind: 'line', title: 'Own-source revenue and closing pending bills, KSh million (Controller of Budget reports)', unit: 'KSh million', labels: FYS.map(fyLabel),
@@ -190,46 +231,53 @@ function reportA() {
     ], interpretation: [
       'Spending has stayed below the approved budget in every year held. Own-source revenue remains small beside the budget. The pending-bills stock depends on which document and which date is used.',
     ] },
-    { id: 'health', title: 'Health', findings: [
+    { id: 'health', title: 'Health', topics: topics('health'), findings: [
       { type: 'figs', caption: 'Household survey indicators (KDHS 2014 and 2022): sample estimates without confidence intervals', rows: kdhs.map(([o, p]) => ({ f: healthFig(o, p) })) },
       { type: 'p', text: 'Disease burden, staffing, community health units and conflicting HIV estimates are in Report C.' },
     ], interpretation: ['Survey indicators for maternal care improved between the two surveys. They are samples, so small changes should not be over-read.'] },
-    { id: 'education', title: 'Education', findings: [
+    { id: 'education', title: 'Education', topics: topics('education'), findings: [
       { type: 'figs', caption: 'Enrolment and teachers (Ministry of Education booklets, KNBS abstracts and county plan)', rows: each('siaya-education.json', '/observations', (o) => /^(primary_enrolment|secondary_enrolment|pre_primary_enrolment|gross_enrolment_rate|net_enrolment_rate|pupil_teacher_ratio)$/.test(o.indicator) && (!o.sex || o.sex === 'total')).map(([o, p]) => ({ f: eduFig(o, p) })) },
       { type: 'conflicts', caption: 'Education: inconsistencies kept side by side', groups: eduConflicts() },
     ], interpretation: ['Pre-primary education is devolved to the county; primary and secondary are national functions, so county budgets explain only the pre-primary and vocational figures.'] },
-    { id: 'agriculture', title: 'Agriculture and fisheries', findings: [
+    { id: 'agriculture', title: 'Agriculture and fisheries', topics: topics('agriculture'), findings: [
       { type: 'figs', caption: 'Crop production, fish landings and aquaculture as printed', rows: each('siaya-agriculture.json', '/observations', (o) => /^(production|fish_landed_quantity|aquaculture_quantity|fish_production)$/.test(o.indicator)).map(([o, p]) => ({ f: agriFig(o, p) })) },
       { type: 'conflicts', caption: 'Agriculture: conflicting values', groups: agriConflicts() },
     ], interpretation: ['Production figures come from two sources ten years apart with different units; they are not a trend.'] },
-    { id: 'climate', title: 'Climate, water and environment', findings: [
+    { id: 'climate', title: 'Climate, water and environment', topics: topics('climate'), findings: [
       { type: 'figs', caption: 'Water and sanitation coverage (each figure uses its own definition)', rows: each('siaya-climate.json', '/observations', (o) => o.kind === 'coverage').map(([o, p]) => ({ f: climFig(o, p) })) },
       { type: 'conflicts', caption: 'Water access: figures with different definitions', groups: climConflicts() },
     ], interpretation: ['Water access ranges widely because the documents measure different things (households, population, utility service areas).'] },
-    { id: 'infrastructure', title: 'Infrastructure and project delivery', findings: [
+    { id: 'infrastructure', title: 'Infrastructure and project delivery', topics: topics('projects'), findings: [
       { type: 'records', caption: 'Projects with an Auditor-General finding (contractors are not named)', columns: PROJECT_COLS, rows: projectRows((p) => p.audit_finding_ids.length) },
     ], interpretation: ['Status is the latest status any document records; only one project has independent verification of completion.'] },
-    { id: 'governance', title: 'Governance and audit', findings: [
+    { id: 'governance', title: 'Governance and audit', topics: topics('governance', 'audits'), findings: [
       { type: 'figs', caption: 'County Budget Transparency Survey (IBP Kenya)', rows: GOV.ibp_cbts.editions.flatMap((e, i) => e.items.map((it, j) => [it, j]).filter(([, j]) => typeof held('siaya-governance.json', P('ibp_cbts', 'editions', i, 'items', j, 'value')) === 'number').map(([it, j]) => ({ f: fig('siaya-governance.json', P('ibp_cbts', 'editions', i, 'items', j, 'value'), { label: `${it.measure} (${it.edition})`, period: String(it.year), confidence: it.confidence }) }))) },
       { type: 'figs', caption: 'Auditor-General opinions', rows: opinions },
     ], interpretation: ['Transparency scores are document-availability scores, not measures of budget quality. Audit opinions describe the accounts, not individuals.'] },
-    { id: 'partners', title: 'NGO, CSO and donor ecosystem', findings: [
+    { id: 'partners', title: 'NGO, CSO and donor ecosystem', topics: topics('programmes'), findings: [
       { type: 'figs', caption: 'Programme records by geography and evidence type', rows: [
         ...Object.keys(sum.by_geography_class).map((k) => ({ f: progFig(P('summary', 'by_geography_class', k), `Records: ${words(k)}`, { unit: 'records' }) })),
         ...Object.keys(sum.by_evidence_type).map((k) => ({ f: progFig(P('summary', 'by_evidence_type', k), `Records: ${words(k)}`, { unit: 'records' }) })),
       ] },
       { type: 'p', text: 'Report E lists every programme record. Multi-county and national totals are never attributed to Siaya.' },
     ], interpretation: ['Most programme records are self-reported by the implementer; few have an independent evaluation.'] },
-    { id: 'wards', title: 'Ward and sub-county disparities', findings: [
+    { id: 'wards', title: 'Ward and sub-county disparities', topics: topics('wards', 'health', 'climate'), findings: [
       { type: 'figs', caption: 'People per health worker by sub-county, 2022 (county plan)', rows: healthRows((o) => /^population-per-/.test(o.measure)) },
       { type: 'records', caption: 'Wards where the 2023 climate risk assessment prints a flood or drought hotspot', columns: ['Ward', 'Hazard listed', 'Hotspots as printed'],
         rows: hazards.map(([o, p]) => [o.ward_register_name || o.area_as_printed, o.measure, fig('siaya-climate.json', `${p}/hotspots_as_printed`, { label: o.measure, period: o.period, confidence: o.confidence })]) },
     ], interpretation: ['Staffing ratios differ several-fold between sub-counties. Hazard lists are ward participation outputs, not measured risk.'] },
-    { id: 'opportunities', title: 'Investment opportunities', findings: [
+    { id: 'opportunities', title: 'Investment opportunities', topics: topics('economy', 'agriculture'), findings: [
       { type: 'p', text: 'Report D sets out the evidence on sectors, service gaps and infrastructure constraints. No returns, market sizes or project financials are estimated because none is published in the documents held.' },
     ], interpretation: ['Sectors with a large share of county output and visible service gaps are candidates for further study, not investment recommendations.'] },
   ];
 }
+
+// Reader labels for the Controller of Budget 47-county table fields (counties-cob.json meta.fields words them tersely).
+const COB_LABEL = {
+  approved_budget_total: 'budget estimates total (recurrent and development)', expenditure_total: 'total expenditure',
+  total_osr_actual: 'own-source revenue, actual (including facility improvement fund and appropriations-in-aid)',
+  overall_absorption_pct: 'share of budget spent (absorption rate), overall, as printed', pb_grand_total: 'pending bills at year end, County Executive and County Assembly',
+};
 
 // ---------- Report B: Fiscal Accountability ----------
 function reportB() {
@@ -248,59 +296,68 @@ function reportB() {
           confidence: rec.read === 'ocr' ? `OCR${rec.ocr_conf != null ? ` (score ${rec.ocr_conf})` : ''}` : (rec.read || 'not graded'),
         });
       };
-      const out = [{ f: mk(P('years', yi, 'counties', ci), `Siaya: ${COB.meta.fields[k] || words(k)}`) }];
-      if (y.total_row && y.total_row[k] && y.total_row[k].value !== undefined) out.push({ f: mk(P('years', yi, 'total_row'), `All 47 counties: ${COB.meta.fields[k] || words(k)}`) });
+      const out = [{ f: mk(P('years', yi, 'counties', ci), `Siaya: ${COB_LABEL[k]}`) }];
+      if (y.total_row && y.total_row[k] && y.total_row[k].value !== undefined) out.push({ f: mk(P('years', yi, 'total_row'), `All 47 counties: ${COB_LABEL[k]}`) });
       return out;
     });
   });
   const findingCats = Object.entries(AUD.recurrence_by_category.county_executive || {});
+  // D9: a cross-tab count cites the pages of the findings it counts (the findings carry no grade of their own; the
+  // report's own grade is the audit opinion's, so the cell says "count, not graded").
+  const auditCell = (cat, fy) => {
+    const doc = (AUD.documents.find((d) => d.fy === fy && d.entity === 'county_executive') || {}).doc_id;
+    const fs = AUD.findings.filter((f) => f.category === cat && f.fy === fy && f.entity !== 'county_assembly' && (!doc || f.doc_id === doc));
+    const pages = [...new Set(fs.map((f) => f.page).filter((x) => x != null))].sort((a, b) => a - b);
+    const op = AUD.opinions.find((o) => o.fy === fy && o.doc_id === doc);
+    return { source: doc || (fs[0] && fs[0].doc_id), page: pages.length ? `PDF ${pages.length > 1 ? 'pp.' : 'p.'} ${pages.join(', ')}` : null, confidence: op && typeof op.confidence === 'number' ? op.confidence : 'count compiled by Takwimu' };
+  };
   return [
-    { id: 'summary', title: 'Summary', findings: [
+    { id: 'summary', title: 'Summary', topics: topics('analysis', 'ledger', 'audits'), findings: [
       { type: 'list', items: [
         ['Approved budget, FY 2024/25 (Controller of Budget): ', series('budget_total')[FYS.indexOf('2024/25')], '.'],
         ['Total expenditure, FY 2024/25 (Controller of Budget): ', series('expenditure_total')[FYS.indexOf('2024/25')], '.'],
         ['Open discrepancy cases in the ledger are listed in the section “Open discrepancy cases”; each pair of values is shown side by side and none has been resolved.'],
       ] },
-    ], interpretation: ['Findings in this report are the values the documents print. Interpretation paragraphs are Takwimu’s reading and are not findings. This report makes no recommendations about named individuals.'] },
-    { id: 'trends', title: 'Annual budget and expenditure', findings: [
+    ], interpretation: ['This report makes no recommendations about named individuals.'] },
+    { id: 'trends', title: 'Annual budget and expenditure', topics: topics('ledger', 'analysis'), findings: [
       { type: 'chart', kind: 'column', title: 'Budget and expenditure, KSh million (Controller of Budget values)', unit: 'KSh million', labels: FYS.map(fyLabel),
         series: [{ name: 'Approved budget', figs: series('budget_total') }, { name: 'Total expenditure', figs: series('expenditure_total') }, { name: 'Development expenditure', figs: series('expenditure_development') }] },
       ...['budget_total', 'budget_recurrent', 'budget_development', 'expenditure_total', 'expenditure_recurrent', 'expenditure_development', 'wage_bill']
         .map((m) => ({ type: 'figs', caption: `${L.measures[m].label}: every source value held`, rows: ledgerRows(m) })),
     ], interpretation: ['Budget values differ between the Controller of Budget, county documents and the Senate because they use different budget versions and scopes. The version is shown on each row.'] },
-    { id: 'execution', title: 'Spending execution', findings: [
-      { type: 'figs', caption: 'Execution (absorption) rates calculated by Takwimu from one document and one budget version', rows: execRows },
-    ], interpretation: ['Development execution is consistently lower than recurrent execution in the documents held.'] },
-    { id: 'osr', title: 'Own-source revenue reconciliation', findings: [
+    { id: 'execution', title: 'Share of budget spent (absorption rate)', topics: topics('analysis'), findings: [
+      { type: 'figs', caption: 'Share of budget spent (absorption rate), calculated by Takwimu from one document and one budget version', rows: execRows },
+    ], interpretation: ['The share of the development budget spent is consistently lower than the share of the recurrent budget spent in the documents held.'] },
+    { id: 'osr', title: 'Own-source revenue reconciliation', topics: topics('ledger'), findings: [
       { type: 'chart', kind: 'line', title: 'Own-source revenue: target and actual, KSh million (Controller of Budget values)', unit: 'KSh million', labels: FYS.map(fyLabel),
         series: [{ name: 'Target', figs: series('osr_total_target') }, { name: 'Actual', figs: series('osr_total_actual') }] },
       ...['osr_total_target', 'osr_total_actual', 'osr_ordinary_actual', 'osr_fif_aia_actual'].map((m) => ({ type: 'figs', caption: `${L.measures[m].label}: every source value held`, rows: ledgerRows(m) })),
-    ], interpretation: ['Whether facility improvement fund and appropriations-in-aid are counted explains much of the spread between OSR totals for the same year.'] },
-    { id: 'transfers', title: 'Transfers', findings: [
+    ], interpretation: ['Whether facility improvement fund and appropriations-in-aid are counted explains much of the spread between own-source revenue totals for the same year.'] },
+    { id: 'transfers', title: 'Transfers', topics: topics('ledger', 'analysis'), findings: [
       ...['equitable_share_budgeted', 'equitable_share_received', 'conditional_grants_budgeted', 'conditional_grants_received'].map((m) => ({ type: 'figs', caption: `${L.measures[m].label}: every source value held`, rows: ledgerRows(m) })),
       { type: 'figs', caption: 'Transfer dependency calculated by Takwimu', rows: transferRows },
     ], interpretation: ['National transfers finance most of the county budget in every year held.'] },
-    { id: 'pending', title: 'Pending bills', findings: [
+    { id: 'pending', title: 'Pending bills', topics: topics('analysis'), findings: [
       { type: 'figs', caption: `${L.measures.pending_bills_close.label}: every source value held`, rows: ledgerRows('pending_bills_close') },
       { type: 'figs', caption: 'Pending-bill changes and roll-forward residuals calculated by Takwimu', rows: pendingRows },
     ], interpretation: ['Pending-bill stocks for the same date differ by document and by whether the County Assembly is included; a roll-forward residual means the published figures do not reconcile.'] },
-    { id: 'audit', title: 'Audit opinions and issues', findings: [
+    { id: 'audit', title: 'Audit opinions and issues', topics: topics('audits'), findings: [
       { type: 'figs', caption: 'Auditor-General opinions', rows: auditOpinionRows() },
       { type: 'records', caption: 'Audit findings by category and year, County Executive (count of findings recorded)', columns: ['Category', ...AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort().map(fyLabel)],
         rows: findingCats.map(([cat]) => {
           const yrs = AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort();
           return [cap(cat), ...yrs.map((fy) => (AUD.recurrence_by_category.county_executive[cat][fy] !== undefined
-            ? fig('siaya-audits.json', P('recurrence_by_category', 'county_executive', cat, fy), { label: `${cap(cat)} findings`, period: fyLabel(fy), unit: 'findings', source: (AUD.documents.find((d) => d.fy === fy && d.entity === 'county_executive') || {}).doc_id, confidence: null, rec: {} })
+            ? fig('siaya-audits.json', P('recurrence_by_category', 'county_executive', cat, fy), { label: `${cap(cat)} findings`, period: fyLabel(fy), unit: 'findings', ...auditCell(cat, fy), rec: {} })
             : '–'))];
         }) },
     ], interpretation: ['Findings are the auditor’s findings about the accounts, not legal conclusions about any person.'] },
-    { id: 'projects', title: 'Project evidence', findings: [
+    { id: 'projects', title: 'Project evidence', topics: topics('projects'), findings: [
       { type: 'records', caption: 'Projects with an Auditor-General finding (contractors are not named)', columns: PROJECT_COLS, rows: projectRows((p) => p.audit_finding_ids.length) },
     ], interpretation: ['A project marked completed by the county is not independently verified unless an audit or inspection says so.'] },
-    { id: 'comparison', title: 'Comparison with all 47 counties', findings: [
+    { id: 'comparison', title: 'Comparison with all 47 counties', topics: topics('compare'), findings: [
       { type: 'figs', caption: 'Siaya beside the 47-county total (Controller of Budget tables, read by OCR)', rows: siayaCob },
     ], interpretation: ['These values were read by OCR from scanned tables and can differ from the ledger values for the same year.'] },
-    { id: 'discrepancies', title: 'Open discrepancy cases', findings: [
+    { id: 'discrepancies', title: 'Open discrepancy cases', topics: topics('ledger'), findings: [
       { type: 'pairs', caption: 'Pairs of values for the same measure and year that differ by more than the ledger threshold', aLabel: 'Value A', bLabel: 'Value B', rows: ledgerPairs((d) => d.status === 'open') },
     ], interpretation: ['None of these cases has been reviewed. Both values remain in the record until a reviewer decides, with reasons.'] },
     { id: 'scenarios', title: 'Scenario sensitivities', findings: [
@@ -322,37 +379,37 @@ function reportC() {
   const kdhsFig = (i, k) => fig('history.json', P('health', 'indicators', i, k), { label: `${kdhs[i].label} (${k === 'v2014' ? 'KDHS 2014' : 'KDHS 2022'})`, period: k === 'v2014' ? '2014' : '2022', source: k === 'v2014' ? 'KDHS-2014' : 'KDHS-2022-KIR', unit: kdhs[i].unit });
   const health = PROG.programmes.map((p, i) => [p, i]).filter(([p]) => p.sector === 'health');
   const sections = [
-    { id: 'summary', title: 'Summary', findings: [
+    { id: 'summary', title: 'Summary', topics: topics('health'), findings: [
       { type: 'chart', kind: 'column', title: 'Maternal and child health indicators, KDHS 2014 and 2022 (per cent)', unit: '%', labels: kdhs.map((k) => k.label),
         series: [{ name: 'KDHS 2014', figs: kdhs.map((k, i) => (held('history.json', P('health', 'indicators', i, 'v2014')) != null ? kdhsFig(i, 'v2014') : null)) }, { name: 'KDHS 2022', figs: kdhs.map((k, i) => (held('history.json', P('health', 'indicators', i, 'v2022')) != null ? kdhsFig(i, 'v2022') : null)) }] },
     ], interpretation: ['Survey indicators moved in the expected direction between the two surveys. Routine annual health data were not retrievable, so year-to-year trends cannot be shown.'] },
-    { id: 'disease', title: 'Disease trends', findings: [
+    { id: 'disease', title: 'Disease trends', topics: topics('health'), findings: [
       { type: 'figs', caption: 'HIV: prevalence, incidence, new infections and treatment (model vintages are not comparable)', rows: grp(/^(hiv|art)-/) },
       { type: 'figs', caption: 'Tuberculosis', rows: grp(/^tb-/) },
       { type: 'figs', caption: 'Malaria and prevention', rows: grp(/^(malaria|itn|iptp)/) },
     ], interpretation: ['HIV estimates come from different model vintages and age bands; national guidance says they should not be joined into a trend line.'] },
-    { id: 'access', title: 'Facility access and maternal and child care', findings: [
+    { id: 'access', title: 'Facility access and maternal and child care', topics: topics('health'), findings: [
       { type: 'figs', caption: 'Antenatal care, delivery and immunisation', rows: grp(/^(skilled|facility|immunisation)/) },
       { type: 'figs', caption: 'Nutrition', rows: grp(/^stunting/) },
     ], interpretation: ['Facility delivery in surveys and in county routine data are different measures; the survey figure is shown.'] },
-    { id: 'staffing', title: 'Staffing', findings: [
+    { id: 'staffing', title: 'Staffing', topics: topics('health', 'wards'), findings: [
       { type: 'chart', kind: 'column', title: 'People per health worker by sub-county, 2022 (county plan)', unit: 'people per worker', labels: subs, series: staffSeries },
     ], interpretation: ['Doctor coverage varies most between sub-counties; nurses are more evenly spread.'] },
-    { id: 'chu', title: 'Community health units', findings: [
+    { id: 'chu', title: 'Community health units', topics: topics('health'), findings: [
       { type: 'figs', caption: 'Community health units and committee functionality (baseline assessment, September 2026)', rows: grp(/^(chu|chc)-/) },
     ], interpretation: ['A small share of committees assessed were fully functional at baseline.'] },
-    { id: 'financing', title: 'Financing', findings: [
+    { id: 'financing', title: 'Financing', topics: topics('analysis', 'health'), findings: [
       { type: 'figs', caption: 'Budget-to-service context calculated by Takwimu (context, not causation)', rows: analysisRows((r) => r.family === 'A6') },
       { type: 'p', text: 'Health department budget and expenditure by year are not in the fiscal ledger; see data gaps.' },
     ], interpretation: [] },
-    { id: 'programmes', title: 'NGO and donor health programmes', findings: [
+    { id: 'programmes', title: 'NGO and donor health programmes', topics: topics('programmes'), findings: [
       { type: 'records', caption: 'Health programme records (evidence type shown; pooled totals are not Siaya figures)', columns: ['ID', 'Programme', 'Implementer', 'Funder', 'Geography', 'Evidence type'],
         rows: health.map(([p, i]) => [p.id, p.title, p.implementing_organisation, p.funder, words(p.geography.class), fig('siaya-programmes.json', P('programmes', i, 'evidence_type'), { label: 'Evidence type', source: p.sources[0] && p.sources[0].source_id, page: p.sources[0] && p.sources[0].page, period: p.period && `${p.period.start || '?'} to ${p.period.end || '?'}`, confidence: `tier ${p.tier}` })]) },
     ], interpretation: ['Self-reported results are the implementer’s own account; only independently evaluated outcomes are treated as evaluated.'] },
-    { id: 'equity', title: 'Geographic equity and small cells', findings: [
+    { id: 'equity', title: 'Geographic equity and small cells', topics: topics('health', 'wards'), findings: [
       { type: 'p', text: '' }, // set below from the figures of this report
     ], interpretation: [] },
-    { id: 'conflicts', title: 'Conflicting values', findings: [{ type: 'conflicts', caption: 'Health: values that disagree, shown together', groups: healthConflicts() }], interpretation: [] },
+    { id: 'conflicts', title: 'Conflicting values', topics: topics('health'), findings: [{ type: 'conflicts', caption: 'Health: values that disagree, shown together', groups: healthConflicts() }], interpretation: [] },
   ];
   sections.find((x) => x.id === 'equity').findings[0].text = smallCountSentence(figsOf(sections));
   return sections;
@@ -363,32 +420,32 @@ function reportD() {
   const latest = (vintage, year) => each('siaya-economy.json', '/observations', (o) => o.indicator === 'gva_by_activity' && o.vintage === vintage && o.period === year).map(([o, p]) => ({ f: econFig(o, p) }));
   const constraintStatuses = /^(delayed|suspended|cancelled|unknown)$/;
   return [
-    { id: 'scope', title: 'Scope and limits', findings: [
+    { id: 'scope', title: 'Scope and limits', topics: topics('economy'), findings: [
       { type: 'p', text: 'This report lists only what the documents held say about sectors, service gaps and infrastructure constraints. It does not estimate market sizes, returns, costs or project financials: none of these is published in the documents held, and inventing them would mislead. Where evidence is absent, the report says so.' },
     ], interpretation: [] },
-    { id: 'sectors', title: 'Economic sectors (Gross County Product)', findings: [
+    { id: 'sectors', title: 'Economic sectors (Gross County Product)', topics: topics('economy'), findings: [
       { type: 'figs', caption: 'Gross value added by activity, 2024, current prices (KNBS GCP 2025; 2024 provisional)', rows: latest('GCP2025', '2024') },
       { type: 'figs', caption: 'Growth', rows: each('siaya-economy.json', '/observations', (o) => o.indicator === 'real_growth_avg').map(([o, p]) => ({ f: econFig(o, p) })) },
       { type: 'pairs', caption: 'Revisions to gross value added by activity between editions', aLabel: 'GCP 2024 edition', bLabel: 'GCP 2025 edition', rows: econRevisions((r) => r.indicator === 'gva_by_activity' && Math.abs(held('siaya-economy.json', `/revisions/${ECON.revisions.indexOf(r)}/difference_pct`) || 0) >= 5) },
     ], interpretation: [`${largestActivity('GCP2025', '2024')} Sector size alone says nothing about profitability or investability.`] },
-    { id: 'value-chains', title: 'Value chains: agriculture, livestock and fisheries', findings: [
+    { id: 'value-chains', title: 'Value chains: agriculture, livestock and fisheries', topics: topics('agriculture'), findings: [
       { type: 'figs', caption: 'Production, area and value as printed (two sources, different years and units)', rows: each('siaya-agriculture.json', '/observations', (o) => o.status === 'observed').map(([o, p]) => ({ f: agriFig(o, p) })) },
       { type: 'figs', caption: 'County plan targets (plans, not outcomes)', rows: each('siaya-agriculture.json', '/observations', (o) => o.status === 'target').map(([o, p]) => ({ f: agriFig(o, p) })) },
       { type: 'conflicts', caption: 'Agriculture: conflicting values', groups: agriConflicts() },
     ], interpretation: ['Yields, prices and margins are not published in the sources held, so no value chain can be ranked by return.'] },
-    { id: 'service-gaps', title: 'Service gaps', findings: [
+    { id: 'service-gaps', title: 'Service gaps', topics: topics('climate', 'health', 'education'), findings: [
       { type: 'figs', caption: 'Water and sanitation coverage', rows: each('siaya-climate.json', '/observations', (o) => o.kind === 'coverage').map(([o, p]) => ({ f: climFig(o, p) })) },
       { type: 'figs', caption: 'Health staffing by sub-county, 2022', rows: healthRows((o) => /^population-per-/.test(o.measure)) },
       { type: 'figs', caption: 'Pre-primary and vocational training indicators (devolved functions)', rows: each('siaya-education.json', '/observations', (o) => o.function === 'devolved' && /enrolment|teachers_required|pupil_teacher|centres/.test(o.indicator) && (!o.sex || o.sex === 'total')).map(([o, p]) => ({ f: eduFig(o, p) })) },
     ], interpretation: ['Among the indicators held, doctor coverage varies most between sub-counties, and the water-access figures depend heavily on which definition a document uses.'] },
-    { id: 'infrastructure', title: 'Infrastructure constraints', findings: [
+    { id: 'infrastructure', title: 'Infrastructure constraints', topics: topics('projects', 'climate'), findings: [
       { type: 'records', caption: 'Projects recorded as delayed, suspended, cancelled or of unknown status (contractors are not named)', columns: PROJECT_COLS, rows: projectRows((p) => constraintStatuses.test(p.status)) },
       { type: 'figs', caption: 'Climate hazard exposure calculated by Takwimu', rows: analysisRows((r) => r.family === 'A7') },
     ], interpretation: ['Stalled public works and ward-level flood and drought hotspots are constraints any investment would have to plan around.'] },
     { id: 'not-assessed', title: 'Investability screening, market size and returns', findings: [
       { type: 'p', text: 'Not assessed. The documents held publish no market sizes, prices, costs, returns or project financial models for Siaya. An investability screen would need them. This section is left empty on purpose rather than filled with assumptions.' },
     ], interpretation: [] },
-    { id: 'risks', title: 'Risk register (evidence risks)', findings: [
+    { id: 'risks', title: 'Risk register (evidence risks)', topics: topics('climate'), findings: [
       { type: 'p', text: 'The risks listed here are risks to the evidence itself: conflicting values and missing data that any decision based on this report would carry. They are taken from the data gaps and conflicts recorded in the data files; no commercial risk is rated.' },
       { type: 'conflicts', caption: 'Water access: figures with different definitions', groups: climConflicts() },
     ], interpretation: [] },
@@ -409,9 +466,14 @@ function reportE() {
   const evFig = (p, i) => fig('siaya-programmes.json', P('programmes', i, 'evidence_type'), { label: 'Evidence type', source: p.sources[0] && p.sources[0].source_id, page: p.sources[0] && p.sources[0].page, period: p.period && `${p.period.start || '?'} to ${p.period.end || '?'}`, confidence: `tier ${p.tier}` });
   // A total that sums a programme record withdrawn in editorial review is withheld (the masked total is null), as on
   // the programmes page.
+  const grantSource = (g) => {
+    const rc = (PROG.summary.reconciliation || []).find((x) => x.period === g.period && x.kind === g.kind);
+    return rc && rc.source ? { source: rc.source.source_id, page: rc.source.page } : { source: null, page: null };
+  };
   const grantHeld = (g) => g.record_ids.map((id) => badge('siaya-programmes', id)).find((b) => b && b.hide) || null;
   const grants = PROG.summary.siaya_development_partner_grants_kes.map((g, i) => ({ f: progFig(P('summary', 'siaya_development_partner_grants_kes', i, 'total'), `Development partner grants to the county, ${g.kind}`, {
-    unit: g.currency, period: g.period, source: 'GOV-03', note: `Sum of ${g.record_ids.length} Siaya-specific records (${g.record_ids.join(', ')})`,
+    // D10: cite the reconciliation record for the same period and kind (its own document and page), not GOV-03 for all.
+    unit: g.currency, period: g.period, ...grantSource(g), notes: [`Sum of ${g.record_ids.length} Siaya-specific records (${g.record_ids.join(', ')})`],
     review: grantHeld(g) ? { ...grantHeld(g), key: `siaya-programmes:summary-grants-${i}`, reason: `Withheld: record ${grantHeld(g).key.split(':')[1]}, which this total sums, was withdrawn after editorial review. ${grantHeld(g).reason}` } : undefined,
   }) }));
   const evals = rows.filter(([p]) => p.evaluation && p.evaluation.by);
@@ -419,7 +481,7 @@ function reportE() {
     fig('siaya-programmes.json', P('programmes', i, 'outputs_outcomes_as_stated', j, 'text'), { label: 'Statement', source: s.source && s.source.source_id, page: s.source && s.source.page, period: p.period && `${p.period.start || '?'} to ${p.period.end || '?'}`, confidence: `tier ${p.tier}` }),
     s.attributable_to_siaya ? 'Yes' : 'No']));
   return [
-    { id: 'summary', title: 'Summary', findings: [
+    { id: 'summary', title: 'Summary', topics: topics('programmes'), findings: [
       { type: 'figs', caption: 'Programme records by geography and evidence type', rows: [
         { f: progFig('/summary/record_count', 'Programme records', { unit: 'records' }) },
         ...Object.keys(PROG.summary.by_geography_class).map((k) => ({ f: progFig(P('summary', 'by_geography_class', k), `Records: ${words(k)}`, { unit: 'records' }) })),
@@ -427,23 +489,23 @@ function reportE() {
       ] },
       { type: 'figs', caption: 'Development partner grants in the county budget (Siaya-specific records only)', rows: grants },
     ], interpretation: ['Pooled multi-county and national amounts are shown on their own records and are never summed into a Siaya total.'] },
-    { id: 'register', title: 'Programme register', findings: [
+    { id: 'register', title: 'Programme register', topics: topics('programmes'), findings: [
       { type: 'records', caption: 'All programme records', columns: ['ID', 'Programme', 'Implementer', 'Funder', 'Sector', 'Geography', 'Evidence type'],
         rows: rows.map(([p, i]) => [p.id, p.title, p.implementing_organisation, p.funder || 'Not stated', words(p.sector), words(p.geography.class), evFig(p, i)]) },
     ], interpretation: [] },
-    { id: 'amounts', title: 'Disclosed amounts', findings: [
+    { id: 'amounts', title: 'Disclosed amounts', topics: topics('programmes'), findings: [
       { type: 'figs', caption: 'Amounts as disclosed (pooled totals labelled; blank or dash printed values are shown as not published)', rows: rows.flatMap(([p, i]) => p.amounts.map((a, j) => ({ f: progAmountFig(p, i, a, j) }))) },
     ], interpretation: [] },
-    { id: 'reach', title: 'Beneficiaries and geographic reach', findings: [
+    { id: 'reach', title: 'Beneficiaries and geographic reach', topics: topics('programmes'), findings: [
       { type: 'figs', caption: 'Beneficiary counts as stated by the source', rows: rows.flatMap(([p, i]) => p.beneficiaries.map((b, j) => ({ f: fig('siaya-programmes.json', P('programmes', i, 'beneficiaries', j, 'value'), { label: `${p.title}: ${b.as_printed || 'beneficiaries'}${b.pooled ? ' (pooled, not a Siaya figure)' : ''}`, unit: b.unit, period: p.period && `${p.period.start || '?'} to ${p.period.end || '?'}`, source: b.source && b.source.source_id, page: b.source && b.source.page, confidence: `tier ${p.tier}`, suppressSmall: true }) }))) },
     ], interpretation: [] },
-    { id: 'evaluations', title: 'Evaluations', findings: [
+    { id: 'evaluations', title: 'Evaluations', topics: topics('programmes'), findings: [
       { type: 'records', caption: 'Independent evaluations (rating as published; Siaya results only where disaggregated)', columns: ['ID', 'Programme', 'Evaluated by', 'Rating as published', 'Scope', 'Siaya disaggregated'],
         rows: evals.map(([p, i]) => [p.id, p.title, p.evaluation.by, fig('siaya-programmes.json', P('programmes', i, 'evaluation', 'rating_as_published'), { label: 'Rating', period: p.evaluation.date, source: p.evaluation.source && p.evaluation.source.source_id, page: p.evaluation.source && p.evaluation.source.page, confidence: `tier ${p.tier}` }), p.evaluation.scope || 'Not stated', p.evaluation.siaya_disaggregated ? 'Yes' : 'No']) },
       { type: 'records', caption: 'Results stated in independently evaluated records', columns: ['ID', 'Programme', 'Kind', 'Statement as published', 'Siaya-specific'], rows: outcomes('independently_evaluated') },
       { type: 'records', caption: 'Results self-reported by the implementer or publisher (not evaluated)', columns: ['ID', 'Programme', 'Kind', 'Statement as published', 'Siaya-specific'], rows: outcomes('self_reported') },
     ], interpretation: ['Self-reported achievements are the implementer’s own account and are listed apart from independently evaluated outcomes.'] },
-    { id: 'screened', title: 'Documents screened out', findings: [
+    { id: 'screened', title: 'Documents screened out', topics: topics('programmes'), findings: [
       { type: 'records', caption: 'Documents checked and not used, with the reason', columns: ['Source', 'Title', 'Finding'], rows: PROG.screened_out.map((s) => [s.source_id, s.title, s.finding]) },
     ], interpretation: [] },
   ];
@@ -475,6 +537,18 @@ export function figsOf(sections) {
   return out;
 }
 
+// Counts of the review states of the figures printed (the cover states them once; scripts/test-reports.js checks
+// them against the page and the PDF). A figure without a register entry is provisional.
+export function reviewState(figs) {
+  const n = { provisional: 0, approved: 0, disputed: 0, superseded: 0, withdrawn: 0 };
+  figs.forEach((f) => {
+    const s = f.review ? f.review.state : 'review_pending';
+    if (s === 'approved') n.approved += 1; else if (s === 'disputed') n.disputed += 1; else if (s === 'superseded') n.superseded += 1;
+    else if (s === 'rejected') n.withdrawn += 1; else n.provisional += 1;
+  });
+  return n;
+}
+
 export function buildReport(slug) {
   const meta = registry.reports.find((r) => r.slug === slug);
   if (!meta) return null;
@@ -494,6 +568,7 @@ export function buildReport(slug) {
     snapshot: snapshot(meta.inputs),
     draft: figs.some((f) => !f.reviewed),
     unreviewed: figs.filter((f) => !f.reviewed).length,
+    reviewState: reviewState(figs),
   };
 }
 export const SLUGS = registry.reports.map((r) => r.slug);

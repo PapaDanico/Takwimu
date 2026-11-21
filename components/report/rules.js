@@ -9,7 +9,7 @@ function conflictNote(figs) {
   const shown = bs.length - out;
   const parts = [];
   if (out) parts.push(`${out} of these values ${out === 1 ? 'was' : 'were'} withdrawn after editorial review.`);
-  if (shown) parts.push(approved === shown ? `The ${shown === 1 ? 'value shown is' : 'values shown are'} approved;` : approved ? `${approved} of the values shown ${approved === 1 ? 'is' : 'are'} approved and the rest are provisional: awaiting editorial review;` : `All values shown are provisional: awaiting editorial review;`);
+  if (shown) parts.push(approved === shown ? `The ${shown === 1 ? 'value shown is' : 'values shown are'} approved;` : approved ? `${approved} of the values shown ${approved === 1 ? 'is' : 'are'} approved and the rest are provisional;` : `All values shown are provisional (see the review notice on the cover);`);
   if (shown) parts.push('none has been chosen over another.');
   return parts.join(' ');
 }

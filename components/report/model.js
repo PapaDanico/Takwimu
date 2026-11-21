@@ -91,6 +91,13 @@ export function fig(file, ptr, o = {}) {
     printed: pick(o.printed, rec.printed_page, rec.page_printed, null),
     confidence: pick(o.confidence, rec.confidence, null),
     note: o.note || null,
+    // Notes as separate parts, so a table can state a part shared by every row once and footnote the rest.
+    notes: (o.notes || (o.note ? [o.note] : [])).filter(Boolean),
+    // The source observation the value was taken from, when it is not the record that holds the value (a pair of
+    // claims, a revision, a cross-tab cell): scripts/test-reports.js checks its page and grade are carried.
+    obs: o.obs || null,
+    // A value the source itself flags as unclear (value_type "unclear") prints this text instead of the number.
+    display: o.display || null,
     suppress: !!(o.suppressSmall && typeof value === 'number' && value < 10 && /^(persons|people|patients|cases|deaths|children|youth|students|pupils|trainees|women|men|beneficiaries)/i.test(String(pick(o.unit, rec.unit, '')))),
     review: o.review || reviewOf(file, ptr, rec, value),
     reviewed: Boolean((o.review || reviewOf(file, ptr, rec, value) || {}).approved),
