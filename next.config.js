@@ -18,7 +18,8 @@ class SortChunkIds {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  distDir: 'dist',
+  // TAKWIMU_DIST: only scripts/test-reviews.js --synthetic sets it, to build a throwaway copy with synthetic rejections.
+  distDir: process.env.TAKWIMU_DIST || 'dist',
   images: { unoptimized: true },
   trailingSlash: true,
   webpack(config) {

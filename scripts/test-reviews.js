@@ -193,6 +193,126 @@ if (dist) {
   }
 }
 
+// ---- renderers not yet wired to the register ----
+// history.json values are also drawn by pages that read the file directly (the Siaya hub, profile, insights and
+// others). Until they are wired, a real rejection of a history value must stop the build instead of leaking there.
+const UNWIRED = { history: ['/counties/siaya/', '/profile/', '/method/', '/counties/siaya/brief/', '/data/', '/subcounties/', '/insights/', '/analytics/', '/counties/siaya/pulse/'] };
+Object.entries(UNWIRED).forEach(([d, pages]) => ok(rs.counts(d).rejected === 0, `${d}: a value is rejected, but ${pages.join(', ')} still read data/${d}.json directly; wire them to lib/review-status.js masked() first`));
+
+// ---- synthetic rejection (node scripts/test-reviews.js dist --synthetic) ----
+// Picks, per dataset, values that the built site shows (elements marked data-obs="<dataset>:<id>"), enough to touch
+// every page that shows that dataset; rebuilds the site into dist-synthetic/ with those values rejected in memory
+// (TAKWIMU_SYNTHETIC_REJECTIONS; data/reviews.json is never written); and checks that every page, the dataset
+// downloads, the published data files and history.csv withhold them, and that calculations using them are withheld.
+// The report PDFs are printed from the report pages checked here.
+if (dist && process.argv.includes('--synthetic')) {
+  const { execFileSync } = require('child_process');
+  const dir = path.resolve(dist);
+  const scan = (base) => {
+    const out = {}; // key -> { page -> [{ state, after }] }
+    const walkHtml = (d) => fs.readdirSync(d, { withFileTypes: true }).forEach((e) => {
+      const p = path.join(d, e.name);
+      if (e.isDirectory()) return walkHtml(p);
+      if (!e.name.endsWith('.html')) return;
+      const html = fs.readFileSync(p, 'utf8');
+      const rel = `/${path.relative(base, path.dirname(p)).split(path.sep).join('/')}/`.replace(/^\/\.?\//, '/');
+      for (const m of html.matchAll(/<[a-z]+\b[^>]*\bdata-obs="([^"]+)"[^>]*>/g)) {
+        const st = (m[0].match(/data-obs-state="([^"]+)"/) || [])[1] || '';
+        ((out[m[1]] = out[m[1]] || {})[rel] = out[m[1]][rel] || []).push({ state: st, after: html.slice(m.index + m[0].length, m.index + m[0].length + 400) });
+      }
+    });
+    walkHtml(base);
+    return out;
+  };
+  const before = scan(dir);
+  // Choose: per dataset, a greedy cover of the pages that show it, preferring values shown on many pages.
+  const chosen = [];
+  rs.DATASET_IDS.forEach((d) => {
+    const keys = Object.keys(before).filter((k) => k.startsWith(`${d}:`) && Object.values(before[k]).flat().every((x) => x.state !== 'rejected'));
+    ok(keys.length > 0, `synthetic: no page marks a value of ${d} (data-obs); its renderers are not wired to lib/review-status.js`);
+    const pagesOf = (k) => Object.keys(before[k]);
+    const need = new Set(keys.flatMap(pagesOf));
+    const pick = [];
+    while (need.size) {
+      const best = keys.filter((k) => !pick.includes(k)).sort((x, y) => pagesOf(y).filter((p) => need.has(p)).length - pagesOf(x).filter((p) => need.has(p)).length || x.localeCompare(y))[0];
+      if (!best || !pagesOf(best).some((p) => need.has(p))) break;
+      pick.push(best);
+      pagesOf(best).forEach((p) => need.delete(p));
+    }
+    chosen.push(...pick);
+  });
+  const ids = chosen.map((k) => { const i = k.indexOf(':'); return [k.slice(0, i), k.slice(i + 1)]; });
+  // Calculations whose inputs include a chosen value are expected to be withheld too.
+  const expected = new Set(chosen);
+  rs.observations('siaya-analysis').forEach((o) => { if ((o.inputs || []).some((x) => expected.has(`${x.dataset}:${x.id}`))) expected.add(`siaya-analysis:${o.id}`); });
+  const out = 'dist-synthetic';
+  const outDir = path.join(root, out);
+  const env = { ...process.env, TAKWIMU_SYNTHETIC_REJECTIONS: JSON.stringify(ids.map(([d, id]) => `${d}|${id}`)), TAKWIMU_DIST: out, NEXT_TELEMETRY_DISABLED: '1' };
+  // next build rewrites tsconfig.json for a new distDir and .next/BUILD_ID: both are restored afterwards.
+  const keep = ['tsconfig.json', 'next-env.d.ts', '.next/BUILD_ID'].map((f) => [f, fs.existsSync(path.join(root, f)) ? fs.readFileSync(path.join(root, f)) : null]);
+  try {
+    fs.rmSync(outDir, { recursive: true, force: true });
+    execFileSync('node', ['scripts/build-data.js'], { cwd: root, env, stdio: 'ignore' });
+    try { execFileSync(process.execPath, [require.resolve('next/dist/bin/next'), 'build'], { cwd: root, env, stdio: 'pipe', maxBuffer: 64 << 20 }); } catch (e) {
+      throw new Error(`synthetic build failed (a renderer cannot cope with a withheld value):\n${String(e.stdout || '').split('\n').filter((l) => /rror|at |Export/.test(l)).slice(0, 25).join('\n')}\n${String(e.stderr || '').slice(-3000)}`);
+    }
+    const after = scan(outDir);
+    // 1. Every element of a value expected withheld says so; no other value is withheld; no page lost a marker.
+    Object.entries(before).forEach(([k, pages]) => Object.entries(pages).forEach(([pg, els]) => {
+      const now = (after[k] || {})[pg] || [];
+      ok(now.length === els.length, `synthetic: ${pg} showed ${k} ${els.length} times, now ${now.length}`);
+      now.forEach((x) => {
+        if (expected.has(k)) ok(x.state === 'rejected' && x.after.includes('Withdrawn after editorial review'), `synthetic: ${pg} still shows ${k} after it was rejected`);
+        else ok(x.state !== 'rejected', `synthetic: ${pg} withholds ${k}, which was not rejected`);
+      });
+    }));
+    ok(chosen.every((k) => Object.keys((after[k] || {})).length > 0), 'synthetic: a rejected value vanished from the page instead of being shown as withdrawn');
+    // 2. Published data files: the value fields are emptied and editorial_review lists the rejection.
+    ids.forEach(([d, id]) => {
+      const f = path.join(outDir, 'data', `${d}.json`);
+      if (!fs.existsSync(f)) return;
+      const pub = JSON.parse(fs.readFileSync(f, 'utf8'));
+      ok(pub.editorial_review && pub.editorial_review.values[id] && pub.editorial_review.values[id].state === 'REJECTED', `synthetic: /data/${d}.json does not list ${id} as rejected`);
+      const item = rs.refsOf(d, pub).find((x) => x.id === id);
+      ok(Boolean(item), `synthetic: /data/${d}.json has no record ${id}`);
+      if (item && item.ref) Object.keys(item.ref[1]).forEach((fk) => { const v = item.ref[0][fk]; ok(v === null || v === undefined || (Array.isArray(v) && !v.length), `synthetic: /data/${d}.json ${id}.${fk} still holds the rejected value`); });
+    });
+    // 3. Dataset downloads: rows marked withdrawn carry no value, and every rejected dataset has such rows.
+    const dlDir = path.join(outDir, 'data', 'datasets');
+    const VALUE_COLS = ['value', 'result', 'amounts', 'amounts_as_printed', 'original_text', 'value_as_printed', 'raw_reading'];
+    const withdrawnIn = {};
+    fs.readdirSync(dlDir).filter((f) => f.endsWith('.json') && f !== 'catalogue.json').forEach((f) => {
+      const rows = JSON.parse(fs.readFileSync(path.join(dlDir, f), 'utf8')).rows || [];
+      const csv = fs.existsSync(path.join(dlDir, f.replace(/\.json$/, '.csv'))) ? fs.readFileSync(path.join(dlDir, f.replace(/\.json$/, '.csv')), 'utf8') : '';
+      rows.filter((r) => /^Withdrawn after editorial review/.test(r.review_status || '') || /withdrawn after editorial review/.test(r.status || '')).forEach((r) => {
+        withdrawnIn[f] = (withdrawnIn[f] || 0) + 1;
+        VALUE_COLS.forEach((c) => { if (c in r) ok(r[c] === null || r[c] === '' || (Array.isArray(r[c]) && !r[c].length), `synthetic: download ${f} row withdrawn but ${c} = ${JSON.stringify(r[c]).slice(0, 40)}`); });
+      });
+      if (withdrawnIn[f]) ok(/review_status/.test(csv.split('\n')[0]), `synthetic: ${f.replace(/\.json$/, '.csv')} has no review_status column`);
+    });
+    const DL = { 'siaya-fiscal-ledger': 'siaya-fiscal-ledger', 'siaya-audits': 'siaya-audit-findings', 'siaya-economy': 'siaya-economy', 'siaya-governance': 'siaya-governance', 'siaya-health': 'siaya-health', 'siaya-education': 'siaya-education', 'siaya-agriculture': 'siaya-agriculture', 'siaya-climate': 'siaya-climate', 'siaya-analysis': 'siaya-analysis', 'siaya-projects': 'siaya-projects', 'siaya-programmes': 'siaya-programmes' };
+    ids.forEach(([d, id]) => {
+      if (!DL[d] || (d === 'siaya-audits' && id.startsWith('opinion:'))) return;
+      ok(Boolean(withdrawnIn[`${DL[d]}.json`]), `synthetic: download ${DL[d]} has no withdrawn row for ${d} ${id}`);
+    });
+    // 4. history.csv says withdrawn and has no value for a rejected history value.
+    const hcsv = fs.readFileSync(path.join(outDir, 'data', 'history.csv'), 'utf8').split('\n');
+    ok(/review_status/.test(hcsv[0]), 'synthetic: history.csv has no review_status column');
+    if (ids.some(([d]) => d === 'history')) ok(hcsv.some((l) => /"Withdrawn after editorial review/.test(l)), 'synthetic: history.csv does not mark the rejected history value');
+    hcsv.filter((l) => /"Withdrawn after editorial review/.test(l)).forEach((l) => ok(/^"[^"]*","[^"]*",(""|,)/.test(l) || /^"[^"]*","[^"]*",,/.test(l), `synthetic: history.csv row withdrawn but holds a value: ${l.slice(0, 80)}`));
+    console.log(`test-reviews --synthetic: ${chosen.length} values rejected in memory across ${new Set(ids.map(([d]) => d)).size} datasets (${expected.size - chosen.length} calculations withheld with them); every page, download and data file checked in ${out}/`);
+  } finally {
+    keep.forEach(([f, buf]) => { if (buf === null) fs.rmSync(path.join(root, f), { force: true }); else fs.writeFileSync(path.join(root, f), buf); });
+    fs.rmSync(outDir, { recursive: true, force: true });
+    execFileSync('node', ['scripts/build-data.js'], { cwd: root, stdio: 'ignore' }); // public/data back to the real register
+  }
+}
+// The synthetic rationale must never reach the real build.
+if (dist) {
+  const walkAll = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walkAll(path.join(d, e.name)) : /\.(html|json|csv|txt)$/.test(e.name) ? [path.join(d, e.name)] : []));
+  ok(!walkAll(path.resolve(dist)).some((f) => fs.readFileSync(f, 'utf8').includes(rs.SYNTHETIC_RATIONALE)), `${dist}: contains the synthetic test rejection`);
+}
+
 if (errors.length) {
   console.error(`test-reviews: ${errors.length} problem(s)`);
   errors.slice(0, 50).forEach((e) => console.error(`  - ${e}`));
