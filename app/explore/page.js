@@ -18,14 +18,7 @@ export default function ExplorePage() {
           {EXPLORE.map((p) => <li key={p.href}><Link className="explore-card" href={p.href}><b>{p.label}</b><span>{p.blurb}</span></Link></li>)}
         </ul>
       </section>
-      <section className="card" aria-labelledby="note-h">
-        <h2 id="note-h">Before you use the figures</h2>
-        <ul className="how">
-          <li>County figures for FY 2023/24 and 2024/25 come from the Controller of Budget&apos;s scanned reports and were read by OCR. Check any figure against its page, which every table gives.</li>
-          <li>National figures come from the World Bank. Several are modelled estimates, and each says so.</li>
-          <li>Missing values are shown as not available, with the reason. Nothing is filled in or estimated.</li>
-        </ul>
-      </section>
+      <p className="notice">County figures were read by OCR from scanned reports and some national figures are modelled; missing values say why. How every figure is read and checked is set out once in the <Link href="/method/">method</Link>.</p>
     </main>
   );
 }

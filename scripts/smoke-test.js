@@ -30,7 +30,7 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/trends/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/']) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
@@ -93,11 +93,13 @@ const srv = http.createServer((req, res) => {
   const dsCsv = await p2.request.get(base + '/data/datasets/counties-absorption.csv');
   check(dsCsv.ok() && (await dsCsv.text()).includes('"Siaya"'), 'dataset CSV served');
   await p2.goto(base + '/trends/?i=siaya-spending&basis=real', { waitUntil: 'networkidle' });
-  check(await p2.locator('input[type=radio]').nth(1).isChecked() && await p2.locator('figure.chart').count() === 1, 'trends reads indicator and real basis from the address');
-  await p2.goto(base + '/trends/?i=nonsense', { waitUntil: 'networkidle' });
+  await p2.waitForURL(/\/kenya\/\?i=siaya-spending&basis=real#trends/, { timeout: 10000 }).catch(() => {});
+  check(/\/kenya\/\?i=siaya-spending&basis=real#trends$/.test(p2.url()), 'old /trends/ links move to the Kenya dashboard trend explorer with their choices');
+  check(await p2.locator('#trends ~ section input[type=radio]').nth(1).isChecked() && await p2.locator('figure.chart').count() === 1, 'trend explorer reads indicator and real basis from the address');
+  await p2.goto(base + '/kenya/?i=nonsense', { waitUntil: 'networkidle' });
   check(/do not have/.test(await p2.locator('.invalid').innerText()), 'trends explains an unknown indicator');
   await p2.goto(base + '/kenya/', { waitUntil: 'networkidle' });
-  check(await p2.locator('figure.chart').count() >= 13 && await p2.locator('.spark').count() >= 12, 'Kenya dashboard shows trend charts and sparklines (one series has a single value, so no line)');
+  check(await p2.locator('figure.chart').count() === 1 && await p2.locator('.spark').count() >= 12 && await p2.locator('#notes tbody tr').count() === 13, 'Kenya dashboard: sparkline cards, one trend explorer chart, a sources row per indicator');
   const nf = await p2.goto(base + '/no-such-page/', { waitUntil: 'load' });
   const nfHtml = fs.readFileSync(path.join(root, '404.html'), 'utf8');
   check(/That page is not here/.test(nfHtml) && /href="\/explore\/"/.test(nfHtml), 'friendly 404 with Home and Explore links');

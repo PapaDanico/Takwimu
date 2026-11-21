@@ -2,6 +2,27 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 21 Nov 2026, sweep 14: de-duplication (owner request) and two review findings
+Scope: every page, header and footer, for repeated county lists, explanations, charts, navigation, calls to action and disclaimers. Nothing unique was removed: every figure, source, caveat, conflict disclosure and legal text is still on the site, in one place.
+
+| Page or part | Merged or removed | Where it lives now |
+|---|---|---|
+| Home | Full 47-county grid in "Find your county" replaced by a compact finder (no list until you type, up to 8 matches); the "How it works" bullets (primary documents, ten-year trends, uncertainty, open data) removed; "Report an inaccuracy" link removed (header has it) | Full grid on /counties/ only; one sentence points to Method, Learn and Explore; purpose statement kept |
+| Footer | 47-county list removed; "Legal and help" link row removed (repeated the Legal column and FAQ); duplicate links removed: Home, "How to read a chart here" (Method twice), "Download the data" (Open data twice), "Report an inaccuracy" (kept as the chip), chip "How we work" (Method) | Header "Find a county" menu and the footer link "All 47 counties"; one disclaimer in the footer base |
+| Header | Data and Method are one item, "Data & Method" (current on both); new Explore item | Method linked from the top of /data/ |
+| /trends/ and /kenya/ | Merged: the trend explorer is now on the Kenya dashboard (/kenya/#trends); the 13 per-indicator charts on /kenya/ removed because the explorer draws the same series; the "Nominal and real" card removed | /kenya/ keeps the sparkline cards, county totals, the explorer and a "Sources and notes" table (source, unit, update, missing years, modelled notes for every indicator). /trends/ redirects to /kenya/ with its query (netlify.toml 301; a fallback page does the same where redirects do not run) |
+| /kenya/ "Not available" card | Removed (repeated the datasets page) | /datasets/#gaps, linked from Sources and notes |
+| Siaya hub | "Ten years at a glance" chart removed (same chart as Insights); four glossary cards removed (same terms on Learn); "Go deeper" links that repeated the page's own Siaya menu removed | Insights #spending and Learn, each linked in one line; Go deeper keeps FAQ and the sub-county links |
+| Insights | Real-terms method text shortened to a pointer (the FY 2019/20 caveat kept); "Development spent" stat card removed (the hub shows the latest value and the Insights section heading gives the range) | Method #prices, which now also states the deflator rule |
+| Analytics | "Real spending growth" stat card removed (repeated the Insights real-spending headline) | Its value stays in the Analytics growth table |
+| Trend explorer | Real-terms explanation shortened to a pointer | Method #prices |
+| /explore/ | "Before you use the figures" card replaced by one line | Method |
+| Not changed, by design | The Siaya brief repeats hub figures and the independence statement because it is the printable one-page PDF, printed without the site footer. In-preparation county pages share one template sentence. Terms keeps its legal independence clause. | |
+
+Review findings fixed in the same sweep:
+- National downloads labelled raw values with display units (population as "million people"). Downloads keep the World Bank unit; `scripts/test-explore.js` checks every scale against its unit.
+- The compare view dropped value notes on published values, so Nandi's FY 2023/24 pending bills (status at 31 March 2024) looked like a year-end figure. Notes now reach the ordered list (numbered marker and footnote), the table (Note column), the map (label and tooltip), the side-by-side table and both downloads, and apply to every value of that row's group. The dataset CSV/JSON carries them too. `scripts/test-explore.js` checks every noted county value (60) keeps its note in the compare output.
+
 ## 21 Nov 2026, sweep 13 (after the brown theme, national navigation and copy pass)
 Scope: all 60 sitemap pages in both colour preferences at 320, 360, 768, 1024 and 1280 px (600 runs), each with every disclosure opened: axe-core WCAG 2.2 AA, horizontal overflow, console errors and CSP violations (pages served with the production CSP), images without alt or failing to load, and literal "undefined", "null" or "NaN" in the page text. Also: keyboard walk on the home page at 360 and 1280 px (skip link first, 40 focus stops, ring contrast at least 3:1 on the brown), county menu (Enter, Escape returns focus, outside click, closes after choosing), every chart's tooltip on keyboard focus and every table view on the Siaya hub, Insights, Analytics, Sub-counties and Profile, map link focus, every download on the Data page (status and JSON validity), built HTML grep for `>undefined<`, `>null<` and `NaN` (62 files, none), page titles and descriptions (crawl), print contrast, the PDF brief (1 A4 page, tagged, text extractable).
 

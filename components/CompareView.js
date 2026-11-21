@@ -11,22 +11,14 @@ import DownloadView from './DownloadView';
 import SaveView from './SaveView';
 import PrintButton from './PrintButton';
 import useUrlParams from '../lib/use-url-params';
+import { cellOf, naText, caveat, unitText, dlRow as rowFor } from '../lib/compare-rows';
 
-const STATUS = ['read', 'blank', 'doubtful'];
 const MAX_SEL = 4;
 const GROUPS = { budget: 'Budget and spending', absorption: 'Share of budget spent', osr: 'Own-source revenue', pb: 'Pending bills' };
 const DATASET = { budget: 'counties-budget-spending', absorption: 'counties-absorption', osr: 'counties-own-source-revenue', pb: 'counties-pending-bills' };
 export const DEFAULT_INDICATOR = 'development_absorption_pct';
 
 const fmtNum = (f, v) => (f.kind === 'pct' ? `${v.toLocaleString('en-US', { maximumFractionDigits: 1 })}%` : v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
-const unitText = (f) => (f.kind === 'pct' ? 'per cent' : 'KSh million');
-
-function cellOf(data, fy, key, idx) {
-  const p = idx === 'total' ? data.totals[fy][key] : data.values[fy][key][idx];
-  return { value: p[0], st: STATUS[p[1]], note: data.notes[p[2]] || '', raw: p[3], pdf: p[4], printed: p[5], conf: p[6] };
-}
-const naText = (c) => (c.st === 'doubtful' ? `Not available: the OCR reading "${c.raw}" does not agree with the printed amounts` : `Not available: ${c.note ? c.note.replace(/^blank cell in table \(no value printed\)(, or not read by OCR)?$/, 'blank in the published table$1') : 'blank in the published table'}`);
-
 export default function CompareView({ data }) {
   const [sp, set] = useUrlParams();
   const uid = useId();
@@ -71,9 +63,13 @@ export default function CompareView({ data }) {
   const mapValues = Object.fromEntries(rows.map((r) => [r.slug, r.value]));
   const selNames = sel.map((s) => data.counties.find((c) => c.slug === s).name);
 
-  const dlRow = (r, field, c) => ({ fiscal_year: fy, county_code: r.code, county: r.name, measure: field.key, measure_label: field.label, value: c.value, unit: unitText(field), status: c.st === 'read' ? 'published' : `not available (${c.st})`, note: c.st === 'read' ? '' : naText(c), raw_reading: c.raw, table: src.tables[field.tab], pdf_page: c.pdf, printed_page: c.printed, read: 'OCR (RapidOCR)', ocr_confidence: c.conf, source: src.title, source_url: src.url });
-  const listRows = ordered.map((r) => dlRow(r, f, r));
-  const sideRows = sel.flatMap((s) => { const idx = data.counties.findIndex((c) => c.slug === s); return data.fields.map((field) => dlRow(data.counties[idx], field, cellOf(data, fy, field.key, idx))); });
+  const idxOf = (slug) => data.counties.findIndex((c) => c.slug === slug);
+  const listRows = ordered.map((r) => rowFor(data, fy, f, idxOf(r.slug)));
+  const sideRows = sel.flatMap((s) => data.fields.map((field) => rowFor(data, fy, field, idxOf(s))));
+  // Published values with a caveat (for example a reporting date other than year end) get a numbered marker.
+  const notes = [...new Set(rows.map((r) => caveat(r)).filter(Boolean))];
+  const mark = (c) => { const n = caveat(c); return n ? notes.indexOf(n) + 1 : 0; };
+  const mapNotes = Object.fromEntries(rows.filter((r) => caveat(r)).map((r) => [r.slug, caveat(r)]));
   const meta = { title: `${f.label}, FY ${fy}, all 47 counties`, unit: unitText(f), source: src.title, source_url: src.url, table, note: 'Values as printed in the Controller of Budget table, read by OCR. Missing values are left empty with the reason.' };
 
   const addCounty = () => {
@@ -134,20 +130,21 @@ export default function CompareView({ data }) {
                 {r.value === null ? <span className="r-na">{naText(r)}</span> : (
                   <>
                     <span className="r-track" aria-hidden="true"><span className="r-fill" style={{ width: `${max > 0 ? (Math.max(r.value, 0) / max) * 100 : 0}%` }} /></span>
-                    <span className="r-val">{fmtNum(f, r.value)}</span>
+                    <span className="r-val">{fmtNum(f, r.value)}{mark(r) ? <sup className="note-mark"><a href={`#${uid.replace(/:/g, '')}-n${mark(r)}`} aria-label={`Note ${mark(r)}: ${caveat(r)}`}>{mark(r)}</a></sup> : null}</span>
                   </>
                 )}
               </li>
             ))}
           </ul>
-          <KenyaMap values={mapValues} valueUnit={f.kind === 'pct' ? '%' : 'KSh m'} valueDec={f.kind === 'pct' ? 0 : 0} valueLabel={`${f.label}, FY ${fy}`} ariaLabel={`Map of Kenya's 47 counties shaded by ${f.label.toLowerCase()}, FY ${fy}`} mapId={`${uid.replace(/:/g, '')}map`} />
+          <KenyaMap valueNotes={mapNotes} values={mapValues} valueUnit={f.kind === 'pct' ? '%' : 'KSh m'} valueDec={f.kind === 'pct' ? 0 : 0} valueLabel={`${f.label}, FY ${fy}`} ariaLabel={`Map of Kenya's 47 counties shaded by ${f.label.toLowerCase()}, FY ${fy}`} mapId={`${uid.replace(/:/g, '')}map`} />
         </div>
+        {notes.length ? <ol className="footnotes" aria-label="Notes on values">{notes.map((n, i) => <li key={n} id={`${uid.replace(/:/g, '')}-n${i + 1}`}>{n}</li>)}</ol> : null}
         <details className="tableview">
           <summary>View as table, with page references</summary>
           <TableWrap label={`${f.label}, FY ${fy}`}>
             <table className="data">
               <caption className="sr-only">{f.label}, FY {fy}, all 47 counties, with the page each value was read from</caption>
-              <thead><tr><th scope="col">County</th><th scope="col">Value ({f.kind === 'pct' ? '%' : 'KSh m'})</th><th scope="col">Printed reading</th><th scope="col">Page (PDF, printed)</th><th scope="col">OCR confidence</th></tr></thead>
+              <thead><tr><th scope="col">County</th><th scope="col">Value ({f.kind === 'pct' ? '%' : 'KSh m'})</th><th scope="col">Printed reading</th><th scope="col">Page (PDF, printed)</th><th scope="col">OCR confidence</th><th scope="col">Note</th></tr></thead>
               <tbody>
                 {ordered.map((r) => (
                   <tr key={r.slug}>
@@ -156,6 +153,7 @@ export default function CompareView({ data }) {
                     <td>{r.raw || '(blank)'}</td>
                     <td>{r.pdf}, {r.printed}</td>
                     <td>{r.conf === null || r.conf === undefined ? 'n/a' : r.conf.toFixed(2)}</td>
+                    <td>{caveat(r) || (r.value === null ? 'See value' : '')}</td>
                   </tr>
                 ))}
               </tbody>
@@ -199,7 +197,7 @@ export default function CompareView({ data }) {
                       <th scope="row">{field.label} <small>({field.kind === 'pct' ? '%' : 'KSh m'})</small></th>
                       {sel.map((s) => {
                         const c = cellOf(data, fy, field.key, data.counties.findIndex((x) => x.slug === s));
-                        return c.value === null ? <td key={s} className="na">{c.st === 'doubtful' ? 'Doubtful reading' : 'Blank in table'}<small>p. {c.pdf}</small></td> : <td key={s} className="num">{fmtNum(field, c.value)}<small>p. {c.pdf}</small></td>;
+                        return c.value === null ? <td key={s} className="na">{c.st === 'doubtful' ? 'Doubtful reading' : 'Blank in table'}<small>p. {c.pdf}</small></td> : <td key={s} className="num">{fmtNum(field, c.value)}<small>p. {c.pdf}{caveat(c) ? `. ${caveat(c)}` : ''}</small></td>;
                       })}
                     </tr>
                   ))}

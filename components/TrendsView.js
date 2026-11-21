@@ -70,7 +70,7 @@ export default function TrendsView({ series, baseFy }) {
         )}
         <LineChart labels={s.labels} series={chartSeries} yFormat={s.dec === 0 ? 'int' : 'one'} valueFormat="auto" unit={s.unit} naText="Not available" ariaLabel={`${s.short}, ${s.labels[0]} to ${s.labels[s.labels.length - 1]}, ${s.unit}`} />
         {s.missing.length ? <p className="muted">Not available ({s.missing.join(', ')}): {s.missingNote}.</p> : null}
-        <p className="how"><b>About this series.</b> {s.note} {s.basis ? `${s.basis}.` : ''} {s.real ? `Real values multiply each year by the ratio of the FY ${baseFy} consumer price index to that year's index (World Bank; each financial year is the average of the two calendar years it spans), so it is approximate.` : ''}</p>
+        <p className="how"><b>About this series.</b> {s.note} {s.basis ? `${s.basis}.` : ''} {s.real ? <>Real values are at FY {baseFy} prices and approximate; <Link href="/method/#prices">how they are worked out</Link>.</> : ''}</p>
         <div className="toolbar"><DownloadView rows={rows} name={`takwimu-trend-${s.slug}${basis === 'real' ? '-real' : ''}`} meta={{ title: `${s.short} (${basis})`, unit: unitShown, source: s.source }} label="Download this series" /></div>
         <p className="src">Source: <a href={s.sourceUrl}>{s.source}</a>. <Link href={`/datasets/?q=${s.dataset}`}>Dataset and downloads</Link>.</p>
       </section>

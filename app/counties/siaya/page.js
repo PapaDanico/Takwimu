@@ -8,7 +8,6 @@ export const metadata = {
 };
 import siaya from '../../../data/siaya.json';
 import hist from '../../../data/history.json';
-import { ColumnChart } from '../../../components/Charts';
 import { fmt, shortDate } from '../../../lib/format';
 
 const X0 = 160;
@@ -31,13 +30,11 @@ function Tile({ label, value, unit, note, tone, dashed, tag }) {
   );
 }
 
-const TEN_BY = Object.fromEntries(hist.years.map((y) => [y.fy, y]));
 // FY 2025/26 in-year (partial-year) figures: shown apart from the ten-year series, never charted with it.
 const IY = hist.in_year;
 const IY_MEASURES = IY.periods.flatMap((p) => p.figures).filter((f, i, a) => a.findIndex((x) => x.measure === f.measure) === i);
 const IY_CONFLICT = { payables_assembly_opening: 'in-year-assembly-payables-2025', revenue_arrears_close: 'in-year-revenue-arrears-2025' };
 const iyValue = (f) => (f.unit === '%' ? `${f.value}%` : `${f.unit} ${f.value.toLocaleString('en-US')}`);
-const TEN_LABELS = ['13/14', '14/15', '15/16', '16/17', '17/18', '18/19', '19/20', '20/21', '21/22', '22/23', '23/24', '24/25'];
 
 export default function Home() {
   const osr = siaya.own_source_revenue;
@@ -356,17 +353,7 @@ export default function Home() {
 
       <section className="card" id="tenyears" aria-labelledby="tenh">
         <h2 id="tenh">Ten years at a glance</h2>
-        <p className="lead">Approved budget and spending by fiscal year, KSh billion. Missing years are left blank. <Link href="/insights/">See the full ten-year analysis</Link> and the <Link href="/analytics/">analytics</Link>.</p>
-        <ColumnChart
-          labels={TEN_LABELS}
-          yFormat="one"
-          unit="KSh bn"
-          ariaLabel="Approved budget and spending by fiscal year, KSh billion"
-          series={[
-            { name: 'Approved budget', color: 1, values: TEN_LABELS.map((l) => (TEN_BY['20' + l.slice(0, 2) + '/' + l.slice(3)] || {}).approved ?? null) },
-            { name: 'Spent', color: 2, values: TEN_LABELS.map((l) => (TEN_BY['20' + l.slice(0, 2) + '/' + l.slice(3)] || {}).spent ?? null) },
-          ]}
-        />
+        <p className="lead">The approved budget and spending for every year since FY 2013/14 are charted once, on <Link href="/insights/#spending">Siaya insights</Link>, with real-terms values and the arithmetic.</p>
       </section>
 
       <section className="card" id="in-year" aria-labelledby="inyh">
@@ -401,25 +388,14 @@ export default function Home() {
 
       <section className="card" id="learn" aria-labelledby="learnh">
         <h2 id="learnh">What do these budget terms mean?</h2>
-        <p className="lead">Draft explainers in plain English. They stay marked as drafts until someone with subject knowledge has reviewed them.</p>
-        <div className="terms">
-          <div className="term"><span className="tag good">Draft explainer</span><h3>Own-source revenue</h3><p>Money a county raises itself from fees, levies and licences, separate from what it receives from the national government.</p></div>
-          <div className="term"><span className="tag good">Draft explainer</span><h3>Absorption rate</h3><p>The share of a budget that was actually spent. A low rate on the development budget means less of the planned spending was paid out in the year. It does not by itself show whether the works were or were not delivered: projects can be paid for in a later year, or be delivered by other funding.</p></div>
-          <div className="term"><span className="tag good">Draft explainer</span><h3>Pending bills</h3><p>Money a county owes suppliers for work already done. Growing pending bills can signal spending beyond what is collected.</p></div>
-          <div className="term"><span className="tag good">Draft explainer</span><h3>Audit opinion</h3><p>The Auditor-General&apos;s verdict on whether accounts are reliable. Read the basis for the opinion, not only its label.</p></div>
-        </div>
+        <p className="lead">Own-source revenue, absorption rate, pending bills and audit opinion are explained in plain English on <Link href="/learn/">Learn</Link>.</p>
       </section>
 
       <section className="card" aria-labelledby="where">
         <h2 id="where">Go deeper</h2>
-        <p className="lead">This page shows the latest year. The pages below go back ten years and down to the six sub-counties.</p>
+        <p className="lead">This page shows the latest year. The Siaya pages listed at the top go back ten years; each sub-county has its own section:</p>
         <ul className="toc">
-          <li><Link href="/insights/">Ten-year insights</Link></li>
-          <li><Link href="/subcounties/">Six sub-counties</Link></li>
-          <li><Link href="/profile/">County profile</Link></li>
-          <li><Link href="/learn/">Learn the terms</Link></li>
           <li><Link href="/faq/">FAQ</Link></li>
-          <li><Link href="/data/">Download the data</Link></li>
         </ul>
         <div className="chips-row" role="group" aria-label="Siaya sub-counties">
           {siaya.sub_counties.map((s) => <Link key={s} href={`/subcounties/#${s.toLowerCase().replace(/\s+/g, '-')}`}>{s}</Link>)}

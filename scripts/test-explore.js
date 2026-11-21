@@ -28,5 +28,28 @@ const range = (slug, lo, hi) => { const t = trends.find((s) => s.slug === slug);
 range('population', 40, 60);
 range('remittances', 0.5, 10);
 range('gdp-per-person', 500, 5000);
+// Every county value with a note in counties-cob.json keeps it in the compare output (screen and downloads):
+// a published value keeps it as a caveat, a missing value as its reason. Notes on one value of a row and group
+// (a reporting date) also reach the other values of that group.
+const { cob, compareData } = require('../lib/explore');
+const { dlRow, caveat, cellOf } = require('../lib/compare-rows');
+const cd = compareData();
+let noted = 0;
+cob.years.forEach((y) => y.counties.forEach((row, idx) => cd.fields.forEach((f) => {
+  const cell = row[f.key];
+  if (!cell || !cell.note) return;
+  noted += 1;
+  const out = dlRow(cd, y.fy, f, idx);
+  if (cell.value !== null && !out.note.includes(cell.note)) fail(`compare ${y.fy} ${row.name} ${f.key}: note "${cell.note}" missing from the download row`);
+  if (cell.value === null && !out.note.startsWith('Not available')) fail(`compare ${y.fy} ${row.name} ${f.key}: missing value lost its reason`);
+  if (cell.value !== null) cd.fields.filter((g) => g.group === f.group).forEach((g) => {
+    const c = cellOf(cd, y.fy, g.key, idx);
+    if (c.st === 'read' && !caveat(c).includes(cell.note)) fail(`compare ${y.fy} ${row.name} ${g.key}: row note "${cell.note}" not carried to this value`);
+  });
+})));
+if (!noted) fail('compare: no notes found to test');
+const nandi = dlRow(cd, '2023/24', cd.fields.find((f) => f.key === 'pb_grand_total'), cd.counties.findIndex((c) => c.slug === 'nandi'));
+if (!/31 March 2024/.test(nandi.note)) fail('compare: Nandi FY 2023/24 pending bills lost the 31 March 2024 reporting date');
+
 if (errors.length) { console.error('Explore unit tests failed:\n- ' + errors.join('\n- ')); process.exit(1); }
-console.log(`Explore unit tests passed (${natIndicators.length} national indicators).`);
+console.log(`Explore unit tests passed (${natIndicators.length} national indicators, ${noted} noted county values).`);

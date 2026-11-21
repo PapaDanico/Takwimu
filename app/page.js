@@ -25,18 +25,12 @@ export default function Home() {
       <section className="card" aria-labelledby="pick-h">
         <h2 id="pick-h">Find your county</h2>
         <p className="lead">Choose a county on the map above, or type its name below. Each county page shows what is published and what is still being checked.</p>
-        <CountyFinder />
+        <CountyFinder compact />
       </section>
       <section className="card" aria-labelledby="how-h">
         <h2 id="how-h">How it works</h2>
-        <ul className="steps">
-          <li><b>Primary documents only.</b> Controller of Budget, Auditor-General, KNBS and Demographic and Health Surveys, with links.</li>
-          <li><b>Ten-year trends.</b> Real terms, per person and against budget, with missing years left blank.</li>
-          <li><b>Honest uncertainty.</b> Confidence ratings, a conflict register, and no verdicts on named people.</li>
-          <li><b>Open data.</b> Every chart has a table, and the datasets download as CSV and JSON.</li>
-        </ul>
         <p className="lead">Our purpose is simple: informed citizens, and counties and citizens working from the same facts, so that public money builds shared progress.</p>
-        <p>You can check every figure against its source. <Link href="/method/">Read the method</Link>, <Link href="/learn/">learn the terms</Link> or <a href="https://github.com/PapaDanico/Takwimu/issues/new">report an inaccuracy</a>.</p>
+        <p>Every figure comes from a primary document and names it, so you can check it. How we read, check and label the figures is set out once, in the <Link href="/method/">method</Link>; the terms are explained in <Link href="/learn/">Learn</Link>. To start with the numbers, <Link href="/explore/">explore the data</Link>.</p>
       </section>
     </main>
   );

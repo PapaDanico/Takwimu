@@ -88,7 +88,7 @@ function Population({ story }) {
           <li>Growth a year is the compound rate between the first and last years. Urban population is total times share, computed here and labelled derived.</li>
         </ul>
         <Sources items={[{ href: p.pop.api_url, label: `World Bank WDI ${p.pop.code} (last updated ${p.pop.last_updated})` }, { href: p.urb.api_url, label: `World Bank WDI ${p.urb.code}` }]} />
-        <DataLinks story={story} extra={[{ href: '/trends/?i=population', label: 'Trend' }, { href: '/kenya/#people', label: 'Kenya dashboard' }]} />
+        <DataLinks story={story} extra={[{ href: '/kenya/?i=population#trends', label: 'Trend' }, { href: '/kenya/#people', label: 'Kenya dashboard' }]} />
       </section>
     </>
   );

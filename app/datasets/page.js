@@ -41,7 +41,7 @@ export default function DatasetsPage() {
         <p className="lead">Views you saved on this device, with their filters. They are kept in this browser only: no account, nothing sent to us.</p>
         <SavedViews />
       </section>
-      <section className="card" aria-labelledby="gaps-h">
+      <section className="card" id="gaps" aria-labelledby="gaps-h">
         <h2 id="gaps-h">Not available</h2>
         <p className="lead">Series we looked for and could not publish. They are listed so the gap is visible, not filled.</p>
         <ul className="how">

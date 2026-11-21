@@ -591,3 +591,6 @@ table.data td.num { font-family: var(--mono); font-variant-numeric: tabular-nums
   .indicator { break-inside: avoid; }
 }
 .indicator .src, .ds .src { overflow-wrap: anywhere; }
+.note-mark { margin-left: 2px; font-size: 10px; }
+.note-mark a { color: var(--accent); text-decoration: none; padding: 0 2px; }
+.footnotes { margin: 12px 0 0; padding-left: 22px; font-size: 12px; color: var(--ink-soft); }

@@ -79,7 +79,7 @@ export default function Method() {
 
       <section id="prices" className="card" aria-labelledby="pr-h">
         <h2 id="pr-h">Real-terms (price-adjusted) values</h2>
-        <p>{cpi.meta.method} Source: <a href={cpi.meta.source_url}>{cpi.meta.source}</a>, retrieved {cpi.meta.retrieved}. Status: {cpi.meta.status}.</p>
+        <p>A real value multiplies each year&apos;s figure by the ratio of the FY 2024/25 price index to that year&apos;s index, so every year is in FY 2024/25 prices. {cpi.meta.method} Source: <a href={cpi.meta.source_url}>{cpi.meta.source}</a>, retrieved {cpi.meta.retrieved}. Status: {cpi.meta.status}.</p>
       </section>
 
       <section id="years" className="card" aria-labelledby="fy-h">

@@ -19,7 +19,7 @@ export function mapScale(values) {
   return { min, max, step, bin, bins: Array.from({ length: STEPS }, (_, i) => [min + step * i, i === STEPS - 1 ? max : min + step * (i + 1)]) };
 }
 
-export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 47 counties', values, valueUnit = '', valueDec = 0, valueLabel, mapId = 'kmap' }) {
+export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 47 counties', values, valueUnit = '', valueDec = 0, valueLabel, valueNotes = {}, mapId = 'kmap' }) {
   const { width, height } = geo.meta;
   let box = `0 0 ${width} ${height}`;
   if (focus) {
@@ -50,8 +50,8 @@ export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 
             const v = values[a.slug];
             const b = scale ? scale.bin(v) : null;
             return (
-              <Link key={a.slug} href={`/counties/${a.slug}/`} aria-label={`${a.name}: ${typeof v === 'number' ? fmtV(v) : 'not available'}`}>
-                <path d={a.d} className={`kmap-area ${b ? `q${b}` : 'na'}`} style={b ? undefined : { fill: `url(#${mapId}-na)` }} strokeWidth="1" />
+              <Link key={a.slug} href={`/counties/${a.slug}/`} aria-label={`${a.name}: ${typeof v === 'number' ? fmtV(v) : 'not available'}${valueNotes[a.slug] ? `. Note: ${valueNotes[a.slug]}` : ''}`}>
+                <path d={a.d} className={`kmap-area ${b ? `q${b}` : 'na'}`} style={b ? undefined : { fill: `url(#${mapId}-na)` }} strokeWidth="1"><title>{`${a.name}: ${typeof v === 'number' ? fmtV(v) : 'not available'}${valueNotes[a.slug] ? ` (${valueNotes[a.slug]})` : ''}`}</title></path>
               </Link>
             );
           }

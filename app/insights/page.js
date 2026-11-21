@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PageHead from '../../components/PageHead';
 import TableWrap from '../../components/TableWrap';
 import { LineChart, ColumnChart } from '../../components/Charts';
@@ -72,7 +73,6 @@ const cur = by['2024/25'];
 const kpis = [
   { label: 'Spent, FY 2024/25', value: bn(cur.spent), unit: 'KSh bn', delta: `${Math.round(nomGrowth)}% above FY 2014/15`, note: 'Nominal', spark: col((y) => y.spent) },
   { label: 'Real change in ten years', value: `${realGrowth >= 0 ? '+' : ''}${Math.round(realGrowth)}%`, delta: 'After adjusting for prices', tone: realGrowth >= 0 ? 'up' : 'down', note: `${label(first.fy)} to ${label(last.fy)}`, spark: col((y) => y.spent * deflator(y.fy)) },
-  { label: 'Development spent', value: `${cur.development_absorption_pct}%`, delta: 'of the development budget', note: `Range ${devMin.development_absorption_pct} to ${devMax.development_absorption_pct}%`, spark: col((y) => y.development_absorption_pct) },
   { label: 'Pending bills', value: m(pendLast.v), unit: 'KSh m', delta: `at end of ${label(pendLast.fy)}`, tone: 'down', note: 'Unpaid for goods and services delivered', spark: col(pendOf) },
   { label: 'Latest audit opinion', value: audits[audits.length - 1].opinion, delta: `FY ${audits[audits.length - 1].fy}`, note: 'County Executive accounts' },
 ];
@@ -110,7 +110,7 @@ export default function Insights() {
         <h3 className="chart-title">Where the {label(BASE)} budget went</h3>
         <p className="chart-sub">Share of the approved budget of KSh {bn(cur.approved)} billion.</p>
         <Donut ariaLabel={`How the ${label(BASE)} approved budget was used`} centerValue={`${Math.round((cur.spent / cur.approved) * 100)}%`} centerLabel="of budget spent" format={bn} unit=" bn" items={[{ label: 'Recurrent spending', value: cur.recurrent_spent, color: 1 }, { label: 'Development spending', value: cur.development_spent, color: 3 }, { label: 'Not spent', value: cur.approved - cur.spent, color: 4 }]} />
-        <p className="how"><b>How we calculated this.</b> Spending is nominal from each year's Controller of Budget report. Real values multiply by the ratio of the {label(BASE)} price index to that year's index. Each fiscal-year index is the average of the two calendar-year World Bank consumer price indices it spans, so the real view is approximate. FY 2019/20 is missing because that report was not found; only its own-source revenue is known.</p>
+        <p className="how"><b>How we calculated this.</b> Spending is nominal, from each year's Controller of Budget report; real values are at {label(BASE)} prices, worked out as set out in the <Link href="/method/#prices">method</Link>. FY 2019/20 is missing because that report was not found; only its own-source revenue is known.</p>
       </section>
 
       <section id="development" className="card insight" aria-labelledby="dev-h">

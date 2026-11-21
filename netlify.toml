@@ -38,3 +38,16 @@
   to = "/data/#conflicts"
   status = 301
   force = true
+
+# The trend explorer moved into the Kenya dashboard (owner de-duplication, 21 Nov 2026). Query strings pass through.
+[[redirects]]
+  from = "/trends/"
+  to = "/kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/trends"
+  to = "/kenya/"
+  status = 301
+  force = true
