@@ -4,7 +4,7 @@
   "description": "Kenya's public finance and statistics, county by county, with sources. Turning Data into Progress.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFFFF",
+  "background_color": "#17191C",
   "theme_color": "#07552D",
   "orientation": "portrait",
   "icons": [

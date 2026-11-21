@@ -1,5 +1,5 @@
-/* Takwimu design system. Borrowed from Mwangaza Yield's "earthy light" system:
-   sand ground, navy ink, gold accent, mint for good news, tinted elevation. */
+/* Takwimu design system: brand charcoal ground (brown theme, 21 Nov 2026), cream ink, brand green accent,
+   orange highlights, slightly lighter warm panels. Print and the PDF brief use the light tokens. */
 :root {
   --sand-50: #FDFBF5; --sand-100: #F7F2E7; --sand-200: #EFE7D5; --sand-300: #E3D8BE; --sand-400: #CBBD9C;
   --ink: #0A192F; --ink-soft: #31445F; --ink-muted: #5C687A; --ink-faint: #6A6555;
@@ -21,19 +21,21 @@
   --brand-panel: transparent;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sand-50: #0F2036; --sand-100: #08111F; --sand-200: #14283F; --sand-300: #223755; --sand-400: #35517A;
-    --ink: #F4EFE3; --ink-soft: #D5CDB9; --ink-muted: #A9B3C4; --ink-faint: #9AA3B2;
-    --gold-700: #FBBF24; --gold-600: #F59E0B; --mint-700: #34D399; --red-600: #F87171; --red-700: #FCA5A5;
-    --chart: #C48419; --on-chart: #08111F; --gold-ink: #FBBF24; --mint-ink: #34D399; --track: #223755;
-    --shadow-card: inset 0 1px 0 rgba(255,255,255,.04), 0 1px 2px rgba(0,0,0,.3), 0 10px 24px -14px rgba(0,0,0,.5);
-    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #9085e9;
-    --up: #34D399; --down: #FCA5A5;
-    --accent: #7DDB9C; --accent-strong: #7DDB9C; --on-accent: #08111F; --accent-line: #4CB872; --accent-soft: color-mix(in srgb, #4CB872 14%, transparent);
-    --brand-panel: #FDFBF5;
-    color-scheme: dark;
-  }
+/* Brown theme (owner, 21 Nov 2026): the footer's brand charcoal (#17191C) is the page background for every
+   visitor, whatever their light or dark preference; cards are slightly lighter warm panels. The light tokens
+   above are kept for print (see @media print), which stays dark text on white, and for the PDF brief. */
+:root {
+  --sand-50: #24221F; --sand-100: var(--brand-charcoal); --sand-200: #2E2B27; --sand-300: #3E3A34; --sand-400: #5A544A;
+  --ink: #F4EFE3; --ink-soft: #D5CDB9; --ink-muted: #B5AD9C; --ink-faint: #A39B8A;
+  --gold-700: #FBBF24; --gold-600: #F59E0B; --mint-700: #34D399; --red-600: #F87171; --red-700: #FCA5A5;
+  --chart: #C48419; --on-chart: #17191C; --gold-ink: #FBBF24; --mint-ink: #34D399; --track: #3E3A34;
+  --shadow-card: inset 0 1px 0 rgba(255,255,255,.04), 0 1px 2px rgba(0,0,0,.3), 0 10px 24px -14px rgba(0,0,0,.5);
+  /* Series colours: the validated dark set; each is at least 4 to 1 on the page and on cards (light --s6 was 2.75). */
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #9085e9;
+  --up: #34D399; --down: #FCA5A5;
+  --accent: #7DDB9C; --accent-strong: #7DDB9C; --on-accent: #17191C; --accent-line: #4CB872; --accent-soft: color-mix(in srgb, #4CB872 14%, transparent);
+  --brand-panel: #FDFBF5;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 84px; }
@@ -78,7 +80,7 @@ main a:not([class]):hover { text-decoration-thickness: 2px; }
 .bottom-nav svg { width: 20px; height: 20px; }
 @media (min-width: 900px) { .bottom-nav { display: none; } }
 
-/* Footer: the one dark surface */
+/* Footer: same brand charcoal as the page, set apart by the green rule */
 .site-footer { margin-top: 64px; background: var(--brand-charcoal); border-top: 4px solid var(--brand-green); color: #E3D8BE; padding-block: 48px 96px; }
 @media (min-width: 900px) { .site-footer { padding-bottom: 48px; } }
 .footer-grid { display: grid; gap: 40px; }
@@ -168,8 +170,8 @@ details.refs summary { cursor: pointer; font-weight: 700; font-size: 15px; min-h
 table.data { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
 table.data th, table.data td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 table.data th { color: var(--ink-muted); font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
-.takeaway { margin-top: 16px; border-radius: 14px; border-left: 4px solid var(--brand-orange); background: var(--gold-50); color: #3B2A07; padding: 14px 16px; font-size: 14px; line-height: 1.6; }
-@media (prefers-color-scheme: dark) { .takeaway { background: color-mix(in srgb, var(--gold-500) 10%, var(--sand-50)); color: var(--ink); } }
+.takeaway { margin-top: 16px; border-radius: 14px; border-left: 4px solid var(--brand-orange); background: color-mix(in srgb, var(--gold-500) 10%, var(--sand-50)); color: var(--ink); padding: 14px 16px; font-size: 14px; line-height: 1.6; }
+@media print { .takeaway { background: #fff !important; color: #000 !important; } }
 .steps { margin: 16px 0 0; padding-left: 20px; font-size: 13px; color: var(--ink-muted); display: grid; gap: 4px; }
 .terms { display: grid; gap: 12px; margin-top: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
 .term { border: 1px solid var(--rule); border-radius: 14px; padding: 14px; background: var(--sand-50); }
