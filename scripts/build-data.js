@@ -350,7 +350,7 @@ Object.entries(files)
   });
 
 // Siaya data is verified-with-status and carries its own provenance fields.
-['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json'].forEach((f) => {
+['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json', 'siaya-boundaries.json'].forEach((f) => {
   fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(outDir, f));
   console.log('Generated public/data/' + f);
 });
