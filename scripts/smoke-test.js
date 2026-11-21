@@ -13,6 +13,7 @@ const NAT_PF = natIndicators.filter((x) => x.hasValues && x.sector === 'public f
 const path = require('path');
 // Review records (data/reviews.json): no value may show "Approved" unless one is in force (none yet).
 const rvs = require('../lib/review-status');
+const REPORT_SLUGS = require('../components/report/reports.json').reports.map((r) => r.slug);
 const REVIEW_APPROVED = rvs.DATASET_IDS.reduce((n, d) => n + rvs.counts(d).approved, 0);
 const toml = fs.readFileSync(path.join(__dirname, '..', 'netlify.toml'), 'utf8');
 const csp = (toml.match(/Content-Security-Policy = "([^"]+)"/) || [])[1];
@@ -36,7 +37,7 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/economy/', '/counties/siaya/governance/', '/counties/siaya/audits/', '/counties/siaya/ledger/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/economy/', '/counties/siaya/governance/', '/counties/siaya/audits/', '/counties/siaya/ledger/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/', '/reports/', ...REPORT_SLUGS.map((x) => `/reports/${x}/`)]) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
@@ -227,6 +228,28 @@ const srv = http.createServer((req, res) => {
   check(['downloaded', 'discovered', 'inaccessible', 'blocked'].every((s) => new RegExp(`${s}\\s+${libJson.documents.filter((d) => d.retrieval_status === s).length} of ${libJson.documents.length}`, 'i').test(pgText)), 'source library states the count for each retrieval status');
   await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
   check(await pg.locator('main a[href="/counties/siaya/sources/"]').count() >= 1, 'Siaya hub links to the source library');
+  // Reports A-E: the hub links the index; the index links each report's page and PDF with edition, snapshot and
+  // DRAFT status; every PDF is in the build.
+  check(await pg.locator('main a[href="/reports/"]').count() >= 1, 'Siaya hub links to the reports index');
+  await pg.goto(base + '/reports/', { waitUntil: 'load' });
+  {
+    const txt = await pg.locator('main').innerText();
+    const linked = await Promise.all(REPORT_SLUGS.map(async (x) => (await pg.locator(`main a[href="/reports/${x}/"]`).count()) === 1 && (await pg.locator(`main a[href="/reports/${x}.pdf"]`).count()) === 1));
+    check(linked.every(Boolean) && (txt.match(/snapshot [0-9a-f]{12}/g) || []).length === REPORT_SLUGS.length && /Edition 1/.test(txt) && (rvs.DATASET_IDS.some((d) => rvs.counts(d).approved) || (txt.match(/DRAFT/g) || []).length >= REPORT_SLUGS.length), `reports index links ${REPORT_SLUGS.length} reports (HTML and PDF) with edition, snapshot ID and DRAFT status`);
+  }
+  check(REPORT_SLUGS.every((x) => fs.existsSync(path.join(root, 'reports', `${x}.pdf`)) && fs.statSync(path.join(root, 'reports', `${x}.pdf`)).size > 10000), 'all five report PDFs are in the build');
+  // IMF World Economic Outlook section on /kenya/: two vintages selectable, projections labelled and dashed, a table view.
+  await pg.goto(base + '/kenya/', { waitUntil: 'load' });
+  {
+    const sec = pg.locator('#imf');
+    const vSel = sec.locator('select').first();
+    const nV = await vSel.locator('option').count();
+    const projRows = await sec.locator('#imf-table tbody tr.imf-proj').count();
+    const label = /IMF projection/.test(await sec.innerText());
+    await vSel.selectOption({ index: 1 });
+    const cap = await sec.locator('#imf-chart-h').innerText();
+    check(nV === 2 && projRows > 0 && label && /April 2025/.test(cap) && await sec.locator('#imf-table tbody tr').count() > 10, `/kenya/ IMF section: ${nV} vintages selectable, ${projRows} rows labelled IMF projection, table view`);
+  }
   // No personal data is collected (owner, 21 Nov 2026): /briefs/request/ describes the service with no form; the thanks page is gone.
   check(!fs.existsSync(path.join(root, 'briefs', 'request', 'thanks')), '/briefs/request/thanks/ is not built');
   await pg.goto(base + '/briefs/request/', { waitUntil: 'load' });

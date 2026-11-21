@@ -46,7 +46,7 @@ To change a decision, never edit or delete the old record: add a new record whos
 | Field | Meaning |
 |---|---|
 | `id` | `REV-<year>-<number>`, e.g. `REV-2026-001`; never reused. |
-| `dataset` | Data file stem: `siaya-fiscal-ledger`, `siaya-audits`, `siaya-health`, `siaya-projects`, `counties-cob`, `history`, `siaya-analysis`, `siaya-economy`, `siaya-governance`, `siaya-education`, `siaya-agriculture`, `siaya-climate`, `siaya-programmes`. |
+| `dataset` | Data file stem: `siaya-fiscal-ledger`, `siaya-audits`, `siaya-health`, `siaya-projects`, `counties-cob`, `history`, `siaya-analysis`, `siaya-economy`, `siaya-governance`, `siaya-education`, `siaya-agriculture`, `siaya-climate`, `siaya-programmes`, `imf`. |
 | `record_ids` | The observation ids as listed in the queue. |
 | `source_document_id` | The document checked; it must be a source of every listed value. |
 | `source_sha256` | The SHA-256 of the document version checked. |

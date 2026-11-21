@@ -930,6 +930,78 @@
       "supersedes": null,
       "page_image_checked": false,
       "effect": "data/kenya-counties-map.json and scripts/make-kenya-map.js now state Public Domain and the RCMRD upstream; the Kenya map credit line follows. The map shapes are unchanged."
+    },
+    {
+      "id": "imf-debt-cbk-2023",
+      "measure": "Kenya public debt as a share of GDP, 2023",
+      "unit": "per cent of GDP",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: general government gross debt (GGXWDG_NGDP), actual",
+          "value": 73.405218,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.GGXWDG_NGDP.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "Central Bank of Kenya: December public debt divided by CBK calendar-year nominal GDP (ratio derived by Takwimu for comparison)",
+          "value": 74.098591,
+          "url": "https://www.centralbank.go.ke/public-debt/"
+        }
+      ],
+      "definitions": "The IMF series is general government gross debt as a share of GDP on the IMF's reporting year. The CBK figure is a ratio derived here from the CBK stock of public debt at December 2023 and CBK nominal GDP for calendar 2023. They differ by -0.69 points (IMF minus CBK).",
+      "hypothesis": "Hypothesis: different coverage (general government against public debt as CBK reports it), different GDP denominators or a different point in the year. Not confirmed; neither source states the reconciliation.",
+      "status": "open",
+      "effect": "Both values are listed with their sources. The IMF series is shown on /kenya/ as the IMF's figure; the CBK ratio is used only for this comparison and is not plotted as a series.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-debt-cbk-2025",
+      "measure": "Kenya public debt as a share of GDP, 2025",
+      "unit": "per cent of GDP",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: general government gross debt (GGXWDG_NGDP), actual",
+          "value": 71.269491,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.GGXWDG_NGDP.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "Central Bank of Kenya: December public debt divided by CBK calendar-year nominal GDP (ratio derived by Takwimu for comparison)",
+          "value": 69.979175,
+          "url": "https://www.centralbank.go.ke/public-debt/"
+        }
+      ],
+      "definitions": "The IMF series is general government gross debt as a share of GDP on the IMF's reporting year. The CBK figure is a ratio derived here from the CBK stock of public debt at December 2025 and CBK nominal GDP for calendar 2025. They differ by +1.29 points (IMF minus CBK).",
+      "hypothesis": "Hypothesis: different coverage (general government against public debt as CBK reports it), different GDP denominators or a different point in the year. Not confirmed; neither source states the reconciliation.",
+      "status": "open",
+      "effect": "Both values are listed with their sources. The IMF series is shown on /kenya/ as the IMF's figure; the CBK ratio is used only for this comparison and is not plotted as a series.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-inflation-eop-cbk-2019",
+      "measure": "Kenya end-of-period consumer price inflation, December 2019",
+      "unit": "per cent a year",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: inflation, end-of-period consumer prices (PCPIEPCH), actual",
+          "value": 7.157037,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.PCPIEPCH.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "Central Bank of Kenya: 12-month inflation, December 2019",
+          "value": 5.82,
+          "url": "https://www.centralbank.go.ke/inflation-rates/"
+        }
+      ],
+      "definitions": "Both describe the 12-month change in consumer prices at the end of 2019. The IMF prints 7.16 per cent and the CBK December rate is 5.82 per cent, a gap of 1.34 points; the two agree within 0.5 points in every other year compared.",
+      "hypothesis": "Hypothesis: the IMF series may use a different end-of-period convention or a revised index (KNBS rebased the CPI in 2020). Not confirmed.",
+      "status": "open",
+      "effect": "Both values are listed; neither corrects the other. The IMF value is shown on /kenya/ as the IMF's figure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
     }
   ]
 }

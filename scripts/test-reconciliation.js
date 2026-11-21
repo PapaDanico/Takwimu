@@ -343,6 +343,25 @@ test('conflict kenya-counties-map-licence: the county map states the ADM1 licenc
   ok(/licence: 'Public Domain'/.test(fs.readFileSync(path.join(__dirname, 'make-kenya-map.js'), 'utf8')), 'the map generator must write the same licence');
 });
 
+// IMF World Economic Outlook against CBK (data/imf.json comparisons, latest vintage, actual years only): the two
+// debt ratios and the end-of-period inflation rate that differ by more than 0.5 points. Definitional differences
+// (GDP per capita, revenue and expenditure against the World Bank) are notes in docs/imf-notes.md, not cases.
+const imf = read('imf.json');
+const imfCase = (id, ind, yr) => test(`conflict ${id}: IMF ${ind} ${yr} and the CBK value are both listed and differ by more than 0.5 points`, () => {
+  const c = imf.comparisons.find((x) => x.imf_indicator === ind && x.year === yr && x.vintage === imf.vintages[0].vintage);
+  ok(c && c.candidate_conflict && c.imf_type === 'actual', `${ind} ${yr} is no longer a candidate in data/imf.json`);
+  ok(listed(id, c.imf_value) && listed(id, c.other_value), 'both values must be in the case');
+  ok(near(c.imf_value - c.other_value, c.difference, 1e-6) && Math.abs(c.difference) > 0.5, 'difference changed');
+  const v = imf.vintages[0].values.find((x) => x.indicator === ind && x.year === yr);
+  ok(v && near(v.value, c.imf_value, 1e-9) && v.type === 'actual', 'the IMF series value must equal the listed value');
+});
+imfCase('imf-debt-cbk-2023', 'GGXWDG_NGDP', 2023);
+imfCase('imf-debt-cbk-2025', 'GGXWDG_NGDP', 2025);
+imfCase('imf-inflation-eop-cbk-2019', 'PCPIEPCH', 2019);
+test('IMF definitional differences stay out of the register', () => {
+  ok(!reg.conflicts.some((c) => /IMF/.test(c.values.map((v) => v.label).join(' ')) && /per capita|revenue|expenditure/i.test(c.measure)), 'GDP per capita, revenue and expenditure differences are definitional: notes, not cases');
+});
+
 // Every register case has a test above, and no test points at a case that was removed.
 test('every conflict in the register has a test', () => {
   const tested = new Set(results.map(([, n]) => (n.match(/^conflict ([a-z0-9-]+)/) || [])[1]).filter(Boolean));

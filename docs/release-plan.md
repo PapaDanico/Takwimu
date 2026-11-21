@@ -19,7 +19,7 @@ Deployment policy (owner decision, 21 Nov 2026): deploy to Netlify only for majo
 | 5 | FAQ | Adds reuse, privacy, accuracy, accessibility and contact questions |
 | 6 | Footer | Terms, Privacy, FAQ and Corrections reachable on every page, on phone and desktop |
 | 7 | Self-hosted fonts | No request to Google Fonts in the built HTML |
-| 8 | Quality gates | Unit tests, data validation, typecheck, build, axe (0 violations) on every page in both themes, overflow at 360 to 1280 px, link check, chart check, print check |
+| 8 | Quality gates | Unit tests, data validation, typecheck, build (ending with the synthetic-rejection test, `test-reviews dist --synthetic`), axe (0 violations) on every page in both themes, overflow at 360 to 1280 px, link check, chart check, print check, and `npm run test:reports` after `npm run reports:pdf` (blocking before any deploy) |
 | 9 | Independent review | A reviewer who did not write the code reads the diff; findings fixed or recorded |
 | 10 | Ship | Commit, push, one Netlify deploy, live checks, notes updated |
 

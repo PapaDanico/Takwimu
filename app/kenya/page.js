@@ -10,6 +10,10 @@ import DataStamp from '../../components/DataStamp';
 import Link from 'next/link';
 import { natIndicators, nat, SECTORS, COB_YEARS, cobTotal, cobSource, trendSeries, BASE_FY, extra } from '../../lib/explore';
 import { shortDate } from '../../lib/format';
+import ImfView from '../../components/ImfView';
+import { imfViewData } from '../../lib/imf';
+
+const imfData = imfViewData();
 
 export const metadata = {
   title: 'Kenya dashboard',
@@ -120,6 +124,8 @@ export default function KenyaPage() {
         </TableWrap>
         <p className="src">Sources: {obs.source.citation_requested} (<a href={obs.source.landing_page}>Open Budget Survey data</a>); scores before 2017 are not comparable for oversight and participation. IEBC, <a href={extra.VOTERS.source.url}>registered voters per constituency, 2022</a> and <a href={cand.source.url}>Annual Report 2022-23</a>, Table 21. The IEBC states no reuse licence for these files. The August 2017 presidential results are not shown: that election was annulled, and the copy found is unsigned and does not add up. Registered voters by constituency are on <Link href="/compare/#voters">Compare counties</Link>.</p>
       </section>
+      <ImfView data={imfData} />
+
       <section className="card" id="trends" aria-labelledby="trends-h">
         <h2 id="trends-h">Trend explorer</h2>
         <p className="lead">Choose any of {series.length} indicators to see every year as a chart and a table. Money values can be shown in real terms, at FY {BASE_FY} prices; <Link href="/method/#prices">how real terms are worked out</Link>.</p>

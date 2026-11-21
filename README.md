@@ -40,14 +40,22 @@ npm run verify:repro  # two builds must be identical; prints "Reproducible"
 npm run qa:axe        # axe-core accessibility check of every sitemap page in dist/, light and dark (must report 0 violations)
 npm run qa:crawl      # crawl of every sitemap page: status, one h1, title, description, broken internal links
 npm run qa:overflow   # no horizontal overflow at phone and desktop widths
+npm run reports:pdf   # regenerate the five report PDFs (public/reports/), then npm run build again
+npm run test:reports  # report pages and PDFs: snapshot, figures resolve, DRAFT mark (blocking before any deploy)
+npm run test:reviews  # synthetic-rejection test on its own (also the last step of npm run build)
+npm run ops:check-sources  # re-checks every source address and document hash (network; writes docs/ops/source-health.md)
+npm run ops:freshness      # dataset freshness against each publisher's cycle (writes docs/ops/freshness.md)
+npm run ops:backup-drill   # clone, build and compare from the remote branch (docs/ops/backup-restore.md)
 npm run dev
 ```
 
-`npm run build` runs, in order: `test-analytics`, `validate-data` (provenance fields, JSON Schemas, sums, source-manifest SHA-256), `test-reconciliation` (one test per conflict case), `test-explore` (units), `test-derived`, `test-economy`, `test-governance`, `test-audits`, `test-fiscal-ledger`, `test-health`, `test-education`, `test-agriculture`, `test-geography`, `test-wards-geo`, `test-climate` (also checks that no phone or ID number from the PCRA's participant annex is extracted), `test-siaya-analysis`, `build-data`, `next build`, `check-built-html` (no `NaN`; gaps stay gaps). There is no hosted CI: run every gate locally before an upload.
+`npm run build` runs, in order: `test-analytics`, `validate-data` (provenance fields, JSON Schemas, sums, source-manifest SHA-256), `test-reconciliation` (one test per conflict case), `test-explore` (units), `test-derived`, `test-economy`, `test-governance`, `test-audits`, `test-fiscal-ledger`, `test-health`, `test-education`, `test-agriculture`, `test-geography`, `test-wards-geo`, `test-climate` (also checks that no phone or ID number from the PCRA's participant annex is extracted), `test-siaya-analysis`, `test-projects`, `test-programmes`, `test-research-deliverables`, `test-reviews`, `test-imf` (IMF WEO: types, vintages, comparisons), `ops/test-ops` (offline, 60 checks), `build-data`, `next build`, `check-built-html` (no `NaN`; gaps stay gaps), and `test-reviews dist --synthetic`: a second, throwaway build into `dist-synthetic/` with one synthetic rejection per dataset held in memory only (never written to `data/reviews.json`), which fails unless every page, report, download and published data file withholds the value and every calculation using it. There is no hosted CI: run every gate locally before an upload.
 
 The `qa:*` scripts and the smoke test use Playwright (and axe-core for `qa:axe`) installed globally, not as project dependencies; the npm scripts set `NODE_PATH=$(npm root -g)` themselves, so install them once with `npm i -g playwright axe-core && npx playwright install chromium`. Run them after `npm run build`; they serve `dist/` locally.
 
-Brief PDF: after a build, `NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js`, then build again.
+Brief PDF: after a build, `NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js`, then build again. Report PDFs: `npm run build`, `npm run reports:pdf`, `npm run build`, then `npm run test:reports`, which must pass before any deploy (release gate).
+
+Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:check-sources`, `npm run ops:freshness`, `npm run ops:backup-drill`.
 
 ## Data rules
 

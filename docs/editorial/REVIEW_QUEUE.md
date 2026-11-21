@@ -20,8 +20,9 @@ Procedure: [review-sop.md](review-sop.md). Every value below is public and label
 | siaya-education | 215 | 0 | 215 | 0 | 31 | 0 | 0 |
 | siaya-agriculture | 105 | 0 | 105 | 0 | 23 | 0 | 0 |
 | siaya-climate | 87 | 0 | 87 | 0 | 0 | 0 | 0 |
+| imf | 430 | 0 | 430 | 0 | 0 | 0 | 430 |
 | siaya-programmes | 73 | 0 | 73 | 0 | 0 | 0 | 0 |
-| **All** | **6270** | **0** | **6270** | **0** | **215** | **0** | **115** |
+| **All** | **6700** | **0** | **6700** | **0** | **215** | **0** | **545** |
 
 Review records in force: 0 (of 0 in the file).
 
@@ -791,13 +792,14 @@ Not itemised (registers and map layers, not measured values):
 
 Full list for one dataset: `node scripts/review-queue.js --dataset <dataset>`.
 
-## Priority 5: other statistics and records (681)
+## Priority 5: other statistics and records (1111)
 
 | Dataset | Pending | Disputed | Unanchored | What |
 |---|---:|---:|---:|---|
 | siaya-agriculture | 105 | 23 | 0 | agriculture statistic |
 | siaya-education | 215 | 31 | 0 | education statistic |
 | history | 9 | 0 | 9 | population; poverty |
+| imf | 430 | 0 | 430 | IMF WEO value (actual); IMF WEO value (estimate); IMF WEO value (projection) |
 | siaya-climate | 87 | 0 | 0 | climate and water statistic |
 | siaya-economy | 154 | 0 | 0 | economic statistic |
 | siaya-governance | 38 | 0 | 0 | governance finding; governance score |
