@@ -369,7 +369,11 @@ Object.entries(files)
   const progText = fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-programmes.json'), 'utf8');
   const names = raw.projects.map((p) => p.contract && p.contract.contractor && p.contract.contractor.name).filter(Boolean).filter((nm) => !progText.includes(nm));
   const out = JSON.stringify({ ...publicCopy(), editorial_review: require('../lib/review-status').publishedCopy('siaya-projects').editorial_review }, null, 1) + '\n';
-  const leak = WITHHELD.filter((k) => out.includes(`"${k}"`)).concat(names.filter((nm) => out.includes(nm)));
+  // Sweep D22: the data file holds no contractor names, so `names` is normally empty; a company-name pattern on the
+  // output (the one scripts/test-projects.js applies to the data) keeps the check meaningful.
+  const COMPANY = /\b[A-Z][A-Za-z&]+(?: (?:[A-Z][A-Za-z&]+|and|of|&))* (?:Limited|Ltd\.?|PLC|Company|Corporation)\b/g;
+  const companies = [...new Set(out.match(COMPANY) || [])].filter((nm) => !progText.includes(nm));
+  const leak = WITHHELD.filter((k) => out.includes(`"${k}"`)).concat(names.filter((nm) => out.includes(nm)), companies);
   if (leak.length) throw new Error(`siaya-projects public copy still contains withheld fields or names: ${leak.join(', ')}`);
   fs.writeFileSync(path.join(outDir, 'siaya-projects.json'), out);
   console.log('Generated public/data/siaya-projects.json (contractor fields withheld)');

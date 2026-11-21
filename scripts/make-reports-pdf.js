@@ -1,6 +1,6 @@
 // Renders the five built report pages (dist/reports/<slug>/index.html) to public/reports/<slug>.pdf with
 // Chromium's print engine: A4, white background, page numbers, snapshot ID and (while any figure is unreviewed)
-// a DRAFT header on every page. Fonts are the site's self-hosted web fonts, embedded by Chromium.
+// a DRAFT header on every page (the provisional label itself is printed once, on the cover). Fonts are the site's self-hosted web fonts, embedded by Chromium.
 // Playwright is NOT a project dependency: run with the global install, after `npm run build`:
 //   NODE_PATH=$(npm root -g) node scripts/make-reports-pdf.js [distDir]
 // Then run `npm run build` again so dist/ carries the new PDFs. Needs pdfinfo and pdffonts (poppler-utils).
@@ -10,6 +10,8 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 const { chromium } = require('playwright');
 const registry = require('../components/report/reports.json');
+
+const SITE_URL = 'https://takwimu.netlify.app'; // lib/site.js SITE_URL (ES module, not loadable here)
 
 const root = path.join(__dirname, '..');
 const dist = path.resolve(process.argv[2] || path.join(root, 'dist'));
@@ -41,12 +43,16 @@ async function render(page, port, r) {
     const m = document.querySelector('main.rp');
     return { snapshot: m.dataset.snapshot, draft: m.dataset.draft === 'true' };
   });
+  // Site links (topic pages, /reports/method/) point at the published site in the PDF, not at this local server.
+  await page.evaluate((site) => {
+    document.querySelectorAll('main.rp a[href^="/"]').forEach((a) => a.setAttribute('href', site + a.getAttribute('href')));
+  }, SITE_URL);
   const out = path.join(outDir, `${r.slug}.pdf`);
   await page.pdf({
     path: out, format: 'A4', printBackground: true, tagged: true, outline: true,
     margin: { top: '17mm', bottom: '16mm', left: '14mm', right: '14mm' },
     displayHeaderFooter: true,
-    headerTemplate: `<div style="${band} color: ${info.draft ? '#B91C1C' : '#31445F'};"><span>${info.draft ? 'DRAFT · Provisional: awaiting editorial review' : 'Reviewed edition'}</span><span>Takwimu Kenya · Report ${r.letter}: ${esc(r.title)}</span></div>`,
+    headerTemplate: `<div style="${band} color: ${info.draft ? '#B91C1C' : '#31445F'};"><span>${info.draft ? 'DRAFT · not yet reviewed (see the notice on page 1)' : 'Reviewed edition'}</span><span>Takwimu Kenya · Report ${r.letter}: ${esc(r.title)}</span></div>`,
     footerTemplate: `<div style="${band} color: #31445F;"><span>Snapshot ${info.snapshot} · ${esc(registry.edition)}</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>`,
   });
   const pdfInfo = execFileSync('pdfinfo', [out]).toString();
