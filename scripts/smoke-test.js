@@ -144,6 +144,7 @@ const srv = http.createServer((req, res) => {
   const nf = await p2.goto(base + '/no-such-page/', { waitUntil: 'load' });
   const nfHtml = fs.readFileSync(path.join(root, '404.html'), 'utf8');
   check(/That page is not here/.test(nfHtml) && /href="\/explore\/"/.test(nfHtml), 'friendly 404 with Home and Explore links');
+  check((await pg.context().cookies()).length === 0 && (await ctx2.cookies()).length === 0, 'no cookies are set on any page visited (no personal data collected)');
   await ctx2.close();
   check(bad.length === 0, `no CSP violations or page errors ${bad.slice(0, 2).join(' | ')}`);
   await b.close(); srv.close();

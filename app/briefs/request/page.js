@@ -18,6 +18,7 @@ export default function RequestBrief() {
         <ul className="how">
           <li><b>The same offer to everyone.</b> Every political party and independent candidate, and any office, organisation or citizen, is offered the same service on the same terms. We do not take sides and we do not rate named individuals.</li>
           <li><b>Paid work never changes a published figure.</b> A figure, ranking or caveat on this site stays as the evidence shows it, whoever asks or pays. Clients have no say over what we publish.</li>
+          <li><b>Public statistics only.</b> A brief is built from published, aggregate figures (budgets, spending, population, services). It holds no information about individual voters or residents, and we do not take on campaign canvassing, voter targeting or direct marketing work.</li>
           <li><b>Free facts stay free.</b> Everything on the site remains open to all. A brief saves you time; it does not unlock different numbers.</li>
         </ul>
       </section>
