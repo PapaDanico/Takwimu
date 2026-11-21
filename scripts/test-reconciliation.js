@@ -417,6 +417,32 @@ test('conflict osr-2024-25-county-statement: the case explains the gap part by p
   ok(/236\.50/.test(c.definitions) && /236\.84/.test(c.definitions) && /521\.07/.test(c.definitions) && /199\.84/.test(c.definitions) && /#an-a8/.test(c.definitions), 'case must give the ordinary and FIF parts and link the analysis');
 });
 
+test('conflict iebc-president-independent-dash: the printed dash is null, not 0', () => {
+  const c = conflict('iebc-president-independent-dash');
+  const r = xpol.iebc_candidates_2022_by_position.rows.find((x) => x.position === 'President');
+  ok(c.status === 'resolved' && r.independent === null && /shown as '-'/.test(r.note), 'President independent must be null with the note');
+});
+test('conflict ecde-enrolment-2022-value-type: the end-2022 ECE figure is labelled unclear', () => {
+  const c = conflict('ecde-enrolment-2022-value-type');
+  const o = read('siaya-education.json').observations.find((x) => x.id === 'cidp-ecde-enrol-end');
+  ok(c.status === 'resolved' && listed2(c, 'actual') && listed2(c, 'unclear') && o.value_type === 'unclear', 'value_type must be unclear');
+});
+test('conflict subcounty-voters-term: sub-county voters use the IEBC term and match the register', () => {
+  const c = conflict('subcounty-voters-term');
+  const sc = read('subcounties.json').sub_counties;
+  ok(c.status === 'resolved' && sc.every((x) => Number.isInteger(x.registered_voters_2022) && !('eligible_voters_2022' in x)), 'field must be registered_voters_2022');
+  const reg41 = xpol.iebc_registered_voters_2022_by_constituency.rows.filter((r) => r.county_code === '041').reduce((s, r) => s + r.registered_voters, 0);
+  ok(sc.reduce((s, x) => s + x.registered_voters_2022, 0) === reg41, 'sub-county voters must add to the IEBC register for Siaya');
+});
+
+test('conflict analytics-per-person-2022-23: /analytics/ uses the A1 value, never an interpolated population', () => {
+  const c = conflict('analytics-per-person-2022-23');
+  const a1 = read('siaya-analysis.json').records.find((x) => x.calc_id === 'SIA-A1-2022-23-cob-report-2022-23');
+  ok(c.status === 'resolved' && a1.result === 7224 && listed(c.id, 7224) && listed(c.id, 7096), 'A1 value and the withdrawn value must be listed');
+  const src = fs.readFileSync(path.join(__dirname, '..', 'app', 'analytics', 'page.js'), 'utf8');
+  ok(!/interpolate\(/.test(src) && /an-a1/.test(src), '/analytics/ must not interpolate population and must link the A1 section');
+});
+
 // Every register case has a test above, and no test points at a case that was removed.
 test('every conflict in the register has a test', () => {
   const tested = new Set(results.map(([, n]) => (n.match(/^conflict ([a-z0-9-]+)/) || [])[1]).filter(Boolean));

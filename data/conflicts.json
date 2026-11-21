@@ -1240,6 +1240,102 @@
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false
+    },
+    {
+      "id": "iebc-president-independent-dash",
+      "measure": "Independent presidential candidates, 2022 general election (IEBC Annual Report 2022-23, Table 21)",
+      "unit": "label",
+      "values": [
+        {
+          "label": "data/political.json before 21 Nov 2026",
+          "value": "0 (a printed dash stored as zero)",
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        },
+        {
+          "label": "As printed in Table 21",
+          "value": "'-' (stored as null with the note \"shown as '-'\")",
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        }
+      ],
+      "definitions": "The table prints '-' in the independent column for President. A dash is not a printed zero.",
+      "hypothesis": "Resolved by the printed document and one site-wide rule (sweep D17): a cell printed as '-' is stored as null with a note, never as 0.",
+      "effect": "political.json holds null; /kenya/ shows '-' with a tooltip; the column sums treat the dash as nothing. scripts/validate-data.js fails on any value 0 whose note says it was shown as '-'.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "ecde-enrolment-2022-value-type",
+      "measure": "Siaya pre-primary (ECE) gross enrolment at the end of 2022, CIDP 2023-2027 (education observation cidp-ecde-enrol-end)",
+      "unit": "label",
+      "values": [
+        {
+          "label": "siaya-education.json value_type before 21 Nov 2026",
+          "value": "actual",
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Government-of-Siaya-CIDP-2023-2027-Final-Print-File-2024.pdf"
+        },
+        {
+          "label": "Corrected value_type (sweep D21)",
+          "value": "unclear",
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Government-of-Siaya-CIDP-2023-2027-Final-Print-File-2024.pdf"
+        }
+      ],
+      "definitions": "The CIDP prints 81,771 as end-2022 ECE enrolment (PDF p. 44); the same plan projects the 3-5 population for 2022 as 81,771 (page 35, case edu-c07 in the education dataset).",
+      "hypothesis": "Resolved: the figure cannot be shown as an actual enrolment count; it is labelled unclear.",
+      "effect": "The education page tags it \"Unclear\" and leaves it out of the enrolment chart; Report D is asked to render it the same way.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "subcounty-voters-term",
+      "measure": "Siaya voters by sub-county, 2022 (CIDP 2023-2027 statistics annex)",
+      "unit": "label",
+      "values": [
+        {
+          "label": "subcounties.json field before 21 Nov 2026 (the CIDP column heading)",
+          "value": "eligible_voters_2022 (\"Eligible Voting Population\")",
+          "url": "https://maarifa.cog.go.ke/sites/default/files/2024-06/SIAYA%20CIDP-2023-2027.pdf"
+        },
+        {
+          "label": "IEBC register of voters 2022 (the figures match it: 533,595 for Siaya)",
+          "value": "registered_voters_2022 (registered voters)",
+          "url": "https://maarifa.cog.go.ke/sites/default/files/2024-06/SIAYA%20CIDP-2023-2027.pdf"
+        }
+      ],
+      "definitions": "The CIDP annex (PDF p. 204) labels the column \"Eligible Voting Population\", but the six figures are the IEBC 2022 registered voters per constituency (they add to 533,595, as in data/political.json). Eligible voters (adults who could register) is a different, larger number.",
+      "hypothesis": "Resolved: the IEBC term registered voters is used everywhere (sweep D23).",
+      "effect": "Field renamed; /subcounties/ and the dataset say \"registered voters\".",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "analytics-per-person-2022-23",
+      "measure": "Siaya real county spending per person, FY 2022/23, FY 2024/25 prices",
+      "unit": "KSh per person",
+      "values": [
+        {
+          "label": "/analytics/ before 21 Nov 2026: population interpolated between censuses and projections to 1 January 2023",
+          "value": 7096,
+          "url": "https://libraryir.parliament.go.ke/items/e32e1bc2-b0b4-4af1-9d21-b27ab6fc5e34"
+        },
+        {
+          "label": "Siaya analysis A1 (SIA-A1-2022-23-cob-report-2022-23): the 2022 CIDP projection matched to FY 2022/23, no interpolation",
+          "value": 7224,
+          "url": "https://libraryir.parliament.go.ke/items/e32e1bc2-b0b4-4af1-9d21-b27ab6fc5e34"
+        }
+      ],
+      "definitions": "Same spending (Controller of Budget FY 2022/23 report) and the same price index; the earlier /analytics/ figure divided by an interpolated mid-year population, which fills a gap between published population figures.",
+      "hypothesis": "Resolved by method (sweep D3): gaps are never filled, so the interpolated series is withdrawn. Per-person values exist only for years with a published population figure (FY 2015/16, 2017/18, 2019/20, 2022/23).",
+      "effect": "/analytics/ no longer shows an interpolated per-person series or an interpolated population growth rate; it lists the A1 values and links to /counties/siaya/analysis/#an-a1, the one canonical home. The other interpolated years (e.g. FY 2024/25, KSh 7,064 on the old page) have no value now.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
     }
   ]
 }
