@@ -237,7 +237,25 @@ const srv = http.createServer((req, res) => {
     const linked = await Promise.all(REPORT_SLUGS.map(async (x) => (await pg.locator(`main a[href="/reports/${x}/"]`).count()) === 1 && (await pg.locator(`main a[href="/reports/${x}.pdf"]`).count()) === 1));
     check(linked.every(Boolean) && (txt.match(/snapshot [0-9a-f]{12}/g) || []).length === REPORT_SLUGS.length && /Edition 1/.test(txt) && (rvs.DATASET_IDS.some((d) => rvs.counts(d).approved) || (txt.match(/DRAFT/g) || []).length >= REPORT_SLUGS.length), `reports index links ${REPORT_SLUGS.length} reports (HTML and PDF) with edition, snapshot ID and DRAFT status`);
   }
-  check(REPORT_SLUGS.every((x) => fs.existsSync(path.join(root, 'reports', `${x}.pdf`)) && fs.statSync(path.join(root, 'reports', `${x}.pdf`)).size > 10000), 'all five report PDFs are in the build');
+  check(REPORT_SLUGS.every((x) => fs.existsSync(path.join(root, 'reports', `${x}.pdf`)) && fs.statSync(path.join(root, 'reports', `${x}.pdf`)).size > 10000), `all ${REPORT_SLUGS.length} report PDFs are in the build`);
+  // Each PDF carries the snapshot of its page, recomputed from the data files and the review state: a PDF printed
+  // before a data change or a review decision fails here (run npm run reports:pdf, then rebuild).
+  {
+    const { snapshot } = require('../components/report/snapshot');
+    const { execFileSync } = require('child_process');
+    const reg = require('../components/report/reports.json').reports;
+    const stale = reg.filter((r) => {
+      const pdf = path.join(root, 'reports', `${r.slug}.pdf`);
+      const html = path.join(root, 'reports', r.slug, 'index.html');
+      if (!fs.existsSync(pdf) || !fs.existsSync(html)) return true;
+      const page = (fs.readFileSync(html, 'utf8').match(/data-snapshot="([0-9a-f]{12})"/) || [])[1];
+      const want = snapshot(r.inputs, path.join(__dirname, '..')).id;
+      let text = '';
+      try { text = execFileSync('pdftotext', [pdf, '-']).toString(); } catch (e) { return true; }
+      return page !== want || !text.includes(want);
+    }).map((r) => r.slug);
+    check(!stale.length, `report PDFs carry the snapshot recomputed from the data files and the review state${stale.length ? ` (stale: ${stale.join(', ')})` : ''}`);
+  }
   // IMF World Economic Outlook section on /kenya/: two vintages selectable, projections labelled and dashed, a table view.
   await pg.goto(base + '/kenya/', { waitUntil: 'load' });
   {
@@ -248,7 +266,8 @@ const srv = http.createServer((req, res) => {
     const label = /IMF projection/.test(await sec.innerText());
     await vSel.selectOption({ index: 1 });
     const cap = await sec.locator('#imf-chart-h').innerText();
-    check(nV === 2 && projRows > 0 && label && /April 2025/.test(cap) && await sec.locator('#imf-table tbody tr').count() > 10, `/kenya/ IMF section: ${nV} vintages selectable, ${projRows} rows labelled IMF projection, table view`);
+    const imfVintages = require('../data/imf.json').vintages.length;
+    check(nV === imfVintages && projRows > 0 && label && /April 2025/.test(cap) && await sec.locator('#imf-table tbody tr').count() > 10, `/kenya/ IMF section: ${nV.toLocaleString('en-US')} of ${imfVintages.toLocaleString('en-US')} vintages selectable, ${projRows.toLocaleString('en-US')} rows labelled IMF projection, table view`);
   }
   // No personal data is collected (owner, 21 Nov 2026): /briefs/request/ describes the service with no form; the thanks page is gone.
   check(!fs.existsSync(path.join(root, 'briefs', 'request', 'thanks')), '/briefs/request/thanks/ is not built');
@@ -337,7 +356,7 @@ const srv = http.createServer((req, res) => {
   await p2.goto(base + '/datasets/?q=counties-absorption', { waitUntil: 'networkidle' });
   check((await p2.locator('#counties-absorption a.file').first().getAttribute('download')) === `counties-absorption-${absCat.version}.csv` && /disputed/i.test(await p2.locator('#counties-absorption').innerText()) && await p2.locator('#status dt').count() === 6, '/datasets/ shows status, version and the six-term status list; downloads are named with the version');
   const absReview = absCat.review;
-  check(Boolean(absReview) && new RegExp(`${absReview.approved} approved, ${absReview.pending.toLocaleString('en-US')} pending, ${absReview.rejected} rejected`).test(await p2.locator('#counties-absorption [data-review-counts]').innerText()) && cat.datasets.filter((d) => d.review).length >= 16 && /Editorial review of/.test(absCat.status_reason), '/datasets/ and catalogue.json show review counts (approved, pending, rejected) per dataset');
+  check(Boolean(absReview) && new RegExp(`${absReview.approved.toLocaleString('en-US')} approved, ${absReview.pending.toLocaleString('en-US')} pending, ${absReview.rejected.toLocaleString('en-US')} rejected`).test(await p2.locator('#counties-absorption [data-review-counts]').innerText()) && cat.datasets.filter((d) => d.review).length === cat.datasets.filter((d) => rvs.catalogueCounts(d.id)).length && cat.datasets.some((d) => d.review) && /Editorial review of/.test(absCat.status_reason), '/datasets/ and catalogue.json show review counts (approved, pending, rejected) per dataset');
   check(await p2.locator('#review').count() === 1 && (REVIEW_APPROVED > 0 || await p2.locator('main [data-review="approved"]').count() === 0), '/datasets/ explains editorial review; nothing shown as approved without a record');
   await p2.goto(base + '/trends/?i=siaya-spending&basis=real', { waitUntil: 'networkidle' });
   await p2.waitForURL(/\/kenya\/\?i=siaya-spending&basis=real#trends/, { timeout: 10000 }).catch(() => {});
