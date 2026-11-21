@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Source document manifest",
-    "note": "Every source document referenced in data/history.json (reports and audits). sha256 is computed over the exact PDF bytes downloaded from the Parliament of Kenya library (DSpace bitstream). A hash is recorded only when the file was downloaded and its MD5 matched the checksum the library publishes; otherwise sha256 is null and access says why. retrieved is the date the figures were read; hashed_on is the date the file was downloaded and hashed. Documents from sites that publish no checksum (parliament.go.ke, siaya.go.ke) are not hashed even when downloaded: sha256 is null and access says so.",
+    "note": "Every source document referenced in data/history.json (reports and audits), data/counties-cob.json and data/national.json. sha256 is computed over the exact PDF bytes downloaded from the Parliament of Kenya library (DSpace bitstream). A hash is recorded only when the file was downloaded and its MD5 matched the checksum the library publishes; otherwise sha256 is null and access says why. retrieved is the date the figures were read; hashed_on is the date the file was downloaded and hashed. Documents from sites that publish no checksum (parliament.go.ke, siaya.go.ke) are not hashed even when downloaded: sha256 is null and access says so. The World Bank API (data/national.json) is a live service, not a file: its responses are not hashed; each indicator records the API's last_updated date.",
     "method": "Item resolved through https://libraryir.parliament.go.ke/server/api (items, bundles, ORIGINAL bitstreams); file fetched with curl -L from the bitstream content URL; MD5 compared with the library checkSum; SHA-256 computed locally.",
     "updated": "2026-11-21"
   },
@@ -30,7 +30,7 @@
       "title": "County Governments Budget Implementation Review Report FY 2024/25",
       "library_title": "County Governments Budget Implementation Review Report for the Financial Year 2024-2025 from the Office of the Controller of Budget",
       "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410",
-      "referenced_by": "history.json reports[\"2024/25\"]",
+      "referenced_by": "history.json reports[\"2024/25\"]; counties-cob.json years[\"2024/25\"] (Tables 2.1, 2.5 and 2.9, PDF pp. 45-46, 51-52, 58-59)",
       "retrieved": "2026-11-20",
       "file_name": "County Governments Budget Implementation Review Report for the Financial Year 2024-2025 from the Office of the Controller of Budget.pdf",
       "file_url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/3458a286-34f3-45fd-9d9d-d8215c6f8d11/content",
@@ -47,7 +47,7 @@
       "title": "County Governments Budget Implementation Review Report FY 2023/24",
       "library_title": "County Governments Budget Implementation Review Report for the Financial Year 2023-2024",
       "url": "https://libraryir.parliament.go.ke/handle/123456789/28882",
-      "referenced_by": "history.json reports[\"2023/24\"]",
+      "referenced_by": "history.json reports[\"2023/24\"]; counties-cob.json years[\"2023/24\"] (Tables 2.1, 2.3 and 2.5, PDF pp. 25-26, 29-30, 32-33)",
       "retrieved": "2026-11-20",
       "file_name": "County Governments Budget Implementation Review Report for the Financial Year 2023-2024.pdf",
       "file_url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/8dff45e0-0da9-4344-a141-4bc9c0e411e7/content",
@@ -390,6 +390,20 @@
       "md5_library": null,
       "sha256": null,
       "access": "downloaded 2026-11-21; not hashed: siaya.go.ke publishes no checksum to verify the file against"
+    },
+    {
+      "id": "worldbank-wdi-api",
+      "kind": "Data service (API)",
+      "fiscal_year": "2010-2025",
+      "title": "World Bank, World Development Indicators API, Kenya (country code KEN)",
+      "url": "https://api.worldbank.org/v2/country/KEN/indicator/",
+      "referenced_by": "national.json (14 indicators; each indicator gives its full api_url)",
+      "retrieved": "2026-11-21",
+      "file_url": "https://api.worldbank.org/v2/country/KEN/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=100",
+      "bytes": null,
+      "md5_library": null,
+      "sha256": null,
+      "access": "downloaded 2026-11-21; not hashed: a live API whose responses change when the World Bank updates a series (last_updated 2026-11-11 for every indicator used)"
     }
   ]
 }

@@ -350,7 +350,7 @@ Object.entries(files)
   });
 
 // Siaya data is verified-with-status and carries its own provenance fields.
-['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json', 'siaya-boundaries.json', 'source-manifest.json'].forEach((f) => {
+['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json', 'siaya-boundaries.json', 'source-manifest.json', 'national.json', 'counties-cob.json'].forEach((f) => {
   fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(outDir, f));
   console.log('Generated public/data/' + f);
 });
@@ -395,4 +395,24 @@ Object.entries(files)
   conf.conflicts.forEach((c) => c.values.forEach((v) => rows.push([`conflict: ${c.measure}`, '', v.value, c.unit, `source value (${c.status})`, v.label, v.url, '', got, '', c.definitions])));
   fs.writeFileSync(path.join(outDir, 'history.csv'), rows.map((r) => [...r, ...Array(Math.max(0, rows[0].length - r.length)).fill('')].map(q).join(',')).join('\n') + '\n');
   console.log(`Generated public/data/history.csv (${rows.length - 1} rows)`);
+}());
+
+// Dataset catalogue downloads (/datasets/): one CSV and one JSON per dataset, built from the same validated files
+// the Explore pages read (lib/explore.js). Each JSON carries the dataset's metadata with its rows.
+(function writeDatasets() {
+  const { DATASETS, catalogue } = require('../lib/explore');
+  const { toCSV } = require('../lib/csv');
+  const dir = path.join(outDir, 'datasets');
+  fs.rmSync(dir, { recursive: true, force: true });
+  fs.mkdirSync(dir, { recursive: true });
+  const meta = Object.fromEntries(catalogue().map((d) => [d.id, d]));
+  let n = 0;
+  DATASETS.forEach((d) => {
+    if (!d.rows) return; // files that already exist in /data/ (history.csv, history.json)
+    const rows = d.rows();
+    if (d.files.csv.startsWith('/data/datasets/')) { fs.writeFileSync(path.join(dir, `${d.id}.csv`), toCSV(rows, d.columns)); n += 1; }
+    if (d.files.json.startsWith('/data/datasets/')) { fs.writeFileSync(path.join(dir, `${d.id}.json`), JSON.stringify({ dataset: meta[d.id], rows }, null, 1) + '\n'); n += 1; }
+  });
+  fs.writeFileSync(path.join(dir, 'catalogue.json'), JSON.stringify({ updated: '2026-11-21', datasets: catalogue() }, null, 1) + '\n');
+  console.log(`Generated public/data/datasets/ (${n} files and catalogue.json, ${DATASETS.length} datasets)`);
 }());

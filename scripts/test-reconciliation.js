@@ -8,6 +8,10 @@ const read = (f) => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data'
 const hist = read('history.json');
 const reg = read('conflicts.json');
 const siaya = read('siaya.json');
+const cob = read('counties-cob.json');
+// Siaya's row in the 47-county tables (Controller of Budget, chapter 2).
+const cobSiaya = (fy, k) => { const y = cob.years.find((x) => x.fy === fy); ok(y, `no ${fy} in counties-cob.json`); const c = y.counties.find((x) => x.slug === 'siaya'); ok(c && c[k], `no Siaya ${k} for ${fy}`); return c[k]; };
+const listed = (id, v) => conflict(id).values.some((x) => near(x.value, v, 1e-9));
 
 const results = [];
 const test = (name, fn) => {
@@ -176,6 +180,43 @@ caseTest('budget-financing-osr-2024-25', 1043, 929, siaya.own_source_revenue.tar
 test('conflict budget-financing-osr-2024-25: stated 47 per cent is quoted, not recomputed', () => {
   ok(siaya.own_source_revenue.share_of_annual_target_pct === 47, 'share_of_annual_target_pct should be the stated 47');
   ok(near(436.68 / 0.47, 929, 1), '436.68 / 0.47 should be about 929');
+});
+
+// The 47-county tables (data/counties-cob.json) give further values for Siaya; each is listed in its case, and the
+// ten-year series is unchanged.
+caseTest('budget-2024-25', 10.94, 10.94813, year('2024/25').approved, 1e-9);
+test('conflict budget-2024-25: Table 2.5 amount is listed and the series keeps the chapter figure', () => {
+  ok(near(cobSiaya('2024/25', 'approved_budget_total').value, 10948.13, 1e-9), 'Table 2.5 should read 10,948.13');
+  ok(listed('budget-2024-25', cobSiaya('2024/25', 'approved_budget_total').value / 1000), 'Table 2.5 amount not in the case');
+  ok(Number((10948.13 / 1000).toFixed(2)) === 10.95 && year('2024/25').approved === 10.94, 'rounding difference changed');
+});
+test('conflict recurrent-absorption-2024-25: Table 2.5 value 82 is listed, the series keeps 83', () => {
+  ok(cobSiaya('2024/25', 'recurrent_absorption_pct').value === 82 && listed('recurrent-absorption-2024-25', 82), 'Table 2.5 82 must be in the case');
+  ok(year('2024/25').recurrent_absorption_pct === 83, 'series must keep 83');
+});
+test('conflict recurrent-absorption-2023-24: Table 2.3 value 87.0 is listed, the series keeps 85.8', () => {
+  ok(cobSiaya('2023/24', 'recurrent_absorption_pct').value === 87 && listed('recurrent-absorption-2023-24', 87), 'Table 2.3 87.0 must be in the case');
+  ok(near((5138.67 / 5909.25) * 100, 87.0, 0.05), 'Table 2.3 amounts should give 87.0');
+  ok(year('2023/24').recurrent_absorption_pct === 85.8, 'series must keep 85.8');
+});
+test('conflict development-absorption-2023-24: Table 2.3 value 64.6 is listed, the series keeps 64.5', () => {
+  ok(cobSiaya('2023/24', 'development_absorption_pct').value === 64.6 && listed('development-absorption-2023-24', 64.6), 'Table 2.3 64.6 must be in the case');
+  ok(year('2023/24').development_absorption_pct === 64.5, 'series must keep 64.5');
+});
+test('conflict pending-close-2025: Table 2.9 value 1,890.0 is a third value; still no series value', () => {
+  const pb = cobSiaya('2024/25', 'pb_grand_total').value;
+  ok(pb === 1890 && listed('pending-close-2025', 1890), 'Table 2.9 1,890.0 must be in the case');
+  ok(near(cobSiaya('2024/25', 'pb_exec_recurrent').value + cobSiaya('2024/25', 'pb_exec_development').value, pb, 0.15), 'Executive parts (832.9 + 1,057.0 = 1,889.9, printed rounding) should add to 1,890.0');
+  ok(conflict('pending-close-2025').values.length === 3, 'the case should hold three values');
+  ok(pendOf(year('2024/25')) === undefined, 'FY 2024/25 pending bills must stay a gap in the series');
+});
+test('conflict pending-2024: Table 2.5 of the FY 2023/24 report matches the listed 303.91', () => {
+  ok(near(cobSiaya('2023/24', 'pb_grand_total').value, 303.91, 0.005) && listed('pending-2024', 303.91), 'Table 2.5 should read 303.91');
+});
+test('conflict budget-financing-osr-2024-25: Table 2.1 target 927.34 is listed and gives the printed 47 per cent', () => {
+  ok(cobSiaya('2024/25', 'total_osr_target').value === 927.34 && listed('budget-financing-osr-2024-25', 927.34), 'Table 2.1 target must be in the case');
+  ok(cobSiaya('2024/25', 'osr_performance_pct').value === 47 && near((436.68 / 927.34) * 100, 47.1, 0.05), 'Table 2.1 should print 47');
+  ok(siaya.own_source_revenue.target.value === 1043, 'the Siaya hub keeps the budget financing target');
 });
 
 // Every register case has a test above, and no test points at a case that was removed.

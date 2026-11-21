@@ -117,12 +117,17 @@
           "label": "Implied by the stated 47 per cent (436.68 / 0.47)",
           "value": 929,
           "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, Table 2.1 (own-source revenue of all 47 counties), Siaya total target: ordinary 643.39 plus FIF/A-i-A 283.95 (PDF p. 46, printed p. 3, RapidOCR)",
+          "value": 927.34,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
         }
       ],
-      "definitions": "KSh 436.68m collected against 1,043m would be 41.9 per cent, but the report states 47 per cent.",
+      "definitions": "KSh 436.68m collected against 1,043m would be 41.9 per cent, but the report states 47 per cent. Table 2.1 gives a total target of 927.34 million and prints 47 per cent, which is 436.68 of 927.34 (47.1 per cent).",
       "hypothesis": "The two figures may measure different concepts (for example, budget financing versus the annual revenue target). The report does not explain.",
       "status": "open",
-      "effect": "The 47 per cent is quoted as the report's own statement and is not recomputed.",
+      "effect": "The 47 per cent is quoted as the report's own statement and is not recomputed. The county comparison uses the Table 2.1 target and percentage; the Siaya hub keeps the budget financing figure.",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false
@@ -141,12 +146,17 @@
           "label": "Recomputed (4.99 / 6.07)",
           "value": 82.2,
           "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, Table 2.5 (all 47 counties), Siaya row, RapidOCR (PDF p. 52, printed p. 9)",
+          "value": 82,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
         }
       ],
-      "definitions": "The recomputed value uses the approved recurrent budget of KSh 6.07bn.",
+      "definitions": "The recomputed value uses the approved recurrent budget of KSh 6.07bn. Table 2.5 prints 82 for Siaya, the rounded share of 4,991.98 of 6,073.31 million (82.2 per cent).",
       "hypothesis": "The report may use a revised budget as its denominator.",
       "status": "open",
-      "effect": "The report's stated 83 per cent is used and the recomputed 82.2 per cent is recorded here and in the year's note on the Data page.",
+      "effect": "The report's stated 83 per cent is used and the recomputed 82.2 per cent is recorded here and in the year's note on the Data page. The county comparison (data/counties-cob.json) shows the Table 2.5 value 82 with this case.",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false
@@ -198,6 +208,30 @@
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false
+    },
+    {
+      "id": "budget-2024-25",
+      "measure": "Approved budget, FY 2024/25",
+      "unit": "KSh billion",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2024/25 report, section 3.38 (Siaya County), PDF text layer (PDF p. 474, printed p. 431)",
+          "value": 10.94,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, Table 2.5 (all 47 counties), Siaya row: 10,948.13 million, RapidOCR (PDF p. 52, printed p. 9)",
+          "value": 10.94813,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
+      ],
+      "definitions": "Same report, same budget. The county chapter states KSh 10.94 billion; Table 2.5 prints 10,948.13 million, which rounds to 10.95 billion. Its recurrent (6,073.31) and development (4,874.83) parts match the chapter's 6.07 and 4.87.",
+      "hypothesis": "Hypothesis: the chapter truncates rather than rounds (10.948 to 10.94). The difference is KSh 8.13 million, under 0.1 per cent. Not confirmed against the page image.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The ten-year series keeps 10.94 (unchanged). The county comparison shows the Table 2.5 amount, 10,948.13 million."
     },
     {
       "id": "pending-2023",
@@ -434,15 +468,20 @@
           "label": "Same line read with RapidOCR at 200 to 400 dpi, and the department table total (PDF p. 517, printed p. 494)",
           "value": 86.8,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same report, Table 2.3 (all 47 counties), Siaya row, RapidOCR (PDF p. 30, printed p. 7)",
+          "value": 87.0,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
         }
       ],
-      "definitions": "A reading conflict, not two sources: the PDF is a scan, and its embedded text layer and RapidOCR read the printed figure differently. The department table (5,138.67 of 5,909.25 million) gives 87.0 per cent by arithmetic.",
+      "definitions": "A reading conflict, not two sources: the PDF is a scan, and its embedded text layer and RapidOCR read the printed figure differently. The department table (5,138.67 of 5,909.25 million) gives 87.0 per cent by arithmetic. Table 2.3, the all-county table, prints 87.0 for Siaya with a recurrent budget of 5,909.25 million, the same as the arithmetic.",
       "hypothesis": "Hypothesis: the text layer misread 86.8 as 85.8, since two RapidOCR reads and the table agree on 86.8. Not confirmed against the page image.",
       "status": "open",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The series still shows 85.8 until a reviewer checks the page image; both readings are listed here."
+      "effect": "The series still shows 85.8 until a reviewer checks the page image; both readings are listed here. The county comparison shows the Table 2.3 value 87.0 with this case."
     },
     {
       "id": "development-absorption-2023-24",
@@ -458,15 +497,20 @@
           "label": "Same line read with RapidOCR at 200 to 400 dpi, and the department table total (PDF p. 517, printed p. 494)",
           "value": 64.6,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same report, Table 2.3 (all 47 counties), Siaya row, RapidOCR (PDF p. 30, printed p. 7)",
+          "value": 64.6,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
         }
       ],
-      "definitions": "A reading conflict, not two sources (see recurrent-absorption-2023-24). The table (2,487.20 of 3,851.88 million) gives 64.6 per cent by arithmetic.",
+      "definitions": "A reading conflict, not two sources (see recurrent-absorption-2023-24). The table (2,487.20 of 3,851.88 million) gives 64.6 per cent by arithmetic. Table 2.3 also prints 64.6 for Siaya.",
       "hypothesis": "Hypothesis: the text layer misread 64.6 as 64.5. Not confirmed against the page image.",
       "status": "open",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The series still shows 64.5 until a reviewer checks the page image; both readings are listed here."
+      "effect": "The series still shows 64.5 until a reviewer checks the page image; both readings are listed here. The county comparison shows the Table 2.3 value 64.6 with this case."
     },
     {
       "id": "pending-2022",
@@ -530,15 +574,20 @@
           "label": "Same report, text before Table 3.458 (\"Kshs.1.12 billion\"), whose ageing totals equal the opening stock of 1,123.65 (PDF p. 478)",
           "value": 1120,
           "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, Table 2.9 (pending bills of all 47 counties at 30 June 2025), Siaya row: County Executive recurrent 832.9 plus development 1,057.0; County Assembly blank (PDF p. 58, printed p. 15, RapidOCR)",
+          "value": 1890.0,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
         }
       ],
-      "definitions": "Same report, same date. Table 3.457 gives 1,123.65 at 1 July 2024 less 577.70 paid, with the column for new bills left blank; the text and the ageing table give 1.12 billion.",
+      "definitions": "Same report, same date. Table 3.457 gives 1,123.65 at 1 July 2024 less 577.70 paid, with the column for new bills left blank; the text and the ageing table give 1.12 billion. Table 2.9 gives a third figure for the same date, 1,890.0 million, with the County Assembly cells blank.",
       "hypothesis": "Hypothesis: the ageing table was not updated after payments, or new bills of the year were left out of Table 3.457. Not confirmed.",
       "status": "open",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The FY 2024/25 year-end stock stays out of the chart, as before. The roll-forward shows the table value with this register case; the year is incomplete because new bills are not published."
+      "effect": "The FY 2024/25 year-end stock stays out of the chart, as before. The roll-forward shows the table value with this register case; the year is incomplete because new bills are not published. The county comparison shows the Table 2.9 value 1,890.0 with this case; the ten-year series still has no FY 2024/25 pending-bills value."
     }
   ]
 }

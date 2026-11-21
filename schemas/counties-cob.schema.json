@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/counties-cob.schema.json",
+  "title": "47-county comparison from Controller of Budget annual reports (data/counties-cob.json)",
+  "type": "object",
+  "required": ["meta", "years"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "unit", "retrieved", "schema_version", "rule", "fields"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "unit": { "type": "string" },
+        "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "schema_version": { "type": "string" },
+        "rule": { "type": "string" },
+        "fields": { "type": "object", "additionalProperties": { "type": "string" } }
+      }
+    },
+    "years": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["fy", "source_id", "source", "printed_page_offset", "reading_method", "counties", "total_row", "checks", "siaya_vs_history_json"],
+        "additionalProperties": false,
+        "properties": {
+          "fy": { "type": "string", "pattern": "^\\d{4}/\\d{2}$" },
+          "source_id": { "type": "string" },
+          "source": {
+            "type": "object",
+            "required": ["publisher", "title", "library_url", "file_url", "sha256", "bytes", "pdf_pages", "retrieved", "printed_page_rule", "tables"],
+            "properties": {
+              "library_url": { "type": "string", "pattern": "^https://" },
+              "file_url": { "type": "string", "pattern": "^https://" },
+              "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+              "tables": { "type": "object", "required": ["osr", "bud", "pb"], "additionalProperties": { "type": "string" } }
+            }
+          },
+          "printed_page_offset": { "type": "integer", "minimum": 0 },
+          "reading_method": { "type": "string" },
+          "counties": { "type": "array", "minItems": 47, "items": { "$ref": "#/$defs/county" } },
+          "total_row": { "$ref": "#/$defs/row" },
+          "checks": { "type": "object", "required": ["column_sums", "row_identity_failures", "doubtful_percentages", "blank_cells"] },
+          "siaya_vs_history_json": { "type": "object", "required": ["history_entry", "comparison"] }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "cell": {
+      "type": "object",
+      "required": ["table", "pdf_page", "printed_page", "read", "unit", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "table": { "type": "string", "pattern": "^Table 2\\.\\d" },
+        "pdf_page": { "type": "integer", "minimum": 1 },
+        "printed_page": { "type": "integer", "minimum": 1 },
+        "read": { "type": "string", "enum": ["ocr"] },
+        "unit": { "type": "string", "enum": ["KSh million", "%"] },
+        "value": { "type": ["number", "null"] },
+        "raw": { "type": "string" },
+        "ocr_conf": { "type": "number", "minimum": 0, "maximum": 1 },
+        "ocr_pass": { "type": "string" },
+        "ocr_reading": { "type": "string" },
+        "printed_unit": { "type": "string" },
+        "status": { "type": "string", "enum": ["blank", "doubtful"] },
+        "note": { "type": "string" }
+      }
+    },
+    "row": {
+      "type": "object",
+      "required": ["name", "recurrent_budget", "development_budget", "approved_budget_total", "recurrent_expenditure", "development_expenditure", "expenditure_total", "total_osr_actual", "total_osr_target", "pb_grand_total"],
+      "properties": {
+        "name": { "type": "string" },
+        "code": { "type": "integer", "minimum": 1, "maximum": 47 },
+        "slug": { "type": "string", "pattern": "^[a-z-]+$" },
+        "derived": { "type": "object", "additionalProperties": { "type": ["number", "null"] } }
+      },
+      "additionalProperties": { "$ref": "#/$defs/cell" }
+    },
+    "county": {
+      "allOf": [{ "$ref": "#/$defs/row" }],
+      "type": "object",
+      "required": ["code", "name", "slug", "derived"]
+    }
+  }
+}

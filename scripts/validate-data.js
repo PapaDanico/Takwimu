@@ -180,13 +180,14 @@ if (hist.in_year) {
 
 // ---- JSON Schema (schemas/*.schema.json) ----
 // Minimal hand-written checker for the subset the schemas use: type (incl. integer and type lists), required,
-// properties, additionalProperties (false or a schema), items, minItems, enum, minimum, maximum, pattern, local $ref.
+// properties, additionalProperties (false or a schema), items, minItems, enum, minimum, maximum, pattern, local $ref, allOf.
 function checkSchema(schema, value, where, root, out) {
   if (schema.$ref) {
     const target = schema.$ref.replace(/^#\//, '').split('/').reduce((o, k) => o && o[k], root);
     if (!target) { out.push(`${where}: unresolved $ref ${schema.$ref}`); return; }
     return checkSchema(target, value, where, root, out);
   }
+  if (schema.allOf) schema.allOf.forEach((sub) => checkSchema(sub, value, where, root, out));
   const kind = (v) => (v === null ? 'null' : Array.isArray(v) ? 'array' : typeof v);
   if (schema.type) {
     const types = [].concat(schema.type);
@@ -213,7 +214,7 @@ function checkSchema(schema, value, where, root, out) {
     });
   }
 }
-['history', 'conflicts', 'subcounties', 'county'].forEach((name) => {
+['history', 'conflicts', 'subcounties', 'county', 'national', 'counties-cob'].forEach((name) => {
   const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', `${name}.schema.json`), 'utf8'));
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', `${name}.json`), 'utf8'));
   const out = [];
@@ -295,6 +296,110 @@ if (hist.pending_rollforward) hist.pending_rollforward.years.forEach((r) => {
       if (Math.abs(sum - t.value) > 0.011) fail(`${where}: parts add to ${sum.toFixed(2)}, not ${t.value}`);
     }
   });
+});
+
+// ---- 47-county comparison (counties-cob.json): every value has its table and page; sums and rows add up ----
+const cob = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'counties-cob.json'), 'utf8'));
+const { COUNTIES } = require('../lib/counties');
+const AMOUNT_SUMS = ['ordinary_osr_target', 'fif_aia_target', 'total_osr_target', 'ordinary_osr_actual', 'fif_aia_actual', 'total_osr_actual',
+  'recurrent_budget', 'development_budget', 'approved_budget_total', 'recurrent_expenditure', 'development_expenditure', 'expenditure_total',
+  'pb_exec_recurrent', 'pb_exec_development', 'pb_exec_subtotal', 'pb_assembly_recurrent', 'pb_assembly_development', 'pb_assembly_subtotal', 'pb_grand_total'];
+const ROWS = [['recurrent_budget', 'development_budget', 'approved_budget_total'], ['recurrent_expenditure', 'development_expenditure', 'expenditure_total'],
+  ['ordinary_osr_target', 'fif_aia_target', 'total_osr_target'], ['ordinary_osr_actual', 'fif_aia_actual', 'total_osr_actual'],
+  ['pb_exec_recurrent', 'pb_exec_development', 'pb_exec_subtotal'], ['pb_assembly_recurrent', 'pb_assembly_development', 'pb_assembly_subtotal'], ['pb_exec_subtotal', 'pb_assembly_subtotal', 'pb_grand_total']];
+// Printed percentage against the printed amounts (tolerance covers whole-number rounding in the tables).
+const PCTS = [['recurrent_absorption_pct', 'recurrent_expenditure', 'recurrent_budget'], ['development_absorption_pct', 'development_expenditure', 'development_budget'],
+  ['overall_absorption_pct', 'expenditure_total', 'approved_budget_total'], ['osr_performance_pct', 'total_osr_actual', 'total_osr_target']];
+const cellsOf = (row) => Object.entries(row).filter(([k, v]) => v && typeof v === 'object' && k !== 'derived');
+const val = (row, k) => (row[k] && typeof row[k].value === 'number' ? row[k].value : null);
+cob.years.forEach((yr) => {
+  const tag = `counties-cob ${yr.fy}`;
+  const doc = byId.get(yr.source_id);
+  if (!doc) fail(`${tag}: source_id ${yr.source_id} is not in data/source-manifest.json`);
+  else {
+    if (doc.url !== yr.source.library_url) fail(`${tag}: library_url differs from the manifest`);
+    if (doc.sha256 !== yr.source.sha256) fail(`${tag}: sha256 differs from the manifest`);
+    if (doc.fiscal_year !== yr.fy) fail(`${tag}: manifest document is for ${doc.fiscal_year}`);
+  }
+  if (yr.counties.length !== 47) fail(`${tag}: expected 47 counties, found ${yr.counties.length}`);
+  yr.counties.forEach((c) => {
+    const k = COUNTIES.find((x) => x.code === c.code);
+    if (!k || k.name !== c.name || k.slug !== c.slug) fail(`${tag}: county ${c.code} ${c.name} does not match lib/counties.js`);
+  });
+  [...yr.counties, yr.total_row].forEach((row) => {
+    const rt = `${tag} ${row.name}`;
+    cellsOf(row).forEach(([k, cell]) => {
+      if (!Object.values(yr.source.tables).includes(cell.table)) fail(`${rt} ${k}: table "${cell.table}" is not one of the year's tables`);
+      if (cell.printed_page !== cell.pdf_page - yr.printed_page_offset) fail(`${rt} ${k}: printed page ${cell.printed_page} is not PDF page ${cell.pdf_page} - ${yr.printed_page_offset}`);
+      if (cell.value === null) {
+        if (!cell.status || !cell.note) fail(`${rt} ${k}: a null value needs a status and a note (gaps are never filled)`);
+        if (cell.status === 'doubtful' && !cell.raw) fail(`${rt} ${k}: a doubtful value must keep its raw OCR reading`);
+      } else {
+        if (cell.status) fail(`${rt} ${k}: a value with status ${cell.status}`);
+        if (!cell.raw) fail(`${rt} ${k}: missing the raw printed reading`);
+      }
+    });
+    ROWS.forEach(([a, b, t]) => {
+      if (val(row, t) === null) return;
+      const parts = (val(row, a) || 0) + (val(row, b) || 0);
+      if (Math.abs(parts - val(row, t)) > 0.15) fail(`${rt}: ${a} + ${b} = ${parts.toFixed(2)}, but ${t} is ${val(row, t)}`);
+    });
+    PCTS.forEach(([p, num, den]) => {
+      if (val(row, p) === null || !val(row, den)) return;
+      const calc = (val(row, num) / val(row, den)) * 100;
+      if (Math.abs(calc - val(row, p)) > 1.5) fail(`${rt}: printed ${p} ${val(row, p)} but the printed amounts give ${calc.toFixed(1)}`);
+    });
+  });
+  AMOUNT_SUMS.forEach((k) => {
+    const t = val(yr.total_row, k);
+    if (t === null) return;
+    const sum = yr.counties.reduce((s, c) => s + (val(c, k) || 0), 0);
+    if (Math.abs(sum - t) > 0.5) fail(`${tag}: ${k} of the 47 counties sums to ${sum.toFixed(2)}, the printed total is ${t}`);
+  });
+});
+// Siaya rows: equal to history.json within rounding, or the difference is in the conflict register.
+const siayaCob = (fy) => cob.years.find((y) => y.fy === fy).counties.find((c) => c.slug === 'siaya');
+const regHas = (id, v) => reg.conflicts.some((c) => c.id === id && c.values.some((x) => Math.abs(x.value - v) < 1e-9));
+[['2024/25', [['approved', 'approved_budget_total', 1000, 'budget-2024-25'], ['recurrent_budget', 'recurrent_budget', 1000], ['development_budget', 'development_budget', 1000],
+  ['spent', 'expenditure_total', 1000], ['recurrent_spent', 'recurrent_expenditure', 1000], ['development_spent', 'development_expenditure', 1000],
+  ['recurrent_absorption_pct', 'recurrent_absorption_pct', 1, 'recurrent-absorption-2024-25'], ['development_absorption_pct', 'development_absorption_pct', 1], ['osr_m', 'total_osr_actual', 1]]],
+['2023/24', [['approved', 'approved_budget_total', 1000], ['recurrent_budget', 'recurrent_budget', 1000], ['development_budget', 'development_budget', 1000],
+  ['spent', 'expenditure_total', 1000], ['recurrent_spent', 'recurrent_expenditure', 1000], ['development_spent', 'development_expenditure', 1000],
+  ['recurrent_absorption_pct', 'recurrent_absorption_pct', 1, 'recurrent-absorption-2023-24'], ['development_absorption_pct', 'development_absorption_pct', 1, 'development-absorption-2023-24'],
+  ['osr_m', 'total_osr_actual', 1], ['osr_target_m', 'total_osr_target', 1]]]].forEach(([fy, pairs]) => {
+  const h = hist.years.find((y) => y.fy === fy);
+  const s = siayaCob(fy);
+  pairs.forEach(([hk, ck, div, caseId]) => {
+    const a = h[hk]; const b = val(s, ck) / div;
+    // Same value when the table figure rounds to the history figure at its own precision.
+    const dec = (String(a).split('.')[1] || '').length;
+    if (Number(b.toFixed(dec)) === a || Math.abs(a - b) < 1e-9) return;
+    if (!caseId) return fail(`counties-cob ${fy} Siaya ${ck} ${val(s, ck)} differs from history.json ${hk} ${a} and no conflict case is named`);
+    if (!regHas(caseId, a) || !regHas(caseId, Number((val(s, ck) / div).toFixed(5)))) fail(`counties-cob ${fy} Siaya ${ck}: conflict ${caseId} must list both ${a} and ${b}`);
+  });
+});
+if (!regHas('pending-close-2025', val(siayaCob('2024/25'), 'pb_grand_total'))) fail('counties-cob 2024/25 Siaya pending bills (Table 2.9) must be listed in conflict pending-close-2025');
+if (!regHas('pending-2024', Number(val(siayaCob('2023/24'), 'pb_grand_total').toFixed(2)))) fail('counties-cob 2023/24 Siaya pending bills (Table 2.5) must be listed in conflict pending-2024');
+if (!regHas('budget-financing-osr-2024-25', val(siayaCob('2024/25'), 'total_osr_target'))) fail('counties-cob 2024/25 Siaya own-source revenue target (Table 2.1) must be listed in conflict budget-financing-osr-2024-25');
+
+// ---- National indicators (national.json): the API source is in the manifest; missing years are listed, never filled ----
+const nat = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'national.json'), 'utf8'));
+if (!byId.has(nat.meta.source_id)) fail(`national: source_id ${nat.meta.source_id} is not in the manifest`);
+const natCodes = new Set();
+nat.indicators.forEach((x) => {
+  const tag = `national ${x.code}`;
+  if (natCodes.has(x.code)) fail(`${tag}: duplicate code`);
+  natCodes.add(x.code);
+  if (!byId.has(x.source_id)) fail(`${tag}: source_id ${x.source_id} is not in the manifest`);
+  if (!x.api_url.includes(`/indicator/${x.code}?`)) fail(`${tag}: api_url does not name the indicator`);
+  const years = x.series.map((p) => p.year);
+  years.forEach((y, i) => { if (i && y !== years[i - 1] + 1) fail(`${tag}: years must run one by one (${years[i - 1]} then ${y})`); });
+  const nulls = x.series.filter((p) => p.value === null).map((p) => p.year);
+  const listed = new Set(x.missing_years);
+  nulls.forEach((y) => { if (!listed.has(y)) fail(`${tag}: ${y} has no value but is not in missing_years`); });
+  x.missing_years.forEach((y) => { const p = x.series.find((q) => q.year === y); if (p && p.value !== null) fail(`${tag}: ${y} is listed as missing but has a value`); });
+  x.series.forEach((p) => { if (p.value !== null && !Number.isFinite(p.value)) fail(`${tag} ${p.year}: not a finite number`); });
+  if (/%/.test(x.unit) && !/change|gross/.test(x.unit)) x.series.forEach((p) => { if (p.value !== null && (p.value < 0 || p.value > 100)) fail(`${tag} ${p.year}: ${p.value} is not a percentage`); });
 });
 
 if (errors.length) {
