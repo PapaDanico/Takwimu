@@ -1822,29 +1822,32 @@
           {
             "measure": "approved_budget",
             "label": "Approved budget, FY 2025/26",
-            "value": 12.79,
-            "unit": "KSh bn",
+            "value": 12790,
+            "unit": "KSh m",
             "pdf_page": 525,
             "printed_page": 479,
-            "read": "RapidOCR"
+            "read": "RapidOCR",
+            "as_printed": "KSh 12.79 billion"
           },
           {
             "measure": "revenue_received",
             "label": "Revenue available in the period",
-            "value": 2.38,
-            "unit": "KSh bn",
+            "value": 2380,
+            "unit": "KSh m",
             "pdf_page": 525,
             "printed_page": 479,
-            "read": "RapidOCR"
+            "read": "RapidOCR",
+            "as_printed": "KSh 2.38 billion"
           },
           {
             "measure": "equitable_share_received",
             "label": "Equitable share received",
-            "value": 1.24,
-            "unit": "KSh bn",
+            "value": 1240,
+            "unit": "KSh m",
             "pdf_page": 525,
             "printed_page": 479,
-            "read": "RapidOCR"
+            "read": "RapidOCR",
+            "as_printed": "KSh 1.24 billion"
           },
           {
             "measure": "osr_collected",
@@ -1880,7 +1883,8 @@
             "unit": "KSh m",
             "pdf_page": 529,
             "printed_page": 483,
-            "read": "OCR layer"
+            "read": "OCR layer",
+            "as_printed": "There was no spending on development programs (section 3.38.6; 600 dpi reading, 21 Nov 2026)"
           },
           {
             "measure": "revenue_arrears_close",
@@ -1930,29 +1934,32 @@
           {
             "measure": "approved_budget",
             "label": "Approved budget, FY 2025/26",
-            "value": 12.79,
-            "unit": "KSh bn",
+            "value": 12790,
+            "unit": "KSh m",
             "pdf_page": 218,
             "printed_page": 593,
-            "read": "RapidOCR"
+            "read": "RapidOCR",
+            "as_printed": "KSh 12.79 billion"
           },
           {
             "measure": "revenue_received",
             "label": "Revenue available in the period",
-            "value": 4.48,
-            "unit": "KSh bn",
+            "value": 4480,
+            "unit": "KSh m",
             "pdf_page": 218,
             "printed_page": 593,
-            "read": "RapidOCR"
+            "read": "RapidOCR",
+            "as_printed": "KSh 4.48 billion"
           },
           {
             "measure": "equitable_share_received",
             "label": "Equitable share received",
-            "value": 3.21,
-            "unit": "KSh bn",
+            "value": 3210,
+            "unit": "KSh m",
             "pdf_page": 218,
             "printed_page": 593,
-            "read": "RapidOCR"
+            "read": "RapidOCR",
+            "as_printed": "KSh 3.21 billion"
           },
           {
             "measure": "osr_collected",
@@ -1975,11 +1982,12 @@
           {
             "measure": "spending_total",
             "label": "Spending",
-            "value": 2.5,
-            "unit": "KSh bn",
+            "value": 2500,
+            "unit": "KSh m",
             "pdf_page": 223,
             "printed_page": 598,
-            "read": "RapidOCR"
+            "read": "RapidOCR",
+            "as_printed": "KSh 2.5 billion"
           },
           {
             "measure": "spending_development",

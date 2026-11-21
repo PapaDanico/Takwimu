@@ -23,8 +23,8 @@
           "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
         }
       ],
-      "definitions": "The FY 2023/24 report splits its figure into health facility financing (KSh 388.53m) and ordinary own-source revenue (KSh 222.10m). The FY 2024/25 report does not give a split for the prior year.",
-      "hypothesis": "The later report may restate the year or count a different scope. The gap is not explained by facility income alone: 610.74 minus 388.53 is 222.21, not 427.95.",
+      "definitions": "The FY 2023/24 report splits its figure into health facility financing (KSh 388.63m; Table 3.258 and Table 2.1 print 388,626,776) and ordinary own-source revenue (KSh 222.11m; printed 222,110,969). The FY 2024/25 report does not give a split for the prior year.",
+      "hypothesis": "The later report may restate the year or count a different scope. The gap is not explained by facility income alone: 610.74 minus 388.63 is 222.11, not 427.95.",
       "status": "open",
       "effect": "610.74 is plotted as the main value and 427.95 as the other report's value (hollow marker). The Insights page states the disagreement beside the chart; treat the FY 2023/24 and FY 2024/25 own-source revenue comparison as uncertain.",
       "verification_state": "unresolved_no_reviewer",
@@ -1002,6 +1002,148 @@
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false
+    },
+    {
+      "id": "fif-2023-24-reading",
+      "measure": "Health Facility Improvement Financing (FIF) collected by Siaya County, FY 2023/24, as read from the scanned Controller of Budget report",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.2 text, PDF text layer (PDF p. 511, printed p. 488): a misreading of the scan (\"Kshs.388.53 million as Health FIF\")",
+          "value": 388.53,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same sentence read with tesseract 5 on a 600 dpi greyscale render of PDF p. 511: \"Kshs.388.63 million as Health FIF\" (word confidence 92)",
+          "value": 388.63,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Table 3.258 (same page), Facility Improvement Fund row, actual receipts: 388,626,776; also Table 2.1 (PDF p. 26) and the county's own Q4 report Table 4 (fiscal ledger L151, L160)",
+          "value": 388.626776,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "A reading conflict, not two sources: the PDF is a scan and its embedded text layer reads 388.53 where the page prints 388.63. Two tables in the same report and the county's own fourth-quarter report all give 388,626,776, which rounds to 388.63.",
+      "hypothesis": "Resolved by the printed document: the text layer misread 388.63 as 388.53. Checked by a 600 dpi machine reading and three agreeing printed tables, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Corrected on 21 Nov 2026: the Siaya hub, the trend note and case osr-2023-24 now give 388.63 (and ordinary own-source revenue 222.11, as in Table 2.1). The earlier note that the parts added to 610.63 and left a 0.11 million difference was an artefact of the misreading and has been removed: 388.626776 + 222.110969 = 610.737745, the printed total. The fiscal ledger always held 388,626,776.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "pdftotext text layer of PDF p. 511 (the scan's embedded OCR)",
+        "method_b": "tesseract 5 (psm 6) on a 600 dpi greyscale render of PDF p. 511 (pdftoppm -r 600 -gray); PDF SHA-256 7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
+        "readings": [
+          {
+            "where": "section 3.38.2 text, PDF p. 511",
+            "method_a": "The raised OSR includes Kshs.388.53 million as Health FIF and Kshs.222.l0 million as ordinary OSR",
+            "method_b": "The raised OSR includes Kshs.388.63 million as Health FIF and Kshs.222.10 million as ordinary OSR"
+          },
+          {
+            "where": "Table 3.258, Facility Improvement Fund (FIF) row, PDF p. 511",
+            "method_a": ",8,626.716",
+            "method_b": "325,50s,006| 38, 26,776 (Table 2.1 on PDF p. 26 reads 388,626,776 with RapidOCR)"
+          }
+        ],
+        "check": "388,626,776 + 222,110,969 = 610,737,745, the printed total in Table 3.258 and Table 2.1 and the 610.74 million in the text; 388.53 + 222.10 would leave 0.11 million unexplained. The county Q4 report for FY 2023/24 (Table 4, Health and Sanitation subtotal) also gives 388,626,776.",
+        "outcome": "Every printed place gives 388.63 (388,626,776): resolved. The text-layer reading 388.53 is kept here only as a record.",
+        "page_image_checked": false
+      }
+    },
+    {
+      "id": "pending-2024-table-2-5-scope",
+      "measure": "Scope of Siaya's pending bills of KSh 303.91 million at 30 June 2024 in Table 2.5 of the FY 2023/24 Controller of Budget report",
+      "unit": "label",
+      "values": [
+        {
+          "label": "Fiscal ledger L255 before 21 Nov 2026 (Table 2.5 grand total read as covering both arms)",
+          "value": "county government (executive and assembly)",
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Table 2.5, PDF p. 33 (printed p. 10), tesseract 5 on a 600 dpi render: Siaya row County Executive 202,659,007 + 101,250,773 = 303,909,780; County Assembly cells shown as '-'; Grand Total 303,909,780",
+          "value": "county executive",
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "Table 2.5 has columns for the County Executive and the County Assembly and a grand total. For Siaya the Assembly cells are printed as '-', so the grand total equals the Executive subtotal. Section 3.38.5 (PDF p. 513) gives the Executive stock of 303.91 million and reports the County Assembly's 12.67 million separately.",
+      "hypothesis": "Resolved by the printed document: the 303.91 million covers the County Executive only. Checked by a 600 dpi machine reading of the row and of the blank Assembly cells, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Ledger observation L255 now has scope 'county executive', the same as L249, with a note that the Assembly cells are shown as '-'. The value (303.91) is unchanged; case pending-2024 still compares it with the KSh 1.12 billion stock in the next report.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "RapidOCR row reading of PDF p. 33 made for data/counties-cob.json (staging)",
+        "method_b": "tesseract 5 (psm 11, word boxes) on a 600 dpi greyscale render of PDF p. 33, and a separate psm 7 reading of the crop over the two Assembly columns of the Siaya row",
+        "readings": [
+          {
+            "where": "Table 2.5, Siaya row, PDF p. 33",
+            "method_a": "Siaya | 202,659,007 | 101,250,773 | 303,909,780 | 303,909,780 (nothing read in the Assembly columns)",
+            "method_b": "Siaya 202,659,007 101,250,773 303,909,780 ... 303,909,780 (Executive subtotal and Grand Total, word confidence 96)"
+          },
+          {
+            "where": "Table 2.5, Siaya row, County Assembly columns",
+            "method_a": "no text",
+            "method_b": "-| -|"
+          },
+          {
+            "where": "section 3.38.5, PDF p. 513",
+            "method_a": "outstanding amount was Kshs.303.91 million ... The County Assembly reported outstanding pending bills of Kshs.12.67 million",
+            "method_b": "same text at 600 dpi"
+          }
+        ],
+        "check": "202,659,007 + 101,250,773 = 303,909,780 = Grand Total, so nothing from the Assembly is in it.",
+        "outcome": "The Table 2.5 figure is the County Executive only: L255 corrected.",
+        "page_image_checked": false
+      }
+    },
+    {
+      "id": "q1-2025-26-development-spending",
+      "measure": "Siaya County development spending, first quarter of FY 2025/26 (July to September 2025)",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "history.json in_year q1 spending_development, read from the PDF text layer (PDF p. 529, printed p. 483)",
+          "value": "0 KSh million (value held in history.json)",
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        },
+        {
+          "label": "Section 3.38.6 text, tesseract 5 on a 600 dpi render of PDF p. 529: \"There was no spending on development programs, and the entire Kshs.712 million was allocated to recurrent programs\"",
+          "value": "There was no spending on development programs",
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        }
+      ],
+      "definitions": "The question was whether the 0 is a printed zero or a blank or dash turned into zero. The report states in words that there was no development spending in the quarter, and that the CoB approved withdrawals only for recurrent programmes (section 3.38.5).",
+      "hypothesis": "Resolved by the printed document: zero development spending is stated in words, not a blank cell.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The value 0 stays, now with the printed sentence attached (as_printed) so it is not read as a missing figure.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "PDF text layer of PDF p. 529 (staging read)",
+        "method_b": "tesseract 5 (psm 6) on a 600 dpi greyscale render of PDF p. 529; PDF SHA-256 1030c623c39a23e49a2272ff39d7b13c7aafe32f28915984eddca35c27cfc37e",
+        "readings": [
+          {
+            "where": "section 3.38.6 Expenditure Review, PDF p. 529",
+            "method_a": "no development spending recorded (value 0)",
+            "method_b": "The County spent Kshs.712 million on recurrent programs during the reporting period ... There was no spending on development programs"
+          },
+          {
+            "where": "section 3.38.5 Exchequers Approved, PDF p. 529",
+            "method_a": "not read",
+            "method_b": "approved the withdrawal of Kshs.712 million ... which was entirely allocated to recurrent programs"
+          }
+        ],
+        "check": "Total spending 712 = recurrent 712 + development 0.",
+        "outcome": "A stated zero: kept.",
+        "page_image_checked": false
+      }
     }
   ]
 }

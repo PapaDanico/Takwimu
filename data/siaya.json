@@ -87,7 +87,7 @@
           "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2023/24, section 3.38 (Siaya)",
           "source_url": "https://libraryir.parliament.go.ke/items/96c1bec0-1702-40ff-96b0-f5fbfc26e684",
           "confidence": 4,
-          "note": "As stated in its own year's report: the county generated KSh 610.74 million including health facility financing (FIF). Parts given: health FIF KSh 388.53 million and ordinary own-source revenue KSh 222.10 million, which add to 610.63 million. The report does not explain the 0.11 million difference.",
+          "note": "As stated in its own year's report: the county generated KSh 610.74 million including health facility financing (FIF). Parts given: health FIF KSh 388.63 million and ordinary own-source revenue KSh 222.11 million (Table 3.258 and Table 2.1: 388,626,776 and 222,110,969, which add to the printed total of 610,737,745). The section text prints the ordinary figure as KSh 222.10 million.",
           "alternate": {
             "value": 427.95,
             "source": "Controller of Budget, County Governments Budget Implementation Review Report FY 2024/25, section 3.38 (Siaya)",
@@ -115,7 +115,7 @@
       "confidence": 4,
       "status": "primary-document",
       "description": "Own-source revenue counted in the approved budget financing: about KSh 1.04 billion, made up of KSh 643 million to be deposited into the County Revenue Fund and KSh 400 million as Appropriations-in-Aid spent at source.",
-      "note": "The report says Siaya collected 47 per cent of its annual target. 436.68 divided by 0.47 gives about KSh 929 million, which is lower than the KSh 1,043 million in the budget financing. The report does not explain the difference."
+      "note": "The report says Siaya collected 47 per cent of its annual target. Table 2.1 of the same report (PDF p. 46, printed p. 3) prints that target as KSh 927.34 million (436.68 / 927.34 = 47.1 per cent), which is lower than the KSh 1,043 million in the budget financing. The report does not explain the difference."
     }
   },
   "budget": {

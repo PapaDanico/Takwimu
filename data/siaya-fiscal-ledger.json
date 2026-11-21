@@ -1705,8 +1705,8 @@
    "id": "L046",
    "measure": "budget_total",
    "fy": "2025/26",
-   "value": 12.79,
-   "unit": "KSh billion",
+   "value": 12790,
+   "unit": "KSh million",
    "source_id": "cob-q1-2025-26",
    "pdf_page": 525,
    "printed_page": 479,
@@ -6488,11 +6488,11 @@
      "value"
     ]
    },
-   "note": null,
+   "note": "Table 2.5 County Assembly cells for Siaya are shown as '-' (600 dpi reading, 21 Nov 2026); the Assembly's KSh 12.67m is reported separately in section 3.38.5. See conflict pending-2024-table-2-5-scope.",
    "stock_point": "closing",
-   "basis": "Cross-county pending bills table, grand total (County Executive and County Assembly)",
+   "basis": "Cross-county pending bills table, grand total; for Siaya the County Assembly cells are shown as '-', so the total is the County Executive only",
    "source_kind": "controller_of_budget",
-   "scope": "county government (executive and assembly)"
+   "scope": "county executive"
   },
   {
    "id": "L256",
@@ -11338,9 +11338,8 @@
     "b_minus_a_ksh_m": -819.74
    },
    "possible_basis_mismatch": [
-    "Scope differs: county executive against county government (executive and assembly).",
     "Stock point differs: opening_of_next_year against closing (same date, different report).",
-    "Basis as stated: A \"Table 3.457, County Executive\"; B \"Cross-county pending bills table, grand total (County Executive and County Assembly)\"."
+    "Basis as stated: A \"Table 3.457, County Executive\"; B \"Cross-county pending bills table, grand total; for Siaya the County Assembly cells are shown as '-', so the total is the County Executive only\"."
    ],
    "status": "open",
    "resolution": null,
@@ -11450,9 +11449,8 @@
     "b_minus_a_ksh_m": -816.09
    },
    "possible_basis_mismatch": [
-    "Scope differs: county executive against county government (executive and assembly).",
     "Stock point differs: opening_of_next_year against closing (same date, different report).",
-    "Basis as stated: A \"Stock at 30 June 2024 quoted in the FY 2024/25 report text (\"Kshs.1.12 billion\")\"; B \"Cross-county pending bills table, grand total (County Executive and County Assembly)\"."
+    "Basis as stated: A \"Stock at 30 June 2024 quoted in the FY 2024/25 report text (\"Kshs.1.12 billion\")\"; B \"Cross-county pending bills table, grand total; for Siaya the County Assembly cells are shown as '-', so the total is the County Executive only\"."
    ],
    "status": "open",
    "resolution": null,
@@ -11563,8 +11561,7 @@
    },
    "possible_basis_mismatch": [
     "Different publishers: controller_of_budget against auditor_general.",
-    "Scope differs: county government (executive and assembly) against county executive.",
-    "Basis as stated: A \"Cross-county pending bills table, grand total (County Executive and County Assembly)\"; B \"County management statement inside the audited financial statements, not an audit finding\"."
+    "Basis as stated: A \"Cross-county pending bills table, grand total; for Siaya the County Assembly cells are shown as '-', so the total is the County Executive only\"; B \"County management statement inside the audited financial statements, not an audit finding\"."
    ],
    "status": "open",
    "resolution": null,
@@ -11600,8 +11597,8 @@
    },
    "possible_basis_mismatch": [
     "Different publishers: controller_of_budget against county.",
-    "Scope differs: county government (executive and assembly) against not stated.",
-    "Basis as stated: A \"Cross-county pending bills table, grand total (County Executive and County Assembly)\"; B \"Outstanding audited bills after payments (257,615,470.40) plus new bills of the year (1,189,279,092.90)\"."
+    "Scope differs: county executive against not stated.",
+    "Basis as stated: A \"Cross-county pending bills table, grand total; for Siaya the County Assembly cells are shown as '-', so the total is the County Executive only\"; B \"Outstanding audited bills after payments (257,615,470.40) plus new bills of the year (1,189,279,092.90)\"."
    ],
    "status": "open",
    "resolution": null,
@@ -11637,9 +11634,9 @@
    },
    "possible_basis_mismatch": [
     "Different publishers: controller_of_budget against county.",
-    "Scope differs: county government (executive and assembly) against not stated.",
+    "Scope differs: county executive against not stated.",
     "Stock point differs: closing against opening_of_next_year (same date, different report).",
-    "Basis as stated: A \"Cross-county pending bills table, grand total (County Executive and County Assembly)\"; B \"Opening stock for FY 2024/25\"."
+    "Basis as stated: A \"Cross-county pending bills table, grand total; for Siaya the County Assembly cells are shown as '-', so the total is the County Executive only\"; B \"Opening stock for FY 2024/25\"."
    ],
    "status": "open",
    "resolution": null,

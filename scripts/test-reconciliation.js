@@ -362,6 +362,37 @@ test('IMF definitional differences stay out of the register', () => {
   ok(!reg.conflicts.some((c) => /IMF/.test(c.values.map((v) => v.label).join(' ')) && /per capita|revenue|expenditure/i.test(c.measure)), 'GDP per capita, revenue and expenditure differences are definitional: notes, not cases');
 });
 
+// Data-integrity corrections of 21 Nov 2026 (sweep D6, D15, D16, D12): each checked against the printed page.
+const ledgerX = read('siaya-fiscal-ledger.json');
+const obsX = (id) => { const o = ledgerX.observations.find((x) => x.id === id); ok(o, `no ledger observation ${id}`); return o; };
+test('conflict fif-2023-24-reading: the FY 2023/24 health FIF is 388.63 (printed), never the text-layer 388.53', () => {
+  const c = conflict('fif-2023-24-reading');
+  ok(c.status === 'resolved' && c.verification_state === 'resolved_by_source' && listed(c.id, 388.53) && listed(c.id, 388.63) && listed(c.id, 388.626776), 'register must keep 388.53, 388.63 and 388.626776, resolved by source');
+  ok(/600 dpi/.test(c.reread.method_b) && c.reread.readings.some((r) => /388\.63/.test(r.method_b)), 'the 600 dpi reading must be recorded');
+  ok(near(obsX('L151').value, 388.626776, 1e-9) && near(obsX('L160').value, 388.626776, 1e-9), 'CoB Table 2.1 and county Q4 Table 4 agree on 388,626,776');
+  ok(near(388.626776 + 222.110969, 610.737745, 1e-6), 'Table 2.1 parts add to the printed total');
+  const txt = JSON.stringify(siaya) + JSON.stringify(reg.conflicts.filter((x) => x.id !== c.id));
+  ok(!/388\.53/.test(txt) && !/0\.11 million difference/.test(txt), 'no page-facing text may carry 388.53 or the 0.11 million difference claim');
+  ok(/610\.74 minus 388\.63 is 222\.11/.test(conflict('osr-2023-24').hypothesis), 'osr-2023-24 hypothesis arithmetic must use 388.63');
+});
+test('conflict pending-2024-table-2-5-scope: Table 2.5 grand total for Siaya is the County Executive only (Assembly cells "-")', () => {
+  const c = conflict('pending-2024-table-2-5-scope');
+  ok(c.status === 'resolved' && listed2(c, 'county government (executive and assembly)') && listed2(c, 'county executive'), 'register must keep both scope labels');
+  const l249 = obsX('L249'); const l255 = obsX('L255');
+  ok(l249.scope === 'county executive' && l255.scope === 'county executive', 'L249 and L255 must both be county executive');
+  ok(/'-'/.test(l255.note || '') && /12\.67/.test(l255.note || ''), 'L255 note must say the Assembly cells are shown as "-" and the Assembly reported 12.67m separately');
+});
+test('conflict q1-2025-26-development-spending: the printed text says no development spending; 0 is kept with the quote', () => {
+  const c = conflict('q1-2025-26-development-spending');
+  ok(c.status === 'resolved' && listed2(c, '0 KSh million') && listed2(c, 'There was no spending on development'), 'register must keep the held 0 and the printed sentence');
+  const f = iy('q1', 'spending_development');
+  ok(f.value === 0 && /no spending on development/.test(f.as_printed || ''), 'Q1 development spending must carry the printed sentence');
+});
+test('in-year money figures are all in KSh million (no KSh bn beside KSh m in one row)', () => {
+  hist.in_year.periods.forEach((p) => p.figures.forEach((f) => ok(f.unit === 'KSh m' || f.unit === '%', `${p.id} ${f.measure}: unit ${f.unit}`)));
+  ok(iy('q1', 'approved_budget').value === 12790 && iy('h1', 'spending_total').value === 2500, 'converted values wrong');
+});
+
 // Every register case has a test above, and no test points at a case that was removed.
 test('every conflict in the register has a test', () => {
   const tested = new Set(results.map(([, n]) => (n.match(/^conflict ([a-z0-9-]+)/) || [])[1]).filter(Boolean));

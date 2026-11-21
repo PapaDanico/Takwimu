@@ -88,7 +88,7 @@ export default function Home() {
           <span className="pill">Recurrent spending {rec.absorption_pct}% of budget</span>
           <span className={`pill ${auditAmber ? 'warn' : 'good'}`}>Audit FY {audit.fiscal_year}: {audit.opinion}</span>
           <span className="pill warn">Sources disagree on revenue</span>
-          <span className="pill">Pending bills KSh {budget.pending_bills.opening_30_jun_2024_billion}B at 30 Jun 2024</span>
+          <a className="pill warn" href="/data/#pending-2024">Pending bills at 30 Jun 2024: sources disagree (KSh 303.91M to {budget.pending_bills.opening_30_jun_2024_billion}B)</a>
         </div>
         <p className="rule-note">
           Amber marks a figure below 50 per cent of its target, a development budget less than 60 per
@@ -105,7 +105,7 @@ export default function Home() {
         </p>
         <div className="tiles">
           <Tile label="Collected" value={fmt(primary.value)} unit="KSh million" note="Stated by the Controller of Budget, including KSh 199 million from health facilities." />
-          <Tile label="Share of annual target" value={`${share}%`} tone="warn" note="The report states this. It implies a target of about KSh 929 million." />
+          <Tile label="Share of annual target" value={`${share}%`} tone="warn" note="The report states this. Its Table 2.1 (PDF p. 46) prints the target: KSh 927.34 million." />
           <Tile label="County statement" value={fmt(county.value)} unit="KSh million" dashed tag="Unverified" note={`Reported in the press. The county's own Q4 report gives KSh ${fmt(report.value)} million instead.`} />
           <Tile label="Share of approved budget" value={`${ofBudgetPct.toFixed(1)}%`} note={`Derived: ${fmt(primary.value)} million divided by the KSh ${budget.approved_total} billion approved budget.`} />
         </div>
@@ -174,7 +174,7 @@ export default function Home() {
             <br />
             Notes: the first solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh 199 million from health facilities).
             The report calls this 2 per cent more than KSh {fmt(osr.previous_year.value)} million in FY 2023/24, but the previous year&apos;s report gave KSh 610.74 million for that year (see the trend below).
-            It is {share} per cent of the annual target, which implies a target of about KSh 929 million. The budget financing counted about KSh {osr.target.value.toLocaleString('en-US')} million of own-source revenue, and the report does not explain the difference.
+            It is {share} per cent of the annual target; Table 2.1 of the same report prints that target as KSh 927.34 million (PDF p. 46). The budget financing counted about KSh {osr.target.value.toLocaleString('en-US')} million of own-source revenue, and the report does not explain the difference.
             The second solid bar is the county treasury&apos;s own fourth-quarter report: KSh 236.50 million into the County Revenue Fund plus KSh 521.07 million collected and spent at source, mostly at health facilities, against a target of KSh 1,044 million. It is unaudited.
             The hatched bar is the county statement reported in the press. It does not match the county&apos;s own report, and what it counts is not established.
             The three figures are shown side by side, not averaged, and we do not say which is right. See the <Link href="/data/#conflicts">conflict register</Link>, case osr-2024-25-county-statement.
@@ -255,7 +255,7 @@ export default function Home() {
             Notes: {osr.trend.caveat}
           </div>
         </figure>
-        <div className="takeaway"><b>What this means:</b> two Controller of Budget reports give different figures for the same year, FY 2023/24 (KSh 610.74 million and KSh 427.95 million). Whether Siaya&apos;s own revenue fell sharply in FY 2024/25 or rose 2 per cent depends on which figure is right. In the reports&apos; own breakdowns, health facility financing fell from KSh 388.53 million to KSh 199 million, while ordinary own-source revenue rose from KSh 222.10 million to KSh 236 million. Check which figures a report is comparing before drawing a trend.</div>
+        <div className="takeaway"><b>What this means:</b> two Controller of Budget reports give different figures for the same year, FY 2023/24 (KSh 610.74 million and KSh 427.95 million). Whether Siaya&apos;s own revenue fell sharply in FY 2024/25 or rose 2 per cent depends on which figure is right. In the reports&apos; own breakdowns, health facility financing (FIF) fell from KSh 388.63 million to KSh 199.84 million, while ordinary own-source revenue rose from KSh 222.11 million to KSh 236.84 million (Table 2.1 of each report). See the <Link href="/counties/siaya/analysis/#an-a8">own-source revenue composition</Link>. Check which figures a report is comparing before drawing a trend.</div>
       </section>
 
       <section className="card" id="spending" aria-labelledby="spend">
@@ -317,7 +317,7 @@ export default function Home() {
         <h2 id="obl">Pending bills, arrears and stalled projects</h2>
         <p className="lead">What the county owes, what is owed to it, and what has stopped midway.</p>
         <div className="tiles">
-          <Tile label="Pending bills at 30 June 2024" value={`KSh ${budget.pending_bills.opening_30_jun_2024_billion}B`} tone="warn" note="Bills the county owed suppliers for work already done." />
+          <Tile label="Pending bills at 30 June 2024" value={`KSh ${budget.pending_bills.opening_30_jun_2024_billion}B`} tone="warn" tag="Sources disagree" note={<>Opening stock in the FY 2024/25 report. The FY 2023/24 report gives KSh 303.91 million for the same date (County Executive only, excluding bills incurred in the year). Range KSh 303.91 million to KSh {budget.pending_bills.opening_30_jun_2024_billion} billion; see <a href="/data/#pending-2024">case pending-2024</a> and the <Link href="/counties/siaya/ledger/">fiscal reconciliation ledger</Link>.</>} />
           <Tile label="Settled in FY 2024/25" value={`KSh ${fmt(budget.pending_bills.settled_in_year_million)}M`} note={`About ${settledPct} per cent of the opening balance (derived).`} />
           <Tile label="Revenue arrears, 30 June 2025" value={`KSh ${budget.revenue_arrears_30_jun_2025_million}M`} note="Revenue owed to the county by payers but not yet collected." />
           <Tile label="Stalled projects" value={`${budget.stalled_projects.count}`} unit={`worth KSh ${budget.stalled_projects.estimated_value_million}M`} tone="warn" note={`KSh ${budget.stalled_projects.paid_million}M had already been paid on them.`} />

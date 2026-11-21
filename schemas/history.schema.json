@@ -1056,6 +1056,10 @@
             "OCR layer",
             "PDF text layer"
           ]
+        },
+        "as_printed": {
+          "type": "string",
+          "description": "The figure as printed where its unit or form differs from value (e.g. KSh 12.79 billion stored as 12790 KSh m), or the printed sentence for a stated zero"
         }
       }
     },
