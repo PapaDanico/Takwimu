@@ -140,6 +140,23 @@ subs.forEach((x) => { if (p09[x.id] === undefined) fail(`history: no 2009 popula
 expectEq('history 2019 point matches county census', hist.population.points.find((p) => p.year === 2019).value, co.population.census_2019);
 Object.entries(hist.reports).forEach(([k, r]) => { if (!/^https:\/\//.test(r.url)) fail(`history report ${k}: missing https url`); });
 
+// Source conflict register: every conflict needs two sourced values, a status, a labelled explanation and an effect.
+const reg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'conflicts.json'), 'utf8'));
+const ids = new Set();
+reg.conflicts.forEach((c) => {
+  if (ids.has(c.id)) fail(`conflicts: duplicate id ${c.id}`);
+  ids.add(c.id);
+  ['measure', 'unit', 'definitions', 'hypothesis', 'status', 'effect'].forEach((k) => { if (!c[k]) fail(`conflicts ${c.id}: missing ${k}`); });
+  if (!['open', 'resolved'].includes(c.status)) fail(`conflicts ${c.id}: status must be open or resolved`);
+  if (!Array.isArray(c.values) || c.values.length < 2) fail(`conflicts ${c.id}: needs at least two values`);
+  (c.values || []).forEach((v, i) => {
+    if (!(typeof v.value === 'number' && v.label && /^https:\/\//.test(v.url))) fail(`conflicts ${c.id} value ${i}: needs a number, a label and an https url`);
+  });
+  if (c.values && c.values.length >= 2 && c.values[0].value === c.values[1].value) fail(`conflicts ${c.id}: the values do not differ`);
+});
+// Every conflict flagged in the history file must appear in the register.
+['osr-2023-24', 'osr-2015-16', 'pending-2021'].forEach((id) => { if (!ids.has(id)) fail(`conflicts: ${id} is missing from the register`); });
+
 if (errors.length) {
   console.error('Data validation failed:\n- ' + errors.join('\n- '));
   process.exit(1);

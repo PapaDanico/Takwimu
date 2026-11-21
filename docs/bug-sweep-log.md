@@ -2,6 +2,21 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 21 Nov 2026, sweep 12 (charts, legal pages, handover review)
+| Finding | How found | Status |
+|---|---|---|
+| Chart hit areas had `aria-label` on elements with no role (axe: aria-prohibited-attr, serious, 120 nodes) | axe-core | Fixed: svg is a labelled group, hit areas are `role="img"` |
+| Terms and Privacy pages made the page 30 px wider than a 360 px phone because of long web addresses in the text | Overflow check at 360 px | Fixed: `overflow-wrap: anywhere` on legal text |
+| Direct line labels collided where two lines end at the same point (real equals nominal in the base year) | Text bounding-box check | Fixed: labels are nudged apart |
+| Axis labels collided on a phone (sub-county names, health indicators, FY labels) | Text bounding-box check at 360 px | Fixed: thin short labels, wrap two-word labels, rotate long ones |
+| Printing with a dark colour preference gave pale text on white (128 elements below 4.5:1) | Vercel bot comment, reproduced by measuring print contrast under dark preference | Fixed: print restores the light colour tokens; 0 low-contrast elements in both preferences |
+| Insights "gaps" list still said FY 2023/24 budget and spending were not extracted, although the page plots them | Handover review | Fixed: stale line removed |
+| Fonts were requested from Google by every visitor | Privacy review | Fixed: fonts self-hosted at build time; no Google references in built HTML or CSS |
+| Unit separated from value only by markup (screen readers read "7.75KSh bn") | Handover review | Fixed: explicit space |
+| Wording implied low development spending means projects were not delivered | Handover review | Fixed on Insights, Analytics, Learn and Home |
+| Default branch `main` is an older, different product; the live site comes from the PR branch | Handover P0 gate, git comparison | Documented in `docs/architecture-map.md` |
+| Source conflicts were scattered across pages | Handover P0.3 | Consolidated into `data/conflicts.json`, validated, shown on Corrections |
+
 ## 20 Nov 2026, sweep 11 (ten-year history and new pages)
 | Finding | How found | Status |
 |---|---|---|

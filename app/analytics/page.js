@@ -1,5 +1,10 @@
 import PageHead from '../../components/PageHead';
 import BarList from '../../components/BarList';
+import { LineChart, ColumnChart } from '../../components/Charts';
+import StatStrip from '../../components/StatStrip';
+import DataStamp from '../../components/DataStamp';
+import { shortDate } from '../../lib/format';
+import { SITE_UPDATED } from '../../lib/site';
 import hist from '../../data/history.json';
 import cpi from '../../data/cpi.json';
 import sc from '../../data/subcounties.json';
@@ -65,15 +70,30 @@ const realYoY = spendYears.slice(1).map((y, i) => {
   return gap === 1 ? { fy: y.fy, g: ((y.spent * defl(y.fy)) / (prev.spent * defl(prev.fy)) - 1) * 100 } : null;
 }).filter(Boolean);
 
+const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
+const SHORT = FYS.map((f) => f.slice(2));
+const fillBy = (rows, f) => FYS.map((fy) => { const r = rows.find((x) => x.fy === fy); return r ? f(r) : null; });
+const lastPP = perPerson[perPerson.length - 1];
+const firstPP = perPerson.find((p) => p.fy === '2014/15');
+const kpis = [
+  { label: 'Real spending growth', value: `${one(growthRows[0].real)}%`, unit: 'a year', delta: `Nominal ${one(growthRows[0].nom)}% a year`, spark: spendYears.map((y) => y.spent * defl(y.fy)) },
+  { label: 'Population growth', value: `${one(popGrowth)}%`, unit: 'a year', delta: 'Estimate, FY 2014/15 to 2024/25' },
+  { label: 'Real spending per person', value: n0(lastPP.v), unit: 'KSh', delta: `${one((lastPP.v / firstPP.v - 1) * 100)}% since FY 2014/15`, tone: lastPP.v >= firstPP.v ? 'up' : 'down', spark: perPerson.map((p) => p.v) },
+  { label: 'Unspent budget, ten years', value: bn(unspentReal), unit: 'KSh bn', delta: `${BASE} prices`, spark: unspent.map((u) => u.pct) },
+];
+
 export default function Analytics() {
   const sp = growthRows[0];
   return (
     <main id="main" className="wrap page">
       <PageHead eyebrow="Analytics" title="Growth, spread and per-person views" sub="Statistics computed from the ten-year Siaya series. Every figure here is derived, so each section says how. Nothing is forecast." path="/analytics/" shareText="Siaya County finances: growth, spread and per-person analytics" />
+      <DataStamp period={`FY 2014/15 to FY 2024/25 (ten years); FY 2013/14 shown where available`} checked={shortDate(hist.meta.retrieved)} updated={shortDate(SITE_UPDATED)} completeness={`${spendYears.length} years of spending; FY 2019/20 missing and not interpolated. Per-person values are estimates.`} />
 
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#growth">Growth</a></li><li><a href="#person">Per person</a></li><li><a href="#share">Own revenue share</a></li><li><a href="#spread">Spread</a></li><li><a href="#unspent">Unspent budget</a></li><li><a href="#pending">Pending bills</a></li><li><a href="#limits">Limits</a></li>
       </ul></nav>
+
+      <StatStrip label="Key analytics" items={kpis} />
 
       <section id="growth" className="card insight" aria-labelledby="gr-h">
         <p className="eyebrow">Growth rates, FY 2014/15 to FY 2024/25</p>
@@ -102,14 +122,14 @@ export default function Analytics() {
         <p className="eyebrow">Per person</p>
         <h2 id="pp-h">Real spending per person went from KSh {n0(perPerson.find((p) => p.fy === '2014/15').v)} to KSh {n0(perPerson[perPerson.length - 1].v)} a year</h2>
         <p className="finding">Dividing real spending by the estimated population removes the effect of a growing county. On this measure spending per person changed by {one((perPerson[perPerson.length - 1].v / perPerson.find((p) => p.fy === '2014/15').v - 1) * 100)} per cent between FY 2014/15 and FY 2024/25. These are estimates: population between censuses is interpolated from official projections.</p>
-        <BarList label="Real spending per person by year" unit=" KSh" format={n0} items={perPerson.map((p) => ({ label: `FY ${p.fy}`, value: p.v }))} />
+        <LineChart labels={SHORT} yFormat="int" unit="KSh" ariaLabel="Real spending per person by fiscal year, KSh" series={[{ name: 'Per person', color: 1, values: fillBy(perPerson, (p) => p.v) }]} />
         <p className="how"><b>How.</b> Spending in {BASE} prices ÷ population at the middle of the fiscal year (1 January of its second calendar year), linearly interpolated between the 2009 and 2019 census counts and county projections for 2012 to 2025. Treat differences under about 5 per cent as noise. Confidence 3 of 5.</p>
       </section>
 
       <section id="share" className="card" aria-labelledby="sh-h">
         <h2 id="sh-h">Own revenue as a share of spending</h2>
         <p className="lead">How much of each year's spending the county's own revenue would cover. Most spending is funded by the national share, so these are small numbers; the trend matters more than the level. The definition of own revenue widened during the period, so early and late years are not strictly comparable.</p>
-        <BarList label="Own-source revenue as share of spending" unit="%" format={one} accent="mint" items={revShare.map((r) => ({ label: `FY ${r.fy}`, value: r.v }))} />
+        <ColumnChart labels={SHORT} yFormat="one" unit="%" ariaLabel="Own-source revenue as a share of spending, by fiscal year" series={[{ name: 'Own revenue as % of spending', color: 3, values: fillBy(revShare, (r) => r.v) }]} />
       </section>
 
       <section id="spread" className="card insight" aria-labelledby="sp-h">
@@ -136,14 +156,14 @@ export default function Analytics() {
       <section id="unspent" className="card insight" aria-labelledby="un-h">
         <p className="eyebrow">Unspent budget</p>
         <h2 id="un-h">Across {unspent.length} years, about KSh {bn(unspentReal)} billion of approved budget went unspent, in {BASE} prices</h2>
-        <p className="finding">This is approved budget minus spending, year by year. Unspent money is not always lost: some rolls over as cash balance. It does show how much planned work was not paid for in the year.</p>
-        <BarList label="Unspent approved budget as a share of the budget" unit="%" format={one} accent="red" items={unspent.map((u) => ({ label: `FY ${u.fy}`, value: u.pct, sub: `KSh ${bn(u.gap)} bn` }))} />
+        <p className="finding">This is approved budget minus spending, year by year. Unspent money is not always lost: some rolls over as cash balance. It shows how much planned spending was not paid out in the year. It does not show which projects were or were not delivered.</p>
+        <ColumnChart labels={SHORT} yFormat="one" unit="%" ariaLabel="Unspent approved budget as a share of the budget, by fiscal year" series={[{ name: 'Unspent, % of approved budget', color: 4, values: fillBy(unspent, (u) => u.pct) }]} />
       </section>
 
       <section id="pending" className="card" aria-labelledby="pd-h">
         <h2 id="pd-h">Pending bills in months of spending</h2>
         <p className="lead">The year-end stock of unpaid bills divided by average monthly spending: roughly how many months of spending the unpaid bills equal.</p>
-        <BarList label="Pending bills in months of spending" unit=" months" format={one} accent="red" items={pending.map((p) => ({ label: `FY ${p.fy}`, value: p.months, sub: `KSh ${n0(p.stock)} m` }))} />
+        <ColumnChart labels={SHORT} yFormat="one" unit="months" ariaLabel="Pending bills in months of spending, by fiscal year" series={[{ name: 'Months of spending', color: 2, values: fillBy(pending, (p) => p.months) }]} />
       </section>
 
       <section id="limits" className="card" aria-labelledby="li-h">

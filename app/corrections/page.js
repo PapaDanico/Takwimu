@@ -1,4 +1,5 @@
 import PageHead from '../../components/PageHead';
+import reg from '../../data/conflicts.json';
 
 export const metadata = {
   title: 'Corrections and open questions',
@@ -27,6 +28,30 @@ export default function Corrections() {
   return (
     <main id="main" className="wrap page">
       <PageHead eyebrow="Trust" title="Corrections and open questions" sub="We publish our mistakes. Each entry says what was wrong, what changed and when." path="/corrections/" shareText="Takwimu Counties corrections log" />
+      <section className="card" id="register" aria-labelledby="reg-h">
+        <h2 id="reg-h">Source conflict register</h2>
+        <p className="lead">{reg.meta.rule}</p>
+        <div className="log">
+          {reg.conflicts.map((c) => (
+            <article key={c.id} id={c.id} className="term-card">
+              <p><span className={`tag ${c.status === 'open' ? 'warn' : 'good'}`}>{c.status === 'open' ? 'Open' : 'Resolved'}</span></p>
+              <h3>{c.measure}</h3>
+              <div className="tablewrap">
+                <table className="data">
+                  <caption className="sr-only">{c.measure}: values by source</caption>
+                  <thead><tr><th scope="col">Source</th><th scope="col">Value ({c.unit})</th></tr></thead>
+                  <tbody>{c.values.map((v) => <tr key={v.label}><th scope="row"><a href={v.url}>{v.label}</a></th><td>{v.value.toLocaleString('en-US')}</td></tr>)}</tbody>
+                </table>
+              </div>
+              <p><b>Difference:</b> {Math.abs(c.values[0].value - c.values[1].value).toLocaleString('en-US', { maximumFractionDigits: 2 })} {c.unit} ({((Math.abs(c.values[0].value - c.values[1].value) / c.values[0].value) * 100).toFixed(1)}% of the first value)</p>
+              <p><b>Definitions:</b> {c.definitions}</p>
+              <p><b>Hypothesis, not established:</b> {c.hypothesis}</p>
+              <p><b>Effect on the site:</b> {c.effect}</p>
+            </article>
+          ))}
+        </div>
+        <p className="how">Review status: {reg.meta.reviewed}. Register last updated {reg.meta.updated}.</p>
+      </section>
       <section className="card" aria-labelledby="fixed">
         <h2 id="fixed">Fixed</h2>
         <div className="log">

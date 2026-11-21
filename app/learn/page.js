@@ -22,7 +22,7 @@ const GROUPS = [
     title: 'Money going out',
     terms: [
       { id: 'development-vs-recurrent', term: 'Development and recurrent spending', def: 'Development spending pays for projects that last, such as roads, classrooms and clinics. Recurrent spending pays for running costs, mainly salaries, medicines and fuel.' },
-      { id: 'absorption-rate', term: 'Absorption rate', def: 'The share of a budget that was actually spent. A low rate on the development budget means planned projects were not all funded in the year.', eg: 'Siaya spent 57 per cent of its development budget in FY 2024/25, according to the Controller of Budget.' },
+      { id: 'absorption-rate', term: 'Absorption rate', def: 'The share of a budget that was actually spent. A low rate on the development budget means less of the planned spending was paid out in the year. It does not by itself show whether the works were or were not delivered: projects can be paid for in a later year, or be delivered by other funding.', eg: 'Siaya spent 57 per cent of its development budget in FY 2024/25, according to the Controller of Budget.' },
       { id: 'supplementary-budget', term: 'Supplementary budget', def: 'A change to a budget during the year. It can raise or cut allocations, which is why the "approved" budget and the "revised" budget can differ.' },
       { id: 'pending-bills', term: 'Pending bills', def: 'Money a county owes suppliers and contractors for goods or work already delivered. Large pending bills can mean a county has committed more than it collects.' },
       { id: 'revenue-arrears', term: 'Revenue arrears', def: 'Money owed to the county, such as unpaid rates or fees, that has not been collected yet.' },

@@ -8,7 +8,6 @@
     "gaps": [
       "FY2013/14: approved budget and pending bills not shown (only spending, absorption and revenue quoted in the FY2014/15 report). FY2014/15: pending recurrent bills were not reported.",
       "FY2019/20: the full-year report could not be downloaded from here (host returned 403). Only own-source revenue is available, from the FY2020/21 report.",
-      "FY2023/24: budget, spending and pending bills not yet extracted into this file; own-source revenue is in data/siaya.json.",
       "Audit opinions for FY2014/15 to FY2018/19 are missing for the reasons given under audits.",
       "FY2025/26: Controller of Budget site is unreachable from the build environment."
     ]
@@ -83,7 +82,7 @@
   },
   "health": {
     "label": "Health in Siaya: Kenya Demographic and Health Surveys 2014 and 2022",
-    "note": "The surveys are the only county-level health series that cover ten years. They are samples, so county values carry a margin of error; small changes should not be over-read. Annual routine health data were not retrievable.",
+    "note": "The surveys are the only county-level health series that cover ten years. They are samples, so county values carry a margin of error; small changes should not be over-read. We show no confidence intervals because we have not computed them from the survey tables. Annual routine health data were not retrievable.",
     "indicators": [
       {"id": "facility-delivery", "label": "Births in a health facility", "unit": "%", "v2014": 69.6, "v2022": 84.4, "better": "up", "confidence": 4, "sources": ["https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf", "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"], "note": "The county plan reports 98 per cent for facility deliveries, which is probably routine health-system data. The two measures are not the same; we show the survey figure."},
       {"id": "skilled-birth", "label": "Births attended by a skilled provider", "unit": "%", "v2014": 70.4, "v2022": 94.9, "better": "up", "confidence": 4, "sources": ["https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf", "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf"]},

@@ -1,8 +1,12 @@
 import PageHead from '../../components/PageHead';
 import BarList from '../../components/BarList';
+import { ColumnChart } from '../../components/Charts';
+import Donut from '../../components/Donut';
+import DataStamp from '../../components/DataStamp';
+import { shortDate } from '../../lib/format';
+import { SITE_UPDATED } from '../../lib/site';
 import co from '../../data/county.json';
 import hist from '../../data/history.json';
-import { shortDate } from '../../lib/format';
 
 export const metadata = {
   title: 'Siaya County profile: people, poverty and health',
@@ -21,6 +25,7 @@ export default function Profile() {
   return (
     <main id="main" className="wrap page">
       <PageHead eyebrow="County profile" title="Siaya County: people, poverty and health" sub={`Siaya had ${n(pc.value)} people at the 2019 census, up from ${n(p0.value)} in 2009. That is growth of about ${cagr.toFixed(1)} per cent a year.`} path="/profile/" shareText="Siaya County profile: population, poverty and health" />
+      <DataStamp period="Census 2009 and 2019; surveys 2014 and 2022; poverty 2005/06 and 2015/16" checked={shortDate(co.retrieved)} updated={shortDate(SITE_UPDATED)} completeness="Survey years only: no annual health or poverty series is available." />
 
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#people">People</a></li><li><a href="#poverty">Poverty</a></li><li><a href="#health">Health, 2014 to 2022</a></li><li><a href="#hiv">HIV</a></li><li><a href="#sources">Sources</a></li>
@@ -29,7 +34,18 @@ export default function Profile() {
       <section id="people" className="card" aria-labelledby="p-h">
         <h2 id="p-h">Population since 2009</h2>
         <p className="lead">Counts come from the 2009 and 2019 censuses. The other years are official projections, marked below, which are estimates and not counts.</p>
-        <BarList label="Siaya County population by year" format={n} items={pop.map((p) => ({ label: String(p.year), value: p.value, sub: p.kind === 'census' ? 'Census count' : 'Projection' }))} />
+        <ColumnChart labels={pop.map((p) => String(p.year))} yFormat="int" unit="people" ariaLabel="Siaya County population by year, census counts and projections" series={[{ name: 'Population (2009 and 2019 are census counts; other years are projections)', color: 1, values: pop.map((p) => p.value) }]} />
+        <div className="chartgrid two">
+          <div>
+            <h3 className="chart-title">Men and women, 2019 census</h3>
+            <Donut ariaLabel="Siaya County population by sex, 2019 census" centerValue={n(co.population.census_2019)} centerLabel="people" items={[{ label: 'Women', value: co.population.female_2019, color: 2 }, { label: 'Men', value: co.population.male_2019, color: 1 }]} />
+          </div>
+          <div>
+            <h3 className="chart-title">Poverty: Siaya and Kenya, per cent</h3>
+            <p className="chart-sub">Comprehensive Poverty Report 2020.</p>
+            <ColumnChart labels={['Income poor', 'Several needs']} yFormat="pct0" unit="%" yMaxFixed={100} ariaLabel="Poverty rates for Siaya and Kenya, monetary and multidimensional" series={[{ name: 'Siaya', color: 1, values: [co.poverty_2020.monetary_poverty_pct.siaya, co.poverty_2020.multidimensional_poverty_pct.siaya] }, { name: 'Kenya', color: 3, values: [co.poverty_2020.monetary_poverty_pct.kenya, co.poverty_2020.multidimensional_poverty_pct.kenya] }]} />
+          </div>
+        </div>
         <ul className="facts">
           <li><span>Households (2019)</span><span>{n(co.population.households)}</span></li>
           <li><span>Average household size</span><span>{co.population.average_household_size}</span></li>
@@ -75,6 +91,7 @@ export default function Profile() {
         <p className="eyebrow">Health</p>
         <h2 id="hl-h">Safer births and fewer stunted children between 2014 and 2022</h2>
         <p className="finding">{hist.health.note}</p>
+        <ColumnChart labels={['Facility births', 'Skilled birth', 'Skilled antenatal', 'Stunting']} yFormat="pct0" unit="%" yMaxFixed={100} ariaLabel="Siaya health indicators in the 2014 and 2022 surveys" series={[{ name: '2014 survey', color: 1, values: hist.health.indicators.map((h) => h.v2014) }, { name: '2022 survey', color: 2, values: hist.health.indicators.map((h) => h.v2022) }]} />
         <div className="tablewrap">
           <table className="data">
             <caption className="sr-only">Siaya health survey results, 2014 and 2022</caption>

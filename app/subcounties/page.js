@@ -1,8 +1,12 @@
 import PageHead from '../../components/PageHead';
 import BarList from '../../components/BarList';
+import { ColumnChart } from '../../components/Charts';
+import Donut from '../../components/Donut';
+import DataStamp from '../../components/DataStamp';
+import { shortDate } from '../../lib/format';
+import { SITE_UPDATED } from '../../lib/site';
 import sc from '../../data/subcounties.json';
 import hist from '../../data/history.json';
-import { shortDate } from '../../lib/format';
 
 export const metadata = {
   title: 'Siaya sub-counties: population, health and growth',
@@ -29,6 +33,7 @@ export default function SubCounties() {
   return (
     <main id="main" className="wrap page">
       <PageHead eyebrow="Sub-counties" title="Six sub-counties, ten years of change" sub={`Siaya's six sub-counties match its six constituencies. Population grew ${((total19 / total09 - 1) * 100).toFixed(1)} per cent between the 2009 and 2019 censuses, from ${n(total09)} to ${n(total19)} people.`} path="/subcounties/" shareText="Siaya sub-counties: population and health" />
+      <DataStamp period="Censuses of 2009 and 2019; projections to 2027" checked={shortDate(sc.retrieved)} updated={shortDate(SITE_UPDATED)} completeness="6 of 6 sub-counties. Facility and staff counts carry no reference date." />
 
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#growth">Growth</a></li><li><a href="#size">Size and density</a></li><li><a href="#health">Health access</a></li><li><a href="#each">Each sub-county</a></li><li><a href="#sources">Sources</a></li>
@@ -45,8 +50,17 @@ export default function SubCounties() {
       <section id="size" className="card" aria-labelledby="s-h">
         <h2 id="s-h">Size and density</h2>
         <p className="lead">People living in each sub-county at the 2019 census, and how crowded the land is.</p>
-        <h3 className="mini">Population, 2019 census</h3>
-        <BarList label="Population by sub-county" format={n} items={byPop.map((r) => ({ label: r.name, value: r.population['2019'] }))} />
+        <div className="chartgrid two">
+          <div>
+            <h3 className="chart-title">Share of the county population, 2019 census</h3>
+            <Donut ariaLabel="Share of Siaya County population by sub-county, 2019 census" centerValue={n(total19)} centerLabel="people in 2019" items={byPop.map((r, k) => ({ label: r.name, value: r.population['2019'], color: k + 1 }))} />
+          </div>
+          <div>
+            <h3 className="chart-title">Population in 2009 and 2019</h3>
+            <p className="chart-sub">Every sub-county grew; compare the pair of columns for each.</p>
+            <ColumnChart labels={byPop.map((r) => r.name.split(' ')[0])} yFormat="int" ariaLabel="Population by sub-county at the 2009 and 2019 censuses" series={[{ name: '2009 census', color: 1, values: byPop.map((r) => r.p09) }, { name: '2019 census', color: 2, values: byPop.map((r) => r.population['2019']) }]} />
+          </div>
+        </div>
         <h3 className="mini">People per square kilometre, 2019</h3>
         <BarList label="Density by sub-county" format={n} accent="navy" items={byDensity.map((r) => ({ label: r.name, value: r.density_per_km2['2019'], sub: `${n(r.area_km2)} km²` }))} />
       </section>
@@ -87,6 +101,8 @@ export default function SubCounties() {
           <li>2019 census, 2022 and later projections, facilities, health workers and voters: {sc.source}. Retrieved {shortDate(sc.retrieved)}. Confidence {sc.confidence} of 5. <a href={sc.source_url}>Document</a>.</li>
           <li>2009 census by constituency: {hist.population.by_sub_county_2009.source}. Confidence {hist.population.by_sub_county_2009.confidence} of 5. These are secondary reproductions of the census; the original 2009 tables were not reachable when we built the site.</li>
           <li>Projections are statistical estimates, not counts.</li>
+          <li>People per doctor, nurse or clinical officer come from the county plan, which does not give the staffing date or whether staff serve people from outside the sub-county. Treat them as rough comparisons, not as measures of need or quality.</li>
+          <li>Facility counts have no reference date, so people-per-facility figures mix 2019 census population with counts of unknown date.</li>
         </ul>
       </section>
     </main>

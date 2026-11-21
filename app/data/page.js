@@ -8,6 +8,8 @@ export const metadata = {
 
 const FILES = [
   { file: 'history.json', what: 'Ten-year Siaya series: budget, spending, absorption, own-source revenue, pending bills, audit opinions, population, health and poverty', source: 'Controller of Budget annual county reports; Auditor-General reports; KNBS census as reproduced in county plans; Kenya DHS 2014 and 2022', conf: '3 to 4' },
+  { file: 'history.csv', what: 'The ten-year series in one long table: indicator, fiscal year, value, unit, basis (reported, derived or alternate), source report, source link and caveat', source: 'Built from history.json and cpi.json', conf: '3 to 4' },
+  { file: 'conflicts.json', what: 'Source conflict register: where two reports disagree, with both values, definitions, hypotheses and status', source: 'Controller of Budget annual reports', conf: '3 to 4' },
   { file: 'siaya.json', what: 'Latest-year fiscal context: FY 2024/25 revenue, budget, spending, pending bills and audit', source: 'Controller of Budget FY 2023/24 and 2024/25 reports', conf: '3 to 5' },
   { file: 'subcounties.json', what: 'Six sub-counties: population 2019 to 2027, area, density, facilities, health workers, voters', source: 'Siaya County Integrated Development Plan 2023 to 2027', conf: '4' },
   { file: 'county.json', what: 'County population, households, urban centres, age groups, poverty and health indicators', source: 'Siaya County Integrated Development Plan 2023 to 2027', conf: '4' },

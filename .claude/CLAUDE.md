@@ -10,5 +10,8 @@ Civic education platform for Kenyan public finance and statistics, focused on tr
 - Series must go back 10 years: data/history.json (budget, spend, revenue, audits, population, health) plus data/cpi.json; gaps are listed, never filled. Validator checks sums.
 - Layout repaired 2026-11-20 (app/, lib/, scripts/, data/, public/). app/_held/ukweli is intentionally not routed. Build, validate and typecheck pass.
 
+- Deploy to Netlify only for major releases (owner, 21 Nov 2026): commit and push often, deploy once per milestone. Production comes from branch claude/eager-rubin-7bpcgq by CLI upload, not from main (see docs/architecture-map.md).
+- Charts: components/Charts.js (line, column), Donut.js; palette --s1..--s6 validated; every chart needs a table view.
+
 # Rules
 Concise responses. Grep before Read. No unrequested extras.

@@ -350,7 +350,34 @@ Object.entries(files)
   });
 
 // Siaya data is verified-with-status and carries its own provenance fields.
-['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json'].forEach((f) => {
+['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json'].forEach((f) => {
   fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(outDir, f));
   console.log('Generated public/data/' + f);
 });
+
+// CSV export of the ten-year series, built from the same validated file the charts use.
+(function writeHistoryCsv() {
+  const hist = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'history.json'), 'utf8'));
+  const cpi = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'cpi.json'), 'utf8'));
+  const q = (v) => (v === undefined || v === null ? '' : `"${String(v).replace(/"/g, '""')}"`);
+  const rows = [['indicator', 'fiscal_year', 'value', 'unit', 'basis', 'source_report', 'source_url', 'caveat']];
+  const field = [
+    ['approved_budget', 'approved', 'KSh billion'], ['recurrent_budget', 'recurrent_budget', 'KSh billion'], ['development_budget', 'development_budget', 'KSh billion'],
+    ['spent', 'spent', 'KSh billion'], ['recurrent_spent', 'recurrent_spent', 'KSh billion'], ['development_spent', 'development_spent', 'KSh billion'],
+    ['recurrent_budget_spent_pct_as_reported', 'recurrent_absorption_pct', 'per cent'], ['development_budget_spent_pct_as_reported', 'development_absorption_pct', 'per cent'],
+    ['own_source_revenue_target', 'osr_target_m', 'KSh million'], ['pending_bills_development', 'pending_development_m', 'KSh million'], ['pending_bills_recurrent', 'pending_recurrent_m', 'KSh million'], ['pending_bills_total', 'pending_total_m', 'KSh million'],
+  ];
+  const years = [...hist.years].sort((a, b) => a.fy.localeCompare(b.fy));
+  years.forEach((y) => {
+    const rep = hist.reports[y.report] || {};
+    field.forEach(([name, key, unit]) => { if (y[key] !== undefined) rows.push([name, y.fy, y[key], unit, 'reported', rep.title, rep.url, y.caveat]); });
+    if (y.spent !== undefined && cpi.fiscal_year[y.fy]) rows.push(['spent_real_2024_25_prices', y.fy, +(y.spent * (cpi.fiscal_year['2024/25'] / cpi.fiscal_year[y.fy])).toFixed(3), 'KSh billion', 'derived (approximate)', 'World Bank CPI, fiscal-year average', cpi.meta.source_url, cpi.meta.method]);
+  });
+  hist.osr_series.points.forEach((p) => {
+    rows.push(['own_source_revenue', p.fy, p.value, 'KSh million', 'reported', p.report, '', '']);
+    if (p.alternate) rows.push(['own_source_revenue', p.fy, p.alternate.value, 'KSh million', 'alternate (other report)', p.alternate.report, '', 'Reports disagree; see conflicts.json']);
+  });
+  hist.audits.points.forEach((a) => rows.push(['audit_opinion', a.fy, a.opinion, 'category', 'reported', a.period || '', a.url, a.reasons]));
+  fs.writeFileSync(path.join(outDir, 'history.csv'), rows.map((r) => r.map(q).join(',')).join('\n') + '\n');
+  console.log(`Generated public/data/history.csv (${rows.length - 1} rows)`);
+}());

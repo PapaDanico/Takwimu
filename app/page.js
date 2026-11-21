@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import siaya from '../data/siaya.json';
+import hist from '../data/history.json';
+import { ColumnChart } from '../components/Charts';
 import { fmt, shortDate } from '../lib/format';
 
 const X0 = 160;
@@ -21,6 +23,9 @@ function Tile({ label, value, unit, note, tone, dashed, tag }) {
     </div>
   );
 }
+
+const TEN_BY = Object.fromEntries(hist.years.map((y) => [y.fy, y]));
+const TEN_LABELS = ['13/14', '14/15', '15/16', '16/17', '17/18', '18/19', '19/20', '20/21', '21/22', '22/23', '23/24', '24/25'];
 
 export default function Home() {
   const osr = siaya.own_source_revenue;
@@ -329,12 +334,27 @@ export default function Home() {
         </figure>
       </section>
 
+      <section className="card" id="tenyears" aria-labelledby="tenh">
+        <h2 id="tenh">Ten years at a glance</h2>
+        <p className="lead">Approved budget and spending by fiscal year, KSh billion. Missing years are left blank. <Link href="/insights/">See the full ten-year analysis</Link> and the <Link href="/analytics/">analytics</Link>.</p>
+        <ColumnChart
+          labels={TEN_LABELS}
+          yFormat="one"
+          unit="KSh bn"
+          ariaLabel="Approved budget and spending by fiscal year, KSh billion"
+          series={[
+            { name: 'Approved budget', color: 1, values: TEN_LABELS.map((l) => (TEN_BY['20' + l.slice(0, 2) + '/' + l.slice(3)] || {}).approved ?? null) },
+            { name: 'Spent', color: 2, values: TEN_LABELS.map((l) => (TEN_BY['20' + l.slice(0, 2) + '/' + l.slice(3)] || {}).spent ?? null) },
+          ]}
+        />
+      </section>
+
       <section className="card" id="learn" aria-labelledby="learnh">
         <h2 id="learnh">What do these budget terms mean?</h2>
         <p className="lead">Draft explainers in plain English. They stay marked as drafts until someone with subject knowledge has reviewed them.</p>
         <div className="terms">
           <div className="term"><span className="tag good">Draft explainer</span><h3>Own-source revenue</h3><p>Money a county raises itself from fees, levies and licences, separate from what it receives from the national government.</p></div>
-          <div className="term"><span className="tag good">Draft explainer</span><h3>Absorption rate</h3><p>The share of a budget that was actually spent. A low rate on the development budget means planned projects were not all funded in the year.</p></div>
+          <div className="term"><span className="tag good">Draft explainer</span><h3>Absorption rate</h3><p>The share of a budget that was actually spent. A low rate on the development budget means less of the planned spending was paid out in the year. It does not by itself show whether the works were or were not delivered: projects can be paid for in a later year, or be delivered by other funding.</p></div>
           <div className="term"><span className="tag good">Draft explainer</span><h3>Pending bills</h3><p>Money a county owes suppliers for work already done. Growing pending bills can signal spending beyond what is collected.</p></div>
           <div className="term"><span className="tag good">Draft explainer</span><h3>Audit opinion</h3><p>The Auditor-General&apos;s verdict on whether accounts are reliable. Read the basis for the opinion, not only its label.</p></div>
         </div>

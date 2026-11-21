@@ -2,20 +2,29 @@ import Link from 'next/link';
 
 const ISSUES_URL = 'https://github.com/PapaDanico/Takwimu/issues/new';
 
+const LEGAL = [
+  { href: '/terms/', label: 'Terms of use' },
+  { href: '/privacy/', label: 'Privacy notice' },
+  { href: '/faq/', label: 'FAQ' },
+  { href: '/corrections/', label: 'Corrections' },
+];
+
 const COLUMNS = [
   {
     heading: 'Explore',
     links: [
-      { href: '/#siaya', label: 'Own-source revenue' },
-      { href: '/#trend', label: 'Revenue trend' },
-      { href: '/#spending', label: 'Budget and spending' },
-      { href: '/#audit', label: 'Audit opinion' },
+      { href: '/', label: 'Overview' },
+      { href: '/insights/', label: 'Ten-year insights' },
+      { href: '/analytics/', label: 'Analytics' },
+      { href: '/subcounties/', label: 'Sub-counties' },
+      { href: '/profile/', label: 'County profile' },
     ],
   },
   {
     heading: 'Learn',
     links: [
-      { href: '/#learn', label: 'Budget terms, in plain English' },
+      { href: '/learn/', label: 'Budget terms, in plain English' },
+      { href: '/faq/', label: 'Frequently asked questions' },
       { href: '/method/', label: 'How to read a chart here' },
     ],
   },
@@ -24,7 +33,18 @@ const COLUMNS = [
     links: [
       { href: '/method/', label: 'How we handle numbers' },
       { href: '/method/#sources', label: 'Where the data comes from' },
+      { href: '/data/', label: 'Download the data' },
+      { href: '/corrections/', label: 'Corrections log' },
       { href: ISSUES_URL, label: 'Report an inaccuracy' },
+    ],
+  },
+  {
+    heading: 'Legal',
+    links: [
+      { href: '/terms/', label: 'Terms of use' },
+      { href: '/privacy/', label: 'Privacy notice' },
+      { href: '/terms/#copyright', label: 'Copyright and reuse' },
+      { href: '/terms/#disclaimer', label: 'Disclaimer' },
     ],
   },
   {
@@ -101,6 +121,9 @@ export default function SiteFooter({ asOf }) {
             misread from scanned pages. Check any number against the source document before relying
             on it. Last checked {asOf}.
           </p>
+          <nav className="footer-legal" aria-label="Legal and help">
+            {LEGAL.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
+          </nav>
           <div className="footer-credit">
             <img src="/brand/danico-ventures.webp" alt="Danico Ventures Ltd" width="32" height="32" />
             <p>© {new Date().getFullYear()} Takwimu, a Danico Ventures Ltd product · Built in Kenya</p>
