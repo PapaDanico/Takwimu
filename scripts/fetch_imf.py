@@ -182,49 +182,62 @@ def year_type(year, latest_actual, ed_year):
 
 
 def build_vintages(route_log):
+    """One request per indicator and vintage: multi-indicator queries drop the
+    dimension-group attributes (LATEST_ACTUAL_ANNUAL_DATA) in some WEO versions."""
     vintages = []
     for v in VERSIONS:
-        raw = os.path.join(RAW_DIR, 'weo_%s_KEN.json' % v)
-        url = SDMX.format(v=v, i='+'.join(INDICATORS))
-        if not OFFLINE:
-            code = curl(url, raw, 'application/vnd.sdmx.data+json;version=2.0.0')
-            route_log.append({'route': 'IMF SDMX 3.0 API (api.imf.org)', 'url': url, 'http_status': code})
-            if code != '200':
-                continue
-            time.sleep(5)
-        if not os.path.exists(raw):
-            continue
-        pub, series = parse_sdmx(raw)
-        ed_year, edition = edition_from(pub)
-        values, inds = [], []
+        values, inds, raws, pub = [], [], [], None
         for code_, (name, unit, sector) in INDICATORS.items():
-            if code_ not in series:
-                inds.append({'code': code_, 'name': name, 'unit': unit, 'available': False})
+            raw = os.path.join(RAW_DIR, 'weo_%s_KEN_%s.json' % (v, code_))
+            ind_url = SDMX.format(v=v, i=code_)
+            if not OFFLINE:
+                code = curl(ind_url, raw, 'application/vnd.sdmx.data+json;version=2.0.0')
+                route_log.append({'route': 'IMF SDMX 3.0 API (api.imf.org)', 'url': ind_url, 'http_status': code})
+                time.sleep(3)
+                if code != '200':
+                    inds.append({'code': code_, 'name': name, 'unit': unit, 'available': False,
+                                 'reason': 'HTTP %s' % code})
+                    continue
+            if not os.path.exists(raw):
                 continue
+            p, series = parse_sdmx(raw)
+            pub = pub or p
+            raws.append({'indicator': code_, 'file': os.path.basename(raw), 'sha256': sha256(raw)})
+            if code_ not in series:
+                inds.append({'code': code_, 'name': name, 'unit': unit, 'available': False,
+                             'reason': 'not served for Kenya in this vintage'})
+                continue
+            ed_year, edition = edition_from(pub)
             s = series[code_]
             la = s['attrs'].get('LATEST_ACTUAL_ANNUAL_DATA')
             la = int(la) if la not in (None, '') else None
-            ind_url = SDMX.format(v=v, i=code_)
+            scale = s['attrs'].get('SCALE')
+            # NGDPD is served in US$ units with SCALE 9 (display in billions): convert to US$ billion
+            div = 1e9 if unit == 'US$ billion' else 1.0
             inds.append({
                 'code': code_, 'name': name, 'unit': unit, 'sector': sector, 'available': True,
                 'latest_actual_year': la,
                 'reporting_year': s['attrs'].get('START_END_MONTHS_OF_REPORTING_YEAR'),
                 'country_update_date': s['attrs'].get('COUNTRY_UPDATE_DATE'),
-                'methodology': s['attrs'].get('METHODOLOGY'),
+                'historical_data_source': s['attrs'].get('HISTORICAL_DATA_SOURCE'),
                 'base_year': s['attrs'].get('BASE_YEAR'),
-                'scale': s['attrs'].get('SCALE'),
+                'scale': scale,
                 'source_url': ind_url,
             })
             for y, val in sorted(s['obs'].items()):
                 yi = int(y)
                 if yi < FIRST_YEAR:
                     continue
-                values.append({'indicator': code_, 'year': yi, 'value': val, 'unit': unit, 'vintage': edition,
+                values.append({'indicator': code_, 'year': yi,
+                               'value': None if val is None else round(val / div, 6),
+                               'unit': unit, 'vintage': edition,
                                'type': year_type(yi, la, ed_year), 'source_url': ind_url})
+        if not pub:
+            continue
+        ed_year, edition = edition_from(pub)
         vintages.append({
             'vintage': edition, 'sdmx_dataflow': 'IMF.RES/WEO', 'sdmx_version': v, 'publication_date': pub[:10],
-            'edition_year': ed_year, 'raw_file': os.path.basename(raw), 'raw_sha256': sha256(raw),
-            'indicators': inds, 'values': values,
+            'edition_year': ed_year, 'raw_files': raws, 'indicators': inds, 'values': values,
         })
     return vintages
 
@@ -299,9 +312,9 @@ PAIRS = [
     ('PCPIPCH', 'national.json', 'FP.CPI.TOTL.ZG', 'points', {}),
     ('PCPIPCH', 'cbk.json', 'inflation_annual_average', 'points', {'note': 'CBK annual = December value of the annual-average rate'}),
     ('PCPIEPCH', 'cbk.json', 'inflation_12_month', 'points', {'month': True, 'note': 'CBK December 12-month rate'}),
-    ('GGR_NGDP', 'national.json', 'GC.REV.XGRT.GD.ZS', 'points', {'note': 'Definitions differ: WB central government revenue excluding grants; IMF general government revenue including grants, Kenya fiscal year July-June'}),
-    ('GGX_NGDP', 'national.json', 'GC.XPN.TOTL.GD.ZS', 'points', {'note': 'Definitions differ: WB central government expense (excludes net acquisition of non-financial assets); IMF general government total expenditure, fiscal year'}),
-    ('GGXWDG_NGDP', 'cbk.json', 'public_debt_total', 'points', {'derived': True, 'note': 'Derived for comparison only: CBK December public debt / CBK calendar-year nominal GDP x 100; IMF series is fiscal-year general government gross debt'}),
+    ('GGR_NGDP', 'national.json', 'GC.REV.XGRT.GD.ZS', 'points', {'note': 'Definitions differ: WB central government revenue excluding grants; IMF general government revenue including grants (reporting year per the reporting_year field)'}),
+    ('GGX_NGDP', 'national.json', 'GC.XPN.TOTL.GD.ZS', 'points', {'note': 'Definitions differ: WB central government expense (excludes net acquisition of non-financial assets); IMF general government total expenditure'}),
+    ('GGXWDG_NGDP', 'cbk.json', 'public_debt_total', 'points', {'derived': True, 'note': 'Derived for comparison only: CBK December public debt / CBK calendar-year nominal GDP x 100; IMF series is general government gross debt (reporting year per reporting_year field)'}),
     ('NGDPD', 'national.json', 'NY.GDP.MKTP.CD', 'percent', {'divisor': 1e9}),
     ('NGDPDPC', 'national.json', 'NY.GDP.PCAP.CD', 'percent', {}),
 ]
