@@ -38,7 +38,8 @@ export default function SiayaSources() {
         <ul className="how">
           {ORIGIN.map(([k, label]) => <li key={k}>{label}: {n((d) => d.origin === k)}.</li>)}
           {Object.entries(COVERAGE).map(([k, label]) => <li key={k}>Coverage, {label}: {n((d) => d.geographic_coverage === k)}.</li>)}
-          <li>Publisher states a reuse licence that allows sharing: {n((d) => d.redistribution_allowed)}. For the other {n((d) => !d.redistribution_allowed)}, we link to the original and cite it rather than share copies.</li>
+          <li>Figures may be reused with citation: {n((d) => d.data_reuse === 'figures may be reused with citation')}; link and cite only: {n((d) => d.data_reuse === 'link and cite only')}; permission required: {n((d) => d.data_reuse === 'permission required')}. Per-publisher terms are on the <a href="/terms/#copyright">terms page</a>.</li>
+          <li>The document itself may be republished under its stated licence: {n((d) => d.document_redistribution)}. For the other {n((d) => !d.document_redistribution)}, we link to the original and cite it rather than share copies.</li>
         </ul>
       </section>
 
