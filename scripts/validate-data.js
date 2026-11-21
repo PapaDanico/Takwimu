@@ -272,6 +272,31 @@ if (hist.in_year) hist.in_year.periods.forEach((p) => {
 });
 if (hist.supplementary) hist.supplementary.documents.forEach((d) => checkRef({ source_id: d.source_id, page: 1 }, `supplementary ${d.id}`, d.url));
 
+// ---- Pending-bills roll-forward: a term is either published (value, document, page) or "not published"; never filled ----
+if (hist.pending_rollforward) hist.pending_rollforward.years.forEach((r) => {
+  const rep = hist.reports[r.fy];
+  if (r.source_id !== null) {
+    const d = byId.get(r.source_id);
+    if (!d) fail(`rollforward ${r.fy}: source_id ${r.source_id} is not in the manifest`);
+    else if (!rep || d.url !== rep.url) fail(`rollforward ${r.fy}: source_id ${r.source_id} is not the year's report`);
+  } else if (rep) fail(`rollforward ${r.fy}: the year has a report but no source_id`);
+  ['opening', 'new_bills', 'payments', 'adjustments', 'closing'].forEach((k) => {
+    const t = r[k];
+    const where = `rollforward ${r.fy} ${k}`;
+    if (t.status === 'not published') {
+      if (t.value !== undefined || t.page !== undefined) fail(`${where}: a "not published" term must have no value or page`);
+      return;
+    }
+    if (typeof t.value !== 'number') return fail(`${where}: needs a value or status "not published"`);
+    if (t.source_id !== r.source_id) fail(`${where}: source_id must be the year's report (${r.source_id})`);
+    if (!Number.isInteger(t.page)) fail(`${where}: a published term needs its page`);
+    if (t.parts) {
+      const sum = Object.values(t.parts).reduce((s, v) => s + v, 0);
+      if (Math.abs(sum - t.value) > 0.011) fail(`${where}: parts add to ${sum.toFixed(2)}, not ${t.value}`);
+    }
+  });
+});
+
 if (errors.length) {
   console.error('Data validation failed:\n- ' + errors.join('\n- '));
   process.exit(1);

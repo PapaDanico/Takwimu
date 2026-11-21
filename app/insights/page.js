@@ -7,6 +7,15 @@ import { shortDate } from '../../lib/format';
 import { SITE_UPDATED } from '../../lib/site';
 import hist from '../../data/history.json';
 import cpi from '../../data/cpi.json';
+import manifest from '../../data/source-manifest.json';
+
+const RF = hist.pending_rollforward;
+const RF_TERMS = [['opening', 'Opening stock'], ['new_bills', 'New bills'], ['payments', 'Payments'], ['adjustments', 'Write-offs or adjustments'], ['closing', 'Closing stock']];
+const DOC = Object.fromEntries(manifest.documents.map((d) => [d.id, d]));
+const rfCell = (t) => (typeof t.value === 'number'
+  ? <>{t.value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}<span className="rf-page">PDF p. {t.page}{t.printed_page ? `, printed p. ${t.printed_page}` : ''}{t.note ? `; ${t.note}` : ''}</span></>
+  : <span className="rf-np">Not published{t.note ? <span className="rf-page">{t.note}</span> : null}</span>);
+const rfComplete = (r) => RF_TERMS.every(([k]) => typeof r[k].value === 'number');
 
 export const metadata = {
   title: 'Ten-year insights: Siaya County finances',
@@ -119,7 +128,26 @@ export default function Insights() {
         <p className="finding">Pending bills are money owed for goods and services already delivered. The reported stock was KSh {m(pendFirst.v)} million at the end of {label(pendFirst.fy)} and KSh {m(pendLast.v)} million at the end of {label(pendLast.fy)}. The reports use slightly different definitions, and two reports disagree about the stock at 30 June 2021, so read the direction rather than each step.</p>
         <h3 className="chart-title">Pending bills at year end, KSh million</h3>
         <ColumnChart labels={SHORT} yFormat="int" unit="KSh m" ariaLabel="Pending bills at the end of each fiscal year, KSh million" series={[{ name: 'Pending bills', color: 2, values: col(pendOf) }]} />
-        <p className="how"><b>Conflict.</b> At 30 June 2021 the FY 2020/21 report gives KSh 1,061 million, while the FY 2021/22 report gives KSh 602 million for the same date. We plot each year's figure from the report that gives it (FY 2022/23 and FY 2023/24 come from the following year's report) and show both values here. The FY 2023/24 column (KSh 1,120 million, from the FY 2024/25 report) differs by about 3.7 times from the KSh 304 million in the FY 2023/24 report, which excludes bills incurred in the year; the Data page lists this and two smaller differences (FY 2022/23). Years without a column (FY 2013/14, FY 2014/15, FY 2019/20 and FY 2024/25) could not be read or were incomplete.</p>
+        <h3 className="chart-title" id="rollforward-h">How the stock changes each year: the roll-forward</h3>
+        <p className="chart-sub">{RF.identity.replace(/^./, (c) => c.toUpperCase())}. KSh million. Each term comes from that year&apos;s Controller of Budget report, with its page.</p>
+        <div className="tablewrap" id="rollforward" tabIndex={0} role="region" aria-labelledby="rollforward-h">
+          <table className="data rf">
+            <caption className="sr-only">Pending bills roll-forward by fiscal year, KSh million, with the page of each published term</caption>
+            <thead><tr><th scope="col">Fiscal year</th>{RF_TERMS.map(([k, l]) => <th key={k} scope="col">{l}</th>)}<th scope="col">Complete?</th></tr></thead>
+            <tbody>
+              {RF.years.map((r) => (
+                <tr key={r.fy}>
+                  <th scope="row">{label(r.fy)}{r.source_id ? <span className="rf-page"><a href={DOC[r.source_id].url}>FY {DOC[r.source_id].fiscal_year} report</a></span> : <span className="rf-page">No report found</span>}</th>
+                  {RF_TERMS.map(([k]) => <td key={k}>{rfCell(r[k])}</td>)}
+                  <td>{rfComplete(r) ? 'Yes' : 'No'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="how"><b>Reading the roll-forward.</b> {RF.note} {RF.years.filter(rfComplete).length} of {RF.years.length} years have every term published. In FY 2021/22 and FY 2022/23 the published terms add up with no adjustment reported, but the reports do not say there were none, so those years stay incomplete.</p>
+        <ul className="steps rf-notes">{RF.years.map((r) => <li key={r.fy}><b>{label(r.fy)}.</b> {r.note}</li>)}</ul>
+        <p className="how"><b>Conflict.</b> At 30 June 2021 the FY 2020/21 report gives KSh 1,061 million, while the FY 2021/22 report gives KSh 602 million for the same date. We plot each year's figure from the report that gives it (FY 2022/23 and FY 2023/24 come from the following year's report) and show both values here. The FY 2023/24 column (KSh 1,120 million, from the FY 2024/25 report) differs by about 3.7 times from the KSh 304 million in the FY 2023/24 report, which excludes bills incurred in the year; the Data page lists this and two smaller differences (FY 2022/23). Years without a column (FY 2013/14, FY 2014/15 and FY 2019/20) could not be read or were incomplete; FY 2024/25 has no column because its report gives two different year-end stocks (see the roll-forward above).</p>
       </section>
 
       <section id="revenue" className="card insight" aria-labelledby="rev-h">

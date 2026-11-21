@@ -42,6 +42,11 @@ const srv = http.createServer((req, res) => {
   await pg.locator('svg rect[tabindex]').first().focus();
   check(await pg.locator('.ctip').count() === 1, 'keyboard focus shows a tooltip');
   check(!(await pg.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)), 'no horizontal overflow at 390px');
+  const rfRows = await pg.locator('#rollforward tbody tr').count();
+  const rfNp = await pg.locator('#rollforward .rf-np').count();
+  const histJson = JSON.parse(fs.readFileSync(path.join(root, 'data', 'history.json'), 'utf8'));
+  const npWant = histJson.pending_rollforward.years.reduce((s, r) => s + ['opening', 'new_bills', 'payments', 'adjustments', 'closing'].filter((k) => r[k].status === 'not published').length, 0);
+  check(rfRows === histJson.pending_rollforward.years.length && rfNp === npWant, `roll-forward table shows every year (${rfRows}) and every unpublished term as "Not published" (${rfNp} of ${npWant})`);
   const csv = await pg.request.get(base + '/data/history.csv');
   check(csv.ok() && (await csv.text()).startsWith('"indicator"'), 'history.csv served with header');
   const conf = await (await pg.request.get(base + '/data/conflicts.json')).json();

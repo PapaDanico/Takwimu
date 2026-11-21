@@ -213,6 +213,11 @@
           "label": "Auditor-General report, FY 2022/23",
           "value": 741.56,
           "url": "https://libraryir.parliament.go.ke/items/7e87be17-5566-48c8-ac76-d4658605ee6c/full"
+        },
+        {
+          "label": "Controller of Budget FY 2022/23 report, closing stock in section 3.38.5 (PDF p. 578, printed p. 552, RapidOCR)",
+          "value": 873.38,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
         }
       ],
       "definitions": "The Controller of Budget figure is the opening stock quoted in the FY 2023/24 report. The Auditor-General reports the amount as an emphasis-of-matter item in the FY 2022/23 audit.",
@@ -462,6 +467,78 @@
       "supersedes": null,
       "page_image_checked": false,
       "effect": "The series still shows 64.5 until a reviewer checks the page image; both readings are listed here."
+    },
+    {
+      "id": "pending-2022",
+      "measure": "Pending bills at 30 June 2022",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2021/22 report, Table 3.251, column E (PDF p. 409, printed p. 385)",
+          "value": 705.38,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        },
+        {
+          "label": "Controller of Budget FY 2022/23 report, opening stock for FY 2022/23 (PDF p. 578, printed p. 552, RapidOCR)",
+          "value": 840.67,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        }
+      ],
+      "definitions": "The closing stock in one report and the opening stock in the next, for the same date.",
+      "hypothesis": "Hypothesis: the county revised its list of bills between the two reports (for example, bills verified later). The reports do not say. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Both values are shown in the pending-bills roll-forward on the Insights page. The chart plots 705.38, the FY 2021/22 report's parts (411.53 development plus 293.85 recurrent)."
+    },
+    {
+      "id": "pending-close-2022",
+      "measure": "Pending bills at 30 June 2022, within the FY 2021/22 report",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2021/22 report, Table 3.251, column E (PDF p. 409, printed p. 385)",
+          "value": 705.38,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        },
+        {
+          "label": "Same report, key observations (PDF p. 407, printed p. 383)",
+          "value": 789.96,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        }
+      ],
+      "definitions": "Same report, same date. The table and the key observations give different totals.",
+      "hypothesis": "Hypothesis: the observation adds bills not in the table (the table includes bills the Auditor-General classed as eligible). Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The roll-forward and the chart use the table (705.38), whose columns add up; the observation value is listed here."
+    },
+    {
+      "id": "pending-close-2025",
+      "measure": "Pending bills at 30 June 2025, County Executive, within the FY 2024/25 report",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2024/25 report, Table 3.457, closing column (PDF p. 478, printed p. 435, RapidOCR)",
+          "value": 545.95,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, text before Table 3.458 (\"Kshs.1.12 billion\"), whose ageing totals equal the opening stock of 1,123.65 (PDF p. 478)",
+          "value": 1120,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
+      ],
+      "definitions": "Same report, same date. Table 3.457 gives 1,123.65 at 1 July 2024 less 577.70 paid, with the column for new bills left blank; the text and the ageing table give 1.12 billion.",
+      "hypothesis": "Hypothesis: the ageing table was not updated after payments, or new bills of the year were left out of Table 3.457. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The FY 2024/25 year-end stock stays out of the chart, as before. The roll-forward shows the table value with this register case; the year is incomplete because new bills are not published."
     }
   ]
 }

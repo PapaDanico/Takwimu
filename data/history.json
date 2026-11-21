@@ -937,7 +937,7 @@
       "development_absorption_pct": 57,
       "osr_m": 436.68,
       "report": "2024/25",
-      "caveat": "Figures are read from a scanned PDF with two OCR engines (see data/siaya.json). The report states 83 per cent recurrent absorption, but 4.99 of 6.07 is 82.2 per cent. Pending bills at 30 June 2025 could not be read reliably and are not shown. Own-source revenue includes health facility financing.",
+      "caveat": "Figures are read from a scanned PDF with two OCR engines (see data/siaya.json). The report states 83 per cent recurrent absorption, but 4.99 of 6.07 is 82.2 per cent. Pending bills at 30 June 2025 are not plotted: the report's Table 3.457 (KSh 545.95m, with new bills left blank) and its text (KSh 1.12bn) disagree; both are in the conflict register and the roll-forward. Own-source revenue includes health facility financing.",
       "provenance": {
         "approved": {
           "source_id": "cob-report-2024-25",
@@ -1262,6 +1262,346 @@
     ],
     "source_page": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98",
     "confidence": 4
+  },
+  "pending_rollforward": {
+    "label": "Pending bills roll-forward by fiscal year (KSh million)",
+    "identity": "opening stock + new bills - payments - write-offs or adjustments = closing stock",
+    "note": "Each term is shown only where the year's Controller of Budget report publishes it, with its page. A term the report does not publish is marked \"not published\"; the closing stock is never worked out from the other terms, and a missing term is never filled. Values are rounded to KSh 0.01 million from the printed figures. Closing stocks for FY 2015/16 to FY 2020/21 are the sum of the published recurrent and development parts.",
+    "years": [
+      {
+        "fy": "2014/15",
+        "source_id": "cob-report-2014-15",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "status": "not published",
+          "note": "Only development bills were published (KSh 800.34m, PDF p. 249); the county had not worked out a recurrent figure, so no total is published."
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2015/16",
+        "source_id": "cob-report-2015-16",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 336.95,
+          "parts": {
+            "recurrent": 172.01,
+            "development": 164.94
+          },
+          "source_id": "cob-report-2015-16",
+          "page": 278,
+          "printed_page": 256,
+          "read": "RapidOCR",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2016/17",
+        "source_id": "cob-report-2016-17",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 277.59,
+          "parts": {
+            "recurrent": 127.55,
+            "development": 150.04
+          },
+          "source_id": "cob-report-2016-17",
+          "page": 276,
+          "printed_page": 254,
+          "read": "PDF text layer",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2017/18",
+        "source_id": "cob-report-2017-18",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 614.5,
+          "parts": {
+            "recurrent": 367.75,
+            "development": 246.75
+          },
+          "source_id": "cob-report-2017-18",
+          "page": 270,
+          "printed_page": 249,
+          "read": "PDF text layer",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2018/19",
+        "source_id": "cob-report-2018-19",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 445.68,
+          "parts": {
+            "recurrent": 258.26,
+            "development": 187.42
+          },
+          "source_id": "cob-report-2018-19",
+          "page": 271,
+          "printed_page": 248,
+          "read": "PDF text layer",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid."
+      },
+      {
+        "fy": "2019/20",
+        "source_id": null,
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "status": "not published"
+        },
+        "note": "The Controller of Budget annual report for this year was not found, so no term is published here. The Senate committee report quoting the audit gives KSh 222.33m at 30 June 2020 (see Other documents on the Data page); it is a different source and is not used in this table."
+      },
+      {
+        "fy": "2020/21",
+        "source_id": "cob-report-2020-21",
+        "opening": {
+          "status": "not published"
+        },
+        "new_bills": {
+          "status": "not published"
+        },
+        "payments": {
+          "status": "not published"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 1060.92,
+          "parts": {
+            "recurrent": 637.54,
+            "development": 423.38
+          },
+          "source_id": "cob-report-2020-21",
+          "page": 374,
+          "read": "PDF text layer",
+          "note": "sum of the two published parts"
+        },
+        "note": "The report gives only the stock at year end (excluded from spending); it does not publish the opening stock, bills added or bills paid. The FY 2021/22 report gives KSh 602.08m for the same date (conflict pending-2021)."
+      },
+      {
+        "fy": "2021/22",
+        "source_id": "cob-report-2021-22",
+        "opening": {
+          "value": 602.08,
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "note": "Table 3.251, column A"
+        },
+        "new_bills": {
+          "value": 598.75,
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "note": "Table 3.251, column D"
+        },
+        "payments": {
+          "value": 495.45,
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "note": "Table 3.251, column B"
+        },
+        "adjustments": {
+          "status": "not published",
+          "note": "Table 3.251 has no write-off or adjustment column."
+        },
+        "closing": {
+          "value": 705.38,
+          "source_id": "cob-report-2021-22",
+          "page": 409,
+          "printed_page": 385,
+          "read": "PDF text layer",
+          "note": "Table 3.251, column E"
+        },
+        "note": "The key observations of the same report (PDF p. 407) give KSh 789.96m at 30 June 2022 (conflict pending-close-2022). The opening stock differs from the FY 2020/21 report's closing stock (conflict pending-2021)."
+      },
+      {
+        "fy": "2022/23",
+        "source_id": "cob-report-2022-23",
+        "opening": {
+          "value": 840.67,
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "RapidOCR"
+        },
+        "new_bills": {
+          "value": 543.68,
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "RapidOCR"
+        },
+        "payments": {
+          "value": 510.97,
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "RapidOCR"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 873.38,
+          "source_id": "cob-report-2022-23",
+          "page": 578,
+          "printed_page": 552,
+          "read": "RapidOCR",
+          "note": "\"inclusive of FY 2022/23 pending bills\""
+        },
+        "note": "The opening stock differs from the FY 2021/22 report's closing stock for the same date (conflict pending-2022). The FY 2023/24 report gives KSh 761.29m at 30 June 2023 (conflict pending-2023)."
+      },
+      {
+        "fy": "2023/24",
+        "source_id": "cob-report-2023-24",
+        "opening": {
+          "value": 761.29,
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "RapidOCR"
+        },
+        "new_bills": {
+          "status": "not published",
+          "note": "The report says the closing figure does not include bills incurred in the year."
+        },
+        "payments": {
+          "value": 457.34,
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "RapidOCR"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 303.91,
+          "source_id": "cob-report-2023-24",
+          "page": 513,
+          "printed_page": 490,
+          "read": "RapidOCR",
+          "note": "excludes bills incurred in FY 2023/24; County Assembly bills of KSh 12.67m are reported separately"
+        },
+        "note": "The closing figure leaves out the year's new bills, so it is not the full stock. The FY 2024/25 report gives KSh 1,123.65m at 1 July 2024 (conflict pending-2024)."
+      },
+      {
+        "fy": "2024/25",
+        "source_id": "cob-report-2024-25",
+        "opening": {
+          "value": 1123.65,
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "RapidOCR",
+          "note": "Table 3.457, County Executive, printed 1,123,648,608"
+        },
+        "new_bills": {
+          "status": "not published",
+          "note": "Table 3.457 has a column for bills incurred in FY 2024/25, but it is blank."
+        },
+        "payments": {
+          "value": 577.7,
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "RapidOCR",
+          "note": "Table 3.457, printed 577,698,205"
+        },
+        "adjustments": {
+          "status": "not published"
+        },
+        "closing": {
+          "value": 545.95,
+          "source_id": "cob-report-2024-25",
+          "page": 478,
+          "printed_page": 435,
+          "read": "RapidOCR",
+          "note": "Table 3.457, printed 545,950,403"
+        },
+        "note": "County Executive only. The text below the table says the outstanding bills at 30 June 2025 were KSh 1.12 billion, but its ageing table totals the opening stock (conflict pending-close-2025). The text gives recurrent KSh 488m and development KSh 635m; the table puts the same amounts the other way round."
+      }
+    ]
   },
   "health": {
     "label": "Health in Siaya: Kenya Demographic and Health Surveys 2014 and 2022",

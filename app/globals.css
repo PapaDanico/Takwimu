@@ -160,6 +160,10 @@ details.tableview summary { cursor: pointer; color: var(--ink-muted); font-weigh
 details.refs { border-bottom: 1px solid var(--rule); }
 details.refs summary { cursor: pointer; font-weight: 700; font-size: 15px; min-height: 44px; display: flex; align-items: center; }
 .tablewrap { overflow-x: auto; }
+.data.rf td, .data.rf th[scope="row"] { vertical-align: top; min-width: 8.5em; }
+.rf-page { display: block; font-size: 12px; font-weight: 400; color: var(--ink-soft); margin-top: 2px; }
+.rf-np { font-style: italic; color: var(--ink-soft); }
+.rf-notes li { font-size: 14px; }
 .data caption:not(.sr-only) { caption-side: top; text-align: left; padding: 4px 0 6px; font-size: 13px; color: var(--ink-soft); }
 table.data { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
 table.data th, table.data td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }

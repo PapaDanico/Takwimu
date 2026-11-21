@@ -13,6 +13,9 @@ Every observation names the document it was read from and the page: each year's 
 ## In-year figures (history.json `in_year`, since 21 Nov 2026)
 Partial-year Controller of Budget figures (FY 2025/26 first quarter and first half). Each period names its report, section and confidence; each figure has measure, value, unit, PDF and printed page, how it was read and, for balances, `as_of`. `comparability` is fixed to "In-year, not comparable with full years". The validator fails if the in-year fiscal year also appears in `years`, or if an in-year conflict id is not in the register. Pages show these apart from the ten-year series, never on the same chart.
 
+## Pending-bills roll-forward (history.json `pending_rollforward`, since 21 Nov 2026)
+One row per fiscal year with the identity opening stock + new bills − payments − write-offs or adjustments = closing stock. Each term is either published (value in KSh million, `source_id` of that year's report, PDF page, printed page where known, how it was read, optional note and `parts`) or `{"status": "not published"}` with no value. A closing stock is never computed from the other terms, and a missing term is never filled. The validator checks that each published term cites the year's report and has a page, that `parts` add up, and that a "not published" term has no value. `scripts/test-reconciliation.js` tests the identity for every year where all five terms are published and, for every other year, that the gap is shown as "not published"; the smoke test checks the Insights table shows every row and every unpublished term.
+
 ## Other documents (history.json `supplementary`)
 Figures for a year whose Controller of Budget report is missing (FY 2019/20), from other primary documents (county Budget Review and Outlook Paper, later CoB reports, Senate committee report quoting the audit). Listed with page numbers; never used to fill `years`. Disagreements with another source go in the register.
 

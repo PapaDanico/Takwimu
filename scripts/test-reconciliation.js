@@ -117,6 +117,46 @@ test('conflict pending-2024: figure is sourced from the FY 2024/25 report', () =
   ok((year('2023/24').field_source || {}).pending_total_m === '2024/25', 'field_source should point to 2024/25');
 });
 
+caseTest('pending-2022', 705.38, 840.67, pendOf(year('2021/22')));
+caseTest('pending-close-2022', 705.38, 789.96, pendOf(year('2021/22')));
+test('conflict pending-close-2025: both values listed, the year-end stock stays out of the chart', () => {
+  const vals = conflict('pending-close-2025').values.map((v) => v.value);
+  ok(vals.includes(545.95) && vals.includes(1120), `register values ${vals}`);
+  ok(pendOf(year('2024/25')) === undefined, 'FY 2024/25 pending bills must stay a gap in the series');
+});
+test('conflict pending-2023: the FY 2022/23 report closing stock is listed', () => {
+  ok(conflict('pending-2023').values.some((v) => near(v.value, 873.38, 1e-9)), '873.38 should be in the register');
+});
+
+// Pending-bills roll-forward: opening + new bills - payments - adjustments = closing, only where every term is published.
+const TERMS = ['opening', 'new_bills', 'payments', 'adjustments', 'closing'];
+const pub = (t) => typeof t.value === 'number';
+const rfRow = (fy) => { const r = hist.pending_rollforward.years.find((x) => x.fy === fy); ok(r, `no roll-forward row ${fy}`); return r; };
+hist.pending_rollforward.years.forEach((r) => {
+  if (TERMS.every((k) => pub(r[k]))) {
+    test(`rollforward ${r.fy}: complete, identity holds`, () => {
+      const v = r.opening.value + r.new_bills.value - r.payments.value - r.adjustments.value;
+      ok(near(v, r.closing.value, 0.02), `${v.toFixed(2)} vs published closing ${r.closing.value}`);
+    });
+  } else {
+    test(`rollforward ${r.fy}: incomplete, gap shown and not filled`, () => {
+      const missing = TERMS.filter((k) => !pub(r[k]));
+      missing.forEach((k) => ok(r[k].status === 'not published' && r[k].value === undefined, `${k} must be "not published" with no value`));
+      if (pub(r.closing)) ok(Number.isInteger(r.closing.page), 'a closing stock shown for an incomplete year must be the published one, with its page');
+    });
+  }
+});
+// Where everything but adjustments is published, check the published terms add up (nothing is filled in).
+[['2021/22', 602.08, 598.75, 495.45, 705.38], ['2022/23', 840.67, 543.68, 510.97, 873.38]].forEach(([fy, o, n, p, c]) => test(`rollforward ${fy}: published terms add up with no adjustment reported`, () => {
+  const r = rfRow(fy);
+  ok(r.opening.value === o && r.new_bills.value === n && r.payments.value === p && r.closing.value === c, 'terms changed');
+  ok(near(o + n - p, c, 0.02), `${(o + n - p).toFixed(2)} vs ${c}`);
+  ok(r.adjustments.status === 'not published', 'adjustments must stay "not published"');
+}));
+test('rollforward: closing stocks match the series where both come from the same report', () => {
+  ['2015/16', '2016/17', '2017/18', '2018/19', '2020/21', '2021/22'].forEach((fy) => ok(near(rfRow(fy).closing.value, pendOf(year(fy)), 0.011), `${fy}: ${rfRow(fy).closing.value} vs ${pendOf(year(fy))}`));
+});
+
 // Budget, spending and absorption.
 caseTest('budget-2022-23', 8.6, 8.5, year('2022/23').approved);
 caseTest('recurrent-spend-2016-17', 3.65, 3.9, year('2016/17').recurrent_spent);
