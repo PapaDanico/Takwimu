@@ -32,3 +32,6 @@ Whether Takwimu Kenya / Danico Ventures Ltd still needs to register with the ODP
 | Non-partisan service: same offer to every party and independent candidate; paid work never changes a published figure (docs/monetisation-plan.md) | /briefs/request/ and Terms §6 |
 | Third-party data licences (World Bank WDI CC BY 4.0; CoB, OAG, KNBS, CRA, IEBC, CBK under their own terms) | Terms §5; advocate to confirm each body's reuse terms |
 | No warranty, corrections policy | Terms §3, §13 |
+
+## Update 21 Nov 2026: WhatsApp for brief requests
+Brief requests go to Danico Ventures Ltd by WhatsApp (link on /briefs/request/). The site still collects nothing; chat details reach the business through WhatsApp and are covered by privacy notice section 5 (purpose: reply only; no list, sharing or profiling; deleted when the request closes unless records of a paid service must be kept; access, correction and deletion on request). This makes the business a data controller for those chats, so the ODPC registration question for the business stands; confirm with an advocate.

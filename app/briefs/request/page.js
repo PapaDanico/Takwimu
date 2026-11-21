@@ -24,7 +24,9 @@ export default function RequestBrief() {
 
       <section className="card legal" aria-labelledby="how-h">
         <h2 id="how-h">How to ask for one</h2>
-        <p>A direct contact route will be published here soon. This site does not collect personal data, so there is no form on it. To report a mistake in a figure, use the &quot;Report an inaccuracy&quot; link at the foot of every page.</p>
+        <p>Message Danico Ventures Ltd, which runs Takwimu Kenya, on WhatsApp. Tell us the county or constituency, what you need the brief for, and when you need it. We will reply with the scope and the price.</p>
+        <p><a className="btn" href="https://wa.me/message/GPPIKMENXJVWO1" target="_blank" rel="noopener noreferrer">Message Danico Ventures Ltd on WhatsApp</a></p>
+        <p>This site itself collects no personal data and has no form. Your conversation happens in WhatsApp, under WhatsApp&apos;s own terms; what you share there is used only to reply to your request (see the <a href="/privacy/">privacy notice</a>). To report a mistake in a figure, use the &quot;Report an inaccuracy&quot; link at the foot of every page.</p>
       </section>
     </main>
   );

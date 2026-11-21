@@ -46,10 +46,10 @@ const srv = http.createServer((req, res) => {
   // No personal data is collected (owner, 21 Nov 2026): /briefs/request/ describes the service with no form; the thanks page is gone.
   check(!fs.existsSync(path.join(root, 'briefs', 'request', 'thanks')), '/briefs/request/thanks/ is not built');
   await pg.goto(base + '/briefs/request/', { waitUntil: 'load' });
-  check(await pg.locator('main form, main input, main textarea').count() === 0 && /contact route will be published here soon/.test(await pg.locator('main').innerText()), 'request a brief page has no form or fields and says a contact route is coming');
+  check(await pg.locator('main form, main input, main textarea').count() === 0 && await pg.locator('main a[href="https://wa.me/message/GPPIKMENXJVWO1"]').count() === 1, 'request a brief page has no form or fields and links to the Danico Ventures WhatsApp chat');
   await pg.goto(base + '/privacy/', { waitUntil: 'load' });
   const privText = (await pg.locator('main').innerText()).toLowerCase();
-  check(['do not collect', 'odpc.go.ke', 'netlify', 'local storage'].every((t) => privText.includes(t)) && !/consent|24 months|data request/.test(privText), 'privacy notice says no personal data is collected, names Netlify and the ODPC, and has no form-era terms');
+  check(['do not collect', 'odpc.go.ke', 'netlify', 'local storage', 'whatsapp'].every((t) => privText.includes(t)) && !/consent|24 months|data request/.test(privText), 'privacy notice says no personal data is collected, names Netlify and the ODPC, and has no form-era terms');
   await pg.goto(base + '/terms/', { waitUntil: 'load' });
   check(/CC BY 4\.0/.test(await pg.locator('main').innerText()) && await pg.locator('#nonpartisan').count() === 1, 'terms name third-party licences and the non-partisan policy');
   // No email address is published: no mailto: with an address and no address-shaped text in any built page.

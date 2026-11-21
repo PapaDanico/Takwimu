@@ -23,10 +23,14 @@ const SECTIONS = [
     `The "Report an inaccuracy" link opens ${ISSUES_URL.replace('/new', '')} on GitHub. Using it is your choice; GitHub's own terms and privacy statement apply, and reports there are public. Do not put personal information in them.`,
     'The "share" buttons are ordinary links that open an app on your device with a ready-made message. We do not see the message or whether you send it.',
   ] },
-  { id: 'complain', title: '5. Your right to complain', body: [
+  { id: 'whatsapp', title: '5. Asking for a brief on WhatsApp', body: [
+    'The "Request a brief" page links to WhatsApp so you can message Danico Ventures Ltd, which runs Takwimu Kenya. The Site does not pass anything to WhatsApp; the chat starts only if you choose to open it. WhatsApp is run by Meta under its own terms and privacy policy.',
+    'Your name, phone number and what you write in the chat reach us through WhatsApp. We use them only to reply to your request and agree any brief, we do not add you to a mailing list, share your details or use them for profiling, and we delete the chat when the request is closed unless the law requires us to keep records of a paid service. You may ask us in the same chat to see, correct or delete what you shared.',
+  ] },
+  { id: 'complain', title: '6. Your right to complain', body: [
     'If you think personal data has been mishandled, you can complain to the Office of the Data Protection Commissioner (ODPC), the regulator under the Kenya Data Protection Act, 2019, at https://www.odpc.go.ke.',
   ] },
-  { id: 'changes', title: '6. Changes to this notice', body: [
+  { id: 'changes', title: '7. Changes to this notice', body: [
     `If the Site ever starts to collect personal data, we will update this notice before that happens. This version was last updated on ${UPDATED}.`,
   ] },
 ];
@@ -34,7 +38,7 @@ const SECTIONS = [
 export default function Privacy() {
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Legal" title="Privacy notice" sub={`Takwimu Kenya does not collect personal data. Version 2.0, last updated ${UPDATED}.`} path="/privacy/" shareText="Takwimu Kenya: privacy notice" />
+      <PageHead eyebrow="Legal" title="Privacy notice" sub={`Takwimu Kenya does not collect personal data. Version 2.1, last updated ${UPDATED}.`} path="/privacy/" shareText="Takwimu Kenya: privacy notice" />
       <nav aria-label="Sections on this page"><ul className="toc">
         {SECTIONS.map((s) => <li key={s.id}><a href={`#${s.id}`}>{s.title.replace(/^\d+\.\s/, '')}</a></li>)}
       </ul></nav>
