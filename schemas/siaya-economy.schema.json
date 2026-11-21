@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/siaya-economy.schema.json",
+  "title": "Siaya Gross County Product by edition (data/siaya-economy.json)",
+  "type": "object",
+  "required": ["meta", "sources", "sectors", "observations", "revisions", "gaps"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "county", "county_code", "retrieved", "schema_version", "rule", "definitions"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "county": { "enum": ["Siaya"] },
+        "county_code": { "type": "integer" },
+        "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "schema_version": { "type": "string" },
+        "rule": { "type": "string" },
+        "definitions": { "type": "object", "additionalProperties": { "type": "string" } }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["vintage", "document_id", "parent_id", "publisher", "title", "publication_date", "reference_period", "library_url", "file_url", "sha256", "bytes", "pdf_pages", "printed_page_offset", "printed_page_rule", "licence", "markers"],
+        "additionalProperties": false,
+        "properties": {
+          "vintage": { "type": "string", "pattern": "^GCP\\d{4}$" },
+          "document_id": { "type": "string" },
+          "parent_id": { "type": "string" },
+          "publisher": { "type": "string" },
+          "title": { "type": "string" },
+          "publication_date": { "type": "string", "pattern": "^\\d{4}" },
+          "pdf_created": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "reference_period": { "type": "string", "pattern": "^\\d{4}-\\d{4}$" },
+          "library_url": { "type": "string", "pattern": "^https://" },
+          "file_url": { "type": "string", "pattern": "^https://" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "pdf_pages": { "type": "integer", "minimum": 1 },
+          "printed_page_offset": { "type": "integer" },
+          "printed_page_rule": { "type": "string" },
+          "licence": { "type": "string" },
+          "markers": { "type": "object", "additionalProperties": { "type": "string" } }
+        }
+      }
+    },
+    "sectors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["code", "isic_section", "label"],
+        "additionalProperties": false,
+        "properties": {
+          "code": { "type": "string", "pattern": "^[a-z_]+$" },
+          "isic_section": { "type": ["string", "null"], "pattern": "^[A-U]$" },
+          "label": { "type": "string" }
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "vintage", "indicator", "sector", "sector_label", "isic_section", "period", "value", "unit", "price_basis", "provisional", "table", "pdf_page", "printed_page", "printed_page_shown", "read_method", "confidence"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "vintage": { "type": "string", "pattern": "^GCP\\d{4}$" },
+          "indicator": { "enum": ["gcp_total", "gcp_annex_total", "gva_by_activity", "share_of_county_gva_total", "real_growth_avg"] },
+          "sector": { "type": ["string", "null"] },
+          "sector_label": { "type": ["string", "null"] },
+          "isic_section": { "type": ["string", "null"] },
+          "period": { "type": "string", "pattern": "^\\d{4}(-\\d{4})?$" },
+          "value": { "type": "number" },
+          "unit": { "enum": ["KSh million", "percent", "percent per year"] },
+          "price_basis": { "enum": ["current", "constant_2016"] },
+          "provisional": { "type": "boolean" },
+          "table": { "type": "string" },
+          "pdf_page": { "type": "integer", "minimum": 1 },
+          "printed_page": { "type": "integer", "minimum": 1 },
+          "printed_page_shown": { "type": "boolean" },
+          "read_method": { "enum": ["text_layer", "ocr_tesseract"] },
+          "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "revisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["indicator", "sector", "period", "price_basis", "unit", "earlier_vintage", "earlier_value", "earlier_id", "later_vintage", "later_value", "later_id", "difference", "difference_pct"],
+        "additionalProperties": false,
+        "properties": {
+          "indicator": { "type": "string" },
+          "sector": { "type": ["string", "null"] },
+          "period": { "type": "string", "pattern": "^\\d{4}$" },
+          "price_basis": { "type": "string" },
+          "unit": { "type": "string" },
+          "earlier_vintage": { "type": "string" },
+          "earlier_value": { "type": "number" },
+          "earlier_id": { "type": "string" },
+          "later_vintage": { "type": "string" },
+          "later_value": { "type": "number" },
+          "later_id": { "type": "string" },
+          "difference": { "type": "number" },
+          "difference_pct": { "type": ["number", "null"] }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["indicator", "vintage", "period", "reason"],
+        "additionalProperties": false,
+        "properties": {
+          "indicator": { "type": "string" },
+          "vintage": { "type": "string" },
+          "period": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    }
+  }
+}
