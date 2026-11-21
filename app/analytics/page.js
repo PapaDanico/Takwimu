@@ -1,4 +1,5 @@
 import PageHead from '../../components/PageHead';
+import TableWrap from '../../components/TableWrap';
 import BarList from '../../components/BarList';
 import { LineChart, ColumnChart } from '../../components/Charts';
 import StatStrip from '../../components/StatStrip';
@@ -101,7 +102,7 @@ export default function Analytics() {
         <p className="eyebrow">Growth rates, FY 2014/15 to FY 2024/25</p>
         <h2 id="gr-h">Spending grew {one(sp.nom)} per cent a year in shillings and {one(sp.real)} per cent a year after prices; the population grew {one(popGrowth)} per cent a year</h2>
         <p className="finding">A compound annual growth rate (CAGR) is the steady yearly rate that would take a value from its start to its end. Where real growth is close to zero or below population growth, spending per person is flat or falling.</p>
-        <div className="tablewrap">
+        <TableWrap label="Compound annual growth rates over ten years">
           <table className="data">
             <caption className="sr-only">Compound annual growth rates over ten years</caption>
             <thead><tr><th scope="col">Measure</th><th scope="col">FY 2014/15</th><th scope="col">FY 2024/25</th><th scope="col">Nominal CAGR</th><th scope="col">Real CAGR</th></tr></thead>
@@ -114,7 +115,7 @@ export default function Analytics() {
               ))}
             </tbody>
           </table>
-        </div>
+        </TableWrap>
         <h3 className="mini">Real spending, change on the previous year, per cent</h3>
         <BarList label="Year-on-year change in real spending" unit="%" format={(v) => one(v)} accent="navy" items={realYoY.map((r) => ({ label: `FY ${r.fy}`, value: Math.abs(r.g), sub: r.g >= 0 ? 'Rise' : 'Fall' }))} />
         <p className="how"><b>How.</b> CAGR = (end ÷ start)^(1 ÷ 10) − 1. Real values use the price index on the Method page. The bars show size of change; the label under each says whether spending rose or fell. FY 2019/20 is missing, so the step into FY 2020/21 is left out.</p>
@@ -138,7 +139,7 @@ export default function Analytics() {
         <p className="eyebrow">Spread</p>
         <h2 id="sp-h">Development spending varies far more from year to year than recurrent spending</h2>
         <p className="finding">The coefficient of variation (spread relative to the average) is {one(spread[0].cv * 100)} per cent for development absorption and {one(spread[1].cv * 100)} per cent for recurrent. The mean and median are shown together; a gap between them signals skew.</p>
-        <div className="tablewrap">
+        <TableWrap label="Variability of absorption rates">
           <table className="data">
             <caption className="sr-only">Variability of absorption rates</caption>
             <thead><tr><th scope="col">Measure</th><th scope="col">Years</th><th scope="col">Mean</th><th scope="col">Median</th><th scope="col">Std dev</th><th scope="col">Lowest</th><th scope="col">Highest</th><th scope="col">Unusual years</th></tr></thead>
@@ -151,7 +152,7 @@ export default function Analytics() {
               ))}
             </tbody>
           </table>
-        </div>
+        </TableWrap>
         <p className="how"><b>How.</b> Sample standard deviation. A year is called unusual if it lies more than 1.5 interquartile ranges beyond the quartiles (Tukey's rule). With about a dozen years, this flags years to look at, not proven anomalies.</p>
       </section>
 

@@ -11,7 +11,9 @@ const path = require('path');
 const toml = fs.readFileSync(path.join(__dirname, '..', 'netlify.toml'), 'utf8');
 const csp = (toml.match(/Content-Security-Policy = "([^"]+)"/) || [])[1];
 const root = path.resolve(process.argv[2] || path.join(__dirname, '..', 'dist'));
-const types = { '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.csv': 'text/csv', '.woff2': 'font/woff2', '.svg': 'image/svg+xml' };
+// .txt follows the netlify.toml rule for Next route payloads (text/x-component), checked below.
+const txtType = /for = "\/\*\/index\.txt"[\s\S]*?Content-Type = "text\/x-component"/.test(toml) ? 'text/x-component' : 'text/plain';
+const types = { '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.csv': 'text/csv', '.woff2': 'font/woff2', '.svg': 'image/svg+xml', '.txt': txtType };
 let failed = 0;
 const check = (ok, msg) => { if (!ok) { failed += 1; console.error('FAIL', msg); } else console.log('ok  ', msg); };
 const srv = http.createServer((req, res) => {
@@ -47,6 +49,12 @@ const srv = http.createServer((req, res) => {
   const histJson = JSON.parse(fs.readFileSync(path.join(root, 'data', 'history.json'), 'utf8'));
   const npWant = histJson.pending_rollforward.years.reduce((s, r) => s + ['opening', 'new_bills', 'payments', 'adjustments', 'closing'].filter((k) => r[k].status === 'not published').length, 0);
   check(rfRows === histJson.pending_rollforward.years.length && rfNp === npWant, `roll-forward table shows every year (${rfRows}) and every unpublished term as "Not published" (${rfNp} of ${npWant})`);
+  // Internal links navigate client-side (no full reload) when route payloads have the right type.
+  await pg.goto(base + '/', { waitUntil: 'networkidle' });
+  await pg.evaluate(() => { window.__noReload = true; });
+  await pg.locator('.bottom-nav a[href="/learn/"]').click();
+  await pg.waitForFunction(() => location.pathname.startsWith('/learn'), null, { timeout: 10000 }).catch(() => {});
+  check(txtType === 'text/x-component' && (await pg.evaluate(() => window.__noReload === true)), 'netlify.toml serves route payloads as text/x-component, so links navigate without a full reload');
   const csv = await pg.request.get(base + '/data/history.csv');
   check(csv.ok() && (await csv.text()).startsWith('"indicator"'), 'history.csv served with header');
   const conf = await (await pg.request.get(base + '/data/conflicts.json')).json();

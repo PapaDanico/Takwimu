@@ -1,4 +1,5 @@
 import PageHead from '../../components/PageHead';
+import TableWrap from '../../components/TableWrap';
 import hist from '../../data/history.json';
 import reg from '../../data/conflicts.json';
 import manifest from '../../data/source-manifest.json';
@@ -59,7 +60,7 @@ export default function DataPage() {
       <PageHead eyebrow="Data" title="Data downloads and sources" sub="Every file is plain JSON. Each figure carries its source and confidence, so you can check it or reuse it. Please cite the original publisher as well as Takwimu." path="/data/" shareText="Takwimu Kenya open data" />
       <section className="card" aria-labelledby="f-h">
         <h2 id="f-h">Files</h2>
-        <div className="tablewrap">
+        <TableWrap label="Data files">
           <table className="data">
             <caption className="sr-only">Data files</caption>
             <thead><tr><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Source</th><th scope="col">Confidence</th><th scope="col">Retrieved</th></tr></thead>
@@ -72,7 +73,7 @@ export default function DataPage() {
               ))}
             </tbody>
           </table>
-        </div>
+        </TableWrap>
       </section>
       <section className="card" aria-labelledby="brief-dl-h">
         <h2 id="brief-dl-h">Printable brief</h2>
@@ -130,13 +131,13 @@ export default function DataPage() {
         <h2 id="supp-h">{hist.supplementary.label}</h2>
         <p className="lead">{hist.supplementary.note}</p>
         {hist.supplementary.documents.map((d) => (
-          <div key={d.id} className="tablewrap">
+          <TableWrap key={d.id} label={d.title}>
             <table className="data">
               <caption><a href={d.url}>{d.title}</a>. {d.kind}; read from the {d.read}; confidence {d.confidence} of 5.</caption>
               <thead><tr><th scope="col">Figure, FY {d.fy}</th><th scope="col">Value</th><th scope="col">PDF page</th></tr></thead>
               <tbody>{d.figures.map((f) => <tr key={f.measure}><th scope="row">{f.label}</th><td>{f.unit === '%' ? `${f.value}%` : `${f.unit} ${f.value.toLocaleString('en-US')}`}</td><td>{f.pdf_page}</td></tr>)}</tbody>
             </table>
-          </div>
+          </TableWrap>
         ))}
         <p className="how">Searched, no Siaya figures: {hist.supplementary.not_found.replace(/: https:\/\/\S+$/, '.')}</p>
       </section>
@@ -148,13 +149,13 @@ export default function DataPage() {
             <article key={c.id} id={c.id} className="term-card">
               <p><span className={`tag ${c.status === 'open' ? 'warn' : 'good'}`}>{c.status === 'open' ? 'Open' : 'Resolved'}</span></p>
               <h3>{c.measure}</h3>
-              <div className="tablewrap">
+              <TableWrap label={`${c.measure}: values by source`}>
                 <table className="data">
                   <caption className="sr-only">{c.measure}: values by source</caption>
                   <thead><tr><th scope="col">Source</th><th scope="col">Value ({c.unit})</th></tr></thead>
                   <tbody>{c.values.map((v) => <tr key={v.label}><th scope="row"><a href={v.url}>{v.label}</a></th><td>{v.value.toLocaleString('en-US')}</td></tr>)}</tbody>
                 </table>
-              </div>
+              </TableWrap>
               <p><b>Difference:</b> {Math.abs(c.values[0].value - c.values[1].value).toLocaleString('en-US', { maximumFractionDigits: 2 })} {c.unit} ({((Math.abs(c.values[0].value - c.values[1].value) / c.values[0].value) * 100).toFixed(1)}% of the first value)</p>
               <p><b>Definitions:</b> {c.definitions}</p>
               <p><b>Hypothesis, not established:</b> {c.hypothesis}</p>

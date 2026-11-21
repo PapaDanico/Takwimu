@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import TableWrap from '../../../components/TableWrap';
 import KenyaMap from '../../../components/KenyaMap';
 
 export const metadata = {
@@ -144,7 +145,7 @@ export default function Home() {
           </svg>
           <details className="tableview">
             <summary>View as table</summary>
-            <div className="tablewrap">
+            <TableWrap label="Own-source revenue by source">
               <table className="data">
                 <thead>
                   <tr><th>Source</th><th>KSh million</th><th>Status</th><th>Confidence</th><th>Retrieved</th></tr>
@@ -168,7 +169,7 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </TableWrap>
           </details>
           <div className="src">
             Sources: <a href={primary.source_url}>{primary.source}</a>; <a href={county.source_url}>{county.source}</a>. Retrieved {asOf}.
@@ -232,7 +233,7 @@ export default function Home() {
           </svg>
           <details className="tableview">
             <summary>View as table</summary>
-            <div className="tablewrap">
+            <TableWrap label="Own-source revenue by fiscal year">
               <table className="data">
                 <thead><tr><th>Fiscal year</th><th>KSh million</th><th>Confidence</th><th>What it includes</th></tr></thead>
                 <tbody>
@@ -246,7 +247,7 @@ export default function Home() {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </TableWrap>
           </details>
           <div className="src">
             Sources: Controller of Budget county reports for <a href={osr.trend.points[1].source_url}>FY 2022/23</a> and <a href={osr.trend.points[3].source_url}>FY 2024/25</a>. Retrieved {asOf}.
@@ -291,7 +292,7 @@ export default function Home() {
           </svg>
           <details className="tableview">
             <summary>View as table</summary>
-            <div className="tablewrap">
+            <TableWrap label="Budget and spending by item">
               <table className="data">
                 <thead><tr><th>Item</th><th>Budget</th><th>Spent</th><th>Share spent (as stated)</th></tr></thead>
                 <tbody>
@@ -301,7 +302,7 @@ export default function Home() {
                   <tr><td>Total</td><td className="mono">{budget.approved_total}</td><td className="mono">{budget.total_spent}</td><td className="mono">{spentPct}%</td></tr>
                 </tbody>
               </table>
-            </div>
+            </TableWrap>
           </details>
           <div className="src">
             Source: <a href={budget.source_url}>{budget.source}</a>. Retrieved {asOf}. Confidence {budget.confidence}/5.
@@ -333,7 +334,7 @@ export default function Home() {
           <Tile label={`${audit.entity}, FY ${audit.fiscal_year}`} value={`${audit.opinion} opinion`} tone={auditAmber ? 'warn' : 'good'} note="A qualified opinion means the accounts are fair except for specific matters the auditor describes." />
         </div>
         <figure className="figure" style={{ margin: '16px 0 0' }}>
-          <div className="tablewrap">
+          <TableWrap label="Pending bills, arrears and stalled projects">
             <table className="data">
               <thead><tr><th>Item</th><th>KSh</th><th>What the report says</th></tr></thead>
               <tbody>
@@ -346,7 +347,7 @@ export default function Home() {
                 ))}
               </tbody>
             </table>
-          </div>
+          </TableWrap>
           <div className="src">
             Source: <a href={audit.source_url}>{audit.source}</a>, Office of the Auditor-General. Retrieved {asOf}. Confidence {audit.confidence}/5 (primary document). This is the most recent audit report read so far, not the latest published.
           </div>
@@ -372,7 +373,7 @@ export default function Home() {
         <p className="eyebrow">FY {IY.fy} · <span className="tag warn">{IY.comparability}</span></p>
         <h2 id="inyh">FY {IY.fy} so far</h2>
         <p className="lead">Running totals from 1 July 2025, from the Controller of Budget&apos;s quarterly and half-year reports. A part of the year is not a full year: do not compare these with the ten-year figures above.</p>
-        <div className="tablewrap">
+        <TableWrap label={`Siaya County FY ${IY.fy} in-year figures`}>
           <table className="data">
             <caption className="sr-only">Siaya County FY {IY.fy} in-year figures by reporting period, with the two reports side by side</caption>
             <thead>
@@ -390,7 +391,7 @@ export default function Home() {
               ))}
             </tbody>
           </table>
-        </div>
+        </TableWrap>
         <div className="src">
           Sources: {IY.periods.map((p, i) => <span key={p.id}>{i ? '; ' : ''}<a href={p.report.url}>{p.report.title}</a>, section {p.report.section}, confidence {p.confidence}/5</span>)}. Page numbers for each figure are in the <Link href="/data/">data files</Link>. — means the report gives no figure.
           <br />

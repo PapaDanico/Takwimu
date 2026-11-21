@@ -21,6 +21,18 @@
     Strict-Transport-Security = "max-age=31536000"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
 
+# Next.js route payloads (index.txt). Netlify serves .txt as text/plain, and Next then reloads the whole page on every
+# internal link instead of navigating client-side; the correct type keeps navigation fast. Sweep 13, 21 Nov 2026.
+[[headers]]
+  for = "/index.txt"
+  [headers.values]
+    Content-Type = "text/x-component"
+
+[[headers]]
+  for = "/*/index.txt"
+  [headers.values]
+    Content-Type = "text/x-component"
+
 [[redirects]]
   from = "/corrections/*"
   to = "/data/#conflicts"

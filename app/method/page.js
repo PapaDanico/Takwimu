@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import TableWrap from '../../components/TableWrap';
 import PageHead from '../../components/PageHead';
 import hist from '../../data/history.json';
 import cpi from '../../data/cpi.json';
@@ -38,24 +39,24 @@ export default function Method() {
       <section id="sources" className="card" aria-labelledby="so-h">
         <h2 id="so-h">Sources</h2>
         <p className="lead">Every figure shows its source, publication or retrieval date, period, unit and a confidence score. Primary official documents take priority over press reports.</p>
-        <div className="tablewrap">
+        <TableWrap label="Source register">
           <table className="data">
             <caption className="sr-only">Source register</caption>
             <thead><tr><th scope="col">Source</th><th scope="col">What we use it for</th><th scope="col">How we read it</th></tr></thead>
             <tbody>{SOURCES.map((s) => <tr key={s.name}><th scope="row">{s.name}</th><td>{s.what}</td><td>{s.how}</td></tr>)}</tbody>
           </table>
-        </div>
+        </TableWrap>
       </section>
 
       <section id="confidence" className="card" aria-labelledby="cf-h">
         <h2 id="cf-h">Confidence score</h2>
-        <div className="tablewrap">
+        <TableWrap label="Confidence rubric">
           <table className="data rubric">
             <caption className="sr-only">Confidence rubric</caption>
             <thead><tr><th scope="col">Score</th><th scope="col">Meaning</th></tr></thead>
             <tbody>{RUBRIC.map((r) => <tr key={r.score}><th scope="row">{r.score} of 5</th><td>{r.meaning}</td></tr>)}</tbody>
           </table>
-        </div>
+        </TableWrap>
       </section>
 
       <section id="checks" className="card" aria-labelledby="ck-h">

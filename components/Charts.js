@@ -4,6 +4,7 @@
 // keyboard-focusable hit areas and a tooltip. Series are told apart by a legend, direct labels (wide screens)
 // and, where a chart sets it, line dash; the table view always gives the exact values.
 import { useEffect, useRef, useState } from 'react';
+import TableWrap from './TableWrap';
 
 const FORMATS = {
   int: (v) => Math.round(v).toLocaleString('en-US'),
@@ -69,7 +70,7 @@ function TableView({ labels, series, yFormat, unit, caption }) {
   return (
     <details className="tableview">
       <summary>View as table</summary>
-      <div className="tablewrap">
+      <TableWrap label={caption}>
         <table className="data">
           <caption className="sr-only">{caption}</caption>
           <thead><tr><th scope="col">Period</th>{series.map((s) => <th key={s.name} scope="col">{s.name}{unit ? ` (${unit})` : ''}</th>)}</tr></thead>
@@ -87,7 +88,7 @@ function TableView({ labels, series, yFormat, unit, caption }) {
             ))}
           </tbody>
         </table>
-      </div>
+      </TableWrap>
     </details>
   );
 }

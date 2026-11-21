@@ -1,4 +1,5 @@
 import PageHead from '../../components/PageHead';
+import TableWrap from '../../components/TableWrap';
 import { LineChart, ColumnChart } from '../../components/Charts';
 import Donut from '../../components/Donut';
 import StatStrip from '../../components/StatStrip';
@@ -168,7 +169,7 @@ export default function Insights() {
         <p className="eyebrow">Insight 5</p>
         <h2 id="audit-h">{noneClean ? 'Every audit opinion we can read for the County Executive is qualified, adverse or a disclaimer' : 'Audit opinions vary by year'}</h2>
         <p className="finding">{audits.length} years of Auditor-General opinions are available: {auditSummary}. An adverse opinion means the auditor found the accounts materially misstated; a disclaimer means the auditor could not form an opinion. An opinion describes the accounts, not the quality of services. FY 2016/17 to FY 2018/19 are missing, and FY 2014/15 and FY 2015/16 come from a Senate compilation rather than the audit reports; see the note below.</p>
-        <div className="tablewrap">
+        <TableWrap label="Auditor-General opinions on the County Executive of Siaya">
           <table className="data">
             <caption className="sr-only">Auditor-General opinions on the County Executive of Siaya</caption>
             <thead><tr><th scope="col">Year</th><th scope="col">Opinion</th><th scope="col">Main matters</th><th scope="col">Confidence</th></tr></thead>
@@ -183,7 +184,7 @@ export default function Insights() {
               ))}
             </tbody>
           </table>
-        </div>
+        </TableWrap>
         <p className="how">{hist.audits.note}</p>
       </section>
 

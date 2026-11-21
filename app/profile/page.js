@@ -1,4 +1,5 @@
 import PageHead from '../../components/PageHead';
+import TableWrap from '../../components/TableWrap';
 import BarList from '../../components/BarList';
 import { ColumnChart } from '../../components/Charts';
 import Donut from '../../components/Donut';
@@ -67,7 +68,7 @@ export default function Profile() {
         <p className="eyebrow">Poverty</p>
         <h2 id="pv-h">About a third of residents live below the income poverty line; more than two in three lack several basic needs</h2>
         <p className="finding">{hist.poverty.note}</p>
-        <div className="tablewrap">
+        <TableWrap label="Poverty in Siaya by measure and year">
           <table className="data">
             <caption className="sr-only">Poverty in Siaya by measure and year</caption>
             <thead><tr><th scope="col">Year</th><th scope="col">Measure</th><th scope="col">Siaya</th><th scope="col">Kenya</th><th scope="col">Source</th></tr></thead>
@@ -83,7 +84,7 @@ export default function Profile() {
               ))}
             </tbody>
           </table>
-        </div>
+        </TableWrap>
         <p className="how"><b>Gap.</b> {hist.poverty.gap}</p>
       </section>
 
@@ -92,7 +93,7 @@ export default function Profile() {
         <h2 id="hl-h">Safer births and fewer stunted children between 2014 and 2022</h2>
         <p className="finding">{hist.health.note}</p>
         <ColumnChart labels={['Facility births', 'Skilled birth', 'Skilled antenatal', 'Stunting']} yFormat="pct0" unit="%" yMaxFixed={100} ariaLabel="Siaya health indicators in the 2014 and 2022 surveys" series={[{ name: '2014 survey', color: 1, values: hist.health.indicators.map((h) => h.v2014) }, { name: '2022 survey', color: 2, values: hist.health.indicators.map((h) => h.v2022) }]} />
-        <div className="tablewrap">
+        <TableWrap label="Siaya health survey results, 2014 and 2022">
           <table className="data">
             <caption className="sr-only">Siaya health survey results, 2014 and 2022</caption>
             <thead><tr><th scope="col">Indicator</th><th scope="col">2014</th><th scope="col">2022</th><th scope="col">Change</th><th scope="col">Confidence</th></tr></thead>
@@ -112,7 +113,7 @@ export default function Profile() {
               })}
             </tbody>
           </table>
-        </div>
+        </TableWrap>
         <p className="how"><b>Other 2022 indicators from the county plan:</b> antenatal visits (four or more) {co.health_2022.antenatal_4th_visit_pct.siaya}% (Kenya {co.health_2022.antenatal_4th_visit_pct.kenya}%); average distance to a health facility {co.health_2022.average_distance_to_facility_km} km against the 5 km WHO radius; {co.health_2022.icu_beds} intensive-care beds in the county.</p>
       </section>
 

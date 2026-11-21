@@ -2,6 +2,20 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 21 Nov 2026, sweep 13 (after the brown theme, national navigation and copy pass)
+Scope: all 60 sitemap pages in both colour preferences at 320, 360, 768, 1024 and 1280 px (600 runs), each with every disclosure opened: axe-core WCAG 2.2 AA, horizontal overflow, console errors and CSP violations (pages served with the production CSP), images without alt or failing to load, and literal "undefined", "null" or "NaN" in the page text. Also: keyboard walk on the home page at 360 and 1280 px (skip link first, 40 focus stops, ring contrast at least 3:1 on the brown), county menu (Enter, Escape returns focus, outside click, closes after choosing), every chart's tooltip on keyboard focus and every table view on the Siaya hub, Insights, Analytics, Sub-counties and Profile, map link focus, every download on the Data page (status and JSON validity), built HTML grep for `>undefined<`, `>null<` and `NaN` (62 files, none), page titles and descriptions (crawl), print contrast, the PDF brief (1 A4 page, tagged, text extractable).
+
+| Finding | How found | Status |
+|---|---|---|
+| Wide tables scroll sideways at 320 and 360 px but could not be reached by keyboard (axe scrollable-region-focusable, 15 table regions on Method, Siaya hub, Profile, Insights table view, Analytics) | Sweep at 320 and 360 px with disclosures opened | Fixed: `components/TableWrap.js` makes each scrolling table a named, focusable region; 17 wrappers converted. Re-run: 0 violations |
+| Every internal link on the live site does a full page reload instead of client-side navigation: Netlify serves Next's route payloads (`index.txt`) as `text/plain` (checked with `curl -sI` on the live site), and Next falls back to a hard navigation when the type is not `text/x-component` | Interaction check of the county menu; reproduced locally by serving `.txt` as `text/plain` | Fixed in `netlify.toml` (Content-Type rule for `/index.txt` and `/*/index.txt`); new smoke check fails with `text/plain` and passes with the rule. Live behaviour needs re-checking with `curl -sI` after the next milestone deploy (no deploy in this sweep) |
+| Map of Kenya on the brown theme: counties in preparation were barely visible (track colour at 55 per cent opacity on the brown card) and the published colour was close to the focus ring | Visual and contrast review during the brown theme work | Fixed before the sweep: in preparation #7A7262 (3.3:1 on cards), published in the accent green, keyboard focus a 3 px orange outline (sweep confirms on all 47 links) |
+| County finder treated a number as matching every county (typing "41" showed all 47) | Interaction check of the new finder | Fixed: a number matches the county code only ("41" shows Siaya) |
+| axe target-size on two contents links (Method, Terms) at 1024 and 1280 px | Sweep | Not a defect: the sweep forced the header county menu open, and its list covered the links. With the menu closed: 0 violations. Sweep now leaves that menu closed |
+| "Menu closes after choosing a county" reported as a failure | Interaction check | Not a defect: the check read the state before navigation finished; with a wait for the new page it passes on three routes |
+
+Result after fixes (re-run on the fixed build): sweep 600 runs, 0 issues; interaction checks 64 ok, 0 fail; build gates, smoke 37 of 37, crawl 0 issues (71 internal links), print contrast 0 low-contrast elements on 16 page-scheme runs, reproducible build. Open: confirm the `index.txt` Content-Type on the live site after the next deploy.
+
 ## 21 Nov 2026, sweep 12 (charts, legal pages, handover review)
 | Finding | How found | Status |
 |---|---|---|
