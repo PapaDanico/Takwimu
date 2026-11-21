@@ -11,7 +11,7 @@ Evidence-based baseline before the design-system overhaul and fiscal intelligenc
 |---|---|---|
 | Lockfile | `package-lock.json` committed | OK |
 | Node version | `.nvmrc` pins 20, `engines` is `>=20 <21`; Netlify builds on Node 20; local checks ran on Node 22 | OK |
-| Byte-identical output | `npm run verify:repro` builds twice and compares SHA-256 of every file in `dist/` (BUILD_ID masked). Two causes fixed: footer year from `new Date()` (now `SITE_UPDATED`), and webpack listing merged duplicate chunk ids in compile order (sorted by a plugin in `next.config.js`). Result: `Reproducible: 4938075e…` | Done (step 1) |
+| Byte-identical output (re-checked after steps 2 to 5: `Reproducible: 78993fed…`) | `npm run verify:repro` builds twice and compares SHA-256 of every file in `dist/` (BUILD_ID masked). Two causes fixed: footer year from `new Date()` (now `SITE_UPDATED`), and webpack listing merged duplicate chunk ids in compile order (sorted by a plugin in `next.config.js`). Result: `Reproducible: 4938075e…` | Done (step 1) |
 | Build gates | `npm run build` = unit tests, data validation, data publishing, `next build` | OK |
 | Network at build | None needed: map outlines and data are committed | OK |
 | CI | GitHub Actions has no runner (account level); Cloudflare build is unrelated noise | Gap: owner-level, outside the code |
@@ -44,7 +44,8 @@ Evidence-based baseline before the design-system overhaul and fiscal intelligenc
 - `public/logo.svg` (Takwimu mark) is vector. The Danico Ventures logo exists only as WebP raster (`public/brand/`). Gap: vector version needed from the owner's original artwork; it must not be redrawn from the raster as if official.
 
 ## 7. Exports
-- CSV and JSON downloads exist and match the charts' data files. PDF: only a print stylesheet; no generated, paginated PDF. Gap.
+- CSV and JSON downloads exist and match the charts' data files.
+- Done (step 5): `/counties/siaya/brief/` is a print-optimised one-page brief built from `siaya.json`, `history.json` and `conflicts.json` (headline figures with source and confidence, ten-year table with gaps shown as dashes, audit opinions, caveats, sources and date), with a named `@page brief { size: A4 }`. `scripts/make-brief-pdf.js` (global Playwright, not a dependency) renders it to `public/briefs/siaya-fiscal-brief.pdf` and checks it: `pdfinfo` Pages: 1, 594.96 x 841.92 pts (A4); `pdftotext` extracts all section headings (5,789 characters). Linked from the Siaya hub and the Data page. The page passes axe (light and dark, 0 violations) and overflow at all five widths. Regenerating the PDF changes its embedded creation date, so commit it only when the brief content changes.
 
 ## Defects fixed in this sweep
 1. Siaya hub shared the home page title (missing metadata).

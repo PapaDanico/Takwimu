@@ -51,6 +51,11 @@ export default function DataPage() {
           </table>
         </div>
       </section>
+      <section className="card" aria-labelledby="brief-dl-h">
+        <h2 id="brief-dl-h">Printable brief</h2>
+        <p className="lead">A one-page A4 summary of Siaya County finances, built from the same files: headline figures with source and confidence, ten years of spending, audit opinions and key caveats.</p>
+        <p><a className="file" href="/briefs/siaya-fiscal-brief.pdf" download>siaya-fiscal-brief.pdf</a> · <a href="/counties/siaya/brief/">View it as a web page</a></p>
+      </section>
       <section className="card" aria-labelledby="c-h">
         <h2 id="c-h">What the history file covers</h2>
         <ul className="steps">
