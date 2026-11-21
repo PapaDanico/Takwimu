@@ -7,6 +7,6 @@ export const dynamic = 'force-static';
 export default function sitemap() {
   const lastModified = new Date('2026-11-20');
   const counties = COUNTIES.filter((c) => !c.published).map((c) => ({ href: `/counties/${c.slug}/` }));
-  const extra = [{ href: '/counties/siaya/brief/' }, { href: '/counties/siaya/pulse/' }, { href: '/briefs/request/' }, ...STORIES.map((x) => ({ href: `/stories/${x.slug}/` }))];
+  const extra = [{ href: '/counties/siaya/brief/' }, { href: '/counties/siaya/pulse/' }, { href: '/counties/siaya/sources/' }, { href: '/briefs/request/' }, ...STORIES.map((x) => ({ href: `/stories/${x.slug}/` }))];
   return [...PAGES, ...extra, ...counties].map((p) => ({ url: `${SITE_URL}${p.href}`, lastModified, changeFrequency: 'monthly', priority: p.href === '/' ? 1 : 0.7 }));
 }

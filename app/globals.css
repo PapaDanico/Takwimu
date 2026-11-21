@@ -547,6 +547,9 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .status-list { margin: 10px 0 0; display: grid; gap: 10px; }
 .status-list dt small { color: var(--ink-soft); margin-left: 6px; }
 .status-list dd { margin: 4px 0 0; font-size: 14px; }
+.filter-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.lib-item h3 { overflow-wrap: anywhere; }
+.filter-row .btn-s.ghost[aria-pressed="true"] { background: var(--accent-strong); color: var(--on-accent); }
 .ds-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .ds-links a { display: inline-flex; align-items: center; min-height: 36px; padding: 4px 12px; border: 1px solid var(--rule); border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; background: var(--surface); }
 .ds-links a:hover { border-color: var(--accent); }

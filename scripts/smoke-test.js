@@ -33,7 +33,7 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/']) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/pulse/', '/counties/siaya/sources/', '/counties/kisumu/', '/insights/', '/analytics/', '/subcounties/', '/profile/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/explore/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/briefs/request/']) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
@@ -43,6 +43,23 @@ const srv = http.createServer((req, res) => {
   const pulseDet = pg.locator('details.tableview').first();
   await pulseDet.locator('summary').click();
   check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'Fiscal Pulse chart has a table view');
+  // Siaya Source Library: one card per record in data/source-library.json, client-side search and filters, no form fields beyond the search box.
+  const libJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-library.json'), 'utf8'));
+  await pg.goto(base + '/counties/siaya/sources/', { waitUntil: 'networkidle' });
+  const libItems = pg.locator('main li.lib-item');
+  const pgText = await pg.locator('section[aria-labelledby="lib-counts"]').innerText();
+  check(await libItems.count() === libJson.documents.length && /Showing (\d+) of \1 records/.test(await pg.locator('#lib-count').innerText()), `source library lists every record (${libJson.documents.length})`);
+  check(await pg.locator('main form, main select, main textarea').count() === 0 && await pg.locator('main input').count() === 1 && await pg.locator('main input[type="search"]').count() === 1, 'source library has no form element other than the search input');
+  await pg.locator('main input[type="search"]').fill('Kenya News Agency');
+  const nKna = libJson.documents.filter((d) => [d.document_id, d.title, d.publisher, d.document_type, d.reference_period, d.siaya_relevance, d.research_use, d.licence, d.retrieval_note].join(' ').toLowerCase().includes('kenya news agency')).length;
+  check(nKna >= 1 && await libItems.count() === nKna && await pg.locator('#doc-MEDIA-01').count() === 1, `source library search filters (${nKna} match "Kenya News Agency")`);
+  await pg.locator('main input[type="search"]').fill('');
+  await pg.getByRole('button', { name: /^Blocked \(/ }).click();
+  const nBlocked = libJson.documents.filter((d) => d.retrieval_status === 'blocked').length;
+  check(await libItems.count() === nBlocked && await pg.getByRole('button', { name: /^Blocked \(/ }).getAttribute('aria-pressed') === 'true', `source library status filter shows the ${nBlocked} blocked records`);
+  check(['downloaded', 'discovered', 'inaccessible', 'blocked'].every((s) => new RegExp(`${s}\\s+${libJson.documents.filter((d) => d.retrieval_status === s).length} of ${libJson.documents.length}`, 'i').test(pgText)), 'source library states the count for each retrieval status');
+  await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
+  check(await pg.locator('main a[href="/counties/siaya/sources/"]').count() >= 1, 'Siaya hub links to the source library');
   // No personal data is collected (owner, 21 Nov 2026): /briefs/request/ describes the service with no form; the thanks page is gone.
   check(!fs.existsSync(path.join(root, 'briefs', 'request', 'thanks')), '/briefs/request/thanks/ is not built');
   await pg.goto(base + '/briefs/request/', { waitUntil: 'load' });
