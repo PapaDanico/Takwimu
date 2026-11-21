@@ -11,6 +11,7 @@ export const metadata = {
 
 import { ISSUES_URL } from '../../lib/site';
 import { KNOWN_GAPS } from '../../lib/known-gaps';
+import { Provisional } from '../../components/ObsTable';
 
 const RUBRIC = [
   { score: 5, meaning: 'Read directly from the primary document and confirmed a second way (for example a second reading of the page, or a matching total).' },
@@ -33,6 +34,7 @@ export default function Method() {
   return (
     <main id="main" className="wrap page">
       <PageHead eyebrow="Method" title="How Takwimu handles numbers" sub="What we publish, where it comes from, how we check it, and what we do when two sources disagree." path="/method/" shareText="How Takwimu Kenya handles numbers" />
+      <Provisional dataset={'history'}>Figures quoted on this page were transcribed by Takwimu from the reports and have not yet been checked by a reviewer.</Provisional>
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#sources">Sources</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#checks">Checks</a></li><li><a href="#conflicts">Disagreements</a></li><li><a href="#prices">Prices</a></li><li><a href="#years">Fiscal years</a></li><li><a href="#people">Named people</a></li><li><a href="#known-gaps">Gaps</a></li>
       </ul></nav>

@@ -5,6 +5,7 @@ import CompareView from '../../components/CompareView';
 import KenyaMap from '../../components/KenyaMap';
 import TableWrap from '../../components/TableWrap';
 import { compareData, extra } from '../../lib/explore';
+import { Provisional } from '../../components/ObsTable';
 
 export const metadata = {
   title: 'Compare counties',
@@ -34,6 +35,7 @@ export default function ComparePage() {
     <main id="main" className="wrap page">
       <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Compare counties" title="Compare counties"
         sub="Pick an indicator and a year to see all 47 counties in one list, on a map and in a table, or pick two to four counties to see them side by side. The figures are those printed in the Controller of Budget's annual county reports." />
+      <Provisional dataset={['counties-cob']}>County figures were read by Takwimu from Controller of Budget reports (OCR, with table and page) and have not yet been checked by a reviewer.</Provisional>
       <Suspense fallback={<Loading />}>
         <CompareView data={data} />
       </Suspense>

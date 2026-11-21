@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { buildReport, SLUGS } from '../../components/report/build';
 import { WHATSAPP_URL } from '../../lib/site';
+import { Provisional } from '../../components/ObsTable';
+import { DATASET_IDS } from '../../lib/review-status';
 
 export const metadata = {
   title: 'Publications',
@@ -16,14 +18,15 @@ export default function Publications() {
   return (
     <main id="main" className="wrap page">
       <header><p className="eyebrow">Publications</p><h1>Publications</h1>
-      <p className="page-sub">Everything here is built only from the data files on this site. Every figure gives its source, page, period, unit and confidence. While any figure is unreviewed, a publication is marked DRAFT and says so once, at the top.</p></header>
+      <p className="page-sub">Everything here is built only from the data files on this site. Every figure gives its source, page, period, unit and confidence. While any figure is unreviewed, a publication is marked DRAFT and says so once, at the top.</p>
+      <Provisional dataset={DATASET_IDS.filter((d) => d !== 'imf')}>The brief and the reports are built from values transcribed by Takwimu that have not yet been checked by a reviewer.</Provisional></header>
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#brief">One-page brief</a></li><li><a href="#evidence">Evidence reports</a></li><li><a href="#briefs">About our briefs</a></li>
       </ul></nav>
 
       <section className="card" aria-labelledby="brief-h" id="brief">
         <h2 id="brief-h">Siaya one-page fiscal brief</h2>
-        <p>Revenue, spending, unpaid bills and audit for Siaya on one A4 page. Read it as a <Link href="/counties/siaya/brief/">web page</Link> or download the <a href="/briefs/siaya-fiscal-brief.pdf" download>PDF (A4)</a>.</p>
+        <p>Revenue, spending, unpaid bills and audit for Siaya on one A4 page. Read it as a <Link href="/counties/siaya/brief/">web page</Link> or download the <a href="/reports/siaya-fiscal-brief.pdf" download>PDF (A4)</a>.</p>
       </section>
 
       <section className="card" aria-labelledby="evidence-h" id="evidence">

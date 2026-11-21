@@ -13,6 +13,7 @@ import { shortDate } from '../../lib/format';
 import ImfView from '../../components/ImfView';
 import { imfViewData } from '../../lib/imf';
 import reg from '../../data/conflicts.json';
+import { Provisional } from '../../components/ObsTable';
 
 const imfData = imfViewData();
 // IMF against the World Bank: definitional differences, both values side by side (sweep D13).
@@ -59,6 +60,7 @@ export default function KenyaPage() {
       <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Kenya dashboard" title="Kenya dashboard"
         sub="National indicators from 2010, grouped by sector. Each card shows the latest value and a small trend line. The trend explorer below charts any indicator, national, all counties or Siaya, in nominal or real terms, with a table." />
       <DataStamp period="2010 to 2025 (latest year varies by indicator)" checked={`Retrieved ${shortDate(nat.meta.retrieved)}`} updated="21 Nov 2026" completeness={`${inds.length} indicators with values; ${natIndicators.length - inds.length} without (see Not available)`} />
+      <Provisional dataset={['counties-cob', 'imf', 'history']}>National figures come from the World Bank, the IMF and the Central Bank of Kenya; county figures were transcribed by Takwimu from Controller of Budget reports and have not yet been checked by a reviewer.</Provisional>
       <section className="card no-print-break" aria-labelledby="tools-h">
         <h2 id="tools-h">Use this dashboard</h2>
         <div className="toolbar">

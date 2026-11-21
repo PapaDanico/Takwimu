@@ -21,6 +21,8 @@ const barPath = (x, y, w, h) => `M${x},${y} h${w - 4} a4,4 0 0 1 4,4 v${h - 8} a
 const A8 = (id) => analysis.records.find((r) => r.calc_id === id) || {};
 const OSR_MIX = { cob2425: A8('SIA-A8-2024-25-cob-report-2024-25'), cty2425: A8('SIA-A8-2024-25-GOV-02-FY2024-25-Q4'), cob2324: A8('SIA-A8-2023-24-cob-report-2023-24'), rank2425: A8('SIA-A8-counties-2024-25-fif-share-rank'), rank2324: A8('SIA-A8-counties-2023-24-fif-share-rank'), dFif: A8('SIA-A8-2024-25-difference-fif'), dOrd: A8('SIA-A8-2024-25-difference-ordinary') };
 
+// Health facility (FIF/A-i-A) part of the Controller of Budget FY 2024/25 total, as printed (Table 2.1).
+const FIF2425 = ((OSR_MIX.cob2425.inputs || []).find((i) => i.role === 'fif') || {}).value;
 const BASE = '2024/25';
 const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
 const SHORT = FYS.map((f) => f.slice(2));
@@ -59,7 +61,7 @@ export default function OsrLedger() {
           as opposed to money sent by the national government.
         </p>
         <div className="tiles">
-          <Tile label="Collected" value={fmt(primary.value)} unit="KSh million" note="Stated by the Controller of Budget, including KSh 199 million from health facilities." />
+          <Tile label="Collected" value={fmt(primary.value)} unit="KSh million" note={`Stated by the Controller of Budget, including KSh ${fmt(FIF2425)} million from health facilities.`} />
           <Tile label="Share of annual target" value={`${share}%`} tone="warn" note="The report states this. Its Table 2.1 (PDF p. 46) prints the target: KSh 927.34 million." />
           <Tile label="County statement" value={fmt(county.value)} unit="KSh million" dashed tag="News report (secondary)" note={`Reported in the press. The county's own Q4 report gives KSh ${fmt(report.value)} million instead.`} />
           <Tile label="Share of approved budget" value={`${ofBudgetPct.toFixed(1)}%`} note={`Derived: ${fmt(primary.value)} million divided by the KSh ${budget.approved_total} billion approved budget.`} />
@@ -127,7 +129,7 @@ export default function OsrLedger() {
           <div className="src">
             Sources: <a href={primary.source_url}>{primary.source}</a>; <a href={report.source_url}>{report.source}</a> (PDF page 6, read from the text layer, retrieved {shortDate(report.retrieved)}); <a href={county.source_url}>{county.source}</a>. Retrieved {asOf}.
             <br />
-            Notes: the first solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh 199 million from health facilities).
+            Notes: the first solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh {fmt(FIF2425)} million from health facilities).
             The report calls this 2 per cent more than KSh {fmt(osr.previous_year.value)} million in FY 2023/24, but the previous year&apos;s report gave KSh 610.74 million for that year (see the trend below).
             It is {share} per cent of the annual target; Table 2.1 of the same report prints that target as KSh 927.34 million (PDF p. 46). The budget financing counted about KSh {osr.target.value.toLocaleString('en-US')} million of own-source revenue, and the report does not explain the difference.
             The second solid bar is the county treasury&apos;s own fourth-quarter report: KSh 236.50 million into the County Revenue Fund plus KSh 521.07 million collected and spent at source, mostly at health facilities, against a target of KSh 1,044 million. It is unaudited.

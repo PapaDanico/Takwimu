@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import TableWrap from '../../../components/TableWrap';
 import KenyaMap from '../../../components/KenyaMap';
+import PageToc from '../../../components/PageToc';
+import { Provisional } from '../../../components/ObsTable';
 import { SIAYA_GROUPS } from '../../../lib/siaya-nav';
 
 export const metadata = {
@@ -36,6 +38,10 @@ export default function Home() {
   const share = osr.share_of_annual_target_pct;
   const spentPct = Math.round((budget.total_spent / budget.approved_total) * 100);
   const settledPct = Math.round((budget.pending_bills.settled_in_year_million / (budget.pending_bills.opening_30_jun_2024_billion * 1000)) * 100);
+  // Pending bills at 30 June 2024 by the own-year rule (sweep D5): the closing stock printed in the FY 2023/24 report,
+  // as in the ten-year series; the FY 2024/25 report's opening stock for the same date is the other end of the range.
+  const pend24 = hist.years.find((y) => y.fy === '2023/24');
+  const pend24Src = pend24.provenance.pending_total_m;
   const asOf = shortDate(primary.retrieved);
   const auditAmber = audit.opinion !== 'Unqualified';
 
@@ -56,9 +62,11 @@ export default function Home() {
             </div>
           ))}
         </nav>
-        <p className="asof"><a href="/briefs/siaya-fiscal-brief.pdf" download>Download the one-page fiscal brief (PDF, A4)</a></p>
+        <p className="asof"><a href="/reports/siaya-fiscal-brief.pdf" download>Download the one-page fiscal brief (PDF, A4)</a></p>
         <p className="asof"><span className="tag good">Checked {asOf}</span> against the Controller of Budget and Auditor-General reports</p>
+        <Provisional dataset="history">Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
       </header>
+      <PageToc items={[['where-h', 'Where Siaya is'], ['position', 'County position'], ['key-h', 'Key figures'], ['obl', 'Pending bills, arrears and stalled projects'], ['aud', 'Audit'], ['tenh', 'Ten years'], ['inyh', `FY ${IY.fy} so far`], ['learnh', 'Budget terms'], ['where', 'Sub-counties']]} />
       <section className="card" aria-labelledby="where-h">
         <h2 id="where-h">Where Siaya is</h2>
         <KenyaMap focus="siaya" ariaLabel="Map of Kenya with Siaya County highlighted" />
@@ -77,7 +85,7 @@ export default function Home() {
           <span className="pill">Recurrent spending {rec.absorption_pct}% of budget</span>
           <span className={`pill ${auditAmber ? 'warn' : 'good'}`}>Audit FY {audit.fiscal_year}: {audit.opinion}</span>
           <span className="pill warn">Sources disagree on revenue</span>
-          <a className="pill warn" href="/data/#pending-2024">Pending bills at 30 Jun 2024: sources disagree (KSh 303.91M to {budget.pending_bills.opening_30_jun_2024_billion}B)</a>
+          <a className="pill warn" href="/data/#pending-2024">Pending bills at 30 Jun 2024: sources disagree (KSh {fmt(pend24.pending_total_m)}M to {budget.pending_bills.opening_30_jun_2024_billion}B)</a>
         </div>
         <p className="rule-note">
           Amber marks a figure below 50 per cent of its target, a development budget less than 60 per
@@ -99,8 +107,8 @@ export default function Home() {
         <h2 id="obl">Pending bills, arrears and stalled projects</h2>
         <p className="lead">What the county owes, what is owed to it, and what has stopped midway.</p>
         <div className="tiles">
-          <Tile label="Pending bills at 30 June 2024" value={`KSh ${budget.pending_bills.opening_30_jun_2024_billion}B`} tone="warn" tag="Sources disagree" note={<>Opening stock in the FY 2024/25 report. The FY 2023/24 report gives KSh 303.91 million for the same date (County Executive only, excluding bills incurred in the year). Range KSh 303.91 million to KSh {budget.pending_bills.opening_30_jun_2024_billion} billion; see <a href="/data/#pending-2024">case pending-2024</a>. Every year, the roll-forward and the ratios: <Link href="/counties/siaya/analysis/#pending">Siaya analysis</Link>.</>} />
-          <Tile label="Settled in FY 2024/25" value={`KSh ${fmt(budget.pending_bills.settled_in_year_million)}M`} note={`About ${settledPct} per cent of the opening balance (derived).`} />
+          <Tile label="Pending bills at 30 June 2024" value={`KSh ${fmt(pend24.pending_total_m)}M`} tone="warn" tag="Sources disagree" note={<>Closing stock in the FY 2023/24 report, the year&apos;s own report (printed page {pend24Src.printed_page}; County Executive only, excluding bills incurred in the year), as in the ten-year series. The FY 2024/25 report gives an opening stock of KSh {budget.pending_bills.opening_30_jun_2024_billion} billion for the same date. Range KSh {fmt(pend24.pending_total_m)} million to KSh {budget.pending_bills.opening_30_jun_2024_billion} billion; see <a href="/data/#pending-2024">case pending-2024</a>. Every year, the roll-forward and the ratios: <Link href="/counties/siaya/analysis/#pending">Siaya analysis</Link>.</>} />
+          <Tile label="Settled in FY 2024/25" value={`KSh ${fmt(budget.pending_bills.settled_in_year_million)}M`} note={`About ${settledPct} per cent of the KSh ${budget.pending_bills.opening_30_jun_2024_billion} billion opening balance in the FY 2024/25 report (derived).`} />
           <Tile label="Revenue arrears, 30 June 2025" value={`KSh ${budget.revenue_arrears_30_jun_2025_million}M`} note="Revenue owed to the county by payers but not yet collected." />
           <Tile label="Stalled projects" value={`${budget.stalled_projects.count}`} unit={`worth KSh ${budget.stalled_projects.estimated_value_million}M`} tone="warn" note={`KSh ${budget.stalled_projects.paid_million}M had already been paid on them.`} />
         </div>

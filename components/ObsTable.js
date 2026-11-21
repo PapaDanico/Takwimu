@@ -70,12 +70,14 @@ export default function ObsTable({ caption, rows, id, labelHead = 'Measure', sho
 
 // Page label. The provisional tag stays until every value is approved (lib/review-status.js isProvisional); with
 // `dataset` the review counts follow.
+// `dataset` may be one dataset id or a list (a page that shows values from several); a list's counts are summed.
+const countsOf = (dataset) => [].concat(dataset).map((d) => counts(d)).reduce((a, c) => Object.fromEntries(Object.keys(c).map((k) => [k, (a[k] || 0) + c[k]])), {});
 export function ReviewCounts({ dataset }) {
-  const c = counts(dataset);
-  return <small className="review-counts" data-review-counts={dataset}> {countsSentence(c)}</small>;
+  const c = countsOf(dataset);
+  return <small className="review-counts" data-review-counts={[].concat(dataset).join(' ')}> {countsSentence(c)}</small>;
 }
 export function Provisional({ children, dataset }) {
-  const c = dataset ? counts(dataset) : null;
+  const c = dataset ? countsOf(dataset) : null;
   return (
     <p className="provisional">
       {isProvisional(c) ? <span className="tag warn">Provisional: awaiting editorial review</span> : null} {children}

@@ -4,6 +4,7 @@ import TableWrap from '../../../../components/TableWrap';
 import { LineChart, ColumnChart } from '../../../../components/Charts';
 import Donut from '../../../../components/Donut';
 import StatStrip from '../../../../components/StatStrip';
+import { Provisional } from '../../../../components/ObsTable';
 import DataStamp from '../../../../components/DataStamp';
 import { shortDate } from '../../../../lib/format';
 import { SITE_UPDATED } from '../../../../lib/site';
@@ -42,6 +43,8 @@ const pendFirst = pend[0];
 const pendLast = pend[pend.length - 1];
 // Years whose year-end stock has an open discrepancy in the fiscal ledger (another document gives a different stock).
 const PEND_DISPUTED = new Set(ledger.discrepancies.filter((d) => d.indicator_id === 'pending_bills_close' && d.status === 'open').map((d) => d.period.replace('FY ', '')));
+// Years whose own-source revenue total has an open discrepancy in the fiscal ledger (as on the Siaya hub).
+const OSR_DISPUTED = new Set(ledger.discrepancies.filter((d) => d.indicator_id === 'osr_total_actual' && d.status === 'open').map((d) => d.period.replace('FY ', '')));
 
 const osr = hist.osr_series.points;
 const osrFirst = osr[0];
@@ -75,7 +78,7 @@ const kpis = [
   { label: 'Real change in ten years', value: `${realGrowth >= 0 ? '+' : ''}${Math.round(realGrowth)}%`, delta: 'After adjusting for prices', tone: realGrowth >= 0 ? 'up' : 'down', note: `${label(first.fy)} to ${label(last.fy)}`, spark: col((y) => realOf(y.spent, y.fy)) },
   { label: 'Share of development budget spent', value: `${absLast.development_absorption_pct}%`, delta: label(absLast.fy), spark: col((y) => y.development_absorption_pct), href: '/counties/siaya/analysis/#spent', link: 'Ten years, with recurrent, on Siaya analysis' },
   { label: 'Pending bills', value: m(pendLast.v), unit: 'KSh m', delta: `at end of ${label(pendLast.fy)}${PEND_DISPUTED.has(pendLast.fy) ? '; sources disagree' : ''}`, spark: col(pendOf), href: '/counties/siaya/analysis/#pending', link: 'Every year and the roll-forward, on Siaya analysis' },
-  { label: 'Own-source revenue', value: m(osrPts[osrPts.length - 1].value), unit: 'KSh m', delta: label(osrPts[osrPts.length - 1].fy), spark: FYS.map((fy) => (osrByFy[fy] ? osrByFy[fy].value : null)), href: '/counties/siaya/ledger/#osr-ten', link: 'Every source and year, on the ledger' },
+  { label: 'Own-source revenue', value: m(osrPts[osrPts.length - 1].value), unit: 'KSh m', delta: `${label(osrPts[osrPts.length - 1].fy)}${OSR_DISPUTED.has(osrPts[osrPts.length - 1].fy) ? '; sources disagree' : ''}`, spark: FYS.map((fy) => (osrByFy[fy] ? osrByFy[fy].value : null)), href: '/counties/siaya/ledger/#osr-ten', link: 'Every source and year, on the ledger' },
   { label: 'Latest audit opinion', value: audits[audits.length - 1].opinion, delta: `FY ${audits[audits.length - 1].fy}`, note: 'County Executive accounts' },
 ];
 
@@ -84,6 +87,8 @@ export default function Insights() {
     <main id="main" className="wrap page">
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Insights" title="Ten years of Siaya County finances" sub="What ten years of Controller of Budget and Auditor-General reports add up to, FY 2014/15 to FY 2024/25, in plain language. Each measure has one home page with every figure and source; this page links to it. Gaps are marked, never filled in." path="/counties/siaya/insights/" shareText="Ten years of Siaya County finances" />
       <DataStamp period={`FY 2014/15 to FY ${FYS[FYS.length - 1]} (July 2014 to June 2025); FY 2013/14 (16 months) shown where available`} checked={shortDate(hist.meta.retrieved)} updated={shortDate(SITE_UPDATED)} completeness={`Spending for ${years.filter((y) => y.spent !== undefined).length} of ${FYS.length} years; budget for ${years.filter((y) => y.approved !== undefined).length}; audit opinions for ${hist.audits.points.length}. Missing years are left blank, never filled.`} />
+
+      <Provisional dataset={['history', 'siaya-fiscal-ledger']}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
 
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#spending">Spending</a></li><li><a href="#audit">Audit</a></li><li><a href="#gaps">Gaps</a></li>

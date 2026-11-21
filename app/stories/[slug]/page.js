@@ -4,6 +4,7 @@ import ExploreHead from '../../../components/ExploreHead';
 import { ColumnChart, LineChart } from '../../../components/Charts';
 import DownloadView from '../../../components/DownloadView';
 import { STORIES, absorption, population, ownRevenue } from '../../../lib/stories';
+import { Provisional } from '../../../components/ObsTable';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return STORIES.map((s) => ({ slug: s.slug })); }
@@ -134,6 +135,7 @@ export default function StoryPage({ params }) {
   return (
     <main id="main" className="wrap page">
       <ExploreHead trail={[{ href: '/', label: 'Home' }, { href: '/stories/', label: 'Data stories' }]} current={story.title} title={story.title} sub={story.blurb} />
+      <Provisional dataset={['counties-cob', 'history']}>Figures in this story were transcribed by Takwimu from Controller of Budget reports and have not yet been checked by a reviewer.</Provisional>
       <Body story={story} />
     </main>
   );

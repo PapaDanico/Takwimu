@@ -14,6 +14,7 @@ const path = require('path');
 // Review records (data/reviews.json): no value may show "Approved" unless one is in force (none yet).
 const rvs = require('../lib/review-status');
 const REPORT_SLUGS = require('../components/report/reports.json').reports.map((r) => r.slug);
+const histSrc = require('../data/history.json');
 const REVIEW_APPROVED = rvs.DATASET_IDS.reduce((n, d) => n + rvs.counts(d).approved, 0);
 const toml = fs.readFileSync(path.join(__dirname, '..', 'netlify.toml'), 'utf8');
 const csp = (toml.match(/Content-Security-Policy = "([^"]+)"/) || [])[1];
@@ -240,10 +241,14 @@ const srv = http.createServer((req, res) => {
   await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
   check(await pg.locator('main a[href="/counties/siaya/sources/"]').count() >= 1, 'Siaya hub links to the source library');
   // Sweep D4/D18/D24: disputed pending bills labelled with the range; printed 927.34 target; OSR composition card.
-  { const hub = await pg.locator('main').innerText(); check(/sources disagree \(KSh 303\.91M to/i.test(hub) && await pg.locator('#key a[href="/counties/siaya/ledger/#osr-latest"]').count() === 1 && await pg.locator('#key a[href="/counties/siaya/analysis/#spent"]').count() === 1, 'Siaya hub: pending bills at 30 Jun 2024 marked as disputed with the range; one summary tile each for own-source revenue and share of budget spent, linked to their homes'); }
+  { const hub = await pg.locator('main').innerText(); const own24 = histSrc.years.find((y) => y.fy === '2023/24');
+    const t0 = await pg.locator('#obligations .tile').first().innerText();
+    check(own24.provenance.pending_total_m.source_id === 'cob-report-2023-24' && new RegExp(`KSh ${own24.pending_total_m}M`).test(t0) && /Sources disagree/i.test(t0) && !/^\s*Pending bills at 30 June 2024[^\n]*\n+\s*KSh 1\.12B/.test(t0), 'Siaya hub: pending bills at 30 Jun 2024 headline uses the own-year report (KSh 303.91M, FY 2023/24 report), flagged "sources disagree"');
+    check(await pg.locator('nav.hub-groups div', { hasText: 'Evidence' }).locator('a[href="/data/"]').count() === 1, 'Siaya hub: the Evidence group links /data/');
+    check(/sources disagree \(KSh 303\.91M to/i.test(hub) && await pg.locator('#key a[href="/counties/siaya/ledger/#osr-latest"]').count() === 1 && await pg.locator('#key a[href="/counties/siaya/analysis/#spent"]').count() === 1, 'Siaya hub: pending bills at 30 Jun 2024 marked as disputed with the range; one summary tile each for own-source revenue and share of budget spent, linked to their homes'); }
   // Own-source revenue's canonical home is the ledger (owner decision U1): FY 2024/25 sources side by side, composition, ten years.
   await pg.goto(base + '/counties/siaya/ledger/', { waitUntil: 'load' });
-  { const led = await pg.locator('main').innerText(); check(/927\.34/.test(led) && !/929 million/.test(led) && await pg.locator('#osr-mix a[href="/counties/siaya/analysis/#an-a8"]').count() === 1 && await pg.locator('#osr-latest .tag', { hasText: 'News report (secondary)' }).count() >= 1 && await pg.locator('#osr-ten figure.chart').count() === 1, 'ledger: own-source revenue FY 2024/25 sources side by side (printed target, news report labelled secondary), composition card and ten-year chart'); }
+  { const led = await pg.locator('main').innerText(); check(/KSh 199\.84 million from health facilities/.test(led) && !/KSh 199 million/.test(led), 'ledger: health-facility revenue given as printed (KSh 199.84 million), as elsewhere'); check(/927\.34/.test(led) && !/929 million/.test(led) && await pg.locator('#osr-mix a[href="/counties/siaya/analysis/#an-a8"]').count() === 1 && await pg.locator('#osr-latest .tag', { hasText: 'News report (secondary)' }).count() >= 1 && await pg.locator('#osr-ten figure.chart').count() === 1, 'ledger: own-source revenue FY 2024/25 sources side by side (printed target, news report labelled secondary), composition card and ten-year chart'); }
   await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
   // Reports A-E: the hub links the index; the index links each report's page and PDF with edition, snapshot and
   // DRAFT status; every PDF is in the build.
@@ -285,13 +290,42 @@ const srv = http.createServer((req, res) => {
     await vSel.selectOption({ index: 1 });
     const cap = await sec.locator('#imf-chart-h').innerText();
     const imfVintages = require('../data/imf.json').vintages.length;
+    const imfSrc = await sec.locator('p.src').last().innerText();
+    check(!/downloads from the/i.test(imfSrc) && /none is offered for download/.test(imfSrc) && await sec.locator('p.src a[href^="https://www.imf.org/"]').count() >= 1, '/kenya/ IMF section: view and cite, links to the IMF, no download claim');
     check(nV === imfVintages && projRows > 0 && label && /April 2025/.test(cap) && await sec.locator('#imf-table tbody tr').count() > 10, `/kenya/ IMF section: ${nV.toLocaleString('en-US')} of ${imfVintages.toLocaleString('en-US')} vintages selectable, ${projRows.toLocaleString('en-US')} rows labelled IMF projection, table view`);
   }
   // No personal data is collected (owner, 21 Nov 2026): /briefs/request/ describes the service with no form; the thanks page is gone.
   check(!fs.existsSync(path.join(root, 'briefs', 'request', 'thanks')), '/briefs/request/thanks/ is not built');
   await pg.goto(base + '/reports/', { waitUntil: 'load' });
-  check(await pg.locator('main form, main input, main textarea').count() === 0 && await pg.locator('#briefs a[href="https://wa.me/message/GPPIKMENXJVWO1"]').count() === 1 && await pg.locator('#brief a[href="/briefs/siaya-fiscal-brief.pdf"]').count() === 1 && await pg.locator('#brief a[href="/counties/siaya/brief/"]').count() === 1, 'Publications: the brief and its PDF, and "About our briefs" with no form or fields and a link to the Danico Ventures WhatsApp chat');
+  check(await pg.locator('main form, main input, main textarea').count() === 0 && await pg.locator('#briefs a[href="https://wa.me/message/GPPIKMENXJVWO1"]').count() === 1 && await pg.locator('#brief a[href="/reports/siaya-fiscal-brief.pdf"]').count() === 1 && await pg.locator('#brief a[href="/counties/siaya/brief/"]').count() === 1, 'Publications: the brief and its PDF, and "About our briefs" with no form or fields and a link to the Danico Ventures WhatsApp chat');
   check(await pg.locator('header a.report[href="https://wa.me/message/GPPIKMENXJVWO1"]', { hasText: 'Report an error' }).count() === 1 && await pg.locator('footer a[href="https://wa.me/message/GPPIKMENXJVWO1"]', { hasText: 'Report an error' }).count() === 1 && await pg.locator('a[href*="github.com"]').count() === 0, '"Report an error" in the header and the footer goes to the WhatsApp chat, none to GitHub');
+  // Sweep N2: the brief PDF lives at /reports/siaya-fiscal-brief.pdf (301 and a byte-identical fallback at the old
+  // path), and it is the brief as published: every headline value, every row of the ten-year table, the number of
+  // open disagreements and, while figures are unreviewed, the DRAFT and provisional notice match the web brief.
+  {
+    const { execFileSync } = require('child_process');
+    const { textOf } = require('./check-built-html');
+    const pdf = path.join(root, 'reports', 'siaya-fiscal-brief.pdf');
+    const old = path.join(root, 'briefs', 'siaya-fiscal-brief.pdf');
+    check(fs.existsSync(pdf) && fs.existsSync(old) && fs.readFileSync(pdf).equals(fs.readFileSync(old)) && /from = "\/briefs\/siaya-fiscal-brief\.pdf"\s*to = "\/reports\/siaya-fiscal-brief\.pdf"\s*status = 301/.test(toml), 'brief PDF at /reports/siaya-fiscal-brief.pdf, with a 301 and an identical fallback at the old /briefs/ path');
+    const html = fs.readFileSync(path.join(root, 'counties', 'siaya', 'brief', 'index.html'), 'utf8');
+    const flat = (t) => t.replace(/\s+/g, ' ');
+    let ptext = '';
+    try { ptext = execFileSync('pdftotext', ['-layout', pdf, '-']).toString(); } catch (e) { ptext = ''; }
+    const pflat = flat(ptext);
+    const heads = [...html.matchAll(/<dd class="v">([\s\S]*?)<\/dd>/g)].map((m) => flat(textOf(m[1])).trim());
+    const tbody = (html.match(/<table class="brief-table">[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/) || [])[1] || '';
+    const rows = [...tbody.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].map((m) => [...m[1].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map((c) => flat(textOf(c[1])).trim()));
+    const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const lines = ptext.split('\n');
+    const missRows = rows.filter((r) => !lines.some((l) => new RegExp(`^\\s*${r.map(esc).join('\\s+')}(\\s|$)`).test(l))).map((r) => r[0]);
+    const webN = (flat(textOf(html)).match(/(\d+) disagreements between reports/) || [])[1];
+    const pdfN = (pflat.match(/(\d+) disagreements between reports/) || [])[1];
+    const draft = /data-draft="true"/.test(html);
+    const missHeads = heads.filter((h) => !pflat.includes(h));
+    check(heads.length === 4 && rows.length >= 10 && !missHeads.length && !missRows.length && webN && webN === pdfN && (!draft || (/\bDRAFT\b/.test(ptext) && /Provisional: awaiting editorial review/i.test(pflat))) && draft === rvs.DATASET_IDS.filter((d) => ['history', 'siaya-fiscal-ledger'].includes(d)).some((d) => rvs.isProvisional(rvs.counts(d))),
+      `brief PDF matches the web brief: ${heads.length} headline values, ${rows.length} ten-year rows, ${webN} disagreements (PDF ${pdfN})${draft ? ', DRAFT and provisional notice' : ''}${missHeads.length ? `; headline missing: ${missHeads.join(' | ')}` : ''}${missRows.length ? `; rows missing: ${missRows.join(', ')}` : ''} (stale? rebuild, run make-brief-pdf.js, rebuild)`);
+  }
   await pg.goto(base + '/privacy/', { waitUntil: 'load' });
   const privText = (await pg.locator('main').innerText()).toLowerCase();
   check(['do not collect', 'odpc.go.ke', 'netlify', 'local storage', 'whatsapp'].every((t) => privText.includes(t)) && !/consent|24 months|data request/.test(privText), 'privacy notice says no personal data is collected, names Netlify and the ODPC, and has no form-era terms');
@@ -311,6 +345,7 @@ const srv = http.createServer((req, res) => {
   check(dataForms.length === 0, `no built page has a Netlify form, posting form, textarea or personal-data input${dataForms.length ? ' (found in ' + dataForms.slice(0, 3).map((f) => path.relative(root, f)).join(', ') + ')' : ''}`);
   await pg.goto(base + '/counties/siaya/insights/', { waitUntil: 'load' });
   check(await pg.locator('main figure.chart').count() >= 2 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#spent"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#pending"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/ledger/#osr-ten"]').count() === 1 && await pg.locator('#gaps a[href="/method/#known-gaps"]').count() === 1, 'Siaya insights: ten-year narrative with one summary tile each for share spent, pending bills and own-source revenue, linked to their homes; gaps link to the method');
+  check(/sources disagree/i.test(await pg.locator('main .statstrip li', { hasText: 'Own-source revenue' }).innerText()) === require('../data/siaya-fiscal-ledger.json').discrepancies.some((d) => d.indicator_id === 'osr_total_actual' && d.status === 'open' && d.period === `FY ${histSrc.osr_series.points[histSrc.osr_series.points.length - 1].fy}`), 'Siaya insights: the own-source revenue tile says "sources disagree" when the ledger has an open case for its year (as on the hub)');
   check(/County Executive, FY \d{4}\/\d{2} to FY \d{4}\/\d{2}: \d+ unqualified, \d+ qualified, \d+ adverse, \d+ disclaimer/.test(await pg.locator('#audit-h').innerText()), 'Siaya insights: the audit headline counts each opinion type over the year range (no verdict)');
   await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
   const charts = await pg.locator('figure.chart').count();
@@ -345,6 +380,16 @@ const srv = http.createServer((req, res) => {
   check(csv.ok() && (await csv.text()).startsWith('"indicator"'), 'history.csv served with header');
   const conf = await (await pg.request.get(base + '/data/conflicts.json')).json();
   check(conf.conflicts.length >= 10 && conf.conflicts.every((c) => c.verification_state), 'conflicts.json has verification states');
+  // Sweep N4: bulk downloads carry no value whose own source is link and cite only (IMF); the row keeps citation and link.
+  {
+    const reuse = require('../lib/reuse');
+    const imfJson = conf.conflicts.flatMap((c) => c.values).filter((v) => !reuse.mayRedistribute(v.url));
+    const cc = await (await pg.request.get(base + '/data/datasets/source-conflicts.csv')).text();
+    const imfCsv = cc.split('\n').filter((l) => /api\.imf\.org/.test(l));
+    const hc = await (await pg.request.get(base + '/data/history.csv')).text();
+    const imfHist = hc.split('\n').filter((l) => /api\.imf\.org/.test(l));
+    check(imfJson.length >= 7 && imfJson.every((v) => v.value === null && v.url && v.value_withheld) && imfCsv.length === imfJson.length && imfCsv.every((l) => /^"[^"]+","[^"]*","[^"]*",,"Value not redistributed/.test(l)) && imfHist.length === imfJson.length && imfHist.every((l) => /^"conflict: [^"]*","",,/.test(l)), `IMF values blank in conflicts.json, source-conflicts.csv and history.csv, with citation and link kept (${imfJson.length} values)`);
+  }
 
   // Explore pages (phase 2): URL state, ordered list and map, side by side, empty states, saved views, downloads.
   const ctx2 = await b.newContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true });
@@ -371,6 +416,7 @@ const srv = http.createServer((req, res) => {
   check(dlText.split('\n').filter(Boolean).length === 48 && dlText.startsWith('"fiscal_year"'), 'compare list downloads as CSV with 47 rows');
   await p2.getByRole('button', { name: 'Save this view' }).click();
   await p2.goto(base + '/datasets/?q=zzzz', { waitUntil: 'networkidle' });
+  check(!/Every one downloads/.test(await p2.locator('main header, main .page-sub').first().innerText()) && /link and cite only: view and cite/.test(await p2.locator('main').innerText()), '/datasets/: says IMF values are viewed and cited, not that every dataset downloads');
   check(/No dataset matches/.test(await p2.locator('main').innerText()), 'datasets search shows an empty state');
   check(await p2.locator('#saved .saved-list li').count() === 1, 'saved view appears in the Saved views list');
   await p2.locator('#saved button', { hasText: 'Remove' }).click();
@@ -438,6 +484,9 @@ const srv = http.createServer((req, res) => {
     const SM = [...fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname).filter((u) => !/^\/counties\/(?!siaya)[a-z-]+\/$/.test(u) || u === '/counties/kisumu/');
     const HOME = [[/budget spent|absorption/i, '/counties/siaya/analysis/'], [/pending bills/i, '/counties/siaya/analysis/'], [/own-source revenue/i, '/counties/siaya/ledger/']];
     const probs = [];
+    const { pages: pageDatasets, matches: matchesRoute } = require('./page-datasets');
+    const PAGE_DATASETS = pageDatasets().filter((p) => p.datasets.length);
+    let labelled = 0;
     for (const u of SM) {
       await pg.goto(base + u, { waitUntil: 'load' });
       const r = await pg.evaluate(() => {
@@ -453,13 +502,22 @@ const srv = http.createServer((req, res) => {
         });
         const rep = Object.entries(seen).filter(([, n]) => n > 2).map(([t, n]) => `${n}x "${t.slice(0, 50)}"`);
         const charts = [...m.querySelectorAll('figure.chart svg[aria-label]')].map((x) => x.getAttribute('aria-label'));
-        return { prov, rep, charts };
+        return { prov, rep, charts, h2: m.querySelectorAll('h2').length, toc: m.querySelectorAll('.toc, .rp-toc').length };
       });
-      if (r.prov > 1) probs.push(`${u}: provisional label ${r.prov} times`);
+      // N3: a page that renders values from a reviewed dataset (scripts/page-datasets.js, derived from the page's imports)
+      // carries the label exactly once while any of those values is unreviewed.
+      const pd = PAGE_DATASETS.find((p) => matchesRoute(p.route, u));
+      const needLabel = pd && pd.datasets.some((d) => rvs.isProvisional(rvs.counts(d)));
+      if (needLabel && r.prov !== 1) probs.push(`${u}: renders ${pd.datasets.join('/')} but prints the provisional label ${r.prov} times (expected exactly 1)`);
+      else if (r.prov > 1) probs.push(`${u}: provisional label ${r.prov} times`);
+      if (needLabel) labelled += 1;
+      // U7: four or more sections need "Sections on this page" (.toc; a report has its printed contents list, .rp-toc).
+      if (r.h2 >= 4 && !r.toc) probs.push(`${u}: ${r.h2} h2 sections and no .toc`);
       if (r.rep.length) probs.push(`${u}: ${r.rep[0]}`);
       if (/^\/counties\/siaya\//.test(u) || u === '/') HOME.forEach(([re, home]) => { if (u !== home && r.charts.some((a) => re.test(a) && /by fiscal year|ten years|FY 20\d\d\/\d\d to/i.test(a))) probs.push(`${u}: ${re.source} series outside ${home}`); });
     }
-    check(SM.length >= 30 && !probs.length, `repetition guard on ${SM.length} pages: one provisional label, no caveat more than twice, each measure in its canonical home${probs.length ? `; ${probs.slice(0, 4).join('; ')}` : ''}`);
+    probs.forEach((p) => console.error('     ', p));
+    check(SM.length >= 30 && labelled >= 20 && !probs.length, `repetition guard on ${SM.length} pages: exactly one provisional label on the ${labelled} pages that render reviewed datasets, a table of contents with four or more sections, no caveat more than twice, each measure in its canonical home${probs.length ? `; ${probs.slice(0, 4).join('; ')}` : ''}`);
   }
   check(bad.length === 0, `no CSP violations or page errors ${bad.slice(0, 2).join(' | ')}`);
   await b.close(); srv.close();
