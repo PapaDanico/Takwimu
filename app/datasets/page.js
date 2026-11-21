@@ -15,6 +15,8 @@ export const metadata = {
 
 const datasets = catalogue();
 const sources = [...new Set(datasets.map((d) => d.source))].sort();
+// Datasets with bulk files; the rest (IMF WEO, link and cite only) are viewed and cited, never downloaded (sweep N5).
+const downloadable = datasets.filter((d) => d.files.csv);
 const reviewed = datasets.filter((d) => d.review);
 const totals = reviewed.reduce((t, d) => ({ approved: t.approved + d.review.approved, pending: t.pending + d.review.pending, rejected: t.rejected + d.review.rejected, total: t.total + d.review.total }), { approved: 0, pending: 0, rejected: 0, total: 0 });
 const years = [...new Set(datasets.flatMap((d) => d.years))].sort((a, b) => a - b);
@@ -36,7 +38,7 @@ export default function DatasetsPage() {
   return (
     <main id="main" className="wrap page">
       <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Datasets" title="Datasets"
-        sub={`${datasets.length} datasets, national and county, each with its source, unit, coverage, method and the date it was last updated. Every one downloads as CSV and JSON.`} />
+        sub={`${datasets.length} datasets, national and county, each with its source, unit, coverage, method and the date it was last updated. ${downloadable.length === datasets.length ? 'Every one downloads as CSV and JSON.' : `${downloadable.length} download as CSV and JSON. ${datasets.filter((d) => !d.files.csv).map((d) => d.source).filter((x, i, l) => l.indexOf(x) === i).join(' and ')} values are link and cite only: view and cite them here, and get them from the publisher at the link given.`}`} />
       <Abbrs list={['PCRA', 'FLLoCA', 'IATI', 'CBTS', 'GCP', 'FIF', 'A-i-A']} />
       <PageToc items={[['find-h', 'Find a dataset'], ['list-h', 'Datasets'], ['status-h', 'What the status means'], ['saved-h', 'Saved views'], ['gaps-h', 'Not available']]} />
       <Suspense fallback={<Loading />}>

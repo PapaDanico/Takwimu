@@ -265,6 +265,12 @@ const manifest0 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 
     // Reuse model (sweep D2): figure reuse and document redistribution are separate; the old flag equals the new one.
     if (d.document_redistribution !== d.redistribution_allowed) fail(`${tag}: document_redistribution and redistribution_allowed must agree`);
     if (/International Monetary Fund/.test(d.publisher) && (d.data_reuse !== 'link and cite only' || d.document_redistribution)) fail(`${tag}: IMF material is link and cite only`);
+    // Sweep N8: the licence text says the same as data_reuse (and so as /terms/, which is built from data_reuse).
+    const lic = String(d.licence);
+    const claimsReuse = /may be reused|\bCC BY\b|Creative Commons|Public Domain/i.test(lic);
+    if (d.data_reuse === 'figures may be reused with citation' && /link and cite/i.test(lic)) fail(`${tag}: licence text "${lic}" says link and cite, but data_reuse allows figures with citation`);
+    if (d.data_reuse === 'link and cite only' && (!/link and cite/i.test(lic) || claimsReuse)) fail(`${tag}: licence text "${lic}" does not agree with data_reuse "link and cite only"`);
+    if (d.data_reuse === 'permission required' && (!/permission/i.test(lic) || claimsReuse)) fail(`${tag}: licence text "${lic}" does not agree with data_reuse "permission required"`);
     if (/Controller of Budget|Central Bank of Kenya|Kenya National Bureau of Statistics|Independent Electoral|Commission on Revenue Allocation|National Treasury|County Government of Siaya|Auditor-General/.test(d.publisher) && (d.data_reuse !== 'figures may be reused with citation' || d.document_redistribution)) fail(`${tag}: Kenyan public statistics: figures with citation, document not redistributed`);
     if (d.document_id === 'worldbank-wdi-api' && !(d.data_reuse === 'figures may be reused with citation' && d.document_redistribution && /CC BY 4\.0/.test(d.licence))) fail(`${tag}: World Bank WDI is CC BY 4.0`);
     if (d.origin === 'programme register' && !PROGRAMME.includes(d.document_id)) fail(`${tag}: only the 27 register IDs may have origin "programme register"`);
@@ -282,13 +288,28 @@ const manifest0 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 
   const lib = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-library.json'), 'utf8')).documents;
   const host = (u) => { try { return new URL(u).hostname; } catch (e) { return null; } };
   const { DATASETS } = require('../lib/explore');
+  const reuse = require('../lib/reuse');
   DATASETS.forEach((ds) => {
     const files = ds.files ? Object.values(ds.files).filter(Boolean) : [];
     if (!files.length) return;
     const blocked = lib.filter((x) => host(x.source_url) && host(x.source_url) === host(ds.source_url) && x.data_reuse !== 'figures may be reused with citation');
     const sameHostAllowed = lib.some((x) => host(x.source_url) === host(ds.source_url) && x.data_reuse === 'figures may be reused with citation');
     if (blocked.length && !sameHostAllowed) fail(`catalogue ${ds.id}: offers ${files.join(', ')} but its source is "${blocked[0].data_reuse}" (${blocked[0].document_id}); remove the bulk download`);
+    // Sweep N4: each value is checked against its own source (the row's url), not only the catalogue's host. A value
+    // whose source is not reusable must be blank in the bulk file (the citation and link stay).
+    if (typeof ds.rows === 'function') {
+      const bad = ds.rows().filter((r) => r && r.url && r.value != null && r.value !== '' && !reuse.mayRedistribute(r.url));
+      if (bad.length) fail(`catalogue ${ds.id}: ${bad.length} row(s) carry a value whose own source is "${reuse.reuseOf(bad[0].url)}" (${bad[0].case_id || bad[0].url}); blank it in the bulk download`);
+    }
   });
+  // The conflict register as published (public/data/conflicts.json and the conflict rows of history.csv).
+  const conf0 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'conflicts.json'), 'utf8'));
+  const leaked = reuse.bulkConflicts(conf0).conflicts.flatMap((c) => c.values.filter((v) => v.value != null && !reuse.mayRedistribute(v.url)).map(() => c.id));
+  if (leaked.length) fail(`published conflicts.json: ${leaked.length} value(s) from a link-and-cite source (${[...new Set(leaked)].join(', ')})`);
+  // Not vacuous: the register holds IMF values, and each is blanked with its link kept.
+  const imfVals = conf0.conflicts.flatMap((c) => c.values).filter((v) => !reuse.mayRedistribute(v.url));
+  const blanked = reuse.bulkConflicts(conf0).conflicts.flatMap((c) => c.values).filter((v) => v.value_withheld);
+  if (!imfVals.length || blanked.length !== imfVals.length || blanked.some((v) => !v.url)) fail('reuse check: expected the IMF values of the conflict register to be found and blanked with their link kept');
 }
 
 // Dataset catalogue (lib/explore.js): status vocabulary, version stamp and files, against schemas/catalogue.schema.json.

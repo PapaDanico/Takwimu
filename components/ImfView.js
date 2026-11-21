@@ -61,7 +61,7 @@ export default function ImfView({ data }) {
           </tbody>
         </table>
       </TableWrap>
-      <p className="src">Source: International Monetary Fund, World Economic Outlook, {v.vintage} (published {v.published}), <a href={ind.sourceUrl} rel="noopener">SDMX series {ind.code}</a>; latest actual year {ind.latestActual}. IMF copyright: link and cite. Where the IMF differs from the CBK beyond definitions, both values are in the <a href="/data/#conflicts">conflict register</a>. Every value with its vintage and type downloads from the <a href="/datasets/?q=imf-weo-kenya">datasets catalogue</a>. IMF staff documents: {data.documents.map((d, i) => <span key={d.id}>{i ? '; ' : ''}<a href={d.url} rel="noopener">{d.series}</a> ({d.date})</span>)}.</p>
+      <p className="src">Source: International Monetary Fund, World Economic Outlook, {v.vintage} (published {v.published}), <a href={ind.sourceUrl} rel="noopener">SDMX series {ind.code}</a>; latest actual year {ind.latestActual}. IMF copyright: link and cite. Where the IMF differs from the CBK beyond definitions, both values are in the <a href="/data/#conflicts">conflict register</a>. IMF values are link and cite only, so none is offered for download: view and cite them here, and get them from the IMF at <a href={ind.sourceUrl} rel="noopener">the SDMX series</a> or <a href="https://www.imf.org/en/Publications/WEO" rel="noopener">imf.org</a> (<a href="/datasets/?q=imf-weo-kenya">catalogue entry</a>). IMF staff documents: {data.documents.map((d, i) => <span key={d.id}>{i ? '; ' : ''}<a href={d.url} rel="noopener">{d.series}</a> ({d.date})</span>)}.</p>
     </section>
   );
 }

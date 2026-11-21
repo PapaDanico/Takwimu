@@ -356,6 +356,8 @@ Object.entries(files)
   const rs = require('../lib/review-status');
   const stem = f.replace(/\.json$/, '');
   if (rs.DATASET_IDS.includes(stem)) fs.writeFileSync(path.join(outDir, f), JSON.stringify(rs.publishedCopy(stem), null, 1) + '\n');
+  // Conflict register: values from a link-and-cite source (IMF) are blanked, citation and link kept (sweep N4).
+  else if (f === 'conflicts.json') fs.writeFileSync(path.join(outDir, f), JSON.stringify(require('../lib/reuse').bulkConflicts(JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', f), 'utf8'))), null, 2) + '\n');
   else fs.copyFileSync(path.join(__dirname, '..', 'data', f), path.join(outDir, f));
   console.log('Generated public/data/' + f);
 });
@@ -420,8 +422,8 @@ Object.entries(files)
   // Figures from other documents for years whose Controller of Budget report is missing: listed, not used in the series.
   if (hist.supplementary) hist.supplementary.documents.forEach((d) => d.figures.forEach((f) => add(null, [`other_source_${f.measure}`, d.fy, f.value, f.unit, `other document (${d.kind}); not used in the series`, `${d.title}, PDF p. ${f.pdf_page}`, d.url, d.confidence, got, `FY ${d.fy}`, f.label, d.source_id, f.pdf_page, f.printed_page, ''])));
   // Every value in the conflict register, so no disagreeing figure is left out of the export.
-  const conf = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'conflicts.json'), 'utf8'));
-  conf.conflicts.forEach((c) => c.values.forEach((v) => add(null, [`conflict: ${c.measure}`, '', v.value, c.unit, `source value (${c.status})`, v.label, v.url, '', got, '', c.definitions])));
+  const conf = require('../lib/reuse').bulkConflicts(JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'conflicts.json'), 'utf8')));
+  conf.conflicts.forEach((c) => c.values.forEach((v) => add(null, [`conflict: ${c.measure}`, '', v.value, c.unit, v.value_withheld ? `source value (${c.status}); ${v.value_withheld}` : `source value (${c.status})`, v.label, v.url, '', got, '', c.definitions])));
   // Every row carries the version stamp of history.json (short content hash, as in the dataset catalogue).
   const ver = require('../lib/dataset-status').versionOf('history.json');
   const status = (i) => { const r = rid[i] ? rs.review('history', rid[i]) : null; return r ? (r.hide ? `${r.label}: ${r.reason}` : r.label) : ''; };
