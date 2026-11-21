@@ -227,7 +227,7 @@ function checkSchema(schema, value, where, root, out) {
     });
   }
 }
-['history', 'conflicts', 'subcounties', 'county', 'national', 'counties-cob', 'cbk', 'derived', 'ngo', 'political', 'source-library', 'siaya-economy', 'siaya-governance'].forEach((name) => {
+['history', 'conflicts', 'subcounties', 'county', 'national', 'counties-cob', 'cbk', 'derived', 'ngo', 'political', 'source-library', 'siaya-economy', 'siaya-governance', 'siaya-audits', 'siaya-fiscal-ledger'].forEach((name) => {
   const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', `${name}.schema.json`), 'utf8'));
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', `${name}.json`), 'utf8'));
   const out = [];

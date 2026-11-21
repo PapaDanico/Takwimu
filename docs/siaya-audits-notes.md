@@ -1,6 +1,6 @@
 # Siaya audit findings tracker: notes (21 Nov 2026)
 
-Data: `data/siaya-audits.json`. Schema: `schemas/siaya-audits.schema.json`. Check: `node scripts/test-audits.js` (not wired into package.json).
+Data: `data/siaya-audits.json`. Schema: `schemas/siaya-audits.schema.json`. Check: `node scripts/test-audits.js` (part of npm run validate and npm run build). Page: /counties/siaya/audits/; dataset siaya-audit-findings.
 
 ## What it holds
 - **12 documents, 14 opinions, 262 findings.** County Executive and County Assembly are kept apart. FY 2013/14 has a 16-month audit of the whole county government (`county_government`) and a separate review of the Executive's financial operations, which carries no opinion.

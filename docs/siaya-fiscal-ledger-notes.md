@@ -1,6 +1,6 @@
 # Siaya fiscal reconciliation ledger: notes (21 Nov 2026)
 
-Files: `data/siaya-fiscal-ledger.json`, `schemas/siaya-fiscal-ledger.schema.json`, `scripts/test-fiscal-ledger.js` (run `node scripts/test-fiscal-ledger.js`; not wired into package.json). Research programme sections 1, 3A, 4 (stages 3 to 5), 6 and 8. Not yet reviewed by a specialist; every discrepancy is `open`.
+Files: `data/siaya-fiscal-ledger.json`, `schemas/siaya-fiscal-ledger.schema.json`, `scripts/test-fiscal-ledger.js` (run `node scripts/test-fiscal-ledger.js`; part of npm run validate and npm run build). Page: /counties/siaya/ledger/; dataset siaya-fiscal-ledger). Research programme sections 1, 3A, 4 (stages 3 to 5), 6 and 8. Not yet reviewed by a specialist; every discrepancy is `open`.
 
 ## What it holds
 - 16 measures, FY 2013/14 to FY 2025/26: budget total, recurrent and development (with `budget_version`), equitable share budgeted and received, conditional grants or additional allocations budgeted and received, own-source revenue target, total, ordinary and FIF/A-i-A, expenditure total, recurrent and development, pending bills at 30 June, and wage bill.
