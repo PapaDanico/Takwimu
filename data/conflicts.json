@@ -436,23 +436,53 @@
       "unit": "per cent",
       "values": [
         {
-          "label": "Controller of Budget FY 2022/23 report, department table total (PDF p. 583, printed p. 557, RapidOCR)",
+          "label": "Controller of Budget FY 2022/23 report, department table total (PDF p. 583, printed p. 557); two re-reading methods both read 53.8",
           "value": 53.8,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
         },
         {
-          "label": "Same report, text of section 3.38.4 (PDF p. 578, printed p. 552, text layer and RapidOCR agree)",
+          "label": "Same report, text of section 3.38.4 (PDF p. 578, printed p. 552); two re-reading methods both read 53.4",
           "value": 53.4,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
         }
       ],
-      "definitions": "Same report, same measure. The table total is 1,520.28 of 2,827.00 million, which is 53.8 per cent; the text says 53.4 per cent.",
+      "definitions": "Same report, same measure. Both figures are printed: re-reading with two methods gives 53.8 in the department table total and 53.4 in the text. The table amounts (1,520.28 of 2,827.00 million, read the same by both methods) give 53.78 per cent.",
       "hypothesis": "Hypothesis: a typing slip in the text. Not confirmed.",
       "status": "open",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The series keeps 53.8 (the table total, which matches the arithmetic). The text value is listed here."
+      "effect": "The series keeps 53.8 (the table total, which matches the arithmetic). The text value is listed here.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "RapidOCR recogniser only (detector and angle classifier off) on a 600 dpi greyscale crop (text lines split into words at blank gaps)",
+        "method_b": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop, Otsu binarised and upscaled 2x",
+        "readings": [
+          {
+            "where": "section 3.38.4 text, PDF p. 578",
+            "method_a": "on  development  programmes represented an absorption rate of 53.4 percent. In contrast, recurrent",
+            "method_b": "on  development programmes represented an absorption rate ofF 53.4 percent. In contrast. recurrent"
+          },
+          {
+            "where": "department table total, PDF p. 583",
+            "method_a": "53.8",
+            "method_b": "53.8"
+          },
+          {
+            "where": "department table total development expenditure, PDF p. 583",
+            "method_a": "1,520.28",
+            "method_b": "1,520.28"
+          },
+          {
+            "where": "department table total development budget, PDF p. 583",
+            "method_a": "2,827.00",
+            "method_b": "2,827.00"
+          }
+        ],
+        "check": "1,520.28 / 2,827.00 = 53.78 per cent; 53.8 differs by 0.02 points, 53.4 by 0.38.",
+        "outcome": "Both values are printed in the report, so the case stays open; the readings are not in doubt.",
+        "page_image_checked": false
+      }
     },
     {
       "id": "recurrent-absorption-2023-24",
@@ -460,28 +490,63 @@
       "unit": "per cent",
       "values": [
         {
-          "label": "Controller of Budget FY 2023/24 report, section 3.38.4, PDF text layer (PDF p. 513, printed p. 490)",
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.4, PDF text layer (PDF p. 513, printed p. 490): a misreading of the scan",
           "value": 85.8,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
         },
         {
-          "label": "Same line read with RapidOCR at 200 to 400 dpi, and the department table total (PDF p. 517, printed p. 494)",
+          "label": "Same line re-read with two RapidOCR methods at 400 and 600 dpi (both 86.8); the department table total (PDF p. 517, printed p. 494) also prints 86.8",
           "value": 86.8,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
         },
         {
-          "label": "Same report, Table 2.3 (all 47 counties), Siaya row, RapidOCR (PDF p. 30, printed p. 7)",
+          "label": "Same report, Table 2.3 (all 47 counties), Siaya row (PDF p. 30, printed p. 7), both re-reading methods",
           "value": 87.0,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
         }
       ],
-      "definitions": "A reading conflict, not two sources: the PDF is a scan, and its embedded text layer and RapidOCR read the printed figure differently. The department table (5,138.67 of 5,909.25 million) gives 87.0 per cent by arithmetic. Table 2.3, the all-county table, prints 87.0 for Siaya with a recurrent budget of 5,909.25 million, the same as the arithmetic.",
-      "hypothesis": "Hypothesis: the text layer misread 86.8 as 85.8, since two RapidOCR reads and the table agree on 86.8. Not confirmed against the page image.",
+      "definitions": "The 85.8 was a text-layer misreading: both re-reading methods give 86.8 for the same line. The report itself then prints two values: 86.8 in chapter 3 (text and department table total) and 87.0 in chapter 2 (Table 2.3). The printed amounts (5,138.67 of 5,909.25 million, read the same by both methods) give 86.96 per cent, so both printed values are within 0.5 points.",
+      "hypothesis": "Hypothesis: chapter 3 truncated or used a slightly different denominator; Table 2.3 rounds the amounts. Not confirmed.",
       "status": "open",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The series still shows 85.8 until a reviewer checks the page image; both readings are listed here. The county comparison shows the Table 2.3 value 87.0 with this case."
+      "effect": "The series now shows 86.8, the county chapter figure (changed from the misread 85.8 on 21 Nov 2026). The county comparison shows the Table 2.3 value 87.0 with this case.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "RapidOCR recogniser only (detector and angle classifier off) on a 600 dpi greyscale crop (text lines split into words at blank gaps)",
+        "method_b": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop, Otsu binarised and upscaled 2x",
+        "readings": [
+          {
+            "where": "section 3.38.4 text, PDF p. 513",
+            "method_a": "programmes represented an absorption rate of 64.6 per cent, while recrrent expenditure represented 86.8 per",
+            "method_b": "programmes represented an absorption rate of 64.6 per cent while recurrent expenditure represented 86.8 per"
+          },
+          {
+            "where": "department table total, PDF p. 517",
+            "method_a": "86.8",
+            "method_b": "86.8"
+          },
+          {
+            "where": "Table 2.3 Siaya row, PDF p. 30",
+            "method_a": "87.0",
+            "method_b": "87.0"
+          },
+          {
+            "where": "department table total recurrent expenditure, PDF p. 517",
+            "method_a": "5,138.67",
+            "method_b": "5,138.67"
+          },
+          {
+            "where": "department table total recurrent budget, PDF p. 517",
+            "method_a": "5,909.25",
+            "method_b": "5,909.25"
+          }
+        ],
+        "check": "5,138.67 / 5,909.25 = 86.96 per cent; 86.8 differs by 0.16 points and 87.0 by 0.04.",
+        "outcome": "85.8 is not printed (both methods read 86.8). The document prints 86.8 and 87.0 in different chapters, so the case stays open.",
+        "page_image_checked": false
+      }
     },
     {
       "id": "development-absorption-2023-24",
@@ -489,28 +554,58 @@
       "unit": "per cent",
       "values": [
         {
-          "label": "Controller of Budget FY 2023/24 report, section 3.38.4, PDF text layer (PDF p. 513, printed p. 490)",
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.4, PDF text layer (PDF p. 513, printed p. 490): a misreading of the scan",
           "value": 64.5,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
         },
         {
-          "label": "Same line read with RapidOCR at 200 to 400 dpi, and the department table total (PDF p. 517, printed p. 494)",
-          "value": 64.6,
-          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
-        },
-        {
-          "label": "Same report, Table 2.3 (all 47 counties), Siaya row, RapidOCR (PDF p. 30, printed p. 7)",
+          "label": "Same line re-read with two RapidOCR methods at 400 and 600 dpi (both 64.6); the department table total (PDF p. 517, printed p. 494) and Table 2.3 (PDF p. 30, printed p. 7) also print 64.6",
           "value": 64.6,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
         }
       ],
-      "definitions": "A reading conflict, not two sources (see recurrent-absorption-2023-24). The table (2,487.20 of 3,851.88 million) gives 64.6 per cent by arithmetic. Table 2.3 also prints 64.6 for Siaya.",
-      "hypothesis": "Hypothesis: the text layer misread 64.6 as 64.5. Not confirmed against the page image.",
-      "status": "open",
-      "verification_state": "unresolved_no_reviewer",
+      "definitions": "A reading conflict, not two sources: the PDF is a scan and its embedded text layer reads 64.5 where the page prints 64.6. Every place the report gives this figure (text of section 3.38.4, the department table total, the all-county Table 2.3) reads 64.6 by both methods, and the printed amounts (2,487.20 of 3,851.88 million) give 64.57 per cent.",
+      "hypothesis": "Resolved by the printed document: the text layer misread 64.6 as 64.5. Checked by two independent machine readings and the arithmetic, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The series still shows 64.5 until a reviewer checks the page image; both readings are listed here. The county comparison shows the Table 2.3 value 64.6 with this case."
+      "effect": "The series now shows 64.6 (changed from 64.5 on 21 Nov 2026). The text-layer reading 64.5 is kept here.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "RapidOCR recogniser only (detector and angle classifier off) on a 600 dpi greyscale crop (text lines split into words at blank gaps)",
+        "method_b": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop, Otsu binarised and upscaled 2x",
+        "readings": [
+          {
+            "where": "section 3.38.4 text, PDF p. 513",
+            "method_a": "programmes represented an absorption rate of 64.6 per cent, while recrrent expenditure represented 86.8 per",
+            "method_b": "programmes represented an absorption rate of 64.6 per cent while recurrent expenditure represented 86.8 per"
+          },
+          {
+            "where": "department table total, PDF p. 517",
+            "method_a": "64.6",
+            "method_b": "64.6"
+          },
+          {
+            "where": "Table 2.3 Siaya row, PDF p. 30",
+            "method_a": "64.6",
+            "method_b": "64.6"
+          },
+          {
+            "where": "department table total development expenditure, PDF p. 517",
+            "method_a": "2,487.20",
+            "method_b": "2,487.20"
+          },
+          {
+            "where": "department table total development budget, PDF p. 517",
+            "method_a": "3,851.88",
+            "method_b": "3,851.81+."
+          }
+        ],
+        "check": "2,487.20 / 3,851.88 = 64.57 per cent; 64.6 is within 0.5 points. Method B misread the budget cell as \"3,851.81+.\"; method A and Table 2.3 read 3,851.88.",
+        "outcome": "All three printed places read 64.6 by both methods: resolved.",
+        "page_image_checked": false
+      }
     },
     {
       "id": "pending-2022",

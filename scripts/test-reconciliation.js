@@ -170,8 +170,29 @@ test('conflict recurrent-absorption-2024-25: recomputed value matches the regist
   ok(near((y.recurrent_spent / y.recurrent_budget) * 100, 82.2, 0.05), 'recomputed share is not 82.2');
 });
 caseTest('development-absorption-2022-23', 53.8, 53.4, year('2022/23').development_absorption_pct, 1e-9);
-caseTest('recurrent-absorption-2023-24', 85.8, 86.8, year('2023/24').recurrent_absorption_pct, 1e-9);
-caseTest('development-absorption-2023-24', 64.5, 64.6, year('2023/24').development_absorption_pct, 1e-9);
+caseTest('recurrent-absorption-2023-24', 86.8, 85.8, year('2023/24').recurrent_absorption_pct, 1e-9);
+caseTest('development-absorption-2023-24', 64.6, 64.5, year('2023/24').development_absorption_pct, 1e-9);
+// Re-readings (21 Nov 2026): both methods agree on what is printed; the misread text-layer values stay in the register.
+test('re-read development-absorption-2023-24: every printed place reads 64.6, so the case is resolved by the source', () => {
+  const c = conflict('development-absorption-2023-24');
+  ok(c.status === 'resolved' && c.verification_state === 'resolved_by_source' && c.page_image_checked === false, 'state should be resolved_by_source, page image not checked');
+  c.reread.readings.filter((r) => /pct|text|Table 2\.3|table total,/.test(r.where) && !/budget|expenditure/.test(r.where)).forEach((r) => ok(/64\.6/.test(r.method_a) && /64\.6/.test(r.method_b), `${r.where}: both readings should give 64.6`));
+  ok(near((2487.20 / 3851.88) * 100, 64.6, 0.05), 'amounts should give 64.6');
+  ok(year('2023/24').development_absorption_pct === 64.6 && listed('development-absorption-2023-24', 64.5), 'series shows 64.6, register keeps 64.5');
+});
+test('re-read recurrent-absorption-2023-24: 85.8 is a misreading, the report prints 86.8 and 87.0, so the case stays open', () => {
+  const c = conflict('recurrent-absorption-2023-24');
+  ok(c.status === 'open' && c.verification_state === 'unresolved_no_reviewer', 'two printed values: case must stay open');
+  const text = c.reread.readings.find((r) => /text/.test(r.where));
+  ok(/86\.8/.test(text.method_a) && /86\.8/.test(text.method_b) && !/85\.8/.test(text.method_a + text.method_b), 'both readings of the line should give 86.8');
+  ok(year('2023/24').recurrent_absorption_pct === 86.8 && listed('recurrent-absorption-2023-24', 85.8) && listed('recurrent-absorption-2023-24', 87), 'series shows 86.8; 85.8 and 87.0 stay listed');
+});
+test('re-read development-absorption-2022-23: text 53.4 and table 53.8 are both printed, so the case stays open', () => {
+  const c = conflict('development-absorption-2022-23');
+  const [text, table] = ['text', 'table total, PDF p. 583'].map((w) => c.reread.readings.find((r) => r.where.includes(w)));
+  ok(/53\.4/.test(text.method_a) && /53\.4/.test(text.method_b) && table.method_a === '53.8' && table.method_b === '53.8', 'readings changed');
+  ok(c.status === 'open' && year('2022/23').development_absorption_pct === 53.8, 'case open, series keeps the table total');
+});
 test('conflict recurrent-absorption-2023-24: provenance points the reader to the register', () => {
   ['recurrent_absorption_pct', 'development_absorption_pct'].forEach((k) => ok(/See conflict/.test(year('2023/24').provenance[k].page_note || ''), `${k} page_note should name the conflict`));
   ok(/See conflict development-absorption-2022-23/.test(year('2022/23').provenance.development_absorption_pct.page_note || ''), '2022/23 page_note should name the conflict');
@@ -194,14 +215,14 @@ test('conflict recurrent-absorption-2024-25: Table 2.5 value 82 is listed, the s
   ok(cobSiaya('2024/25', 'recurrent_absorption_pct').value === 82 && listed('recurrent-absorption-2024-25', 82), 'Table 2.5 82 must be in the case');
   ok(year('2024/25').recurrent_absorption_pct === 83, 'series must keep 83');
 });
-test('conflict recurrent-absorption-2023-24: Table 2.3 value 87.0 is listed, the series keeps 85.8', () => {
+test('conflict recurrent-absorption-2023-24: Table 2.3 value 87.0 is listed, the series shows the chapter value 86.8', () => {
   ok(cobSiaya('2023/24', 'recurrent_absorption_pct').value === 87 && listed('recurrent-absorption-2023-24', 87), 'Table 2.3 87.0 must be in the case');
   ok(near((5138.67 / 5909.25) * 100, 87.0, 0.05), 'Table 2.3 amounts should give 87.0');
-  ok(year('2023/24').recurrent_absorption_pct === 85.8, 'series must keep 85.8');
+  ok(year('2023/24').recurrent_absorption_pct === 86.8, 'series must show 86.8');
 });
-test('conflict development-absorption-2023-24: Table 2.3 value 64.6 is listed, the series keeps 64.5', () => {
+test('conflict development-absorption-2023-24: Table 2.3 value 64.6 equals the series', () => {
   ok(cobSiaya('2023/24', 'development_absorption_pct').value === 64.6 && listed('development-absorption-2023-24', 64.6), 'Table 2.3 64.6 must be in the case');
-  ok(year('2023/24').development_absorption_pct === 64.5, 'series must keep 64.5');
+  ok(year('2023/24').development_absorption_pct === 64.6, 'series must show 64.6');
 });
 test('conflict pending-close-2025: Table 2.9 value 1,890.0 is a third value; still no series value', () => {
   const pb = cobSiaya('2024/25', 'pb_grand_total').value;

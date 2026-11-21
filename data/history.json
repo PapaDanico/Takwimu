@@ -801,7 +801,7 @@
           "page": 583,
           "printed_page": 557,
           "read": "RapidOCR",
-          "page_note": "department table total (1,520.28 of 2,827.00); the text on PDF p. 578 reads 53.4 per cent. See conflict development-absorption-2022-23"
+          "page_note": "department table total (1,520.28 of 2,827.00); the text on PDF p. 578 prints 53.4 per cent (both confirmed by two re-readings on 21 Nov 2026). See conflict development-absorption-2022-23"
         },
         "osr_m": {
           "source_id": "cob-report-2022-23",
@@ -845,12 +845,12 @@
       "spent": 7.63,
       "recurrent_spent": 5.14,
       "development_spent": 2.49,
-      "recurrent_absorption_pct": 85.8,
-      "development_absorption_pct": 64.5,
+      "recurrent_absorption_pct": 86.8,
+      "development_absorption_pct": 64.6,
       "osr_m": 610.74,
       "osr_target_m": 760.0,
       "report": "2023/24",
-      "caveat": "The scanned text of the recurrent budget is garbled; 5.91 is the approved total minus the development budget. On that figure recurrent absorption is 87.0 per cent, against the report's 85.8 per cent. The FY2024/25 report gives a different own-source revenue for this year (KSh 427.95m); see data/siaya.json. Pending bills: the FY2023/24 report gives KSh 303.91m outstanding at 30 June 2024 but says this excludes bills incurred in the year. The FY2024/25 report gives the stock at 30 June 2024 as KSh 1.12bn, which is the figure used here.",
+      "caveat": "The scanned text of the recurrent budget is garbled; 5.91 is the approved total minus the development budget. On that figure recurrent absorption is 87.0 per cent (Table 2.3 also prints 87.0), against 86.8 per cent in the county chapter. The PDF text layer had misread these as 85.8 and 64.5; two re-readings on 21 Nov 2026 give 86.8 and 64.6. The FY2024/25 report gives a different own-source revenue for this year (KSh 427.95m); see data/siaya.json. Pending bills: the FY2023/24 report gives KSh 303.91m outstanding at 30 June 2024 but says this excludes bills incurred in the year. The FY2024/25 report gives the stock at 30 June 2024 as KSh 1.12bn, which is the figure used here.",
       "pending_total_m": 1120,
       "provenance": {
         "approved": {
@@ -894,15 +894,15 @@
           "source_id": "cob-report-2023-24",
           "page": 513,
           "printed_page": 490,
-          "read": "PDF text layer",
-          "page_note": "text layer reads 85.8; RapidOCR of the same line and the department table total (PDF p. 517) read 86.8. See conflict recurrent-absorption-2023-24"
+          "read": "RapidOCR",
+          "page_note": "two RapidOCR re-readings (400 and 600 dpi) of this line read 86.8, as does the department table total (PDF p. 517); the PDF text layer had read 85.8. Table 2.3 (PDF p. 30) prints 87.0. See conflict recurrent-absorption-2023-24"
         },
         "development_absorption_pct": {
           "source_id": "cob-report-2023-24",
           "page": 513,
           "printed_page": 490,
-          "read": "PDF text layer",
-          "page_note": "text layer reads 64.5; RapidOCR of the same line and the department table total (PDF p. 517) read 64.6. See conflict development-absorption-2023-24"
+          "read": "RapidOCR",
+          "page_note": "two RapidOCR re-readings (400 and 600 dpi) of this line read 64.6, as do the department table total (PDF p. 517) and Table 2.3 (PDF p. 30); the PDF text layer had read 64.5. See conflict development-absorption-2023-24"
         },
         "osr_m": {
           "source_id": "cob-report-2023-24",

@@ -68,9 +68,9 @@ const srv = http.createServer((req, res) => {
   await p2.goto(base + '/compare/', { waitUntil: 'networkidle' });
   check(await p2.locator('ul.rank > li').count() === 47, 'compare lists all 47 counties');
   check(await p2.locator('.kmap-values a').count() === 47, 'compare map shades all 47 counties');
-  await p2.locator('select').first().selectOption('osr_performance_pct');
-  await p2.waitForFunction(() => location.search.includes('i=osr_performance_pct'));
-  check(/i=osr_performance_pct/.test(p2.url()), 'compare writes the indicator to the address');
+  await p2.locator('select').first().selectOption('development_absorption_pct');
+  await p2.waitForFunction(() => location.search.includes('i=development_absorption_pct'));
+  check(/i=development_absorption_pct/.test(p2.url()), 'compare writes the indicator to the address');
   check(await p2.locator('input[type=radio][value=high]').isDisabled() && /not by value/.test(await p2.locator('.notice').first().innerText()), 'doubtful readings switch the list to A to Z and disable ordering by value');
   check(/Not available/.test(await p2.locator('ul.rank').innerText()), 'missing values say "Not available" with the reason');
   check(/No county chosen yet/.test(await p2.locator('#side-h ~ .empty').innerText()), 'side by side shows an empty state with no county chosen');

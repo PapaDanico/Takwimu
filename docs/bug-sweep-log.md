@@ -2,6 +2,14 @@
 
 Running log. Newest first. Each entry: what was found, how, status.
 
+## 21 Nov 2026, sweep 15: OCR re-reading
+| Finding | How found | Status |
+|---|---|---|
+| Fifteen FY 2024/25 county percentages doubtful or unread; cause: RapidOCR's angle classifier flipped short numbers (91 as 16, 90 as 06) | Re-reading the cells with the classifier off at 400 and 600 dpi | 9 resolved by two agreeing readings that match the amounts; 6 still open (null, doubtful) |
+| Five cells marked "blank" (Makueni, Murang'a, Samburu, Trans Nzoia development absorption; Mombasa overall absorption) are printed | Re-reading found digits in each | Now `doubtful`, so the compare view does not order those indicators by value |
+| FY 2023/24 Siaya absorption 85.8 and 64.5 were text-layer misreadings | Two re-readings of the line, the department table and Table 2.3 | Series now 86.8 and 64.6; development case resolved by source, recurrent case open (report prints 86.8 and 87.0) |
+| Compare view described every doubtful value as an OCR reading that disagrees with the amounts | Review of the new doubtful cells | Fixed: it shows the cell's own note |
+
 ## 21 Nov 2026, sweep 14: de-duplication (owner request) and two review findings
 Scope: every page, header and footer, for repeated county lists, explanations, charts, navigation, calls to action and disclaimers. Nothing unique was removed: every figure, source, caveat, conflict disclosure and legal text is still on the site, in one place.
 

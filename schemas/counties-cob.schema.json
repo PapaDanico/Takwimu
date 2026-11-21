@@ -67,8 +67,29 @@
         "ocr_reading": { "type": "string" },
         "printed_unit": { "type": "string" },
         "status": { "type": "string", "enum": ["blank", "doubtful"] },
-        "note": { "type": "string" }
+        "note": { "type": "string" },
+        "reread": { "$ref": "#/$defs/reread" }
       }
+    },
+    "reread": {
+      "type": "object",
+      "required": ["on", "method_a", "method_b", "check", "outcome", "page_image_checked", "first_pass"],
+      "additionalProperties": false,
+      "properties": {
+        "on": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "method_a": { "$ref": "#/$defs/reading" },
+        "method_b": { "$ref": "#/$defs/reading" },
+        "check": { "type": "string" },
+        "outcome": { "type": "string", "pattern": "^(accepted|not accepted): " },
+        "page_image_checked": { "type": "boolean", "enum": [false] },
+        "first_pass": { "type": "string" }
+      }
+    },
+    "reading": {
+      "type": "object",
+      "required": ["how", "reading"],
+      "additionalProperties": false,
+      "properties": { "how": { "type": "string" }, "reading": { "type": "string" }, "conf": { "type": ["number", "null"] } }
     },
     "row": {
       "type": "object",

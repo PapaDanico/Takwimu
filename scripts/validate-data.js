@@ -158,6 +158,9 @@ reg.conflicts.forEach((c) => {
   if (!['resolved_by_source', 'unresolved_no_reviewer', 'reviewed'].includes(c.verification_state)) fail(`conflicts ${c.id}: verification_state missing or unknown`);
   if (c.verification_state === 'reviewed' && !(c.reviewer && c.reviewed_on)) fail(`conflicts ${c.id}: a reviewed case needs reviewer and reviewed_on`);
   if (typeof c.page_image_checked !== 'boolean') fail(`conflicts ${c.id}: page_image_checked must be true or false`);
+  // Machine re-readings never stand in for a person viewing the page, and a case they resolve says so.
+  if (c.reread && (c.reread.page_image_checked || c.page_image_checked)) fail(`conflicts ${c.id}: a machine re-read cannot set page_image_checked`);
+  if (c.reread && c.status === 'resolved' && c.verification_state !== 'resolved_by_source') fail(`conflicts ${c.id}: resolved by re-reading must be resolved_by_source`);
 });
 // Every conflict flagged in the history file must appear in the register.
 const required = ['osr-2023-24', 'osr-2015-16', 'pending-2021', 'pending-2023', 'pending-2024'];
@@ -337,6 +340,18 @@ cob.years.forEach((yr) => {
       } else {
         if (cell.status) fail(`${rt} ${k}: a value with status ${cell.status}`);
         if (!cell.raw) fail(`${rt} ${k}: missing the raw printed reading`);
+      }
+      // A re-read value is accepted only when both readings agree with it and with the printed amounts (0.5 points).
+      if (cell.reread) {
+        const r = cell.reread; const digits = (t) => (/^[\d.,]+$/.test(t) ? Number(t.replace(/\D/g, '')) : null);
+        const accepted = r.outcome.startsWith('accepted');
+        if (accepted !== (cell.value !== null)) fail(`${rt} ${k}: re-read outcome "${r.outcome}" does not match value ${cell.value}`);
+        if (accepted) {
+          if (digits(r.method_a.reading) !== cell.value || digits(r.method_b.reading) !== cell.value) fail(`${rt} ${k}: accepted value ${cell.value} is not what both readings give`);
+          const pc = PCTS.find(([p]) => p === k);
+          if (!pc) fail(`${rt} ${k}: re-read is only defined for percentages`);
+          else if (Math.abs((val(row, pc[1]) / val(row, pc[2])) * 100 - cell.value) > 0.5) fail(`${rt} ${k}: accepted re-read ${cell.value} is more than 0.5 points from the printed amounts`);
+        }
       }
     });
     ROWS.forEach(([a, b, t]) => {

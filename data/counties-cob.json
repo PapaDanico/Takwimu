@@ -205,8 +205,26 @@
       "read": "ocr",
       "unit": "%",
       "value": null,
-      "status": "blank",
-      "note": "blank cell in table (no value printed), or not read by OCR"
+      "status": "doubtful",
+      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave 77 and nothing (the printed amounts give 76.7 per cent). Left empty.",
+      "raw": "77 / (none)",
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "77",
+        "conf": 0.594
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "",
+        "conf": null
+       },
+       "check": "expenditure_total / approved_budget_total = 76.71 per cent; reading 77 differs by 0.29 points",
+       "outcome": "not accepted: the two readings disagree",
+       "page_image_checked": false,
+       "first_pass": "not read (cell left blank by the first pass)"
+      }
      },
      "pb_exec_recurrent": {
       "table": "Table 2.9: Pending Bills for the Counties as of 30th June 2025",
@@ -590,13 +608,28 @@
       "printed_page": 2,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "raw": "38",
-      "ocr_conf": 0.664,
+      "value": 77,
+      "raw": "77",
+      "ocr_conf": 0.543,
       "ocr_pass": "second OCR pass on cropped column",
       "ocr_reading": "38",
-      "status": "doubtful",
-      "note": "OCR reading 38 is inconsistent with the printed amounts (total_osr_actual/total_osr_target = 76.6%); printed value not recovered"
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "77",
+        "conf": 0.636
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "77",
+        "conf": 0.543
+       },
+       "check": "total_osr_actual / total_osr_target = 76.64 per cent; reading 77 differs by 0.36 points",
+       "outcome": "accepted: both readings agree and are within 0.5 points of the printed amounts",
+       "page_image_checked": false,
+       "first_pass": "38"
+      }
      },
      "derived": {
       "osr_performance_pct": 76.6,
@@ -1152,12 +1185,27 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "raw": "16",
-      "ocr_conf": 0.643,
+      "value": 91,
+      "raw": "91",
+      "ocr_conf": 0.665,
       "ocr_reading": "16",
-      "status": "doubtful",
-      "note": "OCR reading 16 is inconsistent with the printed amounts (recurrent_expenditure/recurrent_budget = 91.1%); printed value not recovered"
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "91",
+        "conf": 0.665
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "91",
+        "conf": 0.665
+       },
+       "check": "recurrent_expenditure / recurrent_budget = 91.15 per cent; reading 91 differs by 0.15 points",
+       "outcome": "accepted: both readings agree and are within 0.5 points of the printed amounts",
+       "page_image_checked": false,
+       "first_pass": "16"
+      }
      },
      "development_absorption_pct": {
       "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2024/25",
@@ -1175,9 +1223,26 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "status": "blank",
-      "note": "blank cell in table (no value printed), or not read by OCR"
+      "value": 77,
+      "raw": "77",
+      "ocr_conf": 0.322,
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "77",
+        "conf": 0.545
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "77",
+        "conf": 0.322
+       },
+       "check": "expenditure_total / approved_budget_total = 76.74 per cent; reading 77 differs by 0.26 points",
+       "outcome": "accepted: both readings agree and are within 0.5 points of the printed amounts",
+       "page_image_checked": false,
+       "first_pass": "not read (cell left blank by the first pass)"
+      }
      },
      "pb_exec_recurrent": {
       "table": "Table 2.9: Pending Bills for the Counties as of 30th June 2025",
@@ -4059,8 +4124,26 @@
       "read": "ocr",
       "unit": "%",
       "value": null,
-      "status": "blank",
-      "note": "blank cell in table (no value printed), or not read by OCR"
+      "status": "doubtful",
+      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave 71 and 7 (the printed amounts give 71.3 per cent). Left empty.",
+      "raw": "71 / 7",
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "71",
+        "conf": 0.557
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "7",
+        "conf": 0.315
+       },
+       "check": "development_expenditure / development_budget = 71.27 per cent; reading 71 differs by 0.27 points",
+       "outcome": "not accepted: the two readings disagree",
+       "page_image_checked": false,
+       "first_pass": "not read (cell left blank by the first pass)"
+      }
      },
      "overall_absorption_pct": {
       "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2024/25",
@@ -4213,13 +4296,28 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "raw": "24",
-      "ocr_conf": 0.662,
+      "value": 77,
+      "raw": "77",
+      "ocr_conf": 0.468,
       "ocr_pass": "second OCR pass on cropped column",
       "ocr_reading": "24",
-      "status": "doubtful",
-      "note": "OCR reading 24 is inconsistent with the printed amounts (total_osr_actual/total_osr_target = 76.9%); printed value not recovered"
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "77",
+        "conf": 0.536
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "77",
+        "conf": 0.468
+       },
+       "check": "total_osr_actual / total_osr_target = 76.85 per cent; reading 77 differs by 0.15 points",
+       "outcome": "accepted: both readings agree and are within 0.5 points of the printed amounts",
+       "page_image_checked": false,
+       "first_pass": "24"
+      }
      },
      "derived": {
       "osr_performance_pct": 76.9,
@@ -5027,8 +5125,26 @@
       "read": "ocr",
       "unit": "%",
       "value": null,
-      "status": "blank",
-      "note": "blank cell in table (no value printed), or not read by OCR"
+      "status": "doubtful",
+      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave nothing and 71 (the printed amounts give 70.8 per cent). Left empty.",
+      "raw": "(none) / 71",
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "",
+        "conf": null
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "71",
+        "conf": 0.621
+       },
+       "check": "development_expenditure / development_budget = 70.81 per cent",
+       "outcome": "not accepted: the two readings disagree",
+       "page_image_checked": false,
+       "first_pass": "not read (cell left blank by the first pass)"
+      }
      },
      "overall_absorption_pct": {
       "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2024/25",
@@ -5991,8 +6107,26 @@
       "read": "ocr",
       "unit": "%",
       "value": null,
-      "status": "blank",
-      "note": "blank cell in table (no value printed), or not read by OCR"
+      "status": "doubtful",
+      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave 1 and 71 (the printed amounts give 71.1 per cent). Left empty.",
+      "raw": "1 / 71",
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "1",
+        "conf": 0.328
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "71",
+        "conf": 0.627
+       },
+       "check": "development_expenditure / development_budget = 71.13 per cent; reading 1 differs by 70.13 points",
+       "outcome": "not accepted: the two readings disagree",
+       "page_image_checked": false,
+       "first_pass": "not read (cell left blank by the first pass)"
+      }
      },
      "overall_absorption_pct": {
       "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2024/25",
@@ -6232,8 +6366,26 @@
       "read": "ocr",
       "unit": "%",
       "value": null,
-      "status": "blank",
-      "note": "blank cell in table (no value printed), or not read by OCR"
+      "status": "doubtful",
+      "note": "Printed but not read reliably: the first pass read nothing; two re-readings gave 77 and nothing (the printed amounts give 77.5 per cent). Left empty.",
+      "raw": "77 / (none)",
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "77",
+        "conf": 0.54
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "",
+        "conf": null
+       },
+       "check": "development_expenditure / development_budget = 77.45 per cent; reading 77 differs by 0.45 points",
+       "outcome": "not accepted: the two readings disagree",
+       "page_image_checked": false,
+       "first_pass": "not read (cell left blank by the first pass)"
+      }
      },
      "overall_absorption_pct": {
       "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2024/25",
@@ -6868,12 +7020,27 @@
       "printed_page": 3,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "raw": "16",
-      "ocr_conf": 0.651,
+      "value": 91,
+      "raw": "91",
+      "ocr_conf": 0.649,
       "ocr_reading": "16",
-      "status": "doubtful",
-      "note": "OCR reading 16 is inconsistent with the printed amounts (total_osr_actual/total_osr_target = 90.7%); printed value not recovered"
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "91",
+        "conf": 0.649
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "91",
+        "conf": 0.665
+       },
+       "check": "total_osr_actual / total_osr_target = 90.70 per cent; reading 91 differs by 0.30 points",
+       "outcome": "accepted: both readings agree and are within 0.5 points of the printed amounts",
+       "page_image_checked": false,
+       "first_pass": "16"
+      }
      },
      "derived": {
       "osr_performance_pct": 90.7,
@@ -7112,13 +7279,28 @@
       "printed_page": 2,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "raw": "13",
-      "ocr_conf": 0.666,
+      "value": 77,
+      "raw": "77",
+      "ocr_conf": 0.622,
       "ocr_pass": "second OCR pass on cropped column",
       "ocr_reading": "13",
-      "status": "doubtful",
-      "note": "OCR reading 13 is inconsistent with the printed amounts (total_osr_actual/total_osr_target = 76.8%); printed value not recovered"
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "77",
+        "conf": 0.622
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "77",
+        "conf": 0.644
+       },
+       "check": "total_osr_actual / total_osr_target = 76.84 per cent; reading 77 differs by 0.16 points",
+       "outcome": "accepted: both readings agree and are within 0.5 points of the printed amounts",
+       "page_image_checked": false,
+       "first_pass": "13"
+      }
      },
      "derived": {
       "osr_performance_pct": 76.8,
@@ -8638,12 +8820,27 @@
       "printed_page": 8,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "raw": "06",
-      "ocr_conf": 0.666,
+      "value": 90,
+      "raw": "90",
+      "ocr_conf": 0.398,
       "ocr_reading": "06",
-      "status": "doubtful",
-      "note": "OCR reading 06 is inconsistent with the printed amounts (recurrent_expenditure/recurrent_budget = 90.0%); printed value not recovered"
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "90",
+        "conf": 0.666
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "90",
+        "conf": 0.398
+       },
+       "check": "recurrent_expenditure / recurrent_budget = 90.03 per cent; reading 90 differs by 0.03 points",
+       "outcome": "accepted: both readings agree and are within 0.5 points of the printed amounts",
+       "page_image_checked": false,
+       "first_pass": "06"
+      }
      },
      "development_absorption_pct": {
       "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2024/25",
@@ -11314,9 +11511,26 @@
       "printed_page": 9,
       "read": "ocr",
       "unit": "%",
-      "value": null,
-      "status": "blank",
-      "note": "blank cell in table (no value printed), or not read by OCR"
+      "value": 77,
+      "raw": "77",
+      "ocr_conf": 0.538,
+      "reread": {
+       "on": "2026-11-21",
+       "method_a": {
+        "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+        "reading": "77",
+        "conf": 0.611
+       },
+       "method_b": {
+        "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+        "reading": "77",
+        "conf": 0.538
+       },
+       "check": "expenditure_total / approved_budget_total = 76.95 per cent; reading 77 differs by 0.05 points",
+       "outcome": "accepted: both readings agree and are within 0.5 points of the printed amounts",
+       "page_image_checked": false,
+       "first_pass": "not read (cell left blank by the first pass)"
+      }
      },
      "pb_exec_recurrent": {
       "table": "Table 2.9: Pending Bills for the Counties as of 30th June 2025",
@@ -11463,7 +11677,24 @@
      "ocr_conf": 0.755,
      "ocr_reading": "4,145",
      "status": "doubtful",
-     "note": "OCR reading 4,145 is inconsistent with the printed amounts (total_osr_actual/total_osr_target = 76.8%); printed value not recovered"
+     "note": "Both re-readings give 4,145 and 4145: the printed cell holds 4,145, which is not a percentage of the printed amounts (76.8 per cent). Hypothesis: the column was summed (the 47 printed county values add to 4,143). Not confirmed. Left empty.",
+     "reread": {
+      "on": "2026-11-21",
+      "method_a": {
+       "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+       "reading": "4,145",
+       "conf": 0.734
+      },
+      "method_b": {
+       "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+       "reading": "4145",
+       "conf": 0.774
+      },
+      "check": "total_osr_actual / total_osr_target = 76.76 per cent; reading 4145 differs by 4068.24 points",
+      "outcome": "not accepted: both readings agree but differ from the printed amounts by more than 0.5 points",
+      "page_image_checked": false,
+      "first_pass": "4,145"
+     }
     },
     "recurrent_budget": {
      "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2024/25",
@@ -11531,12 +11762,27 @@
      "printed_page": 9,
      "read": "ocr",
      "unit": "%",
-     "value": null,
-     "raw": "16",
-     "ocr_conf": 0.653,
+     "value": 91,
+     "raw": "91",
+     "ocr_conf": 0.666,
      "ocr_reading": "16",
-     "status": "doubtful",
-     "note": "OCR reading 16 is inconsistent with the printed amounts (recurrent_expenditure/recurrent_budget = 90.7%); printed value not recovered"
+     "reread": {
+      "on": "2026-11-21",
+      "method_a": {
+       "how": "RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed",
+       "reading": "91",
+       "conf": 0.666
+      },
+      "method_b": {
+       "how": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x",
+       "reading": "91",
+       "conf": 0.666
+      },
+      "check": "recurrent_expenditure / recurrent_budget = 90.67 per cent; reading 91 differs by 0.33 points",
+      "outcome": "accepted: both readings agree and are within 0.5 points of the printed amounts",
+      "page_image_checked": false,
+      "first_pass": "16"
+     }
     },
     "development_absorption_pct": {
      "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2024/25",
@@ -11768,83 +12014,49 @@
     "row_identity_failures": [],
     "doubtful_percentages": [
      {
-      "county": "Kilifi",
-      "field": "osr_performance_pct",
-      "ocr_reading": "38",
-      "arithmetic": 76.6
-     },
-     {
-      "county": "Nyandarua",
-      "field": "osr_performance_pct",
-      "ocr_reading": "24",
-      "arithmetic": 76.9
-     },
-     {
-      "county": "Nandi",
-      "field": "osr_performance_pct",
-      "ocr_reading": "16",
-      "arithmetic": 90.7
-     },
-     {
-      "county": "Baringo",
-      "field": "osr_performance_pct",
-      "ocr_reading": "13",
-      "arithmetic": 76.8
-     },
-     {
-      "county": "Total",
-      "field": "osr_performance_pct",
-      "ocr_reading": "4,145",
-      "arithmetic": 76.8
-     },
-     {
-      "county": "Lamu",
-      "field": "recurrent_absorption_pct",
-      "ocr_reading": "16",
-      "arithmetic": 91.1
-     },
-     {
-      "county": "Bomet",
-      "field": "recurrent_absorption_pct",
-      "ocr_reading": "06",
-      "arithmetic": 90
-     },
-     {
-      "county": "Total",
-      "field": "recurrent_absorption_pct",
-      "ocr_reading": "16",
-      "arithmetic": 90.7
-     }
-    ],
-    "blank_cells": [
-     {
       "county": "Mombasa",
-      "field": "overall_absorption_pct"
-     },
-     {
-      "county": "Lamu",
-      "field": "overall_absorption_pct"
+      "field": "overall_absorption_pct",
+      "ocr_reading": "77 / (none)",
+      "arithmetic": 76.7,
+      "reread": "not accepted: the two readings disagree"
      },
      {
       "county": "Makueni",
-      "field": "development_absorption_pct"
+      "field": "development_absorption_pct",
+      "ocr_reading": "71 / 7",
+      "arithmetic": 71.3,
+      "reread": "not accepted: the two readings disagree"
      },
      {
       "county": "Murang'a",
-      "field": "development_absorption_pct"
+      "field": "development_absorption_pct",
+      "ocr_reading": "(none) / 71",
+      "arithmetic": 70.8,
+      "reread": "not accepted: the two readings disagree"
      },
      {
       "county": "Samburu",
-      "field": "development_absorption_pct"
+      "field": "development_absorption_pct",
+      "ocr_reading": "1 / 71",
+      "arithmetic": 71.1,
+      "reread": "not accepted: the two readings disagree"
      },
      {
       "county": "Trans Nzoia",
-      "field": "development_absorption_pct"
+      "field": "development_absorption_pct",
+      "ocr_reading": "77 / (none)",
+      "arithmetic": 77.5,
+      "reread": "not accepted: the two readings disagree"
      },
      {
-      "county": "Nairobi City",
-      "field": "overall_absorption_pct"
-     },
+      "county": "Total (as printed)",
+      "field": "osr_performance_pct",
+      "ocr_reading": "4,145",
+      "arithmetic": 76.8,
+      "reread": "not accepted: both readings agree but differ from the printed amounts by more than 0.5 points"
+     }
+    ],
+    "blank_cells": [
      {
       "county": "Mombasa",
       "field": "pb_assembly_development"
@@ -12069,7 +12281,35 @@
       "county": "Nairobi City",
       "field": "pb_assembly_development"
      }
-    ]
+    ],
+    "reread_2026_11_21": {
+     "method": "Every percentage cell of Tables 2.1 and 2.5 (192 cells) re-read with two methods: A) RapidOCR recogniser only (detector and 0/180-degree angle classifier off) on a 600 dpi greyscale crop of the cell, table rules removed; B) RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop of the cell, Otsu binarised and upscaled 2x. A value is accepted only when both readings agree and are within 0.5 points of the printed amounts. The first pass had used the angle classifier, which turned short numbers upside down (91 read as 16, 90 as 06).",
+     "cells": 192,
+     "both_agree_and_match_amounts": 180,
+     "both_agree_not_matching_amounts": 1,
+     "readings_disagree_or_missing": 11,
+     "previously_published_values_contradicted": 0,
+     "resolved": [
+      "Baringo osr_performance_pct: 77",
+      "Kilifi osr_performance_pct: 77",
+      "Nandi osr_performance_pct: 91",
+      "Nyandarua osr_performance_pct: 77",
+      "Bomet recurrent_absorption_pct: 90",
+      "Lamu recurrent_absorption_pct: 91",
+      "Lamu overall_absorption_pct: 77",
+      "Nairobi City overall_absorption_pct: 77",
+      "Total recurrent_absorption_pct: 91"
+     ],
+     "still_open": [
+      "Total osr_performance_pct",
+      "Makueni development_absorption_pct",
+      "Mombasa overall_absorption_pct",
+      "Murang'a development_absorption_pct",
+      "Samburu development_absorption_pct",
+      "Trans Nzoia development_absorption_pct"
+     ],
+     "page_image_checked": false
+    }
    },
    "siaya_vs_history_json": {
     "history_entry": "data/history.json years[fy=2024/25]",
