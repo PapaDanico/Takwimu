@@ -93,7 +93,7 @@ const SECTIONS = [
   { id: 'contact', title: '13. Contact and corrections', body: [
     'The quickest way to reach us is a WhatsApp message to Danico Ventures Ltd, through the "Report an inaccuracy" link. Please give the page address, the figure or text concerned, and a link to the document that shows the right value.',
     'Corrections policy: we check every report of a mistake against the source document. If a figure is wrong, we correct it, note the change and the date in the public repository, and keep the conflict register on the Data page up to date. Where official reports disagree, the Data page lists each case with both values and their sources, rather than choosing one silently. Corrections apply equally to the free Site and to briefs prepared for clients.',
-    'The Site has no form and collects no personal data. Briefs are requested by WhatsApp message to Danico Ventures Ltd, linked from /briefs/request/. We do not publish a contact email address.',
+    'The Site has no form and collects no personal data. Briefs are requested by WhatsApp message to Danico Ventures Ltd, linked from /reports/#briefs. We do not publish a contact email address.',
   ] },
 ];
 

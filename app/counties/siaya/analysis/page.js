@@ -6,13 +6,14 @@ import CalcTable from '../../../../components/CalcTable';
 import { Provisional, ReviewCounts } from '../../../../components/ObsTable';
 import { masked, badge } from '../../../../lib/review-status';
 import Reviewed from '../../../../components/Reviewed';
+import { LatestYear, SpentTenYear, Unspent, PendingTenYear, Growth, Limits, TREND_TOC } from '../../../../components/siaya/AnalysisTrends';
 
 // Masked: a result is withheld (null) when the calculation or any of its inputs was rejected in editorial review.
 const a = masked('siaya-analysis');
 
 export const metadata = {
   title: 'Siaya analysis',
-  description: 'Measures calculated by Takwimu Kenya from published figures for Siaya: real spending per person, transfer dependency, execution rates beside printed rates, pending bills, audit recurrence, budget beside services, climate finance beside hotspot wards and the make-up of own-source revenue (ordinary revenue and health FIF).',
+  description: 'Measures calculated by Takwimu Kenya from published figures for Siaya: the latest year, share of budget spent over ten years, unspent budget, pending bills, growth, real spending per person, transfer dependency, printed and recalculated shares of budget spent, audit recurrence, budget beside services, climate finance beside hotspot wards and the make-up of own-source revenue (ordinary revenue and health FIF).',
 };
 
 const R = a.records;
@@ -38,7 +39,7 @@ const a2Series = A2_SRC.map(([name, test], i) => ({
   values: a2Years.map((y) => { const r = a2.find((x) => x.status === 'value' && fyOf(x) === y && test(x.source_ids[0]) && !(/^GOV-02-/.test(x.source_ids[0]) && !x.source_ids[0].includes(y.slice(3).replace('/', '-')))); return r ? r.result : null; }),
 }));
 
-// A3: execution rates, recalculated beside printed, Controller of Budget and county documents in separate columns.
+// A3: share of budget spent, recalculated beside printed, Controller of Budget and county documents in separate columns.
 const a3 = fam('A3');
 const a3Rows = uniq(a3.map((r) => `${fyOf(r)}|${r.calc_id.split('-').slice(-1)[0].replace(/original|supplementary/, 'total')}`)).sort();
 const a3Cell = (fy, part, cob) => a3.filter((r) => fyOf(r) === fy && r.calc_id.includes(`-${part}`) && (cob ? /cob-/.test(r.source_ids[0]) : !/cob-/.test(r.source_ids[0])));
@@ -83,7 +84,7 @@ export default function SiayaAnalysis() {
   return (
     <main id="main" className="wrap page">
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Analysis" title="Siaya analysis"
-        sub="Measures that no report prints but that can be worked out from figures the reports do print: spending per person in today’s prices, how much the county relies on transfers, how much of its budget it spends, how unpaid bills change, and which audit findings recur."
+        sub="The canonical home for Siaya’s share of budget spent, pending bills and real spending per person: the latest year, ten-year series, and measures worked out from figures the reports print, such as reliance on transfers and audit findings that recur."
         path="/counties/siaya/analysis/" shareText="Siaya analysis: calculated from published figures" />
 
       <section className="card gold" aria-labelledby="an-read">
@@ -96,6 +97,17 @@ export default function SiayaAnalysis() {
           <li><b>No verdicts.</b> Rates and counts describe documents, not the performance of any person.</li>
         </ul>
       </section>
+
+      <nav aria-label="Sections on this page"><ul className="toc">
+        {TREND_TOC.map(([id, t]) => <li key={id}><a href={`#${id}`}>{t}</a></li>)}
+        <li><a href="#an-a1">Per person</a></li><li><a href="#an-a2">Transfers</a></li><li><a href="#an-a3">Printed and recalculated</a></li><li><a href="#an-a4">Pending bills by source</a></li><li><a href="#an-a5">Audit recurrence</a></li><li><a href="#an-a6">Budget beside services</a></li><li><a href="#an-a7">Climate finance</a></li><li><a href="#an-a8">Own-source revenue parts</a></li><li><a href="#limits">Limits</a></li><li><a href="#an-gaps">Gaps</a></li>
+      </ul></nav>
+
+      <LatestYear />
+      <SpentTenYear />
+      <Unspent />
+      <PendingTenYear />
+      <Growth />
 
       <section className="card" aria-labelledby="an-a1">
         <h2 id="an-a1">Real spending per person</h2>
@@ -114,13 +126,13 @@ export default function SiayaAnalysis() {
       </section>
 
       <section className="card" aria-labelledby="an-a3">
-        <h2 id="an-a3">Budget execution: printed and recalculated, side by side</h2>
+        <h2 id="an-a3">Share of budget spent: printed and recalculated, side by side</h2>
         <p className="lead">Spending divided by budget, from the same document and budget version. Each recalculated rate is shown with the rate the report printed. Controller of Budget and county documents are in separate columns; they use different budgets and cut-off dates. No printed rate differs from its recalculation by more than 1 point.</p>
         <LineChart labels={a3Dev} unit="% of development budget" yFormat="one" naText="No value"
-          ariaLabel="Siaya development budget execution, recalculated, by kind of source document, per cent" series={a3DevSeries} />
-        <TableWrap label="Execution rates: Controller of Budget and county documents side by side">
+          ariaLabel="Siaya share of development budget spent, recalculated, by kind of source document, per cent" series={a3DevSeries} />
+        <TableWrap label="Share of budget spent: Controller of Budget and county documents side by side">
           <table className="data" id="exec-side">
-            <caption className="sr-only">Siaya execution rates, recalculated beside printed, Controller of Budget and county documents side by side</caption>
+            <caption className="sr-only">Siaya share of budget spent, recalculated beside printed, Controller of Budget and county documents side by side</caption>
             <thead><tr><th scope="col">Year and budget</th><th scope="col">Controller of Budget report</th><th scope="col">County document</th></tr></thead>
             <tbody>
               {a3Rows.map((k) => { const [fy, part] = k.split('|'); return (
@@ -129,7 +141,7 @@ export default function SiayaAnalysis() {
             </tbody>
           </table>
         </TableWrap>
-        <CalcTable caption="Execution rates: every record with inputs" records={a3} id="calc-a3" />
+        <CalcTable caption="Share of budget spent: every record with inputs" records={a3} id="calc-a3" />
       </section>
 
       <section className="card" aria-labelledby="an-a4">
@@ -177,7 +189,7 @@ export default function SiayaAnalysis() {
         <TableWrap label="Siaya own-source revenue by part, document and year">
           <table className="data" id="osr-parts">
             <caption className="sr-only">Siaya own-source revenue: ordinary revenue, FIF/A-i-A, printed total and FIF share, by fiscal year and source document (KSh million)</caption>
-            <thead><tr><th scope="col">Year and document</th><th scope="col" className="num">Ordinary OSR</th><th scope="col" className="num">FIF / A-i-A</th><th scope="col" className="num">Total (printed)</th><th scope="col" className="num">FIF share</th></tr></thead>
+            <thead><tr><th scope="col">Year and document</th><th scope="col" className="num">Ordinary own-source revenue</th><th scope="col" className="num">FIF / appropriations-in-aid</th><th scope="col" className="num">Total (printed)</th><th scope="col" className="num">FIF share</th></tr></thead>
             <tbody>
               {a8Share.map((r) => { const o = a8In(r, 'ordinary'); const f = a8In(r, 'fif'); const tot = a8In(r, 'printed_total') || a8In(r, 'total'); return (
                 <tr key={r.calc_id}><th scope="row">{r.period}<br /><small>{DOC(r.source_ids[0])}, PDF p. {f.pdf_page}</small></th><td className="num">{o ? m2(o.value) : 'Not given'}</td><td className="num">{m2(f.value)}</td><td className="num">{tot ? m2(tot.value) : '—'}</td><td className="num"><Reviewed b={badge('siaya-analysis', r.calc_id)}>{() => <b>{m2(r.result)}%</b>}</Reviewed></td></tr>
@@ -197,7 +209,7 @@ export default function SiayaAnalysis() {
               <TableWrap label={`FIF share of own-source revenue by county, ${r.period}`}>
                 <table className="data">
                   <caption className="sr-only">FIF/A-i-A and total own-source revenue by county, {r.period}, KSh million, ordered by FIF share</caption>
-                  <thead><tr><th scope="col">Position</th><th scope="col">County</th><th scope="col" className="num">FIF / A-i-A</th><th scope="col" className="num">Total OSR</th><th scope="col" className="num">FIF share</th></tr></thead>
+                  <thead><tr><th scope="col">Position</th><th scope="col">County</th><th scope="col" className="num">FIF / appropriations-in-aid</th><th scope="col" className="num">Total own-source revenue</th><th scope="col" className="num">FIF share</th></tr></thead>
                   <tbody>{rows.map((x, i) => <tr key={x.code} className={x.code === 41 ? 'hl' : undefined}><td className="num">{i + 1}</td><th scope="row">{x.code === 41 ? <b>{x.county}</b> : x.county}</th><td className="num">{m2(x.fif)}</td><td className="num">{m2(x.total)}</td><td className="num">{m2(x.share)}%</td></tr>)}</tbody>
                 </table>
               </TableWrap>
@@ -206,6 +218,8 @@ export default function SiayaAnalysis() {
         ); })}
         <CalcTable caption="Own-source revenue composition: every record with inputs" records={a8} id="calc-a8" />
       </section>
+
+      <Limits />
 
       <section className="card" aria-labelledby="an-gaps">
         <h2 id="an-gaps">Gaps and their reasons</h2>

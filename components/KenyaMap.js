@@ -19,7 +19,7 @@ export function mapScale(values) {
   return { min, max, step, bin, bins: Array.from({ length: STEPS }, (_, i) => [min + step * i, i === STEPS - 1 ? max : min + step * (i + 1)]) };
 }
 
-export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 47 counties', values, valueUnit = '', valueDec = 0, valueLabel, valueNotes = {}, mapId = 'kmap' }) {
+export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 47 counties', values, valueUnit = '', valueDec = 0, valueLabel, valueNotes = {}, mapId = 'kmap', boundaryNote = false }) {
   const { width, height } = geo.meta;
   let box = `0 0 ${width} ${height}`;
   if (focus) {
@@ -79,7 +79,7 @@ export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 
             <span className="kmap-key"><i className="kmap-sw soon" /> In preparation</span>
           </>
         )}
-        Boundaries: {geo.meta.source}, {geo.meta.licence}, simplified for display. Not for measuring area or distance.
+        {boundaryNote ? <span id="boundaries">Boundaries: {geo.meta.source}, {geo.meta.licence}, simplified for display. Not for measuring area or distance.</span> : <a href="/counties/#boundaries">About the map boundaries</a>}
       </figcaption>
     </figure>
   );

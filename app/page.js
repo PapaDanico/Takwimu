@@ -30,7 +30,7 @@ export default function Home() {
       <section className="card" aria-labelledby="how-h">
         <h2 id="how-h">How it works</h2>
         <p className="lead">Our purpose is simple: informed citizens, and counties and citizens working from the same facts, so that public money builds shared progress.</p>
-        <p>Every figure comes from a primary document and names it, so you can check it. How we read, check and label the figures is set out once, in the <Link href="/method/">method</Link>; the terms are explained in <Link href="/learn/">Learn</Link>. To start with the numbers, <Link href="/explore/">explore the data</Link>.</p>
+        <p>Every figure comes from a primary document and names it, so you can check it. How we read, check and label the figures is set out once, in the <Link href="/method/">method</Link>; the terms are explained in <Link href="/learn/">Learn</Link>. To start with the numbers, <Link href="/datasets/">explore the data</Link>.</p>
       </section>
     </main>
   );

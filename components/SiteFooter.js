@@ -7,13 +7,12 @@ const COLUMNS = [
   {
     heading: 'Explore',
     links: [
-      { href: '/explore/', label: 'Explore the data' },
-      { href: '/datasets/', label: 'Datasets' },
-      { href: '/kenya/', label: 'Kenya dashboard' },
-      { href: '/compare/', label: 'Compare counties' },
+      { href: '/kenya/', label: 'Kenya' },
+      { href: '/compare/', label: 'Compare' },
+      { href: '/counties/', label: 'Counties' },
+      { href: '/datasets/', label: 'Data' },
       { href: '/stories/', label: 'Data stories' },
-      { href: '/counties/', label: 'All 47 counties' },
-      { href: '/data/', label: 'Open data' },
+      { href: '/reports/', label: 'Publications' },
     ],
   },
   {
@@ -28,8 +27,9 @@ const COLUMNS = [
     links: [
       { href: '/method/', label: 'How we handle numbers' },
       { href: '/method/#sources', label: 'Where the data comes from' },
+      { href: '/data/', label: 'Siaya ten-year series' },
       { href: '/data/#conflicts', label: 'Where sources disagree' },
-      { href: '/briefs/request/', label: 'About our briefs' },
+      { href: '/reports/#briefs', label: 'About our briefs' },
     ],
   },
   {
@@ -82,7 +82,7 @@ export default function SiteFooter({ asOf }) {
               counties into plain language. Every figure names its source, so you can check it.
             </p>
             <div className="chips">
-              <a className="chip gold" href={ISSUES_URL} target="_blank" rel="noopener noreferrer">Report an inaccuracy</a>
+              <a className="chip gold" href={ISSUES_URL} target="_blank" rel="noopener noreferrer">Report an error</a>
             </div>
           </div>
 

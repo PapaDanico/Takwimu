@@ -618,3 +618,17 @@ small.cite { display: inline-block; margin-top: 2px; font-size: 12px; color: var
 .lv + .lv { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--rule); }
 .lv small { display: block; }
 .cm td { text-align: center; white-space: nowrap; }
+
+/* Siaya Related block and grouped page list (owner decision U6, 21 Nov 2026). */
+.siaya-related { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.siaya-related > .mini { margin: 0 0 8px; }
+.siaya-all { margin-top: 12px; }
+.siaya-all > summary { cursor: pointer; font-weight: 600; min-height: 36px; display: flex; align-items: center; }
+.siaya-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px 20px; margin-top: 8px; }
+.siaya-groups ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.siaya-groups a { display: inline-flex; min-height: 32px; align-items: center; font-size: 14px; }
+.siaya-groups a[aria-current="page"] { font-weight: 700; }
+.hub-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 20px; margin: 16px 0 0; }
+.hub-groups ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.hub-groups h2 { margin: 0 0 4px; font-size: 14px; letter-spacing: .02em; }
+.hub-groups a { display: inline-flex; min-height: 32px; align-items: center; font-size: 14px; }

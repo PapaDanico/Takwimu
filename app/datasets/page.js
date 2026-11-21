@@ -33,7 +33,7 @@ function Loading() {
 export default function DatasetsPage() {
   return (
     <main id="main" className="wrap page">
-      <ExploreHead trail={[{ href: '/', label: 'Home' }, { href: '/explore/', label: 'Explore' }]} current="Datasets" title="Datasets"
+      <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Datasets" title="Datasets"
         sub={`${datasets.length} datasets, national and county, each with its source, unit, coverage, method and the date it was last updated. Every one downloads as CSV and JSON.`} />
       <Suspense fallback={<Loading />}>
         <DatasetCatalogue datasets={datasets} sectors={SECTORS} sources={sources} years={years} />
@@ -57,7 +57,7 @@ export default function DatasetsPage() {
         <p className="lead">Series we looked for and could not publish. They are listed so the gap is visible, not filled.</p>
         <ul className="how">
           <li><b>Central government debt as a share of GDP.</b> The World Bank series (GC.DOD.TOTL.GD.ZS) has no values for Kenya in any year, and the IMF&apos;s series could not be reached on {shortDate(nat.meta.retrieved)} (the service refused the request). The Central Bank of Kenya&apos;s public debt series (domestic plus external, in shillings) is in the catalogue, and its ratio to GDP is a derived measure on the Kenya dashboard. The World Bank external debt series count only debt owed to lenders outside Kenya, so they are not total public debt.</li>
-          <li><b>Other sources not loaded.</b> County budget transparency scores (IBP Kenya), FinAccess county data, Uwezo learning assessments, KNBS census tables and NG-CDF allocations per constituency could not be reached or extracted as tables on {shortDate(nat.meta.retrieved)}. Each is listed with its reason under <Link href="/data/#gaps">known gaps</Link> on the Data page; we retry quarterly. The August 2017 presidential results are left out: that election was annulled, and the copy found is unsigned and its county rows do not add to its national total.</li>
+          <li><b>Other sources not loaded.</b> Sources we could not reach or extract as tables are listed once, each with its reason and retry date, under <Link href="/method/#known-gaps">known gaps</Link>.</li>
           <li><b>Net primary enrolment.</b> Only 2012 has a value from 2010 on; the gross enrolment series is listed beside it.</li>
           <li><b>Poverty.</b> The World Bank now measures this at $3.00 a day in 2021 prices, and only survey years have values.</li>
           <li><b>2025 values.</b> Under-5 mortality, life expectancy and access to electricity have no 2025 value yet.</li>

@@ -51,3 +51,103 @@
   to = "/kenya/"
   status = 301
   force = true
+
+# Owner UX decisions U2/U6 (21 Nov 2026): merged and moved pages. Each old path also keeps a static fallback page
+# (meta refresh, link and rel=canonical, components/Moved.js) for the static export served without these rules.
+# The smoke test checks every pair below against its fallback page.
+
+[[redirects]]
+  from = "/analytics/"
+  to = "/counties/siaya/analysis/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/analytics"
+  to = "/counties/siaya/analysis/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/counties/siaya/pulse/"
+  to = "/counties/siaya/analysis/#latest"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/counties/siaya/pulse"
+  to = "/counties/siaya/analysis/#latest"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/subcounties/"
+  to = "/counties/siaya/wards/#subcounties"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/subcounties"
+  to = "/counties/siaya/wards/#subcounties"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/profile/"
+  to = "/counties/siaya/people/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/profile"
+  to = "/counties/siaya/people/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights/"
+  to = "/counties/siaya/insights/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights"
+  to = "/counties/siaya/insights/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/briefs/"
+  to = "/reports/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/briefs"
+  to = "/reports/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/briefs/request/"
+  to = "/reports/#briefs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/briefs/request"
+  to = "/reports/#briefs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/explore/"
+  to = "/datasets/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/explore"
+  to = "/datasets/"
+  status = 301
+  force = true

@@ -13,10 +13,6 @@ const OPEN = [
   { q: 'Audit opinions for FY 2014/15 to FY 2018/19 are missing.', note: 'The Auditor-General\'s site was unavailable and the Parliament library does not hold those reports. Search summaries suggest FY 2017/18 and FY 2018/19 were qualified, but we could not open the reports, so they are not shown.' },
   { q: 'The FY 2019/20 full-year county report could not be downloaded.', note: 'Only own-source revenue for that year is shown, taken from the FY 2020/21 report.' },
   // Sources looked for and not obtained (21 Nov 2026); the reasons are in data/ngo.json and data/political.json (not_staged).
-  { q: 'Known gap: FinAccess county data (FSD Kenya, Central Bank of Kenya and KNBS).', note: 'The FinAccess site was reachable, but its county figures are only in an embedded dashboard and the downloadable files are survey microdata. County estimates from microdata would need survey weighting by us, which would be our estimate rather than a published figure, so none is shown. Retry quarterly for a published county table.' },
-  { q: 'Known gap: Uwezo learning assessments (Twaweza).', note: 'uwezo.net could not be reached (the connection failed on 21 Nov 2026), and no county table has been found elsewhere yet. No figure is shown. Retry quarterly.' },
-  { q: 'Known gap: NG-CDF allocations per constituency.', note: 'The Parliament library copy of the proposed 2024/25 ceiling for each constituency is a scanned document, and its OCR text is garbled, so no value was taken from it. A secondary website republishes figures, but it is not the primary document. No figure is shown. Retry quarterly for a text copy or a reliable re-read.' },
-  { q: 'Known gap: KNBS 2019 census tables (population by county and sub-county).', note: 'The KNBS website failed the secure (TLS) connection from our build environment, and that check was not bypassed. Siaya\'s 2019 count on this site is the one reproduced in the county\'s CIDP 2023-2027, which is named as its source. Retry quarterly.' },
 ];
 
 const DOCS = Object.fromEntries(manifest.documents.map((d) => [d.id, d]));
@@ -42,7 +38,7 @@ function RefRows({ rows }) {
 const REF_HEAD = <thead><tr><th scope="col">Figure</th><th scope="col">Value</th><th scope="col">Document</th><th scope="col">Page</th><th scope="col">How read, note</th></tr></thead>;
 
 export const metadata = {
-  title: 'Data downloads and sources',
+  title: 'Siaya ten-year series: sources and conflicts',
   description: 'Download the JSON data behind Takwimu Kenya, with the source and confidence of each file.',
 };
 
@@ -63,8 +59,8 @@ export default function DataPage() {
   const rows = hist.years.length;
   return (
     <main id="main" className="wrap page">
-      <PageHead eyebrow="Data" title="Data downloads and sources" sub="Every file is plain JSON. Each figure carries its source and confidence, so you can check it or reuse it. Please cite the original publisher as well as Takwimu." path="/data/" shareText="Takwimu Kenya open data" />
-      <nav className="card" aria-label="Data and method"><p style={{ margin: 0 }}>This section covers the data and how it is checked. <Link href="/method/">Read the method</Link> · <Link href="/datasets/">Search all datasets</Link> · <Link href="/explore/">Explore the data</Link></p></nav>
+      <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Ten-year series" title="Siaya ten-year series: sources and conflicts" sub="The Siaya series behind the ten-year pages, the source of every year and the register of conflicts between sources. Every file is plain JSON. Each figure carries its source and confidence, so you can check it or reuse it. Please cite the original publisher as well as Takwimu." path="/data/" shareText="Takwimu Kenya open data" />
+      <nav className="card" aria-label="Data and method"><p style={{ margin: 0 }}>This section covers the data and how it is checked. <Link href="/method/">Read the method</Link> · <Link href="/datasets/">Search all datasets</Link></p></nav>
       <section className="card" aria-labelledby="f-h">
         <h2 id="f-h">Files</h2>
         <TableWrap label="Data files">
@@ -173,7 +169,8 @@ export default function DataPage() {
         <p className="how">Review status: {reg.meta.reviewed}. Register last updated {reg.meta.updated}.</p>
       </section>
       <section className="card" id="gaps" aria-labelledby="open">
-        <h2 id="open">Known gaps and open questions</h2>
+        <h2 id="open">Open questions</h2>
+        <p className="lead">Sources we could not use, with the reason and the retry date, are listed once under <Link href="/method/#known-gaps">known gaps</Link>.</p>
         <div className="log">
           {OPEN.map((o, i) => (
             <article key={i} className="term-card">
@@ -182,7 +179,7 @@ export default function DataPage() {
             </article>
           ))}
         </div>
-        <p className="how">To report an inaccuracy, <a href="https://wa.me/message/GPPIKMENXJVWO1" target="_blank" rel="noopener noreferrer">message us on WhatsApp</a> with the page, the figure and the document that shows the right value.</p>
+        <p className="how">To report an error, <a href="https://wa.me/message/GPPIKMENXJVWO1" target="_blank" rel="noopener noreferrer">message us on WhatsApp</a> with the page, the figure and the document that shows the right value.</p>
       </section>
     </main>
   );

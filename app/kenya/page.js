@@ -56,7 +56,7 @@ const voterTotal = extra.VOTERS.checks.published_total;
 export default function KenyaPage() {
   return (
     <main id="main" className="wrap page">
-      <ExploreHead trail={[{ href: '/', label: 'Home' }, { href: '/explore/', label: 'Explore' }]} current="Kenya dashboard" title="Kenya dashboard"
+      <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Kenya dashboard" title="Kenya dashboard"
         sub="National indicators from 2010, grouped by sector. Each card shows the latest value and a small trend line. The trend explorer below charts any indicator, national, all counties or Siaya, in nominal or real terms, with a table." />
       <DataStamp period="2010 to 2025 (latest year varies by indicator)" checked={`Retrieved ${shortDate(nat.meta.retrieved)}`} updated="21 Nov 2026" completeness={`${inds.length} indicators with values; ${natIndicators.length - inds.length} without (see Not available)`} />
       <section className="card no-print-break" aria-labelledby="tools-h">
@@ -66,7 +66,7 @@ export default function KenyaPage() {
           <SaveView title="Kenya dashboard" />
           <PrintButton />
         </div>
-        <p className="hint" style={{ marginTop: 10 }}>Jump to: {ORDER.map((s, i) => <span key={s}>{i ? ' · ' : ''}<a href={`#${s.replace(' ', '-')}`}>{SECTORS[s]}</a></span>)} · <a href="#counties">Counties together</a> · <a href="#cbk">Central Bank of Kenya</a> · <a href="#analysis">Analysis</a> · <a href="#governance">Governance and elections</a> · <a href="#trends">Trend explorer</a> · <a href="#notes">Sources and notes</a></p>
+        <p className="hint" style={{ marginTop: 10 }}>Jump to: {ORDER.map((s, i) => <span key={s}>{i ? ' · ' : ''}<a href={`#${s.replace(' ', '-')}`}>{SECTORS[s]}</a></span>)} · <a href="#counties">Counties together</a> · <a href="#analysis">Analysis</a> · <a href="#governance">Governance and elections</a> · <a href="#trends">Trend explorer</a> · <a href="#notes">Sources and notes</a></p>
       </section>
 
       <section className="card" id="counties" aria-labelledby="counties-h">
@@ -85,15 +85,17 @@ export default function KenyaPage() {
             <div style={{ marginTop: 14 }}>
               <StatStrip label={`${SECTORS[sec]}: latest values`} items={list.map((x) => ({ label: x.short, value: show(x.last.value / x.div, x.dec), unit: x.dispUnit, note: `${x.last.year}; ${x.first.year}: ${show(x.first.value / x.div, x.dec)}`, spark: scaled(x) }))} />
             </div>
-          </section>
-        );
-      })}
-      <section className="card" id="cbk" aria-labelledby="cbk-h">
-        <h2 id="cbk-h">Money and banking: Central Bank of Kenya</h2>
+            {sec === 'money and banking' ? (
+      <div id="cbk">
+        <h3 id="cbk-h">Central Bank of Kenya series</h3>
         <p className="lead">Exchange rate, interest rates, public debt, government revenue and spending, money supply and reserves, from the CBK&apos;s own statistics files. One reading per year is shown (December, or the fiscal year for revenue and spending); every monthly value is in the <Link href="/datasets/?source=Central%20Bank%20of%20Kenya">CBK datasets</Link>.</p>
         <div style={{ marginTop: 14 }}><StatStrip label="Central Bank of Kenya: latest values" items={cbkItems} /></div>
         <p className="src">Source: <a href="https://www.centralbank.go.ke/statistics/">Central Bank of Kenya statistics</a>, retrieved {shortDate(extra.cbk.meta.retrieved)}; each file&apos;s SHA-256 is in the source manifest. Public debt is the national government&apos;s domestic and external debt as the CBK publishes it. GDP is the KNBS figure republished by the CBK. Reserves are &quot;usable&quot; reserves to 2024; from 2025 the bulletins drop that word. Notes: {extra.cbk.gaps.doubtful.join(' ')}</p>
-      </section>
+      </div>
+            ) : null}
+          </section>
+        );
+      })}
       <section className="card" id="analysis" aria-labelledby="analysis-h">
         <h2 id="analysis-h">Analysis: measures worked out from the published figures</h2>
         <p className="lead">These are not published by any source: Takwimu computes them from the CBK series above. Each says how. A year is left empty when any input is missing or the year is not complete.</p>

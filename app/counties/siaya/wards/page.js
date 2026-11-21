@@ -2,13 +2,14 @@ import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import WardMap from '../../../../components/WardMap';
+import SubCounties from '../../../../components/siaya/SubCounties';
 import { Provisional } from '../../../../components/ObsTable';
 import g from '../../../../data/siaya-geography.json';
 import wgeo from '../../../../data/siaya-wards-geo.json';
 
 export const metadata = {
-  title: 'Wards and constituencies',
-  description: 'The 6 constituencies and 30 county assembly wards of Siaya County with their IEBC codes, the spelling in each source and known aliases, and a ward map from the 2016 HDX layer (not an official IEBC map).',
+  title: 'Wards, constituencies and sub-counties',
+  description: 'The 6 constituencies, 30 county assembly wards and 6 sub-counties of Siaya County (population, density and health access by sub-county) with their IEBC codes, the spelling in each source and known aliases, and a ward map from the 2016 HDX layer (not an official IEBC map).',
 };
 
 const SRC = Object.fromEntries(g.sources.map((s) => [s.id, s]));
@@ -21,6 +22,10 @@ export default function SiayaWards() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Wards" title="Wards and constituencies"
         sub={`Siaya County (IEBC county code ${g.county.iebc_county_code}) has ${g.constituencies.length} constituencies and ${g.wards.length} county assembly wards. This registry gives each one its IEBC code, the spelling used by each source and the other names it appears under.`}
         path="/counties/siaya/wards/" shareText="Siaya wards and constituencies: codes, spellings and map" />
+
+      <nav aria-label="Sections on this page"><ul className="toc">
+        <li><a href="#wd-map">Ward map</a></li><li><a href="#wd-con">Constituencies</a></li><li><a href="#wd-wards">Wards</a></li><li><a href="#wd-sub">Sub-county names</a></li><li><a href="#subcounties">Sub-counties</a></li><li><a href="#wd-src">Sources</a></li>
+      </ul></nav>
 
       <section className="card gold" aria-labelledby="wd-read">
         <h2 id="wd-read">How to read this page</h2>
@@ -92,12 +97,14 @@ export default function SiayaWards() {
         ))}
       </section>
 
+      <SubCounties />
+
       <section className="card" aria-labelledby="wd-src">
         <h2 id="wd-src">Sources</h2>
         <ul className="how">
           {g.sources.map((s) => <li key={s.id}><b>{s.id}:</b> {s.url ? <a href={s.url} rel="noopener">{s.title}</a> : s.title}{s.pages ? `, ${s.pages}` : ''}. Used for: {s.used_for}.{s.limitation ? ` ${s.limitation}` : ''}</li>)}
         </ul>
-        <p className="src">The registry is in the <Link href="/datasets/?q=siaya-wards">dataset catalogue</Link> and in <a href="/data/siaya-geography.json">siaya-geography.json</a>. See the <Link href="/subcounties/">sub-counties page</Link> and the <Link href="/counties/siaya/climate/">ward climate hazards</Link>.</p>
+        <p className="src">The registry is in the <Link href="/datasets/?q=siaya-wards">dataset catalogue</Link> and in <a href="/data/siaya-geography.json">siaya-geography.json</a>. See the <a href="#subcounties">sub-counties</a> above and the <Link href="/counties/siaya/climate/">ward climate hazards</Link>.</p>
       </section>
     </main>
   );

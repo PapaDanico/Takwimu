@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
+import ProfileHealth from '../../../../components/siaya/ProfileHealth';
 import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
@@ -41,6 +42,10 @@ export default function SiayaHealth() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Health" title="Health in Siaya"
         sub="What published sources say about health in Siaya County: HIV, TB and malaria, care for mothers and children, and the health workforce. Each figure is shown with the document, page and period it comes from; where documents differ, both are shown."
         path="/counties/siaya/health/" shareText="Health in Siaya: indicators by source" />
+
+      <nav aria-label="Sections on this page"><ul className="toc">
+        <li><a href="#hl-hiv">HIV estimates</a></li><li><a href="#hl-hivp">Infections and treatment</a></li><li><a href="#hl-kdhs">Mothers and children</a></li><li><a href="#hl-tb">TB and malaria</a></li><li><a href="#hl-hw">Workforce</a></li><li><a href="#hl-press">News reports</a></li><li><a href="#profile-health">2014 to 2022 and older HIV estimates</a></li><li><a href="#hl-conf">Where sources disagree</a></li><li><a href="#hl-gaps">Not yet found</a></li>
+      </ul></nav>
 
       <section className="card gold" aria-labelledby="hl-read">
         <h2 id="hl-read">How to read this page</h2>
@@ -101,6 +106,8 @@ export default function SiayaHealth() {
         <p className="lead">These are secondary reports: the articles name no dataset, and one could not be retrieved (it is quoted from the research programme). They are leads to check, not established figures.</p>
         <ObsTable dataset="siaya-health" caption="Siaya health figures from county news articles (secondary reports)" id="press" rows={obs.filter(SECONDARY_ONLY).map((o) => row(o))} />
       </section>
+
+      <ProfileHealth />
 
       <section className="card" aria-labelledby="hl-conf">
         <h2 id="hl-conf">Where sources disagree</h2>

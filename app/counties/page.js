@@ -17,7 +17,7 @@ export default function Counties() {
       <section className="card" aria-labelledby="map-h">
         <h2 id="map-h">Map of Kenya</h2>
         <p className="lead">Select a county on the map, or use the list below.</p>
-        <KenyaMap />
+        <KenyaMap boundaryNote />
       </section>
       <section className="card" aria-labelledby="live-h">
         <h2 id="live-h">Published so far</h2>

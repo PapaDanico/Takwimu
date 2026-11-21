@@ -42,7 +42,7 @@ export default function TrendsView({ series, baseFy }) {
   return (
     <>
       <section className="card" aria-labelledby="pick-h">
-        <h2 id="pick-h">Choose an indicator</h2>
+        <h3 id="pick-h">Trend explorer: choose an indicator</h3>
         <form className="controls" onSubmit={(e) => e.preventDefault()}>
           <div className="field">
             <label htmlFor={`${uid}-i`}>Indicator</label>
@@ -64,7 +64,7 @@ export default function TrendsView({ series, baseFy }) {
       </section>
 
       <section className="card" aria-labelledby="trend-h">
-        <h2 id="trend-h">{s.short}</h2>
+        <h3 id="trend-h">Trend: {s.short}</h3>
         <p className="lead">{unitShown}. {s.labels[0]} to {s.labels[s.labels.length - 1]}.{s.missing.length ? ` Not available: ${s.missing.join(', ')}.` : ''}</p>
         {first === null ? <p className="empty">No values to show for this indicator.</p> : (
           <p className="takeaway" role="status" aria-live="polite">

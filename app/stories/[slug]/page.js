@@ -133,7 +133,7 @@ export default function StoryPage({ params }) {
   const Body = BODY[story.slug];
   return (
     <main id="main" className="wrap page">
-      <ExploreHead trail={[{ href: '/', label: 'Home' }, { href: '/explore/', label: 'Explore' }, { href: '/stories/', label: 'Data stories' }]} current={story.title} title={story.title} sub={story.blurb} />
+      <ExploreHead trail={[{ href: '/', label: 'Home' }, { href: '/stories/', label: 'Data stories' }]} current={story.title} title={story.title} sub={story.blurb} />
       <Body story={story} />
     </main>
   );

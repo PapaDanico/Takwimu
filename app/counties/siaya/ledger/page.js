@@ -4,6 +4,7 @@ import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import LedgerView from '../../../../components/LedgerView';
 import { ledger } from '../../../../lib/ledger';
+import OsrLedger, { OSR_TOC } from '../../../../components/siaya/OsrLedger';
 
 export const metadata = {
   title: 'Fiscal reconciliation',
@@ -31,6 +32,13 @@ export default function SiayaLedger() {
           <li>Values are in KSh million unless marked as KSh billion (figures reused from the ten-year series keep the unit of that series).</li>
         </ul>
       </section>
+
+      <nav aria-label="Sections on this page"><ul className="toc">
+        {OSR_TOC.map(([id, t]) => <li key={id}><a href={`#${id}`}>Own-source revenue: {t}</a></li>)}
+        <li><a href="#led-comp">Completeness</a></li><li><a href="#led-sum">Open cases</a></li><li><a href="#led-cav">Not used</a></li>
+      </ul></nav>
+
+      <OsrLedger />
 
       <section className="card" aria-labelledby="led-comp">
         <h2 id="led-comp">Which values exist: completeness by measure and year</h2>

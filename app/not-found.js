@@ -12,7 +12,7 @@ export default function NotFound() {
         <p className="page-sub" style={{ marginInline: 'auto' }}>The link may be old or mistyped. Nothing is wrong with your device. Try one of these instead.</p>
         <p className="toolbar" style={{ justifyContent: 'center' }}>
           <Link className="btn-s" href="/">Home</Link>
-          <Link className="btn-s ghost" href="/explore/">Explore the data</Link>
+          <Link className="btn-s ghost" href="/datasets/">Explore the data</Link>
           <Link className="btn-s ghost" href="/counties/">Find a county</Link>
         </p>
         <h2 className="mini">Explore</h2>

@@ -34,6 +34,7 @@ export default function StatStrip({ items, label }) {
           <span className="stat-v">{it.value}{it.unit ? <small> {it.unit}</small> : null}</span>
           {it.delta ? <span className={`stat-d ${it.tone || ''}`}>{it.delta}</span> : null}
           {it.note ? <span className="stat-n">{it.note}</span> : null}
+          {it.href ? <a className="stat-n" href={it.href}>{it.link || 'Details'}</a> : null}
           {it.spark ? <Spark values={it.spark} /> : null}
         </li>
       ))}

@@ -10,6 +10,7 @@ export const metadata = {
 };
 
 import { ISSUES_URL } from '../../lib/site';
+import { KNOWN_GAPS } from '../../lib/known-gaps';
 
 const RUBRIC = [
   { score: 5, meaning: 'Read directly from the primary document and confirmed a second way (for example a second reading of the page, or a matching total).' },
@@ -33,7 +34,7 @@ export default function Method() {
     <main id="main" className="wrap page">
       <PageHead eyebrow="Method" title="How Takwimu handles numbers" sub="What we publish, where it comes from, how we check it, and what we do when two sources disagree." path="/method/" shareText="How Takwimu Kenya handles numbers" />
       <nav aria-label="Sections on this page"><ul className="toc">
-        <li><a href="#sources">Sources</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#checks">Checks</a></li><li><a href="#conflicts">Disagreements</a></li><li><a href="#prices">Prices</a></li><li><a href="#years">Fiscal years</a></li><li><a href="#people">Named people</a></li><li><a href="#gaps">Gaps</a></li>
+        <li><a href="#sources">Sources</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#checks">Checks</a></li><li><a href="#conflicts">Disagreements</a></li><li><a href="#prices">Prices</a></li><li><a href="#years">Fiscal years</a></li><li><a href="#people">Named people</a></li><li><a href="#known-gaps">Gaps</a></li>
       </ul></nav>
 
       <section id="sources" className="card" aria-labelledby="so-h">
@@ -92,9 +93,15 @@ export default function Method() {
         <p>Takwimu does not label named individuals as wrong or misleading. Any claim tied to a person needs a primary document and a legal check first.</p>
       </section>
 
-      <section id="gaps" className="card" aria-labelledby="gp-h">
+      <section id="known-gaps" className="card" aria-labelledby="gp-h">
         <h2 id="gp-h">Known gaps</h2>
-        <ul className="steps">{hist.meta.gaps.map((g) => <li key={g}>{g}</li>)}<li>{hist.poverty.gap}</li><li>County health series between 2014 and 2022 are not shown; only the two survey years are available.</li></ul>
+        <p className="lead">Every gap is listed here once; other pages link to this list. Nothing is filled or estimated.</p>
+        <h3 className="mini">In the Siaya ten-year series</h3>
+        <ul className="steps" id="gaps">{hist.meta.gaps.map((g) => <li key={g}>{g}</li>)}<li>{hist.poverty.gap}</li><li>County health series between 2014 and 2022 are not shown; only the two survey years are available.</li></ul>
+        <h3 className="mini">Sources we could not use yet</h3>
+        <div className="log" id="sources-gaps">
+          {KNOWN_GAPS.map((o) => <article key={o.q} className="term-card"><p><b>{o.q}</b></p><p>{o.note}</p></article>)}
+        </div>
         <p className="how">Found a mistake? <a href={ISSUES_URL} target="_blank" rel="noopener noreferrer">Report it on WhatsApp</a>.</p>
       </section>
     </main>

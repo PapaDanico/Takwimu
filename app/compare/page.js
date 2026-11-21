@@ -32,7 +32,7 @@ function Loading() {
 export default function ComparePage() {
   return (
     <main id="main" className="wrap page">
-      <ExploreHead trail={[{ href: '/', label: 'Home' }, { href: '/explore/', label: 'Explore' }]} current="Compare counties" title="Compare counties"
+      <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Compare counties" title="Compare counties"
         sub="Pick an indicator and a year to see all 47 counties in one list, on a map and in a table, or pick two to four counties to see them side by side. The figures are those printed in the Controller of Budget's annual county reports." />
       <Suspense fallback={<Loading />}>
         <CompareView data={data} />

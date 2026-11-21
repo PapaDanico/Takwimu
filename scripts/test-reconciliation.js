@@ -435,12 +435,14 @@ test('conflict subcounty-voters-term: sub-county voters use the IEBC term and ma
   ok(sc.reduce((s, x) => s + x.registered_voters_2022, 0) === reg41, 'sub-county voters must add to the IEBC register for Siaya');
 });
 
-test('conflict analytics-per-person-2022-23: /analytics/ uses the A1 value, never an interpolated population', () => {
+test('conflict analytics-per-person-2022-23: per-person spending has one home (A1 on /counties/siaya/analysis/), never an interpolated population', () => {
   const c = conflict('analytics-per-person-2022-23');
   const a1 = read('siaya-analysis.json').records.find((x) => x.calc_id === 'SIA-A1-2022-23-cob-report-2022-23');
   ok(c.status === 'resolved' && a1.result === 7224 && listed(c.id, 7224) && listed(c.id, 7096), 'A1 value and the withdrawn value must be listed');
-  const src = fs.readFileSync(path.join(__dirname, '..', 'app', 'analytics', 'page.js'), 'utf8');
-  ok(!/interpolate\(/.test(src) && /an-a1/.test(src), '/analytics/ must not interpolate population and must link the A1 section');
+  // /analytics/ moved into /counties/siaya/analysis/ (owner decision U2, 21 Nov 2026); its fallback page only redirects.
+  const moved = fs.readFileSync(path.join(__dirname, '..', 'app', 'analytics', 'page.js'), 'utf8');
+  const src = ['app/counties/siaya/analysis/page.js', 'components/siaya/AnalysisTrends.js'].map((f) => fs.readFileSync(path.join(__dirname, '..', f), 'utf8')).join('\n');
+  ok(/to="\/counties\/siaya\/analysis\/"/.test(moved) && !/interpolate\(/.test(src) && /an-a1/.test(src), '/analytics/ must redirect to Siaya analysis, which must not interpolate population and must hold the A1 section');
 });
 
 // Every register case has a test above, and no test points at a case that was removed.
