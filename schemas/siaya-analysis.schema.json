@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/siaya-analysis.schema.json",
+  "title": "Siaya analytical measures calculated from published figures (data/siaya-analysis.json)",
+  "type": "object",
+  "required": ["meta", "records"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "county", "county_code", "schema_version", "label", "generated_by", "rule", "families", "conventions", "input_files", "counts", "notes_file"],
+      "properties": {
+        "label": { "type": "string", "enum": ["Calculated by Takwimu Kenya from published figures"] },
+        "county_code": { "type": "integer", "enum": [41] },
+        "input_files": { "type": "object", "additionalProperties": { "type": "string", "pattern": "^[0-9a-f]{64}$" } }
+      }
+    },
+    "records": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/record" } }
+  },
+  "$defs": {
+    "input": {
+      "type": "object",
+      "required": ["role", "dataset", "record", "field", "value", "unit", "period", "source_id", "source_title", "pdf_page", "confidence"],
+      "properties": {
+        "role": { "type": "string", "pattern": "^[a-z_]+$" },
+        "dataset": { "type": "string", "enum": ["data/siaya-fiscal-ledger.json", "data/history.json", "data/cpi.json", "data/county.json", "data/counties-cob.json", "data/siaya-audits.json", "data/siaya-health.json", "data/siaya-education.json", "data/siaya-climate.json", "data/siaya-economy.json", "data/siaya-agriculture.json"] },
+        "record": { "type": "string", "pattern": "." },
+        "field": { "type": "string", "pattern": "." },
+        "value": { "type": ["number", "string", "boolean"] },
+        "unit": { "type": "string", "pattern": "." },
+        "period": { "type": "string", "pattern": "." },
+        "source_id": { "type": "string", "pattern": "." },
+        "source_title": { "type": ["string", "null"] },
+        "pdf_page": { "type": ["integer", "null"], "minimum": 1 },
+        "printed_page": { "type": ["integer", "null"] },
+        "page_note": { "type": "string" },
+        "confidence": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 }
+      }
+    },
+    "record": {
+      "type": "object",
+      "required": ["calc_id", "family", "status", "title", "formula", "calc", "inputs", "beside", "result", "unit", "period", "source_ids", "comparability_notes", "caveat", "flags", "checks", "gap_reason", "confidence", "label"],
+      "additionalProperties": false,
+      "properties": {
+        "calc_id": { "type": "string", "pattern": "^SIA-A[1-7]-[A-Za-z0-9-]+$" },
+        "family": { "type": "string", "enum": ["A1", "A2", "A3", "A4", "A5", "A6", "A7"] },
+        "status": { "type": "string", "enum": ["value", "gap"] },
+        "title": { "type": "string", "pattern": "." },
+        "formula": { "type": "string", "pattern": "." },
+        "calc": {
+          "type": ["object", "null"],
+          "properties": { "op": { "type": "string", "enum": ["linear", "ratio_pct", "real_per_capita", "count", "count_distinct"] }, "dp": { "type": "integer", "minimum": 0, "maximum": 6 } }
+        },
+        "inputs": { "type": "array", "items": { "$ref": "#/$defs/input" } },
+        "beside": { "type": "array", "items": { "$ref": "#/$defs/input" } },
+        "result": { "type": ["number", "null"] },
+        "unit": { "type": "string", "pattern": "." },
+        "period": { "type": "string", "pattern": "." },
+        "source_ids": { "type": "array", "items": { "type": "string" } },
+        "comparability_notes": { "type": "array", "items": { "type": "string", "pattern": "." } },
+        "caveat": { "type": "string", "pattern": "." },
+        "flags": { "type": "object" },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "printed_value", "printed_dataset", "printed_record", "printed_field", "difference_points", "flag_gt_1_point"],
+            "properties": { "type": { "type": "string", "enum": ["printed_rate"] }, "printed_value": { "type": "number" }, "difference_points": { "type": "number" }, "flag_gt_1_point": { "type": "boolean" } }
+          }
+        },
+        "gap_reason": { "type": ["string", "null"] },
+        "confidence": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+        "label": { "type": "string", "enum": ["Calculated by Takwimu Kenya from published figures"] }
+      }
+    }
+  }
+}
