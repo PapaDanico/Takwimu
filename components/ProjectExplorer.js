@@ -21,6 +21,8 @@ export default function ProjectExplorer({ projects, states, sectors, wards }) {
   const [status, setStatus] = useState('');
   const base = projects.filter((p) => (!sector || p.sector === sector) && (!ward || p.wards.some((w) => w.id === ward)));
   const shown = base.filter((p) => !status || p.status === status);
+  // A project withdrawn in editorial review has no status (lib/projects.js): it is listed, never counted by status.
+  const withdrawn = base.filter((p) => p.review && p.review.hide).length;
   const usedSectors = Object.keys(sectors).filter((k) => projects.some((p) => p.sector === k));
   const scope = `${sector ? sectors[sector] : 'all sectors'}, ${ward ? `${wards.find((w) => w.id === ward).name} ward` : 'all wards and county-wide'}`;
   return (
@@ -52,7 +54,7 @@ export default function ProjectExplorer({ projects, states, sectors, wards }) {
       <h3>Projects by status: {scope}</h3>
       <ColumnChart labels={states.map((s) => s.state)} unit="projects" yFormat="int" ariaLabel={`Number of projects by status, ${scope}`} caption={`Projects by status, ${scope}`}
         series={[{ name: 'Projects', color: 1, values: states.map((s) => base.filter((p) => p.status === s.state).length) }]} />
-      <p className="count" role="status" aria-live="polite" id="pr-count">Showing {shown.length} of {projects.length} projects</p>
+      <p className="count" role="status" aria-live="polite" id="pr-count">Showing {shown.length} of {projects.length} projects{withdrawn ? `; ${withdrawn} withdrawn after review ${withdrawn === 1 ? 'is' : 'are'} not counted by status` : ''}</p>
       {ward ? <p className="src">A ward filter shows only projects whose printed place matches a ward name in the registry; projects printed with a town, facility or county-wide location are not included.</p> : null}
       <ol className="ds-list pr-list">
         {shown.map((p) => (

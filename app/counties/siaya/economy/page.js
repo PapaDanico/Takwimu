@@ -56,11 +56,11 @@ export default function SiayaEconomy() {
 
       <section className="card" aria-labelledby="eco-sectors">
         <h2 id="eco-sectors">What Siaya produced in {e.latestYear}, by activity</h2>
-        <p className="lead">Gross value added by economic activity, current prices, KSh million, largest first. Agriculture, forestry and fishing is the largest at <Reviewed b={e.activities[0].review}>{() => <>KSh {n(e.activities[0].value)} million</>}</Reviewed>. Not shown in the chart: an adjustment for financial services (FISIM) of <Reviewed b={e.fisim.review}>{() => <>KSh {n(e.fisim.value)} million</>}</Reviewed>; with it, the activities add to the printed GCP of <Reviewed b={e.annex.review}>{() => <>KSh {n(e.annex.value)} million</>}</Reviewed>.</p>
-        <ColumnChart labels={e.activities.map((a) => a.short)} unit="KSh million" yFormat="int"
+        <p className="lead">Gross value added by economic activity, current prices, KSh million, largest first. {e.largest ? <>{e.activities.some((x) => x.withdrawn) ? 'Among the values shown, ' : ''}{e.activities.some((x) => x.withdrawn) ? e.largest.sector_label.charAt(0).toLowerCase() + e.largest.sector_label.slice(1) : e.largest.sector_label} is the largest at <Reviewed b={e.largest.review}>{() => <>KSh {n(e.largest.value)} million</>}</Reviewed>.</> : null}{e.activities.filter((x) => x.withdrawn).map((x) => <span key={x.id}> {x.sector_label}: <Reviewed b={x.review}>{() => null}</Reviewed>.</span>)} Not shown in the chart: an adjustment for financial services (FISIM) of <Reviewed b={e.fisim.review}>{() => <>KSh {n(e.fisim.value)} million</>}</Reviewed>; with it, the activities add to the printed GCP of <Reviewed b={e.annex.review}>{() => <>KSh {n(e.annex.value)} million</>}</Reviewed>.</p>
+        <ColumnChart labels={e.activities.map((a) => (a.withdrawn ? `${a.short} (withdrawn)` : a.short))} unit="KSh million" yFormat="int" naText="Withdrawn after editorial review"
           ariaLabel={`Siaya gross value added by economic activity, ${e.latestYear}, current prices, KSh million`}
           series={[{ name: `Value added, ${e.latestYear}`, color: 1, values: e.activities.map((a) => a.value) }]} />
-        <p className="src">Source: <Cite c={e.sectorCite} extra={e.activities[0].provisional ? `; ${e.latestYear} is provisional` : ''} />. Chart labels are shortened; KNBS’s full activity names are in the <Link href="/datasets/?q=siaya-economy">dataset</Link>.</p>
+        <p className="src">Source: <Cite c={e.sectorCite} extra={e.largest && e.largest.provisional ? `; ${e.latestYear} is provisional` : ''} />. Chart labels are shortened; KNBS’s full activity names are in the <Link href="/datasets/?q=siaya-economy">dataset</Link>.</p>
       </section>
 
       <section className="card" aria-labelledby="eco-rev">

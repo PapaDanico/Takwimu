@@ -14,6 +14,9 @@ export default function AuditExplorer({ findings, entities, categories, years })
   const shown = base.filter((f) => !cat || f.category === cat);
   const cats = Object.keys(categories).filter((k) => findings.some((f) => f.category === k));
   const counts = cats.map((k) => base.filter((f) => f.category === k).length);
+  // A finding withdrawn in editorial review has no title or category (lib/audits.js): listed as withdrawn, never counted.
+  const withdrawn = base.filter((f) => f.withdrawn).length;
+  const withdrawnNote = withdrawn ? `${withdrawn} finding${withdrawn === 1 ? '' : 's'} withdrawn after review` : '';
   const scope = `${entity ? entities[entity] : 'all entities'}, ${fy ? `FY ${fy}` : 'all years with a report'}`;
 
   return (
@@ -46,10 +49,11 @@ export default function AuditExplorer({ findings, entities, categories, years })
       <h3 id="aud-chart-h">Number of findings by category: {scope}</h3>
       <ColumnChart labels={cats.map((k) => categories[k])} series={[{ name: 'Findings', color: 1, values: counts }]} yFormat="int" unit="findings"
         ariaLabel={`Number of audit findings by category, ${scope}`} caption={`Audit findings by category, ${scope}`} />
+      {withdrawnNote ? <p className="src" id="aud-withdrawn">Not counted: {withdrawnNote}.</p> : null}
       <p className="src">A count shows how the auditor divided the report into paragraphs. A higher count is not by itself a worse year, and counts are not evidence that a given finding recurred.</p>
 
       <h3 id="aud-list-h">The findings</h3>
-      <p className="count" role="status" aria-live="polite" id="aud-count">Showing {shown.length} of {findings.length} findings</p>
+      <p className="count" role="status" aria-live="polite" id="aud-count">Showing {shown.length} of {findings.length} findings{withdrawnNote ? ` (${withdrawnNote})` : ''}</p>
       {shown.length ? (
         <ol className="ds-list aud-list">
           {shown.map((f) => (
@@ -58,7 +62,7 @@ export default function AuditExplorer({ findings, entities, categories, years })
               <div className="tags">
                 <span className="ds-status">{entities[f.entity]}</span>
                 <span className="ds-status">FY {f.fy}</span>
-                <span className="ds-status">{categories[f.category]}</span>
+                {f.category ? <span className="ds-status">{categories[f.category]}</span> : null}
               </div>
               <dl>
                 <dt>Report</dt><dd><a href={f.url} rel="noopener">{f.doc}</a>, PDF p. {f.page}, paragraph {f.paragraph}</dd>

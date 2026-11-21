@@ -2,7 +2,7 @@
 // source (linked), table, page and confidence. Rows are plain objects; `source_id` is resolved with lib/siaya-sources.
 import TableWrap from './TableWrap';
 import { source, pageRef } from '../lib/siaya-sources';
-import { badge, counts, countsSentence } from '../lib/review-status';
+import { badge, counts, countsSentence, isProvisional } from '../lib/review-status';
 import Reviewed from './Reviewed';
 
 const num = (v) => (typeof v === 'number' ? v.toLocaleString('en-US', { maximumFractionDigits: 3 }) : v);
@@ -57,7 +57,8 @@ export default function ObsTable({ caption, rows, id, labelHead = 'Measure', sho
   );
 }
 
-// Page label. The provisional tag stays while any value is pending; with `dataset` the review counts follow.
+// Page label. The provisional tag stays until every value is approved (lib/review-status.js isProvisional); with
+// `dataset` the review counts follow.
 export function ReviewCounts({ dataset }) {
   const c = counts(dataset);
   return <small className="review-counts" data-review-counts={dataset}> {countsSentence(c)}</small>;
@@ -66,7 +67,7 @@ export function Provisional({ children, dataset }) {
   const c = dataset ? counts(dataset) : null;
   return (
     <p className="provisional">
-      {!c || c.pending > 0 ? <span className="tag warn">Provisional: awaiting editorial review</span> : null} {children}
+      {isProvisional(c) ? <span className="tag warn">Provisional: awaiting editorial review</span> : null} {children}
       {dataset ? <ReviewCounts dataset={dataset} /> : null}
     </p>
   );

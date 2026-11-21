@@ -207,7 +207,7 @@ export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit =
           {L.wide && ends.map((e) => <text key={e.name} x={e.x + 10} y={e.y} style={{ fill: 'var(--ink)', fontWeight: 700, fontFamily: 'var(--sans)' }}>{e.name}</text>)}
           {labels.map((l, i) => (
             <rect key={l} x={xAt(i) - slot / 2} y={M.t} width={slot} height={L.plotH} fill="transparent" tabIndex={0} role="img"
-              aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? 'no data' : fmt(valueKind(yFormat, valueFormat), s.values[i])}`).join(', ')}`}
+              aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? (naText || 'no data') : fmt(valueKind(yFormat, valueFormat), s.values[i])}`).join(', ')}`}
               onMouseEnter={() => setAt({ i, x: xAt(i) })} onFocus={() => setAt({ i, x: xAt(i) })} onBlur={() => setAt(null)} />
           ))}
         </svg>
@@ -218,7 +218,7 @@ export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit =
   );
 }
 
-export function ColumnChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine }) {
+export function ColumnChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine, naText }) {
   const [ref, width] = useWidth();
   const [at, setAt] = useState(null);
   const L = layout(width, labels, true);
@@ -256,13 +256,13 @@ export function ColumnChart({ labels, series, yFormat = 'int', valueFormat, unit
           }))}
           {labels.map((l, i) => (
             <rect key={`h${l}`} x={M.l + slotW * i} y={M.t} width={slotW} height={L.plotH} fill="transparent" tabIndex={0} role="img"
-              aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? 'no data' : fmt(valueKind(yFormat, valueFormat), s.values[i])}`).join(', ')}`}
+              aria-label={`${l}: ${series.map((s) => `${s.name} ${s.values[i] == null ? (naText || 'no data') : fmt(valueKind(yFormat, valueFormat), s.values[i])}`).join(', ')}`}
               onMouseEnter={() => setAt({ i, x: xCenter(i) })} onFocus={() => setAt({ i, x: xCenter(i) })} onBlur={() => setAt(null)} />
           ))}
         </svg>
         <Tooltip at={at} width={width} labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} />
       </div>
-      <TableView labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} caption={caption || ariaLabel} />
+      <TableView labels={labels} series={series} yFormat={valueKind(yFormat, valueFormat)} unit={unit} caption={caption || ariaLabel} naText={naText} />
     </figure>
   );
 }

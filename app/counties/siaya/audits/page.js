@@ -4,7 +4,7 @@ import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import AuditExplorer from '../../../../components/AuditExplorer';
-import { audits, ENTITY, CATEGORY, YEARS } from '../../../../lib/audits';
+import { audits, withdrawnText, ENTITY, CATEGORY, YEARS } from '../../../../lib/audits';
 
 export const metadata = {
   title: 'Audit findings',
@@ -17,8 +17,8 @@ const entities = Object.fromEntries(Object.entries(ENTITY).filter(([k]) => a.fin
 const Cite = ({ c }) => (c.url ? <small className="cite"><a href={c.url} rel="noopener">{c.doc}</a>{c.page ? `, PDF p. ${c.page}` : ''}{c.confidence ? `, confidence ${c.confidence}` : ''}</small> : null);
 const Opinion = ({ c }) => (c.review ? <Reviewed b={c.review}>{() => <OpinionText c={c} />}</Reviewed> : <OpinionText c={c} />);
 const OpinionText = ({ c }) => {
-  if (c.opinion) return <><b>{c.opinion}</b>{c.findings ? ` · ${c.findings} findings recorded` : ''}<br /><Cite c={c} />{c.note ? <><br /><small>{c.note}</small></> : null}</>;
-  if (c.url) return <>{c.note || 'No opinion printed'}{c.findings ? ` · ${c.findings} findings recorded` : ''}<br /><Cite c={c} /></>;
+  if (c.opinion) return <><b>{c.opinion}</b>{c.findings ? ` · ${c.findings} findings recorded` : ''}{c.withdrawn ? ` · ${withdrawnText(c.withdrawn)}` : ''}<br /><Cite c={c} />{c.note ? <><br /><small>{c.note}</small></> : null}</>;
+  if (c.url) return <>{c.note || 'No opinion printed'}{c.findings ? ` · ${c.findings} findings recorded` : ''}{c.withdrawn ? ` · ${withdrawnText(c.withdrawn)}` : ''}<br /><Cite c={c} /></>;
   return <span className="muted">No report found{c.reason ? <><br /><small>{c.reason}</small></> : null}</span>;
 };
 const catRows = (entity) => Object.keys(CATEGORY).filter((k) => a.matrix[entity] && a.matrix[entity][k]);
@@ -51,7 +51,7 @@ export default function SiayaAudits() {
             <thead><tr><th scope="col">Fiscal year</th><th scope="col">County Executive</th><th scope="col">County Assembly</th></tr></thead>
             <tbody>
               {a.whole.map((w) => (
-                <tr key={`w${w.fy}`}><th scope="row">FY {w.fy}, whole county government (16 months)</th><td colSpan={2}><Reviewed b={w.review}>{() => <><b>{w.opinion}</b> · {w.findings} findings recorded<br /><Cite c={{ ...w, confidence: null }} /></>}</Reviewed></td></tr>
+                <tr key={`w${w.fy}`}><th scope="row">FY {w.fy}, whole county government (16 months)</th><td colSpan={2}><Reviewed b={w.review}>{() => <><b>{w.opinion}</b> · {w.findings} findings recorded{w.withdrawn ? ` · ${withdrawnText(w.withdrawn)}` : ''}<br /><Cite c={{ ...w, confidence: null }} /></>}</Reviewed></td></tr>
               ))}
               {a.opinions.map((r) => <tr key={r.fy}><th scope="row">FY {r.fy}</th><td><Opinion c={r.executive} /></td><td><Opinion c={r.assembly} /></td></tr>)}
             </tbody>

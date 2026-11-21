@@ -11,7 +11,7 @@ import DownloadView from './DownloadView';
 import SaveView from './SaveView';
 import PrintButton from './PrintButton';
 import useUrlParams from '../lib/use-url-params';
-import { cellOf, isDoubt, naText, caveat, unitText, dlRow as rowFor } from '../lib/compare-rows';
+import { cellOf, isDoubt, naText, rawText, caveat, unitText, dlRow as rowFor } from '../lib/compare-rows';
 
 const MAX_SEL = 4;
 const GROUPS = { budget: 'Budget and spending', absorption: 'Share of budget spent', osr: 'Own-source revenue', pb: 'Pending bills' };
@@ -153,7 +153,7 @@ export default function CompareView({ data }) {
                   <tr key={r.slug}>
                     <th scope="row">{r.name}</th>
                     {r.value === null ? <td className="na" data-obs={`counties-cob:${fy}:${r.slug}:${key}`} data-obs-state={r.st === 'withdrawn' ? 'rejected' : undefined}>{naText(r)}</td> : <td className="num" data-obs={`counties-cob:${fy}:${r.slug}:${key}`}>{fmtNum(f, r.value)}</td>}
-                    <td>{r.st === 'unverified' ? 'Not yet verified' : r.raw || '(blank)'}</td>
+                    <td>{rawText(r)}</td>
                     <td>{r.pdf}, {r.printed}</td>
                     <td>{r.conf === null || r.conf === undefined ? 'n/a' : r.conf.toFixed(2)}</td>
                     <td>{caveat(r) || (r.value === null ? 'See value' : '')}</td>
