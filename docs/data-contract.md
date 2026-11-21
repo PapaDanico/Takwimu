@@ -1,6 +1,6 @@
 # Data contract (version 1.1)
 
-Applies to `data/history.json` and `data/conflicts.json`. Enforced by `scripts/validate-data.js` at build time.
+Applies to `data/history.json` and `data/conflicts.json`. Enforced by `scripts/validate-data.js` at build time, including the JSON Schemas in `schemas/` (also for `subcounties.json` and `county.json`).
 
 ## Observations (history.json)
 Each year carries: fiscal year, figures, `report` (default source), optional `field_source` (a different report for one field), optional `derived` (fields computed rather than printed), `caveat`. Each report has title, URL and confidence (1 to 5, an explanation of source quality and extraction, not a probability of accuracy). Gaps are listed in `meta.gaps`, never filled.

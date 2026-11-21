@@ -19,7 +19,7 @@ Evidence-based baseline before the design-system overhaul and fiscal intelligenc
 ## 3. Data schema and audit trail
 | Item | Finding | Status |
 |---|---|---|
-| Schema | JSON files checked by `scripts/validate-data.js` (sums, absorption recompute, series length, census sums, conflict register fields) | Partial: not typed; no JSON Schema / TypeScript types |
+| Schema | JSON Schema files in `schemas/` for `history`, `conflicts`, `subcounties` and `county`, checked at build by a small hand-written validator in `scripts/validate-data.js` (type, required, properties, additionalProperties, items, enum, minimum, maximum, pattern, local $ref; no new dependency). A test edit (bad status, extra field, string boolean) failed the build with three schema errors | Done (step 2). Page/table reference per observation still open |
 | Per-figure source | Report per year, `field_source` overrides, `derived` flags; CSV carries source, URL, confidence, retrieval date, period | Partial: page and table references are not recorded per figure |
 | Supersession | Conflict register keeps both values with `supersedes` and `verification_state` | OK, no reviewer yet |
 | Source snapshots | Not stored; no checksums | Gap |
