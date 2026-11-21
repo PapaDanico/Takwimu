@@ -23,7 +23,7 @@ const inds = natIndicators.filter((x) => x.hasValues);
 const scaled = (x) => x.series.map((p) => (p.value === null ? null : p.value / x.div));
 const dlRows = inds.flatMap((x) => x.series.map((p) => ({ indicator_code: x.code, indicator: x.name, year: p.year, value: p.value, unit: x.unit, status: p.value === null ? 'not available' : 'published', source: x.source, api_url: x.api_url, last_updated: x.last_updated })));
 const latest = COB_YEARS[COB_YEARS.length - 1];
-const prev = COB_YEARS[0];
+const prev = COB_YEARS[COB_YEARS.length - 2]; // the year before the latest
 const bn = (m) => (m / 1000).toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const countyItems = [['approved_budget_total', 'County budgets, all 47'], ['expenditure_total', 'County spending, all 47'], ['total_osr_actual', 'Own-source revenue, all 47'], ['pb_grand_total', 'Pending bills, all 47']].map(([k, label]) => {
   const a = cobTotal(prev, k).value; const b = cobTotal(latest, k).value;
@@ -50,7 +50,7 @@ export default function KenyaPage() {
         <h2 id="counties-h">All 47 counties together</h2>
         <p className="lead">The printed totals of the Controller of Budget&apos;s county tables, FY {prev} and FY {latest}, read by OCR. To see each county, use <Link href="/compare/">Compare counties</Link>.</p>
         <div style={{ marginTop: 14 }}><StatStrip label="County totals" items={countyItems} /></div>
-        <p className="src">Source: <a href={cobSource(latest).url}>{cobSource(latest).title}</a> and <a href={cobSource(prev).url}>the FY {prev} report</a>, chapter 2 tables. Nominal shillings; the two years are not adjusted for prices here (see the <Link href="/kenya/?i=counties-total-expenditure-total&amp;basis=real#trends">trend explorer</Link> for real terms).</p>
+        <p className="src">Source: <a href={cobSource(latest).url}>{cobSource(latest).title}</a> and <a href={cobSource(prev).url}>the FY {prev} report</a>, chapter 2 tables. Earlier years (from FY {COB_YEARS[0]}) are in the trend explorer. Nominal shillings; the two years are not adjusted for prices here (see the <Link href="/kenya/?i=counties-total-expenditure-total&amp;basis=real#trends">trend explorer</Link> for real terms).</p>
       </section>
 
       {ORDER.map((sec) => {

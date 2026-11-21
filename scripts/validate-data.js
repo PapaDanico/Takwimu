@@ -309,7 +309,8 @@ const AMOUNT_SUMS = ['ordinary_osr_target', 'fif_aia_target', 'total_osr_target'
   'pb_exec_recurrent', 'pb_exec_development', 'pb_exec_subtotal', 'pb_assembly_recurrent', 'pb_assembly_development', 'pb_assembly_subtotal', 'pb_grand_total'];
 const ROWS = [['recurrent_budget', 'development_budget', 'approved_budget_total'], ['recurrent_expenditure', 'development_expenditure', 'expenditure_total'],
   ['ordinary_osr_target', 'fif_aia_target', 'total_osr_target'], ['ordinary_osr_actual', 'fif_aia_actual', 'total_osr_actual'],
-  ['pb_exec_recurrent', 'pb_exec_development', 'pb_exec_subtotal'], ['pb_assembly_recurrent', 'pb_assembly_development', 'pb_assembly_subtotal'], ['pb_exec_subtotal', 'pb_assembly_subtotal', 'pb_grand_total']];
+  ['pb_exec_recurrent', 'pb_exec_development', 'pb_exec_subtotal'], ['pb_assembly_recurrent', 'pb_assembly_development', 'pb_assembly_subtotal'], ['pb_exec_subtotal', 'pb_assembly_subtotal', 'pb_grand_total'],
+  ['pb_exec_recurrent', 'pb_exec_development', 'pb_assembly_recurrent', 'pb_assembly_development', 'pb_grand_total']];
 // Printed percentage against the printed amounts (tolerance covers whole-number rounding in the tables).
 const PCTS = [['recurrent_absorption_pct', 'recurrent_expenditure', 'recurrent_budget'], ['development_absorption_pct', 'development_expenditure', 'development_budget'],
   ['overall_absorption_pct', 'expenditure_total', 'approved_budget_total'], ['osr_performance_pct', 'total_osr_actual', 'total_osr_target']];
@@ -354,17 +355,27 @@ cob.years.forEach((yr) => {
         }
       }
     });
-    ROWS.forEach(([a, b, t]) => {
-      if (val(row, t) === null) return;
-      const parts = (val(row, a) || 0) + (val(row, b) || 0);
-      if (Math.abs(parts - val(row, t)) > 0.15) fail(`${rt}: ${a} + ${b} = ${parts.toFixed(2)}, but ${t} is ${val(row, t)}`);
+    // Identities whose parts are not in that year's table are skipped (nothing is computed to stand in for them).
+    ROWS.forEach((ids) => {
+      const t = ids[ids.length - 1]; const ps = ids.slice(0, -1);
+      if (val(row, t) === null || ps.some((k) => row[k] && row[k].status === 'not_in_table')) return;
+      // The four-part pending-bills identity is for years whose table prints no subtotals.
+      if (ps.length === 4 && !(row.pb_exec_subtotal && row.pb_exec_subtotal.status === 'not_in_table')) return;
+      const parts = ps.reduce((sum, k) => sum + (val(row, k) || 0), 0);
+      if (Math.abs(parts - val(row, t)) > 0.15) fail(`${rt}: ${ps.join(' + ')} = ${parts.toFixed(2)}, but ${t} is ${val(row, t)}`);
     });
-    PCTS.forEach(([p, num, den]) => {
+    PCTS.forEach(([p, num0, den0]) => {
+      // Own-source revenue performance is printed against ordinary revenue in years whose table has no total.
+      const [num, den] = p === 'osr_performance_pct' && val(row, den0) === null ? ['ordinary_osr_actual', 'ordinary_osr_target'] : [num0, den0];
       if (val(row, p) === null || !val(row, den)) return;
       const calc = (val(row, num) / val(row, den)) * 100;
       if (Math.abs(calc - val(row, p)) > 1.5) fail(`${rt}: printed ${p} ${val(row, p)} but the printed amounts give ${calc.toFixed(1)}`);
     });
   });
+  Object.keys(yr.total_row).filter((k) => yr.total_row[k] && yr.total_row[k].status === 'not_in_table').forEach((k) => {
+    if (yr.counties.some((c) => !c[k] || c[k].status !== 'not_in_table')) fail(`${tag}: ${k} is not in the table for the total but has values for some counties`);
+  });
+  yr.counties.forEach((c) => cellsOf(c).forEach(([k, cell]) => { if (cell.status === 'not_in_table' && yr.total_row[k].status !== 'not_in_table') fail(`${tag} ${c.name} ${k}: not_in_table must cover the whole column`); }));
   AMOUNT_SUMS.forEach((k) => {
     const t = val(yr.total_row, k);
     if (t === null) return;
@@ -381,7 +392,12 @@ const regHas = (id, v) => reg.conflicts.some((c) => c.id === id && c.values.some
 ['2023/24', [['approved', 'approved_budget_total', 1000], ['recurrent_budget', 'recurrent_budget', 1000], ['development_budget', 'development_budget', 1000],
   ['spent', 'expenditure_total', 1000], ['recurrent_spent', 'recurrent_expenditure', 1000], ['development_spent', 'development_expenditure', 1000],
   ['recurrent_absorption_pct', 'recurrent_absorption_pct', 1, 'recurrent-absorption-2023-24'], ['development_absorption_pct', 'development_absorption_pct', 1, 'development-absorption-2023-24'],
-  ['osr_m', 'total_osr_actual', 1], ['osr_target_m', 'total_osr_target', 1]]]].forEach(([fy, pairs]) => {
+  ['osr_m', 'total_osr_actual', 1], ['osr_target_m', 'total_osr_target', 1]]],
+...['2022/23', '2021/22'].map((fy) => [fy, [['approved', 'approved_budget_total', 1000], ['recurrent_budget', 'recurrent_budget', 1000], ['development_budget', 'development_budget', 1000],
+  ['spent', 'expenditure_total', 1000], ['recurrent_spent', 'recurrent_expenditure', 1000], ['development_spent', 'development_expenditure', 1000],
+  ['recurrent_absorption_pct', 'recurrent_absorption_pct', 1], ['development_absorption_pct', 'development_absorption_pct', 1],
+  // FY 2022/23 Table 2.2 prints ordinary revenue (FIF excluded); FY 2021/22 prints one undivided figure.
+  ['osr_m', fy === '2022/23' ? 'ordinary_osr_actual' : 'total_osr_actual', 1], ['osr_target_m', fy === '2022/23' ? 'ordinary_osr_target' : 'total_osr_target', 1]]])].forEach(([fy, pairs]) => {
   const h = hist.years.find((y) => y.fy === fy);
   const s = siayaCob(fy);
   pairs.forEach(([hk, ck, div, caseId]) => {
@@ -395,6 +411,8 @@ const regHas = (id, v) => reg.conflicts.some((c) => c.id === id && c.values.some
 });
 if (!regHas('pending-close-2025', val(siayaCob('2024/25'), 'pb_grand_total'))) fail('counties-cob 2024/25 Siaya pending bills (Table 2.9) must be listed in conflict pending-close-2025');
 if (!regHas('pending-2024', Number(val(siayaCob('2023/24'), 'pb_grand_total').toFixed(2)))) fail('counties-cob 2023/24 Siaya pending bills (Table 2.5) must be listed in conflict pending-2024');
+if (!regHas('pending-2023', Number(val(siayaCob('2022/23'), 'pb_grand_total').toFixed(2)))) fail('counties-cob 2022/23 Siaya pending bills (Table 2.6) must be listed in conflict pending-2023');
+if (!regHas('pending-close-2022', Number(val(siayaCob('2021/22'), 'pb_grand_total').toFixed(2)))) fail('counties-cob 2021/22 Siaya pending bills (Table 2.6) must be listed in conflict pending-close-2022');
 if (!regHas('budget-financing-osr-2024-25', val(siayaCob('2024/25'), 'total_osr_target'))) fail('counties-cob 2024/25 Siaya own-source revenue target (Table 2.1) must be listed in conflict budget-financing-osr-2024-25');
 
 // ---- National indicators (national.json): the API source is in the manifest; missing years are listed, never filled ----

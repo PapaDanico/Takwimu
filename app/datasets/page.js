@@ -49,7 +49,7 @@ export default function DatasetsPage() {
           <li><b>Net primary enrolment.</b> Only 2012 has a value from 2010 on; the gross enrolment series is listed beside it.</li>
           <li><b>Poverty.</b> The World Bank now measures this at $3.00 a day in 2021 prices, and only survey years have values.</li>
           <li><b>2025 values.</b> Under-5 mortality, life expectancy and access to electricity have no 2025 value yet.</li>
-          <li><b>Counties.</b> Two financial years (FY 2023/24 and 2024/25) are loaded for all 47 counties so far; earlier years are in preparation.</li>
+          <li><b>Counties.</b> Four financial years (FY 2021/22 to 2024/25) are loaded for all 47 counties; earlier years are in preparation. Some columns are not printed in the older tables (for example own-source revenue with health facility revenue in FY 2022/23, and pending-bill subtotals in FY 2022/23); they are left empty with the reason.</li>
         </ul>
         <p className="src">More on sources and checks: <Link href="/data/">Data</Link> and <Link href="/method/">Method</Link>. The full catalogue as JSON: <a href="/data/datasets/catalogue.json">catalogue.json</a>.</p>
       </section>

@@ -9,6 +9,7 @@ Running log. Newest first. Each entry: what was found, how, status.
 | Five cells marked "blank" (Makueni, Murang'a, Samburu, Trans Nzoia development absorption; Mombasa overall absorption) are printed | Re-reading found digits in each | Now `doubtful`, so the compare view does not order those indicators by value |
 | FY 2023/24 Siaya absorption 85.8 and 64.5 were text-layer misreadings | Two re-readings of the line, the department table and Table 2.3 | Series now 86.8 and 64.6; development case resolved by source, recurrent case open (report prints 86.8 and 87.0) |
 | Kenya dashboard had no public finance group; a sector id with a space would have made an invalid anchor | Adding the debt series | Fixed: group added, ids use hyphens (`#public-finance`) |
+| Kenya dashboard and stories compared the latest year with the first loaded year; with four years that would mix definitions | Adding FY 2021/22 and 2022/23 | Fixed: they compare the latest year with the year before |
 | Compare view described every doubtful value as an OCR reading that disagrees with the amounts | Review of the new doubtful cells | Fixed: it shows the cell's own note |
 
 ## 21 Nov 2026, sweep 14: de-duplication (owner request) and two review findings

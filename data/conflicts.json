@@ -252,12 +252,17 @@
           "label": "Controller of Budget FY 2022/23 report, closing stock in section 3.38.5 (PDF p. 578, printed p. 552, RapidOCR)",
           "value": 873.38,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        },
+        {
+          "label": "Controller of Budget FY 2022/23 report, Table 2.6 (all 47 counties), Siaya row: Executive 853.64 plus Assembly 19.73 (PDF p. 38, printed p. 12, RapidOCR)",
+          "value": 873.37,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
         }
       ],
       "definitions": "The Controller of Budget figure is the opening stock quoted in the FY 2023/24 report. The Auditor-General reports the amount as an emphasis-of-matter item in the FY 2022/23 audit.",
       "hypothesis": "Different cut-off dates or verification of bills. The reports do not say.",
       "status": "open",
-      "effect": "The chart plots 761.29, quoted from the later report because the FY 2022/23 report was not readable for this item. The difference is about 3 per cent.",
+      "effect": "The chart plots 761.29, quoted from the later report because the FY 2022/23 report was not readable for this item. The difference is about 3 per cent. The county comparison (data/counties-cob.json) shows the Table 2.6 value 873.37 with this case.",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false
@@ -645,6 +650,11 @@
           "label": "Same report, key observations (PDF p. 407, printed p. 383)",
           "value": 789.96,
           "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        },
+        {
+          "label": "Same report, Table 2.6 (all 47 counties), Siaya row: Executive 738.82 plus Assembly 13.17 (PDF p. 35, printed p. 11, RapidOCR)",
+          "value": 751.99,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
         }
       ],
       "definitions": "Same report, same date. The table and the key observations give different totals.",
@@ -653,7 +663,7 @@
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The roll-forward and the chart use the table (705.38), whose columns add up; the observation value is listed here."
+      "effect": "The roll-forward and the chart use the table (705.38), whose columns add up; the observation value is listed here. The county comparison shows the Table 2.6 value 751.99 with this case."
     },
     {
       "id": "pending-close-2025",

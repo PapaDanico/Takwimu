@@ -231,6 +231,27 @@ test('conflict pending-close-2025: Table 2.9 value 1,890.0 is a third value; sti
   ok(conflict('pending-close-2025').values.length === 3, 'the case should hold three values');
   ok(pendOf(year('2024/25')) === undefined, 'FY 2024/25 pending bills must stay a gap in the series');
 });
+test('conflict pending-2023: FY 2022/23 Table 2.6 value 873.37 is listed; the series keeps 761.29', () => {
+  const pb = cobSiaya('2022/23', 'pb_grand_total').value;
+  ok(near(pb, 873.37, 0.005) && listed('pending-2023', 873.37), 'Table 2.6 873.37 must be in the case');
+  const parts = ['pb_exec_recurrent', 'pb_exec_development', 'pb_assembly_recurrent', 'pb_assembly_development'].reduce((t, k) => t + cobSiaya('2022/23', k).value, 0);
+  ok(near(parts, pb, 0.01), 'the four printed parts should add to the grand total');
+  ok(near(year('2022/23').pending_recurrent_m + year('2022/23').pending_development_m, 761.29, 0.005), 'series parts changed');
+});
+test('conflict pending-close-2022: FY 2021/22 Table 2.6 value 751.99 is listed; the series keeps 705.38', () => {
+  ok(near(cobSiaya('2021/22', 'pb_grand_total').value, 751.99, 0.005) && listed('pending-close-2022', 751.99), 'Table 2.6 751.99 must be in the case');
+  ok(near(year('2021/22').pending_recurrent_m + year('2021/22').pending_development_m, 705.38, 0.005), 'series parts changed');
+});
+test('47-county FY 2022/23 and 2021/22: Siaya budget, spending, absorption and own-source revenue equal the series', () => {
+  [['2022/23', 'ordinary_osr_actual'], ['2021/22', 'total_osr_actual']].forEach(([fy, osr]) => {
+    const y = year(fy);
+    ok(Number((cobSiaya(fy, 'approved_budget_total').value / 1000).toFixed(2)) === y.approved, `${fy} approved`);
+    ok(Number((cobSiaya(fy, 'expenditure_total').value / 1000).toFixed(2)) === y.spent, `${fy} spent`);
+    ok(cobSiaya(fy, 'recurrent_absorption_pct').value === y.recurrent_absorption_pct && cobSiaya(fy, 'development_absorption_pct').value === y.development_absorption_pct, `${fy} absorption`);
+    ok(Number(cobSiaya(fy, osr).value.toFixed(2)) === osrPoint(fy).value, `${fy} own-source revenue`);
+  });
+  ok(cobSiaya('2022/23', 'total_osr_actual').status === 'not_in_table', 'FY 2022/23 total OSR (with FIF) is not printed and must stay empty');
+});
 test('conflict pending-2024: Table 2.5 of the FY 2023/24 report matches the listed 303.91', () => {
   ok(near(cobSiaya('2023/24', 'pb_grand_total').value, 303.91, 0.005) && listed('pending-2024', 303.91), 'Table 2.5 should read 303.91');
 });

@@ -32,7 +32,7 @@ export default function CompareView({ data }) {
   if (qi && !keys.includes(qi)) problems.push(`The link asked for an indicator that is not in this dataset ("${qi.slice(0, 40)}"), so the default is shown.`);
   const qy = sp.get('y');
   const fy = qy && data.years.includes(qy) ? qy : data.years[data.years.length - 1];
-  if (qy && !data.years.includes(qy)) problems.push(`The link asked for a year that is not loaded ("${qy.slice(0, 12)}"). Years available: FY ${data.years.join(' and FY ')}.`);
+  if (qy && !data.years.includes(qy)) problems.push(`The link asked for a year that is not loaded ("${qy.slice(0, 12)}"). Years available: FY ${data.years.join(', FY ')}.`);
   const qs = sp.get('sort');
   const sortWanted = ['high', 'low', 'name'].includes(qs) ? qs : 'high';
   const rawSel = (sp.get('c') || '').split(',').filter(Boolean);
@@ -48,6 +48,7 @@ export default function CompareView({ data }) {
   const withVal = rows.filter((r) => r.value !== null);
   const doubtful = rows.filter((r) => r.st === 'doubtful');
   const blank = rows.filter((r) => r.st === 'blank');
+  const absent = rows.filter((r) => r.st === 'not_in_table');
   const canOrder = doubtful.length === 0;
   const sort = canOrder ? sortWanted : 'name';
   const ordered = [...rows].sort((a, b) => {
@@ -119,7 +120,7 @@ export default function CompareView({ data }) {
       <section className="card" aria-labelledby="list-h">
         <h2 id="list-h">{f.label}, FY {fy}</h2>
         <p className="lead">{unitText(f) === 'per cent' ? 'Per cent' : 'KSh million'}. {src.title}, {table}, {pageText}. Every value was read by OCR from a scanned page; check it against the page before relying on it.</p>
-        <p className="count" role="status" aria-live="polite">{withVal.length} of {rows.length} counties have a value{rows.length - withVal.length ? `; ${rows.length - withVal.length} not available (${[blank.length ? `${blank.length} blank in the table` : '', doubtful.length ? `${doubtful.length} doubtful OCR reading${doubtful.length > 1 ? 's' : ''}` : ''].filter(Boolean).join(', ')})` : ''}.</p>
+        <p className="count" role="status" aria-live="polite">{withVal.length} of {rows.length} counties have a value{rows.length - withVal.length ? `; ${rows.length - withVal.length} not available (${[absent.length ? `${absent.length} not in that year\u2019s table` : '', blank.length ? `${blank.length} blank in the table` : '', doubtful.length ? `${doubtful.length} doubtful OCR reading${doubtful.length > 1 ? 's' : ''}` : ''].filter(Boolean).join(', ')})` : ''}.</p>
         {!canOrder ? <p className="notice">Listed from A to Z, not by value: {doubtful.length} value{doubtful.length > 1 ? 's' : ''} for this indicator and year {doubtful.length > 1 ? 'are' : 'is a'} doubtful OCR reading{doubtful.length > 1 ? 's' : ''} ({doubtful.map((d) => d.name).join(', ')}), so an order by value could misplace counties.</p> : <p className="notice">{sort === 'name' ? 'Listed from A to Z.' : `Ordered from the ${sort === 'high' ? 'highest' : 'lowest'} to the ${sort === 'high' ? 'lowest' : 'highest'} value.`} The order describes the published figures; it is not a judgement of performance. Counties without a value come last.</p>}
         <p className="muted">Printed total for all 47 counties: {total.value === null ? naText(total) : `${fmtNum(f, total.value)}${f.kind === 'pct' ? '' : ' KSh million'}`}.</p>
         <div className="compare-grid">
@@ -197,7 +198,7 @@ export default function CompareView({ data }) {
                       <th scope="row">{field.label} <small>({field.kind === 'pct' ? '%' : 'KSh m'})</small></th>
                       {sel.map((s) => {
                         const c = cellOf(data, fy, field.key, data.counties.findIndex((x) => x.slug === s));
-                        return c.value === null ? <td key={s} className="na">{c.st === 'doubtful' ? 'Doubtful reading' : 'Blank in table'}<small>p. {c.pdf}</small></td> : <td key={s} className="num">{fmtNum(field, c.value)}<small>p. {c.pdf}{caveat(c) ? `. ${caveat(c)}` : ''}</small></td>;
+                        return c.value === null ? <td key={s} className="na">{c.st === 'doubtful' ? 'Doubtful reading' : c.st === 'not_in_table' ? 'Not in this year\u2019s table' : 'Blank in table'}<small>p. {c.pdf}</small></td> : <td key={s} className="num">{fmtNum(field, c.value)}<small>p. {c.pdf}{caveat(c) ? `. ${caveat(c)}` : ''}</small></td>;
                       })}
                     </tr>
                   ))}
