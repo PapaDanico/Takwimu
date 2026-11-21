@@ -1,6 +1,6 @@
 # Kenya Data Protection Act, 2019: self-review of Takwimu Kenya
 
-**Self-review against the Act, not legal advice.** Section numbers are as read by a non-lawyer and should be confirmed. Prepared 21 Nov 2026 from the Site as built on branch claude/eager-rubin-7bpcgq. It records where each requirement is met on the Site and what remains for the owner. A Kenyan advocate should confirm it before any paid service starts.
+**Self-review against the Act, not legal advice.** Section numbers were checked on 21 Nov 2026 against the text of the Act (No. 24 of 2019) published by the ODPC (odpc.go.ke); their interpretation still needs an advocate. Prepared 21 Nov 2026 from the Site as built on branch claude/eager-rubin-7bpcgq. It records where each requirement is met on the Site and what remains for the owner. A Kenyan advocate should confirm it before any paid service starts.
 
 ## What personal data the Site handles
 
@@ -12,11 +12,11 @@
 
 | Requirement | Section of the Act | Where it is met on the Site | Status |
 |---|---|---|---|
-| Identify the data controller | s.29(a)–(b) (duty to notify) | Privacy notice §1: Takwimu Kenya, a service of Danico Ventures Ltd | Met |
+| Identify the data controller and how to contact it | s.29(e) (duty to notify) | Privacy notice §1: Takwimu Kenya, a service of Danico Ventures Ltd | Met |
 | Lawful basis for processing | s.30 | Privacy §3: consent for form data; legitimate interest for technical logs | Met |
 | Valid, recorded, withdrawable consent | s.32 | Required consent checkbox linking to /privacy/; submission stores consent; Privacy §3 explains withdrawal | Met |
 | Inform data subjects before collection (purpose, recipients, transfers, rights, retention) | s.29 | Privacy §2–§8, linked from the form's consent box and the form footnote | Met |
-| Purpose limitation | s.25(c)–(d) | Privacy §3: used only to reply; no mailing list, marketing, sharing or profiling | Met |
+| Purpose limitation | s.25(c) | Privacy §3: used only to reply; no mailing list, marketing, sharing or profiling | Met |
 | Data minimisation | s.25(d) | Form asks only for reply details; role optional; organisation and place optional for data requests; no ID, phone or political affiliation fields | Met |
 | Accuracy | s.25(f) | Correction right offered via data request option | Met |
 | Storage limitation / retention | s.25(g), s.39 | Privacy §4: 24 months, then deletion from Netlify and inbox | Met on paper; owner must apply it (see actions) |
@@ -26,7 +26,7 @@
 | Data portability | s.38 | Privacy §8 offers a copy in a usable format | Met |
 | No automated decision-making / profiling | s.35 | Privacy "In short" and §3: none | Met |
 | Use of a processor on our behalf | s.25, s.41 (safeguards apply to processors) | Privacy §5 names Netlify as processor; relies on Netlify's standard terms | Partly met: owner to accept Netlify's Data Processing Addendum |
-| Cross-border transfer | s.48–50 | Privacy §5: transfer to the US stated; safeguards stated honestly (consent plus provider's standard terms; no adequacy decision; no negotiated terms) | Partly met: see actions |
+| Cross-border transfer | s.25(h), s.48–50 | Privacy §5: transfer to the US stated; safeguards stated honestly (consent plus provider's standard terms; no adequacy decision; no negotiated terms) | Partly met: see actions |
 | Sensitive personal data (incl. political opinion) | s.44–47 | Not requested; form asks visitors not to include details about other people. Note: a request from a party office may reveal affiliation; it is used only to reply | Met; keep under review |
 | Children's data | s.33 | Privacy §9: form meant for adults; no knowing collection from children | Met |
 | Right to complain to the regulator | s.56 | Privacy §8: ODPC, odpc.go.ke | Met |
