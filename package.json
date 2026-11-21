@@ -2,12 +2,15 @@
   "name": "takwimu",
   "version": "2.0.0",
   "private": true,
-  "engines": { "node": ">=18.17.0" },
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "validate": "node scripts/test-analytics.js && node scripts/validate-data.js",
     "build": "node scripts/test-analytics.js && node scripts/validate-data.js && node scripts/build-data.js && next build",
     "dev": "next dev",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke-test.js dist"
   },
   "dependencies": {
     "next": "14.2.35",
