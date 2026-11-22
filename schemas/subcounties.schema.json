@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/subcounties.schema.json",
+  "title": "Siaya sub-counties (data/subcounties.json)",
+  "type": "object",
+  "required": ["county", "source", "source_url", "retrieved", "confidence", "status", "note", "sub_counties"],
+  "additionalProperties": false,
+  "properties": {
+    "county": { "type": "string" },
+    "source": { "type": "string" },
+    "source_url": { "type": "string", "pattern": "^https://" },
+    "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "status": { "type": "string" },
+    "note": { "type": "string" },
+    "sub_counties": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "area_km2", "area_admin_km2", "wards", "villages", "population", "density_per_km2", "registered_voters_2022", "facilities", "people_per_health_worker"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z-]+$" },
+          "name": { "type": "string" },
+          "headquarters_note": { "type": "string" },
+          "area_km2": { "type": "number", "minimum": 0 },
+          "area_admin_km2": { "type": "number", "minimum": 0 },
+          "wards": { "type": "integer", "minimum": 1 },
+          "villages": { "type": "integer", "minimum": 1 },
+          "population": {
+            "type": "object",
+            "required": ["2019", "2022", "2025", "2027"],
+            "additionalProperties": false,
+            "properties": {
+              "2019": { "type": "integer", "minimum": 0 },
+              "2022": { "type": "integer", "minimum": 0 },
+              "2025": { "type": "integer", "minimum": 0 },
+              "2027": { "type": "integer", "minimum": 0 }
+            }
+          },
+          "density_per_km2": {
+            "type": "object",
+            "required": ["2019", "2022"],
+            "additionalProperties": false,
+            "properties": { "2019": { "type": "number", "minimum": 0 }, "2022": { "type": "number", "minimum": 0 } }
+          },
+          "registered_voters_2022": { "type": "integer", "minimum": 0 },
+          "facilities": {
+            "type": "object",
+            "required": ["hospitals", "health_centres", "dispensaries", "private_clinics", "nursing_homes", "maternity_beds", "youth_friendly_centres"],
+            "additionalProperties": { "type": "integer", "minimum": 0 }
+          },
+          "people_per_health_worker": {
+            "type": "object",
+            "required": ["doctor", "nurse", "clinical_officer"],
+            "additionalProperties": { "type": "number", "minimum": 0 }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "county": "Siaya",
+  "source": "Siaya County Integrated Development Plan (CIDP) 2023-2027, county statistics annex and tables 12 and 8",
+  "source_url": "https://maarifa.cog.go.ke/sites/default/files/2024-06/SIAYA%20CIDP-2023-2027.pdf",
+  "retrieved": "2026-11-20",
+  "confidence": 4,
+  "status": "county-document",
+  "note": "Read from the PDF's text layer. The plan reproduces figures from KNBS (2019 census, 2020 poverty report) and from the Kenya Health Information System (2022). National averages are as printed in the same plan.",
+  "population": {
+    "census_2019": 993183, "male_2019": 471669, "female_2019": 521496, "intersex_2019": 18,
+    "projection_2022": 1040616,
+    "urban_2022": 90178, "rural_2022": 946951,
+    "urban_rural_note": "The plan prints urban 90,178 and rural 946,951 for 2022 (PDF p. 204, printed p. 185). They add to 1,037,129, which is 3,487 fewer than the 2022 total of 1,040,616 printed in the same plan (PDF p. 28 and 202). The plan does not explain the difference; no figure is adjusted.",
+    "pages": {
+      "census_2019": { "pdf_page": 28, "printed_page": 9 }, "male_2019": { "pdf_page": 28, "printed_page": 9 }, "female_2019": { "pdf_page": 28, "printed_page": 9 },
+      "projection_2022": { "pdf_page": 28, "printed_page": 9 }, "urban_2022": { "pdf_page": 204, "printed_page": 185 }, "rural_2022": { "pdf_page": 204, "printed_page": 185 }
+    },
+    "households": 245139, "average_household_size": 4.245, "female_headed_households_pct": 47.7, "national_female_headed_households_pct": 38.2,
+    "urban_centres": [
+      { "name": "Siaya", "population": 34714 }, { "name": "Bondo", "population": 23777 },
+      { "name": "Usenge", "population": 8355 }, { "name": "Ugunja", "population": 7396 },
+      { "name": "Sega", "population": 4371 }, { "name": "Nyandiwa beach", "population": 4225 },
+      { "name": "Ndori", "population": 3949 }, { "name": "Yala", "population": 3391 }
+    ],
+    "age_groups_2022": [
+      { "label": "Pre-primary age (3 to 5 years)", "population": 81771 },
+      { "label": "Primary school age (6 to 13 years)", "population": 210625 },
+      { "label": "Junior secondary age (12 to 14 years)", "population": 77231 },
+      { "label": "Senior secondary age (15 to 17 years)", "population": 74585 },
+      { "label": "Youth (15 to 29 years)", "population": 335309 },
+      { "label": "Labour force (15 to 64 years)", "population": 587731 },
+      { "label": "Aged 65 and over", "population": 51151 }
+    ]
+  },
+  "poverty_2020": {
+    "source_note": "KNBS Comprehensive Poverty Report 2020, as reproduced in the CIDP",
+    "monetary_poverty_pct": { "siaya": 33.1, "kenya": 35.7 },
+    "multidimensional_poverty_pct": { "siaya": 68.8, "kenya": 53.0 },
+    "multidimensional_by_age_pct": [
+      { "group": "Children (under 18)", "siaya": 65.2, "kenya": 52.5 },
+      { "group": "Youth (18 to 34)", "siaya": 70.1, "kenya": 48.8 },
+      { "group": "Adults (35 to 59)", "siaya": 82.9, "kenya": 60.8 },
+      { "group": "Elderly (60 and over)", "siaya": 62.7, "kenya": 55.7 }
+    ]
+  },
+  "health_2022": {
+    "hiv_prevalence_pct": { "siaya": 14.7, "kenya": 4.7 },
+    "antenatal_4th_visit_pct": { "siaya": 65.1, "kenya": 52.3 },
+    "facility_deliveries_pct": { "siaya": 98, "kenya": 78.9 },
+    "contraceptive_use_women_15_49_pct": { "siaya": 39.6, "kenya": 38.1 },
+    "full_immunisation_coverage_pct": { "siaya": 98.4, "kenya": 86.2 },
+    "crude_birth_rate_per_1000": { "siaya": 26.6, "kenya": 27.9 },
+    "crude_death_rate_per_1000": { "siaya": 15.5, "kenya": 10.5 },
+    "average_distance_to_facility_km": 4.2,
+    "who_recommended_radius_km": 5,
+    "icu_beds": 6
+  }
+}

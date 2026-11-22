@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/county.schema.json",
+  "title": "Siaya county profile (data/county.json)",
+  "type": "object",
+  "required": ["county", "source", "source_url", "retrieved", "confidence", "status", "note", "population", "poverty_2020", "health_2022"],
+  "additionalProperties": false,
+  "$defs": {
+    "pair": {
+      "type": "object",
+      "required": ["siaya", "kenya"],
+      "additionalProperties": false,
+      "properties": { "siaya": { "type": "number", "minimum": 0 }, "kenya": { "type": "number", "minimum": 0 } }
+    }
+  },
+  "properties": {
+    "county": { "type": "string" },
+    "source": { "type": "string" },
+    "source_url": { "type": "string", "pattern": "^https://" },
+    "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "status": { "type": "string" },
+    "note": { "type": "string" },
+    "population": {
+      "type": "object",
+      "required": ["census_2019", "male_2019", "female_2019", "intersex_2019", "projection_2022", "urban_2022", "rural_2022", "households", "average_household_size", "female_headed_households_pct", "national_female_headed_households_pct", "urban_centres", "age_groups_2022"],
+      "additionalProperties": false,
+      "properties": {
+        "urban_rural_note": { "type": "string", "minLength": 20 },
+        "pages": { "type": "object", "description": "PDF and printed page of each population field in the CIDP (sweep D14)", "additionalProperties": { "type": "object", "required": ["pdf_page", "printed_page"], "additionalProperties": false, "properties": { "pdf_page": { "type": "integer", "minimum": 1 }, "printed_page": { "type": "integer", "minimum": 1 } } } },
+        "census_2019": { "type": "integer", "minimum": 0 },
+        "male_2019": { "type": "integer", "minimum": 0 },
+        "female_2019": { "type": "integer", "minimum": 0 },
+        "intersex_2019": { "type": "integer", "minimum": 0 },
+        "projection_2022": { "type": "integer", "minimum": 0 },
+        "urban_2022": { "type": "integer", "minimum": 0 },
+        "rural_2022": { "type": "integer", "minimum": 0 },
+        "households": { "type": "integer", "minimum": 0 },
+        "average_household_size": { "type": "number", "minimum": 0 },
+        "female_headed_households_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "national_female_headed_households_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "urban_centres": {
+          "type": "array",
+          "items": { "type": "object", "required": ["name", "population"], "additionalProperties": false, "properties": { "name": { "type": "string" }, "population": { "type": "integer", "minimum": 0 } } }
+        },
+        "age_groups_2022": {
+          "type": "array",
+          "items": { "type": "object", "required": ["label", "population"], "additionalProperties": false, "properties": { "label": { "type": "string" }, "population": { "type": "integer", "minimum": 0 } } }
+        }
+      }
+    },
+    "poverty_2020": {
+      "type": "object",
+      "required": ["source_note", "monetary_poverty_pct", "multidimensional_poverty_pct", "multidimensional_by_age_pct"],
+      "additionalProperties": false,
+      "properties": {
+        "source_note": { "type": "string" },
+        "monetary_poverty_pct": { "$ref": "#/$defs/pair" },
+        "multidimensional_poverty_pct": { "$ref": "#/$defs/pair" },
+        "multidimensional_by_age_pct": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["group", "siaya", "kenya"],
+            "additionalProperties": false,
+            "properties": { "group": { "type": "string" }, "siaya": { "type": "number", "minimum": 0, "maximum": 100 }, "kenya": { "type": "number", "minimum": 0, "maximum": 100 } }
+          }
+        }
+      }
+    },
+    "health_2022": {
+      "type": "object",
+      "required": ["hiv_prevalence_pct", "antenatal_4th_visit_pct", "facility_deliveries_pct", "contraceptive_use_women_15_49_pct", "full_immunisation_coverage_pct", "crude_birth_rate_per_1000", "crude_death_rate_per_1000", "average_distance_to_facility_km", "who_recommended_radius_km", "icu_beds"],
+      "additionalProperties": false,
+      "properties": {
+        "hiv_prevalence_pct": { "$ref": "#/$defs/pair" },
+        "antenatal_4th_visit_pct": { "$ref": "#/$defs/pair" },
+        "facility_deliveries_pct": { "$ref": "#/$defs/pair" },
+        "contraceptive_use_women_15_49_pct": { "$ref": "#/$defs/pair" },
+        "full_immunisation_coverage_pct": { "$ref": "#/$defs/pair" },
+        "crude_birth_rate_per_1000": { "$ref": "#/$defs/pair" },
+        "crude_death_rate_per_1000": { "$ref": "#/$defs/pair" },
+        "average_distance_to_facility_km": { "type": "number", "minimum": 0 },
+        "who_recommended_radius_km": { "type": "number", "minimum": 0 },
+        "icu_beds": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "title": "Editorial review decisions (review_decisions, handover section 6)",
+    "schema_version": 1,
+    "rule": "One record per review decision. Reviewers are identified by role only, never by name (docs/data-protection-policy.md). The reviewer must not be the person who extracted the values. A value is shown as Approved only when an approved record names it and its source_sha256 equals the current hash of that source document. No reviews have taken place yet, so the list is empty; procedure in docs/editorial/review-sop.md.",
+    "updated": "2026-11-21",
+    "reviewer_roles": ["fiscal reviewer", "audit reviewer", "health reviewer", "statistics reviewer", "education reviewer", "agriculture reviewer", "climate reviewer", "governance reviewer", "projects reviewer", "geography reviewer", "legal reviewer", "editor"]
+  },
+  "decisions": []
+}

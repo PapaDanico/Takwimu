@@ -1,0 +1,1341 @@
+{
+  "meta": {
+    "title": "Source conflict register",
+    "rule": "When two sources give different values for the same measure and period, both are shown. We never average them or pick a winner without evidence. Explanations below are hypotheses, labelled as such, until a reviewer confirms them against the original pages.",
+    "reviewed": "Not yet reviewed by a subject specialist",
+    "updated": "2026-11-21",
+    "schema_version": "1.1"
+  },
+  "conflicts": [
+    {
+      "id": "osr-2023-24",
+      "measure": "Own-source revenue, FY 2023/24",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2023/24 report",
+          "value": 610.74,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "FY 2024/25 report (quoted as prior year)",
+          "value": 427.95,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
+      ],
+      "definitions": "The FY 2023/24 report splits its figure into health facility financing (KSh 388.63m; Table 3.258 and Table 2.1 print 388,626,776) and ordinary own-source revenue (KSh 222.11m; printed 222,110,969). The FY 2024/25 report does not give a split for the prior year.",
+      "hypothesis": "The later report may restate the year or count a different scope. The gap is not explained by facility income alone: 610.74 minus 388.63 is 222.11, not 427.95.",
+      "status": "open",
+      "effect": "610.74 is plotted as the main value and 427.95 as the other report's value (hollow marker). The Insights page states the disagreement beside the chart; treat the FY 2023/24 and FY 2024/25 own-source revenue comparison as uncertain.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "osr-2015-16",
+      "measure": "Own-source revenue, FY 2015/16",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2016/17 report (text)",
+          "value": 127.93,
+          "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6"
+        },
+        {
+          "label": "FY 2018/19 report (chart)",
+          "value": 113.26,
+          "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+        }
+      ],
+      "definitions": "Both are described as the county's own revenue for the year. The FY 2015/16 report itself gives 127.93, of which 120.44 was deposited into the County Revenue Fund.",
+      "hypothesis": "The later chart may be a restated series that excludes revenue spent at source.",
+      "status": "open",
+      "effect": "127.93 is plotted, with 113.26 shown as the other report's value.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "osr-2014-15",
+      "measure": "Own-source revenue, FY 2014/15",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2014/15 report",
+          "value": 143.33,
+          "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1"
+        },
+        {
+          "label": "FY 2018/19 report (chart)",
+          "value": 142.88,
+          "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+        }
+      ],
+      "definitions": "Both describe the county's own revenue for the year.",
+      "hypothesis": "The difference is small and may be rounding or a minor restatement.",
+      "status": "open",
+      "effect": "Immaterial to any trend statement. 143.33 is plotted.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "pending-2021",
+      "measure": "Pending bills at 30 June 2021",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2020/21 report",
+          "value": 1060.92,
+          "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+        },
+        {
+          "label": "FY 2021/22 report (opening stock)",
+          "value": 602.08,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        }
+      ],
+      "definitions": "The FY 2020/21 report states recurrent KSh 637.54m plus development KSh 423.38m. The FY 2021/22 report states recurrent KSh 250.51m plus development KSh 351.58m as the stock outstanding on the same date.",
+      "hypothesis": "The later report may count only bills verified as eligible, or use a different cut-off. The reports do not say.",
+      "status": "open",
+      "effect": "Each year's pending-bills column uses the figure from that year's report where one is readable, and the register lists every case where another report differs. The rise over ten years should be read as a direction, not as exact steps.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "budget-financing-osr-2024-25",
+      "measure": "Own-source revenue target, FY 2024/25",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Budget financing table (own-source target)",
+          "value": 1043,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Implied by the stated 47 per cent (436.68 / 0.47)",
+          "value": 929,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, Table 2.1 (own-source revenue of all 47 counties), Siaya total target: ordinary 643.39 plus FIF/A-i-A 283.95 (PDF p. 46, printed p. 3, RapidOCR)",
+          "value": 927.34,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
+      ],
+      "definitions": "KSh 436.68m collected against 1,043m would be 41.9 per cent, but the report states 47 per cent. Table 2.1 gives a total target of 927.34 million and prints 47 per cent, which is 436.68 of 927.34 (47.1 per cent).",
+      "hypothesis": "The two figures may measure different concepts (for example, budget financing versus the annual revenue target). The report does not explain.",
+      "status": "open",
+      "effect": "The 47 per cent is quoted as the report's own statement and is not recomputed. The county comparison uses the Table 2.1 target and percentage; the Siaya hub keeps the budget financing figure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "osr-2024-25-county-statement",
+      "measure": "Own-source revenue collected, FY 2024/25 (county statement versus Controller of Budget)",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2024/25 report, Table 2.1, Siaya total own-source revenue including facility improvement financing (PDF p. 46, printed p. 3, OCR); 47 per cent of a 927.34 target",
+          "value": 436.68,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "County government statement reported by Kenya News Agency, 20 September 2025 (KSh 946,893,440.40 against a KSh 1,044,061,306 target)",
+          "value": 946.8934404,
+          "url": "https://www.kenyanews.go.ke/county-government-refutes-claims-of-revenue-under-performance/"
+        },
+        {
+          "label": "County Treasury, Budget Implementation Report for the 4th quarter of FY 2024/25, Table 4, Total OSR row (PDF p. 6, printed Page 6 of 8; also Table 2, PDF p. 3; read from the text layer, not OCR): KSh 757,570,621 against KSh 1,044,061,306",
+          "value": 757.570621,
+          "url": "https://siaya.go.ke/?cgdp_download=31530"
+        }
+      ],
+      "definitions": "Kenya News Agency (20 September 2025) reports that, according to the county government, \"the county collected Sh946,893,440/40 against an annual revenue target of Sh1,044,061,306\", and quotes the statement: \"This translates to 90.6% performance and not 47% as reported by the controller of budget\". The fifteen revenue streams listed in the article add up exactly to KSh 946,893,440.40; KSh 643,174,553 of it is hospital fees and the other streams total KSh 303,718,887.40. The Controller of Budget figure of KSh 436.68 million is ordinary own-source revenue of KSh 236.84 million plus facility improvement financing, against a target of KSh 927.34 million (ordinary 643.39 plus FIF/A-i-A 283.95). The county’s own fourth-quarter report gives KSh 757,570,621: KSh 236,502,391 into the County Revenue Fund and KSh 521,068,230 as appropriations-in-aid, mostly health receipts. It states 68 per cent of target; 757.57 of 1,044.06 is 72.6 per cent. 946.89 of 1,044.06 is 90.7 per cent. Part by part (calculated by Takwimu, /counties/siaya/analysis/#an-a8, records SIA-A8-2024-25-difference-*): ordinary own-source revenue is KSh 236.50 million in the county Q4 report against 236.84 in Controller of Budget Table 2.1 (-0.34), and FIF/A-i-A (hospital and health facility receipts) is 521.07 against 199.84 (+321.23). The difference between the two totals (320.89) lies in FIF/A-i-A, which is lawful own-source revenue under the Facility Improvement Financing Act, 2023.",
+      "hypothesis": "Possible basis mismatch, not yet established. (1) Facility improvement financing: the ordinary revenue figures are close (236.50 in the county report, 236.84 in the Controller of Budget table), so the gap sits mainly in hospital and health-insurance receipts, which each source may count differently (for example receipts retained at facilities, SHA/SHIF or capitation payments). (2) Target definition: the county uses KSh 1,044,061,306 (its budget, including appropriations-in-aid), the Controller of Budget table uses KSh 927.34 million. (3) Period: the statement may count receipts recorded after the fourth-quarter report or arrears; the Controller of Budget report notes KSh 290 million of arrears in the total. The county statement says its figures were submitted to the Auditor-General; the audited financial statements for FY 2024/25 would settle the basis.",
+      "status": "open",
+      "effect": "Nothing changes in the series: the ten-year own-source revenue trend and the Siaya hub headline keep the Controller of Budget value 436.68. The county statement and the county report are listed here and in the Siaya hub own-source revenue chart (data/siaya.json observations), side by side, so readers can see the difference. Takwimu draws no conclusion about which figure is right.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "recurrent-absorption-2024-25",
+      "measure": "Recurrent budget spent, FY 2024/25",
+      "unit": "per cent",
+      "values": [
+        {
+          "label": "Report states",
+          "value": 83,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Recomputed (4.99 / 6.07)",
+          "value": 82.2,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, Table 2.5 (all 47 counties), Siaya row, RapidOCR (PDF p. 52, printed p. 9)",
+          "value": 82,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
+      ],
+      "definitions": "The recomputed value uses the approved recurrent budget of KSh 6.07bn. Table 2.5 prints 82 for Siaya, the rounded share of 4,991.98 of 6,073.31 million (82.2 per cent).",
+      "hypothesis": "The report may use a revised budget as its denominator.",
+      "status": "open",
+      "effect": "The report's stated 83 per cent is used and the recomputed 82.2 per cent is recorded here and in the year's note on the Data page. The county comparison (data/counties-cob.json) shows the Table 2.5 value 82 with this case.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "recurrent-spend-2016-17",
+      "measure": "Recurrent spending, FY 2016/17",
+      "unit": "KSh billion",
+      "values": [
+        {
+          "label": "Report text",
+          "value": 3.9,
+          "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6"
+        },
+        {
+          "label": "Report table",
+          "value": 3.65,
+          "url": "https://libraryir.parliament.go.ke/items/46318a2e-2825-4832-a629-dba567a58ce6"
+        }
+      ],
+      "definitions": "Within the same report. The table figure, with development spending of KSh 1.98bn, adds to the stated total of KSh 5.63bn.",
+      "hypothesis": "The text may be a typographical error or use a different measure.",
+      "status": "resolved",
+      "effect": "The table value is used because it is consistent with the stated total.",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "budget-2022-23",
+      "measure": "Approved budget, FY 2022/23",
+      "unit": "KSh billion",
+      "values": [
+        {
+          "label": "FY 2022/23 report",
+          "value": 8.6,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        },
+        {
+          "label": "FY 2023/24 report (quoted as prior year)",
+          "value": 8.5,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "Both are described as the approved supplementary budget for FY 2022/23.",
+      "hypothesis": "The later report may quote a different supplementary budget or round differently.",
+      "status": "open",
+      "effect": "The FY 2022/23 report's own figure is used. The difference changes budget-spent shares by under one percentage point.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "budget-2024-25",
+      "measure": "Approved budget, FY 2024/25",
+      "unit": "KSh billion",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2024/25 report, section 3.38 (Siaya County), PDF text layer (PDF p. 474, printed p. 431)",
+          "value": 10.94,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, Table 2.5 (all 47 counties), Siaya row: 10,948.13 million, RapidOCR (PDF p. 52, printed p. 9)",
+          "value": 10.94813,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
+      ],
+      "definitions": "Same report, same budget. The county chapter states KSh 10.94 billion; Table 2.5 prints 10,948.13 million, which rounds to 10.95 billion. Its recurrent (6,073.31) and development (4,874.83) parts match the chapter's 6.07 and 4.87.",
+      "hypothesis": "Hypothesis: the chapter truncates rather than rounds (10.948 to 10.94). The difference is KSh 8.13 million, under 0.1 per cent. Not confirmed against the page image.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The ten-year series keeps 10.94 (unchanged). The county comparison shows the Table 2.5 amount, 10,948.13 million."
+    },
+    {
+      "id": "pending-2023",
+      "measure": "Pending bills at 30 June 2023",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2023/24 report (opening stock)",
+          "value": 761.29,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Auditor-General report, FY 2022/23",
+          "value": 741.56,
+          "url": "https://libraryir.parliament.go.ke/items/7e87be17-5566-48c8-ac76-d4658605ee6c/full"
+        },
+        {
+          "label": "Controller of Budget FY 2022/23 report, closing stock in section 3.38.5 (PDF p. 578, printed p. 552, RapidOCR)",
+          "value": 873.38,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        },
+        {
+          "label": "Controller of Budget FY 2022/23 report, Table 2.6 (all 47 counties), Siaya row: Executive 853.64 plus Assembly 19.73 (PDF p. 38, printed p. 12, RapidOCR)",
+          "value": 873.37,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        }
+      ],
+      "definitions": "The Controller of Budget figure is the opening stock quoted in the FY 2023/24 report. The Auditor-General reports the amount as an emphasis-of-matter item in the FY 2022/23 audit.",
+      "hypothesis": "Different cut-off dates or verification of bills. The reports do not say.",
+      "status": "open",
+      "effect": "Own-year rule (sweep D5, 21 Nov 2026): the series uses 873.38, the closing stock printed in the FY 2022/23 report; 761.29 (FY 2023/24 report opening stock), 741.56 (Auditor-General) and 873.37 (Table 2.6) are listed beside it.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "pending-2024",
+      "measure": "Pending bills at 30 June 2024",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2024/25 report (opening stock)",
+          "value": 1120,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "FY 2023/24 report",
+          "value": 303.91,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "The FY 2023/24 report states KSh 303.91m outstanding at 30 June 2024 but says this excludes bills incurred during the year. The FY 2024/25 report gives the stock at 30 June 2024 as KSh 1.12 billion.",
+      "hypothesis": "The difference of about 3.7 times is probably a definition difference (bills incurred in the year included or not). The reports do not confirm this.",
+      "status": "open",
+      "effect": "Own-year rule (sweep D5, 21 Nov 2026): the series uses 303.91 from the FY 2023/24 report (County Executive only, excluding bills incurred in the year), and 1,120 from the FY 2024/25 report is shown beside it. The hub labels the date \"Sources disagree\" with the range. Read any change in pending bills around FY 2023/24 with this caveat.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "osr-2013-14",
+      "measure": "Own-source revenue, FY 2013/14",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "FY 2014/15 report text",
+          "value": 99.77,
+          "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1"
+        },
+        {
+          "label": "FY 2018/19 report (chart)",
+          "value": 99.78,
+          "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+        }
+      ],
+      "definitions": "Both describe the county's own revenue for the 16 months to 30 June 2014.",
+      "hypothesis": "The difference of KSh 0.01 million is rounding.",
+      "status": "resolved",
+      "effect": "Immaterial. 99.77 is plotted.",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "osr-2019-20",
+      "measure": "Own-source revenue, FY 2019/20",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2020/21 report (quoted as prior year, PDF p. 374)",
+          "value": 179.43,
+          "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+        },
+        {
+          "label": "Siaya County Budget Review and Outlook Paper FY 2019/20 (county document, PDF p. 15)",
+          "value": 184.25,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf"
+        }
+      ],
+      "definitions": "The county paper gives KSh 184,249,748 against a target of KSh 420m (43.87 per cent). The Controller of Budget figure is a comparison figure in the next year's report; that report does not say what it includes.",
+      "hypothesis": "Hypothesis: the two may count different revenue streams or be cut at different dates. The county paper is not an independent review.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "179.43 (Controller of Budget) is plotted as the main value and 184.25 as the other source's value (hollow marker). The county paper's other FY 2019/20 figures are listed but not plotted."
+    },
+    {
+      "id": "cash-bf-2019-20",
+      "measure": "Cash balance brought forward from FY 2019/20 into FY 2020/21",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2020/21 annual report, Table 3.215, actual (PDF p. 373)",
+          "value": 1186.27,
+          "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+        },
+        {
+          "label": "Controller of Budget First Half FY 2020/21 report (PDF p. 319)",
+          "value": 1840.12,
+          "url": "https://libraryir.parliament.go.ke/items/f8bd1f52-a92c-4012-a04a-ae528af00862"
+        }
+      ],
+      "definitions": "The annual report gives KSh 1,186,274,440 actual against KSh 1,235,985,311 budgeted. The first-half report gives KSh 1,840,119,055 as both budget and actual.",
+      "hypothesis": "Hypothesis: the first-half figure may be an early estimate later restated, or the two may count different accounts. Neither report explains the difference.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Neither value is plotted; FY 2019/20 has no cash or balance series. Both are listed on the Data page."
+    },
+    {
+      "id": "final-budget-2019-20",
+      "measure": "Final budget, FY 2019/20",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Siaya County Budget Review and Outlook Paper FY 2019/20, supplementary budget (county document, PDF p. 11)",
+          "value": 8881.77,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf"
+        },
+        {
+          "label": "Auditor-General basis for opinion FY 2019/20, as reproduced by the Senate County Public Accounts Committee (PDF p. 517)",
+          "value": 8106.98,
+          "url": "https://libraryir.parliament.go.ke/items/6533ab5f-fd9c-4570-ad59-922be3bb9ba1"
+        }
+      ],
+      "definitions": "Both documents describe a cut of KSh 341,576,215. The county paper applies it to an original budget of KSh 9,223,350,139 (giving 8,881,773,924). The audit gives a final budget of KSh 8,106,977,580 under exchequer releases and calls the cut unsupported.",
+      "hypothesis": "Hypothesis: the audit figure may be budgeted exchequer releases only, excluding items such as the balance brought forward, so it may not be the whole budget. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Neither value is plotted: the Controller of Budget figure for FY 2019/20 is missing and stays a gap in the ten-year series."
+    },
+    {
+      "id": "in-year-assembly-payables-2025",
+      "measure": "County Assembly trade payables at 1 July 2025 (opening balance, FY 2025/26)",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget First Quarter FY 2025/26 report, Table 3.436 (PDF p. 530)",
+          "value": 39.29,
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        },
+        {
+          "label": "Controller of Budget First Half FY 2025/26 report, text (PDF p. 223)",
+          "value": 72,
+          "url": "https://libraryir.parliament.go.ke/items/b78c5768-fc91-4c90-ae0f-d45ae647dc17"
+        }
+      ],
+      "definitions": "Same date, same entity. The first-quarter table gives KSh 39,285,727; the first-half text gives \"Kshs.72 million\". Executive opening payables agree (KSh 1.89bn and 1.88bn).",
+      "hypothesis": "Hypothesis: the first-half report may include a later restatement or a different class of Assembly payables. Not confirmed; both read from scanned pages.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Both values are shown side by side in the in-year table on the Siaya hub. In-year figures are not part of the ten-year series."
+    },
+    {
+      "id": "in-year-revenue-arrears-2025",
+      "measure": "Revenue arrears owed to the county, latest in-year figure, FY 2025/26",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget First Quarter FY 2025/26 report, at 30 September 2025 (PDF p. 529)",
+          "value": 332,
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        },
+        {
+          "label": "Controller of Budget First Half FY 2025/26 report, Table 3.561, at 31 December 2025 (PDF p. 222)",
+          "value": 953.73,
+          "url": "https://libraryir.parliament.go.ke/items/b78c5768-fc91-4c90-ae0f-d45ae647dc17"
+        }
+      ],
+      "definitions": "Different dates and a different scope. The first-quarter figure covers ordinary own-source revenue and facility improvement fund arrears only. The first-half figure adds KSh 620.36m of equitable share due for December; its own-source (KSh 45m) and facility fund (KSh 287m) parts are the same as at 30 September (derived: 45 plus 287 is 332).",
+      "hypothesis": "Hypothesis: the jump is mostly the newly included equitable share, and the unchanged own-source and facility fund parts may have been carried forward rather than re-counted. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Both values are shown side by side, with their dates, in the in-year table on the Siaya hub. Do not read the rise from 332 to 953.73 as new arrears of the same kind."
+    },
+    {
+      "id": "development-absorption-2022-23",
+      "measure": "Development absorption, FY 2022/23 (share of the annual development budget spent)",
+      "unit": "per cent",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2022/23 report, department table total (PDF p. 583, printed p. 557); two re-reading methods both read 53.8",
+          "value": 53.8,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        },
+        {
+          "label": "Same report, text of section 3.38.4 (PDF p. 578, printed p. 552); two re-reading methods both read 53.4",
+          "value": 53.4,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        }
+      ],
+      "definitions": "Same report, same measure. Both figures are printed: re-reading with two methods gives 53.8 in the department table total and 53.4 in the text. The table amounts (1,520.28 of 2,827.00 million, read the same by both methods) give 53.78 per cent.",
+      "hypothesis": "Hypothesis: a typing slip in the text. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The series keeps 53.8 (the table total, which matches the arithmetic). The text value is listed here.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "RapidOCR recogniser only (detector and angle classifier off) on a 600 dpi greyscale crop (text lines split into words at blank gaps)",
+        "method_b": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop, Otsu binarised and upscaled 2x",
+        "readings": [
+          {
+            "where": "section 3.38.4 text, PDF p. 578",
+            "method_a": "on  development  programmes represented an absorption rate of 53.4 percent. In contrast, recurrent",
+            "method_b": "on  development programmes represented an absorption rate ofF 53.4 percent. In contrast. recurrent"
+          },
+          {
+            "where": "department table total, PDF p. 583",
+            "method_a": "53.8",
+            "method_b": "53.8"
+          },
+          {
+            "where": "department table total development expenditure, PDF p. 583",
+            "method_a": "1,520.28",
+            "method_b": "1,520.28"
+          },
+          {
+            "where": "department table total development budget, PDF p. 583",
+            "method_a": "2,827.00",
+            "method_b": "2,827.00"
+          }
+        ],
+        "check": "1,520.28 / 2,827.00 = 53.78 per cent; 53.8 differs by 0.02 points, 53.4 by 0.38.",
+        "outcome": "Both values are printed in the report, so the case stays open; the readings are not in doubt.",
+        "page_image_checked": false
+      }
+    },
+    {
+      "id": "recurrent-absorption-2023-24",
+      "measure": "Recurrent absorption, FY 2023/24 (share of the annual recurrent budget spent), as read from the scanned report",
+      "unit": "per cent",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.4, PDF text layer (PDF p. 513, printed p. 490): a misreading of the scan",
+          "value": 85.8,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same line re-read with two RapidOCR methods at 400 and 600 dpi (both 86.8); the department table total (PDF p. 517, printed p. 494) also prints 86.8",
+          "value": 86.8,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same report, Table 2.3 (all 47 counties), Siaya row (PDF p. 30, printed p. 7), both re-reading methods",
+          "value": 87,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "The 85.8 was a text-layer misreading: both re-reading methods give 86.8 for the same line. The report itself then prints two values: 86.8 in chapter 3 (text and department table total) and 87.0 in chapter 2 (Table 2.3). The printed amounts (5,138.67 of 5,909.25 million, read the same by both methods) give 86.96 per cent, so both printed values are within 0.5 points.",
+      "hypothesis": "Hypothesis: chapter 3 truncated or used a slightly different denominator; Table 2.3 rounds the amounts. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The series now shows 86.8, the county chapter figure (changed from the misread 85.8 on 21 Nov 2026). The county comparison shows the Table 2.3 value 87.0 with this case.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "RapidOCR recogniser only (detector and angle classifier off) on a 600 dpi greyscale crop (text lines split into words at blank gaps)",
+        "method_b": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop, Otsu binarised and upscaled 2x",
+        "readings": [
+          {
+            "where": "section 3.38.4 text, PDF p. 513",
+            "method_a": "programmes represented an absorption rate of 64.6 per cent, while recrrent expenditure represented 86.8 per",
+            "method_b": "programmes represented an absorption rate of 64.6 per cent while recurrent expenditure represented 86.8 per"
+          },
+          {
+            "where": "department table total, PDF p. 517",
+            "method_a": "86.8",
+            "method_b": "86.8"
+          },
+          {
+            "where": "Table 2.3 Siaya row, PDF p. 30",
+            "method_a": "87.0",
+            "method_b": "87.0"
+          },
+          {
+            "where": "department table total recurrent expenditure, PDF p. 517",
+            "method_a": "5,138.67",
+            "method_b": "5,138.67"
+          },
+          {
+            "where": "department table total recurrent budget, PDF p. 517",
+            "method_a": "5,909.25",
+            "method_b": "5,909.25"
+          }
+        ],
+        "check": "5,138.67 / 5,909.25 = 86.96 per cent; 86.8 differs by 0.16 points and 87.0 by 0.04.",
+        "outcome": "85.8 is not printed (both methods read 86.8). The document prints 86.8 and 87.0 in different chapters, so the case stays open.",
+        "page_image_checked": false
+      }
+    },
+    {
+      "id": "development-absorption-2023-24",
+      "measure": "Development absorption, FY 2023/24 (share of the annual development budget spent), as read from the scanned report",
+      "unit": "per cent",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.4, PDF text layer (PDF p. 513, printed p. 490): a misreading of the scan",
+          "value": 64.5,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same line re-read with two RapidOCR methods at 400 and 600 dpi (both 64.6); the department table total (PDF p. 517, printed p. 494) and Table 2.3 (PDF p. 30, printed p. 7) also print 64.6",
+          "value": 64.6,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "A reading conflict, not two sources: the PDF is a scan and its embedded text layer reads 64.5 where the page prints 64.6. Every place the report gives this figure (text of section 3.38.4, the department table total, the all-county Table 2.3) reads 64.6 by both methods, and the printed amounts (2,487.20 of 3,851.88 million) give 64.57 per cent.",
+      "hypothesis": "Resolved by the printed document: the text layer misread 64.6 as 64.5. Checked by two independent machine readings and the arithmetic, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The series now shows 64.6 (changed from 64.5 on 21 Nov 2026). The text-layer reading 64.5 is kept here.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "RapidOCR recogniser only (detector and angle classifier off) on a 600 dpi greyscale crop (text lines split into words at blank gaps)",
+        "method_b": "RapidOCR detector and recogniser (angle classifier off) on a 400 dpi crop, Otsu binarised and upscaled 2x",
+        "readings": [
+          {
+            "where": "section 3.38.4 text, PDF p. 513",
+            "method_a": "programmes represented an absorption rate of 64.6 per cent, while recrrent expenditure represented 86.8 per",
+            "method_b": "programmes represented an absorption rate of 64.6 per cent while recurrent expenditure represented 86.8 per"
+          },
+          {
+            "where": "department table total, PDF p. 517",
+            "method_a": "64.6",
+            "method_b": "64.6"
+          },
+          {
+            "where": "Table 2.3 Siaya row, PDF p. 30",
+            "method_a": "64.6",
+            "method_b": "64.6"
+          },
+          {
+            "where": "department table total development expenditure, PDF p. 517",
+            "method_a": "2,487.20",
+            "method_b": "2,487.20"
+          },
+          {
+            "where": "department table total development budget, PDF p. 517",
+            "method_a": "3,851.88",
+            "method_b": "3,851.81+."
+          }
+        ],
+        "check": "2,487.20 / 3,851.88 = 64.57 per cent; 64.6 is within 0.5 points. Method B misread the budget cell as \"3,851.81+.\"; method A and Table 2.3 read 3,851.88.",
+        "outcome": "All three printed places read 64.6 by both methods: resolved.",
+        "page_image_checked": false
+      }
+    },
+    {
+      "id": "pending-2022",
+      "measure": "Pending bills at 30 June 2022",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2021/22 report, Table 3.251, column E (PDF p. 409, printed p. 385)",
+          "value": 705.38,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        },
+        {
+          "label": "Controller of Budget FY 2022/23 report, opening stock for FY 2022/23 (PDF p. 578, printed p. 552, RapidOCR)",
+          "value": 840.67,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+        }
+      ],
+      "definitions": "The closing stock in one report and the opening stock in the next, for the same date.",
+      "hypothesis": "Hypothesis: the county revised its list of bills between the two reports (for example, bills verified later). The reports do not say. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Both values are shown in the pending-bills roll-forward on the Insights page. The chart plots 705.38, the FY 2021/22 report's parts (411.53 development plus 293.85 recurrent)."
+    },
+    {
+      "id": "pending-close-2022",
+      "measure": "Pending bills at 30 June 2022, within the FY 2021/22 report",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2021/22 report, Table 3.251, column E (PDF p. 409, printed p. 385)",
+          "value": 705.38,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        },
+        {
+          "label": "Same report, key observations (PDF p. 407, printed p. 383)",
+          "value": 789.96,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        },
+        {
+          "label": "Same report, Table 2.6 (all 47 counties), Siaya row: Executive 738.82 plus Assembly 13.17 (PDF p. 35, printed p. 11, RapidOCR)",
+          "value": 751.99,
+          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+        }
+      ],
+      "definitions": "Same report, same date. The table and the key observations give different totals.",
+      "hypothesis": "Hypothesis: the observation adds bills not in the table (the table includes bills the Auditor-General classed as eligible). Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The roll-forward and the chart use the table (705.38), whose columns add up; the observation value is listed here. The county comparison shows the Table 2.6 value 751.99 with this case."
+    },
+    {
+      "id": "pending-close-2025",
+      "measure": "Pending bills at 30 June 2025, County Executive, within the FY 2024/25 report",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2024/25 report, Table 3.457, closing column (PDF p. 478, printed p. 435, RapidOCR)",
+          "value": 545.95,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, text before Table 3.458 (\"Kshs.1.12 billion\"), whose ageing totals equal the opening stock of 1,123.65 (PDF p. 478)",
+          "value": 1120,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "Same report, Table 2.9 (pending bills of all 47 counties at 30 June 2025), Siaya row: County Executive recurrent 832.9 plus development 1,057.0; County Assembly blank (PDF p. 58, printed p. 15, RapidOCR)",
+          "value": 1890,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        }
+      ],
+      "definitions": "Same report, same date. Table 3.457 gives 1,123.65 at 1 July 2024 less 577.70 paid, with the column for new bills left blank; the text and the ageing table give 1.12 billion. Table 2.9 gives a third figure for the same date, 1,890.0 million, with the County Assembly cells blank.",
+      "hypothesis": "Hypothesis: the ageing table was not updated after payments, or new bills of the year were left out of Table 3.457. Not confirmed.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The FY 2024/25 year-end stock stays out of the chart, as before. The roll-forward shows the table value with this register case; the year is incomplete because new bills are not published. The county comparison shows the Table 2.9 value 1,890.0 with this case; the ten-year series still has no FY 2024/25 pending-bills value."
+    },
+    {
+      "id": "registered-voters-2022",
+      "measure": "Registered voters, 2022 general election, Kenya",
+      "unit": "voters",
+      "values": [
+        {
+          "label": "IEBC, Registered Voters per Constituency for the 2022 General Election: national total (290 constituency rows add to it)",
+          "value": 22102532,
+          "url": "https://www.iebc.or.ke/docs/rov_per_constituency.pdf"
+        },
+        {
+          "label": "Figure IEBC cites elsewhere for the full register (quoted in notices and media; not in this file)",
+          "value": 22120458,
+          "url": "https://www.iebc.or.ke/"
+        }
+      ],
+      "definitions": "The constituency file covers the 290 constituencies in Kenya. The larger figure is cited for the whole register.",
+      "hypothesis": "Hypothesis: the 17,926 difference is voters registered in the diaspora and in prisons, who are not in any constituency. Not confirmed: the file does not say.",
+      "status": "open",
+      "effect": "The compare page and the Kenya dashboard show 22,102,532 (the file the constituency figures come from) and name the other figure beside it.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "deposit-rate-cbk-wdi",
+      "measure": "Commercial bank deposit interest rate, Kenya, 2024 (annual)",
+      "unit": "per cent a year",
+      "values": [
+        {
+          "label": "Central Bank of Kenya, weighted average deposit rate: mean of the 12 monthly values (derived)",
+          "value": 10.8275,
+          "url": "https://www.centralbank.go.ke/statistics/interest-rates/"
+        },
+        {
+          "label": "World Bank WDI FR.INR.DPST (IMF International Financial Statistics)",
+          "value": 11.98,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/FR.INR.DPST?format=json&per_page=100"
+        }
+      ],
+      "definitions": "Both describe deposit rates in Kenya for 2024. The CBK figure is the mean of its monthly weighted averages; the World Bank series comes from the IMF. The gap is 1.16 points in 2024 and up to 3.67 points (2012) over 2010 to 2024; the lending rates of the two sources agree within 0.08 points in every year.",
+      "hypothesis": "Hypothesis: the two use different deposit categories or weights. Not confirmed; neither file says.",
+      "status": "open",
+      "effect": "Both series are shown, each labelled with its source; neither is used to correct the other. The derived real deposit rate uses the CBK series.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "candidates-2022-woman-member",
+      "measure": "Candidates for County Woman Member of the National Assembly, 2022 general election",
+      "unit": "candidates",
+      "values": [
+        {
+          "label": "IEBC Annual Report 2022-23, Table 21, printed total for the position",
+          "value": 361,
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        },
+        {
+          "label": "Same table: party-sponsored (292) plus independent (68)",
+          "value": 360,
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        },
+        {
+          "label": "Same table, printed grand total",
+          "value": 16106,
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        },
+        {
+          "label": "Same table: party-sponsored total (11,574) plus independent total (4,531)",
+          "value": 16105,
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        }
+      ],
+      "definitions": "One table, one row: its two parts add to one less than its printed total. The table total row has the same gap (11,574 plus 4,531 is 16,105, against 16,106 printed), while each column adds to its printed total.",
+      "hypothesis": "Hypothesis: a typing slip in one of the two parts. Not confirmed.",
+      "status": "open",
+      "effect": "The Kenya dashboard and the dataset show the table as printed; this case is noted beside it.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "equitable-share-received-2023-24",
+      "measure": "Equitable share received by Siaya County, FY 2023/24, as read from the scanned Controller of Budget report",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.2, PDF text layer (PDF p. 511, printed p. 488): a misreading of the scan (\"Kshs.5.68 billion\")",
+          "value": 5680,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same sentence read with tesseract at 300 dpi and again at 600 dpi: \"Kshs.6.68 billion\" (the value held in the fiscal ledger, observation L094)",
+          "value": 6680,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Table 3.258 on the same page, equitable share row, actual receipts, tesseract at 600 dpi: 6,681,978,904 (92.0 per cent of the 7,263,019,559 allocation)",
+          "value": 6681.98,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "A reading conflict, not two sources: the PDF is a scan and its embedded text layer reads 5.68 where the page prints 6.68. The table on the same page prints receipts of 6,681,978,904, and the county Q4 report for FY 2023/24 gives 6,681,977,903.",
+      "hypothesis": "Resolved by the printed document: the text layer misread 6.68 as 5.68. Checked by two independent machine readings and the table arithmetic, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "No published figure changes: the value 5.68 billion was never used on the site. The fiscal ledger holds 6,680 (observation L094) and has done since it was first published on 21 Nov 2026. This entry records the misreading and the check made on 21 Nov 2026 so the text-layer value is not reintroduced.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "tesseract 5 (psm 6) on a 300 dpi render of PDF p. 511 (fiscal ledger step)",
+        "method_b": "tesseract 5 (default page segmentation) on a 600 dpi greyscale render of PDF p. 511 (correction check)",
+        "readings": [
+          {
+            "where": "section 3.38.2 text, PDF p. 511",
+            "method_a": "the County received Kshs.6.68 billion as an equitable share",
+            "method_b": "In the FY 2023/24, the County received Kshs.6.68 billion as an equitable share of the revenue raised nationally"
+          },
+          {
+            "where": "Table 3.258, equitable share row, PDF p. 511",
+            "method_a": "not read",
+            "method_b": "A Equitable Share of Revenue Raised Nationally 7, 263, 019, 559 6, 681, 978, 904 92.0"
+          },
+          {
+            "where": "Table 3.258, total receipts (sum of the four subtotals), PDF p. 511",
+            "method_a": "not read",
+            "method_b": "6,681,978,904 + 477,543,935 + 610,737,745 + 864,091,625 = 8,634,352,209; the page reads \"...634352.209\" in the total row and \"Kshs.8.63 billion\" in the text"
+          }
+        ],
+        "check": "6,681,978,904 / 7,263,019,559 = 92.0 per cent, as printed; 5.68 billion would be 78.2 per cent. The four subtotals add to 8,634,352,209, which matches the printed total and the 8.63 billion in the text only if the equitable share is 6.68 billion.",
+        "outcome": "Every printed place reads 6.68 billion (6,681,978,904): resolved. The text-layer reading 5.68 is kept here only as a record.",
+        "page_image_checked": false
+      }
+    },
+    {
+      "id": "hiv-2025-age-label",
+      "measure": "Age band of the Siaya HIV prevalence estimate for 2025 (10.3%), as labelled in data/history.json and as printed by NSDCC",
+      "unit": "age band (text)",
+      "values": [
+        {
+          "label": "data/history.json until 21 Nov 2026: series label \"per cent of ages 15 to 49\", applied to the 2025 point",
+          "value": "ages 15 to 49",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2026/07/Nsdcc-County-Profiles-2026.pdf"
+        },
+        {
+          "label": "NSDCC County Profiles 2026, Siaya County HIV Burden 2026, PDF p. 84 (printed p. 79): 10.3% labelled \"Overall\", with Men (15+) 7.62% and Women (15+) 12.67% beside it",
+          "value": "Overall (age range not printed; sex split for ages 15 and over)",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2026/07/Nsdcc-County-Profiles-2026.pdf"
+        }
+      ],
+      "definitions": "A labelling error, not two sources: the value 10.3% is the same in both. The 2013, 2015 and 2017 points are 15-49 estimates; the 2025 round prints an overall figure and a 15+ split, and does not say 15-49.",
+      "hypothesis": "Resolved by the printed document: the page text layer (pdftotext, 21 Nov 2026) reads \"10.3%\" above \"Overall\" and \"Men (15+)\", \"Women (15+)\"; no \"15-49\" appears on the page. Checked by machine reading of the text layer, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "data/history.json now gives each HIV point its own age_group; the 2025 point reads \"Overall\" and cites PDF p. 84 (printed p. 79). The series label no longer says 15 to 49. No value changed."
+    },
+    {
+      "id": "hiv-scasp-printed-page",
+      "measure": "Printed page of Table 1 (HIV epidemic situation in Siaya County) in the Siaya County HIV and AIDS Strategic Plan 2015/16-2018/19, cited for the 2013 and 2015 HIV points",
+      "unit": "printed page (text)",
+      "values": [
+        {
+          "label": "data/history.json and data/source-library.json until 21 Nov 2026: \"PDF page 16 (printed page 3)\"",
+          "value": "printed page 3",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf"
+        },
+        {
+          "label": "The same PDF page 16: its footer reads \"4 SIAYA COUNTY HIV & AIDS Strategic Plan ((2015/16 – 2018/2019)\"",
+          "value": "printed page 4",
+          "url": "https://nsdcc.go.ke/wp-content/uploads/2021/08/siaya.pdf"
+        }
+      ],
+      "definitions": "A citation error: PDF page 16 is correct, the printed page number was wrong. The values 23.7% (2013) and 24.8% (2015) are unchanged.",
+      "hypothesis": "Resolved by the printed document: the footer of PDF page 16 (pdftotext, 21 Nov 2026; file SHA-256 3bc1885d…b873) reads 4. Not checked by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The 2013 and 2015 HIV points and the library record now cite PDF page 16 (printed page 4). No value changed."
+    },
+    {
+      "id": "kenya-counties-map-licence",
+      "measure": "Licence and upstream source of the county boundary layer behind data/kenya-counties-map.json (geoBoundaries gbOpen KEN ADM1, boundaryID KEN-ADM1-32016919)",
+      "unit": "licence (text)",
+      "values": [
+        {
+          "label": "data/kenya-counties-map.json meta until 21 Nov 2026 (and scripts/make-kenya-map.js): \"CC BY 3.0 IGO\", \"IEBC via OCHA ROSEA\"",
+          "value": "CC BY 3.0 IGO",
+          "url": "https://www.geoboundaries.org/api/current/gbOpen/KEN/ADM1/"
+        },
+        {
+          "label": "geoBoundaries API record for KEN ADM1: boundaryLicense \"Public Domain\", boundarySource \"RCMRD GeoPortal, Africa GeoPortal\", licenseSource rcmrd.africageoportal.com",
+          "value": "Public Domain",
+          "url": "https://www.geoboundaries.org/api/current/gbOpen/KEN/ADM1/"
+        }
+      ],
+      "definitions": "The map file carried the licence and upstream of the ADM2 (constituency) layer, which is CC BY 3.0 IGO from IEBC via OCHA ROSEA. The ADM1 (county) layer it is built from states Public Domain from RCMRD.",
+      "hypothesis": "Resolved by the source: the geoBoundaries ADM1 API record retrieved on 21 Nov 2026 (source-library record geoboundaries-ken-adm1, SHA-256 fd14563e…1da7) states Public Domain. Attribution to geoBoundaries and RCMRD is kept as good practice.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "data/kenya-counties-map.json and scripts/make-kenya-map.js now state Public Domain and the RCMRD upstream; the Kenya map credit line follows. The map shapes are unchanged."
+    },
+    {
+      "id": "imf-debt-cbk-2023",
+      "measure": "Kenya public debt as a share of GDP, 2023",
+      "unit": "per cent of GDP",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: general government gross debt (GGXWDG_NGDP), actual",
+          "value": 73.405218,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.GGXWDG_NGDP.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "Central Bank of Kenya: December public debt divided by CBK calendar-year nominal GDP (ratio derived by Takwimu for comparison)",
+          "value": 74.098591,
+          "url": "https://www.centralbank.go.ke/public-debt/"
+        }
+      ],
+      "definitions": "The IMF series is general government gross debt as a share of GDP on the IMF's reporting year. The CBK figure is a ratio derived here from the CBK stock of public debt at December 2023 and CBK nominal GDP for calendar 2023. They differ by -0.69 points (IMF minus CBK).",
+      "hypothesis": "Hypothesis: different coverage (general government against public debt as CBK reports it), different GDP denominators or a different point in the year. Not confirmed; neither source states the reconciliation.",
+      "status": "open",
+      "effect": "Both values are listed with their sources. The IMF series is shown on /kenya/ as the IMF's figure; the CBK ratio is used only for this comparison and is not plotted as a series.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-debt-cbk-2025",
+      "measure": "Kenya public debt as a share of GDP, 2025",
+      "unit": "per cent of GDP",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: general government gross debt (GGXWDG_NGDP), actual",
+          "value": 71.269491,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.GGXWDG_NGDP.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "Central Bank of Kenya: December public debt divided by CBK calendar-year nominal GDP (ratio derived by Takwimu for comparison)",
+          "value": 69.979175,
+          "url": "https://www.centralbank.go.ke/public-debt/"
+        }
+      ],
+      "definitions": "The IMF series is general government gross debt as a share of GDP on the IMF's reporting year. The CBK figure is a ratio derived here from the CBK stock of public debt at December 2025 and CBK nominal GDP for calendar 2025. They differ by +1.29 points (IMF minus CBK).",
+      "hypothesis": "Hypothesis: different coverage (general government against public debt as CBK reports it), different GDP denominators or a different point in the year. Not confirmed; neither source states the reconciliation.",
+      "status": "open",
+      "effect": "Both values are listed with their sources. The IMF series is shown on /kenya/ as the IMF's figure; the CBK ratio is used only for this comparison and is not plotted as a series.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-inflation-eop-cbk-2019",
+      "measure": "Kenya end-of-period consumer price inflation, December 2019",
+      "unit": "per cent a year",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: inflation, end-of-period consumer prices (PCPIEPCH), actual",
+          "value": 7.157037,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.PCPIEPCH.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "Central Bank of Kenya: 12-month inflation, December 2019",
+          "value": 5.82,
+          "url": "https://www.centralbank.go.ke/inflation-rates/"
+        }
+      ],
+      "definitions": "Both describe the 12-month change in consumer prices at the end of 2019. The IMF prints 7.16 per cent and the CBK December rate is 5.82 per cent, a gap of 1.34 points; the two agree within 0.5 points in every other year compared.",
+      "hypothesis": "Hypothesis: the IMF series may use a different end-of-period convention or a revised index (KNBS rebased the CPI in 2020). Not confirmed.",
+      "status": "open",
+      "effect": "Both values are listed; neither corrects the other. The IMF value is shown on /kenya/ as the IMF's figure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "fif-2023-24-reading",
+      "measure": "Health Facility Improvement Financing (FIF) collected by Siaya County, FY 2023/24, as read from the scanned Controller of Budget report",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget FY 2023/24 report, section 3.38.2 text, PDF text layer (PDF p. 511, printed p. 488): a misreading of the scan (\"Kshs.388.53 million as Health FIF\")",
+          "value": 388.53,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Same sentence read with tesseract 5 on a 600 dpi greyscale render of PDF p. 511: \"Kshs.388.63 million as Health FIF\" (word confidence 92)",
+          "value": 388.63,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Table 3.258 (same page), Facility Improvement Fund row, actual receipts: 388,626,776; also Table 2.1 (PDF p. 26) and the county's own Q4 report Table 4 (fiscal ledger L151, L160)",
+          "value": 388.626776,
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "A reading conflict, not two sources: the PDF is a scan and its embedded text layer reads 388.53 where the page prints 388.63. Two tables in the same report and the county's own fourth-quarter report all give 388,626,776, which rounds to 388.63.",
+      "hypothesis": "Resolved by the printed document: the text layer misread 388.63 as 388.53. Checked by a 600 dpi machine reading and three agreeing printed tables, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Corrected on 21 Nov 2026: the Siaya hub, the trend note and case osr-2023-24 now give 388.63 (and ordinary own-source revenue 222.11, as in Table 2.1). The earlier note that the parts added to 610.63 and left a 0.11 million difference was an artefact of the misreading and has been removed: 388.626776 + 222.110969 = 610.737745, the printed total. The fiscal ledger always held 388,626,776.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "pdftotext text layer of PDF p. 511 (the scan's embedded OCR)",
+        "method_b": "tesseract 5 (psm 6) on a 600 dpi greyscale render of PDF p. 511 (pdftoppm -r 600 -gray); PDF SHA-256 7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
+        "readings": [
+          {
+            "where": "section 3.38.2 text, PDF p. 511",
+            "method_a": "The raised OSR includes Kshs.388.53 million as Health FIF and Kshs.222.l0 million as ordinary OSR",
+            "method_b": "The raised OSR includes Kshs.388.63 million as Health FIF and Kshs.222.10 million as ordinary OSR"
+          },
+          {
+            "where": "Table 3.258, Facility Improvement Fund (FIF) row, PDF p. 511",
+            "method_a": ",8,626.716",
+            "method_b": "325,50s,006| 38, 26,776 (Table 2.1 on PDF p. 26 reads 388,626,776 with RapidOCR)"
+          }
+        ],
+        "check": "388,626,776 + 222,110,969 = 610,737,745, the printed total in Table 3.258 and Table 2.1 and the 610.74 million in the text; 388.53 + 222.10 would leave 0.11 million unexplained. The county Q4 report for FY 2023/24 (Table 4, Health and Sanitation subtotal) also gives 388,626,776.",
+        "outcome": "Every printed place gives 388.63 (388,626,776): resolved. The text-layer reading 388.53 is kept here only as a record.",
+        "page_image_checked": false
+      }
+    },
+    {
+      "id": "pending-2024-table-2-5-scope",
+      "measure": "Scope of Siaya's pending bills of KSh 303.91 million at 30 June 2024 in Table 2.5 of the FY 2023/24 Controller of Budget report",
+      "unit": "label",
+      "values": [
+        {
+          "label": "Fiscal ledger L255 before 21 Nov 2026 (Table 2.5 grand total read as covering both arms)",
+          "value": "county government (executive and assembly)",
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        },
+        {
+          "label": "Table 2.5, PDF p. 33 (printed p. 10), tesseract 5 on a 600 dpi render: Siaya row County Executive 202,659,007 + 101,250,773 = 303,909,780; County Assembly cells shown as '-'; Grand Total 303,909,780",
+          "value": "county executive",
+          "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+        }
+      ],
+      "definitions": "Table 2.5 has columns for the County Executive and the County Assembly and a grand total. For Siaya the Assembly cells are printed as '-', so the grand total equals the Executive subtotal. Section 3.38.5 (PDF p. 513) gives the Executive stock of 303.91 million and reports the County Assembly's 12.67 million separately.",
+      "hypothesis": "Resolved by the printed document: the 303.91 million covers the County Executive only. Checked by a 600 dpi machine reading of the row and of the blank Assembly cells, not by a person viewing the page image.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "Ledger observation L255 now has scope 'county executive', the same as L249, with a note that the Assembly cells are shown as '-'. The value (303.91) is unchanged; case pending-2024 still compares it with the KSh 1.12 billion stock in the next report.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "RapidOCR row reading of PDF p. 33 made for data/counties-cob.json (staging)",
+        "method_b": "tesseract 5 (psm 11, word boxes) on a 600 dpi greyscale render of PDF p. 33, and a separate psm 7 reading of the crop over the two Assembly columns of the Siaya row",
+        "readings": [
+          {
+            "where": "Table 2.5, Siaya row, PDF p. 33",
+            "method_a": "Siaya | 202,659,007 | 101,250,773 | 303,909,780 | 303,909,780 (nothing read in the Assembly columns)",
+            "method_b": "Siaya 202,659,007 101,250,773 303,909,780 ... 303,909,780 (Executive subtotal and Grand Total, word confidence 96)"
+          },
+          {
+            "where": "Table 2.5, Siaya row, County Assembly columns",
+            "method_a": "no text",
+            "method_b": "-| -|"
+          },
+          {
+            "where": "section 3.38.5, PDF p. 513",
+            "method_a": "outstanding amount was Kshs.303.91 million ... The County Assembly reported outstanding pending bills of Kshs.12.67 million",
+            "method_b": "same text at 600 dpi"
+          }
+        ],
+        "check": "202,659,007 + 101,250,773 = 303,909,780 = Grand Total, so nothing from the Assembly is in it.",
+        "outcome": "The Table 2.5 figure is the County Executive only: L255 corrected.",
+        "page_image_checked": false
+      }
+    },
+    {
+      "id": "q1-2025-26-development-spending",
+      "measure": "Siaya County development spending, first quarter of FY 2025/26 (July to September 2025)",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "history.json in_year q1 spending_development, read from the PDF text layer (PDF p. 529, printed p. 483)",
+          "value": "0 KSh million (value held in history.json)",
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        },
+        {
+          "label": "Section 3.38.6 text, tesseract 5 on a 600 dpi render of PDF p. 529: \"There was no spending on development programs, and the entire Kshs.712 million was allocated to recurrent programs\"",
+          "value": "There was no spending on development programs",
+          "url": "https://libraryir.parliament.go.ke/items/ab833cdf-9648-4688-96c0-030fe6e0e995"
+        }
+      ],
+      "definitions": "The question was whether the 0 is a printed zero or a blank or dash turned into zero. The report states in words that there was no development spending in the quarter, and that the CoB approved withdrawals only for recurrent programmes (section 3.38.5).",
+      "hypothesis": "Resolved by the printed document: zero development spending is stated in words, not a blank cell.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "effect": "The value 0 stays, now with the printed sentence attached (as_printed) so it is not read as a missing figure.",
+      "reread": {
+        "on": "2026-11-21",
+        "method_a": "PDF text layer of PDF p. 529 (staging read)",
+        "method_b": "tesseract 5 (psm 6) on a 600 dpi greyscale render of PDF p. 529; PDF SHA-256 1030c623c39a23e49a2272ff39d7b13c7aafe32f28915984eddca35c27cfc37e",
+        "readings": [
+          {
+            "where": "section 3.38.6 Expenditure Review, PDF p. 529",
+            "method_a": "no development spending recorded (value 0)",
+            "method_b": "The County spent Kshs.712 million on recurrent programs during the reporting period ... There was no spending on development programs"
+          },
+          {
+            "where": "section 3.38.5 Exchequers Approved, PDF p. 529",
+            "method_a": "not read",
+            "method_b": "approved the withdrawal of Kshs.712 million ... which was entirely allocated to recurrent programs"
+          }
+        ],
+        "check": "Total spending 712 = recurrent 712 + development 0.",
+        "outcome": "A stated zero: kept.",
+        "page_image_checked": false
+      }
+    },
+    {
+      "id": "imf-wb-gdp-per-capita-2025",
+      "measure": "Kenya GDP per person, current US dollars, 2025",
+      "unit": "US$ per person",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: NGDPDPC, actual (link and cite only; © IMF)",
+          "value": 2547.501903,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.NGDPDPC.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "World Bank WDI NY.GDP.PCAP.CD (CC BY 4.0)",
+          "value": 2362.860912,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/NY.GDP.PCAP.CD?format=json&per_page=100"
+        }
+      ],
+      "definitions": "Both are nominal GDP in current US dollars divided by population. The IMF figure is 7.8 per cent above the World Bank figure (IMF minus WB, in per cent of WB); the IMF is 6.7 to 9.1 per cent higher in every year 2010-2025, while total GDP in US dollars agrees within 1 per cent, so the difference sits in the population denominator.",
+      "hypothesis": "Definitional: the IMF and the World Bank divide by different population estimates (the World Bank uses UN population estimates; the IMF uses its own WEO population series). Not confirmed by either publisher.",
+      "status": "open",
+      "effect": "Both values are shown side by side on /kenya/ with a definitional note (sweep D13, 21 Nov 2026); neither is chosen and they are never averaged. The IMF series is labelled as the IMF's measure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-wb-revenue-gdp-2023",
+      "measure": "Kenya government revenue as a share of GDP, 2023",
+      "unit": "per cent of GDP",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: GGR_NGDP, actual (link and cite only; © IMF)",
+          "value": 16.989571,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.GGR_NGDP.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "World Bank WDI GC.REV.XGRT.GD.ZS (CC BY 4.0)",
+          "value": 18.638829,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/GC.REV.XGRT.GD.ZS?format=json&per_page=100"
+        }
+      ],
+      "definitions": "IMF WEO general government revenue (GGR_NGDP) against World Bank WDI central government revenue excluding grants (GC.REV.XGRT.GD.ZS); they differ by -1.65 points (IMF minus WB). The gap is -0.5 to -3.3 points in 2014-2023.",
+      "hypothesis": "Definitional: different coverage (general government against central government), treatment of grants and the fiscal-year basis. The two are different measures, not two readings of one figure.",
+      "status": "open",
+      "effect": "Both values are shown side by side on /kenya/ with a definitional note (sweep D13, 21 Nov 2026); neither is chosen and they are never averaged. The IMF series is labelled as the IMF's measure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-wb-expense-gdp-2023",
+      "measure": "Kenya government spending as a share of GDP, 2023",
+      "unit": "per cent of GDP",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: GGX_NGDP, actual (link and cite only; © IMF)",
+          "value": 22.604177,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.GGX_NGDP.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "World Bank WDI GC.XPN.TOTL.GD.ZS (CC BY 4.0)",
+          "value": 27.844641,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/GC.XPN.TOTL.GD.ZS?format=json&per_page=100"
+        }
+      ],
+      "definitions": "IMF WEO general government total expenditure (GGX_NGDP) against World Bank WDI central government expense (GC.XPN.TOTL.GD.ZS); they differ by -5.24 points (IMF minus WB). The gap runs from -5.2 to +5.6 points across 2014-2023.",
+      "hypothesis": "Definitional: expenditure (including net acquisition of non-financial assets) against expense (excluding it), and general against central government. Different measures.",
+      "status": "open",
+      "effect": "Both values are shown side by side on /kenya/ with a definitional note (sweep D13, 21 Nov 2026); neither is chosen and they are never averaged. The IMF series is labelled as the IMF's measure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "imf-wb-gdp-usd-2024",
+      "measure": "Kenya GDP in current US dollars, 2024",
+      "unit": "US$ billion",
+      "values": [
+        {
+          "label": "IMF World Economic Outlook, October 2026: NGDPD, actual (link and cite only; © IMF)",
+          "value": 119.364085,
+          "url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KEN.NGDPD.A?attributes=all&dimensionAtObservation=TIME_PERIOD"
+        },
+        {
+          "label": "World Bank WDI NY.GDP.MKTP.CD (CC BY 4.0)",
+          "value": 120.397538,
+          "url": "https://api.worldbank.org/v2/country/KEN/indicator/NY.GDP.MKTP.CD?format=json&per_page=100"
+        }
+      ],
+      "definitions": "IMF WEO GDP in US dollars (NGDPD) against World Bank WDI GDP in current US dollars (NY.GDP.MKTP.CD, divided by 1,000,000,000); they differ by -0.86 per cent (IMF minus WB). Years 2011, 2023 and 2024 differ by 0.66 to 0.86 per cent; other years agree more closely.",
+      "hypothesis": "Hypothesis: a different exchange-rate conversion or vintage of the national accounts. Not confirmed.",
+      "status": "open",
+      "effect": "Both values are shown side by side on /kenya/ with a definitional note (sweep D13, 21 Nov 2026); neither is chosen and they are never averaged. The IMF series is labelled as the IMF's measure.",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "iebc-president-independent-dash",
+      "measure": "Independent presidential candidates, 2022 general election (IEBC Annual Report 2022-23, Table 21)",
+      "unit": "label",
+      "values": [
+        {
+          "label": "data/political.json before 21 Nov 2026",
+          "value": "0 (a printed dash stored as zero)",
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        },
+        {
+          "label": "As printed in Table 21",
+          "value": "'-' (stored as null with the note \"shown as '-'\")",
+          "url": "https://iebc.or.ke/uploads/resources/8tIiXFDGzt.pdf"
+        }
+      ],
+      "definitions": "The table prints '-' in the independent column for President. A dash is not a printed zero.",
+      "hypothesis": "Resolved by the printed document and one site-wide rule (sweep D17): a cell printed as '-' is stored as null with a note, never as 0.",
+      "effect": "political.json holds null; /kenya/ shows '-' with a tooltip; the column sums treat the dash as nothing. scripts/validate-data.js fails on any value 0 whose note says it was shown as '-'.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "ecde-enrolment-2022-value-type",
+      "measure": "Siaya pre-primary (ECE) gross enrolment at the end of 2022, CIDP 2023-2027 (education observation cidp-ecde-enrol-end)",
+      "unit": "label",
+      "values": [
+        {
+          "label": "siaya-education.json value_type before 21 Nov 2026",
+          "value": "actual",
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Government-of-Siaya-CIDP-2023-2027-Final-Print-File-2024.pdf"
+        },
+        {
+          "label": "Corrected value_type (sweep D21)",
+          "value": "unclear",
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Government-of-Siaya-CIDP-2023-2027-Final-Print-File-2024.pdf"
+        }
+      ],
+      "definitions": "The CIDP prints 81,771 as end-2022 ECE enrolment (PDF p. 44); the same plan projects the 3-5 population for 2022 as 81,771 (page 35, case edu-c07 in the education dataset).",
+      "hypothesis": "Resolved: the figure cannot be shown as an actual enrolment count; it is labelled unclear.",
+      "effect": "The education page tags it \"Unclear\" and leaves it out of the enrolment chart; Report D is asked to render it the same way.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "subcounty-voters-term",
+      "measure": "Siaya voters by sub-county, 2022 (CIDP 2023-2027 statistics annex)",
+      "unit": "label",
+      "values": [
+        {
+          "label": "subcounties.json field before 21 Nov 2026 (the CIDP column heading)",
+          "value": "eligible_voters_2022 (\"Eligible Voting Population\")",
+          "url": "https://maarifa.cog.go.ke/sites/default/files/2024-06/SIAYA%20CIDP-2023-2027.pdf"
+        },
+        {
+          "label": "IEBC register of voters 2022 (the figures match it: 533,595 for Siaya)",
+          "value": "registered_voters_2022 (registered voters)",
+          "url": "https://maarifa.cog.go.ke/sites/default/files/2024-06/SIAYA%20CIDP-2023-2027.pdf"
+        }
+      ],
+      "definitions": "The CIDP annex (PDF p. 204) labels the column \"Eligible Voting Population\", but the six figures are the IEBC 2022 registered voters per constituency (they add to 533,595, as in data/political.json). Eligible voters (adults who could register) is a different, larger number.",
+      "hypothesis": "Resolved: the IEBC term registered voters is used everywhere (sweep D23).",
+      "effect": "Field renamed; /subcounties/ and the dataset say \"registered voters\".",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "analytics-per-person-2022-23",
+      "measure": "Siaya real county spending per person, FY 2022/23, FY 2024/25 prices",
+      "unit": "KSh per person",
+      "values": [
+        {
+          "label": "/analytics/ before 21 Nov 2026: population interpolated between censuses and projections to 1 January 2023",
+          "value": 7096,
+          "url": "https://libraryir.parliament.go.ke/items/e32e1bc2-b0b4-4af1-9d21-b27ab6fc5e34"
+        },
+        {
+          "label": "Siaya analysis A1 (SIA-A1-2022-23-cob-report-2022-23): the 2022 CIDP projection matched to FY 2022/23, no interpolation",
+          "value": 7224,
+          "url": "https://libraryir.parliament.go.ke/items/e32e1bc2-b0b4-4af1-9d21-b27ab6fc5e34"
+        }
+      ],
+      "definitions": "Same spending (Controller of Budget FY 2022/23 report) and the same price index; the earlier /analytics/ figure divided by an interpolated mid-year population, which fills a gap between published population figures.",
+      "hypothesis": "Resolved by method (sweep D3): gaps are never filled, so the interpolated series is withdrawn. Per-person values exist only for years with a published population figure (FY 2015/16, 2017/18, 2019/20, 2022/23).",
+      "effect": "/analytics/ no longer shows an interpolated per-person series or an interpolated population growth rate; it lists the A1 values and links to /counties/siaya/analysis/#an-a1, the one canonical home. The other interpolated years (e.g. FY 2024/25, KSh 7,064 on the old page) have no value now.",
+      "status": "resolved",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false
+    }
+  ]
+}

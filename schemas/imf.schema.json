@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/imf.schema.json",
+  "title": "Kenya: IMF World Economic Outlook indicators and IMF staff documents (data/imf.json)",
+  "type": "object",
+  "required": ["meta", "vintages", "documents", "comparisons", "comparison_rule"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "country", "iso3", "retrieved", "schema_version", "source_id", "publisher", "route", "routes_tried", "licence", "citation", "rule", "type_rule", "first_year"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "country": { "type": "string", "enum": ["Kenya"] },
+        "iso3": { "type": "string", "enum": ["KEN"] },
+        "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "schema_version": { "type": "string" },
+        "source_id": { "type": "string" },
+        "publisher": { "type": "string" },
+        "route": { "type": "string" },
+        "routes_tried": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["route", "url", "http_status"],
+            "additionalProperties": false,
+            "properties": {
+              "route": { "type": "string" },
+              "url": { "type": "string", "pattern": "^https://" },
+              "http_status": { "type": "string", "pattern": "^\\d{3}$" },
+              "note": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "licence": { "$ref": "#/$defs/licence" },
+        "citation": { "type": "string" },
+        "rule": { "type": "string" },
+        "type_rule": {
+          "type": "object",
+          "required": ["actual", "estimate", "projection"],
+          "additionalProperties": false,
+          "properties": { "actual": { "type": "string" }, "estimate": { "type": "string" }, "projection": { "type": "string" } }
+        },
+        "first_year": { "type": "integer" }
+      }
+    },
+    "vintages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["vintage", "sdmx_dataflow", "sdmx_version", "publication_date", "edition_year", "raw_files", "indicators", "values"],
+        "additionalProperties": false,
+        "properties": {
+          "vintage": { "type": "string", "pattern": "^(April|October) \\d{4}$" },
+          "sdmx_dataflow": { "type": "string", "enum": ["IMF.RES/WEO"] },
+          "sdmx_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+          "publication_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "edition_year": { "type": "integer" },
+          "raw_files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["indicator", "file", "sha256"],
+              "additionalProperties": false,
+              "properties": {
+                "indicator": { "type": "string" },
+                "file": { "type": "string" },
+                "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+              }
+            }
+          },
+          "indicators": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["code", "name", "unit", "available"],
+              "additionalProperties": false,
+              "properties": {
+                "code": { "type": "string", "pattern": "^[A-Z_]+$" },
+                "name": { "type": "string" },
+                "unit": { "type": "string" },
+                "sector": { "type": "string", "enum": ["economy", "prices", "public finance", "external"] },
+                "available": { "type": "boolean" },
+                "reason": { "type": "string" },
+                "latest_actual_year": { "type": ["integer", "null"] },
+                "reporting_year": { "type": ["string", "null"] },
+                "country_update_date": { "type": ["string", "null"] },
+                "historical_data_source": { "type": ["string", "null"] },
+                "base_year": { "type": ["string", "null"] },
+                "scale": { "type": ["string", "null"] },
+                "source_url": { "type": "string", "pattern": "^https://api\\.imf\\.org/" }
+              }
+            }
+          },
+          "values": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["indicator", "year", "value", "unit", "vintage", "type", "source_url"],
+              "additionalProperties": false,
+              "properties": {
+                "indicator": { "type": "string", "pattern": "^[A-Z_]+$" },
+                "year": { "type": "integer", "minimum": 1980, "maximum": 2100 },
+                "value": { "type": ["number", "null"] },
+                "unit": { "type": "string" },
+                "vintage": { "type": "string", "pattern": "^(April|October) \\d{4}$" },
+                "type": { "type": "string", "enum": ["actual", "estimate", "projection"] },
+                "source_url": { "type": "string", "pattern": "^https://" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "series", "type", "date", "landing_page", "pdf_url", "alt_urls", "publisher", "licence", "sha256", "retrieved", "download_status"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "title": { "type": "string" },
+          "series": { "type": "string" },
+          "type": { "type": "string" },
+          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$" },
+          "landing_page": { "type": "string", "pattern": "^https://" },
+          "pdf_url": { "type": ["string", "null"] },
+          "alt_urls": { "type": "array", "items": { "type": "string", "pattern": "^https://" } },
+          "publisher": { "type": "string" },
+          "licence": { "$ref": "#/$defs/licence" },
+          "sha256": { "type": ["string", "null"] },
+          "retrieved": { "type": ["string", "null"] },
+          "download_status": { "type": "string" }
+        }
+      }
+    },
+    "comparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["imf_indicator", "vintage", "year", "imf_type", "imf_value", "other", "other_label", "other_value", "difference_basis", "difference", "threshold", "candidate_conflict", "note"],
+        "additionalProperties": false,
+        "properties": {
+          "imf_indicator": { "type": "string" },
+          "vintage": { "type": "string" },
+          "year": { "type": "integer" },
+          "imf_type": { "type": "string", "enum": ["actual", "estimate"] },
+          "imf_value": { "type": "number" },
+          "other": { "type": "object" },
+          "other_label": { "type": "string" },
+          "other_value": { "type": "number" },
+          "difference_basis": { "type": "string", "enum": ["points", "percent"] },
+          "difference": { "type": "number" },
+          "threshold": { "type": "number" },
+          "candidate_conflict": { "type": "boolean" },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "comparison_rule": { "type": "string" }
+  },
+  "$defs": {
+    "licence": {
+      "type": "object",
+      "required": ["terms_url", "statement", "redistribution_allowed", "imf_notice"],
+      "additionalProperties": false,
+      "properties": {
+        "terms_url": { "type": "string", "pattern": "^https://" },
+        "statement": { "type": "string" },
+        "redistribution_allowed": { "type": "boolean" },
+        "imf_notice": { "type": "string" }
+      }
+    }
+  }
+}

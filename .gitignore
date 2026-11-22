@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.next/
+public/data/
+*.tsbuildinfo
+.env*
+dist-synthetic/
+public/briefs/siaya-fiscal-brief.pdf

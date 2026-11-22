@@ -1,0 +1,65 @@
+{
+  "county": "Siaya",
+  "source": "Siaya County Integrated Development Plan (CIDP) 2023-2027, Table 3 (administrative units, IEBC), Table 8 (population and density, KNBS) and the county statistics annex",
+  "source_url": "https://maarifa.cog.go.ke/sites/default/files/2024-06/SIAYA%20CIDP-2023-2027.pdf",
+  "retrieved": "2026-11-20",
+  "confidence": 4,
+  "status": "county-document",
+  "note": "Read from the PDF's text layer, so no scan errors, and checked against totals in the same document. Population is the 2019 census with KNBS projections reproduced by the county. Service counts and staffing ratios are as at 2022. The CIDP calls Alego Usonga 'Siaya' in its population table. Area differs slightly between the KNBS table (used for density) and the administrative table. Voters: the CIDP statistics annex (PDF p. 204, printed p. 185) labels the column 'Eligible Voting Population'; the six figures equal the IEBC register of voters for 2022 (533,595 for Siaya, data/political.json), so the IEBC term 'registered voters' is used. Pages: population and density Table 8 (PDF p. 33, printed p. 14); projections Table 5 (PDF p. 29, printed p. 10); voters PDF p. 204.",
+  "sub_counties": [
+    {
+      "id": "alego-usonga", "name": "Alego Usonga", "headquarters_note": "Includes Siaya town, the county headquarters",
+      "area_km2": 598.9, "area_admin_km2": 605.8, "wards": 6, "villages": 22,
+      "population": { "2019": 224343, "2022": 235057, "2025": 247825, "2027": 256728 },
+      "density_per_km2": { "2019": 375, "2022": 392 },
+      "registered_voters_2022": 122002,
+      "facilities": { "hospitals": 2, "health_centres": 5, "dispensaries": 31, "private_clinics": 14, "nursing_homes": 5, "maternity_beds": 66, "youth_friendly_centres": 2 },
+      "people_per_health_worker": { "doctor": 12526, "nurse": 1087, "clinical_officer": 3173 }
+    },
+    {
+      "id": "bondo", "name": "Bondo", "headquarters_note": "Includes Bondo town and the Lake Victoria shoreline",
+      "area_km2": 598.8, "area_admin_km2": 593.0, "wards": 6, "villages": 21,
+      "population": { "2019": 197883, "2022": 207334, "2025": 218596, "2027": 226448 },
+      "density_per_km2": { "2019": 330, "2022": 346 },
+      "registered_voters_2022": 104035,
+      "facilities": { "hospitals": 3, "health_centres": 6, "dispensaries": 26, "private_clinics": 15, "nursing_homes": 2, "maternity_beds": 55, "youth_friendly_centres": 1 },
+      "people_per_health_worker": { "doctor": 20053, "nurse": 1355, "clinical_officer": 5420 }
+    },
+    {
+      "id": "gem", "name": "Gem", "headquarters_note": "Administratively split into Gem Wagai and Gem Yala",
+      "area_km2": 405.2, "area_admin_km2": 405.0, "wards": 6, "villages": 16,
+      "population": { "2019": 179792, "2022": 188379, "2025": 198611, "2027": 205746 },
+      "density_per_km2": { "2019": 444, "2022": 465 },
+      "registered_voters_2022": 93568,
+      "facilities": { "hospitals": 1, "health_centres": 12, "dispensaries": 21, "private_clinics": 10, "nursing_homes": 1, "maternity_beds": 16, "youth_friendly_centres": 0 },
+      "people_per_health_worker": { "doctor": 68126, "nurse": 2129, "clinical_officer": 6593 }
+    },
+    {
+      "id": "rarieda", "name": "Rarieda", "headquarters_note": "Lake Victoria shoreline and the Ramogi hills",
+      "area_km2": 402.4, "area_admin_km2": 403.4, "wards": 5, "villages": 14,
+      "population": { "2019": 152570, "2022": 159856, "2025": 168540, "2027": 174594 },
+      "density_per_km2": { "2019": 379, "2022": 397 },
+      "registered_voters_2022": 84849,
+      "facilities": { "hospitals": 1, "health_centres": 9, "dispensaries": 20, "private_clinics": 7, "nursing_homes": 0, "maternity_beds": 19, "youth_friendly_centres": 2 },
+      "people_per_health_worker": { "doctor": 170952, "nurse": 2220, "clinical_officer": 8547 }
+    },
+    {
+      "id": "ugenya", "name": "Ugenya", "headquarters_note": "",
+      "area_km2": 323.5, "area_admin_km2": 322.3, "wards": 4, "villages": 14,
+      "population": { "2019": 134354, "2022": 140771, "2025": 148417, "2027": 153749 },
+      "density_per_km2": { "2019": 415, "2022": 435 },
+      "registered_voters_2022": 69027,
+      "facilities": { "hospitals": 1, "health_centres": 2, "dispensaries": 20, "private_clinics": 7, "nursing_homes": 3, "maternity_beds": 12, "youth_friendly_centres": 2 },
+      "people_per_health_worker": { "doctor": 138626, "nurse": 2100, "clinical_officer": 4471 }
+    },
+    {
+      "id": "ugunja", "name": "Ugunja", "headquarters_note": "The smallest and most densely settled sub-county",
+      "area_km2": 201, "area_admin_km2": 200.9, "wards": 3, "villages": 11,
+      "population": { "2019": 104241, "2022": 109219, "2025": 115152, "2027": 119289 },
+      "density_per_km2": { "2019": 519, "2022": 543 },
+      "registered_voters_2022": 60114,
+      "facilities": { "hospitals": 2, "health_centres": 2, "dispensaries": 9, "private_clinics": 5, "nursing_homes": 1, "maternity_beds": 28, "youth_friendly_centres": 0 },
+      "people_per_health_worker": { "doctor": 118315, "nurse": 1793, "clinical_officer": 4225 }
+    }
+  ]
+}

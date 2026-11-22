@@ -1,0 +1,161 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
+
+# Next.js route payloads (index.txt). Netlify serves .txt as text/plain, and Next then reloads the whole page on every
+# internal link instead of navigating client-side; the correct type keeps navigation fast. Sweep 13, 21 Nov 2026.
+[[headers]]
+  for = "/index.txt"
+  [headers.values]
+    Content-Type = "text/x-component"
+
+[[headers]]
+  for = "/*/index.txt"
+  [headers.values]
+    Content-Type = "text/x-component"
+
+[[redirects]]
+  from = "/corrections/*"
+  to = "/data/#conflicts"
+  status = 301
+  force = true
+
+# The trend explorer moved into the Kenya dashboard (owner de-duplication, 21 Nov 2026). Query strings pass through.
+# The fiscal brief PDF moved beside the reports (sweep N2, 21 Nov 2026). The build keeps a byte-identical copy at the
+# old path as the fallback for hosts without this redirect.
+[[redirects]]
+  from = "/briefs/siaya-fiscal-brief.pdf"
+  to = "/reports/siaya-fiscal-brief.pdf"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/trends/"
+  to = "/kenya/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/trends"
+  to = "/kenya/"
+  status = 301
+  force = true
+
+# Owner UX decisions U2/U6 (21 Nov 2026): merged and moved pages. Each old path also keeps a static fallback page
+# (meta refresh, link and rel=canonical, components/Moved.js) for the static export served without these rules.
+# The smoke test checks every pair below against its fallback page.
+
+[[redirects]]
+  from = "/analytics/"
+  to = "/counties/siaya/analysis/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/analytics"
+  to = "/counties/siaya/analysis/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/counties/siaya/pulse/"
+  to = "/counties/siaya/analysis/#latest"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/counties/siaya/pulse"
+  to = "/counties/siaya/analysis/#latest"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/subcounties/"
+  to = "/counties/siaya/wards/#subcounties"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/subcounties"
+  to = "/counties/siaya/wards/#subcounties"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/profile/"
+  to = "/counties/siaya/people/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/profile"
+  to = "/counties/siaya/people/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights/"
+  to = "/counties/siaya/insights/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights"
+  to = "/counties/siaya/insights/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/briefs/"
+  to = "/reports/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/briefs"
+  to = "/reports/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/briefs/request/"
+  to = "/reports/#briefs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/briefs/request"
+  to = "/reports/#briefs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/explore/"
+  to = "/datasets/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/explore"
+  to = "/datasets/"
+  status = 301
+  force = true

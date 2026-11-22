@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/siaya-projects.schema.json",
+  "title": "Siaya County development project register (data/siaya-projects.json)",
+  "type": "object",
+  "required": ["meta", "documents", "projects", "gaps"],
+  "additionalProperties": false,
+  "$defs": {
+    "fy": { "type": "string", "pattern": "^20[0-9]{2}/[0-9]{2}(-20[0-9]{2}/[0-9]{2})?$" },
+    "date": { "type": "string", "pattern": "^20[0-9]{2}(-[01][0-9](-[0-3][0-9])?)?$" },
+    "page": { "type": "integer", "minimum": 1 },
+    "doc_id": { "type": "string", "minLength": 3 },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "tendered", "contracted", "active", "delayed", "suspended", "completed-reported", "completed-independently-verified", "cancelled", "unknown"]
+    },
+    "evidence_type": {
+      "type": "string",
+      "enum": ["audit_physical_verification", "audit_documentary_review", "county_budget_report", "cob_report_county_data", "county_development_plan", "county_participation_report"]
+    },
+    "amount": {
+      "type": "object",
+      "required": ["kind", "value", "unit", "fy", "doc_id", "page", "label_as_printed"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "type": "string", "enum": ["approved_budget", "estimated_cost", "estimated_value", "contract_sum", "revised_contract_sum", "variation", "funding_in_fy", "expenditure_in_fy", "paid_in_fy", "paid_cumulative", "certified_cumulative", "advance", "outstanding_balance", "other_payment"] },
+        "value": { "type": "number", "minimum": 0 },
+        "unit": { "type": "string", "enum": ["KSh", "KSh million"] },
+        "fy": { "$ref": "#/$defs/fy" },
+        "as_at": { "$ref": "#/$defs/date" },
+        "doc_id": { "$ref": "#/$defs/doc_id" },
+        "page": { "$ref": "#/$defs/page" },
+        "label_as_printed": { "type": "string", "minLength": 2 },
+        "note": { "type": "string" }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["doc_id", "page", "evidence_type", "as_at", "finding_id", "summary", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "doc_id": { "$ref": "#/$defs/doc_id" },
+        "page": { "$ref": "#/$defs/page" },
+        "evidence_type": { "$ref": "#/$defs/evidence_type" },
+        "as_at": { "$ref": "#/$defs/date" },
+        "finding_id": { "type": ["string", "null"] },
+        "summary": { "type": "string", "minLength": 10 },
+        "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "reported_completion_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "verifies_completion": { "type": "boolean" }
+      }
+    },
+    "place": {
+      "type": "object",
+      "required": ["text", "doc_id", "page"],
+      "additionalProperties": false,
+      "properties": {
+        "text": { "type": "string", "minLength": 2 },
+        "doc_id": { "$ref": "#/$defs/doc_id" },
+        "page": { "$ref": "#/$defs/page" },
+        "resolved_to": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": { "ward_id": { "type": "string" }, "constituency_id": { "type": "string" } }
+          }
+        },
+        "unresolved_reason": { "type": "string", "minLength": 5 }
+      }
+    },
+    "contractor_reference": {
+      "type": ["object", "null"],
+      "description": "Owner decision 21 Nov 2026 (sweep D22): no contractor name is kept anywhere in the repository. Where an audit report names one, only the document and page are recorded.",
+      "required": ["doc", "page", "note"],
+      "additionalProperties": false,
+      "properties": { "doc": { "$ref": "#/$defs/doc_id" }, "page": { "$ref": "#/$defs/page" }, "note": { "const": "named in the audit report; withheld pending review" } }
+    },
+    "project": {
+      "type": "object",
+      "required": ["id", "name", "aliases", "sector", "implementing_entity", "location", "amounts", "contract", "status", "status_source", "last_evidence_date", "audit_finding_ids", "evidence", "conflicts", "related_project_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^SIA-P-[0-9]{3}$" },
+        "name": { "type": "string", "minLength": 4 },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "object", "required": ["name", "doc_id", "page"], "additionalProperties": false,
+            "properties": { "name": { "type": "string", "minLength": 4 }, "doc_id": { "$ref": "#/$defs/doc_id" }, "page": { "$ref": "#/$defs/page" } }
+          }
+        },
+        "sector": { "type": "string", "enum": ["roads_transport", "water_sanitation", "health", "education", "markets_trade", "industry", "agriculture_fisheries", "sports_culture_tourism", "governance_offices", "ict", "urban_housing_lands", "energy_lighting", "environment", "social_services"] },
+        "implementing_entity": { "type": "string", "enum": ["county_executive", "county_assembly", "national_government", "county_and_partners"] },
+        "location": {
+          "type": "object",
+          "required": ["as_printed", "ward_ids", "constituency_ids", "countywide", "unresolved"],
+          "additionalProperties": false,
+          "properties": {
+            "as_printed": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/place" } },
+            "ward_ids": { "type": "array", "items": { "type": "string" } },
+            "constituency_ids": { "type": "array", "items": { "type": "string" } },
+            "countywide": { "type": "boolean" },
+            "unresolved": {
+              "type": "array",
+              "items": { "type": "object", "required": ["text", "reason"], "additionalProperties": false, "properties": { "text": { "type": "string" }, "reason": { "type": "string" } } }
+            },
+            "note": { "type": "string" }
+          }
+        },
+        "amounts": { "type": "array", "items": { "$ref": "#/$defs/amount" } },
+        "contract": {
+          "type": "object",
+          "required": ["reference", "contractor_reference", "signed", "start", "expected_completion"],
+          "additionalProperties": false,
+          "properties": {
+            "reference": { "type": ["string", "null"] },
+            "reference_as_printed": { "type": "string" },
+            "contractor_reference": { "$ref": "#/$defs/contractor_reference" },
+            "contractor_note": { "type": "string" },
+            "signed": { "type": ["string", "null"] },
+            "start": { "type": ["string", "null"] },
+            "expected_completion": { "type": ["string", "null"] }
+          }
+        },
+        "status": { "$ref": "#/$defs/status" },
+        "status_source": {
+          "type": "object",
+          "required": ["doc_id", "page", "evidence_type", "as_at"],
+          "additionalProperties": false,
+          "properties": { "doc_id": { "$ref": "#/$defs/doc_id" }, "page": { "$ref": "#/$defs/page" }, "evidence_type": { "$ref": "#/$defs/evidence_type" }, "as_at": { "$ref": "#/$defs/date" } }
+        },
+        "status_note": { "type": "string" },
+        "last_evidence_date": { "$ref": "#/$defs/date" },
+        "audit_finding_ids": { "type": "array", "items": { "type": "string", "pattern": "^audit-" } },
+        "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidence" } },
+        "conflicts": {
+          "type": "array",
+          "items": { "type": "object", "required": ["field", "note"], "additionalProperties": false, "properties": { "field": { "type": "string" }, "note": { "type": "string", "minLength": 10 } } }
+        },
+        "related_project_ids": { "type": "array", "items": { "type": "string", "pattern": "^SIA-P-[0-9]{3}$" } }
+      }
+    },
+    "document": {
+      "type": "object",
+      "required": ["doc_id", "title", "publisher", "doc_type", "independent", "published", "period", "url", "sha256", "in_source_library", "in_source_manifest", "page_basis"],
+      "additionalProperties": false,
+      "properties": {
+        "doc_id": { "$ref": "#/$defs/doc_id" },
+        "title": { "type": "string", "minLength": 5 },
+        "publisher": { "type": "string" },
+        "doc_type": { "type": "string", "enum": ["audit_report", "county_budget_report", "cob_report_county_data", "county_development_plan", "county_participation_report"] },
+        "independent": { "type": "boolean" },
+        "published": { "type": "string" },
+        "period": { "type": "string" },
+        "url": { "type": "string", "pattern": "^https://" },
+        "document_page": { "type": "string", "pattern": "^https://" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "retrieved": { "$ref": "#/$defs/date" },
+        "in_source_library": { "type": "boolean" },
+        "in_source_manifest": { "type": "boolean" },
+        "page_basis": { "type": "string" },
+        "text_method": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    }
+  },
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "schema_version", "compiled", "scope", "status_states", "status_rules", "evidence_types", "independent_evidence_types", "amount_rule", "page_rule", "names_rule", "location_rule", "currency"],
+      "properties": {
+        "status_states": { "type": "array", "items": { "$ref": "#/$defs/status" } },
+        "independent_evidence_types": { "type": "array", "items": { "$ref": "#/$defs/evidence_type" } }
+      }
+    },
+    "documents": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/document" } },
+    "projects": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/project" } },
+    "gaps": { "type": "array", "items": { "type": "string" } }
+  }
+}

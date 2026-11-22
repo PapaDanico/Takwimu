@@ -1,0 +1,986 @@
+sector,subsector,year,geography,source_type,dataset,observations,gaps
+agriculture,,2013,county: Siaya,county_government,siaya-agriculture,40,0
+agriculture,,2014,county: Siaya,county_government,siaya-agriculture,35,0
+agriculture,,2018-2022,county: Siaya,county_government,siaya-agriculture,6,0
+agriculture,,2022,county: Siaya,county_government,siaya-agriculture,8,0
+agriculture,,2023,county: Siaya,county_government,siaya-agriculture,4,0
+agriculture,,2023-2027,county: Siaya,county_government,siaya-agriculture,8,0
+agriculture,,2027,county: Siaya,county_government,siaya-agriculture,4,0
+agriculture,,not stated,county: Siaya,gap (no source),siaya-agriculture,0,8
+analysis,A1,FY 2013/14,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A1,FY 2014/15,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A1,FY 2015/16,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A1,FY 2016/17,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A1,FY 2017/18,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A1,FY 2018/19,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A1,FY 2019/20,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A1,FY 2020/21,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A1,FY 2021/22,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A1,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A1,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A1,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,3
+analysis,A1,FY 2025/26,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A2,FY 2013/14,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A2,FY 2014/15,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A2,FY 2015/16,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A2,FY 2015/16,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A2,FY 2016/17,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A2,FY 2017/18,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A2,FY 2018/19,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A2,FY 2019/20,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A2,FY 2020/21,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A2,FY 2020/21,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A2,FY 2021/22,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A2,FY 2021/22,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A2,FY 2022/23,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A2,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A2,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A2,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,2,0
+analysis,A2,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A2,FY 2024/25,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A2,FY 2025/26,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A3,FY 2013/14,county: Siaya,gap (no source),siaya-analysis,0,3
+analysis,A3,FY 2014/15,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A3,FY 2015/16,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A3,FY 2016/17,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A3,FY 2017/18,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A3,FY 2018/19,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A3,FY 2019/20,county: Siaya,gap (no source),siaya-analysis,0,3
+analysis,A3,FY 2019/20,county: Siaya,takwimu_calculation,siaya-analysis,2,0
+analysis,A3,FY 2020/21,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A3,FY 2021/22,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A3,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A3,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,6,0
+analysis,A3,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,3
+analysis,A3,FY 2024/25,county: Siaya,takwimu_calculation,siaya-analysis,6,0
+analysis,A3,FY 2025/26,county: Siaya,gap (no source),siaya-analysis,0,4
+analysis,A3,FY 2025/26,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A4,2014,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A4,2016,county: Siaya,takwimu_calculation,siaya-analysis,2,0
+analysis,A4,2017,county: Siaya,takwimu_calculation,siaya-analysis,2,0
+analysis,A4,2018,county: Siaya,takwimu_calculation,siaya-analysis,2,0
+analysis,A4,2019,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A4,2020,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A4,2021,county: Siaya,takwimu_calculation,siaya-analysis,7,0
+analysis,A4,2022,county: Siaya,takwimu_calculation,siaya-analysis,11,0
+analysis,A4,2023,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A4,2023,county: Siaya,takwimu_calculation,siaya-analysis,9,0
+analysis,A4,2024,county: Siaya,gap (no source),siaya-analysis,0,3
+analysis,A4,2024,county: Siaya,takwimu_calculation,siaya-analysis,7,0
+analysis,A4,2025,county: Siaya,takwimu_calculation,siaya-analysis,5,0
+analysis,A4,FY 2014/15,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A4,FY 2015/16,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A4,FY 2016/17,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A4,FY 2017/18,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A4,FY 2018/19,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A4,FY 2019/20,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A4,FY 2020/21,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A4,FY 2021/22,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A4,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A4,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A4,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A5,FY 2013/14,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A5,FY 2013/14,county: Siaya,takwimu_calculation,siaya-analysis,16,0
+analysis,A5,FY 2019/20,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A5,FY 2019/20,county: Siaya,takwimu_calculation,siaya-analysis,8,0
+analysis,A5,FY 2020/21,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A5,FY 2020/21,county: Siaya,takwimu_calculation,siaya-analysis,22,0
+analysis,A5,FY 2021/22,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A5,FY 2021/22,county: Siaya,takwimu_calculation,siaya-analysis,18,0
+analysis,A5,FY 2022/23,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A5,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,25,0
+analysis,A5,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,27,0
+analysis,A5,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A5,FY 2024/25,county: Siaya,takwimu_calculation,siaya-analysis,22,0
+analysis,A6,FY 2014/15,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A6,FY 2019/20,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A6,FY 2022/23,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A6,FY 2024/25,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A6,FY 2025/26,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A6,not stated,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A7,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,3
+analysis,A7,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A7,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2013/14,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2014/15,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2015/16,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2016/17,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2017/18,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2018/19,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2019/20,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2020/21,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2021/22,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2022/23,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A8,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A8,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A8,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2024/25,county: Siaya,takwimu_calculation,siaya-analysis,7,0
+analysis,A8,FY 2025/26,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+audit,,FY 2013/14,county: Siaya,auditor_general,history,1,0
+audit,,FY 2014/15,county: Siaya,parliament,history,1,0
+audit,,FY 2015/16,county: Siaya,parliament,history,1,0
+audit,,FY 2019/20,county: Siaya,auditor_general,history,1,0
+audit,,FY 2020/21,county: Siaya,auditor_general,history,1,0
+audit,,FY 2021/22,county: Siaya,auditor_general,history,1,0
+audit,,FY 2022/23,county: Siaya,auditor_general,history,1,0
+audit,,FY 2023/24,county: Siaya,auditor_general,history,1,0
+audit,county_assembly,FY 2013/14,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2014/15,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2015/16,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2016/17,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2017/18,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2018/19,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2019/20,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2020/21,county: Siaya,auditor_general,siaya-audits,9,0
+audit,county_assembly,FY 2021/22,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2022/23,county: Siaya,auditor_general,siaya-audits,13,0
+audit,county_assembly,FY 2023/24,county: Siaya,auditor_general,siaya-audits,15,0
+audit,county_assembly,FY 2024/25,county: Siaya,auditor_general,siaya-audits,14,0
+audit,county_executive,FY 2013/14,county: Siaya,auditor_general,siaya-audits,12,0
+audit,county_executive,FY 2014/15,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_executive,FY 2014/15,county: Siaya,parliament,siaya-audits,1,0
+audit,county_executive,FY 2015/16,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_executive,FY 2015/16,county: Siaya,parliament,siaya-audits,1,0
+audit,county_executive,FY 2016/17,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_executive,FY 2017/18,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_executive,FY 2018/19,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_executive,FY 2019/20,county: Siaya,auditor_general,siaya-audits,14,0
+audit,county_executive,FY 2020/21,county: Siaya,auditor_general,siaya-audits,33,0
+audit,county_executive,FY 2021/22,county: Siaya,auditor_general,siaya-audits,46,0
+audit,county_executive,FY 2022/23,county: Siaya,auditor_general,siaya-audits,34,0
+audit,county_executive,FY 2023/24,county: Siaya,auditor_general,siaya-audits,35,0
+audit,county_executive,FY 2024/25,county: Siaya,auditor_general,siaya-audits,40,0
+audit,county_government,FY 2013/14,county: Siaya,auditor_general,siaya-audits,9,0
+climate_environment,,2022,county: Siaya,county_government,siaya-climate,3,0
+climate_environment,,2022,county: Siaya,national_statistics,siaya-climate,8,0
+climate_environment,,2023,county: Siaya,county_government,siaya-climate,7,0
+climate_environment,,2023,sub-county,county_government,siaya-climate,3,0
+climate_environment,,2023,ward,county_government,siaya-climate,39,0
+climate_environment,,2023-2027,county: Siaya,county_government,siaya-climate,1,0
+climate_environment,,FY 2023/24,county: Siaya,county_government,siaya-climate,2,0
+climate_environment,,FY 2024/25,county: Siaya,county_government,siaya-climate,6,0
+climate_environment,,FY 2024/25,county: Siaya,national_government,siaya-climate,3,0
+climate_environment,,FY 2024/25,utility service area,national_government,siaya-climate,3,0
+climate_environment,,FY 2025/26,county: Siaya,county_government,siaya-climate,12,0
+climate_environment,,not stated,county: Siaya,gap (no source),siaya-climate,0,11
+demography,,2009,county: Siaya,national_statistics,history,1,0
+demography,,2012,county: Siaya,national_statistics,history,1,0
+demography,,2015,county: Siaya,national_statistics,history,1,0
+demography,,2017,county: Siaya,national_statistics,history,1,0
+demography,,2019,county: Siaya,national_statistics,history,1,0
+demography,,2022,county: Siaya,other,history,1,0
+economy,,2019,county: Siaya,national_statistics,siaya-economy,3,0
+economy,,2019-2020,county: Siaya,gap (no source),siaya-economy,0,1
+economy,,2019-2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,,2019-2024,county: Siaya,gap (no source),siaya-economy,0,3
+economy,,2020,county: Siaya,national_statistics,siaya-economy,6,0
+economy,,2020-2021,county: Siaya,gap (no source),siaya-economy,0,1
+economy,,2020-2024,county: Siaya,national_statistics,siaya-economy,2,0
+economy,,2021,county: Siaya,national_statistics,siaya-economy,7,0
+economy,,2022,county: Siaya,national_statistics,siaya-economy,8,0
+economy,,2023,county: Siaya,national_statistics,siaya-economy,8,0
+economy,,2024,county: Siaya,national_statistics,siaya-economy,4,0
+economy,accommodation_food,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,accommodation_food,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,accommodation_food,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,accommodation_food,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,administrative_support,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,administrative_support,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,administrative_support,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,administrative_support,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,agriculture_forestry_fishing,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,agriculture_forestry_fishing,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,agriculture_forestry_fishing,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,agriculture_forestry_fishing,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,construction,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,construction,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,construction,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,construction,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,education,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,education,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,education,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,education,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,electricity_supply,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,electricity_supply,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,electricity_supply,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,electricity_supply,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,financial_insurance,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,financial_insurance,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,financial_insurance,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,financial_insurance,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,fisim,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,fisim,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,fisim,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,fisim,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,human_health_social_work,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,human_health_social_work,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,human_health_social_work,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,human_health_social_work,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,information_communication,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,information_communication,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,information_communication,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,information_communication,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,manufacturing,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,manufacturing,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,manufacturing,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,manufacturing,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,mining_quarrying,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,mining_quarrying,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,mining_quarrying,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,mining_quarrying,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,other_service_activities,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,other_service_activities,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,other_service_activities,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,other_service_activities,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,poverty,2021,county: Siaya,gap (no source),history,0,1
+economy,poverty,FY 2005/06,county: Siaya,national_government,history,1,0
+economy,poverty,FY 2015/16,county: Siaya,national_government,history,1,0
+economy,poverty,FY 2015/16,county: Siaya,national_statistics,history,1,0
+economy,professional_technical,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,professional_technical,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,professional_technical,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,professional_technical,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,public_administration_defence,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,public_administration_defence,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,public_administration_defence,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,public_administration_defence,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,real_estate,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,real_estate,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,real_estate,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,real_estate,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,transport_storage,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,transport_storage,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,transport_storage,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,transport_storage,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,water_supply_waste,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,water_supply_waste,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,water_supply_waste,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,water_supply_waste,2024,county: Siaya,national_statistics,siaya-economy,1,0
+economy,wholesale_retail_trade,2021,county: Siaya,national_statistics,siaya-economy,1,0
+economy,wholesale_retail_trade,2022,county: Siaya,national_statistics,siaya-economy,2,0
+economy,wholesale_retail_trade,2023,county: Siaya,national_statistics,siaya-economy,2,0
+economy,wholesale_retail_trade,2024,county: Siaya,national_statistics,siaya-economy,1,0
+education,,2013,county: Siaya,national_statistics,siaya-education,6,0
+education,,2013-2014,county: Siaya,national_statistics,siaya-education,1,0
+education,,2014,county: Siaya,national_government,siaya-education,40,0
+education,,2014,county: Siaya,national_statistics,siaya-education,44,0
+education,,2018-2022,county: Siaya,county_government,siaya-education,6,0
+education,,2019,county: Siaya,national_government,siaya-education,48,0
+education,,2022,county: Siaya,county_government,siaya-education,3,0
+education,,2022,county: Siaya,national_statistics,siaya-education,44,0
+education,,2023,county: Siaya,county_government,siaya-education,11,0
+education,,2026,county: Siaya,county_government,siaya-education,1,0
+education,,2027,county: Siaya,county_government,siaya-education,1,0
+education,,FY 2014/15,county: Siaya,national_statistics,siaya-education,4,0
+education,,FY 2023/24,county: Siaya,county_government,siaya-education,2,0
+education,,FY 2024/25,county: Siaya,county_government,siaya-education,2,0
+education,,FY 2025/26,county: Siaya,county_government,siaya-education,1,0
+education,,not stated,county: Siaya,county_government,siaya-education,1,0
+education,,not stated,county: Siaya,gap (no source),siaya-education,0,12
+governance,,2021,county: Siaya,civil_society_or_peer_review,siaya-governance,8,0
+governance,,2022,county: Siaya,civil_society_or_peer_review,siaya-governance,12,0
+governance,,2024,county: Siaya,civil_society_or_peer_review,siaya-governance,18,0
+health,,2003,sentinel-site,research,siaya-health,1,0
+health,,2013,county: Siaya,county_government,siaya-health,3,0
+health,,2013,county: Siaya,national_government,history,1,0
+health,,2014,county: Siaya,national_statistics,history,4,0
+health,,2014,county: Siaya,national_statistics,siaya-health,6,0
+health,,2015,county: Siaya,county_government,siaya-health,6,0
+health,,2015,county: Siaya,national_government,history,1,0
+health,,2015,county: Siaya,national_government,siaya-health,2,0
+health,,2017,county: Siaya,national_government,history,1,0
+health,,2017,county: Siaya,national_government,siaya-health,2,0
+health,,2018,county: Siaya,county_government,siaya-health,1,0
+health,,2018-2022,county: Siaya,county_government,siaya-health,3,0
+health,,2019,county: Siaya,county_government,siaya-health,2,0
+health,,2020,county: Siaya,national_government,siaya-health,1,0
+health,,2021,county: Siaya,county_government,siaya-health,1,0
+health,,2021,county: Siaya,national_government,siaya-health,1,0
+health,,2022,county: Siaya,county_government,siaya-health,7,0
+health,,2022,county: Siaya,national_government,siaya-health,3,0
+health,,2022,county: Siaya,national_statistics,history,4,0
+health,,2022,county: Siaya,national_statistics,siaya-health,8,0
+health,,2022,sub-county,county_government,siaya-health,18,0
+health,,2023,county: Siaya,county_government,siaya-health,1,0
+health,,2023,county: Siaya,national_government,siaya-health,1,0
+health,,2025,county: Siaya,national_government,history,1,0
+health,,2025,county: Siaya,national_government,siaya-health,6,0
+health,,2026,county: Siaya,county_government,siaya-health,5,0
+health,,not stated,county: Siaya,gap (no source),siaya-health,0,10
+ngo_donor_programmes,,not stated,county: Siaya,gap (no source),siaya-programmes,0,7
+ngo_donor_programmes,agriculture_food,2010,multi_county_including_siaya,development_partner,siaya-programmes,6,0
+ngo_donor_programmes,agriculture_food,2017,multi_county_including_siaya,development_partner,siaya-programmes,5,0
+ngo_donor_programmes,agriculture_food,2018,siaya_specific,county_government,siaya-programmes,4,0
+ngo_donor_programmes,agriculture_food,2020,siaya_specific,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,agriculture_food,2022,multi_county_including_siaya,development_partner,siaya-programmes,5,0
+ngo_donor_programmes,agriculture_food,2023,siaya_specific,county_government,siaya-programmes,14,0
+ngo_donor_programmes,agriculture_food,2024,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,agriculture_food,2024,siaya_specific,county_government,siaya-programmes,3,0
+ngo_donor_programmes,climate_environment,2015,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,climate_environment,2019,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,climate_environment,2021,multi_county_including_siaya,development_partner,siaya-programmes,5,0
+ngo_donor_programmes,climate_environment,2023,siaya_specific,county_government,siaya-programmes,11,0
+ngo_donor_programmes,devolution_public_finance,2016,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,devolution_public_finance,2023,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,devolution_public_finance,2023,siaya_specific,county_government,siaya-programmes,7,0
+ngo_donor_programmes,education,2015,national,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,education,2015,siaya_specific,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,education,2020,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,education,2020,national,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,education,2021,siaya_specific,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,energy,2010,national,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,energy,2014,national,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,energy,2015,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,energy,2017,siaya_specific,development_partner,siaya-programmes,1,0
+ngo_donor_programmes,energy,2020,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,financial_inclusion,2024,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,fisheries_blue_economy,2016,siaya_specific,development_partner,siaya-programmes,4,0
+ngo_donor_programmes,fisheries_blue_economy,2019,siaya_specific,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,fisheries_blue_economy,2023,siaya_specific,county_government,siaya-programmes,6,0
+ngo_donor_programmes,gender_rights,2023,siaya_specific,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,governance_accountability,2013,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,governance_accountability,2022,siaya_specific,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,governance_accountability,2025,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,health,2016,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,health,2016,national,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,health,2016,siaya_specific,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,health,2018,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,health,2018,national,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,health,2021,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,health,2021,siaya_specific,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,health,2022,multi_county_including_siaya,development_partner,siaya-programmes,1,0
+ngo_donor_programmes,health,2022,national,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,health,2023,siaya_specific,county_government,siaya-programmes,6,0
+ngo_donor_programmes,health,2024,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,humanitarian,2015,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,research_surveillance,2006,siaya_wards_listed,research,siaya-programmes,1,0
+ngo_donor_programmes,research_surveillance,2023,siaya_specific,county_government,siaya-programmes,2,0
+ngo_donor_programmes,research_surveillance,2024,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,research_surveillance,2024,siaya_specific,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,social_protection,2018,national,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,urban_development,2017,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,urban_development,2023,siaya_specific,county_government,siaya-programmes,11,0
+ngo_donor_programmes,water_sanitation,2007,multi_county_including_siaya,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,water_sanitation,2010,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,water_sanitation,2014,national,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,water_sanitation,2017,national,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,water_sanitation,2017,siaya_specific,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,water_sanitation,2018,siaya_specific,county_government,siaya-programmes,1,0
+ngo_donor_programmes,water_sanitation,2019,siaya_wards_listed,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,water_sanitation,2020,siaya_specific,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,water_sanitation,2022,national,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,water_sanitation,2025,siaya_specific,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,youth_livelihoods,2016,national,development_partner,siaya-programmes,3,0
+ngo_donor_programmes,youth_livelihoods,2019,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,youth_livelihoods,2020,siaya_specific,development_partner,siaya-programmes,2,0
+ngo_donor_programmes,youth_livelihoods,2022,multi_county_including_siaya,development_partner,siaya-programmes,2,0
+projects,,FY 2014/15,county: Siaya,gap (no source),siaya-projects,0,1
+projects,,FY 2016/17,county: Siaya,gap (no source),siaya-projects,0,1
+projects,,FY 2022/23,county: Siaya,gap (no source),siaya-projects,0,1
+projects,,FY 2024/25,county: Siaya,gap (no source),siaya-projects,0,1
+projects,,FY 2025/26,county: Siaya,gap (no source),siaya-projects,0,1
+projects,,not stated,county: Siaya,gap (no source),siaya-projects,0,2
+projects,agriculture_fisheries,2021,location unresolved,auditor_general,siaya-projects,1,0
+projects,agriculture_fisheries,2022,ward,auditor_general,siaya-projects,1,0
+projects,agriculture_fisheries,2024,constituency,county_government,siaya-projects,3,0
+projects,agriculture_fisheries,2024,location unresolved,controller_of_budget,siaya-projects,1,0
+projects,agriculture_fisheries,2024,ward,auditor_general,siaya-projects,1,0
+projects,agriculture_fisheries,2025,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,agriculture_fisheries,2025,ward,controller_of_budget,siaya-projects,2,0
+projects,agriculture_fisheries,2026,ward,county_government,siaya-projects,1,0
+projects,agriculture_fisheries,FY 2020/21,location unresolved,auditor_general,siaya-projects,2,0
+projects,agriculture_fisheries,FY 2021/22,ward,auditor_general,siaya-projects,1,0
+projects,agriculture_fisheries,FY 2023/24,constituency,county_government,siaya-projects,7,0
+projects,agriculture_fisheries,FY 2023/24,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,agriculture_fisheries,FY 2023/24,ward,auditor_general,siaya-projects,1,0
+projects,agriculture_fisheries,FY 2024/25,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,agriculture_fisheries,FY 2024/25,ward,controller_of_budget,siaya-projects,1,0
+projects,agriculture_fisheries,FY 2025/26,ward,county_government,siaya-projects,3,0
+projects,education,2021,location unresolved,auditor_general,siaya-projects,2,0
+projects,education,2022,location unresolved,auditor_general,siaya-projects,1,0
+projects,education,2023,location unresolved,auditor_general,siaya-projects,1,0
+projects,education,2024,location unresolved,controller_of_budget,siaya-projects,1,0
+projects,education,2024,location unresolved,county_government,siaya-projects,1,0
+projects,education,2024,ward,county_government,siaya-projects,1,0
+projects,education,2025,constituency,auditor_general,siaya-projects,1,0
+projects,education,2025,location unresolved,auditor_general,siaya-projects,2,0
+projects,education,FY 2020/21,location unresolved,auditor_general,siaya-projects,5,0
+projects,education,FY 2021/22,location unresolved,auditor_general,siaya-projects,2,0
+projects,education,FY 2022/23,location unresolved,auditor_general,siaya-projects,2,0
+projects,education,FY 2023/24,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,education,FY 2024/25,constituency,auditor_general,siaya-projects,1,0
+projects,education,FY 2024/25,location unresolved,auditor_general,siaya-projects,2,0
+projects,energy_lighting,2022,location unresolved,controller_of_budget,siaya-projects,1,0
+projects,energy_lighting,2024,constituency,county_government,siaya-projects,1,0
+projects,energy_lighting,2024,location unresolved,auditor_general,siaya-projects,1,0
+projects,energy_lighting,2025,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,energy_lighting,FY 2021/22,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,energy_lighting,FY 2023/24,constituency,county_government,siaya-projects,1,0
+projects,energy_lighting,FY 2023/24,location unresolved,auditor_general,siaya-projects,1,0
+projects,energy_lighting,FY 2024/25,location unresolved,controller_of_budget,siaya-projects,5,0
+projects,environment,2019,ward,controller_of_budget,siaya-projects,1,0
+projects,environment,FY 2018/19,ward,controller_of_budget,siaya-projects,2,0
+projects,governance_offices,2019,location unresolved,controller_of_budget,siaya-projects,1,0
+projects,governance_offices,2024,county: Siaya (countywide),auditor_general,siaya-projects,1,0
+projects,governance_offices,2024,county: Siaya (countywide),controller_of_budget,siaya-projects,1,0
+projects,governance_offices,2024,location unresolved,county_government,siaya-projects,4,0
+projects,governance_offices,2026,constituency,county_government,siaya-projects,3,0
+projects,governance_offices,2026,ward,county_government,siaya-projects,1,0
+projects,governance_offices,FY 2018/19,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,governance_offices,FY 2021/22,county: Siaya (countywide),controller_of_budget,siaya-projects,4,0
+projects,governance_offices,FY 2022/23,county: Siaya (countywide),controller_of_budget,siaya-projects,6,0
+projects,governance_offices,FY 2023/24,county: Siaya (countywide),controller_of_budget,siaya-projects,2,0
+projects,governance_offices,FY 2023/24,location unresolved,county_government,siaya-projects,4,0
+projects,governance_offices,FY 2025/26,constituency,county_government,siaya-projects,7,0
+projects,governance_offices,FY 2025/26,ward,county_government,siaya-projects,4,0
+projects,health,2021,ward,auditor_general,siaya-projects,1,0
+projects,health,2022,location unresolved,auditor_general,siaya-projects,1,0
+projects,health,2024,constituency,controller_of_budget,siaya-projects,1,0
+projects,health,2024,constituency,county_government,siaya-projects,1,0
+projects,health,2024,location unresolved,county_government,siaya-projects,2,0
+projects,health,2024,ward,auditor_general,siaya-projects,1,0
+projects,health,2025,constituency,auditor_general,siaya-projects,1,0
+projects,health,2025,location unresolved,auditor_general,siaya-projects,2,0
+projects,health,2025,location unresolved,controller_of_budget,siaya-projects,1,0
+projects,health,2025,ward,controller_of_budget,siaya-projects,2,0
+projects,health,2025,ward,county_government,siaya-projects,1,0
+projects,health,2026,location unresolved,county_government,siaya-projects,2,0
+projects,health,2026,ward,county_government,siaya-projects,1,0
+projects,health,FY 2020/21,ward,auditor_general,siaya-projects,1,0
+projects,health,FY 2021/22,location unresolved,auditor_general,siaya-projects,1,0
+projects,health,FY 2022/23,constituency,controller_of_budget,siaya-projects,3,0
+projects,health,FY 2023/24,constituency,controller_of_budget,siaya-projects,2,0
+projects,health,FY 2023/24,constituency,county_government,siaya-projects,1,0
+projects,health,FY 2023/24,location unresolved,county_government,siaya-projects,2,0
+projects,health,FY 2023/24,ward,auditor_general,siaya-projects,2,0
+projects,health,FY 2024/25,constituency,auditor_general,siaya-projects,1,0
+projects,health,FY 2024/25,constituency,controller_of_budget,siaya-projects,2,0
+projects,health,FY 2024/25,location unresolved,auditor_general,siaya-projects,3,0
+projects,health,FY 2024/25,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,health,FY 2024/25,ward,controller_of_budget,siaya-projects,2,0
+projects,health,FY 2025/26,location unresolved,county_government,siaya-projects,7,0
+projects,health,FY 2025/26,ward,county_government,siaya-projects,5,0
+projects,ict,2022,location unresolved,controller_of_budget,siaya-projects,3,0
+projects,ict,2023,location unresolved,auditor_general,siaya-projects,1,0
+projects,ict,2024,county: Siaya (countywide),controller_of_budget,siaya-projects,1,0
+projects,ict,2025,constituency,controller_of_budget,siaya-projects,1,0
+projects,ict,2026,location unresolved,county_government,siaya-projects,1,0
+projects,ict,FY 2018/19,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,ict,FY 2021/22,location unresolved,auditor_general,siaya-projects,1,0
+projects,ict,FY 2021/22,location unresolved,controller_of_budget,siaya-projects,8,0
+projects,ict,FY 2022/23,location unresolved,auditor_general,siaya-projects,2,0
+projects,ict,FY 2023/24,county: Siaya (countywide),controller_of_budget,siaya-projects,2,0
+projects,ict,FY 2024/25,constituency,controller_of_budget,siaya-projects,2,0
+projects,ict,FY 2025/26,location unresolved,county_government,siaya-projects,4,0
+projects,industry,2024,location unresolved,county_government,siaya-projects,1,0
+projects,industry,2025,ward,auditor_general,siaya-projects,1,0
+projects,industry,FY 2023/24,location unresolved,county_government,siaya-projects,1,0
+projects,industry,FY 2023/24,ward,auditor_general,siaya-projects,2,0
+projects,industry,FY 2023/24,ward,controller_of_budget,siaya-projects,2,0
+projects,industry,FY 2024/25,ward,auditor_general,siaya-projects,2,0
+projects,markets_trade,2021,constituency,controller_of_budget,siaya-projects,1,0
+projects,markets_trade,2022,ward,controller_of_budget,siaya-projects,1,0
+projects,markets_trade,2023,location unresolved,auditor_general,siaya-projects,1,0
+projects,markets_trade,2023,ward,auditor_general,siaya-projects,2,0
+projects,markets_trade,2026,ward,county_government,siaya-projects,1,0
+projects,markets_trade,FY 2020/21,constituency,controller_of_budget,siaya-projects,2,0
+projects,markets_trade,FY 2021/22,ward,controller_of_budget,siaya-projects,3,0
+projects,markets_trade,FY 2022/23,location unresolved,auditor_general,siaya-projects,2,0
+projects,markets_trade,FY 2022/23,ward,auditor_general,siaya-projects,3,0
+projects,markets_trade,FY 2024/25,ward,controller_of_budget,siaya-projects,1,0
+projects,markets_trade,FY 2025/26,ward,county_government,siaya-projects,2,0
+projects,roads_transport,2019,ward,controller_of_budget,siaya-projects,2,0
+projects,roads_transport,2021,location unresolved,auditor_general,siaya-projects,1,0
+projects,roads_transport,2021,ward,controller_of_budget,siaya-projects,1,0
+projects,roads_transport,2022,location unresolved,auditor_general,siaya-projects,2,0
+projects,roads_transport,2022,ward,auditor_general,siaya-projects,1,0
+projects,roads_transport,2023,location unresolved,auditor_general,siaya-projects,1,0
+projects,roads_transport,2024,constituency,controller_of_budget,siaya-projects,1,0
+projects,roads_transport,2024,constituency,county_government,siaya-projects,1,0
+projects,roads_transport,2024,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,roads_transport,2024,location unresolved,county_government,siaya-projects,1,0
+projects,roads_transport,2025,ward,county_government,siaya-projects,1,0
+projects,roads_transport,2026,ward,county_government,siaya-projects,4,0
+projects,roads_transport,FY 2018/19,ward,controller_of_budget,siaya-projects,4,0
+projects,roads_transport,FY 2020/21,location unresolved,auditor_general,siaya-projects,1,0
+projects,roads_transport,FY 2020/21,ward,controller_of_budget,siaya-projects,4,0
+projects,roads_transport,FY 2021/22,location unresolved,auditor_general,siaya-projects,4,0
+projects,roads_transport,FY 2021/22,ward,auditor_general,siaya-projects,2,0
+projects,roads_transport,FY 2021/22,ward,controller_of_budget,siaya-projects,1,0
+projects,roads_transport,FY 2022/23,location unresolved,auditor_general,siaya-projects,1,0
+projects,roads_transport,FY 2023/24,constituency,controller_of_budget,siaya-projects,2,0
+projects,roads_transport,FY 2023/24,constituency,county_government,siaya-projects,1,0
+projects,roads_transport,FY 2023/24,location unresolved,controller_of_budget,siaya-projects,4,0
+projects,roads_transport,FY 2023/24,location unresolved,county_government,siaya-projects,1,0
+projects,roads_transport,FY 2025/26,ward,county_government,siaya-projects,15,0
+projects,social_services,2021,constituency,auditor_general,siaya-projects,1,0
+projects,social_services,2021,ward,auditor_general,siaya-projects,1,0
+projects,social_services,FY 2020/21,constituency,auditor_general,siaya-projects,2,0
+projects,social_services,FY 2020/21,ward,auditor_general,siaya-projects,2,0
+projects,sports_culture_tourism,2021,location unresolved,auditor_general,siaya-projects,1,0
+projects,sports_culture_tourism,2024,constituency,county_government,siaya-projects,2,0
+projects,sports_culture_tourism,2024,location unresolved,auditor_general,siaya-projects,1,0
+projects,sports_culture_tourism,2024,location unresolved,county_government,siaya-projects,1,0
+projects,sports_culture_tourism,2024,ward,auditor_general,siaya-projects,1,0
+projects,sports_culture_tourism,2025,location unresolved,controller_of_budget,siaya-projects,4,0
+projects,sports_culture_tourism,2025,ward,county_government,siaya-projects,1,0
+projects,sports_culture_tourism,FY 2018/19,ward,controller_of_budget,siaya-projects,2,0
+projects,sports_culture_tourism,FY 2019/20,location unresolved,auditor_general,siaya-projects,1,0
+projects,sports_culture_tourism,FY 2020/21,location unresolved,auditor_general,siaya-projects,1,0
+projects,sports_culture_tourism,FY 2020/21,ward,auditor_general,siaya-projects,4,0
+projects,sports_culture_tourism,FY 2020/21,ward,controller_of_budget,siaya-projects,2,0
+projects,sports_culture_tourism,FY 2021/22,ward,auditor_general,siaya-projects,3,0
+projects,sports_culture_tourism,FY 2021/22,ward,controller_of_budget,siaya-projects,3,0
+projects,sports_culture_tourism,FY 2022/23,ward,auditor_general,siaya-projects,3,0
+projects,sports_culture_tourism,FY 2023/24,constituency,county_government,siaya-projects,2,0
+projects,sports_culture_tourism,FY 2023/24,location unresolved,auditor_general,siaya-projects,6,0
+projects,sports_culture_tourism,FY 2023/24,location unresolved,county_government,siaya-projects,1,0
+projects,sports_culture_tourism,FY 2023/24,ward,controller_of_budget,siaya-projects,2,0
+projects,sports_culture_tourism,FY 2024/25,location unresolved,controller_of_budget,siaya-projects,9,0
+projects,sports_culture_tourism,FY 2025/26,ward,county_government,siaya-projects,3,0
+projects,urban_housing_lands,2024,location unresolved,county_government,siaya-projects,1,0
+projects,urban_housing_lands,2026,location unresolved,county_government,siaya-projects,1,0
+projects,urban_housing_lands,FY 2023/24,location unresolved,county_government,siaya-projects,1,0
+projects,urban_housing_lands,FY 2025/26,location unresolved,county_government,siaya-projects,4,0
+projects,water_sanitation,2019,location unresolved,controller_of_budget,siaya-projects,1,0
+projects,water_sanitation,2021,constituency,controller_of_budget,siaya-projects,1,0
+projects,water_sanitation,2022,constituency,auditor_general,siaya-projects,1,0
+projects,water_sanitation,2023,location unresolved,auditor_general,siaya-projects,1,0
+projects,water_sanitation,2023,location unresolved,controller_of_budget,siaya-projects,1,0
+projects,water_sanitation,2024,constituency,county_government,siaya-projects,2,0
+projects,water_sanitation,2024,county: Siaya (countywide),auditor_general,siaya-projects,1,0
+projects,water_sanitation,2024,location unresolved,county_government,siaya-projects,1,0
+projects,water_sanitation,2024,ward,county_government,siaya-projects,1,0
+projects,water_sanitation,2025,location unresolved,auditor_general,siaya-projects,2,0
+projects,water_sanitation,2025,ward,controller_of_budget,siaya-projects,1,0
+projects,water_sanitation,2026,ward,county_government,siaya-projects,1,0
+projects,water_sanitation,FY 2018/19,location unresolved,controller_of_budget,siaya-projects,2,0
+projects,water_sanitation,FY 2020/21,constituency,controller_of_budget,siaya-projects,2,0
+projects,water_sanitation,FY 2021/22,constituency,auditor_general,siaya-projects,2,0
+projects,water_sanitation,FY 2021/22,county: Siaya (countywide),controller_of_budget,siaya-projects,2,0
+projects,water_sanitation,FY 2022/23,county: Siaya (countywide),auditor_general,siaya-projects,2,0
+projects,water_sanitation,FY 2022/23,county: Siaya (countywide),controller_of_budget,siaya-projects,3,0
+projects,water_sanitation,FY 2022/23,location unresolved,auditor_general,siaya-projects,1,0
+projects,water_sanitation,FY 2022/23,location unresolved,controller_of_budget,siaya-projects,3,0
+projects,water_sanitation,FY 2023/24,constituency,county_government,siaya-projects,2,0
+projects,water_sanitation,FY 2023/24,location unresolved,county_government,siaya-projects,1,0
+projects,water_sanitation,FY 2023/24,ward,county_government,siaya-projects,1,0
+projects,water_sanitation,FY 2024/25,location unresolved,auditor_general,siaya-projects,1,0
+projects,water_sanitation,FY 2025/26,ward,county_government,siaya-projects,3,0
+public_finance,,FY 2013/14,county: Siaya,auditor_general,siaya-fiscal-ledger,1,0
+public_finance,,FY 2013/14,county: Siaya,controller_of_budget,history,5,0
+public_finance,,FY 2013/14,county: Siaya,controller_of_budget,siaya-fiscal-ledger,3,0
+public_finance,,FY 2013/14,county: Siaya,gap (no source),history,0,1
+public_finance,,FY 2013/14,county: Siaya,gap (no source),siaya-fiscal-ledger,0,13
+public_finance,,FY 2014/15,county: Siaya,controller_of_budget,history,12,0
+public_finance,,FY 2014/15,county: Siaya,controller_of_budget,siaya-fiscal-ledger,13,0
+public_finance,,FY 2014/15,county: Siaya,gap (no source),history,0,5
+public_finance,,FY 2014/15,county: Siaya,gap (no source),siaya-fiscal-ledger,0,4
+public_finance,,FY 2015/16,county: Siaya,controller_of_budget,history,14,0
+public_finance,,FY 2015/16,county: Siaya,controller_of_budget,siaya-fiscal-ledger,15,0
+public_finance,,FY 2015/16,county: Siaya,gap (no source),history,0,4
+public_finance,,FY 2015/16,county: Siaya,gap (no source),siaya-fiscal-ledger,0,2
+public_finance,,FY 2016/17,county: Siaya,controller_of_budget,history,14,0
+public_finance,,FY 2016/17,county: Siaya,controller_of_budget,siaya-fiscal-ledger,15,0
+public_finance,,FY 2016/17,county: Siaya,gap (no source),history,0,5
+public_finance,,FY 2016/17,county: Siaya,gap (no source),siaya-fiscal-ledger,0,2
+public_finance,,FY 2017/18,county: Siaya,controller_of_budget,history,14,0
+public_finance,,FY 2017/18,county: Siaya,controller_of_budget,siaya-fiscal-ledger,17,0
+public_finance,,FY 2017/18,county: Siaya,gap (no source),history,0,4
+public_finance,,FY 2017/18,county: Siaya,gap (no source),siaya-fiscal-ledger,0,2
+public_finance,,FY 2018/19,county: Siaya,controller_of_budget,history,14,0
+public_finance,,FY 2018/19,county: Siaya,controller_of_budget,siaya-fiscal-ledger,15,0
+public_finance,,FY 2018/19,county: Siaya,gap (no source),history,0,4
+public_finance,,FY 2018/19,county: Siaya,gap (no source),siaya-fiscal-ledger,0,2
+public_finance,,FY 2018/19,county: Siaya,parliament,siaya-fiscal-ledger,1,0
+public_finance,,FY 2019/20,county: Siaya,auditor_general,siaya-fiscal-ledger,1,0
+public_finance,,FY 2019/20,county: Siaya,controller_of_budget,history,2,0
+public_finance,,FY 2019/20,county: Siaya,controller_of_budget,siaya-fiscal-ledger,1,0
+public_finance,,FY 2019/20,county: Siaya,county_government,siaya-fiscal-ledger,7,0
+public_finance,,FY 2019/20,county: Siaya,gap (no source),history,0,6
+public_finance,,FY 2019/20,county: Siaya,gap (no source),siaya-fiscal-ledger,0,9
+public_finance,,FY 2019/20,county: Siaya,parliament,siaya-fiscal-ledger,2,0
+public_finance,,FY 2020/21,county: Siaya,auditor_general,siaya-fiscal-ledger,2,0
+public_finance,,FY 2020/21,county: Siaya,controller_of_budget,history,14,0
+public_finance,,FY 2020/21,county: Siaya,controller_of_budget,siaya-fiscal-ledger,15,0
+public_finance,,FY 2020/21,county: Siaya,county_government,siaya-fiscal-ledger,1,0
+public_finance,,FY 2020/21,county: Siaya,gap (no source),history,0,4
+public_finance,,FY 2020/21,county: Siaya,gap (no source),siaya-fiscal-ledger,0,2
+public_finance,,FY 2021/22,county: Baringo,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Baringo,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Bomet,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2021/22,county: Bomet,gap (no source),counties-cob,0,8
+public_finance,,FY 2021/22,county: Bungoma,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Bungoma,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Busia,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Busia,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Elgeyo-Marakwet,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Elgeyo-Marakwet,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Embu,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Embu,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Garissa,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Garissa,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Homa Bay,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Homa Bay,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Isiolo,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Isiolo,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Kajiado,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2021/22,county: Kajiado,gap (no source),counties-cob,0,6
+public_finance,,FY 2021/22,county: Kakamega,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Kakamega,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Kericho,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Kericho,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Kiambu,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Kiambu,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Kilifi,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Kilifi,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Kirinyaga,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Kirinyaga,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Kisii,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Kisii,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Kisumu,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2021/22,county: Kisumu,gap (no source),counties-cob,0,6
+public_finance,,FY 2021/22,county: Kitui,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Kitui,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Kwale,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Kwale,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Laikipia,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Laikipia,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Lamu,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Lamu,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Machakos,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Machakos,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Makueni,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Makueni,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Mandera,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2021/22,county: Mandera,gap (no source),counties-cob,0,8
+public_finance,,FY 2021/22,county: Marsabit,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2021/22,county: Marsabit,gap (no source),counties-cob,0,8
+public_finance,,FY 2021/22,county: Meru,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Meru,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Migori,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Migori,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Mombasa,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Mombasa,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Murang'a,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Murang'a,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Nairobi City,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2021/22,county: Nairobi City,gap (no source),counties-cob,0,8
+public_finance,,FY 2021/22,county: Nakuru,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Nakuru,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Nandi,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Nandi,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Narok,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2021/22,county: Narok,gap (no source),counties-cob,0,8
+public_finance,,FY 2021/22,county: Nyamira,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Nyamira,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Nyandarua,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Nyandarua,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Nyeri,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Nyeri,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Samburu,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Samburu,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Siaya,auditor_general,siaya-fiscal-ledger,3,0
+public_finance,,FY 2021/22,county: Siaya,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Siaya,controller_of_budget,history,17,0
+public_finance,,FY 2021/22,county: Siaya,controller_of_budget,siaya-fiscal-ledger,26,0
+public_finance,,FY 2021/22,county: Siaya,county_government,siaya-fiscal-ledger,1,0
+public_finance,,FY 2021/22,county: Siaya,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Siaya,gap (no source),history,0,1
+public_finance,,FY 2021/22,county: Siaya,gap (no source),siaya-fiscal-ledger,0,2
+public_finance,,FY 2021/22,county: Taita-Taveta,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Taita-Taveta,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Tana River,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Tana River,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Tharaka-Nithi,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Tharaka-Nithi,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Trans Nzoia,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Trans Nzoia,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Turkana,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2021/22,county: Turkana,gap (no source),counties-cob,0,5
+public_finance,,FY 2021/22,county: Uasin Gishu,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2021/22,county: Uasin Gishu,gap (no source),counties-cob,0,4
+public_finance,,FY 2021/22,county: Vihiga,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2021/22,county: Vihiga,gap (no source),counties-cob,0,7
+public_finance,,FY 2021/22,county: Wajir,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2021/22,county: Wajir,gap (no source),counties-cob,0,8
+public_finance,,FY 2021/22,county: West Pokot,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2021/22,county: West Pokot,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Baringo,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Baringo,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Bomet,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Bomet,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Bungoma,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Bungoma,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Busia,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Busia,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Elgeyo-Marakwet,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Elgeyo-Marakwet,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Embu,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Embu,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Garissa,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Garissa,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Homa Bay,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Homa Bay,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Isiolo,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Isiolo,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Kajiado,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Kajiado,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Kakamega,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Kakamega,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Kericho,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Kericho,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Kiambu,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Kiambu,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Kilifi,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Kilifi,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Kirinyaga,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Kirinyaga,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Kisii,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Kisii,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Kisumu,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Kisumu,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Kitui,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Kitui,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Kwale,controller_of_budget,counties-cob,14,0
+public_finance,,FY 2022/23,county: Kwale,gap (no source),counties-cob,0,9
+public_finance,,FY 2022/23,county: Laikipia,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Laikipia,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Lamu,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Lamu,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Machakos,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Machakos,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Makueni,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Makueni,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Mandera,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Mandera,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Marsabit,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Marsabit,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Meru,controller_of_budget,counties-cob,14,0
+public_finance,,FY 2022/23,county: Meru,gap (no source),counties-cob,0,9
+public_finance,,FY 2022/23,county: Migori,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Migori,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Mombasa,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Mombasa,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Murang'a,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Murang'a,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Nairobi City,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Nairobi City,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Nakuru,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Nakuru,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Nandi,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Nandi,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Narok,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Narok,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Nyamira,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Nyamira,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Nyandarua,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Nyandarua,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Nyeri,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Nyeri,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Samburu,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Samburu,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Siaya,auditor_general,siaya-fiscal-ledger,3,0
+public_finance,,FY 2022/23,county: Siaya,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Siaya,controller_of_budget,history,16,0
+public_finance,,FY 2022/23,county: Siaya,controller_of_budget,siaya-fiscal-ledger,26,0
+public_finance,,FY 2022/23,county: Siaya,county_government,siaya-fiscal-ledger,2,0
+public_finance,,FY 2022/23,county: Siaya,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Siaya,gap (no source),history,0,1
+public_finance,,FY 2022/23,county: Taita-Taveta,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Taita-Taveta,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Tana River,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Tana River,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Tharaka-Nithi,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Tharaka-Nithi,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: Trans Nzoia,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Trans Nzoia,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Turkana,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Turkana,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Uasin Gishu,controller_of_budget,counties-cob,15,0
+public_finance,,FY 2022/23,county: Uasin Gishu,gap (no source),counties-cob,0,8
+public_finance,,FY 2022/23,county: Vihiga,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2022/23,county: Vihiga,gap (no source),counties-cob,0,7
+public_finance,,FY 2022/23,county: Wajir,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: Wajir,gap (no source),counties-cob,0,6
+public_finance,,FY 2022/23,county: West Pokot,controller_of_budget,counties-cob,17,0
+public_finance,,FY 2022/23,county: West Pokot,gap (no source),counties-cob,0,6
+public_finance,,FY 2023/24,county: Baringo,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Baringo,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Bomet,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Bomet,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Bungoma,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Bungoma,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Busia,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Busia,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Elgeyo-Marakwet,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2023/24,county: Elgeyo-Marakwet,gap (no source),counties-cob,0,4
+public_finance,,FY 2023/24,county: Embu,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Embu,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Garissa,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Garissa,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Homa Bay,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2023/24,county: Isiolo,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2023/24,county: Kajiado,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2023/24,county: Kakamega,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2023/24,county: Kericho,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Kericho,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Kiambu,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2023/24,county: Kilifi,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Kilifi,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Kirinyaga,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Kirinyaga,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Kisii,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2023/24,county: Kisumu,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2023/24,county: Kitui,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2023/24,county: Kitui,gap (no source),counties-cob,0,5
+public_finance,,FY 2023/24,county: Kwale,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Kwale,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Laikipia,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Laikipia,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Lamu,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Lamu,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Machakos,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Machakos,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Makueni,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2023/24,county: Mandera,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2023/24,county: Mandera,gap (no source),counties-cob,0,4
+public_finance,,FY 2023/24,county: Marsabit,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Marsabit,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Meru,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Meru,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Migori,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2023/24,county: Mombasa,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Mombasa,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Murang'a,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Murang'a,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Nairobi City,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Nairobi City,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Nakuru,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Nakuru,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Nandi,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Nandi,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Narok,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2023/24,county: Narok,gap (no source),counties-cob,0,4
+public_finance,,FY 2023/24,county: Nyamira,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Nyamira,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Nyandarua,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Nyandarua,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Nyeri,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Nyeri,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Samburu,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Samburu,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Siaya,auditor_general,siaya-fiscal-ledger,1,0
+public_finance,,FY 2023/24,county: Siaya,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Siaya,controller_of_budget,history,15,0
+public_finance,,FY 2023/24,county: Siaya,controller_of_budget,siaya-fiscal-ledger,29,0
+public_finance,,FY 2023/24,county: Siaya,county_government,siaya-fiscal-ledger,21,0
+public_finance,,FY 2023/24,county: Siaya,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Siaya,gap (no source),history,0,2
+public_finance,,FY 2023/24,county: Taita-Taveta,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Taita-Taveta,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Tana River,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Tana River,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Tharaka-Nithi,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2023/24,county: Tharaka-Nithi,gap (no source),counties-cob,0,1
+public_finance,,FY 2023/24,county: Trans Nzoia,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2023/24,county: Trans Nzoia,gap (no source),counties-cob,0,3
+public_finance,,FY 2023/24,county: Turkana,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2023/24,county: Turkana,gap (no source),counties-cob,0,4
+public_finance,,FY 2023/24,county: Uasin Gishu,controller_of_budget,counties-cob,21,0
+public_finance,,FY 2023/24,county: Uasin Gishu,gap (no source),counties-cob,0,2
+public_finance,,FY 2023/24,county: Vihiga,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2023/24,county: Vihiga,gap (no source),counties-cob,0,4
+public_finance,,FY 2023/24,county: Wajir,controller_of_budget,counties-cob,18,0
+public_finance,,FY 2023/24,county: Wajir,gap (no source),counties-cob,0,5
+public_finance,,FY 2023/24,county: West Pokot,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Baringo,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2024/25,county: Baringo,gap (no source),counties-cob,0,3
+public_finance,,FY 2024/25,county: Bomet,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Bungoma,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Bungoma,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Busia,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Busia,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Elgeyo-Marakwet,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2024/25,county: Elgeyo-Marakwet,gap (no source),counties-cob,0,3
+public_finance,,FY 2024/25,county: Embu,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Embu,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Garissa,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Homa Bay,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Isiolo,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Kajiado,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Kakamega,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Kakamega,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Kericho,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Kericho,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Kiambu,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Kilifi,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Kilifi,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Kirinyaga,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2024/25,county: Kirinyaga,gap (no source),counties-cob,0,3
+public_finance,,FY 2024/25,county: Kisii,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Kisumu,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Kitui,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2024/25,county: Kitui,gap (no source),counties-cob,0,3
+public_finance,,FY 2024/25,county: Kwale,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Laikipia,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Laikipia,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Lamu,controller_of_budget,counties-cob,19,0
+public_finance,,FY 2024/25,county: Lamu,gap (no source),counties-cob,0,4
+public_finance,,FY 2024/25,county: Machakos,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Makueni,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Makueni,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Mandera,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Mandera,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Marsabit,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Meru,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Meru,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Migori,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Mombasa,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Mombasa,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Murang'a,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Murang'a,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Nairobi City,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Nairobi City,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Nakuru,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Nakuru,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Nandi,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Nandi,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Narok,controller_of_budget,counties-cob,16,0
+public_finance,,FY 2024/25,county: Narok,gap (no source),counties-cob,0,7
+public_finance,,FY 2024/25,county: Nyamira,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Nyamira,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Nyandarua,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Nyandarua,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Nyeri,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Nyeri,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Samburu,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Siaya,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2024/25,county: Siaya,controller_of_budget,history,13,0
+public_finance,,FY 2024/25,county: Siaya,controller_of_budget,siaya-fiscal-ledger,25,0
+public_finance,,FY 2024/25,county: Siaya,county_government,siaya-fiscal-ledger,32,0
+public_finance,,FY 2024/25,county: Siaya,gap (no source),counties-cob,0,3
+public_finance,,FY 2024/25,county: Siaya,gap (no source),history,0,2
+public_finance,,FY 2024/25,county: Taita-Taveta,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Taita-Taveta,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Tana River,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Tana River,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Tharaka-Nithi,controller_of_budget,counties-cob,23,0
+public_finance,,FY 2024/25,county: Trans Nzoia,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2024/25,county: Trans Nzoia,gap (no source),counties-cob,0,3
+public_finance,,FY 2024/25,county: Turkana,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Turkana,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Uasin Gishu,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Uasin Gishu,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: Vihiga,controller_of_budget,counties-cob,20,0
+public_finance,,FY 2024/25,county: Vihiga,gap (no source),counties-cob,0,3
+public_finance,,FY 2024/25,county: Wajir,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: Wajir,gap (no source),counties-cob,0,1
+public_finance,,FY 2024/25,county: West Pokot,controller_of_budget,counties-cob,22,0
+public_finance,,FY 2024/25,county: West Pokot,gap (no source),counties-cob,0,1
+public_finance,,FY 2025/26,county: Siaya,controller_of_budget,siaya-fiscal-ledger,1,0
+public_finance,,FY 2025/26,county: Siaya,county_government,siaya-fiscal-ledger,20,0
+public_finance,,FY 2025/26,county: Siaya,gap (no source),history,0,1
+public_finance,,FY 2025/26,county: Siaya,gap (no source),siaya-fiscal-ledger,0,1
+public_finance,in-year (partial),FY 2025/26,county: Siaya,controller_of_budget,history,22,0
