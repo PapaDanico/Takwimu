@@ -2167,7 +2167,7 @@ Each value lists what was stored, where it was read, the text as printed (or as 
 
 ## `SIA-A4-stock-2021-22-L276`: Pending bills stock at 2022-06-30 (cob-report-2021-22, L276)
 
-- Stored value: 789.96 (KSh million); period stock at 2022-06-30
+- Stored value: 705.38 (KSh million); period stock at 2022-06-30
 - Source: County Governments Budget Implementation Review Report FY 2021/22 <https://libraryir.parliament.go.ke/server/api/core/bitstreams/159324ac-5f7d-4020-9ab5-30deeca6f80e/content>; SHA-256 `e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0`
 - Page: not recorded; read by calculation by Takwimu
 - As printed or read: (no string stored)

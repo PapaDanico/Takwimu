@@ -6,7 +6,7 @@ Procedure: [review-sop.md](review-sop.md). Every value below is public and label
 
 ## First: machine cross-check disagrees (3)
 
-A second machine reading of the source page, by a different method from the original extraction (`data/machine-checks.json`, `scripts/machine-check.js`), did not find these values. Check them first. A machine check is not editorial review: it never approves or rejects a value, and no review record may cite it. Results for 2068 Siaya values: 981 agree, 3 disagree, 1084 not checkable. Review packs: [packs/](packs/).
+A second machine reading of the source page, by a different method from the original extraction (`data/machine-checks.json`, `scripts/machine-check.js`), did not find these values. Check them first. A machine check is not editorial review: it never approves or rejects a value, and no review record may cite it. Results for 2068 Siaya values: 979 agree, 3 disagree, 1086 not checkable. Review packs: [packs/](packs/).
 
 | Dataset | Record id | Source document | PDF page | Second method |
 |---|---|---|---:|---|
@@ -18,7 +18,7 @@ A second machine reading of the source page, by a different method from the orig
 
 | Dataset | Values | Approved | Pending | Rejected | Disputed | Superseded | Unanchored |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| siaya-fiscal-ledger | 299 | 0 | 299 | 0 | 111 | 0 | 0 |
+| siaya-fiscal-ledger | 299 | 0 | 299 | 0 | 109 | 0 | 0 |
 | siaya-audits | 276 | 0 | 276 | 0 | 0 | 0 | 0 |
 | siaya-health | 78 | 0 | 78 | 0 | 27 | 0 | 3 |
 | siaya-projects | 118 | 0 | 118 | 0 | 23 | 0 | 0 |
@@ -32,7 +32,7 @@ A second machine reading of the source page, by a different method from the orig
 | siaya-climate | 87 | 0 | 87 | 0 | 0 | 0 | 0 |
 | imf | 430 | 0 | 430 | 0 | 0 | 0 | 430 |
 | siaya-programmes | 73 | 0 | 73 | 0 | 0 | 0 | 0 |
-| **All** | **6730** | **0** | **6730** | **0** | **215** | **0** | **467** |
+| **All** | **6730** | **0** | **6730** | **0** | **213** | **0** | **467** |
 
 Review records in force: 0 (of 0 in the file).
 
@@ -42,11 +42,11 @@ Not itemised (registers and map layers, not measured values):
 - `siaya-wards-geo`: A boundary map layer, checked as one file (resource hash in the file).
 - `siaya-boundaries`: A simplified boundary drawing for the map, not measured values.
 
-## Priority 1: fiscal discrepancies (345)
+## Priority 1: fiscal discrepancies (343)
 
 | Dataset | Pending | Disputed | Unanchored | What |
 |---|---:|---:|---:|---|
-| siaya-fiscal-ledger | 111 | 111 | 0 | fiscal discrepancy (open case in the ledger) |
+| siaya-fiscal-ledger | 109 | 109 | 0 | fiscal discrepancy (open case in the ledger) |
 | siaya-projects | 23 | 23 | 0 | fiscal discrepancy (project amounts differ between documents) |
 | counties-cob | 92 | 0 | 0 | fiscal discrepancy (Siaya row against data/history.json) |
 | history | 119 | 0 | 0 | fiscal value (ten-year series; register cases) |
@@ -157,8 +157,6 @@ Not itemised (registers and map layers, not measured values):
 | siaya-fiscal-ledger | `L282` | wage_bill, FY 2017/18 | cob-report-2018-19 | disputed |
 | siaya-fiscal-ledger | `L283` | wage_bill, FY 2017/18 | cob-report-2017-18 | disputed |
 | siaya-fiscal-ledger | `L284` | wage_bill, FY 2017/18 | cob-report-2018-19 | disputed |
-| siaya-fiscal-ledger | `L285` | wage_bill, FY 2018/19 | cob-report-2018-19 | disputed |
-| siaya-fiscal-ledger | `L286` | wage_bill, FY 2018/19 | cob-report-2018-19 | disputed |
 | siaya-fiscal-ledger | `L289` | wage_bill, FY 2021/22 | cob-report-2021-22 | disputed |
 | siaya-fiscal-ledger | `L290` | wage_bill, FY 2021/22 | cob-report-2022-23 | disputed |
 | siaya-fiscal-ledger | `L296` | wage_bill, FY 2024/25 | cob-report-2024-25 | disputed |
@@ -789,14 +787,14 @@ Not itemised (registers and map layers, not measured values):
 | siaya-health | `tb-inc-health01` | TB incidence, not stated (article of May 2026) | HEALTH-01 | pending |
 | siaya-health | `tbhiv-2023-ntld` | TB patients co-infected with HIV, 2023 | NTLD-AR-2023 | pending |
 
-## Priority 4: other fiscal values and calculations (4904)
+## Priority 4: other fiscal values and calculations (4906)
 
 | Dataset | Pending | Disputed | Unanchored | What |
 |---|---:|---:|---:|---|
 | counties-cob | 4232 | 0 | 0 | county fiscal value (OCR) |
 | history | 34 | 0 | 0 | fiscal value (in-year); fiscal value |
 | siaya-analysis | 355 | 0 | 24 | calculation by Takwimu |
-| siaya-fiscal-ledger | 188 | 0 | 0 | fiscal value |
+| siaya-fiscal-ledger | 190 | 0 | 0 | fiscal value |
 | siaya-projects | 95 | 0 | 0 | project record |
 
 Full list for one dataset: `node scripts/review-queue.js --dataset <dataset>`.

@@ -14554,10 +14554,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -14652,10 +14652,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -15322,10 +15322,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -16069,10 +16069,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -16167,10 +16167,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -16265,10 +16265,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -17234,7 +17234,7 @@
    "label": "pending_bills_close, FY 2021/22",
    "kind": "fiscal discrepancy (open case in the ledger)",
    "state": "Disputed: see the conflict register",
-   "value": 789.96,
+   "value": 705.38,
    "unit": "KSh million",
    "period": "FY 2021/22",
    "scope": "not stated",
@@ -17246,10 +17246,10 @@
      "sha256": "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0"
     }
    ],
-   "pdf_page": 407,
-   "printed_page": 383,
+   "pdf_page": 416,
+   "printed_page": 392,
    "read": "text",
-   "printed_text": "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022",
+   "printed_text": "High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022.",
    "note": "Key issues paragraph of the county chapter",
    "others": [
     {
@@ -17304,7 +17304,7 @@
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
-    "matched": "789.96",
+    "matched": "705.38",
     "reason": null
    },
    "template": {
@@ -17316,7 +17316,7 @@
     "source_document_id": "cob-report-2021-22",
     "source_sha256": "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
     "pages_checked": [
-     407
+     416
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -17451,10 +17451,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L280",
-     "value": 1120,
+     "value": 2400,
      "unit": "KSh million",
      "source": "cob-report-2017-18",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
@@ -17488,7 +17488,7 @@
    "label": "wage_bill, FY 2016/17",
    "kind": "fiscal discrepancy (open case in the ledger)",
    "state": "Disputed: see the conflict register",
-   "value": 1120,
+   "value": 2400,
    "unit": "KSh million",
    "period": "FY 2016/17",
    "scope": "county government (executive and assembly)",
@@ -17500,10 +17500,10 @@
      "sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1"
     }
    ],
-   "pdf_page": 268,
-   "printed_page": 247,
+   "pdf_page": 274,
+   "printed_page": 253,
    "read": "text",
-   "printed_text": "High wage bill that has increased by 40.8 per cent from Kshs.1.12 billion in FY 2016/17",
+   "printed_text": "High wage bill that has increased by 3.9 per cent from Kshs.2.4 billion in FY 2016/17",
    "note": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "others": [
     {
@@ -17516,10 +17516,10 @@
     }
    ],
    "machine_check": {
-    "result": "agree",
-    "method": "tesseract-600dpi-psm6",
-    "matched": "1.12",
-    "reason": null
+    "result": "not checkable",
+    "method": "tesseract-600dpi-psm6+psm4+more",
+    "matched": null,
+    "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -17530,7 +17530,7 @@
     "source_document_id": "cob-report-2017-18",
     "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
     "pages_checked": [
-     268
+     274
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -17575,18 +17575,18 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L283",
-     "value": 1580,
+     "value": 2310,
      "unit": "KSh million",
      "source": "cob-report-2017-18",
-     "pdf_page": 268
+     "pdf_page": 274
     },
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L284",
-     "value": 1580,
+     "value": 2400,
      "unit": "KSh million",
      "source": "cob-report-2018-19",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
@@ -17649,18 +17649,18 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L283",
-     "value": 1580,
+     "value": 2310,
      "unit": "KSh million",
      "source": "cob-report-2017-18",
-     "pdf_page": 268
+     "pdf_page": 274
     },
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L284",
-     "value": 1580,
+     "value": 2400,
      "unit": "KSh million",
      "source": "cob-report-2018-19",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
@@ -17694,7 +17694,7 @@
    "label": "wage_bill, FY 2017/18",
    "kind": "fiscal discrepancy (open case in the ledger)",
    "state": "Disputed: see the conflict register",
-   "value": 1580,
+   "value": 2310,
    "unit": "KSh million",
    "period": "FY 2017/18",
    "scope": "county government (executive and assembly)",
@@ -17706,10 +17706,10 @@
      "sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1"
     }
    ],
-   "pdf_page": 268,
-   "printed_page": 247,
+   "pdf_page": 274,
+   "printed_page": 253,
    "read": "text",
-   "printed_text": "to Kshs.1.58 billion during the period under review",
+   "printed_text": "to Kshs.2.31 billion during the period under review",
    "note": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "others": [
     {
@@ -17731,16 +17731,16 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L284",
-     "value": 1580,
+     "value": 2400,
      "unit": "KSh million",
      "source": "cob-report-2018-19",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
-    "matched": "1.58",
+    "matched": "2.31",
     "reason": null
    },
    "template": {
@@ -17752,7 +17752,7 @@
     "source_document_id": "cob-report-2017-18",
     "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
     "pages_checked": [
-     268
+     274
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -17768,7 +17768,7 @@
    "label": "wage_bill, FY 2017/18",
    "kind": "fiscal discrepancy (open case in the ledger)",
    "state": "Disputed: see the conflict register",
-   "value": 1580,
+   "value": 2400,
    "unit": "KSh million",
    "period": "FY 2017/18",
    "scope": "county government (executive and assembly)",
@@ -17780,10 +17780,10 @@
      "sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798"
     }
    ],
-   "pdf_page": 268,
-   "printed_page": 245,
+   "pdf_page": 274,
+   "printed_page": 251,
    "read": "text",
-   "printed_text": "A high wage bill that increased by 25.3 per cent from Kshs.1.58 billion in the FY 2017/18",
+   "printed_text": "A high wage bill that increased by 14.6 per cent from Kshs.2.4 billion in the FY 2017/18",
    "note": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "others": [
     {
@@ -17805,17 +17805,17 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L283",
-     "value": 1580,
+     "value": 2310,
      "unit": "KSh million",
      "source": "cob-report-2017-18",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
-    "result": "agree",
-    "method": "tesseract-600dpi-psm6",
-    "matched": "1.58",
-    "reason": null
+    "result": "not checkable",
+    "method": "tesseract-600dpi-psm6+psm4+more",
+    "matched": null,
+    "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -17826,7 +17826,7 @@
     "source_document_id": "cob-report-2018-19",
     "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
     "pages_checked": [
-     268
+     274
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -17840,8 +17840,8 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L285",
    "label": "wage_bill, FY 2018/19",
-   "kind": "fiscal discrepancy (open case in the ledger)",
-   "state": "Disputed: see the conflict register",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
    "value": 2750,
    "unit": "KSh million",
    "period": "FY 2018/19",
@@ -17863,10 +17863,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L286",
-     "value": 1980,
+     "value": 2740,
      "unit": "KSh million",
      "source": "cob-report-2018-19",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
@@ -17898,9 +17898,9 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L286",
    "label": "wage_bill, FY 2018/19",
-   "kind": "fiscal discrepancy (open case in the ledger)",
-   "state": "Disputed: see the conflict register",
-   "value": 1980,
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 2740,
    "unit": "KSh million",
    "period": "FY 2018/19",
    "scope": "county government (executive and assembly)",
@@ -17912,10 +17912,10 @@
      "sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798"
     }
    ],
-   "pdf_page": 268,
-   "printed_page": 245,
+   "pdf_page": 274,
+   "printed_page": 251,
    "read": "text",
-   "printed_text": "to Kshs.1.98 billion in the reporting period. The wage bill accounted for 47.4 per cent of total expenditure",
+   "printed_text": "to Kshs.2.74 billion in the reporting period. The wage bill accounted for 48.2 per cent of total expenditure",
    "note": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "others": [
     {
@@ -17930,7 +17930,7 @@
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
-    "matched": "1.98",
+    "matched": "2.74",
     "reason": null
    },
    "template": {
@@ -17942,7 +17942,7 @@
     "source_document_id": "cob-report-2018-19",
     "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
     "pages_checked": [
-     268
+     274
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -66253,7 +66253,7 @@
    "label": "Pending bills stock at 2022-06-30 (cob-report-2021-22, L276)",
    "kind": "calculation by Takwimu",
    "state": "Provisional: awaiting editorial review",
-   "value": 789.96,
+   "value": 705.38,
    "unit": "KSh million",
    "period": "stock at 2022-06-30",
    "scope": null,

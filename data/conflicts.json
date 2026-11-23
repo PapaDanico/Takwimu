@@ -691,23 +691,18 @@
           "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
         },
         {
-          "label": "Same report, key observations (PDF p. 407, printed p. 383)",
-          "value": 789.96,
-          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
-        },
-        {
           "label": "Same report, Table 2.6 (all 47 counties), Siaya row: Executive 738.82 plus Assembly 13.17 (PDF p. 35, printed p. 11, RapidOCR)",
           "value": 751.99,
           "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
         }
       ],
-      "definitions": "Same report, same date. The table and the key observations give different totals.",
-      "hypothesis": "Hypothesis: the observation adds bills not in the table (the table includes bills the Auditor-General classed as eligible). Not confirmed.",
+      "definitions": "Same report, same date. The county chapter (Table 3.251 and the key observations on PDF p. 416, printed p. 392, both 705.38) and the 47-county Table 2.6 (Executive plus Assembly, 751.99) give different totals. Corrected 23 Nov 2026 (COR-2026-003): the 789.96 listed here before is in Samburu County's key observations (section 3.37.13, PDF p. 407), not Siaya's.",
+      "hypothesis": "Hypothesis: Table 2.6 adds the County Assembly's 13.17 and a different Executive figure (738.82). Not confirmed.",
       "status": "open",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The roll-forward and the chart use the table (705.38), whose columns add up; the observation value is listed here. The county comparison shows the Table 2.6 value 751.99 with this case."
+      "effect": "The roll-forward and the chart use the table (705.38), whose columns add up and which the key observations repeat. The county comparison shows the Table 2.6 value 751.99 with this case."
     },
     {
       "id": "pending-close-2025",

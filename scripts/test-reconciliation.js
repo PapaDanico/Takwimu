@@ -130,7 +130,14 @@ test('pending bills: every year in the series follows the own-year rule', () => 
 });
 
 caseTest('pending-2022', 705.38, 840.67, pendOf(year('2021/22')));
-caseTest('pending-close-2022', 705.38, 789.96, pendOf(year('2021/22')));
+caseTest('pending-close-2022', 705.38, 751.99, pendOf(year('2021/22')));
+// COR-2026-003: 789.96 is Samburu County's figure (CoB FY 2021/22 report, section 3.37.13); it may not return as Siaya's.
+test('pending-close-2022: no Samburu figure in the case or the ledger', () => {
+  ok(!listed('pending-close-2022', 789.96), '789.96 (Samburu key observations) is listed again');
+  const obs = read('siaya-fiscal-ledger.json').observations;
+  ok(!obs.some((o) => o.measure === 'pending_bills_close' && o.value === 789.96), 'Samburu\'s 789.96 is back in the Siaya ledger');
+  ok(!obs.some((o) => o.measure === 'wage_bill' && [1120, 1580, 1980].includes(o.value)), 'a Samburu wage-bill figure (1.12, 1.58, 1.98 billion) is back in the Siaya ledger');
+});
 test('conflict pending-close-2025: both values listed, the year-end stock stays out of the chart', () => {
   const vals = conflict('pending-close-2025').values.map((v) => v.value);
   ok(vals.includes(545.95) && vals.includes(1120), `register values ${vals}`);

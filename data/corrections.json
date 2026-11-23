@@ -38,6 +38,73 @@
    "affected_pages": [
     "/counties/siaya/ledger/"
    ]
+  },
+  {
+   "id": "COR-2026-003",
+   "dataset": "siaya-fiscal-ledger",
+   "record_ids": [
+    "L276"
+   ],
+   "measure": "Pending bills, stock at 30 June 2022 (FY 2021/22 report, key observations)",
+   "original": "KSh 789.96 million, CoB FY 2021/22 report PDF p. 407 (printed p. 383)",
+   "corrected": "KSh 705.38 million, CoB FY 2021/22 report PDF p. 416 (printed p. 392)",
+   "reason": "The 789.96 is in section 3.37.13, the key observations for Samburu County, which end on PDF p. 407 just before Siaya's chapter begins. Siaya's own key observations (section 3.38.13) give 705.38, the same as Table 3.251. Found while re-examining the ledger's open cases against the documents.",
+   "evidence": "cob-report-2021-22, PDF p. 407: \"3.37.13 Key Observations and Recommendations ... 2. High level of pending bills which amounted to Kshs.789.96 million\" (Samburu); PDF p. 416: \"3.38.13 ... 3. High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022\"",
+   "date": "2026-11-23",
+   "affected_pages": [
+    "/counties/siaya/ledger/",
+    "/data/"
+   ]
+  },
+  {
+   "id": "COR-2026-004",
+   "dataset": "siaya-fiscal-ledger",
+   "record_ids": [
+    "L280",
+    "L283"
+   ],
+   "measure": "Wage bill, FY 2016/17 and FY 2017/18 (FY 2017/18 report, key observations)",
+   "original": "KSh 1,120 million (FY 2016/17) and KSh 1,580 million (FY 2017/18), CoB FY 2017/18 report PDF p. 268 (printed p. 247)",
+   "corrected": "KSh 2,400 million (FY 2016/17) and KSh 2,310 million (FY 2017/18) as printed, CoB FY 2017/18 report PDF p. 274 (printed p. 253), with a source-error flag",
+   "reason": "The 1.12 and 1.58 billion are in section 3.37.9, Samburu County's key observations, above the heading \"3.38 Siaya County\" on the same page. Siaya's own key observations (section 3.38.9) give 2.4 and 2.31 billion; that sentence calls the fall an increase of 3.9 per cent, so its two figures appear swapped, which is flagged as an error in the source and both are kept as printed.",
+   "evidence": "cob-report-2017-18, PDF p. 268: \"3.37.9 Key Observations ... 3. High wage bill that has increased by 40.8 per cent from Kshs.1.12 billion in FY 2016/17 to Kshs.1.58 billion\" then \"3.38 Siaya County\"; PDF p. 274: \"6. High wage bill that has increased by 3.9 per cent from Kshs.2.4 billion in FY 2016/17 to Kshs.2.31 billion during the period under review\"",
+   "date": "2026-11-23",
+   "affected_pages": [
+    "/counties/siaya/ledger/"
+   ]
+  },
+  {
+   "id": "COR-2026-005",
+   "dataset": "siaya-fiscal-ledger",
+   "record_ids": [
+    "L284",
+    "L286"
+   ],
+   "measure": "Wage bill, FY 2017/18 and FY 2018/19 (FY 2018/19 report, key observations)",
+   "original": "KSh 1,580 million (FY 2017/18) and KSh 1,980 million (FY 2018/19), CoB FY 2018/19 report PDF p. 268 (printed p. 245)",
+   "corrected": "KSh 2,400 million (FY 2017/18) and KSh 2,740 million (FY 2018/19), CoB FY 2018/19 report PDF p. 274 (printed p. 251)",
+   "reason": "The 1.58 and 1.98 billion are in section 3.37.9, Samburu County's key observations; Siaya's chapter starts on PDF p. 269. Siaya's own key observations (section 3.38.9) give 2.4 and 2.74 billion.",
+   "evidence": "cob-report-2018-19, PDF p. 268: \"3.37.9 Key Observations ... A high wage bill that increased by 25.3 per cent from Kshs.1.58 billion\" (tables above it are headed Samburu County); PDF p. 274: \"3. A high wage bill that increased by 14.6 per cent from Kshs.2.4 billion in the FY 2017/18 to Kshs.2.74 billion in the reporting period\"",
+   "date": "2026-11-23",
+   "affected_pages": [
+    "/counties/siaya/ledger/"
+   ]
+  },
+  {
+   "id": "COR-2026-006",
+   "dataset": "siaya-analysis",
+   "record_ids": [
+    "SIA-A4-stock-2021-22-L276"
+   ],
+   "measure": "Pending bills stock at 30 June 2022 (calculation from ledger L276)",
+   "original": "KSh 789.96 million",
+   "corrected": "KSh 705.38 million",
+   "reason": "Recalculated from the corrected ledger value L276 (COR-2026-003); the input was Samburu County's figure.",
+   "evidence": "data/siaya-fiscal-ledger.json L276; cob-report-2021-22 PDF p. 416",
+   "date": "2026-11-23",
+   "affected_pages": [
+    "/counties/siaya/analysis/"
+   ]
   }
  ]
 }

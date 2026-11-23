@@ -13,8 +13,8 @@
   "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way (\"Kshs.2.4 billion\") is not checkable.",
   "checked_on": "2026-11-23",
   "counts": {
-   "agree": 981,
-   "not checkable": 1084,
+   "agree": 979,
+   "not checkable": 1086,
    "disagree": 3
   }
  },
@@ -3309,12 +3309,12 @@
    "id": "L276",
    "source_id": "cob-report-2021-22",
    "source_sha256": "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
-   "pdf_page": 407,
+   "pdf_page": 416,
    "original_method": "PDF text layer",
    "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
    "result": "agree",
-   "matched": "789.96"
+   "matched": "705.38"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -3357,12 +3357,12 @@
    "id": "L280",
    "source_id": "cob-report-2017-18",
    "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
-   "pdf_page": 268,
+   "pdf_page": 274,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6",
+   "method": "tesseract-600dpi-psm6+psm4+more",
    "checked_on": "2026-11-23",
-   "result": "agree",
-   "matched": "1.12"
+   "result": "not checkable",
+   "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -3393,24 +3393,24 @@
    "id": "L283",
    "source_id": "cob-report-2017-18",
    "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
-   "pdf_page": 268,
+   "pdf_page": 274,
    "original_method": "PDF text layer",
    "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
    "result": "agree",
-   "matched": "1.58"
+   "matched": "2.31"
   },
   {
    "dataset": "siaya-fiscal-ledger",
    "id": "L284",
    "source_id": "cob-report-2018-19",
    "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
-   "pdf_page": 268,
+   "pdf_page": 274,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6",
+   "method": "tesseract-600dpi-psm6+psm4+more",
    "checked_on": "2026-11-23",
-   "result": "agree",
-   "matched": "1.58"
+   "result": "not checkable",
+   "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -3429,12 +3429,12 @@
    "id": "L286",
    "source_id": "cob-report-2018-19",
    "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
-   "pdf_page": 268,
+   "pdf_page": 274,
    "original_method": "PDF text layer",
    "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
    "result": "agree",
-   "matched": "1.98"
+   "matched": "2.74"
   },
   {
    "dataset": "siaya-fiscal-ledger",

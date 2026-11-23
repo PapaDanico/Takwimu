@@ -3543,7 +3543,7 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Page: PDF p. 409 (printed p. 385); read by text
 - As printed or read: (no string stored)
 - Note: Table 3.251, column E
-- Other sources, same measure and period: 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 789.96 KSh million (`L276`, cob-report-2021-22 p. 407)
+- Other sources, same measure and period: 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 705.38 KSh million (`L276`, cob-report-2021-22 p. 416)
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "705.38"
 - Current state: Disputed: see the conflict register
 
@@ -3557,7 +3557,7 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Source: Annual County Governments Budget Implementation Review Report FY 2022/23 <https://libraryir.parliament.go.ke/server/api/core/bitstreams/ea1fa5f7-1c31-4851-aaa3-ad14a40b0fe7/content>; SHA-256 `385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da`
 - Page: PDF p. 578 (printed p. 552); read by ocr-rapidocr
 - As printed or read: (no string stored)
-- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 789.96 KSh million (`L276`, cob-report-2021-22 p. 407)
+- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 705.38 KSh million (`L276`, cob-report-2021-22 p. 416)
 - Machine cross-check: agree (pdf-text-layer), found "840.67"
 - Current state: Disputed: see the conflict register
 
@@ -3661,7 +3661,7 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Page: PDF p. 35 (printed p. 11); read by ocr-rapidocr
 - As printed or read: "751,990,941"
 - Note: Cross-county pending bills table, grand total (County Executive and County Assembly)
-- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 789.96 KSh million (`L276`, cob-report-2021-22 p. 407)
+- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 705.38 KSh million (`L276`, cob-report-2021-22 p. 416)
 - Machine cross-check: agree (pdf-text-layer), found "751,990,941"
 - Current state: Disputed: see the conflict register
 
@@ -3811,7 +3811,7 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Page: PDF p. 48; read by text
 - As printed or read: "pending accounts payable balance of Kshs.818,803,232 as disclosed in Annex ll"
 - Note: Auditor-General citing Annex II; the auditor notes supporting schedules of 738,755,483 and IFMIS of 9,093,570,181
-- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 789.96 KSh million (`L276`, cob-report-2021-22 p. 407)
+- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 705.38 KSh million (`L276`, cob-report-2021-22 p. 416)
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "818,803,232"
 - Current state: Disputed: see the conflict register
 
@@ -3826,7 +3826,7 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Page: PDF p. 48; read by text
 - As printed or read: "while the supporting schedules reflect a balance of Kshs.738,755,483"
 - Note: Supporting schedules as reported by the Auditor-General
-- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 789.96 KSh million (`L276`, cob-report-2021-22 p. 407)
+- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12); 705.38 KSh million (`L276`, cob-report-2021-22 p. 416)
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "738,755,483"
 - Current state: Disputed: see the conflict register
 
@@ -3841,7 +3841,7 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Page: PDF p. 12; read by text
 - As printed or read: "to Kshs.959, 087,583.24 in the Financial Year 2021/2022"
 - Note: County management statement inside the audited financial statements, not an audit finding
-- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 789.96 KSh million (`L276`, cob-report-2021-22 p. 407)
+- Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 705.38 KSh million (`L276`, cob-report-2021-22 p. 416)
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "959,087,583.24"
 - Current state: Disputed: see the conflict register
 
@@ -4001,17 +4001,17 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 
 ## `L276`: pending_bills_close, FY 2021/22
 
-- Stored value: 789.96 (KSh million); period FY 2021/22; scope not stated
+- Stored value: 705.38 (KSh million); period FY 2021/22; scope not stated
 - Source: County Governments Budget Implementation Review Report FY 2021/22 <https://libraryir.parliament.go.ke/server/api/core/bitstreams/159324ac-5f7d-4020-9ab5-30deeca6f80e/content>; SHA-256 `e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0`
-- Page: PDF p. 407 (printed p. 383); read by text
-- As printed or read: "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022"
+- Page: PDF p. 416 (printed p. 392); read by text
+- As printed or read: "High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022."
 - Note: Key issues paragraph of the county chapter
 - Other sources, same measure and period: 705.38 KSh million (`L245`, cob-report-2021-22 p. 409); 840.67 KSh million (`L246`, cob-report-2022-23 p. 578); 751.990941 KSh million (`L253`, cob-report-2021-22 p. 35); 818.803232 KSh million (`L263`, audit-2021-22 p. 48); 738.755483 KSh million (`L264`, audit-2021-22 p. 48); 959.087583 KSh million (`L265`, audit-2021-22 p. 12)
-- Machine cross-check: agree (tesseract-600dpi-psm6), found "789.96"
+- Machine cross-check: agree (tesseract-600dpi-psm6), found "705.38"
 - Current state: Disputed: see the conflict register
 
 ```json
-{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L276"],"source_document_id":"cob-report-2021-22","source_sha256":"e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0","pages_checked":[407],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
+{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L276"],"source_document_id":"cob-report-2021-22","source_sha256":"e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0","pages_checked":[416],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
 ```
 
 ## `L277`: wage_bill, FY 2014/15
@@ -4051,7 +4051,7 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Page: PDF p. 277 (printed p. 255); read by text
 - As printed or read: "The expenditure on personnel emoluments of Kshs.2.31 billion was 41 per cent of overall total expenditure"
 - Note: Personnel emoluments spent
-- Other sources, same measure and period: 1120 KSh million (`L280`, cob-report-2017-18 p. 268)
+- Other sources, same measure and period: 2400 KSh million (`L280`, cob-report-2017-18 p. 274)
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "2.31"
 - Current state: Disputed: see the conflict register
 
@@ -4061,17 +4061,17 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 
 ## `L280`: wage_bill, FY 2016/17
 
-- Stored value: 1120 (KSh million); period FY 2016/17; scope county government (executive and assembly)
+- Stored value: 2400 (KSh million); period FY 2016/17; scope county government (executive and assembly)
 - Source: Annual County Governments Budget Implementation Review Report FY 2017/18 <https://libraryir.parliament.go.ke/server/api/core/bitstreams/3ec6f381-f2b8-4881-bf1a-a15d099dcd66/content>; SHA-256 `78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1`
-- Page: PDF p. 268 (printed p. 247); read by text
-- As printed or read: "High wage bill that has increased by 40.8 per cent from Kshs.1.12 billion in FY 2016/17"
+- Page: PDF p. 274 (printed p. 253); read by text
+- As printed or read: "High wage bill that has increased by 3.9 per cent from Kshs.2.4 billion in FY 2016/17"
 - Note: "Wage bill" in the key issues paragraph; basis not defined
 - Other sources, same measure and period: 2310 KSh million (`L279`, cob-report-2016-17 p. 277)
-- Machine cross-check: agree (tesseract-600dpi-psm6), found "1.12"
+- Machine cross-check: not checkable (tesseract-600dpi-psm6+psm4+more); Printed as "2.4 billion": fewer than three significant digits, too short to match safely on a page.
 - Current state: Disputed: see the conflict register
 
 ```json
-{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L280"],"source_document_id":"cob-report-2017-18","source_sha256":"78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1","pages_checked":[268],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
+{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L280"],"source_document_id":"cob-report-2017-18","source_sha256":"78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1","pages_checked":[274],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
 ```
 
 ## `L281`: wage_bill, FY 2017/18
@@ -4081,7 +4081,7 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Page: PDF p. 271 (printed p. 250); read by text
 - As printed or read: "Kshs.2.4 billion (71.9 per cent) incurred on personnel emoluments"
 - Note: Personnel emoluments spent
-- Other sources, same measure and period: 2400 KSh million (`L282`, cob-report-2018-19 p. 272); 1580 KSh million (`L283`, cob-report-2017-18 p. 268); 1580 KSh million (`L284`, cob-report-2018-19 p. 268)
+- Other sources, same measure and period: 2400 KSh million (`L282`, cob-report-2018-19 p. 272); 2310 KSh million (`L283`, cob-report-2017-18 p. 274); 2400 KSh million (`L284`, cob-report-2018-19 p. 274)
 - Machine cross-check: not checkable (tesseract-600dpi-psm6+psm4+more); Printed as "2.4 billion": fewer than three significant digits, too short to match safely on a page.
 - Current state: Disputed: see the conflict register
 
@@ -4096,7 +4096,7 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Page: PDF p. 272 (printed p. 249); read by text
 - As printed or read: "compared to FY 2017/18 when the County spent Kshs.2.40 billion"
 - Note: Personnel emoluments spent, quoted a year later
-- Other sources, same measure and period: 2400 KSh million (`L281`, cob-report-2017-18 p. 271); 1580 KSh million (`L283`, cob-report-2017-18 p. 268); 1580 KSh million (`L284`, cob-report-2018-19 p. 268)
+- Other sources, same measure and period: 2400 KSh million (`L281`, cob-report-2017-18 p. 271); 2310 KSh million (`L283`, cob-report-2017-18 p. 274); 2400 KSh million (`L284`, cob-report-2018-19 p. 274)
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "2.40"
 - Current state: Disputed: see the conflict register
 
@@ -4106,32 +4106,32 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 
 ## `L283`: wage_bill, FY 2017/18
 
-- Stored value: 1580 (KSh million); period FY 2017/18; scope county government (executive and assembly)
+- Stored value: 2310 (KSh million); period FY 2017/18; scope county government (executive and assembly)
 - Source: Annual County Governments Budget Implementation Review Report FY 2017/18 <https://libraryir.parliament.go.ke/server/api/core/bitstreams/3ec6f381-f2b8-4881-bf1a-a15d099dcd66/content>; SHA-256 `78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1`
-- Page: PDF p. 268 (printed p. 247); read by text
-- As printed or read: "to Kshs.1.58 billion during the period under review"
+- Page: PDF p. 274 (printed p. 253); read by text
+- As printed or read: "to Kshs.2.31 billion during the period under review"
 - Note: "Wage bill" in the key issues paragraph; basis not defined
-- Other sources, same measure and period: 2400 KSh million (`L281`, cob-report-2017-18 p. 271); 2400 KSh million (`L282`, cob-report-2018-19 p. 272); 1580 KSh million (`L284`, cob-report-2018-19 p. 268)
-- Machine cross-check: agree (tesseract-600dpi-psm6), found "1.58"
+- Other sources, same measure and period: 2400 KSh million (`L281`, cob-report-2017-18 p. 271); 2400 KSh million (`L282`, cob-report-2018-19 p. 272); 2400 KSh million (`L284`, cob-report-2018-19 p. 274)
+- Machine cross-check: agree (tesseract-600dpi-psm6), found "2.31"
 - Current state: Disputed: see the conflict register
 
 ```json
-{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L283"],"source_document_id":"cob-report-2017-18","source_sha256":"78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1","pages_checked":[268],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
+{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L283"],"source_document_id":"cob-report-2017-18","source_sha256":"78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1","pages_checked":[274],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
 ```
 
 ## `L284`: wage_bill, FY 2017/18
 
-- Stored value: 1580 (KSh million); period FY 2017/18; scope county government (executive and assembly)
+- Stored value: 2400 (KSh million); period FY 2017/18; scope county government (executive and assembly)
 - Source: Annual County Governments Budget Implementation Review Report FY 2018/19 <https://libraryir.parliament.go.ke/server/api/core/bitstreams/ac5966ef-fbc8-4b35-9712-c4b8bd838ebd/content>; SHA-256 `7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798`
-- Page: PDF p. 268 (printed p. 245); read by text
-- As printed or read: "A high wage bill that increased by 25.3 per cent from Kshs.1.58 billion in the FY 2017/18"
+- Page: PDF p. 274 (printed p. 251); read by text
+- As printed or read: "A high wage bill that increased by 14.6 per cent from Kshs.2.4 billion in the FY 2017/18"
 - Note: "Wage bill" in the key issues paragraph; basis not defined
-- Other sources, same measure and period: 2400 KSh million (`L281`, cob-report-2017-18 p. 271); 2400 KSh million (`L282`, cob-report-2018-19 p. 272); 1580 KSh million (`L283`, cob-report-2017-18 p. 268)
-- Machine cross-check: agree (tesseract-600dpi-psm6), found "1.58"
+- Other sources, same measure and period: 2400 KSh million (`L281`, cob-report-2017-18 p. 271); 2400 KSh million (`L282`, cob-report-2018-19 p. 272); 2310 KSh million (`L283`, cob-report-2017-18 p. 274)
+- Machine cross-check: not checkable (tesseract-600dpi-psm6+psm4+more); Printed as "2.4 billion": fewer than three significant digits, too short to match safely on a page.
 - Current state: Disputed: see the conflict register
 
 ```json
-{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L284"],"source_document_id":"cob-report-2018-19","source_sha256":"7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798","pages_checked":[268],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
+{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L284"],"source_document_id":"cob-report-2018-19","source_sha256":"7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798","pages_checked":[274],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
 ```
 
 ## `L285`: wage_bill, FY 2018/19
@@ -4141,9 +4141,9 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 - Page: PDF p. 272 (printed p. 249); read by text
 - As printed or read: "Kshs.2.75 billion (60.7 per cent) incurred on personnel emoluments"
 - Note: Personnel emoluments spent
-- Other sources, same measure and period: 1980 KSh million (`L286`, cob-report-2018-19 p. 268)
+- Other sources, same measure and period: 2740 KSh million (`L286`, cob-report-2018-19 p. 274)
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "2.75"
-- Current state: Disputed: see the conflict register
+- Current state: Provisional: awaiting editorial review
 
 ```json
 {"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L285"],"source_document_id":"cob-report-2018-19","source_sha256":"7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798","pages_checked":[272],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
@@ -4151,17 +4151,17 @@ Machine check disagrees (check these first): `L077`, `L142`, `L143`.
 
 ## `L286`: wage_bill, FY 2018/19
 
-- Stored value: 1980 (KSh million); period FY 2018/19; scope county government (executive and assembly)
+- Stored value: 2740 (KSh million); period FY 2018/19; scope county government (executive and assembly)
 - Source: Annual County Governments Budget Implementation Review Report FY 2018/19 <https://libraryir.parliament.go.ke/server/api/core/bitstreams/ac5966ef-fbc8-4b35-9712-c4b8bd838ebd/content>; SHA-256 `7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798`
-- Page: PDF p. 268 (printed p. 245); read by text
-- As printed or read: "to Kshs.1.98 billion in the reporting period. The wage bill accounted for 47.4 per cent of total expenditure"
+- Page: PDF p. 274 (printed p. 251); read by text
+- As printed or read: "to Kshs.2.74 billion in the reporting period. The wage bill accounted for 48.2 per cent of total expenditure"
 - Note: "Wage bill" in the key issues paragraph; basis not defined
 - Other sources, same measure and period: 2750 KSh million (`L285`, cob-report-2018-19 p. 272)
-- Machine cross-check: agree (tesseract-600dpi-psm6), found "1.98"
-- Current state: Disputed: see the conflict register
+- Machine cross-check: agree (tesseract-600dpi-psm6), found "2.74"
+- Current state: Provisional: awaiting editorial review
 
 ```json
-{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L286"],"source_document_id":"cob-report-2018-19","source_sha256":"7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798","pages_checked":[268],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
+{"id":"REV-YYYY-NNN","dataset":"siaya-fiscal-ledger","record_ids":["L286"],"source_document_id":"cob-report-2018-19","source_sha256":"7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798","pages_checked":[274],"reviewer_role":"","reviewer_is_not_extractor":true,"decision":"","rationale":"","date":"","supersedes":[]}
 ```
 
 ## `L287`: wage_bill, FY 2019/20
