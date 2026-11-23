@@ -33,12 +33,6 @@
   [headers.values]
     Content-Type = "text/x-component"
 
-[[redirects]]
-  from = "/corrections/*"
-  to = "/data/#conflicts"
-  status = 301
-  force = true
-
 # The trend explorer moved into the Kenya dashboard (owner de-duplication, 21 Nov 2026). Query strings pass through.
 # The fiscal brief PDF moved beside the reports (sweep N2, 21 Nov 2026). The build keeps a byte-identical copy at the
 # old path as the fallback for hosts without this redirect.

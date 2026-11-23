@@ -69,6 +69,12 @@ if (dist) {
   ok(home && /<footer[\s\S]*href="\/corrections\/"[\s\S]*<\/footer>/.test(home), 'the footer does not link /corrections/');
 }
 
+// Netlify redirects run before static files: none may shadow the register (live 301 on 23 Nov 2026).
+{
+  const toml = fs.readFileSync(require('path').join(__dirname, '..', 'netlify.toml'), 'utf8');
+  ok(!/from\s*=\s*"\/corrections\//.test(toml), 'netlify.toml redirects /corrections/ away from the register');
+}
+
 if (errors.length) {
   console.error(`test-corrections: ${errors.length} of ${checks} checks failed`);
   errors.slice(0, 40).forEach((e) => console.error(`  - ${e}`));
