@@ -2466,10 +2466,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 9223.35 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "9,223,350,139",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -2532,10 +2532,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 8881.77 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "8,881,773,924",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -2598,10 +2598,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 8106.98 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "8,106,977,580",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -4422,9 +4422,9 @@
    "others": [],
    "machine_check": {
     "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
+    "method": "tesseract-600dpi-psm6+psm4+more",
     "matched": null,
-    "reason": "The second method read the page but did not find 844.302787 (KSh million) in any scale."
+    "reason": "The second method read the page but did not find 844.302787 (KSh million) in any scale. Looked into 23 Nov 2026: the Total row of Table 3.110 is printed (an OCR of that row alone reads 844,302,787), but no full-page reading picks the row up; the page also carries a doubled text layer. Needs a look at the page image."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -6163,10 +6163,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 7545.45041 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm4",
+    "matched": "7,545,450,410",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -7160,10 +7160,10 @@
    "note": "revenue-stream table total, printed as 343,309,926",
    "others": [],
    "machine_check": {
-    "result": "disagree",
+    "result": "agree",
     "method": "tesseract-600dpi-psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 343.31 (KSh million) in any scale."
+    "matched": "343,309,926",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -8197,9 +8197,9 @@
    ],
    "machine_check": {
     "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
+    "method": "tesseract-600dpi-psm6+psm4+more",
     "matched": null,
-    "reason": "The second method read the page but did not find 142.88 (KSh million) in any scale."
+    "reason": "The second method read the page but did not find 142.88 (KSh million) in any scale. Looked into 23 Nov 2026: a data label of Figure 3.150 on a dotted chart background; the text layer reads 142.88, OCR reads it as 142.38. Needs a look at the page image."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -8255,9 +8255,9 @@
    ],
    "machine_check": {
     "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
+    "method": "tesseract-600dpi-psm6+psm4+more",
     "matched": null,
-    "reason": "The second method read the page but did not find 113.26 (KSh million) in any scale."
+    "reason": "The second method read the page but did not find 113.26 (KSh million) in any scale. Looked into 23 Nov 2026: a data label of Figure 3.150 on a dotted chart background; the text layer reads 113.26, OCR reads it as 1T5.26. Needs a look at the page image."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -8312,10 +8312,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 184.25 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "184,249,748",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -8975,7 +8975,7 @@
      "value": 236.502391,
      "unit": "KSh million",
      "source": "GOV-02-FY2024-25-Q4",
-     "pdf_page": 6
+     "pdf_page": 5
     }
    ],
    "machine_check": {
@@ -9568,7 +9568,7 @@
      "value": 236.502391,
      "unit": "KSh million",
      "source": "GOV-02-FY2024-25-Q4",
-     "pdf_page": 6
+     "pdf_page": 5
     }
    ],
    "machine_check": {
@@ -9828,8 +9828,8 @@
      "sha256": "348d0bb6f96e1154e630adf2c0a47ac6c40fe13a2dd37c640234bb9dfee81393"
     }
    ],
-   "pdf_page": 6,
-   "printed_page": 6,
+   "pdf_page": 5,
+   "printed_page": 5,
    "read": "text",
    "printed_text": "Sub-Total=Own Source Revenue (OSR)- CRF Receipt 609,390,296 1,134,703,887 236,502,391 -898,201,496",
    "note": null,
@@ -9852,10 +9852,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 236.502391 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm11",
+    "matched": "236,502,391",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -9866,7 +9866,7 @@
     "source_document_id": "GOV-02-FY2024-25-Q4",
     "source_sha256": "348d0bb6f96e1154e630adf2c0a47ac6c40fe13a2dd37c640234bb9dfee81393",
     "pages_checked": [
-     6
+     5
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -10248,10 +10248,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 508.04 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm11",
+    "matched": "508.04",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -13125,10 +13125,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 6814.85 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "6,814,847,783",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -13174,10 +13174,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 4659.84 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "4,659,842,545",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -13223,10 +13223,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 2155.01 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "2,155,005,238",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -13355,10 +13355,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 5712.964967 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm4",
+    "matched": "5,712,964,967",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -14159,10 +14159,10 @@
    "note": "sum of the two published parts",
    "others": [],
    "machine_check": {
-    "result": "disagree",
+    "result": "agree",
     "method": "tesseract-600dpi-psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 336.95 (KSh million) in any scale."
+    "matched": "172.01 + 164.94",
+    "reason": "A sum of printed parts: each part is on the page and they add up to 336.95."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -14208,10 +14208,10 @@
    "note": "sum of the two published parts",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 277.59 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "127.55 + 150.04",
+    "reason": "A sum of printed parts: each part is on the page and they add up to 277.59."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -14257,10 +14257,10 @@
    "note": "sum of the two published parts",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 614.5 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "367.75 + 246.75",
+    "reason": "A sum of printed parts: each part is on the page and they add up to 614.5."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -14315,10 +14315,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 445.68 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "258.26 + 187.42",
+    "reason": "A sum of printed parts: each part is on the page and they add up to 445.68."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -14389,10 +14389,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 1060.92 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "637.54 + 423.38",
+    "reason": "A sum of printed parts: each part is on the page and they add up to 1060.92."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -14554,10 +14554,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -14652,10 +14652,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -15133,10 +15133,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "pdf-text-layer+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 545.95 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "545,950,403",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -15322,10 +15322,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -15665,10 +15665,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 222.33 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "222,333,808",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -16069,10 +16069,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -16167,10 +16167,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -16265,10 +16265,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L276",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "source": "cob-report-2021-22",
-     "pdf_page": 407
+     "pdf_page": 416
     }
    ],
    "machine_check": {
@@ -17234,7 +17234,7 @@
    "label": "pending_bills_close, FY 2021/22",
    "kind": "fiscal discrepancy (open case in the ledger)",
    "state": "Disputed: see the conflict register",
-   "value": 789.96,
+   "value": 705.38,
    "unit": "KSh million",
    "period": "FY 2021/22",
    "scope": "not stated",
@@ -17246,10 +17246,10 @@
      "sha256": "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0"
     }
    ],
-   "pdf_page": 407,
-   "printed_page": 383,
+   "pdf_page": 416,
+   "printed_page": 392,
    "read": "text",
-   "printed_text": "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022",
+   "printed_text": "High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022.",
    "note": "Key issues paragraph of the county chapter",
    "others": [
     {
@@ -17304,7 +17304,7 @@
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
-    "matched": "789.96",
+    "matched": "705.38",
     "reason": null
    },
    "template": {
@@ -17316,7 +17316,7 @@
     "source_document_id": "cob-report-2021-22",
     "source_sha256": "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
     "pages_checked": [
-     407
+     416
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -17451,10 +17451,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L280",
-     "value": 1120,
+     "value": 2400,
      "unit": "KSh million",
      "source": "cob-report-2017-18",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
@@ -17488,7 +17488,7 @@
    "label": "wage_bill, FY 2016/17",
    "kind": "fiscal discrepancy (open case in the ledger)",
    "state": "Disputed: see the conflict register",
-   "value": 1120,
+   "value": 2400,
    "unit": "KSh million",
    "period": "FY 2016/17",
    "scope": "county government (executive and assembly)",
@@ -17500,10 +17500,10 @@
      "sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1"
     }
    ],
-   "pdf_page": 268,
-   "printed_page": 247,
+   "pdf_page": 274,
+   "printed_page": 253,
    "read": "text",
-   "printed_text": "High wage bill that has increased by 40.8 per cent from Kshs.1.12 billion in FY 2016/17",
+   "printed_text": "High wage bill that has increased by 3.9 per cent from Kshs.2.4 billion in FY 2016/17",
    "note": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "others": [
     {
@@ -17516,10 +17516,10 @@
     }
    ],
    "machine_check": {
-    "result": "agree",
-    "method": "tesseract-600dpi-psm6",
-    "matched": "1.12",
-    "reason": null
+    "result": "not checkable",
+    "method": "tesseract-600dpi-psm6+psm4+more",
+    "matched": null,
+    "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -17530,7 +17530,7 @@
     "source_document_id": "cob-report-2017-18",
     "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
     "pages_checked": [
-     268
+     274
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -17575,25 +17575,25 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L283",
-     "value": 1580,
+     "value": 2310,
      "unit": "KSh million",
      "source": "cob-report-2017-18",
-     "pdf_page": 268
+     "pdf_page": 274
     },
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L284",
-     "value": 1580,
+     "value": 2400,
      "unit": "KSh million",
      "source": "cob-report-2018-19",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
+    "result": "not checkable",
+    "method": "tesseract-600dpi-psm6+psm4+more",
     "matched": null,
-    "reason": "The second method read the page but did not find 2400 (KSh million) in any scale."
+    "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -17649,18 +17649,18 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L283",
-     "value": 1580,
+     "value": 2310,
      "unit": "KSh million",
      "source": "cob-report-2017-18",
-     "pdf_page": 268
+     "pdf_page": 274
     },
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L284",
-     "value": 1580,
+     "value": 2400,
      "unit": "KSh million",
      "source": "cob-report-2018-19",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
@@ -17694,7 +17694,7 @@
    "label": "wage_bill, FY 2017/18",
    "kind": "fiscal discrepancy (open case in the ledger)",
    "state": "Disputed: see the conflict register",
-   "value": 1580,
+   "value": 2310,
    "unit": "KSh million",
    "period": "FY 2017/18",
    "scope": "county government (executive and assembly)",
@@ -17706,10 +17706,10 @@
      "sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1"
     }
    ],
-   "pdf_page": 268,
-   "printed_page": 247,
+   "pdf_page": 274,
+   "printed_page": 253,
    "read": "text",
-   "printed_text": "to Kshs.1.58 billion during the period under review",
+   "printed_text": "to Kshs.2.31 billion during the period under review",
    "note": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "others": [
     {
@@ -17731,16 +17731,16 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L284",
-     "value": 1580,
+     "value": 2400,
      "unit": "KSh million",
      "source": "cob-report-2018-19",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
-    "matched": "1.58",
+    "matched": "2.31",
     "reason": null
    },
    "template": {
@@ -17752,7 +17752,7 @@
     "source_document_id": "cob-report-2017-18",
     "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
     "pages_checked": [
-     268
+     274
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -17768,7 +17768,7 @@
    "label": "wage_bill, FY 2017/18",
    "kind": "fiscal discrepancy (open case in the ledger)",
    "state": "Disputed: see the conflict register",
-   "value": 1580,
+   "value": 2400,
    "unit": "KSh million",
    "period": "FY 2017/18",
    "scope": "county government (executive and assembly)",
@@ -17780,10 +17780,10 @@
      "sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798"
     }
    ],
-   "pdf_page": 268,
-   "printed_page": 245,
+   "pdf_page": 274,
+   "printed_page": 251,
    "read": "text",
-   "printed_text": "A high wage bill that increased by 25.3 per cent from Kshs.1.58 billion in the FY 2017/18",
+   "printed_text": "A high wage bill that increased by 14.6 per cent from Kshs.2.4 billion in the FY 2017/18",
    "note": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "others": [
     {
@@ -17805,17 +17805,17 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L283",
-     "value": 1580,
+     "value": 2310,
      "unit": "KSh million",
      "source": "cob-report-2017-18",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
-    "result": "agree",
-    "method": "tesseract-600dpi-psm6",
-    "matched": "1.58",
-    "reason": null
+    "result": "not checkable",
+    "method": "tesseract-600dpi-psm6+psm4+more",
+    "matched": null,
+    "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -17826,7 +17826,7 @@
     "source_document_id": "cob-report-2018-19",
     "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
     "pages_checked": [
-     268
+     274
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -17840,8 +17840,8 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L285",
    "label": "wage_bill, FY 2018/19",
-   "kind": "fiscal discrepancy (open case in the ledger)",
-   "state": "Disputed: see the conflict register",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
    "value": 2750,
    "unit": "KSh million",
    "period": "FY 2018/19",
@@ -17863,10 +17863,10 @@
     {
      "dataset": "siaya-fiscal-ledger",
      "id": "L286",
-     "value": 1980,
+     "value": 2740,
      "unit": "KSh million",
      "source": "cob-report-2018-19",
-     "pdf_page": 268
+     "pdf_page": 274
     }
    ],
    "machine_check": {
@@ -17898,9 +17898,9 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L286",
    "label": "wage_bill, FY 2018/19",
-   "kind": "fiscal discrepancy (open case in the ledger)",
-   "state": "Disputed: see the conflict register",
-   "value": 1980,
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 2740,
    "unit": "KSh million",
    "period": "FY 2018/19",
    "scope": "county government (executive and assembly)",
@@ -17912,10 +17912,10 @@
      "sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798"
     }
    ],
-   "pdf_page": 268,
-   "printed_page": 245,
+   "pdf_page": 274,
+   "printed_page": 251,
    "read": "text",
-   "printed_text": "to Kshs.1.98 billion in the reporting period. The wage bill accounted for 47.4 per cent of total expenditure",
+   "printed_text": "to Kshs.2.74 billion in the reporting period. The wage bill accounted for 48.2 per cent of total expenditure",
    "note": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "others": [
     {
@@ -17930,7 +17930,7 @@
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
-    "matched": "1.98",
+    "matched": "2.74",
     "reason": null
    },
    "template": {
@@ -17942,7 +17942,7 @@
     "source_document_id": "cob-report-2018-19",
     "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
     "pages_checked": [
-     268
+     274
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -34456,10 +34456,10 @@
    "note": "Model round 2025; not comparable with earlier rounds. Sub-groups sum to the overall (148+381+207=736).",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 736 (people) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm4",
+    "matched": "736",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -36412,10 +36412,10 @@
    "note": "The indicator matrix (PDF p.193) attributes the same 20.7 to 'KDHS'; no KDHS round gives 20.7 for Siaya.",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 20.7 (%) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm11",
+    "matched": "20.7",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -51466,10 +51466,10 @@
    "note": "revenue-stream table total, printed as 343,309,926",
    "others": [],
    "machine_check": {
-    "result": "disagree",
+    "result": "agree",
     "method": "tesseract-600dpi-psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 343.31 (KSh million) in any scale."
+    "matched": "343,309,926",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -54602,10 +54602,10 @@
    "note": "Table 3.251, column E (text layer reads \"4l 1,529,000.36\")",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 411.53 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "411,529,000.36",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -54651,10 +54651,10 @@
    "note": "Table 3.251, column E",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 293.85 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "293,854,691.77",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -55090,17 +55090,17 @@
      "sha256": "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da"
     }
    ],
-   "pdf_page": 583,
-   "printed_page": 557,
+   "pdf_page": 34,
+   "printed_page": 8,
    "read": "RapidOCR",
    "printed_text": null,
-   "note": "department table total (1,520.28 of 2,827.00); the text on PDF p. 578 prints 53.4 per cent (both confirmed by two re-readings on 21 Nov 2026). See conflict development-absorption-2022-23",
+   "note": "Table 2.4 (County Budget Allocation, Expenditure and Absorption Rate), Siaya row: 1,520.28 of 2,827.00 and 53.8 per cent. Locator corrected 23 Nov 2026: the county chapter's department table (PDF pp. 582-583) has no total row. The text on PDF p. 578 prints 53.4 per cent. See conflict development-absorption-2022-23",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "pdf-text-layer+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 53.8 (%) in any scale."
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "53.8",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -55111,7 +55111,7 @@
     "source_document_id": "cob-report-2022-23",
     "source_sha256": "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
     "pages_checked": [
-     583
+     34
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -58773,10 +58773,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "pdf-text-layer+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 39.29 (KSh m) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "39,285,727",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -58824,7 +58824,7 @@
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm4",
-    "matched": "1.97",
+    "matched": "1,971,814,323",
     "reason": null
    },
    "template": {
@@ -59116,10 +59116,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "pdf-text-layer+psm4",
+    "result": "not checkable",
+    "method": "pdf-text-layer+psm4+more",
     "matched": null,
-    "reason": "The second method read the page but did not find 2500 (KSh m) in any scale."
+    "reason": "Printed as \"2.5 billion\": fewer than three significant digits, too short to match safely on a page."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -59214,10 +59214,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "pdf-text-layer+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 953.73 (KSh m) in any scale."
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "953,730,353",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -59312,10 +59312,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "pdf-text-layer+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 1636.14 (KSh m) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "774,898,249.14 + 804,790,964 + 56,452,974",
+    "reason": "A sum of printed parts: each part is on the page and they add up to 1636.14."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -66253,7 +66253,7 @@
    "label": "Pending bills stock at 2022-06-30 (cob-report-2021-22, L276)",
    "kind": "calculation by Takwimu",
    "state": "Provisional: awaiting editorial review",
-   "value": 789.96,
+   "value": 705.38,
    "unit": "KSh million",
    "period": "stock at 2022-06-30",
    "scope": null,
@@ -79181,10 +79181,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 5710 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "5,710",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -84164,10 +84164,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 773 (KSh million) in any scale."
+    "result": "agree",
+    "method": "tesseract-200dpi-psm6",
+    "matched": "773",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -92715,8 +92715,8 @@
    ],
    "machine_check": {
     "result": "agree",
-    "method": "tesseract-600dpi-psm4",
-    "matched": "5,809",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "5809085",
     "reason": null
    },
    "template": {
@@ -96563,10 +96563,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 75.1 (percent) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "75.1",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -97193,10 +97193,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 7301 (students) in any scale."
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "4,005 + 3,296",
+    "reason": "A sum of printed parts: each part is on the page and they add up to 7301."
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -98635,10 +98635,10 @@
    "note": "The same 20,000 target is set for every year to FY 2027/28.",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 20000 (children) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "20,000",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -103807,10 +103807,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 22587 (tonnes) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "22,587",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -104355,10 +104355,10 @@
    "note": "Column heading says Tonnes; 2014* column appears to mix bags and tonnes (maize, beans and sorghum equal Table 4.5 bag counts). Unit unreliable; do not chart.",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 28700 (tonnes) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "28,700",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -104801,10 +104801,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 5285 (number) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "5,285",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -104850,10 +104850,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 5698 (number) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "5,698",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -105046,10 +105046,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 143752 (number) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "143,752",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -105879,10 +105879,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 7577 (number) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "7,577",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -106467,10 +106467,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 677 (tonnes) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "677",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -106565,10 +106565,10 @@
    "note": null,
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 27141 (tonnes) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "27,141",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -106859,10 +106859,10 @@
    "note": "Row \"L.Victoria and L.Kanyaboli\".",
    "others": [],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 28519 (tonnes) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "28,519",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -108276,10 +108276,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 6500 (acres) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "6,500",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -108334,10 +108334,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 5881 (KSh_million) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "5,881",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -108392,10 +108392,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 2000 (acres) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "2,000",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",
@@ -108450,10 +108450,10 @@
     }
    ],
    "machine_check": {
-    "result": "disagree",
-    "method": "tesseract-600dpi-psm6+psm4",
-    "matched": null,
-    "reason": "The second method read the page but did not find 615 (KSh_million) in any scale."
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "615",
+    "reason": null
    },
    "template": {
     "id": "REV-YYYY-NNN",

@@ -26,8 +26,8 @@
    "not_used": "data/siaya-economy.json (Gross County Product) and data/siaya-agriculture.json were read but no requested measure uses them."
   },
   "input_files": {
-   "data/siaya-fiscal-ledger.json": "412ee5b45cf2c49fba20c890544b4c4597ed410b1b24d2ba46868a1af527ad53",
-   "data/history.json": "fa4f817e5a1fd2d92aa3a43a3ab29b7f23f280632cee95a5a8c161a720266dee",
+   "data/siaya-fiscal-ledger.json": "4d42d80dbaf2121579c3e17e7eccf66987dfe964952584cf09c6a7b4f5971b99",
+   "data/history.json": "98f754c9a819aefc1dabc23af20873c6faee59d6a24aaa8e047653da70834fca",
    "data/cpi.json": "3c91c889abaecd66ab7ad17e96ad2aa81a31f943a585484e6b257e361c4924e1",
    "data/county.json": "d362d6fb4804fbe921db3ea484f4690804bb78b5b798f9bd37a13f1c0706f5b5",
    "data/counties-cob.json": "cb4c26d09550a90eb161e064fb5bec51cc26c87c35faa314731488acb40e7907",
@@ -5752,8 +5752,8 @@
      "source_title": "Annual County Governments Budget Implementation Review Report FY 2022/23",
      "source_publication_date": null,
      "table": null,
-     "pdf_page": 583,
-     "printed_page": 557,
+     "pdf_page": 34,
+     "printed_page": 8,
      "basis": "as printed in the county chapter",
      "scope": null,
      "confidence": 3
@@ -11073,7 +11073,7 @@
      "dataset": "data/siaya-fiscal-ledger.json",
      "record": "observations[id=L276]",
      "field": "value",
-     "value": 789.96,
+     "value": 705.38,
      "unit": "KSh million",
      "measure": "pending_bills_close",
      "period": "FY 2021/22",
@@ -11081,16 +11081,16 @@
      "source_kind": "controller_of_budget",
      "source_title": "County Governments Budget Implementation Review Report FY 2021/22",
      "source_publication_date": "2022-09",
-     "table": "County chapter, revenue analysis (text)",
-     "pdf_page": 407,
-     "printed_page": 383,
+     "table": "County chapter, key observations (section 3.38.13, text)",
+     "pdf_page": 416,
+     "printed_page": 392,
      "basis": "Key issues paragraph of the county chapter",
      "scope": "not stated",
      "confidence": 3
     }
    ],
    "beside": [],
-   "result": 789.96,
+   "result": 705.38,
    "unit": "KSh million",
    "period": "stock at 2022-06-30",
    "source_ids": [
@@ -27260,8 +27260,8 @@
      "source_title": "County Government of Siaya, Budget Implementation Report for 4th Quarter Ending June 30, 2025",
      "source_publication_date": "not stated",
      "table": "Table 4: Summary of OSR performance (Sub-Total=Own Source Revenue (OSR)- CRF Receipt)",
-     "pdf_page": 6,
-     "printed_page": 6,
+     "pdf_page": 5,
+     "printed_page": 5,
      "basis": null,
      "scope": "county government (executive and assembly)",
      "confidence": 4
@@ -27296,7 +27296,7 @@
     "cob-report-2024-25"
    ],
    "comparability_notes": [
-    "Controller of Budget KSh 236.84 million (PDF p. 46); county Q4 report KSh 236.5 million (PDF p. 6).",
+    "Controller of Budget KSh 236.84 million (PDF p. 46); county Q4 report KSh 236.5 million (PDF p. 5).",
     "See conflict case osr-2024-25-county-statement: both figures are kept and neither is chosen."
    ],
    "caveat": "Describes how own-source revenue is made up; it is not a judgement of collection. FIF is own-source revenue under the Facility Improvement Financing Act, 2023 (hospital and health facility receipts, including SHA/SHIF, Linda Mama and NHIF where the source includes them). Sources differ in what they put in each part; each document is a separate record.",
@@ -27423,8 +27423,8 @@
      "source_title": "County Government of Siaya, Budget Implementation Report for 4th Quarter Ending June 30, 2025",
      "source_publication_date": "not stated",
      "table": "Table 4: Summary of OSR performance (Sub-Total=Own Source Revenue (OSR)- CRF Receipt)",
-     "pdf_page": 6,
-     "printed_page": 6,
+     "pdf_page": 5,
+     "printed_page": 5,
      "basis": null,
      "scope": "county government (executive and assembly)",
      "confidence": 4

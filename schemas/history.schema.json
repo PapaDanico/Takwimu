@@ -1076,6 +1076,12 @@
         "as_printed": {
           "type": "string",
           "description": "The figure as printed where its unit or form differs from value (e.g. KSh 12.79 billion stored as 12790 KSh m), or the printed sentence for a stated zero"
+        },
+        "parts": {
+          "type": "array",
+          "description": "When the report prints the value only as parts on the same page: each printed part, which add up to value",
+          "minItems": 2,
+          "items": { "type": "object", "required": ["label", "value"], "additionalProperties": false, "properties": { "label": { "type": "string" }, "value": { "type": "number" } } }
         }
       }
     },

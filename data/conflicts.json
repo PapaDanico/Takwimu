@@ -472,7 +472,7 @@
       "unit": "per cent",
       "values": [
         {
-          "label": "Controller of Budget FY 2022/23 report, department table total (PDF p. 583, printed p. 557); two re-reading methods both read 53.8",
+          "label": "Controller of Budget FY 2022/23 report, Table 2.4, Siaya row (PDF p. 34, printed p. 8); two re-reading methods both read 53.8",
           "value": 53.8,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
         },
@@ -482,13 +482,13 @@
           "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
         }
       ],
-      "definitions": "Same report, same measure. Both figures are printed: re-reading with two methods gives 53.8 in the department table total and 53.4 in the text. The table amounts (1,520.28 of 2,827.00 million, read the same by both methods) give 53.78 per cent.",
+      "definitions": "Same report, same measure. Both figures are printed: re-reading with two methods gives 53.8 in the Siaya row of Table 2.4 and 53.4 in the county chapter text. The table amounts (1,520.28 of 2,827.00 million, read the same by both methods) give 53.78 per cent. Locator corrected 23 Nov 2026: these three figures are in Table 2.4 (PDF p. 34), not in the county chapter's department table (PDF pp. 582-583), which has no total row; its department rows add up to the same 1,520.28 of 2,827.00.",
       "hypothesis": "Hypothesis: a typing slip in the text. Not confirmed.",
       "status": "open",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The series keeps 53.8 (the table total, which matches the arithmetic). The text value is listed here.",
+      "effect": "The series keeps 53.8 (Table 2.4, which matches the arithmetic). The text value is listed here.",
       "reread": {
         "on": "2026-11-21",
         "method_a": "RapidOCR recogniser only (detector and angle classifier off) on a 600 dpi greyscale crop (text lines split into words at blank gaps)",
@@ -500,17 +500,17 @@
             "method_b": "on  development programmes represented an absorption rate ofF 53.4 percent. In contrast. recurrent"
           },
           {
-            "where": "department table total, PDF p. 583",
+            "where": "Table 2.4, Siaya row, PDF p. 34",
             "method_a": "53.8",
             "method_b": "53.8"
           },
           {
-            "where": "department table total development expenditure, PDF p. 583",
+            "where": "Table 2.4, Siaya row, development expenditure, PDF p. 34",
             "method_a": "1,520.28",
             "method_b": "1,520.28"
           },
           {
-            "where": "department table total development budget, PDF p. 583",
+            "where": "Table 2.4, Siaya row, development budget, PDF p. 34",
             "method_a": "2,827.00",
             "method_b": "2,827.00"
           }
@@ -691,23 +691,18 @@
           "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
         },
         {
-          "label": "Same report, key observations (PDF p. 407, printed p. 383)",
-          "value": 789.96,
-          "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
-        },
-        {
           "label": "Same report, Table 2.6 (all 47 counties), Siaya row: Executive 738.82 plus Assembly 13.17 (PDF p. 35, printed p. 11, RapidOCR)",
           "value": 751.99,
           "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
         }
       ],
-      "definitions": "Same report, same date. The table and the key observations give different totals.",
-      "hypothesis": "Hypothesis: the observation adds bills not in the table (the table includes bills the Auditor-General classed as eligible). Not confirmed.",
+      "definitions": "Same report, same date. The county chapter (Table 3.251 and the key observations on PDF p. 416, printed p. 392, both 705.38) and the 47-county Table 2.6 (Executive plus Assembly, 751.99) give different totals. Corrected 23 Nov 2026 (COR-2026-003): the 789.96 listed here before is in Samburu County's key observations (section 3.37.13, PDF p. 407), not Siaya's.",
+      "hypothesis": "Hypothesis: Table 2.6 adds the County Assembly's 13.17 and a different Executive figure (738.82). Not confirmed.",
       "status": "open",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The roll-forward and the chart use the table (705.38), whose columns add up; the observation value is listed here. The county comparison shows the Table 2.6 value 751.99 with this case."
+      "effect": "The roll-forward and the chart use the table (705.38), whose columns add up and which the key observations repeat. The county comparison shows the Table 2.6 value 751.99 with this case."
     },
     {
       "id": "pending-close-2025",

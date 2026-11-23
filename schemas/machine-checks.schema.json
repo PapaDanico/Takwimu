@@ -26,7 +26,8 @@
         "properties": {
           "dataset": { "type": "string" }, "id": { "type": "string" },
           "result": { "type": "string", "enum": ["agree", "disagree", "not checkable"] },
-          "method": { "type": ["string", "null"], "pattern": "^(tesseract-600dpi-psm[46]|pdf-text-layer)(\\+psm[46])?$" },
+          "method": { "type": ["string", "null"], "pattern": "^(tesseract-600dpi-psm[46]|tesseract-(300|200)dpi-psm(1|4|6|11)|pdf-text-layer)(\\+psm[46])?(\\+more)?$" },
+          "parts": { "type": "array", "minItems": 2, "items": { "type": "string" } },
           "reason": { "type": "string" }, "matched": { "type": "string" },
           "source_id": { "type": "string" }, "source_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
           "pdf_page": { "type": "integer", "minimum": 1 }, "original_method": { "type": "string" },

@@ -54,7 +54,9 @@ mc.checks.forEach((c) => {
   if (c.result === 'agree') ok(c.matched, `${c.id}: agree without the string found`);
   // The second method differs from the first: text layer -> OCR, OCR -> text layer or another OCR mode.
   if (c.result !== 'not checkable' && /^PDF text layer/.test(c.original_method)) ok(/^tesseract/.test(c.method), `${c.id}: a text-layer value must be checked by OCR`);
-  if (c.result !== 'not checkable' && /^OCR/.test(c.original_method)) ok(/^(pdf-text-layer|tesseract-600dpi-psm4)/.test(c.method), `${c.id}: an OCR value must be checked by the text layer or another OCR mode`);
+  if (c.result !== 'not checkable' && /^OCR/.test(c.original_method)) ok(/^(pdf-text-layer|tesseract-600dpi-psm4|tesseract-(300|200)dpi-)/.test(c.method), `${c.id}: an OCR value must be checked by the text layer or another OCR mode`);
+  // A sum of printed parts agrees only with every part found and the parts adding up (23 Nov 2026).
+  if (c.parts) ok(c.result === 'agree' && c.parts.length >= 2 && c.matched === c.parts.join(' + '), `${c.id}: parts listed without an agreeing sum`);
 });
 // Values the check disagrees with lead the review queue.
 const queue = fs.readFileSync(path.join(ROOT, 'docs', 'editorial', 'REVIEW_QUEUE.md'), 'utf8');

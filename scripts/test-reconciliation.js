@@ -130,7 +130,14 @@ test('pending bills: every year in the series follows the own-year rule', () => 
 });
 
 caseTest('pending-2022', 705.38, 840.67, pendOf(year('2021/22')));
-caseTest('pending-close-2022', 705.38, 789.96, pendOf(year('2021/22')));
+caseTest('pending-close-2022', 705.38, 751.99, pendOf(year('2021/22')));
+// COR-2026-003: 789.96 is Samburu County's figure (CoB FY 2021/22 report, section 3.37.13); it may not return as Siaya's.
+test('pending-close-2022: no Samburu figure in the case or the ledger', () => {
+  ok(!listed('pending-close-2022', 789.96), '789.96 (Samburu key observations) is listed again');
+  const obs = read('siaya-fiscal-ledger.json').observations;
+  ok(!obs.some((o) => o.measure === 'pending_bills_close' && o.value === 789.96), 'Samburu\'s 789.96 is back in the Siaya ledger');
+  ok(!obs.some((o) => o.measure === 'wage_bill' && [1120, 1580, 1980].includes(o.value)), 'a Samburu wage-bill figure (1.12, 1.58, 1.98 billion) is back in the Siaya ledger');
+});
 test('conflict pending-close-2025: both values listed, the year-end stock stays out of the chart', () => {
   const vals = conflict('pending-close-2025').values.map((v) => v.value);
   ok(vals.includes(545.95) && vals.includes(1120), `register values ${vals}`);
@@ -208,9 +215,12 @@ test('re-read recurrent-absorption-2023-24: 85.8 is a misreading, the report pri
 });
 test('re-read development-absorption-2022-23: text 53.4 and table 53.8 are both printed, so the case stays open', () => {
   const c = conflict('development-absorption-2022-23');
-  const [text, table] = ['text', 'table total, PDF p. 583'].map((w) => c.reread.readings.find((r) => r.where.includes(w)));
+  const [text, table] = ['text', 'Table 2.4, Siaya row, PDF p. 34'].map((w) => c.reread.readings.find((r) => r.where.includes(w)));
   ok(/53\.4/.test(text.method_a) && /53\.4/.test(text.method_b) && table.method_a === '53.8' && table.method_b === '53.8', 'readings changed');
   ok(c.status === 'open' && year('2022/23').development_absorption_pct === 53.8, 'case open, series keeps the table total');
+  // Locator (23 Nov 2026): 53.8 is printed in Table 2.4 (PDF p. 34); the county chapter's department table has no total row.
+  const pv = year('2022/23').provenance.development_absorption_pct;
+  ok(pv.page === 34 && pv.printed_page === 8 && /Table 2\.4/.test(pv.page_note), '2022/23 development absorption must cite Table 2.4, PDF p. 34');
 });
 test('conflict recurrent-absorption-2023-24: provenance points the reader to the register', () => {
   ['recurrent_absorption_pct', 'development_absorption_pct'].forEach((k) => ok(/See conflict/.test(year('2023/24').provenance[k].page_note || ''), `${k} page_note should name the conflict`));

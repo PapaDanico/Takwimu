@@ -4234,8 +4234,8 @@
    "unit": "KSh million",
    "table": "Table 4: Summary of OSR performance (Sub-Total=Own Source Revenue (OSR)- CRF Receipt)",
    "source_id": "GOV-02-FY2024-25-Q4",
-   "pdf_page": 6,
-   "printed_page": 6,
+   "pdf_page": 5,
+   "printed_page": 5,
    "original_text": "Sub-Total=Own Source Revenue (OSR)- CRF Receipt 609,390,296 1,134,703,887 236,502,391 -898,201,496",
    "read_method": "text",
    "confidence": 4,
@@ -6984,13 +6984,13 @@
    "id": "L276",
    "measure": "pending_bills_close",
    "fy": "2021/22",
-   "value": 789.96,
+   "value": 705.38,
    "unit": "KSh million",
-   "table": "County chapter, revenue analysis (text)",
+   "table": "County chapter, key observations (section 3.38.13, text)",
    "source_id": "cob-report-2021-22",
-   "pdf_page": 407,
-   "printed_page": 383,
-   "original_text": "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022",
+   "pdf_page": 416,
+   "printed_page": 392,
+   "original_text": "High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022.",
    "read_method": "text",
    "confidence": 3,
    "stock_point": "closing",
@@ -7055,18 +7055,24 @@
    "id": "L280",
    "measure": "wage_bill",
    "fy": "2016/17",
-   "value": 1120,
+   "value": 2400,
    "unit": "KSh million",
-   "table": "County chapter, expenditure analysis (text)",
+   "table": "County chapter, key observations (section 3.38.9, text)",
    "source_id": "cob-report-2017-18",
-   "pdf_page": 268,
-   "printed_page": 247,
-   "original_text": "High wage bill that has increased by 40.8 per cent from Kshs.1.12 billion in FY 2016/17",
+   "pdf_page": 274,
+   "printed_page": 253,
+   "original_text": "High wage bill that has increased by 3.9 per cent from Kshs.2.4 billion in FY 2016/17",
    "read_method": "text",
    "confidence": 3,
    "basis": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "source_kind": "controller_of_budget",
-   "scope": "county government (executive and assembly)"
+   "scope": "county government (executive and assembly)",
+   "source_error": {
+    "quote": "High wage bill that has increased by 3.9 per cent from Kshs.2.4 billion in FY 2016/17 to Kshs.2.31 billion during the period under review.",
+    "page": 274,
+    "printed_page": 253,
+    "issue": "The paragraph calls a fall from 2.4 to 2.31 billion an increase of 3.9 per cent. The figures look swapped: 2.4 / 2.31 is a rise of 3.9 per cent, the same report gives FY 2017/18 personnel emoluments of Kshs.2.4 billion (PDF p. 271), and the FY 2016/17 report gives Kshs.2.31 billion for FY 2016/17 (PDF p. 277). Both values are kept as printed."
+   }
   },
   {
    "id": "L281",
@@ -7106,30 +7112,36 @@
    "id": "L283",
    "measure": "wage_bill",
    "fy": "2017/18",
-   "value": 1580,
+   "value": 2310,
    "unit": "KSh million",
-   "table": "County chapter, expenditure analysis (text)",
+   "table": "County chapter, key observations (section 3.38.9, text)",
    "source_id": "cob-report-2017-18",
-   "pdf_page": 268,
-   "printed_page": 247,
-   "original_text": "to Kshs.1.58 billion during the period under review",
+   "pdf_page": 274,
+   "printed_page": 253,
+   "original_text": "to Kshs.2.31 billion during the period under review",
    "read_method": "text",
    "confidence": 3,
    "basis": "\"Wage bill\" in the key issues paragraph; basis not defined",
    "source_kind": "controller_of_budget",
-   "scope": "county government (executive and assembly)"
+   "scope": "county government (executive and assembly)",
+   "source_error": {
+    "quote": "High wage bill that has increased by 3.9 per cent from Kshs.2.4 billion in FY 2016/17 to Kshs.2.31 billion during the period under review.",
+    "page": 274,
+    "printed_page": 253,
+    "issue": "The paragraph calls a fall from 2.4 to 2.31 billion an increase of 3.9 per cent. The figures look swapped: 2.4 / 2.31 is a rise of 3.9 per cent, the same report gives FY 2017/18 personnel emoluments of Kshs.2.4 billion (PDF p. 271), and the FY 2016/17 report gives Kshs.2.31 billion for FY 2016/17 (PDF p. 277). Both values are kept as printed."
+   }
   },
   {
    "id": "L284",
    "measure": "wage_bill",
    "fy": "2017/18",
-   "value": 1580,
+   "value": 2400,
    "unit": "KSh million",
-   "table": "County chapter, expenditure analysis (text)",
+   "table": "County chapter, key observations (section 3.38.9, text)",
    "source_id": "cob-report-2018-19",
-   "pdf_page": 268,
-   "printed_page": 245,
-   "original_text": "A high wage bill that increased by 25.3 per cent from Kshs.1.58 billion in the FY 2017/18",
+   "pdf_page": 274,
+   "printed_page": 251,
+   "original_text": "A high wage bill that increased by 14.6 per cent from Kshs.2.4 billion in the FY 2017/18",
    "read_method": "text",
    "confidence": 3,
    "basis": "\"Wage bill\" in the key issues paragraph; basis not defined",
@@ -7157,13 +7169,13 @@
    "id": "L286",
    "measure": "wage_bill",
    "fy": "2018/19",
-   "value": 1980,
+   "value": 2740,
    "unit": "KSh million",
-   "table": "County chapter, expenditure analysis (text)",
+   "table": "County chapter, key observations (section 3.38.9, text)",
    "source_id": "cob-report-2018-19",
-   "pdf_page": 268,
-   "printed_page": 245,
-   "original_text": "to Kshs.1.98 billion in the reporting period. The wage bill accounted for 47.4 per cent of total expenditure",
+   "pdf_page": 274,
+   "printed_page": 251,
+   "original_text": "to Kshs.2.74 billion in the reporting period. The wage bill accounted for 48.2 per cent of total expenditure",
    "read_method": "text",
    "confidence": 3,
    "basis": "\"Wage bill\" in the key issues paragraph; basis not defined",
@@ -9980,42 +9992,6 @@
    "reviewed_at": null
   },
   {
-   "case_id": "D-L245-L276",
-   "indicator_id": "pending_bills_close",
-   "period": "FY 2021/22",
-   "claim_a": {
-    "observation_id": "L245",
-    "value_ksh_m": 705.38,
-    "printed": null
-   },
-   "claim_b": {
-    "observation_id": "L276",
-    "value_ksh_m": 789.96,
-    "printed": "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022"
-   },
-   "source_a": {
-    "source_id": "cob-report-2021-22",
-    "pdf_page": 409
-   },
-   "source_b": {
-    "source_id": "cob-report-2021-22",
-    "pdf_page": 407
-   },
-   "difference": {
-    "absolute_ksh_m": 84.58,
-    "pct_of_smaller": 11.99,
-    "b_minus_a_ksh_m": 84.58
-   },
-   "possible_basis_mismatch": [
-    "Both values are in the same document (internal inconsistency).",
-    "Basis as stated: A \"Table 3.251 column E\"; B \"Key issues paragraph of the county chapter\"."
-   ],
-   "status": "open",
-   "resolution": null,
-   "reviewer": null,
-   "reviewed_at": null
-  },
-  {
    "case_id": "D-L246-L253",
    "indicator_id": "pending_bills_close",
    "period": "FY 2021/22",
@@ -10177,8 +10153,8 @@
    },
    "claim_b": {
     "observation_id": "L276",
-    "value_ksh_m": 789.96,
-    "printed": "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022"
+    "value_ksh_m": 705.38,
+    "printed": "High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022."
    },
    "source_a": {
     "source_id": "cob-report-2022-23",
@@ -10186,12 +10162,12 @@
    },
    "source_b": {
     "source_id": "cob-report-2021-22",
-    "pdf_page": 407
+    "pdf_page": 416
    },
    "difference": {
-    "absolute_ksh_m": 50.71,
-    "pct_of_smaller": 6.42,
-    "b_minus_a_ksh_m": -50.71
+    "absolute_ksh_m": 135.29,
+    "pct_of_smaller": 19.18,
+    "b_minus_a_ksh_m": -135.29
    },
    "possible_basis_mismatch": [
     "Stock point differs: opening_of_next_year against closing (same date, different report).",
@@ -10324,8 +10300,8 @@
    },
    "claim_b": {
     "observation_id": "L276",
-    "value_ksh_m": 789.96,
-    "printed": "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022"
+    "value_ksh_m": 705.38,
+    "printed": "High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022."
    },
    "source_a": {
     "source_id": "cob-report-2021-22",
@@ -10333,12 +10309,12 @@
    },
    "source_b": {
     "source_id": "cob-report-2021-22",
-    "pdf_page": 407
+    "pdf_page": 416
    },
    "difference": {
-    "absolute_ksh_m": 37.97,
-    "pct_of_smaller": 5.05,
-    "b_minus_a_ksh_m": 37.97
+    "absolute_ksh_m": 46.61,
+    "pct_of_smaller": 6.61,
+    "b_minus_a_ksh_m": -46.61
    },
    "possible_basis_mismatch": [
     "Both values are in the same document (internal inconsistency).",
@@ -10433,8 +10409,8 @@
    },
    "claim_b": {
     "observation_id": "L276",
-    "value_ksh_m": 789.96,
-    "printed": "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022"
+    "value_ksh_m": 705.38,
+    "printed": "High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022."
    },
    "source_a": {
     "source_id": "audit-2021-22",
@@ -10442,12 +10418,12 @@
    },
    "source_b": {
     "source_id": "cob-report-2021-22",
-    "pdf_page": 407
+    "pdf_page": 416
    },
    "difference": {
-    "absolute_ksh_m": 28.84,
-    "pct_of_smaller": 3.65,
-    "b_minus_a_ksh_m": -28.84
+    "absolute_ksh_m": 113.42,
+    "pct_of_smaller": 16.08,
+    "b_minus_a_ksh_m": -113.42
    },
    "possible_basis_mismatch": [
     "Different publishers: auditor_general against controller_of_budget.",
@@ -10506,8 +10482,8 @@
    },
    "claim_b": {
     "observation_id": "L276",
-    "value_ksh_m": 789.96,
-    "printed": "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022"
+    "value_ksh_m": 705.38,
+    "printed": "High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022."
    },
    "source_a": {
     "source_id": "audit-2021-22",
@@ -10515,12 +10491,12 @@
    },
    "source_b": {
     "source_id": "cob-report-2021-22",
-    "pdf_page": 407
+    "pdf_page": 416
    },
    "difference": {
-    "absolute_ksh_m": 51.2,
-    "pct_of_smaller": 6.93,
-    "b_minus_a_ksh_m": 51.2
+    "absolute_ksh_m": 33.38,
+    "pct_of_smaller": 4.73,
+    "b_minus_a_ksh_m": -33.38
    },
    "possible_basis_mismatch": [
     "Different publishers: auditor_general against controller_of_budget.",
@@ -10543,8 +10519,8 @@
    },
    "claim_b": {
     "observation_id": "L276",
-    "value_ksh_m": 789.96,
-    "printed": "High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022"
+    "value_ksh_m": 705.38,
+    "printed": "High level of pending bills which amounted to Kshs.705.38 million as of 30th June 2022."
    },
    "source_a": {
     "source_id": "audit-2021-22",
@@ -10552,12 +10528,12 @@
    },
    "source_b": {
     "source_id": "cob-report-2021-22",
-    "pdf_page": 407
+    "pdf_page": 416
    },
    "difference": {
-    "absolute_ksh_m": 169.13,
-    "pct_of_smaller": 21.41,
-    "b_minus_a_ksh_m": -169.13
+    "absolute_ksh_m": 253.71,
+    "pct_of_smaller": 35.97,
+    "b_minus_a_ksh_m": -253.71
    },
    "possible_basis_mismatch": [
     "Different publishers: auditor_general against controller_of_budget.",
@@ -12211,8 +12187,8 @@
    },
    "claim_b": {
     "observation_id": "L280",
-    "value_ksh_m": 1120,
-    "printed": "High wage bill that has increased by 40.8 per cent from Kshs.1.12 billion in FY 2016/17"
+    "value_ksh_m": 2400,
+    "printed": "High wage bill that has increased by 3.9 per cent from Kshs.2.4 billion in FY 2016/17"
    },
    "source_a": {
     "source_id": "cob-report-2016-17",
@@ -12220,12 +12196,12 @@
    },
    "source_b": {
     "source_id": "cob-report-2017-18",
-    "pdf_page": 268
+    "pdf_page": 274
    },
    "difference": {
-    "absolute_ksh_m": 1190,
-    "pct_of_smaller": 106.25,
-    "b_minus_a_ksh_m": -1190
+    "absolute_ksh_m": 90,
+    "pct_of_smaller": 3.9,
+    "b_minus_a_ksh_m": 90
    },
    "possible_basis_mismatch": [
     "Basis as stated: A \"Personnel emoluments spent\"; B \"\"Wage bill\" in the key issues paragraph; basis not defined\"."
@@ -12246,8 +12222,8 @@
    },
    "claim_b": {
     "observation_id": "L283",
-    "value_ksh_m": 1580,
-    "printed": "to Kshs.1.58 billion during the period under review"
+    "value_ksh_m": 2310,
+    "printed": "to Kshs.2.31 billion during the period under review"
    },
    "source_a": {
     "source_id": "cob-report-2017-18",
@@ -12255,50 +12231,15 @@
    },
    "source_b": {
     "source_id": "cob-report-2017-18",
-    "pdf_page": 268
+    "pdf_page": 274
    },
    "difference": {
-    "absolute_ksh_m": 820,
-    "pct_of_smaller": 51.9,
-    "b_minus_a_ksh_m": -820
+    "absolute_ksh_m": 90,
+    "pct_of_smaller": 3.9,
+    "b_minus_a_ksh_m": -90
    },
    "possible_basis_mismatch": [
     "Both values are in the same document (internal inconsistency).",
-    "Basis as stated: A \"Personnel emoluments spent\"; B \"\"Wage bill\" in the key issues paragraph; basis not defined\"."
-   ],
-   "status": "open",
-   "resolution": null,
-   "reviewer": null,
-   "reviewed_at": null
-  },
-  {
-   "case_id": "D-L281-L284",
-   "indicator_id": "wage_bill",
-   "period": "FY 2017/18",
-   "claim_a": {
-    "observation_id": "L281",
-    "value_ksh_m": 2400,
-    "printed": "Kshs.2.4 billion (71.9 per cent) incurred on personnel emoluments"
-   },
-   "claim_b": {
-    "observation_id": "L284",
-    "value_ksh_m": 1580,
-    "printed": "A high wage bill that increased by 25.3 per cent from Kshs.1.58 billion in the FY 2017/18"
-   },
-   "source_a": {
-    "source_id": "cob-report-2017-18",
-    "pdf_page": 271
-   },
-   "source_b": {
-    "source_id": "cob-report-2018-19",
-    "pdf_page": 268
-   },
-   "difference": {
-    "absolute_ksh_m": 820,
-    "pct_of_smaller": 51.9,
-    "b_minus_a_ksh_m": -820
-   },
-   "possible_basis_mismatch": [
     "Basis as stated: A \"Personnel emoluments spent\"; B \"\"Wage bill\" in the key issues paragraph; basis not defined\"."
    ],
    "status": "open",
@@ -12317,8 +12258,8 @@
    },
    "claim_b": {
     "observation_id": "L283",
-    "value_ksh_m": 1580,
-    "printed": "to Kshs.1.58 billion during the period under review"
+    "value_ksh_m": 2310,
+    "printed": "to Kshs.2.31 billion during the period under review"
    },
    "source_a": {
     "source_id": "cob-report-2018-19",
@@ -12326,12 +12267,12 @@
    },
    "source_b": {
     "source_id": "cob-report-2017-18",
-    "pdf_page": 268
+    "pdf_page": 274
    },
    "difference": {
-    "absolute_ksh_m": 820,
-    "pct_of_smaller": 51.9,
-    "b_minus_a_ksh_m": -820
+    "absolute_ksh_m": 90,
+    "pct_of_smaller": 3.9,
+    "b_minus_a_ksh_m": -90
    },
    "possible_basis_mismatch": [
     "Basis as stated: A \"Personnel emoluments spent, quoted a year later\"; B \"\"Wage bill\" in the key issues paragraph; basis not defined\"."
@@ -12342,71 +12283,34 @@
    "reviewed_at": null
   },
   {
-   "case_id": "D-L282-L284",
+   "case_id": "D-L283-L284",
    "indicator_id": "wage_bill",
    "period": "FY 2017/18",
    "claim_a": {
-    "observation_id": "L282",
-    "value_ksh_m": 2400,
-    "printed": "compared to FY 2017/18 when the County spent Kshs.2.40 billion"
+    "observation_id": "L283",
+    "value_ksh_m": 2310,
+    "printed": "to Kshs.2.31 billion during the period under review"
    },
    "claim_b": {
     "observation_id": "L284",
-    "value_ksh_m": 1580,
-    "printed": "A high wage bill that increased by 25.3 per cent from Kshs.1.58 billion in the FY 2017/18"
+    "value_ksh_m": 2400,
+    "printed": "A high wage bill that increased by 14.6 per cent from Kshs.2.4 billion in the FY 2017/18"
    },
    "source_a": {
-    "source_id": "cob-report-2018-19",
-    "pdf_page": 272
+    "source_id": "cob-report-2017-18",
+    "pdf_page": 274
    },
    "source_b": {
     "source_id": "cob-report-2018-19",
-    "pdf_page": 268
+    "pdf_page": 274
    },
    "difference": {
-    "absolute_ksh_m": 820,
-    "pct_of_smaller": 51.9,
-    "b_minus_a_ksh_m": -820
+    "absolute_ksh_m": 90,
+    "pct_of_smaller": 3.9,
+    "b_minus_a_ksh_m": 90
    },
    "possible_basis_mismatch": [
-    "Both values are in the same document (internal inconsistency).",
-    "Basis as stated: A \"Personnel emoluments spent, quoted a year later\"; B \"\"Wage bill\" in the key issues paragraph; basis not defined\"."
-   ],
-   "status": "open",
-   "resolution": null,
-   "reviewer": null,
-   "reviewed_at": null
-  },
-  {
-   "case_id": "D-L285-L286",
-   "indicator_id": "wage_bill",
-   "period": "FY 2018/19",
-   "claim_a": {
-    "observation_id": "L285",
-    "value_ksh_m": 2750,
-    "printed": "Kshs.2.75 billion (60.7 per cent) incurred on personnel emoluments"
-   },
-   "claim_b": {
-    "observation_id": "L286",
-    "value_ksh_m": 1980,
-    "printed": "to Kshs.1.98 billion in the reporting period. The wage bill accounted for 47.4 per cent of total expenditure"
-   },
-   "source_a": {
-    "source_id": "cob-report-2018-19",
-    "pdf_page": 272
-   },
-   "source_b": {
-    "source_id": "cob-report-2018-19",
-    "pdf_page": 268
-   },
-   "difference": {
-    "absolute_ksh_m": 770,
-    "pct_of_smaller": 38.89,
-    "b_minus_a_ksh_m": -770
-   },
-   "possible_basis_mismatch": [
-    "Both values are in the same document (internal inconsistency).",
-    "Basis as stated: A \"Personnel emoluments spent\"; B \"\"Wage bill\" in the key issues paragraph; basis not defined\"."
+    "None identified from the documents."
    ],
    "status": "open",
    "resolution": null,

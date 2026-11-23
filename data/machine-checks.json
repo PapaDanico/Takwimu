@@ -6,14 +6,16 @@
    "tesseract-600dpi-psm6": "Page rendered at 600 dpi greyscale (pdftoppm) and read by tesseract 5, page segmentation mode 6, for values first read from the PDF text layer.",
    "tesseract-600dpi-psm4": "Page rendered at 600 dpi greyscale and read by tesseract 5 in segmentation mode 4 (a different mode from the first OCR), for OCR values on pages with no text layer.",
    "pdf-text-layer": "The PDF text layer of the page (pdftotext), for values first read by OCR.",
-   "fallback": "When the first second-method reading does not show the value, the page is read again by tesseract in the other segmentation mode (4 or 6) at 600 dpi; a method written \"a+psmN\" means neither reading found it."
+   "fallback": "When the first second-method reading does not show the value, the page is read again by tesseract in the other segmentation mode (4 or 6) at 600 dpi.",
+   "tesseract-300dpi-psm6": "Further reading when the 600 dpi readings do not show the value: page rendered at 300 dpi (tesseract's training resolution) and read in segmentation mode 6; then mode 4, mode 1 (automatic orientation, for landscape tables), mode 11 (sparse text, for chart labels) and 200 dpi mode 6, stopping at the first that shows it. A method ending \"+more\" means none of the readings found it.",
+   "parts": "A stored total that the source prints only as its parts (recurrent and development pending bills; male and female counts; the Executive and Assembly payables tables) agrees when each part is found on the page by the same method and the parts add up to the stored value at its precision."
   },
-  "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed; numbers with fewer than three significant digits are not used.",
+  "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way (\"Kshs.2.4 billion\") is not checkable.",
   "checked_on": "2026-11-23",
   "counts": {
-   "agree": 935,
-   "not checkable": 1082,
-   "disagree": 51
+   "agree": 979,
+   "not checkable": 1086,
+   "disagree": 3
   }
  },
  "checks": [
@@ -518,10 +520,10 @@
    "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
    "pdf_page": 11,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 9223.35 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "9,223,350,139"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -530,10 +532,10 @@
    "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
    "pdf_page": 11,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 8881.77 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "8,881,773,924"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -542,10 +544,10 @@
    "source_sha256": "98da764f06681e88027c0045a3c41cc2f59033646fafa9369a482c1f42166f96",
    "pdf_page": 517,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 8106.98 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "8,106,977,580"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -926,10 +928,10 @@
    "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
    "pdf_page": 270,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6+psm4+more",
    "checked_on": "2026-11-23",
    "result": "disagree",
-   "reason": "The second method read the page but did not find 844.302787 (KSh million) in any scale."
+   "reason": "The second method read the page but did not find 844.302787 (KSh million) in any scale. Looked into 23 Nov 2026: the Total row of Table 3.110 is printed (an OCR of that row alone reads 844,302,787), but no full-page reading picks the row up; the page also carries a doubled text layer. Needs a look at the page image."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -1286,10 +1288,10 @@
    "source_sha256": "8dd26cf1995be1a428ff39c9a9609e5339e366a3394b3631cdd6cdcac47b11b0",
    "pdf_page": 16,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 7545.45041 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "7,545,450,410"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -1492,8 +1494,8 @@
    "original_method": "OCR (ocr-rapidocr)",
    "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 343.31 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "343,309,926"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -1706,10 +1708,10 @@
    "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
    "pdf_page": 270,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6+psm4+more",
    "checked_on": "2026-11-23",
    "result": "disagree",
-   "reason": "The second method read the page but did not find 142.88 (KSh million) in any scale."
+   "reason": "The second method read the page but did not find 142.88 (KSh million) in any scale. Looked into 23 Nov 2026: a data label of Figure 3.150 on a dotted chart background; the text layer reads 142.88, OCR reads it as 142.38. Needs a look at the page image."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -1718,10 +1720,10 @@
    "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
    "pdf_page": 270,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6+psm4+more",
    "checked_on": "2026-11-23",
    "result": "disagree",
-   "reason": "The second method read the page but did not find 113.26 (KSh million) in any scale."
+   "reason": "The second method read the page but did not find 113.26 (KSh million) in any scale. Looked into 23 Nov 2026: a data label of Figure 3.150 on a dotted chart background; the text layer reads 113.26, OCR reads it as 1T5.26. Needs a look at the page image."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -1730,10 +1732,10 @@
    "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
    "pdf_page": 15,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 184.25 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "184,249,748"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2004,12 +2006,12 @@
    "id": "L167",
    "source_id": "GOV-02-FY2024-25-Q4",
    "source_sha256": "348d0bb6f96e1154e630adf2c0a47ac6c40fe13a2dd37c640234bb9dfee81393",
-   "pdf_page": 6,
+   "pdf_page": 5,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm11",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 236.502391 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "236,502,391"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2078,10 +2080,10 @@
    "source_sha256": "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
    "pdf_page": 4,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm11",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 508.04 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "508.04"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2648,10 +2650,10 @@
    "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
    "pdf_page": 20,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 6814.85 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "6,814,847,783"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2660,10 +2662,10 @@
    "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
    "pdf_page": 20,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 4659.84 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "4,659,842,545"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2672,10 +2674,10 @@
    "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
    "pdf_page": 20,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 2155.01 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "2,155,005,238"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2696,10 +2698,10 @@
    "source_sha256": "1c2009713bf862188d75904b94aebdc4d3d687dde33f6bf3133f99b0945804e9",
    "pdf_page": 6,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 5712.964967 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "5,712,964,967"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2842,8 +2844,13 @@
    "original_method": "OCR (ocr-rapidocr)",
    "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 336.95 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "172.01 + 164.94",
+   "parts": [
+    "172.01",
+    "164.94"
+   ],
+   "reason": "A sum of printed parts: each part is on the page and they add up to 336.95."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2852,10 +2859,15 @@
    "source_sha256": "a206f4fe5ea76543d06327e4dc3af6d13a0300abd05a9e637e94798dca6a2b09",
    "pdf_page": 276,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 277.59 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "127.55 + 150.04",
+   "parts": [
+    "127.55",
+    "150.04"
+   ],
+   "reason": "A sum of printed parts: each part is on the page and they add up to 277.59."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2864,10 +2876,15 @@
    "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
    "pdf_page": 270,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 614.5 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "367.75 + 246.75",
+   "parts": [
+    "367.75",
+    "246.75"
+   ],
+   "reason": "A sum of printed parts: each part is on the page and they add up to 614.5."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2876,10 +2893,15 @@
    "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
    "pdf_page": 271,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 445.68 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "258.26 + 187.42",
+   "parts": [
+    "258.26",
+    "187.42"
+   ],
+   "reason": "A sum of printed parts: each part is on the page and they add up to 445.68."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2888,10 +2910,15 @@
    "source_sha256": "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
    "pdf_page": 374,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 1060.92 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "637.54 + 423.38",
+   "parts": [
+    "637.54",
+    "423.38"
+   ],
+   "reason": "A sum of printed parts: each part is on the page and they add up to 1060.92."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -2984,10 +3011,10 @@
    "source_sha256": "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
    "pdf_page": 478,
    "original_method": "OCR (ocr-rapidocr)",
-   "method": "pdf-text-layer+psm4",
+   "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 545.95 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "545,950,403"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -3056,10 +3083,10 @@
    "source_sha256": "98da764f06681e88027c0045a3c41cc2f59033646fafa9369a482c1f42166f96",
    "pdf_page": 523,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 222.33 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "222,333,808"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -3282,12 +3309,12 @@
    "id": "L276",
    "source_id": "cob-report-2021-22",
    "source_sha256": "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
-   "pdf_page": 407,
+   "pdf_page": 416,
    "original_method": "PDF text layer",
    "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
    "result": "agree",
-   "matched": "789.96"
+   "matched": "705.38"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -3330,12 +3357,12 @@
    "id": "L280",
    "source_id": "cob-report-2017-18",
    "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
-   "pdf_page": 268,
+   "pdf_page": 274,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6",
+   "method": "tesseract-600dpi-psm6+psm4+more",
    "checked_on": "2026-11-23",
-   "result": "agree",
-   "matched": "1.12"
+   "result": "not checkable",
+   "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -3344,10 +3371,10 @@
    "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
    "pdf_page": 271,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6+psm4+more",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 2400 (KSh million) in any scale."
+   "result": "not checkable",
+   "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -3366,24 +3393,24 @@
    "id": "L283",
    "source_id": "cob-report-2017-18",
    "source_sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
-   "pdf_page": 268,
+   "pdf_page": 274,
    "original_method": "PDF text layer",
    "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
    "result": "agree",
-   "matched": "1.58"
+   "matched": "2.31"
   },
   {
    "dataset": "siaya-fiscal-ledger",
    "id": "L284",
    "source_id": "cob-report-2018-19",
    "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
-   "pdf_page": 268,
+   "pdf_page": 274,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6",
+   "method": "tesseract-600dpi-psm6+psm4+more",
    "checked_on": "2026-11-23",
-   "result": "agree",
-   "matched": "1.58"
+   "result": "not checkable",
+   "reason": "Printed as \"2.4 billion\": fewer than three significant digits, too short to match safely on a page."
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -3402,12 +3429,12 @@
    "id": "L286",
    "source_id": "cob-report-2018-19",
    "source_sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
-   "pdf_page": 268,
+   "pdf_page": 274,
    "original_method": "PDF text layer",
    "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
    "result": "agree",
-   "matched": "1.98"
+   "matched": "2.74"
   },
   {
    "dataset": "siaya-fiscal-ledger",
@@ -5669,10 +5696,10 @@
    "source_sha256": "b1467eaed37838344513981c222e8fac671c9f09cd3458179f4ac46e9da61aaa",
    "pdf_page": 84,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 736 (people) in any scale."
+   "result": "agree",
+   "matched": "736"
   },
   {
    "dataset": "siaya-health",
@@ -6049,10 +6076,10 @@
    "source_sha256": "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
    "pdf_page": 205,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm11",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 20.7 (%) in any scale."
+   "result": "agree",
+   "matched": "20.7"
   },
   {
    "dataset": "siaya-health",
@@ -8390,8 +8417,8 @@
    "original_method": "OCR (RapidOCR)",
    "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 343.31 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "343,309,926"
   },
   {
    "dataset": "history",
@@ -9117,10 +9144,10 @@
    "source_sha256": "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
    "pdf_page": 409,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 411.53 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "411,529,000.36"
   },
   {
    "dataset": "history",
@@ -9129,10 +9156,10 @@
    "source_sha256": "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
    "pdf_page": 409,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 293.85 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "293,854,691.77"
   },
   {
    "dataset": "history",
@@ -9213,12 +9240,12 @@
    "id": "years:2022/23:development_absorption_pct",
    "source_id": "cob-report-2022-23",
    "source_sha256": "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
-   "pdf_page": 583,
+   "pdf_page": 34,
    "original_method": "OCR (RapidOCR)",
-   "method": "pdf-text-layer+psm4",
+   "method": "pdf-text-layer",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 53.8 (%) in any scale."
+   "result": "agree",
+   "matched": "53.8"
   },
   {
    "dataset": "history",
@@ -9898,10 +9925,10 @@
    "source_sha256": "1030c623c39a23e49a2272ff39d7b13c7aafe32f28915984eddca35c27cfc37e",
    "pdf_page": 530,
    "original_method": "OCR (RapidOCR)",
-   "method": "pdf-text-layer+psm4",
+   "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 39.29 (KSh m) in any scale."
+   "result": "agree",
+   "matched": "39,285,727"
   },
   {
    "dataset": "history",
@@ -9913,7 +9940,7 @@
    "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
    "result": "agree",
-   "matched": "1.97"
+   "matched": "1,971,814,323"
   },
   {
    "dataset": "history",
@@ -9977,10 +10004,10 @@
    "source_sha256": "4ae2b47b0fcfcf2361635a4e28fbf6f6d8e2df6c19167acdcdfba92a5aae9936",
    "pdf_page": 223,
    "original_method": "OCR (RapidOCR)",
-   "method": "pdf-text-layer+psm4",
+   "method": "pdf-text-layer+psm4+more",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 2500 (KSh m) in any scale."
+   "result": "not checkable",
+   "reason": "Printed as \"2.5 billion\": fewer than three significant digits, too short to match safely on a page."
   },
   {
    "dataset": "history",
@@ -10001,10 +10028,10 @@
    "source_sha256": "4ae2b47b0fcfcf2361635a4e28fbf6f6d8e2df6c19167acdcdfba92a5aae9936",
    "pdf_page": 222,
    "original_method": "OCR (RapidOCR)",
-   "method": "pdf-text-layer+psm4",
+   "method": "pdf-text-layer",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 953.73 (KSh m) in any scale."
+   "result": "agree",
+   "matched": "953,730,353"
   },
   {
    "dataset": "history",
@@ -10020,10 +10047,16 @@
    "source_sha256": "4ae2b47b0fcfcf2361635a4e28fbf6f6d8e2df6c19167acdcdfba92a5aae9936",
    "pdf_page": 224,
    "original_method": "OCR (RapidOCR)",
-   "method": "pdf-text-layer+psm4",
+   "method": "tesseract-600dpi-psm4",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 1636.14 (KSh m) in any scale."
+   "result": "agree",
+   "matched": "774,898,249.14 + 804,790,964 + 56,452,974",
+   "parts": [
+    "774,898,249.14",
+    "804,790,964",
+    "56,452,974"
+   ],
+   "reason": "A sum of printed parts: each part is on the page and they add up to 1636.14."
   },
   {
    "dataset": "history",
@@ -13073,10 +13106,10 @@
    "source_sha256": "412af7c153b065b0e94cd74124274b12fade03554ccccad6ee50789b23661c2c",
    "pdf_page": 54,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 5710 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "5,710"
   },
   {
    "dataset": "siaya-economy",
@@ -14117,10 +14150,10 @@
    "source_sha256": "fe2dff51a6976cbc60d9aeb35b03c8d3fdc4b927de967bb9ba554c5efe4f8ad8",
    "pdf_page": 58,
    "original_method": "PDF text layer",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-200dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 773 (KSh million) in any scale."
+   "result": "agree",
+   "matched": "773"
   },
   {
    "dataset": "siaya-economy",
@@ -15329,10 +15362,10 @@
    "source_sha256": "3ebf97e5064f8f0110f4859f4422083e6868ef083c421f1deaaae19751112f7b",
    "pdf_page": 74,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
    "result": "agree",
-   "matched": "5,809"
+   "matched": "5809085"
   },
   {
    "dataset": "siaya-education",
@@ -15852,10 +15885,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 51,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 75.1 (percent) in any scale."
+   "result": "agree",
+   "matched": "75.1"
   },
   {
    "dataset": "siaya-education",
@@ -15979,10 +16012,15 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 65,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-600dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 7301 (students) in any scale."
+   "result": "agree",
+   "matched": "4,005 + 3,296",
+   "parts": [
+    "4,005",
+    "3,296"
+   ],
+   "reason": "A sum of printed parts: each part is on the page and they add up to 7301."
   },
   {
    "dataset": "siaya-education",
@@ -16290,10 +16328,10 @@
    "source_sha256": "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
    "pdf_page": 148,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm1",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 20000 (children) in any scale."
+   "result": "agree",
+   "matched": "20,000"
   },
   {
    "dataset": "siaya-education",
@@ -17064,10 +17102,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 28,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 22587 (tonnes) in any scale."
+   "result": "agree",
+   "matched": "22,587"
   },
   {
    "dataset": "siaya-agriculture",
@@ -17196,10 +17234,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 28,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 28700 (tonnes) in any scale."
+   "result": "agree",
+   "matched": "28,700"
   },
   {
    "dataset": "siaya-agriculture",
@@ -17292,10 +17330,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 31,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 5285 (number) in any scale."
+   "result": "agree",
+   "matched": "5,285"
   },
   {
    "dataset": "siaya-agriculture",
@@ -17304,10 +17342,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 31,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 5698 (number) in any scale."
+   "result": "agree",
+   "matched": "5,698"
   },
   {
    "dataset": "siaya-agriculture",
@@ -17352,10 +17390,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 31,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 143752 (number) in any scale."
+   "result": "agree",
+   "matched": "143,752"
   },
   {
    "dataset": "siaya-agriculture",
@@ -17556,10 +17594,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 31,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm1",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 7577 (number) in any scale."
+   "result": "agree",
+   "matched": "7,577"
   },
   {
    "dataset": "siaya-agriculture",
@@ -17700,10 +17738,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 36,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 677 (tonnes) in any scale."
+   "result": "agree",
+   "matched": "677"
   },
   {
    "dataset": "siaya-agriculture",
@@ -17724,10 +17762,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 36,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 27141 (tonnes) in any scale."
+   "result": "agree",
+   "matched": "27,141"
   },
   {
    "dataset": "siaya-agriculture",
@@ -17796,10 +17834,10 @@
    "source_sha256": "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
    "pdf_page": 36,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm6",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 28519 (tonnes) in any scale."
+   "result": "agree",
+   "matched": "28,519"
   },
   {
    "dataset": "siaya-agriculture",
@@ -18117,10 +18155,10 @@
    "source_sha256": "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
    "pdf_page": 168,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm1",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 6500 (acres) in any scale."
+   "result": "agree",
+   "matched": "6,500"
   },
   {
    "dataset": "siaya-agriculture",
@@ -18129,10 +18167,10 @@
    "source_sha256": "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
    "pdf_page": 168,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm1",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 5881 (KSh_million) in any scale."
+   "result": "agree",
+   "matched": "5,881"
   },
   {
    "dataset": "siaya-agriculture",
@@ -18141,10 +18179,10 @@
    "source_sha256": "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
    "pdf_page": 169,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm1",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 2000 (acres) in any scale."
+   "result": "agree",
+   "matched": "2,000"
   },
   {
    "dataset": "siaya-agriculture",
@@ -18153,10 +18191,10 @@
    "source_sha256": "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
    "pdf_page": 169,
    "original_method": "not recorded (page has a text layer; taken as text layer)",
-   "method": "tesseract-600dpi-psm6+psm4",
+   "method": "tesseract-300dpi-psm1",
    "checked_on": "2026-11-23",
-   "result": "disagree",
-   "reason": "The second method read the page but did not find 615 (KSh_million) in any scale."
+   "result": "agree",
+   "matched": "615"
   },
   {
    "dataset": "siaya-climate",
