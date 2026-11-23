@@ -1,4 +1,5 @@
 import { Provisional } from '../../../../components/ObsTable';
+import OsrNote from '../../../../components/OsrNote';
 import PageToc from '../../../../components/PageToc';
 import Reviewed from '../../../../components/Reviewed';
 import Link from 'next/link';
@@ -123,6 +124,7 @@ export default function SiayaAudits() {
         <ul className="how">{a.caveats.map((c) => <li key={c}>{c}</li>)}</ul>
         <p className="src">Sources: {a.documents.length} documents from the Parliament library, each linked beside its opinion and findings. Every finding is in the <Link href="/datasets/?q=siaya-audit-findings">dataset catalogue</Link> and in <a href="/data/siaya-audits.json">siaya-audits.json</a>. See also the <Link href="/counties/siaya/ledger/">fiscal reconciliation</Link> and the <Link href="/counties/siaya/">Siaya County hub</Link>.</p>
       </section>
+      <OsrNote />
     </main>
   );
 }

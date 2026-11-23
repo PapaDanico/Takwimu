@@ -11,7 +11,7 @@ const GROUPS = [
     id: 'money-in',
     title: 'Money coming in',
     terms: [
-      { id: 'own-source-revenue', term: 'Own-source revenue', def: 'Money a county raises itself from fees, levies, licences and charges, as opposed to money it receives from the national government.', eg: 'In Siaya it includes payments made at county health facilities.' },
+      { id: 'osr-term', term: 'Own-source revenue', def: 'Money a county raises itself from fees, levies, licences and charges, as opposed to money it receives from the national government.', eg: 'In Siaya it includes payments made at county health facilities.' },
       { id: 'equitable-share', term: 'Equitable share', def: 'The money the national government sends to counties each year from the revenue it collects. The Constitution says counties must receive at least 15 per cent of national revenue, and Parliament decides the exact amount each year.', eg: 'For most counties it is by far the largest source of money.' },
       { id: 'conditional-grants', term: 'Conditional grants', def: 'Extra money from the national government or development partners that may only be spent on a stated purpose, such as a health or road programme.' },
       { id: 'appropriations-in-aid', term: 'Appropriations-in-aid', def: 'Revenue that a county department collects and keeps to spend directly, rather than paying it into the County Revenue Fund first. Reports sometimes call this money spent at source.' },
@@ -59,11 +59,61 @@ const GROUPS = [
   },
 ];
 
+// Own-source revenue, hospital income, FIF and A-i-A (owner item 5, 23 Nov 2026). Every page or report that shows own-source
+// revenue or FIF links here (/learn/#own-source-revenue); the smoke test checks the links.
+function OsrExplainer() {
+  return (
+    <section className="card" id="own-source-revenue" aria-labelledby="osr-h">
+      <h2 id="osr-h">Own-source revenue, hospital income, FIF and A-i-A: why the totals differ</h2>
+      <p className="lead">Different official documents often give different &ldquo;own-source revenue&rdquo; totals for the same county and year. Usually nobody has made a mistake: they are counting different things. This section explains the four terms and how each publisher uses them.</p>
+      <div className="terms">
+        <article className="term-card" id="osr-ordinary">
+          <h3>Ordinary own-source revenue</h3>
+          <p>Money the county raises itself under its own laws: property rates, business permits, market and parking fees, produce cess, liquor and other licences, and charges for services. The Constitution lets counties impose property rates and entertainment taxes (Article 209(3)) and charge for the services they provide (Article 209(4)). This money is paid into the County Revenue Fund before it is spent.</p>
+        </article>
+        <article className="term-card" id="osr-hospital">
+          <h3>Hospital revenue</h3>
+          <p>Money paid to county hospitals and health centres for services: fees from patients, and reimbursements from insurers and national schemes, such as the National Health Insurance Fund (NHIF) until 2024, the Social Health Authority (SHA and its fund, SHIF) since then, and the Linda Mama free maternity programme. For many counties it is now the largest part of what they collect themselves.</p>
+        </article>
+        <article className="term-card" id="osr-fif">
+          <h3>Facility Improvement Financing (FIF)</h3>
+          <p>The Facility Improvement Financing Act, 2023 allows public health facilities to keep the money they collect and spend it on their own needs, such as medicines and repairs, instead of sending it to the county treasury first. &ldquo;FIF&rdquo; in county reports usually means this hospital money. Before the Act, counties ran similar arrangements under their own laws, often called a Facility Improvement Fund.</p>
+        </article>
+        <article className="term-card" id="osr-aia">
+          <h3>Appropriations-in-aid (A-i-A)</h3>
+          <p>Revenue a department collects and is allowed to spend at source, without paying it into the County Revenue Fund first. Hospital FIF is the main kind of A-i-A, but a county can also treat other income this way (Siaya&apos;s own reports, for example, list liquor licensing under A-i-A in FY 2024/25). Because A-i-A is spent where it is collected, it can be missed or counted twice when totals are compiled.</p>
+        </article>
+      </div>
+      <h3 className="mini" id="osr-publishers">How each publisher counts them</h3>
+      <div className="tablewrap" tabIndex={0} role="region" aria-labelledby="osr-publishers">
+        <table className="data" id="osr-publishers-table">
+          <caption className="sr-only">How each publisher counts own-source revenue, hospital income, FIF and A-i-A</caption>
+          <thead><tr><th scope="col">Publisher</th><th scope="col">What its &ldquo;own-source revenue&rdquo; includes</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Controller of Budget (CoB), budget implementation review reports</th><td>Ordinary own-source revenue plus a FIF or A-i-A line, and in recent reports a split between the two. For Siaya in FY 2023/24 the report gives KSh 610.74 million: KSh 222.11 million ordinary revenue and KSh 388.63 million health FIF. A later report can quote a different figure for the same year.</td></tr>
+            <tr><th scope="row">County government reports (quarterly budget reports, Budget Review and Outlook Paper)</th><td>County Revenue Fund receipts plus all A-i-A the county records, including hospital reimbursements from SHA/SHIF, Linda Mama and NHIF capitation. For Siaya in FY 2024/25 the county reports KSh 757.57 million, of which KSh 521.07 million A-i-A, while the CoB reports KSh 436.68 million, of which KSh 199.84 million FIF/A-i-A.</td></tr>
+            <tr><th scope="row">Auditor-General (OAG)</th><td>Audits the county&apos;s financial statements, which record receipts as the county reports them, and comments where collections were not banked, not recorded or not supported. Audit reports do not give a comparable own-source revenue total for every year, so we use them for findings, not for the series.</td></tr>
+            <tr><th scope="row">Kenya National Bureau of Statistics (KNBS)</th><td>Does not compile its own count of county revenue in the sources we use. Its Gross County Product measures the size of the county economy, which is not money the county government collects. Where a KNBS abstract shows county revenue, it repeats a county or Treasury figure.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 className="mini" id="osr-why">Why the totals differ</h3>
+      <ul className="how">
+        <li><b>Hospital money in or out.</b> The largest gap is usually whether FIF and other A-i-A are added to ordinary revenue, and which insurer reimbursements count as FIF.</li>
+        <li><b>Date and version.</b> A quarterly report, the annual report and a figure quoted a year later can each use a different cut-off or a revised figure.</li>
+        <li><b>Where the money was recorded.</b> Money spent at source may reach the county&apos;s books late, or only through a separate facility account.</li>
+        <li><b>Targets.</b> Targets come from different budget versions (original or supplementary), so revenue &ldquo;as a share of target&rdquo; differs too.</li>
+      </ul>
+      <p className="how">On this site every source&apos;s figure is shown side by side, with its basis, in the <a href="/counties/siaya/ledger/#osr-latest">fiscal reconciliation</a>, and the make-up of Siaya&apos;s own-source revenue is on <a href="/counties/siaya/analysis/#an-a8">Siaya analysis</a>. A difference is a question to put to the documents, not evidence that a figure is wrong.</p>
+    </section>
+  );
+}
+
 export default function Learn() {
   return (
     <main id="main" className="wrap page">
       <PageHead eyebrow="Learn" title="Budget, audit and statistics terms in plain English" sub="Short definitions you can use when reading any county report. They are drafts until someone with subject knowledge has reviewed them." path="/learn/" shareText="Budget and audit terms in plain English" />
-      <nav aria-label="Sections on this page"><ul className="toc">{GROUPS.map((g) => <li key={g.id}><a href={`#${g.id}`}>{g.title}</a></li>)}</ul></nav>
+      <nav aria-label="Sections on this page"><ul className="toc">{GROUPS.map((g) => <li key={g.id}><a href={`#${g.id}`}>{g.title}</a></li>)}<li><a href="#own-source-revenue">Own-source revenue, FIF and A-i-A</a></li></ul></nav>
       {GROUPS.map((g) => (
         <section key={g.id} id={g.id} className="card" aria-labelledby={`${g.id}-h`}>
           <h2 id={`${g.id}-h`}>{g.title}</h2>
@@ -79,6 +129,7 @@ export default function Learn() {
           </div>
         </section>
       ))}
+      <OsrExplainer />
       <section className="card" aria-labelledby="questions">
         <h2 id="questions">Five questions to ask of any county number</h2>
         <ol className="steps">

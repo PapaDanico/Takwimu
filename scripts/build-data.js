@@ -350,7 +350,7 @@ Object.entries(files)
   });
 
 // Siaya data is verified-with-status and carries its own provenance fields.
-['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json', 'siaya-boundaries.json', 'source-manifest.json', 'source-library.json', 'national.json', 'counties-cob.json', 'siaya-economy.json', 'siaya-governance.json', 'siaya-audits.json', 'siaya-fiscal-ledger.json', 'siaya-health.json', 'siaya-education.json', 'siaya-agriculture.json', 'siaya-geography.json', 'siaya-climate.json', 'siaya-wards-geo.json', 'siaya-analysis.json', 'siaya-programmes.json'].forEach((f) => {
+['siaya.json', 'subcounties.json', 'county.json', 'history.json', 'cpi.json', 'conflicts.json', 'siaya-boundaries.json', 'source-manifest.json', 'source-library.json', 'national.json', 'counties-cob.json', 'siaya-economy.json', 'siaya-governance.json', 'siaya-audits.json', 'siaya-fiscal-ledger.json', 'siaya-health.json', 'siaya-education.json', 'siaya-agriculture.json', 'siaya-geography.json', 'siaya-climate.json', 'siaya-wards-geo.json', 'siaya-analysis.json', 'siaya-programmes.json', 'ledger-classes.json', 'corrections.json', 'machine-checks.json'].forEach((f) => {
   // Files with itemised observations are published through lib/review-status.js: rejected values removed, and an
   // editorial_review block with the state of every value that is not simply pending. The others are copied as held.
   const rs = require('../lib/review-status');

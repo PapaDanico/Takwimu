@@ -7,6 +7,8 @@ import LedgerView from '../../../../components/LedgerView';
 import { ledger } from '../../../../lib/ledger';
 import { plainDeep } from '../../../../lib/plain';
 import OsrLedger, { OSR_TOC } from '../../../../components/siaya/OsrLedger';
+import PendingAtDate from '../../../../components/siaya/PendingAtDate';
+import { ClassBadge } from '../../../../components/LedgerView';
 
 export const metadata = {
   title: 'Fiscal reconciliation',
@@ -32,14 +34,15 @@ export default function SiayaLedger() {
         <p id="why-differ"><b>Why the figures differ.</b> Official documents often give different figures for the same year because they describe different things: an original or a supplementary budget, a full year or part of one, own-source revenue with or without hospital income (FIF) and other appropriations-in-aid (A-i-A), and money counted when it moves (cash) or when it is owed (accrual). A difference is therefore a question to put to the documents, not evidence that any figure is wrong.</p>
         <ul className="how">
           <li id="no-averaging"><b>No averaging and no verdicts.</b> Every value is shown as its source printed it, with the page it was read from. None is averaged, preferred or corrected here, and a missing value is never shown as zero.</li>
-          <li>A discrepancy case is any pair of values for the same measure and year that differ by more than {l.threshold} per cent of the smaller one. Every case is open: none has yet been reviewed by a specialist.</li>
+          <li>A discrepancy case is any pair of values for the same measure and year that differ by more than {l.threshold} per cent of the smaller one. Each case carries a class saying what the documents themselves show about the difference (<a href="#led-classes">counts by class</a>); the class is our reading, and every case stays open until a specialist reviews it.</li>
+          <li>Own-source revenue, hospital income (FIF) and appropriations-in-aid are counted differently by each publisher: see <Link href="/learn/#own-source-revenue">own-source revenue, FIF and A-i-A explained</Link>.</li>
           <li>Values are in KSh million unless marked as KSh billion (figures reused from the ten-year series keep the unit of that series).</li>
         </ul>
       </section>
 
       <nav aria-label="Sections on this page"><ul className="toc">
         {OSR_TOC.map(([id, t]) => <li key={id}><a href={`#${id}`}>Own-source revenue: {t}</a></li>)}
-        <li><a href="#led-comp">Completeness</a></li><li><a href="#led-sum">Open cases</a></li><li><a href="#led-cav">Not used</a></li>
+        <li><a href="#led-comp">Completeness</a></li><li><a href="#led-classes">Cases by class</a></li><li><a href="#pending-2025">Pending bills, 30 June 2025</a></li><li><a href="#led-sum">Open cases</a></li><li><a href="#led-cav">Not used</a></li>
       </ul></nav>
 
       <OsrLedger />
@@ -66,6 +69,25 @@ export default function SiayaLedger() {
       </section>
 
       <LedgerView measures={l.measures} kinds={l.kinds} values={l.values} cases={l.cases} initial="osr_total_actual" />
+
+      <section className="card" aria-labelledby="led-classes-h" id="led-classes">
+        <h2 id="led-classes-h">Discrepancy cases by class</h2>
+        <p className="lead">Every one of the {l.cases.length} cases is classed by what the documents print about the difference. A class is our reading of the documents, with the reason and the pages it rests on; it is not a review decision, and both values always stay as printed.</p>
+        <TableWrap label="Discrepancy cases by class">
+          <table className="data" id="class-counts">
+            <caption className="sr-only">Number of discrepancy cases in each class, with what the class means</caption>
+            <thead><tr><th scope="col">Class</th><th scope="col">Cases</th><th scope="col">What it means</th></tr></thead>
+            <tbody>{l.classOrder.map((k) => <tr key={k} data-class={k}><th scope="row"><ClassBadge cls={k} /></th><td>{l.classCounts[k]}</td><td>{l.classDefs[k]}</td></tr>)}</tbody>
+            <tfoot><tr><th scope="row">All cases</th><td>{l.cases.length}</td><td>Cases resolved by source are logged in the <Link href="/data/#cbrop-development-spending-2024-25">conflict register</Link>; errors in the documents themselves are on the <Link href="/corrections/#source-errors">corrections register</Link>.</td></tr></tfoot>
+          </table>
+        </TableWrap>
+      </section>
+
+      <section className="card" aria-labelledby="pending-2025-h">
+        <h2 id="pending-2025-h">Pending bills at 30 June 2025: every source side by side</h2>
+        <PendingAtDate fy="2024/25" id="pending-2025" caption="Pending bills at 30 June 2025 (end of FY 2024/25), every value by source, with scope, date and accounting basis" />
+        <p className="how">The KSh 545.95 million is printed twice: in Table 3.457 of the Controller of Budget&apos;s FY 2024/25 report and in the county&apos;s own fourth-quarter report (KSh 545,950,403.16). Both describe the County Executive&apos;s opening stock of 1 July 2024 less payments made in the year, with no new bills added. The other values add the bills of the year or the County Assembly. See <a href="/data/#pending-close-2025">case pending-close-2025</a>.</p>
+      </section>
 
       <section className="card" aria-labelledby="led-sum">
         <h2 id="led-sum">Open discrepancy cases by measure</h2>

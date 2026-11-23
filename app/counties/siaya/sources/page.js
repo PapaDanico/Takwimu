@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import OsrNote from '../../../../components/OsrNote';
 import Abbrs from '../../../../components/Abbrs';
 import PageHead from '../../../../components/PageHead';
 import SourceLibrary from '../../../../components/SourceLibrary';
@@ -58,6 +59,7 @@ export default function SiayaSources() {
         </ul>
         <p className="src">Download the whole library: <a href="/data/source-library.json" download>source-library.json</a> (schema in the project repository, <code>schemas/source-library.schema.json</code>). Method: {lib.meta.method} See also the <Link href="/data/">Data page</Link>, the <Link href="/method/">method notes</Link> and the <Link href="/counties/siaya/">Siaya County hub</Link>.</p>
       </section>
+      <OsrNote />
     </main>
   );
 }

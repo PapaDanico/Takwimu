@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SourceErrorFlag from '../../components/SourceErrorFlag';
 import Abbrs from '../../components/Abbrs';
 import PageToc from '../../components/PageToc';
 import { plain } from '../../lib/plain';
@@ -35,7 +36,7 @@ function RefRows({ rows }) {
       <td>{value}</td>
       <td><a href={DOCS[r.source_id].url}>{DOCS[r.source_id].title}</a></td>
       <td>{pageText(r)}</td>
-      <td>{r.read}{r.page_note ? `. ${r.page_note}` : ''}</td>
+      <td>{r.read}{r.page_note ? `. ${r.page_note}` : ''}<SourceErrorFlag e={r.source_error} id={key} /></td>
     </tr>
   ));
 }
@@ -155,10 +156,11 @@ export default function DataPage() {
       <section className="card" id="conflicts" aria-labelledby="reg-h">
         <h2 id="reg-h">Source conflict register</h2>
         <p className="lead">{reg.meta.rule}</p>
+        <p className="how">Resolved cases that were our own errors, and errors found in the source documents, are listed on the <Link href="/corrections/">corrections register</Link>.</p>
         <div className="log">
           {reg.conflicts.map((c) => (
             <article key={c.id} id={c.id} className="term-card">
-              <p><span className={`tag ${c.status === 'open' ? 'warn' : 'good'}`}>{c.status === 'open' ? 'Open' : 'Resolved'}</span></p>
+              <p><span className={`tag ${c.status === 'open' ? 'warn' : 'good'}`}>{c.status === 'open' ? 'Open' : 'Resolved'}</span>{c.register === 'our_correction' ? <> <a className="tag" href={`/corrections/#cor-${c.id}`}>Our correction</a></> : c.register === 'source_error' ? <> <a className="tag warn" href={`/corrections/#se-${c.id}`}>Source error in original</a></> : null}</p>
               <h3>{c.measure}</h3>
               <TableWrap label={`${c.measure}: values by source`}>
                 <table className="data">

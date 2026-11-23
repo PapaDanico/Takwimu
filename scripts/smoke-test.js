@@ -194,6 +194,19 @@ const srv = http.createServer((req, res) => {
   const audJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-audits.json'), 'utf8'));
   await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
   check(await pg.locator('main a[href="/counties/siaya/audits/"]').count() >= 1 && await pg.locator('main a[href="/counties/siaya/ledger/"]').count() >= 1, 'Siaya hub links to audit findings and fiscal reconciliation');
+  // Hub audit summary is generated from data/siaya-audits.json (owner item 3): the latest opinion of each entity, as printed.
+  {
+    const latest = require('../lib/audits').latestOpinions().entities;
+    const audHub = (await pg.locator('#audit').innerText()).replace(/\s+/g, ' ');
+    const posHub = (await pg.locator('section[aria-labelledby="position"]').innerText()).replace(/\s+/g, ' ');
+    check(latest.length === 2 && latest.every((e) => audHub.includes(`${e.label}, FY ${e.fy}`) && audHub.includes(e.opinion) && posHub.includes(`FY ${e.fy}`)) && await pg.locator('#audit a[href="/counties/siaya/audits/"]').count() >= 1, `Siaya hub audit summary matches data/siaya-audits.json (${latest.map((e) => `${e.label} FY ${e.fy} ${e.opinion}`).join('; ')}) and links audit findings`);
+    const latestFy = latest.map((e) => e.fy).sort().slice(-1)[0];
+    check(!new RegExp(`Audit FY (?!${latestFy.replace('/', '\\/')})`).test(posHub), 'Siaya hub shows no audit pill older than the latest year in the data');
+    const p25 = require('../lib/editorial').pendingAt('2024/25');
+    const fmtM = (v) => v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const pill = await pg.locator('a.pill[href="/counties/siaya/ledger/#pending-2025"]').innerText();
+    check(pill.includes(fmtM(Math.min(...p25.map((r) => r.value)))) && pill.includes(fmtM(Math.max(...p25.map((r) => r.value)))) && pill.includes('545.95'), `Siaya hub: pending bills at 30 June 2025 range includes KSh 545.95 million (${pill.trim()})`);
+  }
   await pg.goto(base + '/counties/siaya/audits/', { waitUntil: 'load' });
   const opHead = await pg.locator('#opinions thead').innerText();
   const opText = await pg.locator('#opinions').innerText();
@@ -218,11 +231,21 @@ const srv = http.createServer((req, res) => {
   check(/No averaging and no verdicts/.test(await pg.locator('#no-averaging').innerText()) && /cash/.test(await pg.locator('#why-differ').innerText()) && /FIF/.test(await pg.locator('#why-differ').innerText()), 'ledger: says no averaging or verdicts and explains why figures differ');
   check(/Provisional: awaiting editorial review/i.test(await pg.locator('main .provisional').innerText()), 'ledger: labelled provisional, awaiting editorial review');
   check(await pg.locator('#case-summary tfoot').innerText().then((t) => new RegExp(`${ledJson.discrepancies.length}\\s*$`).test(t.trim())), 'ledger: case summary accounts for every open case');
+  // Case classes (data/ledger-classes.json): counts by class and a class badge on every case (owner item 2).
+  const clsJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'ledger-classes.json'), 'utf8'));
+  const clsRows = await pg.locator('#class-counts tbody tr').allInnerTexts();
+  check(clsRows.length === 5 && Object.entries(clsJson.meta.counts).every(([k, n]) => clsRows.some((t) => t.toLowerCase().startsWith(k) && new RegExp(`\\b${n}\\b`).test(t))) && /\b142\b|\d+/.test(await pg.locator('#class-counts tfoot').innerText()), `ledger: cases counted by class (${Object.entries(clsJson.meta.counts).map(([k, n]) => `${k} ${n}`).join(', ')})`);
+  check(await pg.locator('#led-case-list > li').count() === await pg.locator('#led-case-list > li h4 [data-case-class]').count(), 'ledger: every listed case carries a class badge');
+  const p25t = await pg.locator('#pending-2025-table').innerText();
+  check(/545\.95/.test(p25t) && /As reported/.test(p25t) && /County Executive/.test(p25t) && /30 June 2025/.test(p25t), 'ledger: pending bills at 30 June 2025 side by side, with KSh 545.95 million, scope, date and accounting basis');
+  check(await pg.locator('[data-machine-check]').count() > 0 && await pg.locator('[data-machine-check]', { hasText: /approv/i }).count() === 0, 'ledger: machine cross-checks shown as "Machine cross-checked", never as approved');
   const osrCases = ledJson.discrepancies.filter((d) => d.indicator_id === 'osr_total_actual').length;
   check(await pg.locator('#led-case-list > li').count() === osrCases && await pg.locator('#led-table a[href*="#page="]').count() >= 1, 'ledger: own-source revenue shows every source with page links and its open cases');
   await pg.locator('main select').first().selectOption('equitable_share_received');
   const esText = await pg.locator('#led-table').innerText();
   check(/6,680/.test(esText) && !/5,680/.test(esText) && await pg.locator('#led-case-list > li').count() === ledJson.discrepancies.filter((d) => d.indicator_id === 'equitable_share_received').length, 'ledger: choosing a measure switches the table and cases (FY 2023/24 equitable share shows the printed 6,680)');
+  await pg.locator('main select').first().selectOption('expenditure_total');
+  check(await pg.locator('#led-table [data-source-error-flag="L233"]', { hasText: /31st June/ }).count() === 1, 'ledger: the county report\'s "31st June 2025" is flagged "Source error in original", quoted, value kept');
   // Siaya Source Library: one card per record in data/source-library.json, client-side search and filters, no form fields beyond the search box.
   const libJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'source-library.json'), 'utf8'));
   await pg.goto(base + '/counties/siaya/sources/', { waitUntil: 'networkidle' });
@@ -518,6 +541,21 @@ const srv = http.createServer((req, res) => {
     }
     probs.forEach((p) => console.error('     ', p));
     check(SM.length >= 30 && labelled >= 20 && !probs.length, `repetition guard on ${SM.length} pages: exactly one provisional label on the ${labelled} pages that render reviewed datasets, a table of contents with four or more sections, no caveat more than twice, each measure in its canonical home${probs.length ? `; ${probs.slice(0, 4).join('; ')}` : ''}`);
+  }
+  // Corrections register (owner item 7), the OSR explainer (item 5) and the analysis pending-bills table (item 4).
+  {
+    await pg.goto(base + '/corrections/', { waitUntil: 'load' });
+    const ed = require('../lib/editorial');
+    check(await pg.locator('#corrections-table tbody tr').count() === ed.corrections().length && await pg.locator('#source-errors-table tbody tr').count() === ed.sourceErrors().length && await pg.locator('#source-errors-table .tag', { hasText: 'Source error in original' }).count() === ed.sourceErrors().length, `corrections: ${ed.corrections().length} corrections and ${ed.sourceErrors().length} source errors listed, each source error flagged`);
+    check(await pg.locator('footer a[href="/corrections/"]').count() >= 1, 'footer links the corrections register');
+    await pg.goto(base + '/learn/', { waitUntil: 'load' });
+    const ex = await pg.locator('#own-source-revenue').textContent();
+    check(/Facility Improvement Financing Act, 2023/.test(ex) && /Appropriations-in-aid/.test(ex) && /Controller of Budget/.test(ex) && /Auditor-General/.test(ex) && /KNBS|Kenya National Bureau of Statistics/.test(ex), 'learn: own-source revenue explainer covers ordinary revenue, hospital revenue, FIF, A-i-A and each publisher');
+    const { osrPagesMissingLink } = require('./check-osr-links');
+    const osr = osrPagesMissingLink(root);
+    check(osr.pages >= 10 && osr.missing.length === 0, `every page that shows own-source revenue or FIF links /learn/#own-source-revenue (${osr.pages} pages${osr.missing.length ? `; missing: ${osr.missing.slice(0, 4).join(', ')}` : ''})`);
+    await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
+    check(/545\.95/.test(await pg.locator('#pending-2025-sources-table').innerText()), 'analysis: pending-bills section shows the 30 June 2025 values side by side, with KSh 545.95 million');
   }
   check(bad.length === 0, `no CSP violations or page errors ${bad.slice(0, 2).join(' | ')}`);
   await b.close(); srv.close();

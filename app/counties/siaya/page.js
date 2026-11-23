@@ -12,6 +12,19 @@ export const metadata = {
 import siaya from '../../../data/siaya.json';
 import hist from '../../../data/history.json';
 import { fmt, shortDate } from '../../../lib/format';
+import { latestOpinions } from '../../../lib/audits';
+import { pendingAt, range } from '../../../lib/editorial';
+import Reviewed from '../../../components/Reviewed';
+
+// Audit summary generated from data/siaya-audits.json and data/history.json (owner item 3): the latest year with an
+// opinion for each entity, as printed; never typed into the page. The smoke test compares this text with the data.
+const AUD = latestOpinions();
+const AUD_LATEST_FY = AUD.entities.map((e) => e.fy).sort().slice(-1)[0];
+const lower = (t) => t.replace(/ Opinion$/, '').toLowerCase();
+// Pending bills at 30 June 2025 (end of FY 2024/25): every printed value, smallest to largest (owner item 4).
+const P25 = pendingAt('2024/25');
+const P25R = range(P25);
+const m2 = (v) => v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 function Tile({ label, value, unit, note, tone, dashed, tag }) {
   return (
@@ -33,7 +46,6 @@ export default function Home() {
   const osr = siaya.own_source_revenue;
   const [primary, county, report] = osr.observations;
   const budget = siaya.budget;
-  const audit = siaya.audit;
   const [dev, rec] = budget.categories;
   const share = osr.share_of_annual_target_pct;
   const spentPct = Math.round((budget.total_spent / budget.approved_total) * 100);
@@ -43,7 +55,7 @@ export default function Home() {
   const pend24 = hist.years.find((y) => y.fy === '2023/24');
   const pend24Src = pend24.provenance.pending_total_m;
   const asOf = shortDate(primary.retrieved);
-  const auditAmber = audit.opinion !== 'Unqualified';
+  const auditAmber = AUD.entities.some((e) => !/^Unqualified/.test(e.opinion));
 
   return (
     <main id="main" className="wrap page">
@@ -64,7 +76,7 @@ export default function Home() {
         </nav>
         <p className="asof"><a href="/reports/siaya-fiscal-brief.pdf" download>Download the one-page fiscal brief (PDF, A4)</a></p>
         <p className="asof"><span className="tag good">Checked {asOf}</span> against the Controller of Budget and Auditor-General reports</p>
-        <Provisional dataset="history">Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset={['history', 'siaya-audits', 'siaya-fiscal-ledger']}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
       </header>
       <PageToc items={[['where-h', 'Where Siaya is'], ['position', 'County position'], ['key-h', 'Key figures'], ['obl', 'Pending bills, arrears and stalled projects'], ['aud', 'Audit'], ['tenh', 'Ten years'], ['inyh', `FY ${IY.fy} so far`], ['learnh', 'Budget terms'], ['where', 'Sub-counties']]} />
       <section className="card" aria-labelledby="where-h">
@@ -77,14 +89,15 @@ export default function Home() {
         <p style={{ margin: '6px 0 0', fontSize: 15, color: 'var(--ink-soft)', maxWidth: '46rem' }}>
           In FY {osr.fiscal_year} Siaya collected KSh {fmt(primary.value)} million of its own revenue,
           {' '}{share} per cent of its annual target, and spent {dev.absorption_pct} per cent of its development budget.
-          The latest audit opinion read is {audit.opinion.toLowerCase()} (FY {audit.fiscal_year}).
+          The latest audit opinions read, for FY {AUD_LATEST_FY}, are {AUD.entities.map((e) => `${lower(e.opinion)} for the ${e.label} (FY ${e.fy})`).join(' and ')}.
         </p>
         <div className="pills">
           <span className={`pill ${share < 50 ? 'warn' : ''}`}>Own revenue {share}% of target</span>
           <span className={`pill ${dev.absorption_pct < 60 ? 'warn' : ''}`}>Development spending {dev.absorption_pct}% of budget</span>
           <span className="pill">Recurrent spending {rec.absorption_pct}% of budget</span>
-          <span className={`pill ${auditAmber ? 'warn' : 'good'}`}>Audit FY {audit.fiscal_year}: {audit.opinion}</span>
+          {AUD.entities.map((e) => <span key={e.entity} className={`pill ${/^Unqualified/.test(e.opinion) ? 'good' : 'warn'}`}>Audit FY {e.fy}, {e.label}: {e.opinion}</span>)}
           <span className="pill warn">Sources disagree on revenue</span>
+          <a className="pill warn" href="/counties/siaya/ledger/#pending-2025">Pending bills at 30 Jun 2025: sources disagree (KSh {m2(P25R.min)}M to KSh {m2(P25R.max)}M)</a>
           <a className="pill warn" href="/data/#pending-2024">Pending bills at 30 Jun 2024: sources disagree (KSh {fmt(pend24.pending_total_m)}M to {budget.pending_bills.opening_30_jun_2024_billion}B)</a>
         </div>
         <p className="rule-note">
@@ -108,6 +121,7 @@ export default function Home() {
         <p className="lead">What the county owes, what is owed to it, and what has stopped midway.</p>
         <div className="tiles">
           <Tile label="Pending bills at 30 June 2024" value={`KSh ${fmt(pend24.pending_total_m)}M`} tone="warn" tag="Sources disagree" note={<>Closing stock in the FY 2023/24 report, the year&apos;s own report (printed page {pend24Src.printed_page}; County Executive only, excluding bills incurred in the year), as in the ten-year series. The FY 2024/25 report gives an opening stock of KSh {budget.pending_bills.opening_30_jun_2024_billion} billion for the same date. Range KSh {fmt(pend24.pending_total_m)} million to KSh {budget.pending_bills.opening_30_jun_2024_billion} billion; see <a href="/data/#pending-2024">case pending-2024</a>. Every year, the roll-forward and the ratios: <Link href="/counties/siaya/analysis/#pending">Siaya analysis</Link>.</>} />
+          <Tile label="Pending bills at 30 June 2025" value={`KSh ${m2(P25R.min)}M to ${m2(P25R.max)}M`} tone="warn" tag="Sources disagree" note={<>{P25.length} printed values for the same date. The lowest, KSh {m2(P25R.min)} million, is the County Executive&apos;s opening stock less payments with no new bills added (Controller of Budget Table 3.457 and the county&apos;s Q4 report); the others add the bills of the year or the County Assembly. Every value with its source, page, scope and basis: <Link href="/counties/siaya/ledger/#pending-2025">fiscal reconciliation</Link>.</>} />
           <Tile label="Settled in FY 2024/25" value={`KSh ${fmt(budget.pending_bills.settled_in_year_million)}M`} note={`About ${settledPct} per cent of the KSh ${budget.pending_bills.opening_30_jun_2024_billion} billion opening balance in the FY 2024/25 report (derived).`} />
           <Tile label="Revenue arrears, 30 June 2025" value={`KSh ${budget.revenue_arrears_30_jun_2025_million}M`} note="Revenue owed to the county by payers but not yet collected." />
           <Tile label="Stalled projects" value={`${budget.stalled_projects.count}`} unit={`worth KSh ${budget.stalled_projects.estimated_value_million}M`} tone="warn" note={`KSh ${budget.stalled_projects.paid_million}M had already been paid on them.`} />
@@ -119,29 +133,13 @@ export default function Home() {
 
       <section className="card" id="audit" aria-labelledby="aud">
         <h2 id="aud">What did the Auditor-General say about Siaya&apos;s accounts?</h2>
-        <p className="lead">The Auditor-General checks whether a county&apos;s accounts are reliable.</p>
-        <div className="tiles">
-          <Tile label={`${audit.entity}, FY ${audit.fiscal_year}`} value={`${audit.opinion} opinion`} tone={auditAmber ? 'warn' : 'good'} note="A qualified opinion means the accounts are fair except for specific matters the auditor describes." />
+        <p className="lead">The Auditor-General checks whether a county&apos;s accounts are reliable. The County Executive and the County Assembly are audited separately. Below is the latest opinion read for each, as printed; every year and every finding is on <Link href="/counties/siaya/audits/">audit findings</Link>.</p>
+        <div className="tiles" id="audit-latest">
+          {AUD.entities.map((e) => (
+            <Tile key={e.entity} label={`${e.label}, FY ${e.fy}`} value={<Reviewed b={e.review}>{() => e.opinion}</Reviewed>} tone={/^Unqualified/.test(e.opinion) ? 'good' : 'warn'} note={<>As printed in the <a href={e.url}>{e.title}</a>, PDF p. {e.page}{e.report_date ? `, dated ${shortDate(e.report_date)}` : ''}. {/^Qualified/.test(e.opinion) ? 'A qualified opinion means the accounts are fair except for specific matters the auditor describes.' : ''}</>} />
+          ))}
         </div>
-        <figure className="figure" style={{ margin: '16px 0 0' }}>
-          <TableWrap label="Pending bills, arrears and stalled projects">
-            <table className="data">
-              <thead><tr><th>Item</th><th>KSh</th><th>What the report says</th></tr></thead>
-              <tbody>
-                {audit.findings.map((f) => (
-                  <tr key={f.label}>
-                    <td>{f.label}</td>
-                    <td className="mono">{f.amount_kes.toLocaleString('en-US')}</td>
-                    <td>{f.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </TableWrap>
-          <div className="src">
-            Source: <a href={audit.source_url}>{audit.source}</a>, Office of the Auditor-General. Retrieved {asOf}. Confidence {audit.confidence} of 5 (primary document). This is the most recent audit report read so far, not the latest published.
-          </div>
-        </figure>
+        <p className="rule-note" id="audit-history-note">Our ten-year audit series for the County Executive ends at FY {AUD.history.fy} ({AUD.history.opinion}); the FY {AUD_LATEST_FY} reports above are newer than that series. Findings, the reasons for each opinion and the years with no report are on <Link href="/counties/siaya/audits/">audit findings</Link>.</p>
       </section>
 
       <section className="card" id="tenyears" aria-labelledby="tenh">
@@ -181,7 +179,7 @@ export default function Home() {
 
       <section className="card" id="learn" aria-labelledby="learnh">
         <h2 id="learnh">What do these budget terms mean?</h2>
-        <p className="lead">Own-source revenue, the share of budget spent (absorption rate), pending bills and audit opinion are explained in plain English on <Link href="/learn/">Learn</Link>.</p>
+        <p className="lead">Own-source revenue, the share of budget spent (absorption rate), pending bills and audit opinion are explained in plain English on <Link href="/learn/">Learn</Link>, including <Link href="/learn/#own-source-revenue">why own-source revenue totals differ</Link> between the Controller of Budget, the county and the Auditor-General.</p>
       </section>
 
       <section className="card" aria-labelledby="where">
