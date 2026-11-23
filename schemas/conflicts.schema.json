@@ -84,7 +84,10 @@
                   "type": "string"
                 },
                 "value": {
-                  "type": ["number", "string"],
+                  "type": [
+                    "number",
+                    "string"
+                  ],
                   "description": "A number, or a short text for cases about a label, citation or licence (no arithmetic is done on text values)"
                 },
                 "url": {
@@ -136,26 +139,123 @@
           },
           "reread": {
             "type": "object",
-            "required": ["on", "method_a", "method_b", "readings", "check", "outcome", "page_image_checked"],
+            "required": [
+              "on",
+              "method_a",
+              "method_b",
+              "readings",
+              "check",
+              "outcome",
+              "page_image_checked"
+            ],
             "additionalProperties": false,
             "properties": {
-              "on": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-              "method_a": { "type": "string" },
-              "method_b": { "type": "string" },
+              "on": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "method_a": {
+                "type": "string"
+              },
+              "method_b": {
+                "type": "string"
+              },
               "readings": {
                 "type": "array",
                 "minItems": 1,
                 "items": {
                   "type": "object",
-                  "required": ["where", "method_a", "method_b"],
+                  "required": [
+                    "where",
+                    "method_a",
+                    "method_b"
+                  ],
                   "additionalProperties": false,
-                  "properties": { "where": { "type": "string" }, "method_a": { "type": "string" }, "method_b": { "type": "string" } }
+                  "properties": {
+                    "where": {
+                      "type": "string"
+                    },
+                    "method_a": {
+                      "type": "string"
+                    },
+                    "method_b": {
+                      "type": "string"
+                    }
+                  }
                 }
               },
-              "check": { "type": "string" },
-              "outcome": { "type": "string" },
-              "page_image_checked": { "type": "boolean", "enum": [false] }
+              "check": {
+                "type": "string"
+              },
+              "outcome": {
+                "type": "string"
+              },
+              "page_image_checked": {
+                "type": "boolean",
+                "enum": [
+                  false
+                ]
+              }
             }
+          },
+          "register": {
+            "type": "string",
+            "enum": [
+              "our_correction",
+              "source_error",
+              "no_change"
+            ],
+            "description": "For a resolved case: our_correction (Takwimu changed a value, label or citation; listed on /corrections/), source_error (the source document is in error; listed on /corrections/ as a source error, not our correction), no_change (rounding or a reading never used)."
+          },
+          "correction": {
+            "type": "object",
+            "required": [
+              "original",
+              "corrected",
+              "reason",
+              "evidence",
+              "date",
+              "affected_pages"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "original": {
+                "type": "string"
+              },
+              "corrected": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "affected_pages": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^/"
+                }
+              },
+              "records": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z-]+\\|.+$"
+                },
+                "description": "dataset|record id of each value the correction changed"
+              }
+            }
+          },
+          "ledger_case": {
+            "type": "string",
+            "pattern": "^D-L\\d{3}-L\\d{3}$"
           }
         }
       }

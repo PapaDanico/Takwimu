@@ -27,6 +27,7 @@
       "additionalProperties": false,
       "properties": {
         "urban_rural_note": { "type": "string", "minLength": 20 },
+        "source_error": { "type": "object", "description": "An error in the source document itself (impossible date, figures that do not agree). The value stays as published.", "required": ["quote", "page", "issue"], "additionalProperties": false, "properties": { "quote": { "type": "string", "minLength": 3 }, "page": { "type": "integer", "minimum": 1 }, "printed_page": { "type": ["integer", "null"] }, "issue": { "type": "string", "minLength": 10 } } },
         "pages": { "type": "object", "description": "PDF and printed page of each population field in the CIDP (sweep D14)", "additionalProperties": { "type": "object", "required": ["pdf_page", "printed_page"], "additionalProperties": false, "properties": { "pdf_page": { "type": "integer", "minimum": 1 }, "printed_page": { "type": "integer", "minimum": 1 } } } },
         "census_2019": { "type": "integer", "minimum": 0 },
         "male_2019": { "type": "integer", "minimum": 0 },

@@ -240,6 +240,7 @@
  "observations": [
   {
    "id": "hiv-prev-2013-scasp",
+   "source_error": { "quote": "The HIV epidemic trend has generally been stable at a rate of 21.4% in 2013, 23.7% in 2014 and 24.8% in 2015(Kenya HIV estimates).", "page": 16, "printed_page": 4, "issue": "The plan's text on the same page gives 21.4% for 2013, while its Table 1 prints 23.7% under 2013 (and the text gives 23.7% for 2014). The table value is kept as printed; the year is flagged, not corrected." },
    "measure": "hiv-prevalence",
    "label": "Adult HIV prevalence",
    "value": 23.7,

@@ -219,6 +219,24 @@ function main() {
     if (c.missing) ok(typeof c.reason === 'string' && c.reason.length > 0, `completeness ${m} ${fy}: missing without a reason`);
   }
 
+  // Case classes (data/ledger-classes.json, scripts/classify-ledger.js): every case classed once, none stale.
+  const cls = read('data/ledger-classes.json');
+  const CLS = ['definitional', 'period or version', 'probable source error', 'resolved by source', 'open'];
+  const caseIds = new Set(data.discrepancies.map((d) => d.case_id));
+  const clsIds = cls.cases.map((c) => c.case_id);
+  ok(clsIds.length === new Set(clsIds).size, 'ledger-classes: a case is classed twice');
+  data.discrepancies.forEach((d) => ok(clsIds.includes(d.case_id), `ledger-classes: ${d.case_id} is not classed (run node scripts/classify-ledger.js)`));
+  cls.cases.forEach((c) => {
+    ok(caseIds.has(c.case_id), `ledger-classes: ${c.case_id} is not a ledger case`);
+    ok(CLS.includes(c.classification), `ledger-classes: ${c.case_id} has class ${c.classification}`);
+    ok(typeof c.reason === 'string' && c.reason.length >= 20 && Array.isArray(c.evidence) && c.evidence.length > 0, `ledger-classes: ${c.case_id} needs a reason and evidence`);
+  });
+  CLS.forEach((k) => ok(cls.meta.counts[k] === cls.cases.filter((c) => c.classification === k).length, `ledger-classes: count for ${k} is stale`));
+  // Pending bills: every stock states its date and accounting basis (owner item 4).
+  data.observations.filter((o) => o.measure === 'pending_bills_close').forEach((o) => ok(/^\d{4}-(06-30|07-01)$/.test(o.as_at || '') && ['cash', 'accrual', 'eligible-verified', 'as reported'].includes(o.accounting_basis), `${o.id}: pending-bills stock needs as_at (30 June or 1 July) and accounting_basis`));
+  // The KSh 545.95 million closing stock (30 June 2025) is held with its printed sources.
+  ['L251', 'L273'].forEach((id) => { const o = byId[id]; ok(o && Math.abs(o.value - 545.95) < 0.01 && o.as_at === '2025-06-30', `${id}: the 545.95 million stock at 30 June 2025 must be held`); });
+
   if (errors.length) {
     console.error(`test-fiscal-ledger: ${errors.length} of ${checks} checks failed`);
     errors.slice(0, 40).forEach((e) => console.error('  - ' + e));

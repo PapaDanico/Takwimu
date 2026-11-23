@@ -1,0 +1,1625 @@
+{
+ "meta": {
+  "title": "Classification of the open discrepancy cases in the Siaya fiscal ledger",
+  "rule": "One entry per case in data/siaya-fiscal-ledger.json discrepancies. The class is Takwimu's reading of what the documents print, with the reason and the pages it rests on; it is not an editorial decision. Both values stay as printed, the case stays in the ledger, and no value changes review state. A case is \"resolved by source\" only when a printed source settles it; each such case is logged in data/conflicts.json and tested in scripts/test-reconciliation.js.",
+  "classes": {
+   "definitional": "The two values count different things (for example FIF in or out, revenue estimates against the expenditure budget, County Executive against the whole county government, bills of the year left out), as the documents themselves state.",
+   "period or version": "A different date, budget version or vintage: for example a later report restating the year, or the original against the supplementary budget.",
+   "probable source error": "One document gives two figures for the same thing and date and does not reconcile them, or the auditor reports that the county's records disagree.",
+   "resolved by source": "A printed source settles which figure is internally consistent.",
+   "open": "Nothing printed explains the difference yet."
+  },
+  "generated_by": "scripts/classify-ledger.js",
+  "updated": "2026-11-23",
+  "counts": {
+   "definitional": 42,
+   "period or version": 17,
+   "probable source error": 6,
+   "resolved by source": 1,
+   "open": 76
+  },
+  "total": 142
+ },
+ "cases": [
+  {
+   "case_id": "D-L025-L047",
+   "measure": "budget_total",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "The county Q4 report states that its 10,542,130,283 are revenue estimates including a balance brought forward of KSh 1,568,905,262; the Controller of Budget figure is the expenditure budget, which the same county report gives as 9,761,123,387 (PDF p. 6).",
+   "evidence": [
+    "L047, L048",
+    "L025: cob-report-2023-24 PDF p. 510",
+    "L047: GOV-02-FY2023-24-Q4 PDF p. 2 (\"The approved revenue estimates for financial year 2023/24 were Kshs. 10,542,130,283\")"
+   ]
+  },
+  {
+   "case_id": "D-L037-L047",
+   "measure": "budget_total",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "Revenue estimates including the balance brought forward (L047) against the expenditure budget (L037, which matches the county's own 9,761,123,387 on PDF p. 6).",
+   "evidence": [
+    "L047, L048",
+    "L037: cob-report-2023-24 PDF p. 30 (\"9,761.12\")",
+    "L047: GOV-02-FY2023-24-Q4 PDF p. 2 (\"The approved revenue estimates for financial year 2023/24 were Kshs. 10,542,130,283\")"
+   ]
+  },
+  {
+   "case_id": "D-L047-L048",
+   "measure": "budget_total",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "Same report: page 2 gives revenue estimates including the balance brought forward; page 6 gives the expenditure (planned) budget.",
+   "evidence": [
+    "L047, L048",
+    "L047: GOV-02-FY2023-24-Q4 PDF p. 2 (\"The approved revenue estimates for financial year 2023/24 were Kshs. 10,542,130,283\")",
+    "L048: GOV-02-FY2023-24-Q4 PDF p. 6 (\"against a planned budget of Kshs.9,761,123,387\")"
+   ]
+  },
+  {
+   "case_id": "D-L044-L045",
+   "measure": "budget_total",
+   "period": "FY 2019/20",
+   "classification": "definitional",
+   "reason": "Different entity scope: the county paper gives the whole county government's final budget; the Senate committee quotes the County Executive's final budget from the audit.",
+   "evidence": [
+    "L044, L045 scope",
+    "L044: siaya-brop-2019-20 PDF p. 11 (County BROP: supplementary (final) budget after a cut of KSh 341.58m)",
+    "L045: senate-cpac-2019-20 PDF p. 517 (Final budget under exchequer releases, as quoted from the audit basis for opinion (County Executive))"
+   ]
+  },
+  {
+   "case_id": "D-L093-L101",
+   "measure": "conditional_grants_budgeted",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "The Controller of Budget figure (874.01) equals the county's \"expected receipts at 30 June 2024\" (874,012,300, Q4 PDF p. 3); 950,205,559 is the approved revenue estimate.",
+   "evidence": [
+    "L102",
+    "L093: cob-report-2023-24 PDF p. 511 (\"Kshs.874.01 million as additional allocations/conditional grants (9 per cent)\")",
+    "L101: GOV-02-FY2023-24-Q4 PDF p. 2 (\"Conditional Grant 950,205,559 9.01\")"
+   ]
+  },
+  {
+   "case_id": "D-L093-L105",
+   "measure": "conditional_grants_budgeted",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "Expected receipts (874.01, as in the county Q4 report) against the approved baseline estimate of 950,205,559 printed in the FY 2024/25 paper.",
+   "evidence": [
+    "L102, L105",
+    "L093: cob-report-2023-24 PDF p. 511 (\"Kshs.874.01 million as additional allocations/conditional grants (9 per cent)\")",
+    "L105: GOV-03 PDF p. 13 (\"Sub-Total=Conditional Grant =B 950,205,559 698,115,420\")"
+   ]
+  },
+  {
+   "case_id": "D-L101-L102",
+   "measure": "conditional_grants_budgeted",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "Same report: approved revenue estimates (p. 2) against expected receipts at 30 June 2024 (p. 3).",
+   "evidence": [
+    "L101, L102",
+    "L101: GOV-02-FY2023-24-Q4 PDF p. 2 (\"Conditional Grant 950,205,559 9.01\")",
+    "L102: GOV-02-FY2023-24-Q4 PDF p. 3 (\"Conditional Grants 874,012,300 466,543,935 -407,468,365\")"
+   ]
+  },
+  {
+   "case_id": "D-L102-L105",
+   "measure": "conditional_grants_budgeted",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "Expected receipts at 30 June 2024 against the approved baseline estimate.",
+   "evidence": [
+    "L102, L105",
+    "L102: GOV-02-FY2023-24-Q4 PDF p. 3 (\"Conditional Grants 874,012,300 466,543,935 -407,468,365\")",
+    "L105: GOV-03 PDF p. 13 (\"Sub-Total=Conditional Grant =B 950,205,559 698,115,420\")"
+   ]
+  },
+  {
+   "case_id": "D-L095-L104",
+   "measure": "conditional_grants_received",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 2.36 per cent difference.",
+   "evidence": [
+    "L095: cob-report-2023-24 PDF p. 511 (\"Kshs.477.54 million as additional allocations/conditional grants\")",
+    "L104: GOV-02-FY2023-24-Q4 PDF p. 5 (\"the County Government had projected to receive Kshs.874,012,300 however Ksh.466,543,935 was disbursed\")"
+   ]
+  },
+  {
+   "case_id": "D-L098-L108",
+   "measure": "equitable_share_received",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 7.92 per cent difference.",
+   "evidence": [
+    "L098: cob-report-2024-25 PDF p. 474 (\"The total revenue consisted of Kshs.7.88 billion from the equitable share\")",
+    "L108: GOV-03 PDF p. 16 (\"Equitable Share 7,545,450,410 7,301,473,431 -243,976,979\")"
+   ]
+  },
+  {
+   "case_id": "D-L108-L113",
+   "measure": "equitable_share_received",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "County Government against County Government; neither document states a basis that explains a 7.96 per cent difference.",
+   "evidence": [
+    "L108: GOV-03 PDF p. 16 (\"Equitable Share 7,545,450,410 7,301,473,431 -243,976,979\")",
+    "L113: GOV-02-FY2024-25-Q4 PDF p. 3 (\"Equitable Share 7,545,380,269 7,882,514,002 337,133,733\")"
+   ]
+  },
+  {
+   "case_id": "D-L099-L110",
+   "measure": "conditional_grants_received",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 149.42 per cent difference.",
+   "evidence": [
+    "L099: cob-report-2024-25 PDF p. 474 (\"additional allocations from the national government and development partners of Kshs.111 million\")",
+    "L110: GOV-03 PDF p. 16 (\"Conditional Grant 698,115,420 276,859,695 -421,255,725\")"
+   ]
+  },
+  {
+   "case_id": "D-L110-L114",
+   "measure": "conditional_grants_received",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "County Government against County Government; neither document states a basis that explains a 148.33 per cent difference.",
+   "evidence": [
+    "L110: GOV-03 PDF p. 16 (\"Conditional Grant 698,115,420 276,859,695 -421,255,725\")",
+    "L114: GOV-02-FY2024-25-Q4 PDF p. 3 (\"Conditional Grants 698,115,690.00 111,490,421 -586,625,269\")"
+   ]
+  },
+  {
+   "case_id": "D-L117-L119",
+   "measure": "conditional_grants_budgeted",
+   "period": "FY 2025/26",
+   "classification": "period or version",
+   "reason": "Different budget versions: supplementary budget targets against the original approved budget.",
+   "evidence": [
+    "L117, L119",
+    "L117: GOV-02-FY2025-26-Q4 PDF p. 3 (\"Sub-Total 1,409,274,562 907,998,733 907,998,733 64.43\")",
+    "L119: GOV-02-FY2025-26-Q1 PDF p. 2 (\"additional allocations of Kshs.962 million (8 per cent)\")"
+   ]
+  },
+  {
+   "case_id": "D-L123-L143",
+   "measure": "osr_total_actual",
+   "period": "FY 2015/16",
+   "classification": "period or version",
+   "reason": "A later Controller of Budget report (FY 2018/19 chart) restates FY 2015/16 own-source revenue.",
+   "evidence": [
+    "L143; conflict osr-2015-16",
+    "L123: cob-report-2015-16 PDF p. 275 (One figure per year; the report does not split ordinary revenue and health facility revenue)",
+    "L143: cob-report-2018-19 PDF p. 270 (Chart label in a later CoB report)"
+   ]
+  },
+  {
+   "case_id": "D-L131-L144",
+   "measure": "osr_total_actual",
+   "period": "FY 2019/20",
+   "classification": "open",
+   "reason": "Case osr-2019-20: the Controller of Budget and the county's Budget Review and Outlook Paper differ by 2.7 per cent; neither explains it.",
+   "evidence": [
+    "conflict osr-2019-20",
+    "L131: cob-report-2020-21 PDF p. 374 (One figure per year; the report does not split ordinary revenue and health facility revenue)",
+    "L144: siaya-brop-2019-20 PDF p. 15 (County BROP; printed 184,249,748)"
+   ]
+  },
+  {
+   "case_id": "D-L132-L171",
+   "measure": "osr_total_actual",
+   "period": "FY 2020/21",
+   "classification": "definitional",
+   "reason": "The county's later chart is a total series of own-source revenue plus A-i-A, FIF and health income; the Controller of Budget's FY 2020/21 figure does not say what it includes.",
+   "evidence": [
+    "L171 basis",
+    "L132: cob-report-2020-21 PDF p. 372 (One figure per year; the report does not split ordinary revenue and health facility revenue)",
+    "L171: GOV-02-FY2025-26-Q4 PDF p. 4 (\"chart data label 434.36\")"
+   ]
+  },
+  {
+   "case_id": "D-L138-L145",
+   "measure": "osr_total_actual",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Case osr-2023-24: the FY 2024/25 report quotes 427.95 for the prior year without a split; the gap is not explained by facility income alone.",
+   "evidence": [
+    "conflict osr-2023-24",
+    "L138: cob-report-2023-24 PDF p. 511 (Includes FIF/A-i-A)",
+    "L145: cob-report-2024-25 PDF p. 476 (Figure quoted in a later CoB report)"
+   ]
+  },
+  {
+   "case_id": "D-L138-L159",
+   "measure": "osr_total_actual",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L138: cob-report-2023-24 PDF p. 511 (Includes FIF/A-i-A)",
+    "L159: GOV-02-FY2023-24-Q4 PDF p. 3 (\"the County Government realized 79.16 percent of targeted OSR translating to collection of Kshs.601,680,094\")"
+   ]
+  },
+  {
+   "case_id": "D-L145-L149",
+   "measure": "osr_total_actual",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Case osr-2023-24: the later report does not give a split, and the gap is not explained by facility income alone (610.74 minus 388.63 is 222.11, not 427.95).",
+   "evidence": [
+    "conflict osr-2023-24",
+    "L145: cob-report-2024-25 PDF p. 476 (Figure quoted in a later CoB report)",
+    "L149: cob-report-2023-24 PDF p. 26 (\"610,737,745\")"
+   ]
+  },
+  {
+   "case_id": "D-L145-L159",
+   "measure": "osr_total_actual",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Case osr-2023-24: the county's 601.68 includes FIF, Linda Mama and NHIF capitation; the later CoB figure of 427.95 gives no basis.",
+   "evidence": [
+    "conflict osr-2023-24",
+    "L145: cob-report-2024-25 PDF p. 476 (Figure quoted in a later CoB report)",
+    "L159: GOV-02-FY2023-24-Q4 PDF p. 3 (\"the County Government realized 79.16 percent of targeted OSR translating to collection of Kshs.601,680,094\")"
+   ]
+  },
+  {
+   "case_id": "D-L145-L174",
+   "measure": "osr_total_actual",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Case osr-2023-24: the county's later chart gives 610.74, as the year's own CoB report does; the 427.95 in the next CoB report is unexplained.",
+   "evidence": [
+    "conflict osr-2023-24",
+    "L145: cob-report-2024-25 PDF p. 476 (Figure quoted in a later CoB report)",
+    "L174: GOV-02-FY2025-26-Q4 PDF p. 4 (\"chart data label 610.74\")"
+   ]
+  },
+  {
+   "case_id": "D-L149-L159",
+   "measure": "osr_total_actual",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L149: cob-report-2023-24 PDF p. 26 (\"610,737,745\")",
+    "L159: GOV-02-FY2023-24-Q4 PDF p. 3 (\"the County Government realized 79.16 percent of targeted OSR translating to collection of Kshs.601,680,094\")"
+   ]
+  },
+  {
+   "case_id": "D-L159-L174",
+   "measure": "osr_total_actual",
+   "period": "FY 2023/24",
+   "classification": "period or version",
+   "reason": "The county's FY 2025/26 Q4 report restates FY 2023/24 as 610.74, the Controller of Budget's figure, in place of the 601.68 in its own FY 2023/24 Q4 report.",
+   "evidence": [
+    "L159, L174",
+    "L159: GOV-02-FY2023-24-Q4 PDF p. 3 (\"the County Government realized 79.16 percent of targeted OSR translating to collection of Kshs.601,680,094\")",
+    "L174: GOV-02-FY2025-26-Q4 PDF p. 4 (\"chart data label 610.74\")"
+   ]
+  },
+  {
+   "case_id": "D-L140-L162",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L140: cob-report-2024-25 PDF p. 476 (Includes FIF/A-i-A)",
+    "L162: GOV-03 PDF p. 16 (\"Total OSR 1,044,061,306 757,570,621 -286,490,685\")"
+   ]
+  },
+  {
+   "case_id": "D-L140-L166",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L140: cob-report-2024-25 PDF p. 476 (Includes FIF/A-i-A)",
+    "L166: GOV-02-FY2024-25-Q4 PDF p. 4 (\"the County Government realized 68 percent of targeted OSR translating to collection of Kshs.757,570,621\")"
+   ]
+  },
+  {
+   "case_id": "D-L140-L170",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L140: cob-report-2024-25 PDF p. 476 (Includes FIF/A-i-A)",
+    "L170: GOV-02-FY2025-26-Q4 PDF p. 4 (\"an increase of 22.91 per cent compared to Kshs.712.82 million realised in a similar period in FY 2024/25\")"
+   ]
+  },
+  {
+   "case_id": "D-L153-L162",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L153: cob-report-2024-25 PDF p. 46 (\"436.68\")",
+    "L162: GOV-03 PDF p. 16 (\"Total OSR 1,044,061,306 757,570,621 -286,490,685\")"
+   ]
+  },
+  {
+   "case_id": "D-L153-L166",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L153: cob-report-2024-25 PDF p. 46 (\"436.68\")",
+    "L166: GOV-02-FY2024-25-Q4 PDF p. 4 (\"the County Government realized 68 percent of targeted OSR translating to collection of Kshs.757,570,621\")"
+   ]
+  },
+  {
+   "case_id": "D-L153-L170",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L153: cob-report-2024-25 PDF p. 46 (\"436.68\")",
+    "L170: GOV-02-FY2025-26-Q4 PDF p. 4 (\"an increase of 22.91 per cent compared to Kshs.712.82 million realised in a similar period in FY 2024/25\")"
+   ]
+  },
+  {
+   "case_id": "D-L162-L170",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "period or version",
+   "reason": "The county's FY 2025/26 report quotes FY 2024/25 own-source revenue a year later (712.82) against 757.57 in its earlier documents.",
+   "evidence": [
+    "L162, L170",
+    "L162: GOV-03 PDF p. 16 (\"Total OSR 1,044,061,306 757,570,621 -286,490,685\")",
+    "L170: GOV-02-FY2025-26-Q4 PDF p. 4 (\"an increase of 22.91 per cent compared to Kshs.712.82 million realised in a similar period in FY 2024/25\")"
+   ]
+  },
+  {
+   "case_id": "D-L166-L170",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "period or version",
+   "reason": "The county's FY 2025/26 report quotes FY 2024/25 own-source revenue a year later (712.82) against 757.57 in its Q4 report.",
+   "evidence": [
+    "L166, L170",
+    "L166: GOV-02-FY2024-25-Q4 PDF p. 4 (\"the County Government realized 68 percent of targeted OSR translating to collection of Kshs.757,570,621\")",
+    "L170: GOV-02-FY2025-26-Q4 PDF p. 4 (\"an increase of 22.91 per cent compared to Kshs.712.82 million realised in a similar period in FY 2024/25\")"
+   ]
+  },
+  {
+   "case_id": "D-L155-L164",
+   "measure": "osr_fif_aia_actual",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L155: cob-report-2024-25 PDF p. 46 (\"199.84\")",
+    "L164: GOV-03 PDF p. 16 (\"OSR (A-in-A) 434,671,010 521,068,230 86,397,220\")"
+   ]
+  },
+  {
+   "case_id": "D-L155-L168",
+   "measure": "osr_fif_aia_actual",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "The county figure counts all appropriations-in-aid, including hospital receipts from SHA/SHIF, Linda Mama and NHIF capitation; the Controller of Budget counts own-source revenue with its narrower FIF/A-i-A line.",
+   "evidence": [
+    "L155: cob-report-2024-25 PDF p. 46 (\"199.84\")",
+    "L168: GOV-02-FY2024-25-Q4 PDF p. 6 (\"Sub Total 434,671,010 534,671,010 521,068,230 -13,602,780\")"
+   ]
+  },
+  {
+   "case_id": "D-L156-L165",
+   "measure": "osr_total_target",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "The Controller of Budget's target (927.34) matches neither the county's original estimates (1,044.06) nor its supplementary estimates (1,669.37).",
+   "evidence": [
+    "L156, L165, L169; conflict budget-financing-osr-2024-25",
+    "L156: cob-report-2024-25 PDF p. 46 (\"927.34\")",
+    "L165: GOV-03 PDF p. 16 (\"Total OSR 1,044,061,306 757,570,621 -286,490,685\")"
+   ]
+  },
+  {
+   "case_id": "D-L156-L169",
+   "measure": "osr_total_target",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "The Controller of Budget's target matches neither county estimates column; budget version not stated by the CoB.",
+   "evidence": [
+    "L156, L165, L169; conflict budget-financing-osr-2024-25",
+    "L156: cob-report-2024-25 PDF p. 46 (\"927.34\")",
+    "L169: GOV-02-FY2024-25-Q4 PDF p. 6 (\"Total OSR 1,044,061,306 1,669,374,897 757,570,621 -911,804,276\")"
+   ]
+  },
+  {
+   "case_id": "D-L165-L169",
+   "measure": "osr_total_target",
+   "period": "FY 2024/25",
+   "classification": "period or version",
+   "reason": "Different budget versions in county documents: original estimates against the supplementary estimates column.",
+   "evidence": [
+    "L165, L169",
+    "L165: GOV-03 PDF p. 16 (\"Total OSR 1,044,061,306 757,570,621 -286,490,685\")",
+    "L169: GOV-02-FY2024-25-Q4 PDF p. 6 (\"Total OSR 1,044,061,306 1,669,374,897 757,570,621 -911,804,276\")"
+   ]
+  },
+  {
+   "case_id": "D-L178-L179",
+   "measure": "osr_total_target",
+   "period": "FY 2025/26",
+   "classification": "period or version",
+   "reason": "Different budget versions: supplementary budget against the original approved budget.",
+   "evidence": [
+    "L178, L179",
+    "L178: GOV-02-FY2025-26-Q4 PDF p. 2 (\"Kshs.3.25 billion (24.31 per cent) generated as own-source revenue\")",
+    "L179: GOV-02-FY2025-26-Q1 PDF p. 2 (\"Kshs.3.11 billion (24 per cent) generated as own-source revenue\")"
+   ]
+  },
+  {
+   "case_id": "D-L205-L226",
+   "measure": "expenditure_total",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 10.13 per cent difference.",
+   "evidence": [
+    "L205: cob-report-2023-24 PDF p. 513",
+    "L226: GOV-02-FY2023-24-Q4 PDF p. 6 (\"Total 9,761,123,388 8,402,772,359 -1,358,351,029 86.1%\")"
+   ]
+  },
+  {
+   "case_id": "D-L217-L226",
+   "measure": "expenditure_total",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 10.19 per cent difference.",
+   "evidence": [
+    "L217: cob-report-2023-24 PDF p. 30 (\"7,625.87\")",
+    "L226: GOV-02-FY2023-24-Q4 PDF p. 6 (\"Total 9,761,123,388 8,402,772,359 -1,358,351,029 86.1%\")"
+   ]
+  },
+  {
+   "case_id": "D-L206-L227",
+   "measure": "expenditure_recurrent",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 11.15 per cent difference.",
+   "evidence": [
+    "L206: cob-report-2023-24 PDF p. 513",
+    "L227: GOV-02-FY2023-24-Q4 PDF p. 6 (\"Total Rec 5,909,247,164 5,712,964,967 -196,282,197 96.7%\")"
+   ]
+  },
+  {
+   "case_id": "D-L218-L227",
+   "measure": "expenditure_recurrent",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 11.18 per cent difference.",
+   "evidence": [
+    "L218: cob-report-2023-24 PDF p. 30 (\"5,138.67\")",
+    "L227: GOV-02-FY2023-24-Q4 PDF p. 6 (\"Total Rec 5,909,247,164 5,712,964,967 -196,282,197 96.7%\")"
+   ]
+  },
+  {
+   "case_id": "D-L207-L228",
+   "measure": "expenditure_development",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 8.02 per cent difference.",
+   "evidence": [
+    "L207: cob-report-2023-24 PDF p. 513",
+    "L228: GOV-02-FY2023-24-Q4 PDF p. 6 (\"DEV 3,851,876,224 2,689,807,392 -1,162,068,832 69.8%\")"
+   ]
+  },
+  {
+   "case_id": "D-L219-L228",
+   "measure": "expenditure_development",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 8.15 per cent difference.",
+   "evidence": [
+    "L219: cob-report-2023-24 PDF p. 30 (\"2,487.20\")",
+    "L228: GOV-02-FY2023-24-Q4 PDF p. 6 (\"DEV 3,851,876,224 2,689,807,392 -1,162,068,832 69.8%\")"
+   ]
+  },
+  {
+   "case_id": "D-L208-L229",
+   "measure": "expenditure_total",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 15.35 per cent difference.",
+   "evidence": [
+    "L208: cob-report-2024-25 PDF p. 478",
+    "L229: GOV-03 PDF p. 19 (\"Total 10,948,133,478 8,939,548,649 -2,008,584,829 81.7%\")"
+   ]
+  },
+  {
+   "case_id": "D-L208-L233",
+   "measure": "expenditure_total",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L208 covers the whole county government (Executive and Assembly); L233 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L208: cob-report-2024-25 PDF p. 478",
+    "L233: GOV-02-FY2024-25-Q4 PDF p. 7 (\"Total cumulative expenditure for the period ending 31st June,2025 amounted to Kshs.6,820,231,145.03\")"
+   ]
+  },
+  {
+   "case_id": "D-L220-L229",
+   "measure": "expenditure_total",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 15.37 per cent difference.",
+   "evidence": [
+    "L220: cob-report-2024-25 PDF p. 52 (\"7,748.65\")",
+    "L229: GOV-03 PDF p. 19 (\"Total 10,948,133,478 8,939,548,649 -2,008,584,829 81.7%\")"
+   ]
+  },
+  {
+   "case_id": "D-L220-L233",
+   "measure": "expenditure_total",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L220 covers the whole county government (Executive and Assembly); L233 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L220: cob-report-2024-25 PDF p. 52 (\"7,748.65\")",
+    "L233: GOV-02-FY2024-25-Q4 PDF p. 7 (\"Total cumulative expenditure for the period ending 31st June,2025 amounted to Kshs.6,820,231,145.03\")"
+   ]
+  },
+  {
+   "case_id": "D-L229-L233",
+   "measure": "expenditure_total",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L229 covers the whole county government (Executive and Assembly); L233 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L229: GOV-03 PDF p. 19 (\"Total 10,948,133,478 8,939,548,649 -2,008,584,829 81.7%\")",
+    "L233: GOV-02-FY2024-25-Q4 PDF p. 7 (\"Total cumulative expenditure for the period ending 31st June,2025 amounted to Kshs.6,820,231,145.03\")"
+   ]
+  },
+  {
+   "case_id": "D-L209-L230",
+   "measure": "expenditure_recurrent",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 23.78 per cent difference.",
+   "evidence": [
+    "L209: cob-report-2024-25 PDF p. 478",
+    "L230: GOV-03 PDF p. 19 (\"Total Rec 6,073,307,294 6,176,645,261 103,337,967 101.7%\")"
+   ]
+  },
+  {
+   "case_id": "D-L209-L234",
+   "measure": "expenditure_recurrent",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L209 covers the whole county government (Executive and Assembly); L234 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L209: cob-report-2024-25 PDF p. 478",
+    "L234: GOV-02-FY2024-25-Q4 PDF p. 7 (\"recurrent expenditure of Kshs.4,216,985,254.38\")"
+   ]
+  },
+  {
+   "case_id": "D-L221-L230",
+   "measure": "expenditure_recurrent",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 23.73 per cent difference.",
+   "evidence": [
+    "L221: cob-report-2024-25 PDF p. 52 (\"4,991.98\")",
+    "L230: GOV-03 PDF p. 19 (\"Total Rec 6,073,307,294 6,176,645,261 103,337,967 101.7%\")"
+   ]
+  },
+  {
+   "case_id": "D-L221-L234",
+   "measure": "expenditure_recurrent",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L221 covers the whole county government (Executive and Assembly); L234 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L221: cob-report-2024-25 PDF p. 52 (\"4,991.98\")",
+    "L234: GOV-02-FY2024-25-Q4 PDF p. 7 (\"recurrent expenditure of Kshs.4,216,985,254.38\")"
+   ]
+  },
+  {
+   "case_id": "D-L230-L234",
+   "measure": "expenditure_recurrent",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L230 covers the whole county government (Executive and Assembly); L234 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L230: GOV-03 PDF p. 19 (\"Total Rec 6,073,307,294 6,176,645,261 103,337,967 101.7%\")",
+    "L234: GOV-02-FY2024-25-Q4 PDF p. 7 (\"recurrent expenditure of Kshs.4,216,985,254.38\")"
+   ]
+  },
+  {
+   "case_id": "D-L210-L232",
+   "measure": "expenditure_development",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 3.2 per cent difference.",
+   "evidence": [
+    "L210: cob-report-2024-25 PDF p. 478",
+    "L232: GOV-03 PDF p. 22 (\"Actual expenditure on development budget was Kshs.2,674,325,435 against budget of Kshs. 4,874,826,184\")"
+   ]
+  },
+  {
+   "case_id": "D-L210-L235",
+   "measure": "expenditure_development",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L210 covers the whole county government (Executive and Assembly); L235 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L210: cob-report-2024-25 PDF p. 478",
+    "L235: GOV-02-FY2024-25-Q4 PDF p. 7 (\"development of Kshs. 2,603,246,890.65\")"
+   ]
+  },
+  {
+   "case_id": "D-L222-L232",
+   "measure": "expenditure_development",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 3.08 per cent difference.",
+   "evidence": [
+    "L222: cob-report-2024-25 PDF p. 52 (\"2,756.67\")",
+    "L232: GOV-03 PDF p. 22 (\"Actual expenditure on development budget was Kshs.2,674,325,435 against budget of Kshs. 4,874,826,184\")"
+   ]
+  },
+  {
+   "case_id": "D-L222-L235",
+   "measure": "expenditure_development",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L222 covers the whole county government (Executive and Assembly); L235 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L222: cob-report-2024-25 PDF p. 52 (\"2,756.67\")",
+    "L235: GOV-02-FY2024-25-Q4 PDF p. 7 (\"development of Kshs. 2,603,246,890.65\")"
+   ]
+  },
+  {
+   "case_id": "D-L231-L232",
+   "measure": "expenditure_development",
+   "period": "FY 2024/25",
+   "classification": "resolved by source",
+   "reason": "The paper's Tables 9 and 11 both print development spending of 2,762,903,388, and with recurrent spending of 6,176,645,261 they add exactly to the printed total of 8,939,548,649; the 2,674,325,435 in the text on PDF p. 22 is the figure the tables do not support.",
+   "evidence": [
+    "conflict cbrop-development-spending-2024-25",
+    "L231: GOV-03 PDF p. 19 (\"DEV 4,874,826,184 2,762,903,388 -2,111,922,796 56.7%\")",
+    "L232: GOV-03 PDF p. 22 (\"Actual expenditure on development budget was Kshs.2,674,325,435 against budget of Kshs. 4,874,826,184\")"
+   ]
+  },
+  {
+   "case_id": "D-L231-L235",
+   "measure": "expenditure_development",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L231 covers the whole county government (Executive and Assembly); L235 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L231: GOV-03 PDF p. 19 (\"DEV 4,874,826,184 2,762,903,388 -2,111,922,796 56.7%\")",
+    "L235: GOV-02-FY2024-25-Q4 PDF p. 7 (\"development of Kshs. 2,603,246,890.65\")"
+   ]
+  },
+  {
+   "case_id": "D-L232-L235",
+   "measure": "expenditure_development",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Different entity scope: L232 covers the whole county government (Executive and Assembly); L235 covers the County Executive only (the quarterly lines of the county report; its chapter heading says Executive and Assembly).",
+   "evidence": [
+    "L232: GOV-03 PDF p. 22 (\"Actual expenditure on development budget was Kshs.2,674,325,435 against budget of Kshs. 4,874,826,184\")",
+    "L235: GOV-02-FY2024-25-Q4 PDF p. 7 (\"development of Kshs. 2,603,246,890.65\")"
+   ]
+  },
+  {
+   "case_id": "D-L242-L258",
+   "measure": "pending_bills_close",
+   "period": "FY 2018/19",
+   "classification": "open",
+   "reason": "Controller of Budget against Senate committee; neither document states a basis that explains a 15.23 per cent difference.",
+   "evidence": [
+    "L242: cob-report-2018-19 PDF p. 271 (Sum of the published recurrent and development parts (history.json roll-forward))",
+    "L258: senate-cpac-2019-20 PDF p. 523 (\"The creditor's ledger was not provided to ascertain the creditor's movement from Kshs.386, 787,728 as at 30 June, 2019 to Kshs.222, 333,808 \")"
+   ]
+  },
+  {
+   "case_id": "D-L243-L244",
+   "measure": "pending_bills_close",
+   "period": "FY 2020/21",
+   "classification": "period or version",
+   "reason": "The FY 2021/22 report restates the stock at 30 June 2021 as its opening balance (602.08) against 1,060.92 in the FY 2020/21 report.",
+   "evidence": [
+    "L243, L244; conflict pending-2021",
+    "L243: cob-report-2020-21 PDF p. 374 (Sum of the published recurrent and development parts (history.json roll-forward))",
+    "L244: cob-report-2021-22 PDF p. 409 (Opening stock at 1 July 2021 in the FY 2021/22 report, Table 3.251 column A)"
+   ]
+  },
+  {
+   "case_id": "D-L243-L261",
+   "measure": "pending_bills_close",
+   "period": "FY 2020/21",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L243: cob-report-2020-21 PDF p. 374 (Sum of the published recurrent and development parts (history.json roll-forward))",
+    "L261: audit-2020-21 PDF p. 11 (\"to Kshs.9l8, 598,546. 15 in the Financial Year 202012021\")"
+   ]
+  },
+  {
+   "case_id": "D-L243-L262",
+   "measure": "pending_bills_close",
+   "period": "FY 2020/21",
+   "classification": "open",
+   "reason": "Controller of Budget against Auditor-General; neither document states a basis that explains a 76.31 per cent difference.",
+   "evidence": [
+    "L243: cob-report-2020-21 PDF p. 374 (Sum of the published recurrent and development parts (history.json roll-forward))",
+    "L262: audit-2020-21 PDF p. 37 (\"Annexure 2 to the financial statements reflects pending bills amounting to Kshs.601,738,508\")"
+   ]
+  },
+  {
+   "case_id": "D-L244-L261",
+   "measure": "pending_bills_close",
+   "period": "FY 2020/21",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L244: cob-report-2021-22 PDF p. 409 (Opening stock at 1 July 2021 in the FY 2021/22 report, Table 3.251 column A)",
+    "L261: audit-2020-21 PDF p. 11 (\"to Kshs.9l8, 598,546. 15 in the Financial Year 202012021\")"
+   ]
+  },
+  {
+   "case_id": "D-L261-L262",
+   "measure": "pending_bills_close",
+   "period": "FY 2020/21",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L261: audit-2020-21 PDF p. 11 (\"to Kshs.9l8, 598,546. 15 in the Financial Year 202012021\")",
+    "L262: audit-2020-21 PDF p. 37 (\"Annexure 2 to the financial statements reflects pending bills amounting to Kshs.601,738,508\")"
+   ]
+  },
+  {
+   "case_id": "D-L245-L246",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "period or version",
+   "reason": "The FY 2022/23 report restates the stock at 30 June 2022 as its opening balance (840.67) against 705.38 in the year's own report.",
+   "evidence": [
+    "L245, L246; conflict pending-2022",
+    "L245: cob-report-2021-22 PDF p. 409 (Table 3.251 column E)",
+    "L246: cob-report-2022-23 PDF p. 578"
+   ]
+  },
+  {
+   "case_id": "D-L245-L253",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "Both are printed in cob-report-2021-22 (PDF p. 409 and p. 35); one covers the whole county government (Executive and Assembly) and the other does not state its scope, so the difference may be one of scope. Not confirmed.",
+   "evidence": [
+    "L245: cob-report-2021-22 PDF p. 409 (Table 3.251 column E)",
+    "L253: cob-report-2021-22 PDF p. 35 (\"751,990,941\")"
+   ]
+  },
+  {
+   "case_id": "D-L245-L263",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "Controller of Budget against Auditor-General; neither document states a basis that explains a 16.08 per cent difference.",
+   "evidence": [
+    "L245: cob-report-2021-22 PDF p. 409 (Table 3.251 column E)",
+    "L263: audit-2021-22 PDF p. 48 (\"pending accounts payable balance of Kshs.818,803,232 as disclosed in Annex ll\")"
+   ]
+  },
+  {
+   "case_id": "D-L245-L264",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "Controller of Budget against Auditor-General; neither document states a basis that explains a 4.73 per cent difference.",
+   "evidence": [
+    "L245: cob-report-2021-22 PDF p. 409 (Table 3.251 column E)",
+    "L264: audit-2021-22 PDF p. 48 (\"while the supporting schedules reflect a balance of Kshs.738,755,483\")"
+   ]
+  },
+  {
+   "case_id": "D-L245-L265",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L245: cob-report-2021-22 PDF p. 409 (Table 3.251 column E)",
+    "L265: audit-2021-22 PDF p. 12 (\"to Kshs.959, 087,583.24 in the Financial Year 2021/2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L245-L276",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "probable source error",
+   "reason": "Both values are printed in cob-report-2021-22 for the same measure and year (PDF p. 409 and p. 407), and the document does not reconcile them.",
+   "evidence": [
+    "L245: cob-report-2021-22 PDF p. 409 (Table 3.251 column E)",
+    "L276: cob-report-2021-22 PDF p. 407 (\"High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L246-L253",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "period or version",
+   "reason": "Two Controller of Budget reports of different years give the same date different values (FY 2022/23 and FY 2021/22 reports); the later report restates it.",
+   "evidence": [
+    "L246: cob-report-2022-23 PDF p. 578",
+    "L253: cob-report-2021-22 PDF p. 35 (\"751,990,941\")"
+   ]
+  },
+  {
+   "case_id": "D-L246-L263",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "Controller of Budget against Auditor-General; neither document states a basis that explains a 2.67 per cent difference.",
+   "evidence": [
+    "L246: cob-report-2022-23 PDF p. 578",
+    "L263: audit-2021-22 PDF p. 48 (\"pending accounts payable balance of Kshs.818,803,232 as disclosed in Annex ll\")"
+   ]
+  },
+  {
+   "case_id": "D-L246-L264",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "Controller of Budget against Auditor-General; neither document states a basis that explains a 13.8 per cent difference.",
+   "evidence": [
+    "L246: cob-report-2022-23 PDF p. 578",
+    "L264: audit-2021-22 PDF p. 48 (\"while the supporting schedules reflect a balance of Kshs.738,755,483\")"
+   ]
+  },
+  {
+   "case_id": "D-L246-L265",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L246: cob-report-2022-23 PDF p. 578",
+    "L265: audit-2021-22 PDF p. 12 (\"to Kshs.959, 087,583.24 in the Financial Year 2021/2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L246-L276",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "period or version",
+   "reason": "Two Controller of Budget reports of different years give the same date different values (FY 2022/23 and FY 2021/22 reports); the later report restates it.",
+   "evidence": [
+    "L246: cob-report-2022-23 PDF p. 578",
+    "L276: cob-report-2021-22 PDF p. 407 (\"High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L253-L263",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "definitional",
+   "reason": "Different entity scope: L253 covers the whole county government (Executive and Assembly); L263 covers the County Executive only.",
+   "evidence": [
+    "L253: cob-report-2021-22 PDF p. 35 (\"751,990,941\")",
+    "L263: audit-2021-22 PDF p. 48 (\"pending accounts payable balance of Kshs.818,803,232 as disclosed in Annex ll\")"
+   ]
+  },
+  {
+   "case_id": "D-L253-L264",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "definitional",
+   "reason": "Different entity scope: L253 covers the whole county government (Executive and Assembly); L264 covers the County Executive only.",
+   "evidence": [
+    "L253: cob-report-2021-22 PDF p. 35 (\"751,990,941\")",
+    "L264: audit-2021-22 PDF p. 48 (\"while the supporting schedules reflect a balance of Kshs.738,755,483\")"
+   ]
+  },
+  {
+   "case_id": "D-L253-L265",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "definitional",
+   "reason": "Different entity scope: L253 covers the whole county government (Executive and Assembly); L265 covers the County Executive only.",
+   "evidence": [
+    "L253: cob-report-2021-22 PDF p. 35 (\"751,990,941\")",
+    "L265: audit-2021-22 PDF p. 12 (\"to Kshs.959, 087,583.24 in the Financial Year 2021/2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L253-L276",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "Both are printed in cob-report-2021-22 (PDF p. 35 and p. 407); one covers the whole county government (Executive and Assembly) and the other does not state its scope, so the difference may be one of scope. Not confirmed.",
+   "evidence": [
+    "L253: cob-report-2021-22 PDF p. 35 (\"751,990,941\")",
+    "L276: cob-report-2021-22 PDF p. 407 (\"High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L263-L264",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "probable source error",
+   "reason": "The Auditor-General reports that the county's Annex II (818,803,232) and its supporting schedules (738,755,483) do not agree, on the same page of the audit report.",
+   "evidence": [
+    "audit-2021-22 PDF p. 48",
+    "L263: audit-2021-22 PDF p. 48 (\"pending accounts payable balance of Kshs.818,803,232 as disclosed in Annex ll\")",
+    "L264: audit-2021-22 PDF p. 48 (\"while the supporting schedules reflect a balance of Kshs.738,755,483\")"
+   ]
+  },
+  {
+   "case_id": "D-L263-L265",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L263: audit-2021-22 PDF p. 48 (\"pending accounts payable balance of Kshs.818,803,232 as disclosed in Annex ll\")",
+    "L265: audit-2021-22 PDF p. 12 (\"to Kshs.959, 087,583.24 in the Financial Year 2021/2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L263-L276",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "Auditor-General against Controller of Budget; neither document states a basis that explains a 3.65 per cent difference.",
+   "evidence": [
+    "L263: audit-2021-22 PDF p. 48 (\"pending accounts payable balance of Kshs.818,803,232 as disclosed in Annex ll\")",
+    "L276: cob-report-2021-22 PDF p. 407 (\"High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L264-L265",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L264: audit-2021-22 PDF p. 48 (\"while the supporting schedules reflect a balance of Kshs.738,755,483\")",
+    "L265: audit-2021-22 PDF p. 12 (\"to Kshs.959, 087,583.24 in the Financial Year 2021/2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L264-L276",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "Auditor-General against Controller of Budget; neither document states a basis that explains a 6.93 per cent difference.",
+   "evidence": [
+    "L264: audit-2021-22 PDF p. 48 (\"while the supporting schedules reflect a balance of Kshs.738,755,483\")",
+    "L276: cob-report-2021-22 PDF p. 407 (\"High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L265-L276",
+   "measure": "pending_bills_close",
+   "period": "FY 2021/22",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L265: audit-2021-22 PDF p. 12 (\"to Kshs.959, 087,583.24 in the Financial Year 2021/2022\")",
+    "L276: cob-report-2021-22 PDF p. 407 (\"High level of pending bills which amounted to Kshs.789.96 million as of 30th lttne 2022\")"
+   ]
+  },
+  {
+   "case_id": "D-L247-L248",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "period or version",
+   "reason": "The FY 2023/24 report restates the stock at 30 June 2023 (761.29) against 873.38 in the year's own report.",
+   "evidence": [
+    "L247, L248; conflict pending-2023",
+    "L247: cob-report-2022-23 PDF p. 578 (Inclusive of FY 2022/23 pending bills)",
+    "L248: cob-report-2023-24 PDF p. 513"
+   ]
+  },
+  {
+   "case_id": "D-L247-L266",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "Controller of Budget against Auditor-General; neither document states a basis that explains a 17.78 per cent difference.",
+   "evidence": [
+    "L247: cob-report-2022-23 PDF p. 578 (Inclusive of FY 2022/23 pending bills)",
+    "L266: audit-2022-23 PDF p. 44 (\"Annex 2 to the financial statements reflects pending accounts payable balance of Kshs.741 ,559,698\")"
+   ]
+  },
+  {
+   "case_id": "D-L247-L267",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "Controller of Budget against Auditor-General; neither document states a basis that explains a 14 per cent difference.",
+   "evidence": [
+    "L247: cob-report-2022-23 PDF p. 578 (Inclusive of FY 2022/23 pending bills)",
+    "L267: audit-2022-23 PDF p. 44 (\"while the supporting schedules reflect a balance of Kshs.766,1 10,894\")"
+   ]
+  },
+  {
+   "case_id": "D-L247-L268",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L247: cob-report-2022-23 PDF p. 578 (Inclusive of FY 2022/23 pending bills)",
+    "L268: audit-2022-23 PDF p. 15 (\"to Kshs. 828,098,541.09 in the Financial Year 202212023\")"
+   ]
+  },
+  {
+   "case_id": "D-L247-L270",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 17.78 per cent difference.",
+   "evidence": [
+    "L247: cob-report-2022-23 PDF p. 578 (Inclusive of FY 2022/23 pending bills)",
+    "L270: GOV-02-FY2023-24-Q4 PDF p. 6 (\"The County had accumulated audited pending bills amounting to Kshs.741,559,698.43 as balances at the beginning of the Financial Year 2023/24\")"
+   ]
+  },
+  {
+   "case_id": "D-L248-L254",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "period or version",
+   "reason": "Two Controller of Budget reports of different years give the same date different values (FY 2023/24 and FY 2022/23 reports); the later report restates it.",
+   "evidence": [
+    "L248: cob-report-2023-24 PDF p. 513",
+    "L254: cob-report-2022-23 PDF p. 38 (\"873,371,614\")"
+   ]
+  },
+  {
+   "case_id": "D-L248-L266",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "Controller of Budget against Auditor-General; neither document states a basis that explains a 2.66 per cent difference.",
+   "evidence": [
+    "L248: cob-report-2023-24 PDF p. 513",
+    "L266: audit-2022-23 PDF p. 44 (\"Annex 2 to the financial statements reflects pending accounts payable balance of Kshs.741 ,559,698\")"
+   ]
+  },
+  {
+   "case_id": "D-L248-L268",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L248: cob-report-2023-24 PDF p. 513",
+    "L268: audit-2022-23 PDF p. 15 (\"to Kshs. 828,098,541.09 in the Financial Year 202212023\")"
+   ]
+  },
+  {
+   "case_id": "D-L248-L270",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 2.66 per cent difference.",
+   "evidence": [
+    "L248: cob-report-2023-24 PDF p. 513",
+    "L270: GOV-02-FY2023-24-Q4 PDF p. 6 (\"The County had accumulated audited pending bills amounting to Kshs.741,559,698.43 as balances at the beginning of the Financial Year 2023/24\")"
+   ]
+  },
+  {
+   "case_id": "D-L254-L266",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "definitional",
+   "reason": "Different entity scope: L254 covers the whole county government (Executive and Assembly); L266 covers the County Executive only.",
+   "evidence": [
+    "L254: cob-report-2022-23 PDF p. 38 (\"873,371,614\")",
+    "L266: audit-2022-23 PDF p. 44 (\"Annex 2 to the financial statements reflects pending accounts payable balance of Kshs.741 ,559,698\")"
+   ]
+  },
+  {
+   "case_id": "D-L254-L267",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "definitional",
+   "reason": "Different entity scope: L254 covers the whole county government (Executive and Assembly); L267 covers the County Executive only.",
+   "evidence": [
+    "L254: cob-report-2022-23 PDF p. 38 (\"873,371,614\")",
+    "L267: audit-2022-23 PDF p. 44 (\"while the supporting schedules reflect a balance of Kshs.766,1 10,894\")"
+   ]
+  },
+  {
+   "case_id": "D-L254-L268",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "definitional",
+   "reason": "Different entity scope: L254 covers the whole county government (Executive and Assembly); L268 covers the County Executive only.",
+   "evidence": [
+    "L254: cob-report-2022-23 PDF p. 38 (\"873,371,614\")",
+    "L268: audit-2022-23 PDF p. 15 (\"to Kshs. 828,098,541.09 in the Financial Year 202212023\")"
+   ]
+  },
+  {
+   "case_id": "D-L254-L270",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 17.77 per cent difference.",
+   "evidence": [
+    "L254: cob-report-2022-23 PDF p. 38 (\"873,371,614\")",
+    "L270: GOV-02-FY2023-24-Q4 PDF p. 6 (\"The County had accumulated audited pending bills amounting to Kshs.741,559,698.43 as balances at the beginning of the Financial Year 2023/24\")"
+   ]
+  },
+  {
+   "case_id": "D-L266-L267",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "probable source error",
+   "reason": "The Auditor-General reports that the county's Annex 2 (741,559,698) and its supporting schedules (766,110,894) do not agree, on the same page of the audit report.",
+   "evidence": [
+    "audit-2022-23 PDF p. 44",
+    "L266: audit-2022-23 PDF p. 44 (\"Annex 2 to the financial statements reflects pending accounts payable balance of Kshs.741 ,559,698\")",
+    "L267: audit-2022-23 PDF p. 44 (\"while the supporting schedules reflect a balance of Kshs.766,1 10,894\")"
+   ]
+  },
+  {
+   "case_id": "D-L266-L268",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L266: audit-2022-23 PDF p. 44 (\"Annex 2 to the financial statements reflects pending accounts payable balance of Kshs.741 ,559,698\")",
+    "L268: audit-2022-23 PDF p. 15 (\"to Kshs. 828,098,541.09 in the Financial Year 202212023\")"
+   ]
+  },
+  {
+   "case_id": "D-L267-L268",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L267: audit-2022-23 PDF p. 44 (\"while the supporting schedules reflect a balance of Kshs.766,1 10,894\")",
+    "L268: audit-2022-23 PDF p. 15 (\"to Kshs. 828,098,541.09 in the Financial Year 202212023\")"
+   ]
+  },
+  {
+   "case_id": "D-L267-L270",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "Auditor-General against County Government; neither document states a basis that explains a 3.31 per cent difference.",
+   "evidence": [
+    "L267: audit-2022-23 PDF p. 44 (\"while the supporting schedules reflect a balance of Kshs.766,1 10,894\")",
+    "L270: GOV-02-FY2023-24-Q4 PDF p. 6 (\"The County had accumulated audited pending bills amounting to Kshs.741,559,698.43 as balances at the beginning of the Financial Year 2023/24\")"
+   ]
+  },
+  {
+   "case_id": "D-L268-L270",
+   "measure": "pending_bills_close",
+   "period": "FY 2022/23",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L268: audit-2022-23 PDF p. 15 (\"to Kshs. 828,098,541.09 in the Financial Year 202212023\")",
+    "L270: GOV-02-FY2023-24-Q4 PDF p. 6 (\"The County had accumulated audited pending bills amounting to Kshs.741,559,698.43 as balances at the beginning of the Financial Year 2023/24\")"
+   ]
+  },
+  {
+   "case_id": "D-L249-L250",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "L249 excludes bills incurred during the year, as the FY 2023/24 report states (PDF p. 513); the other value is a full stock.",
+   "evidence": [
+    "L249: cob-report-2023-24 PDF p. 513 (Excludes bills incurred in FY 2023/24 (report says so); not the full stock)",
+    "L250: cob-report-2024-25 PDF p. 478 (Table 3.457, County Executive)"
+   ]
+  },
+  {
+   "case_id": "D-L249-L252",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "L249 excludes bills incurred during the year, as the FY 2023/24 report states (PDF p. 513); the other value is a full stock.",
+   "evidence": [
+    "L249: cob-report-2023-24 PDF p. 513 (Excludes bills incurred in FY 2023/24 (report says so); not the full stock)",
+    "L252: cob-report-2024-25 PDF p. 478 (\"Kshs.1.12 billion\")"
+   ]
+  },
+  {
+   "case_id": "D-L249-L269",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "L249 excludes bills incurred during the year, as the FY 2023/24 report states (PDF p. 513); the other value is a full stock.",
+   "evidence": [
+    "L249: cob-report-2023-24 PDF p. 513 (Excludes bills incurred in FY 2023/24 (report says so); not the full stock)",
+    "L269: audit-2023-24 PDF p. 15 (\"to Kshs.1,466,051,526.45 in the Financial Year 202312024\")"
+   ]
+  },
+  {
+   "case_id": "D-L249-L271",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "L249 excludes bills incurred during the year, as the FY 2023/24 report states (PDF p. 513); the other value is a full stock.",
+   "evidence": [
+    "L249: cob-report-2023-24 PDF p. 513 (Excludes bills incurred in FY 2023/24 (report says so); not the full stock)",
+    "L271: GOV-02-FY2023-24-Q4 PDF p. 6 (\"resulting into total pending bills of Kshs.1,446,894,563.30\")"
+   ]
+  },
+  {
+   "case_id": "D-L249-L272",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "definitional",
+   "reason": "L249 excludes bills incurred during the year, as the FY 2023/24 report states (PDF p. 513); the other value is a full stock.",
+   "evidence": [
+    "L249: cob-report-2023-24 PDF p. 513 (Excludes bills incurred in FY 2023/24 (report says so); not the full stock)",
+    "L272: GOV-02-FY2024-25-Q4 PDF p. 7 (\"There were pending bills amounting to Kshs.1,123,648,608.42\")"
+   ]
+  },
+  {
+   "case_id": "D-L250-L255",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "period or version",
+   "reason": "Two Controller of Budget reports of different years give the same date different values (FY 2024/25 and FY 2023/24 reports); the later report restates it.",
+   "evidence": [
+    "L250: cob-report-2024-25 PDF p. 478 (Table 3.457, County Executive)",
+    "L255: cob-report-2023-24 PDF p. 33 (\"303,909,780\")"
+   ]
+  },
+  {
+   "case_id": "D-L250-L269",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L250: cob-report-2024-25 PDF p. 478 (Table 3.457, County Executive)",
+    "L269: audit-2023-24 PDF p. 15 (\"to Kshs.1,466,051,526.45 in the Financial Year 202312024\")"
+   ]
+  },
+  {
+   "case_id": "D-L250-L271",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 28.77 per cent difference.",
+   "evidence": [
+    "L250: cob-report-2024-25 PDF p. 478 (Table 3.457, County Executive)",
+    "L271: GOV-02-FY2023-24-Q4 PDF p. 6 (\"resulting into total pending bills of Kshs.1,446,894,563.30\")"
+   ]
+  },
+  {
+   "case_id": "D-L252-L255",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "period or version",
+   "reason": "Two Controller of Budget reports of different years give the same date different values (FY 2024/25 and FY 2023/24 reports); the later report restates it.",
+   "evidence": [
+    "L252: cob-report-2024-25 PDF p. 478 (\"Kshs.1.12 billion\")",
+    "L255: cob-report-2023-24 PDF p. 33 (\"303,909,780\")"
+   ]
+  },
+  {
+   "case_id": "D-L252-L269",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L252: cob-report-2024-25 PDF p. 478 (\"Kshs.1.12 billion\")",
+    "L269: audit-2023-24 PDF p. 15 (\"to Kshs.1,466,051,526.45 in the Financial Year 202312024\")"
+   ]
+  },
+  {
+   "case_id": "D-L252-L271",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 29.19 per cent difference.",
+   "evidence": [
+    "L252: cob-report-2024-25 PDF p. 478 (\"Kshs.1.12 billion\")",
+    "L271: GOV-02-FY2023-24-Q4 PDF p. 6 (\"resulting into total pending bills of Kshs.1,446,894,563.30\")"
+   ]
+  },
+  {
+   "case_id": "D-L255-L269",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L255: cob-report-2023-24 PDF p. 33 (\"303,909,780\")",
+    "L269: audit-2023-24 PDF p. 15 (\"to Kshs.1,466,051,526.45 in the Financial Year 202312024\")"
+   ]
+  },
+  {
+   "case_id": "D-L255-L271",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 376.09 per cent difference.",
+   "evidence": [
+    "L255: cob-report-2023-24 PDF p. 33 (\"303,909,780\")",
+    "L271: GOV-02-FY2023-24-Q4 PDF p. 6 (\"resulting into total pending bills of Kshs.1,446,894,563.30\")"
+   ]
+  },
+  {
+   "case_id": "D-L255-L272",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 269.73 per cent difference.",
+   "evidence": [
+    "L255: cob-report-2023-24 PDF p. 33 (\"303,909,780\")",
+    "L272: GOV-02-FY2024-25-Q4 PDF p. 7 (\"There were pending bills amounting to Kshs.1,123,648,608.42\")"
+   ]
+  },
+  {
+   "case_id": "D-L269-L271",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L269: audit-2023-24 PDF p. 15 (\"to Kshs.1,466,051,526.45 in the Financial Year 202312024\")",
+    "L271: GOV-02-FY2023-24-Q4 PDF p. 6 (\"resulting into total pending bills of Kshs.1,446,894,563.30\")"
+   ]
+  },
+  {
+   "case_id": "D-L269-L272",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "One value is the county management's own statement inside the audited financial statements, which does not say what it counts; nothing printed reconciles it with the other figure.",
+   "evidence": [
+    "L269: audit-2023-24 PDF p. 15 (\"to Kshs.1,466,051,526.45 in the Financial Year 202312024\")",
+    "L272: GOV-02-FY2024-25-Q4 PDF p. 7 (\"There were pending bills amounting to Kshs.1,123,648,608.42\")"
+   ]
+  },
+  {
+   "case_id": "D-L271-L272",
+   "measure": "pending_bills_close",
+   "period": "FY 2023/24",
+   "classification": "open",
+   "reason": "County Government against County Government; neither document states a basis that explains a 28.77 per cent difference.",
+   "evidence": [
+    "L271: GOV-02-FY2023-24-Q4 PDF p. 6 (\"resulting into total pending bills of Kshs.1,446,894,563.30\")",
+    "L272: GOV-02-FY2024-25-Q4 PDF p. 7 (\"There were pending bills amounting to Kshs.1,123,648,608.42\")"
+   ]
+  },
+  {
+   "case_id": "D-L251-L256",
+   "measure": "pending_bills_close",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Same report, same date: Table 3.457 (545.95, opening less payments, new-bills column blank) against Table 2.9 (1,890.0, recurrent plus development). Leaving out new bills may explain it; the report does not say so.",
+   "evidence": [
+    "conflict pending-close-2025",
+    "L251: cob-report-2024-25 PDF p. 478 (Table 3.457: opening less payments; new bills column blank)",
+    "L256: cob-report-2024-25 PDF p. 58 (\"1,890.0\")"
+   ]
+  },
+  {
+   "case_id": "D-L251-L274",
+   "measure": "pending_bills_close",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "The FY 2025/26 Q1 report's 1,473.85 at 1 July 2025 adds the County Assembly's KSh 81 million and includes bills of FY 2024/25; Table 3.457's 545.95 is the County Executive's opening stock less payments, with no new bills added.",
+   "evidence": [
+    "L274 basis; L251 note",
+    "L251: cob-report-2024-25 PDF p. 478 (Table 3.457: opening less payments; new bills column blank)",
+    "L274: GOV-02-FY2025-26-Q1 PDF p. 8 (\"As of 1st July 2025, the County reported pending bills totalling Kshs.1,473,850,073\")"
+   ]
+  },
+  {
+   "case_id": "D-L251-L275",
+   "measure": "pending_bills_close",
+   "period": "FY 2024/25",
+   "classification": "probable source error",
+   "reason": "Same report, same date: the text before Table 3.458 gives KSh 1.12 billion \"as of 30 June 2025\", which is the opening stock of 1 July 2024, while Table 3.457 on the same page gives a closing balance of 545,950,403.",
+   "evidence": [
+    "conflict pending-close-2025",
+    "L251: cob-report-2024-25 PDF p. 478 (Table 3.457: opening less payments; new bills column blank)",
+    "L275: cob-report-2024-25 PDF p. 478 (\"Table 3.458 presenrs the ageing ofthe total outstanding bills as of 30$ fune 2025, which was Kshs'l'12 billion'\")"
+   ]
+  },
+  {
+   "case_id": "D-L256-L273",
+   "measure": "pending_bills_close",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "The county's Q4 figure (opening less payments, no new bills added) against the Controller of Budget's Table 2.9 stock; neither document explains the gap.",
+   "evidence": [
+    "conflict pending-close-2025",
+    "L256: cob-report-2024-25 PDF p. 58 (\"1,890.0\")",
+    "L273: GOV-02-FY2024-25-Q4 PDF p. 7 (\"resulting to outstanding pending bills of Kshs.545,950,403.16\")"
+   ]
+  },
+  {
+   "case_id": "D-L256-L274",
+   "measure": "pending_bills_close",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 28.24 per cent difference.",
+   "evidence": [
+    "L256: cob-report-2024-25 PDF p. 58 (\"1,890.0\")",
+    "L274: GOV-02-FY2025-26-Q1 PDF p. 8 (\"As of 1st July 2025, the County reported pending bills totalling Kshs.1,473,850,073\")"
+   ]
+  },
+  {
+   "case_id": "D-L256-L275",
+   "measure": "pending_bills_close",
+   "period": "FY 2024/25",
+   "classification": "probable source error",
+   "reason": "Same report, same date, two different stocks: Table 2.9 prints 1,890.0 million for the County Executive and the county chapter text prints 1.12 billion; the report does not reconcile them.",
+   "evidence": [
+    "conflict pending-close-2025",
+    "L256: cob-report-2024-25 PDF p. 58 (\"1,890.0\")",
+    "L275: cob-report-2024-25 PDF p. 478 (\"Table 3.458 presenrs the ageing ofthe total outstanding bills as of 30$ fune 2025, which was Kshs'l'12 billion'\")"
+   ]
+  },
+  {
+   "case_id": "D-L273-L274",
+   "measure": "pending_bills_close",
+   "period": "FY 2024/25",
+   "classification": "definitional",
+   "reason": "Same county, two reports: the Q4 figure is the opening stock less payments with no new bills added; the next quarter's 1,473,850,073 is Executive 1,392,002,915 plus the Assembly, new bills included.",
+   "evidence": [
+    "L273 and L274 printed text",
+    "L273: GOV-02-FY2024-25-Q4 PDF p. 7 (\"resulting to outstanding pending bills of Kshs.545,950,403.16\")",
+    "L274: GOV-02-FY2025-26-Q1 PDF p. 8 (\"As of 1st July 2025, the County reported pending bills totalling Kshs.1,473,850,073\")"
+   ]
+  },
+  {
+   "case_id": "D-L273-L275",
+   "measure": "pending_bills_close",
+   "period": "FY 2024/25",
+   "classification": "probable source error",
+   "reason": "The county's Q4 report prints 545,950,403.16 (opening stock less payments), as Table 3.457 of the Controller of Budget report does; the same CoB page's text gives 1.12 billion for 30 June 2025, the opening figure of the year.",
+   "evidence": [
+    "conflict pending-close-2025",
+    "L273: GOV-02-FY2024-25-Q4 PDF p. 7 (\"resulting to outstanding pending bills of Kshs.545,950,403.16\")",
+    "L275: cob-report-2024-25 PDF p. 478 (\"Table 3.458 presenrs the ageing ofthe total outstanding bills as of 30$ fune 2025, which was Kshs'l'12 billion'\")"
+   ]
+  },
+  {
+   "case_id": "D-L274-L275",
+   "measure": "pending_bills_close",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "County Government against Controller of Budget; neither document states a basis that explains a 31.59 per cent difference.",
+   "evidence": [
+    "L274: GOV-02-FY2025-26-Q1 PDF p. 8 (\"As of 1st July 2025, the County reported pending bills totalling Kshs.1,473,850,073\")",
+    "L275: cob-report-2024-25 PDF p. 478 (\"Table 3.458 presenrs the ageing ofthe total outstanding bills as of 30$ fune 2025, which was Kshs'l'12 billion'\")"
+   ]
+  },
+  {
+   "case_id": "D-L279-L280",
+   "measure": "wage_bill",
+   "period": "FY 2016/17",
+   "classification": "open",
+   "reason": "One value is a \"wage bill\" figure in a key-issues paragraph that does not say what it counts; the other is personnel emoluments spent. Nothing printed reconciles them.",
+   "evidence": [
+    "L279: cob-report-2016-17 PDF p. 277 (\"The expenditure on personnel emoluments of Kshs.2.31 billion was 41 per cent of overall total expenditure\")",
+    "L280: cob-report-2017-18 PDF p. 268 (\"High wage bill that has increased by 40.8 per cent from Kshs.1.12 billion in FY 2016/17\")"
+   ]
+  },
+  {
+   "case_id": "D-L281-L283",
+   "measure": "wage_bill",
+   "period": "FY 2017/18",
+   "classification": "open",
+   "reason": "One value is a \"wage bill\" figure in a key-issues paragraph that does not say what it counts; the other is personnel emoluments spent. Nothing printed reconciles them.",
+   "evidence": [
+    "L281: cob-report-2017-18 PDF p. 271 (\"Kshs.2.4 billion (71.9 per cent) incurred on personnel emoluments\")",
+    "L283: cob-report-2017-18 PDF p. 268 (\"to Kshs.1.58 billion during the period under review\")"
+   ]
+  },
+  {
+   "case_id": "D-L281-L284",
+   "measure": "wage_bill",
+   "period": "FY 2017/18",
+   "classification": "open",
+   "reason": "One value is a \"wage bill\" figure in a key-issues paragraph that does not say what it counts; the other is personnel emoluments spent. Nothing printed reconciles them.",
+   "evidence": [
+    "L281: cob-report-2017-18 PDF p. 271 (\"Kshs.2.4 billion (71.9 per cent) incurred on personnel emoluments\")",
+    "L284: cob-report-2018-19 PDF p. 268 (\"A high wage bill that increased by 25.3 per cent from Kshs.1.58 billion in the FY 2017/18\")"
+   ]
+  },
+  {
+   "case_id": "D-L282-L283",
+   "measure": "wage_bill",
+   "period": "FY 2017/18",
+   "classification": "open",
+   "reason": "One value is a \"wage bill\" figure in a key-issues paragraph that does not say what it counts; the other is personnel emoluments spent. Nothing printed reconciles them.",
+   "evidence": [
+    "L282: cob-report-2018-19 PDF p. 272 (\"compared to FY 2017/18 when the County spent Kshs.2.40 billion\")",
+    "L283: cob-report-2017-18 PDF p. 268 (\"to Kshs.1.58 billion during the period under review\")"
+   ]
+  },
+  {
+   "case_id": "D-L282-L284",
+   "measure": "wage_bill",
+   "period": "FY 2017/18",
+   "classification": "open",
+   "reason": "One value is a \"wage bill\" figure in a key-issues paragraph that does not say what it counts; the other is personnel emoluments spent. Nothing printed reconciles them.",
+   "evidence": [
+    "L282: cob-report-2018-19 PDF p. 272 (\"compared to FY 2017/18 when the County spent Kshs.2.40 billion\")",
+    "L284: cob-report-2018-19 PDF p. 268 (\"A high wage bill that increased by 25.3 per cent from Kshs.1.58 billion in the FY 2017/18\")"
+   ]
+  },
+  {
+   "case_id": "D-L285-L286",
+   "measure": "wage_bill",
+   "period": "FY 2018/19",
+   "classification": "open",
+   "reason": "One value is a \"wage bill\" figure in a key-issues paragraph that does not say what it counts; the other is personnel emoluments spent. Nothing printed reconciles them.",
+   "evidence": [
+    "L285: cob-report-2018-19 PDF p. 272 (\"Kshs.2.75 billion (60.7 per cent) incurred on personnel emoluments\")",
+    "L286: cob-report-2018-19 PDF p. 268 (\"to Kshs.1.98 billion in the reporting period. The wage bill accounted for 47.4 per cent of total expenditure\")"
+   ]
+  },
+  {
+   "case_id": "D-L289-L290",
+   "measure": "wage_bill",
+   "period": "FY 2021/22",
+   "classification": "period or version",
+   "reason": "The next year's Controller of Budget report quotes a different FY 2021/22 compensation figure from the year's own report.",
+   "evidence": [
+    "L289, L290",
+    "L289: cob-report-2021-22 PDF p. 410 (\"The wage bill of Kshs.3.11 billion includes Kshs.1.51 billion attributable to the health sector\")",
+    "L290: cob-report-2022-23 PDF p. 578 (\"This expenditure represented an increase from Kshs.2.79 billion reported in FY 2021/22\")"
+   ]
+  },
+  {
+   "case_id": "D-L296-L297",
+   "measure": "wage_bill",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 13.81 per cent difference.",
+   "evidence": [
+    "L296: cob-report-2024-25 PDF p. 479 (\"the expenditure on employee compensation totalled Kshs.2.99 billion\")",
+    "L297: GOV-03 PDF p. 19 (\"PE 3,550,256,735 3,402,983,007 -147,273,728 95.9%\")"
+   ]
+  },
+  {
+   "case_id": "D-L296-L298",
+   "measure": "wage_bill",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 11.71 per cent difference.",
+   "evidence": [
+    "L296: cob-report-2024-25 PDF p. 479 (\"the expenditure on employee compensation totalled Kshs.2.99 billion\")",
+    "L298: GOV-02-FY2025-26-Q4 PDF p. 7 (\"an increase compared to the Kshs.3.34 billion reported in a similar period in FY 2024/25\")"
+   ]
+  },
+  {
+   "case_id": "D-L297-L298",
+   "measure": "wage_bill",
+   "period": "FY 2024/25",
+   "classification": "period or version",
+   "reason": "The county's FY 2025/26 report quotes FY 2024/25 compensation a year later (3,340) against the Budget Review and Outlook Paper's 3,402.98.",
+   "evidence": [
+    "L297, L298",
+    "L297: GOV-03 PDF p. 19 (\"PE 3,550,256,735 3,402,983,007 -147,273,728 95.9%\")",
+    "L298: GOV-02-FY2025-26-Q4 PDF p. 7 (\"an increase compared to the Kshs.3.34 billion reported in a similar period in FY 2024/25\")"
+   ]
+  }
+ ]
+}

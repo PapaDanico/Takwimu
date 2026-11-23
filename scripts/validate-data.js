@@ -233,7 +233,7 @@ function checkSchema(schema, value, where, root, out) {
     });
   }
 }
-['history', 'conflicts', 'subcounties', 'county', 'national', 'counties-cob', 'cbk', 'derived', 'ngo', 'political', 'source-library', 'siaya-economy', 'siaya-governance', 'siaya-audits', 'siaya-fiscal-ledger', 'siaya-health', 'siaya-education', 'siaya-agriculture', 'siaya-geography', 'siaya-climate', 'siaya-wards-geo', 'siaya-analysis', 'siaya-projects', 'siaya-programmes', 'reviews', 'imf'].forEach((name) => {
+['history', 'conflicts', 'subcounties', 'county', 'national', 'counties-cob', 'cbk', 'derived', 'ngo', 'political', 'source-library', 'siaya-economy', 'siaya-governance', 'siaya-audits', 'siaya-fiscal-ledger', 'siaya-health', 'siaya-education', 'siaya-agriculture', 'siaya-geography', 'siaya-climate', 'siaya-wards-geo', 'siaya-analysis', 'siaya-projects', 'siaya-programmes', 'reviews', 'imf', 'ledger-classes', 'corrections', ...(fs.existsSync(path.join(__dirname, '..', 'data', 'machine-checks.json')) ? ['machine-checks'] : [])].forEach((name) => {
   const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', `${name}.schema.json`), 'utf8'));
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', `${name}.json`), 'utf8'));
   const out = [];
