@@ -5,5 +5,39 @@
   "baseline": "main",
   "updated": "2026-11-23"
  },
- "entries": []
+ "entries": [
+  {
+   "id": "COR-2026-001",
+   "dataset": "history",
+   "record_ids": [
+    "years:2022/23:development_absorption_pct"
+   ],
+   "measure": "Development absorption, FY 2022/23 (citation)",
+   "original": "53.8 per cent, cited to the county chapter's department table total, Controller of Budget FY 2022/23 report PDF p. 583 (printed p. 557)",
+   "corrected": "53.8 per cent (unchanged), cited to Table 2.4, Siaya row, Controller of Budget FY 2022/23 report PDF p. 34 (printed p. 8)",
+   "reason": "The department table on PDF pp. 582-583 has no total row; 53.8, 1,520.28 and 2,827.00 are printed in the Siaya row of Table 2.4. Found when the machine cross-check did not find 53.8 on p. 583. The value and the open conflict with the text's 53.4 (PDF p. 578) are unchanged.",
+   "evidence": "cob-report-2022-23 (SHA-256 385285d5...), PDF p. 34 Table 2.4 Siaya row: 5,775.87 2,827.00 8,602.86 5,279.00 1,520.28 6,799.27 91.4 53.8 79.0; PDF pp. 582-583 Table 3.256 ends with the Tourism row and no total",
+   "date": "2026-11-23",
+   "affected_pages": [
+    "/data/",
+    "/counties/siaya/"
+   ]
+  },
+  {
+   "id": "COR-2026-002",
+   "dataset": "siaya-fiscal-ledger",
+   "record_ids": [
+    "L167"
+   ],
+   "measure": "Own-source revenue collected, ordinary (excluding FIF/A-i-A), FY 2024/25 (citation)",
+   "original": "236,502,391 cited to PDF p. 6, printed p. 6",
+   "corrected": "236,502,391 (unchanged) cited to PDF p. 5, printed p. 5",
+   "reason": "Table 4 of the county's FY 2024/25 fourth-quarter report runs over two pages; the CRF sub-total row is at the foot of page 5, not on page 6. Found when the machine cross-check did not find the value on p. 6.",
+   "evidence": "GOV-02-FY2024-25-Q4, PDF p. 5 (\"Page 5 of 8\"): Sub-Total=Own Source Revenue (OSR)- CRF Receipt 609,390,296 1,134,703,887 236,502,391 -898,201,496",
+   "date": "2026-11-23",
+   "affected_pages": [
+    "/counties/siaya/ledger/"
+   ]
+  }
+ ]
 }

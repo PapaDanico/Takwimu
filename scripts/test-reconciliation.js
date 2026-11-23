@@ -208,9 +208,12 @@ test('re-read recurrent-absorption-2023-24: 85.8 is a misreading, the report pri
 });
 test('re-read development-absorption-2022-23: text 53.4 and table 53.8 are both printed, so the case stays open', () => {
   const c = conflict('development-absorption-2022-23');
-  const [text, table] = ['text', 'table total, PDF p. 583'].map((w) => c.reread.readings.find((r) => r.where.includes(w)));
+  const [text, table] = ['text', 'Table 2.4, Siaya row, PDF p. 34'].map((w) => c.reread.readings.find((r) => r.where.includes(w)));
   ok(/53\.4/.test(text.method_a) && /53\.4/.test(text.method_b) && table.method_a === '53.8' && table.method_b === '53.8', 'readings changed');
   ok(c.status === 'open' && year('2022/23').development_absorption_pct === 53.8, 'case open, series keeps the table total');
+  // Locator (23 Nov 2026): 53.8 is printed in Table 2.4 (PDF p. 34); the county chapter's department table has no total row.
+  const pv = year('2022/23').provenance.development_absorption_pct;
+  ok(pv.page === 34 && pv.printed_page === 8 && /Table 2\.4/.test(pv.page_note), '2022/23 development absorption must cite Table 2.4, PDF p. 34');
 });
 test('conflict recurrent-absorption-2023-24: provenance points the reader to the register', () => {
   ['recurrent_absorption_pct', 'development_absorption_pct'].forEach((k) => ok(/See conflict/.test(year('2023/24').provenance[k].page_note || ''), `${k} page_note should name the conflict`));

@@ -50,7 +50,10 @@ function match(value, unit, toks) {
   const scales = SCALES[unit] || [1, 1e3, 1e6, 1e-3, 1e-6];
   for (const s of scales) {
     const target = Math.abs(value) * s; // printed negatives may lose their sign or sit in brackets
-    const tdec = Math.max(0, decOf(value) - Math.round(Math.log10(s)));
+    // Precision of the stored value at this scale: 9223.35 (KSh million) stands for any printed 9,223,345,000 to
+    // 9,223,355,000 shillings, so the printed 9,223,350,139 agrees with it (fixed 23 Nov 2026: the old floor at whole
+    // units rejected every stored value rounded to fewer digits than printed).
+    const tdec = decOf(value) - Math.round(Math.log10(s));
     for (const k of toks) {
       if (k.sig < 3) continue;
       const tol = Math.max(0.5 * 10 ** -k.dec, 0.5 * 10 ** -tdec) + 1e-9 * Math.abs(target);
@@ -79,6 +82,67 @@ function ocr(sha, page, psm) {
   });
 }
 const digits = (t) => (String(t).match(/\d/g) || []).length;
+// Further readings when neither the first second-method reading nor its fallback shows the value (23 Nov 2026):
+// tesseract at 300 dpi (its training resolution; small table fonts misread at 600 dpi, e.g. 5,285 as 9,285), with
+// automatic orientation (mode 1: landscape tables on portrait pages), sparse text (mode 11: chart labels) and 200 dpi.
+// Every one is still a different method from the original extraction.
+const EXTRA = [[300, 6], [300, 4], [300, 1], [300, 11], [200, 6]];
+function ocrAt(sha, page, dpi, psm) {
+  if (dpi === 600) return ocr(sha, page, psm);
+  const f = key(sha, page, `tess${dpi}-psm${psm}`);
+  if (fs.existsSync(f)) return Promise.resolve(fs.readFileSync(f, 'utf8'));
+  const base = path.join(CACHE, `${sha.slice(0, 16)}-p${page}-r${dpi}`);
+  const png = `${base}.png`;
+  return new Promise((resolve) => {
+    const run = () => execFile('tesseract', [png, 'stdout', '--psm', String(psm)], { maxBuffer: 64 << 20, env: { ...process.env, OMP_THREAD_LIMIT: '1' } }, (err, out) => { const t = err ? '' : out; fs.writeFileSync(f, t); resolve(t); });
+    if (fs.existsSync(png)) return run();
+    execFile('pdftoppm', ['-r', String(dpi), '-gray', '-singlefile', '-png', '-f', String(page), '-l', String(page), FILE[sha], base], { maxBuffer: 64 << 20 }, () => run());
+  });
+}
+
+// What a person found when looking into a disagreement the readers still cannot settle (23 Nov 2026). Shown with the
+// result; it never changes it.
+const SEEN = {
+  L077: 'Looked into 23 Nov 2026: the Total row of Table 3.110 is printed (an OCR of that row alone reads 844,302,787), but no full-page reading picks the row up; the page also carries a doubled text layer. Needs a look at the page image.',
+  L142: 'Looked into 23 Nov 2026: a data label of Figure 3.150 on a dotted chart background; the text layer reads 142.88, OCR reads it as 142.38. Needs a look at the page image.',
+  L143: 'Looked into 23 Nov 2026: a data label of Figure 3.150 on a dotted chart background; the text layer reads 113.26, OCR reads it as 1T5.26. Needs a look at the page image.',
+};
+
+// ---- Values that are the sum of printed parts (23 Nov 2026) ----
+// A stored total that the source prints only as its parts cannot be found as one number on the page. It agrees when
+// every part is found on the page by the same second method and the parts add up to the stored value at its precision.
+const readData = (f) => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', f), 'utf8'));
+const HIST = readData('history.json');
+const LEDGER = readData('siaya-fiscal-ledger.json');
+const EDU = readData('siaya-education.json');
+function partsOf(dataset, id) {
+  if (dataset === 'siaya-fiscal-ledger') {
+    const o = LEDGER.observations.find((x) => x.id === id);
+    if (o && /Sum of the published recurrent and development parts/.test(o.basis || '')) {
+      const y = HIST.years.find((x) => x.fy === o.fy);
+      if (y && typeof y.pending_recurrent_m === 'number' && typeof y.pending_development_m === 'number') return [y.pending_recurrent_m, y.pending_development_m];
+    }
+  }
+  if (dataset === 'siaya-education') {
+    const all = EDU.observations || EDU.values || [];
+    const m = all.find((x) => x.id === `${id}-m`); const f = all.find((x) => x.id === `${id}-f`);
+    if (m && f && typeof m.value === 'number' && typeof f.value === 'number') return [m.value, f.value];
+  }
+  if (dataset === 'history' && /^in_year:/.test(id)) {
+    const [, per, measure] = id.split(':');
+    const fig = ((HIST.in_year.periods.find((x) => x.id === per) || {}).figures || []).find((x) => x.measure === measure);
+    if (fig && Array.isArray(fig.parts)) return fig.parts.map((x) => x.value);
+  }
+  return null;
+}
+const sumAgrees = (value, parts) => Math.abs(parts.reduce((a, b) => a + b, 0) - value) <= 0.5 * 10 ** -decOf(value) + 1e-9 * Math.abs(value);
+// A value printed with fewer than three significant digits ("Kshs.2.4 billion") cannot be matched safely on a page.
+function printedShort(e) {
+  const t = String(e.printed_text || '');
+  const sc = { billion: 1e3, million: 1 };
+  const m = [...t.matchAll(/(\d+(?:\.\d+)?)\s*(billion|million)/gi)].find((x) => Math.abs(Number(x[1]) * sc[x[2].toLowerCase()] - e.value) < 1e-9 * Math.max(1, e.value));
+  return m && m[1].replace('.', '').replace(/^0+/, '').length < 3 ? m[0] : null;
+}
 
 // ---- Plan ----
 const entries = pack.all();
@@ -91,7 +155,7 @@ const plan = entries.map((e) => {
   if (!FILE[s.sha256]) return { ...base, result: 'not checkable', reason: 'The stored copy was not available to the check.' };
   if (typeof e.pdf_page !== 'number') return { ...base, result: 'not checkable', reason: 'No PDF page recorded.' };
   if (!tokens(String(Math.abs(e.value))).some((k) => k.sig >= 3)) return { ...base, result: 'not checkable', reason: 'Fewer than three significant digits: too short to match safely on a page.' };
-  return { ...base, sha: s.sha256, source_id: s.id, page: e.pdf_page, value: e.value, unit: e.unit, read_kind: e.read_kind, original: e.read };
+  return { ...base, sha: s.sha256, source_id: s.id, page: e.pdf_page, value: e.value, unit: e.unit, read_kind: e.read_kind, original: e.read, short: printedShort(e), parts: partsOf(e.dataset, e.id) };
 });
 
 async function main() {
@@ -126,9 +190,30 @@ async function main() {
       const m2 = digits(t2) ? match(p.value, p.unit, tokens(t2)) : null;
       if (m2) { m = m2; method = p.fallback; } else { method = `${p.method}+${p.fallback.replace('tesseract-600dpi-', '')}`; text = `${text}\n${t2}`; }
     }
+    if (!m) {
+      for (const [dpi, psm] of EXTRA) {
+        const t3 = await ocrAt(p.sha, p.page, dpi, psm);
+        const m3 = digits(t3) ? match(p.value, p.unit, tokens(t3)) : null;
+        if (m3) { m = m3; method = `tesseract-${dpi}dpi-psm${psm}`; break; }
+      }
+      if (!m) method = `${method}+more`;
+    }
+    // A sum of printed parts: every part on the page by one second method, and the parts add up.
+    let partsFound = null;
+    if (!m && p.parts && sumAgrees(p.value, p.parts)) {
+      const readings = [['pdf-text-layer', null], [600, 6], [600, 4], ...EXTRA].filter(([d, psm]) => (d !== 'pdf-text-layer' || p.method === 'pdf-text-layer') && !(d === 600 && psm === 6 && /^OCR/.test(p.original_method)));
+      for (const [dpi, psm] of readings) {
+        const t4 = dpi === 'pdf-text-layer' ? textLayer(p.sha, p.page) : await ocrAt(p.sha, p.page, dpi, psm);
+        const found = p.parts.map((v) => match(v, p.unit, tokens(t4)));
+        if (found.every(Boolean)) { partsFound = found; method = dpi === 'pdf-text-layer' ? dpi : `tesseract-${dpi}dpi-psm${psm}`; break; }
+      }
+    }
     const out = { dataset: p.dataset, id: p.id, source_id: p.source_id, source_sha256: p.sha, pdf_page: p.page, original_method: p.original_method, method, checked_on: TODAY };
     if (!digits(text)) return { ...out, result: 'not checkable', reason: 'The second method read no digits on the page.' };
-    return m ? { ...out, result: 'agree', matched: m } : { ...out, result: 'disagree', reason: `The second method read the page but did not find ${p.value} (${p.unit || 'unit not stated'}) in any scale.` };
+    if (m) return { ...out, result: 'agree', matched: m };
+    if (partsFound) return { ...out, method, result: 'agree', matched: partsFound.join(' + '), parts: partsFound, reason: `A sum of printed parts: each part is on the page and they add up to ${p.value}.` };
+    if (p.short) return { ...out, result: 'not checkable', reason: `Printed as "${p.short}": fewer than three significant digits, too short to match safely on a page.` };
+    return { ...out, result: 'disagree', reason: `The second method read the page but did not find ${p.value} (${p.unit || 'unit not stated'}) in any scale.${SEEN[p.id] ? ` ${SEEN[p.id]}` : ''}` };
   }));
   const counts = results.reduce((c, r) => { c[r.result] = (c[r.result] || 0) + 1; return c; }, {});
   const out = {
@@ -139,9 +224,11 @@ async function main() {
         'tesseract-600dpi-psm6': 'Page rendered at 600 dpi greyscale (pdftoppm) and read by tesseract 5, page segmentation mode 6, for values first read from the PDF text layer.',
         'tesseract-600dpi-psm4': 'Page rendered at 600 dpi greyscale and read by tesseract 5 in segmentation mode 4 (a different mode from the first OCR), for OCR values on pages with no text layer.',
         'pdf-text-layer': 'The PDF text layer of the page (pdftotext), for values first read by OCR.',
-        fallback: 'When the first second-method reading does not show the value, the page is read again by tesseract in the other segmentation mode (4 or 6) at 600 dpi; a method written "a+psmN" means neither reading found it.',
+        fallback: 'When the first second-method reading does not show the value, the page is read again by tesseract in the other segmentation mode (4 or 6) at 600 dpi.',
+        'tesseract-300dpi-psm6': 'Further reading when the 600 dpi readings do not show the value: page rendered at 300 dpi (tesseract\'s training resolution) and read in segmentation mode 6; then mode 4, mode 1 (automatic orientation, for landscape tables), mode 11 (sparse text, for chart labels) and 200 dpi mode 6, stopping at the first that shows it. A method ending "+more" means none of the readings found it.',
+        parts: 'A stored total that the source prints only as its parts (recurrent and development pending bills; male and female counts; the Executive and Assembly payables tables) agrees when each part is found on the page by the same method and the parts add up to the stored value at its precision.',
       },
-      match_rule: 'agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed; numbers with fewer than three significant digits are not used.',
+      match_rule: 'agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way ("Kshs.2.4 billion") is not checkable.',
       checked_on: TODAY,
       counts,
     },

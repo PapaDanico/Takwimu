@@ -472,7 +472,7 @@
       "unit": "per cent",
       "values": [
         {
-          "label": "Controller of Budget FY 2022/23 report, department table total (PDF p. 583, printed p. 557); two re-reading methods both read 53.8",
+          "label": "Controller of Budget FY 2022/23 report, Table 2.4, Siaya row (PDF p. 34, printed p. 8); two re-reading methods both read 53.8",
           "value": 53.8,
           "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
         },
@@ -482,13 +482,13 @@
           "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
         }
       ],
-      "definitions": "Same report, same measure. Both figures are printed: re-reading with two methods gives 53.8 in the department table total and 53.4 in the text. The table amounts (1,520.28 of 2,827.00 million, read the same by both methods) give 53.78 per cent.",
+      "definitions": "Same report, same measure. Both figures are printed: re-reading with two methods gives 53.8 in the Siaya row of Table 2.4 and 53.4 in the county chapter text. The table amounts (1,520.28 of 2,827.00 million, read the same by both methods) give 53.78 per cent. Locator corrected 23 Nov 2026: these three figures are in Table 2.4 (PDF p. 34), not in the county chapter's department table (PDF pp. 582-583), which has no total row; its department rows add up to the same 1,520.28 of 2,827.00.",
       "hypothesis": "Hypothesis: a typing slip in the text. Not confirmed.",
       "status": "open",
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The series keeps 53.8 (the table total, which matches the arithmetic). The text value is listed here.",
+      "effect": "The series keeps 53.8 (Table 2.4, which matches the arithmetic). The text value is listed here.",
       "reread": {
         "on": "2026-11-21",
         "method_a": "RapidOCR recogniser only (detector and angle classifier off) on a 600 dpi greyscale crop (text lines split into words at blank gaps)",
@@ -500,17 +500,17 @@
             "method_b": "on  development programmes represented an absorption rate ofF 53.4 percent. In contrast. recurrent"
           },
           {
-            "where": "department table total, PDF p. 583",
+            "where": "Table 2.4, Siaya row, PDF p. 34",
             "method_a": "53.8",
             "method_b": "53.8"
           },
           {
-            "where": "department table total development expenditure, PDF p. 583",
+            "where": "Table 2.4, Siaya row, development expenditure, PDF p. 34",
             "method_a": "1,520.28",
             "method_b": "1,520.28"
           },
           {
-            "where": "department table total development budget, PDF p. 583",
+            "where": "Table 2.4, Siaya row, development budget, PDF p. 34",
             "method_a": "2,827.00",
             "method_b": "2,827.00"
           }

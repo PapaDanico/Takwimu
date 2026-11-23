@@ -794,10 +794,10 @@
         },
         "development_absorption_pct": {
           "source_id": "cob-report-2022-23",
-          "page": 583,
-          "printed_page": 557,
+          "page": 34,
+          "printed_page": 8,
           "read": "RapidOCR",
-          "page_note": "department table total (1,520.28 of 2,827.00); the text on PDF p. 578 prints 53.4 per cent (both confirmed by two re-readings on 21 Nov 2026). See conflict development-absorption-2022-23"
+          "page_note": "Table 2.4 (County Budget Allocation, Expenditure and Absorption Rate), Siaya row: 1,520.28 of 2,827.00 and 53.8 per cent. Locator corrected 23 Nov 2026: the county chapter's department table (PDF pp. 582-583) has no total row. The text on PDF p. 578 prints 53.4 per cent. See conflict development-absorption-2022-23"
         },
         "osr_m": {
           "source_id": "cob-report-2022-23",
@@ -2032,7 +2032,12 @@
             "as_of": "2025-12-31",
             "pdf_page": 224,
             "printed_page": 599,
-            "read": "RapidOCR"
+            "read": "RapidOCR",
+            "parts": [
+              { "label": "Table 3.563, County Executive, development trade payables total (774,898,249.14)", "value": 774.898249 },
+              { "label": "Table 3.563, County Executive, total recurrent trade payables (804,790,964)", "value": 804.790964 },
+              { "label": "Table 3.564, County Assembly, total recurrent trade payables (56,452,974)", "value": 56.452974 }
+            ]
           },
           {
             "measure": "development_absorption",
