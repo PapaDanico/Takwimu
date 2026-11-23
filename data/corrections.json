@@ -1,0 +1,9 @@
+{
+ "meta": {
+  "title": "Data corrections log",
+  "rule": "Every change Takwimu makes to a published value, label or citation that is not already a resolved case in data/conflicts.json is logged here with the original and corrected figure, the reason, the evidence (source and page), the date and the pages affected. scripts/test-corrections.js compares every value with the previous release's data (git main) and fails the build if a changed value has no entry here or in the register. Errors in the source documents themselves are not our corrections: they are flagged on the records (source_error) and listed separately on /corrections/.",
+  "baseline": "main",
+  "updated": "2026-11-23"
+ },
+ "entries": []
+}

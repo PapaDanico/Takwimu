@@ -445,6 +445,31 @@ test('conflict analytics-per-person-2022-23: per-person spending has one home (A
   ok(/to="\/counties\/siaya\/analysis\/"/.test(moved) && !/interpolate\(/.test(src) && /an-a1/.test(src), '/analytics/ must redirect to Siaya analysis, which must not interpolate population and must hold the A1 section');
 });
 
+// GOV-03 (County Budget Review and Outlook Paper): development spending FY 2024/25, Tables 9 and 11 against the text.
+test('conflict cbrop-development-spending-2024-25: the table figure adds to the printed total; the text figure does not', () => {
+  const c = conflict('cbrop-development-spending-2024-25');
+  const led = read('siaya-fiscal-ledger.json');
+  const o = (id) => { const x = led.observations.find((y) => y.id === id); ok(x, `no ledger ${id}`); return x; };
+  ok(c.status === 'resolved' && c.register === 'source_error' && c.ledger_case === 'D-L231-L232', 'case must be resolved, a source error, and name ledger case D-L231-L232');
+  ok(listed('cbrop-development-spending-2024-25', o('L231').value) && listed('cbrop-development-spending-2024-25', o('L232').value), 'both printed values must be listed');
+  ok(near(o('L230').value + o('L231').value, o('L229').value, 1e-6), 'recurrent + development (tables) must equal the printed total');
+  ok(!near(o('L230').value + o('L232').value, o('L229').value, 1), 'the text figure must not add to the printed total');
+  ok(o('L232').source_error && /2,674,325,435/.test(o('L232').source_error.quote), 'L232 must carry the source_error flag quoting the text');
+  const cls = read('ledger-classes.json').cases.find((x) => x.case_id === 'D-L231-L232');
+  ok(cls && cls.classification === 'resolved by source', 'ledger case D-L231-L232 must be classed resolved by source');
+});
+
+// Resolved cases: each says whether it is our correction, a source error or no change; our corrections carry the record.
+test('resolved register cases are classed for the corrections register', () => {
+  reg.conflicts.filter((c) => c.status === 'resolved').forEach((c) => {
+    ok(['our_correction', 'source_error', 'no_change'].includes(c.register), `${c.id}: resolved without register`);
+    if (c.register === 'our_correction') ok(c.correction && c.correction.original && c.correction.corrected && c.correction.affected_pages.length, `${c.id}: our correction without its record`);
+  });
+  reg.conflicts.filter((c) => c.status === 'open').forEach((c) => ok(!c.register && !c.correction, `${c.id}: an open case cannot be on the corrections register`));
+  // Every ledger case classed "resolved by source" is logged as a resolved register case.
+  read('ledger-classes.json').cases.filter((x) => x.classification === 'resolved by source').forEach((x) => ok(reg.conflicts.some((c) => c.ledger_case === x.case_id && c.status === 'resolved'), `${x.case_id}: resolved by source but not in the register`));
+});
+
 // Every register case has a test above, and no test points at a case that was removed.
 test('every conflict in the register has a test', () => {
   const tested = new Set(results.map(([, n]) => (n.match(/^conflict ([a-z0-9-]+)/) || [])[1]).filter(Boolean));

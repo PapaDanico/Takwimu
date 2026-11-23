@@ -3,7 +3,7 @@
     "title": "Source conflict register",
     "rule": "When two sources give different values for the same measure and period, both are shown. We never average them or pick a winner without evidence. Explanations below are hypotheses, labelled as such, until a reviewer confirms them against the original pages.",
     "reviewed": "Not yet reviewed by a subject specialist",
-    "updated": "2026-11-21",
+    "updated": "2026-11-23",
     "schema_version": "1.1"
   },
   "conflicts": [
@@ -212,7 +212,8 @@
       "effect": "The table value is used because it is consistent with the stated total.",
       "verification_state": "resolved_by_source",
       "supersedes": null,
-      "page_image_checked": false
+      "page_image_checked": false,
+      "register": "source_error"
     },
     {
       "id": "budget-2022-23",
@@ -342,7 +343,8 @@
       "effect": "Immaterial. 99.77 is plotted.",
       "verification_state": "resolved_by_source",
       "supersedes": null,
-      "page_image_checked": false
+      "page_image_checked": false,
+      "register": "no_change"
     },
     {
       "id": "osr-2019-20",
@@ -639,6 +641,19 @@
         "check": "2,487.20 / 3,851.88 = 64.57 per cent; 64.6 is within 0.5 points. Method B misread the budget cell as \"3,851.81+.\"; method A and Table 2.3 read 3,851.88.",
         "outcome": "All three printed places read 64.6 by both methods: resolved.",
         "page_image_checked": false
+      },
+      "register": "our_correction",
+      "correction": {
+        "original": "64.5 per cent (development absorption, FY 2023/24)",
+        "corrected": "64.6 per cent",
+        "reason": "The PDF text layer misread the scanned figure; two OCR readings and the printed amounts (2,487.20 of 3,851.88 million) give 64.6.",
+        "evidence": "Controller of Budget FY 2023/24 report, section 3.38.4, PDF p. 513 (printed p. 490); department table PDF p. 517; Table 2.3 PDF p. 30",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/counties/siaya/analysis/",
+          "/counties/siaya/insights/",
+          "/counties/siaya/"
+        ]
       }
     },
     {
@@ -857,7 +872,8 @@
         "check": "6,681,978,904 / 7,263,019,559 = 92.0 per cent, as printed; 5.68 billion would be 78.2 per cent. The four subtotals add to 8,634,352,209, which matches the printed total and the 8.63 billion in the text only if the equitable share is 6.68 billion.",
         "outcome": "Every printed place reads 6.68 billion (6,681,978,904): resolved. The text-layer reading 5.68 is kept here only as a record.",
         "page_image_checked": false
-      }
+      },
+      "register": "no_change"
     },
     {
       "id": "hiv-2025-age-label",
@@ -881,7 +897,19 @@
       "verification_state": "resolved_by_source",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "data/history.json now gives each HIV point its own age_group; the 2025 point reads \"Overall\" and cites PDF p. 84 (printed p. 79). The series label no longer says 15 to 49. No value changed."
+      "effect": "data/history.json now gives each HIV point its own age_group; the 2025 point reads \"Overall\" and cites PDF p. 84 (printed p. 79). The series label no longer says 15 to 49. No value changed.",
+      "register": "our_correction",
+      "correction": {
+        "original": "Series label \"per cent of ages 15 to 49\" applied to the 2025 HIV point (10.3%)",
+        "corrected": "Age band \"Overall\" for the 2025 point (sex split for ages 15 and over); value unchanged",
+        "reason": "The 2025 round prints an overall figure, not a 15-49 estimate.",
+        "evidence": "NSDCC County Profiles 2026, PDF p. 84 (printed p. 79)",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/counties/siaya/health/",
+          "/counties/siaya/"
+        ]
+      }
     },
     {
       "id": "hiv-scasp-printed-page",
@@ -905,7 +933,19 @@
       "verification_state": "resolved_by_source",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "The 2013 and 2015 HIV points and the library record now cite PDF page 16 (printed page 4). No value changed."
+      "effect": "The 2013 and 2015 HIV points and the library record now cite PDF page 16 (printed page 4). No value changed.",
+      "register": "our_correction",
+      "correction": {
+        "original": "Citation \"PDF page 16 (printed page 3)\"",
+        "corrected": "PDF page 16 (printed page 4); values unchanged",
+        "reason": "The footer of PDF page 16 reads 4.",
+        "evidence": "Siaya County HIV and AIDS Strategic Plan 2015/16-2018/19, PDF p. 16",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/counties/siaya/health/",
+          "/counties/siaya/sources/"
+        ]
+      }
     },
     {
       "id": "kenya-counties-map-licence",
@@ -929,7 +969,19 @@
       "verification_state": "resolved_by_source",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "data/kenya-counties-map.json and scripts/make-kenya-map.js now state Public Domain and the RCMRD upstream; the Kenya map credit line follows. The map shapes are unchanged."
+      "effect": "data/kenya-counties-map.json and scripts/make-kenya-map.js now state Public Domain and the RCMRD upstream; the Kenya map credit line follows. The map shapes are unchanged.",
+      "register": "our_correction",
+      "correction": {
+        "original": "Licence \"CC BY 3.0 IGO\", upstream \"IEBC via OCHA ROSEA\"",
+        "corrected": "Public Domain, upstream RCMRD (geoBoundaries KEN ADM1); map shapes unchanged",
+        "reason": "The county layer's own record states Public Domain; the earlier text belonged to the constituency layer.",
+        "evidence": "geoBoundaries API record for KEN ADM1 (boundaryID KEN-ADM1-32016919)",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/kenya/",
+          "/counties/"
+        ]
+      }
     },
     {
       "id": "imf-debt-cbk-2023",
@@ -1050,6 +1102,19 @@
         "check": "388,626,776 + 222,110,969 = 610,737,745, the printed total in Table 3.258 and Table 2.1 and the 610.74 million in the text; 388.53 + 222.10 would leave 0.11 million unexplained. The county Q4 report for FY 2023/24 (Table 4, Health and Sanitation subtotal) also gives 388,626,776.",
         "outcome": "Every printed place gives 388.63 (388,626,776): resolved. The text-layer reading 388.53 is kept here only as a record.",
         "page_image_checked": false
+      },
+      "register": "our_correction",
+      "correction": {
+        "original": "Health FIF KSh 388.53 million (FY 2023/24, text-layer reading)",
+        "corrected": "KSh 388.63 million (388,626,776 as printed in Table 3.258)",
+        "reason": "The PDF text layer misread the scan; a 600 dpi OCR reading and three printed tables give 388,626,776.",
+        "evidence": "Controller of Budget FY 2023/24 report, PDF p. 511 (printed p. 488), Table 3.258; Table 2.1 PDF p. 26",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/counties/siaya/",
+          "/counties/siaya/ledger/",
+          "/counties/siaya/insights/"
+        ]
       }
     },
     {
@@ -1099,6 +1164,18 @@
         "check": "202,659,007 + 101,250,773 = 303,909,780 = Grand Total, so nothing from the Assembly is in it.",
         "outcome": "The Table 2.5 figure is the County Executive only: L255 corrected.",
         "page_image_checked": false
+      },
+      "register": "our_correction",
+      "correction": {
+        "original": "Scope of L255 (303.91 million): \"county government (executive and assembly)\"",
+        "corrected": "Scope \"county executive\"; value unchanged",
+        "reason": "Table 2.5 prints the County Assembly cells for Siaya as \"-\", so the grand total is the County Executive only.",
+        "evidence": "Controller of Budget FY 2023/24 report, Table 2.5, PDF p. 33 (printed p. 10)",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/counties/siaya/ledger/",
+          "/counties/siaya/analysis/"
+        ]
       }
     },
     {
@@ -1143,7 +1220,8 @@
         "check": "Total spending 712 = recurrent 712 + development 0.",
         "outcome": "A stated zero: kept.",
         "page_image_checked": false
-      }
+      },
+      "register": "no_change"
     },
     {
       "id": "imf-wb-gdp-per-capita-2025",
@@ -1263,7 +1341,18 @@
       "status": "resolved",
       "verification_state": "resolved_by_source",
       "supersedes": null,
-      "page_image_checked": false
+      "page_image_checked": false,
+      "register": "our_correction",
+      "correction": {
+        "original": "0 independent presidential candidates (a printed dash stored as zero)",
+        "corrected": "\"-\" as printed (stored as null with a note)",
+        "reason": "A dash is not a printed zero.",
+        "evidence": "IEBC Annual Report 2022-23, Table 21",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/kenya/"
+        ]
+      }
     },
     {
       "id": "ecde-enrolment-2022-value-type",
@@ -1287,7 +1376,18 @@
       "status": "resolved",
       "verification_state": "resolved_by_source",
       "supersedes": null,
-      "page_image_checked": false
+      "page_image_checked": false,
+      "register": "our_correction",
+      "correction": {
+        "original": "Value type \"actual\" for pre-primary enrolment at the end of 2022 (81,771)",
+        "corrected": "Value type \"unclear\"; value unchanged",
+        "reason": "The same plan prints 81,771 as the projected population aged 3 to 5 for 2022.",
+        "evidence": "CIDP 2023-2027, PDF p. 44 and p. 35",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/counties/siaya/education/"
+        ]
+      }
     },
     {
       "id": "subcounty-voters-term",
@@ -1311,7 +1411,18 @@
       "status": "resolved",
       "verification_state": "resolved_by_source",
       "supersedes": null,
-      "page_image_checked": false
+      "page_image_checked": false,
+      "register": "our_correction",
+      "correction": {
+        "original": "Field \"eligible voters\" (the CIDP column heading)",
+        "corrected": "\"Registered voters\" (the IEBC term); figures unchanged",
+        "reason": "The six figures are the IEBC 2022 registered voters and add to 533,595.",
+        "evidence": "CIDP 2023-2027 statistics annex, PDF p. 204; IEBC register of voters 2022",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/counties/siaya/wards/"
+        ]
+      }
     },
     {
       "id": "analytics-per-person-2022-23",
@@ -1335,7 +1446,44 @@
       "status": "resolved",
       "verification_state": "resolved_by_source",
       "supersedes": null,
-      "page_image_checked": false
+      "page_image_checked": false,
+      "register": "our_correction",
+      "correction": {
+        "original": "KSh 7,096 per person (FY 2022/23, interpolated population)",
+        "corrected": "KSh 7,224 per person (Siaya analysis A1, 2022 CIDP projection, no interpolation) (the old /analytics/ address now redirects to Siaya analysis)",
+        "reason": "Gaps are never filled: the interpolated population series was withdrawn.",
+        "evidence": "Controller of Budget FY 2022/23 report; CIDP 2023-2027 population projection; record SIA-A1-2022-23-cob-report-2022-23",
+        "date": "2026-11-21",
+        "affected_pages": [
+          "/counties/siaya/analysis/"
+        ]
+      }
+    },
+    {
+      "id": "cbrop-development-spending-2024-25",
+      "measure": "Siaya County development spending, FY 2024/25, in the County Budget Review and Outlook Paper (GOV-03): tables against text",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "GOV-03 Tables 9 and 11, development spending (PDF p. 19; fiscal ledger L231): 2,762,903,388",
+          "value": 2762.903388,
+          "url": "https://siaya.go.ke/documents/county-budget-review-and-outlook-paper-2024_2025/"
+        },
+        {
+          "label": "GOV-03 text, \"Actual expenditure on development budget was Kshs.2,674,325,435\" (PDF p. 22; fiscal ledger L232)",
+          "value": 2674.325435,
+          "url": "https://siaya.go.ke/documents/county-budget-review-and-outlook-paper-2024_2025/"
+        }
+      ],
+      "definitions": "Same paper, same year, same measure. Table 9 on PDF p. 19 prints recurrent spending of 6,176,645,261 and development spending of 2,762,903,388, which add exactly to the printed total of 8,939,548,649; Table 11 repeats 2,762,903,388. The text on PDF p. 22 gives 2,674,325,435 against the same development budget of 4,874,826,184.",
+      "hypothesis": "Resolved by the printed document: the table figure is the one consistent with the paper's own printed total; the text figure is not supported by its tables. The paper does not explain the text figure. Checked by arithmetic on the stored transcriptions, not by a person viewing the page image.",
+      "status": "resolved",
+      "effect": "No value changes. Both values stay in the fiscal ledger as printed; ledger case D-L231-L232 is classed \"resolved by source\", and L232 carries a \"Source error in original\" flag quoting the text. The ledger's other development-spending cases for FY 2024/25 stay open or are classed separately.",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "register": "source_error",
+      "ledger_case": "D-L231-L232"
     }
   ]
 }

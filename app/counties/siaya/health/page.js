@@ -18,7 +18,7 @@ const SECONDARY_ONLY = (o) => o.status === 'secondary report' && o.confidence ==
 const tagOf = (o) => (o.sentinel_site ? { tag: 'Sentinel site: not county-representative' } : SECONDARY_ONLY(o) ? { tag: 'Secondary report: original not named' } : o.status === 'secondary report' ? { tag: 'Quoted by another document', tagTone: 'plain' } : {});
 const row = (o, label) => ({
   key: o.id, label: label || o.label, value: o.value, unit: o.unit, period: `${o.period}${o.age_group && o.age_group !== 'not stated' ? `; ages ${o.age_group}` : ''}`,
-  source_id: o.source_id, table: o.table, pdf_page: o.pdf_page, printed_page: o.printed_page, page_note: o.page_note, confidence: o.confidence,
+  source_id: o.source_id, table: o.table, pdf_page: o.pdf_page, printed_page: o.printed_page, page_note: o.page_note, confidence: o.confidence, source_error: o.source_error || null,
   note: [o.vintage ? `Round or vintage: ${o.vintage}.` : '', o.original_source ? `Original named: ${o.original_source}.` : '', o.note || ''].filter(Boolean).join(' '), ...tagOf(o),
 });
 const short = (id) => ({ 'SCASP-2015': 'county HIV plan', 'KHE-2015': 'KHE 2015', 'KHE-2018': 'KHE 2018', 'CIDP-2023': 'CIDP', 'NSDCC-POSTER-2022': 'NSDCC 2022', 'NSDCC-PROFILES-2026': 'NSDCC 2026' }[id] || id);

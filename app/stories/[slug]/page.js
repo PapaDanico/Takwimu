@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import OsrNote from '../../../components/OsrNote';
 import { notFound } from 'next/navigation';
 import ExploreHead from '../../../components/ExploreHead';
 import { ColumnChart, LineChart } from '../../../components/Charts';
@@ -137,6 +138,7 @@ export default function StoryPage({ params }) {
       <ExploreHead trail={[{ href: '/', label: 'Home' }, { href: '/stories/', label: 'Data stories' }]} current={story.title} title={story.title} sub={story.blurb} />
       <Provisional dataset={['counties-cob', 'history']}>Figures in this story were transcribed by Takwimu from Controller of Budget reports and have not yet been checked by a reviewer.</Provisional>
       <Body story={story} />
+      {story.slug === 'own-source-revenue' ? <OsrNote /> : null}
     </main>
   );
 }

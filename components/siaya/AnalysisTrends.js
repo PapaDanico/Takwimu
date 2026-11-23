@@ -9,6 +9,7 @@ import manifest from '../../data/source-manifest.json';
 import ledger from '../../data/siaya-fiscal-ledger.json';
 import { insights as pulse } from '../../lib/pulse';
 import { mean, median, quantile, sd, cv, cagr, iqrOutliers } from '../../lib/analytics';
+import PendingAtDate from './PendingAtDate';
 
 // Ten-year measures whose canonical home is /counties/siaya/analysis/ (owner decision U1, 21 Nov 2026): share of
 // budget spent (absorption), pending bills and real growth. Moved here from the old analytics, Fiscal Pulse and
@@ -177,6 +178,8 @@ export function PendingTenYear() {
       <p className="how"><b>Reading the roll-forward.</b> {RF.note} {RF.years.filter(rfComplete).length} of {RF.years.length} years have every term published. In FY 2021/22 and FY 2022/23 the published terms add up with no adjustment reported, but the reports do not say there were none, so those years stay incomplete.</p>
       <details><summary>Notes for each year</summary><ul className="steps rf-notes">{RF.years.map((r) => <li key={r.fy}><b>{label(r.fy)}.</b> {r.note}</li>)}</ul></details>
       <p className="how"><b>Conflict.</b> At 30 June 2021 the FY 2020/21 report gives KSh 1,061 million, while the FY 2021/22 report gives KSh 602 million for the same date. The FY 2023/24 column (KSh 304 million, County Executive only, excluding bills incurred in the year) is about a quarter of the KSh 1,120 million the FY 2024/25 report gives for the same date; the FY 2022/23 column (KSh 873 million) differs from the KSh 761 million the next report quotes. The <Link href="/data/#conflicts">conflict register</Link> lists these cases. Years without a column (FY 2013/14, FY 2014/15 and FY 2019/20) could not be read or were incomplete; FY 2024/25 has no column because its report gives two different year-end stocks.</p>
+      <PendingAtDate fy="2024/25" id="pending-2025-sources" headingLevel={3} title="Pending bills at 30 June 2025, every source side by side" caption="Pending bills at 30 June 2025, every printed value with its scope, date and accounting basis" />
+      <p className="how">The lowest value, KSh 545.95 million, is the County Executive&apos;s opening stock less payments, with no new bills of FY 2024/25 added; it is printed in the Controller of Budget&apos;s Table 3.457 and in the county&apos;s fourth-quarter report. The same values, with every other year, are in the <Link href="/counties/siaya/ledger/#pending-2025">fiscal reconciliation</Link>.</p>
     </section>
   );
 }

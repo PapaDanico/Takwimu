@@ -40,6 +40,7 @@ export default function CountyPending({ params }) {
         <ul className="steps">
           <li><Link href="/counties/siaya/">See an example of a published county page</Link></li>
           <li><Link href="/learn/">Learn how county budgets, audits and statistics work</Link></li>
+          <li><Link href="/learn/#own-source-revenue">Why own-source revenue totals differ between reports</Link></li>
           <li><Link href="/method/">How we check every figure</Link></li>
           <li><Link href="/counties/">Back to all 47 counties</Link></li>
         </ul>

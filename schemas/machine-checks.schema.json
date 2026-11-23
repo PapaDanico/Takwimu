@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/machine-checks.schema.json",
+  "title": "Machine cross-checks (data/machine-checks.json)",
+  "type": "object",
+  "required": ["meta", "checks"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "rule", "methods", "match_rule", "checked_on", "counts"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" }, "rule": { "type": "string" }, "match_rule": { "type": "string" },
+        "methods": { "type": "object", "additionalProperties": { "type": "string" } },
+        "checked_on": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "counts": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["dataset", "id", "result"],
+        "additionalProperties": false,
+        "properties": {
+          "dataset": { "type": "string" }, "id": { "type": "string" },
+          "result": { "type": "string", "enum": ["agree", "disagree", "not checkable"] },
+          "method": { "type": ["string", "null"], "pattern": "^(tesseract-600dpi-psm[46]|pdf-text-layer)(\\+psm[46])?$" },
+          "reason": { "type": "string" }, "matched": { "type": "string" },
+          "source_id": { "type": "string" }, "source_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "pdf_page": { "type": "integer", "minimum": 1 }, "original_method": { "type": "string" },
+          "checked_on": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+        }
+      }
+    }
+  }
+}

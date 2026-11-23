@@ -7,6 +7,7 @@ import ledger from '../../../../data/siaya-fiscal-ledger.json';
 import { fmt, shortDate } from '../../../../lib/format';
 import { SITE_URL, SITE_UPDATED } from '../../../../lib/site';
 import { counts, isProvisional, PUBLIC_LABEL } from '../../../../lib/review-status';
+import { latestOpinions } from '../../../../lib/audits';
 
 export const metadata = {
   title: 'Siaya County fiscal brief',
@@ -32,7 +33,8 @@ export default function SiayaBrief() {
   const osr = siaya.own_source_revenue;
   const primary = osr.observations[0];
   const budget = siaya.budget;
-  const audit = siaya.audit;
+  // The latest opinion of each entity, from data/siaya-audits.json (as on the hub; never typed in).
+  const aud = latestOpinions().entities;
   const pb = budget.pending_bills;
   const spentPct = Math.round((budget.total_spent / budget.approved_total) * 100);
   const openCases = reg.conflicts.filter((c) => c.status === 'open').length;
@@ -48,7 +50,7 @@ export default function SiayaBrief() {
     { k: `Approved budget, FY ${budget.fiscal_year}`, v: `KSh ${fmt(budget.approved_total)} bn`, m: `KSh ${fmt(budget.total_spent)} bn spent (${spentPct}% of budget)`, src: 'Controller of Budget, FY 2024/25 report', c: budget.confidence },
     { k: `Own-source revenue, FY ${osr.fiscal_year}`, v: `KSh ${fmt(primary.value)} m`, m: `The report states ${osr.share_of_annual_target_pct}% of the annual target`, src: 'Controller of Budget, FY 2024/25 report', c: primary.confidence },
     { k: 'Pending bills, 30 June 2024: sources disagree', v: `KSh ${fmt(own24)} m`, m: `FY 2023/24 report (own year); the FY 2024/25 report gives KSh ${fmt(pb.opening_30_jun_2024_billion)} bn. KSh ${fmt(pb.settled_in_year_million)} m settled in FY 2024/25`, src: 'Controller of Budget, FY 2024/25 and FY 2023/24 reports', c: budget.confidence },
-    { k: `Audit opinion, FY ${audit.fiscal_year}`, v: audit.opinion, m: audit.entity, src: 'Auditor-General', c: audit.confidence },
+    { k: `Audit opinion, FY ${aud.map((e) => e.fy).sort().slice(-1)[0]}`, v: [...new Set(aud.map((e) => e.opinion.replace(/ Opinion$/, '')))].join(' / '), m: aud.map((e) => e.label).join(' and '), src: 'Auditor-General', c: 3 },
   ];
 
   return (
@@ -87,7 +89,7 @@ export default function SiayaBrief() {
             <table className="brief-table">
               <caption className="sr-only">Siaya County budget, spending, own-source revenue and pending bills by fiscal year</caption>
               <thead>
-                <tr><th scope="col">FY</th><th scope="col">Budget, KSh bn</th><th scope="col">Spent, KSh bn</th><th scope="col">Spent, %</th><th scope="col">Own revenue, KSh m</th><th scope="col">Pending bills, KSh m</th></tr>
+                <tr><th scope="col">FY</th><th scope="col">Budget, KSh bn</th><th scope="col">Spent, KSh bn</th><th scope="col">Spent, %</th><th scope="col"><Link href="/learn/#own-source-revenue">Own revenue</Link>, KSh m</th><th scope="col">Pending bills, KSh m</th></tr>
               </thead>
               <tbody>
                 {FYS.map((fy) => {
@@ -136,7 +138,7 @@ export default function SiayaBrief() {
         </section>
 
         <footer className="brief-foot">
-          <p><b>Sources.</b> Controller of Budget, County Governments Budget Implementation Review Reports FY 2014/15 to FY 2024/25 (Parliament of Kenya library), latest: {latestReport.url.replace('https://', '')}. Auditor-General reports on the County Executive of Siaya, latest: {audit.source_url.replace('https://', '')}. Full list, checksums and the conflict register: {SITE_URL.replace('https://', '')}/data/.</p>
+          <p><b>Sources.</b> Controller of Budget, County Governments Budget Implementation Review Reports FY 2014/15 to FY 2024/25 (Parliament of Kenya library), latest: {latestReport.url.replace('https://', '')}. Auditor-General reports on Siaya, latest: {aud[0].url.replace('https://', '')}. Full list, checksums and the conflict register: {SITE_URL.replace('https://', '')}/data/.</p>
           <p><b>Prepared</b> {shortDate(SITE_UPDATED)} from data retrieved {shortDate(hist.meta.retrieved)}. Takwimu Kenya: Turning Data into Progress. A Danico Ventures Ltd product. Independent; not affiliated with any government body. Education only, not legal, financial or audit advice. Check figures against the source documents.</p>
         </footer>
       </article>

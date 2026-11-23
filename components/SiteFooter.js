@@ -29,6 +29,7 @@ const COLUMNS = [
       { href: '/method/#sources', label: 'Where the data comes from' },
       { href: '/data/', label: 'Siaya ten-year series' },
       { href: '/data/#conflicts', label: 'Where sources disagree' },
+      { href: '/corrections/', label: 'Corrections' },
       { href: '/reports/#briefs', label: 'About our briefs' },
     ],
   },

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import OsrNote from '../../../../components/OsrNote';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { LineChart, ColumnChart } from '../../../../components/Charts';
@@ -147,6 +148,7 @@ export default function Insights() {
         <h2 id="gaps-h">What is missing</h2>
         <p className="lead">{hist.meta.gaps.length} gaps in the ten-year series are listed, with their reasons, once: see <Link href="/method/#known-gaps">known gaps</Link>. Nothing is filled or estimated.</p>
       </section>
+      <OsrNote />
     </main>
   );
 }

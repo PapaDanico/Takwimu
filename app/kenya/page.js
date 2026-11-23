@@ -1,4 +1,5 @@
 import ExploreHead from '../../components/ExploreHead';
+import OsrNote from '../../components/OsrNote';
 import StatStrip from '../../components/StatStrip';
 import { Suspense } from 'react';
 import TrendsView from '../../components/TrendsView';
@@ -181,6 +182,7 @@ export default function KenyaPage() {
           </table>
         </TableWrap>
       </section>
+      <OsrNote />
     </main>
   );
 }

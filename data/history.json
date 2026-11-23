@@ -316,6 +316,7 @@
           "read": "PDF text layer"
         },
         "recurrent_spent": {
+          "source_error": { "quote": "A total of Kshs.3.9 billion was spent on recurrent activities, while Kshs.1.98 billion was spent on development", "page": 276, "printed_page": 254, "issue": "The report's text gives recurrent spending of KSh 3.9 billion, while section 3.38.6 and the table on the next page give KSh 3.65 billion, which with development spending of KSh 1.98 billion adds to the stated total of KSh 5.63 billion. The table figure is kept as published (conflict recurrent-spend-2016-17)." },
           "source_id": "cob-report-2016-17",
           "page": 277,
           "printed_page": 255,
@@ -1653,6 +1654,7 @@
       "points": [
         {
           "year": 2013,
+          "source_error": { "quote": "The HIV epidemic trend has generally been stable at a rate of 21.4% in 2013, 23.7% in 2014 and 24.8% in 2015(Kenya HIV estimates).", "page": 16, "printed_page": 4, "issue": "The plan's text on the same page gives 21.4% for 2013, while its Table 1 prints 23.7% under 2013 (and the text gives 23.7% for 2014). The table value is kept as printed; the year is flagged, not corrected." },
           "value": 23.7,
           "national": 6.04,
           "age_group": "15-49",

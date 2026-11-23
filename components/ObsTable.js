@@ -4,6 +4,8 @@ import TableWrap from './TableWrap';
 import { source, pageRef } from '../lib/siaya-sources';
 import { badge, counts, countsSentence, isProvisional } from '../lib/review-status';
 import Reviewed from './Reviewed';
+import SourceErrorFlag, { MachineTag } from './SourceErrorFlag';
+import { machineBadge } from '../lib/machine-badge';
 
 const num = (v) => (typeof v === 'number' ? v.toLocaleString('en-US', { maximumFractionDigits: 3 }) : v);
 
@@ -27,7 +29,7 @@ function ValueCell({ r, dataset }) {
   const b = dataset ? badge(dataset, r.key) : null;
   return (
     <Reviewed b={b} as="td">
-      {() => (r.value === null || r.value === undefined ? <span className="muted">{r.value_text || 'not printed'}</span> : <>{num(r.value)}{r.unit ? ` ${r.unit}` : ''}</>)}
+      {() => (r.value === null || r.value === undefined ? <span className="muted">{r.value_text || 'not printed'}</span> : <>{num(r.value)}{r.unit ? ` ${r.unit}` : ''}{dataset && machineBadge(dataset, r.key) ? <> <MachineTag m={machineBadge(dataset, r.key)} /></> : null}</>)}
     </Reviewed>
   );
 }
@@ -56,6 +58,7 @@ export default function ObsTable({ caption, rows, id, labelHead = 'Measure', sho
               <td>
                 <Cite id={r.source_id} table={tbl ? undefined : r.table} page={r.pdf_page} printed={r.printed_page} pageNote={r.page_note} confidence={r.confidence} bare={Boolean(src)} />
                 {showNote && r.note && !note ? <><br /><small>{r.note}</small></> : null}
+                <SourceErrorFlag e={r.source_error} id={r.key} />
               </td>
             </tr>
           ))}

@@ -250,7 +250,7 @@ export default function Report({ r }) {
             {appendices.map((a, i) => <li key={a.id}><a href={`#${a.id}`}>{n0 + i + 1}. {a.title}</a></li>)}
           </ol>
         </nav>
-        <p className="rp-howto">How to read this report, the method, the confidence scales and the licence are set out once for all five reports at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>. In short: <strong>Findings</strong> are values as the documents print them; <strong>Interpretation</strong> is Takwimu’s reading, not a finding; where documents disagree all values are shown and none is chosen.</p>
+        <p className="rp-howto">How to read this report, the method, the confidence scales and the licence are set out once for all five reports at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>. In short: <strong>Findings</strong> are values as the documents print them; <strong>Interpretation</strong> is Takwimu’s reading, not a finding; where documents disagree all values are shown and none is chosen.{/own[- ]source revenue|\bFIF\b/i.test(JSON.stringify(r)) ? <> Own-source revenue, hospital income (FIF) and A-i-A are counted differently by each publisher: <a href="/learn/#own-source-revenue">explained</a> <span className="rp-url">(takwimu.netlify.app/learn/#own-source-revenue)</span>.</> : null}</p>
       </header>
 
       {r.sections.map((s, i) => (

@@ -41,6 +41,12 @@ Never write a name, initials, e-mail address, phone number or signature anywhere
 
 To change a decision, never edit or delete the old record: add a new record whose `supersedes` lists the old id.
 
+## Review packs and machine cross-checks
+
+- **Review packs** (`docs/editorial/packs/<dataset>.md`, machine-readable `data/review-packs.json`, written by `node scripts/review-packs.js`) list, for every Siaya-scope value, the record id, stored value, unit and period, the source title, address, SHA-256, PDF and printed page, the text as printed or read by OCR, the other sources' values for the same measure and period, and a review-record template. The template's `decision`, `reviewer_role`, `rationale` and `date` are blank: only an independent reviewer fills them, after opening the page.
+- **Machine cross-checks** (`data/machine-checks.json`, `node scripts/machine-check.js --index <sha256 index of local PDFs>`) read each page again by a different method from the original extraction (text-layer values by tesseract OCR at 600 dpi; OCR values by the text layer or another OCR mode). A result is agree, disagree or not checkable. Values where it disagrees are listed first in `REVIEW_QUEUE.md`; check those first.
+- A machine cross-check is **not review**. Pages show it only as "Machine cross-checked". It never changes a value's state, and a record in `data/reviews.json` must not cite it as its basis: `scripts/test-machine-checks.js` fails the build if one does. Your rationale must say what you compared on the page yourself.
+
 ## Record fields
 
 | Field | Meaning |
