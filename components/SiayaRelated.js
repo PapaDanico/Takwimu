@@ -13,7 +13,8 @@ export default function SiayaRelated() {
     <nav className="wrap siaya-related" aria-label="Related Siaya pages">
       <h2 className="mini">Related</h2>
       <ul className="toc">{rel.map(([h, t]) => <li key={h}><Link href={h}>{t}</Link></li>)}</ul>
-      <details className="siaya-all">
+      {/* The hub already lists every Siaya page by group at the top (duplication sweep D11). */}
+      {p === '' ? null : <details className="siaya-all">
         <summary>All Siaya pages</summary>
         <div className="siaya-groups">
           {SIAYA_GROUPS.map((g) => (
@@ -23,7 +24,7 @@ export default function SiayaRelated() {
             </div>
           ))}
         </div>
-      </details>
+      </details>}
     </nav>
   );
 }

@@ -148,7 +148,7 @@ export default function OsrLedger() {
 
       <section className="card" id="osr-mix" aria-labelledby="osr-mix-h">
         <h2 id="osr-mix-h">How own-source revenue is made up</h2>
-        <p className="lead">Part of Siaya&apos;s own-source revenue is Facility Improvement Financing (FIF): money its hospitals and health facilities collect, lawful own-source revenue under the Facility Improvement Financing Act, 2023. The rest is ordinary revenue such as fees, licences and levies.</p>
+        <p className="lead">Ordinary revenue and FIF (hospital and health facility receipts) in Siaya&apos;s own-source revenue; the terms are <Link href="/learn/#own-source-revenue">explained on Learn</Link>.</p>
         <ul className="how">
           <li>FY 2024/25: FIF is {OSR_MIX.cob2425.result}% of own-source revenue in the Controller of Budget&apos;s Table 2.1 and {OSR_MIX.cty2425.result}% in the county&apos;s Q4 report. The two documents differ by KSh {OSR_MIX.dFif.result} million in FIF and KSh {OSR_MIX.dOrd.result} million in ordinary revenue, so the gap between KSh 436.68 million and KSh 757.57 million lies in hospital and health facility receipts, not in ordinary revenue (case <a href="/data/#osr-2024-25-county-statement">osr-2024-25-county-statement</a>).</li>
           <li>FY 2023/24: FIF is {OSR_MIX.cob2324.result}% (Controller of Budget). Among counties with a printed value, Siaya&apos;s FIF share is position {OSR_MIX.rank2324.result} of {OSR_MIX.rank2324.flags && OSR_MIX.rank2324.flags.n_counties} in FY 2023/24 and {OSR_MIX.rank2425.result} of {OSR_MIX.rank2425.flags && OSR_MIX.rank2425.flags.n_counties} in FY 2024/25 (1 = highest share).</li>

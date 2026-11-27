@@ -136,9 +136,10 @@ export default function Home() {
         <p className="lead">The Auditor-General checks whether a county&apos;s accounts are reliable. The County Executive and the County Assembly are audited separately. Below is the latest opinion read for each, as printed; every year and every finding is on <Link href="/counties/siaya/audits/">audit findings</Link>.</p>
         <div className="tiles" id="audit-latest">
           {AUD.entities.map((e) => (
-            <Tile key={e.entity} label={`${e.label}, FY ${e.fy}`} value={<Reviewed b={e.review}>{() => e.opinion}</Reviewed>} tone={/^Unqualified/.test(e.opinion) ? 'good' : 'warn'} note={<>As printed in the <a href={e.url}>{e.title}</a>, PDF p. {e.page}{e.report_date ? `, dated ${shortDate(e.report_date)}` : ''}. {/^Qualified/.test(e.opinion) ? 'A qualified opinion means the accounts are fair except for specific matters the auditor describes.' : ''}</>} />
+            <Tile key={e.entity} label={`${e.label}, FY ${e.fy}`} value={<Reviewed b={e.review}>{() => e.opinion}</Reviewed>} tone={/^Unqualified/.test(e.opinion) ? 'good' : 'warn'} note={<>As printed in the <a href={e.url}>{e.title}</a>, PDF p. {e.page}{e.report_date ? `, dated ${shortDate(e.report_date)}` : ''}.</>} />
           ))}
         </div>
+        {AUD.entities.some((e) => /^Qualified/.test(e.opinion)) ? <p className="how" id="audit-meaning">A qualified opinion means the accounts are fair except for specific matters the auditor describes.</p> : null}
         <p className="rule-note" id="audit-history-note">Our ten-year audit series for the County Executive ends at FY {AUD.history.fy} ({AUD.history.opinion}); the FY {AUD_LATEST_FY} reports above are newer than that series. Findings, the reasons for each opinion and the years with no report are on <Link href="/counties/siaya/audits/">audit findings</Link>.</p>
       </section>
 

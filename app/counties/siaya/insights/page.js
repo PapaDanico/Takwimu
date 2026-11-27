@@ -55,13 +55,7 @@ const osrRealFirst = realOf(osrFirst.value, osrFirst.fy);
 const osrRealMultiple = osrLast.value / osrRealFirst;
 
 const audits = hist.audits.points;
-const nOp = (o) => audits.filter((a) => a.opinion === o);
-const auditSummary = ['Qualified', 'Adverse', 'Disclaimer', 'Unqualified']
-  .filter((o) => nOp(o).length)
-  .map((o) => `${nOp(o).length} ${o.toLowerCase()}${nOp(o).length && o !== 'Qualified' && o !== 'Unqualified' ? ` (${nOp(o).map((a) => `FY ${a.fy}`).join(', ')})` : ''}`)
-  .join(', ');
 const auditRange = `FY ${audits[0].fy} to FY ${audits[audits.length - 1].fy}`;
-const auditCounts = ['Unqualified', 'Qualified', 'Adverse', 'Disclaimer'].map((o) => `${nOp(o).length} ${o.toLowerCase()}`).join(', ');
 
 const FYS = SIAYA_FYS;
 const by = Object.fromEntries(years.map((y) => [y.fy, y]));
@@ -119,30 +113,14 @@ export default function Insights() {
         <h3 className="chart-title">Where the {label(BASE)} budget went</h3>
         <p className="chart-sub">Share of the approved budget of KSh {bn(cur.approved)} billion.</p>
         <Donut ariaLabel={`How the ${label(BASE)} approved budget was used`} centerValue={`${Math.round((cur.spent / cur.approved) * 100)}%`} centerLabel="of budget spent" format={bn} unit=" bn" items={[{ label: 'Recurrent spending', value: cur.recurrent_spent, color: 1 }, { label: 'Development spending', value: cur.development_spent, color: 3 }, { label: 'Not spent', value: cur.approved - cur.spent, color: 4 }]} />
+        <p className="how" id="growth-link">Growth rates a year, nominal and real, and real spending per person are worked out on <Link href="/counties/siaya/analysis/#growth">Siaya analysis</Link>.</p>
         <p className="how"><b>How we calculated this.</b> Spending is nominal, from each year's Controller of Budget report; real values are at {label(BASE)} prices, worked out as set out in the <Link href="/method/#prices">method</Link>. FY 2019/20: Controller of Budget report not found, so the series has no spending for that year; the county&apos;s own and the Senate&apos;s figures for it are on the <Link href="/counties/siaya/ledger/">fiscal reconciliation ledger</Link>.</p>
       </section>
 
       <section id="audit" className="card insight" aria-labelledby="audit-h">
         <p className="eyebrow">Insight 2</p>
-        <h2 id="audit-h">Auditor-General opinions on the County Executive, {auditRange}: {auditCounts}</h2>
-        <p className="finding">{audits.length} years of opinions are available ({auditSummary}). An adverse opinion means the auditor found the accounts materially misstated; a disclaimer means the auditor could not form an opinion. An opinion describes the accounts, not the quality of services. FY 2016/17 to FY 2018/19 are missing, and FY 2014/15 and FY 2015/16 come from a Senate compilation rather than the audit reports; see the note below.</p>
-        <TableWrap label="Auditor-General opinions on the County Executive of Siaya">
-          <table className="data">
-            <caption className="sr-only">Auditor-General opinions on the County Executive of Siaya</caption>
-            <thead><tr><th scope="col">Year</th><th scope="col">Opinion</th><th scope="col">Main matters</th><th scope="col">Confidence</th></tr></thead>
-            <tbody>
-              {hist.audits.points.map((a) => (
-                <tr key={a.fy}>
-                  <th scope="row">FY {a.fy}</th>
-                  <td><span className={`tag ${a.opinion === 'Adverse' ? 'warn' : ''}`}>{a.opinion}</span></td>
-                  <td>{a.reasons}. <a href={a.url}>{a.source ? 'Senate compilation' : 'Report'}</a>{a.period ? <small style={{ display: "block" }}>Period: {a.period}</small> : null}{a.caveat ? <small style={{ display: "block" }}>Caveat: {a.caveat}</small> : null}</td>
-                  <td>{a.confidence} of 5</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </TableWrap>
-        <p className="how">{hist.audits.note}</p>
+        <h2 id="audit-h">Audit opinions</h2>
+        <p className="finding">The Auditor-General&apos;s opinion on the County Executive for every year held ({auditRange}), with the matters raised, what each opinion means and the gaps, is on <Link href="/counties/siaya/audits/">Siaya audits</Link>.</p>
       </section>
 
       <section id="gaps" className="card" aria-labelledby="gaps-h">

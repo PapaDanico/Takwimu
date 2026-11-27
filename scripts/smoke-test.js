@@ -45,14 +45,16 @@ const srv = http.createServer((req, res) => {
   }
   // Latest year (formerly the Fiscal Pulse, owner decision U2): three findings with source PDF links, one chart with a table view.
   await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
-  check(await pg.locator('#latest #pulse-findings > li').count() === 3 && await pg.locator('#latest ul.how li a[href$="/content"]').count() >= 6 && await pg.locator('#latest figure.chart').count() === 1 && await pg.locator('#latest-parts tbody tr').count() === 3, 'Siaya analysis, latest year: three findings with source PDF links, one chart and the FY 2024/25 parts');
-  const pulseDet = pg.locator('#latest details.tableview').first();
+  check(await pg.locator('#latest #pulse-findings > li').count() === 3 && await pg.locator('#latest ul.how li a[href$="/content"]').count() >= 6 && await pg.locator('#latest figure.chart').count() === 0 && await pg.locator('#spending-chart-link a[href="/counties/siaya/insights/#spending"]').count() === 1 && await pg.locator('#latest-parts tbody tr').count() === 3, 'Siaya analysis, latest year: three findings with source PDF links, the FY 2024/25 parts, and the ten-year spending chart linked to Insights where it is charted once (duplication sweep D05)');
+  // The ten-year spending chart is drawn once, on Insights (D05); its table view opens with every year.
+  await pg.goto(base + '/counties/siaya/insights/', { waitUntil: 'load' });
+  const pulseDet = pg.locator('#spending details.tableview').first();
   await pulseDet.locator('summary').click();
-  check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'latest-year chart has a table view');
+  check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'ten-year spending chart (Insights) has a table view');
   // Siaya topic pages (health, education, agriculture, wards, climate, analysis): each loads, carries the provisional
   // label, is linked from the hub, and every chart has a table view that opens with rows.
-  // analysis: latest year, share spent, unspent, pending (2), A1, A2, A3; health: + survey results moved from /profile/; wards: + sub-county populations.
-  const TOPICS = { health: 2 + 1 + 1, education: 2, agriculture: 2, wards: 1, climate: 0, analysis: 8, projects: 1, programmes: 1 };
+  // analysis: share spent, unspent, pending (2), A1, A2, A3 (the ten-year spending chart is on Insights only, D05); health: + survey results moved from /profile/; wards: + sub-county populations.
+  const TOPICS = { health: 2 + 1 + 1, education: 2, agriculture: 2, wards: 1, climate: 0, analysis: 7, projects: 1, programmes: 1 };
   for (const [slug, charts] of Object.entries(TOPICS)) {
     const u = `/counties/siaya/${slug}/`;
     const r = await pg.goto(base + u, { waitUntil: 'load' });
@@ -369,7 +371,7 @@ const srv = http.createServer((req, res) => {
   await pg.goto(base + '/counties/siaya/insights/', { waitUntil: 'load' });
   check(await pg.locator('main figure.chart').count() >= 2 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#spent"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#pending"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/ledger/#osr-ten"]').count() === 1 && await pg.locator('#gaps a[href="/method/#known-gaps"]').count() === 1, 'Siaya insights: ten-year narrative with one summary tile each for share spent, pending bills and own-source revenue, linked to their homes; gaps link to the method');
   check(/sources disagree/i.test(await pg.locator('main .statstrip li', { hasText: 'Own-source revenue' }).innerText()) === require('../data/siaya-fiscal-ledger.json').discrepancies.some((d) => d.indicator_id === 'osr_total_actual' && d.status === 'open' && d.period === `FY ${histSrc.osr_series.points[histSrc.osr_series.points.length - 1].fy}`), 'Siaya insights: the own-source revenue tile says "sources disagree" when the ledger has an open case for its year (as on the hub)');
-  check(/County Executive, FY \d{4}\/\d{2} to FY \d{4}\/\d{2}: \d+ unqualified, \d+ qualified, \d+ adverse, \d+ disclaimer/.test(await pg.locator('#audit-h').innerText()), 'Siaya insights: the audit headline counts each opinion type over the year range (no verdict)');
+  check(await pg.locator('#audit a[href="/counties/siaya/audits/"]').count() === 1 && !/\d+ adverse/.test(await pg.locator('#audit').innerText()), 'Siaya insights: audit opinions are a one-line link to the audits page, not a second count (duplication sweep D05)');
   await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
   const charts = await pg.locator('figure.chart').count();
   check(charts >= 5, `Siaya analysis shows charts (${charts})`);

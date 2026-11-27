@@ -26,7 +26,6 @@ const COLUMNS = [
     heading: 'Trust',
     links: [
       { href: '/method/', label: 'How we handle numbers' },
-      { href: '/method/#sources', label: 'Where the data comes from' },
       { href: '/data/', label: 'Siaya ten-year series' },
       { href: '/data/#conflicts', label: 'Where sources disagree' },
       { href: '/corrections/', label: 'Corrections' },
@@ -38,8 +37,6 @@ const COLUMNS = [
     links: [
       { href: '/terms/', label: 'Terms of use' },
       { href: '/privacy/', label: 'Privacy notice' },
-      { href: '/terms/#copyright', label: 'Copyright and reuse' },
-      { href: '/terms/#disclaimer', label: 'Disclaimer' },
     ],
   },
   {

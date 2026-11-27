@@ -92,10 +92,7 @@ export function LatestYear() {
           </li>
         ))}
       </ol>
-      <h3 className="chart-title">Total, recurrent and development spending, KSh billion, nominal</h3>
-      <LineChart labels={p.chart.labels} unit="KSh bn" yFormat="one" naText="No figure in the source reports"
-        ariaLabel={`Siaya County total, recurrent and development spending, FY ${p.first} to FY ${p.latest}, KSh billion`}
-        series={p.chart.series.map((s, i) => ({ name: s.name, color: i + 1, dash: i === 2, values: s.values }))} />
+      <p className="how" id="spending-chart-link">Ten years of spending, nominal and in real terms, are charted once, on <Link href="/counties/siaya/insights/#spending">Siaya insights</Link>; growth rates and real spending per person are below (<a href="#growth">growth</a>).</p>
       <h3 className="chart-title">FY {budget.fiscal_year}: budget and spending by part, KSh billion</h3>
       <TableWrap label={`Siaya budget and spending by part, FY ${budget.fiscal_year}`}>
         <table className="data" id="latest-parts">

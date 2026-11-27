@@ -172,6 +172,7 @@ export default function DataPage() {
                 </table>
               </TableWrap>
               {typeof c.values[0].value === 'number' ? <p><b>Difference:</b> {fmtNum(Math.abs(c.values[0].value - c.values[1].value), { dp: 2 })} {c.unit} ({((Math.abs(c.values[0].value - c.values[1].value) / c.values[0].value) * 100).toFixed(1)}% of the first value)</p> : <p><b>Difference:</b> a label, citation or licence, not an amount.</p>}
+              {c.ledger_cases ? <p><b>Fiscal-ledger cases comparing these values:</b> {c.ledger_cases.map((id, i) => <span key={id}>{i ? ', ' : ''}<a href={`/counties/siaya/ledger/?case=${id}#led-cases`}>{id}</a></span>)} (machine-classified pairs; <Link href="/counties/siaya/ledger/#two-registers">why there are two registers</Link>).</p> : null}
               <p><b>Definitions:</b> {plain(c.definitions)}</p>
               <p><b>Hypothesis, not established:</b> {plain(c.hypothesis)}</p>
               {/* A caveat shared by several cases is stated once, at its first case (owner decision U3). */}

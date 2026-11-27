@@ -128,6 +128,18 @@ function OwnRevenue({ story }) {
   );
 }
 
+// The provisional banner names the story's own sources (duplication sweep D20): Controller of Budget tables that
+// Takwimu transcribed (review register counties-cob) or World Bank indicators read from the WDI API.
+const SOURCE_OF = (id) => (id.startsWith('counties-') ? 'cob' : id.startsWith('kenya-') ? 'wdi' : 'other');
+function bannerOf(story) {
+  const kinds = [...new Set(story.datasets.map(SOURCE_OF))];
+  const parts = [];
+  if (kinds.includes('cob')) parts.push('were transcribed by Takwimu from Controller of Budget reports');
+  if (kinds.includes('wdi')) parts.push('are World Bank World Development Indicators, read from the World Bank API');
+  if (kinds.includes('other')) parts.push('come from the datasets listed below');
+  return { dataset: kinds.includes('cob') ? ['counties-cob'] : undefined, text: `Figures in this story ${parts.join(' and ')}, and have not yet been checked by a reviewer.` };
+}
+
 const BODY = { 'county-budget-absorption': Absorption, 'population-and-towns': Population, 'own-source-revenue': OwnRevenue };
 
 export default function StoryPage({ params }) {
@@ -137,7 +149,7 @@ export default function StoryPage({ params }) {
   return (
     <main id="main" className="wrap page">
       <ExploreHead trail={[{ href: '/', label: 'Home' }, { href: '/stories/', label: 'Data stories' }]} current={story.title} title={story.title} sub={story.blurb} />
-      <Provisional dataset={['counties-cob', 'history']}>Figures in this story were transcribed by Takwimu from Controller of Budget reports and have not yet been checked by a reviewer.</Provisional>
+      <Provisional dataset={bannerOf(story).dataset}>{bannerOf(story).text}</Provisional>
       <Body story={story} />
       {story.slug === 'own-source-revenue' ? <OsrNote /> : null}
     </main>

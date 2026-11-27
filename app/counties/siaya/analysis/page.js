@@ -191,7 +191,7 @@ export default function SiayaAnalysis() {
 
       <section className="card" aria-labelledby="an-a8" id="osr-composition">
         <h2 id="an-a8">Own-source revenue: ordinary revenue and health facility receipts</h2>
-        <p className="lead">Own-source revenue has two parts in the reports: ordinary own-source revenue (rates, fees, licences and levies paid into the County Revenue Fund) and Facility Improvement Financing (FIF) or appropriations-in-aid, money hospitals and health facilities collect and spend at source. FIF is lawful own-source revenue under the Facility Improvement Financing Act, 2023. The share below describes how the total is made up; it does not judge collection. Each document is a separate row and none is averaged.</p>
+        <p className="lead">Ordinary own-source revenue and FIF or appropriations-in-aid, by document (the terms: <Link href="/learn/#own-source-revenue">explained on Learn</Link>). The share below describes how the total is made up; it does not judge collection. Each document is a separate row and none is averaged.</p>
         <TableWrap label="Siaya own-source revenue by part, document and year">
           <table className="data" id="osr-parts">
             <caption className="sr-only">Siaya own-source revenue: ordinary revenue, FIF/A-i-A, printed total and FIF share, by fiscal year and source document (KSh million)</caption>
