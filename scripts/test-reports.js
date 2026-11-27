@@ -1,4 +1,5 @@
-// Checks the five report pages and their PDFs (handover section 9, PDF quality gates; section 14).
+// Checks the five report pages and their PDFs (handover section 9, PDF quality gates; section 14), and the fiscal brief PDF
+// (two or three A4 pages, no overflow or clipping; scripts/lib/brief-check.js).
 // Run after `npm run build` and the PDF script:
 //   NODE_PATH=$(npm root -g) node scripts/test-reports.js [distDir]
 // For each report: the PDF exists, is A4, has a page count in a range derived from the content it prints (table rows,
@@ -212,7 +213,20 @@ srv.listen(0, async () => {
         continue;
       }
       const pages = checkPdf(r, expectSnap, dom.draft, dom);
+      // Owner (27 Nov 2026): every report PDF has at least two pages of context.
+      if (pages !== null && pages < 2) fail(r.slug, `PDF has ${pages} page; every report must have at least 2`);
       summary.push(`${r.letter} ${r.slug}: ${pages} pages, ${dom.figs.length} figures resolved, review state ${dom.state.join('/')}, snapshot ${expectSnap}${dom.draft ? ', DRAFT' : ''}`);
+    }
+    // The fiscal brief (owner, 27 Nov 2026): two or three A4 pages, each a whole section page, nothing wider than the
+    // printed column or clipped (scripts/lib/brief-check.js, the checks scripts/make-brief-pdf.js runs after printing).
+    {
+      const { layoutProblems, pdfProblems, ROUTE } = require('./lib/brief-check');
+      const bp = await browser.newPage();
+      const layout = await layoutProblems(bp, `http://localhost:${srv.address().port}${ROUTE}`);
+      await bp.close();
+      const b = pdfProblems(path.join(root, 'public', 'reports', 'siaya-fiscal-brief.pdf'), dist);
+      [...layout, ...b.problems].forEach((m) => fail('siaya-fiscal-brief', m));
+      summary.push(`brief siaya-fiscal-brief: ${b.pages} pages (2 to 3 allowed), A4, ${layout.length ? 'layout problems' : 'no overflow or clipping in print layout'}`);
     }
   } finally {
     await browser.close();
