@@ -45,14 +45,16 @@ const srv = http.createServer((req, res) => {
   }
   // Latest year (formerly the Fiscal Pulse, owner decision U2): three findings with source PDF links, one chart with a table view.
   await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
-  check(await pg.locator('#latest #pulse-findings > li').count() === 3 && await pg.locator('#latest ul.how li a[href$="/content"]').count() >= 6 && await pg.locator('#latest figure.chart').count() === 1 && await pg.locator('#latest-parts tbody tr').count() === 3, 'Siaya analysis, latest year: three findings with source PDF links, one chart and the FY 2024/25 parts');
-  const pulseDet = pg.locator('#latest details.tableview').first();
+  check(await pg.locator('#latest #pulse-findings > li').count() === 3 && await pg.locator('#latest ul.how li a[href$="/content"]').count() >= 6 && await pg.locator('#latest figure.chart').count() === 0 && await pg.locator('#spending-chart-link a[href="/counties/siaya/insights/#spending"]').count() === 1 && await pg.locator('#latest-parts tbody tr').count() === 3, 'Siaya analysis, latest year: three findings with source PDF links, the FY 2024/25 parts, and the ten-year spending chart linked to Insights where it is charted once (duplication sweep D05)');
+  // The ten-year spending chart is drawn once, on Insights (D05); its table view opens with every year.
+  await pg.goto(base + '/counties/siaya/insights/', { waitUntil: 'load' });
+  const pulseDet = pg.locator('#spending details.tableview').first();
   await pulseDet.locator('summary').click();
-  check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'latest-year chart has a table view');
+  check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'ten-year spending chart (Insights) has a table view');
   // Siaya topic pages (health, education, agriculture, wards, climate, analysis): each loads, carries the provisional
   // label, is linked from the hub, and every chart has a table view that opens with rows.
-  // analysis: latest year, share spent, unspent, pending (2), A1, A2, A3; health: + survey results moved from /profile/; wards: + sub-county populations.
-  const TOPICS = { health: 2 + 1 + 1, education: 2, agriculture: 2, wards: 1, climate: 0, analysis: 8, projects: 1, programmes: 1 };
+  // analysis: share spent, unspent, pending (2), A1, A2, A3, B1, B2, B4, B5 (the ten-year spending chart is on Insights only, D05); departments: latest budget; health: + survey results moved from /profile/; wards: + sub-county populations.
+  const TOPICS = { health: 2 + 1 + 1, education: 2, agriculture: 2, wards: 1, climate: 0, analysis: 7 + 4, departments: 1, projects: 1, programmes: 1 };
   for (const [slug, charts] of Object.entries(TOPICS)) {
     const u = `/counties/siaya/${slug}/`;
     const r = await pg.goto(base + u, { waitUntil: 'load' });
@@ -341,9 +343,12 @@ const srv = http.createServer((req, res) => {
     const rows = [...tbody.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].map((m) => [...m[1].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map((c) => flat(textOf(c[1])).trim()));
     const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const lines = ptext.split('\n');
-    const missRows = rows.filter((r) => !lines.some((l) => new RegExp(`^\\s*${r.map(esc).join('\\s+')}(\\s|$)`).test(l))).map((r) => r[0]);
+    // The brief prints a small chart beside the table (three-page brief), so a row line may start with an axis label.
+    const missRows = rows.filter((r) => !lines.some((l) => new RegExp(`(^|\\s)${r.map(esc).join('\\s+')}(\\s|$)`).test(l))).map((r) => r[0]);
     const webN = (flat(textOf(html)).match(/(\d+) disagreements between reports/) || [])[1];
-    const pdfN = (pflat.match(/(\d+) disagreements between reports/) || [])[1];
+    // Reading order (not layout): page 3 sets two columns side by side.
+    let rtext = ''; try { rtext = execFileSync('pdftotext', [pdf, '-']).toString(); } catch (e) { rtext = ''; }
+    const pdfN = (flat(rtext).match(/(\d+) disagreements between reports/) || [])[1];
     const draft = /data-draft="true"/.test(html);
     const missHeads = heads.filter((h) => !pflat.includes(h));
     check(heads.length === 4 && rows.length >= 10 && !missHeads.length && !missRows.length && webN && webN === pdfN && (!draft || (/\bDRAFT\b/.test(ptext) && /Provisional: awaiting editorial review/i.test(pflat))) && draft === rvs.DATASET_IDS.filter((d) => ['history', 'siaya-fiscal-ledger'].includes(d)).some((d) => rvs.isProvisional(rvs.counts(d))),
@@ -369,7 +374,7 @@ const srv = http.createServer((req, res) => {
   await pg.goto(base + '/counties/siaya/insights/', { waitUntil: 'load' });
   check(await pg.locator('main figure.chart').count() >= 2 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#spent"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#pending"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/ledger/#osr-ten"]').count() === 1 && await pg.locator('#gaps a[href="/method/#known-gaps"]').count() === 1, 'Siaya insights: ten-year narrative with one summary tile each for share spent, pending bills and own-source revenue, linked to their homes; gaps link to the method');
   check(/sources disagree/i.test(await pg.locator('main .statstrip li', { hasText: 'Own-source revenue' }).innerText()) === require('../data/siaya-fiscal-ledger.json').discrepancies.some((d) => d.indicator_id === 'osr_total_actual' && d.status === 'open' && d.period === `FY ${histSrc.osr_series.points[histSrc.osr_series.points.length - 1].fy}`), 'Siaya insights: the own-source revenue tile says "sources disagree" when the ledger has an open case for its year (as on the hub)');
-  check(/County Executive, FY \d{4}\/\d{2} to FY \d{4}\/\d{2}: \d+ unqualified, \d+ qualified, \d+ adverse, \d+ disclaimer/.test(await pg.locator('#audit-h').innerText()), 'Siaya insights: the audit headline counts each opinion type over the year range (no verdict)');
+  check(await pg.locator('#audit a[href="/counties/siaya/audits/"]').count() === 1 && !/\d+ adverse/.test(await pg.locator('#audit').innerText()), 'Siaya insights: audit opinions are a one-line link to the audits page, not a second count (duplication sweep D05)');
   await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
   const charts = await pg.locator('figure.chart').count();
   check(charts >= 5, `Siaya analysis shows charts (${charts})`);
@@ -555,7 +560,7 @@ const srv = http.createServer((req, res) => {
     const osr = osrPagesMissingLink(root);
     check(osr.pages >= 10 && osr.missing.length === 0, `every page that shows own-source revenue or FIF links /learn/#own-source-revenue (${osr.pages} pages${osr.missing.length ? `; missing: ${osr.missing.slice(0, 4).join(', ')}` : ''})`);
     await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
-    check(/545\.95/.test(await pg.locator('#pending-2025-sources-table').innerText()), 'analysis: pending-bills section shows the 30 June 2025 values side by side, with KSh 545.95 million');
+    check(/545\.95/.test(await pg.locator('#pending-2025-summary').innerText()) && await pg.locator('#pending-2025-summary a[href="/counties/siaya/ledger/#pending-2025"]').count() === 1, 'analysis: pending-bills section summarises the 30 June 2025 values (lowest KSh 545.95 million) and links the side-by-side table on the ledger (duplication sweep D01)');
   }
   check(bad.length === 0, `no CSP violations or page errors ${bad.slice(0, 2).join(' | ')}`);
   await b.close(); srv.close();

@@ -2,15 +2,16 @@
 // shading is a single-hue scale (light to dark = low to high) with the value written on each area and in the
 // list beside the map, so colour is never the only way to read it.
 import geo from '../data/siaya-boundaries.json';
+import { fmtNum } from '../lib/format';
+import { equalSteps, STEPS } from '../lib/scale';
 
-const STEPS = 5;
 
-export default function SiayaMap({ values, unit, title, ariaLabel, format = (v) => v.toLocaleString('en-US') }) {
+export default function SiayaMap({ values, unit, title, ariaLabel, format = (v) => fmtNum(v) }) {
   const list = geo.areas.map((a) => ({ ...a, v: values[a.id] }));
   const nums = list.map((a) => a.v).filter((v) => typeof v === 'number');
-  const min = Math.min(...nums);
-  const max = Math.max(...nums);
-  const bin = (v) => (max === min ? STEPS - 1 : Math.min(STEPS - 1, Math.floor(((v - min) / (max - min)) * STEPS)));
+  const scale = equalSteps(nums);
+  const { min, max } = scale;
+  const bin = (v) => scale.bin(v) - 1; // 0-based step, drawn as opacity
   const cuts = Array.from({ length: STEPS + 1 }, (_, i) => min + ((max - min) * i) / STEPS);
   const ranked = [...list].sort((a, b) => b.v - a.v);
   const { width, height } = geo.meta;

@@ -6,8 +6,9 @@ import SourceErrorFlag from '../SourceErrorFlag';
 import Reviewed from '../Reviewed';
 import { badge } from '../../lib/review-status';
 import { pendingAt, range } from '../../lib/editorial';
+import { fmtFixed } from '../../lib/format';
 
-const m2 = (v) => v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const m2 = (v) => fmtFixed(v, 2);
 const DATE = (d) => new Date(`${d}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
 export function pendingRange(fy) { const rows = pendingAt(fy); return { rows, ...range(rows) }; }

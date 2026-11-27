@@ -7,6 +7,7 @@ import { LineChart, ColumnChart } from '../../../../components/Charts';
 import { economy } from '../../../../lib/economy';
 import Reviewed from '../../../../components/Reviewed';
 import { Provisional } from '../../../../components/ObsTable';
+import { fmtNum } from '../../../../lib/format';
 
 export const metadata = {
   title: 'Siaya’s economy',
@@ -14,7 +15,7 @@ export const metadata = {
 };
 
 const e = economy();
-const n = (v) => v.toLocaleString('en-US');
+const n = (v) => fmtNum(v);
 const signed = (v) => (v > 0 ? `+${n(v)}` : v < 0 ? `−${n(-v)}` : '0');
 const Cite = ({ c, extra }) => (
   <>{c.edition}, <a href={c.url}>{c.table}</a>, {c.page}, {c.read}{extra}. Confidence {c.confidence} of 5</>

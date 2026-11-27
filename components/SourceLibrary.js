@@ -2,6 +2,7 @@
 // Searchable list of the Siaya Source Library. Search and filters are held in memory only: nothing is stored or sent.
 import { useId, useState } from 'react';
 import { STATUS, COVERAGE } from '../lib/source-library';
+import { licenceLabel, TERMS_HREF } from '../lib/licence';
 
 const MAX_Q = 80;
 function FilterRow({ label, options, value, onChange, counts }) {
@@ -70,7 +71,7 @@ export default function SourceLibrary({ documents }) {
                 <dt>Relevance</dt><dd>{d.siaya_relevance}. {d.research_use}.</dd>
                 <dt>Retrieval</dt><dd>{d.retrieval_note} Checked {d.last_checked_at}.</dd>
                 {d.sha256 ? <><dt>File</dt><dd>{d.file_type}, {sizeOf(d.bytes)}, SHA-256 <code title={d.sha256}>{short(d.sha256)}</code></dd></> : null}
-                <dt>Licence</dt><dd>{d.licence}{d.redistribution_conditions ? ` (${d.redistribution_conditions})` : ''}</dd>
+                <dt>Licence</dt><dd>{licenceLabel(d.licence).label}{d.redistribution_conditions ? ` (${d.redistribution_conditions})` : ''} (<a href={TERMS_HREF}>licence classes</a>)</dd>
                 <dt>Review</dt><dd>{d.review_status}</dd>
                 {d.values_review ? <><dt>Values</dt><dd>{d.values_review.total} values on this site cite this document: {d.values_review.approved} approved, {d.values_review.pending} provisional (awaiting editorial review), {d.values_review.rejected} withdrawn{d.values_review.disputed ? `, ${d.values_review.disputed} disputed` : ''}.{d.values_review.withdrawn.map((w) => <span key={w.key} className="withheld" data-obs={w.key} data-obs-state="rejected"> Withdrawn: <code>{w.key}</code> ({w.reason})</span>)}</dd></> : null}
               </dl>

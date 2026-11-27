@@ -74,7 +74,7 @@ ok(packs.entries.length === scope.length, 'review packs: not one entry per Siaya
 packs.entries.forEach((e) => {
   ok(e.template.decision === '' && e.template.reviewer_role === '' && e.template.rationale === '' && e.template.date === '', `${e.record_id}: a pack template may not carry a decision, role, rationale or date`);
   ok(e.template.reviewer_is_not_extractor === true, `${e.record_id}: template must carry reviewer_is_not_extractor`);
-  ok(e.source.length > 0 || ['history', 'siaya-analysis'].includes(e.dataset), `${e.record_id}: no source listed`);
+  ok(e.source.length > 0 || ['history', 'siaya-analysis', 'siaya-analysis-layers'].includes(e.dataset), `${e.record_id}: no source listed`);
 });
 const h = packs.meta.counts.history;
 ok(h === rs.counts('history').total, 'review packs: history count differs from the review counts');

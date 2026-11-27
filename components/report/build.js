@@ -5,6 +5,7 @@ import {
   DATA, P, get, find, each, fig, registry, snapshot, dataDate, ECON_SRC, source, held,
 } from './model';
 import { badge } from '../../lib/review-status';
+import { CATEGORY as AUDIT_CATEGORY } from '../../lib/audits';
 import { latestOpinion, smallCountSentence } from './rules';
 
 const L = DATA['siaya-fiscal-ledger.json'];
@@ -20,6 +21,8 @@ const AUD = DATA['siaya-audits.json'];
 const AN = DATA['siaya-analysis.json'];
 const HIST = DATA['history.json'];
 const COB = DATA['counties-cob.json'];
+const LAY = DATA['siaya-analysis-layers.json'];
+const SER = DATA['siaya-county-series.json'];
 
 const FYS = L.years;
 const fyLabel = (fy) => (fy ? `FY ${fy}` : fy);
@@ -98,6 +101,30 @@ const analysisFig = (r, ptr) => fig('siaya-analysis.json', `${ptr}/result`, {
   label: term(r.title), source: r.source_ids[0], page: r.inputs[0] ? r.inputs[0].pdf_page : null, printed: r.inputs[0] ? r.inputs[0].printed_page : null,
   confidence: minConf(r.inputs), notes: [term(r.label), `Formula: ${r.formula}`, 'Confidence: the lowest of its inputs'],
 });
+// Layers B1 to B5 (data/siaya-analysis-layers.json): like analysisFig, with the threshold and its legal source.
+const LAYF = 'siaya-analysis-layers.json';
+const layerFig = (r, ptr) => fig(LAYF, `${ptr}/result`, {
+  label: term(r.title), source: r.source_ids[0], page: r.inputs[0] ? r.inputs[0].pdf_page : null, printed: r.inputs[0] ? r.inputs[0].printed_page : null,
+  confidence: minConf(r.inputs), notes: [term(r.label), `Formula: ${r.formula}`, r.threshold ? `Reference: ${r.threshold.value} per cent ${r.threshold.kind}. ${r.threshold.rule}` : null, 'Confidence: the lowest of its inputs'],
+});
+const layerRows = (pred) => each(LAYF, '/records', (r) => pred(r) && r.status === 'value').map(([r, ptr]) => ({ f: layerFig(r, ptr) }));
+const layerFy = (r) => (String(r.period).match(/\d{4}\/\d{2}/) || [''])[0];
+// One figure per fiscal year for a chart: the first record of the year that passes pred (null for a gap).
+const layerSeries = (pred) => FYS.map((fy) => { const hit = each(LAYF, '/records', (r) => r.status === 'value' && layerFy(r) === fy && pred(r))[0]; return hit ? layerFig(hit[0], hit[1]) : null; });
+const layerGaps = () => LAY.records.filter((r) => r.status === 'gap').map((r) => ({ topic: r.title, reason: r.gap_reason }));
+// The Auditor-General's own ratio, shown beside a layer result (a finding title in data/siaya-audits.json).
+const oagRatioRows = (family) => {
+  const ids = [...new Set(LAY.records.filter((r) => r.family === family).flatMap((r) => (r.beside || []).filter((b) => b.role === 'auditor_reported').map((b) => (b.record.match(/id=([^\]]+)/) || [])[1])).filter(Boolean))];
+  return ids.map((id) => { const i = AUD.findings.findIndex((f) => f.id === id); const f = AUD.findings[i]; const op = AUD.opinions.find((o) => o.doc_id === f.doc_id);
+    return { f: fig('siaya-audits.json', P('findings', i, 'title'), { label: 'Auditor-General’s own ratio, as the auditor reports it (its own denominator)', unit: 'text', period: fyLabel(f.fy), source: f.doc_id, page: f.page, confidence: op && typeof op.confidence === 'number' ? op.confidence : 'as printed', rec: f }) }; });
+};
+// County and audited series (data/siaya-county-series.json): own-source revenue by publisher, KSh, charted in millions.
+const SERF = 'siaya-county-series.json';
+const SER_LABEL = { 'county-cbrop': 'County Treasury review (CBROP)', 'oag-ror-table': 'County Treasury table in an Auditor-General report', 'oag-ror': 'Auditor-General audited statement' };
+const serFig = (o, ptr) => fig(SERF, `${ptr}/value`, { label: `${SER_LABEL[o.series] || o.series}: ${words(o.measure)}`, period: fyLabel(o.fy), notes: [o.basis, o.table, o.read_method ? `Read: ${o.read_method}` : null] });
+const serRows = (pred) => each(SERF, '/observations', pred).sort((a, b) => a[0].fy.localeCompare(b[0].fy)).map(([o, ptr]) => ({ f: serFig(o, ptr) }));
+const serSeries = (pred) => FYS.map((fy) => { const hit = each(SERF, '/observations', (o) => o.fy === fy && pred(o))[0]; return hit ? { ...serFig(hit[0], hit[1]), scale: 1e-6 } : null; });
+
 const analysisRows = (pred) => each('siaya-analysis.json', '/records', (r) => pred(r) && r.status === 'value').map(([r, ptr]) => ({ f: analysisFig(r, ptr) }));
 const analysisGaps = (pred) => each('siaya-analysis.json', '/records', (r) => pred(r) && r.status === 'gap')
   .map(([r]) => ({ topic: r.title, reason: r.gap_reason, file: 'siaya-analysis.json' }));
@@ -145,6 +172,7 @@ const ledgerPairs = (pred = () => true) => each('siaya-fiscal-ledger.json', '/di
     b: fig('siaya-fiscal-ledger.json', `${ptr}/claim_b/value_ksh_m`, { unit: 'KSh million', period: d.period, source: d.source_b.source_id, ...fromObs(ob), page: d.source_b.pdf_page ?? (ob && ob.rec.pdf_page) }),
     diff: fig('siaya-fiscal-ledger.json', `${ptr}/difference/pct_of_smaller`, { unit: '% of the smaller value', period: d.period, source: d.source_b.source_id, page: d.source_b.pdf_page, confidence: minConf([oa && oa.rec, ob && ob.rec]) }),
     note: (d.possible_basis_mismatch || []).join(' '),
+    id: d.case_id, // not printed; the web edition checks that the ledger page holds the case
   };
 });
 
@@ -160,6 +188,8 @@ const GAPS = {
   'siaya-projects.json': () => PROJ.gaps.map((g) => ({ topic: 'Project register', reason: typeof g === 'string' ? g : JSON.stringify(g) })),
   'siaya-fiscal-ledger.json': () => Object.entries(L.completeness).flatMap(([m, ys]) => Object.entries(ys).filter(([, c]) => c.missing)
     .map(([fy, c]) => ({ topic: `${L.measures[m].label}, FY ${fy}`, reason: c.reason || 'No value held.' }))),
+  'siaya-analysis-layers.json': () => layerGaps(),
+  'siaya-county-series.json': () => SER.meta.gaps.map((g) => ({ topic: `${SER_LABEL[g.series] || g.series}, FY ${g.fy}`, reason: g.reason })),
   'history.json': () => (HIST.meta.gaps || []).map((g) => (typeof g === 'string' ? { topic: 'Ten-year history', reason: g } : { topic: g.item || g.topic || g.series || 'Ten-year history', reason: g.reason || g.note || JSON.stringify(g) })),
 };
 const gapsOf = (files) => files.filter((f) => GAPS[f]).flatMap((f) => GAPS[f]().map((g) => ({ ...g, file: f })));
@@ -301,6 +331,19 @@ function reportB() {
       return out;
     });
   });
+  // Layers B1 to B5 (27 Nov 2026): wage bill, development share, own-source revenue by publisher, department
+  // absorption and pending bills burden, each beside its threshold and the Auditor-General's own ratio.
+  const fam = (f) => LAY.records.filter((r) => r.family === f);
+  const valued = (f) => fam(f).filter((r) => r.status === 'value');
+  const b1Above = valued('B1').filter((r) => r.flags.above_ceiling).length;
+  const b2Act = valued('B2').filter((r) => /-actual-cob-report-/.test(r.calc_id));
+  const b2Bud = valued('B2').filter((r) => /-budget-/.test(r.calc_id));
+  const b4 = valued('B4');
+  const b4Latest = b4.map(layerFy).sort().pop();
+  const b4Over = b4.filter((r) => r.flags.above_100).length;
+  const b5Above = valued('B5').filter((r) => r.flags.above_limit);
+  const cmpWide = SER.comparisons.filter((c) => c.spread_pct_of_smallest > 10).map((c) => fyLabel(c.fy));
+  const thr = (f) => (fam(f).find((r) => r.threshold) || {}).threshold;
   const findingCats = Object.entries(AUD.recurrence_by_category.county_executive || {});
   // D9: a cross-tab count cites the pages of the findings it counts (the findings carry no grade of their own; the
   // report's own grade is the audit opinion's, so the cell says "count, not graded").
@@ -316,6 +359,7 @@ function reportB() {
       { type: 'list', items: [
         ['Approved budget, FY 2024/25 (Controller of Budget): ', series('budget_total')[FYS.indexOf('2024/25')], '.'],
         ['Total expenditure, FY 2024/25 (Controller of Budget): ', series('expenditure_total')[FYS.indexOf('2024/25')], '.'],
+        ['Wage bill above the 35 per cent ceiling in ', String(b1Above), ' of ', String(valued('B1').length), ' years with a value (Takwimu calculation; section “Wage bill beside the 35 per cent ceiling”).'],
         ['Open discrepancy cases in the ledger are listed in the section “Open discrepancy cases”; each pair of values is shown side by side and none has been resolved.'],
       ] },
     ], interpretation: ['This report makes no recommendations about named individuals.'] },
@@ -328,11 +372,45 @@ function reportB() {
     { id: 'execution', title: 'Share of budget spent (absorption rate)', topics: topics('analysis'), findings: [
       { type: 'figs', caption: 'Share of budget spent (absorption rate), calculated by Takwimu from one document and one budget version', rows: execRows },
     ], interpretation: ['The share of the development budget spent is consistently lower than the share of the recurrent budget spent in the documents held.'] },
+    { id: 'wage-bill', title: 'Wage bill beside the 35 per cent ceiling', topics: topics('analysis', 'audits'), findings: [
+      { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b1', label: 'Siaya analysis, wage bill' }, check: ['Wage bill as a share of total revenue'], kind: 'line', title: 'Wage bill as a share of total revenue, per cent (Takwimu calculation from the Controller of Budget report for each year)', unit: '%', labels: FYS.map(fyLabel),
+        series: [{ name: 'Wage bill, % of total revenue', figs: layerSeries((r) => r.family === 'B1') }] },
+      { type: 'figs', home: { href: '/counties/siaya/analysis/#an-b1', label: 'Siaya analysis, wage bill' }, caption: 'The Auditor-General’s own ratios (its own denominator; shown beside, not combined)', rows: oagRatioRows('B1') },
+    ], interpretation: [
+      `What the figures mean: in ${b1Above} of the ${valued('B1').length} years with a value, staff costs took more than ${thr('B1').value} per cent of the revenue the county received. ${thr('B1').rule}`,
+      'Trend and context: the share rose from about a third in FY 2015/16 to around 40 per cent from FY 2016/17 and fell back towards the ceiling in FY 2024/25 as revenue grew faster than the wage bill. The Auditor-General’s ratios are higher because they divide by the County Executive’s receipts, not the whole county’s revenue; neither ratio is a finding about any person.',
+    ] },
+    { id: 'development-share', title: 'Development share beside the 30 per cent floor', topics: topics('analysis'), findings: [
+      { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b2', label: 'Siaya analysis, development share' }, check: ['Development share of the budget and of spending'], kind: 'line', title: 'Development share of the budget and of actual spending, per cent (Controller of Budget reports; Takwimu calculation)', unit: '%', labels: FYS.map(fyLabel),
+        series: [{ name: 'Share of the budget', figs: layerSeries((r) => /-budget-cob-report-/.test(r.calc_id)) }, { name: 'Share of actual spending', figs: layerSeries((r) => /-actual-cob-report-/.test(r.calc_id)) }] },
+      { type: 'figs', home: { href: '/counties/siaya/analysis/#an-b2', label: 'Siaya analysis, development share' }, check: ['Development share of the budget and of spending'], caption: 'Development share from the county’s own documents (programme-based budgets and budget review papers), kept apart from the Controller of Budget', rows: layerRows((r) => r.family === 'B2' && !/cob-report/.test(r.calc_id)) },
+    ], interpretation: [
+      `What the figures mean: ${b2Bud.filter((r) => r.flags.below_floor).length ? `${b2Bud.filter((r) => r.flags.below_floor).length} budget shares are below the floor` : 'every budget share held meets the 30 per cent floor'}, but the share of actual spending that went to development was below ${thr('B2').value} per cent in ${b2Act.filter((r) => r.flags.below_floor).length} of ${b2Act.length} years in the Controller of Budget reports. ${thr('B2').rule}`,
+      'Context: the gap between budgeted and spent development money is the same pattern as the low share of the development budget spent (section 3). Budget versions differ between documents, so a share from one document is compared only with a share from the same kind of document.',
+    ] },
+    { id: 'department-absorption', title: 'Absorption by department', topics: topics('analysis'), findings: [
+      { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b4', label: 'Siaya analysis, absorption by department' }, check: ['Absorption by department'], kind: 'column', title: `Share of the final development budget spent by department, FY ${b4Latest} (County Treasury review; Takwimu calculation)`, unit: '%', labels: b4.filter((r) => layerFy(r) === b4Latest && /-development$/.test(r.calc_id) && !/-TOTAL-/.test(r.calc_id)).map((r) => r.title.replace(/^Absorption, /, '').replace(/, development, FY .*$/, '')),
+        series: [{ name: 'Development absorption', figs: each(LAYF, '/records', (r) => r.family === 'B4' && r.status === 'value' && layerFy(r) === b4Latest && /-development$/.test(r.calc_id) && !/-TOTAL-/.test(r.calc_id)).map(([r, ptr]) => layerFig(r, ptr)) }] },
+      { type: 'figs', home: { href: '/counties/siaya/analysis/#an-b4', label: 'Siaya analysis, absorption by department' }, check: ['Absorption by department'], caption: 'Whole-county absorption in each County Treasury review (printed Total rows)', rows: layerRows((r) => r.family === 'B4' && /-TOTAL-/.test(r.calc_id)) },
+    ], interpretation: [
+      `What the figures mean: ${b4.length} department ratios are held for ${new Set(b4.map(layerFy)).size} years; ${b4Over} are above 100 per cent, meaning the review prints spending above the final budget beside it. Department names change between budgets, so a department is followed across years only through the crosswalk on the department budgets page.`,
+      'Caution: in the FY 2023/24 review every department except the County Assembly prints the same 95.4 per cent absorption of compensation of employees, which suggests the staff-cost actuals were allocated in proportion; those rows are not read as department performance.',
+    ] },
     { id: 'osr', title: 'Own-source revenue reconciliation', topics: topics('ledger'), findings: [
       { type: 'chart', kind: 'line', title: 'Own-source revenue: target and actual, KSh million (Controller of Budget values)', unit: 'KSh million', labels: FYS.map(fyLabel),
         series: [{ name: 'Target', figs: series('osr_total_target') }, { name: 'Actual', figs: series('osr_total_actual') }] },
       ...['osr_total_target', 'osr_total_actual', 'osr_ordinary_actual', 'osr_fif_aia_actual'].map((m) => ({ type: 'figs', caption: `${L.measures[m].label}: every source value held`, rows: ledgerRows(m) })),
     ], interpretation: ['Whether facility improvement fund and appropriations-in-aid are counted explains much of the spread between own-source revenue totals for the same year.'] },
+    { id: 'osr-publishers', title: 'Own-source revenue by publisher: county, Controller of Budget and Auditor-General', topics: topics('ledger'), findings: [
+      { type: 'chart', home: { href: '/counties/siaya/ledger/#osr-series', label: 'Siaya ledger, own-source revenue by publisher' }, check: ['Own-source revenue by publisher'], kind: 'line', title: 'Own-source revenue by publisher, KSh million (never blended)', unit: 'KSh million', labels: FYS.map(fyLabel),
+        series: [{ name: 'Controller of Budget', figs: series('osr_total_actual') }, { name: 'County Treasury review (CBROP)', figs: serSeries((o) => o.series === 'county-cbrop' && o.measure === 'osr_actual') },
+          { name: 'County Treasury table, Auditor-General FY 2024/25 report', figs: serSeries((o) => o.series === 'oag-ror-table' && o.measure === 'osr_actual' && o.source_id === 'OAG-ROR-2024-25') }, { name: 'Auditor-General audited statement (cash)', figs: serSeries((o) => o.series === 'oag-ror' && o.measure === 'osr_receipts_cash') }] },
+      { type: 'figs', caption: 'Auditor-General audited statements and County Revenue Fund: every value held', rows: serRows((o) => o.series === 'oag-ror' || o.series === 'oag-crf') },
+      { type: 'figs', home: { href: '/counties/siaya/ledger/#osr-b3', label: 'Siaya ledger, own-source revenue against target' }, check: ['Own-source revenue against target, in real terms and per person'], caption: 'Own-source revenue against target, in real terms and per person, by publisher (Takwimu calculation)', rows: layerRows((r) => r.family === 'B3') },
+    ], interpretation: [
+      `What the figures mean: the publishers agree within 10 per cent in most years; the spread is wider in ${cmpWide.join(', ')}. ${SER.meta.bases.treasury_table} ${SER.meta.bases.cash} ${SER.meta.bases.accrual}`,
+      'Context: the county’s revenue grew in nominal and real terms over the decade, but against its own targets it collected between about two-fifths and all of the target, depending on the year and the publisher. Comparisons with other counties use only Controller of Budget figures (section on all 47 counties), because the other publishers do not cover every county.',
+    ] },
     { id: 'transfers', title: 'Transfers', topics: topics('ledger', 'analysis'), findings: [
       ...['equitable_share_budgeted', 'equitable_share_received', 'conditional_grants_budgeted', 'conditional_grants_received'].map((m) => ({ type: 'figs', caption: `${L.measures[m].label}: every source value held`, rows: ledgerRows(m) })),
       { type: 'figs', caption: 'Transfer dependency calculated by Takwimu', rows: transferRows },
@@ -341,9 +419,18 @@ function reportB() {
       { type: 'figs', caption: `${L.measures.pending_bills_close.label}: every source value held`, rows: ledgerRows('pending_bills_close') },
       { type: 'figs', caption: 'Pending-bill changes and roll-forward residuals calculated by Takwimu', rows: pendingRows },
     ], interpretation: ['Pending-bill stocks for the same date differ by document and by whether the County Assembly is included; a roll-forward residual means the published figures do not reconcile.'] },
+    { id: 'pending-burden', title: 'Pending bills as a share of revenue', topics: topics('analysis', 'ledger'), findings: [
+      { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b5', label: 'Siaya analysis, pending bills burden' }, check: ['Pending bills as a share of total revenue'], kind: 'line', title: 'Pending bills at 30 June as a share of total revenue, per cent (Controller of Budget report for each year; Takwimu calculation)', unit: '%', labels: FYS.map(fyLabel),
+        series: [{ name: 'Stock in the county chapter', figs: layerSeries((r) => r.family === 'B5' && !/^Cross-county/.test(((r.inputs || []).find((i) => i.role === 'pending') || {}).basis || '')) },
+          { name: 'Cross-county table grand total', figs: layerSeries((r) => r.family === 'B5' && /^Cross-county/.test(((r.inputs || []).find((i) => i.role === 'pending') || {}).basis || '')) }] },
+      { type: 'figs', home: { href: '/counties/siaya/analysis/#an-b5', label: 'Siaya analysis, pending bills burden' }, caption: 'The Auditor-General’s own ratio (total liabilities of the County Executive against its revenue)', rows: oagRatioRows('B5') },
+    ], interpretation: [
+      `What the figures mean: ${b5Above.length ? `${b5Above.length} reading${b5Above.length === 1 ? ' is' : 's are'} above the ${thr('B5').value} per cent limit (${b5Above.map((r) => r.period).join(', ')})` : `no reading is above the ${thr('B5').value} per cent limit`}. ${thr('B5').rule} Which stock of bills is the right one for a date is an open discrepancy in the ledger, so each reading keeps its own ratio.`,
+      'Trend: unpaid bills grew faster than revenue to FY 2020/21, fell to their lowest share in FY 2023/24 and rose again in FY 2024/25 on the wider definitions.',
+    ] },
     { id: 'audit', title: 'Audit opinions and issues', topics: topics('audits'), findings: [
       { type: 'figs', caption: 'Auditor-General opinions', rows: auditOpinionRows() },
-      { type: 'records', caption: 'Audit findings by category and year, County Executive (count of findings recorded)', columns: ['Category', ...AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort().map(fyLabel)],
+      { type: 'records', check: findingCats.map(([cat]) => AUDIT_CATEGORY[cat] || cap(cat)), caption: 'Audit findings by category and year, County Executive (count of findings recorded)', columns: ['Category', ...AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort().map(fyLabel)],
         rows: findingCats.map(([cat]) => {
           const yrs = AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort();
           return [cap(cat), ...yrs.map((fy) => (AUD.recurrence_by_category.county_executive[cat][fy] !== undefined

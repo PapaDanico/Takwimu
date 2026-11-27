@@ -6,18 +6,12 @@
 import Link from 'next/link';
 import geo from '../data/kenya-counties-map.json';
 import { bySlug } from '../lib/counties';
+import { fmtFixed } from '../lib/format';
+import { equalSteps, legendItems, STEPS_NOTE } from '../lib/scale';
 
-const STEPS = 5;
-const show = (v, dec) => v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+const show = (v, dec) => fmtFixed(v, dec);
 
-export function mapScale(values) {
-  const xs = Object.values(values).filter((v) => typeof v === 'number');
-  if (!xs.length) return null;
-  const min = Math.min(...xs); const max = Math.max(...xs);
-  const step = (max - min) / STEPS;
-  const bin = (v) => (typeof v !== 'number' ? null : step === 0 ? STEPS : Math.min(STEPS, Math.floor((v - min) / step) + 1));
-  return { min, max, step, bin, bins: Array.from({ length: STEPS }, (_, i) => [min + step * i, i === STEPS - 1 ? max : min + step * (i + 1)]) };
-}
+export const mapScale = (values) => equalSteps(Object.values(values));
 
 export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 47 counties', values, valueUnit = '', valueDec = 0, valueLabel, valueNotes = {}, mapId = 'kmap', boundaryNote = false }) {
   const { width, height } = geo.meta;
@@ -67,9 +61,9 @@ export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 
         {values ? (
           <span className="kmap-legend">
             <b>{valueLabel}</b>
-            {scale ? <span className="kmap-legend-note">Five equal steps from the lowest to the highest value. Each shade stands for the range beside it in this key; no shade means better or worse.</span> : null}
+            {scale ? <span className="kmap-legend-note">{STEPS_NOTE}. Each shade stands for the range beside it in this key; no shade means better or worse.</span> : null}
             <span className="kmap-legend-row">
-              {scale ? scale.bins.map(([lo, hi], i) => <span key={i} className="kmap-key"><i className={`kmap-sw q${i + 1}`} />{fmtV(lo)} to {fmtV(hi)}</span>) : null}
+              {legendItems(scale, fmtV).map((k) => <span key={k.step} className="kmap-key"><i className={`kmap-sw q${k.step}`} />{k.text}</span>)}
               <span className="kmap-key"><i className="kmap-sw na" /> Not available</span>
             </span>
           </span>

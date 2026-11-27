@@ -6,7 +6,7 @@ import PageToc from '../../components/PageToc';
 import DatasetCatalogue from '../../components/DatasetCatalogue';
 import SavedViews from '../../components/SavedViews';
 import { catalogue, SECTORS, nat, STATUS_VOCABULARY } from '../../lib/explore';
-import { shortDate } from '../../lib/format';
+import { shortDate, fmtNum } from '../../lib/format';
 
 export const metadata = {
   title: 'Datasets',
@@ -51,7 +51,7 @@ export default function DatasetsPage() {
           {STATUS_VOCABULARY.map((s) => <div key={s.status}><dt><span className={`ds-status st-${s.status}`}>{s.status}</span> <small>{datasets.filter((d) => d.status === s.status).length} dataset{datasets.filter((d) => d.status === s.status).length === 1 ? '' : 's'}</small></dt><dd>{s.definition}</dd></div>)}
         </dl>
         <h3 id="review">Editorial review</h3>
-        <p>Every value Takwimu transcribed or calculated stays labelled &ldquo;Provisional: awaiting editorial review&rdquo; until a reviewer, identified by role only, checks it against the source page and records a decision. A value is shown as approved only when that record names it and the source document has not changed since; a rejected value is withdrawn with the reason. Across the {reviewed.length} datasets itemised for review: {totals.approved.toLocaleString('en-US')} approved, {totals.pending.toLocaleString('en-US')} pending, {totals.rejected.toLocaleString('en-US')} rejected, of {totals.total.toLocaleString('en-US')} values.</p>
+        <p>Every value Takwimu transcribed or calculated stays labelled &ldquo;Provisional: awaiting editorial review&rdquo; until a reviewer, identified by role only, checks it against the source page and records a decision. A value is shown as approved only when that record names it and the source document has not changed since; a rejected value is withdrawn with the reason. Across the {reviewed.length} datasets itemised for review: {fmtNum(totals.approved)} approved, {fmtNum(totals.pending)} pending, {fmtNum(totals.rejected)} rejected, of {fmtNum(totals.total)} values.</p>
       </section>
       <section className="card" id="saved" aria-labelledby="saved-h">
         <h2 id="saved-h">Saved views</h2>

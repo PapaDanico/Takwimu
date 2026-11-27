@@ -1,5 +1,7 @@
 # Production baseline (WO-00)
 
+> Superseded snapshot (21 Nov 2026), kept as written: production now deploys from `main` through Netlify's GitHub link. Current answer: `docs/architecture-map.md`.
+
 Audit date: 21 Nov 2026, about 12:40-13:10 UTC. Read-only: nothing was deployed. Each finding is **CONFIRMED** (with the evidence that was checked) or **UNVERIFIED** (not checked, or checked only from documents).
 
 Verdict: the production source is established. takwimu.netlify.app is served by Netlify deploy `6b0189a18ee52f737fafa147`, built from commit `d413b53` on branch `claude/eager-rubin-7bpcgq` of `PapaDanico/Takwimu`. The handover's stop condition (production source unknown) does not apply.

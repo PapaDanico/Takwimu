@@ -1,4 +1,5 @@
-// Checks the five report pages and their PDFs (handover section 9, PDF quality gates; section 14).
+// Checks the five report pages and their PDFs (handover section 9, PDF quality gates; section 14), and the fiscal brief PDF
+// (two or three A4 pages, no overflow or clipping; scripts/lib/brief-check.js).
 // Run after `npm run build` and the PDF script:
 //   NODE_PATH=$(npm root -g) node scripts/test-reports.js [distDir]
 // For each report: the PDF exists, is A4, has a page count in a range derived from the content it prints (table rows,
@@ -11,11 +12,11 @@
 // print layout no table, cell or chart is wider than the printed column; every figure on the HTML page resolves to a
 // record in its data file with the same value and carries the page and grade of its source observation (D9); every
 // citation link resolves; each chart is a single tab stop.
-const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const { chromium } = require('playwright');
+const { serve } = require('./lib/print-pdf');
 const registry = require('../components/report/reports.json');
 
 const root = path.join(__dirname, '..');
@@ -62,18 +63,7 @@ fs.readdirSync(path.join(root, 'data')).filter((f) => f.endsWith('.json')).forEa
 });
 const strayUndefined = (text) => [...text.replace(/\s+/g, ' ').matchAll(/(?:([A-Za-z,]+) )?\bundefined\b/g)].map((m) => m[0]).filter((m) => !allowedUndefined.has(m));
 
-const TYPES = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.woff2': 'font/woff2', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.json': 'application/json' };
-const srv = http.createServer((req, res) => {
-  let p = decodeURIComponent(req.url.split('?')[0]);
-  if (p.endsWith('/')) p += 'index.html';
-  const f = path.join(dist, path.normalize(p));
-  if (!f.startsWith(dist)) { res.writeHead(403); res.end(); return; }
-  fs.readFile(f, (e, d) => {
-    if (e) { res.writeHead(404); res.end(); return; }
-    res.writeHead(200, { 'content-type': TYPES[path.extname(f)] || 'application/octet-stream' });
-    res.end(d);
-  });
-});
+const srv = serve(dist);
 
 function checkPdf(r, expectSnap, draft, dom) {
   const pdf = path.join(root, 'public', 'reports', `${r.slug}.pdf`);
@@ -120,10 +110,15 @@ srv.listen(0, async () => {
   try {
     const page = await browser.newPage({ viewport: { width: 688, height: 1000 } });
     await page.emulateMedia({ media: 'print', colorScheme: 'light' });
-    for (const r of registry.reports) {
-      const file = path.join(dist, 'reports', r.slug, 'index.html');
+    // Each report has a print edition (/reports/<slug>/print/, the PDF source: every check plus the PDF checks) and a
+    // web edition (/reports/<slug>/, unique content only, duplication sweep D13/D23/D24: the same page checks, plus
+    // a check that every summarised table and gap list is in full on the page it links to).
+    for (const [r0, ed] of registry.reports.flatMap((x) => [[x, 'print'], [x, 'web']])) {
+      const r = ed === 'print' ? r0 : { ...r0, slug: `${r0.slug} (web)` };
+      const rel = ed === 'print' ? `reports/${r0.slug}/print/` : `reports/${r0.slug}/`;
+      const file = path.join(dist, rel, 'index.html');
       if (!fs.existsSync(file)) { fail(r.slug, `missing built page ${path.relative(root, file)}`); continue; }
-      await page.goto(`http://localhost:${srv.address().port}/reports/${r.slug}/`, { waitUntil: 'networkidle' });
+      await page.goto(`http://localhost:${srv.address().port}/${rel}`, { waitUntil: 'networkidle' });
       await page.evaluate(() => document.fonts.ready);
       await page.waitForTimeout(300);
       const dom = await page.evaluate(() => {
@@ -148,7 +143,8 @@ srv.listen(0, async () => {
         const plainRows = trs.length - citeRows;
         const appendices = main.querySelectorAll('.rp-appendix').length;
         const bareValues = [...main.querySelectorAll('td.v')].filter((td) => !td.querySelector('.fig')).length;
-        return { snapshot: main.dataset.snapshot, draft: main.dataset.draft === 'true', reviewState: main.dataset.reviewState, wide, deadLinks, figs, bareValues, text: main.innerText, watermark: !!main.querySelector('.rp-watermark'), charts: charts.length, chartTabs, plainRows, citeRows, appendices };
+        const moved = [...main.querySelectorAll('[data-check]')].map((e) => ({ href: e.dataset.movedTo || e.dataset.gapHome, check: JSON.parse(e.dataset.check || '[]') }));
+        return { edition: main.dataset.edition, moved, snapshot: main.dataset.snapshot, draft: main.dataset.draft === 'true', reviewState: main.dataset.reviewState, wide, deadLinks, figs, bareValues, text: main.innerText, watermark: !!main.querySelector('.rp-watermark'), charts: charts.length, chartTabs, plainRows, citeRows, appendices };
       });
       if (!dom) { fail(r.slug, 'no <main class="rp"> on the page'); continue; }
       const expectSnap = snapshotOf(r.inputs);
@@ -196,8 +192,41 @@ srv.listen(0, async () => {
       const stray = strayUndefined(dom.text);
       if (stray.length) fail(r.slug, `page text contains "undefined" (${stray.slice(0, 3).join(' | ')})`);
       if (dom.text.includes('[object Object]')) fail(r.slug, `page text contains "[object Object]" ${dom.text.split('[object Object]').length - 1} times`);
+      if (dom.edition !== ed) fail(r.slug, `page says edition ${dom.edition}, expected ${ed}`);
+      if (ed === 'web') {
+        // A summary links to a page that shows the table in full: every row key, case note or gap reason is there.
+        const textOf = (href) => {
+          const u = href.split('#')[0];
+          const f = path.join(dist, u, 'index.html');
+          if (!fs.existsSync(f)) return null;
+          return fs.readFileSync(f, 'utf8').replace(/<[^>]+>/g, ' ').replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ');
+        };
+        const norm = (t) => String(t).replace(/\s+/g, ' ').trim();
+        dom.moved.forEach((m) => {
+          const t = textOf(m.href);
+          if (t === null) { fail(r.slug, `summary links to ${m.href}, which is not a built page`); return; }
+          const missing = m.check.filter((c) => !t.includes(norm(c).slice(0, 60)));
+          if (missing.length) fail(r.slug, `${m.href} lacks ${missing.length} of the ${m.check.length} entries summarised here (e.g. "${norm(missing[0]).slice(0, 60)}")`);
+        });
+        if (!dom.moved.length) fail(r.slug, 'web edition summarises nothing (expected links for shared tables and gaps)');
+        summary.push(`${r0.letter} ${rel}: web edition, ${dom.figs.length} figures resolved, ${dom.moved.length} summaries linked and checked, review state ${dom.state.join('/')}`);
+        continue;
+      }
       const pages = checkPdf(r, expectSnap, dom.draft, dom);
+      // Owner (27 Nov 2026): every report PDF has at least two pages of context.
+      if (pages !== null && pages < 2) fail(r.slug, `PDF has ${pages} page; every report must have at least 2`);
       summary.push(`${r.letter} ${r.slug}: ${pages} pages, ${dom.figs.length} figures resolved, review state ${dom.state.join('/')}, snapshot ${expectSnap}${dom.draft ? ', DRAFT' : ''}`);
+    }
+    // The fiscal brief (owner, 27 Nov 2026): two or three A4 pages, each a whole section page, nothing wider than the
+    // printed column or clipped (scripts/lib/brief-check.js, the checks scripts/make-brief-pdf.js runs after printing).
+    {
+      const { layoutProblems, pdfProblems, ROUTE } = require('./lib/brief-check');
+      const bp = await browser.newPage();
+      const layout = await layoutProblems(bp, `http://localhost:${srv.address().port}${ROUTE}`);
+      await bp.close();
+      const b = pdfProblems(path.join(root, 'public', 'reports', 'siaya-fiscal-brief.pdf'), dist);
+      [...layout, ...b.problems].forEach((m) => fail('siaya-fiscal-brief', m));
+      summary.push(`brief siaya-fiscal-brief: ${b.pages} pages (2 to 3 allowed), A4, ${layout.length ? 'layout problems' : 'no overflow or clipping in print layout'}`);
     }
   } finally {
     await browser.close();

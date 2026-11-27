@@ -23,6 +23,9 @@ const programmes = masked('siaya-programmes');
 const audits = masked('siaya-audits');
 const analysis = masked('siaya-analysis');
 const cob = masked('counties-cob');
+const layers = masked('siaya-analysis-layers');
+const series = masked('siaya-county-series');
+const departments = masked('siaya-budget-departments');
 
 export const DATA = {
   'history.json': history, 'siaya-fiscal-ledger.json': ledger, 'siaya-economy.json': economy, 'siaya-health.json': health,
@@ -30,6 +33,7 @@ export const DATA = {
   'siaya-projects.json': projects, 'siaya-governance.json': governance, 'siaya-programmes.json': programmes,
   'siaya-audits.json': audits, 'siaya-analysis.json': analysis, 'siaya-geography.json': geography,
   'counties-cob.json': cob, 'source-library.json': library,
+  'siaya-analysis-layers.json': layers, 'siaya-county-series.json': series, 'siaya-budget-departments.json': departments,
 };
 export { registry };
 
@@ -135,6 +139,8 @@ agriculture.sources.forEach((d) => addSrc(d.source_id, d, 'siaya-agriculture.jso
 economy.sources.forEach((d) => addSrc(d.document_id, d, 'siaya-economy.json'));
 governance.sources.forEach((d) => addSrc(d.source_id, d, 'siaya-governance.json'));
 geography.sources.forEach((d) => addSrc(d.id, d, 'siaya-geography.json'));
+series.sources.forEach((d) => addSrc(d.source_id, d, 'siaya-county-series.json'));
+departments.sources.forEach((d) => addSrc(d.source_id, d, 'siaya-budget-departments.json'));
 export const source = (id) => SRC[id] || null;
 export const ECON_SRC = Object.fromEntries(economy.sources.map((s) => [s.vintage, s.document_id]));
 

@@ -4,6 +4,7 @@ import KenyaMap from '../../../components/KenyaMap';
 import PageToc from '../../../components/PageToc';
 import { Provisional } from '../../../components/ObsTable';
 import { SIAYA_GROUPS } from '../../../lib/siaya-nav';
+import { b1 } from '../../../lib/layers';
 
 export const metadata = {
   title: 'Siaya County',
@@ -11,7 +12,7 @@ export const metadata = {
 };
 import siaya from '../../../data/siaya.json';
 import hist from '../../../data/history.json';
-import { fmt, shortDate } from '../../../lib/format';
+import { fmt, shortDate, fmtFixed, fmtNum } from '../../../lib/format';
 import { latestOpinions } from '../../../lib/audits';
 import { pendingAt, range } from '../../../lib/editorial';
 import Reviewed from '../../../components/Reviewed';
@@ -24,7 +25,7 @@ const lower = (t) => t.replace(/ Opinion$/, '').toLowerCase();
 // Pending bills at 30 June 2025 (end of FY 2024/25): every printed value, smallest to largest (owner item 4).
 const P25 = pendingAt('2024/25');
 const P25R = range(P25);
-const m2 = (v) => v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const m2 = (v) => fmtFixed(v, 2);
 
 function Tile({ label, value, unit, note, tone, dashed, tag }) {
   return (
@@ -40,9 +41,10 @@ function Tile({ label, value, unit, note, tone, dashed, tag }) {
 const IY = hist.in_year;
 const IY_MEASURES = IY.periods.flatMap((p) => p.figures).filter((f, i, a) => a.findIndex((x) => x.measure === f.measure) === i);
 const IY_CONFLICT = { payables_assembly_opening: 'in-year-assembly-payables-2025', revenue_arrears_close: 'in-year-revenue-arrears-2025' };
-const iyValue = (f) => (f.unit === '%' ? `${f.value}%` : `${f.unit} ${f.value.toLocaleString('en-US')}`);
+const iyValue = (f) => (f.unit === '%' ? `${f.value}%` : `${f.unit} ${fmtNum(f.value)}`);
 
 export default function Home() {
+  const B1 = b1();
   const osr = siaya.own_source_revenue;
   const [primary, county, report] = osr.observations;
   const budget = siaya.budget;
@@ -74,7 +76,7 @@ export default function Home() {
             </div>
           ))}
         </nav>
-        <p className="asof"><a href="/reports/siaya-fiscal-brief.pdf" download>Download the one-page fiscal brief (PDF, A4)</a></p>
+        <p className="asof"><a href="/reports/siaya-fiscal-brief.pdf" download>Download the fiscal brief (PDF, three A4 pages)</a></p>
         <p className="asof"><span className="tag good">Checked {asOf}</span> against the Controller of Budget and Auditor-General reports</p>
         <Provisional dataset={['history', 'siaya-audits', 'siaya-fiscal-ledger']}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
       </header>
@@ -136,15 +138,21 @@ export default function Home() {
         <p className="lead">The Auditor-General checks whether a county&apos;s accounts are reliable. The County Executive and the County Assembly are audited separately. Below is the latest opinion read for each, as printed; every year and every finding is on <Link href="/counties/siaya/audits/">audit findings</Link>.</p>
         <div className="tiles" id="audit-latest">
           {AUD.entities.map((e) => (
-            <Tile key={e.entity} label={`${e.label}, FY ${e.fy}`} value={<Reviewed b={e.review}>{() => e.opinion}</Reviewed>} tone={/^Unqualified/.test(e.opinion) ? 'good' : 'warn'} note={<>As printed in the <a href={e.url}>{e.title}</a>, PDF p. {e.page}{e.report_date ? `, dated ${shortDate(e.report_date)}` : ''}. {/^Qualified/.test(e.opinion) ? 'A qualified opinion means the accounts are fair except for specific matters the auditor describes.' : ''}</>} />
+            <Tile key={e.entity} label={`${e.label}, FY ${e.fy}`} value={<Reviewed b={e.review}>{() => e.opinion}</Reviewed>} tone={/^Unqualified/.test(e.opinion) ? 'good' : 'warn'} note={<>As printed in the <a href={e.url}>{e.title}</a>, PDF p. {e.page}{e.report_date ? `, dated ${shortDate(e.report_date)}` : ''}.</>} />
           ))}
         </div>
+        {AUD.entities.some((e) => /^Qualified/.test(e.opinion)) ? <p className="how" id="audit-meaning">A qualified opinion means the accounts are fair except for specific matters the auditor describes.</p> : null}
         <p className="rule-note" id="audit-history-note">Our ten-year audit series for the County Executive ends at FY {AUD.history.fy} ({AUD.history.opinion}); the FY {AUD_LATEST_FY} reports above are newer than that series. Findings, the reasons for each opinion and the years with no report are on <Link href="/counties/siaya/audits/">audit findings</Link>.</p>
       </section>
 
       <section className="card" id="tenyears" aria-labelledby="tenh">
         <h2 id="tenh">Ten years at a glance</h2>
         <p className="lead">The approved budget and spending for every year since FY 2013/14 are charted once, on <Link href="/counties/siaya/insights/#spending">Siaya insights</Link>, with real-terms values and the arithmetic; the share of budget spent and pending bills for every year are on <Link href="/counties/siaya/analysis/">Siaya analysis</Link>.</p>
+        <ul className="how" id="hub-layers">
+          <li>Wage bill: above the 35 per cent ceiling in {B1.above.length} of {B1.valued} years with a value (<Link href="/counties/siaya/analysis/#an-b1">wage bill and development share</Link>).</li>
+          <li>Budgets and spending of each department, FY 2014/15 to FY 2025/26: <Link href="/counties/siaya/departments/">department budgets</Link>.</li>
+          <li>Own-source revenue as four publishers print it, side by side: <Link href="/counties/siaya/ledger/#osr-series">fiscal reconciliation</Link>.</li>
+        </ul>
       </section>
 
       <section className="card" id="in-year" aria-labelledby="inyh">

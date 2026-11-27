@@ -5,16 +5,17 @@
 // and, where a chart sets it, line dash; the table view always gives the exact values.
 import { useEffect, useRef, useState } from 'react';
 import TableWrap from './TableWrap';
+import { fmtInt, fmtNum, fmtPct } from '../lib/format';
 
 const FORMATS = {
-  int: (v) => Math.round(v).toLocaleString('en-US'),
+  int: fmtInt,
   one: (v) => v.toFixed(1),
   two: (v) => v.toFixed(2),
   pct0: (v) => `${Math.round(v)}%`,
   pct1: (v) => `${v.toFixed(1)}%`,
 };
-FORMATS.auto = (v) => v.toLocaleString('en-US', { maximumFractionDigits: 2 });
-FORMATS.autopct = (v) => `${v.toLocaleString('en-US', { maximumFractionDigits: 1 })}%`;
+FORMATS.auto = (v) => fmtNum(v, { dp: 2 });
+FORMATS.autopct = (v) => fmtPct(v, 1);
 const fmt = (kind, v) => (FORMATS[kind] || FORMATS.int)(v);
 // Axis ticks use the short format; tables, tooltips and screen-reader text keep the full published precision.
 const VALUE_FMT = { int: 'auto', one: 'auto', two: 'auto', pct0: 'autopct', pct1: 'autopct' };

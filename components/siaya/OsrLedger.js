@@ -6,8 +6,9 @@ import siaya from '../../data/siaya.json';
 import hist from '../../data/history.json';
 import cpi from '../../data/cpi.json';
 import analysis from '../../data/siaya-analysis.json';
-import { fmt, shortDate } from '../../lib/format';
+import { fmt, shortDate, fmtInt, fmtNum } from '../../lib/format';
 import { cagr } from '../../lib/analytics';
+import { SIAYA_FYS } from '../../lib/siaya-years';
 
 // Own-source revenue, canonical home /counties/siaya/ledger/ (owner decision U1, 21 Nov 2026). Moved here from the
 // Siaya hub (FY 2024/25 sources side by side, composition), from the old Siaya insights page (ten-year series) and from the old
@@ -24,14 +25,14 @@ const OSR_MIX = { cob2425: A8('SIA-A8-2024-25-cob-report-2024-25'), cty2425: A8(
 // Health facility (FIF/A-i-A) part of the Controller of Budget FY 2024/25 total, as printed (Table 2.1).
 const FIF2425 = ((OSR_MIX.cob2425.inputs || []).find((i) => i.role === 'fif') || {}).value;
 const BASE = '2024/25';
-const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
+const FYS = SIAYA_FYS;
 const SHORT = FYS.map((f) => f.slice(2));
 const years = [...hist.years].sort((a, b) => a.fy.localeCompare(b.fy));
 const by = Object.fromEntries(years.map((y) => [y.fy, y]));
 const deflator = (fy) => (cpi.fiscal_year[fy] ? cpi.fiscal_year[BASE] / cpi.fiscal_year[fy] : null);
 const realOf = (v, fy) => (v == null || deflator(fy) === null ? null : v * deflator(fy));
 const fin = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
-const m0 = (v) => Math.round(v).toLocaleString('en-US');
+const m0 = fmtInt;
 const osrPts = hist.osr_series.points;
 const osrByFy = Object.fromEntries(osrPts.map((p) => [p.fy, p]));
 const OSR_CAGR = (() => { const a = by['2014/15'].osr_m; const b = by[BASE].osr_m; return { nom: cagr(a, b, 10), real: cagr(a * deflator('2014/15'), b, 10) }; })();
@@ -83,7 +84,7 @@ export default function OsrLedger() {
             {ticks.map((t) => (
               <g key={t}>
                 <line x1={xFor(t)} x2={xFor(t)} y1="10" y2="176" stroke="var(--rule)" strokeWidth="1" />
-                <text x={xFor(t)} y="194" textAnchor="middle">{t.toLocaleString('en-US')}</text>
+                <text x={xFor(t)} y="194" textAnchor="middle">{fmtNum(t)}</text>
               </g>
             ))}
             <g className="bars">
@@ -117,7 +118,7 @@ export default function OsrLedger() {
                   ))}
                   <tr>
                     <td><a href={osr.target.source_url}>Own-source revenue in budget financing (Controller of Budget)</a>: {osr.target.description}</td>
-                    <td className="mono">{osr.target.value.toLocaleString('en-US')}</td>
+                    <td className="mono">{fmtNum(osr.target.value)}</td>
                     <td>{osr.target.status}</td>
                     <td className="mono">{osr.target.confidence} of 5</td>
                     <td className="mono">{shortDate(osr.target.retrieved)}</td>
@@ -131,7 +132,7 @@ export default function OsrLedger() {
             <br />
             Notes: the first solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh {fmt(FIF2425)} million from health facilities).
             The report calls this 2 per cent more than KSh {fmt(osr.previous_year.value)} million in FY 2023/24, but the previous year&apos;s report gave KSh 610.74 million for that year (see the trend below).
-            It is {share} per cent of the annual target; Table 2.1 of the same report prints that target as KSh 927.34 million (PDF p. 46). The budget financing counted about KSh {osr.target.value.toLocaleString('en-US')} million of own-source revenue, and the report does not explain the difference.
+            It is {share} per cent of the annual target; Table 2.1 of the same report prints that target as KSh 927.34 million (PDF p. 46). The budget financing counted about KSh {fmtNum(osr.target.value)} million of own-source revenue, and the report does not explain the difference.
             The second solid bar is the county treasury&apos;s own fourth-quarter report: KSh 236.50 million into the County Revenue Fund plus KSh 521.07 million collected and spent at source, mostly at health facilities, against a target of KSh 1,044 million. It is unaudited.
             The hatched bar is the county statement reported in the press. It does not match the county&apos;s own report, and what it counts is not established.
             The three figures are shown side by side, not averaged, and we do not say which is right. See the <Link href="/data/#conflicts">conflict register</Link>, case osr-2024-25-county-statement.
@@ -147,7 +148,7 @@ export default function OsrLedger() {
 
       <section className="card" id="osr-mix" aria-labelledby="osr-mix-h">
         <h2 id="osr-mix-h">How own-source revenue is made up</h2>
-        <p className="lead">Part of Siaya&apos;s own-source revenue is Facility Improvement Financing (FIF): money its hospitals and health facilities collect, lawful own-source revenue under the Facility Improvement Financing Act, 2023. The rest is ordinary revenue such as fees, licences and levies.</p>
+        <p className="lead">Ordinary revenue and FIF (hospital and health facility receipts) in Siaya&apos;s own-source revenue; the terms are <Link href="/learn/#own-source-revenue">explained on Learn</Link>.</p>
         <ul className="how">
           <li>FY 2024/25: FIF is {OSR_MIX.cob2425.result}% of own-source revenue in the Controller of Budget&apos;s Table 2.1 and {OSR_MIX.cty2425.result}% in the county&apos;s Q4 report. The two documents differ by KSh {OSR_MIX.dFif.result} million in FIF and KSh {OSR_MIX.dOrd.result} million in ordinary revenue, so the gap between KSh 436.68 million and KSh 757.57 million lies in hospital and health facility receipts, not in ordinary revenue (case <a href="/data/#osr-2024-25-county-statement">osr-2024-25-county-statement</a>).</li>
           <li>FY 2023/24: FIF is {OSR_MIX.cob2324.result}% (Controller of Budget). Among counties with a printed value, Siaya&apos;s FIF share is position {OSR_MIX.rank2324.result} of {OSR_MIX.rank2324.flags && OSR_MIX.rank2324.flags.n_counties} in FY 2023/24 and {OSR_MIX.rank2425.result} of {OSR_MIX.rank2425.flags && OSR_MIX.rank2425.flags.n_counties} in FY 2024/25 (1 = highest share).</li>

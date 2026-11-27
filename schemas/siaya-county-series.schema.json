@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/siaya-county-series.schema.json",
+  "title": "Siaya fiscal series from county documents and the Auditor-General (data/siaya-county-series.json)",
+  "description": "County Treasury (CBROP) totals and the Auditor-General's Receiver of Revenue and County Revenue Fund figures, kept as separate series. Rules beyond this schema (second reading of OCR figures, arithmetic checks, comparisons recomputed, sources in the library with the same hash) are checked by scripts/test-county-series.js.",
+  "type": "object",
+  "required": ["meta", "sources", "series", "observations", "arithmetic_checks", "comparisons"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "county", "county_code", "retrieved", "schema_version", "rule", "bases", "ocr_rule", "confidence_scale", "review", "gaps"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "county": { "type": "string", "enum": ["Siaya"] },
+        "county_code": { "type": "integer", "enum": [41] },
+        "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "schema_version": { "type": "string" },
+        "rule": { "type": "string" },
+        "bases": { "type": "object", "required": ["cash", "accrual", "treasury_table", "county_review"], "additionalProperties": false, "properties": { "cash": { "type": "string" }, "accrual": { "type": "string" }, "treasury_table": { "type": "string" }, "county_review": { "type": "string" } } },
+        "ocr_rule": { "type": "string" },
+        "confidence_scale": { "type": "string" },
+        "review": { "type": "string" },
+        "gaps": { "type": "array", "items": { "type": "object", "required": ["series", "fy", "reason"], "additionalProperties": false, "properties": { "series": { "$ref": "#/$defs/series" }, "fy": { "type": "string" }, "reason": { "type": "string" } } } }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "object", "required": ["source_id", "title", "sha256", "url"], "additionalProperties": false, "properties": { "source_id": { "type": "string" }, "title": { "type": "string" }, "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }, "url": { "type": "string", "pattern": "^https://" } } }
+    },
+    "series": {
+      "type": "array",
+      "minItems": 4,
+      "items": { "type": "object", "required": ["id", "label", "audited"], "additionalProperties": false, "properties": { "id": { "$ref": "#/$defs/series" }, "label": { "type": "string" }, "audited": { "type": "boolean" } } }
+    },
+    "observations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "series", "fy", "measure", "value", "unit", "original_text", "basis", "source_id", "table", "pdf_page", "printed_page", "read_method", "confidence"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^CS-[A-Za-z0-9_-]+$" },
+          "series": { "$ref": "#/$defs/series" },
+          "fy": { "type": "string", "pattern": "^\\d{4}/\\d{2}$" },
+          "measure": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["KSh"] },
+          "original_text": { "type": "string" },
+          "basis": { "type": "string" },
+          "source_id": { "type": "string" },
+          "table": { "type": "string" },
+          "pdf_page": { "type": "integer", "minimum": 1 },
+          "printed_page": { "type": ["integer", "null"] },
+          "read_method": { "type": "string", "enum": ["text", "ocr-tesseract"] },
+          "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "second_reading": {
+            "type": "object",
+            "required": ["rule", "passes", "passes_reading_it", "agree"],
+            "additionalProperties": false,
+            "properties": {
+              "rule": { "type": "string" },
+              "passes": { "type": "object", "additionalProperties": { "type": ["string", "null"] } },
+              "passes_reading_it": { "type": "integer", "minimum": 0, "maximum": 3 },
+              "agree": { "type": "boolean" },
+              "note": { "type": "string" }
+            }
+          },
+          "needs_human_check": { "type": "boolean" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "arithmetic_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ids", "rule", "difference", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "ids": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+          "rule": { "type": "string" },
+          "printed_variance": { "type": "string" },
+          "variance_read_twice": { "type": "boolean" },
+          "difference": { "type": "number" },
+          "status": { "type": "string", "enum": ["adds", "does not add"] }
+        }
+      }
+    },
+    "comparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["fy", "measure", "values", "spread_pct_of_smallest"],
+        "additionalProperties": false,
+        "properties": {
+          "fy": { "type": "string" },
+          "measure": { "type": "string" },
+          "values": { "type": "array", "minItems": 2, "items": { "type": "object", "required": ["series", "source_id", "ref", "value_ksh_m"], "additionalProperties": false, "properties": { "series": { "type": "string" }, "source_id": { "type": ["string", "null"] }, "ref": { "type": "string" }, "value_ksh_m": { "type": "number" } } } },
+          "spread_pct_of_smallest": { "type": "number" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "series": { "type": "string", "enum": ["county-cbrop", "oag-ror-table", "oag-ror", "oag-crf"] }
+  }
+}

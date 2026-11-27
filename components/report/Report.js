@@ -8,9 +8,13 @@ import { Fragment } from 'react';
 import ReportChart from './ReportChart';
 import { PROVISIONAL } from './model';
 import { conflictNote } from './rules';
+import { fmtNum } from '../../lib/format';
+import { licenceLabel, TERMS_HREF } from '../../lib/licence';
 
 export const METHOD_HREF = '/reports/method/';
-const num = (v) => v.toLocaleString('en-US', { maximumFractionDigits: 6 });
+// Web edition: a document link reads as its host (the PDF prints the full address).
+const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return 'link'; } };
+const num = (v) => fmtNum(v, { dp: 6 });
 const fmtValue = (f) => {
   if (f.suppress) return 'Suppressed (fewer than 10)';
   if (f.display) return f.display;
@@ -187,6 +191,8 @@ function Chart({ b }) {
 
 function Block({ b, bib }) {
   switch (b.type) {
+    // Web edition only (components/report/web.js): a table held in full elsewhere, summarised and linked.
+    case 'moved': return <p className="rp-moved" data-moved-to={b.href} data-check={JSON.stringify(b.check || [])}>{b.text} (full table: <a href={b.href}>{b.label}</a>).</p>;
     case 'p': return <p>{b.text}</p>;
     case 'list': return <ul className="rp-list">{b.items.map((it, i) => <li key={i}><Mixed parts={it} bib={bib} /></li>)}</ul>;
     case 'figs': return <FigTable caption={b.caption} rows={b.rows} bib={bib} />;
@@ -202,14 +208,33 @@ function Block({ b, bib }) {
   }
 }
 
-function Topics({ list }) {
+function Topics({ list, web }) {
   if (!list || !list.length) return null;
   return (
-    <p className="rp-topic">Canonical topic page{list.length > 1 ? 's' : ''}: {list.map((t, i) => <span key={t.href}>{i ? '; ' : ''}<a href={t.href}>{t.label}</a> <span className="rp-url">(takwimu.netlify.app{t.href})</span></span>)}.</p>
+    <p className="rp-topic">{web ? 'Topic page' : 'Canonical topic page'}{list.length > 1 ? 's' : ''}: {list.map((t, i) => <span key={t.href}>{i ? '; ' : ''}<a href={t.href}>{t.label}</a>{web ? null : <> <span className="rp-url">(takwimu.netlify.app{t.href})</span></>}</span>)}.</p>
   );
 }
 
-export default function Report({ r }) {
+// Web edition gap appendix: a list held in full on a site page is a count and a link; any other is listed.
+function WebGaps({ groups }) {
+  const linked = groups.filter((g) => g.home);
+  const listed = groups.filter((g) => !g.home);
+  return (
+    <>
+      {linked.length ? <ul className="rp-list">{linked.map((g) => <li key={g.file} data-gap-home={g.home.href} data-check={JSON.stringify(g.rows.map((x) => x.reason))}><span className="mono">data/{g.file}</span>: {g.rows.length} {g.rows.length === 1 ? 'gap' : 'gaps'} (<a href={g.home.href}>{g.home.label}</a>)</li>)}</ul> : null}
+      {listed.length ? (
+        <table className="rp-table gaps">
+          <colgroup><col style={{ width: '30%' }} /><col style={{ width: '52%' }} /><col style={{ width: '18%' }} /></colgroup>
+          <thead><tr><th scope="col">Item</th><th scope="col">Reason</th><th scope="col">Data file</th></tr></thead>
+          <tbody>{listed.flatMap((g) => g.rows).map((g, i) => <tr key={i}><th scope="row">{g.topic}</th><td>{g.reason}</td><td className="mono">data/{g.file}</td></tr>)}</tbody>
+        </table>
+      ) : null}
+    </>
+  );
+}
+
+export default function Report({ r, edition = 'web' }) {
+  const web = edition === 'web' && !!r.web;
   const bib = new Set(r.bibliography.map((s) => s.id));
   const n0 = r.sections.length;
   const appendices = [
@@ -220,7 +245,7 @@ export default function Report({ r }) {
   ];
   const st = r.reviewState;
   return (
-    <main id="main" className="rp" data-report={r.meta.slug} data-snapshot={r.snapshot.id} data-draft={r.draft ? 'true' : 'false'}
+    <main id="main" className={`rp${web ? ' rp-web' : ''}`} data-edition={web ? 'web' : 'print'} data-report={r.meta.slug} data-snapshot={r.snapshot.id} data-draft={r.draft ? 'true' : 'false'}
       data-review-state={`${st.provisional}/${st.approved}/${st.disputed}/${st.superseded}/${st.withdrawn}`}>
       {r.draft ? <div className="rp-watermark" aria-hidden="true">DRAFT</div> : null}
       <header className="rp-cover">
@@ -230,10 +255,10 @@ export default function Report({ r }) {
         <p className="rp-sub">{r.meta.subtitle}</p>
         <div className={r.draft ? 'rp-draft' : 'rp-reviewed'} role="note">
           {r.draft
-            ? <p><strong>DRAFT.</strong> Every figure in this report is “{PROVISIONAL}” unless it carries a mark. This notice replaces a label on each figure; the watermark stays until every included figure has a review record.</p>
+            ? <p><strong>DRAFT.</strong> Every figure in this report is “{PROVISIONAL}” unless it carries a mark.{web ? null : ' This notice replaces a label on each figure; the watermark stays until every included figure has a review record.'}</p>
             : <p>Every figure in this report has an approved review record.</p>}
           <p className="rp-state">Review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn.</p>
-          <p className="rp-legend-marks">Marks: <span className="rp-mark approved">Approved</span> approved in editorial review; <span className="rp-mark disputed">Disputed</span> the data file records a conflict for this value (both readings are kept); <span className="rp-mark superseded">Superseded</span> replaced by a later reading; a withdrawn value prints the withdrawal and its reason instead of the number.</p>
+          {web ? <p className="rp-legend-marks">Marks, review states and how to read a report: <a href={`${METHOD_HREF}#review`}>one page for all five reports</a>.</p> : <p className="rp-legend-marks">Marks: <span className="rp-mark approved">Approved</span> approved in editorial review; <span className="rp-mark disputed">Disputed</span> the data file records a conflict for this value (both readings are kept); <span className="rp-mark superseded">Superseded</span> replaced by a later reading; a withdrawn value prints the withdrawal and its reason instead of the number.</p>}
         </div>
         <dl className="rp-meta">
           <div><dt>Edition</dt><dd>{r.edition}</dd></div>
@@ -250,13 +275,15 @@ export default function Report({ r }) {
             {appendices.map((a, i) => <li key={a.id}><a href={`#${a.id}`}>{n0 + i + 1}. {a.title}</a></li>)}
           </ol>
         </nav>
-        <p className="rp-howto">How to read this report, the method, the confidence scales and the licence are set out once for all five reports at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>. In short: <strong>Findings</strong> are values as the documents print them; <strong>Interpretation</strong> is Takwimu’s reading, not a finding; where documents disagree all values are shown and none is chosen.{/own[- ]source revenue|\bFIF\b/i.test(JSON.stringify(r)) ? <> Own-source revenue, hospital income (FIF) and A-i-A are counted differently by each publisher: <a href="/learn/#own-source-revenue">explained</a> <span className="rp-url">(takwimu.netlify.app/learn/#own-source-revenue)</span>.</> : null}</p>
+        {web ? (
+          <p className="rp-howto">This page shows what is unique to Report {r.meta.letter}; tables held in full on a Siaya page or in another report are summarised and linked. The <a href={`/reports/${r.meta.slug}.pdf`}>PDF</a> is the complete, standalone edition.{/own[- ]source revenue|\bFIF\b/i.test(JSON.stringify(r.sections)) ? <> Own-source revenue terms: <a href="/learn/#own-source-revenue">explained</a>.</> : null}</p>
+        ) : <p className="rp-howto">How to read this report, the method, the confidence scales and the licence are set out once for all five reports at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>. In short: <strong>Findings</strong> are values as the documents print them; <strong>Interpretation</strong> is Takwimu’s reading, not a finding; where documents disagree all values are shown and none is chosen.{/own[- ]source revenue|\bFIF\b/i.test(JSON.stringify(r)) ? <> Own-source revenue, hospital income (FIF) and A-i-A are counted differently by each publisher: <a href="/learn/#own-source-revenue">explained</a> <span className="rp-url">(takwimu.netlify.app/learn/#own-source-revenue)</span>.</> : null}</p>}
       </header>
 
       {r.sections.map((s, i) => (
         <section key={s.id} id={s.id} className="rp-section" aria-labelledby={`${s.id}-h`}>
           <h2 id={`${s.id}-h`}>{i + 1}. {s.title}</h2>
-          <Topics list={s.topics} />
+          <Topics list={s.topics} web={web} />
           <div className="rp-findings">
             <h3>Findings</h3>
             {s.findings.map((b, k) => <Block key={k} b={b} bib={bib} />)}
@@ -272,19 +299,19 @@ export default function Report({ r }) {
 
       <section id="gaps" className="rp-section rp-appendix" aria-labelledby="gaps-h">
         <h2 id="gaps-h">{n0 + 1}. Data gaps</h2>
-        <p>Gaps in the input files of this report, listed and never filled (see <a href={`${METHOD_HREF}#gaps`}>how gaps are handled</a>).</p>
-        <table className="rp-table gaps">
+        <p>{web ? <>Gaps are listed, never filled (<a href={`${METHOD_HREF}#gaps`}>how</a>).</> : <>Gaps in the input files of this report, listed and never filled (see <a href={`${METHOD_HREF}#gaps`}>how gaps are handled</a>).</>}</p>
+        {web ? <WebGaps groups={r.gapGroups} /> : <table className="rp-table gaps">
           <colgroup><col style={{ width: '30%' }} /><col style={{ width: '52%' }} /><col style={{ width: '18%' }} /></colgroup>
           <thead><tr><th scope="col">Item</th><th scope="col">Reason</th><th scope="col">Data file</th></tr></thead>
           <tbody>{r.gaps.map((g, i) => <tr key={i}><th scope="row">{g.topic}</th><td>{g.reason}</td><td className="mono">data/{g.file}</td></tr>)}</tbody>
-        </table>
+        </table>}
       </section>
 
       {r.meta.letter === 'A' ? <Dictionary r={r} n={n0 + 2} /> : null}
 
       <section id="bibliography" className="rp-section rp-appendix" aria-labelledby="bibliography-h">
         <h2 id="bibliography-h">{n0 + appendices.length - 1}. Bibliography and document versions</h2>
-        <p>Every document cited by a figure in this report, with the SHA-256 digest of the file version read (<a href={`${METHOD_HREF}#bibliography`}>conventions</a>).</p>
+        <p>{web ? <>Documents cited by the figures on this page (<a href={`${METHOD_HREF}#bibliography`}>conventions</a>).</> : <>Every document cited by a figure in this report, with the SHA-256 digest of the file version read (<a href={`${METHOD_HREF}#bibliography`}>conventions</a>).</>}</p>
         <table className="rp-table bib">
           <colgroup><col style={{ width: '14%' }} /><col style={{ width: '34%' }} /><col style={{ width: '22%' }} /><col style={{ width: '18%' }} /><col style={{ width: '12%' }} /></colgroup>
           <thead><tr><th scope="col">Key</th><th scope="col">Title, publisher, date</th><th scope="col">SHA-256</th><th scope="col">URL</th><th scope="col">Licence</th></tr></thead>
@@ -293,8 +320,8 @@ export default function Report({ r }) {
               <th scope="row" className="mono">{s.id}</th>
               <td>{s.title}. {s.publisher || 'Publisher not stated'}. {s.date || 'Date not stated'}.{s.period ? ` Period: ${s.period}.` : ''}</td>
               <td className="mono hash">{s.sha256 || 'not recorded'}</td>
-              <td className="url">{s.url ? <a href={s.url}>{s.url}</a> : 'Not recorded'}</td>
-              <td>{s.licence || 'Not stated: link and cite only'}</td>
+              <td className="url">{s.url ? <a href={s.url}>{web ? hostOf(s.url) : s.url}</a> : 'Not recorded'}</td>
+              <td>{licenceLabel(s.licence).label} (<a href={TERMS_HREF}>terms</a>)</td>
             </tr>
           ))}</tbody>
         </table>
@@ -308,7 +335,7 @@ export default function Report({ r }) {
 
       <section id="snapshot" className="rp-section rp-appendix" aria-labelledby="snapshot-h">
         <h2 id="snapshot-h">{n0 + appendices.length}. Snapshot, method and licence</h2>
-        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> identifies the input files below and the review state of every value at the time of printing (review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn). How it is computed, the method, the confidence scales and the licence are at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>. This report contains no personal data and names no contractor or individual.</p>
+        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> identifies the input files below and the review state of every value at the time of printing (review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn). {web ? <><a href={`${METHOD_HREF}#snapshot`}>How it is computed</a>.</> : <>How it is computed, the method, the confidence scales and the licence are at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>.</>} This report contains no personal data and names no contractor or individual.</p>
         <table className="rp-table snap">
           <colgroup><col style={{ width: '32%' }} /><col style={{ width: '68%' }} /></colgroup>
           <thead><tr><th scope="col">Input file</th><th scope="col">SHA-256</th></tr></thead>

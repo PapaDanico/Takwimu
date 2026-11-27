@@ -8,7 +8,7 @@ Checked 21 Nov 2026. This answers the handover's P0 gate.
 |---|---|
 | Public URL | https://takwimu.netlify.app |
 | Hosting project | Netlify site `takwimu`, site id `bf11e227-c98e-4258-aff6-d7660459aef1` |
-| How it is deployed | Netlify continuous deployment from GitHub (PapaDanico/Takwimu, branch `main`, linked by the owner 27 Nov 2026). Each push to `main` runs `npm run build` on Netlify. Branch pushes do not deploy. |
+| How it is deployed | Netlify continuous deployment from GitHub (PapaDanico/Takwimu, branch `main`, linked by the owner 27 Nov 2026). Each push to `main` runs `npm run build` on Netlify. Branch pushes do not deploy; pull requests get deploy previews (deploy-preview-N--takwimu.netlify.app), which are not production. |
 | Repository | https://github.com/PapaDanico/Takwimu |
 | Source branch | `claude/eager-rubin-7bpcgq`, open as pull request 1 against `main` |
 | Build command | `npm run build` = unit tests, data validation, data publishing, `next build` |

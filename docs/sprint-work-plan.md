@@ -1,5 +1,7 @@
 # Sprint work plan: a populated, shareable Takwimu
 
+> Superseded (27 Nov 2026): the 21 Nov 2026 sprint plan, kept as written. The current plan is `docs/release-plan.md`; what deploys production is in `docs/architecture-map.md`.
+
 Sprint goal: by the end of this sprint, https://takwimu.netlify.app is a complete civic-education site for Siaya County that anyone can open on a phone, understand, check against sources, and share.
 
 Scope rule: every figure on the site has a named source, a retrieval date and a confidence score, and passes `npm run validate`. Nothing is published that cannot be traced.

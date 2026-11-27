@@ -7,10 +7,11 @@
 // No network requests, no cookies or storage. Colour is never the only signal: values are in labels and the table.
 import { useCallback, useMemo, useRef, useState } from 'react';
 import geo from '../data/siaya-wards-geo.json';
+import { fmtFixed } from '../lib/format';
+import { equalSteps, legendItems, STEPS_NOTE } from '../lib/scale';
 
 const W = 600;
 const PAD = 10;
-const STEPS = 5;
 const K_MIN = 1;
 const K_MAX = 8;
 const LABEL_K = 2; // labels appear at this zoom and above
@@ -36,16 +37,9 @@ const WARDS = geo.features.map((f) => {
 });
 const BY_CODE = [...WARDS].sort((a, b) => a.code.localeCompare(b.code));
 
-const show = (v, dec) => v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+const show = (v, dec) => fmtFixed(v, dec);
 
-function scaleOf(vals) {
-  const xs = vals.filter((v) => typeof v === 'number' && Number.isFinite(v));
-  if (!xs.length) return null;
-  const min = Math.min(...xs); const max = Math.max(...xs);
-  const step = (max - min) / STEPS;
-  const bin = (v) => (typeof v !== 'number' || !Number.isFinite(v) ? null : step === 0 ? STEPS : Math.min(STEPS, Math.floor((v - min) / step) + 1));
-  return { bin, bins: Array.from({ length: STEPS }, (_, i) => [min + step * i, i === STEPS - 1 ? max : min + step * (i + 1)]) };
-}
+const scaleOf = (vals) => equalSteps(vals);
 
 const clampView = (v) => {
   const k = Math.min(K_MAX, Math.max(K_MIN, v.k));
@@ -270,11 +264,11 @@ export default function WardMap({
       {values ? (
         <div className="wmap-legend">
           {valueLabel ? <b>{valueLabel}</b> : null}
-          {scale ? scale.bins.map(([lo, hi], i) => (
-            <span key={i}><i className="wmap-sw" style={{ background: `var(--q${i + 1})` }} aria-hidden="true" />{fmtV(lo)} to {fmtV(hi)}</span>
-          )) : null}
+          {legendItems(scale, fmtV).map((k) => (
+            <span key={k.step}><i className="wmap-sw" style={{ background: `var(--q${k.step})` }} aria-hidden="true" />{k.text}</span>
+          ))}
           <span><i className="wmap-sw" style={{ background: `repeating-linear-gradient(45deg, var(--qna-bg, var(--recess)) 0 3px, var(--qna-line, var(--ink-faint)) 3px 5px)` }} aria-hidden="true" />Not available</span>
-          {scale ? <span>Five equal steps from the lowest to the highest value; no shade means better or worse.</span> : null}
+          {scale ? <span>{STEPS_NOTE}; no shade means better or worse.</span> : null}
         </div>
       ) : null}
       <details className="tableview">

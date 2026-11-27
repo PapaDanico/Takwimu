@@ -7,6 +7,7 @@ import ObsTable, { Cite, Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
 import { masked, badge } from '../../../../lib/review-status';
 import Reviewed from '../../../../components/Reviewed';
+import { fmtNum } from '../../../../lib/format';
 const c = masked('siaya-climate');
 
 export const metadata = {
@@ -90,7 +91,7 @@ export default function SiayaClimate() {
               {water.observation_ids.map((id) => { const o = byId[id]; return (
                 <tr key={id}>
                   <th scope="row">{o.measure}<br /><small>{o.period}; {o.area_as_printed}</small></th>
-                  <Reviewed b={badge('siaya-climate', id)} as="td">{() => (o.value === null ? o.value_text : `${o.value.toLocaleString('en-US')} ${o.unit}`)}</Reviewed>
+                  <Reviewed b={badge('siaya-climate', id)} as="td">{() => (o.value === null ? o.value_text : `${fmtNum(o.value)} ${o.unit}`)}</Reviewed>
                   <td><small>{o.definition}</small></td>
                   <td><Cite id={o.source_id} table={o.table} page={o.pdf_page} printed={o.printed_page} confidence={o.confidence} /></td>
                 </tr>

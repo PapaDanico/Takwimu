@@ -1,6 +1,6 @@
 # Release checklist
 
-For a major release only (owner policy, 21 Nov 2026: commit and push often, deploy once per milestone). Production is the Netlify site `takwimu` (https://takwimu.netlify.app, site id `bf11e227-c98e-4258-aff6-d7660459aef1`), deployed by command-line build of `main` by Netlify's GitHub link (since 27 Nov 2026; branch pushes do not deploy). Netlify runs only `npm run build`, so the local gates below are the CI. GitHub Actions is retired; Cloudflare and Vercel checks on pull requests are noise.
+For a major release only (owner policy, 21 Nov 2026: commit and push often, deploy once per milestone). What deploys production (Netlify site `takwimu`, https://takwimu.netlify.app) is stated once, in `docs/architecture-map.md`: Netlify builds `main` on every merge and gives pull requests deploy previews. Netlify runs only `npm run build`, so the local gates below are the CI. GitHub Actions is retired; Cloudflare and Vercel checks on pull requests are noise.
 
 Stop at the first failure. Do not deploy around a failing gate.
 

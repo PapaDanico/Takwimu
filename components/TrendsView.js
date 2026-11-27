@@ -8,9 +8,10 @@ import DownloadView from './DownloadView';
 import SaveView from './SaveView';
 import PrintButton from './PrintButton';
 import useUrlParams from '../lib/use-url-params';
+import { fmtFixed } from '../lib/format';
 
 export const DEFAULT_TREND = 'population';
-const show = (v, dec) => v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+const show = (v, dec) => fmtFixed(v, dec);
 
 export default function TrendsView({ series, baseFy }) {
   const [sp, set] = useUrlParams();

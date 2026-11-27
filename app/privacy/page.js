@@ -24,7 +24,7 @@ const SECTIONS = [
     'The "share" buttons are ordinary links that open an app on your device with a ready-made message. We do not see the message or whether you send it.',
   ] },
   { id: 'whatsapp', title: '5. Contacting us on WhatsApp', body: [
-    'The "Request a brief" page links to WhatsApp so you can message Danico Ventures Ltd, which runs Takwimu Kenya. The Site does not pass anything to WhatsApp; the chat starts only if you choose to open it. WhatsApp is run by Meta under its own terms and privacy policy.',
+    'The "Request a brief" link on the Reports page (/reports/#briefs) opens WhatsApp so you can message Danico Ventures Ltd, which runs Takwimu Kenya. The Site does not pass anything to WhatsApp; the chat starts only if you choose to open it. WhatsApp is run by Meta under its own terms and privacy policy.',
     'Your name, phone number and what you write in the chat reach us through WhatsApp. We use them only to reply to your request and agree any brief, we do not add you to a mailing list, share your details or use them for profiling, and we delete the chat when the request is closed unless the law requires us to keep records of a paid service. You may ask us in the same chat to see, correct or delete what you shared.',
   ] },
   { id: 'complain', title: '6. Your right to complain', body: [

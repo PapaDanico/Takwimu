@@ -12,13 +12,14 @@ import SaveView from './SaveView';
 import PrintButton from './PrintButton';
 import useUrlParams from '../lib/use-url-params';
 import { cellOf, isDoubt, naText, rawText, caveat, unitText, dlRow as rowFor } from '../lib/compare-rows';
+import { fmtFixed, fmtPct } from '../lib/format';
 
 const MAX_SEL = 4;
 const GROUPS = { budget: 'Budget and spending', absorption: 'Share of budget spent', osr: 'Own-source revenue', pb: 'Pending bills' };
 const DATASET = { budget: 'counties-budget-spending', absorption: 'counties-absorption', osr: 'counties-own-source-revenue', pb: 'counties-pending-bills' };
 export const DEFAULT_INDICATOR = 'development_absorption_pct';
 
-const fmtNum = (f, v) => (f.kind === 'pct' ? `${v.toLocaleString('en-US', { maximumFractionDigits: 1 })}%` : v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+const fmtNum = (f, v) => (f.kind === 'pct' ? fmtPct(v, 1) : fmtFixed(v, 2));
 export default function CompareView({ data }) {
   const [sp, set] = useUrlParams();
   const uid = useId();

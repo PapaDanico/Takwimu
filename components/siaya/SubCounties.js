@@ -2,11 +2,11 @@ import BarList from '../BarList';
 import { ColumnChart } from '../Charts';
 import Donut from '../Donut';
 import SiayaMap from '../SiayaMap';
-import { shortDate } from '../../lib/format';
+import { shortDate, fmtNum } from '../../lib/format';
 import sc from '../../data/subcounties.json';
 import hist from '../../data/history.json';
 
-const n = (v) => v.toLocaleString('en-US');
+const n = (v) => fmtNum(v);
 const p09 = hist.population.by_sub_county_2009.values;
 const rows = sc.sub_counties.map((s) => {
   const growth = ((s.population['2019'] / p09[s.id]) - 1) * 100;

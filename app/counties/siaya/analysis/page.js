@@ -9,6 +9,9 @@ import { masked, badge } from '../../../../lib/review-status';
 import Reviewed from '../../../../components/Reviewed';
 import { plainDeep } from '../../../../lib/plain';
 import { LatestYear, SpentTenYear, Unspent, PendingTenYear, Growth, Limits, TREND_TOC } from '../../../../components/siaya/AnalysisTrends';
+import { fmtFixed } from '../../../../lib/format';
+import { WageBill, DevShare, DeptAbsorption, PendingBurden, LAYERS_TOC } from '../../../../components/siaya/Layers';
+import { gaps as layerGaps } from '../../../../lib/layers';
 
 // Masked: a result is withheld (null) when the calculation or any of its inputs was rejected in editorial review.
 const a0 = masked('siaya-analysis');
@@ -17,7 +20,7 @@ const a = { ...a0, records: plainDeep(a0.records) };
 
 export const metadata = {
   title: 'Siaya analysis',
-  description: 'Measures calculated by Takwimu Kenya from published figures for Siaya: the latest year, share of budget spent over ten years, unspent budget, pending bills, growth, real spending per person, transfer dependency, printed and recalculated shares of budget spent, audit recurrence, budget beside services, climate finance beside hotspot wards and the make-up of own-source revenue (ordinary revenue and health FIF).',
+  description: 'Measures calculated by Takwimu Kenya from published figures for Siaya: the latest year, share of budget spent over ten years, unspent budget, pending bills, growth, real spending per person, transfer dependency, printed and recalculated shares of budget spent, audit recurrence, budget beside services, climate finance beside hotspot wards and the make-up of own-source revenue (ordinary revenue and health FIF), the wage bill and development share beside their legal limits, absorption by department and pending bills as a share of revenue.',
 };
 
 const R = a.records;
@@ -81,7 +84,7 @@ const COUNTY_ROWS = (r) => {
   r.inputs.forEach((i) => { by[i.county_code] = by[i.county_code] || { code: i.county_code, county: i.county }; by[i.county_code][i.role] = i.value; });
   return Object.values(by).map((x) => ({ ...x, share: Math.round((10000 * x.fif) / x.total) / 100 })).sort((a, b) => b.share - a.share || a.code - b.code);
 };
-const m2 = (v) => (typeof v === 'number' ? v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—');
+const m2 = (v) => (typeof v === 'number' ? fmtFixed(v, 2) : '—');
 const DOC = (id) => (/^cob-report-/.test(id) ? `Controller of Budget annual report ${id.replace('cob-report-', 'FY ').replace(/-(\d\d)$/, '/$1')}` : id === 'GOV-03' ? 'County Budget Review and Outlook Paper (GOV-03)' : /^GOV-02-FY(\d{4})-(\d\d)-Q4$/.test(id) ? `County Q4 budget implementation report FY ${id.replace(/^GOV-02-FY(\d{4})-(\d\d)-Q4$/, '$1/$2')}` : id);
 
 export default function SiayaAnalysis() {
@@ -94,7 +97,7 @@ export default function SiayaAnalysis() {
 
       <section className="card gold" aria-labelledby="an-read">
         <h2 id="an-read">How to read this page</h2>
-        <p className="provisional"><span className="tag warn" id="calc-label">{LABEL}</span> <span className="tag warn">Provisional: awaiting editorial review</span> Each value below is arithmetic by Takwimu on published figures; it is not printed in any report and has not yet been checked by a reviewer.<ReviewCounts dataset="siaya-analysis" /></p>
+        <p className="provisional"><span className="tag warn" id="calc-label">{LABEL}</span> <span className="tag warn">Provisional: awaiting editorial review</span> Each value below is arithmetic by Takwimu on published figures; it is not printed in any report and has not yet been checked by a reviewer.<ReviewCounts dataset={['siaya-analysis', 'siaya-analysis-layers']} /></p>
         <ul className="how">
           <li><b>Every value can be traced.</b> Each has a calc_id, the formula in words and its inputs, each linked to the document and page it was read from. Open &ldquo;Inputs&rdquo; under any row.</li>
           <li><b>One source per calculation.</b> A numerator and its denominator come from the same document. Controller of Budget and county figures are kept as separate records and never mixed.</li>
@@ -105,6 +108,7 @@ export default function SiayaAnalysis() {
 
       <nav aria-label="Sections on this page"><ul className="toc">
         {TREND_TOC.map(([id, t]) => <li key={id}><a href={`#${id}`}>{t}</a></li>)}
+        {LAYERS_TOC.map(([id, t]) => <li key={id}><a href={`#${id}`}>{t}</a></li>)}
         <li><a href="#an-a1">Per person</a></li><li><a href="#an-a2">Transfers</a></li><li><a href="#an-a3">Printed and recalculated</a></li><li><a href="#an-a4">Pending bills by source</a></li><li><a href="#an-a5">Audit recurrence</a></li><li><a href="#an-a6">Budget beside services</a></li><li><a href="#an-a7">Climate finance</a></li><li><a href="#an-a8">Own-source revenue parts</a></li><li><a href="#limits">Limits</a></li><li><a href="#an-gaps">Gaps</a></li>
       </ul></nav>
 
@@ -113,6 +117,10 @@ export default function SiayaAnalysis() {
       <Unspent />
       <PendingTenYear />
       <Growth />
+      <WageBill />
+      <DevShare />
+      <DeptAbsorption />
+      <PendingBurden />
 
       <section className="card" aria-labelledby="an-a1">
         <h2 id="an-a1">Real spending per person</h2>
@@ -190,7 +198,7 @@ export default function SiayaAnalysis() {
 
       <section className="card" aria-labelledby="an-a8" id="osr-composition">
         <h2 id="an-a8">Own-source revenue: ordinary revenue and health facility receipts</h2>
-        <p className="lead">Own-source revenue has two parts in the reports: ordinary own-source revenue (rates, fees, licences and levies paid into the County Revenue Fund) and Facility Improvement Financing (FIF) or appropriations-in-aid, money hospitals and health facilities collect and spend at source. FIF is lawful own-source revenue under the Facility Improvement Financing Act, 2023. The share below describes how the total is made up; it does not judge collection. Each document is a separate row and none is averaged.</p>
+        <p className="lead">Ordinary own-source revenue and FIF or appropriations-in-aid, by document (the terms: <Link href="/learn/#own-source-revenue">explained on Learn</Link>). The share below describes how the total is made up; it does not judge collection. Each document is a separate row and none is averaged.</p>
         <TableWrap label="Siaya own-source revenue by part, document and year">
           <table className="data" id="osr-parts">
             <caption className="sr-only">Siaya own-source revenue: ordinary revenue, FIF/A-i-A, printed total and FIF share, by fiscal year and source document (KSh million)</caption>
@@ -228,7 +236,7 @@ export default function SiayaAnalysis() {
 
       <section className="card" aria-labelledby="an-gaps">
         <h2 id="an-gaps">Gaps and their reasons</h2>
-        <p className="lead">{gaps.length} records have no value. Each reason is in the tables above; the list below gathers them.</p>
+        <p className="lead">{gaps.length} records have no value. Each reason is in the tables above; the list below gathers them. The wage bill, development share, department absorption and pending bills layers add {layerGaps().layers} gaps (with own-source revenue on the <Link href="/counties/siaya/ledger/#osr-b3">ledger</Link>), each with its reason in its record table; sources not yet found are in <Link href="/method/#known-gaps">known gaps</Link>.</p>
         <ul className="how" id="gap-list">{gaps.map((g) => <li key={g.calc_id}><b>{g.title}</b> (<code>{g.calc_id}</code>): {g.gap_reason}</li>)}</ul>
         <p className="src">{LABEL}. Built by scripts/build-siaya-analysis.js from files already validated in this repository. Every record is in the <Link href="/datasets/?q=siaya-analysis">dataset catalogue</Link> and in <a href="/data/siaya-analysis.json">siaya-analysis.json</a>.</p>
       </section>

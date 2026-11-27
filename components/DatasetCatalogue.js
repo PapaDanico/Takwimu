@@ -6,7 +6,7 @@ import { useId } from 'react';
 import useUrlParams from '../lib/use-url-params';
 import DownloadView from './DownloadView';
 import SaveView from './SaveView';
-import { shortDate } from '../lib/format';
+import { shortDate, fmtNum } from '../lib/format';
 
 const MAX_Q = 80;
 const GEO = { national: 'National (Kenya)', county: 'County', constituency: 'Constituency' };
@@ -99,7 +99,7 @@ export default function DatasetCatalogue({ datasets, sectors, sources, years }) 
                 <p>{d.description}</p>
                 <dl>
                   <dt>Status</dt><dd><span className={`ds-status st-${d.status}`}>{d.status}</span> {d.status_reason}</dd>
-                  <dt>Review</dt><dd data-review-counts={d.id}>{d.review ? `${d.review.approved.toLocaleString('en-US')} approved, ${d.review.pending.toLocaleString('en-US')} pending, ${d.review.rejected.toLocaleString('en-US')} rejected (of ${d.review.total.toLocaleString('en-US')} values)` : 'Not itemised for editorial review yet.'}</dd>
+                  <dt>Review</dt><dd data-review-counts={d.id}>{d.review ? `${fmtNum(d.review.approved)} approved, ${fmtNum(d.review.pending)} pending, ${fmtNum(d.review.rejected)} rejected (of ${fmtNum(d.review.total)} values)` : 'Not itemised for editorial review yet.'}</dd>
                 </dl>
                 <details className="ds-tech"><summary>Unit, coverage, source, method and version</summary>
                 <dl>

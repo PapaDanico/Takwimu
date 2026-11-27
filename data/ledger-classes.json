@@ -10,13 +10,13 @@
    "open": "Nothing printed explains the difference yet."
   },
   "generated_by": "scripts/classify-ledger.js",
-  "updated": "2026-11-23",
+  "updated": "2026-11-27",
   "counts": {
-   "definitional": 45,
+   "definitional": 47,
    "period or version": 20,
    "probable source error": 11,
    "resolved by source": 1,
-   "open": 62
+   "open": 60
   },
   "total": 139
  },
@@ -132,9 +132,10 @@
    "case_id": "D-L098-L108",
    "measure": "equitable_share_received",
    "period": "FY 2024/25",
-   "classification": "open",
-   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 7.92 per cent difference.",
+   "classification": "definitional",
+   "reason": "The Controller of Budget's 7,880 is the cash received in the year: the Auditor-General's County Revenue Fund statement of cash flows FY 2024/25 gives exchequer releases of 7,882,514,002 (PDF p. 23), which includes the FY 2023/24 receivable of 581,041,559 (Table 1, PDF p. 10); the paper's 7,301.47 is the equitable share of FY 2024/25 alone (note 6, PDF p. 32).",
    "evidence": [
+    "OAG-CRF-2024-25 PDF pp. 10, 23, 32",
     "L098: cob-report-2024-25 PDF p. 474 (\"The total revenue consisted of Kshs.7.88 billion from the equitable share\")",
     "L108: GOV-03 PDF p. 16 (\"Equitable Share 7,545,450,410 7,301,473,431 -243,976,979\")"
    ]
@@ -143,9 +144,10 @@
    "case_id": "D-L108-L113",
    "measure": "equitable_share_received",
    "period": "FY 2024/25",
-   "classification": "open",
-   "reason": "County Government against County Government; neither document states a basis that explains a 7.96 per cent difference.",
+   "classification": "definitional",
+   "reason": "The Auditor-General's audited County Revenue Fund statements for FY 2024/25 print both figures and the amount between them: note 6 gives the equitable share of the year received as 7,301,472,443 (PDF p. 32, as the paper's L108) and the statement of cash flows gives exchequer releases received in the year as 7,882,514,002 (PDF p. 23, as the Q4 report's L113); the difference, 581,041,559, is the FY 2023/24 exchequer receivable received in FY 2024/25 (Table 1, balance brought forward, PDF p. 10). One counts the year's allocation, the other cash received in the year.",
    "evidence": [
+    "OAG-CRF-2024-25 PDF pp. 10, 23, 32",
     "L108: GOV-03 PDF p. 16 (\"Equitable Share 7,545,450,410 7,301,473,431 -243,976,979\")",
     "L113: GOV-02-FY2024-25-Q4 PDF p. 3 (\"Equitable Share 7,545,380,269 7,882,514,002 337,133,733\")"
    ]
@@ -155,8 +157,9 @@
    "measure": "conditional_grants_received",
    "period": "FY 2024/25",
    "classification": "open",
-   "reason": "Controller of Budget against County Government; neither document states a basis that explains a 149.42 per cent difference.",
+   "reason": "Controller of Budget (111) against the county paper (276.86). The Auditor-General's County Revenue Fund statements FY 2024/25 record transfers from other government agencies of 111,448,420.90 into the Fund (Table 1 PDF p. 10, re-examined 27 Nov 2026), close to the CoB and Q4 figures; grants paid into other accounts could explain 276.86, but nothing printed says so.",
    "evidence": [
+    "OAG-CRF-2024-25 PDF p. 10",
     "L099: cob-report-2024-25 PDF p. 474 (\"additional allocations from the national government and development partners of Kshs.111 million\")",
     "L110: GOV-03 PDF p. 16 (\"Conditional Grant 698,115,420 276,859,695 -421,255,725\")"
    ]
@@ -166,8 +169,9 @@
    "measure": "conditional_grants_received",
    "period": "FY 2024/25",
    "classification": "open",
-   "reason": "County Government against County Government; neither document states a basis that explains a 148.33 per cent difference.",
+   "reason": "The county paper's 276.86 against the county Q4 report's 111.49. The Auditor-General's County Revenue Fund statements FY 2024/25 record 111,448,420.90 received into the Fund (Table 1 PDF p. 10, re-examined 27 Nov 2026), close to the Q4 figure; nothing printed explains 276.86.",
    "evidence": [
+    "OAG-CRF-2024-25 PDF p. 10",
     "L110: GOV-03 PDF p. 16 (\"Conditional Grant 698,115,420 276,859,695 -421,255,725\")",
     "L114: GOV-02-FY2024-25-Q4 PDF p. 3 (\"Conditional Grants 698,115,690.00 111,490,421 -586,625,269\")"
    ]
@@ -201,9 +205,9 @@
    "measure": "osr_total_actual",
    "period": "FY 2019/20",
    "classification": "open",
-   "reason": "Case osr-2019-20: the Controller of Budget and the county's Budget Review and Outlook Paper differ by 2.7 per cent; neither explains it.",
+   "reason": "Case osr-2019-20: the Controller of Budget and the county's Budget Review and Outlook Paper differ by 2.7 per cent; neither explains it. Re-examined 27 Nov 2026: the County Treasury table in the Auditor-General's Receiver of Revenue reports (FY 2024/25 PDF p. 10, FY 2023/24 PDF p. 9) gives a third value, 277,193,698.20; it settles neither, see conflict osr-2019-20-audited-table.",
    "evidence": [
-    "conflict osr-2019-20",
+    "conflict osr-2019-20; conflict osr-2019-20-audited-table",
     "L131: cob-report-2020-21 PDF p. 374 (One figure per year; the report does not split ordinary revenue and health facility revenue)",
     "L144: siaya-brop-2019-20 PDF p. 15 (County BROP; printed 184,249,748)"
    ]
@@ -225,9 +229,9 @@
    "measure": "osr_total_actual",
    "period": "FY 2023/24",
    "classification": "open",
-   "reason": "Case osr-2023-24: the FY 2024/25 report quotes 427.95 for the prior year without a split; the gap is not explained by facility income alone.",
+   "reason": "Case osr-2023-24: the FY 2024/25 report quotes 427.95 for the prior year without a split; the gap is not explained by facility income alone. Re-examined 27 Nov 2026: the Auditor-General's audited Receiver of Revenue statement for FY 2023/24 (PDF p. 19, scanned, read by two of three OCR passes) gives total own-source receipts of 610,364,012 including hospital fees of 382,072,395, close to 610.74; nothing printed gives 427.95, so the case stays open.",
    "evidence": [
-    "conflict osr-2023-24",
+    "conflict osr-2023-24; OAG-ROR-2023-24 PDF p. 19",
     "L138: cob-report-2023-24 PDF p. 511 (Includes FIF/A-i-A)",
     "L145: cob-report-2024-25 PDF p. 476 (Figure quoted in a later CoB report)"
    ]
@@ -419,9 +423,9 @@
    "measure": "osr_total_target",
    "period": "FY 2024/25",
    "classification": "open",
-   "reason": "The Controller of Budget's target (927.34) matches neither the county's original estimates (1,044.06) nor its supplementary estimates (1,669.37).",
+   "reason": "The Controller of Budget's target (927.34) matches neither the county's original estimates (1,044.06) nor its supplementary estimates (1,669.37). Re-examined 27 Nov 2026: the Auditor-General's Receiver of Revenue report FY 2024/25 (PDF pp. 10-11, 18) and County Revenue Fund report (Table 1, PDF p. 10) both print the target 1,044,061,306, the county's original estimates; nothing printed gives 927.34, so the case stays open.",
    "evidence": [
-    "L156, L165, L169; conflict budget-financing-osr-2024-25",
+    "L156, L165, L169; conflict budget-financing-osr-2024-25; OAG-ROR-2024-25 PDF p. 10; OAG-CRF-2024-25 PDF p. 10",
     "L156: cob-report-2024-25 PDF p. 46 (\"927.34\")",
     "L165: GOV-03 PDF p. 16 (\"Total OSR 1,044,061,306 757,570,621 -286,490,685\")"
    ]
@@ -431,9 +435,9 @@
    "measure": "osr_total_target",
    "period": "FY 2024/25",
    "classification": "open",
-   "reason": "The Controller of Budget's target matches neither county estimates column; budget version not stated by the CoB.",
+   "reason": "The Controller of Budget's target matches neither county estimates column; budget version not stated by the CoB. The Auditor-General's FY 2024/25 reports print the original 1,044,061,306 (re-examined 27 Nov 2026), not 927.34.",
    "evidence": [
-    "L156, L165, L169; conflict budget-financing-osr-2024-25",
+    "L156, L165, L169; conflict budget-financing-osr-2024-25; OAG-ROR-2024-25 PDF p. 10",
     "L156: cob-report-2024-25 PDF p. 46 (\"927.34\")",
     "L169: GOV-02-FY2024-25-Q4 PDF p. 6 (\"Total OSR 1,044,061,306 1,669,374,897 757,570,621 -911,804,276\")"
    ]

@@ -7,6 +7,7 @@ import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import AuditExplorer from '../../../../components/AuditExplorer';
 import { audits, withdrawnText, ENTITY, CATEGORY, YEARS } from '../../../../lib/audits';
+import AUD_DATA from '../../../../data/siaya-audits.json';
 
 export const metadata = {
   title: 'Audit findings',
@@ -70,7 +71,9 @@ export default function SiayaAudits() {
             const g = a.missing.filter((x) => x.entity === e);
             return <li key={e}><b>{ENTITY[e]}:</b> {g.length ? g.map((x) => `FY ${x.fy}`).join(', ') : 'none'}.</li>;
           })}
-          <li>For FY 2014/15 and FY 2015/16 only the County Executive&rsquo;s opinion is known, from a Senate compilation; no findings are recorded for those years.</li>
+          {[...new Set(AUD_DATA.gaps.filter((g) => g.status === 'opinion only').map((g) => g.reason))].map((r) => (
+            <li key={r}><b>Opinion only ({AUD_DATA.gaps.filter((g) => g.status === 'opinion only' && g.reason === r).map((g) => `${ENTITY[g.entity]}, FY ${g.fy}`).join('; ')}):</b> {r}</li>
+          ))}
         </ul>
       </section>
 

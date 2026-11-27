@@ -7,3 +7,4 @@ public/data/
 dist-synthetic/
 public/briefs/siaya-fiscal-brief.pdf
 .next-real/
+.claude/worktrees/
