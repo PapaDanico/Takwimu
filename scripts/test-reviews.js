@@ -248,7 +248,7 @@ if (dist && process.argv.includes('--synthetic')) {
   const chosen = [];
   // Datasets added on 27 Nov 2026 that no page shows yet (page wiring follows). Until then nothing of theirs may reach
   // the built site at all: no marked value and no published copy. Remove a dataset from this list when its page lands.
-  const NOT_YET_ON_PAGES = ['siaya-budget-departments', 'siaya-county-series', 'siaya-analysis-layers'];
+  const NOT_YET_ON_PAGES = [];
   rs.DATASET_IDS.forEach((d) => {
     const keys = Object.keys(before).filter((k) => k.startsWith(`${d}:`) && Object.values(before[k]).flat().every((x) => x.state !== 'rejected'));
     if (NOT_YET_ON_PAGES.includes(d)) {
@@ -333,7 +333,7 @@ if (dist && process.argv.includes('--synthetic')) {
       return { head, rows: body.map((r) => Object.fromEntries(head.map((h, i) => [h, r[i]]))) };
     };
     // Downloads of itemised (reviewed) datasets; national WDI series are not in the register.
-    const REVIEWED_DL = new Set(['siaya-fiscal-ledger', 'siaya-audit-findings', 'siaya-economy', 'siaya-governance', 'siaya-health', 'siaya-education', 'siaya-agriculture', 'siaya-climate', 'siaya-analysis', 'siaya-projects', 'siaya-programmes', 'counties-budget-spending', 'counties-absorption', 'counties-own-source-revenue', 'counties-pending-bills']);
+    const REVIEWED_DL = new Set(['siaya-fiscal-ledger', 'siaya-audit-findings', 'siaya-economy', 'siaya-governance', 'siaya-health', 'siaya-education', 'siaya-agriculture', 'siaya-climate', 'siaya-analysis', 'siaya-projects', 'siaya-programmes', 'siaya-budget-departments', 'siaya-county-series', 'siaya-analysis-layers', 'counties-budget-spending', 'counties-absorption', 'counties-own-source-revenue', 'counties-pending-bills']);
     const withdrawnIn = {};
     const isWithdrawn = (r) => /^Withdrawn after editorial review/.test(r.review_status || '') || /withdrawn after editorial review/.test(r.status || '');
     fs.readdirSync(dlDir).filter((f) => f.endsWith('.csv')).forEach((f) => {
@@ -347,7 +347,7 @@ if (dist && process.argv.includes('--synthetic')) {
         [...VALUE_COLS, ...(RECORD_VALUE_COLS[id] || [])].forEach((c) => { if (c in r) ok(r[c] === null || r[c] === '' || (Array.isArray(r[c]) && !r[c].length), `synthetic: download ${id} row withdrawn but ${c} = ${JSON.stringify(r[c]).slice(0, 40)}`); });
       });
     });
-    const DL = { 'siaya-fiscal-ledger': 'siaya-fiscal-ledger', 'siaya-audits': 'siaya-audit-findings', 'siaya-economy': 'siaya-economy', 'siaya-governance': 'siaya-governance', 'siaya-health': 'siaya-health', 'siaya-education': 'siaya-education', 'siaya-agriculture': 'siaya-agriculture', 'siaya-climate': 'siaya-climate', 'siaya-analysis': 'siaya-analysis', 'siaya-projects': 'siaya-projects', 'siaya-programmes': 'siaya-programmes' };
+    const DL = { 'siaya-fiscal-ledger': 'siaya-fiscal-ledger', 'siaya-audits': 'siaya-audit-findings', 'siaya-economy': 'siaya-economy', 'siaya-governance': 'siaya-governance', 'siaya-health': 'siaya-health', 'siaya-education': 'siaya-education', 'siaya-agriculture': 'siaya-agriculture', 'siaya-climate': 'siaya-climate', 'siaya-analysis': 'siaya-analysis', 'siaya-projects': 'siaya-projects', 'siaya-programmes': 'siaya-programmes', 'siaya-budget-departments': 'siaya-budget-departments', 'siaya-county-series': 'siaya-county-series', 'siaya-analysis-layers': 'siaya-analysis-layers' };
     ids.forEach(([d, id]) => {
       if (!DL[d] || (d === 'siaya-audits' && id.startsWith('opinion:'))) return;
       ok(Boolean(withdrawnIn[DL[d]]), `synthetic: download ${DL[d]} has no withdrawn row for ${d} ${id}`);
