@@ -1,16 +1,20 @@
 // Checks data/siaya-audits.json: schema, citations (document, page, entity, year), amounts, recurrence links,
 // no personal names or honorifics, no loaded words outside quoted report headings, and opinions against data/history.json.
+// Since 27 Nov 2026 the same checks run for every county audits file in lib/county-registry.js (Kisumu:
+// data/counties/kisumu/audits.json, opinions only), plus the opinion rules for a county with no history.json: an
+// OCR-read opinion carries a second reading and a page-check flag, a secondary summary carries tier "secondary", and
+// separately audited entities keep their own documents. Siaya's checks are unchanged.
 // Run: node scripts/test-audits.js
 const fs = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, '..');
 const read = (p) => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
-const data = read('data/siaya-audits.json');
+const counties = require('../lib/county-registry');
 const schema = read('schemas/siaya-audits.schema.json');
 const history = read('data/history.json');
 const manifest = read('data/source-manifest.json');
-const errors = [];
+let errors = [];
 let tests = 0;
 const fail = (m) => errors.push(m);
 
@@ -44,7 +48,13 @@ function check(s, v, where) {
     });
   }
 }
-tests++; check(schema, data, 'siaya-audits');
+function run(slug) {
+errors = []; tests = 0;
+const siaya = slug === 'siaya';
+const data = read(counties.file(slug, 'audits'));
+const name = siaya ? 'siaya-audits' : `${slug}-audits`;
+tests++; check(schema, data, name);
+if (siaya && !data.findings.length) fail('siaya-audits: needs at least one finding');
 
 const docs = Object.fromEntries(data.documents.map((d) => [d.doc_id, d]));
 const manDocs = Object.fromEntries((manifest.documents || []).map((d) => [d.id, d]));
@@ -110,7 +120,7 @@ if (canon(rec) !== canon(data.recurrence_by_category)) fail('recurrence_by_categ
 // Opinions: each cites a document in this file or in the source manifest; one per entity and year;
 // and the opinion type matches data/history.json where both exist.
 const kind = (s) => (s ? s.toLowerCase().replace(/ (opinion|of opinion)$/, '').split(' ')[0] : null);
-const hist = Object.fromEntries((history.audits.points || []).map((p) => [p.fy, p]));
+const hist = siaya ? Object.fromEntries((history.audits.points || []).map((p) => [p.fy, p])) : {};
 const seen = new Set();
 data.opinions.forEach((o) => {
   tests++;
@@ -149,11 +159,38 @@ const walk = (v, where, inHeading) => {
   } else if (Array.isArray(v)) v.forEach((x, i) => walk(x, `${where}[${i}]`, inHeading));
   else if (v && typeof v === 'object') Object.keys(v).forEach((k) => walk(v[k], `${where}.${k}`, inHeading || (k === 'report_heading' && v[k] && v[k].quoted === true)));
 };
-tests++; walk(data, 'siaya-audits', false);
+tests++; walk(data, name, false);
+// Another county: opinion rules (no history.json to compare with).
+if (!siaya) {
+  const OPINIONS = ['Unqualified Opinion', 'Unmodified Opinion', 'Qualified Opinion', 'Adverse Opinion', 'Disclaimer of Opinion'];
+  data.opinions.forEach((o) => {
+    tests++;
+    const key = `${o.entity} ${o.fy}`;
+    if (o.opinion !== null && !OPINIONS.includes(o.opinion)) fail(`opinion ${key}: unknown opinion type ${o.opinion}`);
+    if (!['primary', 'secondary'].includes(o.tier)) fail(`opinion ${key}: tier must be primary or secondary`);
+    if (o.read_method === 'ocr-tesseract' && !(o.second_reading && o.needs_page_check === true)) fail(`opinion ${key}: an OCR-read opinion needs a second reading and needs_page_check`);
+    if (o.second_reading && !o.second_reading.agrees && o.needs_page_check !== true) fail(`opinion ${key}: readings disagree without needs_page_check`);
+    if (o.opinion !== null && !(o.quote && o.quote.length > 20)) fail(`opinion ${key}: no opinion sentence quoted`);
+    const d = docs[o.doc_id];
+    if (o.tier === 'secondary' && !(d && /secondary/i.test(d.note))) fail(`opinion ${key}: a secondary opinion must cite a document marked secondary`);
+    if (o.tier === 'primary' && d && !/Auditor-General/.test(d.issuer)) fail(`opinion ${key}: a primary opinion must cite the Auditor-General's report`);
+  });
+  // One primary opinion per entity and year; a secondary one only where no primary is held.
+  const prim = new Set(data.opinions.filter((o) => o.tier === 'primary' && o.opinion).map((o) => `${o.entity}|${o.fy}`));
+  data.opinions.filter((o) => o.tier === 'secondary').forEach((o) => { tests++; if (prim.has(`${o.entity}|${o.fy}`)) fail(`opinion ${o.entity} ${o.fy}: secondary opinion where a primary one is held`); });
+  // Gaps and opinions do not overlap (a listed gap year has no primary opinion).
+  data.gaps.forEach((g) => { tests++; if (prim.has(`${g.entity}|${g.fy}`)) fail(`gap ${g.entity} ${g.fy}: a primary opinion is held`); });
+  // Documents hash-match the county research register.
+  const research = Object.fromEntries((read(counties.COUNTY_DATA[slug].research).sources || []).map((r) => [r.sha256, r]));
+  data.documents.forEach((d) => { tests++; if (!research[d.sha256]) fail(`document ${d.doc_id}: SHA-256 not in the research register`); });
+}
 
+const tag = siaya ? 'test-audits' : `test-audits [${slug}]`;
 if (errors.length) {
-  console.error(`test-audits: ${errors.length} failure(s) in ${tests} checks`);
+  console.error(`${tag}: ${errors.length} failure(s) in ${tests} checks`);
   errors.slice(0, 50).forEach((e) => console.error(' - ' + e));
   process.exit(1);
 }
-console.log(`test-audits: ${tests} checks passed (${data.findings.length} findings, ${data.opinions.length} opinions, ${data.documents.length} documents)`);
+console.log(`${tag}: ${tests} checks passed (${data.findings.length} findings, ${data.opinions.length} opinions, ${data.documents.length} documents)`);
+}
+counties.withKind('audits').forEach(run);

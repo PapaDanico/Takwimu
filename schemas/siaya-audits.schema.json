@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://takwimu.netlify.app/schemas/siaya-audits.schema.json",
-  "title": "Siaya Auditor-General findings tracker (data/siaya-audits.json)",
+  "title": "County Auditor-General opinions and findings tracker (Siaya: data/siaya-audits.json; other counties: data/counties/<slug>/audits.json, see lib/county-registry.js)",
   "type": "object",
   "required": [
     "meta",
@@ -20,8 +20,12 @@
       "enum": [
         "county_executive",
         "county_assembly",
-        "county_government"
-      ]
+        "county_government",
+        "county_revenue_fund",
+        "receiver_of_revenue",
+        "water_company"
+      ],
+      "description": "Separately audited entities are never merged into the county: county_revenue_fund (County Revenue Fund statements), receiver_of_revenue (Receiver of Revenue statements of own-source revenue), water_company (a county-owned water and sanitation company)."
     },
     "fy": {
       "type": "string",
@@ -220,13 +224,47 @@
           },
           "doc_id": {
             "type": "string"
+          },
+          "tier": {
+            "type": "string",
+            "enum": ["primary", "secondary"],
+            "description": "primary: the Auditor-General's own report; secondary: a summary by another body (e.g. a civil-society simplified version), shown with that tier and never as the audit itself."
+          },
+          "quote": {
+            "type": "string",
+            "description": "The opinion sentence as read (first words), for the reviewer."
+          },
+          "quote_page": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "PDF page of the quoted opinion sentence when it is not on the heading page."
+          },
+          "read_method": {
+            "type": "string",
+            "enum": ["text", "ocr-tesseract"]
+          },
+          "second_reading": {
+            "type": "object",
+            "required": ["method", "agrees", "note"],
+            "additionalProperties": false,
+            "properties": {
+              "method": { "type": "string" },
+              "agrees": { "type": "boolean" },
+              "note": { "type": "string" }
+            }
+          },
+          "needs_page_check": {
+            "type": "boolean",
+            "enum": [true],
+            "description": "Read by OCR (or from a garbled text layer): a person must confirm the opinion against the page image."
           }
         }
       }
     },
     "findings": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 0,
+      "description": "At least one finding for Siaya (scripts/test-audits.js); a county may hold opinions only while its findings are not yet coded.",
       "items": {
         "type": "object",
         "required": [

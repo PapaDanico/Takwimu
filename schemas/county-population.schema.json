@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/county-population.schema.json",
+  "title": "County population and per-capita denominator (data/counties/<slug>/population.json, lib/county-registry.js)",
+  "type": "object",
+  "required": ["meta", "sources", "points", "by_sub_county", "denominator", "gaps"],
+  "additionalProperties": false,
+  "$defs": {
+    "source_ref": {
+      "type": "object",
+      "required": ["source_id", "pdf_page", "printed_page", "table", "read_method", "as_printed"],
+      "additionalProperties": false,
+      "properties": {
+        "source_id": { "type": "string" },
+        "pdf_page": { "type": "integer", "minimum": 1 },
+        "printed_page": { "type": ["integer", "null"], "minimum": 1 },
+        "table": { "type": "string", "minLength": 3 },
+        "read_method": { "type": "string", "enum": ["text", "ocr-tesseract"] },
+        "as_printed": { "type": "string", "minLength": 3 }
+      }
+    }
+  },
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "county", "county_code", "retrieved", "rule", "unit"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "county": { "type": "string" },
+        "county_code": { "type": "integer", "minimum": 1, "maximum": 47 },
+        "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "rule": { "type": "string" },
+        "unit": { "type": "string", "enum": ["persons"] }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["title", "publisher", "publication_date", "url", "sha256", "licence"],
+        "additionalProperties": false,
+        "properties": {
+          "title": { "type": "string" },
+          "publisher": { "type": "string" },
+          "publication_date": { "type": "string" },
+          "url": { "type": "string", "pattern": "^https://" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "licence": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "points": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "year", "kind", "value", "male", "female", "intersex", "source", "confidence", "note"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^P\\d{2}$" },
+          "year": { "type": "integer", "minimum": 1969, "maximum": 2100 },
+          "kind": { "type": "string", "enum": ["census", "projection"], "description": "A projection is never shown as a census count." },
+          "value": { "type": "integer", "minimum": 1 },
+          "male": { "type": ["integer", "null"], "minimum": 0 },
+          "female": { "type": ["integer", "null"], "minimum": 0 },
+          "intersex": { "type": ["integer", "null"], "minimum": 0 },
+          "source": { "$ref": "#/$defs/source_ref" },
+          "projection_by": { "type": "string" },
+          "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "by_sub_county": {
+      "type": "object",
+      "required": ["year", "kind", "values", "source", "note"],
+      "additionalProperties": false,
+      "properties": {
+        "year": { "type": "integer" },
+        "kind": { "type": "string", "enum": ["census", "projection"] },
+        "values": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+        "source": { "$ref": "#/$defs/source_ref" },
+        "note": { "type": "string" }
+      }
+    },
+    "denominator": {
+      "type": "object",
+      "required": ["rule", "census_point", "projection_points"],
+      "additionalProperties": false,
+      "properties": {
+        "rule": { "type": "string" },
+        "census_point": { "type": "string" },
+        "projection_points": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "print_differences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["point", "as_printed", "pdf_page", "table", "explanation"],
+        "additionalProperties": false,
+        "properties": {
+          "point": { "type": "string" },
+          "as_printed": { "type": "integer" },
+          "pdf_page": { "type": "integer", "minimum": 1 },
+          "table": { "type": "string" },
+          "explanation": { "type": "string" }
+        }
+      }
+    },
+    "gaps": { "type": "array", "items": { "type": "string" } }
+  }
+}
