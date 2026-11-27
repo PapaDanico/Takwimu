@@ -6,3 +6,4 @@ public/data/
 .env*
 dist-synthetic/
 public/briefs/siaya-fiscal-brief.pdf
+.next-real/
