@@ -34,7 +34,7 @@ An outside assessment of the live site was supplied as a handover. It is an asse
 
 | Handover item | Status |
 |---|---|
-| P0 architecture gate: which repo deploys the site | Done: `docs/architecture-map.md`. `main` is an older product; the live site comes from the PR branch by CLI upload |
+| P0 architecture gate: which repo deploys the site | Done: `docs/architecture-map.md`. production is `main`, built by Netlify from GitHub (linked 27 Nov 2026) |
 | P0.2 reconciliation assertions | Largely in place (budget and spending sums, absorption recompute, census sums, series length). Per-measure tolerances are in code; a typed schema layer is still to do |
 | P0.3 source conflict register | Done: `data/conflicts.json`, validated, shown on the Corrections page |
 | P0.4 cautious wording on absorption, delivery and audit opinions | Done on Insights, Analytics, Learn and Home |

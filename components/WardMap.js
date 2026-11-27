@@ -77,7 +77,7 @@ const CSS = `
 .wmap-ctl button:disabled{opacity:.45;cursor:default}
 .wmap-tip{position:absolute;transform:translate(-50%,calc(-100% - 10px));pointer-events:none;background:var(--ink);color:var(--surface);border-radius:8px;padding:6px 10px;font-size:12px;line-height:1.4;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .wmap-tip b{display:block;font-size:13px}
-.wmap-help{margin:0 0 8px;font-size:13px;color:var(--ink-soft);max-width:720px}
+.wmap-help{margin:0 0 8px;font-size:13px;color:var(--ink-soft);max-width:var(--measure)}
 .wmap-detail{margin:8px 0 0;max-width:720px;border:1px solid var(--rule);border-radius:10px;padding:8px 12px;font-size:14px;background:var(--surface)}
 .wmap-legend{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:8px;font-size:12px;color:var(--ink-soft)}
 .wmap-sw{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:6px;vertical-align:-2px;border:1px solid var(--rule)}

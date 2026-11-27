@@ -86,7 +86,7 @@ export default function Home() {
 
       <section className="card gold" aria-labelledby="position">
         <h2 id="position">County position</h2>
-        <p style={{ margin: '6px 0 0', fontSize: 15, color: 'var(--ink-soft)', maxWidth: '46rem' }}>
+        <p style={{ margin: '6px 0 0', fontSize: 15, color: 'var(--ink-soft)' }}>
           In FY {osr.fiscal_year} Siaya collected KSh {fmt(primary.value)} million of its own revenue,
           {' '}{share} per cent of its annual target, and spent {dev.absorption_pct} per cent of its development budget.
           The latest audit opinions read, for FY {AUD_LATEST_FY}, are {AUD.entities.map((e) => `${lower(e.opinion)} for the ${e.label} (FY ${e.fy})`).join(' and ')}.
