@@ -18,6 +18,7 @@ const SECTOR_TYPES = new Set(['records', 'conflicts', 'pairs']);
 // Gap lists printed in full on a site page (checked against the built page by scripts/test-reports.js).
 export const GAP_HOME = {
   'history.json': { href: '/method/#known-gaps', label: 'Method, known gaps' },
+  'siaya-county-series.json': { href: '/method/#known-gaps', label: 'Method, known gaps' },
   'siaya-health.json': { href: '/counties/siaya/health/#hl-gaps', label: 'Siaya health, gaps' },
   'siaya-education.json': { href: '/counties/siaya/education/#ed-gaps', label: 'Siaya education, gaps' },
   'siaya-agriculture.json': { href: '/counties/siaya/agriculture/#ag-gaps', label: 'Siaya agriculture, gaps' },
@@ -75,6 +76,11 @@ function webBlock(b, s, letter) {
   if (SECTOR_TYPES.has(b.type) && s.topics && s.topics.length) {
     const t = b.home || s.topics[0];
     return { type: 'moved', text: `${what}: ${countOf(b)}`, href: t.href, label: t.label, check: checkTexts(b) };
+  }
+  // A chart or table whose canonical home is a Siaya page (b.home): summarised and linked on the web edition.
+  if (b.home && (b.type === 'chart' || b.type === 'figs')) {
+    const n = figsOf([b]).length;
+    return { type: 'moved', text: `${what}: ${n} ${n === 1 ? 'value' : 'values'}`, href: b.home.href, label: b.home.label, check: b.check || checkTexts(b) };
   }
   const o = ownerOf(keyOf(b));
   if (o && o.letter !== letter) {
