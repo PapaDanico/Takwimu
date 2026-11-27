@@ -8,8 +8,8 @@
   "rules": "Downloads untrusted, one folder each, never executed; read with pdftotext/tesseract/zipfile. SHA-256 of file as received. No personal data; contractor names withheld; media are claims to verify.",
   "status_values": "held = downloaded here (or held in repo/prov and reused); link-only = URL recorded, not downloaded; manual-download = blocked to automated clients; missing = searched, not found; failed = server returned a broken file",
   "counts": {
-   "total": 448,
-   "held": 179,
+   "total": 453,
+   "held": 184,
    "link-only": 249,
    "manual-download": 8,
    "missing": 7,
@@ -9269,6 +9269,104 @@
    "primary_backing": "matches CoB 2,463.03 / 1,443.61 (counties-cob.json); FIF share drives the rise (1,659.67m FIF/A-i-A in FY2024/25)",
    "status": "link-only",
    "note": "No personal names or verdict labels; people by role only."
+  },
+  {
+   "id": "SENATE-CPAIC-FY2014-15-VOL2",
+   "title": "Senate County Public Accounts and Investments Committee, report on the Auditor-General's reports on county financial statements FY 2014/15, Volume 2",
+   "publisher": "Senate of Kenya (County Public Accounts and Investments Committee)",
+   "date": "2018",
+   "period": "FY 2014/15",
+   "url": "https://libraryir.parliament.go.ke/bitstreams/c7e9c102-d1f4-4540-bd9e-1a32d04802bc/download",
+   "licence": "Parliamentary report (Parliament library copy); cite and link; redistribution not licensed.",
+   "tier": "official mirror (committee report quoting the Auditor-General)",
+   "datasets": [
+    "audits"
+   ],
+   "kisumu_location": "Chapter Six, Kisumu County Executive, PDF p. 267 (\"Audit Opinion: Disclaimer\")",
+   "sha256": "20ea7cbda2a7bb6aa85f4a19c25559caaac68a4cace3ebc52f6363b37f9b486d",
+   "bytes": 416299052,
+   "pages": "865",
+   "machine_readable": "scan with library OCR text layer (garbled headings)",
+   "status": "held",
+   "note": "Added 27 Nov 2026 (gap research ingest). No personal names or verdict labels; offices and entities only."
+  },
+  {
+   "id": "PBO-COUNTY-FACT-SHEETS-2024",
+   "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+   "publisher": "Parliamentary Budget Office, National Assembly",
+   "date": "2025-04",
+   "period": "Audit opinions FY 2013/14 to FY 2021/22 (Kisumu Table 3, PDF p. 400)",
+   "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+   "licence": "Parliamentary publication; cite and link; redistribution not licensed.",
+   "tier": "official compilation (secondary)",
+   "datasets": [
+    "audits"
+   ],
+   "kisumu_location": "Kisumu fact sheet, Table 3 \"Audit Opinions for County Executive & County Assembly\", PDF p. 400 (source line: Office of the Auditor General Reports)",
+   "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+   "bytes": 8772641,
+   "pages": "456",
+   "machine_readable": "text layer",
+   "note": "Shared all-county document: data/source-manifest.json id pbo-county-fact-sheets-2024. Added 27 Nov 2026 (gap research ingest).",
+   "status": "held"
+  },
+  {
+   "id": "NTA-CHAMBUA-COUNTY-EXECUTIVES-2016-17",
+   "title": "National Taxpayers Association, Chambua: summary of the Auditor-General's reports on county executives, FY 2016/17 (compressed copy)",
+   "publisher": "National Taxpayers Association",
+   "date": "2019-03 (uploaded 2024-04)",
+   "period": "FY 2016/17",
+   "url": "https://www.nta.or.ke/wp-content/uploads/2024/04/Summary-of-County-Executive-Reports-Chambua-compressed.pdf",
+   "licence": "Civil-society publication; no licence stated; link and cite only.",
+   "tier": "civil-society secondary",
+   "datasets": [
+    "audits (corroboration only)"
+   ],
+   "kisumu_location": "Kisumu page, PDF p. 43 (\"OAG Opinion : Adverse Opinion\")",
+   "sha256": "ee4ddd29a9a86d26e8041ea2b3e4df891ab90ec490f9c990a3c25fd91bd4ff6b",
+   "bytes": 2266642,
+   "pages": "50",
+   "machine_readable": "text layer",
+   "status": "held",
+   "note": "Added 27 Nov 2026 (gap research ingest). No personal names or verdict labels; offices and entities only."
+  },
+  {
+   "id": "KIWASCO-ANNUAL-REPORT-2017",
+   "title": "Kisumu Water and Sewerage Company Limited, Annual Report and Financial Statements June 2017 (reprints the Auditor-General's report)",
+   "publisher": "Kisumu Water and Sewerage Company Limited (KIWASCO)",
+   "date": "2018-12 (file creation date)",
+   "period": "FY 2016/17",
+   "url": "https://kiwasco.co.ke/wp-content/uploads/KIWASCO-Annual-Report-2017.pdf",
+   "licence": "Company publication; no reuse licence stated; cite and link; do not redistribute.",
+   "tier": "official mirror (the Auditor-General's report reprinted by the audited company)",
+   "datasets": [
+    "audits"
+   ],
+   "kisumu_location": "Report of the Auditor-General, PDF p. 23 (\"QUALIFIED OPINION\")",
+   "sha256": "264c9610a6e4449b5127051fe4c49c9e7035c85b2ba4507815a8e3e9e49dff7e",
+   "bytes": 3337646,
+   "machine_readable": "text layer",
+   "note": "Address from the publisher's media listing (kiwasco.co.ke); on 27 Nov 2026 the address answered automated clients with an HTML page, so the held copy (gap research B) could not be re-downloaded and compared. Added 27 Nov 2026 (gap research ingest).",
+   "status": "held"
+  },
+  {
+   "id": "KIWASCO-ANNUAL-REPORT-2019",
+   "title": "Kisumu Water and Sanitation Company Limited, Annual Report and Financial Statements June 2019 (reprints the Auditor-General's report)",
+   "publisher": "Kisumu Water and Sanitation Company Limited (KIWASCO)",
+   "date": "2019",
+   "period": "FY 2018/19",
+   "url": "https://kiwasco.co.ke/wp-content/uploads/KIWASCO-Annual-Report-2019.pdf",
+   "licence": "Company publication; no reuse licence stated; cite and link; do not redistribute.",
+   "tier": "official mirror (the Auditor-General's report reprinted by the audited company)",
+   "datasets": [
+    "audits"
+   ],
+   "kisumu_location": "Report of the Auditor-General, PDF p. 25 (\"OPINION ... present fairly, in all material respects\")",
+   "sha256": "490fc60f65121f5937bcb211f61028172d6a122da8c840135604505e569f55cc",
+   "bytes": 1712501,
+   "machine_readable": "text layer",
+   "note": "Address from the publisher's media listing (kiwasco.co.ke); on 27 Nov 2026 the address answered automated clients with an HTML page, so the held copy (gap research B) could not be re-downloaded and compared. Added 27 Nov 2026 (gap research ingest).",
+   "status": "held"
   }
  ]
 }

@@ -13,12 +13,12 @@
   "updated": "2026-11-27",
   "counts": {
    "definitional": 47,
-   "period or version": 20,
-   "probable source error": 11,
-   "resolved by source": 1,
-   "open": 60
+   "period or version": 22,
+   "probable source error": 15,
+   "resolved by source": 2,
+   "open": 78
   },
-  "total": 139
+  "total": 164
  },
  "cases": [
   {
@@ -340,6 +340,18 @@
    ]
   },
   {
+   "case_id": "D-L140-L321",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Case osr-2024-25-three-sources: KNBS (481.79, revised) against the Controller of Budget (436.68); the Economic Survey does not state what its figure includes.",
+   "evidence": [
+    "conflict osr-2024-25-three-sources",
+    "L140: cob-report-2024-25 PDF p. 476 (Includes FIF/A-i-A)",
+    "L321: knbs-economic-survey-2026 PDF p. 150 (\"Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37\")"
+   ]
+  },
+  {
    "case_id": "D-L153-L162",
    "measure": "osr_total_actual",
    "period": "FY 2024/25",
@@ -373,6 +385,18 @@
    ]
   },
   {
+   "case_id": "D-L153-L321",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Case osr-2024-25-three-sources: KNBS (481.79) against the Controller of Budget Table 2.1 (436.68 = ordinary 236.84 + FIF 199.84); the Economic Survey states no basis.",
+   "evidence": [
+    "conflict osr-2024-25-three-sources",
+    "L153: cob-report-2024-25 PDF p. 46 (\"436.68\")",
+    "L321: knbs-economic-survey-2026 PDF p. 150 (\"Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37\")"
+   ]
+  },
+  {
    "case_id": "D-L162-L170",
    "measure": "osr_total_actual",
    "period": "FY 2024/25",
@@ -385,6 +409,18 @@
    ]
   },
   {
+   "case_id": "D-L162-L321",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Case osr-2024-25-three-sources: the county (757.57, all A-i-A included) against KNBS (481.79, basis not stated).",
+   "evidence": [
+    "conflict osr-2024-25-three-sources",
+    "L162: GOV-03 PDF p. 16 (\"Total OSR 1,044,061,306 757,570,621 -286,490,685\")",
+    "L321: knbs-economic-survey-2026 PDF p. 150 (\"Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37\")"
+   ]
+  },
+  {
    "case_id": "D-L166-L170",
    "measure": "osr_total_actual",
    "period": "FY 2024/25",
@@ -394,6 +430,30 @@
     "L166, L170",
     "L166: GOV-02-FY2024-25-Q4 PDF p. 4 (\"the County Government realized 68 percent of targeted OSR translating to collection of Kshs.757,570,621\")",
     "L170: GOV-02-FY2025-26-Q4 PDF p. 4 (\"an increase of 22.91 per cent compared to Kshs.712.82 million realised in a similar period in FY 2024/25\")"
+   ]
+  },
+  {
+   "case_id": "D-L166-L321",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "Case osr-2024-25-three-sources: the county's Q4 report (757.57) against KNBS (481.79, basis not stated).",
+   "evidence": [
+    "conflict osr-2024-25-three-sources",
+    "L166: GOV-02-FY2024-25-Q4 PDF p. 4 (\"the County Government realized 68 percent of targeted OSR translating to collection of Kshs.757,570,621\")",
+    "L321: knbs-economic-survey-2026 PDF p. 150 (\"Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37\")"
+   ]
+  },
+  {
+   "case_id": "D-L170-L321",
+   "measure": "osr_total_actual",
+   "period": "FY 2024/25",
+   "classification": "open",
+   "reason": "The county's later restatement (712.82) against KNBS (481.79); neither states a basis that explains the difference.",
+   "evidence": [
+    "L170, L321",
+    "L170: GOV-02-FY2025-26-Q4 PDF p. 4 (\"an increase of 22.91 per cent compared to Kshs.712.82 million realised in a similar period in FY 2024/25\")",
+    "L321: knbs-economic-survey-2026 PDF p. 150 (\"Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37\")"
    ]
   },
   {
@@ -455,6 +515,126 @@
    ]
   },
   {
+   "case_id": "D-L175-L315",
+   "measure": "osr_total_actual",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Case osr-2025-26: the county's Q4 report (876.14, as the Controller of Budget) against the county's Budget Review and Outlook Paper summary (862,934,946.65); the paper does not explain the difference.",
+   "evidence": [
+    "conflict osr-2025-26",
+    "L175: GOV-02-FY2025-26-Q4 PDF p. 2 (\"own-source revenue (OSR) collection of Kshs.876.14 million\")",
+    "L315: siaya-cbrop-2025-26 PDF p. 5 (\"Local revenue collection was Kshs. 862,934,946.65 against a target of Kshs. 3,252,420,825 representing a performance of 27 percent. The loca\")"
+   ]
+  },
+  {
+   "case_id": "D-L175-L316",
+   "measure": "osr_total_actual",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Case osr-2025-26: the county's Q4 report (876.14) against the county paper's tables (858,616,248).",
+   "evidence": [
+    "conflict osr-2025-26",
+    "L175: GOV-02-FY2025-26-Q4 PDF p. 2 (\"own-source revenue (OSR) collection of Kshs.876.14 million\")",
+    "L316: siaya-cbrop-2025-26 PDF p. 19 (\"TOTALS 760,000,000 1,044,061,306 3,252,420,830 600,948,814 757,570,622 858,616,248\")"
+   ]
+  },
+  {
+   "case_id": "D-L175-L320",
+   "measure": "osr_total_actual",
+   "period": "FY 2025/26",
+   "classification": "probable source error",
+   "reason": "The Economic Survey's 3,114.92 is the county's own-source revenue budget (Programme-Based Budget PDF p. 13), not collections; the county's Q4 report gives collections of 876.14.",
+   "evidence": [
+    "conflict osr-2025-26-economic-survey",
+    "L175: GOV-02-FY2025-26-Q4 PDF p. 2 (\"own-source revenue (OSR) collection of Kshs.876.14 million\")",
+    "L320: knbs-economic-survey-2026 PDF p. 150 (\"Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37\")"
+   ]
+  },
+  {
+   "case_id": "D-L306-L315",
+   "measure": "osr_total_actual",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Case osr-2025-26: Controller of Budget Table 2.1 (876.14) against the county paper's summary (862.93); same target, different ordinary and A-i-A parts.",
+   "evidence": [
+    "conflict osr-2025-26",
+    "L306: cob-report-2025-26 PDF p. 38 (\"Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94\")",
+    "L315: siaya-cbrop-2025-26 PDF p. 5 (\"Local revenue collection was Kshs. 862,934,946.65 against a target of Kshs. 3,252,420,825 representing a performance of 27 percent. The loca\")"
+   ]
+  },
+  {
+   "case_id": "D-L306-L316",
+   "measure": "osr_total_actual",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Case osr-2025-26: Controller of Budget Table 2.1 (876.14) against the county paper's Tables 8 and 9 (858.62).",
+   "evidence": [
+    "conflict osr-2025-26",
+    "L306: cob-report-2025-26 PDF p. 38 (\"Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94\")",
+    "L316: siaya-cbrop-2025-26 PDF p. 19 (\"TOTALS 760,000,000 1,044,061,306 3,252,420,830 600,948,814 757,570,622 858,616,248\")"
+   ]
+  },
+  {
+   "case_id": "D-L306-L320",
+   "measure": "osr_total_actual",
+   "period": "FY 2025/26",
+   "classification": "resolved by source",
+   "reason": "The Economic Survey's 3,114.92 equals the county's FY 2025/26 own-source revenue budget in its Programme-Based Budget (Total OSR 3,114,920,823, PDF p. 13), not collections; the Controller of Budget prints actual collections of 876.14.",
+   "evidence": [
+    "conflict osr-2025-26-economic-survey",
+    "L306: cob-report-2025-26 PDF p. 38 (\"Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94\")",
+    "L320: knbs-economic-survey-2026 PDF p. 150 (\"Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37\")"
+   ]
+  },
+  {
+   "case_id": "D-L315-L320",
+   "measure": "osr_total_actual",
+   "period": "FY 2025/26",
+   "classification": "probable source error",
+   "reason": "The Economic Survey's 3,114.92 is the own-source revenue budget, not collections (conflict osr-2025-26-economic-survey).",
+   "evidence": [
+    "conflict osr-2025-26-economic-survey",
+    "L315: siaya-cbrop-2025-26 PDF p. 5 (\"Local revenue collection was Kshs. 862,934,946.65 against a target of Kshs. 3,252,420,825 representing a performance of 27 percent. The loca\")",
+    "L320: knbs-economic-survey-2026 PDF p. 150 (\"Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37\")"
+   ]
+  },
+  {
+   "case_id": "D-L316-L320",
+   "measure": "osr_total_actual",
+   "period": "FY 2025/26",
+   "classification": "probable source error",
+   "reason": "The Economic Survey's 3,114.92 is the own-source revenue budget, not collections (conflict osr-2025-26-economic-survey).",
+   "evidence": [
+    "conflict osr-2025-26-economic-survey",
+    "L316: siaya-cbrop-2025-26 PDF p. 19 (\"TOTALS 760,000,000 1,044,061,306 3,252,420,830 600,948,814 757,570,622 858,616,248\")",
+    "L320: knbs-economic-survey-2026 PDF p. 150 (\"Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37\")"
+   ]
+  },
+  {
+   "case_id": "D-L176-L317",
+   "measure": "osr_ordinary_actual",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Ordinary own-source revenue: the county's Q4 table (290.45, as the Controller of Budget) against the county paper (272,116,888.45); the paper also gives a higher A-i-A, and neither explains the split.",
+   "evidence": [
+    "conflict osr-2025-26",
+    "L176: GOV-02-FY2025-26-Q4 PDF p. 3 (\"Sub-Total 2,173,735,310 290,450,788 290,450,788 13.36\")",
+    "L317: siaya-cbrop-2025-26 PDF p. 5 (\"Kshs. 272,116,888.45 as ordinary revenues\")"
+   ]
+  },
+  {
+   "case_id": "D-L307-L317",
+   "measure": "osr_ordinary_actual",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Ordinary own-source revenue: Controller of Budget Table 2.1 (290.45) against the county paper (272.12); the A-i-A parts differ the other way (585.69 against 590.82).",
+   "evidence": [
+    "conflict osr-2025-26",
+    "L307: cob-report-2025-26 PDF p. 38 (\"Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94\")",
+    "L317: siaya-cbrop-2025-26 PDF p. 5 (\"Kshs. 272,116,888.45 as ordinary revenues\")"
+   ]
+  },
+  {
    "case_id": "D-L178-L179",
    "measure": "osr_total_target",
    "period": "FY 2025/26",
@@ -464,6 +644,30 @@
     "L178, L179",
     "L178: GOV-02-FY2025-26-Q4 PDF p. 2 (\"Kshs.3.25 billion (24.31 per cent) generated as own-source revenue\")",
     "L179: GOV-02-FY2025-26-Q1 PDF p. 2 (\"Kshs.3.11 billion (24 per cent) generated as own-source revenue\")"
+   ]
+  },
+  {
+   "case_id": "D-L179-L309",
+   "measure": "osr_total_target",
+   "period": "FY 2025/26",
+   "classification": "period or version",
+   "reason": "Different budget versions: the original approved budget's own-source revenue (3.11 billion, Q1 report) against the supplementary target in the Controller of Budget's Table 2.1 (3,252.42).",
+   "evidence": [
+    "L179, L309",
+    "L179: GOV-02-FY2025-26-Q1 PDF p. 2 (\"Kshs.3.11 billion (24 per cent) generated as own-source revenue\")",
+    "L309: cob-report-2025-26 PDF p. 38 (\"Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94\")"
+   ]
+  },
+  {
+   "case_id": "D-L179-L319",
+   "measure": "osr_total_target",
+   "period": "FY 2025/26",
+   "classification": "period or version",
+   "reason": "Different budget versions: the original budget (3.11 billion) against the supplementary target in the county paper (3,252,420,825).",
+   "evidence": [
+    "L179, L319",
+    "L179: GOV-02-FY2025-26-Q1 PDF p. 2 (\"Kshs.3.11 billion (24 per cent) generated as own-source revenue\")",
+    "L319: siaya-cbrop-2025-26 PDF p. 5 (\"against a target of Kshs. 3,252,420,825\")"
    ]
   },
   {
@@ -720,6 +924,78 @@
    "evidence": [
     "L232: GOV-03 PDF p. 22 (\"Actual expenditure on development budget was Kshs.2,674,325,435 against budget of Kshs. 4,874,826,184\")",
     "L235: GOV-02-FY2024-25-Q4 PDF p. 7 (\"development of Kshs. 2,603,246,890.65\")"
+   ]
+  },
+  {
+   "case_id": "D-L225-L325",
+   "measure": "expenditure_development",
+   "period": "FY 2019/20",
+   "classification": "open",
+   "reason": "Case development-spending-2019-20: the county paper prints 2,155,005,238; the next year's Controller of Budget report quotes 2.12 billion for the same year. Neither explains the 1.65 per cent difference, and the Controller of Budget report for FY 2019/20 itself is not held.",
+   "evidence": [
+    "conflict development-spending-2019-20",
+    "L225: siaya-brop-2019-20 PDF p. 20",
+    "L325: cob-report-2020-21 PDF p. 376 (\"compared to a similar period in FY 2019/20 when the County spent Kshs.2.12 billion\")"
+   ]
+  },
+  {
+   "case_id": "D-L236-L303",
+   "measure": "expenditure_total",
+   "period": "FY 2025/26",
+   "classification": "probable source error",
+   "reason": "The county's Q4 report says \"The County spent Kshs.7.18 billion\" (PDF p. 6) but the same paragraph gives Kshs.1.60 billion for development and Kshs.5.91 billion for recurrent programmes, which add to 7.51 billion; the Controller of Budget prints 7,504.73.",
+   "evidence": [
+    "conflict spent-2025-26",
+    "L236: GOV-02-FY2025-26-Q4 PDF p. 6 (\"The County spent Kshs.7.18 billion on development and recurrent programmes\")",
+    "L303: cob-report-2025-26 PDF p. 43 (\"Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73\")"
+   ]
+  },
+  {
+   "case_id": "D-L236-L312",
+   "measure": "expenditure_total",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Case spent-2025-26: two county documents, 7.18 billion (Q4 text) and 9,605,521,598.65 (Budget Review and Outlook Paper); neither explains the other.",
+   "evidence": [
+    "conflict spent-2025-26",
+    "L236: GOV-02-FY2025-26-Q4 PDF p. 6 (\"The County spent Kshs.7.18 billion on development and recurrent programmes\")",
+    "L312: siaya-cbrop-2025-26 PDF p. 21 (\"Total actual expenditure for the period under review amounted to Kshs. 9,605,521,598.65 against a planned budget of Kshs. 13,377,987,507.00 \")"
+   ]
+  },
+  {
+   "case_id": "D-L303-L312",
+   "measure": "expenditure_total",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Case spent-2025-26: Controller of Budget (7,504.73) against the county paper (9,605.52, which equals its total receipts); nothing printed reconciles them.",
+   "evidence": [
+    "conflict spent-2025-26",
+    "L303: cob-report-2025-26 PDF p. 43 (\"Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73\")",
+    "L312: siaya-cbrop-2025-26 PDF p. 21 (\"Total actual expenditure for the period under review amounted to Kshs. 9,605,521,598.65 against a planned budget of Kshs. 13,377,987,507.00 \")"
+   ]
+  },
+  {
+   "case_id": "D-L238-L313",
+   "measure": "expenditure_development",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Case development-spending-2025-26: the county's Q4 report (1.60 billion) against its Budget Review and Outlook Paper (2,781,583,267.00).",
+   "evidence": [
+    "conflict development-spending-2025-26",
+    "L238: GOV-02-FY2025-26-Q4 PDF p. 6 (\"Kshs.1.60 billion for development programmes\")",
+    "L313: siaya-cbrop-2025-26 PDF p. 21 (\"DEV 6,028,209,526.00 2,781,583,267.00 -3,246,626,259 46.14%\")"
+   ]
+  },
+  {
+   "case_id": "D-L305-L313",
+   "measure": "expenditure_development",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Case development-spending-2025-26: Controller of Budget (1,599.04) against the county paper (2,781.58).",
+   "evidence": [
+    "conflict development-spending-2025-26",
+    "L305: cob-report-2025-26 PDF p. 43 (\"Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73\")",
+    "L313: siaya-cbrop-2025-26 PDF p. 21 (\"DEV 6,028,209,526.00 2,781,583,267.00 -3,246,626,259 46.14%\")"
    ]
   },
   {
@@ -1602,6 +1878,30 @@
     "L297, L298",
     "L297: GOV-03 PDF p. 19 (\"PE 3,550,256,735 3,402,983,007 -147,273,728 95.9%\")",
     "L298: GOV-02-FY2025-26-Q4 PDF p. 7 (\"an increase compared to the Kshs.3.34 billion reported in a similar period in FY 2024/25\")"
+   ]
+  },
+  {
+   "case_id": "D-L299-L314",
+   "measure": "wage_bill",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Compensation of employees (4.44 billion, county Q4 report, including accrued) against personnel emoluments (4,188.77, county paper); the documents do not say whether they count the same items.",
+   "evidence": [
+    "L299, L314",
+    "L299: GOV-02-FY2025-26-Q4 PDF p. 7 (\"The expenditure on employee compensation totalled Kshs.4.44 billion\")",
+    "L314: siaya-cbrop-2025-26 PDF p. 21 (\"PE 3,862,117,174.00 4,188,772,518.52 326,655,345 108%\")"
+   ]
+  },
+  {
+   "case_id": "D-L311-L314",
+   "measure": "wage_bill",
+   "period": "FY 2025/26",
+   "classification": "open",
+   "reason": "Controller of Budget compensation to employees (4,435.93) against the county paper's personnel emoluments (4,188.77); nothing printed reconciles them.",
+   "evidence": [
+    "L311, L314",
+    "L311: cob-report-2025-26 PDF p. 43 (\"Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73\")",
+    "L314: siaya-cbrop-2025-26 PDF p. 21 (\"PE 3,862,117,174.00 4,188,772,518.52 326,655,345 108%\")"
    ]
   }
  ]

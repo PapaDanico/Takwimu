@@ -7,9 +7,9 @@
     "note": "Each year is read from the Controller of Budget annual county report for that year. Where two reports give different values for the same year, both are kept in 'alternates'.",
     "gaps": [
       "FY2013/14: approved budget and pending bills not shown (only spending, absorption and revenue quoted in the FY2014/15 report). FY2014/15: pending recurrent bills were not reported.",
-      "FY2019/20: Controller of Budget report not found. The annual county report for this year is not in the Parliament library and cob.go.ke was unreachable (21 Nov 2026), so the series has no approved budget, recurrent/development split, spending, absorption, own-source revenue target or pending bills for it. Own-source revenue (KSh 179.43m) comes from the FY2020/21 report. County (Budget Review and Outlook Paper) and Senate figures for the year are on /counties/siaya/ledger/ (fiscal reconciliation) and listed under supplementary; they are not used in the series.",
-      "Audit opinions for FY2016/17 to FY2018/19 are missing for the reasons given under audits.",
-      "FY2025/26: only in-year reports (first quarter and first half) were found; they are kept under in_year and are not a full year. The annual FY2025/26 report's Part 2, which holds Siaya, is not in the Parliament library."
+      "FY2019/20: Controller of Budget report not found. The annual county report for this year is not in the Parliament library and cob.go.ke was unreachable (21 Nov 2026; searched again 27 Nov 2026), so the series has no approved budget, recurrent/development split, spending, absorption, own-source revenue target or pending bills for it. Own-source revenue (KSh 179.43m) comes from the FY2020/21 report. The county's Budget Review and Outlook Paper (budget by part, spending, absorption, own-source revenue and its target), the FY2020/21 report's look-back figures (own-source revenue, development spending of KSh 2.12bn, balance brought forward, statutory deductions) and the Senate figures are listed under supplementary and on /counties/siaya/ledger/ (fiscal reconciliation); they are not used in the series. Where they disagree (own-source revenue 184.25 against 179.43; development spending 2,155.01 against 2,120) both values are in the conflict register.",
+      "Audit opinions for FY2016/17 to FY2018/19: the Auditor-General's own reports are still not held. The opinions shown come from the Parliamentary Budget Office's County Fact Sheets 2024, an official compilation (secondary), as explained under audits.",
+      "FY2025/26: the full year is read from Part 1 of the Controller of Budget annual county report for FY2025/26 (August 2026), whose chapter 2 tables give every county's budget, spending, absorption, own-source revenue and trade payables (scanned; read by OCR twice). Part 2, which holds the Siaya chapter (its narrative, department tables and wage-bill ratio), is not in the Parliament library, so those details remain a gap. The in-year reports (first quarter and first half) stay under in_year as partial-year figures and are not compared with the full year."
     ],
     "pending_rule": "Pending bills in years: the closing stock as printed in that year's own Controller of Budget report (own-year rule, sweep D5, 21 Nov 2026). A stock for the same date in another report is listed in the conflict register, and years with an open ledger discrepancy are marked on the pages."
   },
@@ -73,6 +73,12 @@
       "section": "3.39 Siaya County",
       "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c",
       "confidence": 4
+    },
+    "2025/26": {
+      "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+      "section": "Chapter 2 summary tables, Siaya rows (Tables 2.1, 2.3, 2.4, 2.5 and 2.10); the Siaya chapter is in Part 2, not held",
+      "url": "https://libraryir.parliament.go.ke/items/99f48395-0710-4a74-bcdf-e4ea40812813",
+      "confidence": 3
     }
   },
   "years": [
@@ -981,11 +987,106 @@
           "read": "PDF text layer"
         }
       }
+    },
+    {
+      "fy": "2025/26",
+      "approved": 13.38,
+      "recurrent_budget": 7.35,
+      "development_budget": 6.03,
+      "spent": 7.5,
+      "recurrent_spent": 5.91,
+      "development_spent": 1.6,
+      "recurrent_absorption_pct": 80.35,
+      "development_absorption_pct": 26.53,
+      "osr_m": 876.14,
+      "osr_target_m": 3252.42,
+      "pending_total_m": 1276.88,
+      "report": "2025/26",
+      "caveat": "Read from the chapter 2 tables of Part 1 of the annual report (a scanned file, read twice by OCR; each row checks against its own totals): KSh million in the tables, rounded here to KSh 0.01 billion (approved 13,377.98; recurrent 7,349.77; development 6,028.21; spent 7,504.73; recurrent 5,905.69; development 1,599.04). The Siaya chapter (Part 2) is not held. The approved budget is the supplementary budget (13,377,987,507 in the county's own Q4 report); the first-half report gave the original 12.79bn. Own-source revenue includes facility improvement financing (ordinary 290.45, FIF 585.69). Pending bills are the trade payables at 30 June 2026 in Table 2.10 (Executive 1,171.21: recurrent 607.23, development 563.98; Assembly 105.68; the parts add to 1,276.89, printed 1,276.88). The county's Budget Review and Outlook Paper gives spending of KSh 9.61bn (71.80 per cent) and own-source revenue of KSh 862.93m (conflicts spent-2025-26, development-spending-2025-26 and osr-2025-26); the Economic Survey 2026 prints 3,114.92m, the own-source revenue budget (source error, osr-2025-26-economic-survey).",
+      "provenance": {
+        "approved": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 41,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.3, Siaya row: 7,349.77 6,028.21 13,377.98 (also Table 2.5, PDF p. 44)"
+        },
+        "recurrent_budget": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 41,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.3, Siaya row (7,349.77)"
+        },
+        "development_budget": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 41,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.3, Siaya row (6,028.21)"
+        },
+        "spent": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 43,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.4, Siaya row: 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73. See conflict spent-2025-26"
+        },
+        "recurrent_spent": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 43,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.4, Siaya row (5,905.69)"
+        },
+        "development_spent": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 43,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.4, Siaya row (1,599.04). See conflict development-spending-2025-26"
+        },
+        "recurrent_absorption_pct": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 44,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.5, Siaya row: 80.35 26.53 56.10"
+        },
+        "development_absorption_pct": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 44,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.5, Siaya row (26.53)"
+        },
+        "osr_m": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 38,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.1, Siaya row: target 2,173.74 1,078.69 3,252.42; actual 290.45 585.69 876.14; 26.94 per cent. See conflict osr-2025-26"
+        },
+        "osr_target_m": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 38,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.1, Siaya row (3,252.42)"
+        },
+        "pending_total_m": {
+          "source_id": "cob-report-2025-26",
+          "source_type": "primary",
+          "page": 53,
+          "read": "tesseract OCR (two readings)",
+          "page_note": "Table 2.10, trade payables at 30 June 2026, Siaya row: 607.23 563.98 1,171.21 105.68 0.00 105.68 1,276.88 (own-year rule)"
+        }
+      }
     }
   ],
   "audits": {
     "label": "Auditor-General opinion on the County Executive of Siaya's accounts",
-    "note": "Opinions for FY2014/15 and FY2015/16 come from a Senate committee compilation of Auditor-General opinions (annexes to the Senate fiduciary risk report, November 2018), not from the audit reports themselves, so they are graded lower; the FY2014/15 opinion may cover the County Executive and County Assembly together. Opinions for FY2016/17 to FY2018/19 are not shown: the Parliament library holds no County Executive of Siaya audit report for those years and the Auditor-General's site was unreachable when we tried. A civil-society summary gives an opinion for FY2016/17, but it is not a primary document, so it is not shown. FY2019/20 comes from a Senate committee report that quotes the audit, so it is graded lower. The first entry covers 16 months, not a full fiscal year, and the whole county government (executive and assembly together); the later entries cover the County Executive only.",
+    "note": "Opinions for FY2014/15 and FY2015/16 come from a Senate committee compilation of Auditor-General opinions (annexes to the Senate fiduciary risk report, November 2018), not from the audit reports themselves, so they are graded lower; the FY2014/15 opinion may cover the County Executive and County Assembly together. Opinions for FY2016/17 to FY2018/19 come from the Parliamentary Budget Office's County Fact Sheets 2024 (April 2025), an official compilation (secondary), because the Parliament library holds no County Executive of Siaya audit report for those years and the Auditor-General's site still serves a bot check (27 Nov 2026); they are graded lower still, and the PBO table gives the opinion only. For FY2016/17 the civil-society Chambua summary (National Taxpayers Association) prints the same opinion; it is listed as corroboration, not as a source. FY2019/20 comes from a Senate committee report that quotes the audit, so it is graded lower. The first entry covers 16 months, not a full fiscal year, and the whole county government (executive and assembly together); the later entries cover the County Executive only.",
     "points": [
       {
         "fy": "2013/14",
@@ -1027,6 +1128,60 @@
         "page": 2,
         "read": "PDF text layer",
         "page_note": "table \"County Executives Fiduciary Risks 2015/2016\", row 38"
+      },
+      {
+        "fy": "2016/17",
+        "source": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025), Table 5 'Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)'",
+        "source_type": "official compilation (secondary)",
+        "opinion": "Adverse",
+        "reasons": "Not given in the source: the PBO table lists the opinion only, not the auditor's basis for opinion",
+        "headline": "Opinion only; the PBO table gives no amounts (County Executive row)",
+        "confidence": 2,
+        "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+        "caveat": "Official compilation (secondary): a Parliamentary Budget Office summary table, whose source line reads \"Controller of Budget reports\". The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself.",
+        "corroboration": [
+          {
+            "document": "National Taxpayers Association, Chambua: summary of the Auditor-General's reports on county executives, FY 2016/17 (compressed copy)",
+            "url": "https://www.nta.or.ke/wp-content/uploads/2024/04/Summary-of-County-Executive-Reports-Chambua-compressed.pdf",
+            "page": 42,
+            "quote": "OAG Opinion : Adverse Opinion - non compliance with Article 229(6) of CoK",
+            "source_type": "secondary-news/ngo"
+          }
+        ],
+        "source_id": "pbo-county-fact-sheets-2024",
+        "page": 392,
+        "read": "PDF text layer",
+        "page_note": "Table 5, County Executive row; the same table gives the County Assembly (data/siaya-audits.json)"
+      },
+      {
+        "fy": "2017/18",
+        "source": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025), Table 5 'Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)'",
+        "source_type": "official compilation (secondary)",
+        "opinion": "Qualified",
+        "reasons": "Not given in the source: the PBO table lists the opinion only, not the auditor's basis for opinion",
+        "headline": "Opinion only; the PBO table gives no amounts (County Executive row)",
+        "confidence": 2,
+        "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+        "caveat": "Official compilation (secondary): a Parliamentary Budget Office summary table, whose source line reads \"Controller of Budget reports\". The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself.",
+        "source_id": "pbo-county-fact-sheets-2024",
+        "page": 392,
+        "read": "PDF text layer",
+        "page_note": "Table 5, County Executive row; the same table gives the County Assembly (data/siaya-audits.json)"
+      },
+      {
+        "fy": "2018/19",
+        "source": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025), Table 5 'Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)'",
+        "source_type": "official compilation (secondary)",
+        "opinion": "Qualified",
+        "reasons": "Not given in the source: the PBO table lists the opinion only, not the auditor's basis for opinion",
+        "headline": "Opinion only; the PBO table gives no amounts (County Executive row)",
+        "confidence": 2,
+        "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+        "caveat": "Official compilation (secondary): a Parliamentary Budget Office summary table, whose source line reads \"Controller of Budget reports\". The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself.",
+        "source_id": "pbo-county-fact-sheets-2024",
+        "page": 392,
+        "read": "PDF text layer",
+        "page_note": "Table 5, County Executive row; the same table gives the County Assembly (data/siaya-audits.json)"
       },
       {
         "fy": "2019/20",
@@ -1242,6 +1397,21 @@
         "page": 476,
         "printed_page": 433,
         "read": "PDF text layer"
+      },
+      {
+        "fy": "2025/26",
+        "value": 876.14,
+        "report": "FY2025/26 annual report Part 1, Table 2.1, including health facility financing (ordinary 290.45, FIF 585.69)",
+        "alternate": {
+          "value": 862.93,
+          "report": "Siaya County Budget Review and Outlook Paper FY 2025/26 (county document, PDF p. 5: KSh 862,934,946.65)",
+          "source_id": "siaya-cbrop-2025-26",
+          "page": 5,
+          "read": "PDF text layer"
+        },
+        "source_id": "cob-report-2025-26",
+        "page": 38,
+        "read": "tesseract OCR (two readings)"
       }
     ],
     "conflicts": [
@@ -1808,10 +1978,10 @@
     "note": "The 2019 census count and the 2022 to 2025 projections are in data/county.json. The 2009 census households and the sex split at county level were not retrievable (KNBS site unreachable from the build environment)."
   },
   "in_year": {
-    "label": "FY 2025/26 so far: in-year Controller of Budget reports",
+    "label": "FY 2025/26 in-year Controller of Budget reports (first quarter and first half)",
     "fy": "2025/26",
     "comparability": "In-year, not comparable with full years",
-    "note": "Cumulative figures from the start of the fiscal year (1 July 2025) to the end of each period. They are partial-year figures, so they are not part of the ten-year series and must not be compared with full-year values. Read from scanned PDFs (page images re-read with RapidOCR where stated); not yet checked by a reviewer.",
+    "note": "Cumulative figures from the start of the fiscal year (1 July 2025) to the end of each period. They are partial-year figures, so they are not part of the ten-year series and must not be compared with full-year values; the full year is in the series from the annual report (August 2026, Part 1). Read from scanned PDFs (page images re-read with RapidOCR where stated); not yet checked by a reviewer.",
     "periods": [
       {
         "id": "q1",
@@ -2068,7 +2238,7 @@
   },
   "supplementary": {
     "label": "Other primary documents for FY 2019/20 (not used in the ten-year series)",
-    "note": "The Controller of Budget annual report for FY 2019/20 was not found. These documents give some figures for the year. They are listed so readers can check them, but they are not used to fill the series: the county's own paper is not an independent review, and the audit and later-report figures measure different things. Where they disagree with another source, both values are in the conflict register.",
+    "note": "The Controller of Budget annual report for FY 2019/20 was not found (searched again 27 Nov 2026). These documents give some figures for the year. They are listed so readers can check them, but they are not used to fill the series: the county's own paper is not an independent review, and the audit and later-report figures measure different things. Where they disagree with another source, both values are in the conflict register.",
     "documents": [
       {
         "id": "siaya-brop-2019-20",
@@ -2141,6 +2311,42 @@
             "value": 324.83,
             "unit": "KSh m",
             "pdf_page": 20
+          },
+          {
+            "measure": "budget_recurrent",
+            "label": "Supplementary budget, recurrent (Table: budgeted 4,899,616,267)",
+            "value": 4899.62,
+            "unit": "KSh m",
+            "pdf_page": 20,
+            "read": "PDF text layer",
+            "as_printed": "Total Recurrent 4,899,616,267 4,659,842,545 239,773,722 95%"
+          },
+          {
+            "measure": "budget_development",
+            "label": "Supplementary budget, development (Table: budgeted 3,982,157,657)",
+            "value": 3982.16,
+            "unit": "KSh m",
+            "pdf_page": 20,
+            "read": "PDF text layer",
+            "as_printed": "Development 3,982,157,657 2,155,005,238 1,827,152,419 54%"
+          },
+          {
+            "measure": "osr_target",
+            "label": "Own-source revenue target (Table 3, Total for Local Revenue)",
+            "value": 420,
+            "unit": "KSh m",
+            "pdf_page": 13,
+            "read": "PDF text layer",
+            "as_printed": "Total for Local Revenue 420,000,000 184,249,749"
+          },
+          {
+            "measure": "compensation_of_employees",
+            "label": "Compensation of employees, spent (budgeted 2,926,638,524)",
+            "value": 2808.81,
+            "unit": "KSh m",
+            "pdf_page": 20,
+            "read": "PDF text layer",
+            "as_printed": "Compensation to employees 2,926,638,524 2,808,812,405 117,826,119 96%"
           }
         ],
         "source_id": "siaya-brop-2019-20"
@@ -2181,6 +2387,15 @@
             "value": 140.28,
             "unit": "KSh m",
             "pdf_page": 375
+          },
+          {
+            "measure": "spending_development",
+            "label": "Development spending, FY 2019/20 (section 3.39.9)",
+            "value": 2120,
+            "unit": "KSh m",
+            "pdf_page": 376,
+            "read": "PDF text layer",
+            "as_printed": "compared to a similar period in FY 2019/20 when the County spent Kshs.2.12 billion"
           }
         ],
         "source_id": "cob-report-2020-21"

@@ -19,7 +19,7 @@ analysis,A1,FY 2021/22,county: Siaya,gap (no source),siaya-analysis,0,1
 analysis,A1,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,1,0
 analysis,A1,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,2
 analysis,A1,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,3
-analysis,A1,FY 2025/26,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A1,FY 2025/26,county: Siaya,gap (no source),siaya-analysis,0,3
 analysis,A2,FY 2013/14,county: Siaya,gap (no source),siaya-analysis,0,2
 analysis,A2,FY 2014/15,county: Siaya,gap (no source),siaya-analysis,0,2
 analysis,A2,FY 2015/16,county: Siaya,gap (no source),siaya-analysis,0,1
@@ -36,8 +36,9 @@ analysis,A2,FY 2022/23,county: Siaya,gap (no source),siaya-analysis,0,1
 analysis,A2,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,1,0
 analysis,A2,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,2
 analysis,A2,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,2,0
-analysis,A2,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A2,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,2
 analysis,A2,FY 2024/25,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A2,FY 2025/26,county: Siaya,gap (no source),siaya-analysis,0,3
 analysis,A2,FY 2025/26,county: Siaya,takwimu_calculation,siaya-analysis,1,0
 analysis,A3,FY 2013/14,county: Siaya,gap (no source),siaya-analysis,0,3
 analysis,A3,FY 2014/15,county: Siaya,takwimu_calculation,siaya-analysis,3,0
@@ -45,16 +46,16 @@ analysis,A3,FY 2015/16,county: Siaya,takwimu_calculation,siaya-analysis,3,0
 analysis,A3,FY 2016/17,county: Siaya,takwimu_calculation,siaya-analysis,3,0
 analysis,A3,FY 2017/18,county: Siaya,takwimu_calculation,siaya-analysis,3,0
 analysis,A3,FY 2018/19,county: Siaya,takwimu_calculation,siaya-analysis,3,0
-analysis,A3,FY 2019/20,county: Siaya,gap (no source),siaya-analysis,0,3
-analysis,A3,FY 2019/20,county: Siaya,takwimu_calculation,siaya-analysis,2,0
+analysis,A3,FY 2019/20,county: Siaya,gap (no source),siaya-analysis,0,2
+analysis,A3,FY 2019/20,county: Siaya,takwimu_calculation,siaya-analysis,4,0
 analysis,A3,FY 2020/21,county: Siaya,takwimu_calculation,siaya-analysis,3,0
 analysis,A3,FY 2021/22,county: Siaya,takwimu_calculation,siaya-analysis,3,0
 analysis,A3,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,3,0
 analysis,A3,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,6,0
 analysis,A3,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,3
 analysis,A3,FY 2024/25,county: Siaya,takwimu_calculation,siaya-analysis,6,0
-analysis,A3,FY 2025/26,county: Siaya,gap (no source),siaya-analysis,0,4
-analysis,A3,FY 2025/26,county: Siaya,takwimu_calculation,siaya-analysis,3,0
+analysis,A3,FY 2025/26,county: Siaya,gap (no source),siaya-analysis,0,6
+analysis,A3,FY 2025/26,county: Siaya,takwimu_calculation,siaya-analysis,6,0
 analysis,A4,2014,county: Siaya,takwimu_calculation,siaya-analysis,1,0
 analysis,A4,2016,county: Siaya,takwimu_calculation,siaya-analysis,2,0
 analysis,A4,2017,county: Siaya,takwimu_calculation,siaya-analysis,2,0
@@ -68,6 +69,7 @@ analysis,A4,2023,county: Siaya,takwimu_calculation,siaya-analysis,9,0
 analysis,A4,2024,county: Siaya,gap (no source),siaya-analysis,0,3
 analysis,A4,2024,county: Siaya,takwimu_calculation,siaya-analysis,7,0
 analysis,A4,2025,county: Siaya,takwimu_calculation,siaya-analysis,5,0
+analysis,A4,2026,county: Siaya,takwimu_calculation,siaya-analysis,1,0
 analysis,A4,FY 2014/15,county: Siaya,gap (no source),siaya-analysis,0,1
 analysis,A4,FY 2015/16,county: Siaya,gap (no source),siaya-analysis,0,1
 analysis,A4,FY 2016/17,county: Siaya,gap (no source),siaya-analysis,0,1
@@ -114,12 +116,16 @@ analysis,A8,FY 2022/23,county: Siaya,gap (no source),siaya-analysis,0,1
 analysis,A8,FY 2022/23,county: Siaya,takwimu_calculation,siaya-analysis,1,0
 analysis,A8,FY 2023/24,county: Siaya,gap (no source),siaya-analysis,0,2
 analysis,A8,FY 2023/24,county: Siaya,takwimu_calculation,siaya-analysis,3,0
-analysis,A8,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2024/25,county: Siaya,gap (no source),siaya-analysis,0,2
 analysis,A8,FY 2024/25,county: Siaya,takwimu_calculation,siaya-analysis,7,0
-analysis,A8,FY 2025/26,county: Siaya,takwimu_calculation,siaya-analysis,1,0
+analysis,A8,FY 2025/26,county: Siaya,gap (no source),siaya-analysis,0,1
+analysis,A8,FY 2025/26,county: Siaya,takwimu_calculation,siaya-analysis,3,0
 audit,,FY 2013/14,county: Siaya,auditor_general,history,1,0
 audit,,FY 2014/15,county: Siaya,parliament,history,1,0
 audit,,FY 2015/16,county: Siaya,parliament,history,1,0
+audit,,FY 2016/17,county: Siaya,parliament,history,1,0
+audit,,FY 2017/18,county: Siaya,parliament,history,1,0
+audit,,FY 2018/19,county: Siaya,parliament,history,1,0
 audit,,FY 2019/20,county: Siaya,auditor_general,history,1,0
 audit,,FY 2020/21,county: Siaya,auditor_general,history,1,0
 audit,,FY 2021/22,county: Siaya,auditor_general,history,1,0
@@ -129,8 +135,11 @@ audit,county_assembly,FY 2013/14,county: Siaya,gap (no source),siaya-audits,0,1
 audit,county_assembly,FY 2014/15,county: Siaya,gap (no source),siaya-audits,0,1
 audit,county_assembly,FY 2015/16,county: Siaya,gap (no source),siaya-audits,0,1
 audit,county_assembly,FY 2016/17,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2016/17,county: Siaya,parliament,siaya-audits,1,0
 audit,county_assembly,FY 2017/18,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2017/18,county: Siaya,parliament,siaya-audits,1,0
 audit,county_assembly,FY 2018/19,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_assembly,FY 2018/19,county: Siaya,parliament,siaya-audits,1,0
 audit,county_assembly,FY 2019/20,county: Siaya,gap (no source),siaya-audits,0,1
 audit,county_assembly,FY 2020/21,county: Siaya,auditor_general,siaya-audits,9,0
 audit,county_assembly,FY 2021/22,county: Siaya,gap (no source),siaya-audits,0,1
@@ -143,8 +152,11 @@ audit,county_executive,FY 2014/15,county: Siaya,parliament,siaya-audits,1,0
 audit,county_executive,FY 2015/16,county: Siaya,gap (no source),siaya-audits,0,1
 audit,county_executive,FY 2015/16,county: Siaya,parliament,siaya-audits,1,0
 audit,county_executive,FY 2016/17,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_executive,FY 2016/17,county: Siaya,parliament,siaya-audits,1,0
 audit,county_executive,FY 2017/18,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_executive,FY 2017/18,county: Siaya,parliament,siaya-audits,1,0
 audit,county_executive,FY 2018/19,county: Siaya,gap (no source),siaya-audits,0,1
+audit,county_executive,FY 2018/19,county: Siaya,parliament,siaya-audits,1,0
 audit,county_executive,FY 2019/20,county: Siaya,auditor_general,siaya-audits,14,0
 audit,county_executive,FY 2020/21,county: Siaya,auditor_general,siaya-audits,33,0
 audit,county_executive,FY 2021/22,county: Siaya,auditor_general,siaya-audits,46,0
@@ -596,10 +608,10 @@ public_finance,,FY 2018/19,county: Siaya,gap (no source),siaya-fiscal-ledger,0,2
 public_finance,,FY 2018/19,county: Siaya,parliament,siaya-fiscal-ledger,1,0
 public_finance,,FY 2019/20,county: Siaya,auditor_general,siaya-fiscal-ledger,1,0
 public_finance,,FY 2019/20,county: Siaya,controller_of_budget,history,2,0
-public_finance,,FY 2019/20,county: Siaya,controller_of_budget,siaya-fiscal-ledger,1,0
-public_finance,,FY 2019/20,county: Siaya,county_government,siaya-fiscal-ledger,7,0
+public_finance,,FY 2019/20,county: Siaya,controller_of_budget,siaya-fiscal-ledger,2,0
+public_finance,,FY 2019/20,county: Siaya,county_government,siaya-fiscal-ledger,10,0
 public_finance,,FY 2019/20,county: Siaya,gap (no source),history,0,6
-public_finance,,FY 2019/20,county: Siaya,gap (no source),siaya-fiscal-ledger,0,9
+public_finance,,FY 2019/20,county: Siaya,gap (no source),siaya-fiscal-ledger,0,6
 public_finance,,FY 2019/20,county: Siaya,parliament,siaya-fiscal-ledger,2,0
 public_finance,,FY 2020/21,county: Siaya,auditor_general,siaya-fiscal-ledger,2,0
 public_finance,,FY 2020/21,county: Siaya,controller_of_budget,history,14,0
@@ -962,6 +974,7 @@ public_finance,,FY 2024/25,county: Siaya,controller_of_budget,siaya-fiscal-ledge
 public_finance,,FY 2024/25,county: Siaya,county_government,siaya-fiscal-ledger,32,0
 public_finance,,FY 2024/25,county: Siaya,gap (no source),counties-cob,0,3
 public_finance,,FY 2024/25,county: Siaya,gap (no source),history,0,2
+public_finance,,FY 2024/25,county: Siaya,other,siaya-fiscal-ledger,1,0
 public_finance,,FY 2024/25,county: Taita-Taveta,controller_of_budget,counties-cob,22,0
 public_finance,,FY 2024/25,county: Taita-Taveta,gap (no source),counties-cob,0,1
 public_finance,,FY 2024/25,county: Tana River,controller_of_budget,counties-cob,22,0
@@ -979,8 +992,9 @@ public_finance,,FY 2024/25,county: Wajir,controller_of_budget,counties-cob,22,0
 public_finance,,FY 2024/25,county: Wajir,gap (no source),counties-cob,0,1
 public_finance,,FY 2024/25,county: West Pokot,controller_of_budget,counties-cob,22,0
 public_finance,,FY 2024/25,county: West Pokot,gap (no source),counties-cob,0,1
-public_finance,,FY 2025/26,county: Siaya,controller_of_budget,siaya-fiscal-ledger,1,0
-public_finance,,FY 2025/26,county: Siaya,county_government,siaya-fiscal-ledger,20,0
+public_finance,,FY 2025/26,county: Siaya,controller_of_budget,history,12,0
+public_finance,,FY 2025/26,county: Siaya,controller_of_budget,siaya-fiscal-ledger,13,0
+public_finance,,FY 2025/26,county: Siaya,county_government,siaya-fiscal-ledger,28,0
 public_finance,,FY 2025/26,county: Siaya,gap (no source),history,0,1
-public_finance,,FY 2025/26,county: Siaya,gap (no source),siaya-fiscal-ledger,0,1
+public_finance,,FY 2025/26,county: Siaya,other,siaya-fiscal-ledger,1,0
 public_finance,in-year (partial),FY 2025/26,county: Siaya,controller_of_budget,history,22,0

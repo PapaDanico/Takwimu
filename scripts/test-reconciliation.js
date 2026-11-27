@@ -118,10 +118,50 @@ listedCase('in-year-assembly-payables-2025', 39.29, 72, () => {
 listedCase('in-year-revenue-arrears-2025', 332, 953.73, () => {
   ok(near(iy('q1', 'revenue_arrears_close').value, 332, 1e-9) && near(iy('h1', 'revenue_arrears_close').value, 953.73, 1e-9), 'in-year table must carry both values');
 });
-test('in-year: FY 2025/26 is not a full year and carries the comparability label', () => {
-  ok(!hist.years.some((y) => y.fy === hist.in_year.fy), 'FY 2025/26 must not be in years');
+// Since 27 Nov 2026 FY 2025/26 is a full year in the series, read from the annual report (Part 1 chapter 2 tables);
+// the in-year figures stay apart and never feed the year row.
+test('in-year: the FY 2025/26 year row is read from the annual report, never from the in-year reports', () => {
+  const y = year(hist.in_year.fy);
+  ok(y.report === hist.in_year.fy && /Financial Year 2025\/26/.test(hist.reports[y.report].title), 'the year row must cite the FY 2025/26 annual report');
+  const inYearIds = new Set(hist.in_year.periods.map((p) => p.source_id));
+  Object.entries(y.provenance).forEach(([k, p]) => ok(p.source_id === 'cob-report-2025-26' && !inYearIds.has(p.source_id), `${k}: must come from the annual report`));
   ok(hist.in_year.comparability === 'In-year, not comparable with full years', 'label changed');
   hist.in_year.conflicts.forEach((id) => conflict(id));
+});
+
+// FY 2025/26 full year (gap research C, 27 Nov 2026): the Controller of Budget annual report against the county's papers.
+osrCase('osr-2025-26', '2025/26', 876.14, 862.93);
+test('conflict osr-2025-26: the year row uses the Controller of Budget Table 2.1 value; the county paper keeps both its own totals', () => {
+  ok(near(year('2025/26').osr_m, 876.14, 1e-9) && near(year('2025/26').osr_target_m, 3252.42, 1e-9), 'series OSR and target');
+  ok(listed('osr-2025-26', 858.62), 'the county paper\'s table total 858.62 must be listed');
+  ok(near(290.45 + 585.69, 876.14, 0.005), 'ordinary + FIF must equal the Table 2.1 total');
+});
+caseTest('spent-2025-26', 7504.73, 9605.52, year('2025/26').spent * 1000, 5);
+test('conflict spent-2025-26: the county Q4 text figure is listed; the table parts add to the CoB total', () => {
+  ok(listed('spent-2025-26', 7180), 'the Q4 text 7.18 billion must be listed');
+  ok(near(5905.69 + 1599.04, 7504.73, 0.005) && near(4435.93 + 1469.76, 5905.69, 0.005), 'Table 2.4 parts must add up');
+  ok(near((7504.73 / 13377.98) * 100, 56.10, 0.01) && near((9605.521599 / 13377.987507) * 100, 71.80, 0.01), 'the two absorption rates recompute');
+});
+caseTest('development-spending-2025-26', 1599.04, 2781.58, year('2025/26').development_spent * 1000, 5);
+test('conflict osr-2025-26-economic-survey: the Economic Survey value is the OSR budget, flagged as a source error and not plotted', () => {
+  const c = conflict('osr-2025-26-economic-survey');
+  ok(c.status === 'resolved' && c.register === 'source_error' && c.verification_state === 'resolved_by_source' && c.ledger_case === 'D-L306-L320', 'resolved source-error case naming D-L306-L320');
+  ok(near(2036235308 + 1078685515, 3114920823, 0) && listed(c.id, 3114.92) && listed(c.id, 3114.920823), 'the PBB parts add to the printed budget and both are listed');
+  const o = read('siaya-fiscal-ledger.json').observations.find((x) => x.id === 'L320');
+  ok(o && o.value === 3114.92 && o.source_error && /3,114,920,823/.test(o.source_error.issue), 'L320 keeps the printed value with its source_error flag');
+  ok(!near(year('2025/26').osr_m, 3114.92, 1) && !near(osrPoint('2025/26').value, 3114.92, 1), 'never plotted');
+});
+test('conflict osr-2024-25-three-sources: county, KNBS and Controller of Budget side by side; the series keeps 436.68', () => {
+  const c = conflict('osr-2024-25-three-sources');
+  [757.570622, 481.79, 436.68].forEach((v) => ok(listed(c.id, v), `${v} must be listed`));
+  ok(c.values.filter((x) => near(x.value, 436.68, 1e-9)).length === 2 && c.values.some((x) => /standardmedia/.test(x.url)), 'the Standard\'s quotation of the CoB figure is listed as corroboration');
+  ok(near(osrPoint('2024/25').value, 436.68, 1e-9) && near(year('2024/25').osr_m, 436.68, 1e-9), 'series unchanged');
+});
+// FY 2019/20 (gap research A): the county paper against the CoB FY 2020/21 look-back; no value enters the series.
+listedCase('development-spending-2019-20', 2155.01, 2120, () => {
+  ok(near(supp('siaya-brop-2019-20', 'spending_development'), 2155.01, 1e-9) && near(supp('cob-annual-2020-21-comparatives', 'spending_development'), 2120, 1e-9), 'both values must be listed in supplementary');
+  ok(year('2019/20').development_spent === undefined, 'FY 2019/20 development spending must stay a gap');
+  ok(near(supp('siaya-brop-2019-20', 'budget_recurrent') + supp('siaya-brop-2019-20', 'budget_development'), 8881.77, 0.01), 'county paper: budget parts add to the supplementary total');
 });
 test('conflict osr-2023-24: Siaya hub states the later report value as previous year', () => {
   ok(near(siaya.own_source_revenue.previous_year.value, 427.95, 1e-9), 'previous_year should quote the FY 2024/25 report');
