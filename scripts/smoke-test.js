@@ -269,7 +269,7 @@ const srv = http.createServer((req, res) => {
   { const hub = await pg.locator('main').innerText(); const own24 = histSrc.years.find((y) => y.fy === '2023/24');
     const t0 = await pg.locator('#obligations .tile').first().innerText();
     check(own24.provenance.pending_total_m.source_id === 'cob-report-2023-24' && new RegExp(`KSh ${own24.pending_total_m}M`).test(t0) && /Sources disagree/i.test(t0) && !/^\s*Pending bills at 30 June 2024[^\n]*\n+\s*KSh 1\.12B/.test(t0), 'Siaya hub: pending bills at 30 Jun 2024 headline uses the own-year report (KSh 303.91M, FY 2023/24 report), flagged "sources disagree"');
-    check(await pg.locator('nav.hub-groups div', { hasText: 'Evidence' }).locator('a[href="/data/"]').count() === 1, 'Siaya hub: the Evidence group links /data/');
+    check(await pg.locator('nav.hub-groups div', { hasText: 'Evidence' }).locator('a[href="/data/"]').count() === 0, 'Siaya hub: the Evidence group no longer links the ten-year series page (owner, 27 Nov 2026)');
     check(/sources disagree \(KSh 303\.91M to/i.test(hub) && await pg.locator('#key a[href="/counties/siaya/ledger/#osr-latest"]').count() === 1 && await pg.locator('#key a[href="/counties/siaya/analysis/#spent"]').count() === 1, 'Siaya hub: pending bills at 30 Jun 2024 marked as disputed with the range; one summary tile each for own-source revenue and share of budget spent, linked to their homes'); }
   // Own-source revenue's canonical home is the ledger (owner decision U1): FY 2024/25 sources side by side, composition, ten years.
   await pg.goto(base + '/counties/siaya/ledger/', { waitUntil: 'load' });
