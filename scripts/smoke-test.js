@@ -517,6 +517,9 @@ const srv = http.createServer((req, res) => {
     let labelled = 0;
     for (const u of SM) {
       await pg.goto(base + u, { waitUntil: 'load' });
+      // Count what a reader sees: client sections (CompareView, DatasetCatalogue, the trend explorer) render after
+      // hydration in place of an aria-busy fallback, and 'load' can fire before or after that (flaky /compare/ count).
+      await pg.waitForFunction(() => !document.querySelector('main [aria-busy="true"]'), null, { timeout: 15000 });
       const r = await pg.evaluate(() => {
         const m = document.querySelector('main');
         const prov = (m.textContent.match(/Provisional: awaiting editorial review/gi) || []).length;
@@ -547,12 +550,12 @@ const srv = http.createServer((req, res) => {
     probs.forEach((p) => console.error('     ', p));
     check(SM.length >= 30 && labelled >= 20 && !probs.length, `repetition guard on ${SM.length} pages: exactly one provisional label on the ${labelled} pages that render reviewed datasets, a table of contents with four or more sections, no caveat more than twice, each measure in its canonical home${probs.length ? `; ${probs.slice(0, 4).join('; ')}` : ''}`);
   }
-  // Corrections register (owner item 7), the OSR explainer (item 5) and the analysis pending-bills table (item 4).
+  // Corrections footnoted beside the value (owner item 7; register retired 27 Nov 2026), the OSR explainer (item 5) and
+  // the analysis pending-bills table (item 4).
   {
-    await pg.goto(base + '/corrections/', { waitUntil: 'load' });
-    const ed = require('../lib/editorial');
-    check(await pg.locator('#corrections-table tbody tr').count() === ed.corrections().length && await pg.locator('#source-errors-table tbody tr').count() === ed.sourceErrors().length && await pg.locator('#source-errors-table .tag', { hasText: 'Source error in original' }).count() === ed.sourceErrors().length, `corrections: ${ed.corrections().length} corrections and ${ed.sourceErrors().length} source errors listed, each source error flagged`);
-    check(await pg.locator('footer a[href="/corrections/"]').count() >= 1, 'footer links the corrections register');
+    await pg.goto(base + '/counties/siaya/ledger/', { waitUntil: 'load' });
+    await pg.locator('main select').first().selectOption('pending_bills_close');
+    check(await pg.locator('#led-table [data-correction="siaya-fiscal-ledger:L276"]', { hasText: /Corrected 23 Nov 2026: was KSh 789\.96 million/ }).isVisible(), 'corrections: a corrected ledger value shows its footnote beside it (L276, was KSh 789.96 million)');
     await pg.goto(base + '/learn/', { waitUntil: 'load' });
     const ex = await pg.locator('#own-source-revenue').textContent();
     check(/Facility Improvement Financing Act, 2023/.test(ex) && /Appropriations-in-aid/.test(ex) && /Controller of Budget/.test(ex) && /Auditor-General/.test(ex) && /KNBS|Kenya National Bureau of Statistics/.test(ex), 'learn: own-source revenue explainer covers ordinary revenue, hospital revenue, FIF, A-i-A and each publisher');

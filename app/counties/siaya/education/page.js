@@ -37,7 +37,7 @@ export default function SiayaEducation() {
       <PageToc items={[['ed-dev', 'County functions'], ['ed-nat', 'National functions'], ['ed-conf', 'Inconsistencies'], ['ed-gaps', 'Not published']]} />
       <section className="card gold" aria-labelledby="ed-read">
         <h2 id="ed-read">How to read this page</h2>
-        <Provisional dataset="siaya-education">Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-education" />
         <ul className="how">
           <li id="devolved-vs-national"><b>Two levels of government.</b> Under the Constitution&rsquo;s Fourth Schedule the county runs pre-primary education (ECDE), village polytechnics (vocational training centres) and its own bursary fund. Primary and secondary schools, teachers employed by the Teachers Service Commission, national technical institutes and CDF bursaries are national functions. The two are shown in separate sections.</li>
           <li><b>Each source is its own vintage.</b> The Ministry&rsquo;s 2014 and 2019 booklets, the KNBS abstract and the county plan are never merged; where they differ, both values are shown.</li>

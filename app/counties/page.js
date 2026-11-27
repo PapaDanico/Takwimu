@@ -2,6 +2,7 @@ import Link from 'next/link';
 import PageHead from '../../components/PageHead';
 import { COUNTIES } from '../../lib/counties';
 import KenyaMap from '../../components/KenyaMap';
+import { notesFor } from '../../lib/correction-notes';
 import CountyFinder from '../../components/CountyFinder';
 
 export const metadata = {
@@ -17,7 +18,7 @@ export default function Counties() {
       <section className="card" aria-labelledby="map-h">
         <h2 id="map-h">Map of Kenya</h2>
         <p className="lead">Select a county on the map, or use the list below.</p>
-        <KenyaMap boundaryNote />
+        <KenyaMap boundaryNote licenceNote={notesFor('kenya-counties-map', 'meta.licence')} />
       </section>
       <section className="card" aria-labelledby="live-h">
         <h2 id="live-h">Published so far</h2>

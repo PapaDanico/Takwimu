@@ -26,9 +26,7 @@ const COLUMNS = [
     heading: 'Trust',
     links: [
       { href: '/method/', label: 'How we handle numbers' },
-      { href: '/data/', label: 'Siaya ten-year series' },
       { href: '/data/#conflicts', label: 'Where sources disagree' },
-      { href: '/corrections/', label: 'Corrections' },
       { href: '/reports/#briefs', label: 'About our briefs' },
     ],
   },

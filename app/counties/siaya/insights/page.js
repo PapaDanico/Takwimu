@@ -12,7 +12,7 @@ import { SITE_UPDATED } from '../../../../lib/site';
 import hist from '../../../../data/history.json';
 import cpi from '../../../../data/cpi.json';
 import ledger from '../../../../data/siaya-fiscal-ledger.json';
-import { SIAYA_FYS } from '../../../../lib/siaya-years';
+import { SIAYA_FYS, SIAYA_FY_SHORT, SIAYA_OSR_BY_FY, pendingTotal as pendOf } from '../../../../lib/siaya-years';
 
 export const metadata = {
   title: 'Ten-year insights: Siaya County finances',
@@ -59,13 +59,11 @@ const auditRange = `FY ${audits[0].fy} to FY ${audits[audits.length - 1].fy}`;
 
 const FYS = SIAYA_FYS;
 const by = Object.fromEntries(years.map((y) => [y.fy, y]));
-const short = (fy) => fy.slice(2);
-const SHORT = FYS.map(short);
+const SHORT = SIAYA_FY_SHORT;
 // A year missing a field (e.g. FY 2019/20 has no spending) is a gap: any non-finite result becomes null, never NaN.
 const finiteOrNull = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
 const col = (fn) => FYS.map((fy) => (by[fy] ? finiteOrNull(fn(by[fy])) : null));
-const pendOf = (y) => y.pending_total_m ?? (y.pending_development_m !== undefined && y.pending_recurrent_m !== undefined ? y.pending_development_m + y.pending_recurrent_m : undefined);
-const osrByFy = Object.fromEntries(hist.osr_series.points.map((p) => [p.fy, p]));
+const osrByFy = SIAYA_OSR_BY_FY;
 const cur = by['2024/25'];
 const absLast = years.filter((y) => y.development_absorption_pct !== undefined).slice(-1)[0];
 const osrPts = hist.osr_series.points;
@@ -82,9 +80,9 @@ export default function Insights() {
   return (
     <main id="main" className="wrap page">
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Insights" title="Ten years of Siaya County finances" sub="What ten years of Controller of Budget and Auditor-General reports add up to, FY 2014/15 to FY 2024/25, in plain language. Each measure has one home page with every figure and source; this page links to it. Gaps are marked, never filled in." path="/counties/siaya/insights/" shareText="Ten years of Siaya County finances" />
-      <DataStamp period={`FY 2014/15 to FY ${FYS[FYS.length - 1]} (July 2014 to June 2025); FY 2013/14 (16 months) shown where available`} checked={shortDate(hist.meta.retrieved)} updated={shortDate(SITE_UPDATED)} completeness={`Spending for ${years.filter((y) => y.spent !== undefined).length} of ${FYS.length} years; budget for ${years.filter((y) => y.approved !== undefined).length}; audit opinions for ${hist.audits.points.length}. Missing years are left blank, never filled.`} />
+      <DataStamp period={`FY 2014/15 to FY ${FYS[FYS.length - 1]} (July 2014 to June 2025); FY 2013/14 (16 months) shown where available`} updated={shortDate(SITE_UPDATED)} completeness={`Spending for ${years.filter((y) => y.spent !== undefined).length} of ${FYS.length} years; budget for ${years.filter((y) => y.approved !== undefined).length}; audit opinions for ${hist.audits.points.length}. Missing years are left blank, never filled.`} />
 
-      <Provisional dataset={['history', 'siaya-fiscal-ledger']}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
+      <Provisional dataset={['history', 'siaya-fiscal-ledger']} />
 
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#spending">Spending</a></li><li><a href="#audit">Audit</a></li><li><a href="#gaps">Gaps</a></li>

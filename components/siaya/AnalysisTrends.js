@@ -11,7 +11,7 @@ import { insights as pulse } from '../../lib/pulse';
 import { mean, median, quantile, sd, cv, cagr, iqrOutliers } from '../../lib/analytics';
 import { pendingAt, range } from '../../lib/editorial';
 import { fmtFixed, fmtInt } from '../../lib/format';
-import { SIAYA_FYS } from '../../lib/siaya-years';
+import { SIAYA_FYS, SIAYA_FY_SHORT, pendingTotal as pendOf } from '../../lib/siaya-years';
 
 // Ten-year measures whose canonical home is /counties/siaya/analysis/ (owner decision U1, 21 Nov 2026): share of
 // budget spent (absorption), pending bills and real growth. Moved here from the old analytics, Fiscal Pulse and
@@ -23,7 +23,7 @@ const by = Object.fromEntries(years.map((y) => [y.fy, y]));
 const P25 = pendingAt('2024/25');
 const P25R = range(P25);
 const FYS = SIAYA_FYS;
-const SHORT = FYS.map((f) => f.slice(2));
+const SHORT = SIAYA_FY_SHORT;
 const label = (fy) => `FY ${fy}`;
 const bn = (v) => v.toFixed(2);
 const one = (v) => v.toFixed(1);
@@ -31,7 +31,6 @@ const n0 = fmtInt;
 const fin = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
 const col = (fn) => FYS.map((fy) => (by[fy] ? fin(fn(by[fy])) : null));
 const fillBy = (rows, f) => FYS.map((fy) => { const r = rows.find((x) => x.fy === fy); return r ? fin(f(r)) : null; });
-const pendOf = (y) => y.pending_total_m ?? (y.pending_development_m !== undefined && y.pending_recurrent_m !== undefined ? y.pending_development_m + y.pending_recurrent_m : undefined);
 
 const spendYears = years.filter((y) => y.spent !== undefined);
 const y0 = spendYears.find((y) => y.fy === '2014/15');

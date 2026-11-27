@@ -486,12 +486,12 @@ test('conflict cbrop-development-spending-2024-25: the table figure adds to the 
 });
 
 // Resolved cases: each says whether it is our correction, a source error or no change; our corrections carry the record.
-test('resolved register cases are classed for the corrections register', () => {
+test('resolved register cases are classed as our correction, source error or no change', () => {
   reg.conflicts.filter((c) => c.status === 'resolved').forEach((c) => {
     ok(['our_correction', 'source_error', 'no_change'].includes(c.register), `${c.id}: resolved without register`);
     if (c.register === 'our_correction') ok(c.correction && c.correction.original && c.correction.corrected && c.correction.affected_pages.length, `${c.id}: our correction without its record`);
   });
-  reg.conflicts.filter((c) => c.status === 'open').forEach((c) => ok(!c.register && !c.correction, `${c.id}: an open case cannot be on the corrections register`));
+  reg.conflicts.filter((c) => c.status === 'open').forEach((c) => ok(!c.register && !c.correction, `${c.id}: an open case cannot carry a correction`));
   // Every ledger case classed "resolved by source" is logged as a resolved register case.
   read('ledger-classes.json').cases.filter((x) => x.classification === 'resolved by source').forEach((x) => ok(reg.conflicts.some((c) => c.ledger_case === x.case_id && c.status === 'resolved'), `${x.case_id}: resolved by source but not in the register`));
 });

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import BarList from '../../../../components/BarList';
@@ -29,8 +30,8 @@ export default function SiayaPeople() {
   return (
     <main id="main" className="wrap page">
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="People" title="Siaya people: population, households and poverty" sub={`Siaya had ${n(pc.value)} people at the 2019 census, up from ${n(p0.value)} in 2009. That is growth of about ${cagr.toFixed(1)} per cent a year.`} path="/counties/siaya/people/" shareText="Siaya County profile: population, poverty and health" />
-      <DataStamp period="Census 2009 and 2019; surveys 2014 and 2022; poverty 2005/06 and 2015/16" checked={shortDate(co.retrieved)} updated={shortDate(SITE_UPDATED)} completeness="Census and survey years only: no annual poverty series is available. Health survey results are on the health page." />
-      <Provisional dataset={'history'}>Figures were transcribed by Takwimu from the census, surveys and reports and have not yet been checked by a reviewer.</Provisional>
+      <DataStamp period="Census 2009 and 2019; surveys 2014 and 2022; poverty 2005/06 and 2015/16" updated={shortDate(SITE_UPDATED)} completeness="Census and survey years only: no annual poverty series is available. Health survey results are on the health page." />
+      <Provisional dataset={'history'} />
 
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#people">Population</a></li><li><a href="#a-h">Age structure</a></li><li><a href="#poverty">Poverty</a></li><li><a href="#sources">Sources</a></li><li><a href="/counties/siaya/health/#profile-health">Health, 2014 to 2022</a></li>
@@ -57,7 +58,7 @@ export default function SiayaPeople() {
           <li><span>Female-headed households</span><span>{co.population.female_headed_households_pct}% (Kenya {co.population.national_female_headed_households_pct}%)</span></li>
           <li><span>Urban population (2022 projection)</span><span>{n(co.population.urban_2022)} of {n(co.population.projection_2022)}</span></li>
         </ul>
-        <p className="how"><b>Urban and rural.</b> {co.population.urban_rural_note}<SourceErrorFlag e={co.population.source_error} id="county:population" /></p>
+        <p className="how"><b>Urban and rural.</b> {co.population.urban_rural_note}<SourceErrorFlag e={co.population.source_error} id="county:population" refId="county:population.urban_2022, rural_2022" /></p>
         {pop.some((p) => p.alternate) && <p className="how"><b>Note.</b> The 2012 projection appears as 886,417 in the county plans' constituency table and 885,762 in their text. We show the table value.</p>}
       </section>
 
@@ -90,13 +91,13 @@ export default function SiayaPeople() {
             </tbody>
           </table>
         </TableWrap>
-        <p className="how"><b>Gap.</b> {hist.poverty.gap}</p>
+        <p className="how"><b>Gap.</b> No recent monetary poverty figure: see <Link href="/method/#known-gaps">known gaps</Link>.</p>
       </section>
 
       <section id="sources" className="card" aria-labelledby="sr-h">
         <h2 id="sr-h">Sources</h2>
         <ul className="steps">
-          <li>2019 census, age structure, households, 2022 poverty and health plan figures: {co.source}. Retrieved {shortDate(co.retrieved)}. Confidence {co.confidence} of 5.</li>
+          <li>2019 census, age structure, households, 2022 poverty and health plan figures: {co.source}. Confidence {co.confidence} of 5.</li>
           <li>2009 census and earlier projections: {hist.population.by_sub_county_2009.source}.</li>
           <li>Health survey results (KDHS 2014 and 2022) and the older HIV estimates are on <a href="/counties/siaya/health/#profile-health">Siaya health</a>.</li>
         </ul>

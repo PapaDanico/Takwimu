@@ -32,7 +32,7 @@ export default function SiayaLedger() {
 
       <section className="card gold" aria-labelledby="led-read">
         <h2 id="led-read">How to read this page</h2>
-        <Provisional dataset="siaya-fiscal-ledger">Values were transcribed by Takwimu from the documents and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-fiscal-ledger" />
         <p id="why-differ"><b>Why the figures differ.</b> Official documents often give different figures for the same year because they describe different things: an original or a supplementary budget, a full year or part of one, own-source revenue with or without hospital income (FIF) and other appropriations-in-aid (A-i-A), and money counted when it moves (cash) or when it is owed (accrual). A difference is therefore a question to put to the documents, not evidence that any figure is wrong.</p>
         <ul className="how">
           <li id="no-averaging"><b>No averaging and no verdicts.</b> Every value is shown as its source printed it, with the page it was read from. None is averaged, preferred or corrected here, and a missing value is never shown as zero.</li>
@@ -83,7 +83,7 @@ export default function SiayaLedger() {
             <caption className="sr-only">Number of discrepancy cases in each class, with what the class means</caption>
             <thead><tr><th scope="col">Class</th><th scope="col">Cases</th><th scope="col">What it means</th></tr></thead>
             <tbody>{l.classOrder.map((k) => <tr key={k} data-class={k}><th scope="row"><ClassBadge cls={k} /></th><td>{l.classCounts[k]}</td><td>{l.classDefs[k]}</td></tr>)}</tbody>
-            <tfoot><tr><th scope="row">All cases</th><td>{l.cases.length}</td><td>Cases resolved by source are logged in the <Link href="/data/#cbrop-development-spending-2024-25">conflict register</Link>; errors in the documents themselves are on the <Link href="/corrections/#source-errors">corrections register</Link>.</td></tr></tfoot>
+            <tfoot><tr><th scope="row">All cases</th><td>{l.cases.length}</td><td>Cases resolved by source are logged in the <Link href="/data/#cbrop-development-spending-2024-25">conflict register</Link>; errors in the documents themselves are flagged beside the value.</td></tr></tfoot>
           </table>
         </TableWrap>
       </section>

@@ -3,7 +3,9 @@
 // schema; every value has a source and a PDF page; no zero or null stands for a missing value; discrepancy
 // cases are exactly the pairs that differ by more than the threshold, with differences computed correctly;
 // the completeness matrix matches the observations; values reused from data/history.json and
-// data/counties-cob.json equal those files exactly. Run: node scripts/test-fiscal-ledger.js
+// data/counties-cob.json equal those files exactly. Since 27 Nov 2026 the same checks run for every county ledger in
+// lib/county-registry.js (Kisumu: data/counties/kisumu/fiscal-ledger.json); Siaya's own checks are unchanged.
+// Run: node scripts/test-fiscal-ledger.js
 const fs = require('fs');
 const path = require('path');
 
@@ -42,6 +44,25 @@ function computeDiscrepancies(observations, threshold = 1) {
         const vb = toMillion(b);
         const pct = (Math.abs(va - vb) / Math.min(Math.abs(va), Math.abs(vb))) * 100;
         if (!(pct > threshold)) continue;
+        // Rates (unit %, absorption as printed): same rule, compared in percentage points (no Siaya measure is a rate).
+        if (a.unit === '%') {
+          cases.push({
+            case_id: `D-${a.id}-${b.id}`,
+            indicator_id: a.measure,
+            period: `FY ${a.fy}`,
+            claim_a: { observation_id: a.id, value_pct: a.value, printed: a.original_text || null },
+            claim_b: { observation_id: b.id, value_pct: b.value, printed: b.original_text || null },
+            source_a: { source_id: a.source_id, pdf_page: a.pdf_page },
+            source_b: { source_id: b.source_id, pdf_page: b.pdf_page },
+            difference: { absolute_pct_points: round2(Math.abs(va - vb)), pct_of_smaller: round2(pct), b_minus_a_pct_points: round2(vb - va) },
+            possible_basis_mismatch: basisMismatch(a, b),
+            status: 'open',
+            resolution: null,
+            reviewer: null,
+            reviewed_at: null,
+          });
+          continue;
+        }
         cases.push({
           case_id: `D-${a.id}-${b.id}`,
           indicator_id: a.measure,
@@ -120,10 +141,15 @@ function resolve(obj, steps) {
   return cur;
 }
 
-function main() {
+// One ledger per county in lib/county-registry.js. Siaya runs exactly the checks it always had; another county runs
+// the same generic checks with its own source registry (its ledger's sources, hash-matched against the source
+// manifest for shared all-county documents and against the county's research register for the rest).
+function runLedger(slug) {
   const root = path.join(__dirname, '..');
   const read = (f) => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8'));
-  const data = read('data/siaya-fiscal-ledger.json');
+  const counties = require('../lib/county-registry');
+  const siaya = slug === 'siaya';
+  const data = read(counties.file(slug, 'ledger'));
   const schema = read('schemas/siaya-fiscal-ledger.schema.json');
   const library = read('data/source-library.json');
   const reused = { 'data/history.json': read('data/history.json'), 'data/counties-cob.json': read('data/counties-cob.json') };
@@ -136,28 +162,52 @@ function main() {
   ROOT_SCHEMA = schema;
   checkSchema(schema, data, 'ledger', se);
   ok(se.length === 0, `schema: ${se.slice(0, 10).join('; ')}`);
+  ok(data.meta.county_code === counties.COUNTY_DATA[slug].code, `meta.county_code ${data.meta.county_code} is not ${slug}'s code`);
 
   const measures = Object.keys(data.measures);
-  const libIds = new Set(library.documents.map((d) => d.document_id));
+  // Source ids a value may cite: Siaya's source library; for another county, its ledger's own source registry, each
+  // document hash-matched (shared all-county documents keep the source-manifest id and hash, never a duplicate).
+  let libIds;
+  if (siaya) libIds = new Set(library.documents.map((d) => d.document_id));
+  else {
+    const manifest = Object.fromEntries(read('data/source-manifest.json').documents.map((d) => [d.id, d]));
+    const research = Object.fromEntries((read(counties.COUNTY_DATA[slug].research).sources || []).map((r) => [r.id, r]));
+    libIds = new Set();
+    Object.entries(data.sources).forEach(([id, s]) => {
+      const m = manifest[id];
+      const r = research[id];
+      ok(Boolean(m || r), `source ${id}: neither in data/source-manifest.json nor in the research register`);
+      if (m) ok(m.sha256 === s.sha256, `source ${id}: SHA-256 differs from data/source-manifest.json`);
+      if (!m && r) ok(r.sha256 === s.sha256, `source ${id}: SHA-256 differs from the research register`);
+      ok(typeof s.sha256 === 'string' && /^[0-9a-f]{64}$/.test(s.sha256), `source ${id}: no SHA-256 (a value without a stored copy cannot be reviewed)`);
+      libIds.add(id);
+    });
+  }
   const ids = new Set();
   for (const o of data.observations) {
     const w = `${o.id} (${o.measure} ${o.fy})`;
     ok(!ids.has(o.id), `${w}: duplicate id`); ids.add(o.id);
     ok(measures.includes(o.measure), `${w}: unknown measure`);
     ok(data.years.includes(o.fy), `${w}: fiscal year not in years`);
+    ok(o.id.startsWith(siaya ? 'L' : slug === 'kisumu' ? 'K' : '?'), `${w}: id prefix does not belong to ${slug}`);
     // source and page
     ok(typeof o.source_id === 'string' && o.source_id in data.sources, `${w}: source ${o.source_id} not in sources`);
-    ok(libIds.has(o.source_id), `${w}: source ${o.source_id} not in data/source-library.json`);
+    ok(libIds.has(o.source_id), `${w}: source ${o.source_id} not in ${siaya ? 'data/source-library.json' : 'the county source registry'}`);
     ok(Number.isInteger(o.pdf_page) && o.pdf_page > 0, `${w}: missing PDF page`);
     // no zero or null standing for missing
     ok(typeof o.value === 'number' && Number.isFinite(o.value), `${w}: value is not a number`);
     ok(o.value !== 0, `${w}: zero value (missing values must be absent, not zero)`);
     ok(o.value > 0, `${w}: non-positive value`);
-    ok(o.unit === 'KSh million' || o.unit === 'KSh billion', `${w}: unit ${o.unit}`);
+    const rate = data.measures[o.measure] && data.measures[o.measure].unit === '%';
+    if (rate) ok(o.unit === '%' && o.value <= 100, `${w}: a rate must be stored in % and be at most 100`);
+    else ok(o.unit === 'KSh million' || o.unit === 'KSh billion', `${w}: unit ${o.unit}`);
     ok(o.confidence >= 1 && o.confidence <= 5, `${w}: confidence out of range`);
     ok(o.source_kind === data.sources[o.source_id]?.kind, `${w}: source_kind does not match the source registry`);
     if (o.measure.startsWith('budget_')) ok(['original', 'supplementary', 'not stated'].includes(o.budget_version), `${w}: budget_version missing`);
-    if (o.measure === 'pending_bills_close') ok(['closing', 'opening_of_next_year'].includes(o.stock_point), `${w}: stock_point missing`);
+    if (/^pending_bills/.test(o.measure)) ok(['closing', 'opening_of_next_year'].includes(o.stock_point), `${w}: stock_point missing`);
+    // A second reading that disagrees, or a garbled reading, must be flagged for a person to check the page image.
+    if (o.second_reading && !o.second_reading.agrees) ok(o.needs_page_check === true, `${w}: second reading disagrees but no needs_page_check`);
+    if (!siaya && o.read_method === 'ocr-tesseract') ok(Boolean(o.second_reading), `${w}: an OCR reading needs a second, independent reading`);
     // new readings must say what was printed; reused values must match their file exactly
     if (o.reused_from) {
       const src = reused[o.reused_from.file];
@@ -166,6 +216,7 @@ function main() {
         const v = resolve(src, o.reused_from.path);
         ok(v === o.value, `${w}: value ${o.value} differs from ${o.reused_from.file} ${JSON.stringify(o.reused_from.path)} = ${v}`);
       }
+      if (!siaya) ok(o.reused_from.file === 'data/counties-cob.json' && resolve(src, o.reused_from.path.slice(0, 4)).slug === slug, `${w}: reuses a row that is not ${slug}'s`);
     } else {
       ok(typeof o.original_text === 'string' && o.original_text.length > 0, `${w}: new reading without original_text`);
       ok(typeof o.table === 'string' && o.table.length > 0, `${w}: new reading without table or section`);
@@ -175,22 +226,26 @@ function main() {
   ok(!JSON.stringify(data.observations).includes('"value":null'), 'an observation has value null');
 
   // cross-check: every overlapping value in history.json and counties-cob.json that the ledger cites matches (done above);
-  // also, for each counties-cob Siaya field the ledger maps, the ledger must hold it (nothing silently dropped).
+  // also, for each counties-cob field of the county the ledger maps, the ledger must hold it (nothing silently dropped).
   const cobMap = { approved_budget_total: 'budget_total', recurrent_budget: 'budget_recurrent', development_budget: 'budget_development', total_osr_actual: 'osr_total_actual', ordinary_osr_actual: 'osr_ordinary_actual', fif_aia_actual: 'osr_fif_aia_actual', total_osr_target: 'osr_total_target', expenditure_total: 'expenditure_total', recurrent_expenditure: 'expenditure_recurrent', development_expenditure: 'expenditure_development', pb_grand_total: 'pending_bills_close' };
+  if (!siaya) Object.assign(cobMap, { ordinary_osr_target: 'osr_ordinary_target', fif_aia_target: 'osr_fif_aia_target', recurrent_absorption_pct: 'absorption_recurrent_pct', development_absorption_pct: 'absorption_development_pct', overall_absorption_pct: 'absorption_total_pct', pb_exec_recurrent: 'pending_bills_recurrent_close', pb_exec_development: 'pending_bills_development_close' });
   for (const yr of reused['data/counties-cob.json'].years) {
-    const s = yr.counties.find((c) => c.slug === 'siaya');
+    const s = yr.counties.find((c) => c.slug === slug);
+    if (!data.years.includes(yr.fy)) continue;
     for (const [f, m] of Object.entries(cobMap)) {
       if (!s[f] || s[f].value === null) continue;
       ok(data.observations.some((o) => o.measure === m && o.fy === yr.fy && o.reused_from && o.reused_from.file === 'data/counties-cob.json' && o.value === s[f].value), `counties-cob ${yr.fy} ${f} = ${s[f].value} is not in the ledger`);
     }
   }
-  const histMap = { approved: 'budget_total', recurrent_budget: 'budget_recurrent', development_budget: 'budget_development', spent: 'expenditure_total', recurrent_spent: 'expenditure_recurrent', development_spent: 'expenditure_development' };
-  for (const y of reused['data/history.json'].years) {
-    for (const [f, m] of Object.entries(histMap)) {
-      if (y[f] === undefined) continue;
-      ok(data.observations.some((o) => o.measure === m && o.fy === y.fy && o.reused_from && o.reused_from.file === 'data/history.json' && o.value === y[f]), `history ${y.fy} ${f} = ${y[f]} is not in the ledger`);
+  if (siaya) {
+    const histMap = { approved: 'budget_total', recurrent_budget: 'budget_recurrent', development_budget: 'budget_development', spent: 'expenditure_total', recurrent_spent: 'expenditure_recurrent', development_spent: 'expenditure_development' };
+    for (const y of reused['data/history.json'].years) {
+      for (const [f, m] of Object.entries(histMap)) {
+        if (y[f] === undefined) continue;
+        ok(data.observations.some((o) => o.measure === m && o.fy === y.fy && o.reused_from && o.reused_from.file === 'data/history.json' && o.value === y[f]), `history ${y.fy} ${f} = ${y[f]} is not in the ledger`);
+      }
     }
-  }
+  } else ok(!data.observations.some((o) => o.reused_from && o.reused_from.file === 'data/history.json'), 'data/history.json is Siaya\'s file: another county cannot reuse it');
 
   // discrepancies
   const expected = computeDiscrepancies(data.observations, data.meta.threshold_pct);
@@ -200,11 +255,13 @@ function main() {
     const a = byId[d.claim_a.observation_id];
     const b = byId[d.claim_b.observation_id];
     ok(a && b && a.measure === b.measure && a.fy === b.fy, `${d.case_id}: claims are not the same measure and year`);
-    if (a && b) {
+    if (a && b && a.unit !== '%') {
+      ok(typeof d.claim_a.value_ksh_m === 'number' && typeof d.claim_b.value_ksh_m === 'number' && typeof d.difference.b_minus_a_ksh_m === 'number', `${d.case_id}: money case without value_ksh_m`);
       const diff = Math.abs(toMillion(a) - toMillion(b));
       ok(Math.abs(d.difference.absolute_ksh_m - round2(diff)) < 1e-9, `${d.case_id}: absolute difference wrong`);
       ok(d.difference.pct_of_smaller > data.meta.threshold_pct, `${d.case_id}: below threshold`);
     }
+    if (a && b && a.unit === '%') ok(typeof d.claim_a.value_pct === 'number' && Math.abs(d.difference.absolute_pct_points - round2(Math.abs(a.value - b.value))) < 1e-9, `${d.case_id}: rate case wrong`);
     ok(d.status === 'open', `${d.case_id}: status must be open`);
   }
 
@@ -219,30 +276,51 @@ function main() {
     if (c.missing) ok(typeof c.reason === 'string' && c.reason.length > 0, `completeness ${m} ${fy}: missing without a reason`);
   }
 
-  // Case classes (data/ledger-classes.json, scripts/classify-ledger.js): every case classed once, none stale.
-  const cls = read('data/ledger-classes.json');
-  const CLS = ['definitional', 'period or version', 'probable source error', 'resolved by source', 'open'];
-  const caseIds = new Set(data.discrepancies.map((d) => d.case_id));
-  const clsIds = cls.cases.map((c) => c.case_id);
-  ok(clsIds.length === new Set(clsIds).size, 'ledger-classes: a case is classed twice');
-  data.discrepancies.forEach((d) => ok(clsIds.includes(d.case_id), `ledger-classes: ${d.case_id} is not classed (run node scripts/classify-ledger.js)`));
-  cls.cases.forEach((c) => {
-    ok(caseIds.has(c.case_id), `ledger-classes: ${c.case_id} is not a ledger case`);
-    ok(CLS.includes(c.classification), `ledger-classes: ${c.case_id} has class ${c.classification}`);
-    ok(typeof c.reason === 'string' && c.reason.length >= 20 && Array.isArray(c.evidence) && c.evidence.length > 0, `ledger-classes: ${c.case_id} needs a reason and evidence`);
-  });
-  CLS.forEach((k) => ok(cls.meta.counts[k] === cls.cases.filter((c) => c.classification === k).length, `ledger-classes: count for ${k} is stale`));
-  // Pending bills: every stock states its date and accounting basis (owner item 4).
-  data.observations.filter((o) => o.measure === 'pending_bills_close').forEach((o) => ok(/^\d{4}-(06-30|07-01)$/.test(o.as_at || '') && ['cash', 'accrual', 'eligible-verified', 'as reported'].includes(o.accounting_basis), `${o.id}: pending-bills stock needs as_at (30 June or 1 July) and accounting_basis`));
-  // The KSh 545.95 million closing stock (30 June 2025) is held with its printed sources.
-  ['L251', 'L273'].forEach((id) => { const o = byId[id]; ok(o && Math.abs(o.value - 545.95) < 0.01 && o.as_at === '2025-06-30', `${id}: the 545.95 million stock at 30 June 2025 must be held`); });
-
-  if (errors.length) {
-    console.error(`test-fiscal-ledger: ${errors.length} of ${checks} checks failed`);
-    errors.slice(0, 40).forEach((e) => console.error('  - ' + e));
-    process.exit(1);
+  if (siaya) {
+    // Case classes (data/ledger-classes.json, scripts/classify-ledger.js): every case classed once, none stale.
+    const cls = read('data/ledger-classes.json');
+    const CLS = ['definitional', 'period or version', 'probable source error', 'resolved by source', 'open'];
+    const caseIds = new Set(data.discrepancies.map((d) => d.case_id));
+    const clsIds = cls.cases.map((c) => c.case_id);
+    ok(clsIds.length === new Set(clsIds).size, 'ledger-classes: a case is classed twice');
+    data.discrepancies.forEach((d) => ok(clsIds.includes(d.case_id), `ledger-classes: ${d.case_id} is not classed (run node scripts/classify-ledger.js)`));
+    cls.cases.forEach((c) => {
+      ok(caseIds.has(c.case_id), `ledger-classes: ${c.case_id} is not a ledger case`);
+      ok(CLS.includes(c.classification), `ledger-classes: ${c.case_id} has class ${c.classification}`);
+      ok(typeof c.reason === 'string' && c.reason.length >= 20 && Array.isArray(c.evidence) && c.evidence.length > 0, `ledger-classes: ${c.case_id} needs a reason and evidence`);
+    });
+    CLS.forEach((k) => ok(cls.meta.counts[k] === cls.cases.filter((c) => c.classification === k).length, `ledger-classes: count for ${k} is stale`));
   }
-  console.log(`test-fiscal-ledger: ${checks} checks passed (${data.observations.length} values, ${data.discrepancies.length} open discrepancy cases)`);
+  // Pending bills: every stock states its date and accounting basis (owner item 4).
+  data.observations.filter((o) => /^pending_bills/.test(o.measure)).forEach((o) => ok(/^\d{4}-(06-30|07-01)$/.test(o.as_at || '') && ['cash', 'accrual', 'eligible-verified', 'as reported'].includes(o.accounting_basis), `${o.id}: pending-bills stock needs as_at (30 June or 1 July) and accounting_basis`));
+  if (siaya) {
+    // The KSh 545.95 million closing stock (30 June 2025) is held with its printed sources.
+    ['L251', 'L273'].forEach((id) => { const o = byId[id]; ok(o && Math.abs(o.value - 545.95) < 0.01 && o.as_at === '2025-06-30', `${id}: the 545.95 million stock at 30 June 2025 must be held`); });
+  } else {
+    // Ten years back (CLAUDE.md): each core measure has a value or a listed gap for every year of the series.
+    ok(data.years.length >= 10, `${slug}: the series must cover at least ten fiscal years`);
+    // No projection as actual: an actual cannot come from a document published before its year ended.
+    data.observations.filter((o) => /_actual$|^expenditure_|_received$|^wage_bill$|_close$/.test(o.measure)).forEach((o) => ok(!/projection|estimate/i.test(o.basis || ''), `${o.id}: an actual cannot rest on a projection or estimate`));
+  }
+
+  return { errors, checks, data };
+}
+
+function main() {
+  const counties = require('../lib/county-registry');
+  let failed = false;
+  counties.withKind('ledger').forEach((slug) => {
+    const { errors, checks, data } = runLedger(slug);
+    const tag = slug === 'siaya' ? 'test-fiscal-ledger' : `test-fiscal-ledger [${slug}]`;
+    if (errors.length) {
+      failed = true;
+      console.error(`${tag}: ${errors.length} of ${checks} checks failed`);
+      errors.slice(0, 40).forEach((e) => console.error('  - ' + e));
+      return;
+    }
+    console.log(`${tag}: ${checks} checks passed (${data.observations.length} values, ${data.discrepancies.length} open discrepancy cases)`);
+  });
+  if (failed) process.exit(1);
 }
 
 if (require.main === module) main();

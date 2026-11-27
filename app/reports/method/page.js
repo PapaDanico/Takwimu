@@ -42,7 +42,7 @@ export default function ReportsMethod() {
 
       <section id="review" className="card" aria-labelledby="rv-h">
         <h2 id="rv-h">Review state</h2>
-        <p>A figure counts as reviewed only when an approved editorial review record names it (data/reviews.json). Until then it is “{PROVISIONAL}”. A report says this once, on its cover, with the count of figures in each review state, instead of labelling every figure. While any figure is provisional the report carries a DRAFT watermark and a DRAFT header on every printed page.</p>
+        <p>Editorial review works as on the rest of the site (<Link href="/method/#review">Method, editorial review</Link>): until a figure is reviewed it is “{PROVISIONAL}”. A report says this once, on its cover, with the count of figures in each review state, instead of labelling every figure. While any figure is provisional the report carries a DRAFT watermark and a DRAFT header on every printed page.</p>
         <p>Only exceptions carry a mark beside the value: <strong>Approved</strong> (an approved review record), <strong>Disputed</strong> (the data file records a conflict for the value; both readings are kept, see the <Link href="/data/#conflicts">conflict register</Link>), <strong>Superseded</strong> (replaced by a later reading). A value withdrawn after editorial review prints the withdrawal and its reason in place of the number.</p>
       </section>
 

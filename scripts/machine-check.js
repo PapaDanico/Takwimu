@@ -26,8 +26,12 @@ const CACHE = arg('--cache', path.join(os.tmpdir(), 'takwimu-machine-check'));
 const TODAY = arg('--date', new Date().toISOString().slice(0, 10));
 if (!INDEX) { console.error('usage: node scripts/machine-check.js --index <sha256 index> [--keep-existing]'); process.exit(2); }
 const KEEP = process.argv.includes('--keep-existing');
+// --county <slug>: the values of a county in lib/county-registry.js other than Siaya (lib/county-review.js); the result
+// goes to that county's machine-checks file, and data/machine-checks.json (Siaya) is not touched.
+const COUNTY = arg('--county');
+const OUT = COUNTY ? require('../lib/county-registry').abs(require('../lib/county-registry').COUNTY_DATA[COUNTY].review.machine_checks) : path.join(__dirname, '..', 'data', 'machine-checks.json');
 const EXISTING = {};
-if (KEEP) { try { JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'machine-checks.json'), 'utf8')).checks.forEach((c) => { EXISTING[`${c.dataset}|${c.id}`] = c; }); } catch (e) { /* none yet */ } }
+if (KEEP) { try { JSON.parse(fs.readFileSync(OUT, 'utf8')).checks.forEach((c) => { EXISTING[`${c.dataset}|${c.id}`] = c; }); } catch (e) { /* none yet */ } }
 fs.mkdirSync(CACHE, { recursive: true });
 const FILE = {};
 fs.readFileSync(INDEX, 'utf8').split('\n').filter(Boolean).forEach((l) => { const m = l.match(/^([0-9a-f]{64})\s+(.+)$/); if (m && !FILE[m[1]]) FILE[m[1]] = m[2]; });
@@ -148,7 +152,7 @@ function printedShort(e) {
 }
 
 // ---- Plan ----
-const entries = pack.all();
+const entries = COUNTY ? require('../lib/county-review').entries(COUNTY) : pack.all();
 const plan = entries.map((e) => {
   const s = e.source[0];
   const base = { dataset: e.dataset, id: e.id };
@@ -224,7 +228,7 @@ async function main() {
   const counts = results.reduce((c, r) => { c[r.result] = (c[r.result] || 0) + 1; return c; }, {});
   const out = {
     meta: {
-      title: 'Machine cross-checks of Siaya values (independent second reading)',
+      title: COUNTY ? `Machine cross-checks of ${COUNTY[0].toUpperCase()}${COUNTY.slice(1)} values (independent second reading; county not yet on pages)` : 'Machine cross-checks of Siaya values (independent second reading)',
       rule: 'A machine reading by a different method from the original extraction. It is not editorial review: it never approves a value, it is shown on pages only as "machine cross-checked", and no record in data/reviews.json may cite it. Values where the check disagrees go to the top of docs/editorial/REVIEW_QUEUE.md.',
       methods: {
         'tesseract-600dpi-psm6': 'Page rendered at 600 dpi greyscale (pdftoppm) and read by tesseract 5, page segmentation mode 6, for values first read from the PDF text layer.',
@@ -240,7 +244,7 @@ async function main() {
     },
     checks: results,
   };
-  fs.writeFileSync(path.join(__dirname, '..', 'data', 'machine-checks.json'), `${JSON.stringify(out, null, 1)}\n`);
+  fs.writeFileSync(OUT, `${JSON.stringify(out, null, 1)}\n`);
   console.log('machine-check:', JSON.stringify(counts));
 }
 main();

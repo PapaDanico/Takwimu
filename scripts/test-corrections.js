@@ -1,10 +1,13 @@
 #!/usr/bin/env node
-// Corrections register (owner item 7, 23 Nov 2026). Fails the build when:
+// Corrections as footnotes (owner item 7, 23 Nov 2026; register page retired by the owner, 27 Nov 2026). Fails when:
 //  - a resolved register case that is our correction lacks its record, or a source-error case is listed as ours;
+//  - a correction lacks the records, short "was" or one-line note its footnote needs;
 //  - a value differs from the previous release's data (git main, data/corrections.json meta.baseline) and has no
 //    entry in data/corrections.json or a correction record in data/conflicts.json naming it;
-//  - with a built site (node scripts/test-corrections.js dist): /corrections/ does not show every correction and every
-//    source error, or the footer, /method/ and /data/ do not link it.
+//  - with a built site (node scripts/test-corrections.js dist): a correction is not footnoted beside its value on a
+//    built page (data-correction="<dataset>:<record>"), a source error is not flagged beside its value
+//    (data-source-error="<dataset>:<record>"), /method/#corrections is missing, or /corrections/ is more than the
+//    moved stub (netlify.toml 301 and static fallback to /method/#corrections).
 // Run: node scripts/test-corrections.js [dist]
 const fs = require('fs');
 const path = require('path');
@@ -14,16 +17,22 @@ const rs = require('../lib/review-status');
 const ed = require('../lib/editorial');
 const conflicts = require('../data/conflicts.json');
 const log = require('../data/corrections.json');
+const { correctionNotes } = require('../lib/correction-notes');
 
 const errors = [];
 let checks = 0;
 const ok = (c, m) => { checks += 1; if (!c) errors.push(m); };
 
-// 1. Register cases.
+// 1. Register cases and footnote fields.
 const corr = ed.corrections();
-conflicts.conflicts.filter((c) => c.status === 'resolved' && c.register === 'our_correction').forEach((c) => ok(corr.some((x) => x.id === c.id), `${c.id}: our correction missing from the register list`));
+conflicts.conflicts.filter((c) => c.status === 'resolved' && c.register === 'our_correction').forEach((c) => {
+  ok(corr.some((x) => x.id === c.id), `${c.id}: our correction missing from the corrections list`);
+  ok(c.correction && (c.correction.records || []).length, `${c.id}: correction.records missing (where is the corrected value shown?)`);
+});
 ed.registerSourceErrors().forEach((c) => ok(!corr.some((x) => x.id === c.id), `${c.id}: a source error is not our correction`));
 log.entries.forEach((e) => ok(e.original !== e.corrected, `${e.id}: original and corrected are the same`));
+const notes = correctionNotes();
+notes.forEach((n) => ok(n.was && n.was.length <= 80 && n.note && n.note.length >= 10 && n.note.length <= 140, `${n.id} ${n.ref}: the footnote needs a short "was" (80 characters at most) and a one-line note (10 to 140)`));
 const ses = ed.sourceErrors();
 ok(ses.length > 0, 'no source errors found: the source_error fields were removed?');
 ses.forEach((s) => ok(s.quote && s.issue && Number.isInteger(s.page), `${s.dataset} ${s.record}: source error needs quote, page and issue`));
@@ -51,28 +60,43 @@ else {
   });
 }
 
-// 3. The built page.
+// 3. The built site: each correction and source error beside its value; /corrections/ only a moved stub.
 const dist = process.argv[2];
+let pagesWithNotes = 0;
 if (dist) {
-  const page = (p) => { const f = path.join(path.resolve(dist), p, 'index.html'); return fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : null; };
-  const html = page('corrections');
-  ok(html, '/corrections/ was not built');
-  if (html) {
-    const text = html.replace(/<script\b[\s\S]*?<\/script>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/\s+/g, ' ');
-    corr.forEach((c) => { ok(html.includes(`id="cor-${c.id}"`), `/corrections/: correction ${c.id} is not shown`); });
-    ses.forEach((s) => ok(html.includes(`data-source-error="${s.dataset}:${s.record}"`), `/corrections/: source error ${s.dataset} ${s.record} is not shown`));
-    ed.registerSourceErrors().forEach((c) => ok(html.includes(`id="se-${c.id}"`), `/corrections/: source-error case ${c.id} is not shown`));
-    ok(/Source errors in the original documents/.test(text), '/corrections/: no separate section for source-document errors');
-  }
-  ['method', 'data'].forEach((p) => { const h = page(p); ok(h && /href="\/corrections\/"/.test(h), `/${p}/ does not link /corrections/`); });
-  const home = page('');
-  ok(home && /<footer[\s\S]*href="\/corrections\/"[\s\S]*<\/footer>/.test(home), 'the footer does not link /corrections/');
+  const root = path.resolve(dist);
+  const page = (p) => { const f = path.join(root, p, 'index.html'); return fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : null; };
+  const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : e.name.endsWith('.html') ? [path.join(d, e.name)] : []));
+  const unesc = (x) => x.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'");
+  const html = walk(root).map((f) => [f, fs.readFileSync(f, 'utf8')]);
+  const notesSeen = new Set(); const marksSeen = new Set(); const seSeen = new Set();
+  html.forEach(([, h]) => {
+    let any = false;
+    for (const m of h.matchAll(/data-correction="([^"]+)"/g)) { notesSeen.add(unesc(m[1])); any = true; }
+    for (const m of h.matchAll(/data-correction-mark="([^"]+)"/g)) marksSeen.add(unesc(m[1]));
+    for (const m of h.matchAll(/data-source-error="([^"]+)"/g)) seSeen.add(unesc(m[1]));
+    if (any) pagesWithNotes += 1;
+  });
+  // Every corrected record shows its footnote line, or its mark where the same correction's line is already in that table.
+  notes.forEach((n) => ok(notesSeen.has(n.ref) || marksSeen.has(n.ref), `${n.id}: ${n.ref} has no correction footnote on any built page`));
+  [...new Set(notes.map((n) => n.id))].forEach((id) => ok(notes.some((n) => n.id === id && notesSeen.has(n.ref)), `${id}: its footnote line is not shown on any built page`));
+  ses.forEach((s) => ok(seSeen.has(`${s.dataset}:${s.record}`), `source error ${s.dataset}:${s.record} is not flagged beside its value on any built page`));
+  const data = page('data');
+  ed.registerSourceErrors().forEach((c) => ok(data && new RegExp(`id="${c.id}"[^>]*>[\\s\\S]{0,600}?data-register="source_error"`).test(data), `/data/: source-error case ${c.id} is not marked "Source error in original"`));
+  const method = page('method');
+  ok(method && /<section[^>]*id="corrections"/.test(method) && /href="\/data\/corrections\.json"/.test(method), '/method/ has no #corrections section linking corrections.json');
+  const stub = page('corrections');
+  ok(stub && /http-equiv="refresh" content="0; url=\/method\/#corrections"/.test(stub) && !/data-correction=|<table/.test(stub), '/corrections/ is not the moved stub to /method/#corrections');
+  const linking = html.filter(([f, h]) => f !== path.join(root, 'corrections', 'index.html') && /href="\/corrections\/?(#[^"]*)?"/.test(h)).map(([f]) => path.relative(root, f));
+  ok(!linking.length, `built pages still link /corrections/: ${linking.slice(0, 3).join(', ')}`);
+  const sm = path.join(root, 'sitemap.xml');
+  ok(fs.existsSync(sm) && !/\/corrections\/<\/loc>/.test(fs.readFileSync(sm, 'utf8')), '/corrections/ is still in the sitemap');
 }
 
-// Netlify redirects run before static files: none may shadow the register (live 301 on 23 Nov 2026).
+// Netlify answers /corrections/ with a 301 to the method note; the static stub is the fallback.
 {
-  const toml = fs.readFileSync(require('path').join(__dirname, '..', 'netlify.toml'), 'utf8');
-  ok(!/from\s*=\s*"\/corrections\//.test(toml), 'netlify.toml redirects /corrections/ away from the register');
+  const toml = fs.readFileSync(path.join(ROOT, 'netlify.toml'), 'utf8');
+  ['/corrections/', '/corrections'].forEach((from) => ok(new RegExp(`from = "${from}"\\s*to = "/method/#corrections"\\s*status = 301`).test(toml), `netlify.toml has no 301 from ${from} to /method/#corrections`));
 }
 
 if (errors.length) {
@@ -80,4 +104,4 @@ if (errors.length) {
   errors.slice(0, 40).forEach((e) => console.error(`  - ${e}`));
   process.exit(1);
 }
-console.log(`test-corrections: ${checks} checks passed (${corr.length} corrections, ${ses.length} source-error records, ${ed.registerSourceErrors().length} source-error register cases; ${ref ? `${compared} values compared with ${ref}, ${changed} changed` : 'no baseline'})`);
+console.log(`test-corrections: ${checks} checks passed (${corr.length} corrections footnoting ${notes.length} records${dist ? ` on ${pagesWithNotes} pages` : ''}, ${ses.length} source-error records, ${ed.registerSourceErrors().length} source-error register cases; ${ref ? `${compared} values compared with ${ref}, ${changed} changed` : 'no baseline'})`);

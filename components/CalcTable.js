@@ -1,11 +1,14 @@
 // Server-rendered table of Takwimu calculations (data/siaya-analysis.json, or another calculation file via `dataset`): each row shows its calc_id, the result,
 // the formula in words, every input with a link to its source and page, values shown beside it, and the caveat.
-// A gap row shows its reason and no value.
+// A gap row shows its reason and no value. A formula or caveat that is the same for every row is stated once, under the
+// table ("Every row: ..."), instead of on each row (duplication sweep 2, 27 Nov 2026).
 import TableWrap from './TableWrap';
 import { source, pageRef } from '../lib/siaya-sources';
 import { badge } from '../lib/review-status';
 import Reviewed from './Reviewed';
 import { fmtMaybe } from '../lib/format';
+import { notesFor } from '../lib/correction-notes';
+import CorrectionNote, { CorrectionMark } from './CorrectionNote';
 
 const n = (v) => fmtMaybe(v, { dp: 6 });
 const Input = ({ i }) => {
@@ -18,7 +21,11 @@ const Input = ({ i }) => {
   );
 };
 
+const shared = (records, k) => (records.length > 1 && records[0][k] && records.every((r) => r[k] === records[0][k]) ? records[0][k] : null);
+
 export default function CalcTable({ caption, records, id, tag, dataset = 'siaya-analysis' }) {
+  const formula = shared(records, 'formula');
+  const caveat = shared(records, 'caveat');
   return (
     <TableWrap label={caption}>
       <table className="data calc" id={id}>
@@ -28,17 +35,18 @@ export default function CalcTable({ caption, records, id, tag, dataset = 'siaya-
           {records.map((r) => (
             <tr key={r.calc_id} className={r.status === 'gap' ? 'gap' : undefined}>
               <th scope="row">{r.title}<br /><small><code>{r.calc_id}</code></small>{tag ? <><br /><span className="tag warn">{tag}</span></> : null}</th>
-              <td>{r.status === 'gap' ? <span className="muted">Gap: no value</span> : <Reviewed b={badge(dataset, r.calc_id)}>{() => <><b>{n(r.result)}</b> {r.unit}</>}</Reviewed>}<br /><small>{r.period}</small></td>
+              <td>{r.status === 'gap' ? <span className="muted">Gap: no value</span> : <Reviewed b={badge(dataset, r.calc_id)}>{() => <><b>{n(r.result)}</b> {r.unit}<CorrectionMark notes={notesFor(dataset, r.calc_id)} /></>}</Reviewed>}<br /><small>{r.period}</small><CorrectionNote notes={notesFor(dataset, r.calc_id)} /></td>
               <td>
-                <small><b>Formula:</b> {r.formula}</small>
-                {r.status === 'gap' ? <><br /><small><b>Why there is no value:</b> {r.gap_reason}</small></> : null}
+                {formula ? null : <small><b>Formula:</b> {r.formula}</small>}
+                {r.status === 'gap' ? <>{formula ? null : <br />}<small><b>Why there is no value:</b> {r.gap_reason}</small></> : null}
                 {(r.inputs || []).length ? <details><summary>Inputs ({r.inputs.length})</summary><ul className="inputs">{r.inputs.map((i, k) => <Input key={k} i={i} />)}</ul></details> : null}
                 {(r.beside || []).length ? <><br /><small><b>Shown beside (not used in the result):</b></small><ul className="inputs">{r.beside.map((i, k) => <Input key={k} i={i} />)}</ul></> : null}
-                {r.caveat ? <><small><b>Caveat:</b> {r.caveat}</small></> : null}
+                {r.caveat && !caveat ? <><small><b>Caveat:</b> {r.caveat}</small></> : null}
               </td>
             </tr>
           ))}
         </tbody>
+        {formula || caveat ? <tfoot><tr><td colSpan={3}><small className="cite">Every row: {formula ? <><b>Formula:</b> {formula}</> : null}{formula && caveat ? ' ' : null}{caveat ? <><b>Caveat:</b> {caveat}</> : null}</small></td></tr></tfoot> : null}
       </table>
     </TableWrap>
   );

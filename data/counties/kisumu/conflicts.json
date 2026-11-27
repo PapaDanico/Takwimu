@@ -1,0 +1,943 @@
+{
+ "meta": {
+  "title": "Kisumu County source conflict register (data layer; not yet on pages)",
+  "rule": "Every case keeps both (or all) values with their sources, side by side; nothing is averaged or chosen silently. Values are in KSh million (billions as printed are converted) or persons. Each case names the observations it compares (dataset|id); scripts/test-county-reconciliation.js runs one test per case. No case is reviewed: page_image_checked is false and verification_state unresolved_no_reviewer unless the source itself resolves it.",
+  "reviewed": "not reviewed",
+  "updated": "2026-11-27",
+  "schema_version": "1.0"
+ },
+ "conflicts": [
+  {
+   "id": "kisumu-expenditure-2014-15",
+   "measure": "Total expenditure, FY 2014/15",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2014/15, PDF p.134",
+     "value": 5760,
+     "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2014, PDF p.11",
+     "value": 6128.93,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/ad240364-8cd2-4f99-ba1b-53c1b3eaaf37/content"
+    }
+   ],
+   "definitions": "CoB: total spent in the year (section narrative, rounded to KSh 0.01 billion). County: \"Total Expenditure\" actual in the expenditure outturn table (Kshs '000).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K009",
+    "kisumu-fiscal-ledger|K019"
+   ],
+   "ledger_cases": [
+    "D-K009-K019"
+   ]
+  },
+  {
+   "id": "kisumu-wage-bill-2014-15",
+   "measure": "Wage bill, FY 2014/15",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2014/15, PDF p.134",
+     "value": 3210,
+     "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2014, PDF p.11",
+     "value": 3112.783,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/ad240364-8cd2-4f99-ba1b-53c1b3eaaf37/content"
+    }
+   ],
+   "definitions": "CoB: personnel emoluments spent. County: \"Compensation to employees\" actual.",
+   "hypothesis": "Different coverage: the CoB figure may include payroll paid through below-the-line items (the report notes personnel emoluments paid without regard to the departmental budget), the county table may not.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K014",
+    "kisumu-fiscal-ledger|K022"
+   ],
+   "ledger_cases": [
+    "D-K014-K022"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-2017-18",
+   "measure": "Total expenditure, FY 2017/18",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2017/18, PDF p.139",
+     "value": 6430,
+     "url": "https://libraryir.parliament.go.ke/items/29651287-6c3d-4dd9-b07a-cbeed4aa11d7"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2018, PDF p.16",
+     "value": 6498.907006,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/07ef7ee3-fce0-4137-b708-6fea708a4588/content"
+    }
+   ],
+   "definitions": "CoB: total spent (narrative). County: \"Total Expenditure\" actual in the FY 2017/18 fiscal outturn table.",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K071",
+    "kisumu-fiscal-ledger|K082"
+   ],
+   "ledger_cases": [
+    "D-K071-K082"
+   ]
+  },
+  {
+   "id": "kisumu-wage-bill-2017-18",
+   "measure": "Wage bill, FY 2017/18",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2017/18, PDF p.140",
+     "value": 3610,
+     "url": "https://libraryir.parliament.go.ke/items/29651287-6c3d-4dd9-b07a-cbeed4aa11d7"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2018, PDF p.16",
+     "value": 2865.766011,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/07ef7ee3-fce0-4137-b708-6fea708a4588/content"
+    }
+   ],
+   "definitions": "CoB: personnel emoluments spent (Kshs.3.61 billion). County: compensation to employees, actual column of the economic classification table (Kshs.2.87 billion).",
+   "hypothesis": "The county line may exclude County Assembly pay or employee costs booked under other items (the CoB notes hospitals spending through transfers outside IFMIS); the documents do not reconcile the two.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K076",
+    "kisumu-fiscal-ledger|K085"
+   ],
+   "ledger_cases": [
+    "D-K076-K085"
+   ]
+  },
+  {
+   "id": "kisumu-equitable-share-2018-19",
+   "measure": "Equitable share received, FY 2018/19",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2018/19, PDF p.139",
+     "value": 6910,
+     "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2019, PDF p.10",
+     "value": 6223.197964,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/2e499957-982d-4c38-95e0-0a9443d6da55/content"
+    }
+   ],
+   "definitions": "CoB: equitable share received in the year (Kshs.6.91 billion, equal to the allocation). County: actual equitable share received column (Kshs.6,223,197,964 against 6,908,000,000).",
+   "hypothesis": "Timing: the county paper may count only the releases received by 30 June, while the CoB counts the full year's disbursement including June releases received in July.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K092",
+    "kisumu-fiscal-ledger|K111"
+   ],
+   "ledger_cases": [
+    "D-K092-K111"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-2018-19",
+   "measure": "Total expenditure, FY 2018/19",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2018/19, PDF p.140",
+     "value": 8380,
+     "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2019, PDF p.15",
+     "value": 7505.936398,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/2e499957-982d-4c38-95e0-0a9443d6da55/content"
+    }
+   ],
+   "definitions": "CoB: total spent (Kshs.8.38 billion). County: total expenditure actual (Kshs.7,505,936,398).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K097",
+    "kisumu-fiscal-ledger|K108"
+   ],
+   "ledger_cases": [
+    "D-K097-K108"
+   ]
+  },
+  {
+   "id": "kisumu-development-expenditure-2019-20",
+   "measure": "Development expenditure, FY 2019/20",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper September 2020 (compiled final draft), reviews FY 2019/20, PDF p.22",
+     "value": 2226.237562,
+     "url": "https://www.kisumu.go.ke/wp-content/uploads/2020/09/COMPILED-FINAL-DRAFT-CBROP-REPORT-FY-2019-2020-3.pdf"
+    },
+    {
+     "label": "Controller of Budget, FY 2020/21, PDF p.182",
+     "value": 2380,
+     "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+    }
+   ],
+   "definitions": "County: development actual in the CBROP 2020 fiscal outturn (compiled final draft). CoB: the FY 2020/21 report's prior-year comparison (Kshs.2.38 billion). The CoB FY 2019/20 report itself is not held.",
+   "hypothesis": "The CoB comparison figure may include pending bills paid in the year, or the county draft may predate final accounts.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K117",
+    "kisumu-fiscal-ledger|K119"
+   ],
+   "ledger_cases": [
+    "D-K117-K119"
+   ]
+  },
+  {
+   "id": "kisumu-development-expenditure-2020-21",
+   "measure": "Development expenditure, FY 2020/21",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2020/21, PDF p.181",
+     "value": 1930.920241,
+     "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2020, PDF p.20",
+     "value": 2666.598721,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/57d1d300-d07a-4172-bd48-ca05e845d1b3/content"
+    }
+   ],
+   "definitions": "CoB: Table 3.95 development expenditure (Kshs.1,930,920,241). County: CBROP September 2021, development expenditure (Kshs.2,666,598,721).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count. The gap (Kshs.0.74 billion) is close to the scale of development pending bills reported for the year.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K131",
+    "kisumu-fiscal-ledger|K138"
+   ],
+   "ledger_cases": [
+    "D-K131-K138"
+   ]
+  },
+  {
+   "id": "kisumu-pending-development-2021",
+   "measure": "Pending bills, development, stock at 30 June 2021",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2020/21, PDF p.181",
+     "value": 1000,
+     "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+    },
+    {
+     "label": "Controller of Budget, FY 2021/22, PDF p.201 (opening stock of the next year)",
+     "value": 1830,
+     "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+    }
+   ],
+   "definitions": "CoB FY 2020/21 report: development pending bills excluded from expenditure at 30 June 2021 (Kshs.1.0 billion, two significant digits). CoB FY 2021/22 report: opening stock at 30 June 2021 (Kshs.1.83 billion).",
+   "hypothesis": "The later report may include bills verified or recognised after the first report (stock_point differs: closing against opening of the next year).",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K135",
+    "kisumu-fiscal-ledger|K136"
+   ],
+   "ledger_cases": [
+    "D-K135-K136"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-2021-22",
+   "measure": "Total expenditure, FY 2021/22",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2021/22, PDF p.31",
+     "value": 7483.54,
+     "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2021, PDF p.18",
+     "value": 9076.742618,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/c6c44fda-c478-4e44-91bc-3e91c3c986a5/content"
+    }
+   ],
+   "definitions": "CoB: Table 2.4 total expenditure (Kshs.7,483.54 million, reused from data/counties-cob.json). County: CBROP 2022 fiscal outturn (Kshs.9,076,742,618).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K145",
+    "kisumu-fiscal-ledger|K162"
+   ],
+   "ledger_cases": [
+    "D-K145-K162"
+   ]
+  },
+  {
+   "id": "kisumu-pending-2022",
+   "measure": "Pending bills, stock at 30 June 2022",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2021/22, PDF p.34",
+     "value": 1901.4118,
+     "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+    },
+    {
+     "label": "Controller of Budget, FY 2021/22, PDF p.201",
+     "value": 1880,
+     "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+    }
+   ],
+   "definitions": "CoB Table 2.6 (all-county, County Executive plus County Assembly): 1,901.41. CoB county section: \"Kshs.1.88 billion\" (text layer \"t.BB\", needs a page check). The FY 2022/23 report gives a development opening stock of Kshs.1.94 billion (K160, a different measure: development part).",
+   "hypothesis": "Rounding and scope: the county section may give the County Executive only (1,876.63 development in Table 2.6) rounded; the reading of the section figure is uncertain.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K151",
+    "kisumu-fiscal-ledger|K157"
+   ],
+   "ledger_cases": [
+    "D-K151-K157"
+   ]
+  },
+  {
+   "id": "kisumu-wage-bill-2021-22",
+   "measure": "Wage bill, FY 2021/22",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2021/22, PDF p.201",
+     "value": 5130,
+     "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+    },
+    {
+     "label": "Controller of Budget, FY 2022/23, PDF p.257",
+     "value": 5320,
+     "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+    }
+   ],
+   "definitions": "CoB FY 2021/22 report: \"The wage bill of Kshs.5.13 billion\". CoB FY 2022/23 report: prior-year comparison \"from Kshs.5.32 billion reported in FY 2021/22\".",
+   "hypothesis": "The same page of the FY 2021/22 report gives County Executive employee compensation of 4.84 billion and County Assembly 763.58 million; neither printed total equals their sum (5.60). A restatement between reports, or different definitions of the wage bill.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K158",
+    "kisumu-fiscal-ledger|K159"
+   ],
+   "ledger_cases": [
+    "D-K158-K159"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-2022-23",
+   "measure": "Total expenditure, FY 2022/23",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2022/23, PDF p.34",
+     "value": 9080.33,
+     "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2022, PDF p.16",
+     "value": 9304.926301,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/a5b2640a-bff5-44ac-9dc8-4446bc338f06/content"
+    }
+   ],
+   "definitions": "CoB: Table 2.4 total expenditure (9,080.33). County: CBROP 2023 (Kshs.9,304,926,301).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K170",
+    "kisumu-fiscal-ledger|K188"
+   ],
+   "ledger_cases": [
+    "D-K170-K188"
+   ]
+  },
+  {
+   "id": "kisumu-development-expenditure-2022-23",
+   "measure": "Development expenditure, FY 2022/23",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2022/23, PDF p.34",
+     "value": 1808.5,
+     "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2022, PDF p.14",
+     "value": 2356.295196,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/a5b2640a-bff5-44ac-9dc8-4446bc338f06/content"
+    }
+   ],
+   "definitions": "CoB: Table 2.4 development expenditure (1,808.50). County: CBROP 2023 development expenditure (Kshs.2,356,295,196).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K172",
+    "kisumu-fiscal-ledger|K189"
+   ],
+   "ledger_cases": [
+    "D-K172-K189"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-2023-24",
+   "measure": "Total expenditure, FY 2023/24",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2023/24, PDF p.29",
+     "value": 8865.38,
+     "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2023, PDF p.14",
+     "value": 11276.007837,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/123a2ce7-7052-4738-a3a0-1ac26e8c53c3/content"
+    }
+   ],
+   "definitions": "CoB: Table 2.3 total expenditure (8,865.38). County: CBROP 2024 fiscal outturn (Kshs.11,276,007,837).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count. From FY 2023/24 health facility revenue (FIF, Kshs.603.38 million) is spent at source; the county total may include it.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K200",
+    "kisumu-fiscal-ledger|K216"
+   ],
+   "ledger_cases": [
+    "D-K200-K216"
+   ]
+  },
+  {
+   "id": "kisumu-pending-2024",
+   "measure": "Pending bills, stock at 30 June 2024",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2023/24, PDF p.32",
+     "value": 3147.399814,
+     "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+    },
+    {
+     "label": "Controller of Budget, FY 2023/24, PDF p.238",
+     "value": 3000,
+     "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+    },
+    {
+     "label": "Controller of Budget, FY 2024/25, PDF p.240 (opening stock of the next year)",
+     "value": 2990,
+     "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+    }
+   ],
+   "definitions": "CoB FY 2023/24 Table 2.5 (all-county, Executive plus Assembly): 3,147.40. CoB FY 2023/24 county section: County Executive \"Kshs.3 billion\" (scope: Executive only). CoB FY 2024/25 report: opening stock at 1 July 2024 Kshs.2.99 billion (Executive 2.85 billion plus Assembly 144.93 million).",
+   "hypothesis": "The FY 2024/25 opening stock is lower than the FY 2023/24 closing stock for the same date: bills written off, rejected after verification or reclassified between the reports; the reports do not say.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K206",
+    "kisumu-fiscal-ledger|K213",
+    "kisumu-fiscal-ledger|K244"
+   ],
+   "ledger_cases": [
+    "D-K206-K213",
+    "D-K206-K244"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-2024-25",
+   "measure": "Total expenditure, FY 2024/25",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2024/25, PDF p.52",
+     "value": 9467.84,
+     "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2025, reviews FY 2024/25, PDF p.11",
+     "value": 10544.481632,
+     "url": "https://www.kisumu.go.ke/wp-content/uploads/CBROP-FY-2024-2025-1.pdf"
+    }
+   ],
+   "definitions": "CoB: Table 2.5 total expenditure (9,467.84). County: CBROP 2025 (Kshs.10,544,481,632).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count. FIF collections (Kshs.1.66 billion) are spent at source.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K230",
+    "kisumu-fiscal-ledger|K246"
+   ],
+   "ledger_cases": [
+    "D-K230-K246"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-2025-26",
+   "measure": "Total expenditure, FY 2025/26",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, 2025-2026 (August 2026), PDF p.44",
+     "value": 10095,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2026, reviews FY 2025/26, PDF p.11",
+     "value": 10523.865026,
+     "url": "https://www.kisumu.go.ke/wp-content/uploads/CBROP-FY-2025-2026.pdf"
+    }
+   ],
+   "definitions": "CoB FY 2025/26 annual report Table 2.5 (10,095.00). County: CBROP 2026, 12 November 2026 (Ksh 10,523,865,026).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K253",
+    "kisumu-fiscal-ledger|K270"
+   ],
+   "ledger_cases": [
+    "D-K253-K270"
+   ]
+  },
+  {
+   "id": "kisumu-osr-2017-18",
+   "measure": "Own-source revenue, FY 2017/18",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2017/18, PDF p.138",
+     "value": 874.9,
+     "url": "https://libraryir.parliament.go.ke/items/29651287-6c3d-4dd9-b07a-cbeed4aa11d7"
+    },
+    {
+     "label": "Controller of Budget, FY 2017/18, PDF p.142",
+     "value": 879.9,
+     "url": "https://libraryir.parliament.go.ke/items/29651287-6c3d-4dd9-b07a-cbeed4aa11d7"
+    }
+   ],
+   "definitions": "Both in the CoB FY 2017/18 report: section 3.17.2 revenue analysis (874.9, p.138) and the key observations (879.90, p.142). The county CBROP 2018 prints 874,901,776.",
+   "hypothesis": "A typing error in the key-observations paragraph is likely (the revenue analysis, the chart and the county paper agree on 874.9); recorded as a source error on the observation, not resolved.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K069",
+    "kisumu-fiscal-ledger|K070"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-recurrent-2014-15",
+   "measure": "Recurrent expenditure, FY 2014/15",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2014/15, PDF p.134",
+     "value": 4410,
+     "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2014, PDF p.11",
+     "value": 4626.13,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/ad240364-8cd2-4f99-ba1b-53c1b3eaaf37/content"
+    }
+   ],
+   "definitions": "CoB (cob-report-2014-15, p.134) against County Treasury expenditure outturn (Kshs '000) (KIPPRA-CBROP-2014, p.11).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K010",
+    "kisumu-fiscal-ledger|K020"
+   ],
+   "ledger_cases": [
+    "D-K010-K020"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-development-2014-15",
+   "measure": "Development expenditure, FY 2014/15",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2014/15, PDF p.134",
+     "value": 1350,
+     "url": "https://libraryir.parliament.go.ke/items/31b7fc2a-81a8-42b1-ae6b-d0d3629574f1"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2014, PDF p.11",
+     "value": 1502.801,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/ad240364-8cd2-4f99-ba1b-53c1b3eaaf37/content"
+    }
+   ],
+   "definitions": "CoB (cob-report-2014-15, p.134) against County Treasury expenditure outturn (Kshs '000) (KIPPRA-CBROP-2014, p.11).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K011",
+    "kisumu-fiscal-ledger|K021"
+   ],
+   "ledger_cases": [
+    "D-K011-K021"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-recurrent-2017-18",
+   "measure": "Recurrent expenditure, FY 2017/18",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2017/18, PDF p.139",
+     "value": 5760,
+     "url": "https://libraryir.parliament.go.ke/items/29651287-6c3d-4dd9-b07a-cbeed4aa11d7"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2018, PDF p.16",
+     "value": 5829.542465,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/07ef7ee3-fce0-4137-b708-6fea708a4588/content"
+    }
+   ],
+   "definitions": "CoB (cob-report-2017-18, p.139) against County Treasury actual (KIPPRA-CBROP-2018, p.16).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K072",
+    "kisumu-fiscal-ledger|K083"
+   ],
+   "ledger_cases": [
+    "D-K072-K083"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-recurrent-2018-19",
+   "measure": "Recurrent expenditure, FY 2018/19",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2018/19, PDF p.143",
+     "value": 5703,
+     "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2019, PDF p.15",
+     "value": 4957.088574,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/2e499957-982d-4c38-95e0-0a9443d6da55/content"
+    }
+   ],
+   "definitions": "CoB (cob-report-2018-19, p.143) against County Treasury actual (KIPPRA-CBROP-2019, p.15).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K098",
+    "kisumu-fiscal-ledger|K109"
+   ],
+   "ledger_cases": [
+    "D-K098-K109"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-development-2018-19",
+   "measure": "Development expenditure, FY 2018/19",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2018/19, PDF p.143",
+     "value": 2676,
+     "url": "https://libraryir.parliament.go.ke/items/c0a86b90-6178-463e-ab50-56dd3c76ec98"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2019, PDF p.15",
+     "value": 2548.847824,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/2e499957-982d-4c38-95e0-0a9443d6da55/content"
+    }
+   ],
+   "definitions": "CoB (cob-report-2018-19, p.143) against County Treasury actual (KIPPRA-CBROP-2019, p.15).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K099",
+    "kisumu-fiscal-ledger|K110"
+   ],
+   "ledger_cases": [
+    "D-K099-K110"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-recurrent-2020-21",
+   "measure": "Recurrent expenditure, FY 2020/21",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2020/21, PDF p.181",
+     "value": 7322.445166,
+     "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2020, PDF p.19",
+     "value": 7117.158293,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/57d1d300-d07a-4172-bd48-ca05e845d1b3/content"
+    }
+   ],
+   "definitions": "CoB (cob-report-2020-21, p.181) against County Treasury actual (KIPPRA-CBROP-2020, p.19).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K130",
+    "kisumu-fiscal-ledger|K137"
+   ],
+   "ledger_cases": [
+    "D-K130-K137"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-development-2021-22",
+   "measure": "Development expenditure, FY 2021/22",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2021/22, PDF p.31",
+     "value": 1175.68,
+     "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2021, PDF p.17",
+     "value": 1474.538616,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/c6c44fda-c478-4e44-91bc-3e91c3c986a5/content"
+    }
+   ],
+   "definitions": "CoB (cob-report-2021-22, p.31) against County Treasury actual (KIPPRA-CBROP-2021, p.17).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K147",
+    "kisumu-fiscal-ledger|K163"
+   ],
+   "ledger_cases": [
+    "D-K147-K163"
+   ]
+  },
+  {
+   "id": "kisumu-pending-bills-development-close-2021-22",
+   "measure": "Pending bills, development, stock at 30 June, FY 2021/22",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2021/22, PDF p.34",
+     "value": 1876.629991,
+     "url": "https://libraryir.parliament.go.ke/items/f2353427-bb93-460c-b895-b3cae22a7178"
+    },
+    {
+     "label": "Controller of Budget, FY 2022/23, PDF p.257 (opening stock of the next year)",
+     "value": 1940,
+     "url": "https://libraryir.parliament.go.ke/handle/123456789/25332"
+    }
+   ],
+   "definitions": "CoB all-county table: County Executive only (cob-report-2021-22, p.34) against CoB (cob-report-2022-23, p.257).",
+   "hypothesis": "Two Controller of Budget figures for the same year: a restatement between reports, a different stock date, or a different scope (see possible_basis_mismatch in the ledger case).",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K152",
+    "kisumu-fiscal-ledger|K160"
+   ],
+   "ledger_cases": [
+    "D-K152-K160"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-recurrent-2023-24",
+   "measure": "Recurrent expenditure, FY 2023/24",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2023/24, PDF p.29",
+     "value": 7314.92,
+     "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2023, PDF p.12",
+     "value": 8610.394649,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/123a2ce7-7052-4738-a3a0-1ac26e8c53c3/content"
+    }
+   ],
+   "definitions": "CoB (cob-report-2023-24, p.29) against County Treasury actual (KIPPRA-CBROP-2023, p.12).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K201",
+    "kisumu-fiscal-ledger|K217"
+   ],
+   "ledger_cases": [
+    "D-K201-K217"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-development-2023-24",
+   "measure": "Development expenditure, FY 2023/24",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget, FY 2023/24, PDF p.29",
+     "value": 1550.46,
+     "url": "https://libraryir.parliament.go.ke/handle/123456789/28882"
+    },
+    {
+     "label": "County Treasury, Budget Review and Outlook Paper 2023, PDF p.13",
+     "value": 2665.613188,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/123a2ce7-7052-4738-a3a0-1ac26e8c53c3/content"
+    }
+   ],
+   "definitions": "CoB (cob-report-2023-24, p.29) against County Treasury actual (KIPPRA-CBROP-2023, p.13).",
+   "hypothesis": "The Controller of Budget reports the expenditure the county submitted through IFMIS and the exchequer releases it authorised; the County Treasury paper reports its own outturn, which may include payments of prior-year pending bills, health facility (FIF) spending at source or other items the Controller of Budget does not count.",
+   "status": "open",
+   "effect": "Not on pages (Kisumu is not yet published). When pages exist, both values are shown side by side with their sources; the Controller of Budget value is the independent series and the county value is labelled as the county's own figure.",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K202",
+    "kisumu-fiscal-ledger|K218"
+   ],
+   "ledger_cases": [
+    "D-K202-K218"
+   ]
+  },
+  {
+   "id": "kisumu-population-2019-total",
+   "measure": "Population, 2019 census (Kisumu County)",
+   "unit": "persons",
+   "values": [
+    {
+     "label": "Kisumu County Statistical Abstract 2024, Table 1.1.1 (PDF p.26), and text p.24",
+     "value": 1155574,
+     "url": "https://www.kisumu.go.ke/wp-content/uploads/FINAL-KISUMU-CSA-2024.pdf"
+    },
+    {
+     "label": "Kisumu County Statistical Abstract 2024, Table 1.1.2 (PDF p.26)",
+     "value": 1155551,
+     "url": "https://www.kisumu.go.ke/wp-content/uploads/FINAL-KISUMU-CSA-2024.pdf"
+    }
+   ],
+   "definitions": "Table 1.1.1 and the text give male + female + intersex (560,942 + 594,609 + 23). Table 1.1.2 gives male + female only.",
+   "hypothesis": "Definitional: Table 1.1.2 leaves out the 23 intersex persons (1,155,574 - 1,155,551 = 23).",
+   "status": "resolved",
+   "effect": "The census count 1,155,574 (all persons) is the denominator; 1,155,551 is kept in population.json print_differences.",
+   "verification_state": "resolved_by_source",
+   "supersedes": null,
+   "page_image_checked": false,
+   "register": "no_change",
+   "observations": [
+    "kisumu-population|P01",
+    "kisumu-population|print_differences:P01"
+   ]
+  }
+ ]
+}

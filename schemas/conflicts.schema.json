@@ -205,7 +205,7 @@
               "source_error",
               "no_change"
             ],
-            "description": "For a resolved case: our_correction (Takwimu changed a value, label or citation; listed on /corrections/), source_error (the source document is in error; listed on /corrections/ as a source error, not our correction), no_change (rounding or a reading never used)."
+            "description": "For a resolved case: our_correction (Takwimu changed a value, label or citation; footnoted beside each record in correction.records), source_error (the source document is in error; flagged where the value is shown, not our correction), no_change (rounding or a reading never used)."
           },
           "correction": {
             "type": "object",
@@ -249,18 +249,36 @@
                   "type": "string",
                   "pattern": "^[a-z-]+\\|.+$"
                 },
-                "description": "dataset|record id of each value the correction changed"
+                "description": "dataset|record id of each value the correction changed; each is footnoted where it is shown"
+              },
+              "was": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80,
+                "description": "Short original shown in the footnote beside the value"
+              },
+              "note": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 140,
+                "description": "One-line reason shown in the footnote beside the value"
               }
             }
           },
           "ledger_case": {
             "type": "string",
-            "pattern": "^D-L\\d{3}-L\\d{3}$"
+            "pattern": "^D-[LK]\\d{3}-[LK]\\d{3}$"
+          },
+          "observations": {
+            "type": "array",
+            "description": "Other counties (data/counties/<slug>/conflicts.json): the ledger, population or audit records whose values the case compares, as dataset|id; scripts/test-county-reconciliation.js checks each value against them.",
+            "minItems": 2,
+            "items": { "type": "string", "pattern": "^[a-z-]+\\|.+$" }
           },
           "ledger_cases": {
             "type": "array",
             "description": "Fiscal-ledger discrepancy cases (data/siaya-fiscal-ledger.json) that compare values of this case; lib/conflict-links.js, checked by scripts/test-reconciliation.js",
-            "items": { "type": "string", "pattern": "^D-L\\d{3}-L\\d{3}$" },
+            "items": { "type": "string", "pattern": "^D-[LK]\\d{3}-[LK]\\d{3}$" },
             "minItems": 1
           }
         }

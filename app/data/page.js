@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import SourceErrorFlag from '../../components/SourceErrorFlag';
+import CorrectionNote, { CorrectionMark } from '../../components/CorrectionNote';
+import { notesFor } from '../../lib/correction-notes';
 import Abbrs from '../../components/Abbrs';
 import PageToc from '../../components/PageToc';
 import { plain } from '../../lib/plain';
@@ -34,14 +36,15 @@ const FIELD = {
   pending_development_m: 'Pending bills, development (KSh m)', pending_recurrent_m: 'Pending bills, recurrent (KSh m)', pending_total_m: 'Pending bills, total (KSh m)',
 };
 const pageText = (r) => (r.page === null ? 'Not located' : `PDF p. ${r.page}${r.printed_page ? ` (printed p. ${r.printed_page})` : ''}`);
+// rec: the history.json record id ("years:<fy>:<field>"), for source-error flags and correction footnotes.
 function RefRows({ rows }) {
-  return rows.map(([key, label, value, r]) => (
+  return rows.map(([key, label, value, r, rec]) => (
     <tr key={key}>
       <th scope="row">{label}</th>
-      <td>{value}</td>
+      <td>{value}{rec ? <CorrectionMark notes={notesFor('history', rec)} /> : null}</td>
       <td><a href={DOCS[r.source_id].url}>{DOCS[r.source_id].title}</a></td>
       <td>{pageText(r)}</td>
-      <td>{r.read}{r.page_note ? `. ${r.page_note}` : ''}<SourceErrorFlag e={r.source_error} id={key} /></td>
+      <td>{r.read}{r.page_note ? `. ${r.page_note}` : ''}<SourceErrorFlag e={r.source_error} id={key} refId={rec ? `history:${rec}` : undefined} />{rec ? <CorrectionNote notes={notesFor('history', rec)} /> : null}</td>
     </tr>
   ));
 }
@@ -55,16 +58,16 @@ export const metadata = {
 // Files that /datasets/ offers (duplication sweep D09): downloaded there, not listed again here.
 const IN_CATALOGUE = new Set(['history.json', 'history.csv', 'conflicts.json', 'cpi.json', 'subcounties.json']);
 const FILES = [
-  { file: 'history.json', asof: '21 Nov 2026', what: 'Ten-year Siaya series: budget, spending, absorption, own-source revenue, pending bills, audit opinions, population, health and poverty; plus FY 2025/26 in-year figures (in_year) and other documents for FY 2019/20 (supplementary), both kept out of the series', source: 'Controller of Budget annual and in-year county reports; Auditor-General reports and Senate compilations of them; Siaya County Treasury; KNBS census as reproduced in county plans; Kenya DHS 2014 and 2022', conf: '3 to 4' },
-  { file: 'history.csv', asof: '21 Nov 2026', what: 'The ten-year series in one long table: indicator, fiscal year, value, unit, basis (reported, derived or alternate), source report, source link and caveat', source: 'Built from history.json and cpi.json', conf: '3 to 4' },
-  { file: 'conflicts.json', asof: '21 Nov 2026', what: 'Source conflict register: where two reports disagree, with both values, definitions, hypotheses and status', source: 'Controller of Budget annual and in-year reports; Auditor-General via Senate committee; Siaya County Treasury', conf: '3 to 4' },
-  { file: 'siaya.json', asof: '20 Nov 2026', what: 'Latest-year fiscal context: FY 2024/25 revenue, budget, spending, pending bills and audit', source: 'Controller of Budget FY 2023/24 and 2024/25 reports', conf: '3 to 5' },
-  { file: 'subcounties.json', asof: '20 Nov 2026', what: 'Six sub-counties: population 2019 to 2027, area, density, facilities, health workers, voters', source: 'Siaya County Integrated Development Plan 2023 to 2027', conf: '4' },
-  { file: 'county.json', asof: '20 Nov 2026', what: 'County population, households, urban centres, age groups, poverty and health indicators', source: 'Siaya County Integrated Development Plan 2023 to 2027', conf: '4' },
-  { file: 'cpi.json', asof: '20 Nov 2026', what: 'Kenya consumer price index, calendar and fiscal-year averages', source: 'World Bank, series FP.CPI.TOTL', conf: '4' },
-  { file: 'siaya-boundaries.json', asof: '21 Nov 2026', what: 'Simplified outlines of the six Siaya sub-counties, as map paths, with their licence and source', source: 'geoBoundaries (IEBC boundaries via OCHA), CC BY 3.0 IGO', conf: '4' },
-  { file: 'source-manifest.json', asof: '21 Nov 2026', what: 'Source documents behind the ten-year series: title, link, fiscal year, retrieval date and a SHA-256 checksum of the exact PDF downloaded, so anyone can confirm they hold the same file', source: 'Parliament of Kenya library copies of Controller of Budget, Auditor-General and Senate reports; a Senate annex and a county paper that publish no checksum are listed without a hash', conf: 'n/a' },
-  { file: 'sources.json', asof: '20 Nov 2026', what: 'Source register', source: 'Takwimu', conf: 'n/a' },
+  { file: 'history.json', what: 'Ten-year Siaya series: budget, spending, absorption, own-source revenue, pending bills, audit opinions, population, health and poverty; plus FY 2025/26 in-year figures (in_year) and other documents for FY 2019/20 (supplementary), both kept out of the series', source: 'Controller of Budget annual and in-year county reports; Auditor-General reports and Senate compilations of them; Siaya County Treasury; KNBS census as reproduced in county plans; Kenya DHS 2014 and 2022', conf: '3 to 4' },
+  { file: 'history.csv', what: 'The ten-year series in one long table: indicator, fiscal year, value, unit, basis (reported, derived or alternate), source report, source link and caveat', source: 'Built from history.json and cpi.json', conf: '3 to 4' },
+  { file: 'conflicts.json', what: 'Source conflict register: where two reports disagree, with both values, definitions, hypotheses and status', source: 'Controller of Budget annual and in-year reports; Auditor-General via Senate committee; Siaya County Treasury', conf: '3 to 4' },
+  { file: 'siaya.json', what: 'Latest-year fiscal context: FY 2024/25 revenue, budget, spending, pending bills and audit', source: 'Controller of Budget FY 2023/24 and 2024/25 reports', conf: '3 to 5' },
+  { file: 'subcounties.json', what: 'Six sub-counties: population 2019 to 2027, area, density, facilities, health workers, voters', source: 'Siaya County Integrated Development Plan 2023 to 2027', conf: '4' },
+  { file: 'county.json', what: 'County population, households, urban centres, age groups, poverty and health indicators', source: 'Siaya County Integrated Development Plan 2023 to 2027', conf: '4' },
+  { file: 'cpi.json', what: 'Kenya consumer price index, calendar and fiscal-year averages', source: 'World Bank, series FP.CPI.TOTL', conf: '4' },
+  { file: 'siaya-boundaries.json', what: 'Simplified outlines of the six Siaya sub-counties, as map paths, with their licence and source', source: 'geoBoundaries (IEBC boundaries via OCHA), CC BY 3.0 IGO', conf: '4' },
+  { file: 'source-manifest.json', what: 'Source documents behind the ten-year series: title, link, fiscal year, retrieval date and a SHA-256 checksum of the exact PDF downloaded, so anyone can confirm they hold the same file', source: 'Parliament of Kenya library copies of Controller of Budget, Auditor-General and Senate reports; a Senate annex and a county paper that publish no checksum are listed without a hash', conf: 'n/a' },
+  { file: 'sources.json', what: 'Source register', source: 'Takwimu', conf: 'n/a' },
 ];
 
 export default function DataPage() {
@@ -72,7 +75,7 @@ export default function DataPage() {
   return (
     <main id="main" className="wrap page">
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Ten-year series" title="Siaya ten-year series: sources and conflicts" sub="The Siaya series behind the ten-year pages, the source of every year and the register of conflicts between sources. Every file is plain JSON. Each figure carries its source and confidence, so you can check it or reuse it. Please cite the original publisher as well as Takwimu." path="/data/" shareText="Takwimu Kenya open data" />
-      <Provisional dataset={'history'}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
+      <Provisional dataset={'history'} />
       <Abbrs list={['FIF', 'A-i-A']} />
       <nav className="card" aria-label="Data and method"><p style={{ margin: 0 }}>This section covers the data and how it is checked. <Link href="/method/">Read the method</Link> · <Link href="/datasets/">Search all datasets</Link></p></nav>
       <PageToc items={[['f-h', 'Files'], ['c-h', 'Coverage'], ['pref-h', 'Where each figure was read'], ['supp-h', 'Other documents'], ['reg-h', 'Conflict register'], ['open', 'Open questions']]} />
@@ -83,12 +86,12 @@ export default function DataPage() {
         <TableWrap label="Reference files">
           <table className="data">
             <caption className="sr-only">Data files</caption>
-            <thead><tr><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Source</th><th scope="col">Confidence</th><th scope="col">Retrieved</th></tr></thead>
+            <thead><tr><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Source</th><th scope="col">Confidence</th></tr></thead>
             <tbody>
               {FILES.filter((f) => !IN_CATALOGUE.has(f.file)).map((f) => (
                 <tr key={f.file}>
                   <th scope="row"><a className="file" href={`/data/${f.file}`} download>{f.file}</a></th>
-                  <td>{f.what}</td><td>{f.source}</td><td>{f.conf}</td><td>{f.asof}</td>
+                  <td>{f.what}</td><td>{f.source}</td><td>{f.conf}</td>
                 </tr>
               ))}
             </tbody>
@@ -114,7 +117,7 @@ export default function DataPage() {
               <table className="data">
                 <caption className="sr-only">Page references for FY {y.fy}</caption>
                 {REF_HEAD}
-                <tbody><RefRows rows={Object.entries(y.provenance).map(([k, r]) => [k, FIELD[k] || k, y[k], r])} /></tbody>
+                <tbody><RefRows rows={Object.entries(y.provenance).map(([k, r]) => [k, FIELD[k] || k, y[k], r, `years:${y.fy}:${k}`])} /></tbody>
               </table>
             </div>
           </details>
@@ -158,11 +161,10 @@ export default function DataPage() {
       <section className="card" id="conflicts" aria-labelledby="reg-h">
         <h2 id="reg-h">Source conflict register</h2>
         <p className="lead">{reg.meta.rule}</p>
-        <p className="how">Resolved cases that were our own errors, and errors found in the source documents, are listed on the <Link href="/corrections/">corrections register</Link>.</p>
         <div className="log">
           {reg.conflicts.map((c) => (
             <article key={c.id} id={c.id} className="term-card">
-              <p><span className={`tag ${c.status === 'open' ? 'warn' : 'good'}`}>{c.status === 'open' ? 'Open' : 'Resolved'}</span>{c.register === 'our_correction' ? <> <a className="tag" href={`/corrections/#cor-${c.id}`}>Our correction</a></> : c.register === 'source_error' ? <> <a className="tag warn" href={`/corrections/#se-${c.id}`}>Source error in original</a></> : null}</p>
+              <p><span className={`tag ${c.status === 'open' ? 'warn' : 'good'}`}>{c.status === 'open' ? 'Open' : 'Resolved'}</span>{c.register === 'our_correction' ? <> <span className="tag" data-register="our_correction">Our correction</span></> : c.register === 'source_error' ? <> <span className="tag warn" data-register="source_error">Source error in original</span></> : null}</p>
               <h3>{c.measure}</h3>
               <TableWrap label={`${c.measure}: values by source`}>
                 <table className="data">

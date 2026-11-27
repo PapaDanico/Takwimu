@@ -29,8 +29,8 @@ const round = (x, dp) => { const f = 10 ** dp; return Math.round((x + Math.sign(
 const toM = (v, unit) => (unit === 'KSh million' ? v : unit === 'KSh billion' ? v * 1000 : unit === 'KSh' ? v / 1e6 : (() => { throw new Error(`unit ${unit}`); })());
 const fyc = (fy) => fy.replace('/', '-');
 const THRESHOLD = {
-  B1: { value: 35, unit: '%', kind: 'ceiling', rule: 'Public Finance Management (County Governments) Regulations, 2015, regulation 25(1)(b): expenditure on wages and benefits not to exceed 35 per cent of the county government\'s total revenue. Wording as commonly cited; the regulations are not yet in the source library.' },
-  B2: { value: 30, unit: '%', kind: 'floor', rule: 'Public Finance Management Act, 2012, section 107(2)(b): over the medium term, at least 30 per cent of the county budget allocated to development expenditure. The floor applies to the budget; spending is shown for contrast. Wording as commonly cited; the Act is not yet in the source library.' },
+  B1: { value: 35, unit: '%', kind: 'ceiling', rule: 'Public Finance Management (County Governments) Regulations, 2015, regulation 25(1)(b): expenditure on wages and benefits not to exceed 35 per cent of the county government\'s total revenue. Ceiling as quoted by the Commission on Revenue Allocation (April 2016, source CRA-SENATE-CEILINGS-2016-17); the gazetted regulations are not held. The Act (s. 107(2)(c), LAW-PFM-ACT-2012) leaves the percentage to regulations.' },
+  B2: { value: 30, unit: '%', kind: 'floor', rule: 'Public Finance Management Act, 2012, section 107(2)(b): over the medium term, at least 30 per cent of the county budget allocated to development expenditure. The floor applies to the budget; spending is shown for contrast. Wording read in the Act (LAW-PFM-ACT-2012, s. 107(2)(b)).' },
   B5: { value: 20, unit: '%', kind: 'limit', rule: 'The Auditor-General tests total liabilities against 20 per cent of revenue (FY 2024/25 report on the County Executive); the limit as the auditor applies it, not a ratio defined in this repository.' },
 };
 

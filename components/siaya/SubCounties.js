@@ -5,8 +5,11 @@ import SiayaMap from '../SiayaMap';
 import { shortDate, fmtNum } from '../../lib/format';
 import sc from '../../data/subcounties.json';
 import hist from '../../data/history.json';
+import { notesFor } from '../../lib/correction-notes';
+import CorrectionNote, { CorrectionMark } from '../CorrectionNote';
 
 const n = (v) => fmtNum(v);
+const VOTERS_NOTE = notesFor('subcounties', 'registered_voters_2022');
 const p09 = hist.population.by_sub_county_2009.values;
 const rows = sc.sub_counties.map((s) => {
   const growth = ((s.population['2019'] / p09[s.id]) - 1) * 100;
@@ -27,7 +30,7 @@ export default function SubCounties() {
   return (
     <section className="card" id="subcounties" aria-labelledby="subcounties-h">
       <h2 id="subcounties-h">Sub-counties: population, size and health access</h2>
-      <p className="lead">Siaya&apos;s six sub-counties match its six constituencies. Population grew {((total19 / total09 - 1) * 100).toFixed(1)} per cent between the 2009 and 2019 censuses, from {n(total09)} to {n(total19)} people. Censuses of 2009 and 2019, projections to 2027; checked {shortDate(sc.retrieved)}. Facility and staff counts carry no reference date.</p>
+      <p className="lead">Siaya&apos;s six sub-counties match its six constituencies. Population grew {((total19 / total09 - 1) * 100).toFixed(1)} per cent between the 2009 and 2019 censuses, from {n(total09)} to {n(total19)} people. Censuses of 2009 and 2019, projections to 2027. Facility and staff counts carry no reference date.</p>
       <div id="sc-growth">
                 <h3 id="sc-g-h">{fastest.name} grew fastest at {fastest.growth.toFixed(1)} per cent; {slowest.name} slowest at {slowest.growth.toFixed(1)} per cent</h3>
         <p className="finding">Growth between the two censuses ranges across the county. Faster growth means more demand for classrooms, clinics and water in that sub-county.</p>
@@ -79,7 +82,7 @@ export default function SubCounties() {
                 <li><span>Growth 2009 to 2019</span><span>{r.growth.toFixed(1)}%</span></li>
                 <li><span>Area</span><span>{n(r.area_km2)} km²</span></li>
                 <li><span>Wards</span><span>{r.wards}</span></li>
-                <li><span>Registered voters 2022</span><span>{n(r.registered_voters_2022)}</span></li>
+                <li><span>Registered voters 2022<CorrectionMark notes={VOTERS_NOTE} /></span><span>{n(r.registered_voters_2022)}</span></li>
                 <li><span>Hospitals / health centres / dispensaries</span><span>{r.facilities.hospitals} / {r.facilities.health_centres} / {r.facilities.dispensaries}</span></li>
                 <li><span>People per doctor</span><span>{n(r.people_per_health_worker.doctor)}</span></li>
                 <li><span>People per nurse</span><span>{n(r.people_per_health_worker.nurse)}</span></li>
@@ -92,7 +95,7 @@ export default function SubCounties() {
       <div id="sc-sources">
         <h3 id="sc-src-h">Sources and confidence</h3>
         <ul className="steps">
-          <li>2019 census, 2022 and later projections, facilities, health workers and voters: {sc.source}. Retrieved {shortDate(sc.retrieved)}. Confidence {sc.confidence} of 5. <a href={sc.source_url}>Document</a>.</li>
+          <li>2019 census, 2022 and later projections, facilities, health workers and voters: {sc.source}. Confidence {sc.confidence} of 5. <a href={sc.source_url}>Document</a>.<CorrectionNote notes={VOTERS_NOTE} /></li>
           <li>2009 census by constituency: {hist.population.by_sub_county_2009.source}. Confidence {hist.population.by_sub_county_2009.confidence} of 5. These are secondary reproductions of the census; the original 2009 tables were not reachable when we built the site.</li>
           <li>Projections are statistical estimates, not counts.</li>
           <li>People per doctor, nurse or clinical officer come from the county plan, which does not give the staffing date or whether staff serve people from outside the sub-county. Treat them as rough comparisons, not as measures of need or quality.</li>

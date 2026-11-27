@@ -17,7 +17,7 @@ Deployment policy (owner decision, 21 Nov 2026): deploy to Netlify only for majo
 | 3 | Terms of use | Covers purpose, no advice, accuracy, reuse and attribution, acceptable use, third-party links, liability, changes, governing law, contact |
 | 4 | Privacy notice | Says exactly what is and is not collected; names the hosting provider; explains share links, rights under the Kenya Data Protection Act, 2019, children, retention, changes and contact |
 | 5 | FAQ | Adds reuse, privacy, accuracy, accessibility and contact questions |
-| 6 | Footer | Terms, Privacy, FAQ and Corrections reachable on every page, on phone and desktop |
+| 6 | Footer | Terms, Privacy and FAQ reachable on every page (Corrections footnoted beside values since 27 Nov 2026), on phone and desktop |
 | 7 | Self-hosted fonts | No request to Google Fonts in the built HTML |
 | 8 | Quality gates | Unit tests, data validation, typecheck, build (ending with the synthetic-rejection test, `test-reviews dist --synthetic`), axe (0 violations) on every page in both themes, overflow at 360 to 1280 px, link check, chart check, print check, and `npm run test:reports` after `npm run reports:pdf` (blocking before any deploy) |
 | 9 | Independent review | A reviewer who did not write the code reads the diff; findings fixed or recorded |
@@ -36,7 +36,7 @@ An outside assessment of the live site was supplied as a handover. It is an asse
 |---|---|
 | P0 architecture gate: which repo deploys the site | Done: `docs/architecture-map.md`. production is `main`, built by Netlify from GitHub (linked 27 Nov 2026) |
 | P0.2 reconciliation assertions | Largely in place (budget and spending sums, absorption recompute, census sums, series length). Per-measure tolerances are in code; a typed schema layer is still to do |
-| P0.3 source conflict register | Done: `data/conflicts.json`, validated, shown on the Corrections page |
+| P0.3 source conflict register | Done: `data/conflicts.json`, validated, shown on `/data/#conflicts`; corrections footnoted beside the values (Corrections page retired 27 Nov 2026) |
 | P0.4 cautious wording on absorption, delivery and audit opinions | Done on Insights, Analytics, Learn and Home |
 | P0.5 four labels (period, checked, updated, completeness) | Done: data coverage strip on Insights, Analytics, Sub-counties, Profile. Immutable dataset versions and a machine changelog are still to do |
 | Insights note said FY2023/24 not extracted | Fixed: the stale gap line was removed |

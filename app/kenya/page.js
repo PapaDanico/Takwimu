@@ -16,6 +16,8 @@ import { imfViewData } from '../../lib/imf';
 import reg from '../../data/conflicts.json';
 import { Provisional } from '../../components/ObsTable';
 import OpenTarget from '../../components/OpenTarget';
+import CorrectionNote, { CorrectionMark } from '../../components/CorrectionNote';
+import { notesFor } from '../../lib/correction-notes';
 
 const imfData = imfViewData();
 // IMF against the World Bank: definitional differences, both values side by side (sweep D13).
@@ -82,8 +84,8 @@ export default function KenyaPage() {
     <main id="main" className="wrap page">
       <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Kenya dashboard" title="Kenya dashboard"
         sub="National indicators from 2010, grouped by sector. Each card shows the latest value and a small trend line. The trend explorer below charts any indicator, national, all counties or Siaya, in nominal or real terms, with a table." />
-      <DataStamp period="2010 to 2025 (latest year varies by indicator)" checked={`Retrieved ${shortDate(nat.meta.retrieved)}`} updated="21 Nov 2026" completeness={`${inds.length} indicators with values; ${natIndicators.length - inds.length} without (see Not available)`} />
-      <Provisional dataset={['counties-cob', 'imf', 'history']}>National figures come from the World Bank, the IMF and the Central Bank of Kenya; county figures were transcribed by Takwimu from Controller of Budget reports and have not yet been checked by a reviewer.</Provisional>
+      <DataStamp period="2010 to 2025 (latest year varies by indicator)" updated="21 Nov 2026" completeness={`${inds.length} indicators with values; ${natIndicators.length - inds.length} without (see Not available)`} />
+      <Provisional dataset={['counties-cob', 'imf', 'history']} />
       <nav className="secnav no-print" aria-label="Sections on this page"><ul className="toc">
         <li><a href="#trends">Trend explorer</a></li><li><a href="#counties">Counties together</a></li>
         {ORDER.map((s) => <li key={s}><a href={`#${s.replace(' ', '-')}`}>{SECTORS[s]}</a></li>)}
@@ -160,7 +162,7 @@ export default function KenyaPage() {
           <table className="data">
             <caption>Candidates by elective position, 2022 general election</caption>
             <thead><tr><th scope="col">Position</th><th scope="col" className="num">Party-sponsored</th><th scope="col" className="num">Independent</th><th scope="col" className="num">Total</th></tr></thead>
-            <tbody>{cand.rows.map((r) => <tr key={r.position}><th scope="row">{r.position}</th><td className="num">{fmtNum(r.party_sponsored)}</td><td className="num">{r.independent === null ? <span title="Shown as '-' in the IEBC table">-</span> : fmtNum(r.independent)}</td><td className="num">{fmtNum(r.total)}</td></tr>)}</tbody>
+            <tbody>{cand.rows.map((r) => <tr key={r.position}><th scope="row">{r.position}</th><td className="num">{fmtNum(r.party_sponsored)}</td><td className="num">{r.independent === null ? <><span title="Shown as '-' in the IEBC table">-</span><CorrectionMark notes={notesFor('political', `iebc_candidates_2022_by_position:${r.position}`)} /><CorrectionNote notes={notesFor('political', `iebc_candidates_2022_by_position:${r.position}`)} /></> : fmtNum(r.independent)}</td><td className="num">{fmtNum(r.total)}</td></tr>)}</tbody>
           </table>
         </TableWrap>
         </More>

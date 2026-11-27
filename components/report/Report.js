@@ -6,7 +6,7 @@
 // How to read the reports, the method, the confidence scales and the licence live once at /reports/method/.
 import { Fragment } from 'react';
 import ReportChart from './ReportChart';
-import { PROVISIONAL } from './model';
+import { PROVISIONAL, LIBRARY_IDS } from './model';
 import { conflictNote } from './rules';
 import { fmtNum } from '../../lib/format';
 import { licenceLabel, TERMS_HREF } from '../../lib/licence';
@@ -255,7 +255,7 @@ export default function Report({ r, edition = 'web' }) {
         <p className="rp-sub">{r.meta.subtitle}</p>
         <div className={r.draft ? 'rp-draft' : 'rp-reviewed'} role="note">
           {r.draft
-            ? <p><strong>DRAFT.</strong> Every figure in this report is “{PROVISIONAL}” unless it carries a mark.{web ? null : ' This notice replaces a label on each figure; the watermark stays until every included figure has a review record.'}</p>
+            ? (web ? <p><strong>DRAFT:</strong> every figure is “{PROVISIONAL}” unless marked.</p> : <p><strong>DRAFT.</strong> Every figure in this report is “{PROVISIONAL}” unless it carries a mark. This notice replaces a label on each figure; the watermark stays until every included figure has a review record.</p>)
             : <p>Every figure in this report has an approved review record.</p>}
           <p className="rp-state">Review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn.</p>
           {web ? <p className="rp-legend-marks">Marks, review states and how to read a report: <a href={`${METHOD_HREF}#review`}>one page for all five reports</a>.</p> : <p className="rp-legend-marks">Marks: <span className="rp-mark approved">Approved</span> approved in editorial review; <span className="rp-mark disputed">Disputed</span> the data file records a conflict for this value (both readings are kept); <span className="rp-mark superseded">Superseded</span> replaced by a later reading; a withdrawn value prints the withdrawal and its reason instead of the number.</p>}
@@ -291,7 +291,7 @@ export default function Report({ r, edition = 'web' }) {
           {s.interpretation.length ? (
             <div className="rp-interp">
               <h3>Interpretation (Takwimu editorial, not a finding)</h3>
-              {s.interpretation.map((t, k) => <p key={k}>{t}</p>)}
+              {s.interpretation.map((t, k) => <p key={k}>{typeof t === 'string' ? t : <>{t.text} <a href={t.href} data-moved-to={t.href} data-check={JSON.stringify(t.check || [])}>{t.label}</a>.</>}</p>)}
             </div>
           ) : null}
         </section>
@@ -312,19 +312,35 @@ export default function Report({ r, edition = 'web' }) {
       <section id="bibliography" className="rp-section rp-appendix" aria-labelledby="bibliography-h">
         <h2 id="bibliography-h">{n0 + appendices.length - 1}. Bibliography and document versions</h2>
         <p>{web ? <>Documents cited by the figures on this page (<a href={`${METHOD_HREF}#bibliography`}>conventions</a>).</> : <>Every document cited by a figure in this report, with the SHA-256 digest of the file version read (<a href={`${METHOD_HREF}#bibliography`}>conventions</a>).</>}</p>
-        <table className="rp-table bib">
-          <colgroup><col style={{ width: '14%' }} /><col style={{ width: '34%' }} /><col style={{ width: '22%' }} /><col style={{ width: '18%' }} /><col style={{ width: '12%' }} /></colgroup>
-          <thead><tr><th scope="col">Key</th><th scope="col">Title, publisher, date</th><th scope="col">SHA-256</th><th scope="col">URL</th><th scope="col">Licence</th></tr></thead>
-          <tbody>{r.bibliography.map((s) => (
-            <tr key={s.id} id={`src-${s.id}`}>
-              <th scope="row" className="mono">{s.id}</th>
-              <td>{s.title}. {s.publisher || 'Publisher not stated'}. {s.date || 'Date not stated'}.{s.period ? ` Period: ${s.period}.` : ''}</td>
-              <td className="mono hash">{s.sha256 || 'not recorded'}</td>
-              <td className="url">{s.url ? <a href={s.url}>{web ? hostOf(s.url) : s.url}</a> : 'Not recorded'}</td>
-              <td>{licenceLabel(s.licence).label} (<a href={TERMS_HREF}>terms</a>)</td>
-            </tr>
-          ))}</tbody>
-        </table>
+        {web ? (
+          // Web edition: one line per document; its version, SHA-256 digest and licence are held once, in the source
+          // library record (or, for a document outside the library, in the PDF edition's bibliography).
+          <table className="rp-table bib">
+            <colgroup><col style={{ width: '18%' }} /><col style={{ width: '58%' }} /><col style={{ width: '24%' }} /></colgroup>
+            <thead><tr><th scope="col">Key</th><th scope="col">Title, publisher, date</th><th scope="col">Record</th></tr></thead>
+            <tbody>{r.bibliography.map((s) => (
+              <tr key={s.id} id={`src-${s.id}`}>
+                <th scope="row" className="mono">{s.id}</th>
+                <td>{s.title}. {s.publisher || 'Publisher not stated'}. {s.date || 'Date not stated'}.</td>
+                <td className="url">{LIBRARY_IDS.has(s.id) ? <a href={`/counties/siaya/sources/#doc-${s.id}`}>Source library</a> : s.url ? <a href={s.url}>{hostOf(s.url)}</a> : 'Not recorded'}</td>
+              </tr>
+            ))}</tbody>
+          </table>
+        ) : (
+          <table className="rp-table bib">
+            <colgroup><col style={{ width: '14%' }} /><col style={{ width: '34%' }} /><col style={{ width: '22%' }} /><col style={{ width: '18%' }} /><col style={{ width: '12%' }} /></colgroup>
+            <thead><tr><th scope="col">Key</th><th scope="col">Title, publisher, date</th><th scope="col">SHA-256</th><th scope="col">URL</th><th scope="col">Licence</th></tr></thead>
+            <tbody>{r.bibliography.map((s) => (
+              <tr key={s.id} id={`src-${s.id}`}>
+                <th scope="row" className="mono">{s.id}</th>
+                <td>{s.title}. {s.publisher || 'Publisher not stated'}. {s.date || 'Date not stated'}.{s.period ? ` Period: ${s.period}.` : ''}</td>
+                <td className="mono hash">{s.sha256 || 'not recorded'}</td>
+                <td className="url">{s.url ? <a href={s.url}>{web ? hostOf(s.url) : s.url}</a> : 'Not recorded'}</td>
+                <td>{licenceLabel(s.licence).label} (<a href={TERMS_HREF}>terms</a>)</td>
+              </tr>
+            ))}</tbody>
+          </table>
+        )}
         {r.described.length ? (
           <>
             <h3>Sources cited by description</h3>
@@ -335,12 +351,12 @@ export default function Report({ r, edition = 'web' }) {
 
       <section id="snapshot" className="rp-section rp-appendix" aria-labelledby="snapshot-h">
         <h2 id="snapshot-h">{n0 + appendices.length}. Snapshot, method and licence</h2>
-        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> identifies the input files below and the review state of every value at the time of printing (review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn). {web ? <><a href={`${METHOD_HREF}#snapshot`}>How it is computed</a>.</> : <>How it is computed, the method, the confidence scales and the licence are at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>.</>} This report contains no personal data and names no contractor or individual.</p>
-        <table className="rp-table snap">
+        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> identifies the input files {web ? 'of this report' : 'below'} and the review state of every value at the time of printing (review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn). {web ? <><a href={`${METHOD_HREF}#snapshot`}>How it is computed</a>.</> : <>How it is computed, the method, the confidence scales and the licence are at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>.</>} This report contains no personal data and names no contractor or individual.</p>
+        {web ? <p>The <a href={`/reports/${r.meta.slug}.pdf`}>PDF</a> lists the SHA-256 digest of each of the {r.snapshot.files.length} input files.</p> : <table className="rp-table snap">
           <colgroup><col style={{ width: '32%' }} /><col style={{ width: '68%' }} /></colgroup>
           <thead><tr><th scope="col">Input file</th><th scope="col">SHA-256</th></tr></thead>
           <tbody>{r.snapshot.files.map((f) => <tr key={f.file}><th scope="row" className="mono">{f.file}</th><td className="mono hash">{f.sha256}</td></tr>)}</tbody>
-        </table>
+        </table>}
       </section>
     </main>
   );

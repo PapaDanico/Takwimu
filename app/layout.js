@@ -1,11 +1,12 @@
+import './fonts.css';
 import './globals.css';
-import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
 import { SITE_URL } from '../lib/site';
 
-const sans = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], display: 'swap', variable: '--font-sans' });
-const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500', '700'], display: 'swap', variable: '--font-mono' });
+// Fonts are self-hosted from public/fonts/ (app/fonts.css): no network call at build time. The latin files are preloaded,
+// as next/font/google did.
+const PRELOAD = ['/fonts/plus-jakarta-sans-latin.woff2', '/fonts/jetbrains-mono-latin.woff2'];
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -28,7 +29,8 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
+    <html lang="en">
+      <head>{PRELOAD.map((f) => <link key={f} rel="preload" href={f} as="font" type="font/woff2" crossOrigin="" />)}</head>
       <body>
         <a className="skip" href="#main">Skip to content</a>
         <SiteHeader />

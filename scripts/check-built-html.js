@@ -43,4 +43,10 @@ if (bad.length) {
   console.error(`Rendering bugs in ${bad.length} built page(s):\n- ` + bad.map(([p, x]) => `${path.relative(root, p)}: ${x.join(', ')}`).join('\n- '));
   process.exit(1);
 }
-console.log(`Built HTML check passed (${pages.length} pages, no NaN, "[object Object]" or stray "undefined").`);
+// Hermetic build: fonts come from public/fonts/ (app/fonts.css). next/font/google downloads them from Google during
+// every build, which made builds fail intermittently and tied the output bytes to Google's servers (27 Nov 2026).
+const srcDirs = ['app', 'components', 'lib'].map((d) => path.join(__dirname, '..', d));
+const srcFiles = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? srcFiles(path.join(d, e.name)) : /\.(js|jsx|ts|tsx)$/.test(e.name) ? [path.join(d, e.name)] : []));
+const fetchesFonts = srcDirs.flatMap(srcFiles).filter((f) => /from ['"]next\/font\/google['"]|require\(['"]next\/font\/google['"]\)/.test(fs.readFileSync(f, 'utf8')));
+if (fetchesFonts.length) { console.error(`next/font/google fetches fonts over the network at build time; self-host them (app/fonts.css): ${fetchesFonts.map((f) => path.relative(path.join(__dirname, '..'), f)).join(', ')}`); process.exit(1); }
+console.log(`Built HTML check passed (${pages.length} pages, no NaN, "[object Object]" or stray "undefined"; fonts self-hosted).`);
