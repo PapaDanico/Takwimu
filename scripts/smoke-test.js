@@ -517,6 +517,9 @@ const srv = http.createServer((req, res) => {
     let labelled = 0;
     for (const u of SM) {
       await pg.goto(base + u, { waitUntil: 'load' });
+      // Count what a reader sees: client sections (CompareView, DatasetCatalogue, the trend explorer) render after
+      // hydration in place of an aria-busy fallback, and 'load' can fire before or after that (flaky /compare/ count).
+      await pg.waitForFunction(() => !document.querySelector('main [aria-busy="true"]'), null, { timeout: 15000 });
       const r = await pg.evaluate(() => {
         const m = document.querySelector('main');
         const prov = (m.textContent.match(/Provisional: awaiting editorial review/gi) || []).length;

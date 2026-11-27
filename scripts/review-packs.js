@@ -90,7 +90,8 @@ if (require.main === module) {
   const { json, md } = build(county);
   const reg = county ? require('../lib/county-registry').COUNTY_DATA[county].review : null;
   const dir = county ? path.join(ROOT, reg.packs_md) : path.join(ROOT, 'docs', 'editorial', 'packs');
-  const files = { [county ? path.join(ROOT, reg.packs_json) : path.join(ROOT, 'data', 'review-packs.json')]: json, ...Object.fromEntries(Object.entries(md).map(([ds, t]) => [path.join(dir, `${ds}.md`), t])) };
+  const jsonFile = county ? path.join(ROOT, reg.packs_json) : path.join(ROOT, 'data', 'review-packs.json');
+  const files = { [jsonFile]: json, ...Object.fromEntries(Object.entries(md).map(([ds, t]) => [path.join(dir, `${ds}.md`), t])) };
   if (process.argv.includes('--check')) {
     const stale = Object.entries(files).filter(([f, t]) => !fs.existsSync(f) || fs.readFileSync(f, 'utf8') !== t).map(([f]) => path.relative(ROOT, f));
     if (stale.length) { console.error(`review-packs: out of date (run node scripts/review-packs.js): ${stale.join(', ')}`); process.exit(1); }
@@ -98,6 +99,6 @@ if (require.main === module) {
   } else {
     fs.mkdirSync(dir, { recursive: true });
     Object.entries(files).forEach(([f, t]) => fs.writeFileSync(f, t));
-    console.log(`review-packs: wrote ${Object.keys(md).length} packs and data/review-packs.json`);
+    console.log(`review-packs: wrote ${Object.keys(md).length} packs to ${path.relative(ROOT, dir)}/ and ${path.relative(ROOT, jsonFile)}`);
   }
 }

@@ -4,6 +4,7 @@ import ExploreHead from '../../components/ExploreHead';
 import CompareView from '../../components/CompareView';
 import KenyaMap from '../../components/KenyaMap';
 import TableWrap from '../../components/TableWrap';
+import PageToc from '../../components/PageToc';
 import { compareData, extra } from '../../lib/explore';
 import { Provisional } from '../../components/ObsTable';
 import { fmtNum } from '../../lib/format';
@@ -37,6 +38,7 @@ export default function ComparePage() {
       <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Compare counties" title="Compare counties"
         sub="Pick an indicator and a year to see all 47 counties in one list, on a map and in a table, or pick two to four counties to see them side by side. The figures are those printed in the Controller of Budget's annual county reports." />
       <Provisional dataset={['counties-cob']}>County figures were read by Takwimu from Controller of Budget reports (OCR, with table and page) and have not yet been checked by a reviewer.</Provisional>
+      <PageToc items={[['pick-h', 'Choose what to compare'], ['list-h', 'County list, map and table'], ['side-h', 'Side by side'], ['cra-h', 'Equitable share recommended, FY 2026/27'], ['voters-h', 'Registered voters, 2022'], ['read-h', 'How to read this comparison']]} />
       <Suspense fallback={<Loading />}>
         <CompareView data={data} />
       </Suspense>
