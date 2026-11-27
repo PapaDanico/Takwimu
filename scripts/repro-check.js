@@ -26,14 +26,23 @@ const inputs = () => {
   return Object.fromEntries(list.map((f) => [f, fs.existsSync(path.join(root, f)) ? sha(fs.readFileSync(path.join(root, f))) : 'missing']));
 };
 const changed = (x, y) => [...new Set([...Object.keys(x), ...Object.keys(y)])].filter((k) => x[k] !== y[k]);
-const build = () => { execSync('npm run build', { cwd: root, stdio: 'ignore' }); return digest(); };
+let keep = null; // copy of build A's dist/, kept only when the outputs differ
+// A failing gate inside either build is reported with the end of its output, not as a bare child-process error.
+const build = (label) => {
+  try { execSync('npm run build', { cwd: root, stdio: 'pipe', maxBuffer: 256 << 20 }); } catch (e) {
+    console.log(`Build ${label} failed (exit ${e.status}); the check did not compare anything. End of its output:\n${`${e.stdout || ''}\n${e.stderr || ''}`.trim().split('\n').slice(-40).join('\n')}`);
+    if (keep) fs.rmSync(keep, { recursive: true, force: true });
+    process.exit(2);
+  }
+  return digest();
+};
 
 const in0 = inputs();
-const a = build();
-const keep = fs.mkdtempSync(path.join(os.tmpdir(), 'takwimu-repro-'));
+const a = build('A');
+keep = fs.mkdtempSync(path.join(os.tmpdir(), 'takwimu-repro-'));
 fs.cpSync(dist, path.join(keep, 'a'), { recursive: true });
 const in1 = inputs();
-const b = build();
+const b = build('B');
 const in2 = inputs();
 const diff = changed(a.files, b.files);
 const moved = [...new Set([...changed(in0, in1), ...changed(in1, in2)])];
