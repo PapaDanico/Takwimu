@@ -1,0 +1,4745 @@
+{
+ "meta": {
+  "title": "Siaya County fiscal series from county documents and the Auditor-General, FY 2013/14 to FY 2024/25",
+  "county": "Siaya",
+  "county_code": 41,
+  "retrieved": "2026-11-27",
+  "schema_version": "1.0",
+  "rule": "Separate series, never blended with each other or with the Controller of Budget series in data/history.json: county-cbrop (the County Treasury's Budget Review and Outlook Papers), oag-ror-table (the twelve-year own-source revenue table the County Treasury reports in the Auditor-General's Receiver of Revenue reports, Other Information outside the audit opinion), oag-ror (the audited Receiver of Revenue statements and the auditor's text) and oag-crf (the audited County Revenue Fund statements). Every value keeps its basis. comparisons put the series side by side for each year; they choose nothing. Gaps are listed, never filled.",
+  "bases": {
+   "cash": "Receipts actually received in the year (statement of receipts and disbursements, statement of cash flows).",
+   "accrual": "Revenue earned in the year, including amounts billed but not yet received (statement of financial performance). The Receiver of Revenue moved to accrual reporting in FY 2024/25.",
+   "treasury_table": "Figures the County Treasury reports in the management discussion of an audit report; the audit opinion does not cover them.",
+   "county_review": "The County Treasury's own review of the year (CBROP); not audited."
+  },
+  "ocr_rule": "Scanned Auditor-General pages were read by three tesseract passes (300 dpi psm 6, 400 dpi psm 4, 150 dpi psm 3). A figure is stored at confidence 3 only when at least two passes show it; otherwise confidence is capped at 2 and needs_human_check is true. Arithmetic checks (variance, quarters, note totals) are recorded in arithmetic_checks.",
+  "confidence_scale": "5 = clean printed table read twice; 4 = clean table or exact printed figure; 3 = OCR of a scanned page read twice; 2 = chart label, garbled text or a figure read only once; 1 = not used",
+  "review": "Provisional: awaiting editorial review. Nothing is approved.",
+  "gaps": [
+   {
+    "series": "county-cbrop",
+    "fy": "2022/23",
+    "reason": "CBROP of September 2023 not found (KIPPRA's \"2023\" record is the September 2024 paper)."
+   },
+   {
+    "series": "county-cbrop",
+    "fy": "2024/25",
+    "reason": "CBROP 2025 (GOV-03) values are in data/siaya-fiscal-ledger.json; not repeated here."
+   },
+   {
+    "series": "county-cbrop",
+    "fy": "2013/14, 2014/15, 2015/16, 2020/21",
+    "reason": "Own-source revenue totals not transcribed: the papers give them only in narrative or stream tables without a clean total row."
+   },
+   {
+    "series": "oag-ror",
+    "fy": "2013/14 to 2021/22",
+    "reason": "Receiver of Revenue statements before FY 2021/22 not found; FY 2021/22 and FY 2022/23 reports are in the Parliament library (link only, not downloaded)."
+   },
+   {
+    "series": "oag-crf",
+    "fy": "2013/14 to 2023/24",
+    "reason": "Only the FY 2024/25 County Revenue Fund report was downloaded; FY 2021/22 is in the Parliament library (link only)."
+   }
+  ]
+ },
+ "sources": [
+  {
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "title": "Siaya County Budget Review and Outlook Paper 2014",
+   "sha256": "3e8311720983f584fefea75fbf93f792b4b89fe2882d3c1585e0e1c4bad3fd2a",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/b0db87c0-3716-416a-bf30-6276b6614a1a/content"
+  },
+  {
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "title": "Siaya County Budget Review and Outlook Paper 2015",
+   "sha256": "a403ed686551f035da97c3fd4bc655a61b9e6e206d64d511b303aa720f93769b",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/bf38e3f4-6418-477f-8929-584c923784ea/content"
+  },
+  {
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "title": "Siaya County Budget Review and Outlook Paper 2016",
+   "sha256": "b961ff304d55392c22e76c5179aafa8218e7bb2c5c0310caa8c84ba0d89e81cb",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/e8c074cf-03f5-4120-af0a-ac560f6b5c89/content"
+  },
+  {
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "title": "Siaya County Budget Review and Outlook Paper 2017",
+   "sha256": "112173f6581ac5c3cfc6ff95819354406b1abfa7a52719246a8e7511f8f5ed59",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/01dc6762-a68b-48c7-9659-129ceb771f8c/content"
+  },
+  {
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "title": "Siaya County Budget Review and Outlook Paper 2018",
+   "sha256": "df75d8fccbdb2ba205d260fb267eadcc8dccf9557e2fd835ca85c10f9e3f12a9",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/bd2408a5-cffc-4a02-840d-a7ef20060b01/content"
+  },
+  {
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "title": "Siaya County Budget Review and Outlook Paper 2019",
+   "sha256": "0f3b8a91410c27c9ba89ee7f3e692e11297ff95db82ff4f5669a6ca4a130c959",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/819d84ae-ccb2-42ae-a9a4-8dfab1e42615/content"
+  },
+  {
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "title": "Siaya County Budget Review and Outlook Paper 2021",
+   "sha256": "2fbfc4d1b2d910993f38498b85e25da794a810474ff2dcc89291c7c13bf48173",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/fbabeda4-b7db-4ac7-818b-384405ee605f/content"
+  },
+  {
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "title": "Siaya County Budget Review and Outlook Paper 2022",
+   "sha256": "d71fd5f59f526d78171f6d746f49c3552230df2fd799a0e44e38ff8c64350fbc",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/3d4d35cc-fcd8-4539-bfee-5794ff501d39/content"
+  },
+  {
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "title": "Siaya County Budget Review and Outlook Paper, September 2024 (reviews FY 2023/24; the KIPPRA record is labelled 2023)",
+   "sha256": "5e8f30000d903a5d505ccc8e7e5d5e548d1055577bed2cf4c978d68256d1de33",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/85048574-8f66-43a1-a09f-2e1f0870e5c6/content"
+  },
+  {
+   "source_id": "OAG-CRF-2024-25",
+   "title": "Report of the Auditor-General on County Revenue Fund for the Year Ended 30 June 2025, County Government of Siaya",
+   "sha256": "f6e04db51eb338b7d68458d4759af06be76215b481ac3abe503de0f5b6871285",
+   "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/695fb8b0-7446-4017-9741-18da8d5f7bfe/content"
+  },
+  {
+   "source_id": "OAG-ROR-2023-24",
+   "title": "Report of the Auditor-General on Receiver of Revenue - Revenue Statements for the Year Ended 30 June 2024, County Government of Siaya",
+   "sha256": "91bd04bfe9f240dca0be8f43d8b5caa7487ea8682c485f10fbbf4e09cb40cbf2",
+   "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/d0583d17-eec2-41ba-86b9-fdfc4727dbef/content"
+  },
+  {
+   "source_id": "OAG-ROR-2024-25",
+   "title": "Report of the Auditor-General on Receiver of Revenue - Revenue Statements for the Year Ended 30 June 2025, County Government of Siaya",
+   "sha256": "d7488d6b9136926b15e55494b09ebc84778d91e3069fd898adc85c82a36c5037",
+   "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/467bfb30-92cc-43d1-b376-caed961dc092/content"
+  },
+  {
+   "source_id": "siaya-brop-2019-20",
+   "title": "Siaya County Treasury, County Budget Review and Outlook Paper FY 2019/2020 (September 2020)",
+   "sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+   "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf"
+  }
+ ],
+ "series": [
+  {
+   "id": "county-cbrop",
+   "label": "County Treasury (Budget Review and Outlook Papers)",
+   "audited": false
+  },
+  {
+   "id": "oag-ror-table",
+   "label": "County Treasury table in the Auditor-General's Receiver of Revenue reports (Other Information)",
+   "audited": false
+  },
+  {
+   "id": "oag-ror",
+   "label": "Auditor-General, Receiver of Revenue statements (audited, qualified opinion)",
+   "audited": true
+  },
+  {
+   "id": "oag-crf",
+   "label": "Auditor-General, County Revenue Fund statements FY 2024/25 (audited, qualified opinion)",
+   "audited": true
+  }
+ ],
+ "observations": [
+  {
+   "id": "CS-CBROP-1314-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "budget_compensation",
+   "value": 1653107180,
+   "unit": "KSh",
+   "original_text": "1,653,107,180",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1314-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "actual_compensation",
+   "value": 1449642760,
+   "unit": "KSh",
+   "original_text": "1,449,642,760",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1314-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "budget_operations",
+   "value": 1291580765,
+   "unit": "KSh",
+   "original_text": "1,291,580,765",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1314-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "actual_operations",
+   "value": 851734829,
+   "unit": "KSh",
+   "original_text": "851,734,829",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1314-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "budget_recurrent",
+   "value": 2944687945,
+   "unit": "KSh",
+   "original_text": "2,944,687,945",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1314-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "actual_recurrent",
+   "value": 2301377589,
+   "unit": "KSh",
+   "original_text": "2,301,377,589",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1314-budget-development",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "budget_development",
+   "value": 1319210068,
+   "unit": "KSh",
+   "original_text": "1,319,210,068",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1314-actual-development",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "actual_development",
+   "value": 285758115,
+   "unit": "KSh",
+   "original_text": "285,758,115",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1314-budget-total",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "budget_total",
+   "value": 4263898013,
+   "unit": "KSh",
+   "original_text": "4,263,898,013",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1314-actual-total",
+   "series": "county-cbrop",
+   "fy": "2013/14",
+   "measure": "actual_total",
+   "value": 2587135704,
+   "unit": "KSh",
+   "original_text": "2,587,135,704",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2014",
+   "table": "Table: County Government Expenditure Analysis for FY2013/14 (Printed Estimates; Actual Expenditure)",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The text on PDF p. 12 gives total expenditure of KSh 2,376,946,022 (56 per cent), not the table's 2,587,135,704; both are printed."
+  },
+  {
+   "id": "CS-CBROP-1415-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "budget_compensation",
+   "value": 1861654504,
+   "unit": "KSh",
+   "original_text": "1,861,654,504",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1415-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "actual_compensation",
+   "value": 1658968338,
+   "unit": "KSh",
+   "original_text": "1,658,968,338",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1415-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "budget_operations",
+   "value": 1399761981,
+   "unit": "KSh",
+   "original_text": "1,399,761,981",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1415-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "actual_operations",
+   "value": 1419022246,
+   "unit": "KSh",
+   "original_text": "1,419,022,246",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1415-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "budget_recurrent",
+   "value": 3261416485,
+   "unit": "KSh",
+   "original_text": "3,261,416,485",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1415-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "actual_recurrent",
+   "value": 3077990584,
+   "unit": "KSh",
+   "original_text": "3,077,990,584",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1415-budget-development",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "budget_development",
+   "value": 2713220749,
+   "unit": "KSh",
+   "original_text": "2,713,220,749",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1415-actual-development",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "actual_development",
+   "value": 1589314175,
+   "unit": "KSh",
+   "original_text": "1,589,314,175",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1415-budget-total",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "budget_total",
+   "value": 5974637234,
+   "unit": "KSh",
+   "original_text": "5,974,637,234",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1415-actual-total",
+   "series": "county-cbrop",
+   "fy": "2014/15",
+   "measure": "actual_total",
+   "value": 4667304759,
+   "unit": "KSh",
+   "original_text": "4,667,304,759",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2015",
+   "table": "Table 2: County Government Total Expenditure Analysis for FY 2014/15 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "budget_compensation",
+   "value": 1866834469,
+   "unit": "KSh",
+   "original_text": "1,866,834,469",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "actual_compensation",
+   "value": 1754508216,
+   "unit": "KSh",
+   "original_text": "1,754,508,216",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "budget_operations",
+   "value": 1857407995,
+   "unit": "KSh",
+   "original_text": "1,857,407,995",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "actual_operations",
+   "value": 1842059008,
+   "unit": "KSh",
+   "original_text": "1,842,059,008",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "budget_recurrent",
+   "value": 3724242464,
+   "unit": "KSh",
+   "original_text": "3,724,242,464",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "actual_recurrent",
+   "value": 3596567224,
+   "unit": "KSh",
+   "original_text": "3,596,567,224",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-budget-development",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "budget_development",
+   "value": 3222084848,
+   "unit": "KSh",
+   "original_text": "3,222,084,848",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-actual-development",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "actual_development",
+   "value": 1830884455,
+   "unit": "KSh",
+   "original_text": "1,830,884,455",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-budget-total",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "budget_total",
+   "value": 6946327312,
+   "unit": "KSh",
+   "original_text": "6,946,327,312",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1516-actual-total",
+   "series": "county-cbrop",
+   "fy": "2015/16",
+   "measure": "actual_total",
+   "value": 5427451679,
+   "unit": "KSh",
+   "original_text": "5,427,451,679",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2016",
+   "table": "Table 3: Total Expenditure Analysis for FY 2015/16 (Budget; Actual)",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "budget_compensation",
+   "value": 2338487720,
+   "unit": "KSh",
+   "original_text": "2,338,487,720",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "actual_compensation",
+   "value": 2435368992,
+   "unit": "KSh",
+   "original_text": "2,435,368,992",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "budget_operations",
+   "value": 1578589650,
+   "unit": "KSh",
+   "original_text": "1,578,589,650",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "actual_operations",
+   "value": 1862105855,
+   "unit": "KSh",
+   "original_text": "1,862,105,855",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "budget_recurrent",
+   "value": 3917077370,
+   "unit": "KSh",
+   "original_text": "3,917,077,370",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "actual_recurrent",
+   "value": 4297474847,
+   "unit": "KSh",
+   "original_text": "4,297,474,847",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-budget-development",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "budget_development",
+   "value": 3153248740,
+   "unit": "KSh",
+   "original_text": "3,153,248,740",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-actual-development",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "actual_development",
+   "value": 1975468783,
+   "unit": "KSh",
+   "original_text": "1,975,468,783",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-budget-total",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "budget_total",
+   "value": 7070326110,
+   "unit": "KSh",
+   "original_text": "7,070,326,110",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-actual-total",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "actual_total",
+   "value": 6272943630,
+   "unit": "KSh",
+   "original_text": "6,272,943,630",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Table 7: Total Expenditure Analysis (Budget; Actual)",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1718-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "budget_compensation",
+   "value": 2863614848,
+   "unit": "KSh",
+   "original_text": "2,863,614,848",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1718-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "actual_compensation",
+   "value": 2408285749,
+   "unit": "KSh",
+   "original_text": "2,408,285,749",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1718-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "budget_operations",
+   "value": 1435438344,
+   "unit": "KSh",
+   "original_text": "1,435,438,344",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1718-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "actual_operations",
+   "value": 1382856543,
+   "unit": "KSh",
+   "original_text": "1,382,856,543",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1718-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "budget_recurrent",
+   "value": 4299053192,
+   "unit": "KSh",
+   "original_text": "4,299,053,192",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1718-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "actual_recurrent",
+   "value": 3791142292,
+   "unit": "KSh",
+   "original_text": "3,791,142,292",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1718-budget-development",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "budget_development",
+   "value": 2546288668,
+   "unit": "KSh",
+   "original_text": "2,546,288,668",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1718-actual-development",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "actual_development",
+   "value": 782049003,
+   "unit": "KSh",
+   "original_text": "782,049,003",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1718-budget-total",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "budget_total",
+   "value": 6845341860,
+   "unit": "KSh",
+   "original_text": "6,845,341,860",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1718-actual-total",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "actual_total",
+   "value": 4573191295,
+   "unit": "KSh",
+   "original_text": "4,573,191,295",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 12: Absorption based on Economic classification (Budgeted Estimates; Total Receipts; Actual Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "The table also prints total receipts (second column), not stored here."
+  },
+  {
+   "id": "CS-CBROP-1819-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "budget_compensation",
+   "value": 2719767122,
+   "unit": "KSh",
+   "original_text": "2,719,767,122",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "actual_compensation",
+   "value": 2700075765,
+   "unit": "KSh",
+   "original_text": "2,700,075,765",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "budget_operations",
+   "value": 1992859915,
+   "unit": "KSh",
+   "original_text": "1,992,859,915",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "actual_operations",
+   "value": 1933732454,
+   "unit": "KSh",
+   "original_text": "1,933,732,454",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "budget_recurrent",
+   "value": 4712627037,
+   "unit": "KSh",
+   "original_text": "4,712,627,037",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "actual_recurrent",
+   "value": 4633808219,
+   "unit": "KSh",
+   "original_text": "4,633,808,219",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-budget-development",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "budget_development",
+   "value": 3730962575,
+   "unit": "KSh",
+   "original_text": "3,730,962,575",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-actual-development",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "actual_development",
+   "value": 1675901463,
+   "unit": "KSh",
+   "original_text": "1,675,901,463",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-budget-total",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "budget_total",
+   "value": 8443589612,
+   "unit": "KSh",
+   "original_text": "8,443,589,612",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-actual-total",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "actual_total",
+   "value": 6309709682,
+   "unit": "KSh",
+   "original_text": "6,309,709,682",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 9: Expenditures in FY 2018/19 by economic classification (Budgeted Estimates; Actual Expenditure)",
+   "pdf_page": 15,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "budget_compensation",
+   "value": 2926638524,
+   "unit": "KSh",
+   "original_text": "2,926,638,524",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "actual_compensation",
+   "value": 2808812405,
+   "unit": "KSh",
+   "original_text": "2,808,812,405",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "budget_operations",
+   "value": 1972977743,
+   "unit": "KSh",
+   "original_text": "1,972,977,743",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "actual_operations",
+   "value": 1851030140,
+   "unit": "KSh",
+   "original_text": "1,851,030,140",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "budget_recurrent",
+   "value": 4899616267,
+   "unit": "KSh",
+   "original_text": "4,899,616,267",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "actual_recurrent",
+   "value": 4659842545,
+   "unit": "KSh",
+   "original_text": "4,659,842,545",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-budget-development",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "budget_development",
+   "value": 3982157657,
+   "unit": "KSh",
+   "original_text": "3,982,157,657",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-actual-development",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "actual_development",
+   "value": 2155005238,
+   "unit": "KSh",
+   "original_text": "2,155,005,238",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-budget-total",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "budget_total",
+   "value": 8881773924,
+   "unit": "KSh",
+   "original_text": "8,881,773,924",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-actual-total",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "actual_total",
+   "value": 6814847783,
+   "unit": "KSh",
+   "original_text": "6,814,847,783",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 9: Analysis of Actual expenditure per economic classification (Budget; Actual)",
+   "pdf_page": 20,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "budget_compensation",
+   "value": 2856817934,
+   "unit": "KSh",
+   "original_text": "2,856,817,934",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "actual_compensation",
+   "value": 2435662506,
+   "unit": "KSh",
+   "original_text": "2,435,662,506",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "budget_operations",
+   "value": 1984211401,
+   "unit": "KSh",
+   "original_text": "1,984,211,401",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "actual_operations",
+   "value": 1880773074,
+   "unit": "KSh",
+   "original_text": "1,880,773,074",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "budget_recurrent",
+   "value": 4841029335,
+   "unit": "KSh",
+   "original_text": "4,841,029,335",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "actual_recurrent",
+   "value": 4316435581,
+   "unit": "KSh",
+   "original_text": "4,316,435,581",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-budget-development",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "budget_development",
+   "value": 3380075649,
+   "unit": "KSh",
+   "original_text": "3,380,075,649",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-actual-development",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "actual_development",
+   "value": 2243698759,
+   "unit": "KSh",
+   "original_text": "2,243,698,759",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-budget-total",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "budget_total",
+   "value": 8221104984,
+   "unit": "KSh",
+   "original_text": "8,221,104,984",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2021-actual-total",
+   "series": "county-cbrop",
+   "fy": "2020/21",
+   "measure": "actual_total",
+   "value": 6560134340,
+   "unit": "KSh",
+   "original_text": "6,560,134,340",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2021",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "budget_compensation",
+   "value": 3354477547,
+   "unit": "KSh",
+   "original_text": "3,354,477,547",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "actual_compensation",
+   "value": 3242432596,
+   "unit": "KSh",
+   "original_text": "3,242,432,596",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "budget_operations",
+   "value": 2270279560,
+   "unit": "KSh",
+   "original_text": "2,270,279,560",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "actual_operations",
+   "value": 2562145904,
+   "unit": "KSh",
+   "original_text": "2,562,145,904",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "budget_recurrent",
+   "value": 5624757107,
+   "unit": "KSh",
+   "original_text": "5,624,757,107",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "actual_recurrent",
+   "value": 5804578500,
+   "unit": "KSh",
+   "original_text": "5,804,578,500",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-budget-development",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "budget_development",
+   "value": 3345537472,
+   "unit": "KSh",
+   "original_text": "3,345,537,472",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-actual-development",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "actual_development",
+   "value": 2325592568,
+   "unit": "KSh",
+   "original_text": "2,325,592,568",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-budget-total",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "budget_total",
+   "value": 8970294579,
+   "unit": "KSh",
+   "original_text": "8,970,294,579",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-actual-total",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "actual_total",
+   "value": 8130171068,
+   "unit": "KSh",
+   "original_text": "8,130,171,068",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 7: Actual expenditure by economic classification (Budget; Expenditure)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2324-budget-compensation",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "budget_compensation",
+   "value": 3382818518,
+   "unit": "KSh",
+   "original_text": "3,382,818,518",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-2324-actual-compensation",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "actual_compensation",
+   "value": 3203588706,
+   "unit": "KSh",
+   "original_text": "3,203,588,706",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-2324-budget-operations",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "budget_operations",
+   "value": 2526428646,
+   "unit": "KSh",
+   "original_text": "2,526,428,646",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-2324-actual-operations",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "actual_operations",
+   "value": 2509376260,
+   "unit": "KSh",
+   "original_text": "2,509,376,260",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-2324-budget-recurrent",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "budget_recurrent",
+   "value": 5909247164,
+   "unit": "KSh",
+   "original_text": "5,909,247,164",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-2324-actual-recurrent",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "actual_recurrent",
+   "value": 5712964967,
+   "unit": "KSh",
+   "original_text": "5,712,964,967",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-2324-budget-development",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "budget_development",
+   "value": 3851876224,
+   "unit": "KSh",
+   "original_text": "3,851,876,224",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-2324-actual-development",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "actual_development",
+   "value": 2689807392,
+   "unit": "KSh",
+   "original_text": "2,689,807,392",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-2324-budget-total",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "budget_total",
+   "value": 9761123388,
+   "unit": "KSh",
+   "original_text": "9,761,123,388",
+   "basis": "Final approved budget of the year as the County Treasury reviews it (after supplementary budgets), and actual spending, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-2324-actual-total",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "actual_total",
+   "value": 8402772359,
+   "unit": "KSh",
+   "original_text": "8,402,772,359",
+   "basis": "Actual spending as the County Treasury reports it, whole county government (Executive and Assembly).",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 9: Budget performance (Budget; Expenditure)",
+   "pdf_page": 21,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "note": "Printed in the September 2024 paper (the KIPPRA record is labelled 2023)."
+  },
+  {
+   "id": "CS-CBROP-1617-osr_target",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "osr_target",
+   "value": 270000000,
+   "unit": "KSh",
+   "original_text": "270,000,000",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Text, section on own source revenue (\"Ksh 172,822,681 was raised from local sources against a target of Ksh 270,000,000\")",
+   "pdf_page": 12,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1617-osr_actual",
+   "series": "county-cbrop",
+   "fy": "2016/17",
+   "measure": "osr_actual",
+   "value": 172822681,
+   "unit": "KSh",
+   "original_text": "172,822,681",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+   "table": "Text, section on own source revenue (\"Ksh 172,822,681 was raised from local sources against a target of Ksh 270,000,000\")",
+   "pdf_page": 12,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1718-osr_target",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "osr_target",
+   "value": 270000000,
+   "unit": "KSh",
+   "original_text": "270,000,000",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 5: Analysis of Revenue Performance in FY 2017/18, Own Source Revenue (OSR) row",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1718-osr_actual",
+   "series": "county-cbrop",
+   "fy": "2017/18",
+   "measure": "osr_actual",
+   "value": 127729540,
+   "unit": "KSh",
+   "original_text": "127,729,540",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+   "table": "Table 5: Analysis of Revenue Performance in FY 2017/18, Own Source Revenue (OSR) row",
+   "pdf_page": 14,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-osr_target",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "osr_target",
+   "value": 325000000,
+   "unit": "KSh",
+   "original_text": "325,000,000",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 4: Performance of revenue sources, Total for Local Revenue",
+   "pdf_page": 11,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-osr_actual",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "osr_actual",
+   "value": 189668022,
+   "unit": "KSh",
+   "original_text": "189,668,022",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 4: Performance of revenue sources, Total for Local Revenue",
+   "pdf_page": 11,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-osr_target",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "osr_target",
+   "value": 420000000,
+   "unit": "KSh",
+   "original_text": "420,000,000",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 3: Performance of Revenue sources, Total for Local Revenue",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1920-osr_actual",
+   "series": "county-cbrop",
+   "fy": "2019/20",
+   "measure": "osr_actual",
+   "value": 184249749,
+   "unit": "KSh",
+   "original_text": "184,249,749",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "siaya-brop-2019-20",
+   "table": "Table 3: Performance of Revenue sources, Total for Local Revenue",
+   "pdf_page": 13,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-osr_target",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "osr_target",
+   "value": 445445551,
+   "unit": "KSh",
+   "original_text": "445,445,551",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 3: Performance of Revenue sources, OSR",
+   "pdf_page": 12,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2122-osr_actual",
+   "series": "county-cbrop",
+   "fy": "2021/22",
+   "measure": "osr_actual",
+   "value": 446379627,
+   "unit": "KSh",
+   "original_text": "446,379,627",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+   "table": "Table 3: Performance of Revenue sources, OSR",
+   "pdf_page": 12,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2324-osr_target",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "osr_target",
+   "value": 760000000,
+   "unit": "KSh",
+   "original_text": "760,000,000",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 8: Performance of OSR, Sub-Total=Own Source Revenue (OSR)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-2324-osr_actual",
+   "series": "county-cbrop",
+   "fy": "2023/24",
+   "measure": "osr_actual",
+   "value": 601680095,
+   "unit": "KSh",
+   "original_text": "601,680,095",
+   "basis": "Own-source revenue as the County Treasury reports it in the review of the year; the paper does not say whether hospital revenue (FIF, Linda Mama, NHIF/SHA) is included, except FY 2023/24, whose table includes health revenue streams.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+   "table": "Table 8: Performance of OSR, Sub-Total=Own Source Revenue (OSR)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-osr_actual-text",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "osr_actual",
+   "value": 173996994,
+   "unit": "KSh",
+   "original_text": "173,996,994",
+   "basis": "Text after Table 5 (\"actual collection stood at Kshs. 173,996,994\"); the same paper's Table 4 prints 189,668,022.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Text, section on Own Source Revenue (OSR), before Table 6",
+   "pdf_page": 11,
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-cg_budget-basket",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "conditional_grants_budget",
+   "value": 844302787,
+   "unit": "KSh",
+   "original_text": "Kshs 844,302,787 conditional allocations",
+   "basis": "Resource basket in the review of FY 2018/19 (text); the same paper's Tables 4 and 5 give a conditional grants budget of 947,884,880.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Text, \"Review of FY 2018/19 Fiscal Performance\", Revenue Projections",
+   "pdf_page": 9,
+   "printed_page": 9,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-CBROP-1819-cg_budget-table4",
+   "series": "county-cbrop",
+   "fy": "2018/19",
+   "measure": "conditional_grants_budget",
+   "value": 947884880,
+   "unit": "KSh",
+   "original_text": "947,884,880",
+   "basis": "Table 4: Performance of revenue sources, Conditional Grants budget.",
+   "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+   "table": "Table 4: Performance of revenue sources, Conditional Grants",
+   "pdf_page": 11,
+   "printed_page": 11,
+   "read_method": "text",
+   "confidence": 4
+  },
+  {
+   "id": "CS-ROR25-T1-1314-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2013/14",
+   "measure": "osr_target",
+   "value": 153466278,
+   "unit": "KSh",
+   "original_text": "153,466,278.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "153,466,278.00",
+     "B (400 dpi, psm 4)": "153,466,278.00",
+     "C (150 dpi, psm 3)": "153,466,278.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1314-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2013/14",
+   "measure": "osr_actual",
+   "value": 100657764,
+   "unit": "KSh",
+   "original_text": "100,657,764.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "100,657,764.00",
+     "B (400 dpi, psm 4)": "100,657,764.00",
+     "C (150 dpi, psm 3)": "100,657,764.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1415-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2014/15",
+   "measure": "osr_target",
+   "value": 301474027,
+   "unit": "KSh",
+   "original_text": "301,474,027.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "301,474,027.00",
+     "B (400 dpi, psm 4)": "301,474,027.00",
+     "C (150 dpi, psm 3)": "301,474,027.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1415-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2014/15",
+   "measure": "osr_actual",
+   "value": 143271988,
+   "unit": "KSh",
+   "original_text": "143,271,988.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "143,271,988.00",
+     "B (400 dpi, psm 4)": "143,271,988.00",
+     "C (150 dpi, psm 3)": "143,271,988.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1516-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2015/16",
+   "measure": "osr_target",
+   "value": 230000000,
+   "unit": "KSh",
+   "original_text": "230,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "230,000,000.00",
+     "B (400 dpi, psm 4)": "230,000,000.00",
+     "C (150 dpi, psm 3)": "230,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1516-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2015/16",
+   "measure": "osr_actual",
+   "value": 132586919,
+   "unit": "KSh",
+   "original_text": "132,586,919.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "132,586,919.00",
+     "B (400 dpi, psm 4)": "132,586,919.00",
+     "C (150 dpi, psm 3)": null
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass C (150 dpi, psm 3) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1617-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2016/17",
+   "measure": "osr_target",
+   "value": 270000000,
+   "unit": "KSh",
+   "original_text": "270,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "270,000,000.00",
+     "B (400 dpi, psm 4)": "270,000,000.00",
+     "C (150 dpi, psm 3)": "270,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1617-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2016/17",
+   "measure": "osr_actual",
+   "value": 172822681,
+   "unit": "KSh",
+   "original_text": "172,822,681.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "172,822,681.00",
+     "B (400 dpi, psm 4)": "172,822,681.00",
+     "C (150 dpi, psm 3)": null
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass C (150 dpi, psm 3) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1718-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2017/18",
+   "measure": "osr_target",
+   "value": 270000000,
+   "unit": "KSh",
+   "original_text": "270,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "270,000,000.00",
+     "B (400 dpi, psm 4)": "270,000,000.00",
+     "C (150 dpi, psm 3)": "270,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1718-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2017/18",
+   "measure": "osr_actual",
+   "value": 134955357,
+   "unit": "KSh",
+   "original_text": "134,955,357.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "134,955,357.00",
+     "B (400 dpi, psm 4)": "134,955,357.00",
+     "C (150 dpi, psm 3)": "134,955,357.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1819-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2018/19",
+   "measure": "osr_target",
+   "value": 325000000,
+   "unit": "KSh",
+   "original_text": "325,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "325,000,000.00",
+     "B (400 dpi, psm 4)": "325,000,000.00",
+     "C (150 dpi, psm 3)": "325,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1819-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2018/19",
+   "measure": "osr_actual",
+   "value": 189668022,
+   "unit": "KSh",
+   "original_text": "189,668,022.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "189,668,022.00",
+     "B (400 dpi, psm 4)": "189,668,022.00",
+     "C (150 dpi, psm 3)": "189,668,022.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1920-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2019/20",
+   "measure": "osr_target",
+   "value": 420000000,
+   "unit": "KSh",
+   "original_text": "420,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "420,000,000.00",
+     "B (400 dpi, psm 4)": "420,000,000.00",
+     "C (150 dpi, psm 3)": "420,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-1920-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2019/20",
+   "measure": "osr_actual",
+   "value": 277193698.2,
+   "unit": "KSh",
+   "original_text": "277,193,698.20",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "277,193,698.20",
+     "B (400 dpi, psm 4)": "277,193,698.20",
+     "C (150 dpi, psm 3)": "277,193,698.20"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2021-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2020/21",
+   "measure": "osr_target",
+   "value": 420000000,
+   "unit": "KSh",
+   "original_text": "420,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "420,000,000.00",
+     "B (400 dpi, psm 4)": "420,000,000.00",
+     "C (150 dpi, psm 3)": "420,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2021-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2020/21",
+   "measure": "osr_actual",
+   "value": 329295212.34,
+   "unit": "KSh",
+   "original_text": "329,295,212.34",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "329,295,212.34",
+     "B (400 dpi, psm 4)": "329,295,212.34",
+     "C (150 dpi, psm 3)": "329,295,212.34"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2122-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2021/22",
+   "measure": "osr_target",
+   "value": 445445551,
+   "unit": "KSh",
+   "original_text": "445,445,551.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "445,445,551.00",
+     "B (400 dpi, psm 4)": "445,445,551.00",
+     "C (150 dpi, psm 3)": "445,445,551.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2122-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2021/22",
+   "measure": "osr_actual",
+   "value": 446379626.98,
+   "unit": "KSh",
+   "original_text": "446,379,626.98",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "446,379,626.98",
+     "B (400 dpi, psm 4)": "446,379,626.98",
+     "C (150 dpi, psm 3)": "446,379,626.98"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2223-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2022/23",
+   "measure": "osr_target",
+   "value": 700998234,
+   "unit": "KSh",
+   "original_text": "700,998,234.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "700,998,234.00",
+     "B (400 dpi, psm 4)": "700,998,234.00",
+     "C (150 dpi, psm 3)": "700,998,234.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2223-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2022/23",
+   "measure": "osr_actual",
+   "value": 501460021,
+   "unit": "KSh",
+   "original_text": "501,460,021.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "501,460,021.00",
+     "B (400 dpi, psm 4)": "501,460,021.00",
+     "C (150 dpi, psm 3)": "501,460,021.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2324-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2023/24",
+   "measure": "osr_target",
+   "value": 760998234,
+   "unit": "KSh",
+   "original_text": "760,998,234.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "760,998,234.00",
+     "B (400 dpi, psm 4)": "760,998,234.00",
+     "C (150 dpi, psm 3)": "760,998,234.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2324-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2023/24",
+   "measure": "osr_actual",
+   "value": 610405666.75,
+   "unit": "KSh",
+   "original_text": "610,405,666.75",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "610,405,666.75",
+     "B (400 dpi, psm 4)": "610,405,666.75",
+     "C (150 dpi, psm 3)": "610,405,666.75"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2425-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2024/25",
+   "measure": "osr_target",
+   "value": 1044061306,
+   "unit": "KSh",
+   "original_text": "1,044,061,306.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "1,044,061,306.00",
+     "B (400 dpi, psm 4)": "1,044,061,306.00",
+     "C (150 dpi, psm 3)": "1,044,061,306.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-T1-2425-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2024/25",
+   "measure": "osr_actual",
+   "value": 757633212.4,
+   "unit": "KSh",
+   "original_text": "757,633,212.40",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Table 1: FY 2024/2025 OSR performance from 2013 to 2025 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "757,633,212.40",
+     "C (150 dpi, psm 3)": "757,633,212.40"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1314-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2013/14",
+   "measure": "osr_target",
+   "value": 153466278,
+   "unit": "KSh",
+   "original_text": "153,466,278.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "153,466,278.00",
+     "B (400 dpi, psm 4)": "153,466,278.00",
+     "C (150 dpi, psm 3)": "153,466,278.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1314-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2013/14",
+   "measure": "osr_actual",
+   "value": 100657764,
+   "unit": "KSh",
+   "original_text": "100,657,764.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "100,657,764.00",
+     "B (400 dpi, psm 4)": "100,657,764.00",
+     "C (150 dpi, psm 3)": "100,657,764.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1415-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2014/15",
+   "measure": "osr_target",
+   "value": 301474027,
+   "unit": "KSh",
+   "original_text": "301,474,027.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "301,474,027.00",
+     "B (400 dpi, psm 4)": "301,474,027.00",
+     "C (150 dpi, psm 3)": "301,474,027.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1415-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2014/15",
+   "measure": "osr_actual",
+   "value": 143271988,
+   "unit": "KSh",
+   "original_text": "143,271,988.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "143,271,988.00",
+     "B (400 dpi, psm 4)": "143,271,988.00",
+     "C (150 dpi, psm 3)": "143,271,988.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1516-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2015/16",
+   "measure": "osr_target",
+   "value": 230000000,
+   "unit": "KSh",
+   "original_text": "230,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "230,000,000.00",
+     "B (400 dpi, psm 4)": "230,000,000.00",
+     "C (150 dpi, psm 3)": "230,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1516-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2015/16",
+   "measure": "osr_actual",
+   "value": 132586919,
+   "unit": "KSh",
+   "original_text": "132,586,919.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "132,586,919.00",
+     "B (400 dpi, psm 4)": "132,586,919.00",
+     "C (150 dpi, psm 3)": "132,586,919.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1617-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2016/17",
+   "measure": "osr_target",
+   "value": 270000000,
+   "unit": "KSh",
+   "original_text": "270,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "270,000,000.00",
+     "B (400 dpi, psm 4)": "270,000,000.00",
+     "C (150 dpi, psm 3)": "270,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1617-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2016/17",
+   "measure": "osr_actual",
+   "value": 172822681,
+   "unit": "KSh",
+   "original_text": "172,822,681.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "172,822,681.00",
+     "B (400 dpi, psm 4)": "172,822,681.00",
+     "C (150 dpi, psm 3)": "172,822,681.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1718-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2017/18",
+   "measure": "osr_target",
+   "value": 270000000,
+   "unit": "KSh",
+   "original_text": "270,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "270,000,000.00",
+     "B (400 dpi, psm 4)": "270,000,000.00",
+     "C (150 dpi, psm 3)": "270,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1718-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2017/18",
+   "measure": "osr_actual",
+   "value": 134955357,
+   "unit": "KSh",
+   "original_text": "134,955,357.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "134,955,357.00",
+     "B (400 dpi, psm 4)": "134,955,357.00",
+     "C (150 dpi, psm 3)": "134,955,357.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1819-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2018/19",
+   "measure": "osr_target",
+   "value": 325000000,
+   "unit": "KSh",
+   "original_text": "325,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "325,000,000.00",
+     "B (400 dpi, psm 4)": "325,000,000.00",
+     "C (150 dpi, psm 3)": "325,000,000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1819-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2018/19",
+   "measure": "osr_actual",
+   "value": 189668022,
+   "unit": "KSh",
+   "original_text": "189,668,022.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "189,668,022.00",
+     "B (400 dpi, psm 4)": "189,668,022.00",
+     "C (150 dpi, psm 3)": "189,668,022.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1920-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2019/20",
+   "measure": "osr_target",
+   "value": 420000000,
+   "unit": "KSh",
+   "original_text": "420,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "420,000,000.00",
+     "B (400 dpi, psm 4)": "420,000,000.00",
+     "C (150 dpi, psm 3)": "420,000.000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-1920-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2019/20",
+   "measure": "osr_actual",
+   "value": 277193698.2,
+   "unit": "KSh",
+   "original_text": "277,193,698.20",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "277.193,698.20",
+     "B (400 dpi, psm 4)": "277.193,698.20",
+     "C (150 dpi, psm 3)": "277.193,698.20"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-2021-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2020/21",
+   "measure": "osr_target",
+   "value": 420000000,
+   "unit": "KSh",
+   "original_text": "420,000,000.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "420,000,000.00",
+     "B (400 dpi, psm 4)": "420,000,000.00",
+     "C (150 dpi, psm 3)": "420,000.000.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-2021-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2020/21",
+   "measure": "osr_actual",
+   "value": 329295212.34,
+   "unit": "KSh",
+   "original_text": "329,295,212.34",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "329,295,212.34",
+     "B (400 dpi, psm 4)": "329,295,212.34",
+     "C (150 dpi, psm 3)": "329,295,212.34"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-2122-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2021/22",
+   "measure": "osr_target",
+   "value": 445445551,
+   "unit": "KSh",
+   "original_text": "445,445,551.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "445,445,551.00",
+     "B (400 dpi, psm 4)": "445,445,551.00",
+     "C (150 dpi, psm 3)": "445,445,551.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-2122-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2021/22",
+   "measure": "osr_actual",
+   "value": 446379626.98,
+   "unit": "KSh",
+   "original_text": "446,379,626.98",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "446,379,626.98",
+     "B (400 dpi, psm 4)": "446,379,626.98",
+     "C (150 dpi, psm 3)": "446,379,626.98"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-2223-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2022/23",
+   "measure": "osr_target",
+   "value": 700998234,
+   "unit": "KSh",
+   "original_text": "700,998,234.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "700,998,234.00",
+     "B (400 dpi, psm 4)": "700.998,234.00",
+     "C (150 dpi, psm 3)": "700.998,234.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-2223-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2022/23",
+   "measure": "osr_actual",
+   "value": 501460021,
+   "unit": "KSh",
+   "original_text": "501,460,021.00",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "501,460,021.00",
+     "B (400 dpi, psm 4)": "501,460,021.00",
+     "C (150 dpi, psm 3)": "501,460,021.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-2324-osr_target",
+   "series": "oag-ror-table",
+   "fy": "2023/24",
+   "measure": "osr_target",
+   "value": 760998234,
+   "unit": "KSh",
+   "original_text": "760,998,234",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "760,998,234",
+     "B (400 dpi, psm 4)": "760.998,234",
+     "C (150 dpi, psm 3)": "760.998,234"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-T1-2324-osr_actual",
+   "series": "oag-ror-table",
+   "fy": "2023/24",
+   "measure": "osr_actual",
+   "value": 610364012,
+   "unit": "KSh",
+   "original_text": "610,364,012",
+   "basis": "Target and actual own-source revenue as the County Treasury reported them, reproduced in the management discussion of the Receiver of Revenue statements (Other Information: not covered by the audit opinion). The table does not say what each year includes; the FY 2023/24 and FY 2024/25 actuals include hospital revenue (FIF, Linda Mama, NHIF/SHA) and liquor licensing, as the reports state.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Table 1: OSR performance from 2013 to 2024 (management discussion and analysis; \"Source: County Treasury\")",
+   "pdf_page": 9,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "610,364,012",
+     "B (400 dpi, psm 4)": "610,364,012",
+     "C (150 dpi, psm 3)": "610,364,012"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-CASH-TOTAL",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "osr_receipts_cash",
+   "value": 757633212.4,
+   "unit": "KSh",
+   "original_text": "757,633,212.40",
+   "basis": "Audited statement, cash receipts in the year, all own-source streams including hospital fees (cash) and donations not received through the CRF.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Statement of cash flows, Total Receipts",
+   "pdf_page": 29,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "757,633,212.40",
+     "C (150 dpi, psm 3)": "757,633,212.40"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-CASH-HOSPITAL",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "hospital_fees_cash",
+   "value": 514336630,
+   "unit": "KSh",
+   "original_text": "514,336,630.00",
+   "basis": "Audited statement, cash basis.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Statement of cash flows, Hospital Fees",
+   "pdf_page": 29,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "514,336,630.00",
+     "C (150 dpi, psm 3)": "514,336,630.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-ACCRUAL-TOTAL",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "osr_revenue_accrual",
+   "value": 948124858,
+   "unit": "KSh",
+   "original_text": "948,124,858.00",
+   "basis": "Audited statement, accrual basis: revenue earned in the year including receivables, not cash received.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Statement of financial performance, Total Revenues (a)",
+   "pdf_page": 26,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "948,124,858.00",
+     "C (150 dpi, psm 3)": "948,124,858.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-ACCRUAL-HOSPITAL",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "hospital_fees_accrual",
+   "value": 643174553,
+   "unit": "KSh",
+   "original_text": "643,174,553.00",
+   "basis": "Audited statement, accrual basis.",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Statement of financial performance, Hospital Fees (note 19)",
+   "pdf_page": 26,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "643,174,553.00",
+     "C (150 dpi, psm 3)": "643,174,553.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-RECEIVABLE",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "osr_receivables",
+   "value": 189260228,
+   "unit": "KSh",
+   "original_text": "189,260,228",
+   "basis": "Receivables counted in the variance against the target (management discussion).",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Management discussion: \"includes Kshs 189,260,228 representing receivable\"",
+   "pdf_page": 11,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "189,260,228",
+     "B (400 dpi, psm 4)": "189,260,228",
+     "C (150 dpi, psm 3)": "189,260,228"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-FIF",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "hospital_fees_fif",
+   "value": 199844514,
+   "unit": "KSh",
+   "original_text": "199,844,514",
+   "basis": "Auditor's text quoting note 19 (accrual).",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Basis for qualified opinion, para. 2: Level 5 hospital (F.I.F)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "199,844;514",
+     "B (400 dpi, psm 4)": "199,844;514",
+     "C (150 dpi, psm 3)": "199,844;514"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false,
+   "note": "Printed \"199,844;514\" in the auditor's text (a semicolon as the second separator, read the same by every pass); note 19 (PDF p. 48) prints 199,844,514.00."
+  },
+  {
+   "id": "CS-ROR25-LINDAMAMA",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "hospital_fees_linda_mama",
+   "value": 6335232,
+   "unit": "KSh",
+   "original_text": "6,335,232",
+   "basis": "Auditor's text quoting note 19 (accrual).",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Basis for qualified opinion, para. 2: Level 4 hospitals (Linda Mama)",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "6,335,232",
+     "B (400 dpi, psm 4)": "6,335,232",
+     "C (150 dpi, psm 3)": "6,335,232"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-SHA",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "hospital_fees_nhif_sha",
+   "value": 436994807,
+   "unit": "KSh",
+   "original_text": "436,994,807",
+   "basis": "Auditor's text quoting note 19 (accrual).",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Basis for qualified opinion, para. 2: NHIF/Capitation/SHA",
+   "pdf_page": 17,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "436,994,807",
+     "B (400 dpi, psm 4)": "436,994,807",
+     "C (150 dpi, psm 3)": "436,994,807"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-NOTE19-FIF",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "hospital_fees_fif",
+   "value": 199844514,
+   "unit": "KSh",
+   "original_text": "199,844,514.00",
+   "basis": "Audited note (accrual).",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Note 19, Hospital Fees: Level 5 hospitals (F.I.F)",
+   "pdf_page": 48,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "199,844,514.00",
+     "B (400 dpi, psm 4)": "199,844,514.00",
+     "C (150 dpi, psm 3)": "199,844,514.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR25-NOTE19-TOTAL",
+   "series": "oag-ror",
+   "fy": "2024/25",
+   "measure": "hospital_fees_accrual",
+   "value": 643174553,
+   "unit": "KSh",
+   "original_text": "643,174,553.00",
+   "basis": "Audited note (accrual).",
+   "source_id": "OAG-ROR-2024-25",
+   "table": "Note 19, Hospital Fees: Total",
+   "pdf_page": 48,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "643,174,553.00",
+     "B (400 dpi, psm 4)": "643,174,553.00",
+     "C (150 dpi, psm 3)": "643,174,553.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-RECEIPTS",
+   "series": "oag-ror",
+   "fy": "2023/24",
+   "measure": "osr_receipts_cash",
+   "value": 610364012,
+   "unit": "KSh",
+   "original_text": "610,364,012",
+   "basis": "Audited statement of receipts and disbursements (cash), including hospital fees and liquor licences.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Statement of receipts and disbursements, Total County Own Source Revenue (FY 2023/24 column)",
+   "pdf_page": 19,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "610,364,012",
+     "C (150 dpi, psm 3)": "610,364,012"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-RECEIPTS-PRIOR",
+   "series": "oag-ror",
+   "fy": "2022/23",
+   "measure": "osr_receipts_cash",
+   "value": 501561621,
+   "unit": "KSh",
+   "original_text": "501,561,621",
+   "basis": "Audited statement (prior-year comparative), cash.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Statement of receipts and disbursements, Total County Own Source Revenue (FY 2022/23 comparative column)",
+   "pdf_page": 19,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "501,561,621",
+     "C (150 dpi, psm 3)": "501,561,621"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-HOSPITAL",
+   "series": "oag-ror",
+   "fy": "2023/24",
+   "measure": "hospital_fees_cash",
+   "value": 382072395,
+   "unit": "KSh",
+   "original_text": "382,072,395",
+   "basis": "Audited statement (cash); the auditor could not confirm this amount (basis for qualified opinion).",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Statement of receipts and disbursements, Hospital Fees (FY 2023/24)",
+   "pdf_page": 19,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "382,072,395",
+     "C (150 dpi, psm 3)": "382,072,395"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-ROR24-HOSPITAL-PRIOR",
+   "series": "oag-ror",
+   "fy": "2022/23",
+   "measure": "hospital_fees_cash",
+   "value": 273612051,
+   "unit": "KSh",
+   "original_text": "273,612,051",
+   "basis": "Audited statement (prior-year comparative), cash.",
+   "source_id": "OAG-ROR-2023-24",
+   "table": "Statement of receipts and disbursements, Hospital Fees (FY 2022/23 comparative)",
+   "pdf_page": 19,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "273,612,051",
+     "C (150 dpi, psm 3)": "273,612,051"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-T1-2425-crf_balance_bf_budget",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "crf_balance_bf_budget",
+   "value": 1660506342,
+   "unit": "KSh",
+   "original_text": "1,660,506,342.00",
+   "basis": "Revenue budget, balance brought forward.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Table 1: Revenue performance in FY 2024/2025 (management discussion)",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "1,660,506,342.00",
+     "B (400 dpi, psm 4)": "1,660,506,342.00",
+     "C (150 dpi, psm 3)": "1,660,506,342.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-T1-2425-crf_balance_bf_actual",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "crf_balance_bf_actual",
+   "value": 581041559,
+   "unit": "KSh",
+   "original_text": "581,041,559.00",
+   "basis": "Balance brought forward realised: the FY 2023/24 exchequer receivable.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Table 1: Revenue performance in FY 2024/2025 (management discussion)",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "581,041,559.00",
+     "B (400 dpi, psm 4)": "581,041,559.00",
+     "C (150 dpi, psm 3)": "581,041,559.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-T1-2425-equitable_share_budget",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "equitable_share_budget",
+   "value": 7545450410,
+   "unit": "KSh",
+   "original_text": "7,545,450,410.00",
+   "basis": "CARA allocation budgeted.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Table 1: Revenue performance in FY 2024/2025 (management discussion)",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "7,545,450,410.00",
+     "B (400 dpi, psm 4)": "7,545,450,410.00",
+     "C (150 dpi, psm 3)": "7,545,450,410.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-T1-2425-equitable_share_of_year_received",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "equitable_share_of_year_received",
+   "value": 7301472443,
+   "unit": "KSh",
+   "original_text": "7,301,472,443.00",
+   "basis": "CARA (equitable share) of FY 2024/25 received in the year.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Table 1: Revenue performance in FY 2024/2025 (management discussion)",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "7,301,472,443.00",
+     "B (400 dpi, psm 4)": "7,301,472,443.00",
+     "C (150 dpi, psm 3)": "7,301,472,443.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-T1-2425-conditional_grants_budget",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "conditional_grants_budget",
+   "value": 698115420,
+   "unit": "KSh",
+   "original_text": "698,115,420.00",
+   "basis": "Conditional grants (CGAA) budgeted.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Table 1: Revenue performance in FY 2024/2025 (management discussion)",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "698,115,420.00",
+     "B (400 dpi, psm 4)": null,
+     "C (150 dpi, psm 3)": "698,115,420.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass B (400 dpi, psm 4) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-T1-2425-conditional_grants_received_crf",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "conditional_grants_received_crf",
+   "value": 111448420.9,
+   "unit": "KSh",
+   "original_text": "111,448,420.90",
+   "basis": "Transfers from other government agencies received into the County Revenue Fund.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Table 1: Revenue performance in FY 2024/2025 (management discussion)",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "111,448,420.90",
+     "B (400 dpi, psm 4)": "111,448,420.90",
+     "C (150 dpi, psm 3)": "111,448,420.90"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-T1-2425-crf_revenue_budget_total",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "crf_revenue_budget_total",
+   "value": 10948133478,
+   "unit": "KSh",
+   "original_text": "10,948,133,478.00",
+   "basis": "Total revenue budget including the balance brought forward.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Table 1: Revenue performance in FY 2024/2025 (management discussion)",
+   "pdf_page": 10,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "10,948,133,478.00",
+     "C (150 dpi, psm 3)": "10,948,133,478.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-JUNE",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "exchequer_released_in_june",
+   "value": 1289012295,
+   "unit": "KSh",
+   "original_text": "1,289,012,295",
+   "basis": "Exchequer releases received in June 2025 (auditor's text).",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Basis for qualified opinion... Other matter 2, Late Exchequer Issues",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "1,289,012,295",
+     "B (400 dpi, psm 4)": "1,289,012,295",
+     "C (150 dpi, psm 3)": "1,289,012,295"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-TOTAL-RECEIPTS",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "crf_receipts_total_budget_statement",
+   "value": 8296603275,
+   "unit": "KSh",
+   "original_text": "8,296,603,275",
+   "basis": "Total actual receipts in the statement of comparison of budget and actual amounts (auditor's text).",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Other matter 2, Late Exchequer Issues (\"total actual receipt\")",
+   "pdf_page": 16,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "8,296,603,275",
+     "B (400 dpi, psm 4)": "8,296,603,275",
+     "C (150 dpi, psm 3)": "8,296,603,275"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-CASHFLOW-EXCHEQUER",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "exchequer_cash_received",
+   "value": 7882514002,
+   "unit": "KSh",
+   "original_text": "7,882,514,002.00",
+   "basis": "Audited statement, cash received in the year: includes the FY 2023/24 exchequer receivable of 581,041,559 released in FY 2024/25.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "11. Statement of cash flows, Exchequer releases (note 6)",
+   "pdf_page": 23,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "7,882,514,002.00",
+     "B (400 dpi, psm 4)": "7,882,514,002.00",
+     "C (150 dpi, psm 3)": "7,882,514,002.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-NOTE6-ES",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "equitable_share_of_year_received",
+   "value": 7301472443,
+   "unit": "KSh",
+   "original_text": "7,301,472,443.00",
+   "basis": "Audited note: equitable share of FY 2024/25 received.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Note 6, Exchequer releases: Equitable Share",
+   "pdf_page": 32,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": "7,301,472,443.00",
+     "B (400 dpi, psm 4)": "7,301,472,443.00",
+     "C (150 dpi, psm 3)": "7,301,472,443.00"
+    },
+    "passes_reading_it": 3,
+    "agree": true
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-APP2-Q4",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "exchequer_q4_cash",
+   "value": 3066618426,
+   "unit": "KSh",
+   "original_text": "3,066,618,426.00",
+   "basis": "Appendix to the audited statements; quarter of receipt.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Appendix 2: Analysis of receipts from the National Treasury exchequer releases, Equitable share, Quarter 4",
+   "pdf_page": 39,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "3,066,618,426.00",
+     "C (150 dpi, psm 3)": "3,066,618,426.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-APP2-TOTAL",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "exchequer_cash_received",
+   "value": 7882514002,
+   "unit": "KSh",
+   "original_text": "7,882,514,002.00",
+   "basis": "Appendix to the audited statements; total of the four quarters.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Appendix 2: Analysis of receipts from the National Treasury exchequer releases, Equitable share, Total",
+   "pdf_page": 39,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "7,882,514,002.00",
+     "C (150 dpi, psm 3)": "7,882,514,002.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-APP2-Q1",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "exchequer_q1_cash",
+   "value": 1198398213,
+   "unit": "KSh",
+   "original_text": "1,198,398,213.00",
+   "basis": "Appendix to the audited statements.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Appendix 2, Equitable share, Quarter 1",
+   "pdf_page": 39,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "1,198,398,213.00",
+     "C (150 dpi, psm 3)": "1,198,398,213.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-APP2-Q2",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "exchequer_q2_cash",
+   "value": 2412754410,
+   "unit": "KSh",
+   "original_text": "2,412,754,410.00",
+   "basis": "Appendix to the audited statements.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Appendix 2, Equitable share, Quarter 2",
+   "pdf_page": 39,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "2,412,754,410.00",
+     "C (150 dpi, psm 3)": "2,412,754,410.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  },
+  {
+   "id": "CS-CRF25-APP2-Q3",
+   "series": "oag-crf",
+   "fy": "2024/25",
+   "measure": "exchequer_q3_cash",
+   "value": 1204742953,
+   "unit": "KSh",
+   "original_text": "1,204,742,953.00",
+   "basis": "Appendix to the audited statements.",
+   "source_id": "OAG-CRF-2024-25",
+   "table": "Appendix 2, Equitable share, Quarter 3",
+   "pdf_page": 39,
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "second_reading": {
+    "rule": "Read by three independent tesseract passes of the page image; accepted when at least two show the same figure.",
+    "passes": {
+     "A (300 dpi, psm 6)": null,
+     "B (400 dpi, psm 4)": "1,204,742,953.00",
+     "C (150 dpi, psm 3)": "1,204,742,953.00"
+    },
+    "passes_reading_it": 2,
+    "agree": true,
+    "note": "Pass A (300 dpi, psm 6) did not show this figure (it misread or skipped the cell)."
+   },
+   "needs_human_check": false
+  }
+ ],
+ "arithmetic_checks": [
+  {
+   "ids": [
+    "CS-ROR25-T1-1314-osr_target",
+    "CS-ROR25-T1-1314-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "52,808,514.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-1415-osr_target",
+    "CS-ROR25-T1-1415-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "158,202,039.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-1516-osr_target",
+    "CS-ROR25-T1-1516-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "97,413,081.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-1617-osr_target",
+    "CS-ROR25-T1-1617-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "97,177,319.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-1718-osr_target",
+    "CS-ROR25-T1-1718-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "135,044,643.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-1819-osr_target",
+    "CS-ROR25-T1-1819-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "135,331,978.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-1920-osr_target",
+    "CS-ROR25-T1-1920-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "142,806,301.80",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-2021-osr_target",
+    "CS-ROR25-T1-2021-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "90,704,787.66",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-2122-osr_target",
+    "CS-ROR25-T1-2122-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "934,075.98",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-2223-osr_target",
+    "CS-ROR25-T1-2223-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "199,538,213.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-2324-osr_target",
+    "CS-ROR25-T1-2324-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "150,592,567.25",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-T1-2425-osr_target",
+    "CS-ROR25-T1-2425-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "286,428,093.60",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-1314-osr_target",
+    "CS-ROR24-T1-1314-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "52,808,514.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-1415-osr_target",
+    "CS-ROR24-T1-1415-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "158,202,039.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-1516-osr_target",
+    "CS-ROR24-T1-1516-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "97,413,081.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-1617-osr_target",
+    "CS-ROR24-T1-1617-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "97,177,319.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-1718-osr_target",
+    "CS-ROR24-T1-1718-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "135,044,643.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-1819-osr_target",
+    "CS-ROR24-T1-1819-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "135,331,978.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-1920-osr_target",
+    "CS-ROR24-T1-1920-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "142,806,301.80",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-2021-osr_target",
+    "CS-ROR24-T1-2021-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "90,704,787.66",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-2122-osr_target",
+    "CS-ROR24-T1-2122-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "934,075.98",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-2223-osr_target",
+    "CS-ROR24-T1-2223-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "199,538,213.00",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR24-T1-2324-osr_target",
+    "CS-ROR24-T1-2324-osr_actual"
+   ],
+   "rule": "target - actual = printed variance (shown in brackets as a shortfall; FY 2021/22 is a surplus)",
+   "printed_variance": "150,634,222",
+   "variance_read_twice": true,
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-CRF25-APP2-Q1",
+    "CS-CRF25-APP2-Q2",
+    "CS-CRF25-APP2-Q3",
+    "CS-CRF25-APP2-Q4",
+    "CS-CRF25-APP2-TOTAL"
+   ],
+   "rule": "quarters 1 to 4 add to the printed total (Appendix 2)",
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-CRF25-NOTE6-ES",
+    "CS-CRF25-T1-2425-crf_balance_bf_actual",
+    "CS-CRF25-CASHFLOW-EXCHEQUER"
+   ],
+   "rule": "equitable share of FY 2024/25 received (note 6) + FY 2023/24 exchequer receivable received in FY 2024/25 (Table 1, balance brought forward) = exchequer cash received in the year (statement of cash flows)",
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-FIF",
+    "CS-ROR25-LINDAMAMA",
+    "CS-ROR25-SHA",
+    "CS-ROR25-ACCRUAL-HOSPITAL"
+   ],
+   "rule": "FIF + Linda Mama + NHIF/capitation/SHA = hospital fees (accrual, note 19)",
+   "difference": 0,
+   "status": "adds"
+  },
+  {
+   "ids": [
+    "CS-ROR25-CASH-TOTAL",
+    "CS-ROR25-RECEIVABLE",
+    "CS-ROR25-ACCRUAL-TOTAL"
+   ],
+   "rule": "cash receipts + receivables against accrual revenue: the difference is not explained by receivables alone (shown, not forced)",
+   "difference": -1231417.6,
+   "status": "does not add"
+  }
+ ],
+ "comparisons": [
+  {
+   "fy": "2013/14",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2014-15",
+     "ref": "history:osr:2013/14",
+     "value_ksh_m": 99.77
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-1314-osr_actual",
+     "value_ksh_m": 100.66
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-1314-osr_actual",
+     "value_ksh_m": 100.66
+    }
+   ],
+   "spread_pct_of_smallest": 0.89
+  },
+  {
+   "fy": "2014/15",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2014-15",
+     "ref": "history:osr:2014/15",
+     "value_ksh_m": 143.33
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-1415-osr_actual",
+     "value_ksh_m": 143.27
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-1415-osr_actual",
+     "value_ksh_m": 143.27
+    }
+   ],
+   "spread_pct_of_smallest": 0.04
+  },
+  {
+   "fy": "2015/16",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2016-17",
+     "ref": "history:osr:2015/16",
+     "value_ksh_m": 127.93
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-1516-osr_actual",
+     "value_ksh_m": 132.59
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-1516-osr_actual",
+     "value_ksh_m": 132.59
+    }
+   ],
+   "spread_pct_of_smallest": 3.64
+  },
+  {
+   "fy": "2016/17",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2016-17",
+     "ref": "history:osr:2016/17",
+     "value_ksh_m": 172.84
+    },
+    {
+     "series": "county-cbrop",
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2017",
+     "ref": "siaya-county-series:CS-CBROP-1617-osr_actual",
+     "value_ksh_m": 172.82
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-1617-osr_actual",
+     "value_ksh_m": 172.82
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-1617-osr_actual",
+     "value_ksh_m": 172.82
+    }
+   ],
+   "spread_pct_of_smallest": 0.01
+  },
+  {
+   "fy": "2017/18",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2017-18",
+     "ref": "history:osr:2017/18",
+     "value_ksh_m": 139.34
+    },
+    {
+     "series": "county-cbrop",
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2018",
+     "ref": "siaya-county-series:CS-CBROP-1718-osr_actual",
+     "value_ksh_m": 127.73
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-1718-osr_actual",
+     "value_ksh_m": 134.96
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-1718-osr_actual",
+     "value_ksh_m": 134.96
+    }
+   ],
+   "spread_pct_of_smallest": 9.09
+  },
+  {
+   "fy": "2018/19",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2018-19",
+     "ref": "history:osr:2018/19",
+     "value_ksh_m": 189.67
+    },
+    {
+     "series": "county-cbrop",
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+     "ref": "siaya-county-series:CS-CBROP-1819-osr_actual",
+     "value_ksh_m": 189.67
+    },
+    {
+     "series": "county-cbrop",
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2019",
+     "ref": "siaya-county-series:CS-CBROP-1819-osr_actual-text",
+     "value_ksh_m": 174.0
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-1819-osr_actual",
+     "value_ksh_m": 189.67
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-1819-osr_actual",
+     "value_ksh_m": 189.67
+    }
+   ],
+   "spread_pct_of_smallest": 9.01
+  },
+  {
+   "fy": "2019/20",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2020-21",
+     "ref": "history:osr:2019/20",
+     "value_ksh_m": 179.43
+    },
+    {
+     "series": "county-cbrop",
+     "source_id": "siaya-brop-2019-20",
+     "ref": "siaya-county-series:CS-CBROP-1920-osr_actual",
+     "value_ksh_m": 184.25
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-1920-osr_actual",
+     "value_ksh_m": 277.19
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-1920-osr_actual",
+     "value_ksh_m": 277.19
+    }
+   ],
+   "spread_pct_of_smallest": 54.48
+  },
+  {
+   "fy": "2020/21",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2020-21",
+     "ref": "history:osr:2020/21",
+     "value_ksh_m": 332.88
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-2021-osr_actual",
+     "value_ksh_m": 329.3
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-2021-osr_actual",
+     "value_ksh_m": 329.3
+    }
+   ],
+   "spread_pct_of_smallest": 1.09
+  },
+  {
+   "fy": "2021/22",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2021-22",
+     "ref": "history:osr:2021/22",
+     "value_ksh_m": 434.38
+    },
+    {
+     "series": "county-cbrop",
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2022",
+     "ref": "siaya-county-series:CS-CBROP-2122-osr_actual",
+     "value_ksh_m": 446.38
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-2122-osr_actual",
+     "value_ksh_m": 446.38
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-2122-osr_actual",
+     "value_ksh_m": 446.38
+    }
+   ],
+   "spread_pct_of_smallest": 2.76
+  },
+  {
+   "fy": "2022/23",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2022-23",
+     "ref": "history:osr:2022/23",
+     "value_ksh_m": 402.23
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-2223-osr_actual",
+     "value_ksh_m": 501.46
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-2223-osr_actual",
+     "value_ksh_m": 501.46
+    },
+    {
+     "series": "oag-ror",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-RECEIPTS-PRIOR",
+     "value_ksh_m": 501.56
+    }
+   ],
+   "spread_pct_of_smallest": 24.69
+  },
+  {
+   "fy": "2023/24",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2023-24",
+     "ref": "history:osr:2023/24",
+     "value_ksh_m": 610.74
+    },
+    {
+     "series": "county-cbrop",
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "ref": "siaya-county-series:CS-CBROP-2324-osr_actual",
+     "value_ksh_m": 601.68
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-2324-osr_actual",
+     "value_ksh_m": 610.41
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-T1-2324-osr_actual",
+     "value_ksh_m": 610.36
+    },
+    {
+     "series": "oag-ror",
+     "source_id": "OAG-ROR-2023-24",
+     "ref": "siaya-county-series:CS-ROR24-RECEIPTS",
+     "value_ksh_m": 610.36
+    }
+   ],
+   "spread_pct_of_smallest": 1.51
+  },
+  {
+   "fy": "2024/25",
+   "measure": "own-source revenue collected",
+   "values": [
+    {
+     "series": "controller-of-budget",
+     "source_id": "cob-report-2024-25",
+     "ref": "history:osr:2024/25",
+     "value_ksh_m": 436.68
+    },
+    {
+     "series": "oag-ror-table",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-T1-2425-osr_actual",
+     "value_ksh_m": 757.63
+    },
+    {
+     "series": "oag-ror",
+     "source_id": "OAG-ROR-2024-25",
+     "ref": "siaya-county-series:CS-ROR25-CASH-TOTAL",
+     "value_ksh_m": 757.63
+    }
+   ],
+   "spread_pct_of_smallest": 73.5
+  }
+ ]
+}

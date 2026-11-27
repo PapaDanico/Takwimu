@@ -246,9 +246,17 @@ if (dist && process.argv.includes('--synthetic')) {
   const before = scan(dir);
   // Choose: per dataset, a greedy cover of the pages that show it, preferring values shown on many pages.
   const chosen = [];
+  // Datasets added on 27 Nov 2026 that no page shows yet (page wiring follows). Until then nothing of theirs may reach
+  // the built site at all: no marked value and no published copy. Remove a dataset from this list when its page lands.
+  const NOT_YET_ON_PAGES = ['siaya-budget-departments', 'siaya-county-series', 'siaya-analysis-layers'];
   rs.DATASET_IDS.forEach((d) => {
     const keys = Object.keys(before).filter((k) => k.startsWith(`${d}:`) && Object.values(before[k]).flat().every((x) => x.state !== 'rejected'));
-    ok(keys.length > 0, `synthetic: no page marks a value of ${d} (data-obs); its renderers are not wired to lib/review-status.js`);
+    if (NOT_YET_ON_PAGES.includes(d)) {
+      ok(keys.length === 0, `synthetic: ${d} is now shown on a page; remove it from NOT_YET_ON_PAGES so its values are tested`);
+      ok(!fs.existsSync(path.join(dir, 'data', `${d}.json`)), `synthetic: ${d} is published in data/ without a page test; remove it from NOT_YET_ON_PAGES`);
+      return;
+    }
+    ok(keys.length > 0,`synthetic: no page marks a value of ${d} (data-obs); its renderers are not wired to lib/review-status.js`);
     const pagesOf = (k) => Object.keys(before[k]);
     const need = new Set(keys.flatMap(pagesOf));
     const pick = [];

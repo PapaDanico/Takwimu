@@ -60,8 +60,24 @@ test('conflict osr-2019-20: the year row uses the Controller of Budget value, no
   ok(near(year('2019/20').osr_m, 179.43, 1e-9), 'years 2019/20 osr_m should be 179.43');
 });
 
+// FY 2019/20, third source (27 Nov 2026): the County Treasury table in the Auditor-General's Receiver of Revenue reports.
+test('conflict osr-2019-20-audited-table: the audited-report table value is listed beside the CoB and county values and is not plotted', () => {
+  const c = conflict('osr-2019-20-audited-table');
+  const cs = read('siaya-county-series.json');
+  const oag = cs.observations.find((o) => o.id === 'CS-ROR25-T1-1920-osr_actual');
+  const oag24 = cs.observations.find((o) => o.id === 'CS-ROR24-T1-1920-osr_actual');
+  ok(oag && oag.value === 277193698.2 && oag24 && oag24.value === oag.value, 'both Auditor-General tables must print 277,193,698.20');
+  ok(oag.second_reading && oag.second_reading.agree, 'the OCR value must be read by two passes');
+  ok(listed('osr-2019-20-audited-table', 179.43) && listed('osr-2019-20-audited-table', 184.25) && conflict('osr-2019-20-audited-table').values.some((x) => near(x.value, oag.value / 1e6, 1e-6)), 'all three values must be listed');
+  ok(near(osrPoint('2019/20').value, 179.43, 1e-9) && near(year('2019/20').osr_m, 179.43, 1e-9), 'the series keeps the Controller of Budget value');
+  ok(!near(osrPoint('2019/20').alternate.value, oag.value / 1e6, 1), 'the audited-report value must not replace the county alternate');
+  const t = cs.observations.find((o) => o.id === 'CS-ROR25-T1-1920-osr_target');
+  ok(t && near(t.value - oag.value, 142806301.8, 0.01), 'target minus actual must equal the printed variance');
+  ok(c.status === 'open' && c.verification_state === 'unresolved_no_reviewer', 'the case stays open with no reviewer');
+});
+
 // FY 2019/20 figures from other documents: both values recorded in the supplementary block, none plotted.
-const supp = (docId, measure) => {
+const supp =(docId, measure) => {
   const d = (hist.supplementary.documents || []).find((x) => x.id === docId);
   ok(d, `no supplementary document ${docId}`);
   const f = d.figures.find((x) => x.measure === measure);
