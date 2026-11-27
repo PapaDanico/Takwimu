@@ -11,6 +11,7 @@ export default function Home() {
         <h1 id="hero-h">Kenya&apos;s 47 counties, in plain numbers you can check</h1>
         <p className="lead">Budgets, spending, own revenue, unpaid bills, audit opinions and population for every county, with the source, date and confidence beside each figure. Where two official reports disagree, you see both.</p>
         <p className="coverage"><b>{PUBLISHED.length} of {COUNTIES.length} counties published so far.</b> More are added as each meets the same evidence standard.</p>
+        <p className="hero-cta"><Link className="btn" href="/counties/siaya/">See Siaya County <span aria-hidden="true">→</span></Link></p>
         <div className="hero-grid">
           <KenyaMap />
           <div>
@@ -18,7 +19,7 @@ export default function Home() {
             <ul className="published-row" aria-labelledby="published-h">
               {PUBLISHED.map((c) => <li key={c.slug}><Link className="county-card live" href={`/counties/${c.slug}/`}><span className="county-code">{String(c.code).padStart(2, '0')}</span><b>{c.name}</b><small>Published</small></Link></li>)}
             </ul>
-            <p><Link className="btn" href="/counties/">Browse all 47 counties</Link></p>
+            <p><Link className="btn ghost" href="/counties/">Browse all 47 counties</Link></p>
           </div>
         </div>
       </section>

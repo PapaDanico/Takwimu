@@ -15,6 +15,7 @@ import ImfView from '../../components/ImfView';
 import { imfViewData } from '../../lib/imf';
 import reg from '../../data/conflicts.json';
 import { Provisional } from '../../components/ObsTable';
+import OpenTarget from '../../components/OpenTarget';
 
 const imfData = imfViewData();
 // IMF against the World Bank: definitional differences, both values side by side (sweep D13).
@@ -27,6 +28,27 @@ export const metadata = {
 };
 
 const series = trendSeries();
+// Phone scanning (live review, 27 Nov 2026): each section shows its first HEAD cards; the rest open from a <details>
+// that is closed on load. Everything stays in the static HTML, and printing opens every detail.
+const HEAD = 4;
+const Rest = ({ items, label, what }) => (items.length > HEAD ? (
+  <details className="tableview more">
+    <summary>Show {items.length - HEAD} more {what}</summary>
+    <div style={{ marginTop: 12 }}><StatStrip label={`${label} (more)`} items={items.slice(HEAD)} /></div>
+  </details>
+) : null);
+const Strip = ({ items, label, what = 'indicators' }) => (
+  <>
+    <div style={{ marginTop: 14 }}><StatStrip label={label} items={items.slice(0, HEAD)} /></div>
+    <Rest items={items} label={label} what={what} />
+  </>
+);
+const More = ({ summary, children }) => (
+  <details className="tableview more">
+    <summary>{summary}</summary>
+    {children}
+  </details>
+);
 const ORDER = ['economy', 'money and banking', 'public finance', 'people', 'health', 'education', 'infrastructure', 'environment'];
 const show = (v, dec) => v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
 const inds = natIndicators.filter((x) => x.hasValues);
@@ -62,6 +84,16 @@ export default function KenyaPage() {
         sub="National indicators from 2010, grouped by sector. Each card shows the latest value and a small trend line. The trend explorer below charts any indicator, national, all counties or Siaya, in nominal or real terms, with a table." />
       <DataStamp period="2010 to 2025 (latest year varies by indicator)" checked={`Retrieved ${shortDate(nat.meta.retrieved)}`} updated="21 Nov 2026" completeness={`${inds.length} indicators with values; ${natIndicators.length - inds.length} without (see Not available)`} />
       <Provisional dataset={['counties-cob', 'imf', 'history']}>National figures come from the World Bank, the IMF and the Central Bank of Kenya; county figures were transcribed by Takwimu from Controller of Budget reports and have not yet been checked by a reviewer.</Provisional>
+      <nav className="secnav no-print" aria-label="Sections on this page"><ul>
+        <li><a href="#trends">Trend explorer</a></li><li><a href="#counties">Counties together</a></li>
+        {ORDER.map((s) => <li key={s}><a href={`#${s.replace(' ', '-')}`}>{SECTORS[s]}</a></li>)}
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#governance">Governance and elections</a></li>
+        <li><a href="#imf">IMF outlook</a></li>
+        <li><a href="#imf-wb">IMF and World Bank</a></li>
+        <li><a href="#notes">Sources and notes</a></li>
+      </ul></nav>
+      <OpenTarget />
       <section className="card no-print-break" aria-labelledby="tools-h">
         <h2 id="tools-h">Use this dashboard</h2>
         <div className="toolbar">
@@ -69,14 +101,6 @@ export default function KenyaPage() {
           <SaveView title="Kenya dashboard" />
           <PrintButton />
         </div>
-        <nav aria-label="Sections on this page" style={{ marginTop: 10 }}><ul className="toc">
-          <li><a href="#trends">Trend explorer</a></li><li><a href="#counties">Counties together</a></li>
-          {ORDER.map((s) => <li key={s}><a href={`#${s.replace(' ', '-')}`}>{SECTORS[s]}</a></li>)}
-          <li><a href="#analysis">Analysis</a></li>
-          <li><a href="#governance">Governance and elections</a></li>
-          <li><a href="#imf">IMF outlook</a></li>
-          <li><a href="#notes">Sources and notes</a></li>
-        </ul></nav>
       </section>
 
       <section className="card" id="counties" aria-labelledby="counties-h">
@@ -92,14 +116,12 @@ export default function KenyaPage() {
         return (
           <section key={sec} className="card" id={sec.replace(' ', '-')} aria-labelledby={`${sec.replace(' ', '-')}-h`}>
             <h2 id={`${sec.replace(' ', '-')}-h`}>{SECTORS[sec]}</h2>
-            <div style={{ marginTop: 14 }}>
-              <StatStrip label={`${SECTORS[sec]}: latest values`} items={list.map((x) => ({ label: x.short, value: show(x.last.value / x.div, x.dec), unit: x.dispUnit, note: `${x.last.year}; ${x.first.year}: ${show(x.first.value / x.div, x.dec)}`, spark: scaled(x) }))} />
-            </div>
+            <Strip label={`${SECTORS[sec]}: latest values`} what={`${SECTORS[sec].toLowerCase()} indicators`} items={list.map((x) => ({ label: x.short, value: show(x.last.value / x.div, x.dec), unit: x.dispUnit, note: `${x.last.year}; ${x.first.year}: ${show(x.first.value / x.div, x.dec)}`, spark: scaled(x) }))} />
             {sec === 'money and banking' ? (
       <div id="cbk">
         <h3 id="cbk-h">Central Bank of Kenya series</h3>
         <p className="lead">Exchange rate, interest rates, public debt, government revenue and spending, money supply and reserves, from the CBK&apos;s own statistics files. One reading per year is shown (December, or the fiscal year for revenue and spending); every monthly value is in the <Link href="/datasets/?source=Central%20Bank%20of%20Kenya">CBK datasets</Link>.</p>
-        <div style={{ marginTop: 14 }}><StatStrip label="Central Bank of Kenya: latest values" items={cbkItems} /></div>
+        <Strip label="Central Bank of Kenya: latest values" what="CBK series" items={cbkItems} />
         <p className="src">Source: <a href="https://www.centralbank.go.ke/statistics/">Central Bank of Kenya statistics</a>, retrieved {shortDate(extra.cbk.meta.retrieved)}; each file&apos;s SHA-256 is in the source manifest. Public debt is the national government&apos;s domestic and external debt as the CBK publishes it. GDP is the KNBS figure republished by the CBK. Reserves are &quot;usable&quot; reserves to 2024; from 2025 the bulletins drop that word. Notes: {extra.cbk.gaps.doubtful.join(' ')}</p>
       </div>
             ) : null}
@@ -109,7 +131,8 @@ export default function KenyaPage() {
       <section className="card" id="analysis" aria-labelledby="analysis-h">
         <h2 id="analysis-h">Analysis: measures worked out from the published figures</h2>
         <p className="lead">These are not published by any source: Takwimu computes them from the CBK series above. Each says how. A year is left empty when any input is missing or the year is not complete.</p>
-        <div style={{ marginTop: 14 }}><StatStrip label="Derived measures: latest values" items={anaItems} /></div>
+        <Strip label="Derived measures: latest values" what="derived measures" items={anaItems} />
+        <More summary="How each derived measure is worked out (table)">
         <TableWrap label="How each derived measure is worked out">
           <table className="data">
             <caption>How each derived measure is worked out</caption>
@@ -121,6 +144,7 @@ export default function KenyaPage() {
             </tbody>
           </table>
         </TableWrap>
+        </More>
         <p className="src">A real rate subtracts the 12-month inflation rate of the same month (an ex-post rate). Debt to GDP divides December debt by calendar-year GDP. Interest burden uses fiscal-year totals. Remittances are converted at the annual average exchange rate. All {Object.keys(extra.der.measures).length} derived measures, with formulas, download from the <Link href="/datasets/?q=derived">derived measures dataset</Link>.</p>
       </section>
       <section className="card" id="governance" aria-labelledby="governance-h">
@@ -131,6 +155,7 @@ export default function KenyaPage() {
           { label: 'Registered voters, 2022', value: voterTotal.toLocaleString('en-US'), unit: 'voters', note: 'IEBC constituency file; 22,120,458 elsewhere (see register)' },
           { label: 'Candidates, 2022 general election', value: cand.rows.find((r) => r.position === 'Total').total.toLocaleString('en-US'), unit: 'candidates', note: `${cand.rows.find((r) => r.position === 'Total').independent.toLocaleString('en-US')} independent; the printed parts add to one less (see register)` },
         ]} /></div>
+        <More summary="Candidates by elective position, 2022 (table)">
         <TableWrap label="Candidates by elective position, 2022">
           <table className="data">
             <caption>Candidates by elective position, 2022 general election</caption>
@@ -138,6 +163,7 @@ export default function KenyaPage() {
             <tbody>{cand.rows.map((r) => <tr key={r.position}><th scope="row">{r.position}</th><td className="num">{r.party_sponsored.toLocaleString('en-US')}</td><td className="num">{r.independent === null ? <span title="Shown as '-' in the IEBC table">-</span> : r.independent.toLocaleString('en-US')}</td><td className="num">{r.total.toLocaleString('en-US')}</td></tr>)}</tbody>
           </table>
         </TableWrap>
+        </More>
         <p className="src">Sources: {obs.source.citation_requested} (<a href={obs.source.landing_page}>Open Budget Survey data</a>); scores before 2017 are not comparable for oversight and participation. IEBC, <a href={extra.VOTERS.source.url}>registered voters per constituency, 2022</a> and <a href={cand.source.url}>Annual Report 2022-23</a>, Table 21. The IEBC states no reuse licence for these files. The August 2017 presidential results are not shown: that election was annulled, and the copy found is unsigned and does not add up. Registered voters by constituency are on <Link href="/compare/#voters">Compare counties</Link>.</p>
       </section>
       <ImfView data={imfData} />
@@ -164,6 +190,7 @@ export default function KenyaPage() {
       <section className="card" id="notes" aria-labelledby="notes-h">
         <h2 id="notes-h">Sources and notes</h2>
         <p className="lead">One row per national indicator. Series without values are listed under <Link href="/datasets/#gaps">Not available</Link> on the datasets page.</p>
+        <More summary={`Source, unit and missing years for all ${inds.length} indicators (table)`}>
         <TableWrap label="Sources and notes for each national indicator">
           <table className="data">
             <caption className="sr-only">Source, unit, last update, missing years and notes for each national indicator</caption>
@@ -181,6 +208,7 @@ export default function KenyaPage() {
             </tbody>
           </table>
         </TableWrap>
+        </More>
       </section>
       <OsrNote />
     </main>

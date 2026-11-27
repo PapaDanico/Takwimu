@@ -46,21 +46,28 @@ export default function ImfView({ data }) {
           ariaLabel={`${ind.name}, Kenya, IMF World Economic Outlook ${v.vintage}; projection years shown dashed and labelled IMF projection`}
           series={[{ name: `${v.vintage}: actual and IMF estimate`, color: 1, values: observed }, { name: `${v.vintage}: ${data.projectionLabel}`, color: 2, dash: true, values: projected }]} />
       )}
-      <TableWrap label={`${ind.name}, ${v.vintage} vintage, every year with its type`}>
-        <table className="data" id="imf-table">
-          <caption className="sr-only">{ind.name}, Kenya, IMF World Economic Outlook {v.vintage}: every year with its value and type</caption>
-          <thead><tr><th scope="col">Year</th><th scope="col">Value ({ind.unit})</th><th scope="col">Type</th></tr></thead>
-          <tbody>
-            {pts.map((p) => (
-              <tr key={p.year} className={p.type === 'projection' ? 'imf-proj' : undefined}>
-                <th scope="row">{p.year}</th>
-                {p.withheld ? <td data-obs={p.key} data-obs-state="rejected"><span className="muted withheld">{p.withheld}</span></td> : <td className="num" data-obs={p.key}>{p.value === null ? 'Not published' : fmt(p.value)}</td>}
-                <td>{p.type === 'projection' ? <span className="tag warn">{TYPE[p.type]}</span> : TYPE[p.type] || p.type}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </TableWrap>
+      {(() => {
+        // The full table (every year with its type) is the only view when the chart is withheld; otherwise it is one
+        // tap away, closed on load, so the dashboard stays short on a phone.
+        const table = (
+          <TableWrap label={`${ind.name}, ${v.vintage} vintage, every year with its type`}>
+            <table className="data" id="imf-table">
+              <caption className="sr-only">{ind.name}, Kenya, IMF World Economic Outlook {v.vintage}: every year with its value and type</caption>
+              <thead><tr><th scope="col">Year</th><th scope="col">Value ({ind.unit})</th><th scope="col">Type</th></tr></thead>
+              <tbody>
+                {pts.map((p) => (
+                  <tr key={p.year} className={p.type === 'projection' ? 'imf-proj' : undefined}>
+                    <th scope="row">{p.year}</th>
+                    {p.withheld ? <td data-obs={p.key} data-obs-state="rejected"><span className="muted withheld">{p.withheld}</span></td> : <td className="num" data-obs={p.key}>{p.value === null ? 'Not published' : fmt(p.value)}</td>}
+                    <td>{p.type === 'projection' ? <span className="tag warn">{TYPE[p.type]}</span> : TYPE[p.type] || p.type}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </TableWrap>
+        );
+        return negative ? table : <details className="tableview more"><summary>Every year with its type (table)</summary>{table}</details>;
+      })()}
       <p className="src">Source: International Monetary Fund, World Economic Outlook, {v.vintage} (published {v.published}), <a href={ind.sourceUrl} rel="noopener">SDMX series {ind.code}</a>; latest actual year {ind.latestActual}. IMF copyright: link and cite. Where the IMF differs from the CBK beyond definitions, both values are in the <a href="/data/#conflicts">conflict register</a>. IMF values are link and cite only, so none is offered for download: view and cite them here, and get them from the IMF at <a href={ind.sourceUrl} rel="noopener">the SDMX series</a> or <a href="https://www.imf.org/en/Publications/WEO" rel="noopener">imf.org</a> (<a href="/datasets/?q=imf-weo-kenya">catalogue entry</a>). IMF staff documents: {data.documents.map((d, i) => <span key={d.id}>{i ? '; ' : ''}<a href={d.url} rel="noopener">{d.series}</a> ({d.date})</span>)}.</p>
     </section>
   );
