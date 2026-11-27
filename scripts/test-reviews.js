@@ -273,7 +273,13 @@ if (dist && process.argv.includes('--synthetic')) {
   const outDir = path.join(root, out);
   const env = { ...process.env, TAKWIMU_SYNTHETIC_REJECTIONS: JSON.stringify(ids.map(([d, id]) => `${d}|${id}`)), TAKWIMU_DIST: out, NEXT_TELEMETRY_DISABLED: '1' };
   // next build rewrites tsconfig.json for a new distDir and .next/BUILD_ID: both are restored afterwards.
-  const keep = ['tsconfig.json', 'next-env.d.ts', '.next/BUILD_ID'].map((f) => [f, fs.existsSync(path.join(root, f)) ? fs.readFileSync(path.join(root, f)) : null]);
+  const keep = ['tsconfig.json', 'next-env.d.ts'].map((f) => [f, fs.existsSync(path.join(root, f)) ? fs.readFileSync(path.join(root, f)) : null]);
+  // The whole .next/ of the real build is set aside and restored: hosts such as Netlify's Next.js plugin read it after
+  // the build command, and a synthetic .next/ points them at dist-synthetic/ (failed deploy, 27 Nov 2026).
+  const nextDir = path.join(root, '.next');
+  const nextKeep = path.join(root, '.next-real');
+  fs.rmSync(nextKeep, { recursive: true, force: true });
+  if (fs.existsSync(nextDir)) fs.renameSync(nextDir, nextKeep);
   try {
     fs.rmSync(outDir, { recursive: true, force: true });
     execFileSync('node', ['scripts/build-data.js'], { cwd: root, env, stdio: 'ignore' });
@@ -361,9 +367,16 @@ if (dist && process.argv.includes('--synthetic')) {
     console.log(`test-reviews --synthetic: ${chosen.length} values rejected in memory across ${new Set(ids.map(([d]) => d)).size} datasets (${expected.size - chosen.length} calculations withheld with them); every page, download and data file checked in ${out}/`);
   } finally {
     keep.forEach(([f, buf]) => { if (buf === null) fs.rmSync(path.join(root, f), { force: true }); else fs.writeFileSync(path.join(root, f), buf); });
+    fs.rmSync(nextDir, { recursive: true, force: true });
+    if (fs.existsSync(nextKeep)) fs.renameSync(nextKeep, nextDir);
     fs.rmSync(outDir, { recursive: true, force: true });
     execFileSync('node', ['scripts/build-data.js'], { cwd: root, stdio: 'ignore' }); // public/data back to the real register
   }
+}
+// The real build's .next/ must not point at the synthetic copy (Netlify's Next.js plugin reads it after the build).
+if (dist && process.argv.includes('--synthetic') && fs.existsSync(path.join(root, '.next'))) {
+  const metas = fs.readdirSync(path.join(root, '.next')).filter((f) => f.endsWith('.json')).map((f) => fs.readFileSync(path.join(root, '.next', f), 'utf8'));
+  ok(!metas.some((t) => t.includes('dist-synthetic')), '.next/ still points at dist-synthetic after the synthetic build');
 }
 // The synthetic rationale must never reach the real build.
 if (dist) {
