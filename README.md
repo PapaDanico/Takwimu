@@ -2,7 +2,7 @@
 
 **Turning Data into Progress.**
 
-Civic education on Kenyan public finance and statistics, focused on trends. Siaya County is the published county (`/counties/siaya/`); national pages (`/kenya/`, `/explore/`, `/compare/`, `/datasets/`, `/stories/`) cover all 47 counties where data exists. Every figure shows its source, publication date, period, unit and confidence. Conflicting sources are shown side by side.
+Civic education on Kenyan public finance and statistics, focused on trends. Siaya County is the published county (`/counties/siaya/`); national pages (`/kenya/`, `/compare/`, `/datasets/`, `/stories/`; `/explore/` and `/trends/` redirect to `/datasets/` and `/kenya/`) cover all 47 counties where data exists. Every figure shows its source, publication date, period, unit and confidence. Conflicting sources are shown side by side.
 
 Live site: https://takwimu.netlify.app
 
@@ -10,7 +10,7 @@ Live site: https://takwimu.netlify.app
 
 - Next.js 14 static export (`output: 'export'`, `trailingSlash: true`, output in `dist/`), React 18, Tailwind 3. TypeScript is used for type checking only.
 - Hosted on Netlify only. No server, functions, database, accounts, forms, analytics or cookies.
-- Production is built from branch `claude/eager-rubin-7bpcgq` by command-line upload to Netlify, not from `main` and not by Git push. `main` holds an older, different product. See `docs/architecture-map.md`.
+- Production is `main`. Netlify is linked to this repository (27 Nov 2026) and builds `main` on every merge; branch pushes do not deploy. Work happens on `claude/eager-rubin-7bpcgq` and is merged by pull request at each release. See `docs/architecture-map.md`.
 
 ## Layout
 
@@ -49,7 +49,7 @@ npm run ops:backup-drill   # clone, build and compare from the remote branch (do
 npm run dev
 ```
 
-`npm run build` runs, in order: `test-analytics`, `validate-data` (provenance fields, JSON Schemas, sums, source-manifest SHA-256), `test-reconciliation` (one test per conflict case), `test-explore` (units), `test-derived`, `test-economy`, `test-governance`, `test-audits`, `test-fiscal-ledger`, `test-health`, `test-education`, `test-agriculture`, `test-geography`, `test-wards-geo`, `test-climate` (also checks that no phone or ID number from the PCRA's participant annex is extracted), `test-siaya-analysis`, `test-projects`, `test-programmes`, `test-research-deliverables`, `test-reviews`, `test-imf` (IMF WEO: types, vintages, comparisons), `ops/test-ops` (offline, 60 checks), `build-data`, `next build`, `check-built-html` (no `NaN`; gaps stay gaps), and `test-reviews dist --synthetic`: a second, throwaway build into `dist-synthetic/` with one synthetic rejection per dataset held in memory only (never written to `data/reviews.json`), which fails unless every page, report, download and published data file withholds the value and every calculation using it. There is no hosted CI: run every gate locally before an upload.
+`npm run build` runs, in order: `test-analytics`, `validate-data` (provenance fields, JSON Schemas, sums, source-manifest SHA-256), `test-reconciliation` (one test per conflict case), `test-explore` (units), `test-derived`, `test-economy`, `test-governance`, `test-audits`, `test-fiscal-ledger`, `test-health`, `test-education`, `test-agriculture`, `test-geography`, `test-wards-geo`, `test-climate` (also checks that no phone or ID number from the PCRA's participant annex is extracted), `test-siaya-analysis`, `test-projects`, `test-programmes`, `test-research-deliverables`, `test-reviews`, `test-review-logic`, `test-machine-checks` (second independent reading of each value; never approves), `test-corrections` (every changed value is in the corrections log), `test-imf` (IMF WEO: types, vintages, comparisons), `ops/test-ops` (offline, 60 checks), `build-data`, `next build`, `check-built-html` (no `NaN`; gaps stay gaps), `check-redirects` (no Netlify redirect hides a built page), `check-osr-links` (pages on own-source revenue link the explainer), `test-corrections dist`, and `test-reviews dist --synthetic`: a second, throwaway build into `dist-synthetic/` with one synthetic rejection per dataset held in memory only (never written to `data/reviews.json`), which fails unless every page, report, download and published data file withholds the value and every calculation using it; it restores the real `.next/` afterwards, which Netlify's Next.js plugin reads. Netlify runs only `npm run build`: run the smoke, axe, crawl, overflow, report and reproducibility checks locally before merging into `main`.
 
 The `qa:*` scripts and the smoke test use Playwright (and axe-core for `qa:axe`) installed globally, not as project dependencies; the npm scripts set `NODE_PATH=$(npm root -g)` themselves, so install them once with `npm i -g playwright axe-core && npx playwright install chromium`. Run them after `npm run build`; they serve `dist/` locally.
 
@@ -66,9 +66,18 @@ Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:c
 - No verdict labels on named individuals without a primary document and legal review.
 - No personal data is collected (`docs/data-protection-policy.md`).
 
+## Status (27 Nov 2026)
+
+- Counties: 1 of 47 published (Siaya); national pages cover all 47 where data exists.
+- Siaya values: 2,068 across 14 datasets, each with a review pack. 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty); unreviewed values are labelled "Provisional: awaiting editorial review".
+- Machine cross-checks (second reading of the cited page): 979 agree, 3 disagree (need a person to read the page image), 1,086 not checkable.
+- Fiscal ledger: 139 discrepancy cases; 45 definitional, 20 period or version, 11 probable source error, 1 resolved by source, 62 open. Both values stand in every open case.
+- Corrections register (`/corrections/`): 16 corrections, 13 source-error records (values kept as published, e.g. "31st June 2025").
+- Site: 97 pages, 89 downloadable datasets, 5 draft reports.
+
 ## Deploying
 
-Deploy once per major release (owner policy). Run all gates, upload a clean `git archive` of a gated commit to the Netlify site, then check the live pages and data files. Record the deploy in `docs/production-provenance.md`. Rollback: publish an earlier deploy in the Netlify dashboard.
+Deploy once per major release (owner policy). Run all gates on a clean `git archive` of the branch, open a pull request into `main` and merge it; Netlify builds and publishes `main`. Then check the live pages and data files and record the commit and deploy id in `docs/production-provenance.md`. Rollback: publish an earlier deploy in the Netlify dashboard.
 
 ## Documentation
 

@@ -20,10 +20,10 @@ Overdue in `freshness.md` means "a newer edition should exist by the publisher's
 
 ## Netlify remote build failure (intermittent)
 
-Netlify builds the uploaded archive with `npm run build`. Builds have failed with "exit code 2" and no log on commits that then built cleanly unchanged (14ebc25 twice; 964f39e once, then deploy 6b0173e08c671088668f7426 succeeded). The cause is not in our code.
+Netlify builds `main` with `npm run build` and its Next.js plugin (which reads `.next/`; a failure naming `dist-synthetic` means the synthetic review build did not restore `.next/`, fixed 27 Nov 2026). Builds have failed with "exit code 2" and no log on commits that then built cleanly unchanged (14ebc25 twice; 964f39e once, then deploy 6b0173e08c671088668f7426 succeeded). The cause is not in our code.
 
 1. Do not change code in response. Confirm the same commit passes every local gate.
-2. Retry the upload once, unchanged.
+2. Retry the deploy once, unchanged (Netlify dashboard: Deploys, Retry deploy).
 3. If it fails again, use the **prebuilt fallback** used once before (see `docs/production-provenance.md`, "Upload safeguard"): in the upload copy only (not committed), set the build command so that Netlify still runs `npm run build`, and if that fails, publishes the locally gated `dist/` shipped in the upload, and writes Netlify's build log to `/_diag/netlify-build-log.txt` (noindex). Example for the upload copy's `netlify.toml`:
 
    ```toml

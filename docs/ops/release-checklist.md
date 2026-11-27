@@ -1,6 +1,6 @@
 # Release checklist
 
-For a major release only (owner policy, 21 Nov 2026: commit and push often, deploy once per milestone). Production is the Netlify site `takwimu` (https://takwimu.netlify.app, site id `bf11e227-c98e-4258-aff6-d7660459aef1`), deployed by command-line upload of a clean `git archive` of branch `claude/eager-rubin-7bpcgq`, never `main` (see `docs/architecture-map.md`). Netlify then runs `npm run build`. GitHub Actions is retired; these local gates are the CI. Cloudflare and Vercel checks on the pull request are noise.
+For a major release only (owner policy, 21 Nov 2026: commit and push often, deploy once per milestone). Production is the Netlify site `takwimu` (https://takwimu.netlify.app, site id `bf11e227-c98e-4258-aff6-d7660459aef1`), deployed by command-line build of `main` by Netlify's GitHub link (since 27 Nov 2026; branch pushes do not deploy). Netlify runs only `npm run build`, so the local gates below are the CI. GitHub Actions is retired; Cloudflare and Vercel checks on pull requests are noise.
 
 Stop at the first failure. Do not deploy around a failing gate.
 
@@ -22,21 +22,21 @@ Stop at the first failure. Do not deploy around a failing gate.
    - `node scripts/ops/freshness.js` (writes `docs/ops/freshness.md`);
    - `node scripts/ops/check-sources.js` (writes `docs/ops/source-health.md`). A **changed** document blocks release of the values read from it until an editor re-reads them (see `docs/ops/editorial-sop.md`).
 
-## 3. Provenance update (before uploading)
+## 3. Provenance update (before merging)
 1. Add the release to `docs/production-provenance.md`: commit, what changed, gate results (smoke n/n, axe 0 in n runs, pages crawled, repro hash).
-2. Commit and push that change. The deployed archive must be the pushed commit (`git archive HEAD`), so the backup drill can rebuild it.
+2. Commit and push that change on the branch, so it is part of the merge.
 
 ## 4. Deploy
-1. Upload a clean archive: `git archive --format=tar HEAD` of the pushed commit (no `node_modules`, `dist`, `.next`, `public/data`).
+1. Open a pull request from `claude/eager-rubin-7bpcgq` into `main` and merge it. Netlify builds and publishes `main`.
 2. Record the new deploy id and Netlify's build result (exit code, Node version).
 3. If the remote build fails with no code change (it has happened: 6b014e0c…, 6b014f28…, 6b01733a…), follow `docs/ops/monitoring.md` "Netlify remote build failure". Do not change code to "fix" an intermittent remote failure.
 
 ## 5. Live verification
-1. Home, `/counties/siaya/`, `/kenya/`, `/explore/`, `/datasets/`, `/compare/`, `/stories/`, `/data/` load with HTTP 200.
-2. Redirects: `/trends/` and `/corrections/x` return 301 to `/kenya/` and `/data/#conflicts`.
+1. Home, `/counties/siaya/`, `/kenya/`, `/datasets/`, `/compare/`, `/stories/`, `/data/`, `/corrections/`, `/learn/` load with HTTP 200.
+2. Redirects: `/trends/` and `/explore/` return 301 to `/kenya/` and `/datasets/`; every redirect in `netlify.toml` lands on a 200 page (`check-redirects` guards this in the build).
 3. Data files: download `/data/*.json` from the live site and compare SHA-256 with the gated `dist/data/` (method in `docs/audit/production-baseline.md`). All must match.
 4. Headers on `/`: `Content-Security-Policy`, `Strict-Transport-Security`, `X-Frame-Options: DENY`; no cookies set; no third-party requests (browser network tab).
-5. `/briefs/request/` links to the WhatsApp chat; no form is present.
+5. `/reports/#briefs` links to the WhatsApp chat; no form is present.
 6. Write the result into `docs/production-provenance.md` (live commit, deploy id, date) and push.
 
 ## 6. Rollback

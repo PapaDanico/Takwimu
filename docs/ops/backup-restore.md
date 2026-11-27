@@ -31,9 +31,9 @@ Use when a release is bad or the live site was changed unexpectedly. Deploys are
 
 ## Restore from git (Netlify history lost, or new site)
 
-1. `git clone --branch claude/eager-rubin-7bpcgq https://github.com/PapaDanico/Takwimu`; check out the commit recorded as live in `docs/production-provenance.md`.
+1. `git clone --branch main https://github.com/PapaDanico/Takwimu`; check out the commit recorded as live in `docs/production-provenance.md`.
 2. `npm ci && npm run build`, then the gates in `docs/ops/release-checklist.md` section 2.
-3. Upload a clean `git archive` of that commit to the Netlify site (production comes from this branch by CLI upload, never from `main`; see `docs/architecture-map.md`). If the remote build fails intermittently, use the prebuilt fallback in `docs/ops/monitoring.md`.
+3. In the Netlify dashboard, publish the deploy of that commit from Deploys (no rebuild needed). If it is no longer listed, revert `main` to that commit by pull request; Netlify rebuilds it. If the remote build fails intermittently, see `docs/ops/monitoring.md`.
 4. Compare live `/data/*.json` hashes with the local `dist/data/`, then record the deploy.
 
 ## If git were lost
