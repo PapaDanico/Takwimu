@@ -431,7 +431,10 @@
       "verification_state": "unresolved_no_reviewer",
       "supersedes": null,
       "page_image_checked": false,
-      "effect": "Not plotted. The ten-year series keeps the Controller of Budget value 179.43 (history.json osr_series, case osr-2019-20); the Auditor-General table value is a separate series in data/siaya-county-series.json (oag-ror-table), never blended."
+      "effect": "Not plotted. The ten-year series keeps the Controller of Budget value 179.43 (history.json osr_series, case osr-2019-20); the Auditor-General table value is a separate series in data/siaya-county-series.json (oag-ror-table), never blended.",
+      "ledger_cases": [
+        "D-L131-L144"
+      ]
     },
     {
       "id": "cash-bf-2019-20",
