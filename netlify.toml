@@ -50,13 +50,13 @@
 
 [[redirects]]
   from = "/trends/"
-  to = "/kenya/"
+  to = "/kenya/#trends"
   status = 301
   force = true
 
 [[redirects]]
   from = "/trends"
-  to = "/kenya/"
+  to = "/kenya/#trends"
   status = 301
   force = true
 
