@@ -4,6 +4,7 @@ import KenyaMap from '../../../components/KenyaMap';
 import PageToc from '../../../components/PageToc';
 import { Provisional } from '../../../components/ObsTable';
 import { SIAYA_GROUPS } from '../../../lib/siaya-nav';
+import { b1 } from '../../../lib/layers';
 
 export const metadata = {
   title: 'Siaya County',
@@ -43,6 +44,7 @@ const IY_CONFLICT = { payables_assembly_opening: 'in-year-assembly-payables-2025
 const iyValue = (f) => (f.unit === '%' ? `${f.value}%` : `${f.unit} ${fmtNum(f.value)}`);
 
 export default function Home() {
+  const B1 = b1();
   const osr = siaya.own_source_revenue;
   const [primary, county, report] = osr.observations;
   const budget = siaya.budget;
@@ -74,7 +76,7 @@ export default function Home() {
             </div>
           ))}
         </nav>
-        <p className="asof"><a href="/reports/siaya-fiscal-brief.pdf" download>Download the one-page fiscal brief (PDF, A4)</a></p>
+        <p className="asof"><a href="/reports/siaya-fiscal-brief.pdf" download>Download the fiscal brief (PDF, three A4 pages)</a></p>
         <p className="asof"><span className="tag good">Checked {asOf}</span> against the Controller of Budget and Auditor-General reports</p>
         <Provisional dataset={['history', 'siaya-audits', 'siaya-fiscal-ledger']}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
       </header>
@@ -146,6 +148,11 @@ export default function Home() {
       <section className="card" id="tenyears" aria-labelledby="tenh">
         <h2 id="tenh">Ten years at a glance</h2>
         <p className="lead">The approved budget and spending for every year since FY 2013/14 are charted once, on <Link href="/counties/siaya/insights/#spending">Siaya insights</Link>, with real-terms values and the arithmetic; the share of budget spent and pending bills for every year are on <Link href="/counties/siaya/analysis/">Siaya analysis</Link>.</p>
+        <ul className="how" id="hub-layers">
+          <li>Wage bill: above the 35 per cent ceiling in {B1.above.length} of {B1.valued} years with a value (<Link href="/counties/siaya/analysis/#an-b1">wage bill and development share</Link>).</li>
+          <li>Budgets and spending of each department, FY 2014/15 to FY 2025/26: <Link href="/counties/siaya/departments/">department budgets</Link>.</li>
+          <li>Own-source revenue as four publishers print it, side by side: <Link href="/counties/siaya/ledger/#osr-series">fiscal reconciliation</Link>.</li>
+        </ul>
       </section>
 
       <section className="card" id="in-year" aria-labelledby="inyh">

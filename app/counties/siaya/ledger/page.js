@@ -7,6 +7,7 @@ import LedgerView from '../../../../components/LedgerView';
 import { ledger } from '../../../../lib/ledger';
 import { plainDeep } from '../../../../lib/plain';
 import OsrLedger, { OSR_TOC } from '../../../../components/siaya/OsrLedger';
+import { OsrSeries, OSR_SERIES_TOC } from '../../../../components/siaya/Layers';
 import PendingAtDate from '../../../../components/siaya/PendingAtDate';
 import { ClassBadge } from '../../../../components/LedgerView';
 import reg from '../../../../data/conflicts.json';
@@ -44,10 +45,12 @@ export default function SiayaLedger() {
 
       <nav aria-label="Sections on this page"><ul className="toc">
         {OSR_TOC.map(([id, t]) => <li key={id}><a href={`#${id}`}>Own-source revenue: {t}</a></li>)}
+        {OSR_SERIES_TOC.map(([id, t]) => <li key={id}><a href={`#${id}`}>Own-source revenue: {t}</a></li>)}
         <li><a href="#led-comp">Completeness</a></li><li><a href="#led-classes">Cases by class</a></li><li><a href="#pending-2025">Pending bills, 30 June 2025</a></li><li><a href="#led-sum">Open cases</a></li><li><a href="#led-cav">Not used</a></li>
       </ul></nav>
 
       <OsrLedger />
+      <OsrSeries />
 
       <section className="card" aria-labelledby="led-comp">
         <h2 id="led-comp">Which values exist: completeness by measure and year</h2>

@@ -1,4 +1,4 @@
-// Server-rendered table of Takwimu calculations (data/siaya-analysis.json): each row shows its calc_id, the result,
+// Server-rendered table of Takwimu calculations (data/siaya-analysis.json, or another calculation file via `dataset`): each row shows its calc_id, the result,
 // the formula in words, every input with a link to its source and page, values shown beside it, and the caveat.
 // A gap row shows its reason and no value.
 import TableWrap from './TableWrap';
@@ -18,7 +18,7 @@ const Input = ({ i }) => {
   );
 };
 
-export default function CalcTable({ caption, records, id, tag }) {
+export default function CalcTable({ caption, records, id, tag, dataset = 'siaya-analysis' }) {
   return (
     <TableWrap label={caption}>
       <table className="data calc" id={id}>
@@ -28,7 +28,7 @@ export default function CalcTable({ caption, records, id, tag }) {
           {records.map((r) => (
             <tr key={r.calc_id} className={r.status === 'gap' ? 'gap' : undefined}>
               <th scope="row">{r.title}<br /><small><code>{r.calc_id}</code></small>{tag ? <><br /><span className="tag warn">{tag}</span></> : null}</th>
-              <td>{r.status === 'gap' ? <span className="muted">Gap: no value</span> : <Reviewed b={badge('siaya-analysis', r.calc_id)}>{() => <><b>{n(r.result)}</b> {r.unit}</>}</Reviewed>}<br /><small>{r.period}</small></td>
+              <td>{r.status === 'gap' ? <span className="muted">Gap: no value</span> : <Reviewed b={badge(dataset, r.calc_id)}>{() => <><b>{n(r.result)}</b> {r.unit}</>}</Reviewed>}<br /><small>{r.period}</small></td>
               <td>
                 <small><b>Formula:</b> {r.formula}</small>
                 {r.status === 'gap' ? <><br /><small><b>Why there is no value:</b> {r.gap_reason}</small></> : null}

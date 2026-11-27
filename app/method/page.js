@@ -12,6 +12,7 @@ export const metadata = {
 
 import { ISSUES_URL } from '../../lib/site';
 import { KNOWN_GAPS } from '../../lib/known-gaps';
+import { DEP, SER, gaps as layerGaps } from '../../lib/layers';
 import { Provisional } from '../../components/ObsTable';
 
 const RUBRIC = [
@@ -101,6 +102,12 @@ export default function Method() {
         <p className="lead">Every gap is listed here once; other pages link to this list. Nothing is filled or estimated.</p>
         <h3 className="mini">In the Siaya ten-year series</h3>
         <ul className="steps" id="gaps">{hist.meta.gaps.map((g) => <li key={g}>{g}</li>)}<li>{hist.poverty.gap}</li><li>County health series between 2014 and 2022 are not shown; only the two survey years are available.</li></ul>
+        <h3 className="mini">In the department budgets and the county and audited series</h3>
+        <ul className="steps" id="gaps-county-documents">
+          {DEP.meta.gaps.map((g) => <li key={`d${g.fy}${g.what}`}><b>FY {g.fy}, {g.what}:</b> {g.reason}</li>)}
+          {SER.meta.gaps.map((g) => <li key={`s${g.series}${g.fy}`}><b>FY {g.fy}, {g.series === 'county-cbrop' ? 'County Treasury review series' : g.series === 'oag-ror' ? 'Auditor-General Receiver of Revenue statements' : g.series === 'oag-crf' ? 'Auditor-General County Revenue Fund statements' : g.series}:</b> {g.reason}</li>)}
+          <li>The wage bill, development share, own-source revenue, department absorption and pending bills layers have {layerGaps().layers} calculation gaps; each states its reason in its record on <Link href="/counties/siaya/analysis/#an-b1">Siaya analysis</Link> or the <Link href="/counties/siaya/ledger/#osr-b3">ledger</Link>.</li>
+        </ul>
         <h3 className="mini">Sources we could not use yet</h3>
         <div className="log" id="sources-gaps">
           {KNOWN_GAPS.map((o) => <article key={o.q} className="term-card"><p><b>{o.q}</b></p><p>{o.note}</p></article>)}

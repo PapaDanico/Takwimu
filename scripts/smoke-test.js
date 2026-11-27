@@ -53,8 +53,8 @@ const srv = http.createServer((req, res) => {
   check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'ten-year spending chart (Insights) has a table view');
   // Siaya topic pages (health, education, agriculture, wards, climate, analysis): each loads, carries the provisional
   // label, is linked from the hub, and every chart has a table view that opens with rows.
-  // analysis: share spent, unspent, pending (2), A1, A2, A3 (the ten-year spending chart is on Insights only, D05); health: + survey results moved from /profile/; wards: + sub-county populations.
-  const TOPICS = { health: 2 + 1 + 1, education: 2, agriculture: 2, wards: 1, climate: 0, analysis: 7, projects: 1, programmes: 1 };
+  // analysis: share spent, unspent, pending (2), A1, A2, A3, B1, B2, B4, B5 (the ten-year spending chart is on Insights only, D05); departments: latest budget; health: + survey results moved from /profile/; wards: + sub-county populations.
+  const TOPICS = { health: 2 + 1 + 1, education: 2, agriculture: 2, wards: 1, climate: 0, analysis: 7 + 4, departments: 1, projects: 1, programmes: 1 };
   for (const [slug, charts] of Object.entries(TOPICS)) {
     const u = `/counties/siaya/${slug}/`;
     const r = await pg.goto(base + u, { waitUntil: 'load' });
@@ -343,9 +343,12 @@ const srv = http.createServer((req, res) => {
     const rows = [...tbody.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].map((m) => [...m[1].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map((c) => flat(textOf(c[1])).trim()));
     const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const lines = ptext.split('\n');
-    const missRows = rows.filter((r) => !lines.some((l) => new RegExp(`^\\s*${r.map(esc).join('\\s+')}(\\s|$)`).test(l))).map((r) => r[0]);
+    // The brief prints a small chart beside the table (three-page brief), so a row line may start with an axis label.
+    const missRows = rows.filter((r) => !lines.some((l) => new RegExp(`(^|\\s)${r.map(esc).join('\\s+')}(\\s|$)`).test(l))).map((r) => r[0]);
     const webN = (flat(textOf(html)).match(/(\d+) disagreements between reports/) || [])[1];
-    const pdfN = (pflat.match(/(\d+) disagreements between reports/) || [])[1];
+    // Reading order (not layout): page 3 sets two columns side by side.
+    let rtext = ''; try { rtext = execFileSync('pdftotext', [pdf, '-']).toString(); } catch (e) { rtext = ''; }
+    const pdfN = (flat(rtext).match(/(\d+) disagreements between reports/) || [])[1];
     const draft = /data-draft="true"/.test(html);
     const missHeads = heads.filter((h) => !pflat.includes(h));
     check(heads.length === 4 && rows.length >= 10 && !missHeads.length && !missRows.length && webN && webN === pdfN && (!draft || (/\bDRAFT\b/.test(ptext) && /Provisional: awaiting editorial review/i.test(pflat))) && draft === rvs.DATASET_IDS.filter((d) => ['history', 'siaya-fiscal-ledger'].includes(d)).some((d) => rvs.isProvisional(rvs.counts(d))),

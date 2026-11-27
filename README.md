@@ -73,7 +73,7 @@ Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:c
 - Machine cross-checks (second reading of the cited page): 979 agree, 3 disagree (need a person to read the page image), 1,086 not checkable.
 - Fiscal ledger: 139 discrepancy cases; 45 definitional, 20 period or version, 11 probable source error, 1 resolved by source, 62 open. Both values stand in every open case.
 - Corrections register (`/corrections/`): 16 corrections, 13 source-error records (values kept as published, e.g. "31st June 2025").
-- Site: 97 pages, 89 downloadable datasets, 5 draft reports.
+- Site: 98 pages (new: /counties/siaya/departments/), 92 downloadable datasets, a three-page fiscal brief and 5 draft reports. Layers B1, B2, B4, B5 on /counties/siaya/analysis/; B3 and own-source revenue by publisher on /counties/siaya/ledger/.
 
 ## Deploying
 
