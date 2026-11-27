@@ -29,7 +29,7 @@ export default function SiayaPeople() {
   return (
     <main id="main" className="wrap page">
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="People" title="Siaya people: population, households and poverty" sub={`Siaya had ${n(pc.value)} people at the 2019 census, up from ${n(p0.value)} in 2009. That is growth of about ${cagr.toFixed(1)} per cent a year.`} path="/counties/siaya/people/" shareText="Siaya County profile: population, poverty and health" />
-      <DataStamp period="Census 2009 and 2019; surveys 2014 and 2022; poverty 2005/06 and 2015/16" checked={shortDate(co.retrieved)} updated={shortDate(SITE_UPDATED)} completeness="Census and survey years only: no annual poverty series is available. Health survey results are on the health page." />
+      <DataStamp period="Census 2009 and 2019; surveys 2014 and 2022; poverty 2005/06 and 2015/16" updated={shortDate(SITE_UPDATED)} completeness="Census and survey years only: no annual poverty series is available. Health survey results are on the health page." />
       <Provisional dataset={'history'}>Figures were transcribed by Takwimu from the census, surveys and reports and have not yet been checked by a reviewer.</Provisional>
 
       <nav aria-label="Sections on this page"><ul className="toc">
@@ -96,7 +96,7 @@ export default function SiayaPeople() {
       <section id="sources" className="card" aria-labelledby="sr-h">
         <h2 id="sr-h">Sources</h2>
         <ul className="steps">
-          <li>2019 census, age structure, households, 2022 poverty and health plan figures: {co.source}. Retrieved {shortDate(co.retrieved)}. Confidence {co.confidence} of 5.</li>
+          <li>2019 census, age structure, households, 2022 poverty and health plan figures: {co.source}. Confidence {co.confidence} of 5.</li>
           <li>2009 census and earlier projections: {hist.population.by_sub_county_2009.source}.</li>
           <li>Health survey results (KDHS 2014 and 2022) and the older HIV estimates are on <a href="/counties/siaya/health/#profile-health">Siaya health</a>.</li>
         </ul>

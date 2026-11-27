@@ -56,7 +56,6 @@ export default function Home() {
   // as in the ten-year series; the FY 2024/25 report's opening stock for the same date is the other end of the range.
   const pend24 = hist.years.find((y) => y.fy === '2023/24');
   const pend24Src = pend24.provenance.pending_total_m;
-  const asOf = shortDate(primary.retrieved);
   const auditAmber = AUD.entities.some((e) => !/^Unqualified/.test(e.opinion));
 
   return (
@@ -77,7 +76,6 @@ export default function Home() {
           ))}
         </nav>
         <p className="asof"><a href="/reports/siaya-fiscal-brief.pdf" download>Download the fiscal brief (PDF, three A4 pages)</a></p>
-        <p className="asof"><span className="tag good">Checked {asOf}</span> against the Controller of Budget and Auditor-General reports</p>
         <Provisional dataset={['history', 'siaya-audits', 'siaya-fiscal-ledger']}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
       </header>
       <PageToc items={[['where-h', 'Where Siaya is'], ['position', 'County position'], ['key-h', 'Key figures'], ['obl', 'Pending bills, arrears and stalled projects'], ['aud', 'Audit'], ['tenh', 'Ten years'], ['inyh', `FY ${IY.fy} so far`], ['learnh', 'Budget terms'], ['where', 'Sub-counties']]} />

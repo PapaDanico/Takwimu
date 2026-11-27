@@ -47,7 +47,6 @@ export default function OsrLedger() {
   const ticks = [0, 250, 500, 750, 1000];
   const share = osr.share_of_annual_target_pct;
   const ofBudgetPct = (primary.value / (budget.approved_total * 1000)) * 100;
-  const asOf = shortDate(primary.retrieved);
   const rows = [
     { o: primary, label: 'Controller of Budget', sub: 'FY 2024/25 report', y: 20, verified: true },
     { o: report, label: 'County Q4 report', sub: 'Treasury, Table 4', y: 72, verified: true },
@@ -104,7 +103,7 @@ export default function OsrLedger() {
             <TableWrap label="Own-source revenue by source">
               <table className="data">
                 <thead>
-                  <tr><th>Source</th><th>KSh million</th><th>Status</th><th>Confidence</th><th>Retrieved</th></tr>
+                  <tr><th>Source</th><th>KSh million</th><th>Status</th><th>Confidence</th></tr>
                 </thead>
                 <tbody>
                   {osr.observations.map((o) => (
@@ -113,7 +112,6 @@ export default function OsrLedger() {
                       <td className="mono">{fmt(o.value)}</td>
                       <td>{o.status}</td>
                       <td className="mono">{o.confidence} of 5</td>
-                      <td className="mono">{shortDate(o.retrieved)}</td>
                     </tr>
                   ))}
                   <tr>
@@ -121,14 +119,13 @@ export default function OsrLedger() {
                     <td className="mono">{fmtNum(osr.target.value)}</td>
                     <td>{osr.target.status}</td>
                     <td className="mono">{osr.target.confidence} of 5</td>
-                    <td className="mono">{shortDate(osr.target.retrieved)}</td>
                   </tr>
                 </tbody>
               </table>
             </TableWrap>
           </details>
           <div className="src">
-            Sources: <a href={primary.source_url}>{primary.source}</a>; <a href={report.source_url}>{report.source}</a> (PDF page 6, read from the text layer, retrieved {shortDate(report.retrieved)}); <a href={county.source_url}>{county.source}</a>. Retrieved {asOf}.
+            Sources: <a href={primary.source_url}>{primary.source}</a>; <a href={report.source_url}>{report.source}</a> (PDF page 6, read from the text layer); <a href={county.source_url}>{county.source}</a>.
             <br />
             Notes: the first solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh {fmt(FIF2425)} million from health facilities).
             The report calls this 2 per cent more than KSh {fmt(osr.previous_year.value)} million in FY 2023/24, but the previous year&apos;s report gave KSh 610.74 million for that year (see the trend below).

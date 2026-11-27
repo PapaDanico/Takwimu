@@ -248,7 +248,7 @@ export default function SiayaBrief() {
 
           <footer className="brief-foot">
             <p id="brief-sources"><b>Sources.</b> Controller of Budget, County Governments Budget Implementation Review Reports FY 2014/15 to FY 2024/25 (Parliament of Kenya library), latest: {latestReport.url.replace('https://', '')}. Auditor-General reports on Siaya, latest: {aud[0].url.replace('https://', '')}; Receiver of Revenue reports FY 2023/24 and FY 2024/25. County Treasury Budget Review and Outlook Papers and programme-based budgets (KIPPRA repository). Full list, checksums and the conflict register: {SITE_URL.replace('https://', '')}/data/ and {SITE_URL.replace('https://', '')}/counties/siaya/sources/.</p>
-            <p><b>Prepared</b> {shortDate(SITE_UPDATED)} from data retrieved {shortDate(hist.meta.retrieved)} and 27 Nov 2026. Takwimu Kenya: Turning Data into Progress. A Danico Ventures Ltd product. Independent; not affiliated with any government body. Education only, not legal, financial or audit advice. Check figures against the source documents.</p>
+            <p><b>Prepared</b> {shortDate(SITE_UPDATED)}. Takwimu Kenya: Turning Data into Progress. A Danico Ventures Ltd product. Independent; not affiliated with any government body. Education only, not legal, financial or audit advice. Check figures against the source documents.</p>
           </footer>
         </div>
       </article>
