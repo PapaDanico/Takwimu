@@ -19,7 +19,7 @@ export default function Publications() {
     <main id="main" className="wrap page">
       <header><p className="eyebrow">Publications</p><h1>Publications</h1>
       <p className="page-sub">Everything here is built only from the data files on this site. Every figure gives its source, page, period, unit and confidence. While any figure is unreviewed, a publication is marked DRAFT and says so once, at the top.</p>
-      <Provisional dataset={DATASET_IDS.filter((d) => d !== 'imf')}>The brief and the reports are built from values transcribed by Takwimu that have not yet been checked by a reviewer.</Provisional></header>
+      <Provisional dataset={DATASET_IDS.filter((d) => d !== 'imf')} /></header>
       <nav aria-label="Sections on this page"><ul className="toc">
         <li><a href="#brief">One-page brief</a></li><li><a href="#evidence">Evidence reports</a></li><li><a href="#briefs">About our briefs</a></li>
       </ul></nav>

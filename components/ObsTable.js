@@ -87,17 +87,21 @@ export default function ObsTable({ caption, rows, id, labelHead = 'Measure', sho
 // Page label. The provisional tag stays until every value is approved (lib/review-status.js isProvisional); with
 // `dataset` the review counts follow.
 // `dataset` may be one dataset id or a list (a page that shows values from several); a list's counts are summed.
+// One short form on every page (duplication sweep 2, 27 Nov 2026): the label, the page's counts and a link to the one
+// explanation of editorial review, /method/#review. Pages no longer restate who transcribed what: each figure cites
+// its own source. `children` is accepted for old call sites and not rendered.
 const countsOf = (dataset) => [].concat(dataset).map((d) => counts(d)).reduce((a, c) => Object.fromEntries(Object.keys(c).map((k) => [k, (a[k] || 0) + c[k]])), {});
 export function ReviewCounts({ dataset }) {
   const c = countsOf(dataset);
   return <small className="review-counts" data-review-counts={[].concat(dataset).join(' ')}> {countsSentence(c)}</small>;
 }
-export function Provisional({ children, dataset }) {
+export const REVIEW_HREF = '/method/#review';
+export function Provisional({ dataset, lead = null }) {
   const c = dataset ? countsOf(dataset) : null;
   return (
     <p className="provisional">
-      {isProvisional(c) ? <span className="tag warn">Provisional: awaiting editorial review</span> : null} {children}
-      {dataset ? <ReviewCounts dataset={dataset} /> : null}
+      {lead}{isProvisional(c) ? <span className="tag warn">Provisional: awaiting editorial review</span> : null}
+      {dataset ? <ReviewCounts dataset={dataset} /> : null} <a href={REVIEW_HREF}>What this means</a>
     </p>
   );
 }

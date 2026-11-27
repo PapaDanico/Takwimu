@@ -29,7 +29,7 @@ export default function SiayaWards() {
 
       <section className="card gold" aria-labelledby="wd-read">
         <h2 id="wd-read">How to read this page</h2>
-        <Provisional>The registry was compiled by Takwimu from IEBC documents and the county plan and has not yet been checked by a reviewer.</Provisional>
+        <Provisional />
         <ul className="how">
           <li><b>Official names and codes.</b> {g.official_name_rule}</li>
           <li><b>Boundaries in force.</b> {g.boundary_vintage}</li>

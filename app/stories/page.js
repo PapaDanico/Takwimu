@@ -13,7 +13,7 @@ export default function StoriesPage() {
     <main id="main" className="wrap page">
       <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Data stories" title="Data stories"
         sub="Short reads built only from the published figures. Each story shows its method and sources, and links to the data so you can check every number." />
-      <Provisional dataset={['counties-cob', 'history']}>Figures in these stories were transcribed by Takwimu from Controller of Budget reports and have not yet been checked by a reviewer.</Provisional>
+      <Provisional dataset={['counties-cob', 'history']} />
       <section className="card" aria-labelledby="list-h">
         <h2 id="list-h">Stories</h2>
         <ul className="explore-grid">

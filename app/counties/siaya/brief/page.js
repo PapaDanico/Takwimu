@@ -10,7 +10,7 @@ import { fmt, shortDate, fmtNum } from '../../../../lib/format';
 import { SITE_URL, SITE_UPDATED } from '../../../../lib/site';
 import { counts, isProvisional, PUBLIC_LABEL, badge } from '../../../../lib/review-status';
 import { latestOpinions } from '../../../../lib/audits';
-import { SIAYA_FYS } from '../../../../lib/siaya-years';
+import { SIAYA_FYS, SIAYA_OSR_BY_FY, pendingTotal as pendOf } from '../../../../lib/siaya-years';
 import { b1, b2, b5, osrSeries, refBadge, fyOf, gaps as layerGaps } from '../../../../lib/layers';
 
 export const metadata = {
@@ -21,9 +21,7 @@ export const metadata = {
 // Every fiscal year in the ten-year window, so missing years show as gaps rather than disappearing.
 const FYS = SIAYA_FYS;
 const BY_FY = Object.fromEntries(hist.years.map((y) => [y.fy, y]));
-const OSR_BY_FY = Object.fromEntries(hist.osr_series.points.map((p) => [p.fy, p]));
-// Same rule as the Insights page: a stated total wins, otherwise recurrent plus development.
-const pendOf = (y) => (y ? y.pending_total_m ?? (y.pending_development_m !== undefined && y.pending_recurrent_m !== undefined ? y.pending_development_m + y.pending_recurrent_m : undefined) : undefined);
+const OSR_BY_FY = SIAYA_OSR_BY_FY;
 const num = (v, d = 2) => (v === undefined || v === null ? '—' : fmtNum(Number(v), { dp: d }));
 const conflict = (id) => reg.conflicts.find((c) => c.id === id);
 // Years whose year-end pending-bills stock has an open discrepancy in the fiscal ledger.

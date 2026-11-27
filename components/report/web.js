@@ -11,6 +11,7 @@
 import registry from './reports.json';
 import { buildReport, SLUGS, figsOf, reviewState } from './build';
 import { source } from './model';
+import layers from '../../data/siaya-analysis-layers.json';
 
 const OWNER_ORDER = ['B', 'C', 'D', 'E', 'A'];
 // Tables whose full version lives on a sector page (the section's first canonical topic page).
@@ -71,6 +72,27 @@ function index() {
 }
 const ownerOf = (k) => [...(index().get(k) || [])].sort((a, b) => OWNER_ORDER.indexOf(a.letter) - OWNER_ORDER.indexOf(b.letter))[0];
 
+// Duplication sweep 2 (27 Nov 2026): a table or chart whose every figure is also printed in one section of a report
+// earlier in OWNER_ORDER (same data pointers, whatever the caption or grouping) is shown there only.
+let SECTION_FIGS = null;
+function sectionFigs() {
+  if (SECTION_FIGS) return SECTION_FIGS;
+  SECTION_FIGS = [];
+  SLUGS.forEach((slug) => {
+    const r = buildReport(slug);
+    r.sections.forEach((s, i) => SECTION_FIGS.push({ letter: r.meta.letter, slug, sectionId: s.id, sectionNo: i + 1, sectionTitle: s.title, ptrs: new Set(s.findings.flatMap(ptrs)) }));
+  });
+  SECTION_FIGS.sort((a, b) => OWNER_ORDER.indexOf(a.letter) - OWNER_ORDER.indexOf(b.letter));
+  return SECTION_FIGS;
+}
+function coveredBy(b, letter) {
+  if (b.type !== 'figs' && b.type !== 'chart') return null;
+  const mine = ptrs(b);
+  if (!mine.length) return null;
+  const rank = OWNER_ORDER.indexOf(letter);
+  return sectionFigs().find((s) => OWNER_ORDER.indexOf(s.letter) < rank && mine.every((p) => s.ptrs.has(p))) || null;
+}
+
 function webBlock(b, s, letter) {
   const what = b.caption || b.title || '';
   if (SECTOR_TYPES.has(b.type) && s.topics && s.topics.length) {
@@ -82,11 +104,25 @@ function webBlock(b, s, letter) {
     const n = figsOf([b]).length;
     return { type: 'moved', text: `${what}: ${n} ${n === 1 ? 'value' : 'values'}`, href: b.home.href, label: b.home.label, check: b.check || checkTexts(b) };
   }
-  const o = ownerOf(keyOf(b));
+  const o0 = ownerOf(keyOf(b));
+  const o = o0 && o0.letter !== letter ? o0 : coveredBy(b, letter);
   if (o && o.letter !== letter) {
     return { type: 'moved', text: b.type === 'p' ? 'Shared note' : `${what}${b.rows ? `: ${countOf(b)}` : ''}`, href: `/reports/${o.slug}/#${o.sectionId}`, label: `Report ${o.letter}, section ${o.sectionNo} (${o.sectionTitle})`, check: checkTexts(b) };
   }
   return b;
+}
+
+// Thresholds quoted in an interpretation (the legal rule and where it is quoted from) are set out once, beside the
+// ratios on Siaya analysis; the web edition keeps the reading and links to the rule.
+const RULES = [...new Map(layers.records.filter((r) => r.threshold && r.threshold.rule).map((r) => [r.threshold.rule, r.family])).entries()];
+const FAMILY_ANCHOR = { B1: 'an-b1', B2: 'an-b2', B3: 'osr-b3', B4: 'an-b4', B5: 'an-b5' };
+function webInterp(t) {
+  if (typeof t !== 'string') return t;
+  const hit = RULES.find(([rule]) => t.includes(rule));
+  if (!hit) return t;
+  const [rule, fam] = hit;
+  const href = fam === 'B3' ? '/counties/siaya/ledger/#osr-b3' : `/counties/siaya/analysis/#${FAMILY_ANCHOR[fam] || 'an-read'}`;
+  return { text: t.replace(rule, '').replace(/\s+/g, ' ').trim(), href, label: 'The threshold and its legal source', check: [rule] };
 }
 
 const CACHE = {};
@@ -94,7 +130,7 @@ export function buildWebReport(slug) {
   if (CACHE[slug]) return CACHE[slug];
   const r = buildReport(slug);
   if (!r) return null;
-  const sections = r.sections.map((s) => ({ ...s, findings: s.findings.map((b) => webBlock(b, s, r.meta.letter)) }));
+  const sections = r.sections.map((s) => ({ ...s, findings: s.findings.map((b) => webBlock(b, s, r.meta.letter)), interpretation: s.interpretation.map(webInterp) }));
   const shown = sections.map((s) => ({ ...s, findings: s.findings.filter((b) => b.type !== 'moved') }));
   const figs = figsOf(shown);
   const ids = [...new Set(figs.map((f) => f.source).filter(Boolean))].sort();

@@ -557,7 +557,7 @@ push({ calc_id: 'SIA-A7-pcra-other-years', family: 'A7', status: 'gap', title: '
 // own-source revenue for all 47 counties (Controller of Budget Table 2.1, FY 2023/24 and FY 2024/25). FIF is lawful
 // own-source revenue (Facility Improvement Financing Act, 2023); the share describes composition only.
 // =====================================================================================================================
-const A8_CAVEAT = 'Describes how own-source revenue is made up; it is not a judgement of collection. FIF is own-source revenue under the Facility Improvement Financing Act, 2023 (hospital and health facility receipts, including SHA/SHIF, Linda Mama and NHIF where the source includes them). Sources differ in what they put in each part; each document is a separate record.';
+const A8_CAVEAT = 'Describes how own-source revenue is made up; it is not a judgement of collection. What FIF and A-i-A are: Learn, own-source revenue (defined once there). Sources differ in what they put in each part; each document is a separate record.';
 L.years.forEach((fy) => {
   sourcesFor(['osr_fif_aia_actual', 'osr_total_actual', 'osr_ordinary_actual'], fy).forEach((sid) => {
     const key = `SIA-A8-${slug(fy)}-${slug(sid)}`;

@@ -40,7 +40,7 @@ export default function SiayaAgriculture() {
       <PageToc items={[['ag-obs', 'Observed'], ['ag-tgt', 'Targets'], ['ag-conf', 'Conflicts'], ['ag-gaps', 'Not published']]} />
       <section className="card gold" aria-labelledby="ag-read">
         <h2 id="ag-read">How to read this page</h2>
-        <Provisional dataset="siaya-agriculture">Values were transcribed by Takwimu from the KNBS Siaya County Statistical Abstract 2015 and the CIDP 2023-2027 and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-agriculture" />
         <ul className="how">
           <li id="observed-vs-targets"><b>Observed values and targets are separate.</b> {observed.length} values are reported as counted or achieved; {planned.length} are plan targets. Targets appear only in their own section and are never shown as results.</li>
           <li><b>Some printed units are unreliable.</b> Where a table&rsquo;s unit cannot be right as printed (for example tonnes equal to bag counts), the value is kept with confidence 1 and is not charted.</li>
