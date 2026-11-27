@@ -85,7 +85,7 @@ export default function KenyaPage() {
       <ExploreHead trail={[{ href: '/', label: 'Home' }]} current="Kenya dashboard" title="Kenya dashboard"
         sub="National indicators from 2010, grouped by sector. Each card shows the latest value and a small trend line. The trend explorer below charts any indicator, national, all counties or Siaya, in nominal or real terms, with a table." />
       <DataStamp period="2010 to 2025 (latest year varies by indicator)" updated="21 Nov 2026" completeness={`${inds.length} indicators with values; ${natIndicators.length - inds.length} without (see Not available)`} />
-      <Provisional dataset={['counties-cob', 'imf', 'history']}>National figures come from the World Bank, the IMF and the Central Bank of Kenya; county figures were transcribed by Takwimu from Controller of Budget reports and have not yet been checked by a reviewer.</Provisional>
+      <Provisional dataset={['counties-cob', 'imf', 'history']} />
       <nav className="secnav no-print" aria-label="Sections on this page"><ul className="toc">
         <li><a href="#trends">Trend explorer</a></li><li><a href="#counties">Counties together</a></li>
         {ORDER.map((s) => <li key={s}><a href={`#${s.replace(' ', '-')}`}>{SECTORS[s]}</a></li>)}

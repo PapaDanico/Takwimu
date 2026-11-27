@@ -125,6 +125,9 @@ const serFig = (o, ptr) => fig(SERF, `${ptr}/value`, { label: `${SER_LABEL[o.ser
 const serRows = (pred) => each(SERF, '/observations', pred).sort((a, b) => a[0].fy.localeCompare(b[0].fy)).map(([o, ptr]) => ({ f: serFig(o, ptr) }));
 const serSeries = (pred) => FYS.map((fy) => { const hit = each(SERF, '/observations', (o) => o.fy === fy && pred(o))[0]; return hit ? { ...serFig(hit[0], hit[1]), scale: 1e-6 } : null; });
 
+// Web edition: a Takwimu calculation (data/siaya-analysis.json family A<n>) is shown in full, with formula and inputs,
+// on Siaya analysis; the report's web page links there (components/report/web.js).
+const ANALYSIS_HOME = (n, label) => ({ href: `/counties/siaya/analysis/#an-${n}`, label: `Siaya analysis, ${label}` });
 const analysisRows = (pred) => each('siaya-analysis.json', '/records', (r) => pred(r) && r.status === 'value').map(([r, ptr]) => ({ f: analysisFig(r, ptr) }));
 const analysisGaps = (pred) => each('siaya-analysis.json', '/records', (r) => pred(r) && r.status === 'gap')
   .map(([r]) => ({ topic: r.title, reason: r.gap_reason, file: 'siaya-analysis.json' }));
@@ -266,11 +269,11 @@ function reportA() {
       { type: 'p', text: 'Disease burden, staffing, community health units and conflicting HIV estimates are in Report C.' },
     ], interpretation: ['Survey indicators for maternal care improved between the two surveys. They are samples, so small changes should not be over-read.'] },
     { id: 'education', title: 'Education', topics: topics('education'), findings: [
-      { type: 'figs', caption: 'Enrolment and teachers (Ministry of Education booklets, KNBS abstracts and county plan)', rows: each('siaya-education.json', '/observations', (o) => /^(primary_enrolment|secondary_enrolment|pre_primary_enrolment|gross_enrolment_rate|net_enrolment_rate|pupil_teacher_ratio)$/.test(o.indicator) && (!o.sex || o.sex === 'total')).map(([o, p]) => ({ f: eduFig(o, p) })) },
+      { type: 'figs', home: TOPIC.education, caption: 'Enrolment and teachers (Ministry of Education booklets, KNBS abstracts and county plan)', rows: each('siaya-education.json', '/observations', (o) => /^(primary_enrolment|secondary_enrolment|pre_primary_enrolment|gross_enrolment_rate|net_enrolment_rate|pupil_teacher_ratio)$/.test(o.indicator) && (!o.sex || o.sex === 'total')).map(([o, p]) => ({ f: eduFig(o, p) })) },
       { type: 'conflicts', caption: 'Education: inconsistencies kept side by side', groups: eduConflicts() },
     ], interpretation: ['Pre-primary education is devolved to the county; primary and secondary are national functions, so county budgets explain only the pre-primary and vocational figures.'] },
     { id: 'agriculture', title: 'Agriculture and fisheries', topics: topics('agriculture'), findings: [
-      { type: 'figs', caption: 'Crop production, fish landings and aquaculture as printed', rows: each('siaya-agriculture.json', '/observations', (o) => /^(production|fish_landed_quantity|aquaculture_quantity|fish_production)$/.test(o.indicator)).map(([o, p]) => ({ f: agriFig(o, p) })) },
+      { type: 'figs', home: TOPIC.agriculture, caption: 'Crop production, fish landings and aquaculture as printed', rows: each('siaya-agriculture.json', '/observations', (o) => /^(production|fish_landed_quantity|aquaculture_quantity|fish_production)$/.test(o.indicator)).map(([o, p]) => ({ f: agriFig(o, p) })) },
       { type: 'conflicts', caption: 'Agriculture: conflicting values', groups: agriConflicts() },
     ], interpretation: ['Production figures come from two sources ten years apart with different units; they are not a trend.'] },
     { id: 'climate', title: 'Climate, water and environment', topics: topics('climate'), findings: [
@@ -282,7 +285,7 @@ function reportA() {
     ], interpretation: ['Status is the latest status any document records; only one project has independent verification of completion.'] },
     { id: 'governance', title: 'Governance and audit', topics: topics('governance', 'audits'), findings: [
       { type: 'figs', caption: 'County Budget Transparency Survey (IBP Kenya)', rows: GOV.ibp_cbts.editions.flatMap((e, i) => e.items.map((it, j) => [it, j]).filter(([, j]) => typeof held('siaya-governance.json', P('ibp_cbts', 'editions', i, 'items', j, 'value')) === 'number').map(([it, j]) => ({ f: fig('siaya-governance.json', P('ibp_cbts', 'editions', i, 'items', j, 'value'), { label: `${it.measure} (${it.edition})`, period: String(it.year), confidence: it.confidence }) }))) },
-      { type: 'figs', caption: 'Auditor-General opinions', rows: opinions },
+      { type: 'figs', home: TOPIC.audits, caption: 'Auditor-General opinions', rows: opinions },
     ], interpretation: ['Transparency scores are document-availability scores, not measures of budget quality. Audit opinions describe the accounts, not individuals.'] },
     { id: 'partners', title: 'NGO, CSO and donor ecosystem', topics: topics('programmes'), findings: [
       { type: 'figs', caption: 'Programme records by geography and evidence type', rows: [
@@ -370,7 +373,7 @@ function reportB() {
         .map((m) => ({ type: 'figs', caption: `${L.measures[m].label}: every source value held`, rows: ledgerRows(m) })),
     ], interpretation: ['Budget values differ between the Controller of Budget, county documents and the Senate because they use different budget versions and scopes. The version is shown on each row.'] },
     { id: 'execution', title: 'Share of budget spent (absorption rate)', topics: topics('analysis'), findings: [
-      { type: 'figs', caption: 'Share of budget spent (absorption rate), calculated by Takwimu from one document and one budget version', rows: execRows },
+      { type: 'figs', home: ANALYSIS_HOME('a3', 'share of budget spent'), check: ['Share of budget spent: printed and recalculated'], caption: 'Share of budget spent (absorption rate), calculated by Takwimu from one document and one budget version', rows: execRows },
     ], interpretation: ['The share of the development budget spent is consistently lower than the share of the recurrent budget spent in the documents held.'] },
     { id: 'wage-bill', title: 'Wage bill beside the 35 per cent ceiling', topics: topics('analysis', 'audits'), findings: [
       { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b1', label: 'Siaya analysis, wage bill' }, check: ['Wage bill as a share of total revenue'], kind: 'line', title: 'Wage bill as a share of total revenue, per cent (Takwimu calculation from the Controller of Budget report for each year)', unit: '%', labels: FYS.map(fyLabel),
@@ -413,11 +416,11 @@ function reportB() {
     ] },
     { id: 'transfers', title: 'Transfers', topics: topics('ledger', 'analysis'), findings: [
       ...['equitable_share_budgeted', 'equitable_share_received', 'conditional_grants_budgeted', 'conditional_grants_received'].map((m) => ({ type: 'figs', caption: `${L.measures[m].label}: every source value held`, rows: ledgerRows(m) })),
-      { type: 'figs', caption: 'Transfer dependency calculated by Takwimu', rows: transferRows },
+      { type: 'figs', home: ANALYSIS_HOME('a2', 'dependence on national transfers'), check: ['Dependence on national transfers'], caption: 'Transfer dependency calculated by Takwimu', rows: transferRows },
     ], interpretation: ['National transfers finance most of the county budget in every year held.'] },
     { id: 'pending', title: 'Pending bills', topics: topics('analysis'), findings: [
       { type: 'figs', caption: `${L.measures.pending_bills_close.label}: every source value held`, rows: ledgerRows('pending_bills_close') },
-      { type: 'figs', caption: 'Pending-bill changes and roll-forward residuals calculated by Takwimu', rows: pendingRows },
+      { type: 'figs', home: ANALYSIS_HOME('a4', 'pending bills stocks and changes'), check: ['Pending bills: stocks and changes by source'], caption: 'Pending-bill changes and roll-forward residuals calculated by Takwimu', rows: pendingRows },
     ], interpretation: ['Pending-bill stocks for the same date differ by document and by whether the County Assembly is included; a roll-forward residual means the published figures do not reconcile.'] },
     { id: 'pending-burden', title: 'Pending bills as a share of revenue', topics: topics('analysis', 'ledger'), findings: [
       { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b5', label: 'Siaya analysis, pending bills burden' }, check: ['Pending bills as a share of total revenue'], kind: 'line', title: 'Pending bills at 30 June as a share of total revenue, per cent (Controller of Budget report for each year; Takwimu calculation)', unit: '%', labels: FYS.map(fyLabel),
@@ -429,7 +432,7 @@ function reportB() {
       'Trend: unpaid bills grew faster than revenue to FY 2020/21, fell to their lowest share in FY 2023/24 and rose again in FY 2024/25 on the wider definitions.',
     ] },
     { id: 'audit', title: 'Audit opinions and issues', topics: topics('audits'), findings: [
-      { type: 'figs', caption: 'Auditor-General opinions', rows: auditOpinionRows() },
+      { type: 'figs', home: TOPIC.audits, caption: 'Auditor-General opinions', rows: auditOpinionRows() },
       { type: 'records', check: findingCats.map(([cat]) => AUDIT_CATEGORY[cat] || cap(cat)), caption: 'Audit findings by category and year, County Executive (count of findings recorded)', columns: ['Category', ...AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort().map(fyLabel)],
         rows: findingCats.map(([cat]) => {
           const yrs = AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort();
@@ -486,7 +489,7 @@ function reportC() {
       { type: 'figs', caption: 'Community health units and committee functionality (baseline assessment, September 2026)', rows: grp(/^(chu|chc)-/) },
     ], interpretation: ['A small share of committees assessed were fully functional at baseline.'] },
     { id: 'financing', title: 'Financing', topics: topics('analysis', 'health'), findings: [
-      { type: 'figs', caption: 'Budget-to-service context calculated by Takwimu (context, not causation)', rows: analysisRows((r) => r.family === 'A6') },
+      { type: 'figs', home: ANALYSIS_HOME('a6', 'budget beside services'), check: ['Budget beside services: context, not causation'], caption: 'Budget-to-service context calculated by Takwimu (context, not causation)', rows: analysisRows((r) => r.family === 'A6') },
       { type: 'p', text: 'Health department budget and expenditure by year are not in the fiscal ledger; see data gaps.' },
     ], interpretation: [] },
     { id: 'programmes', title: 'NGO and donor health programmes', topics: topics('programmes'), findings: [
@@ -527,7 +530,7 @@ function reportD() {
     ], interpretation: ['Among the indicators held, doctor coverage varies most between sub-counties, and the water-access figures depend heavily on which definition a document uses.'] },
     { id: 'infrastructure', title: 'Infrastructure constraints', topics: topics('projects', 'climate'), findings: [
       { type: 'records', caption: 'Projects recorded as delayed, suspended, cancelled or of unknown status (contractors are not named)', columns: PROJECT_COLS, rows: projectRows((p) => constraintStatuses.test(p.status)) },
-      { type: 'figs', caption: 'Climate hazard exposure calculated by Takwimu', rows: analysisRows((r) => r.family === 'A7') },
+      { type: 'figs', home: ANALYSIS_HOME('a7', 'climate finance beside hotspot wards'), check: ['Climate finance beside hotspot wards'], caption: 'Climate hazard exposure calculated by Takwimu', rows: analysisRows((r) => r.family === 'A7') },
     ], interpretation: ['Stalled public works and ward-level flood and drought hotspots are constraints any investment would have to plan around.'] },
     { id: 'not-assessed', title: 'Investability screening, market size and returns', findings: [
       { type: 'p', text: 'Not assessed. The documents held publish no market sizes, prices, costs, returns or project financial models for Siaya. An investability screen would need them. This section is left empty on purpose rather than filled with assumptions.' },

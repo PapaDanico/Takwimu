@@ -43,7 +43,7 @@ export default function SiayaClimate() {
       <PageToc items={[['cl-haz', 'Hotspots by ward'], ['cl-water', 'Water and sanitation'], ['cl-money', 'Climate and water money'], ['cl-gaps', 'Not published']]} />
       <section className="card gold" aria-labelledby="cl-read">
         <h2 id="cl-read">How to read this page</h2>
-        <Provisional dataset="siaya-climate">Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-climate" />
         <ul className="how">
           <li id="no-ranking"><b>The PCRA prints no ranking of wards.</b> The Participatory Climate Risk Assessment (2023) lists hazards and hotspots ward by ward as participants described them. It does not rank wards by severity, and serial numbers in its tables are not ranks. Hotspots below are copied exactly as printed.</li>
           <li id="money-kinds"><b>Four kinds of money, never mixed.</b> An allocation is a plan, a receipt is cash received, a transfer is money moved into a fund and expenditure is money spent. None of them is an outcome. They are shown in separate tables and never added together.</li>

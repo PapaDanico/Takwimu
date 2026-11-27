@@ -4,7 +4,7 @@ import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { LineChart } from '../../../../components/Charts';
 import CalcTable from '../../../../components/CalcTable';
-import { Provisional, ReviewCounts } from '../../../../components/ObsTable';
+import { Provisional } from '../../../../components/ObsTable';
 import { masked, badge } from '../../../../lib/review-status';
 import Reviewed from '../../../../components/Reviewed';
 import { plainDeep } from '../../../../lib/plain';
@@ -97,7 +97,7 @@ export default function SiayaAnalysis() {
 
       <section className="card gold" aria-labelledby="an-read">
         <h2 id="an-read">How to read this page</h2>
-        <p className="provisional"><span className="tag warn" id="calc-label">{LABEL}</span> <span className="tag warn">Provisional: awaiting editorial review</span> Each value below is arithmetic by Takwimu on published figures; it is not printed in any report and has not yet been checked by a reviewer.<ReviewCounts dataset={['siaya-analysis', 'siaya-analysis-layers']} /></p>
+        <Provisional dataset={['siaya-analysis', 'siaya-analysis-layers']} lead={<><span className="tag warn" id="calc-label">{LABEL}</span> </>} />
         <ul className="how">
           <li><b>Every value can be traced.</b> Each has a calc_id, the formula in words and its inputs, each linked to the document and page it was read from. Open &ldquo;Inputs&rdquo; under any row.</li>
           <li><b>One source per calculation.</b> A numerator and its denominator come from the same document. Controller of Budget and county figures are kept as separate records and never mixed.</li>

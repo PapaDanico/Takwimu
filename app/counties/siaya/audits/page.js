@@ -37,7 +37,7 @@ export default function SiayaAudits() {
       <PageToc items={[['aud-op', 'Opinions by year'], ['aud-gaps', 'Years with no report'], ['aud-find', 'Findings'], ['aud-matrix', 'By category and year'], ['aud-carry', 'Carried forward'], ['aud-cav', 'Caveats']]} />
       <section className="card gold" aria-labelledby="aud-read">
         <h2 id="aud-read">How to read this page</h2>
-        <Provisional dataset="siaya-audits">Findings were transcribed by Takwimu from the reports and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-audits" />
         <ul className="how">
           <li id="not-convictions"><b>Audit findings are findings, not convictions.</b> Each finding is what the Auditor-General reported at the time, often with the county&rsquo;s management response in the same report. It is not a finding of guilt, and some matters are later explained or resolved. No individual is named on this page; offices and public bodies are named only where a finding concerns them.</li>
           <li id="oag-unavailable"><b>The Auditor-General&rsquo;s website was unavailable on 21 Nov 2026</b> (oagkenya.go.ke returned &ldquo;Under Maintenance&rdquo;). The reports used here are the copies tabled in Parliament and held in the Parliament library; each link opens that copy.</li>

@@ -92,7 +92,7 @@ function OsrExplainer() {
         </article>
       </div>
       <h3 className="mini" id="osr-publishers">How each publisher counts them</h3>
-      <Provisional dataset="siaya-fiscal-ledger">The Siaya figures in this table are read from the fiscal ledger, transcribed by Takwimu from the source documents, and have not yet been checked by a reviewer.</Provisional>
+      <Provisional dataset="siaya-fiscal-ledger" />
       <div className="tablewrap" tabIndex={0} role="region" aria-labelledby="osr-publishers">
         <table className="data" id="osr-publishers-table">
           <caption className="sr-only">How each publisher counts own-source revenue, hospital income, FIF and A-i-A</caption>

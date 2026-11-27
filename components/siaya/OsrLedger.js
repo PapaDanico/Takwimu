@@ -8,7 +8,7 @@ import cpi from '../../data/cpi.json';
 import analysis from '../../data/siaya-analysis.json';
 import { fmt, shortDate, fmtInt, fmtNum } from '../../lib/format';
 import { cagr } from '../../lib/analytics';
-import { SIAYA_FYS } from '../../lib/siaya-years';
+import { SIAYA_FYS, SIAYA_FY_SHORT, SIAYA_OSR_BY_FY } from '../../lib/siaya-years';
 
 // Own-source revenue, canonical home /counties/siaya/ledger/ (owner decision U1, 21 Nov 2026). Moved here from the
 // Siaya hub (FY 2024/25 sources side by side, composition), from the old Siaya insights page (ten-year series) and from the old
@@ -26,7 +26,7 @@ const OSR_MIX = { cob2425: A8('SIA-A8-2024-25-cob-report-2024-25'), cty2425: A8(
 const FIF2425 = ((OSR_MIX.cob2425.inputs || []).find((i) => i.role === 'fif') || {}).value;
 const BASE = '2024/25';
 const FYS = SIAYA_FYS;
-const SHORT = FYS.map((f) => f.slice(2));
+const SHORT = SIAYA_FY_SHORT;
 const years = [...hist.years].sort((a, b) => a.fy.localeCompare(b.fy));
 const by = Object.fromEntries(years.map((y) => [y.fy, y]));
 const deflator = (fy) => (cpi.fiscal_year[fy] ? cpi.fiscal_year[BASE] / cpi.fiscal_year[fy] : null);
@@ -34,7 +34,7 @@ const realOf = (v, fy) => (v == null || deflator(fy) === null ? null : v * defla
 const fin = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
 const m0 = fmtInt;
 const osrPts = hist.osr_series.points;
-const osrByFy = Object.fromEntries(osrPts.map((p) => [p.fy, p]));
+const osrByFy = SIAYA_OSR_BY_FY;
 const OSR_CAGR = (() => { const a = by['2014/15'].osr_m; const b = by[BASE].osr_m; return { nom: cagr(a, b, 10), real: cagr(a * deflator('2014/15'), b, 10) }; })();
 const osrRealMultiple = osrPts[osrPts.length - 1].value / realOf(osrPts[0].value, osrPts[0].fy);
 

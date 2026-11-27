@@ -36,7 +36,7 @@ export default function SiayaDepartments() {
 
       <section className="card gold" aria-labelledby="dp-read">
         <h2 id="dp-read">How to read this page</h2>
-        <Provisional dataset={DS}>Values were transcribed by Takwimu from the County Treasury&rsquo;s programme-based budgets and budget review papers and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset={DS} />
         <ul className="how">
           <li><b>Two kinds of document.</b> Budgets come from {pbbDocs} programme-based budgets (the estimates the Assembly approves). Final budgets and actual spending come from {cbropDocs} County Budget Review and Outlook Papers (CBROP), each reviewing one year. All values are KSh million, rounded from the whole shillings printed.</li>
           <li><b>Versions stay apart.</b> Original, supplementary and final budgets are different figures, and some include balances brought forward from the year before. Each column says which it is.</li>

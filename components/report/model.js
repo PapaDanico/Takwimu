@@ -142,6 +142,9 @@ geography.sources.forEach((d) => addSrc(d.id, d, 'siaya-geography.json'));
 series.sources.forEach((d) => addSrc(d.source_id, d, 'siaya-county-series.json'));
 departments.sources.forEach((d) => addSrc(d.source_id, d, 'siaya-budget-departments.json'));
 export const source = (id) => SRC[id] || null;
+// Documents with a record in the Siaya source library (/counties/siaya/sources/#doc-<id>), the canonical home of a
+// document's version, digest and licence on the web.
+export const LIBRARY_IDS = new Set(library.documents.map((d) => d.document_id));
 export const ECON_SRC = Object.fromEntries(economy.sources.map((s) => [s.vintage, s.document_id]));
 
 // Snapshot ID (components/report/snapshot.js): SHA-256 over the input files, the review register, the documents it

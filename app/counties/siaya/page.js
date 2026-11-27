@@ -76,7 +76,7 @@ export default function Home() {
           ))}
         </nav>
         <p className="asof"><a href="/reports/siaya-fiscal-brief.pdf" download>Download the fiscal brief (PDF, three A4 pages)</a></p>
-        <Provisional dataset={['history', 'siaya-audits', 'siaya-fiscal-ledger']}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset={['history', 'siaya-audits', 'siaya-fiscal-ledger']} />
       </header>
       <PageToc items={[['where-h', 'Where Siaya is'], ['position', 'County position'], ['key-h', 'Key figures'], ['obl', 'Pending bills, arrears and stalled projects'], ['aud', 'Audit'], ['tenh', 'Ten years'], ['inyh', `FY ${IY.fy} so far`], ['learnh', 'Budget terms'], ['where', 'Sub-counties']]} />
       <section className="card" aria-labelledby="where-h">

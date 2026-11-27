@@ -36,9 +36,9 @@ export default function Method() {
   return (
     <main id="main" className="wrap page">
       <PageHead eyebrow="Method" title="How Takwimu handles numbers" sub="What we publish, where it comes from, how we check it, and what we do when two sources disagree." path="/method/" shareText="How Takwimu Kenya handles numbers" />
-      <Provisional dataset={'history'}>Figures quoted on this page were transcribed by Takwimu from the reports and have not yet been checked by a reviewer.</Provisional>
+      <Provisional dataset={'history'} />
       <nav aria-label="Sections on this page"><ul className="toc">
-        <li><a href="#sources">Sources</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#checks">Checks</a></li><li><a href="#conflicts">Disagreements</a></li><li><a href="#corrections">Corrections</a></li><li><a href="#prices">Prices</a></li><li><a href="#years">Fiscal years</a></li><li><a href="#people">Named people</a></li><li><a href="#known-gaps">Gaps</a></li>
+        <li><a href="#sources">Sources</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#checks">Checks</a></li><li><a href="#conflicts">Disagreements</a></li><li><a href="#review">Editorial review</a></li><li><a href="#corrections">Corrections</a></li><li><a href="#prices">Prices</a></li><li><a href="#years">Fiscal years</a></li><li><a href="#people">Named people</a></li><li><a href="#known-gaps">Gaps</a></li>
       </ul></nav>
 
       <section id="sources" className="card" aria-labelledby="so-h">
@@ -77,9 +77,12 @@ export default function Method() {
 
       <section id="conflicts" className="card" aria-labelledby="cn-h">
         <h2 id="cn-h">When sources disagree</h2>
-        <p>Both values are shown side by side with their sources. We never average them or pick a winner without evidence. Current examples:</p>
-        <ul className="steps">{hist.osr_series.conflicts.map((c) => <li key={c}>{c}</li>)}<li>FY 2023/24 own-source revenue: KSh 610.74 million (FY 2023/24 report) against KSh 427.95 million (FY 2024/25 report).</li><li>Pending bills at 30 June 2021: KSh 1,061 million (FY 2020/21 report) against KSh 602 million (FY 2021/22 report).</li></ul>
-        <p>All open items are on the <Link href="/data/#conflicts">Data page</Link>.</p>
+        <p>Both values are shown side by side with their sources. We never average them or pick a winner without evidence. Every open case, with both readings and their documents, is in one place: the <Link href="/data/#conflicts">conflict register</Link>.</p>
+      </section>
+
+      <section id="review" className="card" aria-labelledby="rv-h">
+        <h2 id="rv-h">Editorial review</h2>
+        <p>Every value Takwimu transcribed or calculated carries the provisional label, as at the top of this page, until a reviewer, identified by role only, checks it against the source page and records a decision. Each page states this once, at the top, with the count of its values in each review state; the source of each value is cited beside it. A value is shown as approved only when that record names it and the source document has not changed since; a rejected value is withdrawn with the reason. A value marked disputed is one where the documents disagree: both readings are kept (see <a href="#conflicts">when sources disagree</a>). Totals across every dataset are on the <Link href="/datasets/#review">Datasets page</Link>; how the reports show review state is in the <Link href="/reports/method/#review">reports appendix</Link>.</p>
       </section>
 
       <section id="corrections" className="card" aria-labelledby="cor-h">

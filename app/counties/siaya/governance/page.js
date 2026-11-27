@@ -37,7 +37,7 @@ export default function SiayaGovernance() {
       <PageHead county={{ slug: 'siaya', name: 'Siaya' }} eyebrow="Transparency" title="Budget transparency and public participation"
         sub="How many of Siaya County’s key budget documents were publicly available, how much they said about public participation, and what a county peer review found about participation, civic education and feedback."
         path="/counties/siaya/governance/" shareText="Siaya: budget transparency and public participation" />
-      <Provisional dataset={'siaya-governance'}>Scores and findings were transcribed by Takwimu from the IBP and APRM reports and have not yet been checked by a reviewer.</Provisional>
+      <Provisional dataset={'siaya-governance'} />
       <Abbrs list={['CBTS']} />
 
       <PageToc items={[['gov-cbts', 'Budget transparency survey'], ['gov-conf', 'Where editions disagree'], ['gov-aprm', 'County peer review'], ['gov-cav', 'Caveats']]} />

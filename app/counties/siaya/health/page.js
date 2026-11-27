@@ -49,7 +49,7 @@ export default function SiayaHealth() {
 
       <section className="card gold" aria-labelledby="hl-read">
         <h2 id="hl-read">How to read this page</h2>
-        <Provisional dataset="siaya-health">Values were transcribed by Takwimu from the source documents and have not yet been checked by a reviewer.</Provisional>
+        <Provisional dataset="siaya-health" />
         <ul className="how">
           <li><b>Estimates are not measurements.</b> County HIV figures are modelled estimates. The national HIV council says estimates from different model rounds are not directly comparable, so each round is shown on its own and no trend line is drawn across them.</li>
           <li><b>Surveys are samples.</b> KDHS county values rest on small samples and carry a margin of error; small differences should not be over-read.</li>
