@@ -5,6 +5,7 @@ import {
   DATA, P, get, find, each, fig, registry, snapshot, dataDate, ECON_SRC, source, held,
 } from './model';
 import { badge } from '../../lib/review-status';
+import { CATEGORY as AUDIT_CATEGORY } from '../../lib/audits';
 import { latestOpinion, smallCountSentence } from './rules';
 
 const L = DATA['siaya-fiscal-ledger.json'];
@@ -145,6 +146,7 @@ const ledgerPairs = (pred = () => true) => each('siaya-fiscal-ledger.json', '/di
     b: fig('siaya-fiscal-ledger.json', `${ptr}/claim_b/value_ksh_m`, { unit: 'KSh million', period: d.period, source: d.source_b.source_id, ...fromObs(ob), page: d.source_b.pdf_page ?? (ob && ob.rec.pdf_page) }),
     diff: fig('siaya-fiscal-ledger.json', `${ptr}/difference/pct_of_smaller`, { unit: '% of the smaller value', period: d.period, source: d.source_b.source_id, page: d.source_b.pdf_page, confidence: minConf([oa && oa.rec, ob && ob.rec]) }),
     note: (d.possible_basis_mismatch || []).join(' '),
+    id: d.case_id, // not printed; the web edition checks that the ledger page holds the case
   };
 });
 
@@ -343,7 +345,7 @@ function reportB() {
     ], interpretation: ['Pending-bill stocks for the same date differ by document and by whether the County Assembly is included; a roll-forward residual means the published figures do not reconcile.'] },
     { id: 'audit', title: 'Audit opinions and issues', topics: topics('audits'), findings: [
       { type: 'figs', caption: 'Auditor-General opinions', rows: auditOpinionRows() },
-      { type: 'records', caption: 'Audit findings by category and year, County Executive (count of findings recorded)', columns: ['Category', ...AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort().map(fyLabel)],
+      { type: 'records', check: findingCats.map(([cat]) => AUDIT_CATEGORY[cat] || cap(cat)), caption: 'Audit findings by category and year, County Executive (count of findings recorded)', columns: ['Category', ...AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort().map(fyLabel)],
         rows: findingCats.map(([cat]) => {
           const yrs = AUD.findings.reduce((a, f) => (a.includes(f.fy) ? a : [...a, f.fy]), []).sort();
           return [cap(cat), ...yrs.map((fy) => (AUD.recurrence_by_category.county_executive[cat][fy] !== undefined

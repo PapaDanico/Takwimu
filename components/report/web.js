@@ -17,15 +17,16 @@ const OWNER_ORDER = ['B', 'C', 'D', 'E', 'A'];
 const SECTOR_TYPES = new Set(['records', 'conflicts', 'pairs']);
 // Gap lists printed in full on a site page (checked against the built page by scripts/test-reports.js).
 export const GAP_HOME = {
-  'history.json': { href: '/method/#known-gaps', label: 'Method: known gaps in the ten-year series' },
-  'siaya-health.json': { href: '/counties/siaya/health/#hl-gaps', label: 'Siaya health: gaps and next steps' },
-  'siaya-education.json': { href: '/counties/siaya/education/#ed-gaps', label: 'Siaya education: gaps' },
-  'siaya-agriculture.json': { href: '/counties/siaya/agriculture/#ag-gaps', label: 'Siaya agriculture: gaps' },
-  'siaya-climate.json': { href: '/counties/siaya/climate/#cl-gaps', label: 'Siaya climate: gaps' },
-  'siaya-economy.json': { href: '/counties/siaya/economy/#eco-gaps', label: 'Siaya economy: gaps' },
-  'siaya-programmes.json': { href: '/counties/siaya/programmes/#pg-gaps', label: 'Siaya programmes: gaps' },
-  'siaya-projects.json': { href: '/counties/siaya/projects/#pr-gaps', label: 'Siaya project register: gaps' },
-  'siaya-fiscal-ledger.json': { href: '/counties/siaya/ledger/#gap-reasons', label: 'Siaya fiscal ledger: missing values and reasons' },
+  'history.json': { href: '/method/#known-gaps', label: 'Method, known gaps' },
+  'siaya-health.json': { href: '/counties/siaya/health/#hl-gaps', label: 'Siaya health, gaps' },
+  'siaya-education.json': { href: '/counties/siaya/education/#ed-gaps', label: 'Siaya education, gaps' },
+  'siaya-agriculture.json': { href: '/counties/siaya/agriculture/#ag-gaps', label: 'Siaya agriculture, gaps' },
+  'siaya-climate.json': { href: '/counties/siaya/climate/#cl-gaps', label: 'Siaya climate, gaps' },
+  'siaya-economy.json': { href: '/counties/siaya/economy/#eco-gaps', label: 'Siaya economy, gaps' },
+  'siaya-programmes.json': { href: '/counties/siaya/programmes/#pg-gaps', label: 'Siaya programmes, gaps' },
+  'siaya-projects.json': { href: '/counties/siaya/projects/#pr-gaps', label: 'Siaya projects, gaps' },
+  'siaya-audits.json': { href: '/counties/siaya/audits/#aud-gaps', label: 'Siaya audits, years with no report' },
+  'siaya-fiscal-ledger.json': { href: '/counties/siaya/ledger/#gap-reasons', label: 'Siaya ledger, missing values' },
 };
 
 const ptrs = (b) => figsOf([b]).map((f) => `${f.file}#${f.ptr}`);
@@ -36,15 +37,17 @@ function keyOf(b) {
     case 'list': return `list|${b.items.map(plain).join('\n')}`;
     case 'records': return `records|${b.caption}|${JSON.stringify(b.rows.map((r) => (r[0] && typeof r[0] === 'object' ? ptrs({ r }) : String(r[0]))))}|${ptrs(b)}`;
     case 'conflicts': return `conflicts|${b.groups.map((g) => g.topic).join('|')}|${ptrs(b)}`;
-    default: return `${b.type}|${b.caption || b.title || ''}|${ptrs(b)}`;
+    // Tables and charts: the same figures are the same block, whatever the caption.
+    default: return `${b.type === 'chart' ? 'chart' : 'figs'}|${ptrs(b).sort().join(',')}`;
   }
 }
 // Texts the linked page must also show (scripts/test-reports.js): row keys, case topics or the note itself.
 function checkTexts(b) {
+  if (b.check) return b.check;
   if (b.type === 'records') return b.rows.map((r) => r[0]).filter((c) => typeof c === 'string');
   const head = (t) => String(t || '').trim().slice(0, 60);
   if (b.type === 'conflicts') return b.groups.map((g) => head(g.note)).filter((t) => t.length > 20);
-  if (b.type === 'pairs') return b.rows.map((r) => head(r.note)).filter((t) => t.length > 20);
+  if (b.type === 'pairs') return b.rows.map((r) => r.id).filter(Boolean);
   if (b.type === 'p') return [b.text];
   return figsOf([b]).map((f) => f.value).filter((v) => typeof v === 'string' && v.length > 3);
 }

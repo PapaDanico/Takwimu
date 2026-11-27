@@ -12,6 +12,8 @@ import { fmtNum } from '../../lib/format';
 import { licenceLabel, TERMS_HREF } from '../../lib/licence';
 
 export const METHOD_HREF = '/reports/method/';
+// Web edition: a document link reads as its host (the PDF prints the full address).
+const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return 'link'; } };
 const num = (v) => fmtNum(v, { dp: 6 });
 const fmtValue = (f) => {
   if (f.suppress) return 'Suppressed (fewer than 10)';
@@ -219,7 +221,7 @@ function WebGaps({ groups }) {
   const listed = groups.filter((g) => !g.home);
   return (
     <>
-      {linked.length ? <ul className="rp-list">{linked.map((g) => <li key={g.file} data-gap-home={g.home.href} data-check={JSON.stringify(g.rows.map((x) => x.reason))}><span className="mono">data/{g.file}</span>: {g.rows.length} {g.rows.length === 1 ? 'gap' : 'gaps'}, each with its reason, at <a href={g.home.href}>{g.home.label}</a>.</li>)}</ul> : null}
+      {linked.length ? <ul className="rp-list">{linked.map((g) => <li key={g.file} data-gap-home={g.home.href} data-check={JSON.stringify(g.rows.map((x) => x.reason))}><span className="mono">data/{g.file}</span>: {g.rows.length} {g.rows.length === 1 ? 'gap' : 'gaps'} (<a href={g.home.href}>{g.home.label}</a>)</li>)}</ul> : null}
       {listed.length ? (
         <table className="rp-table gaps">
           <colgroup><col style={{ width: '30%' }} /><col style={{ width: '52%' }} /><col style={{ width: '18%' }} /></colgroup>
@@ -318,7 +320,7 @@ export default function Report({ r, edition = 'web' }) {
               <th scope="row" className="mono">{s.id}</th>
               <td>{s.title}. {s.publisher || 'Publisher not stated'}. {s.date || 'Date not stated'}.{s.period ? ` Period: ${s.period}.` : ''}</td>
               <td className="mono hash">{s.sha256 || 'not recorded'}</td>
-              <td className="url">{s.url ? <a href={s.url}>{s.url}</a> : 'Not recorded'}</td>
+              <td className="url">{s.url ? <a href={s.url}>{web ? hostOf(s.url) : s.url}</a> : 'Not recorded'}</td>
               <td>{licenceLabel(s.licence).label} (<a href={TERMS_HREF}>terms</a>)</td>
             </tr>
           ))}</tbody>

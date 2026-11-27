@@ -53,7 +53,7 @@ npm run dev
 
 The `qa:*` scripts and the smoke test use Playwright (and axe-core for `qa:axe`) installed globally, not as project dependencies; the npm scripts set `NODE_PATH=$(npm root -g)` themselves, so install them once with `npm i -g playwright axe-core && npx playwright install chromium`. Run them after `npm run build`; they serve `dist/` locally.
 
-Brief PDF: after a build, `NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js`, then build again. Report PDFs: `npm run build`, `npm run reports:pdf`, `npm run build`, then `npm run test:reports`, which must pass before any deploy (release gate).
+Brief PDF: after a build, `NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js`, then build again. Report PDFs (printed from the full print edition at `/reports/<slug>/print/`; the web page `/reports/<slug>/` shows what is unique to each report and links the rest): `npm run build`, `npm run reports:pdf`, `npm run build`, then `npm run test:reports`, which must pass before any deploy (release gate).
 
 Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:check-sources`, `npm run ops:freshness`, `npm run ops:backup-drill`.
 
