@@ -24,7 +24,10 @@ const INDEX = arg('--index');
 const JOBS = Number(arg('--jobs', '4'));
 const CACHE = arg('--cache', path.join(os.tmpdir(), 'takwimu-machine-check'));
 const TODAY = arg('--date', new Date().toISOString().slice(0, 10));
-if (!INDEX) { console.error('usage: node scripts/machine-check.js --index <sha256 index>'); process.exit(2); }
+if (!INDEX) { console.error('usage: node scripts/machine-check.js --index <sha256 index> [--keep-existing]'); process.exit(2); }
+const KEEP = process.argv.includes('--keep-existing');
+const EXISTING = {};
+if (KEEP) { try { JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'machine-checks.json'), 'utf8')).checks.forEach((c) => { EXISTING[`${c.dataset}|${c.id}`] = c; }); } catch (e) { /* none yet */ } }
 fs.mkdirSync(CACHE, { recursive: true });
 const FILE = {};
 fs.readFileSync(INDEX, 'utf8').split('\n').filter(Boolean).forEach((l) => { const m = l.match(/^([0-9a-f]{64})\s+(.+)$/); if (m && !FILE[m[1]]) FILE[m[1]] = m[2]; });
@@ -149,7 +152,7 @@ const entries = pack.all();
 const plan = entries.map((e) => {
   const s = e.source[0];
   const base = { dataset: e.dataset, id: e.id };
-  if (e.dataset === 'siaya-analysis') return { ...base, result: 'not checkable', reason: 'Calculation by Takwimu: its inputs are checked where they are stored.' };
+  if (e.dataset === 'siaya-analysis' || e.dataset === 'siaya-analysis-layers') return { ...base, result: 'not checkable', reason: 'Calculation by Takwimu: its inputs are checked where they are stored.' };
   if (typeof e.value !== 'number') return { ...base, result: 'not checkable', reason: 'Not a single number (text, a list of amounts or a series).' };
   if (!s || !s.sha256) return { ...base, result: 'not checkable', reason: 'No stored copy of the source document (no SHA-256).' };
   if (!FILE[s.sha256]) return { ...base, result: 'not checkable', reason: 'The stored copy was not available to the check.' };
@@ -159,7 +162,9 @@ const plan = entries.map((e) => {
 });
 
 async function main() {
-  const todo = plan.filter((p) => p.sha);
+  // --keep-existing: a value already checked keeps its result (same document hash and page, or no stored copy now).
+  const kept = (p) => { const e = KEEP && EXISTING[`${p.dataset}|${p.id}`]; return e && (!p.sha ? p.reason === 'The stored copy was not available to the check.' : e.source_sha256 === p.sha && e.pdf_page === p.page) ? e : null; };
+  const todo = plan.filter((p) => p.sha && !kept(p));
   // Decide the second method per value.
   todo.forEach((p) => {
     const layer = textLayer(p.sha, p.page);
@@ -180,6 +185,7 @@ async function main() {
   async function worker() { while (queue.length) { const [sha, page, psm] = queue.shift().split('|'); await ocr(sha, Number(page), Number(psm)); done += 1; if (done % 10 === 0) console.error(`ocr ${done}/${jobs.length}`); } }
   await Promise.all(Array.from({ length: JOBS }, worker));
   const results = await Promise.all(plan.map(async (p) => {
+    if (kept(p)) return kept(p);
     if (!p.sha) return { dataset: p.dataset, id: p.id, result: p.result, method: null, reason: p.reason };
     const read1 = async (m) => (m === 'pdf-text-layer' ? textLayer(p.sha, p.page) : ocr(p.sha, p.page, Number(m.slice(-1))));
     let text = await read1(p.method);
