@@ -67,7 +67,7 @@ function LinkList({ links }) {
   );
 }
 
-export default function SiteFooter({ asOf }) {
+export default function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="wrap">
@@ -113,7 +113,7 @@ export default function SiteFooter({ asOf }) {
             the Office of the Auditor-General, the Kenya National Bureau of Statistics or any
             county government. Figures are read from published reports and may be delayed, rounded or
             misread from scanned pages. Check any number against the source document before relying
-            on it. Last checked {asOf}.
+            on it. Each figure shows its own source and the date it was checked.
           </p>
           <div className="footer-credit">
             <img src="/brand/danico-ventures-96.webp" srcSet="/brand/danico-ventures-96.webp 1x, /brand/danico-ventures.webp 2x" alt="Danico Ventures Ltd" width="40" height="40" />

@@ -1,4 +1,4 @@
-// Renders the five built report pages (dist/reports/<slug>/index.html) to public/reports/<slug>.pdf with
+// Renders the print editions of the five reports (dist/reports/<slug>/print/index.html; the web pages link instead of repeating) to public/reports/<slug>.pdf with
 // Chromium's print engine: A4, white background, page numbers, snapshot ID and (while any figure is unreviewed)
 // a DRAFT header on every page (the provisional label itself is printed once, on the cover). Fonts are the site's self-hosted web fonts, embedded by Chromium.
 // Playwright is NOT a project dependency: run with the global install, after `npm run build`:
@@ -14,14 +14,14 @@ const SITE_URL = 'https://takwimu.netlify.app'; // lib/site.js SITE_URL (ES modu
 const root = path.join(__dirname, '..');
 const dist = path.resolve(process.argv[2] || path.join(root, 'dist'));
 const outDir = path.join(root, 'public', 'reports');
-const missing = registry.reports.filter((r) => !fs.existsSync(path.join(dist, 'reports', r.slug, 'index.html')));
-if (missing.length) { console.error(`Build first: missing ${missing.map((r) => `dist/reports/${r.slug}/`).join(', ')}`); process.exit(1); }
+const missing = registry.reports.filter((r) => !fs.existsSync(path.join(dist, 'reports', r.slug, 'print', 'index.html')));
+if (missing.length) { console.error(`Build first: missing ${missing.map((r) => `dist/reports/${r.slug}/print/`).join(', ')}`); process.exit(1); }
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const band = 'font-family: Helvetica, Arial, sans-serif; font-size: 7pt; width: 100%; padding: 0 14mm; display: flex; justify-content: space-between; gap: 12px;';
 
 async function render(page, port, r) {
-  await page.goto(`http://localhost:${port}/reports/${r.slug}/`, { waitUntil: 'networkidle' });
+  await page.goto(`http://localhost:${port}/reports/${r.slug}/print/`, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(300); // charts measure their container once mounted
   const info = await page.evaluate(() => {

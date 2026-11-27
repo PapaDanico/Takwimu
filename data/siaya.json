@@ -146,7 +146,7 @@
     "pending_bills": {
       "opening_30_jun_2024_billion": 1.12,
       "settled_in_year_million": 577.7,
-      "note": "The county reported KSh 1.12 billion pending at 30 June 2024 and settled KSh 577.7 million during FY 2024/25. The closing balance at 30 June 2025 could not be read reliably from the OCR text and is not shown."
+      "note": "The county reported KSh 1.12 billion pending at 30 June 2024 and settled KSh 577.7 million during FY 2024/25. The sources print several different closing balances for 30 June 2025 (County Executive or whole county, with or without the year's new bills); every printed value, with its scope, date and accounting basis, is in the fiscal reconciliation (/counties/siaya/ledger/#pending-2025)."
     },
     "revenue_arrears_30_jun_2025_million": 290,
     "stalled_projects": {

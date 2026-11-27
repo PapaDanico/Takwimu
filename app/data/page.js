@@ -10,9 +10,13 @@ import reg from '../../data/conflicts.json';
 import manifest from '../../data/source-manifest.json';
 import { Provisional } from '../../components/ObsTable';
 import { fmtMaybe, fmtNum } from '../../lib/format';
+import siaya from '../../data/siaya.json';
+
+// Duplication sweep D10: the figures of this question come from data/siaya.json, not page text.
+const OSR = siaya.own_source_revenue;
 
 const OPEN = [
-  { q: 'The report states 47 per cent of the revenue target for FY 2024/25, but 436.68 of 1,043 is about 42 per cent.', note: 'Resolved in part: 47 per cent is measured against an annual target of about KSh 929 million, not the KSh 1,043 million in budget financing. The report does not explain why the two targets differ.' },
+  { q: `The report states ${OSR.share_of_annual_target_pct} per cent of the revenue target for FY ${OSR.fiscal_year}, but ${fmtNum(OSR.observations[0].value)} of ${fmtNum(OSR.target.value)} is about ${Math.round((OSR.observations[0].value / OSR.target.value) * 100)} per cent.`, note: 'Resolved in part: 47 per cent is measured against an annual target of about KSh 929 million, not the KSh 1,043 million in budget financing. The report does not explain why the two targets differ.' },
   { q: 'Own-source revenue for FY 2015/16 is KSh 127.93 million in the FY 2016/17 report and KSh 113.26 million in the FY 2018/19 report.', note: 'Both are shown. The reports do not say whether the later figure is a restatement.' },
   { q: 'FY 2016/17 recurrent spending is KSh 3.9 billion in one sentence of the report and KSh 3.65 billion in its table.', note: 'We use the table, which adds to the KSh 5.63 billion total.' },
   { q: 'The FY 2025/26 Controller of Budget report could not be reached from our build environment.', note: 'Press coverage reports Siaya at 26.94 per cent of its own-revenue target. We have not shown it because we could not read the document.' },
@@ -45,9 +49,11 @@ const REF_HEAD = <thead><tr><th scope="col">Figure</th><th scope="col">Value</th
 
 export const metadata = {
   title: 'Siaya ten-year series: sources and conflicts',
-  description: 'Download the JSON data behind Takwimu Kenya, with the source and confidence of each file.',
+  description: 'The Siaya ten-year series: where each figure was read, documents outside the series and the register of conflicts between sources.',
 };
 
+// Files that /datasets/ offers (duplication sweep D09): downloaded there, not listed again here.
+const IN_CATALOGUE = new Set(['history.json', 'history.csv', 'conflicts.json', 'cpi.json', 'subcounties.json']);
 const FILES = [
   { file: 'history.json', asof: '21 Nov 2026', what: 'Ten-year Siaya series: budget, spending, absorption, own-source revenue, pending bills, audit opinions, population, health and poverty; plus FY 2025/26 in-year figures (in_year) and other documents for FY 2019/20 (supplementary), both kept out of the series', source: 'Controller of Budget annual and in-year county reports; Auditor-General reports and Senate compilations of them; Siaya County Treasury; KNBS census as reproduced in county plans; Kenya DHS 2014 and 2022', conf: '3 to 4' },
   { file: 'history.csv', asof: '21 Nov 2026', what: 'The ten-year series in one long table: indicator, fiscal year, value, unit, basis (reported, derived or alternate), source report, source link and caveat', source: 'Built from history.json and cpi.json', conf: '3 to 4' },
@@ -69,16 +75,17 @@ export default function DataPage() {
       <Provisional dataset={'history'}>Figures were transcribed by Takwimu from the Controller of Budget and Auditor-General reports and have not yet been checked by a reviewer.</Provisional>
       <Abbrs list={['FIF', 'A-i-A']} />
       <nav className="card" aria-label="Data and method"><p style={{ margin: 0 }}>This section covers the data and how it is checked. <Link href="/method/">Read the method</Link> · <Link href="/datasets/">Search all datasets</Link></p></nav>
-      <PageToc items={[['f-h', 'Files'], ['brief-dl-h', 'Printable brief'], ['c-h', 'Coverage'], ['pref-h', 'Where each figure was read'], ['supp-h', 'Other documents'], ['reg-h', 'Conflict register'], ['open', 'Open questions']]} />
+      <PageToc items={[['f-h', 'Files'], ['c-h', 'Coverage'], ['pref-h', 'Where each figure was read'], ['supp-h', 'Other documents'], ['reg-h', 'Conflict register'], ['open', 'Open questions']]} />
 
       <section className="card" aria-labelledby="f-h">
         <h2 id="f-h">Files</h2>
-        <TableWrap label="Data files">
+        <p className="lead">The series, the conflict register, the price index and the sub-county file download from <Link href="/datasets/?q=Siaya">Datasets</Link>, the one catalogue of downloads, each with its source, unit and date. The reference files below are not datasets in the catalogue.</p>
+        <TableWrap label="Reference files">
           <table className="data">
             <caption className="sr-only">Data files</caption>
             <thead><tr><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Source</th><th scope="col">Confidence</th><th scope="col">Retrieved</th></tr></thead>
             <tbody>
-              {FILES.map((f) => (
+              {FILES.filter((f) => !IN_CATALOGUE.has(f.file)).map((f) => (
                 <tr key={f.file}>
                   <th scope="row"><a className="file" href={`/data/${f.file}`} download>{f.file}</a></th>
                   <td>{f.what}</td><td>{f.source}</td><td>{f.conf}</td><td>{f.asof}</td>
@@ -88,11 +95,6 @@ export default function DataPage() {
           </table>
         </TableWrap>
       </section>
-      <section className="card" aria-labelledby="brief-dl-h">
-        <h2 id="brief-dl-h">Printable brief</h2>
-        <p className="lead">A one-page A4 summary of Siaya County finances, built from the same files: headline figures with source and confidence, ten years of spending, audit opinions and key caveats.</p>
-        <p><a className="file" href="/reports/siaya-fiscal-brief.pdf" download>siaya-fiscal-brief.pdf</a> · <a href="/counties/siaya/brief/">View it as a web page</a></p>
-      </section>
       <section className="card" aria-labelledby="c-h">
         <h2 id="c-h">What the history file covers</h2>
         <ul className="steps">
@@ -100,8 +102,7 @@ export default function DataPage() {
           <li>Values are nominal KSh. Use cpi.json to adjust for prices; the method is on the Method page.</li>
           <li>Where two reports disagree, both values appear in the file as an alternate.</li>
         </ul>
-        <h3 className="mini">Gaps</h3>
-        <ul className="steps">{hist.meta.gaps.map((g) => <li key={g}>{g}</li>)}</ul>
+        <p className="how">{hist.meta.gaps.length} gaps in the series are listed, with their reasons, once: <Link href="/method/#known-gaps">known gaps</Link>. The printable one-page brief built from the same files is on <Link href="/reports/#briefs">Reports</Link>.</p>
       </section>
       <section className="card" id="page-references" aria-labelledby="pref-h">
         <h2 id="pref-h">Where each figure was read</h2>

@@ -69,12 +69,9 @@ main a:not([class]):hover { text-decoration-thickness: 2px; }
 .nav a:hover { background: var(--sand-200); color: var(--ink); }
 .nav a[aria-current="page"] { background: var(--accent-strong); color: var(--on-accent); }
 .header-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
-.status { display: none; align-items: center; gap: 8px; font-size: 12px; color: var(--ink-muted); border: 1px solid var(--rule); background: var(--sand-50); padding: 6px 12px; border-radius: 999px; }
-.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--mint-600); box-shadow: 0 0 0 3px color-mix(in srgb, var(--mint-500) 25%, transparent); }
 .report { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 14px; border-radius: 10px; background: var(--accent-strong); color: var(--on-accent); font-size: 13px; font-weight: 600; text-decoration: none; }
 .report:hover { background: color-mix(in srgb, var(--accent-strong) 85%, var(--ink)); }
 @media (min-width: 900px) { .nav { display: flex; } }
-@media (min-width: 1200px) { .status { display: inline-flex; } }
 .bottom-nav { position: fixed; inset: auto 0 0 0; z-index: 40; display: flex; justify-content: space-around; border-top: 1px solid var(--rule); background: color-mix(in srgb, var(--sand-50) 95%, transparent); backdrop-filter: blur(8px); padding: 8px 0 max(8px, env(safe-area-inset-bottom, 0px)); }
 .bottom-nav a { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 12px; font-weight: 600; color: var(--ink-muted); text-decoration: none; padding: 4px 2px; }
 .bottom-nav a[aria-current="page"] { color: var(--accent); }

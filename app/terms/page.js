@@ -2,6 +2,7 @@ import PageHead from '../../components/PageHead';
 import { SITE_URL, ISSUES_URL } from '../../lib/site';
 import TableWrap from '../../components/TableWrap';
 import library from '../../data/source-library.json';
+import { CLASSES } from '../../lib/licence';
 
 export const metadata = {
   title: 'Terms of use',
@@ -119,6 +120,13 @@ export default function Terms() {
         <section key={s.id} id={s.id} className="card legal" aria-labelledby={`${s.id}-h`}>
           <h2 id={`${s.id}-h`}>{s.title}</h2>
           {s.body.map((para, i) => <p key={i}>{para}</p>)}
+          {s.table ? (
+            <div id="reuse">
+              <h3>Licence classes</h3>
+              <p>Source lists and report bibliographies print a short licence label for each document; the label names one of these classes. The full licence text of every document stays in the data files.</p>
+              <dl className="licence-classes">{CLASSES.map((c) => <div key={c.id} id={`licence-${c.id}`}><dt>{c.name} (&ldquo;{c.label}&rdquo;)</dt><dd>{c.text}</dd></div>)}<div id="licence-open"><dt>Open licences</dt><dd>Creative Commons (CC BY, CC BY-NC, CC BY 3.0 IGO) and public-domain documents are labelled with their own licence, as the publisher states it.</dd></div></dl>
+            </div>
+          ) : null}
           {s.table ? (
             <TableWrap label="Reuse terms by publisher">
               <table className="data" id="reuse-by-publisher">

@@ -1,5 +1,11 @@
 import { ABBR } from '../../lib/abbreviations';
 import PageHead from '../../components/PageHead';
+import ledger from '../../data/siaya-fiscal-ledger.json';
+import { fmtFixed } from '../../lib/format';
+
+// Duplication sweep D10: the FY 2024/25 own-source revenue figures quoted below are read from the fiscal ledger
+// (observation ids), so the text cannot drift from the data.
+const LV = (id) => fmtFixed(ledger.observations.find((o) => o.id === id).value, 2);
 
 export const metadata = {
   title: 'Learn: budget, audit and statistics terms in plain English',
@@ -91,7 +97,7 @@ function OsrExplainer() {
           <thead><tr><th scope="col">Publisher</th><th scope="col">What its &ldquo;own-source revenue&rdquo; includes</th></tr></thead>
           <tbody>
             <tr><th scope="row">Controller of Budget (CoB), budget implementation review reports</th><td>Ordinary own-source revenue plus a FIF or A-i-A line, and in recent reports a split between the two. For Siaya in FY 2023/24 the report gives KSh 610.74 million: KSh 222.11 million ordinary revenue and KSh 388.63 million health FIF. A later report can quote a different figure for the same year.</td></tr>
-            <tr><th scope="row">County government reports (quarterly budget reports, Budget Review and Outlook Paper)</th><td>County Revenue Fund receipts plus all A-i-A the county records, including hospital reimbursements from SHA/SHIF, Linda Mama and NHIF capitation. For Siaya in FY 2024/25 the county reports KSh 757.57 million, of which KSh 521.07 million A-i-A, while the CoB reports KSh 436.68 million, of which KSh 199.84 million FIF/A-i-A.</td></tr>
+            <tr><th scope="row">County government reports (quarterly budget reports, Budget Review and Outlook Paper)</th><td>County Revenue Fund receipts plus all A-i-A the county records, including hospital reimbursements from SHA/SHIF, Linda Mama and NHIF capitation. For Siaya in FY 2024/25 the county reports KSh {LV('L162')} million, of which KSh {LV('L164')} million A-i-A, while the CoB reports KSh {LV('L153')} million, of which KSh {LV('L155')} million FIF/A-i-A.</td></tr>
             <tr><th scope="row">Auditor-General (OAG)</th><td>Audits the county&apos;s financial statements, which record receipts as the county reports them, and comments where collections were not banked, not recorded or not supported. Audit reports do not give a comparable own-source revenue total for every year, so we use them for findings, not for the series.</td></tr>
             <tr><th scope="row">Kenya National Bureau of Statistics (KNBS)</th><td>Does not compile its own count of county revenue in the sources we use. Its Gross County Product measures the size of the county economy, which is not money the county government collects. Where a KNBS abstract shows county revenue, it repeats a county or Treasury figure.</td></tr>
           </tbody>

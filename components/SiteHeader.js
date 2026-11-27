@@ -20,7 +20,7 @@ const NAV = [
   { href: '/datasets/', label: 'Data', short: 'Data', Icon: Database },
 ];
 
-export default function SiteHeader({ asOf }) {
+export default function SiteHeader() {
   const pathname = usePathname() || '/';
   // Hash links belong to the home page, so only real routes can be "current".
   const menu = useRef(null);
@@ -61,7 +61,6 @@ export default function SiteHeader({ asOf }) {
             <ul>{COUNTIES.map((c) => <li key={c.slug}><Link href={`/counties/${c.slug}/`}>{c.name}</Link></li>)}</ul>
           </details>
           <div className="header-right">
-            <span className="status" title="Date the figures were last checked against their sources">Checked {asOf}</span>
             <a className="report" href={ISSUES_URL} target="_blank" rel="noopener noreferrer">Report an error</a>
           </div>
         </div>

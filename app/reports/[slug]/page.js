@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Report from '../../../components/report/Report';
 import { buildReport, SLUGS } from '../../../components/report/build';
+import { buildWebReport } from '../../../components/report/web';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -18,7 +19,7 @@ export function generateMetadata({ params }) {
 }
 
 export default function ReportPage({ params }) {
-  const r = buildReport(params.slug);
+  const r = buildWebReport(params.slug);
   if (!r) notFound();
-  return <Report r={r} />;
+  return <Report r={r} edition="web" />;
 }

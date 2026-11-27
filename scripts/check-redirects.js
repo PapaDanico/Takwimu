@@ -27,9 +27,19 @@ for (const b of blocks) {
   else if (m[1] !== to) errors.push(`${from}: redirect goes to ${to}, the page's refresh goes to ${m[1]}`);
 }
 
+// No sitemap URL may be a redirect source (duplication sweep D22).
+const sources = new Set(blocks.map((b) => (b.match(/from\s*=\s*"([^"]+)"/) || [])[1]).filter(Boolean).map((f) => f.replace(/\/?$/, '/')));
+const smFile = path.join(dist, 'sitemap.xml');
+let smUrls = 0;
+if (fs.existsSync(smFile)) {
+  const locs = [...fs.readFileSync(smFile, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname);
+  smUrls = locs.length;
+  locs.filter((u) => sources.has(u.replace(/\/?$/, '/'))).forEach((u) => errors.push(`sitemap lists ${u}, which is a redirect source in netlify.toml`));
+} else errors.push('dist/sitemap.xml is missing');
+
 if (errors.length) {
   console.error(`check-redirects: ${errors.length} redirect(s) hide or disagree with built pages`);
   errors.forEach((e) => console.error(`  - ${e}`));
   process.exit(1);
 }
-console.log(`check-redirects: ${blocks.length} redirects, ${checked} over built files, all stubs agree`);
+console.log(`check-redirects: ${blocks.length} redirects, ${checked} over built files, all stubs agree; ${smUrls} sitemap URLs, none a redirect source`);

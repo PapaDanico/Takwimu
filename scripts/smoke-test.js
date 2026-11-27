@@ -555,7 +555,7 @@ const srv = http.createServer((req, res) => {
     const osr = osrPagesMissingLink(root);
     check(osr.pages >= 10 && osr.missing.length === 0, `every page that shows own-source revenue or FIF links /learn/#own-source-revenue (${osr.pages} pages${osr.missing.length ? `; missing: ${osr.missing.slice(0, 4).join(', ')}` : ''})`);
     await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
-    check(/545\.95/.test(await pg.locator('#pending-2025-sources-table').innerText()), 'analysis: pending-bills section shows the 30 June 2025 values side by side, with KSh 545.95 million');
+    check(/545\.95/.test(await pg.locator('#pending-2025-summary').innerText()) && await pg.locator('#pending-2025-summary a[href="/counties/siaya/ledger/#pending-2025"]').count() === 1, 'analysis: pending-bills section summarises the 30 June 2025 values (lowest KSh 545.95 million) and links the side-by-side table on the ledger (duplication sweep D01)');
   }
   check(bad.length === 0, `no CSP violations or page errors ${bad.slice(0, 2).join(' | ')}`);
   await b.close(); srv.close();

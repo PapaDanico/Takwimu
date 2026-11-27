@@ -611,6 +611,24 @@ if (Object.keys(xder.measures).some((k) => /2017/.test(k))) fail('derived: the a
   if (!regHas('deposit-rate-cbk-wdi', dep.a) || !regHas('deposit-rate-cbk-wdi', Number(dep.b.toFixed(2)))) fail('derived: deposit-rate-cbk-wdi must list the CBK and World Bank 2024 values');
 }
 
+// Duplication sweep D10: data/siaya.json repeats three FY 2024/25 headline values that the ten-year series and the
+// fiscal ledger hold canonically; each copy must equal them, so the files cannot drift apart.
+{
+  const sy = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya.json'), 'utf8'));
+  const hy = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'history.json'), 'utf8')).years.find((y) => y.fy === sy.budget.fiscal_year);
+  const led = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-fiscal-ledger.json'), 'utf8'));
+  const ledHas = (measure, fy, v) => led.observations.some((o) => o.measure === measure && o.fy === fy && Math.abs(o.value - v) < 1e-9);
+  const osr = sy.own_source_revenue.observations[0].value;
+  if (!hy) fail(`siaya.json: FY ${sy.budget.fiscal_year} is not in history.json`);
+  else {
+    if (sy.budget.approved_total !== hy.approved) fail(`siaya.json approved_total ${sy.budget.approved_total} differs from history.json ${hy.approved}`);
+    if (sy.budget.total_spent !== hy.spent) fail(`siaya.json total_spent ${sy.budget.total_spent} differs from history.json ${hy.spent}`);
+    if (osr !== hy.osr_m) fail(`siaya.json own-source revenue ${osr} differs from history.json ${hy.osr_m}`);
+  }
+  if (!ledHas('osr_total_actual', sy.own_source_revenue.fiscal_year, osr)) fail(`siaya.json own-source revenue ${osr} is not a ledger value for FY ${sy.own_source_revenue.fiscal_year}`);
+  if (/could not be read/.test(sy.budget.pending_bills.note)) fail('siaya.json pending-bills note says the 30 June 2025 balance could not be read; the ledger holds the printed values (D01)');
+}
+
 if (errors.length) {
   console.error('Data validation failed:\n- ' + errors.join('\n- '));
   process.exit(1);
