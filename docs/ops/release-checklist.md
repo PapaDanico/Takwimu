@@ -32,8 +32,8 @@ Stop at the first failure. Do not deploy around a failing gate.
 3. If the remote build fails with no code change (it has happened: 6b014e0c…, 6b014f28…, 6b01733a…), follow `docs/ops/monitoring.md` "Netlify remote build failure". Do not change code to "fix" an intermittent remote failure.
 
 ## 5. Live verification
-1. Home, `/counties/siaya/`, `/kenya/`, `/datasets/`, `/compare/`, `/stories/`, `/data/`, `/corrections/`, `/learn/` load with HTTP 200.
-2. Redirects: `/trends/` and `/explore/` return 301 to `/kenya/` and `/datasets/`; every redirect in `netlify.toml` lands on a 200 page (`check-redirects` guards this in the build).
+1. Home, `/counties/siaya/`, `/kenya/`, `/datasets/`, `/compare/`, `/stories/`, `/data/`, `/learn/` load with HTTP 200.
+2. Redirects: `/trends/` and `/explore/` return 301 to `/kenya/` and `/datasets/`, and `/corrections/` to `/method/#corrections` (register retired 27 Nov 2026; corrections are footnoted beside the values); every redirect in `netlify.toml` lands on a 200 page (`check-redirects` guards this in the build).
 3. Data files: download `/data/*.json` from the live site and compare SHA-256 with the gated `dist/data/` (method in `docs/audit/production-baseline.md`). All must match.
 4. Headers on `/`: `Content-Security-Policy`, `Strict-Transport-Security`, `X-Frame-Options: DENY`; no cookies set; no third-party requests (browser network tab).
 5. `/reports/#briefs` links to the WhatsApp chat; no form is present.

@@ -62,6 +62,7 @@ Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:c
 - Every figure carries source, publication date, period, unit and confidence.
 - Series go back 10 years (`data/history.json`, `data/cpi.json`). Gaps are listed, never filled; unknowns are never shown as zero.
 - Conflicting figures are shown side by side and tested in `scripts/test-reconciliation.js`.
+- Corrections are small footnotes beside the value ("Corrected <date>: was <original>. <reason>."), and source-document errors are flagged there too; `data/corrections.json` is the log and `/method/#corrections` the note. There is no register page (owner, 27 Nov 2026; `/corrections/` redirects). `scripts/test-corrections.js` fails the build if a changed value has no entry or a correction is not footnoted on a built page.
 - Cited PDFs are pinned by SHA-256 in `data/source-manifest.json`.
 - No verdict labels on named individuals without a primary document and legal review.
 - No personal data is collected (`docs/data-protection-policy.md`).
@@ -72,7 +73,7 @@ Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:c
 - Siaya values: 2,068 across 14 datasets, each with a review pack. 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty); unreviewed values are labelled "Provisional: awaiting editorial review".
 - Machine cross-checks (second reading of the cited page): 979 agree, 3 disagree (need a person to read the page image), 1,086 not checkable.
 - Fiscal ledger: 139 discrepancy cases; 45 definitional, 20 period or version, 11 probable source error, 1 resolved by source, 62 open. Both values stand in every open case.
-- Corrections register (`/corrections/`): 16 corrections, 13 source-error records (values kept as published, e.g. "31st June 2025").
+- Corrections: 16 corrections footnoted beside 24 values, 13 source-error records flagged beside theirs (kept as published, e.g. "31st June 2025"); no register page, `/corrections/` redirects to `/method/#corrections` (owner, 27 Nov 2026).
 - Site: 98 pages (new: /counties/siaya/departments/), 92 downloadable datasets, a three-page fiscal brief and 5 draft reports. Layers B1, B2, B4, B5 on /counties/siaya/analysis/; B3 and own-source revenue by publisher on /counties/siaya/ledger/.
 
 ## Deploying

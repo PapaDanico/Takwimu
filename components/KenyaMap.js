@@ -2,18 +2,20 @@
 // "in preparation" in their label, so colour is never the only signal. With `focus`, the view zooms to one county.
 // With `values` ({ slug: number | null }), the map shades each county on a single-hue scale of five equal steps
 // between the lowest and highest value, with a legend; counties without a value are hatched and labelled
-// "not available". Every value is also in the link's label and in the table beside the map.
+// "not available". Every value is also in the link's label and in the table beside the map. With `boundaryNote`, the
+// boundary source and licence are printed, with `licenceNote` (lib/correction-notes.js) as its correction footnote.
 import Link from 'next/link';
 import geo from '../data/kenya-counties-map.json';
 import { bySlug } from '../lib/counties';
 import { fmtFixed } from '../lib/format';
 import { equalSteps, legendItems, STEPS_NOTE } from '../lib/scale';
+import CorrectionNote, { CorrectionMark } from './CorrectionNote';
 
 const show = (v, dec) => fmtFixed(v, dec);
 
 export const mapScale = (values) => equalSteps(Object.values(values));
 
-export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 47 counties', values, valueUnit = '', valueDec = 0, valueLabel, valueNotes = {}, mapId = 'kmap', boundaryNote = false }) {
+export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 47 counties', values, valueUnit = '', valueDec = 0, valueLabel, valueNotes = {}, mapId = 'kmap', boundaryNote = false, licenceNote = null }) {
   const { width, height } = geo.meta;
   let box = `0 0 ${width} ${height}`;
   if (focus) {
@@ -73,7 +75,7 @@ export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 
             <span className="kmap-key"><i className="kmap-sw soon" /> In preparation</span>
           </>
         )}
-        {boundaryNote ? <span id="boundaries">Boundaries: {geo.meta.source}, {geo.meta.licence}, simplified for display. Not for measuring area or distance.</span> : <a className="kmap-blink" href="/counties/#boundaries">About the map boundaries</a>}
+        {boundaryNote ? <span id="boundaries">Boundaries: {geo.meta.source}, {geo.meta.licence}<CorrectionMark notes={licenceNote} />, simplified for display. Not for measuring area or distance.<CorrectionNote notes={licenceNote} /></span> : <a className="kmap-blink" href="/counties/#boundaries">About the map boundaries</a>}
       </figcaption>
     </figure>
   );

@@ -29,7 +29,7 @@ export default function PendingAtDate({ fy, id, caption, headingLevel = 3, title
             {rows.map((r) => (
               <tr key={r.id} data-pending-id={r.id}>
                 <td className="mono"><Reviewed b={badge('siaya-fiscal-ledger', r.id)}>{() => <b>{m2(r.value)}</b>}</Reviewed><br /><small><code>{r.id}</code></small></td>
-                <td>{r.publisher}: <a href={r.url} rel="noopener">{r.title}</a><br /><small>{r.basis}{r.printed ? <> Printed: &ldquo;{r.printed}&rdquo;</> : null}</small><SourceErrorFlag e={r.source_error} id={r.id} /></td>
+                <td>{r.publisher}: <a href={r.url} rel="noopener">{r.title}</a><br /><small>{r.basis}{r.printed ? <> Printed: &ldquo;{r.printed}&rdquo;</> : null}</small><SourceErrorFlag e={r.source_error} id={r.id} refId={`siaya-fiscal-ledger:${r.id}`} /></td>
                 <td>{r.published}</td>
                 <td>PDF p. {r.pdf_page}{r.printed_page ? ` (printed p. ${r.printed_page})` : ''}</td>
                 <td>{r.scope}</td>

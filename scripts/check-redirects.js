@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Netlify redirects with force = true run before static files. A redirect whose source is a built page
 // is allowed only when that page is a meta-refresh stub to the same target; anything else hides a real page
-// (the /corrections/ register was hidden this way on 23 Nov 2026).
+// (the old corrections register was hidden this way on 23 Nov 2026; /corrections/ is now a moved stub).
 const fs = require('fs');
 const path = require('path');
 

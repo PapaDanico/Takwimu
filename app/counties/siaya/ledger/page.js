@@ -83,7 +83,7 @@ export default function SiayaLedger() {
             <caption className="sr-only">Number of discrepancy cases in each class, with what the class means</caption>
             <thead><tr><th scope="col">Class</th><th scope="col">Cases</th><th scope="col">What it means</th></tr></thead>
             <tbody>{l.classOrder.map((k) => <tr key={k} data-class={k}><th scope="row"><ClassBadge cls={k} /></th><td>{l.classCounts[k]}</td><td>{l.classDefs[k]}</td></tr>)}</tbody>
-            <tfoot><tr><th scope="row">All cases</th><td>{l.cases.length}</td><td>Cases resolved by source are logged in the <Link href="/data/#cbrop-development-spending-2024-25">conflict register</Link>; errors in the documents themselves are on the <Link href="/corrections/#source-errors">corrections register</Link>.</td></tr></tfoot>
+            <tfoot><tr><th scope="row">All cases</th><td>{l.cases.length}</td><td>Cases resolved by source are logged in the <Link href="/data/#cbrop-development-spending-2024-25">conflict register</Link>; errors in the documents themselves are flagged beside the value.</td></tr></tfoot>
           </table>
         </TableWrap>
       </section>

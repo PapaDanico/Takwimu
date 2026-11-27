@@ -38,7 +38,7 @@ export default function Method() {
       <PageHead eyebrow="Method" title="How Takwimu handles numbers" sub="What we publish, where it comes from, how we check it, and what we do when two sources disagree." path="/method/" shareText="How Takwimu Kenya handles numbers" />
       <Provisional dataset={'history'}>Figures quoted on this page were transcribed by Takwimu from the reports and have not yet been checked by a reviewer.</Provisional>
       <nav aria-label="Sections on this page"><ul className="toc">
-        <li><a href="#sources">Sources</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#checks">Checks</a></li><li><a href="#conflicts">Disagreements</a></li><li><a href="#prices">Prices</a></li><li><a href="#years">Fiscal years</a></li><li><a href="#people">Named people</a></li><li><a href="#known-gaps">Gaps</a></li>
+        <li><a href="#sources">Sources</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#checks">Checks</a></li><li><a href="#conflicts">Disagreements</a></li><li><a href="#corrections">Corrections</a></li><li><a href="#prices">Prices</a></li><li><a href="#years">Fiscal years</a></li><li><a href="#people">Named people</a></li><li><a href="#known-gaps">Gaps</a></li>
       </ul></nav>
 
       <section id="sources" className="card" aria-labelledby="so-h">
@@ -79,7 +79,12 @@ export default function Method() {
         <h2 id="cn-h">When sources disagree</h2>
         <p>Both values are shown side by side with their sources. We never average them or pick a winner without evidence. Current examples:</p>
         <ul className="steps">{hist.osr_series.conflicts.map((c) => <li key={c}>{c}</li>)}<li>FY 2023/24 own-source revenue: KSh 610.74 million (FY 2023/24 report) against KSh 427.95 million (FY 2024/25 report).</li><li>Pending bills at 30 June 2021: KSh 1,061 million (FY 2020/21 report) against KSh 602 million (FY 2021/22 report).</li></ul>
-        <p>All open items are on the <Link href="/data/#conflicts">Data page</Link>. Every correction we make, and every error we find in a source document, is listed on the <Link href="/corrections/">corrections register</Link>.</p>
+        <p>All open items are on the <Link href="/data/#conflicts">Data page</Link>.</p>
+      </section>
+
+      <section id="corrections" className="card" aria-labelledby="cor-h">
+        <h2 id="cor-h">Corrections</h2>
+        <p>When we correct a figure, label or citation, a small footnote beside the value gives the date, what it was and why. An error in the source document itself is flagged beside the value in the same way, quoted, and the value is kept as published. The machine-readable log is <a href="/data/corrections.json">corrections.json</a>; a changed value without an entry stops the build.</p>
       </section>
 
       <section id="prices" className="card" aria-labelledby="pr-h">

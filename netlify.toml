@@ -148,6 +148,19 @@
   status = 301
   force = true
 
+# The corrections register was retired (owner decision, 27 Nov 2026): corrections are footnoted beside the values.
+[[redirects]]
+  from = "/corrections/"
+  to = "/method/#corrections"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/corrections"
+  to = "/method/#corrections"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/explore/"
   to = "/datasets/"

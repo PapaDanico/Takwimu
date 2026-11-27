@@ -722,7 +722,12 @@
           "/counties/siaya/analysis/",
           "/counties/siaya/insights/",
           "/counties/siaya/"
-        ]
+        ],
+        "records": [
+          "history|years:2023/24:development_absorption_pct"
+        ],
+        "was": "64.5 per cent",
+        "note": "The PDF text layer misread the scan; two OCR readings and the printed amounts give 64.6."
       }
     },
     {
@@ -987,7 +992,12 @@
         "affected_pages": [
           "/counties/siaya/health/",
           "/counties/siaya/"
-        ]
+        ],
+        "records": [
+          "siaya-health|hiv-prev-2025-profiles"
+        ],
+        "was": "labelled ages 15 to 49",
+        "note": "The 2025 round prints an overall figure. Value unchanged."
       }
     },
     {
@@ -1023,7 +1033,18 @@
         "affected_pages": [
           "/counties/siaya/health/",
           "/counties/siaya/sources/"
-        ]
+        ],
+        "records": [
+          "siaya-health|hiv-prev-2013-scasp",
+          "siaya-health|hiv-prev-2015-scasp",
+          "siaya-health|hiv-inc-2015-scasp",
+          "siaya-health|hiv-newinf-2013-scasp",
+          "siaya-health|hiv-newinf-2015-scasp",
+          "siaya-health|art-adult-2013-scasp",
+          "siaya-health|art-adult-2015-scasp"
+        ],
+        "was": "cited to printed page 3",
+        "note": "The footer of PDF page 16 reads 4. Values unchanged."
       }
     },
     {
@@ -1059,7 +1080,12 @@
         "affected_pages": [
           "/kenya/",
           "/counties/"
-        ]
+        ],
+        "records": [
+          "kenya-counties-map|meta.licence"
+        ],
+        "was": "CC BY 3.0 IGO, from IEBC via OCHA ROSEA",
+        "note": "The county layer's own record states Public Domain (RCMRD). Shapes unchanged."
       }
     },
     {
@@ -1193,7 +1219,12 @@
           "/counties/siaya/",
           "/counties/siaya/ledger/",
           "/counties/siaya/insights/"
-        ]
+        ],
+        "records": [
+          "siaya-fiscal-ledger|L151"
+        ],
+        "was": "KSh 388.53 million",
+        "note": "The PDF text layer misread the scan; OCR and three printed tables give 388,626,776."
       }
     },
     {
@@ -1254,7 +1285,12 @@
         "affected_pages": [
           "/counties/siaya/ledger/",
           "/counties/siaya/analysis/"
-        ]
+        ],
+        "records": [
+          "siaya-fiscal-ledger|L255"
+        ],
+        "was": "scope county executive and assembly",
+        "note": "Table 2.5 prints the Assembly cells as \"-\", so the total is the County Executive only. Value unchanged."
       }
     },
     {
@@ -1430,7 +1466,12 @@
         "date": "2026-11-21",
         "affected_pages": [
           "/kenya/"
-        ]
+        ],
+        "records": [
+          "political|iebc_candidates_2022_by_position:President"
+        ],
+        "was": "0",
+        "note": "The IEBC table prints a dash, not a zero."
       }
     },
     {
@@ -1465,7 +1506,12 @@
         "date": "2026-11-21",
         "affected_pages": [
           "/counties/siaya/education/"
-        ]
+        ],
+        "records": [
+          "siaya-education|cidp-ecde-enrol-end"
+        ],
+        "was": "value type \"actual\"",
+        "note": "The plan prints the same number as its projected population aged 3 to 5. Value unchanged."
       }
     },
     {
@@ -1500,7 +1546,12 @@
         "date": "2026-11-21",
         "affected_pages": [
           "/counties/siaya/wards/"
-        ]
+        ],
+        "records": [
+          "subcounties|registered_voters_2022"
+        ],
+        "was": "labelled \"eligible voters\"",
+        "note": "The figures are the IEBC 2022 registered voters. Figures unchanged."
       }
     },
     {
@@ -1535,7 +1586,12 @@
         "date": "2026-11-21",
         "affected_pages": [
           "/counties/siaya/analysis/"
-        ]
+        ],
+        "records": [
+          "siaya-analysis|SIA-A1-2022-23-cob-report-2022-23"
+        ],
+        "was": "KSh 7,096 per person (interpolated population)",
+        "note": "Gaps are never filled: the interpolated population series was withdrawn."
       }
     },
     {
