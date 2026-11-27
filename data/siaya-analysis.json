@@ -26,12 +26,12 @@
    "not_used": "data/siaya-economy.json (Gross County Product) and data/siaya-agriculture.json were read but no requested measure uses them."
   },
   "input_files": {
-   "data/siaya-fiscal-ledger.json": "4d42d80dbaf2121579c3e17e7eccf66987dfe964952584cf09c6a7b4f5971b99",
-   "data/history.json": "98f754c9a819aefc1dabc23af20873c6faee59d6a24aaa8e047653da70834fca",
+   "data/siaya-fiscal-ledger.json": "5b8e1b4b9256c70fc0a92fc8668b9257ecf2f167a0696763f076e67e1d5433b3",
+   "data/history.json": "914425b67fbc6652974f1ed395ce221e0f80c00fc51cd3b6dbee9ee9431e341f",
    "data/cpi.json": "3c91c889abaecd66ab7ad17e96ad2aa81a31f943a585484e6b257e361c4924e1",
    "data/county.json": "d362d6fb4804fbe921db3ea484f4690804bb78b5b798f9bd37a13f1c0706f5b5",
    "data/counties-cob.json": "cb4c26d09550a90eb161e064fb5bec51cc26c87c35faa314731488acb40e7907",
-   "data/siaya-audits.json": "47e0cdba261a38006f0d1a7d7a8b7fc18db27dbe80969b51aa36546c5a533ad9",
+   "data/siaya-audits.json": "62803241adca3d705fed1b14df36d37b7bb2cdc7367c2beac495dd2025c2715e",
    "data/siaya-health.json": "e946ebaa40d3ba3ed86eea356d8a6be22f2514dcb878d44666ab21a20409fafd",
    "data/siaya-education.json": "39bb1f52fd957ceee08b70a47342a8228af275d97473d4721d3ec627972cbdab",
    "data/siaya-climate.json": "241d781daa2579da92ec5c92494d46f56a94f8797f8df980305f5fc0c8ff6e6a",
@@ -39,24 +39,24 @@
    "data/siaya-agriculture.json": "107bcb546b0ee746230832cf58872cfa053db7543e7b012f5e55a7ef7f708082"
   },
   "counts": {
-   "records": 355,
-   "values": 267,
-   "gaps": 88,
+   "records": 372,
+   "values": 275,
+   "gaps": 97,
    "by_family": {
     "A1": {
      "values": 4,
-     "gaps": 12
+     "gaps": 14
     },
     "A2": {
      "values": 13,
-     "gaps": 13
+     "gaps": 17
     },
     "A3": {
-     "values": 41,
-     "gaps": 13
+     "values": 46,
+     "gaps": 14
     },
     "A4": {
-     "values": 54,
+     "values": 55,
      "gaps": 13
     },
     "A5": {
@@ -72,8 +72,8 @@
      "gaps": 4
     },
     "A8": {
-     "values": 12,
-     "gaps": 19
+     "values": 14,
+     "gaps": 21
     }
    },
    "printed_rate_mismatches_gt_1_point": 0
@@ -1054,6 +1054,50 @@
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
+   "calc_id": "SIA-A1-2025-26-cob-report-2025-26",
+   "family": "A1",
+   "status": "gap",
+   "title": "Real per-capita county expenditure, FY 2025/26 (cob-report-2025-26)",
+   "formula": "Total county expenditure (KSh) divided by population, multiplied by CPI(FY 2024/25) / CPI(FY 2025/26).",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "expenditure",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L303]",
+     "field": "value",
+     "value": 7.5,
+     "unit": "KSh billion",
+     "measure": "expenditure_total",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.4: Expenditure by Major Economic Classification in FY 2025/26 (Siaya row)",
+     "pdf_page": 43,
+     "printed_page": null,
+     "basis": "CoB expenditure",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "KSh per person at FY 2024/25 prices",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Deflated with the national CPI (World Bank WDI, fiscal-year average of two calendar years; approximate). Population is a single-year figure matched to the fiscal year that starts in that calendar year. Expenditure scope is as the source states it.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "No population figure for calendar year 2025 is held (held: census 2009 and 2019; projections 2012, 2015, 2017, 2022). The 2019 census count is not projected forward and no year is interpolated.",
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
    "calc_id": "SIA-A1-2025-26-GOV-02-FY2025-26-Q4",
    "family": "A1",
    "status": "gap",
@@ -1095,6 +1139,50 @@
    "checks": [],
    "gap_reason": "No population figure for calendar year 2025 is held (held: census 2009 and 2019; projections 2012, 2015, 2017, 2022). The 2019 census count is not projected forward and no year is interpolated.",
    "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A1-2025-26-siaya-cbrop-2025-26",
+   "family": "A1",
+   "status": "gap",
+   "title": "Real per-capita county expenditure, FY 2025/26 (siaya-cbrop-2025-26)",
+   "formula": "Total county expenditure (KSh) divided by population, multiplied by CPI(FY 2024/25) / CPI(FY 2025/26).",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "expenditure",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L312]",
+     "field": "value",
+     "value": 9605.521599,
+     "unit": "KSh million",
+     "measure": "expenditure_total",
+     "period": "FY 2025/26",
+     "source_id": "siaya-cbrop-2025-26",
+     "source_kind": "county",
+     "source_title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "source_publication_date": "2026-09",
+     "table": "Table 10: Budget performance by economic classification, FY 2025/26 (and text)",
+     "pdf_page": 21,
+     "printed_page": null,
+     "basis": "County Treasury actual",
+     "scope": "county government (executive and assembly)",
+     "confidence": 4
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "KSh per person at FY 2024/25 prices",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "siaya-cbrop-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Deflated with the national CPI (World Bank WDI, fiscal-year average of two calendar years; approximate). Population is a single-year figure matched to the fiscal year that starts in that calendar year. Expenditure scope is as the source states it.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "No population figure for calendar year 2025 is held (held: census 2009 and 2019; projections 2012, 2015, 2017, 2022). The 2019 census count is not projected forward and no year is interpolated.",
+   "confidence": 4,
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
@@ -2902,6 +2990,94 @@
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
+   "calc_id": "SIA-A2-2024-25-knbs-economic-survey-2026",
+   "family": "A2",
+   "status": "gap",
+   "title": "Transfer dependency, FY 2024/25 (knbs-economic-survey-2026)",
+   "formula": "(Equitable share received + conditional grants or additional allocations received) divided by (equitable share received + conditional grants received + own-source revenue collected, including FIF/A-i-A where the source includes it), times 100. All three from the same document.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "own_source",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L321]",
+     "field": "value",
+     "value": 481.79,
+     "unit": "KSh million",
+     "measure": "osr_total_actual",
+     "period": "FY 2024/25",
+     "source_id": "knbs-economic-survey-2026",
+     "source_kind": "other",
+     "source_title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "source_publication_date": "2026",
+     "table": "Table 5.13 (Siaya row, Annual Own Source Revenue, 2024/25 revised)",
+     "pdf_page": 150,
+     "printed_page": null,
+     "basis": "KNBS: annual own-source revenue, revised",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "% of the three published receipt streams",
+   "period": "FY 2024/25",
+   "source_ids": [
+    "knbs-economic-survey-2026"
+   ],
+   "comparability_notes": [],
+   "caveat": "Not a share of total county revenue as printed: the denominator leaves out balances brought forward and any other receipts. Own-source revenue coverage of health facility revenue (FIF/A-i-A) changes between years and sources.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "This document does not give equitable_share_received, conditional_grants_received for FY 2024/25. Components are never taken from another source to complete the ratio.",
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A2-2025-26-cob-report-2025-26",
+   "family": "A2",
+   "status": "gap",
+   "title": "Transfer dependency, FY 2025/26 (cob-report-2025-26)",
+   "formula": "(Equitable share received + conditional grants or additional allocations received) divided by (equitable share received + conditional grants received + own-source revenue collected, including FIF/A-i-A where the source includes it), times 100. All three from the same document.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "own_source",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L306]",
+     "field": "value",
+     "value": 876.14,
+     "unit": "KSh million",
+     "measure": "osr_total_actual",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.1: Own Source Revenue Collection in FY 2025/26 (Siaya row)",
+     "pdf_page": 38,
+     "printed_page": null,
+     "basis": "CoB: total own-source revenue including FIF/A-i-A",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "% of the three published receipt streams",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Not a share of total county revenue as printed: the denominator leaves out balances brought forward and any other receipts. Own-source revenue coverage of health facility revenue (FIF/A-i-A) changes between years and sources.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "This document does not give equitable_share_received, conditional_grants_received for FY 2025/26. Components are never taken from another source to complete the ratio.",
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
    "calc_id": "SIA-A2-2025-26-GOV-02-FY2025-26-Q4",
    "family": "A2",
    "status": "value",
@@ -3000,6 +3176,94 @@
    "checks": [],
    "gap_reason": null,
    "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A2-2025-26-knbs-economic-survey-2026",
+   "family": "A2",
+   "status": "gap",
+   "title": "Transfer dependency, FY 2025/26 (knbs-economic-survey-2026)",
+   "formula": "(Equitable share received + conditional grants or additional allocations received) divided by (equitable share received + conditional grants received + own-source revenue collected, including FIF/A-i-A where the source includes it), times 100. All three from the same document.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "own_source",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L320]",
+     "field": "value",
+     "value": 3114.92,
+     "unit": "KSh million",
+     "measure": "osr_total_actual",
+     "period": "FY 2025/26",
+     "source_id": "knbs-economic-survey-2026",
+     "source_kind": "other",
+     "source_title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "source_publication_date": "2026",
+     "table": "Table 5.13: County Governments' Revenue, 2024/25 - 2025/26 (Siaya row, Annual Own Source Revenue, 2025/26 provisional)",
+     "pdf_page": 150,
+     "printed_page": null,
+     "basis": "KNBS: annual own-source revenue, provisional",
+     "scope": "county government (executive and assembly)",
+     "confidence": 2
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "% of the three published receipt streams",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "knbs-economic-survey-2026"
+   ],
+   "comparability_notes": [],
+   "caveat": "Not a share of total county revenue as printed: the denominator leaves out balances brought forward and any other receipts. Own-source revenue coverage of health facility revenue (FIF/A-i-A) changes between years and sources.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "This document does not give equitable_share_received, conditional_grants_received for FY 2025/26. Components are never taken from another source to complete the ratio.",
+   "confidence": 2,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A2-2025-26-siaya-cbrop-2025-26",
+   "family": "A2",
+   "status": "gap",
+   "title": "Transfer dependency, FY 2025/26 (siaya-cbrop-2025-26)",
+   "formula": "(Equitable share received + conditional grants or additional allocations received) divided by (equitable share received + conditional grants received + own-source revenue collected, including FIF/A-i-A where the source includes it), times 100. All three from the same document.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "own_source",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L315]",
+     "field": "value",
+     "value": 862.934947,
+     "unit": "KSh million",
+     "measure": "osr_total_actual",
+     "period": "FY 2025/26",
+     "source_id": "siaya-cbrop-2025-26",
+     "source_kind": "county",
+     "source_title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "source_publication_date": "2026-09",
+     "table": "Executive summary (text)",
+     "pdf_page": 5,
+     "printed_page": null,
+     "basis": "County: local revenue including A-i-A",
+     "scope": "county government (executive and assembly)",
+     "confidence": 4
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "% of the three published receipt streams",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "siaya-cbrop-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Not a share of total county revenue as printed: the denominator leaves out balances brought forward and any other receipts. Own-source revenue coverage of health facility revenue (FIF/A-i-A) changes between years and sources.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "This document does not give equitable_share_received, conditional_grants_received for FY 2025/26. Components are never taken from another source to complete the ratio.",
+   "confidence": 4,
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
@@ -4671,6 +4935,50 @@
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
+   "calc_id": "SIA-A3-2019-20-cob-report-2020-21-development",
+   "family": "A3",
+   "status": "gap",
+   "title": "Execution rate, development, FY 2019/20 (cob-report-2020-21)",
+   "formula": "Development expenditure divided by the development budget of the same version, times 100, both from the same document.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "expenditure",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L325]",
+     "field": "value",
+     "value": 2.12,
+     "unit": "KSh billion",
+     "measure": "expenditure_development",
+     "period": "FY 2019/20",
+     "source_id": "cob-report-2020-21",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report FY 2020/21",
+     "source_publication_date": "2022-01-25",
+     "table": "Section 3.39.9 Development Expenditure (prior-year comparison in the FY 2020/21 report)",
+     "pdf_page": 376,
+     "printed_page": null,
+     "basis": "CoB FY 2020/21 report, prior-year comparison",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "% of budget",
+   "period": "FY 2019/20",
+   "source_ids": [
+    "cob-report-2020-21"
+   ],
+   "comparability_notes": [],
+   "caveat": "Absorption shows spending against the budget; it says nothing about what the spending delivered. Rates from different documents use different budget versions and cut-off dates and are separate records.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "No development expenditure-side budget is held from this document for FY 2019/20; the rate is not calculated.",
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
    "calc_id": "SIA-A3-2019-20-senate-cpac-2019-20-total",
    "family": "A3",
    "status": "gap",
@@ -4717,10 +5025,21 @@
   {
    "calc_id": "SIA-A3-2019-20-siaya-brop-2019-20-development",
    "family": "A3",
-   "status": "gap",
+   "status": "value",
    "title": "Execution rate, development, FY 2019/20 (siaya-brop-2019-20)",
    "formula": "Development expenditure divided by the development budget of the same version, times 100, both from the same document.",
-   "calc": null,
+   "calc": {
+    "op": "ratio_pct",
+    "to_unit": "KSh million",
+    "dp": 2,
+    "numerator_roles": [
+     "expenditure"
+    ],
+    "denominator_roles": [
+     "budget"
+    ],
+    "budget_version": "supplementary"
+   },
    "inputs": [
     {
      "role": "expenditure",
@@ -4741,30 +5060,68 @@
      "basis": null,
      "scope": "county government (executive and assembly)",
      "confidence": 3
+    },
+    {
+     "role": "budget",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L323]",
+     "field": "value",
+     "value": 3982.157657,
+     "unit": "KSh million",
+     "measure": "budget_development",
+     "period": "FY 2019/20",
+     "source_id": "siaya-brop-2019-20",
+     "source_kind": "county",
+     "source_title": "Siaya County Treasury, County Budget Review and Outlook Paper FY 2019/2020 (September 2020)",
+     "source_publication_date": "not stated",
+     "table": "Expenditure by economic classification, FY 2019/20 (Budgeted column)",
+     "pdf_page": 20,
+     "printed_page": null,
+     "basis": "County: supplementary budget",
+     "scope": "county government (executive and assembly)",
+     "confidence": 4
     }
    ],
    "beside": [],
-   "result": null,
+   "result": 54.12,
    "unit": "% of budget",
    "period": "FY 2019/20",
    "source_ids": [
     "siaya-brop-2019-20"
    ],
-   "comparability_notes": [],
+   "comparability_notes": [
+    "Budget version: supplementary. Source kind: county.",
+    "No printed rate from this document is held in the repository."
+   ],
    "caveat": "Absorption shows spending against the budget; it says nothing about what the spending delivered. Rates from different documents use different budget versions and cut-off dates and are separate records.",
-   "flags": {},
+   "flags": {
+    "budget_version": "supplementary",
+    "printed_mismatch_gt_1_point": false,
+    "source_kind": "county"
+   },
    "checks": [],
-   "gap_reason": "No development expenditure-side budget is held from this document for FY 2019/20; the rate is not calculated.",
+   "gap_reason": null,
    "confidence": 3,
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
    "calc_id": "SIA-A3-2019-20-siaya-brop-2019-20-recurrent",
    "family": "A3",
-   "status": "gap",
+   "status": "value",
    "title": "Execution rate, recurrent, FY 2019/20 (siaya-brop-2019-20)",
    "formula": "Recurrent expenditure divided by the recurrent budget of the same version, times 100, both from the same document.",
-   "calc": null,
+   "calc": {
+    "op": "ratio_pct",
+    "to_unit": "KSh million",
+    "dp": 2,
+    "numerator_roles": [
+     "expenditure"
+    ],
+    "denominator_roles": [
+     "budget"
+    ],
+    "budget_version": "supplementary"
+   },
    "inputs": [
     {
      "role": "expenditure",
@@ -4785,20 +5142,47 @@
      "basis": null,
      "scope": "county government (executive and assembly)",
      "confidence": 3
+    },
+    {
+     "role": "budget",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L322]",
+     "field": "value",
+     "value": 4899.616267,
+     "unit": "KSh million",
+     "measure": "budget_recurrent",
+     "period": "FY 2019/20",
+     "source_id": "siaya-brop-2019-20",
+     "source_kind": "county",
+     "source_title": "Siaya County Treasury, County Budget Review and Outlook Paper FY 2019/2020 (September 2020)",
+     "source_publication_date": "not stated",
+     "table": "Expenditure by economic classification, FY 2019/20 (Budgeted column)",
+     "pdf_page": 20,
+     "printed_page": null,
+     "basis": "County: supplementary budget",
+     "scope": "county government (executive and assembly)",
+     "confidence": 4
     }
    ],
    "beside": [],
-   "result": null,
+   "result": 95.11,
    "unit": "% of budget",
    "period": "FY 2019/20",
    "source_ids": [
     "siaya-brop-2019-20"
    ],
-   "comparability_notes": [],
+   "comparability_notes": [
+    "Budget version: supplementary. Source kind: county.",
+    "No printed rate from this document is held in the repository."
+   ],
    "caveat": "Absorption shows spending against the budget; it says nothing about what the spending delivered. Rates from different documents use different budget versions and cut-off dates and are separate records.",
-   "flags": {},
+   "flags": {
+    "budget_version": "supplementary",
+    "printed_mismatch_gt_1_point": false,
+    "source_kind": "county"
+   },
    "checks": [],
-   "gap_reason": "No recurrent expenditure-side budget is held from this document for FY 2019/20; the rate is not calculated.",
+   "gap_reason": null,
    "confidence": 3,
    "label": "Calculated by Takwimu Kenya from published figures"
   },
@@ -7560,6 +7944,317 @@
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
+   "calc_id": "SIA-A3-2025-26-cob-report-2025-26-development",
+   "family": "A3",
+   "status": "value",
+   "title": "Execution rate, development, FY 2025/26 (cob-report-2025-26)",
+   "formula": "Development expenditure divided by the development budget of the same version, times 100, both from the same document.",
+   "calc": {
+    "op": "ratio_pct",
+    "to_unit": "KSh million",
+    "dp": 2,
+    "numerator_roles": [
+     "expenditure"
+    ],
+    "denominator_roles": [
+     "budget"
+    ],
+    "budget_version": "supplementary"
+   },
+   "inputs": [
+    {
+     "role": "expenditure",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L305]",
+     "field": "value",
+     "value": 1.6,
+     "unit": "KSh billion",
+     "measure": "expenditure_development",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.4 (Siaya row)",
+     "pdf_page": 43,
+     "printed_page": null,
+     "basis": "CoB expenditure",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    },
+    {
+     "role": "budget",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L302]",
+     "field": "value",
+     "value": 6.03,
+     "unit": "KSh billion",
+     "measure": "budget_development",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.3 (Siaya row)",
+     "pdf_page": 41,
+     "printed_page": null,
+     "basis": null,
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [
+    {
+     "role": "printed_rate",
+     "dataset": "data/history.json",
+     "record": "years[fy=2025/26]",
+     "field": "development_absorption_pct",
+     "value": 26.53,
+     "unit": "%",
+     "measure": "development_absorption_pct",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": null,
+     "table": null,
+     "pdf_page": 44,
+     "printed_page": null,
+     "basis": "as printed in the county chapter",
+     "scope": null,
+     "confidence": 3
+    }
+   ],
+   "result": 26.53,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [
+    "Budget version: supplementary. Source kind: controller_of_budget.",
+    "Expenditure basis as recorded: CoB expenditure.",
+    "Printed rate(s) shown beside; the printed rate is never replaced by the calculated one."
+   ],
+   "caveat": "Absorption shows spending against the budget; it says nothing about what the spending delivered. Rates from different documents use different budget versions and cut-off dates and are separate records.",
+   "flags": {
+    "budget_version": "supplementary",
+    "printed_mismatch_gt_1_point": false,
+    "source_kind": "controller_of_budget"
+   },
+   "checks": [
+    {
+     "type": "printed_rate",
+     "printed_value": 26.53,
+     "printed_dataset": "data/history.json",
+     "printed_record": "years[fy=2025/26]",
+     "printed_field": "development_absorption_pct",
+     "difference_points": 0,
+     "flag_gt_1_point": false
+    }
+   ],
+   "gap_reason": null,
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A3-2025-26-cob-report-2025-26-recurrent",
+   "family": "A3",
+   "status": "value",
+   "title": "Execution rate, recurrent, FY 2025/26 (cob-report-2025-26)",
+   "formula": "Recurrent expenditure divided by the recurrent budget of the same version, times 100, both from the same document.",
+   "calc": {
+    "op": "ratio_pct",
+    "to_unit": "KSh million",
+    "dp": 2,
+    "numerator_roles": [
+     "expenditure"
+    ],
+    "denominator_roles": [
+     "budget"
+    ],
+    "budget_version": "supplementary"
+   },
+   "inputs": [
+    {
+     "role": "expenditure",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L304]",
+     "field": "value",
+     "value": 5.91,
+     "unit": "KSh billion",
+     "measure": "expenditure_recurrent",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.4 (Siaya row)",
+     "pdf_page": 43,
+     "printed_page": null,
+     "basis": "CoB expenditure",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    },
+    {
+     "role": "budget",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L301]",
+     "field": "value",
+     "value": 7.35,
+     "unit": "KSh billion",
+     "measure": "budget_recurrent",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.3 (Siaya row)",
+     "pdf_page": 41,
+     "printed_page": null,
+     "basis": null,
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [
+    {
+     "role": "printed_rate",
+     "dataset": "data/history.json",
+     "record": "years[fy=2025/26]",
+     "field": "recurrent_absorption_pct",
+     "value": 80.35,
+     "unit": "%",
+     "measure": "recurrent_absorption_pct",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": null,
+     "table": null,
+     "pdf_page": 44,
+     "printed_page": null,
+     "basis": "as printed in the county chapter",
+     "scope": null,
+     "confidence": 3
+    }
+   ],
+   "result": 80.41,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [
+    "Budget version: supplementary. Source kind: controller_of_budget.",
+    "Expenditure basis as recorded: CoB expenditure.",
+    "Printed rate(s) shown beside; the printed rate is never replaced by the calculated one."
+   ],
+   "caveat": "Absorption shows spending against the budget; it says nothing about what the spending delivered. Rates from different documents use different budget versions and cut-off dates and are separate records.",
+   "flags": {
+    "budget_version": "supplementary",
+    "printed_mismatch_gt_1_point": false,
+    "source_kind": "controller_of_budget"
+   },
+   "checks": [
+    {
+     "type": "printed_rate",
+     "printed_value": 80.35,
+     "printed_dataset": "data/history.json",
+     "printed_record": "years[fy=2025/26]",
+     "printed_field": "recurrent_absorption_pct",
+     "difference_points": 0.06,
+     "flag_gt_1_point": false
+    }
+   ],
+   "gap_reason": null,
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A3-2025-26-cob-report-2025-26-total",
+   "family": "A3",
+   "status": "value",
+   "title": "Execution rate, total, FY 2025/26 (cob-report-2025-26)",
+   "formula": "Total expenditure divided by the total budget of the same version, times 100, both from the same document.",
+   "calc": {
+    "op": "ratio_pct",
+    "to_unit": "KSh million",
+    "dp": 2,
+    "numerator_roles": [
+     "expenditure"
+    ],
+    "denominator_roles": [
+     "budget"
+    ],
+    "budget_version": "supplementary"
+   },
+   "inputs": [
+    {
+     "role": "expenditure",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L303]",
+     "field": "value",
+     "value": 7.5,
+     "unit": "KSh billion",
+     "measure": "expenditure_total",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.4: Expenditure by Major Economic Classification in FY 2025/26 (Siaya row)",
+     "pdf_page": 43,
+     "printed_page": null,
+     "basis": "CoB expenditure",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    },
+    {
+     "role": "budget",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L300]",
+     "field": "value",
+     "value": 13.38,
+     "unit": "KSh billion",
+     "measure": "budget_total",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.3: County Government Approved Budget Estimates and Exchequer Issues (Siaya row)",
+     "pdf_page": 41,
+     "printed_page": null,
+     "basis": "CoB Table 2.3 \"Approved Budget Estimates\"; equals the county's supplementary budget of 13,377,987,507 (Q4 report, L058)",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": 56.05,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [
+    "Budget version: supplementary. Source kind: controller_of_budget.",
+    "Expenditure basis as recorded: CoB expenditure.",
+    "No printed rate from this document is held in the repository."
+   ],
+   "caveat": "Absorption shows spending against the budget; it says nothing about what the spending delivered. Rates from different documents use different budget versions and cut-off dates and are separate records.",
+   "flags": {
+    "budget_version": "supplementary",
+    "printed_mismatch_gt_1_point": false,
+    "source_kind": "controller_of_budget"
+   },
+   "checks": [],
+   "gap_reason": null,
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
    "calc_id": "SIA-A3-2025-26-GOV-02-FY2025-26-Q1-development",
    "family": "A3",
    "status": "gap",
@@ -7937,6 +8632,94 @@
    "checks": [],
    "gap_reason": null,
    "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A3-2025-26-siaya-cbrop-2025-26-development",
+   "family": "A3",
+   "status": "gap",
+   "title": "Execution rate, development, FY 2025/26 (siaya-cbrop-2025-26)",
+   "formula": "Development expenditure divided by the development budget of the same version, times 100, both from the same document.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "expenditure",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L313]",
+     "field": "value",
+     "value": 2781.583267,
+     "unit": "KSh million",
+     "measure": "expenditure_development",
+     "period": "FY 2025/26",
+     "source_id": "siaya-cbrop-2025-26",
+     "source_kind": "county",
+     "source_title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "source_publication_date": "2026-09",
+     "table": "Table 10 (DEV row)",
+     "pdf_page": 21,
+     "printed_page": null,
+     "basis": "County Treasury actual",
+     "scope": "county government (executive and assembly)",
+     "confidence": 4
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "siaya-cbrop-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Absorption shows spending against the budget; it says nothing about what the spending delivered. Rates from different documents use different budget versions and cut-off dates and are separate records.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "No development expenditure-side budget is held from this document for FY 2025/26; the rate is not calculated.",
+   "confidence": 4,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A3-2025-26-siaya-cbrop-2025-26-total",
+   "family": "A3",
+   "status": "gap",
+   "title": "Execution rate, total, FY 2025/26 (siaya-cbrop-2025-26)",
+   "formula": "Total expenditure divided by the total budget of the same version, times 100, both from the same document.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "expenditure",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L312]",
+     "field": "value",
+     "value": 9605.521599,
+     "unit": "KSh million",
+     "measure": "expenditure_total",
+     "period": "FY 2025/26",
+     "source_id": "siaya-cbrop-2025-26",
+     "source_kind": "county",
+     "source_title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "source_publication_date": "2026-09",
+     "table": "Table 10: Budget performance by economic classification, FY 2025/26 (and text)",
+     "pdf_page": 21,
+     "printed_page": null,
+     "basis": "County Treasury actual",
+     "scope": "county government (executive and assembly)",
+     "confidence": 4
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "siaya-cbrop-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Absorption shows spending against the budget; it says nothing about what the spending delivered. Rates from different documents use different budget versions and cut-off dates and are separate records.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "No total expenditure-side budget is held from this document for FY 2025/26; the rate is not calculated.",
+   "confidence": 4,
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
@@ -12211,6 +12994,64 @@
    "checks": [],
    "gap_reason": null,
    "confidence": 2,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A4-stock-2025-26-L310",
+   "family": "A4",
+   "status": "value",
+   "title": "Pending bills stock at 2026-06-30 (cob-report-2025-26, L310)",
+   "formula": "Reported stock as printed, converted to KSh million.",
+   "calc": {
+    "op": "linear",
+    "to_unit": "KSh million",
+    "dp": 2,
+    "coefficients": {
+     "stock": 1
+    }
+   },
+   "inputs": [
+    {
+     "role": "stock",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L310]",
+     "field": "value",
+     "value": 1276.88,
+     "unit": "KSh million",
+     "measure": "pending_bills_close",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.10: Trade Payables for the Counties as of 30 June 2026 (Siaya row)",
+     "pdf_page": 53,
+     "printed_page": null,
+     "basis": "CoB FY 2025/26: \"trade payables\" (the report uses this term in place of pending bills)",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": 1276.88,
+   "unit": "KSh million",
+   "period": "stock at 2026-06-30",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [
+    "Basis: CoB FY 2025/26: \"trade payables\" (the report uses this term in place of pending bills).",
+    "Scope: county government (executive and assembly).",
+    "Stock point: printed as the closing stock of the year."
+   ],
+   "caveat": "Payments settle individual bills; the stock can rise in the same year because new bills are added, and reported stocks depend on what each source counts (executive only or whole county, verified or unverified, with or without the year's new bills).",
+   "flags": {
+    "source_kind": "controller_of_budget",
+    "stock_point": "closing"
+   },
+   "checks": [],
+   "gap_reason": null,
+   "confidence": 3,
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
@@ -27643,6 +28484,154 @@
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
+   "calc_id": "SIA-A8-2024-25-knbs-economic-survey-2026",
+   "family": "A8",
+   "status": "gap",
+   "title": "FIF/A-i-A share of own-source revenue, FY 2024/25 (knbs-economic-survey-2026)",
+   "formula": "FIF/A-i-A collected divided by (ordinary own-source revenue + FIF/A-i-A) from the same document, times 100; where the document gives no ordinary figure, FIF/A-i-A divided by its printed total own-source revenue.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "total",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L321]",
+     "field": "value",
+     "value": 481.79,
+     "unit": "KSh million",
+     "measure": "osr_total_actual",
+     "period": "FY 2024/25",
+     "source_id": "knbs-economic-survey-2026",
+     "source_kind": "other",
+     "source_title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "source_publication_date": "2026",
+     "table": "Table 5.13 (Siaya row, Annual Own Source Revenue, 2024/25 revised)",
+     "pdf_page": 150,
+     "printed_page": null,
+     "basis": "KNBS: annual own-source revenue, revised",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "% of own-source revenue",
+   "period": "FY 2024/25",
+   "source_ids": [
+    "knbs-economic-survey-2026"
+   ],
+   "comparability_notes": [],
+   "caveat": "Describes how own-source revenue is made up; it is not a judgement of collection. What FIF and A-i-A are: Learn, own-source revenue (defined once there). Sources differ in what they put in each part; each document is a separate record.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "This document prints one own-source revenue figure for the year and does not give health FIF/A-i-A separately, so its composition cannot be stated.",
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A8-2025-26-cob-report-2025-26",
+   "family": "A8",
+   "status": "value",
+   "title": "FIF/A-i-A share of own-source revenue, FY 2025/26 (cob-report-2025-26)",
+   "formula": "FIF/A-i-A collected divided by (ordinary own-source revenue + FIF/A-i-A) from the same document, times 100; where the document gives no ordinary figure, FIF/A-i-A divided by its printed total own-source revenue.",
+   "calc": {
+    "op": "ratio_pct",
+    "numerator_roles": [
+     "fif"
+    ],
+    "denominator_roles": [
+     "ordinary",
+     "fif"
+    ],
+    "to_unit": "KSh million",
+    "dp": 2
+   },
+   "inputs": [
+    {
+     "role": "ordinary",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L307]",
+     "field": "value",
+     "value": 290.45,
+     "unit": "KSh million",
+     "measure": "osr_ordinary_actual",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.1 (Siaya row)",
+     "pdf_page": 38,
+     "printed_page": null,
+     "basis": "CoB: ordinary own-source revenue",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    },
+    {
+     "role": "fif",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L308]",
+     "field": "value",
+     "value": 585.69,
+     "unit": "KSh million",
+     "measure": "osr_fif_aia_actual",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.1 (Siaya row)",
+     "pdf_page": 38,
+     "printed_page": null,
+     "basis": "CoB: FIF/A-i-A",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [
+    {
+     "role": "printed_total",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L306]",
+     "field": "value",
+     "value": 876.14,
+     "unit": "KSh million",
+     "measure": "osr_total_actual",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_kind": "controller_of_budget",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "source_publication_date": "2026-08",
+     "table": "Table 2.1: Own Source Revenue Collection in FY 2025/26 (Siaya row)",
+     "pdf_page": 38,
+     "printed_page": null,
+     "basis": "CoB: total own-source revenue including FIF/A-i-A",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "result": 66.85,
+   "unit": "% of own-source revenue",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [
+    "Ordinary own-source revenue KSh 290.45 million; FIF/A-i-A KSh 585.69 million.",
+    "Printed total KSh 876.14 million; the two parts add to the printed total.",
+    "What the FIF/A-i-A part covers, as the source states it: CoB: FIF/A-i-A.",
+    "Source kind: controller_of_budget. Other documents for the same year are separate records and are not averaged."
+   ],
+   "caveat": "Describes how own-source revenue is made up; it is not a judgement of collection. What FIF and A-i-A are: Learn, own-source revenue (defined once there). Sources differ in what they put in each part; each document is a separate record.",
+   "flags": {
+    "source_kind": "controller_of_budget",
+    "denominator": "ordinary+fif"
+   },
+   "checks": [],
+   "gap_reason": null,
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
    "calc_id": "SIA-A8-2025-26-GOV-02-FY2025-26-Q4",
    "family": "A8",
    "status": "value",
@@ -27734,6 +28723,155 @@
     "Ordinary own-source revenue KSh 290.45 million; FIF/A-i-A KSh 585.69 million.",
     "Printed total KSh 876.14 million; the two parts add to the printed total.",
     "What the FIF/A-i-A part covers, as the source states it: FIF: SHIF and hospital revenue.",
+    "Source kind: county. Other documents for the same year are separate records and are not averaged."
+   ],
+   "caveat": "Describes how own-source revenue is made up; it is not a judgement of collection. What FIF and A-i-A are: Learn, own-source revenue (defined once there). Sources differ in what they put in each part; each document is a separate record.",
+   "flags": {
+    "source_kind": "county",
+    "denominator": "ordinary+fif"
+   },
+   "checks": [],
+   "gap_reason": null,
+   "confidence": 4,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A8-2025-26-knbs-economic-survey-2026",
+   "family": "A8",
+   "status": "gap",
+   "title": "FIF/A-i-A share of own-source revenue, FY 2025/26 (knbs-economic-survey-2026)",
+   "formula": "FIF/A-i-A collected divided by (ordinary own-source revenue + FIF/A-i-A) from the same document, times 100; where the document gives no ordinary figure, FIF/A-i-A divided by its printed total own-source revenue.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "total",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L320]",
+     "field": "value",
+     "value": 3114.92,
+     "unit": "KSh million",
+     "measure": "osr_total_actual",
+     "period": "FY 2025/26",
+     "source_id": "knbs-economic-survey-2026",
+     "source_kind": "other",
+     "source_title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "source_publication_date": "2026",
+     "table": "Table 5.13: County Governments' Revenue, 2024/25 - 2025/26 (Siaya row, Annual Own Source Revenue, 2025/26 provisional)",
+     "pdf_page": 150,
+     "printed_page": null,
+     "basis": "KNBS: annual own-source revenue, provisional",
+     "scope": "county government (executive and assembly)",
+     "confidence": 2
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "% of own-source revenue",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "knbs-economic-survey-2026"
+   ],
+   "comparability_notes": [],
+   "caveat": "Describes how own-source revenue is made up; it is not a judgement of collection. What FIF and A-i-A are: Learn, own-source revenue (defined once there). Sources differ in what they put in each part; each document is a separate record.",
+   "flags": {},
+   "checks": [],
+   "gap_reason": "This document prints one own-source revenue figure for the year and does not give health FIF/A-i-A separately, so its composition cannot be stated.",
+   "confidence": 2,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-A8-2025-26-siaya-cbrop-2025-26",
+   "family": "A8",
+   "status": "value",
+   "title": "FIF/A-i-A share of own-source revenue, FY 2025/26 (siaya-cbrop-2025-26)",
+   "formula": "FIF/A-i-A collected divided by (ordinary own-source revenue + FIF/A-i-A) from the same document, times 100; where the document gives no ordinary figure, FIF/A-i-A divided by its printed total own-source revenue.",
+   "calc": {
+    "op": "ratio_pct",
+    "numerator_roles": [
+     "fif"
+    ],
+    "denominator_roles": [
+     "ordinary",
+     "fif"
+    ],
+    "to_unit": "KSh million",
+    "dp": 2
+   },
+   "inputs": [
+    {
+     "role": "ordinary",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L317]",
+     "field": "value",
+     "value": 272.116888,
+     "unit": "KSh million",
+     "measure": "osr_ordinary_actual",
+     "period": "FY 2025/26",
+     "source_id": "siaya-cbrop-2025-26",
+     "source_kind": "county",
+     "source_title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "source_publication_date": "2026-09",
+     "table": "Executive summary (text)",
+     "pdf_page": 5,
+     "printed_page": null,
+     "basis": "County: ordinary revenue",
+     "scope": "county government (executive and assembly)",
+     "confidence": 4
+    },
+    {
+     "role": "fif",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L318]",
+     "field": "value",
+     "value": 590.818058,
+     "unit": "KSh million",
+     "measure": "osr_fif_aia_actual",
+     "period": "FY 2025/26",
+     "source_id": "siaya-cbrop-2025-26",
+     "source_kind": "county",
+     "source_title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "source_publication_date": "2026-09",
+     "table": "Executive summary (text)",
+     "pdf_page": 5,
+     "printed_page": null,
+     "basis": "County: appropriations-in-aid",
+     "scope": "county government (executive and assembly)",
+     "confidence": 4
+    }
+   ],
+   "beside": [
+    {
+     "role": "printed_total",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L315]",
+     "field": "value",
+     "value": 862.934947,
+     "unit": "KSh million",
+     "measure": "osr_total_actual",
+     "period": "FY 2025/26",
+     "source_id": "siaya-cbrop-2025-26",
+     "source_kind": "county",
+     "source_title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "source_publication_date": "2026-09",
+     "table": "Executive summary (text)",
+     "pdf_page": 5,
+     "printed_page": null,
+     "basis": "County: local revenue including A-i-A",
+     "scope": "county government (executive and assembly)",
+     "confidence": 4
+    }
+   ],
+   "result": 68.47,
+   "unit": "% of own-source revenue",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "siaya-cbrop-2025-26"
+   ],
+   "comparability_notes": [
+    "Ordinary own-source revenue KSh 272.12 million; FIF/A-i-A KSh 590.82 million.",
+    "Printed total KSh 862.93 million; the two parts add to the printed total.",
+    "Same figure at other rounding in the same document: L316.",
+    "What the FIF/A-i-A part covers, as the source states it: County: appropriations-in-aid.",
     "Source kind: county. Other documents for the same year are separate records and are not averaged."
    ],
    "caveat": "Describes how own-source revenue is made up; it is not a judgement of collection. What FIF and A-i-A are: Learn, own-source revenue (defined once there). Sources differ in what they put in each part; each document is a separate record.",

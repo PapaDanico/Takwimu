@@ -3,7 +3,7 @@
   "title": "Data corrections log",
   "rule": "Every change Takwimu makes to a published value, label or citation that is not already a resolved case in data/conflicts.json is logged here with the original and corrected figure, the reason, the evidence (source and page), the date and the pages affected. scripts/test-corrections.js compares every value with the previous release's data (git main) and fails the build if a changed value has no entry here or in the register. Errors in the source documents themselves are not our corrections: they are flagged on the records (source_error) and flagged where the value is shown. Each correction is footnoted beside the value it changed, from its was and note fields.",
   "baseline": "main",
-  "updated": "2026-11-23"
+  "updated": "2026-11-27"
  },
  "entries": [
   {
@@ -123,6 +123,25 @@
    ],
    "was": "KSh 789.96 million",
    "note": "Recalculated from the corrected ledger value L276."
+  },
+  {
+   "id": "COR-2026-007",
+   "dataset": "siaya-analysis",
+   "record_ids": [
+    "SIA-A3-2019-20-siaya-brop-2019-20-recurrent",
+    "SIA-A3-2019-20-siaya-brop-2019-20-development"
+   ],
+   "measure": "Execution rates, recurrent and development, FY 2019/20, from the county Budget Review and Outlook Paper (calculations)",
+   "original": "Not calculated: no budget by part was held from the paper",
+   "corrected": "95.11 per cent (recurrent) and 54.12 per cent (development)",
+   "reason": "The paper's budget by part (supplementary: recurrent 4,899,616,267; development 3,982,157,657, PDF p. 20) was read on 27 Nov 2026 (gap research A) and entered in the fiscal ledger (L322, L323), so the rates are now calculated from printed figures. The paper itself prints 95% and 54% on the same page. No input value changed.",
+   "evidence": "data/siaya-fiscal-ledger.json L322, L323, L224, L225; siaya-brop-2019-20 (SHA-256 5be47fcf...) PDF p. 20",
+   "date": "2026-11-27",
+   "affected_pages": [
+    "/counties/siaya/analysis/"
+   ],
+   "was": "not calculated (budget by part not held)",
+   "note": "Calculated once the paper's budget by part (PDF p. 20) was read; no input value changed."
   }
  ]
 }

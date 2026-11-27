@@ -25,15 +25,15 @@
   "counts": {
    "B1": {
     "values": 8,
-    "gaps": 4
+    "gaps": 5
    },
    "B2": {
-    "values": 59,
+    "values": 61,
     "gaps": 9
    },
    "B3": {
-    "values": 84,
-    "gaps": 25
+    "values": 85,
+    "gaps": 27
    },
    "B4": {
     "values": 228,
@@ -41,7 +41,7 @@
    },
    "B5": {
     "values": 15,
-    "gaps": 3
+    "gaps": 4
    }
   }
  },
@@ -1159,6 +1159,53 @@
    "flags": {
     "above_ceiling": true
    },
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-B1-2025-26-cob-report-2025-26",
+   "family": "B1",
+   "status": "gap",
+   "title": "Wage bill as a share of total revenue, FY 2025/26 (cob-report-2025-26)",
+   "formula": "Wage bill (compensation of employees) divided by total revenue received (equitable share + conditional grants or additional allocations + own-source revenue), times 100. All from the Controller of Budget's report for the year.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "wage_bill",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L311]",
+     "field": "value",
+     "value": 4435.93,
+     "unit": "KSh million",
+     "measure": "wage_bill",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "table": "Table 2.4 (Siaya row, compensation to employees)",
+     "pdf_page": 43,
+     "printed_page": null,
+     "basis": "CoB: compensation to employees",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Revenue here is what the Controller of Budget reports as received; it leaves out balances brought forward. The Auditor-General's ratios use the auditor's own denominator (receipts or revenue of the County Executive) and are shown beside, not combined.",
+   "threshold": {
+    "value": 35,
+    "unit": "%",
+    "kind": "ceiling",
+    "rule": "Public Finance Management (County Governments) Regulations, 2015, regulation 25(1)(b): expenditure on wages and benefits not to exceed 35 per cent of the county government's total revenue. Ceiling as quoted by the Commission on Revenue Allocation (April 2016, source CRA-SENATE-CEILINGS-2016-17); the gazetted regulations are not held. The Act (s. 107(2)(c), LAW-PFM-ACT-2012) leaves the percentage to regulations."
+   },
+   "flags": {},
+   "gap_reason": "equitable_share_received: not printed in the year's own report",
    "confidence": 3,
    "label": "Calculated by Takwimu Kenya from published figures"
   },
@@ -5849,6 +5896,156 @@
     "below_floor": false
    },
    "confidence": 4,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-B2-2025-26-actual-cob-report-2025-26",
+   "family": "B2",
+   "status": "value",
+   "title": "Development share of actual spending, FY 2025/26 (cob-report-2025-26)",
+   "formula": "Development spending divided by total spending, times 100; the Controller of Budget's report for the year.",
+   "calc": {
+    "op": "ratio_pct",
+    "numerator_roles": [
+     "development"
+    ],
+    "denominator_roles": [
+     "total"
+    ],
+    "dp": 2
+   },
+   "inputs": [
+    {
+     "role": "development",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L305]",
+     "field": "value",
+     "value": 1.6,
+     "unit": "KSh billion",
+     "measure": "expenditure_development",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "table": "Table 2.4 (Siaya row)",
+     "pdf_page": 43,
+     "printed_page": null,
+     "basis": "CoB expenditure",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    },
+    {
+     "role": "total",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L303]",
+     "field": "value",
+     "value": 7.5,
+     "unit": "KSh billion",
+     "measure": "expenditure_total",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "table": "Table 2.4: Expenditure by Major Economic Classification in FY 2025/26 (Siaya row)",
+     "pdf_page": 43,
+     "printed_page": null,
+     "basis": "CoB expenditure",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": 21.33,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "The 30 per cent floor applies to the budget; spending is shown for contrast.",
+   "threshold": {
+    "value": 30,
+    "unit": "%",
+    "kind": "floor",
+    "rule": "Public Finance Management Act, 2012, section 107(2)(b): over the medium term, at least 30 per cent of the county budget allocated to development expenditure. The floor applies to the budget; spending is shown for contrast. Wording read in the Act (LAW-PFM-ACT-2012, s. 107(2)(b))."
+   },
+   "flags": {
+    "below_floor": true
+   },
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-B2-2025-26-budget-cob-report-2025-26",
+   "family": "B2",
+   "status": "value",
+   "title": "Development share of the approved budget, FY 2025/26 (cob-report-2025-26)",
+   "formula": "Development budget divided by total budget, times 100; the Controller of Budget's report for the year.",
+   "calc": {
+    "op": "ratio_pct",
+    "numerator_roles": [
+     "development"
+    ],
+    "denominator_roles": [
+     "total"
+    ],
+    "dp": 2
+   },
+   "inputs": [
+    {
+     "role": "development",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L302]",
+     "field": "value",
+     "value": 6.03,
+     "unit": "KSh billion",
+     "measure": "budget_development",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "table": "Table 2.3 (Siaya row)",
+     "pdf_page": 41,
+     "printed_page": null,
+     "basis": null,
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    },
+    {
+     "role": "total",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L300]",
+     "field": "value",
+     "value": 13.38,
+     "unit": "KSh billion",
+     "measure": "budget_total",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "table": "Table 2.3: County Government Approved Budget Estimates and Exchequer Issues (Siaya row)",
+     "pdf_page": 41,
+     "printed_page": null,
+     "basis": "CoB Table 2.3 \"Approved Budget Estimates\"; equals the county's supplementary budget of 13,377,987,507 (Q4 report, L058)",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": 45.07,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": null,
+   "threshold": {
+    "value": 30,
+    "unit": "%",
+    "kind": "floor",
+    "rule": "Public Finance Management Act, 2012, section 107(2)(b): over the medium term, at least 30 per cent of the county budget allocated to development expenditure. The floor applies to the budget; spending is shown for contrast. Wording read in the Act (LAW-PFM-ACT-2012, s. 107(2)(b))."
+   },
+   "flags": {
+    "below_floor": false
+   },
+   "confidence": 3,
    "label": "Calculated by Takwimu Kenya from published figures"
   },
   {
@@ -13180,6 +13377,158 @@
    "caveat": "Deflated with the national CPI (World Bank WDI, fiscal-year average of two calendar years; approximate).",
    "threshold": null,
    "flags": {},
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-B3-2025-26-capita-cob",
+   "family": "B3",
+   "status": "gap",
+   "title": "Own-source revenue per person, FY 2025/26 (Controller of Budget)",
+   "formula": "Own-source revenue (KSh) divided by the population of the calendar year in which the fiscal year starts.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "osr_actual",
+     "dataset": "data/history.json",
+     "record": "years[fy=2025/26]",
+     "field": "osr_m",
+     "value": 876.14,
+     "unit": "KSh million",
+     "measure": "osr_m",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": null,
+     "table": null,
+     "pdf_page": 38,
+     "printed_page": null,
+     "basis": null,
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "KSh per person (current prices)",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Census counts and county projections are kept distinct (input basis); no year is interpolated.",
+   "threshold": null,
+   "flags": {},
+   "gap_reason": "No population figure for calendar year 2025 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-B3-2025-26-perf-cob",
+   "family": "B3",
+   "status": "value",
+   "title": "Own-source revenue against target, FY 2025/26 (Controller of Budget)",
+   "formula": "Own-source revenue collected divided by the target, times 100; both from the same document.",
+   "calc": {
+    "op": "ratio_pct",
+    "numerator_roles": [
+     "osr_actual"
+    ],
+    "denominator_roles": [
+     "osr_target"
+    ],
+    "dp": 2
+   },
+   "inputs": [
+    {
+     "role": "osr_actual",
+     "dataset": "data/history.json",
+     "record": "years[fy=2025/26]",
+     "field": "osr_m",
+     "value": 876.14,
+     "unit": "KSh million",
+     "measure": "osr_m",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": null,
+     "table": null,
+     "pdf_page": 38,
+     "printed_page": null,
+     "basis": null,
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    },
+    {
+     "role": "osr_target",
+     "dataset": "data/history.json",
+     "record": "years[fy=2025/26]",
+     "field": "osr_target_m",
+     "value": 3252.42,
+     "unit": "KSh million",
+     "measure": "osr_target_m",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": null,
+     "table": null,
+     "pdf_page": 38,
+     "printed_page": null,
+     "basis": null,
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": 26.94,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "What the target and the actual include is as the document states (see each input's basis).",
+   "threshold": null,
+   "flags": {},
+   "confidence": 3,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-B3-2025-26-real-cob",
+   "family": "B3",
+   "status": "gap",
+   "title": "Own-source revenue in real terms, FY 2025/26 (Controller of Budget)",
+   "formula": "Own-source revenue (KSh million) multiplied by CPI(FY 2024/25) / CPI(FY 2025/26).",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "osr_actual",
+     "dataset": "data/history.json",
+     "record": "years[fy=2025/26]",
+     "field": "osr_m",
+     "value": 876.14,
+     "unit": "KSh million",
+     "measure": "osr_m",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": null,
+     "table": null,
+     "pdf_page": 38,
+     "printed_page": null,
+     "basis": null,
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "KSh million at FY 2024/25 prices",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Deflated with the national CPI (World Bank WDI, fiscal-year average of two calendar years; approximate).",
+   "threshold": null,
+   "flags": {},
+   "gap_reason": "No CPI for FY 2025/26.",
    "confidence": 3,
    "label": "Calculated by Takwimu Kenya from published figures"
   },
@@ -31359,6 +31708,53 @@
     "above_limit": false
    },
    "confidence": 2,
+   "label": "Calculated by Takwimu Kenya from published figures"
+  },
+  {
+   "calc_id": "SIA-B5-2025-26-cob-report-2025-26-L310",
+   "family": "B5",
+   "status": "gap",
+   "title": "Pending bills as a share of total revenue, FY 2025/26 (cob-report-2025-26, L310)",
+   "formula": "Pending bills at 30 June (own-year report) divided by total revenue received in the year (equitable share + grants + own-source revenue, same report), times 100.",
+   "calc": null,
+   "inputs": [
+    {
+     "role": "pending",
+     "dataset": "data/siaya-fiscal-ledger.json",
+     "record": "observations[id=L310]",
+     "field": "value",
+     "value": 1276.88,
+     "unit": "KSh million",
+     "measure": "pending_bills_close",
+     "period": "FY 2025/26",
+     "source_id": "cob-report-2025-26",
+     "source_title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "table": "Table 2.10: Trade Payables for the Counties as of 30 June 2026 (Siaya row)",
+     "pdf_page": 53,
+     "printed_page": null,
+     "basis": "CoB FY 2025/26: \"trade payables\" (the report uses this term in place of pending bills)",
+     "scope": "county government (executive and assembly)",
+     "confidence": 3
+    }
+   ],
+   "beside": [],
+   "result": null,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "source_ids": [
+    "cob-report-2025-26"
+   ],
+   "comparability_notes": [],
+   "caveat": "Each stock the report prints is a separate record (scope and the bills of the year as the report states them); the Auditor-General's ratio counts total liabilities against the auditor's own revenue figure. Ageing (share older than a year) needs the Auditor-General's annexes, not yet transcribed.",
+   "threshold": {
+    "value": 20,
+    "unit": "%",
+    "kind": "limit",
+    "rule": "The Auditor-General tests total liabilities against 20 per cent of revenue (FY 2024/25 report on the County Executive); the limit as the auditor applies it, not a ratio defined in this repository."
+   },
+   "flags": {},
+   "gap_reason": "equitable_share_received: not printed in the year's own report",
+   "confidence": 3,
    "label": "Calculated by Takwimu Kenya from published figures"
   }
  ]

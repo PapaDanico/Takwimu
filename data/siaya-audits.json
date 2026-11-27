@@ -301,6 +301,58 @@
   },
   {
    "entity": "county_executive",
+   "fy": "2016/17",
+   "opinion": "Adverse Opinion",
+   "opinion_note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Executive row, printed \"Adverse\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "doc_id": "pbo-county-fact-sheets-2024",
+   "page": 392,
+   "confidence": 2,
+   "history": "matches",
+   "source_type": "official compilation (secondary)",
+   "tier": "secondary",
+   "quote": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Executive row, FY 2016/17: Adverse",
+   "read_method": "text",
+   "corroboration": [
+    {
+     "document": "National Taxpayers Association, Chambua: summary of the Auditor-General's reports on county executives, FY 2016/17 (compressed copy)",
+     "url": "https://www.nta.or.ke/wp-content/uploads/2024/04/Summary-of-County-Executive-Reports-Chambua-compressed.pdf",
+     "sha256": "ee4ddd29a9a86d26e8041ea2b3e4df891ab90ec490f9c990a3c25fd91bd4ff6b",
+     "page": 42,
+     "quote": "OAG Opinion : Adverse Opinion - non compliance with Article 229(6) of CoK",
+     "source_type": "secondary-news/ngo"
+    }
+   ]
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2017/18",
+   "opinion": "Qualified Opinion",
+   "opinion_note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Executive row, printed \"Qualified\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "doc_id": "pbo-county-fact-sheets-2024",
+   "page": 392,
+   "confidence": 2,
+   "history": "matches",
+   "source_type": "official compilation (secondary)",
+   "tier": "secondary",
+   "quote": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Executive row, FY 2017/18: Qualified",
+   "read_method": "text"
+  },
+  {
+   "entity": "county_executive",
+   "fy": "2018/19",
+   "opinion": "Qualified Opinion",
+   "opinion_note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Executive row, printed \"Qualified\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "doc_id": "pbo-county-fact-sheets-2024",
+   "page": 392,
+   "confidence": 2,
+   "history": "matches",
+   "source_type": "official compilation (secondary)",
+   "tier": "secondary",
+   "quote": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Executive row, FY 2018/19: Qualified",
+   "read_method": "text"
+  },
+  {
+   "entity": "county_executive",
    "fy": "2019/20",
    "opinion": "Qualified Opinion",
    "doc_id": "audit-2019-20",
@@ -358,6 +410,48 @@
    "confidence": 3,
    "history": "not in history",
    "opinion_note": ""
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2016/17",
+   "opinion": "Adverse Opinion",
+   "opinion_note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Assembly row, printed \"Adverse\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "doc_id": "pbo-county-fact-sheets-2024",
+   "page": 392,
+   "confidence": 2,
+   "history": "not in history",
+   "source_type": "official compilation (secondary)",
+   "tier": "secondary",
+   "quote": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Assembly row, FY 2016/17: Adverse",
+   "read_method": "text"
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2017/18",
+   "opinion": "Qualified Opinion",
+   "opinion_note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Assembly row, printed \"Qualified\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "doc_id": "pbo-county-fact-sheets-2024",
+   "page": 392,
+   "confidence": 2,
+   "history": "not in history",
+   "source_type": "official compilation (secondary)",
+   "tier": "secondary",
+   "quote": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Assembly row, FY 2017/18: Qualified",
+   "read_method": "text"
+  },
+  {
+   "entity": "county_assembly",
+   "fy": "2018/19",
+   "opinion": "Qualified Opinion",
+   "opinion_note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Assembly row, printed \"Qualified\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "doc_id": "pbo-county-fact-sheets-2024",
+   "page": 392,
+   "confidence": 2,
+   "history": "not in history",
+   "source_type": "official compilation (secondary)",
+   "tier": "secondary",
+   "quote": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Assembly row, FY 2018/19: Qualified",
+   "read_method": "text"
   },
   {
    "entity": "county_assembly",
@@ -7105,20 +7199,20 @@
   {
    "entity": "county_executive",
    "fy": "2016/17",
-   "status": "missing",
-   "reason": "No County Executive audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503 on 20 and 21 Nov 2026."
+   "status": "opinion only",
+   "reason": "The Auditor-General's report is still not held (no County Executive of Siaya report for FY 2016/17 in the Parliament library; oagkenya.go.ke serves a bot check, 27 Nov 2026). The opinion comes from the Parliamentary Budget Office's County Fact Sheets 2024 (official compilation, secondary), so no findings are recorded."
   },
   {
    "entity": "county_executive",
    "fy": "2017/18",
-   "status": "missing",
-   "reason": "As for 2016/17."
+   "status": "opinion only",
+   "reason": "The Auditor-General's report is still not held (no County Executive of Siaya report for FY 2017/18 in the Parliament library; oagkenya.go.ke serves a bot check, 27 Nov 2026). The opinion comes from the Parliamentary Budget Office's County Fact Sheets 2024 (official compilation, secondary), so no findings are recorded."
   },
   {
    "entity": "county_executive",
    "fy": "2018/19",
-   "status": "missing",
-   "reason": "As for 2016/17."
+   "status": "opinion only",
+   "reason": "The Auditor-General's report is still not held (no County Executive of Siaya report for FY 2018/19 in the Parliament library; oagkenya.go.ke serves a bot check, 27 Nov 2026). The opinion comes from the Parliamentary Budget Office's County Fact Sheets 2024 (official compilation, secondary), so no findings are recorded."
   },
   {
    "entity": "county_assembly",
@@ -7141,20 +7235,20 @@
   {
    "entity": "county_assembly",
    "fy": "2016/17",
-   "status": "missing",
-   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+   "status": "opinion only",
+   "reason": "The Auditor-General's report is still not held (no County Assembly of Siaya report for FY 2016/17 in the Parliament library; oagkenya.go.ke serves a bot check, 27 Nov 2026). The opinion comes from the Parliamentary Budget Office's County Fact Sheets 2024 (official compilation, secondary), so no findings are recorded."
   },
   {
    "entity": "county_assembly",
    "fy": "2017/18",
-   "status": "missing",
-   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+   "status": "opinion only",
+   "reason": "The Auditor-General's report is still not held (no County Assembly of Siaya report for FY 2017/18 in the Parliament library; oagkenya.go.ke serves a bot check, 27 Nov 2026). The opinion comes from the Parliamentary Budget Office's County Fact Sheets 2024 (official compilation, secondary), so no findings are recorded."
   },
   {
    "entity": "county_assembly",
    "fy": "2018/19",
-   "status": "missing",
-   "reason": "No County Assembly of Siaya audit report found in the Parliament library (searched 21 Nov 2026); oagkenya.go.ke returned HTTP 503."
+   "status": "opinion only",
+   "reason": "The Auditor-General's report is still not held (no County Assembly of Siaya report for FY 2018/19 in the Parliament library; oagkenya.go.ke serves a bot check, 27 Nov 2026). The opinion comes from the Parliamentary Budget Office's County Fact Sheets 2024 (official compilation, secondary), so no findings are recorded."
   },
   {
    "entity": "county_assembly",

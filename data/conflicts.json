@@ -1622,6 +1622,203 @@
       "ledger_cases": [
         "D-L231-L232"
       ]
+    },
+    {
+      "id": "development-spending-2019-20",
+      "measure": "Development spending, FY 2019/20",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Siaya County Budget Review and Outlook Paper FY 2019/20 (county document, expenditure table, PDF p. 20): 2,155,005,238",
+          "value": 2155.01,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf"
+        },
+        {
+          "label": "Controller of Budget FY 2020/21 report, section 3.39.9, quoted as the prior year (\"the County spent Kshs.2.12 billion\", PDF p. 376)",
+          "value": 2120,
+          "url": "https://libraryir.parliament.go.ke/items/79eb8b51-0c86-4077-aceb-e1e762cce44c"
+        }
+      ],
+      "definitions": "The county paper prints development spending of 2,155,005,238 against a supplementary development budget of 3,982,157,657 (54 per cent). The Controller of Budget figure is a rounded comparison figure in the next year's report; the Controller of Budget annual report for FY 2019/20 itself is not held.",
+      "hypothesis": "Hypothesis: the two may be cut at different dates or the CoB figure may count exchequer-backed spending only. The difference is 1.65 per cent of the smaller value. Not confirmed.",
+      "effect": "Neither value is plotted: FY 2019/20 stays a gap in the ten-year series. Both are listed in history.json supplementary and in the fiscal ledger.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "ledger_cases": [
+        "D-L225-L325"
+      ]
+    },
+    {
+      "id": "spent-2025-26",
+      "measure": "Spending, FY 2025/26 (Controller of Budget annual report against the county's own documents)",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget annual report FY 2025/26, Part 1, Table 2.4, Siaya row (PDF p. 43; Table 2.5, p. 44, prints the same); the series value, rounded to 7.50 billion",
+          "value": 7504.73,
+          "url": "https://libraryir.parliament.go.ke/items/99f48395-0710-4a74-bcdf-e4ea40812813"
+        },
+        {
+          "label": "Siaya County Budget Review and Outlook Paper FY 2025/26, Table 10 and text (PDF p. 21): 9,605,521,598.65, 71.80 per cent of the 13,377,987,507 budget",
+          "value": 9605.52,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf"
+        },
+        {
+          "label": "Siaya County fourth-quarter budget implementation report FY 2025/26, text (\"The County spent Kshs.7.18 billion\", PDF p. 6); its own components and table add to 7,504.73",
+          "value": 7180,
+          "url": "https://siaya.go.ke/?cgdp_download=31593"
+        }
+      ],
+      "definitions": "The Controller of Budget prints recurrent 5,905.69 (compensation 4,435.93, operations 1,469.76) and development 1,599.04 (absorption 80.35, 26.53 and 56.10 per cent). The county paper prints personnel emoluments 4,188,772,518.52, operations 2,635,165,813.13 and development 2,781,583,267.00. The county's Q4 text says 7.18 billion, but its components and table add to 7,504.73 (gap research C); the Q4 table adds accrued expenses of KSh 324.22m (ledger L236).",
+      "hypothesis": "Hypothesis (gap research C): the county paper's 9,605.52 equals its total receipts, so it may count commitments or receipts rather than payments. The Q4 text may count cash paid only. Not confirmed.",
+      "effect": "The series plots the Controller of Budget value (7.50 billion). The county values are listed in the fiscal ledger and here, side by side; Takwimu draws no conclusion about which is right.",
+      "ledger_cases": [
+        "D-L236-L312"
+      ],
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "development-spending-2025-26",
+      "measure": "Development spending, FY 2025/26",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget annual report FY 2025/26, Part 1, Table 2.4, Siaya row (PDF p. 43): 1,599.04, 26.53 per cent absorption (Table 2.5)",
+          "value": 1599.04,
+          "url": "https://libraryir.parliament.go.ke/items/99f48395-0710-4a74-bcdf-e4ea40812813"
+        },
+        {
+          "label": "Siaya County Budget Review and Outlook Paper FY 2025/26, Table 10 DEV row (PDF p. 21): 2,781,583,267.00, 46.14 per cent",
+          "value": 2781.58,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf"
+        }
+      ],
+      "definitions": "Same budget (6,028,209,526), same year. The county's Q4 report gives 1.60 billion (ledger L238), as the Controller of Budget does.",
+      "hypothesis": "Hypothesis: the paper may count development commitments or payments made after 30 June. Not confirmed.",
+      "effect": "The series plots the Controller of Budget value (1.60 billion). The county paper's value is listed in the fiscal ledger.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false
+    },
+    {
+      "id": "osr-2025-26",
+      "measure": "Own-source revenue, FY 2025/26 (including facility improvement financing)",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Controller of Budget annual report FY 2025/26, Part 1, Table 2.1, Siaya row (PDF p. 38): ordinary 290.45 plus FIF 585.69, 26.94 per cent of a 3,252.42 target",
+          "value": 876.14,
+          "url": "https://libraryir.parliament.go.ke/items/99f48395-0710-4a74-bcdf-e4ea40812813"
+        },
+        {
+          "label": "Siaya County Budget Review and Outlook Paper FY 2025/26, executive summary (PDF p. 5): \"Kshs. 862,934,946.65 against a target of Kshs. 3,252,420,825\" (ordinary 272,116,888.45; A-i-A 590,818,058.20)",
+          "value": 862.93,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf"
+        },
+        {
+          "label": "Same paper, OSR section, Table 8 and Table 9 (PDF pp. 15, 17, 19): 858,616,247.65",
+          "value": 858.62,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf"
+        }
+      ],
+      "definitions": "Same target (3,252.42 million). The county's Q4 report gives 876.14 million (ledger L175), as the Controller of Budget does. The county paper gives two totals of its own (862.93 in the summary, 858.62 in its tables) and does not reconcile them; its ordinary revenue (272.12) is lower than the Controller of Budget's (290.45) and its A-i-A (590.82) higher than the FIF/A-i-A (585.69).",
+      "hypothesis": "Hypothesis: receipts recorded after the Q4 report, or a different split between ordinary revenue and A-i-A. Not confirmed.",
+      "effect": "876.14 (Controller of Budget) is plotted as the main value and 862.93 (county paper) as the other source's value (hollow marker). The Economic Survey's 3,114.92 is a source error (case osr-2025-26-economic-survey) and is not plotted.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "ledger_cases": [
+        "D-L175-L315",
+        "D-L175-L316",
+        "D-L306-L315",
+        "D-L306-L316"
+      ]
+    },
+    {
+      "id": "osr-2025-26-economic-survey",
+      "measure": "Own-source revenue, FY 2025/26, as printed in the KNBS Economic Survey 2026 (Table 5.13)",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "KNBS Economic Survey 2026, Table 5.13, Siaya row, Annual Own Source Revenue 2025/26 (provisional, PDF p. 150)",
+          "value": 3114.92,
+          "url": "https://repository.knbs.or.ke/items/0e833fb6-486a-43ed-987f-7d8051c0f7ee"
+        },
+        {
+          "label": "Siaya Programme-Based Budget 2025/26, Total OSR budget for FY 2025/26 (PDF p. 13): 3,114,920,823 = 2,036,235,308 ordinary + 1,078,685,515 SHA A-in-A",
+          "value": 3114.920823,
+          "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/ea54188d-b9e4-4bc2-9f5d-cce173fbda47/content"
+        },
+        {
+          "label": "Controller of Budget annual report FY 2025/26, Part 1, Table 2.1, Siaya row, actual collections (PDF p. 38)",
+          "value": 876.14,
+          "url": "https://libraryir.parliament.go.ke/items/99f48395-0710-4a74-bcdf-e4ea40812813"
+        }
+      ],
+      "definitions": "The Economic Survey prints 3,114.92 million for Siaya's FY 2025/26 own-source revenue, against 481.79 million for FY 2024/25. The county's own Programme-Based Budget gives exactly that amount as the FY 2025/26 own-source revenue budget (Total OSR=A, 3,114,920,823), and its Budget Review and Outlook Paper prints the same figure as the original estimate (PDF p. 17). Actual collections were 876.14 million (Controller of Budget) or 862.93 million (county).",
+      "hypothesis": "Resolved by the printed documents: the Economic Survey figure is the budget, not collections. Checked by arithmetic on the stored transcriptions, not by a person viewing the page image.",
+      "status": "resolved",
+      "effect": "No value changes. The Economic Survey value stays in the fiscal ledger as printed (L320) and carries a \"Source error in original\" flag; it is never plotted. The series keeps 876.14.",
+      "verification_state": "resolved_by_source",
+      "supersedes": null,
+      "page_image_checked": false,
+      "register": "source_error",
+      "ledger_case": "D-L306-L320",
+      "ledger_cases": [
+        "D-L175-L320",
+        "D-L306-L320"
+      ]
+    },
+    {
+      "id": "osr-2024-25-three-sources",
+      "measure": "Own-source revenue, FY 2024/25: county, KNBS and Controller of Budget side by side",
+      "unit": "KSh million",
+      "values": [
+        {
+          "label": "Siaya County Budget Review and Outlook Paper FY 2025/26, Table 9, FY 2024/25 actual column (PDF p. 19): 757,570,622 (the county's Q4 report and FY 2024/25 paper print 757,570,621)",
+          "value": 757.570622,
+          "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf"
+        },
+        {
+          "label": "KNBS Economic Survey 2026, Table 5.13, Siaya row, Annual Own Source Revenue 2024/25 (revised, PDF p. 150)",
+          "value": 481.79,
+          "url": "https://repository.knbs.or.ke/items/0e833fb6-486a-43ed-987f-7d8051c0f7ee"
+        },
+        {
+          "label": "Controller of Budget FY 2024/25 report, Table 2.1 (PDF p. 46) and county chapter (PDF p. 476)",
+          "value": 436.68,
+          "url": "https://libraryir.parliament.go.ke/items/e8739aa8-b91b-42db-8402-3b3bd53ff410"
+        },
+        {
+          "label": "The Standard, 20 September 2025 (secondary-news), quoting the Controller of Budget: \"The CoB report indicates that Siaya collected Sh436.68 million in own-source revenue in 2024-2025 financial year.\"",
+          "value": 436.68,
+          "url": "https://www.standardmedia.co.ke/business/nyanza/article/2001529961/governor-orengo-dismisses-cob-report-on-revenue-collection"
+        }
+      ],
+      "definitions": "Three publishers, three figures. The county counts all appropriations-in-aid including hospital receipts (ordinary 236.50, A-i-A 521.07); the Controller of Budget counts ordinary 236.84 plus FIF 199.84; KNBS does not say what its 481.79 includes. The Standard quotes the Controller of Budget figure; it is corroboration, not a fourth source. The audited Receiver of Revenue statements give receipts of 757,633,212.40 (already held: data/siaya-county-series.json, conflict osr-2024-25-county-statement).",
+      "hypothesis": "Hypothesis: KNBS may count a different revenue basis or a different vintage. Not confirmed; the Economic Survey does not state its basis.",
+      "effect": "Nothing changes in the series (436.68, Controller of Budget). The KNBS value is listed in the fiscal ledger (L321) and here.",
+      "status": "open",
+      "verification_state": "unresolved_no_reviewer",
+      "supersedes": null,
+      "page_image_checked": false,
+      "ledger_cases": [
+        "D-L140-L162",
+        "D-L140-L166",
+        "D-L140-L321",
+        "D-L153-L162",
+        "D-L153-L166",
+        "D-L153-L321",
+        "D-L162-L321",
+        "D-L166-L321"
+      ]
     }
   ]
 }

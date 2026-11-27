@@ -16,6 +16,24 @@
    "sha256": "d3f38c772cbf29e82d7e1c59b06cc2eee3523b2af5e3f76e0cafca345026df7c",
    "licence": "KNBS/County statistics publication: 'Extracts may be used or published if the source is duly acknowledged'; do not redistribute the PDF.",
    "note": "Secondary print of the KNBS census (the KPHC 2019 volumes could not be fetched: TLS chain incomplete / 503, manual download list item 10)."
+  },
+  "KNBS-KPHC-2019-VOL2": {
+   "title": "2019 Kenya Population and Housing Census Volume II: Distribution of Population by Administrative Units",
+   "publisher": "Kenya National Bureau of Statistics",
+   "publication_date": "2019",
+   "url": "https://repository.knbs.or.ke/server/api/core/bitstreams/f240c7f0-873a-4951-aa4e-7a839106384a/content",
+   "sha256": "4e4e091a67eddebc7c1158d09c02f4470e10786a269443dde97a4fcc17a4872d",
+   "licence": "Kenyan public statistics: figures may be reused with the body and report named; the document is not redistributed.",
+   "note": "KNBS repository copy; MD5 matched the repository checksum (gap research D)."
+  },
+  "KNBS-KPHC-2019-VOL1": {
+   "title": "2019 Kenya Population and Housing Census Volume I: Population by County and Sub-County",
+   "publisher": "Kenya National Bureau of Statistics",
+   "publication_date": "2019",
+   "url": "https://repository.knbs.or.ke/server/api/core/bitstreams/4ec8e85f-c86c-45b0-bb62-6b926e6b5c45/content",
+   "sha256": "740093a7e0d3a2f34bc85bebfe343c3b45e6b8401a394470f191d281b280ae4e",
+   "licence": "Kenyan public statistics: figures may be reused with the body and report named; the document is not redistributed.",
+   "note": "KNBS repository copy; MD5 matched the repository checksum (gap research D)."
   }
  },
  "points": [
@@ -27,9 +45,34 @@
    "male": 560942,
    "female": 594609,
    "intersex": 23,
-   "source": { "source_id": "KISUMU-CSA-2024", "pdf_page": 26, "printed_page": 1, "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2019 columns; source line: 2019 KPHC, KNBS)", "read_method": "text", "as_printed": "Total 560,942 594,609 1,155,574" },
+   "source": {
+    "source_id": "KISUMU-CSA-2024",
+    "pdf_page": 26,
+    "printed_page": 1,
+    "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2019 columns; source line: 2019 KPHC, KNBS)",
+    "read_method": "text",
+    "as_printed": "Total 560,942 594,609 1,155,574"
+   },
    "confidence": 4,
-   "note": "Also printed in the text (PDF p.24: \"Kisumu County has a population of approximately 1,155,574 people, with 560,942 males, 594,609 females, and 23 intersex persons\") and in Table 1.1.3 (PDF p.27). Male + female + intersex = 1,155,574."
+   "note": "Also printed in the text (PDF p.24: \"Kisumu County has a population of approximately 1,155,574 people, with 560,942 males, 594,609 females, and 23 intersex persons\") and in Table 1.1.3 (PDF p.27). Male + female + intersex = 1,155,574.",
+   "also_printed_in": [
+    {
+     "source_id": "KNBS-KPHC-2019-VOL2",
+     "pdf_page": 22,
+     "printed_page": null,
+     "table": "Table 2.2: Distribution of Population by Sex, Number of Households, Land Area, Population Density and County (Kisumu row)",
+     "read_method": "text",
+     "as_printed": "KISUMU 1,155,574 560,942 594,609 23 300,745 296,846 3,899 2,085 554"
+    },
+    {
+     "source_id": "KNBS-KPHC-2019-VOL1",
+     "pdf_page": 17,
+     "printed_page": null,
+     "table": "Table 2.2: Distribution of Population by Sex and County (Kisumu row)",
+     "read_method": "text",
+     "as_printed": "Kisumu 560,942 594,609 23 1,155,574"
+    }
+   ]
   },
   {
    "id": "P02",
@@ -39,7 +82,14 @@
    "male": 592271,
    "female": 593889,
    "intersex": null,
-   "source": { "source_id": "KISUMU-CSA-2024", "pdf_page": 26, "printed_page": 1, "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2020 columns)", "read_method": "text", "as_printed": "592,271 593,889 1,186,160" },
+   "source": {
+    "source_id": "KISUMU-CSA-2024",
+    "pdf_page": 26,
+    "printed_page": 1,
+    "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2020 columns)",
+    "read_method": "text",
+    "as_printed": "592,271 593,889 1,186,160"
+   },
    "projection_by": "KNBS (as printed in the County Statistical Abstract 2024; the projection method is not stated in the table)",
    "confidence": 3,
    "note": "Projection, not a count."
@@ -52,7 +102,14 @@
    "male": 601838,
    "female": 605093,
    "intersex": null,
-   "source": { "source_id": "KISUMU-CSA-2024", "pdf_page": 26, "printed_page": 1, "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2021 columns)", "read_method": "text", "as_printed": "601,838 605,093 1,206,931" },
+   "source": {
+    "source_id": "KISUMU-CSA-2024",
+    "pdf_page": 26,
+    "printed_page": 1,
+    "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2021 columns)",
+    "read_method": "text",
+    "as_printed": "601,838 605,093 1,206,931"
+   },
    "projection_by": "KNBS (as printed in the County Statistical Abstract 2024)",
    "confidence": 3,
    "note": "Projection, not a count."
@@ -65,7 +122,14 @@
    "male": 611404,
    "female": 616298,
    "intersex": null,
-   "source": { "source_id": "KISUMU-CSA-2024", "pdf_page": 26, "printed_page": 1, "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2022 columns)", "read_method": "text", "as_printed": "611,404 616,298 1,227,702" },
+   "source": {
+    "source_id": "KISUMU-CSA-2024",
+    "pdf_page": 26,
+    "printed_page": 1,
+    "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2022 columns)",
+    "read_method": "text",
+    "as_printed": "611,404 616,298 1,227,702"
+   },
    "projection_by": "KNBS (as printed in the County Statistical Abstract 2024)",
    "confidence": 3,
    "note": "Projection, not a count."
@@ -78,7 +142,14 @@
    "male": 620971,
    "female": 627502,
    "intersex": null,
-   "source": { "source_id": "KISUMU-CSA-2024", "pdf_page": 26, "printed_page": 1, "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2023 columns)", "read_method": "text", "as_printed": "620,971 627,502 1,248,474" },
+   "source": {
+    "source_id": "KISUMU-CSA-2024",
+    "pdf_page": 26,
+    "printed_page": 1,
+    "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (Total row, 2023 columns)",
+    "read_method": "text",
+    "as_printed": "620,971 627,502 1,248,474"
+   },
    "projection_by": "KNBS (as printed in the County Statistical Abstract 2024)",
    "confidence": 3,
    "note": "Projection, not a count. The latest year printed: no projection for 2024 onward is held. As printed, male plus female add to 1,248,473, one less than the printed total 1,248,474 (rounding in the source); both are kept as printed and nothing is adjusted."
@@ -87,14 +158,34 @@
  "by_sub_county": {
   "year": 2019,
   "kind": "census",
-  "values": { "kisumu-east": 220997, "kisumu-central": 174145, "kisumu-west": 172821, "seme": 121667, "muhoroni": 154116, "nyando": 161508, "nyakach": 150320 },
-  "source": { "source_id": "KISUMU-CSA-2024", "pdf_page": 26, "printed_page": 1, "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (2019 Total column)", "read_method": "text", "as_printed": "Kisumu East 220,997; Kisumu Central 174,145; Kisumu West 172,821; Seme 121,667; Muhoroni 154,116; Nyando 161,508; Nyakach 150,320; Kadibo .." },
+  "values": {
+   "kisumu-east": 220997,
+   "kisumu-central": 174145,
+   "kisumu-west": 172821,
+   "seme": 121667,
+   "muhoroni": 154116,
+   "nyando": 161508,
+   "nyakach": 150320
+  },
+  "source": {
+   "source_id": "KISUMU-CSA-2024",
+   "pdf_page": 26,
+   "printed_page": 1,
+   "table": "Table 1.1.1: County Population Projection by Sub County and Sex, 2019-2023 (2019 Total column)",
+   "read_method": "text",
+   "as_printed": "Kisumu East 220,997; Kisumu Central 174,145; Kisumu West 172,821; Seme 121,667; Muhoroni 154,116; Nyando 161,508; Nyakach 150,320; Kadibo .."
+  },
   "note": "Seven sub-counties as printed; the table also lists Kadibo with no figures (\"..\"), so Kadibo is not a gap filled from another source. The seven add to the county census count."
  },
  "denominator": {
   "rule": "Per-capita fiscal values for FY 2019/20 use the 2019 census count; for FY 2020/21 to FY 2023/24 the KNBS projection for the calendar year in which the fiscal year starts, labelled projection; from FY 2024/25 no projection is held, so per-capita values for those years are not computed (gap).",
   "census_point": "P01",
-  "projection_points": ["P02", "P03", "P04", "P05"]
+  "projection_points": [
+   "P02",
+   "P03",
+   "P04",
+   "P05"
+  ]
  },
  "print_differences": [
   {
@@ -106,7 +197,7 @@
   }
  ],
  "gaps": [
-  "KNBS 2019 census volumes (KPHC Vol I, II, IV) could not be fetched (TLS chain incomplete / 503); the count is read from the county statistical abstract's print of the census table.",
+  "The count is read from the county statistical abstract's print of the census table; since 27 Nov 2026 the KNBS census Volumes I and II (repository copies, MD5 matched) are held and print the same count (P01 also_printed_in). Household, housing, water, sanitation, energy and ICT indicators from Volume IV, GCP 2025, KDHS 2022 and the poverty reports are held but not entered: no itemised socio-economic dataset for Kisumu exists yet (gap research D).",
   "2009 census and earlier counts for Kisumu were not transcribed in Phase 1 (the 2015 County Statistical Abstract is held).",
   "No population projection for 2024, 2025 or 2026 is held, so per-capita values for FY 2024/25 onward are not computed.",
   "Ward populations (35 wards) are not transcribed in Phase 1."

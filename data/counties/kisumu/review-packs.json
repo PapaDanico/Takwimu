@@ -5,14 +5,14 @@
   "generated_by": "scripts/review-packs.js",
   "scope": "Every value in data/counties/kisumu/ (fiscal ledger, audit opinions, population); the county's rows of data/counties-cob.json are reused inside its ledger.",
   "counts": {
-   "total": 304,
+   "total": 331,
    "approved": 0,
-   "pending": 304,
-   "disputed": 59,
+   "pending": 331,
+   "disputed": 74,
    "rejected": 0,
-   "needs_page_check": 50
+   "needs_page_check": 51
   },
-  "total": 304
+  "total": 331
  },
  "entries": [
   {
@@ -6089,7 +6089,7 @@
    "record_id": "K115",
    "label": "expenditure_total, FY 2019/20",
    "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "state": "Disputed: see the conflict register",
    "value": 9053.376663,
    "unit": "KSh million",
    "period": "FY 2019/20",
@@ -6107,7 +6107,16 @@
    "read": "PDF text layer",
    "printed_text": "Total Expenditure 12,215,958,368 9,053,376,663 3,162,581,705",
    "note": "Compiled final draft of the CBROP; the Controller of Budget annual report for FY 2019/20 is not held, so this county figure has no independent counterpart. Basis: County Treasury actual",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K272",
+     "value": 9.12,
+     "unit": "KSh billion",
+     "source": "KIPPRA-CFSP-2021",
+     "pdf_page": 58
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -6138,7 +6147,7 @@
    "record_id": "K116",
    "label": "expenditure_recurrent, FY 2019/20",
    "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "state": "Disputed: see the conflict register",
    "value": 6827.139101,
    "unit": "KSh million",
    "period": "FY 2019/20",
@@ -6156,7 +6165,16 @@
    "read": "PDF text layer",
    "printed_text": "Recurrent 8,129,207,638 6,827,139,101 1,302,068,537",
    "note": "Compiled final draft of the CBROP; the Controller of Budget annual report for FY 2019/20 is not held, so this county figure has no independent counterpart. Basis: County Treasury actual",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K273",
+     "value": 6.74,
+     "unit": "KSh billion",
+     "source": "KIPPRA-CFSP-2021",
+     "pdf_page": 58
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -6213,6 +6231,14 @@
      "unit": "KSh billion",
      "source": "cob-report-2020-21",
      "pdf_page": 182
+    },
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K274",
+     "value": 2.38,
+     "unit": "KSh billion",
+     "source": "KIPPRA-CFSP-2021",
+     "pdf_page": 58
     }
    ],
    "machine_check": {
@@ -6263,7 +6289,16 @@
    "read": "PDF text layer",
    "printed_text": "This amount represented a decrease of 2.3 per cent compared to Kshs.804.39 million realised during a similar period in FY 2019/20",
    "note": "Basis: CoB FY 2020/21 report, prior-year comparison",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K277",
+     "value": 804.387972,
+     "unit": "KSh million",
+     "source": "KIPPRA-CFSP-2021",
+     "pdf_page": 56
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -6320,6 +6355,14 @@
      "unit": "KSh million",
      "source": "COUNTY-CBROP-2020-FY2019-20",
      "pdf_page": 22
+    },
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K274",
+     "value": 2.38,
+     "unit": "KSh billion",
+     "source": "KIPPRA-CFSP-2021",
+     "pdf_page": 58
     }
    ],
    "machine_check": {
@@ -13266,7 +13309,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13290,7 +13333,7 @@
     "record_ids": [
      "K250"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      44
@@ -13315,7 +13358,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13339,7 +13382,7 @@
     "record_ids": [
      "K251"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      44
@@ -13364,7 +13407,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13388,7 +13431,7 @@
     "record_ids": [
      "K252"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      44
@@ -13413,7 +13456,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13446,7 +13489,7 @@
     "record_ids": [
      "K253"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      44
@@ -13471,7 +13514,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13495,7 +13538,7 @@
     "record_ids": [
      "K254"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      44
@@ -13520,7 +13563,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13544,7 +13587,7 @@
     "record_ids": [
      "K255"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      44
@@ -13569,7 +13612,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13593,7 +13636,7 @@
     "record_ids": [
      "K256"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      44
@@ -13618,7 +13661,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13642,7 +13685,7 @@
     "record_ids": [
      "K257"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      44
@@ -13667,7 +13710,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13691,7 +13734,7 @@
     "record_ids": [
      "K258"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      44
@@ -13716,7 +13759,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13740,7 +13783,7 @@
     "record_ids": [
      "K259"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      350
@@ -13765,7 +13808,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13798,7 +13841,7 @@
     "record_ids": [
      "K260"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      350
@@ -13823,7 +13866,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13847,7 +13890,7 @@
     "record_ids": [
      "K261"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      350
@@ -13872,7 +13915,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13896,7 +13939,7 @@
     "record_ids": [
      "K262"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      350
@@ -13921,7 +13964,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13932,7 +13975,16 @@
    "read": "OCR (tesseract)",
    "printed_text": "own-source revenue of Kshs.865.75 million (5.10 per cent), Facility Improvement Financing of Kshs.800.00 million (4.71 per cent)",
    "note": "Basis: CoB: ordinary own-source revenue in the financing plan Second reading (PDF text layer (publisher OCR)): agrees. Both readings give the same figure.",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K286",
+     "value": 865.75,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "pdf-text-layer",
@@ -13945,7 +13997,7 @@
     "record_ids": [
      "K263"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      350
@@ -13963,14 +14015,14 @@
    "record_id": "K264",
    "label": "osr_fif_aia_target, FY 2025/26",
    "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "state": "Disputed: see the conflict register",
    "value": 800,
    "unit": "KSh million",
    "period": "FY 2025/26",
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -13981,7 +14033,16 @@
    "read": "OCR (tesseract)",
    "printed_text": "Facility Improvement Financing of Kshs.800.00 million (4.71 per cent)",
    "note": "Basis: CoB: FIF in the financing plan (A-i-A of Kshs.91.18 million listed separately) Second reading (PDF text layer (publisher OCR)): agrees. Both readings give the same figure.",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K287",
+     "value": 2758.13,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm4",
@@ -13994,7 +14055,7 @@
     "record_ids": [
      "K264"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      350
@@ -14012,14 +14073,14 @@
    "record_id": "K265",
    "label": "osr_total_actual, FY 2025/26",
    "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "state": "Disputed: see the conflict register",
    "value": 1.47,
    "unit": "KSh billion",
    "period": "FY 2025/26",
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -14030,7 +14091,16 @@
    "read": "OCR (tesseract)",
    "printed_text": "own-source revenue (OSR) including FIF of Kshs.1.47 billion",
    "note": "Basis: CoB: own-source revenue including FIF Second reading (PDF text layer (publisher OCR)): agrees. Both readings give the same figure.",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K282",
+     "value": 1803.5,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "pdf-text-layer",
@@ -14043,7 +14113,7 @@
     "record_ids": [
      "K265"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      350
@@ -14061,14 +14131,14 @@
    "record_id": "K266",
    "label": "osr_fif_aia_actual, FY 2025/26",
    "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "state": "Disputed: see the conflict register",
    "value": 693.55,
    "unit": "KSh million",
    "period": "FY 2025/26",
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -14079,7 +14149,16 @@
    "read": "OCR (tesseract)",
    "printed_text": "Facilities Improvement Financing (FIF) of Kshs.693.55 million",
    "note": "Basis: CoB: FIF part of own-source revenue Second reading (PDF text layer (publisher OCR)): agrees. Both readings give the same figure.",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K284",
+     "value": 902.45,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "pdf-text-layer",
@@ -14092,7 +14171,7 @@
     "record_ids": [
      "K266"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      350
@@ -14110,14 +14189,14 @@
    "record_id": "K267",
    "label": "osr_ordinary_actual, FY 2025/26",
    "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "state": "Disputed: see the conflict register",
    "value": 773.42,
    "unit": "KSh million",
    "period": "FY 2025/26",
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -14128,7 +14207,16 @@
    "read": "OCR (tesseract)",
    "printed_text": "and Kshs.773.42 million from other OSR sources",
    "note": "Basis: CoB: own-source revenue other than FIF Second reading (PDF text layer (publisher OCR)): agrees. Both readings give the same figure.",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K283",
+     "value": 901.05,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "pdf-text-layer",
@@ -14141,7 +14229,7 @@
     "record_ids": [
      "K267"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      350
@@ -14166,7 +14254,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -14177,7 +14265,16 @@
    "read": "OCR (tesseract)",
    "printed_text": "The expenditure on employee compensation totalled Kshs.5.54 billion, representing 41.48 per cent of revenue",
    "note": "Basis: CoB: employee compensation Second reading (PDF text layer (publisher OCR)): agrees. Both readings give the same figure.",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K291",
+     "value": 5542,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 43
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm4",
@@ -14190,7 +14287,7 @@
     "record_ids": [
      "K268"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      355
@@ -14215,7 +14312,7 @@
    "scope": "county government (executive and assembly)",
    "source": [
     {
-     "id": "COB-ANNUAL-FY2025-26",
+     "id": "cob-report-2025-26",
      "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
      "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
@@ -14226,7 +14323,16 @@
    "read": "OCR (tesseract)",
    "printed_text": "High level of trade payables, which amounted to Kshs.850.47 million as of 30 June 2026",
    "note": "Basis: CoB FY 2025/26: \"trade payables\" (the report uses this term in place of pending bills) Second reading (PDF text layer (publisher OCR)): agrees. Both readings give the same figure.",
-   "others": [],
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K290",
+     "value": 850.47,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 53
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm4",
@@ -14239,7 +14345,7 @@
     "record_ids": [
      "K269"
     ],
-    "source_document_id": "COB-ANNUAL-FY2025-26",
+    "source_document_id": "cob-report-2025-26",
     "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [
      367
@@ -14281,7 +14387,7 @@
      "id": "K253",
      "value": 10095,
      "unit": "KSh million",
-     "source": "COB-ANNUAL-FY2025-26",
+     "source": "cob-report-2025-26",
      "pdf_page": 44
     }
    ],
@@ -14339,7 +14445,7 @@
      "id": "K260",
      "value": 8.9,
      "unit": "KSh billion",
-     "source": "COB-ANNUAL-FY2025-26",
+     "source": "cob-report-2025-26",
      "pdf_page": 350
     }
    ],
@@ -14359,6 +14465,1111 @@
     "source_sha256": "a2479d120f54344089001a81c4c155c9a849e022e95deac5658d36f8be7c60ff",
     "pages_checked": [
      9
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K272",
+   "label": "expenditure_total, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Disputed: see the conflict register",
+   "value": 9.12,
+   "unit": "KSh billion",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "KIPPRA-CFSP-2021",
+     "title": "Kisumu City County Fiscal Strategy Paper 2021",
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content",
+     "sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b"
+    }
+   ],
+   "pdf_page": 58,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": "The county's own figure (CBROP, K115; CFSP p.57) is 9,053,376,663. Basis: County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K115",
+     "value": 9053.376663,
+     "unit": "KSh million",
+     "source": "COUNTY-CBROP-2020-FY2019-20",
+     "pdf_page": 22
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "9.12",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K272"
+    ],
+    "source_document_id": "KIPPRA-CFSP-2021",
+    "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+    "pages_checked": [
+     58
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K273",
+   "label": "expenditure_recurrent, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Disputed: see the conflict register",
+   "value": 6.74,
+   "unit": "KSh billion",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "KIPPRA-CFSP-2021",
+     "title": "Kisumu City County Fiscal Strategy Paper 2021",
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content",
+     "sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b"
+    }
+   ],
+   "pdf_page": 58,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": "Annex 1 Table 14 (PDF p.78) prints the same CoB department table total: expenditure 6,740.83 recurrent, 2,379.77 development. Basis: County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K116",
+     "value": 6827.139101,
+     "unit": "KSh million",
+     "source": "COUNTY-CBROP-2020-FY2019-20",
+     "pdf_page": 22
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "6.74",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K273"
+    ],
+    "source_document_id": "KIPPRA-CFSP-2021",
+    "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+    "pages_checked": [
+     58
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K274",
+   "label": "expenditure_development, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Disputed: see the conflict register",
+   "value": 2.38,
+   "unit": "KSh billion",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "KIPPRA-CFSP-2021",
+     "title": "Kisumu City County Fiscal Strategy Paper 2021",
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content",
+     "sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b"
+    }
+   ],
+   "pdf_page": 58,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": "Equals the CoB FY 2020/21 report's look-back figure (K119). Basis: County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K117",
+     "value": 2226.237562,
+     "unit": "KSh million",
+     "source": "COUNTY-CBROP-2020-FY2019-20",
+     "pdf_page": 22
+    },
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K119",
+     "value": 2.38,
+     "unit": "KSh billion",
+     "source": "cob-report-2020-21",
+     "pdf_page": 182
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "2.38",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K274"
+    ],
+    "source_document_id": "KIPPRA-CFSP-2021",
+    "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+    "pages_checked": [
+     58
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K275",
+   "label": "absorption_development_pct, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 58.2,
+   "unit": "%",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "KIPPRA-CFSP-2021",
+     "title": "Kisumu City County Fiscal Strategy Paper 2021",
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content",
+     "sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b"
+    }
+   ],
+   "pdf_page": 58,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": "Basis: County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "58.2",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K275"
+    ],
+    "source_document_id": "KIPPRA-CFSP-2021",
+    "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+    "pages_checked": [
+     58
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K276",
+   "label": "absorption_recurrent_pct, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 82.9,
+   "unit": "%",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "KIPPRA-CFSP-2021",
+     "title": "Kisumu City County Fiscal Strategy Paper 2021",
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content",
+     "sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b"
+    }
+   ],
+   "pdf_page": 58,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": "Basis: County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "82.9",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K276"
+    ],
+    "source_document_id": "KIPPRA-CFSP-2021",
+    "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+    "pages_checked": [
+     58
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K277",
+   "label": "osr_total_actual, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 804.387972,
+   "unit": "KSh million",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "KIPPRA-CFSP-2021",
+     "title": "Kisumu City County Fiscal Strategy Paper 2021",
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content",
+     "sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b"
+    }
+   ],
+   "pdf_page": 56,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "Ksh 804,387,972 against a target of Ksh 1,438,478,604 representing 55.9% of the target",
+   "note": "Agrees with the CoB FY 2020/21 look-back (804.39 million, K118). The county CBROP (K20 draft) prints the same total; its four quarters sum to 804,387,672 (gap research E). Basis: County Treasury actual",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K118",
+     "value": 804.39,
+     "unit": "KSh million",
+     "source": "cob-report-2020-21",
+     "pdf_page": 180
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "804,387,972",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K277"
+    ],
+    "source_document_id": "KIPPRA-CFSP-2021",
+    "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+    "pages_checked": [
+     56
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K278",
+   "label": "osr_total_target, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1438.478604,
+   "unit": "KSh million",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "KIPPRA-CFSP-2021",
+     "title": "Kisumu City County Fiscal Strategy Paper 2021",
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content",
+     "sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b"
+    }
+   ],
+   "pdf_page": 56,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "Ksh 804,387,972 against a target of Ksh 1,438,478,604 representing 55.9% of the target",
+   "note": "Basis: County: annual own-source revenue target",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "1,438,478,604",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K278"
+    ],
+    "source_document_id": "KIPPRA-CFSP-2021",
+    "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+    "pages_checked": [
+     56
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K279",
+   "label": "pending_bills_close, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Disputed: see the conflict register",
+   "value": 2309.494252,
+   "unit": "KSh million",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "OAG-EXEC-FY2019-20",
+     "title": "Report of the Auditor General on County Executive of Kisumu for the year ended 30 June 2020",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/1447a52c-f2bc-46b9-aba5-17d836968856/content",
+     "sha256": "20629f1f492a6bc0a435acbf2ead2f481489b8bd6344604997df6ea7ec2c14a8"
+    }
+   ],
+   "pdf_page": 39,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "Note 28(1) - other important disclosures on pending accounts payables indicates that the outstanding balance as at 30 June, 2020 was Kshs.2,309,494,252.",
+   "note": "Library OCR text layer. Basis: Auditor-General: pending accounts payable at 30 June 2020 as disclosed in the financial statements (County Executive)",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K280",
+     "value": 2621.421193,
+     "unit": "KSh million",
+     "source": "KIPPRA-CFSP-2021",
+     "pdf_page": 67
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "2,309,494,252",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K279"
+    ],
+    "source_document_id": "OAG-EXEC-FY2019-20",
+    "source_sha256": "20629f1f492a6bc0a435acbf2ead2f481489b8bd6344604997df6ea7ec2c14a8",
+    "pages_checked": [
+     39
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K280",
+   "label": "pending_bills_close, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Disputed: see the conflict register",
+   "value": 2621.421193,
+   "unit": "KSh million",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "KIPPRA-CFSP-2021",
+     "title": "Kisumu City County Fiscal Strategy Paper 2021",
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content",
+     "sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b"
+    }
+   ],
+   "pdf_page": 67,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "The total stock of debt as at 30th June, 2020 stood at Kshs. 2,621,421,192.93. The accumulated debt of Kshs.2,621,421,192.93 has been occasioned by revenue shortfalls over the years since 2013/14.",
+   "note": "Of which the FY 2019/20 part is 1,733,921,288.16 (table Total row). A wider definition than year-end pending bills: the accumulated stock of debt since FY 2013/14. Basis: County: total stock of debt including pending bills (definition differs from the Auditor-General's pending accounts payable)",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K279",
+     "value": 2309.494252,
+     "unit": "KSh million",
+     "source": "OAG-EXEC-FY2019-20",
+     "pdf_page": 39
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "2,621,421,192.93",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K280"
+    ],
+    "source_document_id": "KIPPRA-CFSP-2021",
+    "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+    "pages_checked": [
+     67
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K281",
+   "label": "wage_bill, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 4261.475456,
+   "unit": "KSh million",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "OAG-EXEC-FY2019-20",
+     "title": "Report of the Auditor General on County Executive of Kisumu for the year ended 30 June 2020",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/1447a52c-f2bc-46b9-aba5-17d836968856/content",
+     "sha256": "20629f1f492a6bc0a435acbf2ead2f481489b8bd6344604997df6ea7ec2c14a8"
+    }
+   ],
+   "pdf_page": 43,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "the total compensation of employees amounted to Kshs.4,261 ,475,456 which is 49% of total receipts of Kshs.8,733,502,114",
+   "note": "Library OCR text layer (a space inside the figure as printed). Basis: Auditor-General: compensation of employees (County Executive statements of receipts and payments)",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "4,261,475,456",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K281"
+    ],
+    "source_document_id": "OAG-EXEC-FY2019-20",
+    "source_sha256": "20629f1f492a6bc0a435acbf2ead2f481489b8bd6344604997df6ea7ec2c14a8",
+    "pages_checked": [
+     43
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K282",
+   "label": "osr_total_actual, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Disputed: see the conflict register",
+   "value": 1803.5,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": "Ordinary 901.05 plus FIF/A-i-A 902.45; 49.77 per cent of the 3,623.88 target. The same report's Kisumu chapter (PDF p.350) gives 1.47 billion (K265): an internal conflict. Basis: CoB Table 2.1: total own-source revenue including FIF/A-i-A Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 38.",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K265",
+     "value": 1.47,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 350
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "1,803.50",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K282"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K283",
+   "label": "osr_ordinary_actual, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Disputed: see the conflict register",
+   "value": 901.05,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": "Basis: CoB Table 2.1: ordinary own-source revenue Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 38.",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K267",
+     "value": 773.42,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 350
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "901",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K283"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K284",
+   "label": "osr_fif_aia_actual, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Disputed: see the conflict register",
+   "value": 902.45,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": "Basis: CoB Table 2.1: FIF/A-i-A Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 38.",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K266",
+     "value": 693.55,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 350
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "902.45",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K284"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K285",
+   "label": "osr_total_target, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3623.88,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": "Ordinary 865.75 plus FIF/A-i-A 2,758.13. Basis: CoB Table 2.1: annual target including FIF/A-i-A Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 38.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "3,623.88",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K285"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K286",
+   "label": "osr_ordinary_target, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 865.75,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": "Basis: CoB Table 2.1: ordinary target Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 38.",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K263",
+     "value": 865.75,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 350
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "865.75",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K286"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K287",
+   "label": "osr_fif_aia_target, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Disputed: see the conflict register",
+   "value": 2758.13,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": "The Kisumu chapter (PDF p.350) gives FIF of 800.00 million in the financing plan (K264). Basis: CoB Table 2.1: FIF/A-i-A target Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 38.",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K264",
+     "value": 800,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 350
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "2,758.13",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K287"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K288",
+   "label": "pending_bills_recurrent_close, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 569.5,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu* 569.50 280.97 850.47 - - 0.00 850.47 16,982.00 5.01",
+   "note": "The row carries a footnote mark (Kisumu*). Basis: CoB FY 2025/26 Table 2.10: \"trade payables\" (the report uses this term in place of pending bills) Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 53.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "569.50",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K288"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K289",
+   "label": "pending_bills_development_close, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 280.97,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu* 569.50 280.97 850.47 - - 0.00 850.47 16,982.00 5.01",
+   "note": "Basis: CoB FY 2025/26 Table 2.10: \"trade payables\" (the report uses this term in place of pending bills) Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 53.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "280.97",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K289"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K290",
+   "label": "pending_bills_close, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 850.47,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu* 569.50 280.97 850.47 - - 0.00 850.47 16,982.00 5.01",
+   "note": "Equals the key observations (PDF p.367, K269). Basis: CoB FY 2025/26 Table 2.10: \"trade payables\" (the report uses this term in place of pending bills) Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 53.",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K269",
+     "value": 850.47,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 367
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "850.47",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K290"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "record_id": "K291",
+   "label": "wage_bill, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 5542,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 43,
+   "printed_page": null,
+   "read": "OCR (tesseract)",
+   "printed_text": "Kisumu 5,542.00 2,814.00 8,356.00 1,739.00 10,095.00",
+   "note": "Basis: CoB Table 2.4: compensation to employees Second reading (tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)): agrees. Both readings give the same figure on PDF p. 43. First reading at 450 dpi, mode 6.",
+   "others": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "id": "K268",
+     "value": 5.54,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 355
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "5,542.00",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-fiscal-ledger",
+    "record_ids": [
+     "K291"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     43
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -15731,6 +16942,349 @@
     "source_sha256": "6ae0c79993ec842294570b37475afe80f53875fa82536acd713e11c43d0e9df7",
     "pages_checked": [
      7
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-audits",
+   "record_id": "opinion:county_executive:2014/15",
+   "label": "county_executive, FY 2014/15: Disclaimer of Opinion",
+   "kind": "audit opinion (secondary summary)",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Disclaimer of Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2014/15",
+   "scope": "county_executive",
+   "source": [
+    {
+     "id": "audit-kisumu-cpaic-2014-15-exec",
+     "title": "Senate County Public Accounts and Investments Committee, report on the Auditor-General's reports on county financial statements FY 2014/15, Volume 2",
+     "url": "https://libraryir.parliament.go.ke/bitstreams/c7e9c102-d1f4-4540-bd9e-1a32d04802bc/download",
+     "sha256": "20ea7cbda2a7bb6aa85f4a19c25559caaac68a4cace3ebc52f6363b37f9b486d"
+    }
+   ],
+   "pdf_page": 267,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "CHAPTER SIX: KISUMU COUNTY EXECUTIVE. Audit Opinion: Disclaimer (heading; the text layer reads \"CflAPTER SD(: KISUMU COTIN:|Y EXECU:rrvE\")",
+   "note": "Official mirror (secondary): the Senate committee report reproduces the Auditor-General's report, Chapter Six \"Kisumu County Executive\", heading \"Audit Opinion: Disclaimer\" (PDF p.267). The PBO County Fact Sheets 2024 (PDF p.400) print the same. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-audits",
+    "record_ids": [
+     "opinion:county_executive:2014/15"
+    ],
+    "source_document_id": "audit-kisumu-cpaic-2014-15-exec",
+    "source_sha256": "20ea7cbda2a7bb6aa85f4a19c25559caaac68a4cace3ebc52f6363b37f9b486d",
+    "pages_checked": [
+     267
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-audits",
+   "record_id": "opinion:county_executive:2015/16",
+   "label": "county_executive, FY 2015/16: Disclaimer of Opinion",
+   "kind": "audit opinion (secondary summary)",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Disclaimer of Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2015/16",
+   "scope": "county_executive",
+   "source": [
+    {
+     "id": "audit-kisumu-pbo-2015-16-exec",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 400,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "Table 3: Audit Opinions for County Executive & County Assembly, County Executive row, FY 2015/16: Disclaimer",
+   "note": "Official compilation (secondary): PBO County Fact Sheets 2024, Kisumu Table 3, County Executive row, printed \"Disclaimer\" (PDF p.400). The Auditor-General's report is not held. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-audits",
+    "record_ids": [
+     "opinion:county_executive:2015/16"
+    ],
+    "source_document_id": "audit-kisumu-pbo-2015-16-exec",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     400
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-audits",
+   "record_id": "opinion:county_executive:2017/18",
+   "label": "county_executive, FY 2017/18: Adverse Opinion",
+   "kind": "audit opinion (secondary summary)",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Adverse Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2017/18",
+   "scope": "county_executive",
+   "source": [
+    {
+     "id": "audit-kisumu-pbo-2017-18-exec",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 400,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "Table 3: Audit Opinions for County Executive & County Assembly, County Executive row, FY 2017/18: Adverse",
+   "note": "Official compilation (secondary): PBO County Fact Sheets 2024, Kisumu Table 3, County Executive row, printed \"Adverse\" (PDF p.400). The Auditor-General's report is not held. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-audits",
+    "record_ids": [
+     "opinion:county_executive:2017/18"
+    ],
+    "source_document_id": "audit-kisumu-pbo-2017-18-exec",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     400
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-audits",
+   "record_id": "opinion:county_assembly:2017/18",
+   "label": "county_assembly, FY 2017/18: Adverse Opinion",
+   "kind": "audit opinion (secondary summary)",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Adverse Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2017/18",
+   "scope": "county_assembly",
+   "source": [
+    {
+     "id": "audit-kisumu-pbo-2017-18-assembly",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 400,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "Table 3: Audit Opinions for County Executive & County Assembly, County Assembly row, FY 2017/18: Adverse",
+   "note": "Official compilation (secondary): PBO County Fact Sheets 2024, Kisumu Table 3, County Assembly row, printed \"Adverse\" (PDF p.400). The Auditor-General's report is not held. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-audits",
+    "record_ids": [
+     "opinion:county_assembly:2017/18"
+    ],
+    "source_document_id": "audit-kisumu-pbo-2017-18-assembly",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     400
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-audits",
+   "record_id": "opinion:county_assembly:2018/19",
+   "label": "county_assembly, FY 2018/19: Qualified Opinion",
+   "kind": "audit opinion (secondary summary)",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Qualified Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2018/19",
+   "scope": "county_assembly",
+   "source": [
+    {
+     "id": "audit-kisumu-pbo-2018-19-assembly",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 400,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "Table 3: Audit Opinions for County Executive & County Assembly, County Assembly row, FY 2018/19: Qualified",
+   "note": "Official compilation (secondary): PBO County Fact Sheets 2024, Kisumu Table 3, County Assembly row, printed \"Qualified\" (PDF p.400). The Auditor-General's report is not held. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-audits",
+    "record_ids": [
+     "opinion:county_assembly:2018/19"
+    ],
+    "source_document_id": "audit-kisumu-pbo-2018-19-assembly",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     400
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-audits",
+   "record_id": "opinion:water_company:2016/17",
+   "label": "water_company, FY 2016/17: Qualified Opinion",
+   "kind": "audit opinion (secondary summary)",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Qualified Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2016/17",
+   "scope": "water_company",
+   "source": [
+    {
+     "id": "audit-kisumu-kiwasco-ar-2016-17",
+     "title": "Kisumu Water and Sewerage Company Limited, Annual Report and Financial Statements June 2017 (reprints the Auditor-General's report)",
+     "url": "https://kiwasco.co.ke/wp-content/uploads/KIWASCO-Annual-Report-2017.pdf",
+     "sha256": "264c9610a6e4449b5127051fe4c49c9e7035c85b2ba4507815a8e3e9e49dff7e"
+    }
+   ],
+   "pdf_page": 23,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "In my opinion, except for the effect of matters described in the Basis for Qualified Opinion paragraph, the financial statements present fairly, in all material respects, the financial position of Kisumu Water and Sewerage Company Limited as at June 30, June 2017",
+   "note": "Official mirror (secondary): the Auditor-General's report as reprinted in the company's Annual Report 2017, heading \"QUALIFIED OPINION\" (PDF p.23). An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-audits",
+    "record_ids": [
+     "opinion:water_company:2016/17"
+    ],
+    "source_document_id": "audit-kisumu-kiwasco-ar-2016-17",
+    "source_sha256": "264c9610a6e4449b5127051fe4c49c9e7035c85b2ba4507815a8e3e9e49dff7e",
+    "pages_checked": [
+     23
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-audits",
+   "record_id": "opinion:water_company:2018/19",
+   "label": "water_company, FY 2018/19: Unmodified Opinion",
+   "kind": "audit opinion (secondary summary)",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Unmodified Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2018/19",
+   "scope": "water_company",
+   "source": [
+    {
+     "id": "audit-kisumu-kiwasco-ar-2018-19",
+     "title": "Kisumu Water and Sanitation Company Limited, Annual Report and Financial Statements June 2019 (reprints the Auditor-General's report)",
+     "url": "https://kiwasco.co.ke/wp-content/uploads/KIWASCO-Annual-Report-2019.pdf",
+     "sha256": "490fc60f65121f5937bcb211f61028172d6a122da8c840135604505e569f55cc"
+    }
+   ],
+   "pdf_page": 25,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": "In my opinion, the financial statements present fairly, in all material respects, the financial position of Kisumu Water and Sanitation Company Limited as at 30 June, 2019",
+   "note": "Official mirror (secondary): the Auditor-General's report as reprinted in the company's Annual Report 2019, heading \"OPINION\" with no modification and a \"Basis for Opinion\" paragraph (PDF p.25). An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-audits",
+    "record_ids": [
+     "opinion:water_company:2018/19"
+    ],
+    "source_document_id": "audit-kisumu-kiwasco-ar-2018-19",
+    "source_sha256": "490fc60f65121f5937bcb211f61028172d6a122da8c840135604505e569f55cc",
+    "pages_checked": [
+     25
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,

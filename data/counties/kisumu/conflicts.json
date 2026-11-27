@@ -938,6 +938,251 @@
     "kisumu-population|P01",
     "kisumu-population|print_differences:P01"
    ]
+  },
+  {
+   "id": "kisumu-expenditure-2019-20",
+   "measure": "Total expenditure, FY 2019/20 (Kisumu County)",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "County CBROP September 2020 (compiled final draft), fiscal outturn table, PDF p.22: 9,053,376,663 (the CFSP 2021 repeats it, p.57)",
+     "value": 9053.376663,
+     "url": "https://www.kisumu.go.ke/wp-content/uploads/2020/09/COMPILED-FINAL-DRAFT-CBROP-REPORT-FY-2019-2020-3.pdf"
+    },
+    {
+     "label": "Kisumu CFSP 2021, PDF p.58, quoting the Controller of Budget's report for FY 2019/20: \"a total of Kshs.9.12 billion was spent\"",
+     "value": 9120,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content"
+    }
+   ],
+   "definitions": "The county figure is its own outturn; the CoB figure is quoted by the county paper (99.3 per cent of funds released from the County Revenue Fund). The CoB report for FY 2019/20 is not held.",
+   "hypothesis": "Hypothesis: different cut-off dates or the CoB counting exchequer-backed spending. The gap is 0.74 per cent, below the ledger's 1 per cent threshold, so it is not a ledger case; it is listed because the research (gap A) records it.",
+   "effect": "No value changes; both are in the fiscal ledger (Kisumu is not yet on pages).",
+   "status": "open",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K115",
+    "kisumu-fiscal-ledger|K272"
+   ]
+  },
+  {
+   "id": "kisumu-expenditure-recurrent-2019-20",
+   "measure": "Recurrent expenditure, FY 2019/20 (Kisumu County)",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "County CBROP September 2020 (compiled final draft), PDF p.22: 6,827,139,101",
+     "value": 6827.139101,
+     "url": "https://www.kisumu.go.ke/wp-content/uploads/2020/09/COMPILED-FINAL-DRAFT-CBROP-REPORT-FY-2019-2020-3.pdf"
+    },
+    {
+     "label": "Kisumu CFSP 2021, PDF p.58, quoting the Controller of Budget: Kshs.6.74 billion (Annex 1 Table 14, p.78: 6,740.83)",
+     "value": 6740,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content"
+    }
+   ],
+   "definitions": "County outturn against the Controller of Budget figure as quoted by the county.",
+   "hypothesis": "Hypothesis: as for the total; not confirmed.",
+   "effect": "No value changes; both are in the fiscal ledger.",
+   "status": "open",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K116",
+    "kisumu-fiscal-ledger|K273"
+   ],
+   "ledger_cases": [
+    "D-K116-K273"
+   ]
+  },
+  {
+   "id": "kisumu-development-expenditure-2019-20-cfsp",
+   "measure": "Development expenditure, FY 2019/20 (Kisumu County): county outturn against the CoB figure quoted in the CFSP 2021",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "County CBROP September 2020 (compiled final draft), PDF p.22: 2,226,237,562",
+     "value": 2226.237562,
+     "url": "https://www.kisumu.go.ke/wp-content/uploads/2020/09/COMPILED-FINAL-DRAFT-CBROP-REPORT-FY-2019-2020-3.pdf"
+    },
+    {
+     "label": "Kisumu CFSP 2021, PDF p.58, quoting the Controller of Budget: Kshs.2.38 billion (equal to the CoB FY 2020/21 look-back, case kisumu-development-expenditure-2019-20)",
+     "value": 2380,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content"
+    }
+   ],
+   "definitions": "Same comparison as case kisumu-development-expenditure-2019-20, with the Controller of Budget figure as quoted by the county paper.",
+   "hypothesis": "Hypothesis: the county outturn and the CoB figure are cut at different dates. Not confirmed.",
+   "effect": "No value changes; both are in the fiscal ledger.",
+   "status": "open",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K117",
+    "kisumu-fiscal-ledger|K274"
+   ],
+   "ledger_cases": [
+    "D-K117-K274"
+   ]
+  },
+  {
+   "id": "kisumu-pending-2020-definitions",
+   "measure": "Pending bills at 30 June 2020 (Kisumu County): Auditor-General pending accounts payable against the county's total debt stock",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Auditor-General, County Executive FY 2019/20, PDF p.39: \"the outstanding balance as at 30 June, 2020 was Kshs.2,309,494,252\" (Note 28(1), pending accounts payable)",
+     "value": 2309.494252,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/1447a52c-f2bc-46b9-aba5-17d836968856/content"
+    },
+    {
+     "label": "Kisumu CFSP 2021, PDF p.67: \"The total stock of debt as at 30th June, 2020 stood at Kshs. 2,621,421,192.93\", accumulated since FY 2013/14",
+     "value": 2621.421193,
+     "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content"
+    }
+   ],
+   "definitions": "Definitional: the Auditor-General figure is the County Executive's pending accounts payable disclosed in its financial statements; the county figure is its total stock of debt, including pending bills accumulated since FY 2013/14 (of which 1,733,921,288.16 relates to FY 2019/20).",
+   "hypothesis": "Definitional difference stated by the documents themselves; neither is a corrected version of the other.",
+   "effect": "No value changes; both stocks are in the fiscal ledger with their definitions.",
+   "status": "open",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K279",
+    "kisumu-fiscal-ledger|K280"
+   ],
+   "ledger_cases": [
+    "D-K279-K280"
+   ]
+  },
+  {
+   "id": "kisumu-osr-2025-26",
+   "measure": "Own-source revenue including FIF, FY 2025/26 (Kisumu County): two figures in the same Controller of Budget report",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget annual report FY 2025/26, Kisumu chapter, section 3.17 (PDF p.350): \"own-source revenue (OSR) including FIF of Kshs.1.47 billion\" (FIF 693.55 + other 773.42)",
+     "value": 1470,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content"
+    },
+    {
+     "label": "Same report, Table 2.1, Kisumu row (PDF p.38): ordinary 901.05 + FIF/A-i-A 902.45 = 1,803.50, 49.77 per cent of 3,623.88",
+     "value": 1803.5,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content"
+    }
+   ],
+   "definitions": "Internal conflict: the same report gives 1.47 billion in the county chapter and 1,803.50 million in the summary table, with different splits (ordinary 773.42 against 901.05; FIF 693.55 against 902.45).",
+   "hypothesis": "Hypothesis: the summary table may count appropriations-in-aid or receipts the chapter leaves out. The report does not reconcile them.",
+   "effect": "No value changes; both are in the fiscal ledger (Kisumu is not yet on pages).",
+   "status": "open",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K265",
+    "kisumu-fiscal-ledger|K282"
+   ],
+   "ledger_cases": [
+    "D-K265-K282"
+   ]
+  },
+  {
+   "id": "kisumu-osr-ordinary-2025-26",
+   "measure": "Ordinary own-source revenue, FY 2025/26 (Kisumu County): chapter against Table 2.1",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget annual report FY 2025/26, section 3.17 (PDF p.350): \"Kshs.773.42 million from other OSR sources\"",
+     "value": 773.42,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content"
+    },
+    {
+     "label": "Same report, Table 2.1, Kisumu row (PDF p.38): 901.05",
+     "value": 901.05,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content"
+    }
+   ],
+   "definitions": "Same report, same year; see kisumu-osr-2025-26.",
+   "hypothesis": "As for kisumu-osr-2025-26.",
+   "effect": "No value changes.",
+   "status": "open",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K267",
+    "kisumu-fiscal-ledger|K283"
+   ],
+   "ledger_cases": [
+    "D-K267-K283"
+   ]
+  },
+  {
+   "id": "kisumu-osr-fif-2025-26",
+   "measure": "Facility improvement financing (FIF/A-i-A) collected, FY 2025/26 (Kisumu County): chapter against Table 2.1",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget annual report FY 2025/26, section 3.17 (PDF p.350): FIF of Kshs.693.55 million",
+     "value": 693.55,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content"
+    },
+    {
+     "label": "Same report, Table 2.1, Kisumu row (PDF p.38): FIF/A-i-A 902.45",
+     "value": 902.45,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content"
+    }
+   ],
+   "definitions": "Same report, same year; Table 2.1 labels the column FIF/A-i-A, the chapter FIF.",
+   "hypothesis": "Hypothesis: the table may add appropriations-in-aid (124.07 million are listed separately in the chapter) or other receipts. Not confirmed.",
+   "effect": "No value changes.",
+   "status": "open",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K266",
+    "kisumu-fiscal-ledger|K284"
+   ],
+   "ledger_cases": [
+    "D-K266-K284"
+   ]
+  },
+  {
+   "id": "kisumu-osr-fif-target-2025-26",
+   "measure": "FIF/A-i-A target, FY 2025/26 (Kisumu County): chapter financing plan against Table 2.1",
+   "unit": "KSh million",
+   "values": [
+    {
+     "label": "Controller of Budget annual report FY 2025/26, section 3.17 (PDF p.350): \"Facility Improvement Financing of Kshs.800.00 million (4.71 per cent)\" in the financing plan",
+     "value": 800,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content"
+    },
+    {
+     "label": "Same report, Table 2.1, Kisumu row (PDF p.38): FIF/A-i-A target 2,758.13",
+     "value": 2758.13,
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content"
+    }
+   ],
+   "definitions": "Same report, same year. The chapter also lists SHIF receivables brought forward of 1.87 billion and A-i-A of 91.18 million separately in the financing plan.",
+   "hypothesis": "Hypothesis: the table target may include SHIF receivables and A-i-A that the chapter lists on other lines (800.00 + 1,870 + 91.18 is close to 2,758.13, but the report does not say so).",
+   "effect": "No value changes.",
+   "status": "open",
+   "verification_state": "unresolved_no_reviewer",
+   "supersedes": null,
+   "page_image_checked": false,
+   "observations": [
+    "kisumu-fiscal-ledger|K264",
+    "kisumu-fiscal-ledger|K287"
+   ],
+   "ledger_cases": [
+    "D-K264-K287"
+   ]
   }
  ]
 }

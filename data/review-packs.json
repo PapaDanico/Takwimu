@@ -5,13 +5,13 @@
   "generated_by": "scripts/review-packs.js",
   "scope": "Every dataset about Siaya; the 47-county Controller of Budget file for Siaya's rows only; the IMF file (national) is out of scope.",
   "counts": {
-   "siaya-fiscal-ledger": 299,
-   "siaya-audits": 276,
+   "siaya-fiscal-ledger": 325,
+   "siaya-audits": 282,
    "siaya-health": 78,
    "siaya-projects": 118,
    "counties-cob": 92,
-   "history": 178,
-   "siaya-analysis": 355,
+   "history": 193,
+   "siaya-analysis": 372,
    "siaya-economy": 154,
    "siaya-governance": 38,
    "siaya-education": 215,
@@ -19,10 +19,10 @@
    "siaya-climate": 87,
    "siaya-budget-departments": 1240,
    "siaya-county-series": 191,
-   "siaya-analysis-layers": 435,
+   "siaya-analysis-layers": 442,
    "siaya-programmes": 73
   },
-  "total": 3934
+  "total": 4005
  },
  "entries": [
   {
@@ -2664,6 +2664,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 3
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L300",
+     "value": 13.38,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 41
     }
    ],
    "machine_check": {
@@ -3290,6 +3298,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 3
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L300",
+     "value": 13.38,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 41
     }
    ],
    "machine_check": {
@@ -3348,6 +3364,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L301",
+     "value": 7.35,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 41
     }
    ],
    "machine_check": {
@@ -3406,6 +3430,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L302",
+     "value": 6.03,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 41
     }
    ],
    "machine_check": {
@@ -3472,6 +3504,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q1",
      "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L300",
+     "value": 13.38,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 41
     }
    ],
    "machine_check": {
@@ -3530,6 +3570,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q1",
      "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L301",
+     "value": 7.35,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 41
     }
    ],
    "machine_check": {
@@ -3588,6 +3636,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q1",
      "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L302",
+     "value": 6.03,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 41
     }
    ],
    "machine_check": {
@@ -8080,6 +8136,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 4
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L321",
+     "value": 481.79,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
     }
    ],
    "machine_check": {
@@ -8913,6 +8977,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 4
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L321",
+     "value": 481.79,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
     }
    ],
    "machine_check": {
@@ -9506,6 +9578,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 4
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L321",
+     "value": 481.79,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
     }
    ],
    "machine_check": {
@@ -9786,6 +9866,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 4
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L321",
+     "value": 481.79,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
     }
    ],
    "machine_check": {
@@ -10066,6 +10154,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2024-25-Q4",
      "pdf_page": 4
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L321",
+     "value": 481.79,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
     }
    ],
    "machine_check": {
@@ -10361,8 +10457,8 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L175",
    "label": "osr_total_actual, FY 2025/26",
-   "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
    "value": 876.14,
    "unit": "KSh million",
    "period": "FY 2025/26",
@@ -10380,7 +10476,40 @@
    "read": "text",
    "printed_text": "own-source revenue (OSR) collection of Kshs.876.14 million",
    "note": "Includes FIF of KSh 585.69m",
-   "others": [],
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L306",
+     "value": 876.14,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L315",
+     "value": 862.934947,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L316",
+     "value": 858.616248,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 19
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L320",
+     "value": 3114.92,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -10410,8 +10539,8 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L176",
    "label": "osr_ordinary_actual, FY 2025/26",
-   "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
    "value": 290.450788,
    "unit": "KSh million",
    "period": "FY 2025/26",
@@ -10429,7 +10558,24 @@
    "read": "text",
    "printed_text": "Sub-Total 2,173,735,310 290,450,788 290,450,788 13.36",
    "note": null,
-   "others": [],
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L307",
+     "value": 290.45,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L317",
+     "value": 272.116888,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -10478,7 +10624,24 @@
    "read": "text",
    "printed_text": "Sub-Total 1,078,685,515 585,688,754 585,688,754 54.30",
    "note": "FIF: SHIF and hospital revenue",
-   "others": [],
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L308",
+     "value": 585.69,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L318",
+     "value": 590.818058,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm4",
@@ -10535,6 +10698,22 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q1",
      "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L309",
+     "value": 3252.42,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L319",
+     "value": 3252.420825,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
     }
    ],
    "machine_check": {
@@ -10593,6 +10772,22 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L309",
+     "value": 3252.42,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L319",
+     "value": 3252.420825,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
     }
    ],
    "machine_check": {
@@ -13205,8 +13400,8 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L225",
    "label": "expenditure_development, FY 2019/20",
-   "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
    "value": 2155.01,
    "unit": "KSh million",
    "period": "FY 2019/20",
@@ -13224,7 +13419,16 @@
    "read": "text",
    "printed_text": null,
    "note": null,
-   "others": [],
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L325",
+     "value": 2.12,
+     "unit": "KSh billion",
+     "source": "cob-report-2020-21",
+     "pdf_page": 376
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -13994,8 +14198,8 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L236",
    "label": "expenditure_total, FY 2025/26",
-   "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
    "value": 7180,
    "unit": "KSh million",
    "period": "FY 2025/26",
@@ -14013,7 +14217,24 @@
    "read": "text",
    "printed_text": "The County spent Kshs.7.18 billion on development and recurrent programmes",
    "note": "Paid; Table 0.3 adds accrued expenses of KSh 324.22m",
-   "others": [],
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L303",
+     "value": 7.5,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 43
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L312",
+     "value": 9605.521599,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 21
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -14062,7 +14283,16 @@
    "read": "text",
    "printed_text": "Kshs.5.91 billion for recurrent programmes",
    "note": "Text says the expenditure is inclusive of accrued expenses",
-   "others": [],
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L304",
+     "value": 5.91,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 43
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -14092,8 +14322,8 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L238",
    "label": "expenditure_development, FY 2025/26",
-   "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
    "value": 1600,
    "unit": "KSh million",
    "period": "FY 2025/26",
@@ -14111,7 +14341,24 @@
    "read": "text",
    "printed_text": "Kshs.1.60 billion for development programmes",
    "note": null,
-   "others": [],
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L305",
+     "value": 1.6,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 43
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L313",
+     "value": 2781.583267,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 21
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -18685,8 +18932,8 @@
    "dataset": "siaya-fiscal-ledger",
    "record_id": "L299",
    "label": "wage_bill, FY 2025/26",
-   "kind": "fiscal value",
-   "state": "Provisional: awaiting editorial review",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
    "value": 4440,
    "unit": "KSh million",
    "period": "FY 2025/26",
@@ -18704,7 +18951,24 @@
    "read": "text",
    "printed_text": "The expenditure on employee compensation totalled Kshs.4.44 billion",
    "note": "Compensation of employees, including accrued",
-   "others": [],
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L311",
+     "value": 4435.93,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 43
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L314",
+     "value": 4188.772519,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 21
+    }
+   ],
    "machine_check": {
     "result": "agree",
     "method": "tesseract-600dpi-psm6",
@@ -18721,6 +18985,1750 @@
     "source_sha256": "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
     "pages_checked": [
      7
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L300",
+   "label": "budget_total, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 13.38,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 41,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 7,349.77 6,028.21 13,377.98 5,658.66 1,630.77 7,289.43 76.99 27.05 54.49",
+   "note": "Rounded in history.json from 13,377.98 million; Table 2.5 (PDF p. 44) prints the same budget.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L046",
+     "value": 12790,
+     "unit": "KSh million",
+     "source": "cob-q1-2025-26",
+     "pdf_page": 525
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L055",
+     "value": 12790,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q1",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L058",
+     "value": 13377.987507,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 3
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "13,377.98",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L300"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     41
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L301",
+   "label": "budget_recurrent, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 7.35,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 41,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 7,349.77 6,028.21 13,377.98 5,658.66 1,630.77 7,289.43 76.99 27.05 54.49",
+   "note": "Rounded in history.json from 7,349.77 million.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L056",
+     "value": 6970,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q1",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L059",
+     "value": 7350,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "7,349.17",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L301"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     41
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L302",
+   "label": "budget_development, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 6.03,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 41,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 7,349.77 6,028.21 13,377.98 5,658.66 1,630.77 7,289.43 76.99 27.05 54.49",
+   "note": "Rounded in history.json from 6,028.21 million.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L057",
+     "value": 5820,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q1",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L060",
+     "value": 6030,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "6,028.21",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L302"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     41
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L303",
+   "label": "expenditure_total, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 7.5,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 43,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73",
+   "note": "Rounded in history.json from 7,504.73 million (Table 2.5, PDF p. 44, prints the same).",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L236",
+     "value": 7180,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 6
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L312",
+     "value": 9605.521599,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 21
+    }
+   ],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L303"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     43
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L304",
+   "label": "expenditure_recurrent, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 5.91,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 43,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73",
+   "note": "Rounded in history.json from 5,905.69 million.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L237",
+     "value": 5910,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 6
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "5,905.69",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L304"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     43
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L305",
+   "label": "expenditure_development, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 1.6,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 43,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73",
+   "note": "Rounded in history.json from 1,599.04 million.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L238",
+     "value": 1600,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 6
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L313",
+     "value": 2781.583267,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 21
+    }
+   ],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L305"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     43
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L306",
+   "label": "osr_total_actual, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 876.14,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94",
+   "note": "Ordinary 290.45 plus FIF/A-i-A 585.69; 26.94 per cent of the 3,252.42 target.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L175",
+     "value": 876.14,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L315",
+     "value": 862.934947,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L316",
+     "value": 858.616248,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 19
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L320",
+     "value": 3114.92,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "876.14",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L306"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L307",
+   "label": "osr_ordinary_actual, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 290.45,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94",
+   "note": "CoB: ordinary own-source revenue",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L176",
+     "value": 290.450788,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 3
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L317",
+     "value": 272.116888,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "290.45",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L307"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L308",
+   "label": "osr_fif_aia_actual, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 585.69,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94",
+   "note": "CoB: FIF/A-i-A",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L177",
+     "value": 585.688754,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 3
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L318",
+     "value": 590.818058,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "585.69",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L308"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L309",
+   "label": "osr_total_target, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 3252.42,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94",
+   "note": "Ordinary 2,173.74 plus FIF/A-i-A 1,078.69 (they add to 3,252.43; printed 3,252.42).",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L178",
+     "value": 3250,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L179",
+     "value": 3110,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q1",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L319",
+     "value": 3252.420825,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "3,252.42",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L309"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L310",
+   "label": "pending_bills_close, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1276.88,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 607.23 563.98 1,171.21 105.68 0.00 105.68 1,276.88 13,377.98 9.54",
+   "note": "Executive 1,171.21 (recurrent 607.23, development 563.98) plus Assembly 105.68; the parts add to 1,276.89, printed 1,276.88. The county's Q4 report gives 1,276,882,801.13 (PDF pp. 15-16).",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "1,276.88",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L310"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L311",
+   "label": "wage_bill, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 4435.93,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 43,
+   "printed_page": null,
+   "read": "ocr-tesseract",
+   "printed_text": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73",
+   "note": "CoB: compensation to employees",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L299",
+     "value": 4440,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 7
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L314",
+     "value": 4188.772519,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 21
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "4,435.93",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L311"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     43
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L312",
+   "label": "expenditure_total, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 9605.521599,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": 21,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Total actual expenditure for the period under review amounted to Kshs. 9,605,521,598.65 against a planned budget of Kshs. 13,377,987,507.00 representing a performance of 71.80 percent",
+   "note": "PE 4,188,772,518.52; O&M 2,635,165,813.13; development 2,781,583,267.00 (Table 10 total 9,605,521,598.65, 71.80%). Gap research C notes that the figure equals the county's total receipts.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L236",
+     "value": 7180,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 6
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L303",
+     "value": 7.5,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 43
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "9,605,521,598.65",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L312"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "pages_checked": [
+     21
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L313",
+   "label": "expenditure_development, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 2781.583267,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": 21,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "DEV 6,028,209,526.00 2,781,583,267.00 -3,246,626,259 46.14%",
+   "note": "County Treasury actual",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L238",
+     "value": 1600,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 6
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L305",
+     "value": 1.6,
+     "unit": "KSh billion",
+     "source": "cob-report-2025-26",
+     "pdf_page": 43
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "2,781,583,267.00",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L313"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "pages_checked": [
+     21
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L314",
+   "label": "wage_bill, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 4188.772519,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": 21,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "PE 3,862,117,174.00 4,188,772,518.52 326,655,345 108%",
+   "note": "County: personnel emoluments",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L299",
+     "value": 4440,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 7
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L311",
+     "value": 4435.93,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 43
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "4,188,772,518.52",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L314"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "pages_checked": [
+     21
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L315",
+   "label": "osr_total_actual, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 862.934947,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": 5,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Local revenue collection was Kshs. 862,934,946.65 against a target of Kshs. 3,252,420,825 representing a performance of 27 percent. The local revenue comprised of Kshs. 590,818,058.20 as appropriation in Aid (AIA) and Kshs. 272,116,888.45 as ordinary revenues.",
+   "note": "The same paper gives 858,616,247.65 in its OSR section and Table 8 (PDF pp. 15, 17) and 858,616,248 in Table 9 (PDF p. 19).",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L175",
+     "value": 876.14,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L306",
+     "value": 876.14,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L316",
+     "value": 858.616248,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 19
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L320",
+     "value": 3114.92,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "862,934,946.65",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L315"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "pages_checked": [
+     5
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L316",
+   "label": "osr_total_actual, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 858.616248,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": 19,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "TOTALS 760,000,000 1,044,061,306 3,252,420,830 600,948,814 757,570,622 858,616,248",
+   "note": "Same paper as the 862,934,946.65 on PDF p. 5; the paper does not reconcile the two.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L175",
+     "value": 876.14,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L306",
+     "value": 876.14,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L315",
+     "value": 862.934947,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L320",
+     "value": 3114.92,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "858,616,248",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L316"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "pages_checked": [
+     19
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L317",
+   "label": "osr_ordinary_actual, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 272.116888,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": 5,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Kshs. 272,116,888.45 as ordinary revenues",
+   "note": "County: ordinary revenue",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L176",
+     "value": 290.450788,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 3
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L307",
+     "value": 290.45,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "272,116,888.45",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L317"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "pages_checked": [
+     5
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L318",
+   "label": "osr_fif_aia_actual, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 590.818058,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": 5,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Kshs. 590,818,058.20 as appropriation in Aid (AIA)",
+   "note": "County: appropriations-in-aid",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L177",
+     "value": 585.688754,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 3
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L308",
+     "value": 585.69,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "590,818,058.20",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L318"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "pages_checked": [
+     5
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L319",
+   "label": "osr_total_target, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 3252.420825,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": 5,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "against a target of Kshs. 3,252,420,825",
+   "note": "County: annual target (supplementary budget)",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L178",
+     "value": 3250,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L179",
+     "value": 3110,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q1",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L309",
+     "value": 3252.42,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "3,252,420,825",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L319"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "pages_checked": [
+     5
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L320",
+   "label": "osr_total_actual, FY 2025/26",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 3114.92,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "knbs-economic-survey-2026",
+     "title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "url": "https://repository.knbs.or.ke/server/api/core/bitstreams/0f93337f-d810-48af-bd1a-9de0a11498e6/content",
+     "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc"
+    }
+   ],
+   "pdf_page": 150,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37",
+   "note": "KNBS compilation of county revenue; marked provisional (*).",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L175",
+     "value": 876.14,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L306",
+     "value": 876.14,
+     "unit": "KSh million",
+     "source": "cob-report-2025-26",
+     "pdf_page": 38
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L315",
+     "value": 862.934947,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 5
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L316",
+     "value": 858.616248,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 19
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "3,114.92",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L320"
+    ],
+    "source_document_id": "knbs-economic-survey-2026",
+    "source_sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+    "pages_checked": [
+     150
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L321",
+   "label": "osr_total_actual, FY 2024/25",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 481.79,
+   "unit": "KSh million",
+   "period": "FY 2024/25",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "knbs-economic-survey-2026",
+     "title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "url": "https://repository.knbs.or.ke/server/api/core/bitstreams/0f93337f-d810-48af-bd1a-9de0a11498e6/content",
+     "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc"
+    }
+   ],
+   "pdf_page": 150,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37",
+   "note": "KNBS compilation; marked revised (+). Neither the Controller of Budget (436.68) nor the county (757.57) prints 481.79.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L140",
+     "value": 436.68,
+     "unit": "KSh million",
+     "source": "cob-report-2024-25",
+     "pdf_page": 476
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L153",
+     "value": 436.68,
+     "unit": "KSh million",
+     "source": "cob-report-2024-25",
+     "pdf_page": 46
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L162",
+     "value": 757.570621,
+     "unit": "KSh million",
+     "source": "GOV-03",
+     "pdf_page": 16
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L166",
+     "value": 757.570621,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2024-25-Q4",
+     "pdf_page": 4
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L170",
+     "value": 712.82,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 4
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "481.79",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L321"
+    ],
+    "source_document_id": "knbs-economic-survey-2026",
+    "source_sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+    "pages_checked": [
+     150
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L322",
+   "label": "budget_recurrent, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 4899.616267,
+   "unit": "KSh million",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-brop-2019-20",
+     "title": "Siaya County Treasury, County Budget Review and Outlook Paper FY 2019/2020 (September 2020)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf",
+     "sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac"
+    }
+   ],
+   "pdf_page": 20,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Total Recurrent 4,899,616,267 4,659,842,545 239,773,722 95%",
+   "note": "Supplementary budget (total 8,881,773,924).",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "4,899,616,267",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L322"
+    ],
+    "source_document_id": "siaya-brop-2019-20",
+    "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+    "pages_checked": [
+     20
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L323",
+   "label": "budget_development, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3982.157657,
+   "unit": "KSh million",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-brop-2019-20",
+     "title": "Siaya County Treasury, County Budget Review and Outlook Paper FY 2019/2020 (September 2020)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf",
+     "sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac"
+    }
+   ],
+   "pdf_page": 20,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Development 3,982,157,657 2,155,005,238 1,827,152,419 54%",
+   "note": "County: supplementary budget",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "3,982,157,657",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L323"
+    ],
+    "source_document_id": "siaya-brop-2019-20",
+    "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+    "pages_checked": [
+     20
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L324",
+   "label": "osr_total_target, FY 2019/20",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 420,
+   "unit": "KSh million",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "siaya-brop-2019-20",
+     "title": "Siaya County Treasury, County Budget Review and Outlook Paper FY 2019/2020 (September 2020)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf",
+     "sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac"
+    }
+   ],
+   "pdf_page": 13,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Total for Local Revenue 420,000,000 184,249,749 - 235,750,251",
+   "note": "County: own-source revenue target",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "420,000,000",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L324"
+    ],
+    "source_document_id": "siaya-brop-2019-20",
+    "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+    "pages_checked": [
+     13
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "record_id": "L325",
+   "label": "expenditure_development, FY 2019/20",
+   "kind": "fiscal discrepancy (open case in the ledger)",
+   "state": "Disputed: see the conflict register",
+   "value": 2.12,
+   "unit": "KSh billion",
+   "period": "FY 2019/20",
+   "scope": "county government (executive and assembly)",
+   "source": [
+    {
+     "id": "cob-report-2020-21",
+     "title": "County Governments Budget Implementation Review Report FY 2020/21",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/fa13464d-84c7-492c-a336-b65c902ddfbe/content",
+     "sha256": "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868"
+    }
+   ],
+   "pdf_page": 376,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "compared to a similar period in FY 2019/20 when the County spent Kshs.2.12 billion",
+   "note": "Parliament library copy; the Nairobi County Assembly copy of the same report prints it on PDF p. 379.",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L225",
+     "value": 2155.01,
+     "unit": "KSh million",
+     "source": "siaya-brop-2019-20",
+     "pdf_page": 20
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "2.12",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-fiscal-ledger",
+    "record_ids": [
+     "L325"
+    ],
+    "source_document_id": "cob-report-2020-21",
+    "source_sha256": "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
+    "pages_checked": [
+     376
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -18917,6 +20925,153 @@
     "source_sha256": "6a9b4bc3bbfab8d6eb2bd8d155ff001bdcd34833ecfbb6d486e360267fdf2837",
     "pages_checked": [
      2
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-audits",
+   "record_id": "opinion:county_executive:2016/17",
+   "label": "county_executive, FY 2016/17: Adverse Opinion",
+   "kind": "audit opinion",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Adverse Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2016/17",
+   "scope": "county_executive",
+   "source": [
+    {
+     "id": "pbo-county-fact-sheets-2024",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 392,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Executive row, FY 2016/17: Adverse",
+   "note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Executive row, printed \"Adverse\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-audits",
+    "record_ids": [
+     "opinion:county_executive:2016/17"
+    ],
+    "source_document_id": "pbo-county-fact-sheets-2024",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     392
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-audits",
+   "record_id": "opinion:county_executive:2017/18",
+   "label": "county_executive, FY 2017/18: Qualified Opinion",
+   "kind": "audit opinion",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Qualified Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2017/18",
+   "scope": "county_executive",
+   "source": [
+    {
+     "id": "pbo-county-fact-sheets-2024",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 392,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Executive row, FY 2017/18: Qualified",
+   "note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Executive row, printed \"Qualified\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-audits",
+    "record_ids": [
+     "opinion:county_executive:2017/18"
+    ],
+    "source_document_id": "pbo-county-fact-sheets-2024",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     392
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-audits",
+   "record_id": "opinion:county_executive:2018/19",
+   "label": "county_executive, FY 2018/19: Qualified Opinion",
+   "kind": "audit opinion",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Qualified Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2018/19",
+   "scope": "county_executive",
+   "source": [
+    {
+     "id": "pbo-county-fact-sheets-2024",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 392,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Executive row, FY 2018/19: Qualified",
+   "note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Executive row, printed \"Qualified\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-audits",
+    "record_ids": [
+     "opinion:county_executive:2018/19"
+    ],
+    "source_document_id": "pbo-county-fact-sheets-2024",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     392
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -19211,6 +21366,153 @@
     "source_sha256": "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe",
     "pages_checked": [
      47
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-audits",
+   "record_id": "opinion:county_assembly:2016/17",
+   "label": "county_assembly, FY 2016/17: Adverse Opinion",
+   "kind": "audit opinion",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Adverse Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2016/17",
+   "scope": "county_assembly",
+   "source": [
+    {
+     "id": "pbo-county-fact-sheets-2024",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 392,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Assembly row, FY 2016/17: Adverse",
+   "note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Assembly row, printed \"Adverse\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-audits",
+    "record_ids": [
+     "opinion:county_assembly:2016/17"
+    ],
+    "source_document_id": "pbo-county-fact-sheets-2024",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     392
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-audits",
+   "record_id": "opinion:county_assembly:2017/18",
+   "label": "county_assembly, FY 2017/18: Qualified Opinion",
+   "kind": "audit opinion",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Qualified Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2017/18",
+   "scope": "county_assembly",
+   "source": [
+    {
+     "id": "pbo-county-fact-sheets-2024",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 392,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Assembly row, FY 2017/18: Qualified",
+   "note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Assembly row, printed \"Qualified\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-audits",
+    "record_ids": [
+     "opinion:county_assembly:2017/18"
+    ],
+    "source_document_id": "pbo-county-fact-sheets-2024",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     392
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-audits",
+   "record_id": "opinion:county_assembly:2018/19",
+   "label": "county_assembly, FY 2018/19: Qualified Opinion",
+   "kind": "audit opinion",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Qualified Opinion",
+   "unit": "opinion (text)",
+   "period": "FY 2018/19",
+   "scope": "county_assembly",
+   "source": [
+    {
+     "id": "pbo-county-fact-sheets-2024",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 392,
+   "printed_page": null,
+   "read": "text",
+   "printed_text": "Table 5: Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23), County Assembly row, FY 2018/19: Qualified",
+   "note": "Official compilation (secondary): Parliamentary Budget Office, County Fact Sheets 2024, Table 5 \"Audit Opinions for Siaya County Executive and Assembly (FY 2013/14-2022/23)\", County Assembly row, printed \"Qualified\" (PDF p. 392; source line \"Controller of Budget reports\"). The Auditor-General's report for the year is not held, so the opinion is not confirmed against the audit itself and no findings are recorded. An opinion is the auditor's finding about the financial statements, not a verdict on any person.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-audits",
+    "record_ids": [
+     "opinion:county_assembly:2018/19"
+    ],
+    "source_document_id": "pbo-county-fact-sheets-2024",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     392
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -56568,6 +58870,14 @@
      "unit": "KSh million",
      "source": "GOV-02-FY2025-26-Q4",
      "pdf_page": 4
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L321",
+     "value": 481.79,
+     "unit": "KSh million",
+     "source": "knbs-economic-survey-2026",
+     "pdf_page": 150
     }
    ],
    "machine_check": {
@@ -56586,6 +58896,647 @@
     "source_sha256": "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
     "pages_checked": [
      476
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:approved",
+   "label": "approved, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 13.38,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 41,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.3, Siaya row: 7,349.77 6,028.21 13,377.98 (also Table 2.5, PDF p. 44)",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L046",
+     "value": 12790,
+     "unit": "KSh million",
+     "source": "cob-q1-2025-26",
+     "pdf_page": 525
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L055",
+     "value": 12790,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q1",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L058",
+     "value": 13377.987507,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 3
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "13,377.98",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:approved"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     41
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:recurrent_budget",
+   "label": "recurrent_budget, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 7.35,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 41,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.3, Siaya row (7,349.77)",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L056",
+     "value": 6970,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q1",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L059",
+     "value": 7350,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "7,349.17",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:recurrent_budget"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     41
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:development_budget",
+   "label": "development_budget, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 6.03,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 41,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.3, Siaya row (6,028.21)",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L057",
+     "value": 5820,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q1",
+     "pdf_page": 2
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L060",
+     "value": 6030,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 2
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "6,028.21",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:development_budget"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     41
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:spent",
+   "label": "spent, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 7.5,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 43,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.4, Siaya row: 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73. See conflict spent-2025-26",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L236",
+     "value": 7180,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 6
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L312",
+     "value": 9605.521599,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 21
+    }
+   ],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:spent"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     43
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:recurrent_spent",
+   "label": "recurrent_spent, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 5.91,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 43,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.4, Siaya row (5,905.69)",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L237",
+     "value": 5910,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 6
+    }
+   ],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "5,905.69",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:recurrent_spent"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     43
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:development_spent",
+   "label": "development_spent, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1.6,
+   "unit": "KSh billion",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 43,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.4, Siaya row (1,599.04). See conflict development-spending-2025-26",
+   "others": [
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L238",
+     "value": 1600,
+     "unit": "KSh million",
+     "source": "GOV-02-FY2025-26-Q4",
+     "pdf_page": 6
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "id": "L313",
+     "value": 2781.583267,
+     "unit": "KSh million",
+     "source": "siaya-cbrop-2025-26",
+     "pdf_page": 21
+    }
+   ],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:development_spent"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     43
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:recurrent_absorption_pct",
+   "label": "recurrent_absorption_pct, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 80.35,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 44,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.5, Siaya row: 80.35 26.53 56.10",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "80.35",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:recurrent_absorption_pct"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     44
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:development_absorption_pct",
+   "label": "development_absorption_pct, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 26.53,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 44,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.5, Siaya row (26.53)",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "26.53",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:development_absorption_pct"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     44
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:osr_m",
+   "label": "osr_m, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 876.14,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.1, Siaya row: target 2,173.74 1,078.69 3,252.42; actual 290.45 585.69 876.14; 26.94 per cent. See conflict osr-2025-26",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "876.14",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:osr_m"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:osr_target_m",
+   "label": "osr_target_m, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3252.42,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.1, Siaya row (3,252.42)",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "3,252.42",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:osr_target_m"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "years:2025/26:pending_total_m",
+   "label": "pending_total_m, FY 2025/26",
+   "kind": "fiscal value (ten-year series; register cases)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1276.88,
+   "unit": "KSh million",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": "Table 2.10, trade payables at 30 June 2026, Siaya row: 607.23 563.98 1,171.21 105.68 0.00 105.68 1,276.88 (own-year rule)",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "1,276.88",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "years:2025/26:pending_total_m"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     53
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -56733,6 +59684,153 @@
     "source_sha256": "6a9b4bc3bbfab8d6eb2bd8d155ff001bdcd34833ecfbb6d486e360267fdf2837",
     "pages_checked": [
      2
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "audits:2016/17",
+   "label": "Audit opinion, FY 2016/17: Adverse",
+   "kind": "audit opinion",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Adverse",
+   "unit": null,
+   "period": "FY 2016/17",
+   "scope": null,
+   "source": [
+    {
+     "id": "pbo-county-fact-sheets-2024",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 392,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": null,
+   "note": "Table 5, County Executive row; the same table gives the County Assembly (data/siaya-audits.json)",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "audits:2016/17"
+    ],
+    "source_document_id": "pbo-county-fact-sheets-2024",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     392
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "audits:2017/18",
+   "label": "Audit opinion, FY 2017/18: Qualified",
+   "kind": "audit opinion",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Qualified",
+   "unit": null,
+   "period": "FY 2017/18",
+   "scope": null,
+   "source": [
+    {
+     "id": "pbo-county-fact-sheets-2024",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 392,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": null,
+   "note": "Table 5, County Executive row; the same table gives the County Assembly (data/siaya-audits.json)",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "audits:2017/18"
+    ],
+    "source_document_id": "pbo-county-fact-sheets-2024",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     392
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "audits:2018/19",
+   "label": "Audit opinion, FY 2018/19: Qualified",
+   "kind": "audit opinion",
+   "state": "Provisional: awaiting editorial review",
+   "value": "Qualified",
+   "unit": null,
+   "period": "FY 2018/19",
+   "scope": null,
+   "source": [
+    {
+     "id": "pbo-county-fact-sheets-2024",
+     "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+     "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+     "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e"
+    }
+   ],
+   "pdf_page": 392,
+   "printed_page": null,
+   "read": "PDF text layer",
+   "printed_text": null,
+   "note": "Table 5, County Executive row; the same table gives the County Assembly (data/siaya-audits.json)",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "audits:2018/19"
+    ],
+    "source_document_id": "pbo-county-fact-sheets-2024",
+    "source_sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "pages_checked": [
+     392
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -57566,6 +60664,55 @@
     "source_sha256": "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
     "pages_checked": [
      476
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "history",
+   "record_id": "osr:2025/26",
+   "label": "Own-source revenue, FY 2025/26",
+   "kind": "fiscal value",
+   "state": "Provisional: awaiting editorial review",
+   "value": 876.14,
+   "unit": null,
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": 38,
+   "printed_page": null,
+   "read": "tesseract OCR (two readings)",
+   "printed_text": null,
+   "note": null,
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "pdf-text-layer",
+    "matched": "876.14",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "history",
+    "record_ids": [
+     "osr:2025/26"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [
+     38
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -60192,6 +63339,53 @@
   },
   {
    "dataset": "siaya-analysis",
+   "record_id": "SIA-A1-2025-26-cob-report-2025-26",
+   "label": "Real per-capita county expenditure, FY 2025/26 (cob-report-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "KSh per person at FY 2024/25 prices",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Total county expenditure (KSh) divided by population, multiplied by CPI(FY 2024/25) / CPI(FY 2025/26).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A1-2025-26-cob-report-2025-26"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
    "record_id": "SIA-A1-2025-26-GOV-02-FY2025-26-Q4",
    "label": "Real per-capita county expenditure, FY 2025/26 (GOV-02-FY2025-26-Q4)",
    "kind": "calculation by Takwimu",
@@ -60228,6 +63422,53 @@
     ],
     "source_document_id": "GOV-02-FY2025-26-Q4",
     "source_sha256": "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A1-2025-26-siaya-cbrop-2025-26",
+   "label": "Real per-capita county expenditure, FY 2025/26 (siaya-cbrop-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "KSh per person at FY 2024/25 prices",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Total county expenditure (KSh) divided by population, multiplied by CPI(FY 2024/25) / CPI(FY 2025/26).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A1-2025-26-siaya-cbrop-2025-26"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
     "pages_checked": [],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -61414,6 +64655,100 @@
   },
   {
    "dataset": "siaya-analysis",
+   "record_id": "SIA-A2-2024-25-knbs-economic-survey-2026",
+   "label": "Transfer dependency, FY 2024/25 (knbs-economic-survey-2026)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "% of the three published receipt streams",
+   "period": "FY 2024/25",
+   "scope": null,
+   "source": [
+    {
+     "id": "knbs-economic-survey-2026",
+     "title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "url": "https://repository.knbs.or.ke/server/api/core/bitstreams/0f93337f-d810-48af-bd1a-9de0a11498e6/content",
+     "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "(Equitable share received + conditional grants or additional allocations received) divided by (equitable share received + conditional grants received + own-source revenue collected, including FIF/A-i-A where the source includes it), times 100. All three from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A2-2024-25-knbs-economic-survey-2026"
+    ],
+    "source_document_id": "knbs-economic-survey-2026",
+    "source_sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A2-2025-26-cob-report-2025-26",
+   "label": "Transfer dependency, FY 2025/26 (cob-report-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "% of the three published receipt streams",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "(Equitable share received + conditional grants or additional allocations received) divided by (equitable share received + conditional grants received + own-source revenue collected, including FIF/A-i-A where the source includes it), times 100. All three from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A2-2025-26-cob-report-2025-26"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
    "record_id": "SIA-A2-2025-26-GOV-02-FY2025-26-Q4",
    "label": "Transfer dependency, FY 2025/26 (GOV-02-FY2025-26-Q4)",
    "kind": "calculation by Takwimu",
@@ -61450,6 +64785,100 @@
     ],
     "source_document_id": "GOV-02-FY2025-26-Q4",
     "source_sha256": "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A2-2025-26-knbs-economic-survey-2026",
+   "label": "Transfer dependency, FY 2025/26 (knbs-economic-survey-2026)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "% of the three published receipt streams",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "knbs-economic-survey-2026",
+     "title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "url": "https://repository.knbs.or.ke/server/api/core/bitstreams/0f93337f-d810-48af-bd1a-9de0a11498e6/content",
+     "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "(Equitable share received + conditional grants or additional allocations received) divided by (equitable share received + conditional grants received + own-source revenue collected, including FIF/A-i-A where the source includes it), times 100. All three from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A2-2025-26-knbs-economic-survey-2026"
+    ],
+    "source_document_id": "knbs-economic-survey-2026",
+    "source_sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A2-2025-26-siaya-cbrop-2025-26",
+   "label": "Transfer dependency, FY 2025/26 (siaya-cbrop-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "% of the three published receipt streams",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "(Equitable share received + conditional grants or additional allocations received) divided by (equitable share received + conditional grants received + own-source revenue collected, including FIF/A-i-A where the source includes it), times 100. All three from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A2-2025-26-siaya-cbrop-2025-26"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
     "pages_checked": [],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -62293,6 +65722,53 @@
   },
   {
    "dataset": "siaya-analysis",
+   "record_id": "SIA-A3-2019-20-cob-report-2020-21-development",
+   "label": "Execution rate, development, FY 2019/20 (cob-report-2020-21)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "% of budget",
+   "period": "FY 2019/20",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2020-21",
+     "title": "County Governments Budget Implementation Review Report FY 2020/21",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/fa13464d-84c7-492c-a336-b65c902ddfbe/content",
+     "sha256": "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Development expenditure divided by the development budget of the same version, times 100, both from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A3-2019-20-cob-report-2020-21-development"
+    ],
+    "source_document_id": "cob-report-2020-21",
+    "source_sha256": "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
    "record_id": "SIA-A3-2019-20-senate-cpac-2019-20-total",
    "label": "Execution rate, total, FY 2019/20 (senate-cpac-2019-20)",
    "kind": "calculation by Takwimu",
@@ -62344,7 +65820,7 @@
    "label": "Execution rate, development, FY 2019/20 (siaya-brop-2019-20)",
    "kind": "calculation by Takwimu",
    "state": "Provisional: awaiting editorial review",
-   "value": null,
+   "value": 54.12,
    "unit": "% of budget",
    "period": "FY 2019/20",
    "scope": null,
@@ -62391,7 +65867,7 @@
    "label": "Execution rate, recurrent, FY 2019/20 (siaya-brop-2019-20)",
    "kind": "calculation by Takwimu",
    "state": "Provisional: awaiting editorial review",
-   "value": null,
+   "value": 95.11,
    "unit": "% of budget",
    "period": "FY 2019/20",
    "scope": null,
@@ -63703,6 +67179,147 @@
   },
   {
    "dataset": "siaya-analysis",
+   "record_id": "SIA-A3-2025-26-cob-report-2025-26-development",
+   "label": "Execution rate, development, FY 2025/26 (cob-report-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": 26.53,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Development expenditure divided by the development budget of the same version, times 100, both from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A3-2025-26-cob-report-2025-26-development"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A3-2025-26-cob-report-2025-26-recurrent",
+   "label": "Execution rate, recurrent, FY 2025/26 (cob-report-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": 80.41,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Recurrent expenditure divided by the recurrent budget of the same version, times 100, both from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A3-2025-26-cob-report-2025-26-recurrent"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A3-2025-26-cob-report-2025-26-total",
+   "label": "Execution rate, total, FY 2025/26 (cob-report-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": 56.05,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Total expenditure divided by the total budget of the same version, times 100, both from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A3-2025-26-cob-report-2025-26-total"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
    "record_id": "SIA-A3-2025-26-GOV-02-FY2025-26-Q1-development",
    "label": "Execution rate, development, FY 2025/26 (GOV-02-FY2025-26-Q1)",
    "kind": "calculation by Takwimu",
@@ -63974,6 +67591,100 @@
     ],
     "source_document_id": "GOV-02-FY2025-26-Q4",
     "source_sha256": "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A3-2025-26-siaya-cbrop-2025-26-development",
+   "label": "Execution rate, development, FY 2025/26 (siaya-cbrop-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Development expenditure divided by the development budget of the same version, times 100, both from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A3-2025-26-siaya-cbrop-2025-26-development"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A3-2025-26-siaya-cbrop-2025-26-total",
+   "label": "Execution rate, total, FY 2025/26 (siaya-cbrop-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "% of budget",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Total expenditure divided by the total budget of the same version, times 100, both from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A3-2025-26-siaya-cbrop-2025-26-total"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
     "pages_checked": [],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -67181,6 +70892,53 @@
     ],
     "source_document_id": "cob-report-2024-25",
     "source_sha256": "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A4-stock-2025-26-L310",
+   "label": "Pending bills stock at 2026-06-30 (cob-report-2025-26, L310)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1276.88,
+   "unit": "KSh million",
+   "period": "stock at 2026-06-30",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Reported stock as printed, converted to KSh million.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A4-stock-2025-26-L310"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -76013,6 +79771,100 @@
   },
   {
    "dataset": "siaya-analysis",
+   "record_id": "SIA-A8-2024-25-knbs-economic-survey-2026",
+   "label": "FIF/A-i-A share of own-source revenue, FY 2024/25 (knbs-economic-survey-2026)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "% of own-source revenue",
+   "period": "FY 2024/25",
+   "scope": null,
+   "source": [
+    {
+     "id": "knbs-economic-survey-2026",
+     "title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "url": "https://repository.knbs.or.ke/server/api/core/bitstreams/0f93337f-d810-48af-bd1a-9de0a11498e6/content",
+     "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "FIF/A-i-A collected divided by (ordinary own-source revenue + FIF/A-i-A) from the same document, times 100; where the document gives no ordinary figure, FIF/A-i-A divided by its printed total own-source revenue.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A8-2024-25-knbs-economic-survey-2026"
+    ],
+    "source_document_id": "knbs-economic-survey-2026",
+    "source_sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A8-2025-26-cob-report-2025-26",
+   "label": "FIF/A-i-A share of own-source revenue, FY 2025/26 (cob-report-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": 66.85,
+   "unit": "% of own-source revenue",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "FIF/A-i-A collected divided by (ordinary own-source revenue + FIF/A-i-A) from the same document, times 100; where the document gives no ordinary figure, FIF/A-i-A divided by its printed total own-source revenue.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A8-2025-26-cob-report-2025-26"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
    "record_id": "SIA-A8-2025-26-GOV-02-FY2025-26-Q4",
    "label": "FIF/A-i-A share of own-source revenue, FY 2025/26 (GOV-02-FY2025-26-Q4)",
    "kind": "calculation by Takwimu",
@@ -76049,6 +79901,100 @@
     ],
     "source_document_id": "GOV-02-FY2025-26-Q4",
     "source_sha256": "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A8-2025-26-knbs-economic-survey-2026",
+   "label": "FIF/A-i-A share of own-source revenue, FY 2025/26 (knbs-economic-survey-2026)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "% of own-source revenue",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "knbs-economic-survey-2026",
+     "title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+     "url": "https://repository.knbs.or.ke/server/api/core/bitstreams/0f93337f-d810-48af-bd1a-9de0a11498e6/content",
+     "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "FIF/A-i-A collected divided by (ordinary own-source revenue + FIF/A-i-A) from the same document, times 100; where the document gives no ordinary figure, FIF/A-i-A divided by its printed total own-source revenue.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A8-2025-26-knbs-economic-survey-2026"
+    ],
+    "source_document_id": "knbs-economic-survey-2026",
+    "source_sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis",
+   "record_id": "SIA-A8-2025-26-siaya-cbrop-2025-26",
+   "label": "FIF/A-i-A share of own-source revenue, FY 2025/26 (siaya-cbrop-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": 68.47,
+   "unit": "% of own-source revenue",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "siaya-cbrop-2025-26",
+     "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+     "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+     "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "FIF/A-i-A collected divided by (ordinary own-source revenue + FIF/A-i-A) from the same document, times 100; where the document gives no ordinary figure, FIF/A-i-A divided by its printed total own-source revenue.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis",
+    "record_ids": [
+     "SIA-A8-2025-26-siaya-cbrop-2025-26"
+    ],
+    "source_document_id": "siaya-cbrop-2025-26",
+    "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
     "pages_checked": [],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -198404,6 +202350,53 @@
   },
   {
    "dataset": "siaya-analysis-layers",
+   "record_id": "SIA-B1-2025-26-cob-report-2025-26",
+   "label": "Wage bill as a share of total revenue, FY 2025/26 (cob-report-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Wage bill (compensation of employees) divided by total revenue received (equitable share + conditional grants or additional allocations + own-source revenue), times 100. All from the Controller of Budget's report for the year.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis-layers",
+    "record_ids": [
+     "SIA-B1-2025-26-cob-report-2025-26"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis-layers",
    "record_id": "SIA-B2-2013-14-actual-cbrop",
    "label": "Development share of actual spending, FY 2013/14 (County Budget Review and Outlook Paper)",
    "kind": "calculation by Takwimu",
@@ -201514,6 +205507,100 @@
     ],
     "source_document_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2024-2025",
     "source_sha256": "52368fc5654a54c6120bf59c166c4a94e14c230c998ed8858a36ecae238d6c74",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "record_id": "SIA-B2-2025-26-actual-cob-report-2025-26",
+   "label": "Development share of actual spending, FY 2025/26 (cob-report-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": 21.33,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Development spending divided by total spending, times 100; the Controller of Budget's report for the year.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis-layers",
+    "record_ids": [
+     "SIA-B2-2025-26-actual-cob-report-2025-26"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "record_id": "SIA-B2-2025-26-budget-cob-report-2025-26",
+   "label": "Development share of the approved budget, FY 2025/26 (cob-report-2025-26)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": 45.07,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Development budget divided by total budget, times 100; the Controller of Budget's report for the year.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis-layers",
+    "record_ids": [
+     "SIA-B2-2025-26-budget-cob-report-2025-26"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -206882,6 +210969,147 @@
     ],
     "source_document_id": "OAG-ROR-2024-25",
     "source_sha256": "d7488d6b9136926b15e55494b09ebc84778d91e3069fd898adc85c82a36c5037",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "record_id": "SIA-B3-2025-26-capita-cob",
+   "label": "Own-source revenue per person, FY 2025/26 (Controller of Budget)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "KSh per person (current prices)",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Own-source revenue (KSh) divided by the population of the calendar year in which the fiscal year starts.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis-layers",
+    "record_ids": [
+     "SIA-B3-2025-26-capita-cob"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "record_id": "SIA-B3-2025-26-perf-cob",
+   "label": "Own-source revenue against target, FY 2025/26 (Controller of Budget)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": 26.94,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Own-source revenue collected divided by the target, times 100; both from the same document.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis-layers",
+    "record_ids": [
+     "SIA-B3-2025-26-perf-cob"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "record_id": "SIA-B3-2025-26-real-cob",
+   "label": "Own-source revenue in real terms, FY 2025/26 (Controller of Budget)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "KSh million at FY 2024/25 prices",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Own-source revenue (KSh million) multiplied by CPI(FY 2024/25) / CPI(FY 2025/26).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis-layers",
+    "record_ids": [
+     "SIA-B3-2025-26-real-cob"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
@@ -218423,6 +222651,53 @@
     ],
     "source_document_id": "cob-report-2024-25",
     "source_sha256": "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "record_id": "SIA-B5-2025-26-cob-report-2025-26-L310",
+   "label": "Pending bills as a share of total revenue, FY 2025/26 (cob-report-2025-26, L310)",
+   "kind": "calculation by Takwimu",
+   "state": "Provisional: awaiting editorial review",
+   "value": null,
+   "unit": "%",
+   "period": "FY 2025/26",
+   "scope": null,
+   "source": [
+    {
+     "id": "cob-report-2025-26",
+     "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+     "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+     "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "calculation by Takwimu",
+   "printed_text": null,
+   "note": "Pending bills at 30 June (own-year report) divided by total revenue received in the year (equitable share + grants + own-source revenue, same report), times 100.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "siaya-analysis-layers",
+    "record_ids": [
+     "SIA-B5-2025-26-cob-report-2025-26-L310"
+    ],
+    "source_document_id": "cob-report-2025-26",
+    "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
     "pages_checked": [],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,

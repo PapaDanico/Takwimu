@@ -1670,6 +1670,68 @@
       "hashed_on": "2026-11-27",
       "access": "downloaded",
       "md5_library": "f88842240da718e7d4dbbab98857320e"
+    },
+    {
+      "id": "cob-report-2025-26",
+      "kind": "Controller of Budget annual county budget implementation review report",
+      "fiscal_year": "2025/26",
+      "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+      "library_title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026. August,2026.Part 1",
+      "url": "https://libraryir.parliament.go.ke/items/99f48395-0710-4a74-bcdf-e4ea40812813",
+      "referenced_by": "history.json reports[\"2025/26\"] and years 2025/26 (Tables 2.1, 2.3, 2.4, 2.5, 2.10, PDF pp. 38, 41, 43-44, 53); data/siaya-fiscal-ledger.json; data/counties/kisumu/fiscal-ledger.json (shared all-county record)",
+      "retrieved": "2026-11-27",
+      "file_name": "County Government Budget Implementation Review Report for the Financial Year 2025-2026. August,2026.Part 1.pdf",
+      "file_url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+      "bytes": 289274062,
+      "md5_library": "b0af47c34427ff4916c9e7e38cfaf5d7",
+      "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+      "hashed_on": "2026-11-27",
+      "access": "downloaded"
+    },
+    {
+      "id": "siaya-cbrop-2025-26",
+      "kind": "County Budget Review and Outlook Paper (County Treasury)",
+      "fiscal_year": "2025/26",
+      "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+      "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+      "referenced_by": "history.json osr_series 2025/26 alternate; data/siaya-fiscal-ledger.json; data/conflicts.json spent-2025-26, osr-2025-26",
+      "retrieved": "2026-11-27",
+      "file_url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+      "bytes": 1223716,
+      "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+      "hashed_on": "2026-11-27",
+      "access": "downloaded",
+      "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received (gap research, docs/research/gaps-2026-11-27)."
+    },
+    {
+      "id": "pbo-county-fact-sheets-2024",
+      "kind": "Parliamentary Budget Office report (official compilation)",
+      "fiscal_year": "FY 2013/14 to FY 2022/23 audit opinions",
+      "title": "Parliamentary Budget Office, County Fact Sheets 2024 (April 2025)",
+      "url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+      "referenced_by": "history.json audits.points 2016/17 to 2018/19; data/siaya-audits.json opinions; data/counties/kisumu/audits.json (shared all-county record)",
+      "retrieved": "2026-11-27",
+      "file_url": "https://www.parliament.go.ke/sites/default/files/2025-06/COUNTY%20FACT%20SHEETS%20-2024%20-APRIL-2025%20%20Website_1.pdf",
+      "bytes": 8772641,
+      "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+      "hashed_on": "2026-11-27",
+      "access": "downloaded",
+      "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received (gap research, docs/research/gaps-2026-11-27)."
+    },
+    {
+      "id": "knbs-economic-survey-2026",
+      "kind": "National statistics publication (KNBS)",
+      "fiscal_year": "2024/25 and 2025/26 (Table 5.13)",
+      "title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+      "url": "https://repository.knbs.or.ke/items/0e833fb6-486a-43ed-987f-7d8051c0f7ee",
+      "referenced_by": "data/siaya-fiscal-ledger.json (Table 5.13, PDF p. 150); data/conflicts.json osr-2025-26-economic-survey, osr-2024-25-three-sources",
+      "retrieved": "2026-11-27",
+      "file_url": "https://repository.knbs.or.ke/server/api/core/bitstreams/0f93337f-d810-48af-bd1a-9de0a11498e6/content",
+      "bytes": 34865123,
+      "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+      "hashed_on": "2026-11-27",
+      "access": "downloaded",
+      "checksum_note": "The KNBS repository publishes an MD5 (6c693845a4187d375e93aaa937b2828f); it matched the file. SHA-256 computed locally."
     }
   ]
 }
