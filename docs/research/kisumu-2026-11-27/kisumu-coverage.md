@@ -61,6 +61,7 @@ The opinions are read from the Parliament library OCR text layer, or from tesser
 ## 3. Manual browser download list
 
 Retry 27 Nov 2026 (automated, no bot-check bypass): OAG site returned 503 with Retry-After 3600 for items 1-4; IBP returned an empty 202; the Kisumu ADP final URL serves 13 MB of null bytes and the draft returns 503 (an Internet Archive copy of the draft, 10 Feb 2026, exists but the transfer was reset); CoB's FY2019/20 page has no direct PDF link (script-driven download); KNBS serves an incomplete TLS chain. Item 11 is now held.
+Retry 27 Nov 2026 16:33 UTC (after Retry-After): OAG items 1-3 still 503 (maintenance page); item 4 returns a 200 HTML page, not the PDF. Items 8 and 9 are now held (draft ADP, IBP CBTS 2022), and the audit opinions for items 1-5 are covered by the PBO County Fact Sheets 2024 (see docs/research/gaps-2026-11-27/B-audits.md) pending the primary reports.
 
 | # | Document | URL | Why |
 |---|---|---|---|
