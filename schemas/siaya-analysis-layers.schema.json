@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://takwimu.netlify.app/schemas/siaya-analysis-layers.schema.json",
+  "title": "Siaya analytical layers B1 to B5 (data/siaya-analysis-layers.json)",
+  "description": "Calculated by Takwimu Kenya (scripts/build-analysis-layers.js). Recomputation, input values against their datasets and reproducibility are checked by scripts/test-analysis-layers.js.",
+  "type": "object",
+  "required": ["meta", "records"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "county", "county_code", "schema_version", "label", "generated_by", "rule", "families", "conventions", "review", "counts"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" }, "county": { "type": "string", "enum": ["Siaya"] }, "county_code": { "type": "integer", "enum": [41] },
+        "schema_version": { "type": "string" }, "label": { "type": "string" }, "generated_by": { "type": "string" }, "rule": { "type": "string" },
+        "families": { "type": "object", "required": ["B1", "B2", "B3", "B4", "B5"], "additionalProperties": false, "properties": { "B1": { "type": "string" }, "B2": { "type": "string" }, "B3": { "type": "string" }, "B4": { "type": "string" }, "B5": { "type": "string" } } },
+        "conventions": { "type": "object", "additionalProperties": { "type": "string" } },
+        "review": { "type": "string" },
+        "counts": { "type": "object", "additionalProperties": { "type": "object", "required": ["values", "gaps"], "additionalProperties": false, "properties": { "values": { "type": "integer", "minimum": 0 }, "gaps": { "type": "integer", "minimum": 0 } } } }
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["calc_id", "family", "status", "title", "formula", "calc", "inputs", "beside", "result", "unit", "period", "source_ids", "comparability_notes", "caveat", "threshold", "flags", "confidence", "label"],
+        "additionalProperties": false,
+        "properties": {
+          "calc_id": { "type": "string", "pattern": "^SIA-B[1-5]-\\d{4}-\\d{2}-[A-Za-z0-9-]+$" },
+          "family": { "type": "string", "enum": ["B1", "B2", "B3", "B4", "B5"] },
+          "status": { "type": "string", "enum": ["value", "gap"] },
+          "title": { "type": "string" }, "formula": { "type": "string" },
+          "calc": { "type": ["object", "null"] },
+          "inputs": { "type": "array", "items": { "$ref": "#/$defs/input" } },
+          "beside": { "type": "array", "items": { "$ref": "#/$defs/input" } },
+          "result": { "type": ["number", "null"] },
+          "unit": { "type": "string" }, "period": { "type": "string" },
+          "source_ids": { "type": "array", "items": { "type": "string" } },
+          "comparability_notes": { "type": "array", "items": { "type": "string" } },
+          "caveat": { "type": ["string", "null"] },
+          "threshold": { "type": ["object", "null"] },
+          "flags": { "type": "object", "additionalProperties": { "type": "boolean" } },
+          "gap_reason": { "type": "string" },
+          "confidence": { "type": ["integer", "null"] },
+          "label": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "input": {
+      "type": "object",
+      "required": ["role", "dataset", "record", "field", "value", "unit", "measure", "period", "source_id", "pdf_page", "confidence"],
+      "additionalProperties": true,
+      "properties": {
+        "role": { "type": "string" },
+        "dataset": { "type": "string", "pattern": "^data/[a-z0-9-]+\\.json$" },
+        "record": { "type": "string" },
+        "field": { "type": "string" },
+        "value": { "type": ["number", "string"] },
+        "unit": { "type": "string" },
+        "source_id": { "type": ["string", "null"] },
+        "pdf_page": { "type": ["integer", "null"] },
+        "confidence": { "type": ["integer", "null"] }
+      }
+    }
+  }
+}
