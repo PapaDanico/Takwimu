@@ -3,6 +3,7 @@
 Evidence-based baseline before the design-system overhaul and fiscal intelligence expansion. Every line below was checked in this session; nothing is inferred from the live site alone.
 
 ## 1. What deploys production
+> Superseded (27 Nov 2026): the text below is the 21 Nov 2026 snapshot. Production now deploys from `main` through Netlify's GitHub link; see `docs/architecture-map.md`.
 - Live: https://takwimu.netlify.app, Netlify site `bf11e227-…`, CLI upload of `git archive` of branch `claude/eager-rubin-7bpcgq` (see `docs/architecture-map.md`). `main` is an older, different product and must not be deployed.
 - Last verified deploys: `6b00fa9b…` (commit `7d4ffed`), `6b0100c7…` (commit `6710b05`, national release).
 

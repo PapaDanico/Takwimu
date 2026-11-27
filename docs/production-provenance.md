@@ -1,5 +1,7 @@
 # Production provenance (21 Nov 2026)
 
+> Dated log of live commits and deploys. What deploys production today (Netlify linked to GitHub, production = `main`, merges deploy automatically, pull requests get deploy previews) is stated once, in `docs/architecture-map.md`; older entries below keep their original wording.
+
 Answers P0-1 of the monetisation audit handover: which code is live, and how it differs from the repository.
 
 ## Live site

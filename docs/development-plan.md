@@ -1,5 +1,7 @@
 # Takwimu development plan
 
+> Superseded (27 Nov 2026): this is the 20 Nov 2026 plan, kept as written. The current plan is `docs/release-plan.md`; what deploys production is in `docs/architecture-map.md`.
+
 Updated 20 Nov 2026. Design: `docs/superpowers/specs/2026-11-20-takwimu-civic-education-design.md`. Research: `docs/research/`. Bugs: `docs/bug-sweep-log.md`.
 
 ## Where things stand
