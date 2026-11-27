@@ -508,6 +508,22 @@ test('identity FY 2024/25 hub: category budgets and spending sum to totals', () 
   ok(near(b.categories.reduce((s, c) => s + c.spent, 0), b.total_spent, 0.05), 'category spending does not sum');
 });
 
+// Duplication sweep D03: the curated register and the fiscal ledger's discrepancy cases are linked both ways.
+{
+  const links = require('../lib/conflict-links');
+  const ledgerIds = new Set(require('../data/siaya-fiscal-ledger.json').discrepancies.map((d) => d.case_id));
+  reg.conflicts.forEach((c) => {
+    test(`register ${c.id}: lists every fiscal-ledger case that compares its values`, () => {
+      const listed = new Set(c.ledger_cases || []);
+      const missing = links.touching(c).filter((id) => !listed.has(id));
+      ok(!missing.length, `ledger_cases lacks ${missing.join(', ')}`);
+      const unknown = [...listed].filter((id) => !ledgerIds.has(id));
+      ok(!unknown.length, `ledger_cases names cases that are not in the ledger: ${unknown.join(', ')}`);
+    });
+  });
+  test('register links: at least one ledger case points back to the curated register', () => ok(reg.conflicts.some((c) => (c.ledger_cases || []).some((id) => links.curatedFor(id).includes(c.id))), 'reverse lookup is empty'));
+}
+
 const failed = results.filter(([pass]) => !pass);
 if (failed.length) {
   console.error(`Reconciliation tests failed (${failed.length} of ${results.length}):\n- ` + failed.map(([, m]) => m).join('\n- '));

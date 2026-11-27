@@ -256,6 +256,12 @@
           "ledger_case": {
             "type": "string",
             "pattern": "^D-L\\d{3}-L\\d{3}$"
+          },
+          "ledger_cases": {
+            "type": "array",
+            "description": "Fiscal-ledger discrepancy cases (data/siaya-fiscal-ledger.json) that compare values of this case; lib/conflict-links.js, checked by scripts/test-reconciliation.js",
+            "items": { "type": "string", "pattern": "^D-L\\d{3}-L\\d{3}$" },
+            "minItems": 1
           }
         }
       }

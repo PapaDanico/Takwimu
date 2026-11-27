@@ -9,6 +9,7 @@ import { plainDeep } from '../../../../lib/plain';
 import OsrLedger, { OSR_TOC } from '../../../../components/siaya/OsrLedger';
 import PendingAtDate from '../../../../components/siaya/PendingAtDate';
 import { ClassBadge } from '../../../../components/LedgerView';
+import reg from '../../../../data/conflicts.json';
 
 export const metadata = {
   title: 'Fiscal reconciliation',
@@ -36,6 +37,7 @@ export default function SiayaLedger() {
           <li id="no-averaging"><b>No averaging and no verdicts.</b> Every value is shown as its source printed it, with the page it was read from. None is averaged, preferred or corrected here, and a missing value is never shown as zero.</li>
           <li>A discrepancy case is any pair of values for the same measure and year that differ by more than {l.threshold} per cent of the smaller one. Each case carries a class saying what the documents themselves show about the difference (<a href="#led-classes">counts by class</a>); the class is our reading, and every case stays open until a specialist reviews it.</li>
           <li>Own-source revenue, hospital income (FIF) and appropriations-in-aid are counted differently by each publisher: see <Link href="/learn/#own-source-revenue">own-source revenue, FIF and A-i-A explained</Link>.</li>
+          <li id="two-registers"><b>Two registers, two counts.</b> The <Link href="/data/#conflicts">conflict register</Link> holds the cases an editor has explained ({reg.conflicts.length}, with definitions and a hypothesis); this page lists every machine-classified pair of ledger values that differ ({l.cases.length} cases). A ledger case that compares values of a curated case links to it, and the curated case lists it.</li>
           <li>Values are in KSh million unless marked as KSh billion (figures reused from the ten-year series keep the unit of that series).</li>
         </ul>
       </section>
