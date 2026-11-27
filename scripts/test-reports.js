@@ -11,11 +11,11 @@
 // print layout no table, cell or chart is wider than the printed column; every figure on the HTML page resolves to a
 // record in its data file with the same value and carries the page and grade of its source observation (D9); every
 // citation link resolves; each chart is a single tab stop.
-const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const { chromium } = require('playwright');
+const { serve } = require('./lib/print-pdf');
 const registry = require('../components/report/reports.json');
 
 const root = path.join(__dirname, '..');
@@ -62,18 +62,7 @@ fs.readdirSync(path.join(root, 'data')).filter((f) => f.endsWith('.json')).forEa
 });
 const strayUndefined = (text) => [...text.replace(/\s+/g, ' ').matchAll(/(?:([A-Za-z,]+) )?\bundefined\b/g)].map((m) => m[0]).filter((m) => !allowedUndefined.has(m));
 
-const TYPES = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.woff2': 'font/woff2', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.json': 'application/json' };
-const srv = http.createServer((req, res) => {
-  let p = decodeURIComponent(req.url.split('?')[0]);
-  if (p.endsWith('/')) p += 'index.html';
-  const f = path.join(dist, path.normalize(p));
-  if (!f.startsWith(dist)) { res.writeHead(403); res.end(); return; }
-  fs.readFile(f, (e, d) => {
-    if (e) { res.writeHead(404); res.end(); return; }
-    res.writeHead(200, { 'content-type': TYPES[path.extname(f)] || 'application/octet-stream' });
-    res.end(d);
-  });
-});
+const srv = serve(dist);
 
 function checkPdf(r, expectSnap, draft, dom) {
   const pdf = path.join(root, 'public', 'reports', `${r.slug}.pdf`);

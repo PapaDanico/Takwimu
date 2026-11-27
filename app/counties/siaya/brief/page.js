@@ -8,6 +8,7 @@ import { fmt, shortDate, fmtNum } from '../../../../lib/format';
 import { SITE_URL, SITE_UPDATED } from '../../../../lib/site';
 import { counts, isProvisional, PUBLIC_LABEL } from '../../../../lib/review-status';
 import { latestOpinions } from '../../../../lib/audits';
+import { SIAYA_FYS } from '../../../../lib/siaya-years';
 
 export const metadata = {
   title: 'Siaya County fiscal brief',
@@ -15,7 +16,7 @@ export const metadata = {
 };
 
 // Every fiscal year in the ten-year window, so missing years show as gaps rather than disappearing.
-const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
+const FYS = SIAYA_FYS;
 const BY_FY = Object.fromEntries(hist.years.map((y) => [y.fy, y]));
 const OSR_BY_FY = Object.fromEntries(hist.osr_series.points.map((p) => [p.fy, p]));
 // Same rule as the Insights page: a stated total wins, otherwise recurrent plus development.

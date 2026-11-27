@@ -8,6 +8,7 @@ import cpi from '../../data/cpi.json';
 import analysis from '../../data/siaya-analysis.json';
 import { fmt, shortDate, fmtInt, fmtNum } from '../../lib/format';
 import { cagr } from '../../lib/analytics';
+import { SIAYA_FYS } from '../../lib/siaya-years';
 
 // Own-source revenue, canonical home /counties/siaya/ledger/ (owner decision U1, 21 Nov 2026). Moved here from the
 // Siaya hub (FY 2024/25 sources side by side, composition), from the old Siaya insights page (ten-year series) and from the old
@@ -24,7 +25,7 @@ const OSR_MIX = { cob2425: A8('SIA-A8-2024-25-cob-report-2024-25'), cty2425: A8(
 // Health facility (FIF/A-i-A) part of the Controller of Budget FY 2024/25 total, as printed (Table 2.1).
 const FIF2425 = ((OSR_MIX.cob2425.inputs || []).find((i) => i.role === 'fif') || {}).value;
 const BASE = '2024/25';
-const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
+const FYS = SIAYA_FYS;
 const SHORT = FYS.map((f) => f.slice(2));
 const years = [...hist.years].sort((a, b) => a.fy.localeCompare(b.fy));
 const by = Object.fromEntries(years.map((y) => [y.fy, y]));

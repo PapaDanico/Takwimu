@@ -12,6 +12,7 @@ import { SITE_UPDATED } from '../../../../lib/site';
 import hist from '../../../../data/history.json';
 import cpi from '../../../../data/cpi.json';
 import ledger from '../../../../data/siaya-fiscal-ledger.json';
+import { SIAYA_FYS } from '../../../../lib/siaya-years';
 
 export const metadata = {
   title: 'Ten-year insights: Siaya County finances',
@@ -62,7 +63,7 @@ const auditSummary = ['Qualified', 'Adverse', 'Disclaimer', 'Unqualified']
 const auditRange = `FY ${audits[0].fy} to FY ${audits[audits.length - 1].fy}`;
 const auditCounts = ['Unqualified', 'Qualified', 'Adverse', 'Disclaimer'].map((o) => `${nOp(o).length} ${o.toLowerCase()}`).join(', ');
 
-const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
+const FYS = SIAYA_FYS;
 const by = Object.fromEntries(years.map((y) => [y.fy, y]));
 const short = (fy) => fy.slice(2);
 const SHORT = FYS.map(short);

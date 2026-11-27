@@ -11,6 +11,7 @@ import { insights as pulse } from '../../lib/pulse';
 import { mean, median, quantile, sd, cv, cagr, iqrOutliers } from '../../lib/analytics';
 import PendingAtDate from './PendingAtDate';
 import { fmtFixed, fmtInt } from '../../lib/format';
+import { SIAYA_FYS } from '../../lib/siaya-years';
 
 // Ten-year measures whose canonical home is /counties/siaya/analysis/ (owner decision U1, 21 Nov 2026): share of
 // budget spent (absorption), pending bills and real growth. Moved here from the old analytics, Fiscal Pulse and
@@ -19,7 +20,7 @@ const BASE = '2024/25';
 const defl = (fy) => (cpi.fiscal_year[fy] ? cpi.fiscal_year[BASE] / cpi.fiscal_year[fy] : null);
 const years = [...hist.years].sort((a, b) => a.fy.localeCompare(b.fy));
 const by = Object.fromEntries(years.map((y) => [y.fy, y]));
-const FYS = ['2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
+const FYS = SIAYA_FYS;
 const SHORT = FYS.map((f) => f.slice(2));
 const label = (fy) => `FY ${fy}`;
 const bn = (v) => v.toFixed(2);
