@@ -112,7 +112,7 @@ function OsrExplainer() {
         <li><b>Where the money was recorded.</b> Money spent at source may reach the county&apos;s books late, or only through a separate facility account.</li>
         <li><b>Targets.</b> Targets come from different budget versions (original or supplementary), so revenue &ldquo;as a share of target&rdquo; differs too.</li>
       </ul>
-      <p className="how">On this site every source&apos;s figure is shown side by side, with its basis, in the <a href="/counties/siaya/ledger/#osr-latest">fiscal reconciliation</a>, and the make-up of Siaya&apos;s own-source revenue is on <a href="/counties/siaya/analysis/#an-a8">Siaya analysis</a>. A difference is a question to put to the documents, not evidence that a figure is wrong.</p>
+      <p className="how">On this site every source&apos;s figure is shown side by side, with its basis, in the <a href="/counties/siaya/ledger/#osr-latest">fiscal reconciliation</a>, and the make-up of Siaya&apos;s own-source revenue is on <a href="/counties/siaya/analysis/revenue/#an-a8">Siaya analysis</a>. A difference is a question to put to the documents, not evidence that a figure is wrong.</p>
     </section>
   );
 }

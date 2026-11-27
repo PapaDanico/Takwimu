@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-// Page header for the Explore pages: breadcrumb trail, title, summary, and plain Back and Home links.
+// Page header for the Explore pages: breadcrumb trail, title and summary. The breadcrumb is the only way back
+// (design review P2-5: a "Back to Home" link under a "Home" crumb said the same thing twice).
 // trail: [{ href, label }] from Home down to the parent; the current page is the last crumb (not a link).
 export default function ExploreHead({ trail, current, title, sub, children }) {
-  const parent = trail[trail.length - 1];
   return (
     <header>
       <nav aria-label="Breadcrumb">
@@ -15,10 +15,6 @@ export default function ExploreHead({ trail, current, title, sub, children }) {
       <h1>{title}</h1>
       {sub ? <p className="page-sub">{sub}</p> : null}
       {children}
-      <p className="backhome no-print">
-        <Link href={parent.href}>← Back to {parent.label}</Link>
-        {parent.href !== '/' ? <Link href="/">Home</Link> : null}
-      </p>
     </header>
   );
 }

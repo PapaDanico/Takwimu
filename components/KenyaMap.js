@@ -6,7 +6,7 @@
 // boundary source and licence are printed, with `licenceNote` (lib/correction-notes.js) as its correction footnote.
 import Link from 'next/link';
 import geo from '../data/kenya-counties-map.json';
-import { bySlug } from '../lib/counties';
+import { bySlug, COUNTIES } from '../lib/counties';
 import { fmtFixed } from '../lib/format';
 import { equalSteps, legendItems, STEPS_NOTE } from '../lib/scale';
 import CorrectionNote, { CorrectionMark } from './CorrectionNote';
@@ -29,7 +29,13 @@ export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 
   }
   const scale = values ? mapScale(values) : null;
   const fmtV = (v) => `${show(v, valueDec)}${valueUnit === '%' ? '%' : valueUnit ? ` ${valueUnit}` : ''}`;
+  // Design review P2-4/P2-6: the 47 county links are 47 tab stops, so a skip link (shown on focus) jumps past them;
+  // the map without values also has a list view (county and status), which is the keyboard and screen-reader route.
+  const after = values ? `${mapId}-after` : `${mapId}-list`;
+  const byName = [...geo.areas].sort((x, y) => x.name.localeCompare(y.name));
   return (
+    <>
+    <a className="skip-map" href={`#${after}`}>Skip the map{values ? '' : ': go to the list of counties'}</a>
     <figure className={`kmap${focus ? ' kmap-focus' : ''}${values ? ' kmap-values' : ''}`}>
       <svg viewBox={box} role="group" aria-label={ariaLabel} className="kmap-svg">
         {values ? (
@@ -75,8 +81,23 @@ export default function KenyaMap({ focus, ariaLabel = 'Map of Kenya showing its 
             <span className="kmap-key"><i className="kmap-sw soon" /> In preparation</span>
           </>
         )}
-        {boundaryNote ? <span id="boundaries">Boundaries: {geo.meta.source}, {geo.meta.licence}<CorrectionMark notes={licenceNote} />, simplified for display. Not for measuring area or distance.<CorrectionNote notes={licenceNote} /></span> : <a className="kmap-blink" href="/counties/#boundaries">About the map boundaries</a>}
+        {boundaryNote ? <span id="boundaries">Boundaries: {geo.meta.source}, {geo.meta.licence}<CorrectionMark notes={licenceNote} />, simplified for display. Not for measuring area or distance.<CorrectionNote notes={licenceNote} /></span>
+          : <span className="kmap-src">Boundaries: geoBoundaries gbOpen Kenya ADM1, retrieved {geo.meta.retrieved}, simplified for display. <a className="kmap-blink" href="/counties/#boundaries">Source and licence</a></span>}
       </figcaption>
+      {values ? null : (
+        <details className="tableview" id={after}>
+          <summary>View as list: {COUNTIES.length} counties and their status</summary>
+          <div className="tablewrap" tabIndex={0} role="region" aria-label="Counties and their status">
+            <table className="data">
+              <caption className="sr-only">Kenya&apos;s {COUNTIES.length} counties and whether each is published on Takwimu Kenya</caption>
+              <thead><tr><th scope="col">County</th><th scope="col">Status</th></tr></thead>
+              <tbody>{byName.map((a) => { const c = bySlug(a.slug); return <tr key={a.slug}><th scope="row"><Link href={`/counties/${a.slug}/`} aria-current={a.slug === focus ? 'page' : undefined}>{a.name}</Link></th><td>{c && c.published ? 'Published' : 'In preparation'}{a.slug === focus ? ' (this county)' : ''}</td></tr>; })}</tbody>
+            </table>
+          </div>
+        </details>
+      )}
     </figure>
+    {values ? <span id={after} tabIndex={-1} /> : null}
+    </>
   );
 }

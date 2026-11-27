@@ -14,6 +14,9 @@ const path = require('path');
 // Review records (data/reviews.json): no value may show "Approved" unless one is in force (none yet).
 const rvs = require('../lib/review-status');
 const REPORT_SLUGS = require('../components/report/reports.json').reports.map((r) => r.slug);
+// Siaya analysis topic pages (design review P1-2): the index plus one page per topic.
+const { ANALYSIS_TOPICS, MOVED_ANCHORS } = require('../lib/analysis-topics');
+const AN = (slug) => `/counties/siaya/analysis/${slug}/`;
 const histSrc = require('../data/history.json');
 const REVIEW_APPROVED = rvs.DATASET_IDS.reduce((n, d) => n + rvs.counts(d).approved, 0);
 const toml = fs.readFileSync(path.join(__dirname, '..', 'netlify.toml'), 'utf8');
@@ -38,13 +41,13 @@ const srv = http.createServer((req, res) => {
   const bad = [];
   pg.on('console', (m) => { if (/content security policy|refused to/i.test(m.text())) bad.push(m.text()); });
   pg.on('pageerror', (e) => bad.push(String(e)));
-  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/analysis/', '/counties/siaya/insights/', '/counties/siaya/people/', '/counties/siaya/economy/', '/counties/siaya/governance/', '/counties/siaya/audits/', '/counties/siaya/ledger/', '/counties/siaya/sources/', '/counties/kisumu/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/reports/', '/reports/method/', ...REPORT_SLUGS.map((x) => `/reports/${x}/`)]) {
+  for (const u of ['/', '/counties/', '/counties/siaya/', '/counties/siaya/analysis/', ...ANALYSIS_TOPICS.map((t) => AN(t.slug)), '/counties/siaya/insights/', '/counties/siaya/people/', '/counties/siaya/economy/', '/counties/siaya/governance/', '/counties/siaya/audits/', '/counties/siaya/ledger/', '/counties/siaya/sources/', '/counties/kisumu/', '/learn/', '/faq/', '/method/', '/data/', '/terms/', '/privacy/', '/datasets/', '/kenya/', '/compare/', '/stories/', '/stories/county-budget-absorption/', '/stories/population-and-towns/', '/stories/own-source-revenue/', '/reports/', '/reports/method/', ...REPORT_SLUGS.map((x) => `/reports/${x}/`)]) {
     const r = await pg.goto(base + u, { waitUntil: 'load' });
     check(r.status() === 200, `${u} loads`);
     check((await pg.locator('main h1').count()) === 1, `${u} has one h1`);
   }
   // Latest year (formerly the Fiscal Pulse, owner decision U2): three findings with source PDF links, one chart with a table view.
-  await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
+  await pg.goto(base + AN('latest'), { waitUntil: 'load' });
   check(await pg.locator('#latest #pulse-findings > li').count() === 3 && await pg.locator('#latest ul.how li a[href$="/content"]').count() >= 6 && await pg.locator('#latest figure.chart').count() === 0 && await pg.locator('#spending-chart-link a[href="/counties/siaya/insights/#spending"]').count() === 1 && await pg.locator('#latest-parts tbody tr').count() === 3, 'Siaya analysis, latest year: three findings with source PDF links, the FY 2024/25 parts, and the ten-year spending chart linked to Insights where it is charted once (duplication sweep D05)');
   // The ten-year spending chart is drawn once, on Insights (D05); its table view opens with every year.
   await pg.goto(base + '/counties/siaya/insights/', { waitUntil: 'load' });
@@ -53,8 +56,9 @@ const srv = http.createServer((req, res) => {
   check(await pulseDet.locator('table.data tbody tr').count() >= 10, 'ten-year spending chart (Insights) has a table view');
   // Siaya topic pages (health, education, agriculture, wards, climate, analysis): each loads, carries the provisional
   // label, is linked from the hub, and every chart has a table view that opens with rows.
-  // analysis: share spent, unspent, pending (2), A1, A2, A3, B1, B2, B4, B5 (the ten-year spending chart is on Insights only, D05); departments: latest budget; health: + survey results moved from /profile/; wards: + sub-county populations.
-  const TOPICS = { health: 2 + 1 + 1, education: 2, agriculture: 2, wards: 1, climate: 0, analysis: 7 + 4, departments: 1, projects: 1, programmes: 1 };
+  // analysis (one page per topic since design review P1-2; the eleven charts are unchanged): spending = share spent, unspent, A3, B1, B2, B4;
+  // pending bills = pending (2), B5; revenue = A2; per person = A1 (the ten-year spending chart is on Insights only, D05); departments: latest budget; health: + survey results moved from /profile/; wards: + sub-county populations.
+  const TOPICS = { health: 2 + 1 + 1, education: 2, agriculture: 2, wards: 1, climate: 0, 'analysis/spending': 6, 'analysis/pending-bills': 3, 'analysis/revenue': 1, 'analysis/per-person': 1, 'analysis/audit-findings': 0, departments: 1, projects: 1, programmes: 1 };
   for (const [slug, charts] of Object.entries(TOPICS)) {
     const u = `/counties/siaya/${slug}/`;
     const r = await pg.goto(base + u, { waitUntil: 'load' });
@@ -117,9 +121,26 @@ const srv = http.createServer((req, res) => {
     check(!/(?:\+?254|\b0)[\s-]?7\d{2}[\s-]?\d{3}[\s-]?\d{3}\b/.test(mainC), 'climate: no phone numbers on the page (PCRA Annex 1 personal data never shown)');
     const anJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'siaya-analysis.json'), 'utf8'));
     await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
-    check(/Calculated by Takwimu Kenya from published figures/i.test(await pg.locator('#calc-label').innerText()) && /context, not causation/.test(await pg.locator('#context-not-causation').innerText()), 'analysis: calculated label and "context, not causation" shown');
-    check(await pg.locator('table.calc tbody tr').count() >= anJson.records.filter((r) => r.family !== 'A5' || r.flags.count_kind !== 'category' || r.status === 'gap').length && await pg.locator('#gap-list li').count() === anJson.records.filter((r) => r.status === 'gap').length, 'analysis: every record with its calc_id; every gap listed with its reason');
+    check(/Calculated by Takwimu Kenya from published figures/i.test(await pg.locator('#calc-label').innerText()), 'analysis index: calculated label shown');
+    // Old in-page anchors (before the split into topic pages): every section id is still on the index as a link to its new page.
+    const oldIds = ANALYSIS_TOPICS.flatMap((t) => t.sections.map(([id]) => [id, AN(t.slug) + '#' + id]));
+    let oldOk = 0;
+    for (const [id, to] of oldIds) if (await pg.locator(`[id="${id}"]`).count() === 1 && await pg.locator(`[id="${id}"]`).evaluate((e) => (e.closest('a') || e.querySelector('a') || {}).getAttribute && (e.closest('a') || e.querySelector('a')).getAttribute('href')) === to) oldOk += 1;
+    check(oldIds.length >= 18 && oldOk === oldIds.length && await pg.locator('#osr-composition a[href$="/revenue/#an-a8"]').count() === 1 && await pg.locator('main .an-topics > li').count() === ANALYSIS_TOPICS.length, `analysis index: ${oldOk} of ${oldIds.length} old section anchors kept as links to their topic page; one entry per topic`);
+    // A fresh load (not a same-page hash change), as when an old link is followed from another page.
+    await pg.goto('about:blank');
+    await pg.goto(base + '/counties/siaya/analysis/#pending', { waitUntil: 'load' });
+    await pg.waitForURL(/\/analysis\/pending-bills\/#pending$/, { timeout: 10000 }).catch(() => {});
+    check(/\/counties\/siaya\/analysis\/pending-bills\/#pending$/.test(pg.url()) && Object.keys(MOVED_ANCHORS).length >= 60, 'analysis index: an old anchor (#pending) moves the reader to the same section on its topic page');
+    let calcRows = 0;
+    for (const t of ANALYSIS_TOPICS) { await pg.goto(base + AN(t.slug), { waitUntil: 'load' }); calcRows += await pg.locator('table.calc tbody tr').count(); }
+    check(calcRows >= anJson.records.filter((r) => r.family !== 'A5' || r.flags.count_kind !== 'category' || r.status === 'gap').length, `analysis topic pages: every record with its calc_id (${calcRows} rows)`);
+    await pg.goto(base + AN('gaps'), { waitUntil: 'load' });
+    check(await pg.locator('#gap-list li').count() === anJson.records.filter((r) => r.status === 'gap').length, 'analysis, gaps: every gap listed with its reason');
+    await pg.goto(base + AN('per-person'), { waitUntil: 'load' });
+    check(/context, not causation/.test(await pg.locator('#context-not-causation').innerText()), 'analysis, per person: "context, not causation" shown');
     check(await pg.locator('main a[href="/counties/siaya/wards/"]').count() >= 1, 'analysis: climate finance links to the ward map');
+    await pg.goto(base + AN('revenue'), { waitUntil: 'load' });
     // Sweep D24: own-source revenue composition, Siaya by document and all 47 counties, linked to the OSR dispute case.
     check(await pg.locator('#osr-parts tbody tr').count() === anJson.records.filter((r) => r.family === 'A8' && r.status === 'value' && r.calc.op === 'ratio_pct').length && /388\.63/.test(await pg.locator('#osr-parts').innerText()) && await pg.locator('#osr-dispute-parts a[href="/data/#osr-2024-25-county-statement"]').count() === 1, 'analysis: OSR composition table (FIF 388.63 for FY 2023/24) and the dispute explained part by part');
     // Project register: eight-state legend, reported beside audit-found, one verified project, filters, finding links.
@@ -270,10 +291,10 @@ const srv = http.createServer((req, res) => {
     const t0 = await pg.locator('#obligations .tile').first().innerText();
     check(own24.provenance.pending_total_m.source_id === 'cob-report-2023-24' && new RegExp(`KSh ${own24.pending_total_m}M`).test(t0) && /Sources disagree/i.test(t0) && !/^\s*Pending bills at 30 June 2024[^\n]*\n+\s*KSh 1\.12B/.test(t0), 'Siaya hub: pending bills at 30 Jun 2024 headline uses the own-year report (KSh 303.91M, FY 2023/24 report), flagged "sources disagree"');
     check(await pg.locator('nav.hub-groups div', { hasText: 'Evidence' }).locator('a[href="/data/"]').count() === 0, 'Siaya hub: the Evidence group no longer links the ten-year series page (owner, 27 Nov 2026)');
-    check(/sources disagree \(KSh 303\.91M to/i.test(hub) && await pg.locator('#key a[href="/counties/siaya/ledger/#osr-latest"]').count() === 1 && await pg.locator('#key a[href="/counties/siaya/analysis/#spent"]').count() === 1, 'Siaya hub: pending bills at 30 Jun 2024 marked as disputed with the range; one summary tile each for own-source revenue and share of budget spent, linked to their homes'); }
+    check(/sources disagree \(KSh 303\.91M to/i.test(hub) && await pg.locator('#key a[href="/counties/siaya/ledger/#osr-latest"]').count() === 1 && await pg.locator('#key a[href="/counties/siaya/analysis/spending/#spent"]').count() === 1, 'Siaya hub: pending bills at 30 Jun 2024 marked as disputed with the range; one summary tile each for own-source revenue and share of budget spent, linked to their homes'); }
   // Own-source revenue's canonical home is the ledger (owner decision U1): FY 2024/25 sources side by side, composition, ten years.
   await pg.goto(base + '/counties/siaya/ledger/', { waitUntil: 'load' });
-  { const led = await pg.locator('main').innerText(); check(/KSh 199\.84 million from health facilities/.test(led) && !/KSh 199 million/.test(led), 'ledger: health-facility revenue given as printed (KSh 199.84 million), as elsewhere'); check(/927\.34/.test(led) && !/929 million/.test(led) && await pg.locator('#osr-mix a[href="/counties/siaya/analysis/#an-a8"]').count() === 1 && await pg.locator('#osr-latest .tag', { hasText: 'News report (secondary)' }).count() >= 1 && await pg.locator('#osr-ten figure.chart').count() === 1, 'ledger: own-source revenue FY 2024/25 sources side by side (printed target, news report labelled secondary), composition card and ten-year chart'); }
+  { const led = await pg.locator('main').innerText(); check(/KSh 199\.84 million from health facilities/.test(led) && !/KSh 199 million/.test(led), 'ledger: health-facility revenue given as printed (KSh 199.84 million), as elsewhere'); check(/927\.34/.test(led) && !/929 million/.test(led) && await pg.locator('#osr-mix a[href="/counties/siaya/analysis/revenue/#an-a8"]').count() === 1 && await pg.locator('#osr-latest .tag', { hasText: 'News report (secondary)' }).count() >= 1 && await pg.locator('#osr-ten figure.chart').count() === 1, 'ledger: own-source revenue FY 2024/25 sources side by side (printed target, news report labelled secondary), composition card and ten-year chart'); }
   await pg.goto(base + '/counties/siaya/', { waitUntil: 'load' });
   // Reports A-E: the hub links the index; the index links each report's page and PDF with edition, snapshot and
   // DRAFT status; every PDF is in the build.
@@ -372,12 +393,12 @@ const srv = http.createServer((req, res) => {
   const dataForms = htmlFiles.filter((f) => { const h = fs.readFileSync(f, 'utf8'); return /data-netlify|netlify-honeypot|<textarea/i.test(h) || /<form[^>]*\s(method|action)=/i.test(h) || (h.match(/<input\b[^>]*>/gi) || []).some((t) => !/type="(search|radio|checkbox)"/i.test(t)); });
   check(dataForms.length === 0, `no built page has a Netlify form, posting form, textarea or personal-data input${dataForms.length ? ' (found in ' + dataForms.slice(0, 3).map((f) => path.relative(root, f)).join(', ') + ')' : ''}`);
   await pg.goto(base + '/counties/siaya/insights/', { waitUntil: 'load' });
-  check(await pg.locator('main figure.chart').count() >= 2 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#spent"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/#pending"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/ledger/#osr-ten"]').count() === 1 && await pg.locator('#gaps a[href="/method/#known-gaps"]').count() === 1, 'Siaya insights: ten-year narrative with one summary tile each for share spent, pending bills and own-source revenue, linked to their homes; gaps link to the method');
+  check(await pg.locator('main figure.chart').count() >= 2 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/spending/#spent"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/analysis/pending-bills/#pending"]').count() === 1 && await pg.locator('main .statstrip a[href="/counties/siaya/ledger/#osr-ten"]').count() === 1 && await pg.locator('#gaps a[href="/method/#known-gaps"]').count() === 1, 'Siaya insights: ten-year narrative with one summary tile each for share spent, pending bills and own-source revenue, linked to their homes; gaps link to the method');
   check(/sources disagree/i.test(await pg.locator('main .statstrip li', { hasText: 'Own-source revenue' }).innerText()) === require('../data/siaya-fiscal-ledger.json').discrepancies.some((d) => d.indicator_id === 'osr_total_actual' && d.status === 'open' && d.period === `FY ${histSrc.osr_series.points[histSrc.osr_series.points.length - 1].fy}`), 'Siaya insights: the own-source revenue tile says "sources disagree" when the ledger has an open case for its year (as on the hub)');
   check(await pg.locator('#audit a[href="/counties/siaya/audits/"]').count() === 1 && !/\d+ adverse/.test(await pg.locator('#audit').innerText()), 'Siaya insights: audit opinions are a one-line link to the audits page, not a second count (duplication sweep D05)');
-  await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
+  await pg.goto(base + AN('spending'), { waitUntil: 'load' });
   const charts = await pg.locator('figure.chart').count();
-  check(charts >= 5, `Siaya analysis shows charts (${charts})`);
+  check(charts >= 5, `Siaya analysis, spending shows charts (${charts})`);
   const det = pg.locator('details.tableview').first();
   await det.locator('summary').click();
   check(await det.locator('table.data tbody tr').count() >= 10, 'table view opens with rows');
@@ -387,6 +408,8 @@ const srv = http.createServer((req, res) => {
   await pg.keyboard.press('ArrowRight');
   check(await pg.locator('.ctip').count() === 1, 'keyboard focus on a chart and the arrow keys show a tooltip');
   check(!(await pg.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)), 'no horizontal overflow at 390px');
+  // The roll-forward table is on the pending-bills topic page (design review P1-2).
+  await pg.goto(base + AN('pending-bills'), { waitUntil: 'load' });
   const rfRows = await pg.locator('#rollforward tbody tr').count();
   const rfNp = await pg.locator('#rollforward .rf-np').count();
   const histJson = JSON.parse(fs.readFileSync(path.join(root, 'data', 'history.json'), 'utf8'));
@@ -460,6 +483,8 @@ const srv = http.createServer((req, res) => {
   await p2.goto(base + '/datasets/?q=counties-absorption', { waitUntil: 'networkidle' });
   check((await p2.locator('#counties-absorption a.file').first().getAttribute('download')) === `counties-absorption-${absCat.version}.csv` && /disputed/i.test(await p2.locator('#counties-absorption').innerText()) && await p2.locator('#status dt').count() === 6, '/datasets/ shows status, version and the six-term status list; downloads are named with the version');
   const absReview = absCat.review;
+  // The compact list (design review P1-2) keeps the review counts under each dataset's Details.
+  await p2.locator('#counties-absorption .ds-tech > summary').click();
   check(Boolean(absReview) && new RegExp(`${absReview.approved.toLocaleString('en-US')} approved, ${absReview.pending.toLocaleString('en-US')} pending, ${absReview.rejected.toLocaleString('en-US')} rejected`).test(await p2.locator('#counties-absorption [data-review-counts]').innerText()) && cat.datasets.filter((d) => d.review).length === cat.datasets.filter((d) => rvs.catalogueCounts(d.id)).length && cat.datasets.some((d) => d.review) && /Editorial review of/.test(absCat.status_reason), '/datasets/ and catalogue.json show review counts (approved, pending, rejected) per dataset');
   check(await p2.locator('#review').count() === 1 && (REVIEW_APPROVED > 0 || await p2.locator('main [data-review="approved"]').count() === 0), '/datasets/ explains editorial review; nothing shown as approved without a record');
   await p2.goto(base + '/trends/?i=siaya-spending&basis=real', { waitUntil: 'networkidle' });
@@ -510,7 +535,7 @@ const srv = http.createServer((req, res) => {
   // and of own-source revenue only on /counties/siaya/ledger/ (other Siaya pages carry one summary tile and a link).
   {
     const SM = [...fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname).filter((u) => !/^\/counties\/(?!siaya)[a-z-]+\/$/.test(u) || u === '/counties/kisumu/');
-    const HOME = [[/budget spent|absorption/i, '/counties/siaya/analysis/'], [/pending bills/i, '/counties/siaya/analysis/'], [/own-source revenue/i, '/counties/siaya/ledger/']];
+    const HOME = [[/budget spent|absorption/i, AN('spending')], [/pending bills/i, AN('pending-bills')], [/own-source revenue/i, '/counties/siaya/ledger/']];
     const probs = [];
     const { pages: pageDatasets, matches: matchesRoute } = require('./page-datasets');
     const PAGE_DATASETS = pageDatasets().filter((p) => p.datasets.length);
@@ -562,7 +587,7 @@ const srv = http.createServer((req, res) => {
     const { osrPagesMissingLink } = require('./check-osr-links');
     const osr = osrPagesMissingLink(root);
     check(osr.pages >= 10 && osr.missing.length === 0, `every page that shows own-source revenue or FIF links /learn/#own-source-revenue (${osr.pages} pages${osr.missing.length ? `; missing: ${osr.missing.slice(0, 4).join(', ')}` : ''})`);
-    await pg.goto(base + '/counties/siaya/analysis/', { waitUntil: 'load' });
+    await pg.goto(base + AN('pending-bills'), { waitUntil: 'load' });
     check(/545\.95/.test(await pg.locator('#pending-2025-summary').innerText()) && await pg.locator('#pending-2025-summary a[href="/counties/siaya/ledger/#pending-2025"]').count() === 1, 'analysis: pending-bills section summarises the 30 June 2025 values (lowest KSh 545.95 million) and links the side-by-side table on the ledger (duplication sweep D01)');
   }
   check(bad.length === 0, `no CSP violations or page errors ${bad.slice(0, 2).join(' | ')}`);

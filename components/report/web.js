@@ -10,6 +10,7 @@
 // Nothing is recalculated: kept blocks are the same objects the print edition renders.
 import registry from './reports.json';
 import { buildReport, SLUGS, figsOf, reviewState } from './build';
+import { MOVED_ANCHORS } from '../../lib/analysis-topics';
 import { source } from './model';
 import layers from '../../data/siaya-analysis-layers.json';
 
@@ -121,7 +122,7 @@ function webInterp(t) {
   const hit = RULES.find(([rule]) => t.includes(rule));
   if (!hit) return t;
   const [rule, fam] = hit;
-  const href = fam === 'B3' ? '/counties/siaya/ledger/#osr-b3' : `/counties/siaya/analysis/#${FAMILY_ANCHOR[fam] || 'an-read'}`;
+  const href = fam === 'B3' ? '/counties/siaya/ledger/#osr-b3' : (MOVED_ANCHORS[FAMILY_ANCHOR[fam]] || '/counties/siaya/analysis/#an-read');
   return { text: t.replace(rule, '').replace(/\s+/g, ' ').trim(), href, label: 'The threshold and its legal source', check: [rule] };
 }
 

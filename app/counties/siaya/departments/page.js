@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 // Department budgets as the County Treasury printed them (data/siaya-budget-departments.json). Canonical home of the
-// department figures and of the name crosswalk; absorption ratios by department are on /counties/siaya/analysis/#an-b4.
+// department figures and of the name crosswalk; absorption ratios by department are on /counties/siaya/analysis/spending/#an-b4.
 const d = departments();
 const DS = 'siaya-budget-departments';
 const m = (o) => (o && typeof o.value === 'number' ? fmtFixed(o.value / 1e6, 2) : null);
@@ -74,7 +74,7 @@ export default function SiayaDepartments() {
 
       <section className="card" aria-labelledby="dp-cbrop">
         <h2 id="dp-cbrop">Final budget and actual spending by department (County Treasury reviews)</h2>
-        <p className="lead">Each cell gives the final budget (including balances brought forward) and the actual spending of the year, both from the same table of the review paper. Absorption, actual over final budget, is worked out for every cell on <Link href="/counties/siaya/analysis/#an-b4">Siaya analysis</Link>.</p>
+        <p className="lead">Each cell gives the final budget (including balances brought forward) and the actual spending of the year, both from the same table of the review paper. Absorption, actual over final budget, is worked out for every cell on <Link href="/counties/siaya/analysis/spending/#an-b4">Siaya analysis</Link>.</p>
         {['total', 'development', 'recurrent'].map((cls) => { const ys = d.cbropYears(cls); return ys.length ? (
           <details key={cls} className="tableview" open={cls === 'total'}><summary>{cls === 'total' ? 'Total' : cls === 'development' ? 'Development' : 'Recurrent'}: final budget and actual, KSh million ({ys.length} years)</summary>
             <TableWrap label={`Final budget and actual by department, ${cls}`}>

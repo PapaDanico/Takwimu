@@ -93,28 +93,30 @@ export default function DatasetCatalogue({ datasets, sectors, sources, years }) 
         ) : (
           <ul className="ds-list">
             {shown.map((d) => (
-              <li key={d.id} className="ds" id={d.id}>
+              <li key={d.id} className="ds ds-row" id={d.id}>
+                {/* Compact result first (design review P1-2): title, unit, coverage, status and downloads; the description,
+                    source, method, review counts and pages are one click away under Details. */}
                 <h3>{d.title}</h3>
+                <p className="ds-meta"><span className="sr-only">Unit: </span>{d.unit} · <span className="sr-only">covers </span>{d.period.from} to {d.period.to}, {d.area || GEO[d.geography]} · <span className={`ds-status st-${d.status}`}>{d.status}</span></p>
+                <div className="ds-foot">
+                <div className="ds-links">
+                  {d.files.csv ? <a className="file" href={d.files.csv} download={`${d.download_name}.csv`} aria-label={`${d.title}: download CSV, version ${d.version}`}>CSV</a> : <span className="muted">No download: the publisher&rsquo;s terms are link and cite only</span>}
+                  {d.files.json ? <a className="file" href={d.files.json} download={`${d.download_name}.json`} aria-label={`${d.title}: download JSON, version ${d.version}`}>JSON</a> : null}
+                </div>
+                <details className="ds-tech"><summary>Details<span className="sr-only">: {d.title}</span></summary>
                 <div className="tags"><span className="tag">{d.sectorLabel}</span><span className="tag">{GEO[d.geography]}</span><span className="tag">{d.source}</span></div>
                 <p>{d.description}</p>
                 <dl>
                   <dt>Status</dt><dd><span className={`ds-status st-${d.status}`}>{d.status}</span> {d.status_reason}</dd>
                   <dt>Review</dt><dd data-review-counts={d.id}>{d.review ? `${fmtNum(d.review.approved)} approved, ${fmtNum(d.review.pending)} pending, ${fmtNum(d.review.rejected)} rejected (of ${fmtNum(d.review.total)} values)` : 'Not itemised for editorial review yet.'}</dd>
-                </dl>
-                <details className="ds-tech"><summary>Unit, coverage, source, method and version</summary>
-                <dl>
-                  <dt>Unit</dt><dd>{d.unit}</dd>
                   <dt>Coverage</dt><dd>{d.coverage}</dd>
                   <dt>Source</dt><dd><a href={d.source_url}>{d.source_detail}</a></dd>
                   <dt>Method</dt><dd>{d.method}</dd>
                   <dt>Last updated</dt><dd>{when(d.last_updated)} (source); retrieved {when(d.retrieved)}</dd>
                   <dt>Version</dt><dd><code>{d.version}</code> (first 10 characters of the SHA-256 of {d.data_file})</dd>
                 </dl>
+                {d.views.length ? <div className="ds-links">{d.views.map((v) => <Link key={v.href} href={v.href}>{v.label}</Link>)}</div> : null}
                 </details>
-                <div className="ds-links">
-                  {d.files.csv ? <a className="file" href={d.files.csv} download={`${d.download_name}.csv`} aria-label={`${d.title}: download CSV, version ${d.version}`}>CSV</a> : <span className="muted">No download: the publisher&rsquo;s terms are link and cite only</span>}
-                  {d.files.json ? <a className="file" href={d.files.json} download={`${d.download_name}.json`} aria-label={`${d.title}: download JSON, version ${d.version}`}>JSON</a> : null}
-                  {d.views.map((v) => <Link key={v.href} href={v.href}>{v.label}</Link>)}
                 </div>
               </li>
             ))}
