@@ -667,11 +667,11 @@ details.tableview summary { display: list-item; padding-block: 3px; }
 /* Kenya dashboard (live review, 27 Nov 2026): a sticky section menu under the site header, one scrolling row of pills,
    and long detail collapsed into <details class="tableview more">, closed on load and opened for print. */
 .secnav { position: sticky; top: 70px; z-index: 30; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 14px; background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(8px); box-shadow: var(--shadow-card); }
-.secnav ul { display: flex; gap: 8px; margin: 0; padding: 0; list-style: none; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
+.secnav ul { display: flex; flex-wrap: nowrap; gap: 8px; margin: 0; padding: 0; list-style: none; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
 .secnav li { flex: none; }
 .secnav a { display: inline-flex; align-items: center; min-height: 36px; padding-inline: 12px; border: 1px solid var(--rule); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap; text-decoration: none; background: var(--sand-50); }
 .secnav a:hover { border-color: var(--accent); }
-@media (min-width: 768px) { .secnav { top: 84px; } }
+@media (min-width: 768px) { .secnav { top: 82px; } }
 html:has(.secnav) { scroll-padding-top: 140px; }
 @media (min-width: 768px) { html:has(.secnav) { scroll-padding-top: 156px; } }
 details.more { margin-top: 14px; }

@@ -112,7 +112,7 @@ function Tooltip({ at, width, labels, series, yFormat, unit }) {
 
 const M = { l: 48, t: 14, b: 34 };
 
-const CHAR = 6.4; // approximate width of one axis character at 11px
+const CHAR = 7.2; // approximate width of one axis character at 12px (the minimum text size)
 function layout(width, labels, columns) {
   const wide = width >= 560;
   const right = wide ? 96 : 14;
@@ -153,7 +153,7 @@ function Axes({ L, ticks, yMax, yFormat, labels, xAt }) {
         if (L.mode === 'rotate') return <text key={l} x={x + 4} y={y} textAnchor="end" transform={`rotate(-40 ${x + 4} ${y})`}>{l}</text>;
         if (L.mode === 'wrap' && l.includes(' ')) {
           const mid = l.lastIndexOf(' ');
-          return <text key={l} x={x} y={y} textAnchor="middle"><tspan x={x}>{l.slice(0, mid)}</tspan><tspan x={x} dy="13">{l.slice(mid + 1)}</tspan></text>;
+          return <text key={l} x={x} y={y} textAnchor="middle"><tspan x={x}>{l.slice(0, mid)}</tspan><tspan x={x} dy="14">{l.slice(mid + 1)}</tspan></text>;
         }
         return <text key={l} x={x} y={y} textAnchor="middle">{l}</text>;
       })}

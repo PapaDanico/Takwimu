@@ -43,7 +43,7 @@ export default function Corrections() {
                   <td>{c.corrected}</td>
                   <td>{c.reason}<br /><small className="cite">Evidence: {c.evidence}</small></td>
                   <td className="mono">{day(c.date)}</td>
-                  <td>{c.affected_pages.map((p, i) => <span key={p}>{i ? ', ' : ''}<a href={p}>{p}</a></span>)}</td>
+                  <td className="links">{c.affected_pages.map((p, i) => <span key={p}>{i ? ', ' : ''}<a href={p}>{p}</a></span>)}</td>
                 </tr>
               ))}
             </tbody>
@@ -65,7 +65,7 @@ export default function Corrections() {
                   <td className="mono">{s.value}</td>
                   <td><span className="tag warn">Source error in original</span> &ldquo;{s.quote}&rdquo;<br /><small className="cite">{s.url ? <a href={s.url} rel="noopener">{s.source}</a> : s.source}, PDF p. {s.page}{s.printed_page ? ` (printed p. ${s.printed_page})` : ''}</small></td>
                   <td>{s.issue}</td>
-                  <td>{s.pages.map((p, i) => <span key={p}>{i ? ', ' : ''}<a href={p}>{p}</a></span>)}</td>
+                  <td className="links">{s.pages.map((p, i) => <span key={p}>{i ? ', ' : ''}<a href={p}>{p}</a></span>)}</td>
                 </tr>
               ))}
             </tbody>
