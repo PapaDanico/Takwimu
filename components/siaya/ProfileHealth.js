@@ -1,4 +1,5 @@
 import TableWrap from '../TableWrap';
+import SourceErrorFlag from '../SourceErrorFlag';
 import BarList from '../BarList';
 import { ColumnChart } from '../Charts';
 import co from '../../data/county.json';
@@ -42,7 +43,7 @@ export default function ProfileHealth() {
         <h2 id="hiv-h">HIV prevalence in the ten-year series: read with care</h2>
         <p className="lead">{hist.health.hiv.warning}</p>
         <BarList label="Estimated adult HIV prevalence by estimate year" unit="%" format={(v) => v.toFixed(1)} accent="red" items={hist.health.hiv.points.map((p) => ({ label: String(p.year), value: p.value, compareTo: p.national, sub: p.vintage }))} />
-        <p className="how">The marker shows the national estimate from the same source where one is available.</p>
+        <p className="how">The marker shows the national estimate from the same source where one is available.{hist.health.hiv.points.filter((p) => p.source_error).map((p) => <span key={p.year}> {p.year}, {p.value}% as published:<SourceErrorFlag e={p.source_error} id={`hiv:${p.year}`} refId={`history:hiv:${p.year}`} /></span>)}</p>
       </section>
 
       <p className="src">Survey results: Kenya Demographic and Health Surveys (KDHS) 2014 (<a href="https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf">final report</a>) and 2022 (<a href="https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf">key indicators</a>); county values come from samples. Plan figures: {co.source}, confidence {co.confidence} of 5.</p>

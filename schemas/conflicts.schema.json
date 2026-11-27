@@ -205,7 +205,7 @@
               "source_error",
               "no_change"
             ],
-            "description": "For a resolved case: our_correction (Takwimu changed a value, label or citation; listed on /corrections/), source_error (the source document is in error; listed on /corrections/ as a source error, not our correction), no_change (rounding or a reading never used)."
+            "description": "For a resolved case: our_correction (Takwimu changed a value, label or citation; footnoted beside each record in correction.records), source_error (the source document is in error; flagged where the value is shown, not our correction), no_change (rounding or a reading never used)."
           },
           "correction": {
             "type": "object",
@@ -249,7 +249,19 @@
                   "type": "string",
                   "pattern": "^[a-z-]+\\|.+$"
                 },
-                "description": "dataset|record id of each value the correction changed"
+                "description": "dataset|record id of each value the correction changed; each is footnoted where it is shown"
+              },
+              "was": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80,
+                "description": "Short original shown in the footnote beside the value"
+              },
+              "note": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 140,
+                "description": "One-line reason shown in the footnote beside the value"
               }
             }
           },

@@ -6,6 +6,8 @@ import { source, pageRef } from '../lib/siaya-sources';
 import { badge } from '../lib/review-status';
 import Reviewed from './Reviewed';
 import { fmtMaybe } from '../lib/format';
+import { notesFor } from '../lib/correction-notes';
+import CorrectionNote, { CorrectionMark } from './CorrectionNote';
 
 const n = (v) => fmtMaybe(v, { dp: 6 });
 const Input = ({ i }) => {
@@ -28,7 +30,7 @@ export default function CalcTable({ caption, records, id, tag, dataset = 'siaya-
           {records.map((r) => (
             <tr key={r.calc_id} className={r.status === 'gap' ? 'gap' : undefined}>
               <th scope="row">{r.title}<br /><small><code>{r.calc_id}</code></small>{tag ? <><br /><span className="tag warn">{tag}</span></> : null}</th>
-              <td>{r.status === 'gap' ? <span className="muted">Gap: no value</span> : <Reviewed b={badge(dataset, r.calc_id)}>{() => <><b>{n(r.result)}</b> {r.unit}</>}</Reviewed>}<br /><small>{r.period}</small></td>
+              <td>{r.status === 'gap' ? <span className="muted">Gap: no value</span> : <Reviewed b={badge(dataset, r.calc_id)}>{() => <><b>{n(r.result)}</b> {r.unit}<CorrectionMark notes={notesFor(dataset, r.calc_id)} /></>}</Reviewed>}<br /><small>{r.period}</small><CorrectionNote notes={notesFor(dataset, r.calc_id)} /></td>
               <td>
                 <small><b>Formula:</b> {r.formula}</small>
                 {r.status === 'gap' ? <><br /><small><b>Why there is no value:</b> {r.gap_reason}</small></> : null}

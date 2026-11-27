@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import SourceErrorFlag from '../../components/SourceErrorFlag';
+import CorrectionNote, { CorrectionMark } from '../../components/CorrectionNote';
+import { notesFor } from '../../lib/correction-notes';
 import Abbrs from '../../components/Abbrs';
 import PageToc from '../../components/PageToc';
 import { plain } from '../../lib/plain';
@@ -34,14 +36,15 @@ const FIELD = {
   pending_development_m: 'Pending bills, development (KSh m)', pending_recurrent_m: 'Pending bills, recurrent (KSh m)', pending_total_m: 'Pending bills, total (KSh m)',
 };
 const pageText = (r) => (r.page === null ? 'Not located' : `PDF p. ${r.page}${r.printed_page ? ` (printed p. ${r.printed_page})` : ''}`);
+// rec: the history.json record id ("years:<fy>:<field>"), for source-error flags and correction footnotes.
 function RefRows({ rows }) {
-  return rows.map(([key, label, value, r]) => (
+  return rows.map(([key, label, value, r, rec]) => (
     <tr key={key}>
       <th scope="row">{label}</th>
-      <td>{value}</td>
+      <td>{value}{rec ? <CorrectionMark notes={notesFor('history', rec)} /> : null}</td>
       <td><a href={DOCS[r.source_id].url}>{DOCS[r.source_id].title}</a></td>
       <td>{pageText(r)}</td>
-      <td>{r.read}{r.page_note ? `. ${r.page_note}` : ''}<SourceErrorFlag e={r.source_error} id={key} /></td>
+      <td>{r.read}{r.page_note ? `. ${r.page_note}` : ''}<SourceErrorFlag e={r.source_error} id={key} refId={rec ? `history:${rec}` : undefined} />{rec ? <CorrectionNote notes={notesFor('history', rec)} /> : null}</td>
     </tr>
   ));
 }
@@ -114,7 +117,7 @@ export default function DataPage() {
               <table className="data">
                 <caption className="sr-only">Page references for FY {y.fy}</caption>
                 {REF_HEAD}
-                <tbody><RefRows rows={Object.entries(y.provenance).map(([k, r]) => [k, FIELD[k] || k, y[k], r])} /></tbody>
+                <tbody><RefRows rows={Object.entries(y.provenance).map(([k, r]) => [k, FIELD[k] || k, y[k], r, `years:${y.fy}:${k}`])} /></tbody>
               </table>
             </div>
           </details>
@@ -158,11 +161,10 @@ export default function DataPage() {
       <section className="card" id="conflicts" aria-labelledby="reg-h">
         <h2 id="reg-h">Source conflict register</h2>
         <p className="lead">{reg.meta.rule}</p>
-        <p className="how">Resolved cases that were our own errors, and errors found in the source documents, are listed on the <Link href="/corrections/">corrections register</Link>.</p>
         <div className="log">
           {reg.conflicts.map((c) => (
             <article key={c.id} id={c.id} className="term-card">
-              <p><span className={`tag ${c.status === 'open' ? 'warn' : 'good'}`}>{c.status === 'open' ? 'Open' : 'Resolved'}</span>{c.register === 'our_correction' ? <> <a className="tag" href={`/corrections/#cor-${c.id}`}>Our correction</a></> : c.register === 'source_error' ? <> <a className="tag warn" href={`/corrections/#se-${c.id}`}>Source error in original</a></> : null}</p>
+              <p><span className={`tag ${c.status === 'open' ? 'warn' : 'good'}`}>{c.status === 'open' ? 'Open' : 'Resolved'}</span>{c.register === 'our_correction' ? <> <span className="tag" data-register="our_correction">Our correction</span></> : c.register === 'source_error' ? <> <span className="tag warn" data-register="source_error">Source error in original</span></> : null}</p>
               <h3>{c.measure}</h3>
               <TableWrap label={`${c.measure}: values by source`}>
                 <table className="data">

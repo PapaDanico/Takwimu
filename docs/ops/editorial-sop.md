@@ -15,6 +15,7 @@ Readers report errors through the WhatsApp link on `/data/` and the error page (
    - the reader cites a different document with a different value: go to section 2 (conflict);
    - interpretation or opinion, not a value: reply with the method note; no change.
 4. **Fix a slip.** Correct the value in `data/<dataset>.json` against the page, run `npm run build`, and add a review record in `data/reviews.json` (`rejected` for the old value if it was public, then the corrected value enters the queue as `REVIEW_PENDING`). A different reviewer from the person who made the fix approves it. The commit message names the dataset, record id and page, e.g. `Correction: siaya-health H012, KDHS 2022 p.48`.
+   Add an entry to `data/corrections.json` (with its short `was` and one-line `note`): it appears as a small footnote beside the value. There is no corrections page.
 5. **Close.** Reply in the chat with the outcome and the date it goes live (next release; see `docs/ops/release-checklist.md`). Material fiscal, health or legal corrections are listed in the release notes in `docs/production-provenance.md`.
 
 ## 2. Conflicting sources (the conflict register)
