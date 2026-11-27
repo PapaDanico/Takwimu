@@ -5,12 +5,12 @@ import Reviewed from '../Reviewed';
 import { LineChart, ColumnChart } from '../Charts';
 import { ReviewCounts } from '../ObsTable';
 import { badge } from '../../lib/review-status';
-import { fmtFixed } from '../../lib/format';
+import { fmtFixed, shortDate } from '../../lib/format';
 import { plainDeep } from '../../lib/plain';
 import { b1, b2, b3, b4, b5, osrSeries, refBadge, fyOf, LAY, SER } from '../../lib/layers';
 
 // Layers B1 to B5 (data/siaya-analysis-layers.json) and the own-source revenue series of data/siaya-county-series.json.
-// Canonical homes: B1, B2, B4 and B5 on /counties/siaya/analysis/; B3 and the series side by side on
+// Canonical homes: B1, B2 and B4 on /counties/siaya/analysis/spending/, B5 on .../pending-bills/; B3 and the series side by side on
 // /counties/siaya/ledger/ (the home of own-source revenue). Department budgets as printed are on
 // /counties/siaya/departments/. Thresholds are facts about a ratio, not verdicts; the Auditor-General's own ratios are
 // shown beside ours, labelled as the auditor's, and never combined with them.
@@ -22,6 +22,8 @@ const Res = ({ r }) => (!r ? <span className="muted">No record</span> : r.status
 const Threshold = ({ t }) => (t ? <p className="rule-note"><b>Reference line at {t.value} per cent ({t.kind}).</b> {t.rule}</p> : null);
 const Label = () => <span className="tag warn">{LAY.meta.label}</span>;
 const records = (rs0) => plainDeep(rs0);
+// Chart captions (design review P2-7). The date is the dataset's last update in the catalogue (lib/siaya-topics.js).
+const LAYER_SRC = (what) => `Calculated by Takwimu Kenya from ${what}; updated ${shortDate('2026-11-27')}. Each input's document and page is in the records under the chart.`;
 
 export const LAYERS_TOC = [['an-b1', 'Wage bill'], ['an-b2', 'Development share'], ['an-b4', 'Absorption by department'], ['an-b5', 'Pending bills burden']];
 
@@ -32,7 +34,7 @@ export function WageBill() {
       <h2 id="an-b1">Wage bill as a share of total revenue</h2>
       <p className="lead"><Label /> Compensation of employees divided by total revenue received (equitable share, conditional grants and own-source revenue), all from the Controller of Budget&rsquo;s report for the year. {d.valued} of {d.records.length} years have a value; in {d.above.length} of them the share is above the 35 per cent ceiling. The other years are gaps: the report for that year does not print the wage bill, or prints it in a way that cannot be matched to its revenue.</p>
       <LineChart labels={d.years.map(fy)} unit="% of total revenue" yFormat="one" naText="Gap: no value" refLine={{ value: d.threshold.value, label: `${d.threshold.value}% ceiling` }}
-        ariaLabel="Siaya wage bill as a share of total revenue by fiscal year, per cent, with the 35 per cent ceiling" series={d.series} />
+        source={LAYER_SRC('the Controller of Budget report for each year (compensation of employees and revenue received)')} ariaLabel="Siaya wage bill as a share of total revenue by fiscal year, per cent, with the 35 per cent ceiling" series={d.series} />
       <Threshold t={d.threshold} />
       <TableWrap label="Wage bill share by year, beside the ceiling and the Auditor-General's own ratio">
         <table className="data" id="b1-table">
@@ -57,7 +59,7 @@ export function DevShare() {
       <h2 id="an-b2">Development share of the budget and of spending</h2>
       <p className="lead"><Label /> Development budget or spending divided by the total, from one document and one budget version. The 30 per cent floor applies to the budget over the medium term; the share of actual spending is shown for contrast. Each kind of document is its own line: the Controller of Budget, the programme-based budget (original estimates) and the County Treasury&rsquo;s review use different budget versions and are never averaged. {d.budgetBelow.length ? `Budget shares below the floor: ${d.budgetBelow.map(fy).join(', ')}.` : `No budget share held is below the floor (${d.budgetValued.length} years with a budget share).`}</p>
       <LineChart labels={d.years.map(fy)} unit="% of total" yFormat="one" naText="No value from this kind of document" refLine={{ value: d.threshold.value, label: `${d.threshold.value}% floor (budget)` }}
-        ariaLabel="Siaya development share of the budget and of actual spending by fiscal year and kind of document, per cent, with the 30 per cent floor" series={d.series} />
+        source={LAYER_SRC('Controller of Budget reports, programme-based budgets and the County Treasury reviews (CBROP), one document per line')} ariaLabel="Siaya development share of the budget and of actual spending by fiscal year and kind of document, per cent, with the 30 per cent floor" series={d.series} />
       <Threshold t={d.threshold} />
       <TableWrap label="Development share by year and kind of document">
         <table className="data" id="b2-table">
@@ -80,7 +82,7 @@ export function DeptAbsorption() {
       <h2 id="an-b4">Absorption by department</h2>
       <p className="lead"><Label /> Actual spending divided by the final budget, for each department, from the same table of the County Treasury&rsquo;s review of the year (CBROP). The budgets and spending themselves, the department name changes and the totals that do not add up are on <Link href="/counties/siaya/departments/">department budgets</Link>. {d.over100.length} department-years are above 100 per cent (spending above the final budget printed beside it).</p>
       <ColumnChart labels={d.latestChart.labels} unit={`% of final development budget, FY ${d.latest}`} yFormat="one" naText="No value"
-        ariaLabel={`Siaya share of the final development budget spent by department, FY ${d.latest}, per cent`} series={[{ name: `Development absorption, FY ${d.latest}`, color: 1, values: d.latestChart.values }]} />
+        source={LAYER_SRC(`the County Treasury review of FY ${d.latest} (CBROP), final budget and actual spending from the same table`)} ariaLabel={`Siaya share of the final development budget spent by department, FY ${d.latest}, per cent`} series={[{ name: `Development absorption, FY ${d.latest}`, color: 1, values: d.latestChart.values }]} />
       <p className="how">In the FY 2023/24 review (CBROP of September 2024, Table 12) every department except the County Assembly prints the same 95.4 per cent absorption of compensation of employees, so those department figures look allocated in proportion rather than measured. They are kept as printed and the compensation rows are not read as department performance.</p>
       {d.classes.map((cls) => { const ys = d.years.filter((y) => d.depts.some((dep) => d.get(y, dep, cls))); return ys.length ? (
         <details key={cls} className="tableview" open={cls === 'development'}><summary>{cls === 'development' ? 'Development' : cls === 'recurrent' ? 'Recurrent' : cls === 'compensation' ? 'Compensation of employees' : 'Total'}: absorption by department and year</summary>
@@ -107,7 +109,7 @@ export function PendingBurden() {
       <h2 id="an-b5">Pending bills as a share of total revenue</h2>
       <p className="lead"><Label /> The stock of unpaid bills at 30 June divided by the revenue received in the year, both from the Controller of Budget&rsquo;s report for that year. A report often prints more than one stock for the same date (the county chapter and the cross-county table, Executive only or with the Assembly), so each reading gives its own ratio; none is chosen. The stocks themselves are compared on the <Link href="/counties/siaya/ledger/#pending-2025">fiscal reconciliation</Link> page.</p>
       <LineChart labels={d.years.map(fy)} unit="% of total revenue" yFormat="one" naText="Gap: no value" refLine={{ value: d.threshold.value, label: `${d.threshold.value}% limit (as the auditor applies it)` }}
-        ariaLabel="Siaya pending bills as a share of total revenue by fiscal year and reading, per cent, with the 20 per cent limit the Auditor-General applies" series={d.series} />
+        source={LAYER_SRC('the Controller of Budget report for each year (pending bills stock at 30 June and revenue received)')} ariaLabel="Siaya pending bills as a share of total revenue by fiscal year and reading, per cent, with the 20 per cent limit the Auditor-General applies" series={d.series} />
       <Threshold t={d.threshold} />
       <TableWrap label="Pending bills share by year and reading, beside the Auditor-General's own ratio">
         <table className="data" id="b5-table">

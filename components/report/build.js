@@ -7,6 +7,7 @@ import {
 import { badge } from '../../lib/review-status';
 import { CATEGORY as AUDIT_CATEGORY } from '../../lib/audits';
 import { latestOpinion, smallCountSentence } from './rules';
+import { MOVED_ANCHORS } from '../../lib/analysis-topics';
 
 const L = DATA['siaya-fiscal-ledger.json'];
 const ECON = DATA['siaya-economy.json'];
@@ -127,7 +128,7 @@ const serSeries = (pred) => FYS.map((fy) => { const hit = each(SERF, '/observati
 
 // Web edition: a Takwimu calculation (data/siaya-analysis.json family A<n>) is shown in full, with formula and inputs,
 // on Siaya analysis; the report's web page links there (components/report/web.js).
-const ANALYSIS_HOME = (n, label) => ({ href: `/counties/siaya/analysis/#an-${n}`, label: `Siaya analysis, ${label}` });
+const ANALYSIS_HOME = (n, label) => ({ href: MOVED_ANCHORS[`an-${n}`], label: `Siaya analysis, ${label}` });
 const analysisRows = (pred) => each('siaya-analysis.json', '/records', (r) => pred(r) && r.status === 'value').map(([r, ptr]) => ({ f: analysisFig(r, ptr) }));
 const analysisGaps = (pred) => each('siaya-analysis.json', '/records', (r) => pred(r) && r.status === 'gap')
   .map(([r]) => ({ topic: r.title, reason: r.gap_reason, file: 'siaya-analysis.json' }));
@@ -376,25 +377,25 @@ function reportB() {
       { type: 'figs', home: ANALYSIS_HOME('a3', 'share of budget spent'), check: ['Share of budget spent: printed and recalculated'], caption: 'Share of budget spent (absorption rate), calculated by Takwimu from one document and one budget version', rows: execRows },
     ], interpretation: ['The share of the development budget spent is consistently lower than the share of the recurrent budget spent in the documents held.'] },
     { id: 'wage-bill', title: 'Wage bill beside the 35 per cent ceiling', topics: topics('analysis', 'audits'), findings: [
-      { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b1', label: 'Siaya analysis, wage bill' }, check: ['Wage bill as a share of total revenue'], kind: 'line', title: 'Wage bill as a share of total revenue, per cent (Takwimu calculation from the Controller of Budget report for each year)', unit: '%', labels: FYS.map(fyLabel),
+      { type: 'chart', home: { href: '/counties/siaya/analysis/spending/#an-b1', label: 'Siaya analysis, wage bill' }, check: ['Wage bill as a share of total revenue'], kind: 'line', title: 'Wage bill as a share of total revenue, per cent (Takwimu calculation from the Controller of Budget report for each year)', unit: '%', labels: FYS.map(fyLabel),
         series: [{ name: 'Wage bill, % of total revenue', figs: layerSeries((r) => r.family === 'B1') }] },
-      { type: 'figs', home: { href: '/counties/siaya/analysis/#an-b1', label: 'Siaya analysis, wage bill' }, caption: 'The Auditor-General’s own ratios (its own denominator; shown beside, not combined)', rows: oagRatioRows('B1') },
+      { type: 'figs', home: { href: '/counties/siaya/analysis/spending/#an-b1', label: 'Siaya analysis, wage bill' }, caption: 'The Auditor-General’s own ratios (its own denominator; shown beside, not combined)', rows: oagRatioRows('B1') },
     ], interpretation: [
       `What the figures mean: in ${b1Above} of the ${valued('B1').length} years with a value, staff costs took more than ${thr('B1').value} per cent of the revenue the county received. ${thr('B1').rule}`,
       'Trend and context: the share rose from about a third in FY 2015/16 to around 40 per cent from FY 2016/17 and fell back towards the ceiling in FY 2024/25 as revenue grew faster than the wage bill. The Auditor-General’s ratios are higher because they divide by the County Executive’s receipts, not the whole county’s revenue; neither ratio is a finding about any person.',
     ] },
     { id: 'development-share', title: 'Development share beside the 30 per cent floor', topics: topics('analysis'), findings: [
-      { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b2', label: 'Siaya analysis, development share' }, check: ['Development share of the budget and of spending'], kind: 'line', title: 'Development share of the budget and of actual spending, per cent (Controller of Budget reports; Takwimu calculation)', unit: '%', labels: FYS.map(fyLabel),
+      { type: 'chart', home: { href: '/counties/siaya/analysis/spending/#an-b2', label: 'Siaya analysis, development share' }, check: ['Development share of the budget and of spending'], kind: 'line', title: 'Development share of the budget and of actual spending, per cent (Controller of Budget reports; Takwimu calculation)', unit: '%', labels: FYS.map(fyLabel),
         series: [{ name: 'Share of the budget', figs: layerSeries((r) => /-budget-cob-report-/.test(r.calc_id)) }, { name: 'Share of actual spending', figs: layerSeries((r) => /-actual-cob-report-/.test(r.calc_id)) }] },
-      { type: 'figs', home: { href: '/counties/siaya/analysis/#an-b2', label: 'Siaya analysis, development share' }, check: ['Development share of the budget and of spending'], caption: 'Development share from the county’s own documents (programme-based budgets and budget review papers), kept apart from the Controller of Budget', rows: layerRows((r) => r.family === 'B2' && !/cob-report/.test(r.calc_id)) },
+      { type: 'figs', home: { href: '/counties/siaya/analysis/spending/#an-b2', label: 'Siaya analysis, development share' }, check: ['Development share of the budget and of spending'], caption: 'Development share from the county’s own documents (programme-based budgets and budget review papers), kept apart from the Controller of Budget', rows: layerRows((r) => r.family === 'B2' && !/cob-report/.test(r.calc_id)) },
     ], interpretation: [
       `What the figures mean: ${b2Bud.filter((r) => r.flags.below_floor).length ? `${b2Bud.filter((r) => r.flags.below_floor).length} budget shares are below the floor` : 'every budget share held meets the 30 per cent floor'}, but the share of actual spending that went to development was below ${thr('B2').value} per cent in ${b2Act.filter((r) => r.flags.below_floor).length} of ${b2Act.length} years in the Controller of Budget reports. ${thr('B2').rule}`,
       'Context: the gap between budgeted and spent development money is the same pattern as the low share of the development budget spent (section 3). Budget versions differ between documents, so a share from one document is compared only with a share from the same kind of document.',
     ] },
     { id: 'department-absorption', title: 'Absorption by department', topics: topics('analysis'), findings: [
-      { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b4', label: 'Siaya analysis, absorption by department' }, check: ['Absorption by department'], kind: 'column', title: `Share of the final development budget spent by department, FY ${b4Latest} (County Treasury review; Takwimu calculation)`, unit: '%', labels: b4.filter((r) => layerFy(r) === b4Latest && /-development$/.test(r.calc_id) && !/-TOTAL-/.test(r.calc_id)).map((r) => r.title.replace(/^Absorption, /, '').replace(/, development, FY .*$/, '')),
+      { type: 'chart', home: { href: '/counties/siaya/analysis/spending/#an-b4', label: 'Siaya analysis, absorption by department' }, check: ['Absorption by department'], kind: 'column', title: `Share of the final development budget spent by department, FY ${b4Latest} (County Treasury review; Takwimu calculation)`, unit: '%', labels: b4.filter((r) => layerFy(r) === b4Latest && /-development$/.test(r.calc_id) && !/-TOTAL-/.test(r.calc_id)).map((r) => r.title.replace(/^Absorption, /, '').replace(/, development, FY .*$/, '')),
         series: [{ name: 'Development absorption', figs: each(LAYF, '/records', (r) => r.family === 'B4' && r.status === 'value' && layerFy(r) === b4Latest && /-development$/.test(r.calc_id) && !/-TOTAL-/.test(r.calc_id)).map(([r, ptr]) => layerFig(r, ptr)) }] },
-      { type: 'figs', home: { href: '/counties/siaya/analysis/#an-b4', label: 'Siaya analysis, absorption by department' }, check: ['Absorption by department'], caption: 'Whole-county absorption in each County Treasury review (printed Total rows)', rows: layerRows((r) => r.family === 'B4' && /-TOTAL-/.test(r.calc_id)) },
+      { type: 'figs', home: { href: '/counties/siaya/analysis/spending/#an-b4', label: 'Siaya analysis, absorption by department' }, check: ['Absorption by department'], caption: 'Whole-county absorption in each County Treasury review (printed Total rows)', rows: layerRows((r) => r.family === 'B4' && /-TOTAL-/.test(r.calc_id)) },
     ], interpretation: [
       `What the figures mean: ${b4.length} department ratios are held for ${new Set(b4.map(layerFy)).size} years; ${b4Over} are above 100 per cent, meaning the review prints spending above the final budget beside it. Department names change between budgets, so a department is followed across years only through the crosswalk on the department budgets page.`,
       'Caution: in the FY 2023/24 review every department except the County Assembly prints the same 95.4 per cent absorption of compensation of employees, which suggests the staff-cost actuals were allocated in proportion; those rows are not read as department performance.',
@@ -423,10 +424,10 @@ function reportB() {
       { type: 'figs', home: ANALYSIS_HOME('a4', 'pending bills stocks and changes'), check: ['Pending bills: stocks and changes by source'], caption: 'Pending-bill changes and roll-forward residuals calculated by Takwimu', rows: pendingRows },
     ], interpretation: ['Pending-bill stocks for the same date differ by document and by whether the County Assembly is included; a roll-forward residual means the published figures do not reconcile.'] },
     { id: 'pending-burden', title: 'Pending bills as a share of revenue', topics: topics('analysis', 'ledger'), findings: [
-      { type: 'chart', home: { href: '/counties/siaya/analysis/#an-b5', label: 'Siaya analysis, pending bills burden' }, check: ['Pending bills as a share of total revenue'], kind: 'line', title: 'Pending bills at 30 June as a share of total revenue, per cent (Controller of Budget report for each year; Takwimu calculation)', unit: '%', labels: FYS.map(fyLabel),
+      { type: 'chart', home: { href: '/counties/siaya/analysis/pending-bills/#an-b5', label: 'Siaya analysis, pending bills burden' }, check: ['Pending bills as a share of total revenue'], kind: 'line', title: 'Pending bills at 30 June as a share of total revenue, per cent (Controller of Budget report for each year; Takwimu calculation)', unit: '%', labels: FYS.map(fyLabel),
         series: [{ name: 'Stock in the county chapter', figs: layerSeries((r) => r.family === 'B5' && !/^Cross-county/.test(((r.inputs || []).find((i) => i.role === 'pending') || {}).basis || '')) },
           { name: 'Cross-county table grand total', figs: layerSeries((r) => r.family === 'B5' && /^Cross-county/.test(((r.inputs || []).find((i) => i.role === 'pending') || {}).basis || '')) }] },
-      { type: 'figs', home: { href: '/counties/siaya/analysis/#an-b5', label: 'Siaya analysis, pending bills burden' }, caption: 'The Auditor-General’s own ratio (total liabilities of the County Executive against its revenue)', rows: oagRatioRows('B5') },
+      { type: 'figs', home: { href: '/counties/siaya/analysis/pending-bills/#an-b5', label: 'Siaya analysis, pending bills burden' }, caption: 'The Auditor-General’s own ratio (total liabilities of the County Executive against its revenue)', rows: oagRatioRows('B5') },
     ], interpretation: [
       `What the figures mean: ${b5Above.length ? `${b5Above.length} reading${b5Above.length === 1 ? ' is' : 's are'} above the ${thr('B5').value} per cent limit (${b5Above.map((r) => r.period).join(', ')})` : `no reading is above the ${thr('B5').value} per cent limit`}. ${thr('B5').rule} Which stock of bills is the right one for a date is an open discrepancy in the ledger, so each reading keeps its own ratio.`,
       'Trend: unpaid bills grew faster than revenue to FY 2020/21, fell to their lowest share in FY 2023/24 and rose again in FY 2024/25 on the wider definitions.',

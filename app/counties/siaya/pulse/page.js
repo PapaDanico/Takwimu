@@ -1,8 +1,8 @@
 import Moved, { movedMetadata } from '../../../../components/Moved';
 
 // Moved (owner decision U2/U6, 21 Nov 2026). netlify.toml answers with a 301; this static page is the fallback.
-export const metadata = movedMetadata('Siaya Fiscal Pulse', '/counties/siaya/analysis/#latest');
+export const metadata = movedMetadata('Siaya Fiscal Pulse', '/counties/siaya/analysis/latest/');
 
 export default function MovedPage() {
-  return <Moved title="Siaya Fiscal Pulse" to="/counties/siaya/analysis/#latest" label="Siaya analysis, latest year" />;
+  return <Moved title="Siaya Fiscal Pulse" to="/counties/siaya/analysis/latest/" label="Siaya analysis, latest year" />;
 }

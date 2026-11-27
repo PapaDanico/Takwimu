@@ -10,13 +10,17 @@ import ledger from '../../data/siaya-fiscal-ledger.json';
 import { insights as pulse } from '../../lib/pulse';
 import { mean, median, quantile, sd, cv, cagr, iqrOutliers } from '../../lib/analytics';
 import { pendingAt, range } from '../../lib/editorial';
-import { fmtFixed, fmtInt } from '../../lib/format';
+import { fmtFixed, fmtInt, shortDate } from '../../lib/format';
 import { SIAYA_FYS, SIAYA_FY_SHORT, pendingTotal as pendOf } from '../../lib/siaya-years';
 
-// Ten-year measures whose canonical home is /counties/siaya/analysis/ (owner decision U1, 21 Nov 2026): share of
+// Ten-year measures whose canonical home is Siaya analysis (owner decision U1, 21 Nov 2026; one page per topic since
+// design review P1-2, lib/analysis-topics.js): share of
 // budget spent (absorption), pending bills and real growth. Moved here from the old analytics, Fiscal Pulse and
 // insights pages and the Siaya hub; those pages now show one summary tile and link here.
 const BASE = '2024/25';
+// Chart captions (design review P2-7): source and the date the reports were read, outside the table view.
+const CB = 'Controller of Budget, County Governments Budget Implementation Review Reports';
+const READ = shortDate(hist.meta.retrieved);
 const defl = (fy) => (cpi.fiscal_year[fy] ? cpi.fiscal_year[BASE] / cpi.fiscal_year[fy] : null);
 const years = [...hist.years].sort((a, b) => a.fy.localeCompare(b.fy));
 const by = Object.fromEntries(years.map((y) => [y.fy, y]));
@@ -91,7 +95,7 @@ export function LatestYear() {
           </li>
         ))}
       </ol>
-      <p className="how" id="spending-chart-link">Ten years of spending, nominal and in real terms, are charted once, on <Link href="/counties/siaya/insights/#spending">Siaya insights</Link>; growth rates and real spending per person are below (<a href="#growth">growth</a>).</p>
+      <p className="how" id="spending-chart-link">Ten years of spending, nominal and in real terms, are charted once, on <Link href="/counties/siaya/insights/#spending">Siaya insights</Link>; growth rates are on <Link href="/counties/siaya/analysis/spending/#growth">spending</Link> and real spending per person on <Link href="/counties/siaya/analysis/per-person/#an-a1">per person</Link>.</p>
       <h3 className="chart-title">FY {budget.fiscal_year}: budget and spending by part, KSh billion</h3>
       <TableWrap label={`Siaya budget and spending by part, FY ${budget.fiscal_year}`}>
         <table className="data" id="latest-parts">
@@ -113,7 +117,7 @@ export function SpentTenYear() {
     <section className="card" id="spent" aria-labelledby="spent-h">
       <h2 id="spent-h">Share of budget spent, ten years: development ranged from {devMin.development_absorption_pct} to {devMax.development_absorption_pct} per cent</h2>
       <p className="lead">The share of the approved budget actually spent (the absorption rate; <Link href="/learn/#absorption-rate">what this means</Link>). The lowest development year was {label(devMin.fy)} and the highest {label(devMax.fy)}. Recurrent spending (salaries and running costs) usually uses most of its budget. Low spending does not by itself show whether projects were delivered: payments can fall in a later year.</p>
-      <LineChart labels={SHORT} yFormat="pct0" unit="%" yMaxFixed={100} refLine={{ value: 100, label: 'Whole budget' }} ariaLabel="Share of the recurrent and development budgets spent, by fiscal year" series={[{ name: 'Development', color: 3, dash: true, values: col((y) => y.development_absorption_pct) }, { name: 'Recurrent', color: 1, values: col((y) => y.recurrent_absorption_pct) }]} />
+      <LineChart labels={SHORT} yFormat="pct0" unit="%" yMaxFixed={100} refLine={{ value: 100, label: 'Whole budget' }} source={`${CB}, FY 2013/14 to FY 2024/25 (one report a year; percentages as stated). Read ${READ}.`} ariaLabel="Share of the recurrent and development budgets spent, by fiscal year" series={[{ name: 'Development', color: 3, dash: true, values: col((y) => y.development_absorption_pct) }, { name: 'Recurrent', color: 1, values: col((y) => y.recurrent_absorption_pct) }]} />
       <p className="how">These are the percentages stated by the Controller of Budget, checked against our own division of spending by budget (the validator allows a small difference for rounding).</p>
       <h3 id="spread">How much the share varies from year to year</h3>
       <p>The coefficient of variation (spread relative to the average) is {one(spread[0].cv * 100)} per cent for development and {one(spread[1].cv * 100)} per cent for recurrent. The mean and median are shown together; a gap between them signals skew.</p>
@@ -134,7 +138,7 @@ export function Unspent() {
     <section className="card" id="unspent" aria-labelledby="unspent-h">
       <h2 id="unspent-h">Unspent budget: about KSh {Math.round(unspentReal)} billion over {unspent.length} years, in FY {BASE} prices</h2>
       <p className="lead">Unspent money is not always lost: some rolls over to the next year as a cash balance, so this total is not money that disappeared. It is approved budget minus spending, year by year, at FY {BASE} prices (KSh {bn(unspentReal)} billion before rounding). It shows how much planned spending was not paid out in the year; it does not show which projects were or were not delivered.</p>
-      <ColumnChart labels={SHORT} yFormat="one" unit="%" ariaLabel="Unspent approved budget as a share of the budget, by fiscal year" series={[{ name: 'Unspent, % of approved budget', color: 4, values: fillBy(unspent, (u) => u.pct) }]} />
+      <ColumnChart labels={SHORT} yFormat="one" unit="%" source={`Calculated by Takwimu Kenya: approved budget minus spending, from the ${CB} for each year. Read ${READ}.`} ariaLabel="Unspent approved budget as a share of the budget, by fiscal year" series={[{ name: 'Unspent, % of approved budget', color: 4, values: fillBy(unspent, (u) => u.pct) }]} />
     </section>
   );
 }
@@ -145,11 +149,11 @@ export function PendingTenYear() {
     <section className="card" id="pending" aria-labelledby="pending-h">
       <h2 id="pending-h">Pending bills, ten years: KSh {n0(first.v)} million ({label(first.fy)}) to KSh {n0(last.v)} million ({label(last.fy)}) at year end</h2>
       <p className="lead">Pending bills are money owed for goods and services already delivered. One rule is used for every year: the closing stock printed in that year&apos;s own Controller of Budget report. Other documents often give a different stock for the same date; {PEND_DISPUTED.size} years have an open discrepancy in the <Link href="/counties/siaya/ledger/">fiscal reconciliation ledger</Link>. The FY 2023/24 figure covers the County Executive only and excludes bills incurred in the year. Read the direction with care rather than each step.</p>
-      <ColumnChart labels={SHORT} yFormat="int" unit="KSh m" ariaLabel="Pending bills at the end of each fiscal year, KSh million, as printed in each year's own report" series={[{ name: 'Pending bills', color: 2, values: col(pendOf) }]} />
+      <ColumnChart labels={SHORT} yFormat="int" unit="KSh m" source={`${CB}: the closing stock printed in each year's own report. Read ${READ}.`} ariaLabel="Pending bills at the end of each fiscal year, KSh million, as printed in each year's own report" series={[{ name: 'Pending bills', color: 2, values: col(pendOf) }]} />
       <ul className="how" id="pending-disputed">{FYS.filter((fy) => by[fy] && pendOf(by[fy]) !== undefined).map((fy) => <li key={fy}><b>{label(fy)}:</b> KSh {n0(pendOf(by[fy]))} million{PEND_DISPUTED.has(fy) ? <> <span className="tag warn">Sources disagree</span> (open ledger discrepancy)</> : null}</li>)}</ul>
       <h3 className="chart-title">Pending bills in months of spending, and as a share of a year&apos;s spending</h3>
       <p className="chart-sub">Year-end stock ÷ average monthly spending; and the same stock ÷ the year&apos;s spending, per cent. The FY 2024/25 report gives KSh 1,120 million for 30 June 2024, the same date as the KSh 304 million in the FY 2023/24 report, so that point is the least certain.</p>
-      <ColumnChart labels={SHORT} yFormat="one" unit="months" ariaLabel="Pending bills in months of spending, by fiscal year" series={[{ name: 'Months of spending', color: 2, values: fillBy(pendMonths, (x) => x.months) }]} />
+      <ColumnChart labels={SHORT} yFormat="one" unit="months" source={`Calculated by Takwimu Kenya: year-end stock and the year's spending, both from that year's ${CB}. Read ${READ}.`} ariaLabel="Pending bills in months of spending, by fiscal year" series={[{ name: 'Months of spending', color: 2, values: fillBy(pendMonths, (x) => x.months) }]} />
       <details className="tableview"><summary>Pending bills as a share of a year&apos;s spending, by year</summary>
         <TableWrap label="Pending bills as a share of annual spending">
           <table className="data"><caption className="sr-only">Pending bills at year end as a share of the year&apos;s spending, per cent</caption>
@@ -189,7 +193,7 @@ export function Growth() {
   return (
     <section className="card" id="growth" aria-labelledby="growth-h">
       <h2 id="growth-h">Growth: spending grew {one(sp.nom)} per cent a year in shillings and {one(sp.real)} per cent a year after prices</h2>
-      <p className="lead">A compound annual growth rate (CAGR) is the steady yearly rate that would take a value from its start to its end, FY 2014/15 to FY {BASE}. Own-source revenue growth is on the <Link href="/counties/siaya/ledger/#osr-ten">ledger</Link>; spending per person is below.</p>
+      <p className="lead">A compound annual growth rate (CAGR) is the steady yearly rate that would take a value from its start to its end, FY 2014/15 to FY {BASE}. Own-source revenue growth is on the <Link href="/counties/siaya/ledger/#osr-ten">ledger</Link>; spending per person is on <Link href="/counties/siaya/analysis/per-person/#an-a1">per person</Link>.</p>
       <TableWrap label="Compound annual growth rates over ten years">
         <table className="data" id="growth-table">
           <caption className="sr-only">Compound annual growth rates over ten years</caption>
