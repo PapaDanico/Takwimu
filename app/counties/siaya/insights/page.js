@@ -70,8 +70,8 @@ const osrPts = hist.osr_series.points;
 const kpis = [
   { label: 'Spent, FY 2024/25', value: bn(cur.spent), unit: 'KSh bn', delta: `${Math.round(nomGrowth)}% above FY 2014/15`, note: 'Nominal', spark: col((y) => y.spent) },
   { label: 'Real change in ten years', value: `${realGrowth >= 0 ? '+' : ''}${Math.round(realGrowth)}%`, delta: 'After adjusting for prices', tone: realGrowth >= 0 ? 'up' : 'down', note: `${label(first.fy)} to ${label(last.fy)}`, spark: col((y) => realOf(y.spent, y.fy)) },
-  { label: 'Share of development budget spent', value: `${absLast.development_absorption_pct}%`, delta: label(absLast.fy), spark: col((y) => y.development_absorption_pct), href: '/counties/siaya/analysis/#spent', link: 'Ten years, with recurrent, on Siaya analysis' },
-  { label: 'Pending bills', value: m(pendLast.v), unit: 'KSh m', delta: `at end of ${label(pendLast.fy)}${PEND_DISPUTED.has(pendLast.fy) ? '; sources disagree' : ''}`, spark: col(pendOf), href: '/counties/siaya/analysis/#pending', link: 'Every year and the roll-forward, on Siaya analysis' },
+  { label: 'Share of development budget spent', value: `${absLast.development_absorption_pct}%`, delta: label(absLast.fy), spark: col((y) => y.development_absorption_pct), href: '/counties/siaya/analysis/spending/#spent', link: 'Ten years, with recurrent, on Siaya analysis' },
+  { label: 'Pending bills', value: m(pendLast.v), unit: 'KSh m', delta: `at end of ${label(pendLast.fy)}${PEND_DISPUTED.has(pendLast.fy) ? '; sources disagree' : ''}`, spark: col(pendOf), href: '/counties/siaya/analysis/pending-bills/#pending', link: 'Every year and the roll-forward, on Siaya analysis' },
   { label: 'Own-source revenue', value: m(osrPts[osrPts.length - 1].value), unit: 'KSh m', delta: `${label(osrPts[osrPts.length - 1].fy)}${OSR_DISPUTED.has(osrPts[osrPts.length - 1].fy) ? '; sources disagree' : ''}`, spark: FYS.map((fy) => (osrByFy[fy] ? osrByFy[fy].value : null)), href: '/counties/siaya/ledger/#osr-ten', link: 'Every source and year, on the ledger' },
   { label: 'Latest audit opinion', value: audits[audits.length - 1].opinion, delta: `FY ${audits[audits.length - 1].fy}`, note: 'County Executive accounts' },
 ];
@@ -111,7 +111,7 @@ export default function Insights() {
         <h3 className="chart-title">Where the {label(BASE)} budget went</h3>
         <p className="chart-sub">Share of the approved budget of KSh {bn(cur.approved)} billion.</p>
         <Donut ariaLabel={`How the ${label(BASE)} approved budget was used`} centerValue={`${Math.round((cur.spent / cur.approved) * 100)}%`} centerLabel="of budget spent" format={bn} unit=" bn" items={[{ label: 'Recurrent spending', value: cur.recurrent_spent, color: 1 }, { label: 'Development spending', value: cur.development_spent, color: 3 }, { label: 'Not spent', value: cur.approved - cur.spent, color: 4 }]} />
-        <p className="how" id="growth-link">Growth rates a year, nominal and real, and real spending per person are worked out on <Link href="/counties/siaya/analysis/#growth">Siaya analysis</Link>.</p>
+        <p className="how" id="growth-link">Growth rates a year, nominal and real, and real spending per person are worked out on <Link href="/counties/siaya/analysis/spending/#growth">Siaya analysis</Link>.</p>
         <p className="how"><b>How we calculated this.</b> Spending is nominal, from each year's Controller of Budget report; real values are at {label(BASE)} prices, worked out as set out in the <Link href="/method/#prices">method</Link>. FY 2019/20: Controller of Budget report not found, so the series has no spending for that year; the county&apos;s own and the Senate&apos;s figures for it are on the <Link href="/counties/siaya/ledger/">fiscal reconciliation ledger</Link>.</p>
       </section>
 

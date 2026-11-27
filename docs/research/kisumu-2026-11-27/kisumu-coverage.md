@@ -60,6 +60,8 @@ The opinions are read from the Parliament library OCR text layer, or from tesser
 
 ## 3. Manual browser download list
 
+Retry 27 Nov 2026 (automated, no bot-check bypass): OAG site returned 503 with Retry-After 3600 for items 1-4; IBP returned an empty 202; the Kisumu ADP final URL serves 13 MB of null bytes and the draft returns 503 (an Internet Archive copy of the draft, 10 Feb 2026, exists but the transfer was reset); CoB's FY2019/20 page has no direct PDF link (script-driven download); KNBS serves an incomplete TLS chain. Item 11 is now held.
+
 | # | Document | URL | Why |
 |---|---|---|---|
 | 1 | OAG County Executive of Kisumu 2017-2018 | https://www.oagkenya.go.ke/wp-content/uploads/2021/09/County-Executive-of-Kisumu-2017-2018.pdf | bot challenge / 503 |
@@ -72,7 +74,7 @@ The opinions are read from the Parliament library OCR text layer, or from tesser
 | 8 | Kisumu ADP 2026/27 | https://www.kisumu.go.ke/wp-content/uploads/KISUMU-ADP-2026-2027.pdf (or the Sept 2025 draft: DRAFT-KISUMU-COUNTY-ADP-2026-2027.pdf) | server returns null bytes |
 | 9 | IBP Kenya County Budget Transparency Survey 2022 | https://internationalbudget.org/wp-content/uploads/Kenya-County-Budget-Transparency-Survey-2022-web.pdf | HTTP 403 |
 | 10 | KNBS KPHC 2019 Vol I, II, IV; Kenya Poverty Report 2021/2022; KIHBS 2015/16 county report | https://www.knbs.or.ke/ | TLS chain incomplete / 503 |
-| 11 | NSDCC County HIV poster 2022, Kisumu | https://nsdcc.go.ke/ | not yet attempted (same series as Siaya) |
+| 11 | NSDCC County HIV poster 2022, Kisumu | https://nsdcc.go.ke/wp-content/uploads/2024/07/County-Posters_2022.pdf | **H (27 Nov 2026)**: Kisumu poster PDF p.17; also NSDCC County Profiles 2026 (104 pp.) held |
 
 Parliament library items marked L (121 records: hospitals, funds, city, KUP, Senate) can be fetched by script. They were not downloaded only to save space (about 6.7 GB of scans: hospitals 2.4 GB, funds 1.9 GB, Senate 1.4 GB).
 

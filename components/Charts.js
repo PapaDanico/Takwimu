@@ -111,7 +111,23 @@ function Tooltip({ at, width, labels, series, yFormat, unit }) {
   );
 }
 
-const M = { l: 48, t: 14, b: 34 };
+// t leaves room for the unit label above the value axis (design review P2-7: every axis names its unit).
+const M = { l: 48, t: 24, b: 34 };
+const UNIT_WORDS = { '%': 'Per cent' };
+const unitText = (unit) => UNIT_WORDS[unit] || unit;
+// The axis carries the unit's head ("KSh per person", not its price basis); the caption gives it in full.
+const axisUnit = (unit) => unitText(unit).split(/ \(|, /)[0];
+
+// Caption outside the collapsed table view (design review P2-7): unit, source and date are always visible.
+function Caption({ unit, source }) {
+  if (!unit && !source) return null;
+  return (
+    <figcaption className="chart-cap">
+      {unit ? <span><b>Unit:</b> {unitText(unit)}.</span> : null}
+      {source ? <span> <b>Source:</b> {source}</span> : null}
+    </figcaption>
+  );
+}
 
 const CHAR = 7.2; // approximate width of one axis character at 12px (the minimum text size)
 function layout(width, labels, columns) {
@@ -134,10 +150,11 @@ function layout(width, labels, columns) {
   return { wide, right, h, plotW, plotH, mode, bottom, every };
 }
 
-function Axes({ L, ticks, yMax, yFormat, labels, xAt }) {
+function Axes({ L, ticks, yMax, yFormat, labels, xAt, unit }) {
   const every = L.every;
   return (
     <g>
+      {unit ? <text x={4} y={12} className="axis-unit">{axisUnit(unit)}</text> : null}
       {ticks.map((t) => {
         const y = M.t + L.plotH - (t / yMax) * L.plotH;
         return (
@@ -177,7 +194,7 @@ function keyNav(n, at, setAt, xOf) {
   };
 }
 
-export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine, naText }) {
+export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine, naText, source }) {
   const [ref, width] = useWidth();
   const [at, setAt] = useState(null);
   const L = layout(width, labels, false);
@@ -196,10 +213,11 @@ export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit =
 
   return (
     <figure className="chart" ref={ref}>
+      <Caption unit={unit} source={source} />
       <Legend series={series.map((s) => ({ ...s, kind: 'line' }))} />
       <div className="chart-frame" onMouseLeave={() => setAt(null)}>
         <svg width={width} height={L.h} viewBox={`0 0 ${width} ${L.h}`} role="group" aria-label={`${ariaLabel}. Use the left and right arrow keys to read each year.`} className="chart-svg" {...keyNav(labels.length, at, setAt, xAt)}>
-          <Axes L={L} ticks={ticks} yMax={yMax} yFormat={yFormat} labels={labels} xAt={xAt} />
+          <Axes L={L} ticks={ticks} yMax={yMax} yFormat={yFormat} labels={labels} xAt={xAt} unit={unit} />
           {refLine && (
             <g>
               <line x1={M.l} x2={M.l + L.plotW} y1={yAt(refLine.value)} y2={yAt(refLine.value)} strokeWidth="1.5" strokeDasharray="2 4" style={{ stroke: 'var(--ink-muted)' }} />
@@ -234,7 +252,7 @@ export function LineChart({ labels, series, yFormat = 'int', valueFormat, unit =
   );
 }
 
-export function ColumnChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine, naText }) {
+export function ColumnChart({ labels, series, yFormat = 'int', valueFormat, unit = '', ariaLabel, caption, yMaxFixed, refLine, naText, source }) {
   const [ref, width] = useWidth();
   const [at, setAt] = useState(null);
   const L = layout(width, labels, true);
@@ -253,10 +271,11 @@ export function ColumnChart({ labels, series, yFormat = 'int', valueFormat, unit
 
   return (
     <figure className="chart" ref={ref}>
+      <Caption unit={unit} source={source} />
       <Legend series={series.map((s) => ({ ...s, kind: 'column' }))} />
       <div className="chart-frame" onMouseLeave={() => setAt(null)}>
         <svg width={width} height={L.h} viewBox={`0 0 ${width} ${L.h}`} role="group" aria-label={`${ariaLabel}. Use the left and right arrow keys to read each year.`} className="chart-svg" {...keyNav(labels.length, at, setAt, xCenter)}>
-          <Axes L={L} ticks={ticks} yMax={yMax} yFormat={yFormat} labels={labels} xAt={xCenter} />
+          <Axes L={L} ticks={ticks} yMax={yMax} yFormat={yFormat} labels={labels} xAt={xCenter} unit={unit} />
           {refLine && (
             <g>
               <line x1={M.l} x2={M.l + L.plotW} y1={yAt(refLine.value)} y2={yAt(refLine.value)} strokeWidth="1.5" strokeDasharray="2 4" style={{ stroke: 'var(--ink-muted)' }} />

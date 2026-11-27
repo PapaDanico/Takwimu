@@ -1,15 +1,15 @@
 import Link from 'next/link';
 
 // Static fallback for a URL that moved (owner UX decisions U2/U6, 21 Nov 2026). On Netlify a 301 in netlify.toml
-// answers first; this page serves the static export everywhere else: an inline script that keeps the query string and
-// the hash, then a meta refresh, a link and rel=canonical (set by movedMetadata in the page's metadata).
+// answers first; this page serves the static export everywhere else: an inline script that keeps the query string and,
+// like a browser following that 301, uses the target's hash when it has one and the visitor's hash otherwise; then a meta refresh, a link and rel=canonical (set by movedMetadata in the page's metadata).
 export function movedMetadata(title, to) {
   return { title: `${title} (moved)`, description: `This page moved to ${to}.`, robots: { index: false }, alternates: { canonical: to.split('#')[0] } };
 }
 
 export default function Moved({ title, to, label, clientTo }) {
   const [p, h] = (clientTo || to).split('#');
-  const js = `location.replace(${JSON.stringify(p)}+location.search+(location.hash||${JSON.stringify(h ? `#${h}` : '')}))`;
+  const js = `location.replace(${JSON.stringify(p)}+location.search+${h ? JSON.stringify(`#${h}`) : 'location.hash'})`;
   return (
     <main id="main" className="wrap page">
       <script dangerouslySetInnerHTML={{ __html: js }} />

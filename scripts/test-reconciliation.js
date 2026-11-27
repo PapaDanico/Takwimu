@@ -467,8 +467,9 @@ test('conflict analytics-per-person-2022-23: per-person spending has one home (A
   ok(c.status === 'resolved' && a1.result === 7224 && listed(c.id, 7224) && listed(c.id, 7096), 'A1 value and the withdrawn value must be listed');
   // /analytics/ moved into /counties/siaya/analysis/ (owner decision U2, 21 Nov 2026); its fallback page only redirects.
   const moved = fs.readFileSync(path.join(__dirname, '..', 'app', 'analytics', 'page.js'), 'utf8');
-  const src = ['app/counties/siaya/analysis/page.js', 'components/siaya/AnalysisTrends.js'].map((f) => fs.readFileSync(path.join(__dirname, '..', f), 'utf8')).join('\n');
-  ok(/to="\/counties\/siaya\/analysis\/"/.test(moved) && !/interpolate\(/.test(src) && /an-a1/.test(src), '/analytics/ must redirect to Siaya analysis, which must not interpolate population and must hold the A1 section');
+  // Since the split into topic pages (design review P1-2) the A1 section is on /counties/siaya/analysis/per-person/.
+  const src = ['app/counties/siaya/analysis/page.js', 'app/counties/siaya/analysis/per-person/page.js', 'components/siaya/AnalysisTrends.js', 'components/siaya/AnalysisCalc.js'].map((f) => fs.readFileSync(path.join(__dirname, '..', f), 'utf8')).join('\n');
+  ok(/to="\/counties\/siaya\/analysis\/"/.test(moved) && !/interpolate\(/.test(src) && /an-a1/.test(src) && /<PerPerson \/>/.test(src), '/analytics/ must redirect to Siaya analysis, which must not interpolate population and must hold the A1 section');
 });
 
 // GOV-03 (County Budget Review and Outlook Paper): development spending FY 2024/25, Tables 9 and 11 against the text.

@@ -25,6 +25,15 @@ for (const b of blocks) {
   const m = html.match(/http-equiv="refresh"\s+content="0;\s*url=([^"]+)"/i);
   if (!m) errors.push(`${from} redirects to ${to} but ${path.relative(dist, file)} is a real page`);
   else if (m[1] !== to) errors.push(`${from}: redirect goes to ${to}, the page's refresh goes to ${m[1]}`);
+  // The stub's script must land where a browser following the 301 lands: the target's hash wins when it has one.
+  const js = html.match(/location\.replace\(("[^"]*")\+location\.search\+([^)]+)\)/);
+  if (!js) errors.push(`${from}: moved stub has no location.replace script`);
+  else {
+    const [tp, th] = to.split('#');
+    if (JSON.parse(js[1]) !== tp) errors.push(`${from}: stub script goes to ${JSON.parse(js[1])}, redirect to ${tp}`);
+    const want = th ? JSON.stringify(`#${th}`) : 'location.hash';
+    if (js[2].trim() !== want) errors.push(`${from}: stub script hash is ${js[2].trim()}, a browser following the 301 gets ${want}`);
+  }
 }
 
 // No sitemap URL may be a redirect source (duplication sweep D22).

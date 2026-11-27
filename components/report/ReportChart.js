@@ -41,7 +41,7 @@ export default function ReportChart({ kind, title, labels, series, unit }) {
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" aria-hidden="true" focusable="false">
         {ticks.map((t) => (
           <g key={t}>
-            <line x1={M.l} x2={M.l + plotW} y1={yAt(t)} y2={yAt(t)} stroke="#D6DAE0" strokeWidth="0.8" />
+            <line x1={M.l} x2={M.l + plotW} y1={yAt(t)} y2={yAt(t)} strokeWidth="0.8" style={{ stroke: 'var(--rp-grid)' }} />
             <text x={M.l - 6} y={yAt(t) + 3.5} textAnchor="end">{fmt(t)}</text>
           </g>
         ))}
@@ -72,7 +72,7 @@ export default function ReportChart({ kind, title, labels, series, unit }) {
               </g>
             );
           })}
-        <line x1={M.l} x2={M.l + plotW} y1={M.t + plotH} y2={M.t + plotH} stroke="#31445F" strokeWidth="1" />
+        <line x1={M.l} x2={M.l + plotW} y1={M.t + plotH} y2={M.t + plotH} strokeWidth="1" style={{ stroke: 'var(--ink-soft)' }} />
       </svg>
     </figure>
   );

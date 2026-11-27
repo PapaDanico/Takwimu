@@ -114,7 +114,7 @@ export default function Method() {
         <ul className="steps" id="gaps-county-documents">
           {DEP.meta.gaps.map((g) => <li key={`d${g.fy}${g.what}`}><b>FY {g.fy}, {g.what}:</b> {g.reason}</li>)}
           {SER.meta.gaps.map((g) => <li key={`s${g.series}${g.fy}`}><b>FY {g.fy}, {g.series === 'county-cbrop' ? 'County Treasury review series' : g.series === 'oag-ror' ? 'Auditor-General Receiver of Revenue statements' : g.series === 'oag-crf' ? 'Auditor-General County Revenue Fund statements' : g.series}:</b> {g.reason}</li>)}
-          <li>The wage bill, development share, own-source revenue, department absorption and pending bills layers have {layerGaps().layers} calculation gaps; each states its reason in its record on <Link href="/counties/siaya/analysis/#an-b1">Siaya analysis</Link> or the <Link href="/counties/siaya/ledger/#osr-b3">ledger</Link>.</li>
+          <li>The wage bill, development share, own-source revenue, department absorption and pending bills layers have {layerGaps().layers} calculation gaps; each states its reason in its record on <Link href="/counties/siaya/analysis/spending/#an-b1">Siaya analysis</Link> or the <Link href="/counties/siaya/ledger/#osr-b3">ledger</Link>.</li>
         </ul>
         <h3 className="mini">Sources we could not use yet</h3>
         <div className="log" id="sources-gaps">

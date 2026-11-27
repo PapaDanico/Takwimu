@@ -5,5 +5,5 @@ import Moved, { movedMetadata } from '../../components/Moved';
 export const metadata = movedMetadata('Trends', '/kenya/');
 
 export default function TrendsMoved() {
-  return <Moved title="The trend explorer" to="/kenya/" clientTo="/kenya/#trends" label="the Kenya dashboard trend explorer" />;
+  return <Moved title="The trend explorer" to="/kenya/#trends" label="the Kenya dashboard trend explorer" />;
 }

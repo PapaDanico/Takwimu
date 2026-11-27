@@ -50,13 +50,13 @@
 
 [[redirects]]
   from = "/trends/"
-  to = "/kenya/"
+  to = "/kenya/#trends"
   status = 301
   force = true
 
 [[redirects]]
   from = "/trends"
-  to = "/kenya/"
+  to = "/kenya/#trends"
   status = 301
   force = true
 
@@ -78,13 +78,13 @@
 
 [[redirects]]
   from = "/counties/siaya/pulse/"
-  to = "/counties/siaya/analysis/#latest"
+  to = "/counties/siaya/analysis/latest/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/counties/siaya/pulse"
-  to = "/counties/siaya/analysis/#latest"
+  to = "/counties/siaya/analysis/latest/"
   status = 301
   force = true
 
