@@ -436,9 +436,12 @@ const srv = http.createServer((req, res) => {
     const reuse = require('../lib/reuse');
     const imfJson = conf.conflicts.flatMap((c) => c.values).filter((v) => !reuse.mayRedistribute(v.url));
     const cc = await (await pg.request.get(base + '/data/datasets/source-conflicts.csv')).text();
-    const imfCsv = cc.split('\n').filter((l) => /api\.imf\.org/.test(l));
+    // Every withheld source (IMF; since 27 Nov 2026 also a news article quoted in a conflict case), matched by its link.
+    const withheldUrls = [...new Set(imfJson.map((v) => v.url))];
+    const hasWithheld = (l) => withheldUrls.some((u) => l.includes(u));
+    const imfCsv = cc.split('\n').filter(hasWithheld);
     const hc = await (await pg.request.get(base + '/data/history.csv')).text();
-    const imfHist = hc.split('\n').filter((l) => /api\.imf\.org/.test(l));
+    const imfHist = hc.split('\n').filter(hasWithheld);
     check(imfJson.length >= 7 && imfJson.every((v) => v.value === null && v.url && v.value_withheld) && imfCsv.length === imfJson.length && imfCsv.every((l) => /^"[^"]+","[^"]*","[^"]*",,"Value not redistributed/.test(l)) && imfHist.length === imfJson.length && imfHist.every((l) => /^"conflict: [^"]*","",,/.test(l)), `IMF values blank in conflicts.json, source-conflicts.csv and history.csv, with citation and link kept (${imfJson.length} values)`);
   }
 

@@ -78,7 +78,7 @@ export default function Home() {
         <p className="asof"><a href="/reports/siaya-fiscal-brief.pdf" download>Download the fiscal brief (PDF, three A4 pages)</a></p>
         <Provisional dataset={['history', 'siaya-audits', 'siaya-fiscal-ledger']} />
       </header>
-      <PageToc items={[['where-h', 'Where Siaya is'], ['position', 'County position'], ['key-h', 'Key figures'], ['obl', 'Pending bills, arrears and stalled projects'], ['aud', 'Audit'], ['tenh', 'Ten years'], ['inyh', `FY ${IY.fy} so far`], ['learnh', 'Budget terms'], ['where', 'Sub-counties']]} />
+      <PageToc items={[['where-h', 'Where Siaya is'], ['position', 'County position'], ['key-h', 'Key figures'], ['obl', 'Pending bills, arrears and stalled projects'], ['aud', 'Audit'], ['tenh', 'Ten years'], ['inyh', `FY ${IY.fy} in-year reports`], ['learnh', 'Budget terms'], ['where', 'Sub-counties']]} />
       <section className="card" aria-labelledby="where-h">
         <h2 id="where-h">Where Siaya is</h2>
         <KenyaMap focus="siaya" ariaLabel="Map of Kenya with Siaya County highlighted" />
@@ -155,7 +155,7 @@ export default function Home() {
 
       <section className="card" id="in-year" aria-labelledby="inyh">
         <p className="eyebrow">FY {IY.fy} · <span className="tag warn">{IY.comparability}</span></p>
-        <h2 id="inyh">FY {IY.fy} so far</h2>
+        <h2 id="inyh">FY {IY.fy} in-year reports</h2>
         <p className="lead">Running totals from 1 July 2025, from the Controller of Budget&apos;s quarterly and half-year reports. A part of the year is not a full year: do not compare these with the ten-year figures above.</p>
         <TableWrap label={`Siaya County FY ${IY.fy} in-year figures`}>
           <table className="data">

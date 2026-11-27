@@ -225,6 +225,8 @@
           "doc_id": {
             "type": "string"
           },
+          "source_type": { "type": "string", "enum": ["primary", "official mirror", "official compilation (secondary)", "secondary-news/ngo"], "description": "Kind of document the value was read from: primary (the publisher's own report), official mirror (an official body reprinting or quoting it), official compilation (secondary: an official body's summary table of other reports), secondary-news/ngo (media or civil society). Added 27 Nov 2026 (gap research ingest)." },
+          "corroboration": { "type": "array", "description": "Other documents that print the same opinion for the same entity and year (corroboration, not a second opinion).", "items": { "type": "object", "required": ["document", "url", "sha256", "page", "quote", "source_type"], "additionalProperties": false, "properties": { "document": { "type": "string" }, "url": { "type": "string", "pattern": "^https://" }, "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }, "page": { "type": "integer", "minimum": 1 }, "quote": { "type": "string", "minLength": 5 }, "source_type": { "type": "string", "enum": ["primary", "official mirror", "official compilation (secondary)", "secondary-news/ngo"], "description": "Kind of document the value was read from: primary (the publisher's own report), official mirror (an official body reprinting or quoting it), official compilation (secondary: an official body's summary table of other reports), secondary-news/ngo (media or civil society). Added 27 Nov 2026 (gap research ingest)." } } } },
           "tier": {
             "type": "string",
             "enum": ["primary", "secondary"],

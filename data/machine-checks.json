@@ -13,8 +13,8 @@
   "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way (\"Kshs.2.4 billion\") is not checkable.",
   "checked_on": "2026-11-27",
   "counts": {
-   "agree": 2329,
-   "not checkable": 1525,
+   "agree": 2363,
+   "not checkable": 1562,
    "disagree": 80
   }
  },
@@ -3593,6 +3593,308 @@
    "matched": "4.44"
   },
   {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L300",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 41,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "13,377.98"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L301",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 41,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "7,349.17"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L302",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 41,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "6,028.21"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L303",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L304",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 43,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "5,905.69"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L305",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L306",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "876.14"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L307",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "290.45"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L308",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "585.69"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L309",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "3,252.42"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L310",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 53,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "1,276.88"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L311",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 43,
+   "original_method": "OCR (ocr-tesseract)",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "4,435.93"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L312",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+   "pdf_page": 21,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "9,605,521,598.65"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L313",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+   "pdf_page": 21,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "2,781,583,267.00"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L314",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+   "pdf_page": 21,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "4,188,772,518.52"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L315",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+   "pdf_page": 5,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "862,934,946.65"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L316",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+   "pdf_page": 19,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "858,616,248"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L317",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+   "pdf_page": 5,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "272,116,888.45"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L318",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+   "pdf_page": 5,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "590,818,058.20"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L319",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+   "pdf_page": 5,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "3,252,420,825"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L320",
+   "source_id": "knbs-economic-survey-2026",
+   "source_sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+   "pdf_page": 150,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "3,114.92"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L321",
+   "source_id": "knbs-economic-survey-2026",
+   "source_sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+   "pdf_page": 150,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "481.79"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L322",
+   "source_id": "siaya-brop-2019-20",
+   "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+   "pdf_page": 20,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "4,899,616,267"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L323",
+   "source_id": "siaya-brop-2019-20",
+   "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+   "pdf_page": 20,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "3,982,157,657"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L324",
+   "source_id": "siaya-brop-2019-20",
+   "source_sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+   "pdf_page": 13,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "420,000,000"
+  },
+  {
+   "dataset": "siaya-fiscal-ledger",
+   "id": "L325",
+   "source_id": "cob-report-2020-21",
+   "source_sha256": "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
+   "pdf_page": 376,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "2.12"
+  },
+  {
    "dataset": "siaya-audits",
    "id": "opinion:county_government:2013/14",
    "result": "not checkable",
@@ -3616,6 +3918,27 @@
   {
    "dataset": "siaya-audits",
    "id": "opinion:county_executive:2015/16",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "siaya-audits",
+   "id": "opinion:county_executive:2016/17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "siaya-audits",
+   "id": "opinion:county_executive:2017/18",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "siaya-audits",
+   "id": "opinion:county_executive:2018/19",
    "result": "not checkable",
    "method": null,
    "reason": "Not a single number (text, a list of amounts or a series)."
@@ -3658,6 +3981,27 @@
   {
    "dataset": "siaya-audits",
    "id": "opinion:county_executive:2024/25",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "siaya-audits",
+   "id": "opinion:county_assembly:2016/17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "siaya-audits",
+   "id": "opinion:county_assembly:2017/18",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "siaya-audits",
+   "id": "opinion:county_assembly:2018/19",
    "result": "not checkable",
    "method": null,
    "reason": "Not a single number (text, a list of amounts or a series)."
@@ -9515,6 +9859,128 @@
   },
   {
    "dataset": "history",
+   "id": "years:2025/26:approved",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 41,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "13,377.98"
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:recurrent_budget",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 41,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "7,349.17"
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:development_budget",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 41,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "6,028.21"
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:spent",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:recurrent_spent",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 43,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "5,905.69"
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:development_spent",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:recurrent_absorption_pct",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 44,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "80.35"
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:development_absorption_pct",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 44,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "26.53"
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:osr_m",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "876.14"
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:osr_target_m",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "3,252.42"
+  },
+  {
+   "dataset": "history",
+   "id": "years:2025/26:pending_total_m",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 53,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "1,276.88"
+  },
+  {
+   "dataset": "history",
    "id": "audits:2013/14",
    "result": "not checkable",
    "method": null,
@@ -9530,6 +9996,27 @@
   {
    "dataset": "history",
    "id": "audits:2015/16",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "history",
+   "id": "audits:2016/17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "history",
+   "id": "audits:2017/18",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "history",
+   "id": "audits:2018/19",
    "result": "not checkable",
    "method": null,
    "reason": "Not a single number (text, a list of amounts or a series)."
@@ -9712,6 +10199,18 @@
    "checked_on": "2026-11-23",
    "result": "agree",
    "matched": "436.68"
+  },
+  {
+   "dataset": "history",
+   "id": "osr:2025/26",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (tesseract OCR (two readings))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "876.14"
   },
   {
    "dataset": "history",
@@ -10179,7 +10678,21 @@
   },
   {
    "dataset": "siaya-analysis",
+   "id": "SIA-A1-2025-26-cob-report-2025-26",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
    "id": "SIA-A1-2025-26-GOV-02-FY2025-26-Q4",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A1-2025-26-siaya-cbrop-2025-26",
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
@@ -10361,7 +10874,35 @@
   },
   {
    "dataset": "siaya-analysis",
+   "id": "SIA-A2-2024-25-knbs-economic-survey-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A2-2025-26-cob-report-2025-26",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
    "id": "SIA-A2-2025-26-GOV-02-FY2025-26-Q4",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A2-2025-26-knbs-economic-survey-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A2-2025-26-siaya-cbrop-2025-26",
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
@@ -10488,6 +11029,13 @@
   {
    "dataset": "siaya-analysis",
    "id": "SIA-A3-2018-19-cob-report-2018-19-total",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A3-2019-20-cob-report-2020-21-development",
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
@@ -10704,6 +11252,27 @@
   },
   {
    "dataset": "siaya-analysis",
+   "id": "SIA-A3-2025-26-cob-report-2025-26-development",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A3-2025-26-cob-report-2025-26-recurrent",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A3-2025-26-cob-report-2025-26-total",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
    "id": "SIA-A3-2025-26-GOV-02-FY2025-26-Q1-development",
    "result": "not checkable",
    "method": null,
@@ -10740,6 +11309,20 @@
   {
    "dataset": "siaya-analysis",
    "id": "SIA-A3-2025-26-GOV-02-FY2025-26-Q4-total",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A3-2025-26-siaya-cbrop-2025-26-development",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A3-2025-26-siaya-cbrop-2025-26-total",
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
@@ -11209,6 +11792,13 @@
   {
    "dataset": "siaya-analysis",
    "id": "SIA-A4-stock-2024-25-L275",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A4-stock-2025-26-L310",
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
@@ -12538,7 +13128,35 @@
   },
   {
    "dataset": "siaya-analysis",
+   "id": "SIA-A8-2024-25-knbs-economic-survey-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A8-2025-26-cob-report-2025-26",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
    "id": "SIA-A8-2025-26-GOV-02-FY2025-26-Q4",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A8-2025-26-knbs-economic-survey-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis",
+   "id": "SIA-A8-2025-26-siaya-cbrop-2025-26",
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
@@ -36188,6 +36806,13 @@
   },
   {
    "dataset": "siaya-analysis-layers",
+   "id": "SIA-B1-2025-26-cob-report-2025-26",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis-layers",
    "id": "SIA-B2-2013-14-actual-cbrop",
    "result": "not checkable",
    "method": null,
@@ -36651,6 +37276,20 @@
   {
    "dataset": "siaya-analysis-layers",
    "id": "SIA-B2-2024-25-budget-pbb-original-bf",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "id": "SIA-B2-2025-26-actual-cob-report-2025-26",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "id": "SIA-B2-2025-26-budget-cob-report-2025-26",
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
@@ -37421,6 +38060,27 @@
   {
    "dataset": "siaya-analysis-layers",
    "id": "SIA-B3-2024-25-real-oag-table-2025",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "id": "SIA-B3-2025-26-capita-cob",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "id": "SIA-B3-2025-26-perf-cob",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "id": "SIA-B3-2025-26-real-cob",
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
@@ -39143,6 +39803,13 @@
   {
    "dataset": "siaya-analysis-layers",
    "id": "SIA-B5-2024-25-cob-report-2024-25-L275",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "siaya-analysis-layers",
+   "id": "SIA-B5-2025-26-cob-report-2025-26-L310",
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."

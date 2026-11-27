@@ -348,6 +348,36 @@
    "url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf",
    "sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
    "licence": "not stated: link and cite only"
+  },
+  "cob-report-2025-26": {
+   "title": "County Governments Budget Implementation Review Report for the Financial Year 2025/26 (August 2026), Part 1",
+   "publisher": "Office of the Controller of Budget",
+   "kind": "controller_of_budget",
+   "publication_date": "2026-08",
+   "reference_period": "FY 2025/26 (full year; Part 1 holds the chapter 2 tables of all 47 counties)",
+   "url": "https://libraryir.parliament.go.ke/items/99f48395-0710-4a74-bcdf-e4ea40812813",
+   "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "licence": "not stated: link and cite only"
+  },
+  "siaya-cbrop-2025-26": {
+   "title": "County Government of Siaya, County Budget Review and Outlook Paper, Financial Year 2025/26 (September 2026)",
+   "publisher": "County Government of Siaya (County Treasury)",
+   "kind": "county",
+   "publication_date": "2026-09",
+   "reference_period": "Review of FY 2025/26",
+   "url": "https://siaya.go.ke/wp-content/uploads/2026/10/County-Budget-Review-and-Outlook-Paper-For-FY-2025_2026.pdf",
+   "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+   "licence": "© County Government of Siaya, all rights reserved (site footer); no reuse licence stated: link and cite only"
+  },
+  "knbs-economic-survey-2026": {
+   "title": "Kenya National Bureau of Statistics, Economic Survey 2026",
+   "publisher": "Kenya National Bureau of Statistics",
+   "kind": "other",
+   "publication_date": "2026",
+   "reference_period": "Table 5.13: FY 2024/25 (revised) and FY 2025/26 (provisional)",
+   "url": "https://repository.knbs.or.ke/items/0e833fb6-486a-43ed-987f-7d8051c0f7ee",
+   "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+   "licence": "not stated: link and cite only"
   }
  },
  "observations": [
@@ -7414,6 +7444,644 @@
    "basis": "Compensation of employees, including accrued",
    "source_kind": "county",
    "scope": "county government (executive and assembly)"
+  },
+  {
+   "id": "L300",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "budget_total",
+   "fy": "2025/26",
+   "value": 13.38,
+   "unit": "KSh billion",
+   "table": "Table 2.3: County Government Approved Budget Estimates and Exchequer Issues (Siaya row)",
+   "pdf_page": 41,
+   "original_text": "Siaya 7,349.77 6,028.21 13,377.98 5,658.66 1,630.77 7,289.43 76.99 27.05 54.49",
+   "reused_from": {
+    "file": "data/history.json",
+    "path": [
+     "years",
+     {
+      "fy": "2025/26"
+     },
+     "approved"
+    ]
+   },
+   "note": "Rounded in history.json from 13,377.98 million; Table 2.5 (PDF p. 44) prints the same budget.",
+   "budget_version": "supplementary",
+   "basis": "CoB Table 2.3 \"Approved Budget Estimates\"; equals the county's supplementary budget of 13,377,987,507 (Q4 report, L058)",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 41."
+   }
+  },
+  {
+   "id": "L301",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "budget_recurrent",
+   "fy": "2025/26",
+   "value": 7.35,
+   "unit": "KSh billion",
+   "table": "Table 2.3 (Siaya row)",
+   "pdf_page": 41,
+   "original_text": "Siaya 7,349.77 6,028.21 13,377.98 5,658.66 1,630.77 7,289.43 76.99 27.05 54.49",
+   "reused_from": {
+    "file": "data/history.json",
+    "path": [
+     "years",
+     {
+      "fy": "2025/26"
+     },
+     "recurrent_budget"
+    ]
+   },
+   "note": "Rounded in history.json from 7,349.77 million.",
+   "budget_version": "supplementary",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 41."
+   }
+  },
+  {
+   "id": "L302",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "budget_development",
+   "fy": "2025/26",
+   "value": 6.03,
+   "unit": "KSh billion",
+   "table": "Table 2.3 (Siaya row)",
+   "pdf_page": 41,
+   "original_text": "Siaya 7,349.77 6,028.21 13,377.98 5,658.66 1,630.77 7,289.43 76.99 27.05 54.49",
+   "reused_from": {
+    "file": "data/history.json",
+    "path": [
+     "years",
+     {
+      "fy": "2025/26"
+     },
+     "development_budget"
+    ]
+   },
+   "note": "Rounded in history.json from 6,028.21 million.",
+   "budget_version": "supplementary",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 41."
+   }
+  },
+  {
+   "id": "L303",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "expenditure_total",
+   "fy": "2025/26",
+   "value": 7.5,
+   "unit": "KSh billion",
+   "table": "Table 2.4: Expenditure by Major Economic Classification in FY 2025/26 (Siaya row)",
+   "pdf_page": 43,
+   "original_text": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73",
+   "reused_from": {
+    "file": "data/history.json",
+    "path": [
+     "years",
+     {
+      "fy": "2025/26"
+     },
+     "spent"
+    ]
+   },
+   "note": "Rounded in history.json from 7,504.73 million (Table 2.5, PDF p. 44, prints the same).",
+   "basis": "CoB expenditure",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 43."
+   }
+  },
+  {
+   "id": "L304",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "expenditure_recurrent",
+   "fy": "2025/26",
+   "value": 5.91,
+   "unit": "KSh billion",
+   "table": "Table 2.4 (Siaya row)",
+   "pdf_page": 43,
+   "original_text": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73",
+   "reused_from": {
+    "file": "data/history.json",
+    "path": [
+     "years",
+     {
+      "fy": "2025/26"
+     },
+     "recurrent_spent"
+    ]
+   },
+   "note": "Rounded in history.json from 5,905.69 million.",
+   "basis": "CoB expenditure",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 43."
+   }
+  },
+  {
+   "id": "L305",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "expenditure_development",
+   "fy": "2025/26",
+   "value": 1.6,
+   "unit": "KSh billion",
+   "table": "Table 2.4 (Siaya row)",
+   "pdf_page": 43,
+   "original_text": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73",
+   "reused_from": {
+    "file": "data/history.json",
+    "path": [
+     "years",
+     {
+      "fy": "2025/26"
+     },
+     "development_spent"
+    ]
+   },
+   "note": "Rounded in history.json from 1,599.04 million.",
+   "basis": "CoB expenditure",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 43."
+   }
+  },
+  {
+   "id": "L306",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_total_actual",
+   "fy": "2025/26",
+   "value": 876.14,
+   "unit": "KSh million",
+   "table": "Table 2.1: Own Source Revenue Collection in FY 2025/26 (Siaya row)",
+   "pdf_page": 38,
+   "original_text": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94",
+   "note": "Ordinary 290.45 plus FIF/A-i-A 585.69; 26.94 per cent of the 3,252.42 target.",
+   "basis": "CoB: total own-source revenue including FIF/A-i-A",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "L307",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_ordinary_actual",
+   "fy": "2025/26",
+   "value": 290.45,
+   "unit": "KSh million",
+   "table": "Table 2.1 (Siaya row)",
+   "pdf_page": 38,
+   "original_text": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94",
+   "note": null,
+   "basis": "CoB: ordinary own-source revenue",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "L308",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_fif_aia_actual",
+   "fy": "2025/26",
+   "value": 585.69,
+   "unit": "KSh million",
+   "table": "Table 2.1 (Siaya row)",
+   "pdf_page": 38,
+   "original_text": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94",
+   "note": null,
+   "basis": "CoB: FIF/A-i-A",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "L309",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_total_target",
+   "fy": "2025/26",
+   "value": 3252.42,
+   "unit": "KSh million",
+   "table": "Table 2.1 (Siaya row)",
+   "pdf_page": 38,
+   "original_text": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94",
+   "note": "Ordinary 2,173.74 plus FIF/A-i-A 1,078.69 (they add to 3,252.43; printed 3,252.42).",
+   "basis": "CoB: annual target including FIF/A-i-A",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "L310",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "pending_bills_close",
+   "fy": "2025/26",
+   "value": 1276.88,
+   "unit": "KSh million",
+   "table": "Table 2.10: Trade Payables for the Counties as of 30 June 2026 (Siaya row)",
+   "pdf_page": 53,
+   "original_text": "Siaya 607.23 563.98 1,171.21 105.68 0.00 105.68 1,276.88 13,377.98 9.54",
+   "note": "Executive 1,171.21 (recurrent 607.23, development 563.98) plus Assembly 105.68; the parts add to 1,276.89, printed 1,276.88. The county's Q4 report gives 1,276,882,801.13 (PDF pp. 15-16).",
+   "basis": "CoB FY 2025/26: \"trade payables\" (the report uses this term in place of pending bills)",
+   "stock_point": "closing",
+   "as_at": "2026-06-30",
+   "accounting_basis": "as reported",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 53."
+   }
+  },
+  {
+   "id": "L311",
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "measure": "wage_bill",
+   "fy": "2025/26",
+   "value": 4435.93,
+   "unit": "KSh million",
+   "table": "Table 2.4 (Siaya row, compensation to employees)",
+   "pdf_page": 43,
+   "original_text": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73",
+   "note": null,
+   "basis": "CoB: compensation to employees",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 43."
+   }
+  },
+  {
+   "id": "L312",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "expenditure_total",
+   "fy": "2025/26",
+   "value": 9605.521599,
+   "unit": "KSh million",
+   "table": "Table 10: Budget performance by economic classification, FY 2025/26 (and text)",
+   "pdf_page": 21,
+   "original_text": "Total actual expenditure for the period under review amounted to Kshs. 9,605,521,598.65 against a planned budget of Kshs. 13,377,987,507.00 representing a performance of 71.80 percent",
+   "note": "PE 4,188,772,518.52; O&M 2,635,165,813.13; development 2,781,583,267.00 (Table 10 total 9,605,521,598.65, 71.80%). Gap research C notes that the figure equals the county's total receipts.",
+   "basis": "County Treasury actual"
+  },
+  {
+   "id": "L313",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "expenditure_development",
+   "fy": "2025/26",
+   "value": 2781.583267,
+   "unit": "KSh million",
+   "table": "Table 10 (DEV row)",
+   "pdf_page": 21,
+   "original_text": "DEV 6,028,209,526.00 2,781,583,267.00 -3,246,626,259 46.14%",
+   "note": null,
+   "basis": "County Treasury actual"
+  },
+  {
+   "id": "L314",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "wage_bill",
+   "fy": "2025/26",
+   "value": 4188.772519,
+   "unit": "KSh million",
+   "table": "Table 10 (PE row)",
+   "pdf_page": 21,
+   "original_text": "PE 3,862,117,174.00 4,188,772,518.52 326,655,345 108%",
+   "note": null,
+   "basis": "County: personnel emoluments"
+  },
+  {
+   "id": "L315",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_total_actual",
+   "fy": "2025/26",
+   "value": 862.934947,
+   "unit": "KSh million",
+   "table": "Executive summary (text)",
+   "pdf_page": 5,
+   "original_text": "Local revenue collection was Kshs. 862,934,946.65 against a target of Kshs. 3,252,420,825 representing a performance of 27 percent. The local revenue comprised of Kshs. 590,818,058.20 as appropriation in Aid (AIA) and Kshs. 272,116,888.45 as ordinary revenues.",
+   "note": "The same paper gives 858,616,247.65 in its OSR section and Table 8 (PDF pp. 15, 17) and 858,616,248 in Table 9 (PDF p. 19).",
+   "basis": "County: local revenue including A-i-A"
+  },
+  {
+   "id": "L316",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_total_actual",
+   "fy": "2025/26",
+   "value": 858.616248,
+   "unit": "KSh million",
+   "table": "Table 9 (TOTALS row, FY 2025/26 actual column); also Table 8 and text, PDF pp. 15, 17",
+   "pdf_page": 19,
+   "original_text": "TOTALS 760,000,000 1,044,061,306 3,252,420,830 600,948,814 757,570,622 858,616,248",
+   "note": "Same paper as the 862,934,946.65 on PDF p. 5; the paper does not reconcile the two.",
+   "basis": "County: Total OSR"
+  },
+  {
+   "id": "L317",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_ordinary_actual",
+   "fy": "2025/26",
+   "value": 272.116888,
+   "unit": "KSh million",
+   "table": "Executive summary (text)",
+   "pdf_page": 5,
+   "original_text": "Kshs. 272,116,888.45 as ordinary revenues",
+   "note": null,
+   "basis": "County: ordinary revenue"
+  },
+  {
+   "id": "L318",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_fif_aia_actual",
+   "fy": "2025/26",
+   "value": 590.818058,
+   "unit": "KSh million",
+   "table": "Executive summary (text)",
+   "pdf_page": 5,
+   "original_text": "Kshs. 590,818,058.20 as appropriation in Aid (AIA)",
+   "note": null,
+   "basis": "County: appropriations-in-aid"
+  },
+  {
+   "id": "L319",
+   "source_id": "siaya-cbrop-2025-26",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_total_target",
+   "fy": "2025/26",
+   "value": 3252.420825,
+   "unit": "KSh million",
+   "table": "Executive summary (text)",
+   "pdf_page": 5,
+   "original_text": "against a target of Kshs. 3,252,420,825",
+   "note": null,
+   "basis": "County: annual target (supplementary budget)"
+  },
+  {
+   "id": "L320",
+   "measure": "osr_total_actual",
+   "fy": "2025/26",
+   "value": 3114.92,
+   "unit": "KSh million",
+   "source_id": "knbs-economic-survey-2026",
+   "source_kind": "other",
+   "source_type": "official compilation (secondary)",
+   "table": "Table 5.13: County Governments' Revenue, 2024/25 - 2025/26 (Siaya row, Annual Own Source Revenue, 2025/26 provisional)",
+   "pdf_page": 150,
+   "printed_page": null,
+   "read_method": "text",
+   "original_text": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37",
+   "confidence": 2,
+   "scope": "county government (executive and assembly)",
+   "note": "KNBS compilation of county revenue; marked provisional (*).",
+   "basis": "KNBS: annual own-source revenue, provisional",
+   "source_error": {
+    "quote": "Siaya ... Annual Own Source Revenue 2024/25+ 481.79, 2025/26* 3,114.92 (Table 5.13)",
+    "page": 150,
+    "printed_page": null,
+    "issue": "The 3,114.92 million printed as Siaya's FY 2025/26 own-source revenue equals the county's FY 2025/26 own-source revenue budget in its Programme-Based Budget (Total OSR 3,114,920,823 = 2,036,235,308 ordinary + 1,078,685,515 SHA A-in-A, PDF p. 13), not collections: the Controller of Budget gives actual collections of 876.14 million (Table 2.1). The value stays as published."
+   }
+  },
+  {
+   "id": "L321",
+   "measure": "osr_total_actual",
+   "fy": "2024/25",
+   "value": 481.79,
+   "unit": "KSh million",
+   "source_id": "knbs-economic-survey-2026",
+   "source_kind": "other",
+   "source_type": "official compilation (secondary)",
+   "table": "Table 5.13 (Siaya row, Annual Own Source Revenue, 2024/25 revised)",
+   "pdf_page": 150,
+   "printed_page": null,
+   "read_method": "text",
+   "original_text": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "note": "KNBS compilation; marked revised (+). Neither the Controller of Budget (436.68) nor the county (757.57) prints 481.79.",
+   "basis": "KNBS: annual own-source revenue, revised"
+  },
+  {
+   "id": "L322",
+   "source_id": "siaya-brop-2019-20",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "budget_recurrent",
+   "fy": "2019/20",
+   "value": 4899.616267,
+   "unit": "KSh million",
+   "table": "Expenditure by economic classification, FY 2019/20 (Budgeted column)",
+   "pdf_page": 20,
+   "original_text": "Total Recurrent 4,899,616,267 4,659,842,545 239,773,722 95%",
+   "note": "Supplementary budget (total 8,881,773,924).",
+   "budget_version": "supplementary",
+   "basis": "County: supplementary budget"
+  },
+  {
+   "id": "L323",
+   "source_id": "siaya-brop-2019-20",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "budget_development",
+   "fy": "2019/20",
+   "value": 3982.157657,
+   "unit": "KSh million",
+   "table": "Expenditure by economic classification, FY 2019/20 (Budgeted column)",
+   "pdf_page": 20,
+   "original_text": "Development 3,982,157,657 2,155,005,238 1,827,152,419 54%",
+   "note": null,
+   "budget_version": "supplementary",
+   "basis": "County: supplementary budget"
+  },
+  {
+   "id": "L324",
+   "source_id": "siaya-brop-2019-20",
+   "source_kind": "county",
+   "source_type": "primary",
+   "printed_page": null,
+   "read_method": "text",
+   "confidence": 4,
+   "scope": "county government (executive and assembly)",
+   "measure": "osr_total_target",
+   "fy": "2019/20",
+   "value": 420,
+   "unit": "KSh million",
+   "table": "Table 3 (Total for Local Revenue)",
+   "pdf_page": 13,
+   "original_text": "Total for Local Revenue 420,000,000 184,249,749 - 235,750,251",
+   "note": null,
+   "basis": "County: own-source revenue target"
+  },
+  {
+   "id": "L325",
+   "measure": "expenditure_development",
+   "fy": "2019/20",
+   "value": 2.12,
+   "unit": "KSh billion",
+   "source_id": "cob-report-2020-21",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "table": "Section 3.39.9 Development Expenditure (prior-year comparison in the FY 2020/21 report)",
+   "pdf_page": 376,
+   "printed_page": null,
+   "read_method": "text",
+   "original_text": "compared to a similar period in FY 2019/20 when the County spent Kshs.2.12 billion",
+   "confidence": 3,
+   "scope": "county government (executive and assembly)",
+   "note": "Parliament library copy; the Nairobi County Assembly copy of the same report prints it on PDF p. 379.",
+   "basis": "CoB FY 2020/21 report, prior-year comparison"
   }
  ],
  "discrepancies": [
@@ -8383,6 +9051,42 @@
    "reviewed_at": null
   },
   {
+   "case_id": "D-L140-L321",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2024/25",
+   "claim_a": {
+    "observation_id": "L140",
+    "value_ksh_m": 436.68,
+    "printed": null
+   },
+   "claim_b": {
+    "observation_id": "L321",
+    "value_ksh_m": 481.79,
+    "printed": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37"
+   },
+   "source_a": {
+    "source_id": "cob-report-2024-25",
+    "pdf_page": 476
+   },
+   "source_b": {
+    "source_id": "knbs-economic-survey-2026",
+    "pdf_page": 150
+   },
+   "difference": {
+    "absolute_ksh_m": 45.11,
+    "pct_of_smaller": 10.33,
+    "b_minus_a_ksh_m": 45.11
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: controller_of_budget against other.",
+    "Basis as stated: A \"Includes FIF/A-i-A\"; B \"KNBS: annual own-source revenue, revised\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
    "case_id": "D-L153-L162",
    "indicator_id": "osr_total_actual",
    "period": "FY 2024/25",
@@ -8491,6 +9195,42 @@
    "reviewed_at": null
   },
   {
+   "case_id": "D-L153-L321",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2024/25",
+   "claim_a": {
+    "observation_id": "L153",
+    "value_ksh_m": 436.68,
+    "printed": "436.68"
+   },
+   "claim_b": {
+    "observation_id": "L321",
+    "value_ksh_m": 481.79,
+    "printed": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37"
+   },
+   "source_a": {
+    "source_id": "cob-report-2024-25",
+    "pdf_page": 46
+   },
+   "source_b": {
+    "source_id": "knbs-economic-survey-2026",
+    "pdf_page": 150
+   },
+   "difference": {
+    "absolute_ksh_m": 45.11,
+    "pct_of_smaller": 10.33,
+    "b_minus_a_ksh_m": 45.11
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: controller_of_budget against other.",
+    "Basis as stated: A \"Includes FIF/A-i-A\"; B \"KNBS: annual own-source revenue, revised\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
    "case_id": "D-L162-L170",
    "indicator_id": "osr_total_actual",
    "period": "FY 2024/25",
@@ -8526,6 +9266,42 @@
    "reviewed_at": null
   },
   {
+   "case_id": "D-L162-L321",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2024/25",
+   "claim_a": {
+    "observation_id": "L162",
+    "value_ksh_m": 757.57,
+    "printed": "Total OSR 1,044,061,306 757,570,621 -286,490,685"
+   },
+   "claim_b": {
+    "observation_id": "L321",
+    "value_ksh_m": 481.79,
+    "printed": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37"
+   },
+   "source_a": {
+    "source_id": "GOV-03",
+    "pdf_page": 16
+   },
+   "source_b": {
+    "source_id": "knbs-economic-survey-2026",
+    "pdf_page": 150
+   },
+   "difference": {
+    "absolute_ksh_m": 275.78,
+    "pct_of_smaller": 57.24,
+    "b_minus_a_ksh_m": -275.78
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: county against other.",
+    "Basis as stated: A \"CRF receipts plus A-i-A (hospital revenue including SHA/SHIF, Linda Mama, NHIF capitation, liquor licensing)\"; B \"KNBS: annual own-source revenue, revised\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
    "case_id": "D-L166-L170",
    "indicator_id": "osr_total_actual",
    "period": "FY 2024/25",
@@ -8554,6 +9330,78 @@
    },
    "possible_basis_mismatch": [
     "Basis as stated: A \"CRF receipts plus A-i-A\"; B \"Figure quoted a year later by the county; includes FIF\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L166-L321",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2024/25",
+   "claim_a": {
+    "observation_id": "L166",
+    "value_ksh_m": 757.57,
+    "printed": "the County Government realized 68 percent of targeted OSR translating to collection of Kshs.757,570,621"
+   },
+   "claim_b": {
+    "observation_id": "L321",
+    "value_ksh_m": 481.79,
+    "printed": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2024-25-Q4",
+    "pdf_page": 4
+   },
+   "source_b": {
+    "source_id": "knbs-economic-survey-2026",
+    "pdf_page": 150
+   },
+   "difference": {
+    "absolute_ksh_m": 275.78,
+    "pct_of_smaller": 57.24,
+    "b_minus_a_ksh_m": -275.78
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: county against other.",
+    "Basis as stated: A \"CRF receipts plus A-i-A\"; B \"KNBS: annual own-source revenue, revised\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L170-L321",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2024/25",
+   "claim_a": {
+    "observation_id": "L170",
+    "value_ksh_m": 712.82,
+    "printed": "an increase of 22.91 per cent compared to Kshs.712.82 million realised in a similar period in FY 2024/25"
+   },
+   "claim_b": {
+    "observation_id": "L321",
+    "value_ksh_m": 481.79,
+    "printed": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q4",
+    "pdf_page": 4
+   },
+   "source_b": {
+    "source_id": "knbs-economic-survey-2026",
+    "pdf_page": 150
+   },
+   "difference": {
+    "absolute_ksh_m": 231.03,
+    "pct_of_smaller": 47.95,
+    "b_minus_a_ksh_m": -231.03
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: county against other.",
+    "Basis as stated: A \"Figure quoted a year later by the county; includes FIF\"; B \"KNBS: annual own-source revenue, revised\"."
    ],
    "status": "open",
    "resolution": null,
@@ -8740,6 +9588,367 @@
    "reviewed_at": null
   },
   {
+   "case_id": "D-L175-L315",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L175",
+    "value_ksh_m": 876.14,
+    "printed": "own-source revenue (OSR) collection of Kshs.876.14 million"
+   },
+   "claim_b": {
+    "observation_id": "L315",
+    "value_ksh_m": 862.93,
+    "printed": "Local revenue collection was Kshs. 862,934,946.65 against a target of Kshs. 3,252,420,825 representing a performance of 27 percent. The local revenue comprised of Kshs. 590,818,058.20 as appropriation in Aid (AIA) and Kshs. 272,116,888.45 as ordinary revenues."
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q4",
+    "pdf_page": 2
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 5
+   },
+   "difference": {
+    "absolute_ksh_m": 13.21,
+    "pct_of_smaller": 1.53,
+    "b_minus_a_ksh_m": -13.21
+   },
+   "possible_basis_mismatch": [
+    "Basis as stated: A \"Includes FIF of KSh 585.69m\"; B \"County: local revenue including A-i-A\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L175-L316",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L175",
+    "value_ksh_m": 876.14,
+    "printed": "own-source revenue (OSR) collection of Kshs.876.14 million"
+   },
+   "claim_b": {
+    "observation_id": "L316",
+    "value_ksh_m": 858.62,
+    "printed": "TOTALS 760,000,000 1,044,061,306 3,252,420,830 600,948,814 757,570,622 858,616,248"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q4",
+    "pdf_page": 2
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 19
+   },
+   "difference": {
+    "absolute_ksh_m": 17.52,
+    "pct_of_smaller": 2.04,
+    "b_minus_a_ksh_m": -17.52
+   },
+   "possible_basis_mismatch": [
+    "Basis as stated: A \"Includes FIF of KSh 585.69m\"; B \"County: Total OSR\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L175-L320",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L175",
+    "value_ksh_m": 876.14,
+    "printed": "own-source revenue (OSR) collection of Kshs.876.14 million"
+   },
+   "claim_b": {
+    "observation_id": "L320",
+    "value_ksh_m": 3114.92,
+    "printed": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q4",
+    "pdf_page": 2
+   },
+   "source_b": {
+    "source_id": "knbs-economic-survey-2026",
+    "pdf_page": 150
+   },
+   "difference": {
+    "absolute_ksh_m": 2238.78,
+    "pct_of_smaller": 255.53,
+    "b_minus_a_ksh_m": 2238.78
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: county against other.",
+    "Basis as stated: A \"Includes FIF of KSh 585.69m\"; B \"KNBS: annual own-source revenue, provisional\".",
+    "At least one reading has confidence 2 or lower (chart label or garbled text)."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L306-L315",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L306",
+    "value_ksh_m": 876.14,
+    "printed": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94"
+   },
+   "claim_b": {
+    "observation_id": "L315",
+    "value_ksh_m": 862.93,
+    "printed": "Local revenue collection was Kshs. 862,934,946.65 against a target of Kshs. 3,252,420,825 representing a performance of 27 percent. The local revenue comprised of Kshs. 590,818,058.20 as appropriation in Aid (AIA) and Kshs. 272,116,888.45 as ordinary revenues."
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 38
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 5
+   },
+   "difference": {
+    "absolute_ksh_m": 13.21,
+    "pct_of_smaller": 1.53,
+    "b_minus_a_ksh_m": -13.21
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: controller_of_budget against county.",
+    "Basis as stated: A \"CoB: total own-source revenue including FIF/A-i-A\"; B \"County: local revenue including A-i-A\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L306-L316",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L306",
+    "value_ksh_m": 876.14,
+    "printed": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94"
+   },
+   "claim_b": {
+    "observation_id": "L316",
+    "value_ksh_m": 858.62,
+    "printed": "TOTALS 760,000,000 1,044,061,306 3,252,420,830 600,948,814 757,570,622 858,616,248"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 38
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 19
+   },
+   "difference": {
+    "absolute_ksh_m": 17.52,
+    "pct_of_smaller": 2.04,
+    "b_minus_a_ksh_m": -17.52
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: controller_of_budget against county.",
+    "Basis as stated: A \"CoB: total own-source revenue including FIF/A-i-A\"; B \"County: Total OSR\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L306-L320",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L306",
+    "value_ksh_m": 876.14,
+    "printed": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94"
+   },
+   "claim_b": {
+    "observation_id": "L320",
+    "value_ksh_m": 3114.92,
+    "printed": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 38
+   },
+   "source_b": {
+    "source_id": "knbs-economic-survey-2026",
+    "pdf_page": 150
+   },
+   "difference": {
+    "absolute_ksh_m": 2238.78,
+    "pct_of_smaller": 255.53,
+    "b_minus_a_ksh_m": 2238.78
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: controller_of_budget against other.",
+    "Basis as stated: A \"CoB: total own-source revenue including FIF/A-i-A\"; B \"KNBS: annual own-source revenue, provisional\".",
+    "At least one reading has confidence 2 or lower (chart label or garbled text)."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L315-L320",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L315",
+    "value_ksh_m": 862.93,
+    "printed": "Local revenue collection was Kshs. 862,934,946.65 against a target of Kshs. 3,252,420,825 representing a performance of 27 percent. The local revenue comprised of Kshs. 590,818,058.20 as appropriation in Aid (AIA) and Kshs. 272,116,888.45 as ordinary revenues."
+   },
+   "claim_b": {
+    "observation_id": "L320",
+    "value_ksh_m": 3114.92,
+    "printed": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37"
+   },
+   "source_a": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 5
+   },
+   "source_b": {
+    "source_id": "knbs-economic-survey-2026",
+    "pdf_page": 150
+   },
+   "difference": {
+    "absolute_ksh_m": 2251.99,
+    "pct_of_smaller": 260.97,
+    "b_minus_a_ksh_m": 2251.99
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: county against other.",
+    "Basis as stated: A \"County: local revenue including A-i-A\"; B \"KNBS: annual own-source revenue, provisional\".",
+    "At least one reading has confidence 2 or lower (chart label or garbled text)."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L316-L320",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L316",
+    "value_ksh_m": 858.62,
+    "printed": "TOTALS 760,000,000 1,044,061,306 3,252,420,830 600,948,814 757,570,622 858,616,248"
+   },
+   "claim_b": {
+    "observation_id": "L320",
+    "value_ksh_m": 3114.92,
+    "printed": "Siaya 5,066.14 5,521.33 475.63 451.12 481.79 3,114.92 6,024 9,087.37"
+   },
+   "source_a": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 19
+   },
+   "source_b": {
+    "source_id": "knbs-economic-survey-2026",
+    "pdf_page": 150
+   },
+   "difference": {
+    "absolute_ksh_m": 2256.3,
+    "pct_of_smaller": 262.78,
+    "b_minus_a_ksh_m": 2256.3
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: county against other.",
+    "Basis as stated: A \"County: Total OSR\"; B \"KNBS: annual own-source revenue, provisional\".",
+    "At least one reading has confidence 2 or lower (chart label or garbled text)."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L176-L317",
+   "indicator_id": "osr_ordinary_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L176",
+    "value_ksh_m": 290.45,
+    "printed": "Sub-Total 2,173,735,310 290,450,788 290,450,788 13.36"
+   },
+   "claim_b": {
+    "observation_id": "L317",
+    "value_ksh_m": 272.12,
+    "printed": "Kshs. 272,116,888.45 as ordinary revenues"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q4",
+    "pdf_page": 3
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 5
+   },
+   "difference": {
+    "absolute_ksh_m": 18.33,
+    "pct_of_smaller": 6.74,
+    "b_minus_a_ksh_m": -18.33
+   },
+   "possible_basis_mismatch": [
+    "Basis as stated: A \"not stated\"; B \"County: ordinary revenue\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L307-L317",
+   "indicator_id": "osr_ordinary_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L307",
+    "value_ksh_m": 290.45,
+    "printed": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94"
+   },
+   "claim_b": {
+    "observation_id": "L317",
+    "value_ksh_m": 272.12,
+    "printed": "Kshs. 272,116,888.45 as ordinary revenues"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 38
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 5
+   },
+   "difference": {
+    "absolute_ksh_m": 18.33,
+    "pct_of_smaller": 6.74,
+    "b_minus_a_ksh_m": -18.33
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: controller_of_budget against county.",
+    "Basis as stated: A \"CoB: ordinary own-source revenue\"; B \"County: ordinary revenue\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
    "case_id": "D-L178-L179",
    "indicator_id": "osr_total_target",
    "period": "FY 2025/26",
@@ -8768,6 +9977,77 @@
    },
    "possible_basis_mismatch": [
     "Basis as stated: A \"Supplementary budget; Table 0.1 prints ordinary 2,173,735,310 and FIF 1,078,685,515\"; B \"Original approved budget\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L179-L309",
+   "indicator_id": "osr_total_target",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L179",
+    "value_ksh_m": 3110,
+    "printed": "Kshs.3.11 billion (24 per cent) generated as own-source revenue"
+   },
+   "claim_b": {
+    "observation_id": "L309",
+    "value_ksh_m": 3252.42,
+    "printed": "Siaya 2,173.74 1,078.69 3,252.42 290.45 585.69 876.14 13.36 54.30 26.94"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q1",
+    "pdf_page": 2
+   },
+   "source_b": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 38
+   },
+   "difference": {
+    "absolute_ksh_m": 142.42,
+    "pct_of_smaller": 4.58,
+    "b_minus_a_ksh_m": 142.42
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: county against controller_of_budget.",
+    "Basis as stated: A \"Original approved budget\"; B \"CoB: annual target including FIF/A-i-A\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L179-L319",
+   "indicator_id": "osr_total_target",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L179",
+    "value_ksh_m": 3110,
+    "printed": "Kshs.3.11 billion (24 per cent) generated as own-source revenue"
+   },
+   "claim_b": {
+    "observation_id": "L319",
+    "value_ksh_m": 3252.42,
+    "printed": "against a target of Kshs. 3,252,420,825"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q1",
+    "pdf_page": 2
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 5
+   },
+   "difference": {
+    "absolute_ksh_m": 142.42,
+    "pct_of_smaller": 4.58,
+    "b_minus_a_ksh_m": 142.42
+   },
+   "possible_basis_mismatch": [
+    "Basis as stated: A \"Original approved budget\"; B \"County: annual target (supplementary budget)\"."
    ],
    "status": "open",
    "resolution": null,
@@ -9579,6 +10859,220 @@
    },
    "possible_basis_mismatch": [
     "Scope differs: county government (executive and assembly) against not stated (the chapter says Executive and Assembly; the quarterly lines say County Executive only)."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L225-L325",
+   "indicator_id": "expenditure_development",
+   "period": "FY 2019/20",
+   "claim_a": {
+    "observation_id": "L225",
+    "value_ksh_m": 2155.01,
+    "printed": null
+   },
+   "claim_b": {
+    "observation_id": "L325",
+    "value_ksh_m": 2120,
+    "printed": "compared to a similar period in FY 2019/20 when the County spent Kshs.2.12 billion"
+   },
+   "source_a": {
+    "source_id": "siaya-brop-2019-20",
+    "pdf_page": 20
+   },
+   "source_b": {
+    "source_id": "cob-report-2020-21",
+    "pdf_page": 376
+   },
+   "difference": {
+    "absolute_ksh_m": 35.01,
+    "pct_of_smaller": 1.65,
+    "b_minus_a_ksh_m": -35.01
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: county against controller_of_budget.",
+    "Basis as stated: A \"not stated\"; B \"CoB FY 2020/21 report, prior-year comparison\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L236-L303",
+   "indicator_id": "expenditure_total",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L236",
+    "value_ksh_m": 7180,
+    "printed": "The County spent Kshs.7.18 billion on development and recurrent programmes"
+   },
+   "claim_b": {
+    "observation_id": "L303",
+    "value_ksh_m": 7500,
+    "printed": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q4",
+    "pdf_page": 6
+   },
+   "source_b": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 43
+   },
+   "difference": {
+    "absolute_ksh_m": 320,
+    "pct_of_smaller": 4.46,
+    "b_minus_a_ksh_m": 320
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: county against controller_of_budget.",
+    "Basis as stated: A \"Paid; Table 0.3 adds accrued expenses of KSh 324.22m\"; B \"CoB expenditure\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L236-L312",
+   "indicator_id": "expenditure_total",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L236",
+    "value_ksh_m": 7180,
+    "printed": "The County spent Kshs.7.18 billion on development and recurrent programmes"
+   },
+   "claim_b": {
+    "observation_id": "L312",
+    "value_ksh_m": 9605.52,
+    "printed": "Total actual expenditure for the period under review amounted to Kshs. 9,605,521,598.65 against a planned budget of Kshs. 13,377,987,507.00 representing a performance of 71.80 percent"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q4",
+    "pdf_page": 6
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 21
+   },
+   "difference": {
+    "absolute_ksh_m": 2425.52,
+    "pct_of_smaller": 33.78,
+    "b_minus_a_ksh_m": 2425.52
+   },
+   "possible_basis_mismatch": [
+    "Basis as stated: A \"Paid; Table 0.3 adds accrued expenses of KSh 324.22m\"; B \"County Treasury actual\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L303-L312",
+   "indicator_id": "expenditure_total",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L303",
+    "value_ksh_m": 7500,
+    "printed": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73"
+   },
+   "claim_b": {
+    "observation_id": "L312",
+    "value_ksh_m": 9605.52,
+    "printed": "Total actual expenditure for the period under review amounted to Kshs. 9,605,521,598.65 against a planned budget of Kshs. 13,377,987,507.00 representing a performance of 71.80 percent"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 43
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 21
+   },
+   "difference": {
+    "absolute_ksh_m": 2105.52,
+    "pct_of_smaller": 28.07,
+    "b_minus_a_ksh_m": 2105.52
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: controller_of_budget against county.",
+    "Basis as stated: A \"CoB expenditure\"; B \"County Treasury actual\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L238-L313",
+   "indicator_id": "expenditure_development",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L238",
+    "value_ksh_m": 1600,
+    "printed": "Kshs.1.60 billion for development programmes"
+   },
+   "claim_b": {
+    "observation_id": "L313",
+    "value_ksh_m": 2781.58,
+    "printed": "DEV 6,028,209,526.00 2,781,583,267.00 -3,246,626,259 46.14%"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q4",
+    "pdf_page": 6
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 21
+   },
+   "difference": {
+    "absolute_ksh_m": 1181.58,
+    "pct_of_smaller": 73.85,
+    "b_minus_a_ksh_m": 1181.58
+   },
+   "possible_basis_mismatch": [
+    "Basis as stated: A \"not stated\"; B \"County Treasury actual\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L305-L313",
+   "indicator_id": "expenditure_development",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L305",
+    "value_ksh_m": 1600,
+    "printed": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73"
+   },
+   "claim_b": {
+    "observation_id": "L313",
+    "value_ksh_m": 2781.58,
+    "printed": "DEV 6,028,209,526.00 2,781,583,267.00 -3,246,626,259 46.14%"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 43
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 21
+   },
+   "difference": {
+    "absolute_ksh_m": 1181.58,
+    "pct_of_smaller": 73.85,
+    "b_minus_a_ksh_m": 1181.58
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: controller_of_budget against county.",
+    "Basis as stated: A \"CoB expenditure\"; B \"County Treasury actual\"."
    ],
    "status": "open",
    "resolution": null,
@@ -12458,6 +13952,77 @@
    "resolution": null,
    "reviewer": null,
    "reviewed_at": null
+  },
+  {
+   "case_id": "D-L299-L314",
+   "indicator_id": "wage_bill",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L299",
+    "value_ksh_m": 4440,
+    "printed": "The expenditure on employee compensation totalled Kshs.4.44 billion"
+   },
+   "claim_b": {
+    "observation_id": "L314",
+    "value_ksh_m": 4188.77,
+    "printed": "PE 3,862,117,174.00 4,188,772,518.52 326,655,345 108%"
+   },
+   "source_a": {
+    "source_id": "GOV-02-FY2025-26-Q4",
+    "pdf_page": 7
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 21
+   },
+   "difference": {
+    "absolute_ksh_m": 251.23,
+    "pct_of_smaller": 6,
+    "b_minus_a_ksh_m": -251.23
+   },
+   "possible_basis_mismatch": [
+    "Basis as stated: A \"Compensation of employees, including accrued\"; B \"County: personnel emoluments\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-L311-L314",
+   "indicator_id": "wage_bill",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "L311",
+    "value_ksh_m": 4435.93,
+    "printed": "Siaya 4,435.93 1,469.76 5,905.69 1,599.04 7,504.73"
+   },
+   "claim_b": {
+    "observation_id": "L314",
+    "value_ksh_m": 4188.77,
+    "printed": "PE 3,862,117,174.00 4,188,772,518.52 326,655,345 108%"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 43
+   },
+   "source_b": {
+    "source_id": "siaya-cbrop-2025-26",
+    "pdf_page": 21
+   },
+   "difference": {
+    "absolute_ksh_m": 247.16,
+    "pct_of_smaller": 5.9,
+    "b_minus_a_ksh_m": -247.16
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: controller_of_budget against county.",
+    "Basis as stated: A \"CoB: compensation to employees\"; B \"County: personnel emoluments\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
   }
  ],
  "completeness": {
@@ -12561,8 +14126,8 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 3,
-    "n_sources": 3,
+    "n_values": 4,
+    "n_sources": 4,
     "source_kinds": [
      "controller_of_budget",
      "county"
@@ -12619,11 +14184,12 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The Controller of Budget annual report for FY 2019/20 was not found (Parliament library and cob.go.ke, 21 Nov 2026). Only the county BROP FY 2019/20, the Senate CPAC report and comparison figures in later reports are held."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "county"
+    ],
+    "missing": false
    },
    "2020/21": {
     "n_values": 1,
@@ -12668,9 +14234,10 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 2,
-    "n_sources": 2,
+    "n_values": 3,
+    "n_sources": 3,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false
@@ -12725,11 +14292,12 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The Controller of Budget annual report for FY 2019/20 was not found (Parliament library and cob.go.ke, 21 Nov 2026). Only the county BROP FY 2019/20, the Senate CPAC report and comparison figures in later reports are held."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "county"
+    ],
+    "missing": false
    },
    "2020/21": {
     "n_values": 1,
@@ -12774,9 +14342,10 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 2,
-    "n_sources": 2,
+    "n_values": 3,
+    "n_sources": 3,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false
@@ -13254,11 +14823,12 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The Controller of Budget annual report for FY 2019/20 was not found (Parliament library and cob.go.ke, 21 Nov 2026). Only the county BROP FY 2019/20, the Senate CPAC report and comparison figures in later reports are held."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "county"
+    ],
+    "missing": false
    },
    "2020/21": {
     "n_values": 1,
@@ -13303,9 +14873,10 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 2,
-    "n_sources": 2,
+    "n_values": 4,
+    "n_sources": 4,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false
@@ -13406,19 +14977,22 @@
     "missing": false
    },
    "2024/25": {
-    "n_values": 5,
-    "n_sources": 4,
+    "n_values": 6,
+    "n_sources": 5,
     "source_kinds": [
      "controller_of_budget",
-     "county"
+     "county",
+     "other"
     ],
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 5,
+    "n_sources": 4,
     "source_kinds": [
-     "county"
+     "controller_of_budget",
+     "county",
+     "other"
     ],
     "missing": false
    }
@@ -13513,9 +15087,10 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 3,
+    "n_sources": 3,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false
@@ -13612,9 +15187,10 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 3,
+    "n_sources": 3,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false
@@ -13720,9 +15296,10 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 3,
+    "n_sources": 3,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false
@@ -13827,9 +15404,10 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 2,
+    "n_sources": 2,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false
@@ -13884,9 +15462,10 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 2,
+    "n_sources": 2,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false
@@ -13934,9 +15513,10 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 3,
+    "n_sources": 3,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false
@@ -14048,11 +15628,12 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "Only the county fourth-quarter report and Controller of Budget in-year reports were found; the Controller of Budget annual report for FY 2025/26 (Part 2, Siaya) is not in the Parliament library."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "controller_of_budget"
+    ],
+    "missing": false
    }
   },
   "wage_bill": {
@@ -14154,9 +15735,10 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 3,
+    "n_sources": 3,
     "source_kinds": [
+     "controller_of_budget",
      "county"
     ],
     "missing": false

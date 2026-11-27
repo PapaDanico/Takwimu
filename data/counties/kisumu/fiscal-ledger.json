@@ -18,7 +18,7 @@
   "not_used": [
    "Controller of Budget in-year reports for FY 2025/26 (first quarter; first nine months, Part I): partial-year figures, not comparable with full years; the FY 2025/26 annual report (August 2026) is used instead.",
    "Senate review of the Controller of Budget FY 2019/20 report (repo): it is a review of the report, not the report, and no Kisumu table was located in it.",
-   "County Fiscal Strategy Papers: their prior-year actuals repeat the CBROP figures and were not transcribed in Phase 1.",
+   "County Fiscal Strategy Papers: their prior-year actuals repeat the CBROP figures and were not transcribed in Phase 1. Exception (27 Nov 2026): the CFSP 2021 is used for FY 2019/20 (its quotation of the Controller of Budget report for that year, the OSR target and the debt stock), because the CoB report itself is not held.",
    "Duplicate copies of the same CBROP (identical SHA-256 or a draft of the same year): KIPPRA-CBROP-2015, COUNTY-CBROP-2015-SITE, COUNTY-CBROP-2021-COMPILED, COUNTY-CBROP-FY2021-22-DOCUMENT, COUNTY-CBROP-2024-FY2023-24-SCAN (same file as the KIPPRA copy used), COUNTY-CBROP-2024-FY2023-24-DRAFT, KIPPRA-CBROP-2018-V2, KIPPRA-CBROP-2024 and the DOCX drafts are versions of the papers cited and are listed in the research register, not cited here.",
    "County budget implementation reports (BIRR) and the county pending-bills schedule at 30 June 2025: held, not transcribed in Phase 1."
   ]
@@ -255,16 +255,6 @@
    "sha256": "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
    "licence": "Controller of Budget public report (Parliament library copy); cite and link; redistribution not licensed. Shared all-county record: the same document id as data/source-manifest.json (not duplicated)."
   },
-  "COB-ANNUAL-FY2025-26": {
-   "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
-   "publisher": "Office of the Controller of Budget",
-   "kind": "controller_of_budget",
-   "publication_date": "August 2026",
-   "reference_period": "FY 2025/26 (full year)",
-   "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
-   "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
-   "licence": "Controller of Budget public report (Parliament library copy); cite and link; redistribution not licensed."
-  },
   "KIPPRA-CBROP-2014": {
    "title": "Kisumu City County Budget Review and Outlook Paper 2014",
    "publisher": "County Government of Kisumu (Treasury / Finance, Economic Planning and ICT) (hosted by KIPPRA repository)",
@@ -364,6 +354,36 @@
    "url": "https://www.kisumu.go.ke/wp-content/uploads/CBROP-FY-2025-2026.pdf",
    "sha256": "a2479d120f54344089001a81c4c155c9a849e022e95deac5658d36f8be7c60ff",
    "licence": "County Government of Kisumu document; no reuse licence stated. Cite figures with body, document and page; do not redistribute the PDF (Takwimu /terms/ practice, as for Siaya)."
+  },
+  "cob-report-2025-26": {
+   "title": "County Government Budget Implementation Review Report for the Financial Year 2025-2026 (August 2026)",
+   "publisher": "Office of the Controller of Budget",
+   "kind": "controller_of_budget",
+   "publication_date": "August 2026",
+   "reference_period": "FY 2025/26 (full year)",
+   "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/18137d92-306c-4c84-9a99-9cc665b9834f/content",
+   "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "licence": "Controller of Budget public report (Parliament library copy); cite and link; redistribution not licensed. Shared all-county record: the same document id as data/source-manifest.json (not duplicated)."
+  },
+  "KIPPRA-CFSP-2021": {
+   "title": "Kisumu City County Fiscal Strategy Paper 2021",
+   "publisher": "County Government of Kisumu (Treasury / Finance, Economic Planning and ICT) (hosted by KIPPRA repository)",
+   "kind": "county",
+   "publication_date": "2021",
+   "reference_period": "CFSP 2021, for FY 2021/22; reviews FY 2019/20 (prior-year actuals, debt stock at 30 June 2020)",
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/312156c9-d1e5-4afe-abb1-b0b86998ba91/content",
+   "sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+   "licence": "County document hosted by the KIPPRA repository; no reuse licence stated. Cite with body and page; do not redistribute the PDF."
+  },
+  "OAG-EXEC-FY2019-20": {
+   "title": "Report of the Auditor General on County Executive of Kisumu for the year ended 30 June 2020",
+   "publisher": "Office of the Auditor-General",
+   "kind": "auditor_general",
+   "publication_date": "2022-02-16 (library record)",
+   "reference_period": "FY 2019/20",
+   "url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/1447a52c-f2bc-46b9-aba5-17d836968856/content",
+   "sha256": "20629f1f492a6bc0a435acbf2ead2f481489b8bd6344604997df6ea7ec2c14a8",
+   "licence": "Public audit report tabled in Parliament (Parliament library copy); cite and link; redistribution not licensed."
   }
  },
  "observations": [
@@ -5982,7 +6002,7 @@
    "fy": "2025/26",
    "value": 16982,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2025/26 (Kisumu row)",
    "pdf_page": 44,
@@ -6000,7 +6020,7 @@
    "fy": "2025/26",
    "value": 10272,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2025/26 (Kisumu row)",
    "pdf_page": 44,
@@ -6018,7 +6038,7 @@
    "fy": "2025/26",
    "value": 6710,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2025/26 (Kisumu row)",
    "pdf_page": 44,
@@ -6037,7 +6057,7 @@
    "fy": "2025/26",
    "value": 10095,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2025/26 (Kisumu row)",
    "pdf_page": 44,
@@ -6054,7 +6074,7 @@
    "fy": "2025/26",
    "value": 8356,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2025/26 (Kisumu row)",
    "pdf_page": 44,
@@ -6071,7 +6091,7 @@
    "fy": "2025/26",
    "value": 1739,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2025/26 (Kisumu row)",
    "pdf_page": 44,
@@ -6088,7 +6108,7 @@
    "fy": "2025/26",
    "value": 81.35,
    "unit": "%",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2025/26 (Kisumu row)",
    "pdf_page": 44,
@@ -6105,7 +6125,7 @@
    "fy": "2025/26",
    "value": 25.92,
    "unit": "%",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2025/26 (Kisumu row)",
    "pdf_page": 44,
@@ -6122,7 +6142,7 @@
    "fy": "2025/26",
    "value": 59.45,
    "unit": "%",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Table 2.5: County Budget Allocation, Expenditure, and Absorption Rate for FY 2025/26 (Kisumu row)",
    "pdf_page": 44,
@@ -6139,7 +6159,7 @@
    "fy": "2025/26",
    "value": 8.9,
    "unit": "KSh billion",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 County Government of Kisumu",
    "pdf_page": 350,
@@ -6162,7 +6182,7 @@
    "fy": "2025/26",
    "value": 8.9,
    "unit": "KSh billion",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 County Government of Kisumu",
    "pdf_page": 350,
@@ -6185,7 +6205,7 @@
    "fy": "2025/26",
    "value": 2.89,
    "unit": "KSh billion",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 County Government of Kisumu",
    "pdf_page": 350,
@@ -6208,7 +6228,7 @@
    "fy": "2025/26",
    "value": 1.31,
    "unit": "KSh billion",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 County Government of Kisumu",
    "pdf_page": 350,
@@ -6231,7 +6251,7 @@
    "fy": "2025/26",
    "value": 865.75,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 County Government of Kisumu",
    "pdf_page": 350,
@@ -6255,7 +6275,7 @@
    "fy": "2025/26",
    "value": 800,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 County Government of Kisumu",
    "pdf_page": 350,
@@ -6279,7 +6299,7 @@
    "fy": "2025/26",
    "value": 1.47,
    "unit": "KSh billion",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 County Government of Kisumu",
    "pdf_page": 350,
@@ -6303,7 +6323,7 @@
    "fy": "2025/26",
    "value": 693.55,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 County Government of Kisumu",
    "pdf_page": 350,
@@ -6327,7 +6347,7 @@
    "fy": "2025/26",
    "value": 773.42,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 County Government of Kisumu",
    "pdf_page": 350,
@@ -6351,7 +6371,7 @@
    "fy": "2025/26",
    "value": 5.54,
    "unit": "KSh billion",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 Expenditure on Compensation of Employees",
    "pdf_page": 355,
@@ -6375,7 +6395,7 @@
    "fy": "2025/26",
    "value": 850.47,
    "unit": "KSh million",
-   "source_id": "COB-ANNUAL-FY2025-26",
+   "source_id": "cob-report-2025-26",
    "source_kind": "controller_of_budget",
    "table": "Section 3.17 Key Observations and Recommendations",
    "pdf_page": 367,
@@ -6430,6 +6450,461 @@
    "confidence": 4,
    "scope": "county government (executive and assembly)",
    "note": null
+  },
+  {
+   "id": "K272",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_kind": "county",
+   "read_method": "text",
+   "confidence": 3,
+   "measure": "expenditure_total",
+   "fy": "2019/20",
+   "value": 9.12,
+   "unit": "KSh billion",
+   "source_type": "official mirror",
+   "table": "Section 3.2.3.2 County Governments Budget Absorption Rate (quoting the CoB report for FY 2019/20)",
+   "pdf_page": 58,
+   "original_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": "The county's own figure (CBROP, K115; CFSP p.57) is 9,053,376,663.",
+   "basis": "County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)"
+  },
+  {
+   "id": "K273",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_kind": "county",
+   "read_method": "text",
+   "confidence": 3,
+   "measure": "expenditure_recurrent",
+   "fy": "2019/20",
+   "value": 6.74,
+   "unit": "KSh billion",
+   "source_type": "official mirror",
+   "table": "Section 3.2.3.2 County Governments Budget Absorption Rate (quoting the CoB report for FY 2019/20)",
+   "pdf_page": 58,
+   "original_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": "Annex 1 Table 14 (PDF p.78) prints the same CoB department table total: expenditure 6,740.83 recurrent, 2,379.77 development.",
+   "basis": "County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)"
+  },
+  {
+   "id": "K274",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_kind": "county",
+   "read_method": "text",
+   "confidence": 3,
+   "measure": "expenditure_development",
+   "fy": "2019/20",
+   "value": 2.38,
+   "unit": "KSh billion",
+   "source_type": "official mirror",
+   "table": "Section 3.2.3.2 County Governments Budget Absorption Rate (quoting the CoB report for FY 2019/20)",
+   "pdf_page": 58,
+   "original_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": "Equals the CoB FY 2020/21 report's look-back figure (K119).",
+   "basis": "County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)"
+  },
+  {
+   "id": "K275",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_kind": "county",
+   "read_method": "text",
+   "confidence": 3,
+   "measure": "absorption_development_pct",
+   "fy": "2019/20",
+   "value": 58.2,
+   "unit": "%",
+   "source_type": "official mirror",
+   "table": "Section 3.2.3.2 County Governments Budget Absorption Rate (quoting the CoB report for FY 2019/20)",
+   "pdf_page": 58,
+   "original_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": null,
+   "basis": "County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)"
+  },
+  {
+   "id": "K276",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_kind": "county",
+   "read_method": "text",
+   "confidence": 3,
+   "measure": "absorption_recurrent_pct",
+   "fy": "2019/20",
+   "value": 82.9,
+   "unit": "%",
+   "source_type": "official mirror",
+   "table": "Section 3.2.3.2 County Governments Budget Absorption Rate (quoting the CoB report for FY 2019/20)",
+   "pdf_page": 58,
+   "original_text": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized.",
+   "note": null,
+   "basis": "County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)"
+  },
+  {
+   "id": "K277",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_kind": "county",
+   "read_method": "text",
+   "confidence": 4,
+   "measure": "osr_total_actual",
+   "fy": "2019/20",
+   "value": 804.387972,
+   "unit": "KSh million",
+   "source_type": "primary",
+   "table": "Section 3.2.3.1 Own Source Revenue performance (text)",
+   "pdf_page": 56,
+   "original_text": "Ksh 804,387,972 against a target of Ksh 1,438,478,604 representing 55.9% of the target",
+   "note": "Agrees with the CoB FY 2020/21 look-back (804.39 million, K118). The county CBROP (K20 draft) prints the same total; its four quarters sum to 804,387,672 (gap research E).",
+   "basis": "County Treasury actual"
+  },
+  {
+   "id": "K278",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_kind": "county",
+   "read_method": "text",
+   "confidence": 4,
+   "measure": "osr_total_target",
+   "fy": "2019/20",
+   "value": 1438.478604,
+   "unit": "KSh million",
+   "source_type": "primary",
+   "table": "Section 3.2.3.1 Own Source Revenue performance (text)",
+   "pdf_page": 56,
+   "original_text": "Ksh 804,387,972 against a target of Ksh 1,438,478,604 representing 55.9% of the target",
+   "note": null,
+   "basis": "County: annual own-source revenue target"
+  },
+  {
+   "id": "K279",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "measure": "pending_bills_close",
+   "fy": "2019/20",
+   "value": 2309.494252,
+   "unit": "KSh million",
+   "source_id": "OAG-EXEC-FY2019-20",
+   "source_kind": "auditor_general",
+   "source_type": "primary",
+   "table": "Report on Lawfulness and Effectiveness in Use of Public Resources: Pending Bills",
+   "pdf_page": 39,
+   "read_method": "text",
+   "original_text": "Note 28(1) - other important disclosures on pending accounts payables indicates that the outstanding balance as at 30 June, 2020 was Kshs.2,309,494,252.",
+   "confidence": 3,
+   "note": "Library OCR text layer.",
+   "basis": "Auditor-General: pending accounts payable at 30 June 2020 as disclosed in the financial statements (County Executive)",
+   "stock_point": "closing",
+   "as_at": "2020-06-30",
+   "accounting_basis": "as reported"
+  },
+  {
+   "id": "K280",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_kind": "county",
+   "read_method": "text",
+   "confidence": 3,
+   "measure": "pending_bills_close",
+   "fy": "2019/20",
+   "value": 2621.421193,
+   "unit": "KSh million",
+   "source_type": "primary",
+   "table": "Debt and pending bills (text and table, Total row)",
+   "pdf_page": 67,
+   "original_text": "The total stock of debt as at 30th June, 2020 stood at Kshs. 2,621,421,192.93. The accumulated debt of Kshs.2,621,421,192.93 has been occasioned by revenue shortfalls over the years since 2013/14.",
+   "note": "Of which the FY 2019/20 part is 1,733,921,288.16 (table Total row). A wider definition than year-end pending bills: the accumulated stock of debt since FY 2013/14.",
+   "basis": "County: total stock of debt including pending bills (definition differs from the Auditor-General's pending accounts payable)",
+   "stock_point": "closing",
+   "as_at": "2020-06-30",
+   "accounting_basis": "as reported"
+  },
+  {
+   "id": "K281",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "measure": "wage_bill",
+   "fy": "2019/20",
+   "value": 4261.475456,
+   "unit": "KSh million",
+   "source_id": "OAG-EXEC-FY2019-20",
+   "source_kind": "auditor_general",
+   "source_type": "primary",
+   "table": "Non-compliance with the Law on Fiscal Responsibility - Wage Bill",
+   "pdf_page": 43,
+   "read_method": "text",
+   "original_text": "the total compensation of employees amounted to Kshs.4,261 ,475,456 which is 49% of total receipts of Kshs.8,733,502,114",
+   "confidence": 3,
+   "note": "Library OCR text layer (a space inside the figure as printed).",
+   "basis": "Auditor-General: compensation of employees (County Executive statements of receipts and payments)"
+  },
+  {
+   "id": "K282",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "osr_total_actual",
+   "fy": "2025/26",
+   "value": 1803.5,
+   "unit": "KSh million",
+   "table": "Table 2.1: Own Source Revenue Collection in FY 2025/26 (Kisumu row)",
+   "pdf_page": 38,
+   "original_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": "Ordinary 901.05 plus FIF/A-i-A 902.45; 49.77 per cent of the 3,623.88 target. The same report's Kisumu chapter (PDF p.350) gives 1.47 billion (K265): an internal conflict.",
+   "basis": "CoB Table 2.1: total own-source revenue including FIF/A-i-A",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "K283",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "osr_ordinary_actual",
+   "fy": "2025/26",
+   "value": 901.05,
+   "unit": "KSh million",
+   "table": "Table 2.1 (Kisumu row)",
+   "pdf_page": 38,
+   "original_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": null,
+   "basis": "CoB Table 2.1: ordinary own-source revenue",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "K284",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "osr_fif_aia_actual",
+   "fy": "2025/26",
+   "value": 902.45,
+   "unit": "KSh million",
+   "table": "Table 2.1 (Kisumu row)",
+   "pdf_page": 38,
+   "original_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": null,
+   "basis": "CoB Table 2.1: FIF/A-i-A",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "K285",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "osr_total_target",
+   "fy": "2025/26",
+   "value": 3623.88,
+   "unit": "KSh million",
+   "table": "Table 2.1 (Kisumu row)",
+   "pdf_page": 38,
+   "original_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": "Ordinary 865.75 plus FIF/A-i-A 2,758.13.",
+   "basis": "CoB Table 2.1: annual target including FIF/A-i-A",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "K286",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "osr_ordinary_target",
+   "fy": "2025/26",
+   "value": 865.75,
+   "unit": "KSh million",
+   "table": "Table 2.1 (Kisumu row)",
+   "pdf_page": 38,
+   "original_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": null,
+   "basis": "CoB Table 2.1: ordinary target",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "K287",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "osr_fif_aia_target",
+   "fy": "2025/26",
+   "value": 2758.13,
+   "unit": "KSh million",
+   "table": "Table 2.1 (Kisumu row)",
+   "pdf_page": 38,
+   "original_text": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77",
+   "note": "The Kisumu chapter (PDF p.350) gives FIF of 800.00 million in the financing plan (K264).",
+   "basis": "CoB Table 2.1: FIF/A-i-A target",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 38."
+   }
+  },
+  {
+   "id": "K288",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "pending_bills_recurrent_close",
+   "fy": "2025/26",
+   "value": 569.5,
+   "unit": "KSh million",
+   "table": "Table 2.10: Trade Payables for the Counties as of 30 June 2026 (Kisumu row, County Executive recurrent)",
+   "pdf_page": 53,
+   "original_text": "Kisumu* 569.50 280.97 850.47 - - 0.00 850.47 16,982.00 5.01",
+   "note": "The row carries a footnote mark (Kisumu*).",
+   "stock_point": "closing",
+   "as_at": "2026-06-30",
+   "accounting_basis": "as reported",
+   "basis": "CoB FY 2025/26 Table 2.10: \"trade payables\" (the report uses this term in place of pending bills)",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 53."
+   }
+  },
+  {
+   "id": "K289",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "pending_bills_development_close",
+   "fy": "2025/26",
+   "value": 280.97,
+   "unit": "KSh million",
+   "table": "Table 2.10 (Kisumu row, County Executive development)",
+   "pdf_page": 53,
+   "original_text": "Kisumu* 569.50 280.97 850.47 - - 0.00 850.47 16,982.00 5.01",
+   "note": null,
+   "stock_point": "closing",
+   "as_at": "2026-06-30",
+   "accounting_basis": "as reported",
+   "basis": "CoB FY 2025/26 Table 2.10: \"trade payables\" (the report uses this term in place of pending bills)",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 53."
+   }
+  },
+  {
+   "id": "K290",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "pending_bills_close",
+   "fy": "2025/26",
+   "value": 850.47,
+   "unit": "KSh million",
+   "table": "Table 2.10 (Kisumu row, total; County Assembly 0.00)",
+   "pdf_page": 53,
+   "original_text": "Kisumu* 569.50 280.97 850.47 - - 0.00 850.47 16,982.00 5.01",
+   "note": "Equals the key observations (PDF p.367, K269).",
+   "stock_point": "closing",
+   "as_at": "2026-06-30",
+   "accounting_basis": "as reported",
+   "basis": "CoB FY 2025/26 Table 2.10: \"trade payables\" (the report uses this term in place of pending bills)",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 53."
+   }
+  },
+  {
+   "id": "K291",
+   "scope": "county government (executive and assembly)",
+   "printed_page": null,
+   "source_id": "cob-report-2025-26",
+   "source_kind": "controller_of_budget",
+   "source_type": "primary",
+   "read_method": "ocr-tesseract",
+   "confidence": 3,
+   "measure": "wage_bill",
+   "fy": "2025/26",
+   "value": 5542,
+   "unit": "KSh million",
+   "table": "Table 2.4: Expenditure by Major Economic Classification in FY 2025/26 (Kisumu row, compensation to employees)",
+   "pdf_page": 43,
+   "original_text": "Kisumu 5,542.00 2,814.00 8,356.00 1,739.00 10,095.00",
+   "note": null,
+   "basis": "CoB Table 2.4: compensation to employees",
+   "second_reading": {
+    "method": "tesseract 5, 400 dpi greyscale, page segmentation mode 4 (second, independent reading on 27 Nov 2026)",
+    "first_method": "tesseract 5, 350 dpi (450 dpi for PDF pp. 43-44) greyscale, mode 4 or 6",
+    "agrees": true,
+    "note": "Both readings give the same figure on PDF p. 43. First reading at 450 dpi, mode 6."
+   }
   }
  ],
  "discrepancies": [
@@ -6830,6 +7305,41 @@
    "reviewed_at": null
   },
   {
+   "case_id": "D-K116-K273",
+   "indicator_id": "expenditure_recurrent",
+   "period": "FY 2019/20",
+   "claim_a": {
+    "observation_id": "K116",
+    "value_ksh_m": 6827.14,
+    "printed": "Recurrent 8,129,207,638 6,827,139,101 1,302,068,537"
+   },
+   "claim_b": {
+    "observation_id": "K273",
+    "value_ksh_m": 6740,
+    "printed": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized."
+   },
+   "source_a": {
+    "source_id": "COUNTY-CBROP-2020-FY2019-20",
+    "pdf_page": 22
+   },
+   "source_b": {
+    "source_id": "KIPPRA-CFSP-2021",
+    "pdf_page": 58
+   },
+   "difference": {
+    "absolute_ksh_m": 87.14,
+    "pct_of_smaller": 1.29,
+    "b_minus_a_ksh_m": -87.14
+   },
+   "possible_basis_mismatch": [
+    "Basis as stated: A \"County Treasury actual\"; B \"County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
    "case_id": "D-K117-K119",
    "indicator_id": "expenditure_development",
    "period": "FY 2019/20",
@@ -6859,6 +7369,41 @@
    "possible_basis_mismatch": [
     "Different publishers: county against controller_of_budget.",
     "Basis as stated: A \"County Treasury actual\"; B \"CoB FY 2020/21 report, prior-year comparison\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-K117-K274",
+   "indicator_id": "expenditure_development",
+   "period": "FY 2019/20",
+   "claim_a": {
+    "observation_id": "K117",
+    "value_ksh_m": 2226.24,
+    "printed": "Development 4,086,750,730 2,226,237,562 1,860,513,168"
+   },
+   "claim_b": {
+    "observation_id": "K274",
+    "value_ksh_m": 2380,
+    "printed": "a total of Kshs.9.12 billion was spent on development and recurrent activities and represented 99.3 per cent of the total funds released from the CRF account. The expenditure comprised of Kshs.2.38 billion and Kshs.6.74 billion on development and recurrent activities respectively. Expenditure on development programmes represented an absorption rate of 58.2 per cent while on recurrent expenditure an absorption rate of 82.9 per cent was realized."
+   },
+   "source_a": {
+    "source_id": "COUNTY-CBROP-2020-FY2019-20",
+    "pdf_page": 22
+   },
+   "source_b": {
+    "source_id": "KIPPRA-CFSP-2021",
+    "pdf_page": 58
+   },
+   "difference": {
+    "absolute_ksh_m": 153.76,
+    "pct_of_smaller": 6.91,
+    "b_minus_a_ksh_m": 153.76
+   },
+   "possible_basis_mismatch": [
+    "Basis as stated: A \"County Treasury actual\"; B \"County CFSP 2021 quoting the Controller of Budget's County Budget Implementation Report for 2019/2020 (that report itself is not held)\"."
    ],
    "status": "open",
    "resolution": null,
@@ -7459,7 +8004,7 @@
     "printed": "The total expenditure for the period under review amounted to Ksh 10,523,865,026"
    },
    "source_a": {
-    "source_id": "COB-ANNUAL-FY2025-26",
+    "source_id": "cob-report-2025-26",
     "pdf_page": 44
    },
    "source_b": {
@@ -7474,6 +8019,186 @@
    "possible_basis_mismatch": [
     "Different publishers: controller_of_budget against county.",
     "Basis as stated: A \"not stated\"; B \"County Treasury actual\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-K264-K287",
+   "indicator_id": "osr_fif_aia_target",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "K264",
+    "value_ksh_m": 800,
+    "printed": "Facility Improvement Financing of Kshs.800.00 million (4.71 per cent)"
+   },
+   "claim_b": {
+    "observation_id": "K287",
+    "value_ksh_m": 2758.13,
+    "printed": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 350
+   },
+   "source_b": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 38
+   },
+   "difference": {
+    "absolute_ksh_m": 1958.13,
+    "pct_of_smaller": 244.77,
+    "b_minus_a_ksh_m": 1958.13
+   },
+   "possible_basis_mismatch": [
+    "Both values are in the same document (internal inconsistency).",
+    "Basis as stated: A \"CoB: FIF in the financing plan (A-i-A of Kshs.91.18 million listed separately)\"; B \"CoB Table 2.1: FIF/A-i-A target\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-K265-K282",
+   "indicator_id": "osr_total_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "K265",
+    "value_ksh_m": 1470,
+    "printed": "own-source revenue (OSR) including FIF of Kshs.1.47 billion"
+   },
+   "claim_b": {
+    "observation_id": "K282",
+    "value_ksh_m": 1803.5,
+    "printed": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 350
+   },
+   "source_b": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 38
+   },
+   "difference": {
+    "absolute_ksh_m": 333.5,
+    "pct_of_smaller": 22.69,
+    "b_minus_a_ksh_m": 333.5
+   },
+   "possible_basis_mismatch": [
+    "Both values are in the same document (internal inconsistency).",
+    "Basis as stated: A \"CoB: own-source revenue including FIF\"; B \"CoB Table 2.1: total own-source revenue including FIF/A-i-A\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-K266-K284",
+   "indicator_id": "osr_fif_aia_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "K266",
+    "value_ksh_m": 693.55,
+    "printed": "Facilities Improvement Financing (FIF) of Kshs.693.55 million"
+   },
+   "claim_b": {
+    "observation_id": "K284",
+    "value_ksh_m": 902.45,
+    "printed": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 350
+   },
+   "source_b": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 38
+   },
+   "difference": {
+    "absolute_ksh_m": 208.9,
+    "pct_of_smaller": 30.12,
+    "b_minus_a_ksh_m": 208.9
+   },
+   "possible_basis_mismatch": [
+    "Both values are in the same document (internal inconsistency).",
+    "Basis as stated: A \"CoB: FIF part of own-source revenue\"; B \"CoB Table 2.1: FIF/A-i-A\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-K267-K283",
+   "indicator_id": "osr_ordinary_actual",
+   "period": "FY 2025/26",
+   "claim_a": {
+    "observation_id": "K267",
+    "value_ksh_m": 773.42,
+    "printed": "and Kshs.773.42 million from other OSR sources"
+   },
+   "claim_b": {
+    "observation_id": "K283",
+    "value_ksh_m": 901.05,
+    "printed": "Kisumu 865.75 2,758.13 3,623.88 901.05 902.45 1,803.50 104.08 32.72 49.77"
+   },
+   "source_a": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 350
+   },
+   "source_b": {
+    "source_id": "cob-report-2025-26",
+    "pdf_page": 38
+   },
+   "difference": {
+    "absolute_ksh_m": 127.63,
+    "pct_of_smaller": 16.5,
+    "b_minus_a_ksh_m": 127.63
+   },
+   "possible_basis_mismatch": [
+    "Both values are in the same document (internal inconsistency).",
+    "Basis as stated: A \"CoB: own-source revenue other than FIF\"; B \"CoB Table 2.1: ordinary own-source revenue\"."
+   ],
+   "status": "open",
+   "resolution": null,
+   "reviewer": null,
+   "reviewed_at": null
+  },
+  {
+   "case_id": "D-K279-K280",
+   "indicator_id": "pending_bills_close",
+   "period": "FY 2019/20",
+   "claim_a": {
+    "observation_id": "K279",
+    "value_ksh_m": 2309.49,
+    "printed": "Note 28(1) - other important disclosures on pending accounts payables indicates that the outstanding balance as at 30 June, 2020 was Kshs.2,309,494,252."
+   },
+   "claim_b": {
+    "observation_id": "K280",
+    "value_ksh_m": 2621.42,
+    "printed": "The total stock of debt as at 30th June, 2020 stood at Kshs. 2,621,421,192.93. The accumulated debt of Kshs.2,621,421,192.93 has been occasioned by revenue shortfalls over the years since 2013/14."
+   },
+   "source_a": {
+    "source_id": "OAG-EXEC-FY2019-20",
+    "pdf_page": 39
+   },
+   "source_b": {
+    "source_id": "KIPPRA-CFSP-2021",
+    "pdf_page": 67
+   },
+   "difference": {
+    "absolute_ksh_m": 311.93,
+    "pct_of_smaller": 13.51,
+    "b_minus_a_ksh_m": 311.93
+   },
+   "possible_basis_mismatch": [
+    "Different publishers: auditor_general against county.",
+    "Basis as stated: A \"Auditor-General: pending accounts payable at 30 June 2020 as disclosed in the financial statements (County Executive)\"; B \"County: total stock of debt including pending bills (definition differs from the Auditor-General's pending accounts payable)\"."
    ],
    "status": "open",
    "resolution": null,
@@ -8224,11 +8949,12 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The Controller of Budget annual report for FY 2019/20 is not held: it is only on cob.go.ke, which blocks automated download (manual download list item 6, docs/research/kisumu-2026-11-27/kisumu-coverage.md). For this year only the county Budget Review and Outlook Paper (September 2020, compiled final draft) and two prior-year figures in the FY 2020/21 report are held."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "county"
+    ],
+    "missing": false
    },
    "2020/21": {
     "n_values": 1,
@@ -8271,11 +8997,12 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "Not printed in the documents read for Phase 1 (Controller of Budget annual report: county section and all-county tables; county Budget Review and Outlook Paper); not filled."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "controller_of_budget"
+    ],
+    "missing": false
    }
   },
   "osr_total_actual": {
@@ -8322,10 +9049,11 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 2,
+    "n_sources": 2,
     "source_kinds": [
-     "controller_of_budget"
+     "controller_of_budget",
+     "county"
     ],
     "missing": false
    },
@@ -8371,7 +9099,7 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
+    "n_values": 2,
     "n_sources": 1,
     "source_kinds": [
      "controller_of_budget"
@@ -8461,7 +9189,7 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
+    "n_values": 2,
     "n_sources": 1,
     "source_kinds": [
      "controller_of_budget"
@@ -8551,7 +9279,7 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
+    "n_values": 2,
     "n_sources": 1,
     "source_kinds": [
      "controller_of_budget"
@@ -8604,8 +9332,8 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 2,
+    "n_sources": 2,
     "source_kinds": [
      "county"
     ],
@@ -8710,8 +9438,8 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 1,
-    "n_sources": 1,
+    "n_values": 2,
+    "n_sources": 2,
     "source_kinds": [
      "county"
     ],
@@ -8813,8 +9541,8 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 2,
-    "n_sources": 2,
+    "n_values": 3,
+    "n_sources": 3,
     "source_kinds": [
      "controller_of_budget",
      "county"
@@ -8912,11 +9640,13 @@
     "reason": "Printed only as recurrent and development parts (both held under the part measures); the report prints no total and the parts are not added."
    },
    "2019/20": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The Controller of Budget annual report for FY 2019/20 is not held: it is only on cob.go.ke, which blocks automated download (manual download list item 6, docs/research/kisumu-2026-11-27/kisumu-coverage.md). For this year only the county Budget Review and Outlook Paper (September 2020, compiled final draft) and two prior-year figures in the FY 2020/21 report are held."
+    "n_values": 2,
+    "n_sources": 2,
+    "source_kinds": [
+     "auditor_general",
+     "county"
+    ],
+    "missing": false
    },
    "2020/21": {
     "n_values": 0,
@@ -8958,7 +9688,7 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
+    "n_values": 2,
     "n_sources": 1,
     "source_kinds": [
      "controller_of_budget"
@@ -9010,11 +9740,12 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The Controller of Budget annual report for FY 2019/20 is not held: it is only on cob.go.ke, which blocks automated download (manual download list item 6, docs/research/kisumu-2026-11-27/kisumu-coverage.md). For this year only the county Budget Review and Outlook Paper (September 2020, compiled final draft) and two prior-year figures in the FY 2020/21 report are held."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "auditor_general"
+    ],
+    "missing": false
    },
    "2020/21": {
     "n_values": 1,
@@ -9057,7 +9788,7 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
+    "n_values": 2,
     "n_sources": 1,
     "source_kinds": [
      "controller_of_budget"
@@ -9147,7 +9878,7 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
+    "n_values": 2,
     "n_sources": 1,
     "source_kinds": [
      "controller_of_budget"
@@ -9237,7 +9968,7 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 1,
+    "n_values": 2,
     "n_sources": 1,
     "source_kinds": [
      "controller_of_budget"
@@ -9332,11 +10063,12 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The FY 2025/26 report gives the stock as trade payables with an ageing table (Table 3.268, p.366) that was not transcribed in Phase 1; only the total (850.47m) is held."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "controller_of_budget"
+    ],
+    "missing": false
    }
   },
   "pending_bills_development_close": {
@@ -9428,11 +10160,12 @@
     "missing": false
    },
    "2025/26": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The FY 2025/26 report gives the stock as trade payables with an ageing table (Table 3.268, p.366) that was not transcribed in Phase 1; only the total (850.47m) is held."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "controller_of_budget"
+    ],
+    "missing": false
    }
   },
   "absorption_recurrent_pct": {
@@ -9477,11 +10210,12 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The Controller of Budget annual report for FY 2019/20 is not held: it is only on cob.go.ke, which blocks automated download (manual download list item 6, docs/research/kisumu-2026-11-27/kisumu-coverage.md). For this year only the county Budget Review and Outlook Paper (September 2020, compiled final draft) and two prior-year figures in the FY 2020/21 report are held."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "county"
+    ],
+    "missing": false
    },
    "2020/21": {
     "n_values": 1,
@@ -9574,11 +10308,12 @@
     "missing": false
    },
    "2019/20": {
-    "n_values": 0,
-    "n_sources": 0,
-    "source_kinds": [],
-    "missing": true,
-    "reason": "The Controller of Budget annual report for FY 2019/20 is not held: it is only on cob.go.ke, which blocks automated download (manual download list item 6, docs/research/kisumu-2026-11-27/kisumu-coverage.md). For this year only the county Budget Review and Outlook Paper (September 2020, compiled final draft) and two prior-year figures in the FY 2020/21 report are held."
+    "n_values": 1,
+    "n_sources": 1,
+    "source_kinds": [
+     "county"
+    ],
+    "missing": false
    },
    "2020/21": {
     "n_values": 1,

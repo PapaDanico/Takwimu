@@ -257,6 +257,8 @@
               "source": {
                 "type": "string"
               },
+              "source_type": { "type": "string", "enum": ["primary", "official mirror", "official compilation (secondary)", "secondary-news/ngo"], "description": "Kind of document the value was read from: primary (the publisher's own report), official mirror (an official body reprinting or quoting it), official compilation (secondary: an official body's summary table of other reports), secondary-news/ngo (media or civil society). Added 27 Nov 2026 (gap research ingest)." },
+              "corroboration": { "type": "array", "description": "Other documents that print the same opinion (not a second value).", "items": { "type": "object", "required": ["document", "url", "page", "quote", "source_type"], "additionalProperties": false, "properties": { "document": { "type": "string" }, "url": { "type": "string", "pattern": "^https://" }, "page": { "type": "integer", "minimum": 1 }, "quote": { "type": "string", "minLength": 5 }, "source_type": { "type": "string", "enum": ["primary", "official mirror", "official compilation (secondary)", "secondary-news/ngo"], "description": "Kind of document the value was read from: primary (the publisher's own report), official mirror (an official body reprinting or quoting it), official compilation (secondary: an official body's summary table of other reports), secondary-news/ngo (media or civil society). Added 27 Nov 2026 (gap research ingest)." } } } },
               "source_id": {
                 "type": "string",
                 "pattern": "^[a-z0-9-]+$",
@@ -279,7 +281,8 @@
                 "enum": [
                   "RapidOCR",
                   "OCR layer",
-                  "PDF text layer"
+                  "PDF text layer",
+                  "tesseract OCR (two readings)"
                 ]
               },
               "page_note": {
@@ -370,7 +373,8 @@
                     "enum": [
                       "RapidOCR",
                       "OCR layer",
-                      "PDF text layer"
+                      "PDF text layer",
+                      "tesseract OCR (two readings)"
                     ]
                   },
                   "page_note": {
@@ -400,7 +404,8 @@
                 "enum": [
                   "RapidOCR",
                   "OCR layer",
-                  "PDF text layer"
+                  "PDF text layer",
+                  "tesseract OCR (two readings)"
                 ]
               },
               "page_note": {
@@ -926,7 +931,8 @@
                 "enum": [
                   "RapidOCR",
                   "OCR layer",
-                  "PDF text layer"
+                  "PDF text layer",
+                  "tesseract OCR (two readings)"
                 ]
               },
               "confidence": {
@@ -941,6 +947,7 @@
                   "$ref": "#/$defs/figure"
                 }
               },
+              "source_type": { "type": "string", "enum": ["primary", "official mirror", "official compilation (secondary)", "secondary-news/ngo"], "description": "Kind of document the value was read from: primary (the publisher's own report), official mirror (an official body reprinting or quoting it), official compilation (secondary: an official body's summary table of other reports), secondary-news/ngo (media or civil society). Added 27 Nov 2026 (gap research ingest)." },
               "source_id": {
                 "type": "string",
                 "pattern": "^[a-z0-9-]+$",
@@ -1070,7 +1077,8 @@
           "enum": [
             "RapidOCR",
             "OCR layer",
-            "PDF text layer"
+            "PDF text layer",
+            "tesseract OCR (two readings)"
           ]
         },
         "as_printed": {
@@ -1096,6 +1104,7 @@
       "additionalProperties": false,
       "properties": {
         "source_error": { "type": "object", "description": "An error in the source document itself (impossible date, figures that do not agree). The value stays as published.", "required": ["quote", "page", "issue"], "additionalProperties": false, "properties": { "quote": { "type": "string", "minLength": 3 }, "page": { "type": "integer", "minimum": 1 }, "printed_page": { "type": ["integer", "null"] }, "issue": { "type": "string", "minLength": 10 } } },
+        "source_type": { "type": "string", "enum": ["primary", "official mirror", "official compilation (secondary)", "secondary-news/ngo"], "description": "Kind of document the value was read from: primary (the publisher's own report), official mirror (an official body reprinting or quoting it), official compilation (secondary: an official body's summary table of other reports), secondary-news/ngo (media or civil society). Added 27 Nov 2026 (gap research ingest)." },
         "source_id": {
           "type": "string",
           "pattern": "^[a-z0-9-]+$",
@@ -1118,7 +1127,8 @@
           "enum": [
             "RapidOCR",
             "OCR layer",
-            "PDF text layer"
+            "PDF text layer",
+            "tesseract OCR (two readings)"
           ]
         },
         "page_note": {
@@ -1165,7 +1175,8 @@
           "enum": [
             "RapidOCR",
             "OCR layer",
-            "PDF text layer"
+            "PDF text layer",
+            "tesseract OCR (two readings)"
           ]
         },
         "note": {

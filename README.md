@@ -70,11 +70,13 @@ Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:c
 ## Status (27 Nov 2026)
 
 - Counties: 1 of 47 published (Siaya); national pages cover all 47 where data exists.
-- Siaya values: 2,068 across 14 datasets, each with a review pack. 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty); unreviewed values are labelled "Provisional: awaiting editorial review".
-- Machine cross-checks (second reading of the cited page): 979 agree, 3 disagree (need a person to read the page image), 1,086 not checkable.
-- Fiscal ledger: 139 discrepancy cases; 45 definitional, 20 period or version, 11 probable source error, 1 resolved by source, 62 open. Both values stand in every open case.
-- Corrections: 16 corrections footnoted beside 24 values, 13 source-error records flagged beside theirs (kept as published, e.g. "31st June 2025"); no register page, `/corrections/` redirects to `/method/#corrections` (owner, 27 Nov 2026).
-- Site: 98 pages (new: /counties/siaya/departments/), 92 downloadable datasets, a three-page fiscal brief and 5 draft reports. Layers B1, B2, B4, B5 on /counties/siaya/analysis/; B3 and own-source revenue by publisher on /counties/siaya/ledger/.
+- Siaya values: 4,005 across 16 datasets, each with a review pack. 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty); unreviewed values are labelled "Provisional: awaiting editorial review".
+- Machine cross-checks (second reading of the cited page): 2,363 agree, 80 disagree (need a person to read the page image), 1,562 not checkable.
+- Fiscal ledger: 164 discrepancy cases; 47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 open. Both values stand in every open case. Conflict register: 53 cases.
+- Ten-year series: FY 2013/14 to FY 2025/26 (FY 2025/26 from the CoB annual report Part 1 tables, 27 Nov 2026); FY 2019/20 stays a gap (CoB report not found), with county and look-back figures listed beside it.
+- Corrections: 17 corrections footnoted beside 26 values, 14 source-error records flagged beside theirs (kept as published, e.g. "31st June 2025", and the Economic Survey 2026 printing Siaya's OSR budget as FY 2025/26 revenue); no register page, `/corrections/` redirects to `/method/#corrections` (owner, 27 Nov 2026).
+- Kisumu (unpublished, data layer only): 331 values (291 ledger, 35 audit opinions, population), 38 conflict cases, 0 approved; kept off the site by `scripts/test-unpublished-counties.js`.
+- Site: 110 pages, 92 downloadable datasets, a three-page fiscal brief and 5 draft reports. Layers B1, B2, B4, B5 on /counties/siaya/analysis/; B3 and own-source revenue by publisher on /counties/siaya/ledger/.
 
 ## Deploying
 

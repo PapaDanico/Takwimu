@@ -188,7 +188,14 @@ required.forEach((id) => { if (!ids.has(id)) fail(`conflicts: ${id} is missing f
 // In-year figures: partial-year values must never enter the ten-year series, and their conflicts must be registered.
 if (hist.in_year) {
   const iy = hist.in_year;
-  if (hist.years.some((y) => y.fy === iy.fy)) fail(`history in_year: ${iy.fy} must not also be a full year in years`);
+  // The in-year FY may also be a full year only once its annual report is read (27 Nov 2026: FY 2025/26 Part 1);
+  // the year row then cites the annual report alone, never an in-year report.
+  const fullYear = hist.years.find((y) => y.fy === iy.fy);
+  if (fullYear) {
+    const inYearIds = new Set(iy.periods.map((p) => p.source_id));
+    if (fullYear.report !== iy.fy) fail(`history in_year: the ${iy.fy} year row must cite the ${iy.fy} annual report`);
+    Object.entries(fullYear.provenance || {}).forEach(([k, p]) => { if (inYearIds.has(p.source_id)) fail(`history in_year: ${iy.fy} ${k} is read from an in-year report`); });
+  }
   iy.conflicts.forEach((id) => { if (!ids.has(id)) fail(`history in_year: conflict ${id} is not in the register`); });
   iy.periods.forEach((p) => {
     const ms = p.figures.map((f) => f.measure);

@@ -13,8 +13,8 @@
   "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way (\"Kshs.2.4 billion\") is not checkable.",
   "checked_on": "2026-11-27",
   "counts": {
-   "agree": 253,
-   "not checkable": 46,
+   "agree": 273,
+   "not checkable": 53,
    "disagree": 5
   }
  },
@@ -3187,6 +3187,246 @@
    "matched": "8,902,026,938"
   },
   {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K272",
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+   "pdf_page": 58,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "9.12"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K273",
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+   "pdf_page": 58,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "6.74"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K274",
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+   "pdf_page": 58,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "2.38"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K275",
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+   "pdf_page": 58,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "58.2"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K276",
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+   "pdf_page": 58,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "82.9"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K277",
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+   "pdf_page": 56,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "804,387,972"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K278",
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+   "pdf_page": 56,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "1,438,478,604"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K279",
+   "source_id": "OAG-EXEC-FY2019-20",
+   "source_sha256": "20629f1f492a6bc0a435acbf2ead2f481489b8bd6344604997df6ea7ec2c14a8",
+   "pdf_page": 39,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "2,309,494,252"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K280",
+   "source_id": "KIPPRA-CFSP-2021",
+   "source_sha256": "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b",
+   "pdf_page": 67,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "2,621,421,192.93"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K281",
+   "source_id": "OAG-EXEC-FY2019-20",
+   "source_sha256": "20629f1f492a6bc0a435acbf2ead2f481489b8bd6344604997df6ea7ec2c14a8",
+   "pdf_page": 43,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "4,261,475,456"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K282",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "1,803.50"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K283",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "901"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K284",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "902.45"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K285",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "3,623.88"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K286",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "865.75"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K287",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 38,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "2,758.13"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K288",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 53,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "569.50"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K289",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 53,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "280.97"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K290",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 53,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "850.47"
+  },
+  {
+   "dataset": "kisumu-fiscal-ledger",
+   "id": "K291",
+   "source_id": "cob-report-2025-26",
+   "source_sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+   "pdf_page": 43,
+   "original_method": "OCR (OCR (tesseract))",
+   "method": "pdf-text-layer",
+   "checked_on": "2026-11-27",
+   "result": "agree",
+   "matched": "5,542.00"
+  },
+  {
    "dataset": "kisumu-audits",
    "id": "opinion:county_executive:2018/19",
    "result": "not checkable",
@@ -3378,6 +3618,55 @@
   {
    "dataset": "kisumu-audits",
    "id": "opinion:county_executive:2013/14",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "kisumu-audits",
+   "id": "opinion:county_executive:2014/15",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "kisumu-audits",
+   "id": "opinion:county_executive:2015/16",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "kisumu-audits",
+   "id": "opinion:county_executive:2017/18",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "kisumu-audits",
+   "id": "opinion:county_assembly:2017/18",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "kisumu-audits",
+   "id": "opinion:county_assembly:2018/19",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "kisumu-audits",
+   "id": "opinion:water_company:2016/17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "kisumu-audits",
+   "id": "opinion:water_company:2018/19",
    "result": "not checkable",
    "method": null,
    "reason": "Not a single number (text, a list of amounts or a series)."
