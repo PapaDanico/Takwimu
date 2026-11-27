@@ -6,6 +6,7 @@ import KenyaMap from '../../components/KenyaMap';
 import TableWrap from '../../components/TableWrap';
 import { compareData, extra } from '../../lib/explore';
 import { Provisional } from '../../components/ObsTable';
+import { fmtNum } from '../../lib/format';
 
 export const metadata = {
   title: 'Compare counties',
@@ -13,7 +14,7 @@ export const metadata = {
 };
 
 const data = compareData();
-const fmt = (v) => v.toLocaleString('en-US');
+const fmt = (v) => fmtNum(v);
 const cra = extra.craRows.slice().sort((a, b) => a.code - b.code);
 const craMap = Object.fromEntries(cra.map((r) => [r.slug, r.total_allocation_2026_27]));
 const voterMap = Object.fromEntries(extra.voterCounty.map((r) => [r.slug, r.value]));

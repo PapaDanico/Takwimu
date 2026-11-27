@@ -6,7 +6,7 @@ import siaya from '../../data/siaya.json';
 import hist from '../../data/history.json';
 import cpi from '../../data/cpi.json';
 import analysis from '../../data/siaya-analysis.json';
-import { fmt, shortDate } from '../../lib/format';
+import { fmt, shortDate, fmtInt, fmtNum } from '../../lib/format';
 import { cagr } from '../../lib/analytics';
 
 // Own-source revenue, canonical home /counties/siaya/ledger/ (owner decision U1, 21 Nov 2026). Moved here from the
@@ -31,7 +31,7 @@ const by = Object.fromEntries(years.map((y) => [y.fy, y]));
 const deflator = (fy) => (cpi.fiscal_year[fy] ? cpi.fiscal_year[BASE] / cpi.fiscal_year[fy] : null);
 const realOf = (v, fy) => (v == null || deflator(fy) === null ? null : v * deflator(fy));
 const fin = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
-const m0 = (v) => Math.round(v).toLocaleString('en-US');
+const m0 = fmtInt;
 const osrPts = hist.osr_series.points;
 const osrByFy = Object.fromEntries(osrPts.map((p) => [p.fy, p]));
 const OSR_CAGR = (() => { const a = by['2014/15'].osr_m; const b = by[BASE].osr_m; return { nom: cagr(a, b, 10), real: cagr(a * deflator('2014/15'), b, 10) }; })();
@@ -83,7 +83,7 @@ export default function OsrLedger() {
             {ticks.map((t) => (
               <g key={t}>
                 <line x1={xFor(t)} x2={xFor(t)} y1="10" y2="176" stroke="var(--rule)" strokeWidth="1" />
-                <text x={xFor(t)} y="194" textAnchor="middle">{t.toLocaleString('en-US')}</text>
+                <text x={xFor(t)} y="194" textAnchor="middle">{fmtNum(t)}</text>
               </g>
             ))}
             <g className="bars">
@@ -117,7 +117,7 @@ export default function OsrLedger() {
                   ))}
                   <tr>
                     <td><a href={osr.target.source_url}>Own-source revenue in budget financing (Controller of Budget)</a>: {osr.target.description}</td>
-                    <td className="mono">{osr.target.value.toLocaleString('en-US')}</td>
+                    <td className="mono">{fmtNum(osr.target.value)}</td>
                     <td>{osr.target.status}</td>
                     <td className="mono">{osr.target.confidence} of 5</td>
                     <td className="mono">{shortDate(osr.target.retrieved)}</td>
@@ -131,7 +131,7 @@ export default function OsrLedger() {
             <br />
             Notes: the first solid bar is the figure the Controller of Budget states for FY 2024/25 (KSh {fmt(primary.value)} million, including KSh {fmt(FIF2425)} million from health facilities).
             The report calls this 2 per cent more than KSh {fmt(osr.previous_year.value)} million in FY 2023/24, but the previous year&apos;s report gave KSh 610.74 million for that year (see the trend below).
-            It is {share} per cent of the annual target; Table 2.1 of the same report prints that target as KSh 927.34 million (PDF p. 46). The budget financing counted about KSh {osr.target.value.toLocaleString('en-US')} million of own-source revenue, and the report does not explain the difference.
+            It is {share} per cent of the annual target; Table 2.1 of the same report prints that target as KSh 927.34 million (PDF p. 46). The budget financing counted about KSh {fmtNum(osr.target.value)} million of own-source revenue, and the report does not explain the difference.
             The second solid bar is the county treasury&apos;s own fourth-quarter report: KSh 236.50 million into the County Revenue Fund plus KSh 521.07 million collected and spent at source, mostly at health facilities, against a target of KSh 1,044 million. It is unaudited.
             The hatched bar is the county statement reported in the press. It does not match the county&apos;s own report, and what it counts is not established.
             The three figures are shown side by side, not averaged, and we do not say which is right. See the <Link href="/data/#conflicts">conflict register</Link>, case osr-2024-25-county-statement.

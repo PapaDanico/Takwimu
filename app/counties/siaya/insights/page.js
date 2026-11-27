@@ -7,7 +7,7 @@ import Donut from '../../../../components/Donut';
 import StatStrip from '../../../../components/StatStrip';
 import { Provisional } from '../../../../components/ObsTable';
 import DataStamp from '../../../../components/DataStamp';
-import { shortDate } from '../../../../lib/format';
+import { shortDate, fmtInt } from '../../../../lib/format';
 import { SITE_UPDATED } from '../../../../lib/site';
 import hist from '../../../../data/history.json';
 import cpi from '../../../../data/cpi.json';
@@ -26,7 +26,7 @@ const realOf = (v, fy) => (v == null || deflator(fy) === null ? null : v * defla
 const years = [...hist.years].sort((a, b) => a.fy.localeCompare(b.fy));
 const label = (fy) => `FY ${fy}`;
 const bn = (v) => v.toFixed(2);
-const m = (v) => Math.round(v).toLocaleString('en-US');
+const m = fmtInt;
 
 const withSpend = years.filter((y) => y.spent !== undefined);
 const first = withSpend.find((y) => y.fy === '2014/15');

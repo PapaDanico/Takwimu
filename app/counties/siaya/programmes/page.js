@@ -8,6 +8,7 @@ import { Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
 import { masked, badge } from '../../../../lib/review-status';
 import Reviewed from '../../../../components/Reviewed';
+import { fmtMaybe } from '../../../../lib/format';
 
 const g = masked('siaya-programmes');
 
@@ -25,7 +26,7 @@ const EV_DEF = {
 const SPECIFIC = new Set(['siaya_specific', 'siaya_wards_listed']);
 const specific = g.programmes.filter((p) => SPECIFIC.has(p.geography.class));
 const pooled = g.programmes.filter((p) => !SPECIFIC.has(p.geography.class));
-const n = (v) => (typeof v === 'number' ? v.toLocaleString('en-US') : v);
+const n = (v) => fmtMaybe(v);
 const Src = ({ s }) => { const r = source(s.source_id); return <small className="cite">{r.url ? <a href={r.url} rel="noopener">{r.title}</a> : r.title}, {typeof s.page === 'number' ? `PDF p. ${s.page}` : s.page}{s.locator ? `; ${s.locator}` : ''}</small>; };
 const Badge = ({ t }) => <span className={`tag ${t === 'independently_evaluated' ? 'good' : 'warn'}`}>{EVIDENCE[t]}</span>;
 const period = (p) => `${p.period.start || '?'} to ${p.period.end || 'not stated'}`;

@@ -1,3 +1,4 @@
+import { fmtNum } from '../../lib/format';
 // Static SVG chart for the print reports (server component, no client script). One tab stop per chart: the figure
 // itself is focusable and carries a text summary; the marks inside are not focusable (UX sweep U7). The values are
 // always in the table that follows the chart (Report.js), which is the accessible and citable form.
@@ -13,7 +14,7 @@ function niceScale(max) {
   const n = Math.max(Math.ceil(max / step - 1e-9), 1);
   return { yMax: step * n, ticks: Array.from({ length: n + 1 }, (_, i) => step * i) };
 }
-const fmt = (v) => v.toLocaleString('en-US', { maximumFractionDigits: v < 10 ? 1 : 0 });
+const fmt = (v) => fmtNum(v, { dp: v < 10 ? 1 : 0 });
 
 export default function ReportChart({ kind, title, labels, series, unit }) {
   const all = series.flatMap((s) => s.values).filter((v) => v != null);

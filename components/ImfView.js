@@ -6,8 +6,9 @@
 import { useId, useState } from 'react';
 import { LineChart } from './Charts';
 import TableWrap from './TableWrap';
+import { fmtNum } from '../lib/format';
 
-const fmt = (v) => v.toLocaleString('en-US', { maximumFractionDigits: 2 });
+const fmt = (v) => fmtNum(v, { dp: 2 });
 const TYPE = { actual: 'Actual', estimate: 'IMF estimate', projection: 'IMF projection' };
 
 export default function ImfView({ data }) {

@@ -1,6 +1,7 @@
+import { fmtNum } from '../lib/format';
 // A horizontal bar list: label, bar, value. Plain HTML so it reads well to screen readers and scales
 // to any width. Bars start at zero. Pass `compareTo` to draw a thin marker (for example a national average).
-export default function BarList({ items, unit, format = (v) => v.toLocaleString('en-US'), label, accent = 'chart' }) {
+export default function BarList({ items, unit, format = (v) => fmtNum(v), label, accent = 'chart' }) {
   const max = Math.max(...items.map((i) => Math.max(i.value, i.compareTo || 0)));
   return (
     <ul className="bl" aria-label={label}>

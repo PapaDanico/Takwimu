@@ -1,10 +1,11 @@
+import { fmtNum } from '../lib/format';
 // Donut chart for a small number of parts of one whole (six at most). Segments are separated by a 2 px gap,
 // every segment is labelled in the legend with its value and share, and the same numbers are in the list,
 // so colour is never the only way to tell parts apart.
 const R = 72;
 const C = 2 * Math.PI * R;
 
-export default function Donut({ items, centerValue, centerLabel, format = (v) => v.toLocaleString('en-US'), unit = '', ariaLabel }) {
+export default function Donut({ items, centerValue, centerLabel, format = (v) => fmtNum(v), unit = '', ariaLabel }) {
   const total = items.reduce((s, i) => s + i.value, 0);
   const gap = items.length > 1 ? 2.2 : 0;
   let offset = 0;

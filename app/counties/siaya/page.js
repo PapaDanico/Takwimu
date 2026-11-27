@@ -11,7 +11,7 @@ export const metadata = {
 };
 import siaya from '../../../data/siaya.json';
 import hist from '../../../data/history.json';
-import { fmt, shortDate } from '../../../lib/format';
+import { fmt, shortDate, fmtFixed, fmtNum } from '../../../lib/format';
 import { latestOpinions } from '../../../lib/audits';
 import { pendingAt, range } from '../../../lib/editorial';
 import Reviewed from '../../../components/Reviewed';
@@ -24,7 +24,7 @@ const lower = (t) => t.replace(/ Opinion$/, '').toLowerCase();
 // Pending bills at 30 June 2025 (end of FY 2024/25): every printed value, smallest to largest (owner item 4).
 const P25 = pendingAt('2024/25');
 const P25R = range(P25);
-const m2 = (v) => v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const m2 = (v) => fmtFixed(v, 2);
 
 function Tile({ label, value, unit, note, tone, dashed, tag }) {
   return (
@@ -40,7 +40,7 @@ function Tile({ label, value, unit, note, tone, dashed, tag }) {
 const IY = hist.in_year;
 const IY_MEASURES = IY.periods.flatMap((p) => p.figures).filter((f, i, a) => a.findIndex((x) => x.measure === f.measure) === i);
 const IY_CONFLICT = { payables_assembly_opening: 'in-year-assembly-payables-2025', revenue_arrears_close: 'in-year-revenue-arrears-2025' };
-const iyValue = (f) => (f.unit === '%' ? `${f.value}%` : `${f.unit} ${f.value.toLocaleString('en-US')}`);
+const iyValue = (f) => (f.unit === '%' ? `${f.value}%` : `${f.unit} ${fmtNum(f.value)}`);
 
 export default function Home() {
   const osr = siaya.own_source_revenue;

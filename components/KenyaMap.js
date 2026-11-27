@@ -6,9 +6,10 @@
 import Link from 'next/link';
 import geo from '../data/kenya-counties-map.json';
 import { bySlug } from '../lib/counties';
+import { fmtFixed } from '../lib/format';
 
 const STEPS = 5;
-const show = (v, dec) => v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+const show = (v, dec) => fmtFixed(v, dec);
 
 export function mapScale(values) {
   const xs = Object.values(values).filter((v) => typeof v === 'number');

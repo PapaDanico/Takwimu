@@ -8,9 +8,10 @@ import { Fragment } from 'react';
 import ReportChart from './ReportChart';
 import { PROVISIONAL } from './model';
 import { conflictNote } from './rules';
+import { fmtNum } from '../../lib/format';
 
 export const METHOD_HREF = '/reports/method/';
-const num = (v) => v.toLocaleString('en-US', { maximumFractionDigits: 6 });
+const num = (v) => fmtNum(v, { dp: 6 });
 const fmtValue = (f) => {
   if (f.suppress) return 'Suppressed (fewer than 10)';
   if (f.display) return f.display;

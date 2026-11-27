@@ -10,6 +10,7 @@ import ledger from '../../data/siaya-fiscal-ledger.json';
 import { insights as pulse } from '../../lib/pulse';
 import { mean, median, quantile, sd, cv, cagr, iqrOutliers } from '../../lib/analytics';
 import PendingAtDate from './PendingAtDate';
+import { fmtFixed, fmtInt } from '../../lib/format';
 
 // Ten-year measures whose canonical home is /counties/siaya/analysis/ (owner decision U1, 21 Nov 2026): share of
 // budget spent (absorption), pending bills and real growth. Moved here from the old analytics, Fiscal Pulse and
@@ -23,7 +24,7 @@ const SHORT = FYS.map((f) => f.slice(2));
 const label = (fy) => `FY ${fy}`;
 const bn = (v) => v.toFixed(2);
 const one = (v) => v.toFixed(1);
-const n0 = (v) => Math.round(v).toLocaleString('en-US');
+const n0 = fmtInt;
 const fin = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
 const col = (fn) => FYS.map((fy) => (by[fy] ? fin(fn(by[fy])) : null));
 const fillBy = (rows, f) => FYS.map((fy) => { const r = rows.find((x) => x.fy === fy); return r ? fin(f(r)) : null; });
@@ -58,7 +59,7 @@ const RF = hist.pending_rollforward;
 const RF_TERMS = [['opening', 'Opening stock'], ['new_bills', 'New bills'], ['payments', 'Payments'], ['adjustments', 'Write-offs or adjustments'], ['closing', 'Closing stock']];
 const DOC = Object.fromEntries(manifest.documents.map((d) => [d.id, d]));
 const rfCell = (t) => (typeof t.value === 'number'
-  ? <>{t.value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}<span className="rf-page">PDF p. {t.page}{t.printed_page ? `, printed p. ${t.printed_page}` : ''}{t.note ? `; ${t.note}` : ''}</span></>
+  ? <>{fmtFixed(t.value, 2)}<span className="rf-page">PDF p. {t.page}{t.printed_page ? `, printed p. ${t.printed_page}` : ''}{t.note ? `; ${t.note}` : ''}</span></>
   : <span className="rf-np">Not published{t.note ? <span className="rf-page">{t.note}</span> : null}</span>);
 const rfComplete = (r) => RF_TERMS.every(([k]) => typeof r[k].value === 'number');
 

@@ -7,8 +7,9 @@ import { readParams, writeParams } from '../lib/url-state';
 import { stateLabel } from '../lib/labels';
 import { ColumnChart } from './Charts';
 import Reviewed from './Reviewed';
+import { fmtMaybe } from '../lib/format';
 
-const n = (v) => (typeof v === 'number' ? v.toLocaleString('en-US') : v);
+const n = (v) => fmtMaybe(v);
 const Ev = ({ e }) => (
   <li>
     {e.pct !== null ? <b>{e.pct}% complete (as stated). </b> : null}{e.summary}

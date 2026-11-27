@@ -9,6 +9,7 @@ import hist from '../../data/history.json';
 import reg from '../../data/conflicts.json';
 import manifest from '../../data/source-manifest.json';
 import { Provisional } from '../../components/ObsTable';
+import { fmtMaybe, fmtNum } from '../../lib/format';
 
 const OPEN = [
   { q: 'The report states 47 per cent of the revenue target for FY 2024/25, but 436.68 of 1,043 is about 42 per cent.', note: 'Resolved in part: 47 per cent is measured against an annual target of about KSh 929 million, not the KSh 1,043 million in budget financing. The report does not explain why the two targets differ.' },
@@ -147,7 +148,7 @@ export default function DataPage() {
             <table className="data">
               <caption><a href={d.url}>{d.title}</a>. {d.kind}; read from the {d.read}; confidence {d.confidence} of 5.</caption>
               <thead><tr><th scope="col">Figure, FY {d.fy}</th><th scope="col">Value</th><th scope="col">PDF page</th></tr></thead>
-              <tbody>{d.figures.map((f) => <tr key={f.measure}><th scope="row">{f.label}</th><td>{f.unit === '%' ? `${f.value}%` : `${f.unit} ${f.value.toLocaleString('en-US')}`}</td><td>{f.pdf_page}</td></tr>)}</tbody>
+              <tbody>{d.figures.map((f) => <tr key={f.measure}><th scope="row">{f.label}</th><td>{f.unit === '%' ? `${f.value}%` : `${f.unit} ${fmtNum(f.value)}`}</td><td>{f.pdf_page}</td></tr>)}</tbody>
             </table>
           </TableWrap>
         ))}
@@ -166,10 +167,10 @@ export default function DataPage() {
                 <table className="data">
                   <caption className="sr-only">{c.measure}: values by source</caption>
                   <thead><tr><th scope="col">Source</th><th scope="col">Value ({c.unit})</th></tr></thead>
-                  <tbody>{c.values.map((v) => <tr key={v.label}><th scope="row"><a href={v.url}>{v.label}</a></th><td>{typeof v.value === 'number' ? v.value.toLocaleString('en-US') : v.value}</td></tr>)}</tbody>
+                  <tbody>{c.values.map((v) => <tr key={v.label}><th scope="row"><a href={v.url}>{v.label}</a></th><td>{fmtMaybe(v.value)}</td></tr>)}</tbody>
                 </table>
               </TableWrap>
-              {typeof c.values[0].value === 'number' ? <p><b>Difference:</b> {Math.abs(c.values[0].value - c.values[1].value).toLocaleString('en-US', { maximumFractionDigits: 2 })} {c.unit} ({((Math.abs(c.values[0].value - c.values[1].value) / c.values[0].value) * 100).toFixed(1)}% of the first value)</p> : <p><b>Difference:</b> a label, citation or licence, not an amount.</p>}
+              {typeof c.values[0].value === 'number' ? <p><b>Difference:</b> {fmtNum(Math.abs(c.values[0].value - c.values[1].value), { dp: 2 })} {c.unit} ({((Math.abs(c.values[0].value - c.values[1].value) / c.values[0].value) * 100).toFixed(1)}% of the first value)</p> : <p><b>Difference:</b> a label, citation or licence, not an amount.</p>}
               <p><b>Definitions:</b> {plain(c.definitions)}</p>
               <p><b>Hypothesis, not established:</b> {plain(c.hypothesis)}</p>
               {/* A caveat shared by several cases is stated once, at its first case (owner decision U3). */}

@@ -4,7 +4,7 @@ import siaya from '../../../../data/siaya.json';
 import hist from '../../../../data/history.json';
 import reg from '../../../../data/conflicts.json';
 import ledger from '../../../../data/siaya-fiscal-ledger.json';
-import { fmt, shortDate } from '../../../../lib/format';
+import { fmt, shortDate, fmtNum } from '../../../../lib/format';
 import { SITE_URL, SITE_UPDATED } from '../../../../lib/site';
 import { counts, isProvisional, PUBLIC_LABEL } from '../../../../lib/review-status';
 import { latestOpinions } from '../../../../lib/audits';
@@ -20,7 +20,7 @@ const BY_FY = Object.fromEntries(hist.years.map((y) => [y.fy, y]));
 const OSR_BY_FY = Object.fromEntries(hist.osr_series.points.map((p) => [p.fy, p]));
 // Same rule as the Insights page: a stated total wins, otherwise recurrent plus development.
 const pendOf = (y) => (y ? y.pending_total_m ?? (y.pending_development_m !== undefined && y.pending_recurrent_m !== undefined ? y.pending_development_m + y.pending_recurrent_m : undefined) : undefined);
-const num = (v, d = 2) => (v === undefined ? '—' : Number(v).toLocaleString('en-US', { maximumFractionDigits: d }));
+const num = (v, d = 2) => (v === undefined ? '—' : fmtNum(Number(v), { dp: d }));
 const conflict = (id) => reg.conflicts.find((c) => c.id === id);
 // Years whose year-end pending-bills stock has an open discrepancy in the fiscal ledger.
 const PEND_DISPUTED = new Set(ledger.discrepancies.filter((d) => d.indicator_id === 'pending_bills_close' && d.status === 'open').map((d) => d.period.replace('FY ', '')));

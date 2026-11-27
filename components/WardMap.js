@@ -7,6 +7,7 @@
 // No network requests, no cookies or storage. Colour is never the only signal: values are in labels and the table.
 import { useCallback, useMemo, useRef, useState } from 'react';
 import geo from '../data/siaya-wards-geo.json';
+import { fmtFixed } from '../lib/format';
 
 const W = 600;
 const PAD = 10;
@@ -36,7 +37,7 @@ const WARDS = geo.features.map((f) => {
 });
 const BY_CODE = [...WARDS].sort((a, b) => a.code.localeCompare(b.code));
 
-const show = (v, dec) => v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+const show = (v, dec) => fmtFixed(v, dec);
 
 function scaleOf(vals) {
   const xs = vals.filter((v) => typeof v === 'number' && Number.isFinite(v));

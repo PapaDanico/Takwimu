@@ -6,6 +6,7 @@ import { ColumnChart, LineChart } from '../../../components/Charts';
 import DownloadView from '../../../components/DownloadView';
 import { STORIES, absorption, population, ownRevenue } from '../../../lib/stories';
 import { Provisional } from '../../../components/ObsTable';
+import { fmtFixed, fmtInt } from '../../../lib/format';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return STORIES.map((s) => ({ slug: s.slug })); }
@@ -14,8 +15,8 @@ export function generateMetadata({ params }) {
   return s ? { title: s.title, description: s.blurb } : {};
 }
 
-const n0 = (v) => Math.round(v).toLocaleString('en-US');
-const n1 = (v) => v.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+const n0 = fmtInt;
+const n1 = (v) => fmtFixed(v, 1);
 const bn = (m) => n1(m / 1000);
 
 function Sources({ items }) {

@@ -5,8 +5,9 @@ import TableWrap from './TableWrap';
 import { source, pageRef } from '../lib/siaya-sources';
 import { badge } from '../lib/review-status';
 import Reviewed from './Reviewed';
+import { fmtMaybe } from '../lib/format';
 
-const n = (v) => (typeof v === 'number' ? v.toLocaleString('en-US', { maximumFractionDigits: 6 }) : v);
+const n = (v) => fmtMaybe(v, { dp: 6 });
 const Input = ({ i }) => {
   const s = source(i.source_id);
   return (

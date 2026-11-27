@@ -4,7 +4,7 @@ import BarList from '../../../../components/BarList';
 import { ColumnChart } from '../../../../components/Charts';
 import Donut from '../../../../components/Donut';
 import DataStamp from '../../../../components/DataStamp';
-import { shortDate } from '../../../../lib/format';
+import { shortDate, fmtNum } from '../../../../lib/format';
 import { SITE_UPDATED } from '../../../../lib/site';
 import co from '../../../../data/county.json';
 import hist from '../../../../data/history.json';
@@ -17,7 +17,7 @@ export const metadata = {
   alternates: { canonical: '/counties/siaya/people/' },
 };
 
-const n = (v) => v.toLocaleString('en-US');
+const n = (v) => fmtNum(v);
 const pop = hist.population.points;
 const p0 = pop[0];
 const pc = pop.find((p) => p.year === 2019);

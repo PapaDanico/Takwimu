@@ -9,6 +9,7 @@ import { masked, badge } from '../../../../lib/review-status';
 import Reviewed from '../../../../components/Reviewed';
 import { plainDeep } from '../../../../lib/plain';
 import { LatestYear, SpentTenYear, Unspent, PendingTenYear, Growth, Limits, TREND_TOC } from '../../../../components/siaya/AnalysisTrends';
+import { fmtFixed } from '../../../../lib/format';
 
 // Masked: a result is withheld (null) when the calculation or any of its inputs was rejected in editorial review.
 const a0 = masked('siaya-analysis');
@@ -81,7 +82,7 @@ const COUNTY_ROWS = (r) => {
   r.inputs.forEach((i) => { by[i.county_code] = by[i.county_code] || { code: i.county_code, county: i.county }; by[i.county_code][i.role] = i.value; });
   return Object.values(by).map((x) => ({ ...x, share: Math.round((10000 * x.fif) / x.total) / 100 })).sort((a, b) => b.share - a.share || a.code - b.code);
 };
-const m2 = (v) => (typeof v === 'number' ? v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—');
+const m2 = (v) => (typeof v === 'number' ? fmtFixed(v, 2) : '—');
 const DOC = (id) => (/^cob-report-/.test(id) ? `Controller of Budget annual report ${id.replace('cob-report-', 'FY ').replace(/-(\d\d)$/, '/$1')}` : id === 'GOV-03' ? 'County Budget Review and Outlook Paper (GOV-03)' : /^GOV-02-FY(\d{4})-(\d\d)-Q4$/.test(id) ? `County Q4 budget implementation report FY ${id.replace(/^GOV-02-FY(\d{4})-(\d\d)-Q4$/, '$1/$2')}` : id);
 
 export default function SiayaAnalysis() {

@@ -6,8 +6,9 @@ import { badge, counts, countsSentence, isProvisional } from '../lib/review-stat
 import Reviewed from './Reviewed';
 import SourceErrorFlag, { MachineTag } from './SourceErrorFlag';
 import { machineBadge } from '../lib/machine-badge';
+import { fmtMaybe } from '../lib/format';
 
-const num = (v) => (typeof v === 'number' ? v.toLocaleString('en-US', { maximumFractionDigits: 3 }) : v);
+const num = (v) => fmtMaybe(v, { dp: 3 });
 
 export function Cite({ id, table, page, printed, pageNote, confidence, bare }) {
   const s = source(id);

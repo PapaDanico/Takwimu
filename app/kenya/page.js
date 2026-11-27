@@ -10,7 +10,7 @@ import PrintButton from '../../components/PrintButton';
 import DataStamp from '../../components/DataStamp';
 import Link from 'next/link';
 import { natIndicators, nat, SECTORS, COB_YEARS, cobTotal, cobSource, trendSeries, BASE_FY, extra } from '../../lib/explore';
-import { shortDate } from '../../lib/format';
+import { shortDate, fmtFixed, fmtNum } from '../../lib/format';
 import ImfView from '../../components/ImfView';
 import { imfViewData } from '../../lib/imf';
 import reg from '../../data/conflicts.json';
@@ -50,13 +50,13 @@ const More = ({ summary, children }) => (
   </details>
 );
 const ORDER = ['economy', 'money and banking', 'public finance', 'people', 'health', 'education', 'infrastructure', 'environment'];
-const show = (v, dec) => v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+const show = (v, dec) => fmtFixed(v, dec);
 const inds = natIndicators.filter((x) => x.hasValues);
 const scaled = (x) => x.series.map((p) => (p.value === null ? null : p.value / x.div));
 const dlRows = inds.flatMap((x) => x.series.map((p) => ({ indicator_code: x.code, indicator: x.name, year: p.year, value: p.value, unit: x.unit, status: p.value === null ? 'not available' : 'published', source: x.source, api_url: x.api_url, last_updated: x.last_updated })));
 const latest = COB_YEARS[COB_YEARS.length - 1];
 const prev = COB_YEARS[COB_YEARS.length - 2]; // the year before the latest
-const bn = (m) => (m / 1000).toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+const bn = (m) => fmtFixed(m / 1000, 1);
 const countyItems = [['approved_budget_total', 'County budgets, all 47'], ['expenditure_total', 'County spending, all 47'], ['total_osr_actual', 'Own-source revenue, all 47'], ['pb_grand_total', 'Pending bills, all 47']].map(([k, label]) => {
   const a = cobTotal(prev, k).value; const b = cobTotal(latest, k).value;
   return { label, value: bn(b), unit: 'KSh bn', note: `FY ${latest}; FY ${prev}: KSh ${bn(a)} bn` };
@@ -152,15 +152,15 @@ export default function KenyaPage() {
         <p className="lead">Figures about institutions and places only; no person is rated.</p>
         <div style={{ marginTop: 14 }}><StatStrip label="Governance and elections" items={[
           { label: 'Open Budget Index, national government', value: show(obsLast['OBI (unrounded)'], 1), unit: 'out of 100', note: `${obsLast.Year} (${obsLast['OBI Category']}); ${obsPrev.Year}: ${show(obsPrev['OBI (unrounded)'], 1)}` },
-          { label: 'Registered voters, 2022', value: voterTotal.toLocaleString('en-US'), unit: 'voters', note: 'IEBC constituency file; 22,120,458 elsewhere (see register)' },
-          { label: 'Candidates, 2022 general election', value: cand.rows.find((r) => r.position === 'Total').total.toLocaleString('en-US'), unit: 'candidates', note: `${cand.rows.find((r) => r.position === 'Total').independent.toLocaleString('en-US')} independent; the printed parts add to one less (see register)` },
+          { label: 'Registered voters, 2022', value: fmtNum(voterTotal), unit: 'voters', note: 'IEBC constituency file; 22,120,458 elsewhere (see register)' },
+          { label: 'Candidates, 2022 general election', value: fmtNum(cand.rows.find((r) => r.position === 'Total').total), unit: 'candidates', note: `${fmtNum(cand.rows.find((r) => r.position === 'Total').independent)} independent; the printed parts add to one less (see register)` },
         ]} /></div>
         <More summary="Candidates by elective position, 2022 (table)">
         <TableWrap label="Candidates by elective position, 2022">
           <table className="data">
             <caption>Candidates by elective position, 2022 general election</caption>
             <thead><tr><th scope="col">Position</th><th scope="col" className="num">Party-sponsored</th><th scope="col" className="num">Independent</th><th scope="col" className="num">Total</th></tr></thead>
-            <tbody>{cand.rows.map((r) => <tr key={r.position}><th scope="row">{r.position}</th><td className="num">{r.party_sponsored.toLocaleString('en-US')}</td><td className="num">{r.independent === null ? <span title="Shown as '-' in the IEBC table">-</span> : r.independent.toLocaleString('en-US')}</td><td className="num">{r.total.toLocaleString('en-US')}</td></tr>)}</tbody>
+            <tbody>{cand.rows.map((r) => <tr key={r.position}><th scope="row">{r.position}</th><td className="num">{fmtNum(r.party_sponsored)}</td><td className="num">{r.independent === null ? <span title="Shown as '-' in the IEBC table">-</span> : fmtNum(r.independent)}</td><td className="num">{fmtNum(r.total)}</td></tr>)}</tbody>
           </table>
         </TableWrap>
         </More>

@@ -6,6 +6,7 @@ import { useId, useState } from 'react';
 import TableWrap from './TableWrap';
 import Reviewed from './Reviewed';
 import SourceErrorFlag, { MachineTag } from './SourceErrorFlag';
+import { fmtNum } from '../lib/format';
 
 // Case classes (data/ledger-classes.json): Takwimu's reading of what the documents print, not an editorial decision.
 const CLASS_TONE = { definitional: 'good', 'period or version': 'good', 'probable source error': 'warn', 'resolved by source': 'good', open: 'warn' };
@@ -14,7 +15,7 @@ export function ClassBadge({ cls }) {
   return <span className={`tag ${CLASS_TONE[cls] || 'warn'}`} data-case-class={cls}>{CLASS_LABEL[cls] || cls}</span>;
 }
 
-const num = (v) => v.toLocaleString('en-US', { maximumFractionDigits: 2 });
+const num = (v) => fmtNum(v, { dp: 2 });
 const amount = (o) => (o.unit === 'KSh billion' ? `KSh ${num(o.value)} billion` : `KSh ${num(o.value)} million`);
 const pages = (o) => `PDF p. ${o.pdf_page}${o.printed_page ? ` (printed p. ${o.printed_page})` : ''}`;
 
