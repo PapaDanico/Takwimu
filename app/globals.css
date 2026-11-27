@@ -653,7 +653,7 @@ small.cite { display: inline-block; margin-top: 2px; font-size: 12px; color: var
 @media screen {
   .page :is(p, dd, blockquote, figcaption, .lead, .page-sub),
   .page :is(ul:not([class]), ol:not([class]), .how, .steps, .plain, .inputs) > li { max-width: var(--measure); }
-  .page :is(td, th, .chart, .tile, .stat) :is(p, dd, li) { max-width: none; }
+  .page :is(td, th, .chart, .stat) :is(p, dd, li) { max-width: none; }
 }
 /* Minimum text size 12px: <small> is never smaller than 12px, even inside 12px tags and table headers. */
 small { font-size: max(12px, .833em); }
