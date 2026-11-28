@@ -1,0 +1,1084 @@
+{
+ "meta": {
+  "title": "Kisumu County geographic registry: county, constituencies (sub-counties) and county assembly wards",
+  "compiled": "2026-11-28",
+  "county": "Kisumu",
+  "iebc_county_code": "042",
+  "official_name_rule": "Ward and constituency names and codes follow IEBC Gazette Notice 13904 of 26 September 2025 (all 35 wards listed). The ward polygons carry the American Red Cross names; the crosswalk records every pair.",
+  "boundary_vintage": "IEBC delimitation of 2012 (in force for the 2013, 2017 and 2022 general elections); the 2025 gazette notice uses the same codes.",
+  "scope": "County, constituency and ward boundaries only. The City of Kisumu (the city board area) is not drawn: it is not the county, and it is not the Kisumu Central constituency. Sub-county here means the IEBC constituency, which carries the same name as the KNBS 2019 census sub-county; KNBS also lists a Kadibo sub-county with no figures, which has no IEBC equivalent.",
+  "lake_rule": "The ward polygons cover land only: the 35 wards add to 2086.1 km2 against the KNBS land area of 2085 km2. The sub-county view joins each constituency's wards, so it is land only too. The geoBoundaries constituency polygons are larger (2677 km2): they extend over Lake Victoria (Winam Gulf) water off Seme, Kisumu West, Nyando and Kisumu Central and differ from the ward edges inland; they are used only as a check. No lake area is counted in any figure here.",
+  "build": "scripts/build-county-geo.py (one-off; outputs committed)"
+ },
+ "sources": [
+  {
+   "id": "IEBC-GN-13904-2025",
+   "title": "Kenya Gazette Special Issue Vol. CXXVII No. 201, Gazette Notice No. 13904: Registration Centres, First Schedule",
+   "publisher": "Independent Electoral and Boundaries Commission",
+   "published": "2025-09-26",
+   "url": "https://www.iebc.or.ke/uploads/resources/r9lwR44tQK.pdf",
+   "sha256": "2139bcda649c5a62d3a362c004a7d5c4d688e8226c5e3abddc6406ce67526661",
+   "retrieved": "2026-11-28",
+   "pages": "PDF pages 303-312 (Kisumu, county code 042)",
+   "used_for": "all 35 ward codes and names and the 7 constituency codes and names"
+  },
+  {
+   "id": "IEBC-ROV-2022",
+   "title": "Registered voters per constituency for the 2022 General Election",
+   "publisher": "Independent Electoral and Boundaries Commission",
+   "published": "2022",
+   "url": "https://www.iebc.or.ke/docs/rov_per_constituency.pdf",
+   "sha256": "6affa5b6677abea44aaed2d66fe7b4b9165771efe67dd63856c68b1238b0aefb",
+   "retrieved": "2026-11-28",
+   "pages": "PDF page 6, rows 042/238-244",
+   "used_for": "registered voters by constituency (values) and a cross-check of the constituency codes"
+  },
+  {
+   "id": "HDX-ARC-WARDS",
+   "publisher": "American Red Cross",
+   "distributor": "Humanitarian Data Exchange (HDX), OCHA",
+   "dataset": "Administrative Wards in Kenya 1450",
+   "dataset_url": "https://data.humdata.org/dataset/administrative-wards-in-kenya-1450",
+   "resource_url": "https://data.humdata.org/dataset/e8d06ae7-740b-4491-8749-43f81700cf41/resource/858129b2-7197-4ffe-b34f-c2091b307b2c/download/kenya_wards.zip",
+   "resource_sha256": "13e0dee1a1c731fbb2eb03f0c28468d202fdc174279a104064f05740cc281206",
+   "licence": "CC BY",
+   "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+   "attribution": "Ward boundaries: American Red Cross via HDX, CC BY, 2016",
+   "vintage": "2016-03-31 (HDX dataset date); last modified on HDX 2019-04-12. Ward set matches the IEBC 2012 delimitation (35 Kisumu wards, codes 1186-1220).",
+   "crs": "EPSG:4326 (WGS 84; source .prj GCS_WGS_1984, no reprojection)",
+   "retrieved": "2026-11-28",
+   "used_for": "ward polygons"
+  },
+  {
+   "id": "GEOB-KEN-ADM2",
+   "publisher": "geoBoundaries (William & Mary geoLab)",
+   "dataset": "gbOpen KEN ADM2",
+   "boundary_id": "KEN-ADM2-3690345",
+   "upstream": "IEBC, OCHA ROSEA",
+   "boundary_year_represented": "2020",
+   "download_url": "https://www.geoboundaries.org/data/snapshots/1c423398df24ddf6e730b116567d2181c9782778d0459c3f3b76ca2f9f12b6bc/gbOpen/KEN/ADM2/geoBoundaries-KEN-ADM2.geojson",
+   "sha256": "5aad558bf35bbd549efe5c29195f06a5cf7815054cb67d8c019a7ec0c1c7960e",
+   "licence": "CC BY 3.0 IGO",
+   "attribution": "Constituency boundaries: geoBoundaries gbOpen KEN ADM2 (IEBC, OCHA ROSEA), CC BY 3.0 IGO",
+   "crs": "EPSG:4326 (WGS 84)",
+   "retrieved": "2026-11-28",
+   "used_for": "check only: constituency polygons compared with the union of their wards (checks.constituency_vs_wards)"
+  },
+  {
+   "id": "KNBS-KPHC-2019-VOL2",
+   "title": "2019 Kenya Population and Housing Census Volume II",
+   "publisher": "Kenya National Bureau of Statistics",
+   "used_for": "official land area 2085 km2 (Table 2.2, Kisumu row; data/counties/kisumu/population.json P01, also_printed_in)"
+  }
+ ],
+ "county": {
+  "id": "kisumu",
+  "name": "Kisumu",
+  "iebc_county_code": "042",
+  "constitution_first_schedule_number": 42,
+  "constituency_ids": [
+   "kisumu-east",
+   "kisumu-west",
+   "kisumu-central",
+   "seme",
+   "nyando",
+   "muhoroni",
+   "nyakach"
+  ]
+ },
+ "constituencies": [
+  {
+   "id": "kisumu-east",
+   "name": "Kisumu East",
+   "iebc_constituency_code": "238",
+   "parent": "kisumu",
+   "knbs_sub_county_slug": "kisumu-east",
+   "ward_ids": [
+    "kajulu",
+    "kolwa-east",
+    "manyatta-b",
+    "nyalenda-a",
+    "kolwa-central"
+   ],
+   "registered_voters_2022": {
+    "value": 93177,
+    "as_printed": "042 KISUMU                   238 KISUMU EAST                            93,177",
+    "pdf_page": 6,
+    "name_as_printed": "KISUMU EAST",
+    "source_id": "IEBC-ROV-2022",
+    "unit": "persons (registered voters)",
+    "period": "2022 General Election register",
+    "confidence": 4,
+    "read_method": "PDF text layer"
+   }
+  },
+  {
+   "id": "kisumu-west",
+   "name": "Kisumu West",
+   "iebc_constituency_code": "239",
+   "parent": "kisumu",
+   "knbs_sub_county_slug": "kisumu-west",
+   "ward_ids": [
+    "south-west-kisumu",
+    "central-kisumu",
+    "kisumu-north",
+    "west-kisumu",
+    "north-west-kisumu"
+   ],
+   "registered_voters_2022": {
+    "value": 82927,
+    "as_printed": "042 KISUMU                   239 KISUMU WEST                            82,927",
+    "pdf_page": 6,
+    "name_as_printed": "KISUMU WEST",
+    "source_id": "IEBC-ROV-2022",
+    "unit": "persons (registered voters)",
+    "period": "2022 General Election register",
+    "confidence": 4,
+    "read_method": "PDF text layer"
+   }
+  },
+  {
+   "id": "kisumu-central",
+   "name": "Kisumu Central",
+   "iebc_constituency_code": "240",
+   "parent": "kisumu",
+   "knbs_sub_county_slug": "kisumu-central",
+   "ward_ids": [
+    "railways",
+    "migosi",
+    "shaurimoyo-kaloleni",
+    "market-milimani",
+    "kondele",
+    "nyalenda-b"
+   ],
+   "registered_voters_2022": {
+    "value": 130149,
+    "as_printed": "042 KISUMU                   240 KISUMU CENTRAL                        130,149",
+    "pdf_page": 6,
+    "name_as_printed": "KISUMU CENTRAL",
+    "source_id": "IEBC-ROV-2022",
+    "unit": "persons (registered voters)",
+    "period": "2022 General Election register",
+    "confidence": 4,
+    "read_method": "PDF text layer"
+   }
+  },
+  {
+   "id": "seme",
+   "name": "Seme",
+   "iebc_constituency_code": "241",
+   "parent": "kisumu",
+   "knbs_sub_county_slug": "seme",
+   "ward_ids": [
+    "west-seme",
+    "central-seme",
+    "east-seme",
+    "north-seme"
+   ],
+   "registered_voters_2022": {
+    "value": 62045,
+    "as_printed": "042 KISUMU                   241 SEME                                   62,045",
+    "pdf_page": 6,
+    "name_as_printed": "SEME",
+    "source_id": "IEBC-ROV-2022",
+    "unit": "persons (registered voters)",
+    "period": "2022 General Election register",
+    "confidence": 4,
+    "read_method": "PDF text layer"
+   }
+  },
+  {
+   "id": "nyando",
+   "name": "Nyando",
+   "iebc_constituency_code": "242",
+   "parent": "kisumu",
+   "knbs_sub_county_slug": "nyando",
+   "ward_ids": [
+    "east-kano-wawidhi",
+    "awasi-onjiko",
+    "ahero",
+    "kabonyo-kanyagwal",
+    "kobura"
+   ],
+   "registered_voters_2022": {
+    "value": 80757,
+    "as_printed": "042 KISUMU                   242 NYANDO                                 80,757",
+    "pdf_page": 6,
+    "name_as_printed": "NYANDO",
+    "source_id": "IEBC-ROV-2022",
+    "unit": "persons (registered voters)",
+    "period": "2022 General Election register",
+    "confidence": 4,
+    "read_method": "PDF text layer"
+   }
+  },
+  {
+   "id": "muhoroni",
+   "name": "Muhoroni",
+   "iebc_constituency_code": "243",
+   "parent": "kisumu",
+   "knbs_sub_county_slug": "muhoroni",
+   "ward_ids": [
+    "miwani",
+    "ombeyi",
+    "masogo-nyangoma",
+    "chemelil",
+    "muhoroni-koru"
+   ],
+   "registered_voters_2022": {
+    "value": 79765,
+    "as_printed": "042 KISUMU                   243 MUHORONI                               79,765",
+    "pdf_page": 6,
+    "name_as_printed": "MUHORONI",
+    "source_id": "IEBC-ROV-2022",
+    "unit": "persons (registered voters)",
+    "period": "2022 General Election register",
+    "confidence": 4,
+    "read_method": "PDF text layer"
+   }
+  },
+  {
+   "id": "nyakach",
+   "name": "Nyakach",
+   "iebc_constituency_code": "244",
+   "parent": "kisumu",
+   "knbs_sub_county_slug": "nyakach",
+   "ward_ids": [
+    "south-west-nyakach",
+    "north-nyakach",
+    "central-nyakach",
+    "west-nyakach",
+    "south-east-nyakach"
+   ],
+   "registered_voters_2022": {
+    "value": 77934,
+    "as_printed": "042 KISUMU                   244 NYAKACH                                77,934",
+    "pdf_page": 6,
+    "name_as_printed": "NYAKACH",
+    "source_id": "IEBC-ROV-2022",
+    "unit": "persons (registered voters)",
+    "period": "2022 General Election register",
+    "confidence": 4,
+    "read_method": "PDF text layer"
+   }
+  }
+ ],
+ "wards": [
+  {
+   "id": "kajulu",
+   "name": "Kajulu",
+   "iebc_ward_code": "1186",
+   "iebc_constituency_code": "238",
+   "parent": "kisumu-east",
+   "gazette_pages": [
+    303,
+    304
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Kajulu",
+    "HDX-ARC-WARDS": "Kajulu Ward"
+   }
+  },
+  {
+   "id": "kolwa-east",
+   "name": "Kolwa East",
+   "iebc_ward_code": "1187",
+   "iebc_constituency_code": "238",
+   "parent": "kisumu-east",
+   "gazette_pages": [
+    304
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Kolwa East",
+    "HDX-ARC-WARDS": "Kolwa East Ward"
+   }
+  },
+  {
+   "id": "manyatta-b",
+   "name": "Manyatta 'B'",
+   "iebc_ward_code": "1188",
+   "iebc_constituency_code": "238",
+   "parent": "kisumu-east",
+   "gazette_pages": [
+    304
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Manyatta 'B'",
+    "HDX-ARC-WARDS": "Manyatta B Ward"
+   }
+  },
+  {
+   "id": "nyalenda-a",
+   "name": "Nyalenda 'A'",
+   "iebc_ward_code": "1189",
+   "iebc_constituency_code": "238",
+   "parent": "kisumu-east",
+   "gazette_pages": [
+    304
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Nyalenda 'A'",
+    "HDX-ARC-WARDS": "Nyalenda A Ward"
+   }
+  },
+  {
+   "id": "kolwa-central",
+   "name": "Kolwa Central",
+   "iebc_ward_code": "1190",
+   "iebc_constituency_code": "238",
+   "parent": "kisumu-east",
+   "gazette_pages": [
+    304
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Kolwa Central",
+    "HDX-ARC-WARDS": "Kolwa Central Ward"
+   }
+  },
+  {
+   "id": "south-west-kisumu",
+   "name": "South West Kisumu",
+   "iebc_ward_code": "1191",
+   "iebc_constituency_code": "239",
+   "parent": "kisumu-west",
+   "gazette_pages": [
+    304
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "South West Kisumu",
+    "HDX-ARC-WARDS": "South West Kisumu Ward"
+   }
+  },
+  {
+   "id": "central-kisumu",
+   "name": "Central Kisumu",
+   "iebc_ward_code": "1192",
+   "iebc_constituency_code": "239",
+   "parent": "kisumu-west",
+   "gazette_pages": [
+    304
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Central Kisumu",
+    "HDX-ARC-WARDS": "Central Kisumu Ward"
+   }
+  },
+  {
+   "id": "kisumu-north",
+   "name": "Kisumu North",
+   "iebc_ward_code": "1193",
+   "iebc_constituency_code": "239",
+   "parent": "kisumu-west",
+   "gazette_pages": [
+    305
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Kisumu North",
+    "HDX-ARC-WARDS": "North Kisumu Ward"
+   }
+  },
+  {
+   "id": "west-kisumu",
+   "name": "West Kisumu",
+   "iebc_ward_code": "1194",
+   "iebc_constituency_code": "239",
+   "parent": "kisumu-west",
+   "gazette_pages": [
+    305
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "West Kisumu",
+    "HDX-ARC-WARDS": "West Kisumu Ward"
+   }
+  },
+  {
+   "id": "north-west-kisumu",
+   "name": "North West Kisumu",
+   "iebc_ward_code": "1195",
+   "iebc_constituency_code": "239",
+   "parent": "kisumu-west",
+   "gazette_pages": [
+    305
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "North West Kisumu",
+    "HDX-ARC-WARDS": "North West Kisumu Ward"
+   }
+  },
+  {
+   "id": "railways",
+   "name": "Railways",
+   "iebc_ward_code": "1196",
+   "iebc_constituency_code": "240",
+   "parent": "kisumu-central",
+   "gazette_pages": [
+    305
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Railways",
+    "HDX-ARC-WARDS": "Railways Ward"
+   }
+  },
+  {
+   "id": "migosi",
+   "name": "Migosi",
+   "iebc_ward_code": "1197",
+   "iebc_constituency_code": "240",
+   "parent": "kisumu-central",
+   "gazette_pages": [
+    305
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Migosi",
+    "HDX-ARC-WARDS": "Migosi Ward"
+   }
+  },
+  {
+   "id": "shaurimoyo-kaloleni",
+   "name": "Shaurimoyo Kaloleni",
+   "iebc_ward_code": "1198",
+   "iebc_constituency_code": "240",
+   "parent": "kisumu-central",
+   "gazette_pages": [
+    305,
+    306
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Shaurimoyo Kaloleni",
+    "HDX-ARC-WARDS": "Shauri Moyo Kaloleni Ward"
+   }
+  },
+  {
+   "id": "market-milimani",
+   "name": "Market Milimani",
+   "iebc_ward_code": "1199",
+   "iebc_constituency_code": "240",
+   "parent": "kisumu-central",
+   "gazette_pages": [
+    306
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Market Milimani",
+    "HDX-ARC-WARDS": "Market Milimani Ward"
+   }
+  },
+  {
+   "id": "kondele",
+   "name": "Kondele",
+   "iebc_ward_code": "1200",
+   "iebc_constituency_code": "240",
+   "parent": "kisumu-central",
+   "gazette_pages": [
+    306
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Kondele",
+    "HDX-ARC-WARDS": "Kondele Ward"
+   }
+  },
+  {
+   "id": "nyalenda-b",
+   "name": "Nyalenda B",
+   "iebc_ward_code": "1201",
+   "iebc_constituency_code": "240",
+   "parent": "kisumu-central",
+   "gazette_pages": [
+    306
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Nyalenda B",
+    "HDX-ARC-WARDS": "Nyalenda B Ward"
+   }
+  },
+  {
+   "id": "west-seme",
+   "name": "West Seme",
+   "iebc_ward_code": "1202",
+   "iebc_constituency_code": "241",
+   "parent": "seme",
+   "gazette_pages": [
+    306
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "West Seme",
+    "HDX-ARC-WARDS": "West Seme Ward"
+   }
+  },
+  {
+   "id": "central-seme",
+   "name": "Central Seme",
+   "iebc_ward_code": "1203",
+   "iebc_constituency_code": "241",
+   "parent": "seme",
+   "gazette_pages": [
+    306,
+    307
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Central Seme",
+    "HDX-ARC-WARDS": "Central Seme Ward"
+   }
+  },
+  {
+   "id": "east-seme",
+   "name": "East Seme",
+   "iebc_ward_code": "1204",
+   "iebc_constituency_code": "241",
+   "parent": "seme",
+   "gazette_pages": [
+    307
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "East Seme",
+    "HDX-ARC-WARDS": "East Seme Ward"
+   }
+  },
+  {
+   "id": "north-seme",
+   "name": "North Seme",
+   "iebc_ward_code": "1205",
+   "iebc_constituency_code": "241",
+   "parent": "seme",
+   "gazette_pages": [
+    307
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "North Seme",
+    "HDX-ARC-WARDS": "North Seme Ward"
+   }
+  },
+  {
+   "id": "east-kano-wawidhi",
+   "name": "East Kano/Wawidhi",
+   "iebc_ward_code": "1206",
+   "iebc_constituency_code": "242",
+   "parent": "nyando",
+   "gazette_pages": [
+    307,
+    308
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "East Kano/Wawidhi",
+    "HDX-ARC-WARDS": "East Kano/wawidhi Ward"
+   }
+  },
+  {
+   "id": "awasi-onjiko",
+   "name": "Awasi/Onjiko",
+   "iebc_ward_code": "1207",
+   "iebc_constituency_code": "242",
+   "parent": "nyando",
+   "gazette_pages": [
+    308
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Awasi/Onjiko",
+    "HDX-ARC-WARDS": "Awasi/onjiko Ward"
+   }
+  },
+  {
+   "id": "ahero",
+   "name": "Ahero",
+   "iebc_ward_code": "1208",
+   "iebc_constituency_code": "242",
+   "parent": "nyando",
+   "gazette_pages": [
+    308
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Ahero",
+    "HDX-ARC-WARDS": "Ahero Ward"
+   }
+  },
+  {
+   "id": "kabonyo-kanyagwal",
+   "name": "Kabonyo/Kanyagwal",
+   "iebc_ward_code": "1209",
+   "iebc_constituency_code": "242",
+   "parent": "nyando",
+   "gazette_pages": [
+    308
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Kabonyo/Kanyagwal",
+    "HDX-ARC-WARDS": "Kabonyo Kanyagwal"
+   }
+  },
+  {
+   "id": "kobura",
+   "name": "Kobura",
+   "iebc_ward_code": "1210",
+   "iebc_constituency_code": "242",
+   "parent": "nyando",
+   "gazette_pages": [
+    308,
+    309
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Kobura",
+    "HDX-ARC-WARDS": "Kobura Ward"
+   }
+  },
+  {
+   "id": "miwani",
+   "name": "Miwani",
+   "iebc_ward_code": "1211",
+   "iebc_constituency_code": "243",
+   "parent": "muhoroni",
+   "gazette_pages": [
+    309
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Miwani",
+    "HDX-ARC-WARDS": "Miwani Ward"
+   }
+  },
+  {
+   "id": "ombeyi",
+   "name": "Ombeyi",
+   "iebc_ward_code": "1212",
+   "iebc_constituency_code": "243",
+   "parent": "muhoroni",
+   "gazette_pages": [
+    309
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Ombeyi",
+    "HDX-ARC-WARDS": "Ombeyi Ward"
+   }
+  },
+  {
+   "id": "masogo-nyangoma",
+   "name": "Masogo/Nyang'oma",
+   "iebc_ward_code": "1213",
+   "iebc_constituency_code": "243",
+   "parent": "muhoroni",
+   "gazette_pages": [
+    309,
+    310
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Masogo/Nyang'oma",
+    "HDX-ARC-WARDS": "Masogo/nyang'oma Ward"
+   }
+  },
+  {
+   "id": "chemelil",
+   "name": "Chemelil",
+   "iebc_ward_code": "1214",
+   "iebc_constituency_code": "243",
+   "parent": "muhoroni",
+   "gazette_pages": [
+    310
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Chemelil",
+    "HDX-ARC-WARDS": "Chemelil Ward"
+   }
+  },
+  {
+   "id": "muhoroni-koru",
+   "name": "Muhoroni/Koru",
+   "iebc_ward_code": "1215",
+   "iebc_constituency_code": "243",
+   "parent": "muhoroni",
+   "gazette_pages": [
+    310
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Muhoroni/Koru",
+    "HDX-ARC-WARDS": "Muhoroni Koru Ward"
+   }
+  },
+  {
+   "id": "south-west-nyakach",
+   "name": "South West Nyakach",
+   "iebc_ward_code": "1216",
+   "iebc_constituency_code": "244",
+   "parent": "nyakach",
+   "gazette_pages": [
+    310
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "South West Nyakach",
+    "HDX-ARC-WARDS": "South West Nyakach Ward"
+   }
+  },
+  {
+   "id": "north-nyakach",
+   "name": "North Nyakach",
+   "iebc_ward_code": "1217",
+   "iebc_constituency_code": "244",
+   "parent": "nyakach",
+   "gazette_pages": [
+    310,
+    311
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "North Nyakach",
+    "HDX-ARC-WARDS": "North Nyakach Ward"
+   }
+  },
+  {
+   "id": "central-nyakach",
+   "name": "Central Nyakach",
+   "iebc_ward_code": "1218",
+   "iebc_constituency_code": "244",
+   "parent": "nyakach",
+   "gazette_pages": [
+    311
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "Central Nyakach",
+    "HDX-ARC-WARDS": "Central Nyakach Ward"
+   }
+  },
+  {
+   "id": "west-nyakach",
+   "name": "West Nyakach",
+   "iebc_ward_code": "1219",
+   "iebc_constituency_code": "244",
+   "parent": "nyakach",
+   "gazette_pages": [
+    311
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "West Nyakach",
+    "HDX-ARC-WARDS": "West Nyakach Ward"
+   }
+  },
+  {
+   "id": "south-east-nyakach",
+   "name": "South East Nyakach",
+   "iebc_ward_code": "1220",
+   "iebc_constituency_code": "244",
+   "parent": "nyakach",
+   "gazette_pages": [
+    311,
+    312
+   ],
+   "source_names": {
+    "IEBC-GN-13904-2025": "South East Nyakach",
+    "HDX-ARC-WARDS": "South East Nyakach Ward"
+   }
+  }
+ ],
+ "crosswalk": [
+  {
+   "iebc_code": "1186",
+   "iebc_name": "Kajulu",
+   "polygon_name": "Kajulu Ward",
+   "polygon_sub_county": "Kisumu East Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1187",
+   "iebc_name": "Kolwa East",
+   "polygon_name": "Kolwa East Ward",
+   "polygon_sub_county": "Kisumu East Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1188",
+   "iebc_name": "Manyatta 'B'",
+   "polygon_name": "Manyatta B Ward",
+   "polygon_sub_county": "Kisumu East Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1189",
+   "iebc_name": "Nyalenda 'A'",
+   "polygon_name": "Nyalenda A Ward",
+   "polygon_sub_county": "Kisumu East Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1190",
+   "iebc_name": "Kolwa Central",
+   "polygon_name": "Kolwa Central Ward",
+   "polygon_sub_county": "Kisumu East Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1191",
+   "iebc_name": "South West Kisumu",
+   "polygon_name": "South West Kisumu Ward",
+   "polygon_sub_county": "Kisumu West Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1192",
+   "iebc_name": "Central Kisumu",
+   "polygon_name": "Central Kisumu Ward",
+   "polygon_sub_county": "Kisumu West Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1193",
+   "iebc_name": "Kisumu North",
+   "polygon_name": "North Kisumu Ward",
+   "polygon_sub_county": "Kisumu West Sub County",
+   "rule": "alias"
+  },
+  {
+   "iebc_code": "1194",
+   "iebc_name": "West Kisumu",
+   "polygon_name": "West Kisumu Ward",
+   "polygon_sub_county": "Kisumu West Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1195",
+   "iebc_name": "North West Kisumu",
+   "polygon_name": "North West Kisumu Ward",
+   "polygon_sub_county": "Kisumu West Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1196",
+   "iebc_name": "Railways",
+   "polygon_name": "Railways Ward",
+   "polygon_sub_county": "Kisumu Central Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1197",
+   "iebc_name": "Migosi",
+   "polygon_name": "Migosi Ward",
+   "polygon_sub_county": "Kisumu Central Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1198",
+   "iebc_name": "Shaurimoyo Kaloleni",
+   "polygon_name": "Shauri Moyo Kaloleni Ward",
+   "polygon_sub_county": "Kisumu Central Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1199",
+   "iebc_name": "Market Milimani",
+   "polygon_name": "Market Milimani Ward",
+   "polygon_sub_county": "Kisumu Central Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1200",
+   "iebc_name": "Kondele",
+   "polygon_name": "Kondele Ward",
+   "polygon_sub_county": "Kisumu Central Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1201",
+   "iebc_name": "Nyalenda B",
+   "polygon_name": "Nyalenda B Ward",
+   "polygon_sub_county": "Kisumu Central Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1202",
+   "iebc_name": "West Seme",
+   "polygon_name": "West Seme Ward",
+   "polygon_sub_county": "Seme Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1203",
+   "iebc_name": "Central Seme",
+   "polygon_name": "Central Seme Ward",
+   "polygon_sub_county": "Seme Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1204",
+   "iebc_name": "East Seme",
+   "polygon_name": "East Seme Ward",
+   "polygon_sub_county": "Seme Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1205",
+   "iebc_name": "North Seme",
+   "polygon_name": "North Seme Ward",
+   "polygon_sub_county": "Seme Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1206",
+   "iebc_name": "East Kano/Wawidhi",
+   "polygon_name": "East Kano/wawidhi Ward",
+   "polygon_sub_county": "Nyando Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1207",
+   "iebc_name": "Awasi/Onjiko",
+   "polygon_name": "Awasi/onjiko Ward",
+   "polygon_sub_county": "Nyando Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1208",
+   "iebc_name": "Ahero",
+   "polygon_name": "Ahero Ward",
+   "polygon_sub_county": "Nyando Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1209",
+   "iebc_name": "Kabonyo/Kanyagwal",
+   "polygon_name": "Kabonyo Kanyagwal",
+   "polygon_sub_county": "Nyando Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1210",
+   "iebc_name": "Kobura",
+   "polygon_name": "Kobura Ward",
+   "polygon_sub_county": "Nyando Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1211",
+   "iebc_name": "Miwani",
+   "polygon_name": "Miwani Ward",
+   "polygon_sub_county": "Muhoroni Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1212",
+   "iebc_name": "Ombeyi",
+   "polygon_name": "Ombeyi Ward",
+   "polygon_sub_county": "Muhoroni Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1213",
+   "iebc_name": "Masogo/Nyang'oma",
+   "polygon_name": "Masogo/nyang'oma Ward",
+   "polygon_sub_county": "Muhoroni Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1214",
+   "iebc_name": "Chemelil",
+   "polygon_name": "Chemelil Ward",
+   "polygon_sub_county": "Muhoroni Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1215",
+   "iebc_name": "Muhoroni/Koru",
+   "polygon_name": "Muhoroni Koru Ward",
+   "polygon_sub_county": "Muhoroni Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1216",
+   "iebc_name": "South West Nyakach",
+   "polygon_name": "South West Nyakach Ward",
+   "polygon_sub_county": "Nyakach Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1217",
+   "iebc_name": "North Nyakach",
+   "polygon_name": "North Nyakach Ward",
+   "polygon_sub_county": "Nyakach Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1218",
+   "iebc_name": "Central Nyakach",
+   "polygon_name": "Central Nyakach Ward",
+   "polygon_sub_county": "Nyakach Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1219",
+   "iebc_name": "West Nyakach",
+   "polygon_name": "West Nyakach Ward",
+   "polygon_sub_county": "Nyakach Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  },
+  {
+   "iebc_code": "1220",
+   "iebc_name": "South East Nyakach",
+   "polygon_name": "South East Nyakach Ward",
+   "polygon_sub_county": "Nyakach Sub County",
+   "rule": "same name after case, punctuation and the word \"Ward\""
+  }
+ ],
+ "checks": {
+  "wards": 35,
+  "constituencies": 7,
+  "coverage_valid": true,
+  "ward_overlap_km2": 0.0,
+  "ward_area_km2": 2086.1,
+  "geoboundaries_constituency_area_km2": 2677.0,
+  "official_land_area_km2": 2085,
+  "ward_area_vs_official_pct": 0.05,
+  "geoboundaries_constituency_area_vs_official_pct": 28.39,
+  "min_share_of_ward_inside_geoboundaries_constituency": 0.549,
+  "constituency_vs_wards": [
+   {
+    "iebc_code": "238",
+    "name": "Kisumu East",
+    "wards_area_km2": 135.8,
+    "geoboundaries_area_km2": 166.2,
+    "geoboundaries_outside_wards_km2": 42.8,
+    "wards_outside_geoboundaries_km2": 12.4
+   },
+   {
+    "iebc_code": "239",
+    "name": "Kisumu West",
+    "wards_area_km2": 212.7,
+    "geoboundaries_area_km2": 313.8,
+    "geoboundaries_outside_wards_km2": 109.0,
+    "wards_outside_geoboundaries_km2": 7.9
+   },
+   {
+    "iebc_code": "240",
+    "name": "Kisumu Central",
+    "wards_area_km2": 32.7,
+    "geoboundaries_area_km2": 68.6,
+    "geoboundaries_outside_wards_km2": 39.4,
+    "wards_outside_geoboundaries_km2": 3.5
+   },
+   {
+    "iebc_code": "241",
+    "name": "Seme",
+    "wards_area_km2": 266.9,
+    "geoboundaries_area_km2": 451.1,
+    "geoboundaries_outside_wards_km2": 189.6,
+    "wards_outside_geoboundaries_km2": 5.5
+   },
+   {
+    "iebc_code": "242",
+    "name": "Nyando",
+    "wards_area_km2": 413.1,
+    "geoboundaries_area_km2": 605.8,
+    "geoboundaries_outside_wards_km2": 207.9,
+    "wards_outside_geoboundaries_km2": 15.2
+   },
+   {
+    "iebc_code": "243",
+    "name": "Muhoroni",
+    "wards_area_km2": 667.7,
+    "geoboundaries_area_km2": 667.2,
+    "geoboundaries_outside_wards_km2": 22.4,
+    "wards_outside_geoboundaries_km2": 22.9
+   },
+   {
+    "iebc_code": "244",
+    "name": "Nyakach",
+    "wards_area_km2": 357.2,
+    "geoboundaries_area_km2": 404.3,
+    "geoboundaries_outside_wards_km2": 59.9,
+    "wards_outside_geoboundaries_km2": 12.8
+   }
+  ],
+  "area_method": "Lambert azimuthal equal-area projection centred on the county, authalic radius 6371.0072 km, on the unsimplified polygons."
+ }
+}
