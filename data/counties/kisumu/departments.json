@@ -1,0 +1,5087 @@
+{
+ "meta": {
+  "title": "Kisumu County: budget, exchequer, expenditure and absorption by department, FY 2021/22 to 2024/25 (held; not on pages)",
+  "county": "Kisumu",
+  "county_code": 42,
+  "unit": "KSh million; *_pct columns in per cent as printed",
+  "rule": "One record per department row of the Controller of Budget table, cells as printed. Every cell was read by Claude from the rendered page image (the publisher text layer is OCR with errors and was not used for values). \"-\" printed is kept as null with status \"dash\", never zero. Department names and groupings change between years and are kept as printed; no row is mapped across years. Ratios are the report's own; checks recompute them from the printed amounts but never replace them. 2024/25 prints a revised budget and whole-number percentages. Every value is provisional until a reviewer approves it.",
+  "source_ids": [
+   "cob-report-2021-22",
+   "cob-report-2022-23",
+   "cob-report-2023-24",
+   "cob-report-2024-25"
+  ],
+  "extracted": "2026-11-28",
+  "status": "Provisional: awaiting editorial review",
+  "held": true
+ },
+ "columns": {
+  "budget_rec": "Budget allocation, recurrent",
+  "budget_dev": "Budget allocation, development",
+  "exchequer_rec": "Exchequer issues, recurrent",
+  "exchequer_dev": "Exchequer issues, development",
+  "expenditure_rec": "Expenditure, recurrent",
+  "expenditure_dev": "Expenditure, development",
+  "exp_to_exchequer_rec_pct": "Expenditure to exchequer issues, recurrent (%)",
+  "exp_to_exchequer_dev_pct": "Expenditure to exchequer issues, development (%)",
+  "absorption_rec_pct": "Absorption rate, recurrent (%)",
+  "absorption_dev_pct": "Absorption rate, development (%)"
+ },
+ "headers_by_year": {
+  "2021/22": {
+   "budget": "Budget Allocation (Kshs. Million)",
+   "exchequer": "Exchequer Issues (Kshs. Million)"
+  },
+  "2022/23": {
+   "budget": "Budget Allocation (Kshs.Million)",
+   "exchequer": "Exchequer Issues (Kshs.Million)"
+  },
+  "2023/24": {
+   "budget": "Budget Allocation (Kshs. Million)",
+   "exchequer": "Exchequer Issues (Kshs. Million)"
+  },
+  "2024/25": {
+   "budget": "Revised Budget Allocation (Kshs.Million)",
+   "exchequer": "Exchequer Received (Kshs.Million)"
+  }
+ },
+ "records": [
+  {
+   "id": "kisumu-dept-2021-22-office-of-governor-and-county-administration",
+   "fy": "2021/22",
+   "department": "Office of Governor and County Administration",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 204,
+   "printed_page": 180,
+   "read_method": "image",
+   "confidence": 2,
+   "cells": {
+    "budget_rec": {
+     "value": 290.75,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exchequer_rec": {
+     "value": 260.83,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "expenditure_rec": {
+     "value": 236.78,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 90.8,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 0.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 38.3,
+     "status": "printed",
+     "note": "As printed (38.3%), and repeated in the report narrative as the lowest recurrent absorption; the printed amounts give 81.4% (236.78 / 290.75). Source inconsistency kept side by side in checks; not corrected."
+    },
+    "absorption_dev_pct": {
+     "value": 0.0,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-public-health-medical-services",
+   "fy": "2021/22",
+   "department": "Public Health, Medical Services",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 204,
+   "printed_page": 180,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 3700.53,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 144.2,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 3329.23,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 32.08,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 2558.32,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 68.44,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 76.8,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 213.4,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 69.1,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 47.5,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-tourism-culture-arts-sports",
+   "fy": "2021/22",
+   "department": "Tourism Culture, Arts & Sports",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 204,
+   "printed_page": 180,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 73.48,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 146.55,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 47.26,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 10.23,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 46.37,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 64.02,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 98.1,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 625.7,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 63.1,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 43.7,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-public-works-roads-transport",
+   "fy": "2021/22",
+   "department": "Public Works, roads & Transport",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 204,
+   "printed_page": 180,
+   "read_method": "image",
+   "confidence": 2,
+   "cells": {
+    "budget_rec": {
+     "value": 207.22,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 505.42,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 191.78,
+     "status": "printed",
+     "note": "A stray mark before the figure makes it look like \"1 191.78\" on the page; read as 191.78, which the printed expenditure-to-exchequer ratio (106.1%) and the column total confirm."
+    },
+    "exchequer_dev": {
+     "value": 59.03,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 203.44,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 91.35,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 106.1,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 154.8,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 98.2,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 18.1,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-physical-planning-lands-housing-urban-dev",
+   "fy": "2021/22",
+   "department": "Physical Planning, Lands, Housing & Urban Dev",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 204,
+   "printed_page": 180,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 79.51,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 341.1,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 50.73,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "expenditure_rec": {
+     "value": 91.16,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 8.7,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 179.7,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 0.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 114.7,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 2.5,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-agriculture-livestock-food-fisheries",
+   "fy": "2021/22",
+   "department": "Agriculture, Livestock, Food & Fisheries",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 203.49,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 581.59,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 135.77,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 268.82,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 192.57,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 250.03,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 141.8,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 93.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 94.6,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 43.0,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-education-human-resource-dev-ict",
+   "fy": "2021/22",
+   "department": "Education, Human Resource Dev, & ICT",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 582.99,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 210.9,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 554.32,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 74.23,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 580.34,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 93.56,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 104.7,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 126.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 99.5,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 44.4,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-environment-water-irrigation-natural-resource",
+   "fy": "2021/22",
+   "department": "Environment, Water, Irrigation, & Natural Resource.",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 108.94,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 74.95,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 73.72,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 7.92,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 86.47,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 36.21,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 117.3,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 457.1,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 79.4,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 48.3,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-county-public-service-board",
+   "fy": "2021/22",
+   "department": "County Public Service Board",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 75.03,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exchequer_rec": {
+     "value": 41.21,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "expenditure_rec": {
+     "value": 66.84,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 162.2,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 0.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 89.1,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 0.0,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-kisumu-city",
+   "fy": "2021/22",
+   "department": "Kisumu City",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 406.78,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 324.86,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 353.12,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 136.65,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 370.24,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 263.42,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 104.8,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 192.8,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 91.0,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 81.1,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-finance-and-economic-planning",
+   "fy": "2021/22",
+   "department": "Finance and Economic Planning",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 1423.37,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 927.75,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 1222.1,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 511.77,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 729.17,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 77.94,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 59.7,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 15.2,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 51.2,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 8.4,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-public-administration-devolution",
+   "fy": "2021/22",
+   "department": "Public Administration & Devolution",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 408.46,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 15.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 285.83,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "expenditure_rec": {
+     "value": 299.11,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 2.27,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 104.6,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 0.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 73.2,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 15.2,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-trade-energy-and-industry",
+   "fy": "2021/22",
+   "department": "Trade Energy and Industry",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 111.18,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 304.48,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 85.61,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 145.66,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 83.45,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 131.31,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 97.5,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 90.1,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 75.1,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 43.1,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-county-assembly",
+   "fy": "2021/22",
+   "department": "County Assembly",
+   "is_total": false,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 779.32,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 150.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 764.32,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 88.43,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 763.58,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 88.43,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 99.9,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 98.0,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 59.0,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2021-22-total",
+   "fy": "2021/22",
+   "department": "TOTAL",
+   "is_total": true,
+   "source_id": "cob-report-2021-22",
+   "table": "Table 3.115: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 205,
+   "printed_page": 181,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 8451.05,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 3726.8,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 7395.84,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 1334.83,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 6307.86,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 1175.68,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 85.3,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 88.1,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 74.6,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 31.5,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-agriculture-irrigation-livestock-and-fisheries",
+   "fy": "2022/23",
+   "department": "Agriculture, Irrigation, Livestock and Fisheries",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 202.78,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 285.75,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 167.29,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 112.38,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 167.29,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 109.22,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 97.2,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 82.5,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 38.2,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-city-of-kisumu",
+   "fy": "2022/23",
+   "department": "City of Kisumu",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 458.41,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 118.29,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 285.54,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 30.5,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 285.54,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 30.5,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 62.3,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 25.8,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-roads-transport-and-public-works",
+   "fy": "2022/23",
+   "department": "Roads, Transport and Public Works",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 200.96,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 303.66,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 143.37,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 71.99,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 143.37,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 71.99,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 71.3,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 23.7,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-county-public-service-board",
+   "fy": "2022/23",
+   "department": "County Public Service Board",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 88.83,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exchequer_rec": {
+     "value": 50.08,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "expenditure_rec": {
+     "value": 50.08,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": null,
+     "status": "dash"
+    },
+    "absorption_rec_pct": {
+     "value": 56.4,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": null,
+     "status": "dash"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-education-human-resource-development-and-ict",
+   "fy": "2022/23",
+   "department": "Education, Human Resource Development and ICT",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 601.08,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 124.2,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 575.53,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 64.55,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 575.53,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 64.55,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 95.7,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 52.0,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-office-of-the-governor",
+   "fy": "2022/23",
+   "department": "Office of the Governor",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 299.83,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 45.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 225.3,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 25.0,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 225.3,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 25.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 75.1,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 55.6,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-health-services",
+   "fy": "2022/23",
+   "department": "Health Services",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 3394.88,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 180.1,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 3206.21,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 65.0,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 2833.99,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 65.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 88.4,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 83.5,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 36.1,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-public-service-administration-devolution",
+   "fy": "2022/23",
+   "department": "Public Service Administration & Devolution",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 430.49,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 20.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 416.45,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "expenditure_rec": {
+     "value": 416.45,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": null,
+     "status": "dash"
+    },
+    "absorption_rec_pct": {
+     "value": 96.7,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": null,
+     "status": "dash"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-tourism-culture-arts-and-sports",
+   "fy": "2022/23",
+   "department": "Tourism, Culture, Arts and Sports.",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 84.6,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 59.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 47.37,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 18.0,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 47.37,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 18.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 56.0,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 30.5,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-lands-housing-and-physical-planning",
+   "fy": "2022/23",
+   "department": "Lands, Housing and Physical Planning",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 149.17,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 514.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 82.69,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 200.0,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 82.69,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 200.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 55.4,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 38.9,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-trade-energy-and-industry",
+   "fy": "2022/23",
+   "department": "Trade, Energy and Industry",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 102.67,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 117.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 93.36,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 20.38,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 93.36,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 20.38,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 90.9,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 17.4,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-finance-and-economic-planning",
+   "fy": "2022/23",
+   "department": "Finance and Economic Planning",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 1573.9,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 1552.86,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 1290.96,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 1245.89,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 1535.39,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 1060.63,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 118.9,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 85.1,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 97.6,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 68.3,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-water-environment-and-natural-resources",
+   "fy": "2022/23",
+   "department": "Water, Environment and Natural Resources",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 111.64,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 92.3,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 77.66,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 18.0,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 77.66,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 17.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 94.4,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 69.6,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 18.4,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-county-assembly",
+   "fy": "2022/23",
+   "department": "County Assembly",
+   "is_total": false,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 783.89,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 150.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 741.47,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 128.32,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 737.79,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 126.22,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 99.5,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 98.4,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 94.1,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 84.1,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2022-23-total",
+   "fy": "2022/23",
+   "department": "Total",
+   "is_total": true,
+   "source_id": "cob-report-2022-23",
+   "table": "Table 3.116: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 260,
+   "printed_page": 234,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 8483.12,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 3562.16,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 7403.31,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 2000.02,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 7271.83,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 1808.5,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 98.2,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 90.4,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 85.7,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 50.8,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-agriculture-livestock-and-fisheries",
+   "fy": "2023/24",
+   "department": "Agriculture, Livestock and Fisheries",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 297.38,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 496.8,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 245.81,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 40.12,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 245.81,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 40.12,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 82.7,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 8.1,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-county-assembly-of-kisumu",
+   "fy": "2023/24",
+   "department": "County Assembly of Kisumu",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 975.31,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 165.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 836.07,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 0.74,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 835.33,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 0.74,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 99.9,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 85.6,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 0.4,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-city-of-kisumu",
+   "fy": "2023/24",
+   "department": "City of Kisumu",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 469.42,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 369.3,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 302.27,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 97.68,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 302.27,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 97.68,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 64.4,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 26.4,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-county-public-service-board",
+   "fy": "2023/24",
+   "department": "County Public Service Board",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 103.26,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exchequer_rec": {
+     "value": 61.0,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "expenditure_rec": {
+     "value": 61.0,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": null,
+     "status": "dash"
+    },
+    "absorption_rec_pct": {
+     "value": 59.1,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": null,
+     "status": "dash"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-education-technical-training-innovation-and-social-services",
+   "fy": "2023/24",
+   "department": "Education, Technical Training, Innovation and Social Services",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 729.42,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 200.83,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 609.07,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 20.95,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 609.07,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 20.95,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 83.5,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 10.4,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-public-services-county-administration-participatory-development-and-office-of-the-governor",
+   "fy": "2023/24",
+   "department": "Public Services, County Administration, Participatory Development and Office of the Governor",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 1171.06,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 118.5,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 724.6,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 22.85,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 672.68,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 22.85,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 92.8,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 57.4,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 19.3,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-medical-services-public-health-and-sanitation",
+   "fy": "2023/24",
+   "department": "Medical Services, Public Health and Sanitation",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 3369.41,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 229.87,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 3008.64,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 44.77,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 2908.64,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 42.77,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 96.7,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 95.5,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 86.3,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 18.6,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-trade-energy-industry-and-tourism",
+   "fy": "2023/24",
+   "department": "Trade, Energy, Industry and Tourism",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 130.85,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 184.15,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 110.88,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 10.1,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 60.88,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 10.1,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 54.9,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 46.5,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 5.5,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-sports-culture-gender-and-youth-affairs",
+   "fy": "2023/24",
+   "department": "Sports, Culture, gender and Youth Affairs",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 195.03,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 22.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 108.2,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 1.0,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 108.2,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 1.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 55.5,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 4.5,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-roads-infrastructure-transport-and-public-works",
+   "fy": "2023/24",
+   "department": "Roads Infrastructure, transport and Public Works",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 242.53,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 540.3,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 232.68,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 130.49,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 132.68,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 130.49,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 57.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 54.7,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 24.2,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-lands-housing-physical-planning-and-urban-development",
+   "fy": "2023/24",
+   "department": "Lands, Housing, Physical Planning and Urban Development",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 165.6,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 370.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 105.17,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 236.34,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 85.17,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 236.34,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 81.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 51.4,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 63.9,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-finance-economic-planning-and-ict-services",
+   "fy": "2023/24",
+   "department": "Finance, Economic Planning and ICT Services",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 1503.67,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 1062.14,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 1315.21,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 1043.13,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 1215.21,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 910.12,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 92.4,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 87.2,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 80.8,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 85.7,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-water-environment-and-natural-resources",
+   "fy": "2023/24",
+   "department": "Water, Environment and Natural Resources",
+   "is_total": false,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 158.38,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 427.65,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 77.99,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 37.3,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 77.99,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 37.3,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 49.2,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 8.7,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2023-24-total",
+   "fy": "2023/24",
+   "department": "Total",
+   "is_total": true,
+   "source_id": "cob-report-2023-24",
+   "table": "Table 3.117: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 242,
+   "printed_page": 219,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 9511.31,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 4186.55,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 7737.57,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 1685.47,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 7314.92,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 1550.46,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 94.5,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 92.0,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 76.9,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 37.0,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-physical-planning-lands-housing-and-urban-development",
+   "fy": "2024/25",
+   "department": "Physical Planning, Lands, Housing and Urban Development",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 85.55,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 1000.3,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 81.41,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 758.75,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 58.54,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 12.65,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 72,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 2,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 68,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 1,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-agriculture-livestock-food-and-fisheries",
+   "fy": "2024/25",
+   "department": "Agriculture, Livestock, Food and Fisheries",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 60.75,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 310.4,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 25.11,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 128.31,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 58.55,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 50.6,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 233,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 39,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 96,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 16,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-city-of-kisumu",
+   "fy": "2024/25",
+   "department": "City of Kisumu",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 184.1,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 912.59,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 106.36,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 121.7,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 96.75,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 121.7,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 91,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 53,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 13,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-county-assembly-of-kisumu",
+   "fy": "2024/25",
+   "department": "County Assembly of Kisumu",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 1002.02,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 100.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 943.48,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 72.21,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 937.78,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 72.21,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 99,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 94,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 72,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-county-public-service-board",
+   "fy": "2024/25",
+   "department": "County Public Service Board",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 37.12,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exchequer_rec": {
+     "value": 27.15,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "expenditure_rec": {
+     "value": 22.84,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": null,
+     "status": "dash"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 84,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": null,
+     "status": "dash"
+    },
+    "absorption_rec_pct": {
+     "value": 62,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": null,
+     "status": "dash"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-education-technical-training-innovation-and-social-service",
+   "fy": "2024/25",
+   "department": "Education, Technical Training, Innovation and Social Service",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 217.84,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 255.43,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 116.09,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 115.5,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 102.17,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 46.4,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 88,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 40,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 47,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 18,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-infrastructure-energy-and-public-works",
+   "fy": "2024/25",
+   "department": "Infrastructure, Energy and Public Works",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 82.69,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 960.23,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 53.02,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 328.18,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 33.11,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 254.39,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 62,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 78,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 40,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 27,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-finance-economic-planning-and-ict-services",
+   "fy": "2024/25",
+   "department": "Finance, Economic Planning and ICT Services",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 1184.6,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 1023.6,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 716.38,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 721.97,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 721.32,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 726.83,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 101,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 101,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 61,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 71,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-trade-tourism-industry-and-marketing",
+   "fy": "2024/25",
+   "department": "Trade, Tourism, Industry and Marketing",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 38.43,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 22.8,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 6.42,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 6.48,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 8.35,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 6.49,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 130,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 22,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 28,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-medical-services-public-health-and-sanitation",
+   "fy": "2024/25",
+   "department": "Medical Services, Public Health and Sanitation",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 805.97,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 123.65,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 258.45,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 52.03,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 283.37,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 58.17,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 110,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 112,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 35,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 47,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-sports-culture-gender-and-youth-affairs",
+   "fy": "2024/25",
+   "department": "Sports, Culture, Gender and Youth Affairs",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 69.4,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 48.5,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 28.49,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 5.99,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 42.51,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 6.47,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 149,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 108,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 61,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 13,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-water-environment-natural-resources-and-climate-change",
+   "fy": "2024/25",
+   "department": "Water, Environment, Natural Resources and Climate Change",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 71.58,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 626.43,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 22.3,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 36.61,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 68.09,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 202.29,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 305,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 553,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 95,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 32,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-public-service-county-administration-and-participatory-development",
+   "fy": "2024/25",
+   "department": "Public Service, County Administration and Participatory Development",
+   "is_total": false,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 2,
+   "cells": {
+    "budget_rec": {
+     "value": 6045.35,
+     "status": "printed",
+     "note": "As printed: this department carries 61% of the recurrent budget in 2024/25 (Medical Services 806 million against 3,369 million in 2023/24), which suggests county-wide personnel costs were moved to it; the table does not say so. Kept as printed, flagged for the reviewer."
+    },
+    "budget_dev": {
+     "value": 45.0,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 5570.06,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 9.81,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 5466.47,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 9.79,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 98,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 100,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 90,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 22,
+     "status": "printed"
+    }
+   }
+  },
+  {
+   "id": "kisumu-dept-2024-25-total",
+   "fy": "2024/25",
+   "department": "Total",
+   "is_total": true,
+   "source_id": "cob-report-2024-25",
+   "table": "Table 3.205: Kisumu County, Budget Allocation and Absorption Rate by Department",
+   "pdf_page": 248,
+   "printed_page": 205,
+   "read_method": "image",
+   "confidence": 3,
+   "cells": {
+    "budget_rec": {
+     "value": 9885.39,
+     "status": "printed"
+    },
+    "budget_dev": {
+     "value": 5428.94,
+     "status": "printed"
+    },
+    "exchequer_rec": {
+     "value": 7954.74,
+     "status": "printed"
+    },
+    "exchequer_dev": {
+     "value": 2357.55,
+     "status": "printed"
+    },
+    "expenditure_rec": {
+     "value": 7899.84,
+     "status": "printed"
+    },
+    "expenditure_dev": {
+     "value": 1567.99,
+     "status": "printed"
+    },
+    "exp_to_exchequer_rec_pct": {
+     "value": 99,
+     "status": "printed"
+    },
+    "exp_to_exchequer_dev_pct": {
+     "value": 67,
+     "status": "printed"
+    },
+    "absorption_rec_pct": {
+     "value": 80,
+     "status": "printed"
+    },
+    "absorption_dev_pct": {
+     "value": 29,
+     "status": "printed"
+    }
+   }
+  }
+ ],
+ "checks": [
+  {
+   "fy": "2021/22",
+   "check": "sum of departments, budget_rec",
+   "computed": 8451.05,
+   "printed": 8451.05,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "sum of departments, budget_dev",
+   "computed": 3726.8,
+   "printed": 3726.8,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "sum of departments, exchequer_rec",
+   "computed": 7395.83,
+   "printed": 7395.84,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "sum of departments, exchequer_dev",
+   "computed": 1334.82,
+   "printed": 1334.83,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "sum of departments, expenditure_rec",
+   "computed": 6307.84,
+   "printed": 6307.86,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "sum of departments, expenditure_dev",
+   "computed": 1175.68,
+   "printed": 1175.68,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Office of Governor and County Administration: exp_to_exchequer_rec_pct",
+   "computed": 90.8,
+   "printed": 90.8,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Office of Governor and County Administration: absorption_rec_pct",
+   "computed": 81.4,
+   "printed": 38.3,
+   "agrees": false
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Health, Medical Services: exp_to_exchequer_rec_pct",
+   "computed": 76.8,
+   "printed": 76.8,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Health, Medical Services: exp_to_exchequer_dev_pct",
+   "computed": 213.3,
+   "printed": 213.4,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Health, Medical Services: absorption_rec_pct",
+   "computed": 69.1,
+   "printed": 69.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Health, Medical Services: absorption_dev_pct",
+   "computed": 47.5,
+   "printed": 47.5,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Tourism Culture, Arts & Sports: exp_to_exchequer_rec_pct",
+   "computed": 98.1,
+   "printed": 98.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Tourism Culture, Arts & Sports: exp_to_exchequer_dev_pct",
+   "computed": 625.8,
+   "printed": 625.7,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Tourism Culture, Arts & Sports: absorption_rec_pct",
+   "computed": 63.1,
+   "printed": 63.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Tourism Culture, Arts & Sports: absorption_dev_pct",
+   "computed": 43.7,
+   "printed": 43.7,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Works, roads & Transport: exp_to_exchequer_rec_pct",
+   "computed": 106.1,
+   "printed": 106.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Works, roads & Transport: exp_to_exchequer_dev_pct",
+   "computed": 154.8,
+   "printed": 154.8,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Works, roads & Transport: absorption_rec_pct",
+   "computed": 98.2,
+   "printed": 98.2,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Works, roads & Transport: absorption_dev_pct",
+   "computed": 18.1,
+   "printed": 18.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Physical Planning, Lands, Housing & Urban Dev: exp_to_exchequer_rec_pct",
+   "computed": 179.7,
+   "printed": 179.7,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Physical Planning, Lands, Housing & Urban Dev: absorption_rec_pct",
+   "computed": 114.7,
+   "printed": 114.7,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Physical Planning, Lands, Housing & Urban Dev: absorption_dev_pct",
+   "computed": 2.6,
+   "printed": 2.5,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Agriculture, Livestock, Food & Fisheries: exp_to_exchequer_rec_pct",
+   "computed": 141.8,
+   "printed": 141.8,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Agriculture, Livestock, Food & Fisheries: exp_to_exchequer_dev_pct",
+   "computed": 93.0,
+   "printed": 93.0,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Agriculture, Livestock, Food & Fisheries: absorption_rec_pct",
+   "computed": 94.6,
+   "printed": 94.6,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Agriculture, Livestock, Food & Fisheries: absorption_dev_pct",
+   "computed": 43.0,
+   "printed": 43.0,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Education, Human Resource Dev, & ICT: exp_to_exchequer_rec_pct",
+   "computed": 104.7,
+   "printed": 104.7,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Education, Human Resource Dev, & ICT: exp_to_exchequer_dev_pct",
+   "computed": 126.0,
+   "printed": 126.0,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Education, Human Resource Dev, & ICT: absorption_rec_pct",
+   "computed": 99.5,
+   "printed": 99.5,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Education, Human Resource Dev, & ICT: absorption_dev_pct",
+   "computed": 44.4,
+   "printed": 44.4,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Environment, Water, Irrigation, & Natural Resource.: exp_to_exchequer_rec_pct",
+   "computed": 117.3,
+   "printed": 117.3,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Environment, Water, Irrigation, & Natural Resource.: exp_to_exchequer_dev_pct",
+   "computed": 457.2,
+   "printed": 457.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Environment, Water, Irrigation, & Natural Resource.: absorption_rec_pct",
+   "computed": 79.4,
+   "printed": 79.4,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Environment, Water, Irrigation, & Natural Resource.: absorption_dev_pct",
+   "computed": 48.3,
+   "printed": 48.3,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "County Public Service Board: exp_to_exchequer_rec_pct",
+   "computed": 162.2,
+   "printed": 162.2,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "County Public Service Board: absorption_rec_pct",
+   "computed": 89.1,
+   "printed": 89.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Kisumu City: exp_to_exchequer_rec_pct",
+   "computed": 104.8,
+   "printed": 104.8,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Kisumu City: exp_to_exchequer_dev_pct",
+   "computed": 192.8,
+   "printed": 192.8,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Kisumu City: absorption_rec_pct",
+   "computed": 91.0,
+   "printed": 91.0,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Kisumu City: absorption_dev_pct",
+   "computed": 81.1,
+   "printed": 81.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Finance and Economic Planning: exp_to_exchequer_rec_pct",
+   "computed": 59.7,
+   "printed": 59.7,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Finance and Economic Planning: exp_to_exchequer_dev_pct",
+   "computed": 15.2,
+   "printed": 15.2,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Finance and Economic Planning: absorption_rec_pct",
+   "computed": 51.2,
+   "printed": 51.2,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Finance and Economic Planning: absorption_dev_pct",
+   "computed": 8.4,
+   "printed": 8.4,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Administration & Devolution: exp_to_exchequer_rec_pct",
+   "computed": 104.6,
+   "printed": 104.6,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Administration & Devolution: absorption_rec_pct",
+   "computed": 73.2,
+   "printed": 73.2,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Public Administration & Devolution: absorption_dev_pct",
+   "computed": 15.1,
+   "printed": 15.2,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Trade Energy and Industry: exp_to_exchequer_rec_pct",
+   "computed": 97.5,
+   "printed": 97.5,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Trade Energy and Industry: exp_to_exchequer_dev_pct",
+   "computed": 90.1,
+   "printed": 90.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Trade Energy and Industry: absorption_rec_pct",
+   "computed": 75.1,
+   "printed": 75.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "Trade Energy and Industry: absorption_dev_pct",
+   "computed": 43.1,
+   "printed": 43.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "County Assembly: exp_to_exchequer_rec_pct",
+   "computed": 99.9,
+   "printed": 99.9,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "County Assembly: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "County Assembly: absorption_rec_pct",
+   "computed": 98.0,
+   "printed": 98.0,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "County Assembly: absorption_dev_pct",
+   "computed": 59.0,
+   "printed": 59.0,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "TOTAL: exp_to_exchequer_rec_pct",
+   "computed": 85.3,
+   "printed": 85.3,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "TOTAL: exp_to_exchequer_dev_pct",
+   "computed": 88.1,
+   "printed": 88.1,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "TOTAL: absorption_rec_pct",
+   "computed": 74.6,
+   "printed": 74.6,
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "check": "TOTAL: absorption_dev_pct",
+   "computed": 31.5,
+   "printed": 31.5,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "sum of departments, budget_rec",
+   "computed": 8483.13,
+   "printed": 8483.12,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "sum of departments, budget_dev",
+   "computed": 3562.16,
+   "printed": 3562.16,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "sum of departments, exchequer_rec",
+   "computed": 7403.28,
+   "printed": 7403.31,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "sum of departments, exchequer_dev",
+   "computed": 2000.01,
+   "printed": 2000.02,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "sum of departments, expenditure_rec",
+   "computed": 7271.81,
+   "printed": 7271.83,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "sum of departments, expenditure_dev",
+   "computed": 1808.49,
+   "printed": 1808.5,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Agriculture, Irrigation, Livestock and Fisheries: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Agriculture, Irrigation, Livestock and Fisheries: exp_to_exchequer_dev_pct",
+   "computed": 97.2,
+   "printed": 97.2,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Agriculture, Irrigation, Livestock and Fisheries: absorption_rec_pct",
+   "computed": 82.5,
+   "printed": 82.5,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Agriculture, Irrigation, Livestock and Fisheries: absorption_dev_pct",
+   "computed": 38.2,
+   "printed": 38.2,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "City of Kisumu: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "City of Kisumu: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "City of Kisumu: absorption_rec_pct",
+   "computed": 62.3,
+   "printed": 62.3,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "City of Kisumu: absorption_dev_pct",
+   "computed": 25.8,
+   "printed": 25.8,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Roads, Transport and Public Works: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Roads, Transport and Public Works: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Roads, Transport and Public Works: absorption_rec_pct",
+   "computed": 71.3,
+   "printed": 71.3,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Roads, Transport and Public Works: absorption_dev_pct",
+   "computed": 23.7,
+   "printed": 23.7,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "County Public Service Board: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "County Public Service Board: absorption_rec_pct",
+   "computed": 56.4,
+   "printed": 56.4,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Education, Human Resource Development and ICT: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Education, Human Resource Development and ICT: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Education, Human Resource Development and ICT: absorption_rec_pct",
+   "computed": 95.7,
+   "printed": 95.7,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Education, Human Resource Development and ICT: absorption_dev_pct",
+   "computed": 52.0,
+   "printed": 52.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Office of the Governor: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Office of the Governor: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Office of the Governor: absorption_rec_pct",
+   "computed": 75.1,
+   "printed": 75.1,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Office of the Governor: absorption_dev_pct",
+   "computed": 55.6,
+   "printed": 55.6,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Health Services: exp_to_exchequer_rec_pct",
+   "computed": 88.4,
+   "printed": 88.4,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Health Services: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Health Services: absorption_rec_pct",
+   "computed": 83.5,
+   "printed": 83.5,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Health Services: absorption_dev_pct",
+   "computed": 36.1,
+   "printed": 36.1,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Public Service Administration & Devolution: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Public Service Administration & Devolution: absorption_rec_pct",
+   "computed": 96.7,
+   "printed": 96.7,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Tourism, Culture, Arts and Sports.: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Tourism, Culture, Arts and Sports.: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Tourism, Culture, Arts and Sports.: absorption_rec_pct",
+   "computed": 56.0,
+   "printed": 56.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Tourism, Culture, Arts and Sports.: absorption_dev_pct",
+   "computed": 30.5,
+   "printed": 30.5,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Lands, Housing and Physical Planning: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Lands, Housing and Physical Planning: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Lands, Housing and Physical Planning: absorption_rec_pct",
+   "computed": 55.4,
+   "printed": 55.4,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Lands, Housing and Physical Planning: absorption_dev_pct",
+   "computed": 38.9,
+   "printed": 38.9,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Trade, Energy and Industry: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Trade, Energy and Industry: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Trade, Energy and Industry: absorption_rec_pct",
+   "computed": 90.9,
+   "printed": 90.9,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Trade, Energy and Industry: absorption_dev_pct",
+   "computed": 17.4,
+   "printed": 17.4,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Finance and Economic Planning: exp_to_exchequer_rec_pct",
+   "computed": 118.9,
+   "printed": 118.9,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Finance and Economic Planning: exp_to_exchequer_dev_pct",
+   "computed": 85.1,
+   "printed": 85.1,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Finance and Economic Planning: absorption_rec_pct",
+   "computed": 97.6,
+   "printed": 97.6,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Finance and Economic Planning: absorption_dev_pct",
+   "computed": 68.3,
+   "printed": 68.3,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Water, Environment and Natural Resources: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Water, Environment and Natural Resources: exp_to_exchequer_dev_pct",
+   "computed": 94.4,
+   "printed": 94.4,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Water, Environment and Natural Resources: absorption_rec_pct",
+   "computed": 69.6,
+   "printed": 69.6,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Water, Environment and Natural Resources: absorption_dev_pct",
+   "computed": 18.4,
+   "printed": 18.4,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "County Assembly: exp_to_exchequer_rec_pct",
+   "computed": 99.5,
+   "printed": 99.5,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "County Assembly: exp_to_exchequer_dev_pct",
+   "computed": 98.4,
+   "printed": 98.4,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "County Assembly: absorption_rec_pct",
+   "computed": 94.1,
+   "printed": 94.1,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "County Assembly: absorption_dev_pct",
+   "computed": 84.1,
+   "printed": 84.1,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Total: exp_to_exchequer_rec_pct",
+   "computed": 98.2,
+   "printed": 98.2,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Total: exp_to_exchequer_dev_pct",
+   "computed": 90.4,
+   "printed": 90.4,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Total: absorption_rec_pct",
+   "computed": 85.7,
+   "printed": 85.7,
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "check": "Total: absorption_dev_pct",
+   "computed": 50.8,
+   "printed": 50.8,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "sum of departments, budget_rec",
+   "computed": 9511.32,
+   "printed": 9511.31,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "sum of departments, budget_dev",
+   "computed": 4186.54,
+   "printed": 4186.55,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "sum of departments, exchequer_rec",
+   "computed": 7737.59,
+   "printed": 7737.57,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "sum of departments, exchequer_dev",
+   "computed": 1685.47,
+   "printed": 1685.47,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "sum of departments, expenditure_rec",
+   "computed": 7314.93,
+   "printed": 7314.92,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "sum of departments, expenditure_dev",
+   "computed": 1550.46,
+   "printed": 1550.46,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Agriculture, Livestock and Fisheries: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Agriculture, Livestock and Fisheries: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Agriculture, Livestock and Fisheries: absorption_rec_pct",
+   "computed": 82.7,
+   "printed": 82.7,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Agriculture, Livestock and Fisheries: absorption_dev_pct",
+   "computed": 8.1,
+   "printed": 8.1,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "County Assembly of Kisumu: exp_to_exchequer_rec_pct",
+   "computed": 99.9,
+   "printed": 99.9,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "County Assembly of Kisumu: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "County Assembly of Kisumu: absorption_rec_pct",
+   "computed": 85.6,
+   "printed": 85.6,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "County Assembly of Kisumu: absorption_dev_pct",
+   "computed": 0.4,
+   "printed": 0.4,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "City of Kisumu: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "City of Kisumu: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "City of Kisumu: absorption_rec_pct",
+   "computed": 64.4,
+   "printed": 64.4,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "City of Kisumu: absorption_dev_pct",
+   "computed": 26.5,
+   "printed": 26.4,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "County Public Service Board: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "County Public Service Board: absorption_rec_pct",
+   "computed": 59.1,
+   "printed": 59.1,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Education, Technical Training, Innovation and Social Services: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Education, Technical Training, Innovation and Social Services: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Education, Technical Training, Innovation and Social Services: absorption_rec_pct",
+   "computed": 83.5,
+   "printed": 83.5,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Education, Technical Training, Innovation and Social Services: absorption_dev_pct",
+   "computed": 10.4,
+   "printed": 10.4,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Public Services, County Administration, Participatory Development and Office of the Governor: exp_to_exchequer_rec_pct",
+   "computed": 92.8,
+   "printed": 92.8,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Public Services, County Administration, Participatory Development and Office of the Governor: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Public Services, County Administration, Participatory Development and Office of the Governor: absorption_rec_pct",
+   "computed": 57.4,
+   "printed": 57.4,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Public Services, County Administration, Participatory Development and Office of the Governor: absorption_dev_pct",
+   "computed": 19.3,
+   "printed": 19.3,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Medical Services, Public Health and Sanitation: exp_to_exchequer_rec_pct",
+   "computed": 96.7,
+   "printed": 96.7,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Medical Services, Public Health and Sanitation: exp_to_exchequer_dev_pct",
+   "computed": 95.5,
+   "printed": 95.5,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Medical Services, Public Health and Sanitation: absorption_rec_pct",
+   "computed": 86.3,
+   "printed": 86.3,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Medical Services, Public Health and Sanitation: absorption_dev_pct",
+   "computed": 18.6,
+   "printed": 18.6,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Trade, Energy, Industry and Tourism: exp_to_exchequer_rec_pct",
+   "computed": 54.9,
+   "printed": 54.9,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Trade, Energy, Industry and Tourism: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Trade, Energy, Industry and Tourism: absorption_rec_pct",
+   "computed": 46.5,
+   "printed": 46.5,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Trade, Energy, Industry and Tourism: absorption_dev_pct",
+   "computed": 5.5,
+   "printed": 5.5,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Sports, Culture, gender and Youth Affairs: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Sports, Culture, gender and Youth Affairs: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Sports, Culture, gender and Youth Affairs: absorption_rec_pct",
+   "computed": 55.5,
+   "printed": 55.5,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Sports, Culture, gender and Youth Affairs: absorption_dev_pct",
+   "computed": 4.5,
+   "printed": 4.5,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Roads Infrastructure, transport and Public Works: exp_to_exchequer_rec_pct",
+   "computed": 57.0,
+   "printed": 57.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Roads Infrastructure, transport and Public Works: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Roads Infrastructure, transport and Public Works: absorption_rec_pct",
+   "computed": 54.7,
+   "printed": 54.7,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Roads Infrastructure, transport and Public Works: absorption_dev_pct",
+   "computed": 24.2,
+   "printed": 24.2,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Lands, Housing, Physical Planning and Urban Development: exp_to_exchequer_rec_pct",
+   "computed": 81.0,
+   "printed": 81.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Lands, Housing, Physical Planning and Urban Development: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Lands, Housing, Physical Planning and Urban Development: absorption_rec_pct",
+   "computed": 51.4,
+   "printed": 51.4,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Lands, Housing, Physical Planning and Urban Development: absorption_dev_pct",
+   "computed": 63.9,
+   "printed": 63.9,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Finance, Economic Planning and ICT Services: exp_to_exchequer_rec_pct",
+   "computed": 92.4,
+   "printed": 92.4,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Finance, Economic Planning and ICT Services: exp_to_exchequer_dev_pct",
+   "computed": 87.2,
+   "printed": 87.2,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Finance, Economic Planning and ICT Services: absorption_rec_pct",
+   "computed": 80.8,
+   "printed": 80.8,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Finance, Economic Planning and ICT Services: absorption_dev_pct",
+   "computed": 85.7,
+   "printed": 85.7,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Water, Environment and Natural Resources: exp_to_exchequer_rec_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Water, Environment and Natural Resources: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Water, Environment and Natural Resources: absorption_rec_pct",
+   "computed": 49.2,
+   "printed": 49.2,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Water, Environment and Natural Resources: absorption_dev_pct",
+   "computed": 8.7,
+   "printed": 8.7,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Total: exp_to_exchequer_rec_pct",
+   "computed": 94.5,
+   "printed": 94.5,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Total: exp_to_exchequer_dev_pct",
+   "computed": 92.0,
+   "printed": 92.0,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Total: absorption_rec_pct",
+   "computed": 76.9,
+   "printed": 76.9,
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "check": "Total: absorption_dev_pct",
+   "computed": 37.0,
+   "printed": 37.0,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "sum of departments, budget_rec",
+   "computed": 9885.4,
+   "printed": 9885.39,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "sum of departments, budget_dev",
+   "computed": 5428.93,
+   "printed": 5428.94,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "sum of departments, exchequer_rec",
+   "computed": 7954.72,
+   "printed": 7954.74,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "sum of departments, exchequer_dev",
+   "computed": 2357.54,
+   "printed": 2357.55,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "sum of departments, expenditure_rec",
+   "computed": 7899.85,
+   "printed": 7899.84,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "sum of departments, expenditure_dev",
+   "computed": 1567.99,
+   "printed": 1567.99,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Physical Planning, Lands, Housing and Urban Development: exp_to_exchequer_rec_pct",
+   "computed": 71.9,
+   "printed": 72,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Physical Planning, Lands, Housing and Urban Development: exp_to_exchequer_dev_pct",
+   "computed": 1.7,
+   "printed": 2,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Physical Planning, Lands, Housing and Urban Development: absorption_rec_pct",
+   "computed": 68.4,
+   "printed": 68,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Physical Planning, Lands, Housing and Urban Development: absorption_dev_pct",
+   "computed": 1.3,
+   "printed": 1,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Agriculture, Livestock, Food and Fisheries: exp_to_exchequer_rec_pct",
+   "computed": 233.2,
+   "printed": 233,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Agriculture, Livestock, Food and Fisheries: exp_to_exchequer_dev_pct",
+   "computed": 39.4,
+   "printed": 39,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Agriculture, Livestock, Food and Fisheries: absorption_rec_pct",
+   "computed": 96.4,
+   "printed": 96,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Agriculture, Livestock, Food and Fisheries: absorption_dev_pct",
+   "computed": 16.3,
+   "printed": 16,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "City of Kisumu: exp_to_exchequer_rec_pct",
+   "computed": 91.0,
+   "printed": 91,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "City of Kisumu: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "City of Kisumu: absorption_rec_pct",
+   "computed": 52.6,
+   "printed": 53,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "City of Kisumu: absorption_dev_pct",
+   "computed": 13.3,
+   "printed": 13,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "County Assembly of Kisumu: exp_to_exchequer_rec_pct",
+   "computed": 99.4,
+   "printed": 99,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "County Assembly of Kisumu: exp_to_exchequer_dev_pct",
+   "computed": 100.0,
+   "printed": 100,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "County Assembly of Kisumu: absorption_rec_pct",
+   "computed": 93.6,
+   "printed": 94,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "County Assembly of Kisumu: absorption_dev_pct",
+   "computed": 72.2,
+   "printed": 72,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "County Public Service Board: exp_to_exchequer_rec_pct",
+   "computed": 84.1,
+   "printed": 84,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "County Public Service Board: absorption_rec_pct",
+   "computed": 61.5,
+   "printed": 62,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Education, Technical Training, Innovation and Social Service: exp_to_exchequer_rec_pct",
+   "computed": 88.0,
+   "printed": 88,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Education, Technical Training, Innovation and Social Service: exp_to_exchequer_dev_pct",
+   "computed": 40.2,
+   "printed": 40,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Education, Technical Training, Innovation and Social Service: absorption_rec_pct",
+   "computed": 46.9,
+   "printed": 47,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Education, Technical Training, Innovation and Social Service: absorption_dev_pct",
+   "computed": 18.2,
+   "printed": 18,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Infrastructure, Energy and Public Works: exp_to_exchequer_rec_pct",
+   "computed": 62.4,
+   "printed": 62,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Infrastructure, Energy and Public Works: exp_to_exchequer_dev_pct",
+   "computed": 77.5,
+   "printed": 78,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Infrastructure, Energy and Public Works: absorption_rec_pct",
+   "computed": 40.0,
+   "printed": 40,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Infrastructure, Energy and Public Works: absorption_dev_pct",
+   "computed": 26.5,
+   "printed": 27,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Finance, Economic Planning and ICT Services: exp_to_exchequer_rec_pct",
+   "computed": 100.7,
+   "printed": 101,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Finance, Economic Planning and ICT Services: exp_to_exchequer_dev_pct",
+   "computed": 100.7,
+   "printed": 101,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Finance, Economic Planning and ICT Services: absorption_rec_pct",
+   "computed": 60.9,
+   "printed": 61,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Finance, Economic Planning and ICT Services: absorption_dev_pct",
+   "computed": 71.0,
+   "printed": 71,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Trade, Tourism, Industry and Marketing: exp_to_exchequer_rec_pct",
+   "computed": 130.1,
+   "printed": 130,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Trade, Tourism, Industry and Marketing: exp_to_exchequer_dev_pct",
+   "computed": 100.2,
+   "printed": 100,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Trade, Tourism, Industry and Marketing: absorption_rec_pct",
+   "computed": 21.7,
+   "printed": 22,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Trade, Tourism, Industry and Marketing: absorption_dev_pct",
+   "computed": 28.5,
+   "printed": 28,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Medical Services, Public Health and Sanitation: exp_to_exchequer_rec_pct",
+   "computed": 109.6,
+   "printed": 110,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Medical Services, Public Health and Sanitation: exp_to_exchequer_dev_pct",
+   "computed": 111.8,
+   "printed": 112,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Medical Services, Public Health and Sanitation: absorption_rec_pct",
+   "computed": 35.2,
+   "printed": 35,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Medical Services, Public Health and Sanitation: absorption_dev_pct",
+   "computed": 47.0,
+   "printed": 47,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Sports, Culture, Gender and Youth Affairs: exp_to_exchequer_rec_pct",
+   "computed": 149.2,
+   "printed": 149,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Sports, Culture, Gender and Youth Affairs: exp_to_exchequer_dev_pct",
+   "computed": 108.0,
+   "printed": 108,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Sports, Culture, Gender and Youth Affairs: absorption_rec_pct",
+   "computed": 61.3,
+   "printed": 61,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Sports, Culture, Gender and Youth Affairs: absorption_dev_pct",
+   "computed": 13.3,
+   "printed": 13,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Water, Environment, Natural Resources and Climate Change: exp_to_exchequer_rec_pct",
+   "computed": 305.3,
+   "printed": 305,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Water, Environment, Natural Resources and Climate Change: exp_to_exchequer_dev_pct",
+   "computed": 552.6,
+   "printed": 553,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Water, Environment, Natural Resources and Climate Change: absorption_rec_pct",
+   "computed": 95.1,
+   "printed": 95,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Water, Environment, Natural Resources and Climate Change: absorption_dev_pct",
+   "computed": 32.3,
+   "printed": 32,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Public Service, County Administration and Participatory Development: exp_to_exchequer_rec_pct",
+   "computed": 98.1,
+   "printed": 98,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Public Service, County Administration and Participatory Development: exp_to_exchequer_dev_pct",
+   "computed": 99.8,
+   "printed": 100,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Public Service, County Administration and Participatory Development: absorption_rec_pct",
+   "computed": 90.4,
+   "printed": 90,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Public Service, County Administration and Participatory Development: absorption_dev_pct",
+   "computed": 21.8,
+   "printed": 22,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Total: exp_to_exchequer_rec_pct",
+   "computed": 99.3,
+   "printed": 99,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Total: exp_to_exchequer_dev_pct",
+   "computed": 66.5,
+   "printed": 67,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Total: absorption_rec_pct",
+   "computed": 79.9,
+   "printed": 80,
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "check": "Total: absorption_dev_pct",
+   "computed": 28.9,
+   "printed": 29,
+   "agrees": true
+  }
+ ],
+ "comparisons": [
+  {
+   "fy": "2021/22",
+   "measure": "budget_rec",
+   "department_table_total": 8451.05,
+   "counties_cob_value": 8451.05,
+   "counties_cob_field": "recurrent_budget",
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "measure": "budget_dev",
+   "department_table_total": 3726.8,
+   "counties_cob_value": 3726.8,
+   "counties_cob_field": "development_budget",
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "measure": "expenditure_rec",
+   "department_table_total": 6307.86,
+   "counties_cob_value": 6307.86,
+   "counties_cob_field": "recurrent_expenditure",
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "measure": "expenditure_dev",
+   "department_table_total": 1175.68,
+   "counties_cob_value": 1175.68,
+   "counties_cob_field": "development_expenditure",
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "measure": "absorption_rec_pct",
+   "department_table_total": 74.6,
+   "counties_cob_value": 74.6,
+   "counties_cob_field": "recurrent_absorption_pct",
+   "agrees": true
+  },
+  {
+   "fy": "2021/22",
+   "measure": "absorption_dev_pct",
+   "department_table_total": 31.5,
+   "counties_cob_value": 31.5,
+   "counties_cob_field": "development_absorption_pct",
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "measure": "budget_rec",
+   "department_table_total": 8483.12,
+   "counties_cob_value": 8483.12,
+   "counties_cob_field": "recurrent_budget",
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "measure": "budget_dev",
+   "department_table_total": 3562.16,
+   "counties_cob_value": 3562.16,
+   "counties_cob_field": "development_budget",
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "measure": "expenditure_rec",
+   "department_table_total": 7271.83,
+   "counties_cob_value": 7271.83,
+   "counties_cob_field": "recurrent_expenditure",
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "measure": "expenditure_dev",
+   "department_table_total": 1808.5,
+   "counties_cob_value": 1808.5,
+   "counties_cob_field": "development_expenditure",
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "measure": "absorption_rec_pct",
+   "department_table_total": 85.7,
+   "counties_cob_value": 85.7,
+   "counties_cob_field": "recurrent_absorption_pct",
+   "agrees": true
+  },
+  {
+   "fy": "2022/23",
+   "measure": "absorption_dev_pct",
+   "department_table_total": 50.8,
+   "counties_cob_value": 50.8,
+   "counties_cob_field": "development_absorption_pct",
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "measure": "budget_rec",
+   "department_table_total": 9511.31,
+   "counties_cob_value": 9511.31,
+   "counties_cob_field": "recurrent_budget",
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "measure": "budget_dev",
+   "department_table_total": 4186.55,
+   "counties_cob_value": 4186.55,
+   "counties_cob_field": "development_budget",
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "measure": "expenditure_rec",
+   "department_table_total": 7314.92,
+   "counties_cob_value": 7314.92,
+   "counties_cob_field": "recurrent_expenditure",
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "measure": "expenditure_dev",
+   "department_table_total": 1550.46,
+   "counties_cob_value": 1550.46,
+   "counties_cob_field": "development_expenditure",
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "measure": "absorption_rec_pct",
+   "department_table_total": 76.9,
+   "counties_cob_value": 76.9,
+   "counties_cob_field": "recurrent_absorption_pct",
+   "agrees": true
+  },
+  {
+   "fy": "2023/24",
+   "measure": "absorption_dev_pct",
+   "department_table_total": 37.0,
+   "counties_cob_value": 37,
+   "counties_cob_field": "development_absorption_pct",
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "measure": "budget_rec",
+   "department_table_total": 9885.39,
+   "counties_cob_value": 9885.39,
+   "counties_cob_field": "recurrent_budget",
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "measure": "budget_dev",
+   "department_table_total": 5428.94,
+   "counties_cob_value": 5428.94,
+   "counties_cob_field": "development_budget",
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "measure": "expenditure_rec",
+   "department_table_total": 7899.84,
+   "counties_cob_value": 7899.84,
+   "counties_cob_field": "recurrent_expenditure",
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "measure": "expenditure_dev",
+   "department_table_total": 1567.99,
+   "counties_cob_value": 1567.99,
+   "counties_cob_field": "development_expenditure",
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "measure": "absorption_rec_pct",
+   "department_table_total": 80,
+   "counties_cob_value": 80,
+   "counties_cob_field": "recurrent_absorption_pct",
+   "agrees": true
+  },
+  {
+   "fy": "2024/25",
+   "measure": "absorption_dev_pct",
+   "department_table_total": 29,
+   "counties_cob_value": 29,
+   "counties_cob_field": "development_absorption_pct",
+   "agrees": true
+  }
+ ],
+ "gaps": [
+  {
+   "item": "Department tables before FY 2021/22",
+   "status": "not yet read",
+   "reason": "CoB annual reports FY 2014/15 to 2020/21 are held in the ledger sources; their department tables have not been read yet."
+  },
+  {
+   "item": "Pending bills by department",
+   "status": "not in source",
+   "reason": "The CoB annual reports print pending bills for the county executive and assembly only, not by department."
+  }
+ ]
+}
