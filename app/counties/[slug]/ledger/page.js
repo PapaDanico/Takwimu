@@ -7,13 +7,14 @@ import CountyProvisional from '../../../../components/county/CountyProvisional';
 import { paramsFor } from '../../../../components/county/params';
 import { fmtNum } from '../../../../lib/format';
 import * as cp from '../../../../lib/county-pages';
+import { pageMeta } from '../../../../lib/page-meta';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => paramsFor('ledger');
 export function generateMetadata({ params }) {
   const m = cp.meta(params.slug);
   const l = cp.ledger(params.slug);
-  return { title: `${m.name}: fiscal reconciliation`, description: `${m.name} County fiscal figures from the Controller of Budget, the County Treasury and the Auditor-General, side by side by year with page links, FY ${l.years[0]} to FY ${l.years[l.years.length - 1]}: which values exist, and where the sources differ.` };
+  return pageMeta(`/counties/${params.slug}/ledger/`, { title: `${m.name}: fiscal reconciliation`, description: `${m.name} County fiscal figures from the Controller of Budget, the County Treasury and the Auditor-General, side by side by year with page links, FY ${l.years[0]} to FY ${l.years[l.years.length - 1]}: which values exist, and where the sources differ.` });
 }
 
 const sup = (i) => <sup><a href={`#gap-${i + 1}`} aria-label={`reason ${i + 1}`}>{i + 1}</a></sup>;

@@ -6,12 +6,13 @@ import CountyProvisional from '../../../../components/county/CountyProvisional';
 import CountyCite, { ValueFlags } from '../../../../components/county/Cite';
 import { paramsFor } from '../../../../components/county/params';
 import * as cp from '../../../../lib/county-pages';
+import { pageMeta } from '../../../../lib/page-meta';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => paramsFor('audits');
 export function generateMetadata({ params }) {
   const m = cp.meta(params.slug);
-  return { title: `${m.name}: audit opinions`, description: `Auditor-General opinions on the accounts of ${m.name} County's executive, assembly and separately audited bodies, by year, each quoted as printed with the report and page; years with no primary report listed.` };
+  return pageMeta(`/counties/${params.slug}/audits/`, { title: `${m.name}: audit opinions`, description: `Auditor-General opinions on the accounts of ${m.name} County's executive, assembly and separately audited bodies, by year, each quoted as printed with the report and page; years with no primary report listed.` });
 }
 
 function Opinion({ o }) {
