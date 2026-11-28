@@ -6,8 +6,8 @@ Takwimu is a static site with no server, no analytics and no trackers (`docs/dat
 
 | When | Run | Look for | Act |
 |---|---|---|---|
-| Weekly | Open https://takwimu.netlify.app, `/counties/siaya/`, `/kenya/`, `/data/`; check WhatsApp reports | Page errors, reader corrections | `docs/ops/editorial-sop.md` section 1 |
-| Weekly | `curl -sI https://takwimu.netlify.app/` | HTTP 200; `Content-Security-Policy` and `Strict-Transport-Security` present | If down, check Netlify status; roll back if a deploy caused it (`docs/ops/release-checklist.md` section 6) |
+| Weekly | Open https://takwimukenya.com, `/counties/siaya/`, `/kenya/`, `/data/`; check WhatsApp reports | Page errors, reader corrections | `docs/ops/editorial-sop.md` section 1 |
+| Weekly | `curl -sI https://takwimukenya.com/` and `curl -sI https://takwimu.netlify.app/` | Primary: HTTP 200; `Content-Security-Policy` and `Strict-Transport-Security` present. Alias: HTTP 301 to `https://takwimukenya.com/` | If down, check Netlify status; roll back if a deploy caused it (`docs/ops/release-checklist.md` section 6) |
 | Monthly | `node scripts/ops/check-sources.js` (about 5 minutes; one request per second per host) | `docs/ops/source-health.md`: changed, moved, broken, blocked | `docs/ops/editorial-sop.md` section 3; commit the refreshed report and `docs/ops/source-health.json` |
 | Monthly | `node scripts/review-queue.js` | Review backlog | Work the queue (`docs/editorial/review-sop.md`) |
 | Monthly | Live data check: SHA-256 of live `/data/*.json` against the last gated build | Any mismatch means the live site is not the recorded commit | Re-run the release verification; record in `docs/production-provenance.md` |

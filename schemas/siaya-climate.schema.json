@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-climate.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-climate.schema.json",
   "title": "Siaya climate, water and resilience evidence by source (data/siaya-climate.json)",
   "type": "object",
   "required": ["meta", "ward_register", "sources", "observations", "comparisons", "gaps"],

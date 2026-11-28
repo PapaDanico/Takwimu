@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-county-series.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-county-series.schema.json",
   "title": "Siaya fiscal series from county documents and the Auditor-General (data/siaya-county-series.json)",
   "description": "County Treasury (CBROP) totals and the Auditor-General's Receiver of Revenue and County Revenue Fund figures, kept as separate series. Rules beyond this schema (second reading of OCR figures, arithmetic checks, comparisons recomputed, sources in the library with the same hash) are checked by scripts/test-county-series.js.",
   "type": "object",

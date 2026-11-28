@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/catalogue.schema.json",
+  "$id": "https://takwimukenya.com/schemas/catalogue.schema.json",
   "title": "Dataset catalogue entries (lib/explore.js catalogue(), built to data/datasets/catalogue.json)",
   "type": "array",
   "minItems": 1,

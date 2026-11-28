@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-fiscal-ledger.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-fiscal-ledger.schema.json",
   "title": "County fiscal reconciliation ledger (Siaya: data/siaya-fiscal-ledger.json; other counties: data/counties/<slug>/fiscal-ledger.json, see lib/county-registry.js)",
   "type": "object",
   "required": ["meta", "measures", "years", "sources", "observations", "discrepancies", "completeness"],

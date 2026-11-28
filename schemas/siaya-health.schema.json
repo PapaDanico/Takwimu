@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-health.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-health.schema.json",
   "title": "Siaya health indicators by source, vintage and geography (data/siaya-health.json)",
   "type": "object",
   "required": ["meta", "sources", "observations", "conflicts", "gaps"],

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/subcounties.schema.json",
+  "$id": "https://takwimukenya.com/schemas/subcounties.schema.json",
   "title": "Siaya sub-counties (data/subcounties.json)",
   "type": "object",
   "required": ["county", "source", "source_url", "retrieved", "confidence", "status", "note", "sub_counties"],

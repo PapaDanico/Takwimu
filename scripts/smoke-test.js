@@ -512,7 +512,13 @@ const srv = http.createServer((req, res) => {
   // (meta refresh, link and rel=canonical to the new address), the old path is not in the sitemap, and no built page
   // links to a retired address.
   {
-    const MOVED = [...toml.matchAll(/\[\[redirects\]\]\s*from = "([^"]+\/)"\s*to = "([^"]+)"/g)].map((m) => [m[1], m[2]]).filter(([f]) => f !== '/corrections/*');
+    {
+      const { SITE_URL: CANON } = require('../lib/site-url');
+      const { OLD_HOST } = require('./lib/old-host');
+      const first = toml.split('[[redirects]]')[1] || '';
+      check(first.includes(`from = "https://${OLD_HOST}/*"`) && first.includes(`to = "${CANON}/:splat"`) && /status = 301/.test(first) && /force = true/.test(first), `the first redirect sends https://${OLD_HOST}/* to ${CANON}/:splat (301)`);
+    }
+    const MOVED = [...toml.matchAll(/\[\[redirects\]\]\s*from = "([^"]+\/)"\s*to = "([^"]+)"/g)].map((m) => [m[1], m[2]]).filter(([f]) => f !== '/corrections/*' && !/^https?:\/\//.test(f));
     const sm = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
     const bad = MOVED.filter(([from, to]) => {
       const f = path.join(root, from, 'index.html');

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/imf.schema.json",
+  "$id": "https://takwimukenya.com/schemas/imf.schema.json",
   "title": "Kenya: IMF World Economic Outlook indicators and IMF staff documents (data/imf.json)",
   "type": "object",
   "required": ["meta", "vintages", "documents", "comparisons", "comparison_rule"],

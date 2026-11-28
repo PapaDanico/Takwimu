@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/ngo.schema.json",
+  "$id": "https://takwimukenya.com/schemas/ngo.schema.json",
   "title": "CRA and IBP figures (data/ngo.json)",
   "type": "object",
   "required": ["meta", "cra", "ibp_open_budget_survey_kenya", "not_staged"],

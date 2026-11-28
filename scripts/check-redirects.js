@@ -4,17 +4,36 @@
 // (the old corrections register was hidden this way on 23 Nov 2026; /corrections/ is now a moved stub).
 const fs = require('fs');
 const path = require('path');
+const { SITE_URL } = require('../lib/site-url');
+const { OLD_HOST } = require('./lib/old-host');
 
 const dist = process.argv[2] || 'dist';
 const toml = fs.readFileSync(path.join(__dirname, '..', 'netlify.toml'), 'utf8');
 const blocks = toml.split('[[redirects]]').slice(1);
 const errors = [];
 let checked = 0;
+const fromOf = (b) => (b.match(/from\s*=\s*"([^"]+)"/) || [])[1];
+const isHostRule = (from) => /^https?:\/\//.test(from || '');
+
+// Host rule: the netlify.app alias must 301 every path to the primary domain, and must be the first redirect
+// (rules match in order). Host rules are not paths in dist, so the built-file checks below skip them.
+{
+  const first = blocks[0] || '';
+  const f = fromOf(first);
+  const t = (first.match(/to\s*=\s*"([^"]+)"/) || [])[1];
+  if (f !== `https://${OLD_HOST}/*` || t !== `${SITE_URL}/:splat` || !/status\s*=\s*301/.test(first) || !/force\s*=\s*true/.test(first)) {
+    errors.push(`the first redirect must be https://${OLD_HOST}/* -> ${SITE_URL}/:splat (301, force); found ${f} -> ${t}`);
+  }
+  blocks.filter((b) => isHostRule(fromOf(b))).forEach((b) => {
+    const to = (b.match(/to\s*=\s*"([^"]+)"/) || [])[1] || '';
+    if (!to.startsWith(`${SITE_URL}/`)) errors.push(`host redirect ${fromOf(b)} goes to ${to}, not ${SITE_URL}`);
+  });
+}
 
 for (const b of blocks) {
   const from = (b.match(/from\s*=\s*"([^"]+)"/) || [])[1];
   const to = (b.match(/to\s*=\s*"([^"]+)"/) || [])[1];
-  if (!from || !to) continue;
+  if (!from || !to || isHostRule(from)) continue;
   const base = from.replace(/\*$/, '');
   const candidates = [path.join(dist, base), path.join(dist, base, 'index.html')];
   const file = candidates.find((f) => fs.existsSync(f) && fs.statSync(f).isFile());
@@ -37,7 +56,7 @@ for (const b of blocks) {
 }
 
 // No sitemap URL may be a redirect source (duplication sweep D22).
-const sources = new Set(blocks.map((b) => (b.match(/from\s*=\s*"([^"]+)"/) || [])[1]).filter(Boolean).map((f) => f.replace(/\/?$/, '/')));
+const sources = new Set(blocks.map((b) => (b.match(/from\s*=\s*"([^"]+)"/) || [])[1]).filter((f) => f && !isHostRule(f)).map((f) => f.replace(/\/?$/, '/')));
 const smFile = path.join(dist, 'sitemap.xml');
 let smUrls = 0;
 if (fs.existsSync(smFile)) {
@@ -51,4 +70,4 @@ if (errors.length) {
   errors.forEach((e) => console.error(`  - ${e}`));
   process.exit(1);
 }
-console.log(`check-redirects: ${blocks.length} redirects, ${checked} over built files, all stubs agree; ${smUrls} sitemap URLs, none a redirect source`);
+console.log(`check-redirects: ${blocks.length} redirects (host rule ${OLD_HOST} -> ${SITE_URL} first), ${checked} over built files, all stubs agree; ${smUrls} sitemap URLs, none a redirect source`);

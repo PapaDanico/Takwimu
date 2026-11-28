@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-budget-departments.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-budget-departments.schema.json",
   "title": "Siaya budgets and spending by department (data/siaya-budget-departments.json)",
   "description": "County Treasury programme-based budgets (PBB) and Budget Review and Outlook Papers (CBROP), FY 2014/15 to FY 2025/26. Rules beyond this schema (unique ids, sums, crosswalk coverage, sources in the library with the same hash) are checked by scripts/test-budget-departments.js.",
   "type": "object",

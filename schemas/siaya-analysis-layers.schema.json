@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-analysis-layers.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-analysis-layers.schema.json",
   "title": "Siaya analytical layers B1 to B5 (data/siaya-analysis-layers.json)",
   "description": "Calculated by Takwimu Kenya (scripts/build-analysis-layers.js). Recomputation, input values against their datasets and reproducibility are checked by scripts/test-analysis-layers.js.",
   "type": "object",

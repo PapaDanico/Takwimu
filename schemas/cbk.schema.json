@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/cbk.schema.json",
+  "$id": "https://takwimukenya.com/schemas/cbk.schema.json",
   "title": "Central Bank of Kenya statistics (data/cbk.json)",
   "type": "object",
   "required": ["meta", "generated", "publisher", "period", "series", "files", "checks", "gaps"],

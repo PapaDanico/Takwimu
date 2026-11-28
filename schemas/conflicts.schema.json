@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/conflicts.schema.json",
+  "$id": "https://takwimukenya.com/schemas/conflicts.schema.json",
   "title": "Source conflict register (data/conflicts.json)",
   "type": "object",
   "required": [

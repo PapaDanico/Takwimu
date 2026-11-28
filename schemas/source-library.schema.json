@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/source-library.schema.json",
+  "$id": "https://takwimukenya.com/schemas/source-library.schema.json",
   "title": "Siaya Source Library (data/source-library.json)",
   "description": "One record per document, following the Document schema of the Siaya research programme (section 6). Rules the checker cannot express in this subset are enforced in scripts/validate-data.js: unique IDs and addresses, sha256 and bytes present if and only if retrieval_status is downloaded, redistribution_allowed false when the licence is not stated, parent_id must name a record.",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-agriculture.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-agriculture.schema.json",
   "title": "Siaya agriculture, livestock, fisheries and irrigation by source (data/siaya-agriculture.json)",
   "type": "object",
   "required": ["meta", "sources", "observations", "conflicts", "gaps"],

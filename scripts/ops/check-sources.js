@@ -18,7 +18,8 @@ const os = require('os');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..', '..');
-const UA = 'TakwimuKenya-linkcheck/1.0 (+https://takwimu.netlify.app)';
+const { SITE_URL } = require('../../lib/site-url');
+const UA = `TakwimuKenya-linkcheck/1.0 (+${SITE_URL})`;
 
 const args = (argv) => {
   const o = {};

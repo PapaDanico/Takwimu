@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/machine-checks.schema.json",
+  "$id": "https://takwimukenya.com/schemas/machine-checks.schema.json",
   "title": "Machine cross-checks (data/machine-checks.json)",
   "type": "object",
   "required": ["meta", "checks"],

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-analysis.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-analysis.schema.json",
   "title": "Siaya analytical measures calculated from published figures (data/siaya-analysis.json)",
   "type": "object",
   "required": ["meta", "records"],
