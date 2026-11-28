@@ -1,6 +1,7 @@
 // Shared appendix for Reports A-E (UX sweep U3): how to read the reports, the method, the confidence scales, the
 // bibliography conventions and the licence, stated once here and linked from every report.
 import Link from 'next/link';
+import { SITE_HOST } from '../../../lib/site';
 import TableWrap from '../../../components/TableWrap';
 import registry from '../../../components/report/reports.json';
 import { REVIEW_FILES, REVIEW_STATE } from '../../../components/report/snapshot';
@@ -86,7 +87,7 @@ export default function ReportsMethod() {
 
       <section id="licence" className="card" aria-labelledby="li-h">
         <h2 id="li-h">Licence</h2>
-        <p>Takwimu Kenya’s original text, tables and charts in these reports may be reused for personal, educational, journalistic, research or commercial purposes with the credit “Takwimu Kenya (takwimu.netlify.app), based on [the original publisher]”, without suggesting endorsement; say so if you change the material. The underlying documents and figures remain under their publishers’ own licences, listed in each report’s bibliography.</p>
+        <p>Takwimu Kenya’s original text, tables and charts in these reports may be reused for personal, educational, journalistic, research or commercial purposes with the credit “Takwimu Kenya ({SITE_HOST}), based on [the original publisher]”, without suggesting endorsement; say so if you change the material. The underlying documents and figures remain under their publishers’ own licences, listed in each report’s bibliography.</p>
       </section>
     </main>
   );

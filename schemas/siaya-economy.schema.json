@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-economy.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-economy.schema.json",
   "title": "Siaya Gross County Product by edition (data/siaya-economy.json)",
   "type": "object",
   "required": ["meta", "sources", "sectors", "observations", "revisions", "gaps"],

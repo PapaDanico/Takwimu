@@ -9,7 +9,7 @@ const path = require('path');
 const { withPrintPage, pdfInfo } = require('./lib/print-pdf');
 const registry = require('../components/report/reports.json');
 
-const SITE_URL = 'https://takwimu.netlify.app'; // lib/site.js SITE_URL (ES module, not loadable here)
+const { SITE_URL } = require('../lib/site-url');
 
 const root = path.join(__dirname, '..');
 const dist = path.resolve(process.argv[2] || path.join(root, 'dist'));

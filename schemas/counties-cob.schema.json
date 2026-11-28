@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/counties-cob.schema.json",
+  "$id": "https://takwimukenya.com/schemas/counties-cob.schema.json",
   "title": "47-county comparison from Controller of Budget annual reports (data/counties-cob.json)",
   "type": "object",
   "required": ["meta", "years"],

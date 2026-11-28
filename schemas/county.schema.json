@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/county.schema.json",
+  "$id": "https://takwimukenya.com/schemas/county.schema.json",
   "title": "Siaya county profile (data/county.json)",
   "type": "object",
   "required": ["county", "source", "source_url", "retrieved", "confidence", "status", "note", "population", "poverty_2020", "health_2022"],

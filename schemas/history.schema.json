@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/history.schema.json",
+  "$id": "https://takwimukenya.com/schemas/history.schema.json",
   "title": "Siaya ten-year fiscal history (data/history.json)",
   "description": "Checked at build by scripts/validate-data.js (subset: type, required, properties, additionalProperties, items, enum, minimum, maximum, pattern, minItems).",
   "type": "object",

@@ -1,5 +1,5 @@
 import PageHead from '../../components/PageHead';
-import { SITE_URL, ISSUES_URL } from '../../lib/site';
+import { SITE_URL, SITE_HOST, ISSUES_URL } from '../../lib/site';
 import TableWrap from '../../components/TableWrap';
 import library from '../../data/source-library.json';
 import { CLASSES } from '../../lib/licence';
@@ -57,7 +57,7 @@ const SECTIONS = [
   ] },
   { id: 'copyright', title: '5. Copyright, reuse and attribution', body: [
     'Our original text, charts, explainers, layout, logo and the Takwimu name belong to Danico Ventures Ltd or its licensors. The Danico Ventures Ltd name and logo belong to that company and may not be used without its permission.',
-    'You may reuse our own original text, explanations and calculations (figures labelled "Calculated by Takwimu Kenya from published figures"), including commercially, provided you (a) credit "Takwimu Kenya (takwimu.netlify.app), based on [the original publisher]" and (b) do not suggest that we or the original publishers endorse you or your use. If you change the material, say so. This grant covers only our own work.',
+    `You may reuse our own original text, explanations and calculations (figures labelled "Calculated by Takwimu Kenya from published figures"), including commercially, provided you (a) credit "Takwimu Kenya (${SITE_HOST}), based on [the original publisher]" and (b) do not suggest that we or the original publishers endorse you or your use. If you change the material, say so. This grant covers only our own work.`,
     'There is no blanket grant, commercial or otherwise, for third-party data. The figures and documents behind the Site stay under their publishers\' own terms, set out publisher by publisher in the table below. Kenyan public statistics (Controller of Budget, Auditor-General, KNBS, CBK, IEBC, CRA, the National Treasury and county governments) may be reused as figures with the body and report named, but the documents themselves are not republished here. World Bank World Development Indicators are CC BY 4.0: credit "World Bank, World Development Indicators".',
     'IMF World Economic Outlook figures are excluded from any reuse grant on this Site: the IMF\'s terms are link and cite only. They are shown on /kenya/#imf with the vintage and a link, "Source: IMF World Economic Outlook, © IMF", and no CSV or JSON copy is offered. To reuse them, go to the IMF.',
     'Bulk downloads (CSV and JSON on the datasets page) are offered only for datasets whose publishers allow the figures to be reused with citation. Citing a figure from our Data page does not replace citing the original report, which you should also name.',

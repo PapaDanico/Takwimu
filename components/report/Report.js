@@ -10,6 +10,7 @@ import { PROVISIONAL, LIBRARY_IDS } from './model';
 import { conflictNote } from './rules';
 import { fmtNum } from '../../lib/format';
 import { licenceLabel, TERMS_HREF } from '../../lib/licence';
+import { SITE_HOST } from '../../lib/site';
 
 export const METHOD_HREF = '/reports/method/';
 // Web edition: a document link reads as its host (the PDF prints the full address).
@@ -211,7 +212,7 @@ function Block({ b, bib }) {
 function Topics({ list, web }) {
   if (!list || !list.length) return null;
   return (
-    <p className="rp-topic">{web ? 'Topic page' : 'Canonical topic page'}{list.length > 1 ? 's' : ''}: {list.map((t, i) => <span key={t.href}>{i ? '; ' : ''}<a href={t.href}>{t.label}</a>{web ? null : <> <span className="rp-url">(takwimu.netlify.app{t.href})</span></>}</span>)}.</p>
+    <p className="rp-topic">{web ? 'Topic page' : 'Canonical topic page'}{list.length > 1 ? 's' : ''}: {list.map((t, i) => <span key={t.href}>{i ? '; ' : ''}<a href={t.href}>{t.label}</a>{web ? null : <> <span className="rp-url">({SITE_HOST}{t.href})</span></>}</span>)}.</p>
   );
 }
 
@@ -277,7 +278,7 @@ export default function Report({ r, edition = 'web' }) {
         </nav>
         {web ? (
           <p className="rp-howto">This page shows what is unique to Report {r.meta.letter}; tables held in full on a Siaya page or in another report are summarised and linked. The <a href={`/reports/${r.meta.slug}.pdf`}>PDF</a> is the complete, standalone edition.{/own[- ]source revenue|\bFIF\b/i.test(JSON.stringify(r.sections)) ? <> Own-source revenue terms: <a href="/learn/#own-source-revenue">explained</a>.</> : null}</p>
-        ) : <p className="rp-howto">How to read this report, the method, the confidence scales and the licence are set out once for all five reports at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>. In short: <strong>Findings</strong> are values as the documents print them; <strong>Interpretation</strong> is Takwimu’s reading, not a finding; where documents disagree all values are shown and none is chosen.{/own[- ]source revenue|\bFIF\b/i.test(JSON.stringify(r)) ? <> Own-source revenue, hospital income (FIF) and A-i-A are counted differently by each publisher: <a href="/learn/#own-source-revenue">explained</a> <span className="rp-url">(takwimu.netlify.app/learn/#own-source-revenue)</span>.</> : null}</p>}
+        ) : <p className="rp-howto">How to read this report, the method, the confidence scales and the licence are set out once for all five reports at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">({SITE_HOST}{METHOD_HREF})</span>. In short: <strong>Findings</strong> are values as the documents print them; <strong>Interpretation</strong> is Takwimu’s reading, not a finding; where documents disagree all values are shown and none is chosen.{/own[- ]source revenue|\bFIF\b/i.test(JSON.stringify(r)) ? <> Own-source revenue, hospital income (FIF) and A-i-A are counted differently by each publisher: <a href="/learn/#own-source-revenue">explained</a> <span className="rp-url">({SITE_HOST}/learn/#own-source-revenue)</span>.</> : null}</p>}
       </header>
 
       {r.sections.map((s, i) => (
@@ -351,7 +352,7 @@ export default function Report({ r, edition = 'web' }) {
 
       <section id="snapshot" className="rp-section rp-appendix" aria-labelledby="snapshot-h">
         <h2 id="snapshot-h">{n0 + appendices.length}. Snapshot, method and licence</h2>
-        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> identifies the input files {web ? 'of this report' : 'below'} and the review state of every value at the time of printing (review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn). {web ? <><a href={`${METHOD_HREF}#snapshot`}>How it is computed</a>.</> : <>How it is computed, the method, the confidence scales and the licence are at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">(takwimu.netlify.app{METHOD_HREF})</span>.</>} This report contains no personal data and names no contractor or individual.</p>
+        <p>Snapshot ID <span className="mono">{r.snapshot.id}</span> identifies the input files {web ? 'of this report' : 'below'} and the review state of every value at the time of printing (review state: {st.provisional} provisional, {st.approved} approved, {st.disputed} disputed, {st.superseded} superseded, {st.withdrawn} withdrawn). {web ? <><a href={`${METHOD_HREF}#snapshot`}>How it is computed</a>.</> : <>How it is computed, the method, the confidence scales and the licence are at <a href={METHOD_HREF}>How to read these reports</a> <span className="rp-url">({SITE_HOST}{METHOD_HREF})</span>.</>} This report contains no personal data and names no contractor or individual.</p>
         {web ? <p>The <a href={`/reports/${r.meta.slug}.pdf`}>PDF</a> lists the SHA-256 digest of each of the {r.snapshot.files.length} input files.</p> : <table className="rp-table snap">
           <colgroup><col style={{ width: '32%' }} /><col style={{ width: '68%' }} /></colgroup>
           <thead><tr><th scope="col">Input file</th><th scope="col">SHA-256</th></tr></thead>

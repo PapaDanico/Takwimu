@@ -4,7 +4,7 @@
 
 Civic education on Kenyan public finance and statistics, focused on trends. Siaya County is the published county (`/counties/siaya/`); national pages (`/kenya/`, `/compare/`, `/datasets/`, `/stories/`; `/explore/` and `/trends/` redirect to `/datasets/` and `/kenya/`) cover all 47 counties where data exists. Every figure shows its source, publication date, period, unit and confidence. Conflicting sources are shown side by side.
 
-Live site: https://takwimu.netlify.app
+Live site: https://takwimukenya.com (primary domain from 28 Nov 2026; https://takwimu.netlify.app is a Netlify alias that 301s to it). The address is set once, in `lib/site-url.js`.
 
 ## Stack and hosting
 

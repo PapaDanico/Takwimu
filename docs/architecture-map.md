@@ -6,7 +6,7 @@ Checked 21 Nov 2026. This answers the handover's P0 gate.
 
 | Link | Value |
 |---|---|
-| Public URL | https://takwimu.netlify.app |
+| Public URL | https://takwimukenya.com (primary domain, owner, 28 Nov 2026; Netlify DNS). https://takwimu.netlify.app is an alias: the first rule in `netlify.toml` 301s it to the same path on the primary domain (deploy previews untouched). `lib/site-url.js` holds the address; `scripts/check-host.js` fails the build if a published file names the old host |
 | Hosting project | Netlify site `takwimu`, site id `bf11e227-c98e-4258-aff6-d7660459aef1` |
 | How it is deployed | Netlify continuous deployment from GitHub (PapaDanico/Takwimu, branch `main`, linked by the owner 27 Nov 2026). Each push to `main` runs `npm run build` on Netlify. Branch pushes do not deploy; pull requests get deploy previews (deploy-preview-N--takwimu.netlify.app), which are not production. |
 | Repository | https://github.com/PapaDanico/Takwimu |

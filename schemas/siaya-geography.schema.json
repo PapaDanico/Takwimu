@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-geography.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-geography.schema.json",
   "title": "Siaya geographic registry (data/siaya-geography.json)",
   "type": "object",
   "required": ["meta", "sources", "county", "constituencies", "wards", "sub_county_systems", "spatial_layers"],

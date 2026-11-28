@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/political.schema.json",
+  "$id": "https://takwimukenya.com/schemas/political.schema.json",
   "title": "IEBC registered voters and candidates (data/political.json)",
   "type": "object",
   "required": ["meta", "iebc_registered_voters_2022_by_constituency", "iebc_candidates_2022_by_position", "institutional_counts", "not_staged", "licence_terms"],

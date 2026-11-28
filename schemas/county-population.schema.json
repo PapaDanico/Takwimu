@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/county-population.schema.json",
+  "$id": "https://takwimukenya.com/schemas/county-population.schema.json",
   "title": "County population and per-capita denominator (data/counties/<slug>/population.json, lib/county-registry.js)",
   "type": "object",
   "required": ["meta", "sources", "points", "by_sub_county", "denominator", "gaps"],

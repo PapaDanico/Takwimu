@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/siaya-governance.schema.json",
+  "$id": "https://takwimukenya.com/schemas/siaya-governance.schema.json",
   "title": "Siaya transparency and participation (data/siaya-governance.json)",
   "type": "object",
   "required": ["meta", "sources", "ibp_cbts", "aprm", "caveats"],

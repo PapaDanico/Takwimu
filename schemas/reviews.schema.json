@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://takwimu.netlify.app/schemas/reviews.schema.json",
+  "$id": "https://takwimukenya.com/schemas/reviews.schema.json",
   "title": "Editorial review decisions (data/reviews.json)",
   "type": "object",
   "required": ["meta", "decisions"],
