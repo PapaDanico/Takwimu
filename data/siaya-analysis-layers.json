@@ -70,7 +70,8 @@
    "flags": {},
    "gap_reason": "wage bill: not printed in the year's own report",
    "confidence": null,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": []
   },
   {
    "calc_id": "SIA-B1-2014-15-cob-report-2014-15",
@@ -117,7 +118,10 @@
    "flags": {},
    "gap_reason": "conditional_grants_received: not printed in the year's own report",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L277"
+   ]
   },
   {
    "calc_id": "SIA-B1-2015-16-cob-report-2015-16",
@@ -228,7 +232,13 @@
     "above_ceiling": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L066",
+    "siaya-fiscal-ledger:L067",
+    "siaya-fiscal-ledger:L123",
+    "siaya-fiscal-ledger:L278"
+   ]
   },
   {
    "calc_id": "SIA-B1-2016-17-cob-report-2016-17",
@@ -339,7 +349,13 @@
     "above_ceiling": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L070",
+    "siaya-fiscal-ledger:L071",
+    "siaya-fiscal-ledger:L125",
+    "siaya-fiscal-ledger:L279"
+   ]
   },
   {
    "calc_id": "SIA-B1-2017-18-cob-report-2017-18",
@@ -422,7 +438,12 @@
    "flags": {},
    "gap_reason": "wage bill: the report prints 2 readings more than 1 per cent apart (L281 2400 KSh million; L283 2310 KSh million)",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L074",
+    "siaya-fiscal-ledger:L075",
+    "siaya-fiscal-ledger:L127"
+   ]
   },
   {
    "calc_id": "SIA-B1-2018-19-cob-report-2018-19",
@@ -535,7 +556,13 @@
     "above_ceiling": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L078",
+    "siaya-fiscal-ledger:L079",
+    "siaya-fiscal-ledger:L129",
+    "siaya-fiscal-ledger:L285"
+   ]
   },
   {
    "calc_id": "SIA-B1-2019-20-cob-report-2019-20",
@@ -561,7 +588,8 @@
    "flags": {},
    "gap_reason": "wage bill: not printed in the year's own report",
    "confidence": null,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": []
   },
   {
    "calc_id": "SIA-B1-2020-21-cob-report-2020-21",
@@ -672,7 +700,13 @@
     "above_ceiling": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L082",
+    "siaya-fiscal-ledger:L083",
+    "siaya-fiscal-ledger:L132",
+    "siaya-fiscal-ledger:L288"
+   ]
   },
   {
    "calc_id": "SIA-B1-2021-22-cob-report-2021-22",
@@ -785,7 +819,13 @@
     "above_ceiling": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L085",
+    "siaya-fiscal-ledger:L087",
+    "siaya-fiscal-ledger:L146",
+    "siaya-fiscal-ledger:L289"
+   ]
   },
   {
    "calc_id": "SIA-B1-2022-23-cob-report-2022-23",
@@ -915,7 +955,13 @@
     "above_ceiling": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L090",
+    "siaya-fiscal-ledger:L091",
+    "siaya-fiscal-ledger:L157",
+    "siaya-fiscal-ledger:L291"
+   ]
   },
   {
    "calc_id": "SIA-B1-2023-24-cob-report-2023-24",
@@ -1028,7 +1074,13 @@
     "above_ceiling": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L094",
+    "siaya-fiscal-ledger:L095",
+    "siaya-fiscal-ledger:L149",
+    "siaya-fiscal-ledger:L293"
+   ]
   },
   {
    "calc_id": "SIA-B1-2024-25-cob-report-2024-25",
@@ -1160,7 +1212,13 @@
     "above_ceiling": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L098",
+    "siaya-fiscal-ledger:L099",
+    "siaya-fiscal-ledger:L153",
+    "siaya-fiscal-ledger:L296"
+   ]
   },
   {
    "calc_id": "SIA-B1-2025-26-cob-report-2025-26",
@@ -1207,7 +1265,10 @@
    "flags": {},
    "gap_reason": "equitable_share_received: not printed in the year's own report",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L311"
+   ]
   },
   {
    "calc_id": "SIA-B2-2013-14-actual-cbrop",
@@ -1282,7 +1343,11 @@
     "below_floor": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1314-actual-development",
+    "siaya-county-series:CS-CBROP-1314-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2013-14-actual-cob-report-2013-14",
@@ -1308,7 +1373,8 @@
    "flags": {},
    "gap_reason": "development: not printed in the year's own report",
    "confidence": null,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": []
   },
   {
    "calc_id": "SIA-B2-2013-14-budget-cbrop",
@@ -1383,7 +1449,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1314-budget-development",
+    "siaya-county-series:CS-CBROP-1314-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2013-14-budget-cob-report-2013-14",
@@ -1409,7 +1479,8 @@
    "flags": {},
    "gap_reason": "development: not printed in the year's own report",
    "confidence": null,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": []
   },
   {
    "calc_id": "SIA-B2-2014-15-actual-cbrop",
@@ -1484,7 +1555,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1415-actual-development",
+    "siaya-county-series:CS-CBROP-1415-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2014-15-actual-cob-report-2014-15",
@@ -1559,7 +1634,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L181",
+    "siaya-fiscal-ledger:L183"
+   ]
   },
   {
    "calc_id": "SIA-B2-2014-15-budget-cbrop",
@@ -1634,7 +1713,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1415-budget-development",
+    "siaya-county-series:CS-CBROP-1415-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2014-15-budget-cbrop-dept-tables-final-bf",
@@ -1681,7 +1764,10 @@
    "flags": {},
    "gap_reason": "The document prints no total budget for the same version and balance basis.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2014-15-budget-cob-report-2014-15",
@@ -1756,7 +1842,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L001",
+    "siaya-fiscal-ledger:L003"
+   ]
   },
   {
    "calc_id": "SIA-B2-2014-15-budget-pbb-original",
@@ -1803,7 +1893,10 @@
    "flags": {},
    "gap_reason": "The document prints no total budget for the same version and balance basis.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-PBB-TOTAL-budget-dev-orig"
+   ]
   },
   {
    "calc_id": "SIA-B2-2014-15-budget-pbb-supplementary-bf",
@@ -1878,7 +1971,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-PBB-TOTAL-budget-dev-supp-bf",
+    "siaya-budget-departments:BD-1415-PBB-TOTAL-budget-tot-supp-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2015-16-actual-cbrop",
@@ -1953,7 +2050,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1516-actual-development",
+    "siaya-county-series:CS-CBROP-1516-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2015-16-actual-cob-report-2015-16",
@@ -2028,7 +2129,11 @@
     "below_floor": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L184",
+    "siaya-fiscal-ledger:L186"
+   ]
   },
   {
    "calc_id": "SIA-B2-2015-16-budget-cbrop",
@@ -2103,7 +2208,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1516-budget-development",
+    "siaya-county-series:CS-CBROP-1516-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2015-16-budget-cbrop-dept-tables-final-bf",
@@ -2178,7 +2287,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-TOTAL-budget-dev-fina-bf",
+    "siaya-budget-departments:BD-1516-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2015-16-budget-cob-report-2015-16",
@@ -2253,7 +2366,11 @@
     "below_floor": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L004",
+    "siaya-fiscal-ledger:L006"
+   ]
   },
   {
    "calc_id": "SIA-B2-2015-16-budget-pbb-original",
@@ -2300,7 +2417,10 @@
    "flags": {},
    "gap_reason": "The document prints no total budget for the same version and balance basis.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-PBB-TOTAL-budget-dev-orig"
+   ]
   },
   {
    "calc_id": "SIA-B2-2015-16-budget-pbb-supplementary-bf",
@@ -2375,7 +2495,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-PBB-TOTAL-budget-dev-supp-bf",
+    "siaya-budget-departments:BD-1516-PBB-TOTAL-budget-tot-supp-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2016-17-actual-cbrop",
@@ -2450,7 +2574,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1617-actual-development",
+    "siaya-county-series:CS-CBROP-1617-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2016-17-actual-cob-report-2016-17",
@@ -2525,7 +2653,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L187",
+    "siaya-fiscal-ledger:L189"
+   ]
   },
   {
    "calc_id": "SIA-B2-2016-17-budget-cbrop",
@@ -2600,7 +2732,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1617-budget-development",
+    "siaya-county-series:CS-CBROP-1617-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2016-17-budget-cbrop-dept-tables-final-bf",
@@ -2675,7 +2811,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TOTAL-budget-dev-fina-bf",
+    "siaya-budget-departments:BD-1617-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2016-17-budget-cob-report-2016-17",
@@ -2750,7 +2890,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L007",
+    "siaya-fiscal-ledger:L009"
+   ]
   },
   {
    "calc_id": "SIA-B2-2016-17-budget-pbb-original",
@@ -2825,7 +2969,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-PBB-TOTAL-budget-dev-orig",
+    "siaya-budget-departments:BD-1617-PBB-TOTAL-budget-tot-orig"
+   ]
   },
   {
    "calc_id": "SIA-B2-2016-17-budget-pbb-supplementary-bf",
@@ -2900,7 +3048,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-PBB-TOTAL-budget-dev-supp-bf",
+    "siaya-budget-departments:BD-1617-PBB-TOTAL-budget-tot-supp-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2017-18-actual-cbrop",
@@ -2975,7 +3127,11 @@
     "below_floor": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1718-actual-development",
+    "siaya-county-series:CS-CBROP-1718-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2017-18-actual-cob-report-2017-18",
@@ -3050,7 +3206,11 @@
     "below_floor": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L190",
+    "siaya-fiscal-ledger:L192"
+   ]
   },
   {
    "calc_id": "SIA-B2-2017-18-budget-cbrop",
@@ -3125,7 +3285,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1718-budget-development",
+    "siaya-county-series:CS-CBROP-1718-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2017-18-budget-cob-report-2017-18",
@@ -3200,7 +3364,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L010",
+    "siaya-fiscal-ledger:L012"
+   ]
   },
   {
    "calc_id": "SIA-B2-2018-19-actual-cbrop",
@@ -3275,7 +3443,11 @@
     "below_floor": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1819-actual-development",
+    "siaya-county-series:CS-CBROP-1819-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2018-19-actual-cob-report-2018-19",
@@ -3350,7 +3522,11 @@
     "below_floor": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L193",
+    "siaya-fiscal-ledger:L195"
+   ]
   },
   {
    "calc_id": "SIA-B2-2018-19-budget-cbrop",
@@ -3425,7 +3601,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1819-budget-development",
+    "siaya-county-series:CS-CBROP-1819-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2018-19-budget-cbrop-dept-tables-final-bf",
@@ -3500,7 +3680,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TOTAL-budget-dev-fina-bf",
+    "siaya-budget-departments:BD-1819-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2018-19-budget-cob-report-2018-19",
@@ -3575,7 +3759,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L013",
+    "siaya-fiscal-ledger:L015"
+   ]
   },
   {
    "calc_id": "SIA-B2-2018-19-budget-pbb-original-nobf",
@@ -3650,7 +3838,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-PBB-TOTAL-budget-dev-orig-nobf",
+    "siaya-budget-departments:BD-1819-PBB-TOTAL-budget-tot-orig-nobf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2019-20-actual-cbrop",
@@ -3725,7 +3917,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1920-actual-development",
+    "siaya-county-series:CS-CBROP-1920-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2019-20-actual-cob-report-2019-20",
@@ -3751,7 +3947,8 @@
    "flags": {},
    "gap_reason": "development: not printed in the year's own report",
    "confidence": null,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": []
   },
   {
    "calc_id": "SIA-B2-2019-20-budget-cbrop",
@@ -3826,7 +4023,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1920-budget-development",
+    "siaya-county-series:CS-CBROP-1920-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2019-20-budget-cbrop-dept-tables-final-bf",
@@ -3873,7 +4074,10 @@
    "flags": {},
    "gap_reason": "The document prints no total budget for the same version and balance basis.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2019-20-budget-cob-report-2019-20",
@@ -3899,7 +4103,8 @@
    "flags": {},
    "gap_reason": "development: not printed in the year's own report",
    "confidence": null,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": []
   },
   {
    "calc_id": "SIA-B2-2019-20-budget-pbb-original-nobf",
@@ -3974,7 +4179,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-PBB-TOTAL-budget-dev-orig-nobf",
+    "siaya-budget-departments:BD-1920-PBB-TOTAL-budget-tot-orig-nobf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2019-20-budget-pbb-supplementary-bf",
@@ -4049,7 +4258,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-PBB-TOTAL-budget-dev-supp-bf",
+    "siaya-budget-departments:BD-1920-PBB-TOTAL-budget-tot-supp-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2020-21-actual-cbrop",
@@ -4124,7 +4337,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2021-actual-development",
+    "siaya-county-series:CS-CBROP-2021-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2020-21-actual-cob-report-2020-21",
@@ -4199,7 +4416,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L196",
+    "siaya-fiscal-ledger:L198"
+   ]
   },
   {
    "calc_id": "SIA-B2-2020-21-budget-cbrop",
@@ -4274,7 +4495,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2021-budget-development",
+    "siaya-county-series:CS-CBROP-2021-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2020-21-budget-cbrop-dept-tables-final-bf",
@@ -4349,7 +4574,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TOTAL-budget-dev-fina-bf",
+    "siaya-budget-departments:BD-2021-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2020-21-budget-cob-report-2020-21",
@@ -4424,7 +4653,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L016",
+    "siaya-fiscal-ledger:L018"
+   ]
   },
   {
    "calc_id": "SIA-B2-2020-21-budget-pbb-original-bf",
@@ -4499,7 +4732,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-PBB-TOTAL-budget-dev-orig-bf",
+    "siaya-budget-departments:BD-2021-PBB-TOTAL-budget-tot-orig-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2020-21-budget-pbb-original-nobf",
@@ -4546,7 +4783,10 @@
    "flags": {},
    "gap_reason": "The document prints no total budget for the same version and balance basis.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-PBB-TOTAL-budget-dev-orig-nobf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2021-22-actual-cbrop",
@@ -4621,7 +4861,11 @@
     "below_floor": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2122-actual-development",
+    "siaya-county-series:CS-CBROP-2122-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2021-22-actual-cob-report-2021-22",
@@ -4696,7 +4940,11 @@
     "below_floor": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L211",
+    "siaya-fiscal-ledger:L213"
+   ]
   },
   {
    "calc_id": "SIA-B2-2021-22-budget-cbrop",
@@ -4771,7 +5019,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2122-budget-development",
+    "siaya-county-series:CS-CBROP-2122-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2021-22-budget-cbrop-dept-tables-final-bf",
@@ -4846,7 +5098,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-TOTAL-budget-dev-fina-bf",
+    "siaya-budget-departments:BD-2122-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2021-22-budget-cob-report-2021-22",
@@ -4921,7 +5177,11 @@
     "below_floor": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L031",
+    "siaya-fiscal-ledger:L033"
+   ]
   },
   {
    "calc_id": "SIA-B2-2021-22-budget-pbb-original-bf",
@@ -4996,7 +5256,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-PBB-TOTAL-budget-dev-orig-bf",
+    "siaya-budget-departments:BD-2122-PBB-TOTAL-budget-tot-orig-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2022-23-actual-cob-report-2022-23",
@@ -5071,7 +5335,11 @@
     "below_floor": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L214",
+    "siaya-fiscal-ledger:L216"
+   ]
   },
   {
    "calc_id": "SIA-B2-2022-23-budget-cob-report-2022-23",
@@ -5146,7 +5414,11 @@
     "below_floor": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L034",
+    "siaya-fiscal-ledger:L036"
+   ]
   },
   {
    "calc_id": "SIA-B2-2023-24-actual-cbrop",
@@ -5221,7 +5493,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2324-actual-development",
+    "siaya-county-series:CS-CBROP-2324-actual-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2023-24-actual-cob-report-2023-24",
@@ -5296,7 +5572,11 @@
     "below_floor": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L217",
+    "siaya-fiscal-ledger:L219"
+   ]
   },
   {
    "calc_id": "SIA-B2-2023-24-budget-cbrop",
@@ -5371,7 +5651,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2324-budget-development",
+    "siaya-county-series:CS-CBROP-2324-budget-total"
+   ]
   },
   {
    "calc_id": "SIA-B2-2023-24-budget-cbrop-dept-tables-final-bf",
@@ -5446,7 +5730,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TOTAL-budget-dev-fina-bf",
+    "siaya-budget-departments:BD-2324-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2023-24-budget-cob-report-2023-24",
@@ -5521,7 +5809,11 @@
     "below_floor": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L037",
+    "siaya-fiscal-ledger:L039"
+   ]
   },
   {
    "calc_id": "SIA-B2-2023-24-budget-pbb-original-bf",
@@ -5596,7 +5888,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-PBB-TOTAL-budget-dev-orig-bf",
+    "siaya-budget-departments:BD-2324-PBB-TOTAL-budget-tot-orig-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2023-24-budget-pbb-original-nobf",
@@ -5671,7 +5967,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-PBB-TOTAL-budget-dev-orig-nobf",
+    "siaya-budget-departments:BD-2324-PBB-TOTAL-budget-tot-orig-nobf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2024-25-actual-cob-report-2024-25",
@@ -5746,7 +6046,11 @@
     "below_floor": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L220",
+    "siaya-fiscal-ledger:L222"
+   ]
   },
   {
    "calc_id": "SIA-B2-2024-25-budget-cob-report-2024-25",
@@ -5821,7 +6125,11 @@
     "below_floor": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L040",
+    "siaya-fiscal-ledger:L042"
+   ]
   },
   {
    "calc_id": "SIA-B2-2024-25-budget-pbb-original-bf",
@@ -5896,7 +6204,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2425-PBB-TOTAL-budget-dev-orig-bf",
+    "siaya-budget-departments:BD-2425-PBB-TOTAL-budget-tot-orig-bf"
+   ]
   },
   {
    "calc_id": "SIA-B2-2025-26-actual-cob-report-2025-26",
@@ -5971,7 +6283,11 @@
     "below_floor": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L303",
+    "siaya-fiscal-ledger:L305"
+   ]
   },
   {
    "calc_id": "SIA-B2-2025-26-budget-cob-report-2025-26",
@@ -6046,7 +6362,11 @@
     "below_floor": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L300",
+    "siaya-fiscal-ledger:L302"
+   ]
   },
   {
    "calc_id": "SIA-B2-2025-26-budget-pbb-original-bf",
@@ -6121,7 +6441,11 @@
     "below_floor": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2526-PBB-TOTAL-budget-dev-orig-bf",
+    "siaya-budget-departments:BD-2526-PBB-TOTAL-budget-tot-orig-bf"
+   ]
   },
   {
    "calc_id": "SIA-B3-2013-14-capita-cob",
@@ -6163,7 +6487,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2013 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2013/14:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2013-14-capita-oag-table-2025",
@@ -6205,7 +6532,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2013 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1314-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2013-14-perf-cob",
@@ -6247,7 +6577,10 @@
    "flags": {},
    "gap_reason": "No target is recorded for the year in data/history.json.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2013/14:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2013-14-perf-oag-table-2024",
@@ -6315,7 +6648,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-1314-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-1314-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2013-14-perf-oag-table-2025",
@@ -6383,7 +6720,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1314-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-1314-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2013-14-real-cob",
@@ -6467,7 +6808,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2013/14",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2013/14:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2013-14-real-oag-table-2025",
@@ -6551,7 +6897,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2013/14",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-1314-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2014-15-capita-cob",
@@ -6593,7 +6944,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2014 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2014/15:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2014-15-capita-oag-table-2025",
@@ -6635,7 +6989,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2014 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1415-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2014-15-perf-cob",
@@ -6703,7 +7060,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2014/15:osr_m",
+    "history:years:2014/15:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2014-15-perf-oag-table-2024",
@@ -6771,7 +7132,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-1415-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-1415-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2014-15-perf-oag-table-2025",
@@ -6839,7 +7204,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1415-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-1415-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2014-15-real-cob",
@@ -6923,7 +7292,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2014/15",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2014/15:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2014-15-real-oag-table-2025",
@@ -7007,7 +7381,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2014/15",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-1415-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2015-16-capita-cob",
@@ -7070,7 +7449,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2015",
+    "history:years:2015/16:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2015-16-capita-oag-table-2025",
@@ -7133,7 +7516,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2015",
+    "siaya-county-series:CS-ROR25-T1-1516-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2015-16-perf-cob",
@@ -7201,7 +7588,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2015/16:osr_m",
+    "history:years:2015/16:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2015-16-perf-oag-table-2024",
@@ -7269,7 +7660,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-1516-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-1516-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2015-16-perf-oag-table-2025",
@@ -7337,7 +7732,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1516-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-1516-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2015-16-real-cob",
@@ -7421,7 +7820,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2015/16",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2015/16:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2015-16-real-oag-table-2025",
@@ -7505,7 +7909,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2015/16",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-1516-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-capita-cbrop",
@@ -7547,7 +7956,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2016 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1617-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-capita-cob",
@@ -7589,7 +8001,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2016 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2016/17:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-capita-oag-table-2025",
@@ -7631,7 +8046,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2016 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1617-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-perf-cbrop",
@@ -7699,7 +8117,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1617-osr_actual",
+    "siaya-county-series:CS-CBROP-1617-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-perf-cob",
@@ -7767,7 +8189,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2016/17:osr_m",
+    "history:years:2016/17:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-perf-oag-table-2024",
@@ -7835,7 +8261,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-1617-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-1617-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-perf-oag-table-2025",
@@ -7903,7 +8333,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1617-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-1617-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-real-cbrop",
@@ -7987,7 +8421,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2016/17",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-CBROP-1617-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-real-cob",
@@ -8071,7 +8510,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2016/17",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2016/17:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2016-17-real-oag-table-2025",
@@ -8155,7 +8599,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2016/17",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-1617-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-capita-cbrop",
@@ -8218,7 +8667,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2017",
+    "siaya-county-series:CS-CBROP-1718-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-capita-cob",
@@ -8281,7 +8734,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2017",
+    "history:years:2017/18:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-capita-oag-table-2025",
@@ -8344,7 +8801,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2017",
+    "siaya-county-series:CS-ROR25-T1-1718-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-perf-cbrop",
@@ -8412,7 +8873,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1718-osr_actual",
+    "siaya-county-series:CS-CBROP-1718-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-perf-cob",
@@ -8480,7 +8945,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2017/18:osr_m",
+    "history:years:2017/18:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-perf-oag-table-2024",
@@ -8548,7 +9017,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-1718-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-1718-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-perf-oag-table-2025",
@@ -8616,7 +9089,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1718-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-1718-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-real-cbrop",
@@ -8700,7 +9177,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2017/18",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-CBROP-1718-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-real-cob",
@@ -8784,7 +9266,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2017/18",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2017/18:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2017-18-real-oag-table-2025",
@@ -8868,7 +9355,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2017/18",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-1718-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-capita-cbrop",
@@ -8910,7 +9402,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2018 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1819-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-capita-cob",
@@ -8952,7 +9447,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2018 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2018/19:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-capita-oag-table-2025",
@@ -8994,7 +9492,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2018 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1819-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-perf-cbrop",
@@ -9062,7 +9563,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1819-osr_actual",
+    "siaya-county-series:CS-CBROP-1819-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-perf-cob",
@@ -9130,7 +9635,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2018/19:osr_m",
+    "history:years:2018/19:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-perf-oag-table-2024",
@@ -9198,7 +9707,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-1819-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-1819-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-perf-oag-table-2025",
@@ -9266,7 +9779,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1819-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-1819-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-real-cbrop",
@@ -9350,7 +9867,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2018/19",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-CBROP-1819-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-real-cob",
@@ -9434,7 +9956,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2018/19",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2018/19:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2018-19-real-oag-table-2025",
@@ -9518,7 +10045,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2018/19",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-1819-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-capita-cbrop",
@@ -9582,7 +10114,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2019",
+    "siaya-county-series:CS-CBROP-1920-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-capita-cob",
@@ -9646,7 +10182,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2019",
+    "history:years:2019/20:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-capita-oag-table-2025",
@@ -9710,7 +10250,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2019",
+    "siaya-county-series:CS-ROR25-T1-1920-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-perf-cbrop",
@@ -9778,7 +10322,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-1920-osr_actual",
+    "siaya-county-series:CS-CBROP-1920-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-perf-cob",
@@ -9820,7 +10368,10 @@
    "flags": {},
    "gap_reason": "No target is recorded for the year in data/history.json.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2019/20:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-perf-oag-table-2024",
@@ -9888,7 +10439,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-1920-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-1920-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-perf-oag-table-2025",
@@ -9956,7 +10511,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-1920-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-1920-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-real-cbrop",
@@ -10040,7 +10599,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2019/20",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-CBROP-1920-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-real-cob",
@@ -10124,7 +10688,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2019/20",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2019/20:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2019-20-real-oag-table-2025",
@@ -10208,7 +10777,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2019/20",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-1920-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2020-21-capita-cob",
@@ -10250,7 +10824,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2020 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2020/21:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2020-21-capita-oag-table-2025",
@@ -10292,7 +10869,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2020 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-2021-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2020-21-perf-cob",
@@ -10360,7 +10940,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2020/21:osr_m",
+    "history:years:2020/21:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2020-21-perf-oag-table-2024",
@@ -10428,7 +11012,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-2021-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-2021-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2020-21-perf-oag-table-2025",
@@ -10496,7 +11084,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-2021-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-2021-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2020-21-real-cob",
@@ -10580,7 +11172,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2020/21",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2020/21:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2020-21-real-oag-table-2025",
@@ -10664,7 +11261,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2020/21",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-2021-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-capita-cbrop",
@@ -10706,7 +11308,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2021 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2122-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-capita-cob",
@@ -10748,7 +11353,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2021 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2021/22:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-capita-oag-table-2025",
@@ -10790,7 +11398,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2021 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-2122-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-perf-cbrop",
@@ -10858,7 +11469,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2122-osr_actual",
+    "siaya-county-series:CS-CBROP-2122-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-perf-cob",
@@ -10926,7 +11541,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2021/22:osr_m",
+    "history:years:2021/22:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-perf-oag-table-2024",
@@ -10994,7 +11613,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-2122-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-2122-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-perf-oag-table-2025",
@@ -11062,7 +11685,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-2122-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-2122-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-real-cbrop",
@@ -11146,7 +11773,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2021/22",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-CBROP-2122-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-real-cob",
@@ -11230,7 +11862,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2021/22",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2021/22:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2021-22-real-oag-table-2025",
@@ -11314,7 +11951,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2021/22",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-2122-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2022-23-capita-cob",
@@ -11378,7 +12020,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2022",
+    "history:years:2022/23:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2022-23-capita-oag-cash-23-24",
@@ -11444,7 +12090,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2022",
+    "siaya-county-series:CS-ROR24-RECEIPTS-PRIOR"
+   ]
   },
   {
    "calc_id": "SIA-B3-2022-23-capita-oag-table-2025",
@@ -11508,7 +12158,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:population:2022",
+    "siaya-county-series:CS-ROR25-T1-2223-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2022-23-perf-cob",
@@ -11576,7 +12230,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2022/23:osr_m",
+    "history:years:2022/23:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2022-23-perf-oag-table-2024",
@@ -11644,7 +12302,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-2223-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-2223-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2022-23-perf-oag-table-2025",
@@ -11712,7 +12374,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-2223-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-2223-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2022-23-real-cob",
@@ -11796,7 +12462,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2022/23",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2022/23:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2022-23-real-oag-cash-23-24",
@@ -11882,7 +12553,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2022/23",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR24-RECEIPTS-PRIOR"
+   ]
   },
   {
    "calc_id": "SIA-B3-2022-23-real-oag-table-2025",
@@ -11966,7 +12642,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2022/23",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-2223-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-capita-cbrop",
@@ -12008,7 +12689,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2023 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2324-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-capita-cob",
@@ -12050,7 +12734,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2023 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2023/24:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-capita-oag-cash-23-24",
@@ -12094,7 +12781,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2023 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-RECEIPTS"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-capita-oag-table-2025",
@@ -12136,7 +12826,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2023 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-2324-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-perf-cbrop",
@@ -12204,7 +12897,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-CBROP-2324-osr_actual",
+    "siaya-county-series:CS-CBROP-2324-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-perf-cob",
@@ -12272,7 +12969,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2023/24:osr_m",
+    "history:years:2023/24:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-perf-oag-table-2024",
@@ -12340,7 +13041,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR24-T1-2324-osr_actual",
+    "siaya-county-series:CS-ROR24-T1-2324-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-perf-oag-table-2025",
@@ -12408,7 +13113,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-2324-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-2324-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-real-cbrop",
@@ -12492,7 +13201,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2023/24",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-CBROP-2324-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-real-cob",
@@ -12576,7 +13290,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2023/24",
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2023/24:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-real-oag-cash-23-24",
@@ -12662,7 +13381,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2023/24",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR24-RECEIPTS"
+   ]
   },
   {
    "calc_id": "SIA-B3-2023-24-real-oag-table-2025",
@@ -12746,7 +13470,12 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2023/24",
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-2324-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-capita-cob",
@@ -12788,7 +13517,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2024 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2024/25:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-capita-oag-cash-24-25",
@@ -12832,7 +13564,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2024 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-CASH-TOTAL"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-capita-oag-table-2025",
@@ -12874,7 +13609,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2024 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-2425-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-perf-cob",
@@ -12916,7 +13654,10 @@
    "flags": {},
    "gap_reason": "No target is recorded for the year in data/history.json.",
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2024/25:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-perf-oag-accrual",
@@ -12986,7 +13727,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-ACCRUAL-TOTAL",
+    "siaya-county-series:CS-ROR25-T1-2425-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-perf-oag-cash",
@@ -13056,7 +13801,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-CASH-TOTAL",
+    "siaya-county-series:CS-ROR25-T1-2425-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-perf-oag-table-2025",
@@ -13124,7 +13873,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-county-series:CS-ROR25-T1-2425-osr_actual",
+    "siaya-county-series:CS-ROR25-T1-2425-osr_target"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-real-cob",
@@ -13208,7 +13961,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2024/25",
+    "history:years:2024/25:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-real-oag-cash-24-25",
@@ -13294,7 +14051,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-CASH-TOTAL"
+   ]
   },
   {
    "calc_id": "SIA-B3-2024-25-real-oag-table-2025",
@@ -13378,7 +14139,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "cpi.json#fiscal_year.2024/25",
+    "siaya-county-series:CS-ROR25-T1-2425-osr_actual"
+   ]
   },
   {
    "calc_id": "SIA-B3-2025-26-capita-cob",
@@ -13420,7 +14185,10 @@
    "flags": {},
    "gap_reason": "No population figure for calendar year 2025 is held (held: 2009 census, 2012 projection, 2015 projection, 2017 projection, 2019 census, 2022 projection); none is interpolated.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2025/26:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2025-26-perf-cob",
@@ -13488,7 +14256,11 @@
    "threshold": null,
    "flags": {},
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2025/26:osr_m",
+    "history:years:2025/26:osr_target_m"
+   ]
   },
   {
    "calc_id": "SIA-B3-2025-26-real-cob",
@@ -13530,7 +14302,10 @@
    "flags": {},
    "gap_reason": "No CPI for FY 2025/26.",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "history:years:2025/26:osr_m"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-AGRICULTURE-development",
@@ -13602,7 +14377,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-AGRICULTURE-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-AGRICULTURE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-ASSEMBLY-development",
@@ -13672,7 +14451,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-ASSEMBLY-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-ASSEMBLY-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-EDUCATION-development",
@@ -13744,7 +14527,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-EDUCATION-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-EDUCATION-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-EXECUTIVE-development",
@@ -13816,7 +14603,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-EXECUTIVE-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-EXECUTIVE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-FINANCE-development",
@@ -13888,7 +14679,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-FINANCE-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-FINANCE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-HEALTH-development",
@@ -13960,7 +14755,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-HEALTH-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-HEALTH-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-LANDS-development",
@@ -14032,7 +14831,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-LANDS-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-LANDS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-ROADS-development",
@@ -14104,7 +14907,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-ROADS-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-ROADS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-TOTAL-development",
@@ -14174,7 +14981,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-TOTAL-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-TOURISM-development",
@@ -14246,7 +15057,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-TOURISM-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-TOURISM-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-TRADE-development",
@@ -14318,7 +15133,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-TRADE-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-TRADE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2014-15-WATER-development",
@@ -14390,7 +15209,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1415-CBROP-WATER-actual-dev",
+    "siaya-budget-departments:BD-1415-CBROP-WATER-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-AGRICULTURE-development",
@@ -14462,7 +15285,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-AGRICULTURE-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-AGRICULTURE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-AGRICULTURE-total",
@@ -14534,7 +15361,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-AGRICULTURE-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-AGRICULTURE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-ASSEMBLY-development",
@@ -14604,7 +15435,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-ASSEMBLY-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-ASSEMBLY-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-ASSEMBLY-total",
@@ -14674,7 +15509,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-ASSEMBLY-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-ASSEMBLY-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-EDUCATION-development",
@@ -14746,7 +15585,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-EDUCATION-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-EDUCATION-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-EDUCATION-total",
@@ -14818,7 +15661,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-EDUCATION-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-EDUCATION-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-EXECUTIVE-development",
@@ -14890,7 +15737,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-EXECUTIVE-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-EXECUTIVE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-EXECUTIVE-total",
@@ -14962,7 +15813,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-EXECUTIVE-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-EXECUTIVE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-FINANCE-development",
@@ -15034,7 +15889,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-FINANCE-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-FINANCE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-FINANCE-total",
@@ -15106,7 +15965,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-FINANCE-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-FINANCE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-HEALTH-development",
@@ -15178,7 +16041,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-HEALTH-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-HEALTH-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-HEALTH-total",
@@ -15250,7 +16117,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-HEALTH-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-HEALTH-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-LANDS-development",
@@ -15322,7 +16193,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-LANDS-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-LANDS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-LANDS-total",
@@ -15394,7 +16269,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-LANDS-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-LANDS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-ROADS-development",
@@ -15466,7 +16345,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-ROADS-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-ROADS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-ROADS-total",
@@ -15538,7 +16421,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-ROADS-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-ROADS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-TOTAL-development",
@@ -15608,7 +16495,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-TOTAL-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-TOTAL-total",
@@ -15678,7 +16569,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-TOTAL-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-TOURISM-development",
@@ -15750,7 +16645,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-TOURISM-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-TOURISM-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-TOURISM-total",
@@ -15822,7 +16721,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-TOURISM-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-TOURISM-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-TRADE-development",
@@ -15894,7 +16797,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-TRADE-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-TRADE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-TRADE-total",
@@ -15966,7 +16873,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-TRADE-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-TRADE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-WATER-development",
@@ -16038,7 +16949,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-WATER-actual-dev",
+    "siaya-budget-departments:BD-1516-CBROP-WATER-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2015-16-WATER-total",
@@ -16110,7 +17025,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1516-CBROP-WATER-actual-tot",
+    "siaya-budget-departments:BD-1516-CBROP-WATER-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-AGRICULTURE-development",
@@ -16182,7 +17101,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-AGRICULTURE-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-AGRICULTURE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-AGRICULTURE-recurrent",
@@ -16254,7 +17177,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-AGRICULTURE-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-AGRICULTURE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-AGRICULTURE-total",
@@ -16326,7 +17253,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-AGRICULTURE-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-AGRICULTURE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-ASSEMBLY-development",
@@ -16396,7 +17327,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-ASSEMBLY-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-ASSEMBLY-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-ASSEMBLY-recurrent",
@@ -16466,7 +17401,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-ASSEMBLY-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-ASSEMBLY-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-ASSEMBLY-total",
@@ -16536,7 +17475,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-ASSEMBLY-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-ASSEMBLY-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-EDUCATION-development",
@@ -16608,7 +17551,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-EDUCATION-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-EDUCATION-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-EDUCATION-recurrent",
@@ -16680,7 +17627,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-EDUCATION-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-EDUCATION-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-EDUCATION-total",
@@ -16752,7 +17703,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-EDUCATION-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-EDUCATION-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-EXECUTIVE-development",
@@ -16824,7 +17779,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-EXECUTIVE-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-EXECUTIVE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-EXECUTIVE-recurrent",
@@ -16896,7 +17855,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-EXECUTIVE-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-EXECUTIVE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-EXECUTIVE-total",
@@ -16968,7 +17931,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-EXECUTIVE-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-EXECUTIVE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-FINANCE-development",
@@ -17040,7 +18007,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-FINANCE-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-FINANCE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-FINANCE-recurrent",
@@ -17112,7 +18083,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-FINANCE-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-FINANCE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-FINANCE-total",
@@ -17184,7 +18159,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-FINANCE-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-FINANCE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-HEALTH-development",
@@ -17256,7 +18235,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-HEALTH-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-HEALTH-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-HEALTH-recurrent",
@@ -17328,7 +18311,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-HEALTH-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-HEALTH-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-HEALTH-total",
@@ -17400,7 +18387,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-HEALTH-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-HEALTH-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-LANDS-development",
@@ -17472,7 +18463,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-LANDS-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-LANDS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-LANDS-recurrent",
@@ -17544,7 +18539,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-LANDS-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-LANDS-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-LANDS-total",
@@ -17616,7 +18615,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-LANDS-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-LANDS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-ROADS-development",
@@ -17688,7 +18691,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-ROADS-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-ROADS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-ROADS-recurrent",
@@ -17760,7 +18767,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-ROADS-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-ROADS-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-ROADS-total",
@@ -17832,7 +18843,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-ROADS-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-ROADS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-TOTAL-development",
@@ -17902,7 +18917,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TOTAL-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-TOTAL-recurrent",
@@ -17972,7 +18991,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TOTAL-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-TOTAL-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-TOTAL-total",
@@ -18042,7 +19065,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TOTAL-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-TOURISM-development",
@@ -18114,7 +19141,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TOURISM-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-TOURISM-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-TOURISM-recurrent",
@@ -18186,7 +19217,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TOURISM-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-TOURISM-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-TOURISM-total",
@@ -18258,7 +19293,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TOURISM-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-TOURISM-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-TRADE-development",
@@ -18330,7 +19369,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TRADE-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-TRADE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-TRADE-recurrent",
@@ -18402,7 +19445,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TRADE-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-TRADE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-TRADE-total",
@@ -18474,7 +19521,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-TRADE-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-TRADE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-WATER-development",
@@ -18546,7 +19597,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-WATER-actual-dev",
+    "siaya-budget-departments:BD-1617-CBROP-WATER-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-WATER-recurrent",
@@ -18618,7 +19673,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-WATER-actual-rec",
+    "siaya-budget-departments:BD-1617-CBROP-WATER-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2016-17-WATER-total",
@@ -18690,7 +19749,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1617-CBROP-WATER-actual-tot",
+    "siaya-budget-departments:BD-1617-CBROP-WATER-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-AGRICULTURE-development",
@@ -18762,7 +19825,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-AGRICULTURE-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-AGRICULTURE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-AGRICULTURE-recurrent",
@@ -18834,7 +19901,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-AGRICULTURE-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-AGRICULTURE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-AGRICULTURE-total",
@@ -18906,7 +19977,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-AGRICULTURE-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-AGRICULTURE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-ASSEMBLY-development",
@@ -18976,7 +20051,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-ASSEMBLY-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-ASSEMBLY-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-ASSEMBLY-recurrent",
@@ -19046,7 +20125,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-ASSEMBLY-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-ASSEMBLY-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-ASSEMBLY-total",
@@ -19116,7 +20199,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-ASSEMBLY-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-ASSEMBLY-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-EDUCATION-development",
@@ -19188,7 +20275,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-EDUCATION-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-EDUCATION-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-EDUCATION-recurrent",
@@ -19260,7 +20351,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-EDUCATION-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-EDUCATION-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-EDUCATION-total",
@@ -19332,7 +20427,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-EDUCATION-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-EDUCATION-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-EXECUTIVE-development",
@@ -19404,7 +20503,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-EXECUTIVE-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-EXECUTIVE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-EXECUTIVE-recurrent",
@@ -19476,7 +20579,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-EXECUTIVE-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-EXECUTIVE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-EXECUTIVE-total",
@@ -19548,7 +20655,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-EXECUTIVE-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-EXECUTIVE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-FINANCE-development",
@@ -19620,7 +20731,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-FINANCE-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-FINANCE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-FINANCE-recurrent",
@@ -19692,7 +20807,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-FINANCE-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-FINANCE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-FINANCE-total",
@@ -19764,7 +20883,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-FINANCE-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-FINANCE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-HEALTH-development",
@@ -19836,7 +20959,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-HEALTH-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-HEALTH-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-HEALTH-recurrent",
@@ -19908,7 +21035,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-HEALTH-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-HEALTH-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-HEALTH-total",
@@ -19980,7 +21111,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-HEALTH-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-HEALTH-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-LANDS-development",
@@ -20052,7 +21187,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-LANDS-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-LANDS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-LANDS-recurrent",
@@ -20124,7 +21263,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-LANDS-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-LANDS-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-LANDS-total",
@@ -20196,7 +21339,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-LANDS-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-LANDS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-ROADS-development",
@@ -20268,7 +21415,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-ROADS-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-ROADS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-ROADS-recurrent",
@@ -20340,7 +21491,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-ROADS-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-ROADS-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-ROADS-total",
@@ -20412,7 +21567,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-ROADS-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-ROADS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-TOTAL-development",
@@ -20482,7 +21641,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TOTAL-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-TOTAL-recurrent",
@@ -20552,7 +21715,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TOTAL-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-TOTAL-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-TOTAL-total",
@@ -20622,7 +21789,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TOTAL-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-TOURISM-development",
@@ -20694,7 +21865,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TOURISM-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-TOURISM-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-TOURISM-recurrent",
@@ -20766,7 +21941,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TOURISM-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-TOURISM-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-TOURISM-total",
@@ -20838,7 +22017,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TOURISM-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-TOURISM-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-TRADE-development",
@@ -20910,7 +22093,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TRADE-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-TRADE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-TRADE-recurrent",
@@ -20982,7 +22169,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TRADE-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-TRADE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-TRADE-total",
@@ -21054,7 +22245,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-TRADE-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-TRADE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-WATER-development",
@@ -21126,7 +22321,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-WATER-actual-dev",
+    "siaya-budget-departments:BD-1819-CBROP-WATER-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-WATER-recurrent",
@@ -21198,7 +22397,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-WATER-actual-rec",
+    "siaya-budget-departments:BD-1819-CBROP-WATER-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2018-19-WATER-total",
@@ -21270,7 +22473,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1819-CBROP-WATER-actual-tot",
+    "siaya-budget-departments:BD-1819-CBROP-WATER-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-AGRICULTURE-development",
@@ -21342,7 +22549,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-AGRICULTURE-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-AGRICULTURE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-AGRICULTURE-recurrent",
@@ -21414,7 +22625,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-AGRICULTURE-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-AGRICULTURE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-ASSEMBLY-development",
@@ -21484,7 +22699,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-ASSEMBLY-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-ASSEMBLY-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-ASSEMBLY-recurrent",
@@ -21554,7 +22773,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-ASSEMBLY-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-ASSEMBLY-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-EDUCATION-development",
@@ -21626,7 +22849,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-EDUCATION-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-EDUCATION-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-EDUCATION-recurrent",
@@ -21698,7 +22925,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-EDUCATION-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-EDUCATION-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-EXECUTIVE-development",
@@ -21770,7 +23001,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-EXECUTIVE-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-EXECUTIVE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-EXECUTIVE-recurrent",
@@ -21842,7 +23077,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-EXECUTIVE-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-EXECUTIVE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-FINANCE-development",
@@ -21914,7 +23153,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-FINANCE-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-FINANCE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-FINANCE-recurrent",
@@ -21986,7 +23229,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-FINANCE-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-FINANCE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-HEALTH-development",
@@ -22058,7 +23305,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-HEALTH-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-HEALTH-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-HEALTH-recurrent",
@@ -22130,7 +23381,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-HEALTH-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-HEALTH-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-LANDS-development",
@@ -22202,7 +23457,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-LANDS-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-LANDS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-LANDS-recurrent",
@@ -22274,7 +23533,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-LANDS-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-LANDS-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-ROADS-development",
@@ -22346,7 +23609,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-ROADS-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-ROADS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-ROADS-recurrent",
@@ -22418,7 +23685,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-ROADS-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-ROADS-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-TOTAL-development",
@@ -22488,7 +23759,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-TOTAL-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-TOTAL-recurrent",
@@ -22558,7 +23833,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-TOTAL-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-TOTAL-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-TOURISM-development",
@@ -22630,7 +23909,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-TOURISM-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-TOURISM-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-TOURISM-recurrent",
@@ -22702,7 +23985,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-TOURISM-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-TOURISM-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-TRADE-development",
@@ -22774,7 +24061,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-TRADE-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-TRADE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-TRADE-recurrent",
@@ -22846,7 +24137,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-TRADE-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-TRADE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-WATER-development",
@@ -22918,7 +24213,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-WATER-actual-dev",
+    "siaya-budget-departments:BD-1920-CBROP-WATER-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2019-20-WATER-recurrent",
@@ -22990,7 +24289,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-1920-CBROP-WATER-actual-rec",
+    "siaya-budget-departments:BD-1920-CBROP-WATER-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-AGRICULTURE-development",
@@ -23062,7 +24365,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-AGRICULTURE-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-AGRICULTURE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-AGRICULTURE-recurrent",
@@ -23134,7 +24441,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-AGRICULTURE-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-AGRICULTURE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-AGRICULTURE-total",
@@ -23206,7 +24517,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-AGRICULTURE-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-AGRICULTURE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-ASSEMBLY-development",
@@ -23276,7 +24591,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-ASSEMBLY-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-ASSEMBLY-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-ASSEMBLY-recurrent",
@@ -23346,7 +24665,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-ASSEMBLY-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-ASSEMBLY-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-ASSEMBLY-total",
@@ -23416,7 +24739,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-ASSEMBLY-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-ASSEMBLY-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-EDUCATION-development",
@@ -23488,7 +24815,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-EDUCATION-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-EDUCATION-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-EDUCATION-recurrent",
@@ -23560,7 +24891,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-EDUCATION-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-EDUCATION-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-EDUCATION-total",
@@ -23632,7 +24967,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-EDUCATION-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-EDUCATION-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-EXECUTIVE-development",
@@ -23704,7 +25043,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-EXECUTIVE-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-EXECUTIVE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-EXECUTIVE-recurrent",
@@ -23776,7 +25119,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-EXECUTIVE-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-EXECUTIVE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-EXECUTIVE-total",
@@ -23848,7 +25195,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-EXECUTIVE-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-EXECUTIVE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-FINANCE-development",
@@ -23920,7 +25271,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-FINANCE-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-FINANCE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-FINANCE-recurrent",
@@ -23992,7 +25347,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-FINANCE-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-FINANCE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-FINANCE-total",
@@ -24064,7 +25423,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-FINANCE-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-FINANCE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-HEALTH-development",
@@ -24136,7 +25499,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-HEALTH-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-HEALTH-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-HEALTH-recurrent",
@@ -24208,7 +25575,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-HEALTH-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-HEALTH-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-HEALTH-total",
@@ -24280,7 +25651,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-HEALTH-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-HEALTH-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-LANDS-development",
@@ -24352,7 +25727,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-LANDS-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-LANDS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-LANDS-recurrent",
@@ -24424,7 +25803,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-LANDS-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-LANDS-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-LANDS-total",
@@ -24496,7 +25879,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-LANDS-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-LANDS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-ROADS-development",
@@ -24568,7 +25955,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-ROADS-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-ROADS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-ROADS-recurrent",
@@ -24640,7 +26031,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-ROADS-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-ROADS-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-ROADS-total",
@@ -24712,7 +26107,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-ROADS-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-ROADS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-TOTAL-development",
@@ -24782,7 +26181,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TOTAL-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-TOTAL-recurrent",
@@ -24852,7 +26255,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TOTAL-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-TOTAL-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-TOTAL-total",
@@ -24922,7 +26329,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TOTAL-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-TOURISM-development",
@@ -24994,7 +26405,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TOURISM-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-TOURISM-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-TOURISM-recurrent",
@@ -25066,7 +26481,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TOURISM-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-TOURISM-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-TOURISM-total",
@@ -25138,7 +26557,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TOURISM-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-TOURISM-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-TRADE-development",
@@ -25210,7 +26633,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TRADE-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-TRADE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-TRADE-recurrent",
@@ -25282,7 +26709,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TRADE-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-TRADE-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-TRADE-total",
@@ -25354,7 +26785,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-TRADE-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-TRADE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-WATER-development",
@@ -25426,7 +26861,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-WATER-actual-dev",
+    "siaya-budget-departments:BD-2021-CBROP-WATER-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-WATER-recurrent",
@@ -25498,7 +26937,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-WATER-actual-rec",
+    "siaya-budget-departments:BD-2021-CBROP-WATER-budget-rec-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2020-21-WATER-total",
@@ -25570,7 +27013,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2021-CBROP-WATER-actual-tot",
+    "siaya-budget-departments:BD-2021-CBROP-WATER-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-AGRICULTURE-development",
@@ -25642,7 +27089,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-AGRICULTURE-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-AGRICULTURE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-AGRICULTURE-total",
@@ -25714,7 +27165,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-AGRICULTURE-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-AGRICULTURE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-ASSEMBLY-development",
@@ -25784,7 +27239,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-ASSEMBLY-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-ASSEMBLY-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-ASSEMBLY-total",
@@ -25854,7 +27313,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-ASSEMBLY-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-ASSEMBLY-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-EDUCATION-development",
@@ -25926,7 +27389,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-EDUCATION-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-EDUCATION-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-EDUCATION-total",
@@ -25998,7 +27465,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-EDUCATION-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-EDUCATION-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-EXECUTIVE-development",
@@ -26070,7 +27541,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-EXECUTIVE-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-EXECUTIVE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-EXECUTIVE-total",
@@ -26142,7 +27617,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-EXECUTIVE-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-EXECUTIVE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-FINANCE-development",
@@ -26214,7 +27693,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-FINANCE-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-FINANCE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-FINANCE-total",
@@ -26286,7 +27769,11 @@
     "above_100": true
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-FINANCE-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-FINANCE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-HEALTH-development",
@@ -26358,7 +27845,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-HEALTH-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-HEALTH-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-HEALTH-total",
@@ -26430,7 +27921,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-HEALTH-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-HEALTH-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-LANDS-development",
@@ -26502,7 +27997,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-LANDS-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-LANDS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-LANDS-total",
@@ -26574,7 +28073,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-LANDS-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-LANDS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-ROADS-development",
@@ -26646,7 +28149,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-ROADS-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-ROADS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-ROADS-total",
@@ -26718,7 +28225,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-ROADS-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-ROADS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-TOTAL-development",
@@ -26788,7 +28299,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-TOTAL-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-TOTAL-total",
@@ -26858,7 +28373,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-TOTAL-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-TOURISM-development",
@@ -26930,7 +28449,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-TOURISM-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-TOURISM-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-TOURISM-total",
@@ -27002,7 +28525,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-TOURISM-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-TOURISM-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-TRADE-development",
@@ -27074,7 +28601,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-TRADE-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-TRADE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-TRADE-total",
@@ -27146,7 +28677,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-TRADE-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-TRADE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-WATER-development",
@@ -27218,7 +28753,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-WATER-actual-dev",
+    "siaya-budget-departments:BD-2122-CBROP-WATER-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2021-22-WATER-total",
@@ -27290,7 +28829,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2122-CBROP-WATER-actual-tot",
+    "siaya-budget-departments:BD-2122-CBROP-WATER-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-AGRICULTURE-compensation",
@@ -27363,7 +28906,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-AGRICULTURE-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-AGRICULTURE-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-AGRICULTURE-development",
@@ -27435,7 +28982,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-AGRICULTURE-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-AGRICULTURE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-AGRICULTURE-total",
@@ -27507,7 +29058,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-AGRICULTURE-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-AGRICULTURE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-ASSEMBLY-compensation",
@@ -27579,7 +29134,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-ASSEMBLY-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-ASSEMBLY-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-ASSEMBLY-development",
@@ -27649,7 +29208,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-ASSEMBLY-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-ASSEMBLY-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-ASSEMBLY-total",
@@ -27719,7 +29282,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-ASSEMBLY-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-ASSEMBLY-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-EDUCATION-compensation",
@@ -27792,7 +29359,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-EDUCATION-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-EDUCATION-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-EDUCATION-development",
@@ -27864,7 +29435,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-EDUCATION-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-EDUCATION-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-EDUCATION-total",
@@ -27936,7 +29511,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-EDUCATION-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-EDUCATION-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-EXECUTIVE-compensation",
@@ -28009,7 +29588,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-EXECUTIVE-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-EXECUTIVE-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-EXECUTIVE-development",
@@ -28081,7 +29664,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-EXECUTIVE-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-EXECUTIVE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-EXECUTIVE-total",
@@ -28153,7 +29740,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-EXECUTIVE-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-EXECUTIVE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-FINANCE-compensation",
@@ -28226,7 +29817,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-FINANCE-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-FINANCE-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-FINANCE-development",
@@ -28298,7 +29893,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-FINANCE-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-FINANCE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-FINANCE-total",
@@ -28370,7 +29969,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-FINANCE-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-FINANCE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-HEALTH-compensation",
@@ -28443,7 +30046,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-HEALTH-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-HEALTH-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-HEALTH-development",
@@ -28515,7 +30122,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-HEALTH-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-HEALTH-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-HEALTH-total",
@@ -28587,7 +30198,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-HEALTH-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-HEALTH-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-LANDS-compensation",
@@ -28660,7 +30275,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-LANDS-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-LANDS-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-LANDS-development",
@@ -28732,7 +30351,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-LANDS-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-LANDS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-LANDS-total",
@@ -28804,7 +30427,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-LANDS-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-LANDS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-ROADS-compensation",
@@ -28877,7 +30504,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-ROADS-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-ROADS-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-ROADS-development",
@@ -28949,7 +30580,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-ROADS-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-ROADS-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-ROADS-total",
@@ -29021,7 +30656,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-ROADS-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-ROADS-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-TOTAL-compensation",
@@ -29093,7 +30732,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TOTAL-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-TOTAL-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-TOTAL-development",
@@ -29163,7 +30806,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TOTAL-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-TOTAL-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-TOTAL-total",
@@ -29233,7 +30880,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TOTAL-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-TOTAL-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-TOURISM-compensation",
@@ -29306,7 +30957,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TOURISM-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-TOURISM-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-TOURISM-development",
@@ -29378,7 +31033,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TOURISM-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-TOURISM-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-TOURISM-total",
@@ -29450,7 +31109,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TOURISM-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-TOURISM-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-TRADE-compensation",
@@ -29523,7 +31186,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TRADE-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-TRADE-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-TRADE-development",
@@ -29595,7 +31262,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TRADE-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-TRADE-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-TRADE-total",
@@ -29667,7 +31338,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-TRADE-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-TRADE-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-WATER-compensation",
@@ -29740,7 +31415,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-WATER-actual-pe",
+    "siaya-budget-departments:BD-2324-CBROP-WATER-budget-pe-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-WATER-development",
@@ -29812,7 +31491,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-WATER-actual-dev",
+    "siaya-budget-departments:BD-2324-CBROP-WATER-budget-dev-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B4-2023-24-WATER-total",
@@ -29884,7 +31567,11 @@
     "above_100": false
    },
    "confidence": 4,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-budget-departments:BD-2324-CBROP-WATER-actual-tot",
+    "siaya-budget-departments:BD-2324-CBROP-WATER-budget-tot-fina-bf"
+   ]
   },
   {
    "calc_id": "SIA-B5-2013-14-cob-report-2013-14",
@@ -29910,7 +31597,8 @@
    "flags": {},
    "gap_reason": "The year's own report prints no closing stock of pending bills.",
    "confidence": null,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": []
   },
   {
    "calc_id": "SIA-B5-2014-15-cob-report-2014-15",
@@ -29936,7 +31624,8 @@
    "flags": {},
    "gap_reason": "The year's own report prints no closing stock of pending bills.",
    "confidence": null,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": []
   },
   {
    "calc_id": "SIA-B5-2015-16-cob-report-2015-16-L239",
@@ -30049,7 +31738,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L066",
+    "siaya-fiscal-ledger:L067",
+    "siaya-fiscal-ledger:L123",
+    "siaya-fiscal-ledger:L239"
+   ]
   },
   {
    "calc_id": "SIA-B5-2016-17-cob-report-2016-17-L240",
@@ -30162,7 +31857,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L070",
+    "siaya-fiscal-ledger:L071",
+    "siaya-fiscal-ledger:L125",
+    "siaya-fiscal-ledger:L240"
+   ]
   },
   {
    "calc_id": "SIA-B5-2017-18-cob-report-2017-18-L241",
@@ -30275,7 +31976,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L074",
+    "siaya-fiscal-ledger:L075",
+    "siaya-fiscal-ledger:L127",
+    "siaya-fiscal-ledger:L241"
+   ]
   },
   {
    "calc_id": "SIA-B5-2018-19-cob-report-2018-19-L242",
@@ -30388,7 +32095,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L078",
+    "siaya-fiscal-ledger:L079",
+    "siaya-fiscal-ledger:L129",
+    "siaya-fiscal-ledger:L242"
+   ]
   },
   {
    "calc_id": "SIA-B5-2019-20-cob-report-2019-20",
@@ -30414,7 +32127,8 @@
    "flags": {},
    "gap_reason": "The year's own report prints no closing stock of pending bills.",
    "confidence": null,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": []
   },
   {
    "calc_id": "SIA-B5-2020-21-cob-report-2020-21-L243",
@@ -30527,7 +32241,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L082",
+    "siaya-fiscal-ledger:L083",
+    "siaya-fiscal-ledger:L132",
+    "siaya-fiscal-ledger:L243"
+   ]
   },
   {
    "calc_id": "SIA-B5-2021-22-cob-report-2021-22-L245",
@@ -30640,7 +32360,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L085",
+    "siaya-fiscal-ledger:L087",
+    "siaya-fiscal-ledger:L146",
+    "siaya-fiscal-ledger:L245"
+   ]
   },
   {
    "calc_id": "SIA-B5-2021-22-cob-report-2021-22-L253",
@@ -30751,7 +32477,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L085",
+    "siaya-fiscal-ledger:L087",
+    "siaya-fiscal-ledger:L146",
+    "siaya-fiscal-ledger:L253"
+   ]
   },
   {
    "calc_id": "SIA-B5-2021-22-cob-report-2021-22-L276",
@@ -30864,7 +32596,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L085",
+    "siaya-fiscal-ledger:L087",
+    "siaya-fiscal-ledger:L146",
+    "siaya-fiscal-ledger:L276"
+   ]
   },
   {
    "calc_id": "SIA-B5-2022-23-cob-report-2022-23-L247",
@@ -30977,7 +32715,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L090",
+    "siaya-fiscal-ledger:L091",
+    "siaya-fiscal-ledger:L157",
+    "siaya-fiscal-ledger:L247"
+   ]
   },
   {
    "calc_id": "SIA-B5-2022-23-cob-report-2022-23-L254",
@@ -31088,7 +32832,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L090",
+    "siaya-fiscal-ledger:L091",
+    "siaya-fiscal-ledger:L157",
+    "siaya-fiscal-ledger:L254"
+   ]
   },
   {
    "calc_id": "SIA-B5-2023-24-cob-report-2023-24-L249",
@@ -31201,7 +32951,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L094",
+    "siaya-fiscal-ledger:L095",
+    "siaya-fiscal-ledger:L149",
+    "siaya-fiscal-ledger:L249"
+   ]
   },
   {
    "calc_id": "SIA-B5-2023-24-cob-report-2023-24-L255",
@@ -31314,7 +33070,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L094",
+    "siaya-fiscal-ledger:L095",
+    "siaya-fiscal-ledger:L149",
+    "siaya-fiscal-ledger:L255"
+   ]
   },
   {
    "calc_id": "SIA-B5-2024-25-cob-report-2024-25-L251",
@@ -31446,7 +33208,13 @@
     "above_limit": false
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L098",
+    "siaya-fiscal-ledger:L099",
+    "siaya-fiscal-ledger:L153",
+    "siaya-fiscal-ledger:L251"
+   ]
   },
   {
    "calc_id": "SIA-B5-2024-25-cob-report-2024-25-L256",
@@ -31576,7 +33344,13 @@
     "above_limit": true
    },
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L098",
+    "siaya-fiscal-ledger:L099",
+    "siaya-fiscal-ledger:L153",
+    "siaya-fiscal-ledger:L256"
+   ]
   },
   {
    "calc_id": "SIA-B5-2024-25-cob-report-2024-25-L275",
@@ -31708,7 +33482,13 @@
     "above_limit": false
    },
    "confidence": 2,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L098",
+    "siaya-fiscal-ledger:L099",
+    "siaya-fiscal-ledger:L153",
+    "siaya-fiscal-ledger:L275"
+   ]
   },
   {
    "calc_id": "SIA-B5-2025-26-cob-report-2025-26-L310",
@@ -31755,7 +33535,10 @@
    "flags": {},
    "gap_reason": "equitable_share_received: not printed in the year's own report",
    "confidence": 3,
-   "label": "Calculated by Takwimu Kenya from published figures"
+   "label": "Calculated by Takwimu Kenya from published figures",
+   "derived_from": [
+    "siaya-fiscal-ledger:L310"
+   ]
   }
  ]
 }

@@ -279,7 +279,7 @@ function runLedger(slug) {
   if (siaya) {
     // Case classes (data/ledger-classes.json, scripts/classify-ledger.js): every case classed once, none stale.
     const cls = read('data/ledger-classes.json');
-    const CLS = ['definitional', 'period or version', 'probable source error', 'resolved by source', 'open'];
+    const CLS = ['definitional', 'period or version', 'probable source error', 'resolved by source', 'unexplained'];
     const caseIds = new Set(data.discrepancies.map((d) => d.case_id));
     const clsIds = cls.cases.map((c) => c.case_id);
     ok(clsIds.length === new Set(clsIds).size, 'ledger-classes: a case is classed twice');
@@ -290,6 +290,12 @@ function runLedger(slug) {
       ok(typeof c.reason === 'string' && c.reason.length >= 20 && Array.isArray(c.evidence) && c.evidence.length > 0, `ledger-classes: ${c.case_id} needs a reason and evidence`);
     });
     CLS.forEach((k) => ok(cls.meta.counts[k] === cls.cases.filter((c) => c.classification === k).length, `ledger-classes: count for ${k} is stale`));
+    // "Open" has one meaning (census 28 Nov 2026): the ledger case status, open until a review record resolves it. The
+    // classes file copies the status counts from the ledger and has no class called "open".
+    const st = {}; data.discrepancies.forEach((d) => { st[d.status] = (st[d.status] || 0) + 1; });
+    ok(JSON.stringify(cls.meta.status_counts) === JSON.stringify(st), `ledger-classes: status_counts ${JSON.stringify(cls.meta.status_counts)} differ from the ledger ${JSON.stringify(st)} (run node scripts/classify-ledger.js)`);
+    ok(!CLS.includes('open') && !cls.cases.some((c) => c.classification === 'open'), 'ledger-classes: "open" is a case status, not a class');
+    data.discrepancies.forEach((d) => ok(d.status === (d.resolution ? 'resolved' : 'open'), `${d.case_id}: status follows the review resolution (open until resolved)`));
   }
   // Pending bills: every stock states its date and accounting basis (owner item 4).
   data.observations.filter((o) => /^pending_bills/.test(o.measure)).forEach((o) => ok(/^\d{4}-(06-30|07-01)$/.test(o.as_at || '') && ['cash', 'accrual', 'eligible-verified', 'as reported'].includes(o.accounting_basis), `${o.id}: pending-bills stock needs as_at (30 June or 1 July) and accounting_basis`));
