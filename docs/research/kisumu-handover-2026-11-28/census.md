@@ -86,8 +86,8 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | README Status | Conflict register: 53 cases | 53 | yes | data/conflicts.json |
 | README Status | Ten-year series: FY 2013/14 to FY 2025/26 | 2013/14, 2025/26 | yes | data/history.json years |
 | README Status | Corrections: 17 corrections footnoted beside 26 values, 14 source-error records | 17, 26, 14 | yes | lib/correction-notes.js; lib/editorial.js sourceErrors() |
-| README Status | Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, indicators, health, education, trade and markets, governance, wards and constituencies with IEBC boundary maps, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked "Needs page check", 0 approved | 331, 291, 35, 5, 38, 0 | yes | lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json |
-| README Status | Site: 120 pages | 120 | yes | .html files under dist/ |
+| README Status | Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, indicators, health, education, trade and markets, governance, agriculture and fisheries, water and environment, social protection, road safety and communications, wards and constituencies with IEBC boundary maps, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked "Needs page check", 0 approved | 331, 291, 35, 5, 38, 0 | yes | lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json |
+| README Status | Site: 120 pages | 124 | **NO** | .html files under dist/ |
 | README Status | 92 downloadable datasets plus 1 link-only (IMF) | 92, 1, IMF | yes | lib/explore.js catalogue() files.csv |
 | README Status | 5 draft reports | 5 | yes | components/report/reports.json |
 | CLAUDE.md | lib/counties.js lists 47 counties; Siaya (/counties/siaya/ hub, old URLs kept) and Kisumu (from 28 Nov 2026) are published | 47, Siaya, Kisumu | yes | lib/counties.js |
@@ -304,8 +304,8 @@ data/counties/kisumu/machine-checks.json: 6811 checks; agree 2786, disagree 6, n
 
 ## Inputs (SHA-256)
 
-- .claude/CLAUDE.md: 8e1ff72c2d3ab92bd7c7d857a7c27ddea38fa79961aebd4f4600577cf48f5cfe
-- README.md: dbf430f8a2a57fbea44a6b75e2e6ae79f601f6d58d3cd88fe8490829dcf407c0
+- .claude/CLAUDE.md: 2f8f936b0ba41ffc45ce39b97f07091e950ca38c25f17da06834d6ddcc9a6e12
+- README.md: dcb82ffa0cdf7b16146a5ceef01fcb8775109fabff57028405520a01b7589583
 - components/report/reports.json: af38ebeb395f6af7d863f47bc9a08de0ada926f67d01cfb202052896243738a7
 - data/cbk.json: 6c47b668a4baa2f6202e3b44dfe969a40f83ca40744cf82cb1597a6b750dca86
 - data/conflicts.json: 5e7357a5c5a01a3c7f49b9ee086dd646fc96ba447193c9f54ae4f1931b4994d8
