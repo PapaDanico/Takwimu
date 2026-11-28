@@ -20,7 +20,8 @@ function Opinion({ o }) {
     <div className="lv" data-obs={o.review.key}>
       <b>{o.opinion}</b><ValueFlags label={o.state_label} needsCheck={o.needs_page_check} machine={o.machine} tier={o.tier} />
       {o.quote ? <><br /><small>Printed: &ldquo;{o.quote}&rdquo;</small></> : null}
-      <br /><CountyCite title={o.doc} url={o.url} published={o.report_date || 'not stated'} period={o.period} unit="opinion (text)" confidence={o.confidence} pdf={o.page} read={o.read} />
+      <br /><CountyCite title={o.doc} url={o.url} published={o.report_date || 'not transcribed (see the date note)'} period={o.period} unit="opinion (text)" confidence={o.confidence} pdf={o.page} read={o.read} />
+      {!o.report_date && o.date_note ? <><br /><small>Publication date: {o.date_note}</small></> : null}
       {o.note ? <><br /><small>{o.note}</small></> : null}
     </div>
   );
