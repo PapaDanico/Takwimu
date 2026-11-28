@@ -268,6 +268,10 @@ if (dist && process.argv.includes('--synthetic')) {
     }
     chosen.push(...pick);
   });
+  // Every corrected value a page marks (lib/correction-notes.js) is rejected too, so that its footnote is tested: a
+  // withheld value must not keep its "Corrected <date>: was X" line or its mark (check 1b).
+  const cnotes = require('../lib/correction-notes').correctionNotes();
+  cnotes.forEach((n) => { if (before[n.ref] && rs.DATASET_IDS.includes(n.dataset) && !chosen.includes(n.ref) && Object.values(before[n.ref]).flat().every((x) => x.state !== 'rejected')) chosen.push(n.ref); });
   const ids = chosen.map((k) => { const i = k.indexOf(':'); return [k.slice(0, i), k.slice(i + 1)]; });
   if (process.env.TAKWIMU_DEBUG) fs.writeSync(2, `${chosen.join('\n')}\n`);
   // Calculations whose inputs include a chosen value are expected to be withheld too.
@@ -305,6 +309,25 @@ if (dist && process.argv.includes('--synthetic')) {
       });
     }));
     ok(chosen.every((k) => Object.keys((after[k] || {})).length > 0), 'synthetic: a rejected value vanished from the page instead of being shown as withdrawn');
+    // 1b. A withheld value takes its correction footnote with it: no data-correction line or mark for it, and no
+    // "Corrected <date>: was X" text (HTML or flight payload) where every record that footnote serves is withheld.
+    {
+      const esc = (x) => x.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
+      const filesOf = (base) => { const o = []; const w = (d) => fs.readdirSync(d, { withFileTypes: true }).forEach((e) => { const p = path.join(d, e.name); if (e.isDirectory()) w(p); else if (/\.(html|txt)$/.test(e.name)) o.push([path.relative(base, p), fs.readFileSync(p, 'utf8')]); }); w(base); return o; };
+      const has = (h, t) => h.includes(t) || h.includes(esc(t)) || h.includes(JSON.stringify(t).slice(1, -1));
+      const beforeFiles = filesOf(dir);
+      const afterFiles = filesOf(outDir);
+      let tested = 0;
+      cnotes.filter((n) => expected.has(n.ref)).forEach((n) => {
+        const attrs = [`data-correction="${esc(n.ref)}"`, `data-correction-mark="${esc(n.ref)}"`];
+        afterFiles.forEach(([f, h]) => ok(!attrs.some((x) => h.includes(x)), `synthetic: ${f} keeps the correction footnote of ${n.ref} after the value was withheld`));
+        if (!cnotes.filter((x) => x.text === n.text).every((x) => expected.has(x.ref))) return;
+        if (!beforeFiles.some(([, h]) => has(h, n.text))) return;
+        tested += 1;
+        afterFiles.forEach(([f, h]) => ok(!has(h, n.text), `synthetic: ${f} still shows "${n.text.slice(0, 60)}" (footnote of withheld ${n.ref})`));
+      });
+      ok(tested > 0, 'synthetic: no correction footnote of a withheld value was tested');
+    }
     // 2. Published data files: the value fields are emptied and editorial_review lists the rejection.
     ids.forEach(([d, id]) => {
       const f = path.join(outDir, 'data', `${d}.json`);

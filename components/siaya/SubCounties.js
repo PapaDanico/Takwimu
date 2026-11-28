@@ -82,7 +82,7 @@ export default function SubCounties() {
                 <li><span>Growth 2009 to 2019</span><span>{r.growth.toFixed(1)}%</span></li>
                 <li><span>Area</span><span>{n(r.area_km2)} km²</span></li>
                 <li><span>Wards</span><span>{r.wards}</span></li>
-                <li><span>Registered voters 2022<CorrectionMark notes={VOTERS_NOTE} /></span><span>{n(r.registered_voters_2022)}</span></li>
+                <li data-record="subcounties:registered_voters_2022"><span>Registered voters 2022<CorrectionMark notes={VOTERS_NOTE} /></span><span>{n(r.registered_voters_2022)}</span></li>
                 <li><span>Hospitals / health centres / dispensaries</span><span>{r.facilities.hospitals} / {r.facilities.health_centres} / {r.facilities.dispensaries}</span></li>
                 <li><span>People per doctor</span><span>{n(r.people_per_health_worker.doctor)}</span></li>
                 <li><span>People per nurse</span><span>{n(r.people_per_health_worker.nurse)}</span></li>
@@ -95,7 +95,7 @@ export default function SubCounties() {
       <div id="sc-sources">
         <h3 id="sc-src-h">Sources and confidence</h3>
         <ul className="steps">
-          <li>2019 census, 2022 and later projections, facilities, health workers and voters: {sc.source}. Confidence {sc.confidence} of 5. <a href={sc.source_url}>Document</a>.<CorrectionNote notes={VOTERS_NOTE} /></li>
+          <li data-record="subcounties:registered_voters_2022">2019 census, 2022 and later projections, facilities, health workers and voters: {sc.source}. Confidence {sc.confidence} of 5. <a href={sc.source_url}>Document</a>.<CorrectionNote notes={VOTERS_NOTE} /></li>
           <li>2009 census by constituency: {hist.population.by_sub_county_2009.source}. Confidence {hist.population.by_sub_county_2009.confidence} of 5. These are secondary reproductions of the census; the original 2009 tables were not reachable when we built the site.</li>
           <li>Projections are statistical estimates, not counts.</li>
           <li>People per doctor, nurse or clinical officer come from the county plan, which does not give the staffing date or whether staff serve people from outside the sub-county. Treat them as rough comparisons, not as measures of need or quality.</li>

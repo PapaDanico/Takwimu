@@ -162,7 +162,7 @@ export default function KenyaPage() {
           <table className="data">
             <caption>Candidates by elective position, 2022 general election</caption>
             <thead><tr><th scope="col">Position</th><th scope="col" className="num">Party-sponsored</th><th scope="col" className="num">Independent</th><th scope="col" className="num">Total</th></tr></thead>
-            <tbody>{cand.rows.map((r) => <tr key={r.position}><th scope="row">{r.position}</th><td className="num">{fmtNum(r.party_sponsored)}</td><td className="num">{r.independent === null ? <><span title="Shown as '-' in the IEBC table">-</span><CorrectionMark notes={notesFor('political', `iebc_candidates_2022_by_position:${r.position}`)} /><CorrectionNote notes={notesFor('political', `iebc_candidates_2022_by_position:${r.position}`)} /></> : fmtNum(r.independent)}</td><td className="num">{fmtNum(r.total)}</td></tr>)}</tbody>
+            <tbody>{cand.rows.map((r) => <tr key={r.position} data-record={`political:iebc_candidates_2022_by_position:${r.position}`}><th scope="row">{r.position}</th><td className="num">{fmtNum(r.party_sponsored)}</td><td className="num">{r.independent === null ? <><span title="Shown as '-' in the IEBC table">-</span><CorrectionMark notes={notesFor('political', `iebc_candidates_2022_by_position:${r.position}`)} /><CorrectionNote notes={notesFor('political', `iebc_candidates_2022_by_position:${r.position}`)} /></> : fmtNum(r.independent)}</td><td className="num">{fmtNum(r.total)}</td></tr>)}</tbody>
           </table>
         </TableWrap>
         </More>

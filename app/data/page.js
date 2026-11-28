@@ -2,6 +2,8 @@ import Link from 'next/link';
 import SourceErrorFlag from '../../components/SourceErrorFlag';
 import CorrectionNote, { CorrectionMark } from '../../components/CorrectionNote';
 import { notesFor } from '../../lib/correction-notes';
+import { badge } from '../../lib/review-status';
+import Reviewed from '../../components/Reviewed';
 import Abbrs from '../../components/Abbrs';
 import PageToc from '../../components/PageToc';
 import { plain } from '../../lib/plain';
@@ -37,16 +39,21 @@ const FIELD = {
 };
 const pageText = (r) => (r.page === null ? 'Not located' : `PDF p. ${r.page}${r.printed_page ? ` (printed p. ${r.printed_page})` : ''}`);
 // rec: the history.json record id ("years:<fy>:<field>"), for source-error flags and correction footnotes.
+// A value withheld after editorial review is shown as withdrawn (components/Reviewed.js), and its footnote goes with it.
 function RefRows({ rows }) {
-  return rows.map(([key, label, value, r, rec]) => (
-    <tr key={key}>
-      <th scope="row">{label}</th>
-      <td>{value}{rec ? <CorrectionMark notes={notesFor('history', rec)} /> : null}</td>
-      <td><a href={DOCS[r.source_id].url}>{DOCS[r.source_id].title}</a></td>
-      <td>{pageText(r)}</td>
-      <td>{r.read}{r.page_note ? `. ${r.page_note}` : ''}<SourceErrorFlag e={r.source_error} id={key} refId={rec ? `history:${rec}` : undefined} />{rec ? <CorrectionNote notes={notesFor('history', rec)} /> : null}</td>
-    </tr>
-  ));
+  return rows.map(([key, label, value, r, rec]) => {
+    const b = rec ? badge('history', rec) : null;
+    const notes = rec ? notesFor('history', rec) : null;
+    return (
+      <tr key={key}>
+        <th scope="row">{label}</th>
+        <td><Reviewed b={b}>{() => <>{value}<CorrectionMark notes={notes} /></>}</Reviewed></td>
+        <td><a href={DOCS[r.source_id].url}>{DOCS[r.source_id].title}</a></td>
+        <td>{pageText(r)}</td>
+        <td>{r.read}{r.page_note ? `. ${r.page_note}` : ''}<SourceErrorFlag e={r.source_error} id={key} refId={rec ? `history:${rec}` : undefined} /><CorrectionNote notes={notes} b={b} /></td>
+      </tr>
+    );
+  });
 }
 const REF_HEAD = <thead><tr><th scope="col">Figure</th><th scope="col">Value</th><th scope="col">Document</th><th scope="col">Page</th><th scope="col">How read, note</th></tr></thead>;
 

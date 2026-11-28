@@ -28,8 +28,7 @@ export function Cite({ id, table, page, printed, pageNote, confidence, bare }) {
 // review record in force changes what is shown (components/Reviewed.js): approved adds the "Approved" tag (only then),
 // rejected hides the value and shows the rationale, disputed links the conflict register. Without a record nothing
 // changes. Pages pass rows from masked(dataset), so a rejected value is already null here.
-function ValueCell({ r, dataset, notes }) {
-  const b = dataset ? badge(dataset, r.key) : null;
+function ValueCell({ r, b, dataset, notes }) {
   return (
     <Reviewed b={b} as="td">
       {() => (r.value === null || r.value === undefined ? <span className="muted">{r.value_text || 'not printed'}</span> : <>{num(r.value)}{r.unit ? ` ${r.unit}` : ''}{dataset && machineBadge(dataset, r.key) ? <> <MachineTag m={machineBadge(dataset, r.key)} /></> : null}<CorrectionMark notes={notes} /></>)}
@@ -45,10 +44,11 @@ export default function ObsTable({ caption, rows, id, labelHead = 'Measure', sho
   const tbl = src ? one('table') : undefined;
   const note = showNote ? one('note') : undefined;
   const s = src ? source(src) : null;
-  // Correction footnotes: the full line at the first row a correction touches in this table, the mark alone after that.
+  // Correction footnotes: the full line at the first shown row a correction touches in this table, the mark alone
+  // after that. A row whose value is withheld after review shows neither.
   const seen = new Set();
-  const notesOf = (r) => {
-    const all = dataset ? notesFor(dataset, r.key) : null;
+  const notesOf = (r, b) => {
+    const all = dataset && !(b && b.hide) ? notesFor(dataset, r.key) : null;
     if (!all) return [null, null];
     const fresh = all.filter((n) => !seen.has(n.id));
     fresh.forEach((n) => seen.add(n.id));
@@ -62,10 +62,10 @@ export default function ObsTable({ caption, rows, id, labelHead = 'Measure', sho
           <tr><th scope="col">{labelHead}</th><th scope="col">Value</th><th scope="col">Period</th><th scope="col">{src ? 'Page and confidence' : 'Source, page and confidence'}</th></tr>
         </thead>
         <tbody>
-          {rows.map((r) => { const [notes, fresh] = notesOf(r); return (
+          {rows.map((r) => { const b = dataset ? badge(dataset, r.key) : null; const [notes, fresh] = notesOf(r, b); return (
             <tr key={r.key}>
               <th scope="row">{r.label}{r.tag ? <> <span className={`tag ${r.tagTone || 'warn'}`}>{r.tag}</span></> : null}</th>
-              <ValueCell r={r} dataset={dataset} notes={notes} />
+              <ValueCell r={r} b={b} dataset={dataset} notes={notes} />
               <td>{r.period}</td>
               <td>
                 <Cite id={r.source_id} table={tbl ? undefined : r.table} page={r.pdf_page} printed={r.printed_page} pageNote={r.page_note} confidence={r.confidence} bare={Boolean(src)} />

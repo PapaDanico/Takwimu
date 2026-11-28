@@ -32,10 +32,10 @@ export default function CalcTable({ caption, records, id, tag, dataset = 'siaya-
         <caption className="sr-only">{caption}</caption>
         <thead><tr><th scope="col">Measure and calc_id</th><th scope="col">Result</th><th scope="col">How it is calculated, and from what</th></tr></thead>
         <tbody>
-          {records.map((r) => (
+          {records.map((r) => { const b = badge(dataset, r.calc_id); const notes = notesFor(dataset, r.calc_id); return (
             <tr key={r.calc_id} className={r.status === 'gap' ? 'gap' : undefined}>
               <th scope="row">{r.title}<br /><small><code>{r.calc_id}</code></small>{tag ? <><br /><span className="tag warn">{tag}</span></> : null}</th>
-              <td>{r.status === 'gap' ? <span className="muted">Gap: no value</span> : <Reviewed b={badge(dataset, r.calc_id)}>{() => <><b>{n(r.result)}</b> {r.unit}<CorrectionMark notes={notesFor(dataset, r.calc_id)} /></>}</Reviewed>}<br /><small>{r.period}</small><CorrectionNote notes={notesFor(dataset, r.calc_id)} /></td>
+              <td>{r.status === 'gap' ? <span className="muted">Gap: no value</span> : <Reviewed b={b}>{() => <><b>{n(r.result)}</b> {r.unit}<CorrectionMark notes={notes} /></>}</Reviewed>}<br /><small>{r.period}</small><CorrectionNote notes={notes} b={b} /></td>
               <td>
                 {formula ? null : <small><b>Formula:</b> {r.formula}</small>}
                 {r.status === 'gap' ? <>{formula ? null : <br />}<small><b>Why there is no value:</b> {r.gap_reason}</small></> : null}
@@ -44,7 +44,7 @@ export default function CalcTable({ caption, records, id, tag, dataset = 'siaya-
                 {r.caveat && !caveat ? <><small><b>Caveat:</b> {r.caveat}</small></> : null}
               </td>
             </tr>
-          ))}
+          ); })}
         </tbody>
         {formula || caveat ? <tfoot><tr><td colSpan={3}><small className="cite">Every row: {formula ? <><b>Formula:</b> {formula}</> : null}{formula && caveat ? ' ' : null}{caveat ? <><b>Caveat:</b> {caveat}</> : null}</small></td></tr></tfoot> : null}
       </table>
