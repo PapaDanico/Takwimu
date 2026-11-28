@@ -1561,49 +1561,2020 @@
     "quoted": true
    },
    "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-01",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 39,
+   "paragraph": "Basis for Qualified Opinion 1",
+   "section": "financial_statements",
+   "title": "Bank balances include accounts without records and unexplained reconciling items",
+   "category": "cash_and_bank",
+   "amounts": [
+    {
+     "value": 365945566,
+     "unit": "KSh",
+     "label": "cash and cash equivalents"
+    },
+    {
+     "value": 22774117,
+     "unit": "KSh",
+     "label": "balance of 15 bank accounts without cash books, reconciliations or certificates"
+    },
+    {
+     "value": 991761,
+     "unit": "KSh",
+     "label": "unpresented cheques on a dairy enterprise development account, presentation dates not provided"
+    },
+    {
+     "value": 10107604,
+     "unit": "KSh",
+     "label": "interbank transfers in the bank statement not in the cash book (health account)"
+    },
+    {
+     "value": 27130581,
+     "unit": "KSh",
+     "label": "balances of six bank accounts reported as nil in the statements"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Anomalies in Cash and Cash Equivalents",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-02",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 40,
+   "paragraph": "Basis for Qualified Opinion 2",
+   "section": "financial_statements",
+   "title": "Compensation of employees in the statements differs from the payroll ledger",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 4374160138,
+     "unit": "KSh",
+     "label": "compensation of employees in the statements"
+    },
+    {
+     "value": 4633007878,
+     "unit": "KSh",
+     "label": "payroll ledger amount"
+    },
+    {
+     "value": 258847740,
+     "unit": "KSh",
+     "label": "variance"
+    },
+    {
+     "value": 232706482,
+     "unit": "KSh",
+     "label": "paid by a commercial bank on behalf of the County Executive in a financing arrangement"
+    },
+    {
+     "value": 26141258,
+     "unit": "KSh",
+     "label": "unreconciled balance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Variances in Compensation of Employees",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-03",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 40,
+   "paragraph": "Basis for Qualified Opinion 3.1",
+   "section": "financial_statements",
+   "title": "Computers charged to communication services, and consultancy payments for unclear services",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 1234220223,
+     "unit": "KSh",
+     "label": "use of goods and services"
+    },
+    {
+     "value": 19249924,
+     "unit": "KSh",
+     "label": "communication, supplies and services"
+    },
+    {
+     "value": 7722638,
+     "unit": "KSh",
+     "label": "computers and printers charged to this item (misallocation)"
+    },
+    {
+     "value": 6128710,
+     "unit": "KSh",
+     "label": "paid to three consultancy firms, including an audit firm, for unclear services"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unsupported Use of Goods and Services: Communication, Supplies and Services",
+    "quoted": true
+   },
+   "note": "Paragraph 3 prints sub-items 3.1, 3.2, 3.5, 3.6 and 3.7 (there is no 3.3 or 3.4 in the report); each is a separate record. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-04",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 40,
+   "paragraph": "Basis for Qualified Opinion 3.2",
+   "section": "financial_statements",
+   "title": "Domestic travel and subsistence payments without registers or itineraries, and allowances implying 100 to 200 days away",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 177814736,
+     "unit": "KSh",
+     "label": "domestic travel and subsistence allowances"
+    },
+    {
+     "value": 53420906,
+     "unit": "KSh",
+     "label": "payments to a commercial bank listed in the report table"
+    },
+    {
+     "value": 4282800,
+     "unit": "KSh",
+     "label": "income tax payment listed in the report table"
+    },
+    {
+     "value": 1634663,
+     "unit": "KSh",
+     "label": "retention refund to a construction company for an irrigation scheme, listed in the report table"
+    },
+    {
+     "value": 642000,
+     "unit": "KSh",
+     "label": "catering items paid in cash"
+    },
+    {
+     "value": 3918900,
+     "unit": "KSh",
+     "label": "resource mobilisation payments without imprest applications or attendance registers"
+    },
+    {
+     "value": 16491985,
+     "unit": "KSh",
+     "label": "allowances paid to seven staff (about Kshs.2,000,000 each)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unsupported Use of Goods and Services: Domestic Travel and Subsistence Allowances",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 41 (table and items i-ii read from the page image). The company is not named here. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-05",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 41,
+   "paragraph": "Basis for Qualified Opinion 3.5",
+   "section": "financial_statements",
+   "title": "Car hire without justification and logistics payments without supporting documents",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 11331274,
+     "unit": "KSh",
+     "label": "rent and rates"
+    },
+    {
+     "value": 1217018,
+     "unit": "KSh",
+     "label": "car hire for county visitors"
+    },
+    {
+     "value": 3720000,
+     "unit": "KSh",
+     "label": "logistic services without supporting documents"
+    },
+    {
+     "value": 4937018,
+     "unit": "KSh",
+     "label": "amount whose regularity could not be confirmed"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unsupported Use of Goods and Services: Rent and Rates",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-06",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 41,
+   "paragraph": "Basis for Qualified Opinion 3.6",
+   "section": "financial_statements",
+   "title": "Training allowances to staff also paid subsistence for official duty, and a tax payment charged to training",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 20193911,
+     "unit": "KSh",
+     "label": "training expenses"
+    },
+    {
+     "value": 5828300,
+     "unit": "KSh",
+     "label": "training and accommodation allowances paid to three staff"
+    },
+    {
+     "value": 7348090,
+     "unit": "KSh",
+     "label": "subsistence allowances paid to the same three staff for official duty in the same period"
+    },
+    {
+     "value": 510151,
+     "unit": "KSh",
+     "label": "payment to the tax authority charged to training"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unsupported Use of Goods and Services: Training Expenses",
+    "quoted": true
+   },
+   "note": "Kshs.20,193,911 read from the page image (the text layer reads \"20,193,91'1\"). Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-07",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 42,
+   "paragraph": "Basis for Qualified Opinion 3.7",
+   "section": "financial_statements",
+   "title": "Hospitality payments including an amount paid to a staff member",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 111126700,
+     "unit": "KSh",
+     "label": "hospitality, supplies and services"
+    },
+    {
+     "value": 4800000,
+     "unit": "KSh",
+     "label": "amount paid to a staff member"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unsupported Use of Goods and Services: Hospitality, Supplies and Services",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-08",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 42,
+   "paragraph": "Basis for Qualified Opinion 4",
+   "section": "financial_statements",
+   "title": "Legal fees without case records, and legal work procured without records or by direct procurement",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 241138696,
+     "unit": "KSh",
+     "label": "other operating expenses"
+    },
+    {
+     "value": 44600165,
+     "unit": "KSh",
+     "label": "legal expenses"
+    },
+    {
+     "value": 6960000,
+     "unit": "KSh",
+     "label": "fee note in an employment case, shown as fully outstanding in pending bills"
+    },
+    {
+     "value": 2000000,
+     "unit": "KSh",
+     "label": "part of that fee note paid in the year"
+    },
+    {
+     "value": 1740000,
+     "unit": "KSh",
+     "label": "gazettement and company registration work given to a law firm"
+    },
+    {
+     "value": 3000000,
+     "unit": "KSh",
+     "label": "drafting of county bills: procurement and contract records not provided"
+    },
+    {
+     "value": 4000000,
+     "unit": "KSh",
+     "label": "preparation of a bill and regulations by direct procurement without reasons"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unsupported Legal Expenses",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 43. Firms are not named here. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-09",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 43,
+   "paragraph": "Emphasis of Matter 1",
+   "section": "emphasis_of_matter",
+   "title": "Receipts and spending each fell short of the final budget by about a quarter",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 11111397362,
+     "unit": "KSh",
+     "label": "final budget"
+    },
+    {
+     "value": 8533526659,
+     "unit": "KSh",
+     "label": "actual receipts"
+    },
+    {
+     "value": 2577870703,
+     "unit": "KSh",
+     "label": "under-funding (23% of the budget)"
+    },
+    {
+     "value": 8439183251,
+     "unit": "KSh",
+     "label": "actual expenditure"
+    },
+    {
+     "value": 2672214111,
+     "unit": "KSh",
+     "label": "under-expenditure (24% of the budget)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Budgetary Control and Performance",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-10",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 43,
+   "paragraph": "Emphasis of Matter 2",
+   "section": "emphasis_of_matter",
+   "title": "Exchequer releases arrived late in the year",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 8533526659,
+     "unit": "KSh",
+     "label": "exchequer releases"
+    },
+    {
+     "value": 594888816,
+     "unit": "KSh",
+     "label": "received towards the end of June 2023"
+    },
+    {
+     "value": 1389758573,
+     "unit": "KSh",
+     "label": "released in July 2023 for the 2022/23 budget"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Delay in Disbursement of Exchequer Releases",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-11",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 43,
+   "paragraph": "Emphasis of Matter 3",
+   "section": "emphasis_of_matter",
+   "title": "Pending bills: opening balance differs from the prior year, and first-charge bills (some from 2014) unpaid",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 2038281553,
+     "unit": "KSh",
+     "label": "pending bills disclosed"
+    },
+    {
+     "value": 2429762663,
+     "unit": "KSh",
+     "label": "opening balance in the supporting schedule"
+    },
+    {
+     "value": 2416382496,
+     "unit": "KSh",
+     "label": "closing balance in the audited 2021/22 statements"
+    },
+    {
+     "value": 13380167,
+     "unit": "KSh",
+     "label": "unexplained variance"
+    },
+    {
+     "value": 1932521289,
+     "unit": "KSh",
+     "label": "pending bills that should have been paid as a first charge in 2022/23, still outstanding"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Pending Bills",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 44. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-12",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 44,
+   "paragraph": "Emphasis of Matter 4",
+   "section": "emphasis_of_matter",
+   "title": "811 voided transactions in the system during the year",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 1063432081,
+     "unit": "KSh",
+     "label": "value of 811 voided transactions"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Voided Transactions",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-13",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 44,
+   "paragraph": "Other Matter",
+   "section": "other_matter",
+   "title": "Prior-year audit matters not resolved",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Other Matter paragraph: issues raised in the previous year's report were not resolved or explained."
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unresolved Prior Year Matters",
+    "quoted": true
+   },
+   "note": "A general statement; the report does not list the paragraphs. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-14",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 45,
+   "paragraph": "Basis for Conclusion (lawfulness) 1",
+   "section": "lawfulness",
+   "title": "Imprests outstanding beyond the surrender date",
+   "category": "imprest",
+   "amounts": [
+    {
+     "value": 41505499,
+     "unit": "KSh",
+     "label": "outstanding imprests and advances"
+    },
+    {
+     "value": 14250776,
+     "unit": "KSh",
+     "label": "outstanding for more than a year (from 2013/14)"
+    },
+    {
+     "value": 2571187,
+     "unit": "KSh",
+     "label": "multiple imprests held by the same officers"
+    },
+    {
+     "value": 54120090,
+     "unit": "KSh",
+     "label": "prior-year balance in the ageing analysis"
+    },
+    {
+     "value": 31084115,
+     "unit": "KSh",
+     "label": "balance in the ageing analysis"
+    },
+    {
+     "value": 12614591,
+     "unit": "KSh",
+     "label": "decrease without evidence of surrender or recovery"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Long Outstanding Imprests",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-15",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 45,
+   "paragraph": "Basis for Conclusion (lawfulness) 2",
+   "section": "lawfulness",
+   "title": "Training without a training needs assessment",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Training Undertaken Without Needs Assessments",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-16",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 45,
+   "paragraph": "Basis for Conclusion (lawfulness) 3",
+   "section": "lawfulness",
+   "title": "No approved staff establishment",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Lack of staff Establishment",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-17",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 46,
+   "paragraph": "Basis for Conclusion (lawfulness) 4",
+   "section": "lawfulness",
+   "title": "No annual recruitment plan; 10 chief officer and 18 director posts noted",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Lack of an Annual Recruitment Plan",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-18",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 46,
+   "paragraph": "Basis for Conclusion (lawfulness) 5",
+   "section": "lawfulness",
+   "title": "No human resource plan",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Lack of Human Resource Plans",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-19",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 46,
+   "paragraph": "Basis for Conclusion (lawfulness) 5 (second)",
+   "section": "lawfulness",
+   "title": "Staff counts differ between records (4,699 against 5,544 and 5,030)",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Variances in Staff Records",
+    "quoted": true
+   },
+   "note": "The report numbers two paragraphs \"5\"; this is the second. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-20",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 47,
+   "paragraph": "Basis for Conclusion (lawfulness) 7",
+   "section": "lawfulness",
+   "title": "34 employees retained beyond the mandatory retirement age",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Retention of Staff Beyond Mandatory Retirement Age",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-21",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 47,
+   "paragraph": "Basis for Conclusion (lawfulness) 8",
+   "section": "lawfulness",
+   "title": "94 employees with net pay below one third of basic salary",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Non-Compliance with One-Third Basic Salary Rule",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-22",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 47,
+   "paragraph": "Basis for Conclusion (lawfulness) 9",
+   "section": "lawfulness",
+   "title": "Officers in acting positions for more than six months",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Staff Serving in Acting Capacity for More Than Six (6) Months",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-23",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 47,
+   "paragraph": "Basis for Conclusion (lawfulness) 10",
+   "section": "lawfulness",
+   "title": "Grounded motor vehicles and machinery",
+   "category": "assets",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Grounded Motor Vehicles and Machineries",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 48. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-24",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 48,
+   "paragraph": "Basis for Conclusion (lawfulness) 11",
+   "section": "lawfulness",
+   "title": "Contributions to the Council of Governors without justification",
+   "category": "transfers",
+   "amounts": [
+    {
+     "value": 3000000,
+     "unit": "KSh",
+     "label": "paid to the Council of Governors"
+    },
+    {
+     "value": 2000000,
+     "unit": "KSh",
+     "label": "annual intergovernmental contribution"
+    },
+    {
+     "value": 1000000,
+     "unit": "KSh",
+     "label": "annual contribution towards legal fees"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Irregular Funding of Council of Governors",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-25",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 48,
+   "paragraph": "Basis for Conclusion (lawfulness) 12",
+   "section": "lawfulness",
+   "title": "Payments to members of a county football club without a legal basis",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 5128560,
+     "unit": "KSh",
+     "label": "payments"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Irregular Payment to Kisumu All Stars Members",
+    "quoted": true
+   },
+   "note": "The closing line of the paragraph is garbled in the text layer; amount read from the page image. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-26",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 48,
+   "paragraph": "Basis for Conclusion (lawfulness) 13",
+   "section": "lawfulness",
+   "title": "Political appointees in the governor's offices above the limit (47 appointees; 10 town committee members)",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Excess Staff for the Office of the Governor and Deputy Governor",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 49. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-27",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 49,
+   "paragraph": "Basis for Conclusion (lawfulness) 14",
+   "section": "lawfulness",
+   "title": "Revenue automation system paid for but not accessible to the revenue department",
+   "category": "ict",
+   "amounts": [
+    {
+     "value": 1570295208,
+     "unit": "KSh",
+     "label": "acquisition of assets"
+    },
+    {
+     "value": 10000000,
+     "unit": "KSh",
+     "label": "paid to the consultant in the year"
+    },
+    {
+     "value": 64202500,
+     "unit": "KSh",
+     "label": "contract sum (awarded September 2018)"
+    },
+    {
+     "value": 32101250,
+     "unit": "KSh",
+     "label": "payment demand of March 2019"
+    },
+    {
+     "value": 19853019,
+     "unit": "KSh",
+     "label": "first instalment paid in 2018/19"
+    },
+    {
+     "value": 29853019,
+     "unit": "KSh",
+     "label": "spent to November 2023"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unused Revenue Automation System",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-28",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 49,
+   "paragraph": "Basis for Conclusion (lawfulness) 15",
+   "section": "lawfulness",
+   "title": "Fuel bought from suppliers not on the prequalified list",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 76126997,
+     "unit": "KSh",
+     "label": "fuel, oil and lubricants"
+    },
+    {
+     "value": 2662655,
+     "unit": "KSh",
+     "label": "orders to suppliers not prequalified"
+    },
+    {
+     "value": 3000000,
+     "unit": "KSh",
+     "label": "fuel quotation outside the e-procurement system"
+    },
+    {
+     "value": 900000,
+     "unit": "KSh",
+     "label": "fuel bought by direct procurement without justification"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Procurement of Fuel from Non-Prequalified Suppliers",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 50. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-29",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 50,
+   "paragraph": "Basis for Conclusion (lawfulness) 16",
+   "section": "lawfulness",
+   "title": "Quotation used above the threshold for open tender",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 16806552,
+     "unit": "KSh",
+     "label": "research, studies, project preparation, design and supervision"
+    },
+    {
+     "value": 3625000,
+     "unit": "KSh",
+     "label": "cotton seed tender procured by quotation above the threshold"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unjustified Procurement Method",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-30",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 50,
+   "paragraph": "Basis for Conclusion (lawfulness) 17",
+   "section": "lawfulness",
+   "title": "Procurement done outside the e-procurement portal",
+   "category": "procurement",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Procurement Done Outside e-Procurement Portal",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-31",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 50,
+   "paragraph": "Basis for Conclusion (lawfulness) 18",
+   "section": "lawfulness",
+   "title": "Tender evaluation and award records not provided",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 29281455,
+     "unit": "KSh",
+     "label": "goods supplied and delivered"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unsupported Tender Evaluation and Awarding Process",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 51. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-32",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 51,
+   "paragraph": "Basis for Conclusion (lawfulness) 19",
+   "section": "lawfulness",
+   "title": "Validity of framework agreements",
+   "category": "procurement",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Validity of Framework Agreements",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-33",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 51,
+   "paragraph": "Basis for Conclusion (lawfulness) 20",
+   "section": "lawfulness",
+   "title": "Commitments made after the 31 May deadline",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 5497005,
+     "unit": "KSh",
+     "label": "commitments and contracts made in June 2023"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Irregular Commitments and Expenditures",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-34",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 52,
+   "paragraph": "Basis for Conclusion (lawfulness) 21",
+   "section": "lawfulness",
+   "title": "Medical equipment paid for but not in use",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 17179900,
+     "unit": "KSh",
+     "label": "medical equipment for a sub-county hospital"
+    },
+    {
+     "value": 11028900,
+     "unit": "KSh",
+     "label": "paid January 2023"
+    },
+    {
+     "value": 6151000,
+     "unit": "KSh",
+     "label": "paid June 2023"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unutilized Medical Equipment",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-35",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 52,
+   "paragraph": "Basis for Conclusion (lawfulness) 22",
+   "section": "lawfulness",
+   "title": "Cancer centre contract at 61% progress after expiry, then terminated without following procedure",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 165622113,
+     "unit": "KSh",
+     "label": "contract price"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Un-Procedural Termination of Construction of a Cancer Center",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-36",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 53,
+   "paragraph": "Basis for Conclusion (lawfulness) 23.1",
+   "section": "lawfulness",
+   "title": "Single-sourced road upgrade to bitumen, past its contract period without approved extension",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 217907156,
+     "unit": "KSh",
+     "label": "construction of roads"
+    },
+    {
+     "value": 130892628,
+     "unit": "KSh",
+     "label": "paid in the year to a national service agency for the road"
+    },
+    {
+     "value": 221183468,
+     "unit": "KSh",
+     "label": "contract cost (8 km, 12 months from October 2021)"
+    },
+    {
+     "value": 142045912,
+     "unit": "KSh",
+     "label": "paid to date (64% of the contract sum)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Acquisition of Assets: Delayed Completion of Namba Kapiyo-Lolwe to Bitumen Standards",
+    "quoted": true
+   },
+   "note": "Paragraph 23 covers sub-items 23.1 to 23.3, each a separate record. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-37",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 53,
+   "paragraph": "Basis for Conclusion (lawfulness) 23.2",
+   "section": "lawfulness",
+   "title": "Road works not done to specification",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 2998233,
+     "unit": "KSh",
+     "label": "paid for one access road"
+    },
+    {
+     "value": 3999603,
+     "unit": "KSh",
+     "label": "paid for another access road"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Acquisition of Assets: Poorly Implemented Road Projects",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 54. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-38",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 54,
+   "paragraph": "Basis for Conclusion (lawfulness) 23.3",
+   "section": "lawfulness",
+   "title": "Water supply project: storage tank not supplied and borehole water levels too low",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 1301697011,
+     "unit": "KSh",
+     "label": "construction and civil works"
+    },
+    {
+     "value": 3025219,
+     "unit": "KSh",
+     "label": "paid for drilling and equipping a water supply; tank not supplied"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Acquisition of Assets: Construction of Water Projects",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-39",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 54,
+   "paragraph": "Basis for Conclusion (lawfulness) 24",
+   "section": "lawfulness",
+   "title": "Staff medical cover paid without a signed agreement",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 185788774,
+     "unit": "KSh",
+     "label": "insurance costs"
+    },
+    {
+     "value": 112539497,
+     "unit": "KSh",
+     "label": "paid to the national health insurer for staff cover (3,519 employees)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Provision of Comprehensive Medical Cover",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-40",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 54,
+   "paragraph": "Basis for Conclusion (lawfulness) 25",
+   "section": "lawfulness",
+   "title": "Asset verification system paid for without a signed contract",
+   "category": "ict",
+   "amounts": [
+    {
+     "value": 7638640,
+     "unit": "KSh",
+     "label": "paid to the contractor"
+    },
+    {
+     "value": 19596600,
+     "unit": "KSh",
+     "label": "contract cost"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Installation, Testing and Commissioning of an Automated Asset Verification System",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 55. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-41",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 55,
+   "paragraph": "Basis for Conclusion (lawfulness) 26",
+   "section": "lawfulness",
+   "title": "Statutory deductions not remitted in full",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 93699562,
+     "unit": "KSh",
+     "label": "tax and pension deductions not remitted or remitted late"
+    },
+    {
+     "value": 183094747,
+     "unit": "KSh",
+     "label": "remitted to the national health insurer per county records"
+    },
+    {
+     "value": 178054347,
+     "unit": "KSh",
+     "label": "remittances confirmed by the insurer"
+    },
+    {
+     "value": 5040400,
+     "unit": "KSh",
+     "label": "unexplained variance"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Non-remittance of Statutory Deductions",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 56. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-42",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 56,
+   "paragraph": "Basis for Conclusion (lawfulness) 27.1",
+   "section": "lawfulness",
+   "title": "96 employees received arrears more than once",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 11087550,
+     "unit": "KSh",
+     "label": "arrears paid more than once"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "IPPD Payroll: Payment of Arrears",
+    "quoted": true
+   },
+   "note": "Paragraph 27 covers sub-items 27.1 to 27.5, each a separate record. Amount read from the page image (the text layer reads \"'1 1,087,550\"). Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-43",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 56,
+   "paragraph": "Basis for Conclusion (lawfulness) 27.2",
+   "section": "lawfulness",
+   "title": "425 employees moved more than one job group",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "IPPD Payroll: Employees Skipping Job Groups",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-44",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 56,
+   "paragraph": "Basis for Conclusion (lawfulness) 27.3",
+   "section": "lawfulness",
+   "title": "Seven employees' job groups changed without records",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "IPPD Payroll: Change of Job Groups",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-45",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 57,
+   "paragraph": "Basis for Conclusion (lawfulness) 27.4",
+   "section": "lawfulness",
+   "title": "Arrears of allowances paid to 63 employees not entitled to them",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 5660993,
+     "unit": "KSh",
+     "label": "arrears paid"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "IPPD Payroll: Payment of Arrears for Unentitled Allowances",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-46",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 57,
+   "paragraph": "Basis for Conclusion (lawfulness) 27.5",
+   "section": "lawfulness",
+   "title": "Bank payments above recalculated net pay for 126 employees",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "IPPD Payroll: Bank Amount Paid Greater than the IPPD Recalculated Net Pay",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-47",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 57,
+   "paragraph": "Basis for Conclusion (lawfulness) 28.1",
+   "section": "lawfulness",
+   "title": "Manual payroll data incomplete (436 and 471 employees)",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Manual Payroll: Data Integrity Issues",
+    "quoted": true
+   },
+   "note": "Paragraph 28 covers sub-items 28.1 to 28.5, each a separate record. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-48",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 57,
+   "paragraph": "Basis for Conclusion (lawfulness) 28.2",
+   "section": "lawfulness",
+   "title": "Overpayment of salaries and allowances on the manual payroll",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 1769730,
+     "unit": "KSh",
+     "label": "basic pay overpaid (33 employees)"
+    },
+    {
+     "value": 224900,
+     "unit": "KSh",
+     "label": "house allowance overpaid (5 employees)"
+    },
+    {
+     "value": 12000,
+     "unit": "KSh",
+     "label": "commuter allowance overpaid (2 employees)"
+    },
+    {
+     "value": 304181,
+     "unit": "KSh",
+     "label": "leave allowance overpaid (16 employees)"
+    },
+    {
+     "value": 1520000,
+     "unit": "KSh",
+     "label": "extraneous allowance overpaid (18 employees)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Manual Payroll: Overpayment of Salaries and Allowances",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 58. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-49",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 58,
+   "paragraph": "Basis for Conclusion (lawfulness) 28.3",
+   "section": "lawfulness",
+   "title": "Salary arrears paid through the manual payroll not confirmed",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 11670129,
+     "unit": "KSh",
+     "label": "arrears paid to 68 employees through the manual payroll"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Manual Payroll: Unconfirmed Payment of Salary Arrears through Manual Payroll",
+    "quoted": true
+   },
+   "note": "Amount read from the page image (the text layer reads \"1 1,670,129\"). Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-50",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 58,
+   "paragraph": "Basis for Conclusion (lawfulness) 28.4",
+   "section": "lawfulness",
+   "title": "Salaries paid outside the integrated payroll and financial systems",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 773945,
+     "unit": "KSh",
+     "label": "paid through the manual payroll"
+    },
+    {
+     "value": 443316,
+     "unit": "KSh",
+     "label": "paid to the same officers through the integrated payroll"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Manual Payroll: Payment of Salaries Outside IFMIS and IPPD",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-51",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 58,
+   "paragraph": "Basis for Conclusion (lawfulness) 28.5",
+   "section": "lawfulness",
+   "title": "Income tax not deducted and remitted for 13 employees",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Manual Payroll: Non-Compliance with Deduction and Remittance of PAYE",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 59. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-52",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 59,
+   "paragraph": "Basis for Conclusion (lawfulness) 29",
+   "section": "lawfulness",
+   "title": "Purchases without competitive bidding",
+   "category": "procurement",
+   "amounts": [
+    {
+     "value": 17061560,
+     "unit": "KSh",
+     "label": "foreign travel and subsistence"
+    },
+    {
+     "value": 11764015,
+     "unit": "KSh",
+     "label": "paid to two travel agencies"
+    },
+    {
+     "value": 48071296,
+     "unit": "KSh",
+     "label": "printing, advertising and information"
+    },
+    {
+     "value": 10300000,
+     "unit": "KSh",
+     "label": "paid to two companies"
+    },
+    {
+     "value": 499000,
+     "unit": "KSh",
+     "label": "paid to a hotel"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Lack of Competitive Bidding",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-53",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 59,
+   "paragraph": "Basis for Conclusion (lawfulness) 30",
+   "section": "lawfulness",
+   "title": "Wage bill at 51% of revenue, above the legal limit",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 4374160138,
+     "unit": "KSh",
+     "label": "compensation of employees"
+    },
+    {
+     "value": 8533526659,
+     "unit": "KSh",
+     "label": "total receipts"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Non-Compliance with the Law on Fiscal Responsibility",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-54",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 59,
+   "paragraph": "Basis for Conclusion (lawfulness) 31",
+   "section": "lawfulness",
+   "title": "Legal costs that the report says could have been avoided",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 17461066,
+     "unit": "KSh",
+     "label": "legal fees"
+    },
+    {
+     "value": 2461066,
+     "unit": "KSh",
+     "label": "paid to an advocate"
+    },
+    {
+     "value": 1922708,
+     "unit": "KSh",
+     "label": "court award"
+    },
+    {
+     "value": 538358,
+     "unit": "KSh",
+     "label": "interest on delayed payment"
+    },
+    {
+     "value": 115000000,
+     "unit": "KSh",
+     "label": "decretal debt fixed by consent"
+    },
+    {
+     "value": 15000000,
+     "unit": "KSh",
+     "label": "first instalment paid in the year"
+    },
+    {
+     "value": 35207455,
+     "unit": "KSh",
+     "label": "legal costs within pending bills, without details"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Avoidable Legal Expenditure",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 60. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-55",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 60,
+   "paragraph": "Basis for Conclusion (internal controls) 1",
+   "section": "internal_controls",
+   "title": "Monthly wages rose 38% in July 2022 and 11% in August 2022 without explanation",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 435316300,
+     "unit": "KSh",
+     "label": "wages paid in July 2022"
+    },
+    {
+     "value": 118842497,
+     "unit": "KSh",
+     "label": "increase on June 2022 (38%)"
+    },
+    {
+     "value": 316473803,
+     "unit": "KSh",
+     "label": "wages paid in June 2022"
+    },
+    {
+     "value": 47183061,
+     "unit": "KSh",
+     "label": "further increase in August 2022 (11%)"
+    },
+    {
+     "value": 482499361,
+     "unit": "KSh",
+     "label": "wages paid in August 2022"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unexplained Increase in Compensation of Employees",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-exec-2022-23-56",
+   "entity": "county_executive",
+   "fy": "2022/23",
+   "doc_id": "audit-kisumu-exec-2022-23",
+   "page": 61,
+   "paragraph": "Basis for Conclusion (internal controls) 2",
+   "section": "internal_controls",
+   "title": "Retention funds balance not supported",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 76990376,
+     "unit": "KSh",
+     "label": "contractors' retention funds held at the central bank"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Deposits and Retention",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
   }
  ],
  "same_items": [],
  "recurrence_by_category": {
   "county_executive": {
    "payroll": {
-    "2023/24": 9
+    "2023/24": 9,
+    "2022/23": 22
    },
    "unsupported_expenditure": {
-    "2023/24": 3
+    "2023/24": 3,
+    "2022/23": 8
    },
    "transfers": {
-    "2023/24": 1
+    "2023/24": 1,
+    "2022/23": 2
    },
    "cash_and_bank": {
-    "2023/24": 3
+    "2023/24": 3,
+    "2022/23": 1
    },
    "budget_control": {
-    "2023/24": 3
+    "2023/24": 3,
+    "2022/23": 2
    },
    "governance": {
-    "2023/24": 7
+    "2023/24": 7,
+    "2022/23": 2
    },
    "projects": {
-    "2023/24": 6
+    "2023/24": 6,
+    "2022/23": 4
    },
    "financial_reporting": {
-    "2023/24": 3
+    "2023/24": 3,
+    "2022/23": 2
    },
    "procurement": {
-    "2023/24": 9
+    "2023/24": 9,
+    "2022/23": 7
    },
    "ict": {
-    "2023/24": 1
+    "2023/24": 1,
+    "2022/23": 2
    },
    "pending_bills": {
-    "2023/24": 1
+    "2023/24": 1,
+    "2022/23": 1
    },
    "imprest": {
-    "2023/24": 1
+    "2023/24": 1,
+    "2022/23": 1
    },
    "other": {
     "2023/24": 1
+   },
+   "assets": {
+    "2022/23": 2
    }
   }
  },
@@ -1619,13 +3590,6 @@
    "entity": "county_executive",
    "fy": "2020/21",
    "doc_id": "audit-kisumu-exec-2020-21",
-   "status": "not yet coded",
-   "reason": "Report held (hash in audits.json); findings not yet coded."
-  },
-  {
-   "entity": "county_executive",
-   "fy": "2022/23",
-   "doc_id": "audit-kisumu-exec-2022-23",
    "status": "not yet coded",
    "reason": "Report held (hash in audits.json); findings not yet coded."
   },
