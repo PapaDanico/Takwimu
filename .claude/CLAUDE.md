@@ -21,3 +21,4 @@ Civic education platform for Kenyan public finance and statistics, focused on tr
 # Rules
 Concise responses. Grep before Read. No unrequested extras.
 - Multi-county (27 Nov 2026, docs/adr-0001-multi-county-data.md): new counties live in data/counties/<slug>/ via lib/county-registry.js; Siaya keeps its paths. Kisumu (042) phase 1 data is in, unpublished (scripts/test-unpublished-counties.js blocks it from dist until its pages pass review).
+- Indicators (28 Nov 2026): schemas/county-indicators.schema.json; data/indicators.json (Siaya + regional lake rows, published as /datasets/ siaya-indicators) and data/counties/kisumu/indicators.json (held); scripts/test-indicators.js. Delta and gaps: docs/research/kisumu-handover-2026-11-28/delta-manifest.md. KeFS (kefs.go.ke) certificate expired: county landings blocked, never bypass.

@@ -67,15 +67,15 @@ Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:c
 - No verdict labels on named individuals without a primary document and legal review.
 - No personal data is collected (`docs/data-protection-policy.md`).
 
-## Status (27 Nov 2026)
+## Status (28 Nov 2026)
 
 - Counties: 1 of 47 published (Siaya); national pages cover all 47 where data exists.
-- Siaya values: 4,005 across 16 datasets, each with a review pack. 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty); unreviewed values are labelled "Provisional: awaiting editorial review".
-- Machine cross-checks (second reading of the cited page): 2,363 agree, 80 disagree (need a person to read the page image), 1,562 not checkable.
+- Siaya values: 4,122 across 17 datasets, each with a review pack (28 Nov: `data/indicators.json` adds poverty 2022, KDHS 2022 fact sheet, crops, Sibo utility and lake fish landings). 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty); unreviewed values are labelled "Provisional: awaiting editorial review".
+- Machine cross-checks (second reading of the cited page): 2,435 agree, 80 disagree (need a person to read the page image), 1,607 not checkable.
 - Fiscal ledger: 164 discrepancy cases; 47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 open. Both values stand in every open case. Conflict register: 53 cases.
 - Ten-year series: FY 2013/14 to FY 2025/26 (FY 2025/26 from the CoB annual report Part 1 tables, 27 Nov 2026); FY 2019/20 stays a gap (CoB report not found), with county and look-back figures listed beside it.
 - Corrections: 17 corrections footnoted beside 26 values, 14 source-error records flagged beside theirs (kept as published, e.g. "31st June 2025", and the Economic Survey 2026 printing Siaya's OSR budget as FY 2025/26 revenue); no register page, `/corrections/` redirects to `/method/#corrections` (owner, 27 Nov 2026).
-- Kisumu (unpublished, data layer only): 331 values (291 ledger, 35 audit opinions, population), 38 conflict cases, 0 approved; kept off the site by `scripts/test-unpublished-counties.js`.
+- Kisumu (unpublished, data layer only): 507 values (291 ledger, 35 audit opinions, 5 population, 176 indicators), 38 ledger conflict cases plus 4 in the indicators file, 0 approved; kept off the site by `scripts/test-unpublished-counties.js`. Evidence delta of 28 Nov: `docs/research/kisumu-handover-2026-11-28/delta-manifest.md`.
 - Site: 110 pages, 92 downloadable datasets, a three-page fiscal brief and 5 draft reports. Layers B1, B2, B4, B5 on /counties/siaya/analysis/; B3 and own-source revenue by publisher on /counties/siaya/ledger/.
 
 ## Deploying

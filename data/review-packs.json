@@ -20,10 +20,10 @@
    "siaya-budget-departments": 1240,
    "siaya-county-series": 191,
    "siaya-analysis-layers": 442,
-   "indicators": 78,
+   "indicators": 117,
    "siaya-programmes": 73
   },
-  "total": 4083
+  "total": 4122
  },
  "entries": [
   {
@@ -226665,6 +226665,1917 @@
     "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
     "pages_checked": [
      53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-area-2020-siaya",
+   "label": "Maize: area, Siaya County, 2020",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 63493,
+   "unit": "ha",
+   "period": "2020",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "63,493",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "63,493",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-area-2020-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-production-2020-siaya",
+   "label": "Maize: production, Siaya County, 2020",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 72351,
+   "unit": "tonnes",
+   "period": "2020",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "72,351",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "72,351",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-production-2020-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-area-2021-siaya",
+   "label": "Maize: area, Siaya County, 2021",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 83933,
+   "unit": "ha",
+   "period": "2021",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "83,933",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "83,933",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-area-2021-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-production-2021-siaya",
+   "label": "Maize: production, Siaya County, 2021",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 53512,
+   "unit": "tonnes",
+   "period": "2021",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "53,512",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "53,512",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-production-2021-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-area-2022-siaya",
+   "label": "Maize: area, Siaya County, 2022",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 73521,
+   "unit": "ha",
+   "period": "2022",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "73,521",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "73,521",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-area-2022-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-production-2022-siaya",
+   "label": "Maize: production, Siaya County, 2022",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 76580,
+   "unit": "tonnes",
+   "period": "2022",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "76,580",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "76,580",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-production-2022-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-area-2023-siaya",
+   "label": "Maize: area, Siaya County, 2023",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 77550,
+   "unit": "ha",
+   "period": "2023",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "77,550",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "77,550",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-area-2023-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-production-2023-siaya",
+   "label": "Maize: production, Siaya County, 2023",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 115191,
+   "unit": "tonnes",
+   "period": "2023",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "115,191",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "115,191",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-production-2023-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-area-2024-siaya",
+   "label": "Maize: area, Siaya County, 2024",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 77660,
+   "unit": "ha",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "77,660",
+   "note": "KNBS county annex; 2024 marked * (provisional). Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "77,660",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-area-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-maize-production-2024-siaya",
+   "label": "Maize: production, Siaya County, 2024",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 143979,
+   "unit": "tonnes",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 187,
+   "printed_page": 163,
+   "read": "text layer",
+   "printed_text": "143,979",
+   "note": "KNBS county annex; 2024 marked * (provisional). Production location as reported, not market supply. 143,979 t in 2024 against 115,191 t in 2023 on almost the same area (77,660 ha against 77,550 ha); no reason printed.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "143,979",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-maize-production-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     187
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-area-2020-siaya",
+   "label": "Sweet potatoes: area, Siaya County, 2020",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 5154,
+   "unit": "ha",
+   "period": "2020",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "5,154",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "5,154",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-area-2020-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-production-2020-siaya",
+   "label": "Sweet potatoes: production, Siaya County, 2020",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 71504,
+   "unit": "tonnes",
+   "period": "2020",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "71,504",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "71,504",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-production-2020-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-area-2021-siaya",
+   "label": "Sweet potatoes: area, Siaya County, 2021",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 4935,
+   "unit": "ha",
+   "period": "2021",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "4,935",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "4,935",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-area-2021-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-production-2021-siaya",
+   "label": "Sweet potatoes: production, Siaya County, 2021",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 60938,
+   "unit": "tonnes",
+   "period": "2021",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "60,938",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "60,938",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-production-2021-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-area-2022-siaya",
+   "label": "Sweet potatoes: area, Siaya County, 2022",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 7160,
+   "unit": "ha",
+   "period": "2022",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "7,160",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "7,160",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-area-2022-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-production-2022-siaya",
+   "label": "Sweet potatoes: production, Siaya County, 2022",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 69534,
+   "unit": "tonnes",
+   "period": "2022",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "69,534",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "69,534",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-production-2022-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-area-2023-siaya",
+   "label": "Sweet potatoes: area, Siaya County, 2023",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 7440,
+   "unit": "ha",
+   "period": "2023",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "7,440",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "7,440",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-area-2023-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-production-2023-siaya",
+   "label": "Sweet potatoes: production, Siaya County, 2023",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 84540,
+   "unit": "tonnes",
+   "period": "2023",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "84,540",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "84,540",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-production-2023-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-area-2024-siaya",
+   "label": "Sweet potatoes: area, Siaya County, 2024",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 7364,
+   "unit": "ha",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "7,364",
+   "note": "KNBS county annex; 2024 marked * (provisional). Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "7,364",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-area-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sweet-potato-production-2024-siaya",
+   "label": "Sweet potatoes: production, Siaya County, 2024",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 78852,
+   "unit": "tonnes",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 198,
+   "printed_page": 174,
+   "read": "text layer",
+   "printed_text": "78,852",
+   "note": "KNBS county annex; 2024 marked * (provisional). Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "78,852",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sweet-potato-production-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     198
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-area-2020-siaya",
+   "label": "Cassava: area, Siaya County, 2020",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3354,
+   "unit": "ha",
+   "period": "2020",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "3,354",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "3,354",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-area-2020-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-production-2020-siaya",
+   "label": "Cassava: production, Siaya County, 2020",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 41906,
+   "unit": "tonnes",
+   "period": "2020",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "41,906",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "41,906",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-production-2020-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-area-2021-siaya",
+   "label": "Cassava: area, Siaya County, 2021",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3340,
+   "unit": "ha",
+   "period": "2021",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "3,340",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "3,340",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-area-2021-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-production-2021-siaya",
+   "label": "Cassava: production, Siaya County, 2021",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 45816,
+   "unit": "tonnes",
+   "period": "2021",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "45,816",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "45,816",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-production-2021-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-area-2022-siaya",
+   "label": "Cassava: area, Siaya County, 2022",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3606,
+   "unit": "ha",
+   "period": "2022",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "3,606",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "3,606",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-area-2022-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-production-2022-siaya",
+   "label": "Cassava: production, Siaya County, 2022",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 39756,
+   "unit": "tonnes",
+   "period": "2022",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "39,756",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "39,756",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-production-2022-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-area-2023-siaya",
+   "label": "Cassava: area, Siaya County, 2023",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3930,
+   "unit": "ha",
+   "period": "2023",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "3,930",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "3,930",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-area-2023-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-production-2023-siaya",
+   "label": "Cassava: production, Siaya County, 2023",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 73960,
+   "unit": "tonnes",
+   "period": "2023",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "73,960",
+   "note": "KNBS county annex; Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "73,960",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-production-2023-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-area-2024-siaya",
+   "label": "Cassava: area, Siaya County, 2024",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 4527,
+   "unit": "ha",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "4,527",
+   "note": "KNBS county annex; 2024 marked * (provisional). Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "4,527",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-area-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cassava-production-2024-siaya",
+   "label": "Cassava: production, Siaya County, 2024",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 75840,
+   "unit": "tonnes",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 200,
+   "printed_page": 176,
+   "read": "text layer",
+   "printed_text": "75,840",
+   "note": "KNBS county annex; 2024 marked * (provisional). Production location as reported, not market supply.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm1",
+    "matched": "75,840",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cassava-production-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     200
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sugar-production-2020-siaya",
+   "label": "Sugar produced by factories in the county (processed sugar, not cane), Siaya County, 2020",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1635,
+   "unit": "tonnes",
+   "period": "2020",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 99,
+   "printed_page": 75,
+   "read": "text layer",
+   "printed_text": "1,635",
+   "note": "Processed sugar by the county where the factory is (column headed \"Factory\"), not sugarcane grown in the county. 2020-2022 marked + (revised), 2024 * (provisional).",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "1,635",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sugar-production-2020-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     99
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sugar-production-2021-siaya",
+   "label": "Sugar produced by factories in the county (processed sugar, not cane), Siaya County, 2021",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1692,
+   "unit": "tonnes",
+   "period": "2021",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 99,
+   "printed_page": 75,
+   "read": "text layer",
+   "printed_text": "1,692",
+   "note": "Processed sugar by the county where the factory is (column headed \"Factory\"), not sugarcane grown in the county. 2020-2022 marked + (revised), 2024 * (provisional).",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "1,692",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sugar-production-2021-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     99
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sugar-production-2022-siaya",
+   "label": "Sugar produced by factories in the county (processed sugar, not cane), Siaya County, 2022",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 2086,
+   "unit": "tonnes",
+   "period": "2022",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 99,
+   "printed_page": 75,
+   "read": "text layer",
+   "printed_text": "2,086",
+   "note": "Processed sugar by the county where the factory is (column headed \"Factory\"), not sugarcane grown in the county. 2020-2022 marked + (revised), 2024 * (provisional).",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "2,086",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sugar-production-2022-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     99
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sugar-production-2023-siaya",
+   "label": "Sugar produced by factories in the county (processed sugar, not cane), Siaya County, 2023",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 2710,
+   "unit": "tonnes",
+   "period": "2023",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 99,
+   "printed_page": 75,
+   "read": "text layer",
+   "printed_text": "2,710",
+   "note": "Processed sugar by the county where the factory is (column headed \"Factory\"), not sugarcane grown in the county. 2020-2022 marked + (revised), 2024 * (provisional).",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-300dpi-psm6",
+    "matched": "2,710",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sugar-production-2023-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     99
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-sugar-production-2024-siaya",
+   "label": "Sugar produced by factories in the county (processed sugar, not cane), Siaya County, 2024",
+   "kind": "agriculture (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 10932,
+   "unit": "tonnes",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 99,
+   "printed_page": 75,
+   "read": "text layer",
+   "printed_text": "10,932",
+   "note": "Processed sugar by the county where the factory is (column headed \"Factory\"), not sugarcane grown in the county. 2020-2022 marked + (revised), 2024 * (provisional). Siaya rises from 2,710 t (2023) to 10,932 t (2024); no reason printed.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "10,932",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-sugar-production-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     99
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cage-farmers-2024-siaya",
+   "label": "Cage culture: cage fish farmers, Siaya County, 2024",
+   "kind": "fisheries (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 424,
+   "unit": "farmers",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 181,
+   "printed_page": 157,
+   "read": "text layer",
+   "printed_text": "424",
+   "note": "Source line: KeFS. Cage aquaculture in Lake Victoria, not capture landings.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "424",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cage-farmers-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     181
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cages-2024-siaya",
+   "label": "Cage culture: fish cages, Siaya County, 2024",
+   "kind": "fisheries (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 4586,
+   "unit": "cages",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 181,
+   "printed_page": 157,
+   "read": "text layer",
+   "printed_text": "4,586",
+   "note": "Source line: KeFS. Cage aquaculture in Lake Victoria, not capture landings.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "4,586",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cages-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     181
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cage-surface-area-2024-siaya",
+   "label": "Cage culture: cage surface area, Siaya County, 2024",
+   "kind": "fisheries (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 119608,
+   "unit": "m2",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 181,
+   "printed_page": 157,
+   "read": "text layer",
+   "printed_text": "119,608",
+   "note": "Source line: KeFS. Cage aquaculture in Lake Victoria, not capture landings.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "119,608",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cage-surface-area-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     181
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "indicators",
+   "record_id": "napr25-cage-volume-2024-siaya",
+   "label": "Cage culture: cage volume, Siaya County, 2024",
+   "kind": "fisheries (official statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 592418,
+   "unit": "m3",
+   "period": "2024",
+   "scope": "county",
+   "source": [
+    {
+     "id": "KNBS-NAPR-2025",
+     "title": "National Agriculture Production Report 2025",
+     "url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+     "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0"
+    }
+   ],
+   "pdf_page": 181,
+   "printed_page": 157,
+   "read": "text layer",
+   "printed_text": "592,418",
+   "note": "Source line: KeFS. Cage aquaculture in Lake Victoria, not capture landings.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "592,418",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "indicators",
+    "record_ids": [
+     "napr25-cage-volume-2024-siaya"
+    ],
+    "source_document_id": "KNBS-NAPR-2025",
+    "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "pages_checked": [
+     181
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,

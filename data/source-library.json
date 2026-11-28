@@ -6443,6 +6443,33 @@
    "data_reuse": "figures may be reused with citation",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed."
+  },
+  {
+   "review_status": "not reviewed",
+   "last_checked_at": "2026-11-28",
+   "licence": "CC BY-NC 4.0 (KNBS repository record): figures may be reused with the body and report named; non-commercial; the document is not redistributed",
+   "redistribution_allowed": false,
+   "document_id": "knbs-napr-2025",
+   "origin": "cited by the site",
+   "title": "National Agriculture Production Report 2025",
+   "publisher": "Kenya National Bureau of Statistics",
+   "document_type": "Statistical publication (KNBS)",
+   "publication_date": "2025",
+   "reference_period": "2020-2024 (2024 provisional): county annexes for maize, sweet potato and cassava; Table 5.3.3 sugar by factory county; Table 8.7 cage culture by county",
+   "source_url": "https://repository.knbs.or.ke/items/91c19a3d-3d5d-48ab-8726-97607c7453e4",
+   "file_url": "https://repository.knbs.or.ke/server/api/core/bitstreams/3282c763-aa56-46f0-b43f-f5e4e2fd3add/content",
+   "cited_by": "indicators.json",
+   "geographic_coverage": "multi-county including Siaya",
+   "siaya_relevance": "Siaya rows in Annexes 1, 9 and 10 and Tables 5.3.3 and 8.7",
+   "research_use": "Crop area and production, sugar by factory county and cage culture as printed (data/indicators.json)",
+   "sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "bytes": 7582889,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "retrieval_note": "Downloaded from the KNBS repository; its MD5 matched the checksum the repository publishes.",
+   "data_reuse": "figures may be reused with citation",
+   "document_redistribution": false,
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed."
   }
  ]
 }

@@ -8,8 +8,8 @@
   "rules": "Downloads untrusted, one folder each, never executed; read with pdftotext/tesseract/zipfile. SHA-256 of file as received. No personal data; contractor names withheld; media are claims to verify.",
   "status_values": "held = downloaded here (or held in repo/prov and reused); link-only = URL recorded, not downloaded; manual-download = blocked to automated clients; missing = searched, not found; failed = server returned a broken file",
   "counts": {
-   "total": 457,
-   "held": 189,
+   "total": 458,
+   "held": 190,
    "link-only": 249,
    "manual-download": 7,
    "missing": 7,
@@ -20,7 +20,7 @@
     "civil-society secondary": 2,
     "official claim": 5,
     "official secondary research": 9,
-    "official statistics": 3,
+    "official statistics": 4,
     "official statistics / official secondary": 22,
     "academic": 102,
     "media claim": 17,
@@ -7079,7 +7079,7 @@
    "publisher": "Kenya Fisheries Service",
    "date": "annual",
    "period": "annual",
-   "url": "https://kefs.go.ke/",
+   "url": "https://kefs.go.ke/sites/default/files/2025-07/Fisheries%20Annual%20Statistics%202024.pdf",
    "licence": "official publication; cite",
    "tier": "official statistics / official secondary",
    "datasets": [
@@ -7087,7 +7087,8 @@
     "economy"
    ],
    "figures": "Kisumu fish landings by beach/species (Lake Victoria)",
-   "status": "link-only; to locate"
+   "status": "link-only; blocked 28 Nov 2026 (kefs.go.ke certificate expired 2026-09-14; not bypassed)",
+   "note": "Fisheries Annual Statistics 2024 Table 3 (county landings 2013-2023) and Figure 6 (2024) named in the owner handover; no other copy found (Internet Archive none; web search none). Gap gap-kefs-county-landings-kisumu in data/counties/kisumu/indicators.json."
   },
   {
    "id": "NDMA-KISUMU",
@@ -9458,6 +9459,28 @@
    "bytes": null,
    "machine_readable": "HTML",
    "note": "Claims, kept beside IMPACT 18; two open conflicts (collection efficiency, connections)."
+  },
+  {
+   "id": "KNBS-CSA-KISUMU-2024",
+   "title": "Kisumu County Statistical Abstract 2024 (KNBS repository copy)",
+   "publisher": "Kenya National Bureau of Statistics",
+   "date": "2025",
+   "period": "2019-2023 (reference year 2024)",
+   "url": "https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f",
+   "licence": "CC BY-SA 4.0 (KNBS repository record, except where otherwise noted)",
+   "tier": "official statistics (county statistical abstract)",
+   "datasets": [
+    "indicators",
+    "population"
+   ],
+   "figures": "219 tables; dispositions in docs/research/kisumu-handover-2026-11-28/abstract-dispositions-kisumu-2024.md",
+   "kisumu_location": "whole document",
+   "status": "held (KNBS repository copy, 28 Nov 2026; MD5 matched)",
+   "download_path": "/tmp/claude-0/src/abs-kisumu-2024/2024-Statistical-Abstract-Kisumu-County.pdf",
+   "sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "bytes": 3417652,
+   "machine_readable": "text layer",
+   "note": "Same edition as KISUMU-CSA-2024 (county-hosted copy d3f38c77...): same 255 pages, same creation date 2025-09-08, identical text layer; bytes differ (re-saved)."
   }
  ]
 }

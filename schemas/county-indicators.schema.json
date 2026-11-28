@@ -59,7 +59,7 @@
         "additionalProperties": false,
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
-          "domain": { "type": "string", "enum": ["poverty", "household survey", "water utility", "fisheries", "statistical abstract"] },
+          "domain": { "type": "string", "enum": ["poverty", "household survey", "water utility", "fisheries", "agriculture", "statistical abstract"] },
           "indicator": { "type": "string", "pattern": "^[a-z0-9_]+$" },
           "label": { "type": "string" },
           "area": { "type": "string" },
