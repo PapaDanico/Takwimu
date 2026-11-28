@@ -13,6 +13,8 @@ import { Provisional } from '../../../../components/ObsTable';
 import SourceErrorFlag from '../../../../components/SourceErrorFlag';
 import { COUNTY_POP_SE } from '../../../../lib/editorial';
 import { pageMeta } from '../../../../lib/page-meta';
+import Reviewed from '../../../../components/Reviewed';
+import { masked, badge } from '../../../../lib/review-status';
 
 export const metadata = pageMeta('/counties/siaya/people/', {
   title: 'Siaya people: population, households and poverty',
@@ -25,6 +27,14 @@ const p0 = pop[0];
 const pc = pop.find((p) => p.year === 2019);
 const cagr = (Math.pow(pc.value / p0.value, 1 / 10) - 1) * 100;
 const pov = hist.poverty.points;
+// Kenya Poverty Report 2022 (data/indicators.json, read through the review mask): one row per poverty line.
+const ind = masked('indicators');
+const kpr = ind.sources.find((x) => x.source_id === 'KNBS-KPR-2022');
+const kpr22 = ['food', 'overall', 'hardcore'].map((t) => {
+  const get = (k) => ind.observations.find((o) => o.id === `kpr22-${t}-${k}-siaya`);
+  return { t, rate: get('headcount-rate'), gap: get('poverty-gap'), sev: get('severity'), poor: get('number-poor'), popn: get('population') };
+});
+const cell = (o, fmt) => (o ? <Reviewed b={badge('indicators', o.id)} as="td">{() => fmt(o)}</Reviewed> : <td>Not shown</td>);
 const age = (co.population.age_groups_2022 || []).filter((g) => !/Youth|Labour/.test(g.label));
 
 export default function SiayaPeople() {
@@ -92,7 +102,26 @@ export default function SiayaPeople() {
             </tbody>
           </table>
         </TableWrap>
-        <p className="how"><b>Gap.</b> No recent monetary poverty figure: see <Link href="/method/#known-gaps">known gaps</Link>.</p>
+        <h3 id="pv22-h">2022 county estimates (KNBS Kenya Poverty Report 2022)</h3>
+        <TableWrap label="Siaya poverty in 2022 by poverty line">
+          <table className="data">
+            <caption className="sr-only">Siaya poverty in 2022 by poverty line: headcount, gap, severity and number of poor, with Kenya beside</caption>
+            <thead><tr><th scope="col">Poverty line</th><th scope="col">Headcount (Siaya)</th><th scope="col">Kenya</th><th scope="col">Poverty gap</th><th scope="col">Severity</th><th scope="col">Number of poor</th></tr></thead>
+            <tbody>
+              {kpr22.map((r) => (
+                <tr key={r.t}>
+                  <th scope="row">{r.t[0].toUpperCase() + r.t.slice(1)}</th>
+                  {cell(r.rate, (o) => `${o.value_as_printed}%${o.standard_error ? ` (standard error ${o.standard_error})` : ''}`)}
+                  {cell(r.rate, (o) => (o.comparator ? `${o.comparator.value_as_printed}%` : 'Not shown'))}
+                  {cell(r.gap, (o) => `${o.value_as_printed}%`)}
+                  {cell(r.sev, (o) => `${o.value_as_printed}%`)}
+                  {cell(r.poor, (o) => `${o.value_as_printed} thousand`)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </TableWrap>
+        <p className="how">Individuals, from the Kenya Continuous Household Survey 2022: {kpr ? <a href={kpr.url} rel="noopener">{kpr.title}</a> : 'KNBS Kenya Poverty Report 2022'}, Tables 4.3 to 4.5 (PDF pages 46, 50 and 55) and Annex Table A1 (standard errors). Food and hardcore poverty use different poverty lines from overall poverty. Counts are printed in thousands and rounded separately from the rates. Survey estimates with sampling error (standard errors as printed in Annex A1 for overall poverty); no test of a difference from Kenya is made here. All values, with the survey population: <Link href="/datasets/">Siaya indicators dataset</Link>.</p>
       </section>
 
       <section id="sources" className="card" aria-labelledby="sr-h">
