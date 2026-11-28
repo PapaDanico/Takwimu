@@ -53,7 +53,7 @@ npm run dev
 
 The `qa:*` scripts and the smoke test use Playwright (and axe-core for `qa:axe`) installed globally, not as project dependencies; the npm scripts set `NODE_PATH=$(npm root -g)` themselves, so install them once with `npm i -g playwright axe-core && npx playwright install chromium`. Run them after `npm run build`; they serve `dist/` locally.
 
-Brief PDF: after a build, `NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js`, then build again. Report PDFs (printed from the full print edition at `/reports/<slug>/print/`; the web page `/reports/<slug>/` shows what is unique to each report and links the rest): `npm run build`, `npm run reports:pdf`, `npm run build`, then `npm run test:reports`, which must pass before any deploy (release gate).
+Brief PDF: after a build, `NODE_PATH=$(npm root -g) node scripts/make-brief-pdf.js`, then build again. Report PDFs (printed from the full print edition at `/reports/<slug>/print/`; the web page `/reports/<slug>/` shows what is unique to each report and links the rest): `npm run build`, `npm run reports:pdf`, `npm run build`, then `npm run test:reports`, which must pass before any deploy (release gate). Whenever a PDF in `public/` changes, or what is held back changes, also run `node scripts/test-unpublished-counties.js dist --record-pdfs` and commit `data/pdf-leak-scan.json`: Netlify has no pdftotext, so its build accepts a PDF only if that file records it as scanned clean against the current held records (the local build fails until the record is current).
 
 Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:check-sources`, `npm run ops:freshness`, `npm run ops:backup-drill`.
 
