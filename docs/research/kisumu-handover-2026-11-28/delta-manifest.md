@@ -135,3 +135,19 @@ Status words: held, partial, blocked, lead (URL recorded, document not read), no
 - Wired: `lib/county-registry.js` (kind `indicators`), `lib/county-review.js`, `lib/county-pages.js` (page counts cover public kinds only), `scripts/county-leaks.js` and `scripts/test-unpublished-counties.js` (sentinels for held indicator records), `lib/review-status.js`, `lib/review-pack.js`, `lib/siaya-topics.js` (catalogue `siaya-indicators`), `scripts/build-data.js` (publishes `indicators.json`), `scripts/test-reviews.js`, `schemas/reviews.schema.json`.
 - Page: `app/counties/siaya/people/` poverty section shows the 2022 estimates through the review mask (the old "no recent figure" line was wrong after this delta); `data/history.json` poverty gap text updated without values.
 - Regenerated: review packs, machine checks, review queue, research deliverables, report PDFs.
+
+## 11. Licence questions (parent session request), checked 28 Nov 2026
+
+Each answer is from the publisher's own record. The KNBS DSpace repository, `repository.knbs.or.ke/server/api/core/items/<id>`, gives fields `dc.rights` and `dc.rights.uri`. knbs.or.ke itself fails TLS from here.
+
+| Document | Repository item | dc.rights (as recorded) | dc.rights.uri | commercial_reuse |
+|---|---|---|---|---|
+| KNBS Gross County Product 2025 | 7b86f948-dc7c-4862-952a-a18169e6d136 | Attribution-NonCommercial 4.0 International | http://creativecommons.org/licenses/by-nc/4.0/ | non-commercial only |
+| KNBS Gross County Product 2024 | 8eb93ffa-014f-4e8f-8ff2-a1c1d6d4187f | Attribution-NonCommercial 4.0 International | http://creativecommons.org/licenses/by-nc/4.0/ | non-commercial only |
+| Siaya County Statistical Abstract 2015 | 023678b8-6251-4ea4-8d30-9a201acde629 | Attribution-NonCommercial 4.0 International | http://creativecommons.org/licenses/by-nc/4.0/ | non-commercial only |
+| Kenya Demographic and Health Survey 2022, Volume 1 | c2764a2a-2662-49a9-9268-8e065cd507b8 | Attribution-NonCommercial 4.0 International | http://creativecommons.org/licenses/by-nc/4.0/ | non-commercial only |
+| KDHS 2022 Siaya fact sheet (and Kisumu, a33ddaa3) | eaf54dcf-c06d-4e57-8ddc-f1fbd51304bd | Attribution-NonCommercial 4.0 International | http://creativecommons.org/licenses/by-nc/4.0/ | non-commercial only |
+
+KDHS copies hosted by the DHS Program (dhsprogram.com FR380 and PR143) fall under the DHS Program terms of use. The terms page (https://dhsprogram.com/Legal/Terms-of-Use.cfm) returned "Error Occurred While Processing Request" on 28 Nov 2026, so this check could not confirm its wording. The existing records keep "link and cite; do not republish tables without permission" for the DHS-hosted copies. The KNBS-hosted KDHS volume is CC BY-NC 4.0. The two copies have different licences, and both rule out commercial reuse.
+
+Conclusion: the `licence_check_needed` flags for KNBS GCP, the Siaya abstract 2015 and KDHS 2022 can be closed as **CC BY-NC 4.0 (non-commercial only)**, on the KNBS repository records above. This matches the `non-commercial-only` value the integrator gave the five KNBS records added in Release 9.
