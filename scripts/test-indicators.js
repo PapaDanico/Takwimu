@@ -21,14 +21,14 @@ const readData = (f) => JSON.parse(fs.readFileSync(path.join(counties.ROOT, 'dat
 const manifest = new Set([...readData('source-manifest.json').documents, ...readData('source-library.json').documents].map((d) => d.sha256).filter(Boolean));
 const numOf = (s) => Number(String(s).replace(/,/g, '').replace(/%$/, ''));
 
-counties.withKind('indicators').forEach((slug) => {
-  const d = counties.load(slug, 'indicators');
-  const tag = (x) => `${slug} indicators ${x}`;
-  const out = check(counties.schema('indicators'), d, `${slug}-indicators`);
+[...counties.withKind('indicators').map((s) => [s, 'indicators']), ...counties.withKind('abstract').map((s) => [s, 'abstract'])].forEach(([slug, kind]) => {
+  const d = counties.load(slug, kind);
+  const tag = (x) => `${slug} ${kind} ${x}`;
+  const out = check(counties.schema(kind), d, `${slug}-${kind}`);
   ok(out.length === 0, tag(`schema: ${out.slice(0, 5).join('; ')}`));
   const code = counties.COUNTY_DATA[slug].code;
   ok(d.meta.county_code === code, tag('meta.county_code'));
-  const held = !counties.isPublicKind(slug, 'indicators');
+  const held = !counties.isPublicKind(slug, kind);
   ok(Boolean(d.meta.held) === held, tag(`meta.held must be ${held}`));
   const research = counties.COUNTY_DATA[slug].research ? new Set((JSON.parse(fs.readFileSync(counties.abs(counties.COUNTY_DATA[slug].research), 'utf8')).sources || []).map((r) => r.sha256).filter(Boolean)) : new Set();
   const src = Object.fromEntries(d.sources.map((s) => [s.source_id, s]));
@@ -70,4 +70,4 @@ counties.withKind('indicators').forEach((slug) => {
 });
 
 if (errors.length) { console.error(`test-indicators: ${errors.length} failures\n  ${errors.slice(0, 40).join('\n  ')}`); process.exit(1); }
-console.log(`test-indicators: ${n} checks passed (${counties.withKind('indicators').join(', ')})`);
+console.log(`test-indicators: ${n} checks passed (${counties.withKind('indicators').join(', ')} indicators; ${counties.withKind('abstract').join(', ')} abstract)`);

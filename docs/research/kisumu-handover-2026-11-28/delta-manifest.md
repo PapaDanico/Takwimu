@@ -151,3 +151,21 @@ Each answer is from the publisher's own record. The KNBS DSpace repository, `rep
 KDHS copies hosted by the DHS Program (dhsprogram.com FR380 and PR143) fall under the DHS Program terms of use. The terms page (https://dhsprogram.com/Legal/Terms-of-Use.cfm) returned "Error Occurred While Processing Request" on 28 Nov 2026, so this check could not confirm its wording. The existing records keep "link and cite; do not republish tables without permission" for the DHS-hosted copies. The KNBS-hosted KDHS volume is CC BY-NC 4.0. The two copies have different licences, and both rule out commercial reuse.
 
 Conclusion: the `licence_check_needed` flags for KNBS GCP, the Siaya abstract 2015 and KDHS 2022 can be closed as **CC BY-NC 4.0 (non-commercial only)**, on the KNBS repository records above. This matches the `non-commercial-only` value the integrator gave the five KNBS records added in Release 9.
+
+## 12. Kisumu depth (owner, 28 Nov 2026: "Kisumu carries even more detail than Siaya")
+
+- New held kind `abstract`: `data/counties/kisumu/abstract.json`. It uses the indicators schema, adds `sector` (the pages session's domain list) and `sub_county`, and holds 5,989 values. The kind is not in Kisumu's `public_kinds` until its pages exist; the leak guard scans its record ids.
+- Method: every row and column of the 60 Kisumu Statistical Abstract 2024 tables whose layout parses cleanly, read from the PDF text layer.
+  - A table is accepted only if every data line parses and each row has exactly one cell per column. Two-level headers (e.g. Male / Female / Total under each year) are accepted only when the sub-header line has exactly the right labels.
+  - Sub-county rows are summed against the printed Total. Where they do not add up, both are kept as printed and the value is flagged (confidence 2).
+  - ".." cells (not available) are not entered.
+  - Sampled tables were checked against the page images (1.3.4 ECDE enrolment, 1.6.1-1.6.4 library service); all values matched.
+- Not entered:
+  - privacy small-cell tables (1.2.5, 1.5.9, 4.3.3);
+  - fiscal tables, which await the ledger comparison (2.1.3-2.1.5, 3.1.16, 3.1.17, 3.1.24);
+  - population projections already held (1.1.1, 1.1.4);
+  - GCP (2.1.1: KNBS GCP reports are the primary);
+  - tables already entered as county totals in `indicators.json` (1.4.5, 1.4.12, 2.3.6, 2.1.2);
+  - the 115 tables whose layout could not be verified automatically (merged or wrapped headers). These stay pending, each listed in `abstract-dispositions-kisumu-2024.md`.
+- One likely source error seen on the page image (kept as printed): Table 1.3.4, Muhoroni / Masogo-Nyang'oma 2020, public 10,672 + private 10,496 = total 21,168, about ten times the neighbouring wards.
+- Count after this release: Kisumu 6,496 values (331 ledger, audits and population; 176 indicators; 5,989 abstract) against Siaya's 4,122.
