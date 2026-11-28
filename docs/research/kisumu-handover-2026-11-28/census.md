@@ -57,6 +57,7 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | data/machine-checks.json | machine cross-check results |  | checks 4122 |
 | data/national.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2010-2025 | indicators 53 |
 | data/ngo.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) |  | not_staged 8 |
+| data/pdf-leak-scan.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) |  |  |
 | data/political.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) |  | not_staged 8 |
 | data/review-packs.json | review packs (preparation, not review) | 2003-2027 | entries 4122 |
 | data/reviews.json | review decision register |  | decisions 0 |
@@ -81,8 +82,8 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | README Status | Conflict register: 53 cases | 53 | yes | data/conflicts.json |
 | README Status | Ten-year series: FY 2013/14 to FY 2025/26 | 2013/14, 2025/26 | yes | data/history.json years |
 | README Status | Corrections: 17 corrections footnoted beside 26 values, 14 source-error records | 17, 26, 14 | yes | lib/correction-notes.js; lib/editorial.js sourceErrors() |
-| README Status | Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked "Needs page check", 0 approved | 331, 291, 35, 5, 38, 0 | yes | lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json |
-| README Status | Site: 114 pages | 114 | yes | .html files under dist/ |
+| README Status | Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, indicators, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked "Needs page check", 0 approved | 331, 291, 35, 5, 38, 0 | yes | lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json |
+| README Status | Site: 115 pages | 115 | yes | .html files under dist/ |
 | README Status | 92 downloadable datasets plus 1 link-only (IMF) | 92, 1, IMF | yes | lib/explore.js catalogue() files.csv |
 | README Status | 5 draft reports | 5 | yes | components/report/reports.json |
 | CLAUDE.md | lib/counties.js lists 47 counties; Siaya (/counties/siaya/ hub, old URLs kept) and Kisumu (from 28 Nov 2026) are published | 47, Siaya, Kisumu | yes | lib/counties.js |
@@ -299,7 +300,7 @@ data/counties/kisumu/machine-checks.json: 507 checks; agree 376, disagree 5, not
 ## Inputs (SHA-256)
 
 - .claude/CLAUDE.md: 1c74e0d280ec37ec7de491305cbbcc509e69faee4e0ebe3bc8dd665909f499f5
-- README.md: 2a087b53ab0b293b573ea177d64ee1fd94f9cb9c3b93edee1faef343879f6fd3
+- README.md: 7fbf06145fc555b0985d301861df407d3103c373798bc28c67f9fcb8c39d8d9c
 - components/report/reports.json: af38ebeb395f6af7d863f47bc9a08de0ada926f67d01cfb202052896243738a7
 - data/cbk.json: 6c47b668a4baa2f6202e3b44dfe969a40f83ca40744cf82cb1597a6b750dca86
 - data/conflicts.json: 5e7357a5c5a01a3c7f49b9ee086dd646fc96ba447193c9f54ae4f1931b4994d8
@@ -323,6 +324,7 @@ data/counties/kisumu/machine-checks.json: 507 checks; agree 376, disagree 5, not
 - data/machine-checks.json: d333bc59407cfc8e6e9a3f5329b417bf7ab937da16cf3838da2e873087d0d7a7
 - data/national.json: fda96171ab8130dbdb38299e9b4ac6e3eb7c3689d070d88168f86f35f6ca6701
 - data/ngo.json: fb9624766ee6d608c95fcefb65d0777a12fae30dc5f92a8a41b081b9b25c8c49
+- data/pdf-leak-scan.json: b2bd89a51f696cd279e65e6e1d5166705617503d8f83eca090f61cfb710ad562
 - data/political.json: d8345a13f1238abafe27c573151789c5f47d8a0b6e52a0300d84637711fd6345
 - data/review-packs.json: 98e2596b61f04bf18e2b8654d9ec08d369b77fe84aab70489956e6f8a67a6075
 - data/reviews.json: c9d511495ad60dfa3ea068a7c29087763cfd4b661f9b099d7fd323d3b672e72d
