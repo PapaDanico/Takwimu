@@ -86,8 +86,8 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | README Status | Conflict register: 53 cases | 53 | yes | data/conflicts.json |
 | README Status | Ten-year series: FY 2013/14 to FY 2025/26 | 2013/14, 2025/26 | yes | data/history.json years |
 | README Status | Corrections: 17 corrections footnoted beside 26 values, 14 source-error records | 17, 26, 14 | yes | lib/correction-notes.js; lib/editorial.js sourceErrors() |
-| README Status | Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, indicators, health, wards and constituencies with IEBC boundary maps, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked "Needs page check", 0 approved | 331, 291, 35, 5, 38, 0 | yes | lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json |
-| README Status | Site: 117 pages | 117 | yes | .html files under dist/ |
+| README Status | Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, indicators, health, education, wards and constituencies with IEBC boundary maps, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked "Needs page check", 0 approved | 331, 291, 35, 5, 38, 0 | yes | lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json |
+| README Status | Site: 118 pages | 118 | yes | .html files under dist/ |
 | README Status | 92 downloadable datasets plus 1 link-only (IMF) | 92, 1, IMF | yes | lib/explore.js catalogue() files.csv |
 | README Status | 5 draft reports | 5 | yes | components/report/reports.json |
 | CLAUDE.md | lib/counties.js lists 47 counties; Siaya (/counties/siaya/ hub, old URLs kept) and Kisumu (from 28 Nov 2026) are published | 47, Siaya, Kisumu | yes | lib/counties.js |
@@ -304,14 +304,14 @@ data/counties/kisumu/machine-checks.json: 6811 checks; agree 2786, disagree 6, n
 
 ## Inputs (SHA-256)
 
-- .claude/CLAUDE.md: 49d91d7b1e3c7c94b2132b6f30aa8c47223957c7a7d6dac1ceb116df5fa68387
-- README.md: e5b39d23011d66f77dfd031b31687bdd17e297b8afdb00efd8964ef77d920ef2
+- .claude/CLAUDE.md: 72a65d5941cdd40a6ca96c4d9a315230ab0acce0f9b0f0491bd6f6fb2f6621d2
+- README.md: f43412c008184f9ab39602eaa307152fd45033a1b94d2b5af0c235ef32826f52
 - components/report/reports.json: af38ebeb395f6af7d863f47bc9a08de0ada926f67d01cfb202052896243738a7
 - data/cbk.json: 6c47b668a4baa2f6202e3b44dfe969a40f83ca40744cf82cb1597a6b750dca86
 - data/conflicts.json: 5e7357a5c5a01a3c7f49b9ee086dd646fc96ba447193c9f54ae4f1931b4994d8
 - data/corrections.json: f06dced7faf20c73a2770b278261459d515307d605658406ac5d350450c032c5
 - data/counties-cob.json: cb4c26d09550a90eb161e064fb5bec51cc26c87c35faa314731488acb40e7907
-- data/counties/kisumu/abstract.json: 4314d31651cd4e3290ec127a8aac6726516ee56418f141d7bf718e35d67d17e1
+- data/counties/kisumu/abstract.json: ebf513649470829d8aca2333f39ce7cccbf62d442ea6cf4e88b990688818cbd2
 - data/counties/kisumu/audits.json: 14ae1130ef8241dcb7f4fce1a1b6e77d21b9b6efd7e19c6cd82582c857e64f2f
 - data/counties/kisumu/conflicts.json: b49f7faf3bc31234f6fd9f7bb1d6e828c8d548533659ebf74d6ce1cb4bd5502c
 - data/counties/kisumu/constituencies-geo.json: 1dd5d40740e3438e91ef9d2c0ce61e4e7105398c04b283e8c4ac3f85acbc7496
@@ -320,7 +320,7 @@ data/counties/kisumu/machine-checks.json: 6811 checks; agree 2786, disagree 6, n
 - data/counties/kisumu/indicators.json: d03bdbc3745065953cfb456a5af96fdbd23778680ae0b767ca3b69b6311dfd89
 - data/counties/kisumu/machine-checks.json: 2a2fc361a80b30b1ff5b1e21a75bbdfa2e59d97756e2425d50a40d9e07fcc50d
 - data/counties/kisumu/population.json: 45a0ba3bb5e7187a1f2314cc7e869e2c335f3fa183f45a5563dc6b4f8d4e59d6
-- data/counties/kisumu/review-packs.json: 7ef71d9a3c3fb6e30aace8513c6f31336ac548a9663464bdae93149a9e020121
+- data/counties/kisumu/review-packs.json: 508be0592f3a3443466f68f4b506534d1c335fd07c9b3490b26d86fed37f3fba
 - data/counties/kisumu/wards-geo.json: c74821aa750fcca0be77a0a65a469492d0d77c2ba338f11ee1ce1117525ba3e6
 - data/county.json: d362d6fb4804fbe921db3ea484f4690804bb78b5b798f9bd37a13f1c0706f5b5
 - data/cpi.json: 3c91c889abaecd66ab7ad17e96ad2aa81a31f943a585484e6b257e361c4924e1
@@ -333,7 +333,7 @@ data/counties/kisumu/machine-checks.json: 6811 checks; agree 2786, disagree 6, n
 - data/machine-checks.json: d333bc59407cfc8e6e9a3f5329b417bf7ab937da16cf3838da2e873087d0d7a7
 - data/national.json: fda96171ab8130dbdb38299e9b4ac6e3eb7c3689d070d88168f86f35f6ca6701
 - data/ngo.json: fb9624766ee6d608c95fcefb65d0777a12fae30dc5f92a8a41b081b9b25c8c49
-- data/pdf-leak-scan.json: 4a2c436aa61153d6c25ebf4ddeb746363f112c9feb234b595e0b9a5cbcbc40bb
+- data/pdf-leak-scan.json: 9c2d7a7d21ade45da0cf83346b0d3667421851779fedf039f1f170f215e4c965
 - data/political.json: d8345a13f1238abafe27c573151789c5f47d8a0b6e52a0300d84637711fd6345
 - data/review-packs.json: 98e2596b61f04bf18e2b8654d9ec08d369b77fe84aab70489956e6f8a67a6075
 - data/reviews.json: c9d511495ad60dfa3ea068a7c29087763cfd4b661f9b099d7fd323d3b672e72d
