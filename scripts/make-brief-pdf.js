@@ -8,12 +8,17 @@
 const fs = require('fs');
 const path = require('path');
 const { withPrintPage } = require('./lib/print-pdf');
-const { ROUTE, layoutProblems, pdfProblems } = require('./lib/brief-check');
+const { BRIEFS, layoutProblems, pdfProblems } = require('./lib/brief-check');
+// --county <slug> picks the brief (default siaya): node scripts/make-brief-pdf.js --county kisumu
+const ci = process.argv.indexOf('--county');
+const B = BRIEFS[ci > 0 ? process.argv[ci + 1] : 'siaya'];
+if (!B) { console.error(`No brief for ${process.argv[ci + 1]}; known: ${Object.keys(BRIEFS).join(', ')}`); process.exit(1); }
+const ROUTE = B.route;
 
 const root = path.join(__dirname, '..');
 const dist = path.join(root, 'dist');
-const out = path.join(root, 'public', 'reports', 'siaya-fiscal-brief.pdf');
-if (!fs.existsSync(path.join(dist, ROUTE, 'index.html'))) { console.error('Build first: dist/counties/siaya/brief/index.html is missing.'); process.exit(1); }
+const out = path.join(root, B.pdf);
+if (!fs.existsSync(path.join(dist, ROUTE, 'index.html'))) { console.error(`Build first: dist${ROUTE}index.html is missing.`); process.exit(1); }
 
 withPrintPage(dist, undefined, async ({ page, port }) => {
   const url = `http://localhost:${port}${ROUTE}`;
@@ -22,7 +27,7 @@ withPrintPage(dist, undefined, async ({ page, port }) => {
   await page.evaluate(() => document.fonts.ready);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   await page.pdf({ path: out, preferCSSPageSize: true, printBackground: true, tagged: true });
-  const { pages, size, problems, chars } = pdfProblems(out, dist);
+  const { pages, size, problems, chars } = pdfProblems(out, dist, B);
   console.log(`Wrote ${path.relative(root, out)}: ${pages} page(s), ${size}, ${chars} characters of text.`);
   [...layout, ...problems].forEach((p) => console.error(`FAIL: ${p}`));
   return layout.length || problems.length ? 1 : 0;

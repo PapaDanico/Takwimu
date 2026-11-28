@@ -220,13 +220,16 @@ srv.listen(0, async () => {
     // The fiscal brief (owner, 27 Nov 2026): two or three A4 pages, each a whole section page, nothing wider than the
     // printed column or clipped (scripts/lib/brief-check.js, the checks scripts/make-brief-pdf.js runs after printing).
     {
-      const { layoutProblems, pdfProblems, ROUTE } = require('./lib/brief-check');
-      const bp = await browser.newPage();
-      const layout = await layoutProblems(bp, `http://localhost:${srv.address().port}${ROUTE}`);
-      await bp.close();
-      const b = pdfProblems(path.join(root, 'public', 'reports', 'siaya-fiscal-brief.pdf'), dist);
-      [...layout, ...b.problems].forEach((m) => fail('siaya-fiscal-brief', m));
-      summary.push(`brief siaya-fiscal-brief: ${b.pages} pages (2 to 3 allowed), A4, ${layout.length ? 'layout problems' : 'no overflow or clipping in print layout'}`);
+      const { layoutProblems, pdfProblems, BRIEFS } = require('./lib/brief-check');
+      for (const [county, B] of Object.entries(BRIEFS)) {
+        const name = `${county}-fiscal-brief`;
+        const bp = await browser.newPage();
+        const layout = await layoutProblems(bp, `http://localhost:${srv.address().port}${B.route}`);
+        await bp.close();
+        const b = pdfProblems(path.join(root, B.pdf), dist, B);
+        [...layout, ...b.problems].forEach((m) => fail(name, m));
+        summary.push(`brief ${name}: ${b.pages} pages (2 to 3 allowed), A4, ${layout.length ? 'layout problems' : 'no overflow or clipping in print layout'}`);
+      }
     }
   } finally {
     await browser.close();

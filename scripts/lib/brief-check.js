@@ -8,10 +8,17 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 const { pdfInfo, pdfText } = require('./print-pdf');
 
-const ROUTE = '/counties/siaya/brief/';
-// The heading each printed page must carry, in order (page 1 headlines, page 2 trends, page 3 audit and sources).
-const PAGE_HEADS = ['Headline figures', 'Trends, FY', 'Audit opinions'];
-const MUST = ['Siaya County fiscal brief', 'What the figures mean', 'Spending and absorption', 'Own-source revenue as each publisher prints it', 'Wage bill, development share and pending bills', 'Open questions', 'Data gaps', 'Sources and how to read', 'Sources.', '2024/25'];
+// One entry per county brief: its route, PDF, the heading each printed page must carry in order (page 1 headlines,
+// page 2 trends, page 3 audit and sources) and text that must be extractable from the PDF.
+const BRIEFS = {
+  siaya: { route: '/counties/siaya/brief/', pdf: 'public/reports/siaya-fiscal-brief.pdf', heads: ['Headline figures', 'Trends, FY', 'Audit opinions'],
+    must: ['Siaya County fiscal brief', 'What the figures mean', 'Spending and absorption', 'Own-source revenue as each publisher prints it', 'Wage bill, development share and pending bills', 'Open questions', 'Data gaps', 'Sources and how to read', 'Sources.', '2024/25'] },
+  kisumu: { route: '/counties/kisumu/brief/', pdf: 'public/reports/kisumu-fiscal-brief.pdf', heads: ['Headline figures', 'Trends and comparisons', 'Audit opinions'],
+    must: ['Kisumu County fiscal brief', 'What the figures mean', 'Budget, spending and absorption', 'Spending per person', 'beside Siaya and all 47 counties', 'Open questions', 'Data gaps', 'Sources and how to read'] },
+};
+const ROUTE = BRIEFS.siaya.route;
+const PAGE_HEADS = BRIEFS.siaya.heads;
+const MUST = BRIEFS.siaya.must;
 
 // A4 printable box of the @page brief rule (9 mm by 11 mm margins), in CSS pixels at 96 dpi.
 const MM = 96 / 25.4;
@@ -44,18 +51,18 @@ async function layoutProblems(page, url) {
 }
 
 // PDF checks: returns { pages, size, problems }.
-function pdfProblems(pdf, dist) {
+function pdfProblems(pdf, dist, b = BRIEFS.siaya) {
   const problems = [];
   if (!fs.existsSync(pdf)) return { pages: 0, size: '', problems: [`missing ${pdf}`] };
   const { pages, size } = pdfInfo(pdf);
   if (pages < 2 || pages > 3) problems.push(`the brief has ${pages} page(s); it must have 2 or 3`);
   if (!/\(A4\)/.test(size)) problems.push('page is not A4 (595 x 842 pt)');
   const text = pdfText(pdf);
-  const draft = /data-draft="true"/.test(fs.readFileSync(path.join(dist, ROUTE, 'index.html'), 'utf8'));
-  const missing = [...MUST, ...(draft ? ['DRAFT', 'Provisional: awaiting editorial review'] : [])].filter((s) => !text.replace(/\s+/g, ' ').toLowerCase().includes(s.toLowerCase()));
+  const draft = /data-draft="true"/.test(fs.readFileSync(path.join(dist, b.route, 'index.html'), 'utf8'));
+  const missing = [...b.must, ...(draft ? ['DRAFT', 'Provisional: awaiting editorial review'] : [])].filter((s) => !text.replace(/\s+/g, ' ').toLowerCase().includes(s.toLowerCase()));
   if (missing.length) problems.push(`text not extractable for: ${missing.join(', ')}`);
   // Each printed page carries its own section heading: a page that spilled over would push a heading to the next page.
-  PAGE_HEADS.slice(0, pages).forEach((h, i) => {
+  b.heads.slice(0, pages).forEach((h, i) => {
     const t = execFileSync('pdftotext', ['-f', String(i + 1), '-l', String(i + 1), '-layout', pdf, '-']).toString();
     if (!t.toLowerCase().includes(h.toLowerCase())) problems.push(`page ${i + 1} does not carry "${h}" (content spilled onto the wrong page)`);
     if (draft && !/\bDRAFT\b/.test(t)) problems.push(`page ${i + 1} lacks the DRAFT mark`);
@@ -63,4 +70,4 @@ function pdfProblems(pdf, dist) {
   return { pages, size, problems, chars: text.length };
 }
 
-module.exports = { ROUTE, BOX, layoutProblems, pdfProblems };
+module.exports = { BRIEFS, ROUTE, BOX, layoutProblems, pdfProblems };
