@@ -2,7 +2,7 @@ import Link from 'next/link';
 import TableWrap from '../TableWrap';
 import { LineChart } from '../Charts';
 import CalcTable from '../CalcTable';
-import { masked, badge } from '../../lib/review-status';
+import { masked, badge, original } from '../../lib/review-status';
 import Reviewed from '../Reviewed';
 import { plainDeep } from '../../lib/plain';
 import { fmtFixed, shortDate } from '../../lib/format';
@@ -77,7 +77,9 @@ export const gaps = R.filter((r) => r.status === 'gap');
 
 // A8: own-source revenue composition (ordinary OSR and health FIF/A-i-A), Siaya by document, and all 47 counties.
 const a8 = fam('A8');
-const a8Share = a8.filter((r) => r.status === 'value' && r.calc.op === 'ratio_pct');
+// The operation is read from the unmasked file: a withheld result has calc null, and its row must still show (withdrawn).
+const OP = Object.fromEntries(original('siaya-analysis').records.map((r) => [r.calc_id, r.calc && r.calc.op]));
+const a8Share = a8.filter((r) => r.status === 'value' && OP[r.calc_id] === 'ratio_pct');
 const a8In = (r, role) => (r.inputs.concat(r.beside || [])).find((i) => i.role === role);
 const a8Diff = (part) => a8.find((r) => r.calc_id === `SIA-A8-2024-25-difference-${part}`);
 const a8Rank = a8.filter((r) => r.calc && r.calc.op === 'share_rank');

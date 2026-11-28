@@ -4,6 +4,7 @@ import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import LedgerView from '../../../../components/LedgerView';
+import { ledgerTables } from '../../../../components/LedgerTables';
 import { ledger } from '../../../../lib/ledger';
 import { plainDeep } from '../../../../lib/plain';
 import OsrLedger, { OSR_TOC } from '../../../../components/siaya/OsrLedger';
@@ -73,7 +74,7 @@ export default function SiayaLedger() {
         <ol className="how">{l.reasons.map((r, i) => <li key={r} id={`gap-${i + 1}`}>{r}</li>)}</ol>
       </section>
 
-      <LedgerView measures={l.measures} kinds={l.kinds} values={l.values} cases={l.cases} initial="osr_total_actual" />
+      <LedgerView measures={l.measures} {...ledgerTables(l)} initial="osr_total_actual" />
 
       <section className="card" aria-labelledby="led-classes-h" id="led-classes">
         <h2 id="led-classes-h">Discrepancy cases by class</h2>

@@ -3,11 +3,8 @@
 // (with a link to the page it was read from), then the open discrepancy cases for that measure. Nothing is averaged or
 // chosen. The choice is held in memory only: nothing is stored or sent.
 import { useEffect, useId, useState } from 'react';
-import TableWrap from './TableWrap';
 import Reviewed from './Reviewed';
-import SourceErrorFlag, { MachineTag } from './SourceErrorFlag';
 import { fmtNum } from '../lib/format';
-import CorrectionNote, { CorrectionMark } from './CorrectionNote';
 
 // Case classes (data/ledger-classes.json): Takwimu's reading of what the documents print, not an editorial decision.
 const CLASS_TONE = { definitional: 'good', 'period or version': 'good', 'probable source error': 'warn', 'resolved by source': 'good', open: 'warn' };
@@ -20,46 +17,12 @@ const num = (v) => fmtNum(v, { dp: 2 });
 const amount = (o) => (o.unit === 'KSh billion' ? `KSh ${num(o.value)} billion` : `KSh ${num(o.value)} million`);
 const pages = (o) => `PDF p. ${o.pdf_page}${o.printed_page ? ` (printed p. ${o.printed_page})` : ''}`;
 
-function Value({ o }) {
-  return (
-    <div className="lv">
-      <Reviewed b={o.review}>{() => <><b>{amount(o)}</b><CorrectionMark notes={o.cor} /></>}</Reviewed>{o.machine ? <> <MachineTag m={o.machine} /></> : null}
-      <small className="cite"> <a href={o.url} rel="noopener">{o.source}</a>, {pages(o)}{o.table ? `, ${o.table}` : ''}. {o.read}, confidence {o.confidence}.</small>
-      {o.version ? <small> Budget version: {o.version}.</small> : null}
-      {o.basis ? <small> Basis: {o.basis}.</small> : null}
-      {o.as_at ? <small> Stock at {o.as_at}; scope {o.scope || 'not stated'}; accounting basis {o.accounting_basis}.</small> : null}
-      <SourceErrorFlag e={o.source_error} id={o.id} refId={`siaya-fiscal-ledger:${o.id}`} />
-      <CorrectionNote notes={o.cor} />
-    </div>
-  );
-}
-
-function MeasureTable({ measure, values, kinds, id }) {
-  const rows = values[measure.key].filter((r) => r.byKind.some((k) => k.length));
-  const used = kinds.map((k, i) => ({ ...k, i })).filter((k) => rows.some((r) => r.byKind[k.i].length));
-  return (
-    <TableWrap label={`${measure.label}: values by source and year`}>
-      <table className="data" id={id}>
-        <caption className="sr-only">{measure.label}: every source&rsquo;s value by fiscal year, as printed, with the page it was read from</caption>
-        <thead><tr><th scope="col">Fiscal year</th>{used.map((k) => <th key={k.key} scope="col">{k.label}</th>)}</tr></thead>
-        <tbody>
-          {rows.map((r) => (
-            <tr key={r.fy}>
-              <th scope="row">FY {r.fy}</th>
-              {used.map((k) => <td key={k.key}>{r.byKind[k.i].length ? r.byKind[k.i].map((o) => <Value key={o.id} o={o} />) : <span className="muted">None held</span>}</td>)}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </TableWrap>
-  );
-}
-
-export default function LedgerView({ measures, kinds, values, cases, initial }) {
+// tables: every measure's table, rendered on the server (components/LedgerTables.js ledgerTables()); stats: the
+// number of values and years each one shows. This component only chooses which table is visible.
+export default function LedgerView({ measures, tables, stats, cases, initial }) {
   const uid = useId();
   const [m, setM] = useState(initial);
   const measure = measures.find((x) => x.key === m);
-  const rows = values[m].filter((r) => r.byKind.some((k) => k.length));
   const open = cases.filter((c) => c.measure === m && c.status === 'open');
   // A link to one case (/counties/siaya/ledger/?case=D-L…#led-cases, e.g. from the conflict register, or #D-L…)
   // opens its measure and scrolls to it.
@@ -83,11 +46,10 @@ export default function LedgerView({ measures, kinds, values, cases, initial }) 
           <p id={`${uid}-def`} className="hint">{measure.definition}</p>
         </div>
       </div>
-      <p className="count" role="status" aria-live="polite" id="led-count">{measure.label}: {rows.reduce((s, r) => s + r.byKind.flat().length, 0)} values in {rows.length} years; {open.length} open discrepancy cases</p>
-      <MeasureTable measure={measure} values={values} kinds={kinds} id="led-table" />
-      {/* The other measures are in the page too, hidden until chosen, so every value, correction footnote and
-          source-error flag is in the static HTML (scripts/test-corrections.js). */}
-      {measures.filter((x) => x.key !== m).map((x) => <div key={x.key} hidden data-measure={x.key}><MeasureTable measure={x} values={values} kinds={kinds} /></div>)}
+      <p className="count" role="status" aria-live="polite" id="led-count">{measure.label}: {stats[m].values} values in {stats[m].years} years; {open.length} open discrepancy cases</p>
+      {/* Every measure is in the page, the others hidden until chosen, so every value, correction footnote and
+          source-error flag is in the static HTML (scripts/test-corrections.js). The chosen one is #led-table. */}
+      {measures.map((x) => <div key={x.key} id={x.key === m ? 'led-table' : undefined} hidden={x.key !== m} data-measure={x.key}>{tables[x.key]}</div>)}
 
       <h3 id="led-cases">Open discrepancy cases: {measure.label}</h3>
       {open.length ? (

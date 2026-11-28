@@ -454,7 +454,7 @@ const srv = http.createServer((req, res) => {
   check(await p2.locator('ul.rank > li').count() === 47, 'compare lists all 47 counties');
   check(await p2.locator('.kmap-values').first().locator('svg a').count() === 47, 'compare map shades all 47 counties');
   await p2.locator('select').first().selectOption('development_absorption_pct');
-  await p2.waitForFunction(() => location.search.includes('i=development_absorption_pct'));
+  await p2.waitForFunction(() => location.search.includes('i=development_absorption_pct'), null, { timeout: 10000 }).catch(() => {}); // the check below records a timeout
   check(/i=development_absorption_pct/.test(p2.url()), 'compare writes the indicator to the address');
   check(!(await p2.locator('input[type=radio][value=high]').isDisabled()) && /not a judgement of performance/.test(await p2.locator('.notice').first().innerText()), 'with every reading confirmed, the list orders by value and says the order is not a judgement of performance');
   const rankText = await p2.locator('ul.rank').innerText();
@@ -547,7 +547,9 @@ const srv = http.createServer((req, res) => {
       await pg.goto(base + u, { waitUntil: 'load' });
       // Count what a reader sees: client sections (CompareView, DatasetCatalogue, the trend explorer) render after
       // hydration in place of an aria-busy fallback, and 'load' can fire before or after that (flaky /compare/ count).
-      await pg.waitForFunction(() => !document.querySelector('main [aria-busy="true"]'), null, { timeout: 15000 });
+      // A timeout is one failed check for that page, not the end of the run.
+      const hydrated = await pg.waitForFunction(() => !document.querySelector('main [aria-busy="true"]'), null, { timeout: 15000 }).then(() => true, () => false);
+      if (!hydrated) { check(false, `${u}: still aria-busy after 15 s (client section did not render)`); continue; }
       const r = await pg.evaluate(() => {
         const m = document.querySelector('main');
         const prov = (m.textContent.match(/Provisional: awaiting editorial review/gi) || []).length;
