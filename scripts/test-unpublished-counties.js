@@ -148,11 +148,12 @@ if (dist) {
       // Every value of a public kind is on a page, with its review label.
       const html = counties.pages(slug).map((p) => { const f = path.join(dist, 'counties', slug, p, 'index.html'); return fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : ''; }).join('\n');
       const shown = new Set([...html.matchAll(/data-obs="([^"]+)"/g)].map((x) => x[1]));
-      cr.entries(slug).filter((e) => counties.isPublicKind(slug, (Object.entries({ ledger: 'fiscal-ledger', audits: 'audits', population: 'population', indicators: 'indicators' }).find(([, v]) => e.dataset === `${slug}-${v}`) || [null])[0])).forEach((e) => ok(shown.has(`${e.dataset}:${e.id}`), `${slug}: ${e.dataset}|${e.id} is not shown on any of its pages`));
+      cr.entries(slug).filter((e) => counties.isPublicKind(slug, (Object.entries({ ledger: 'fiscal-ledger', audits: 'audits', population: 'population', indicators: 'indicators', abstract: 'abstract' }).find(([, v]) => e.dataset === `${slug}-${v}`) || [null])[0])).forEach((e) => ok(shown.has(`${e.dataset}:${e.id}`), `${slug}: ${e.dataset}|${e.id} is not shown on any of its pages`));
       // The page label exactly once on each page that shows values while any is unreviewed (smoke-test rule N3).
       const pending = cr.counts(slug).approved < cr.counts(slug).total;
       counties.pages(slug).forEach((p) => { const f = path.join(dist, 'counties', slug, p, 'index.html'); if (!fs.existsSync(f)) return; const t = fs.readFileSync(f, 'utf8').replace(/<script[\s\S]*?<\/script>/g, ''); const k = (t.match(/Provisional: awaiting editorial review/g) || []).length; ok(p === 'sources' ? k === 0 : k === (pending ? 1 : 0), `${slug}/${p}: the provisional label appears ${k} times`); });
-      const npc = cr.entries(slug).filter((e) => e.needs_page_check).length;
+      const kindOfDs = (e) => (Object.entries({ ledger: 'fiscal-ledger', audits: 'audits', population: 'population', indicators: 'indicators', abstract: 'abstract' }).find(([, v]) => e.dataset === `${slug}-${v}`) || [null])[0];
+      const npc = cr.entries(slug).filter((e) => e.needs_page_check && counties.isPublicKind(slug, kindOfDs(e))).length;
       const npcShown = (html.match(/data-needs-page-check/g) || []).length;
       ok(npcShown >= npc, `${slug}: ${npc} values need a page check but only ${npcShown} labels are shown`);
     }
