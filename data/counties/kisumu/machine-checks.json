@@ -1,6 +1,6 @@
 {
  "meta": {
-  "title": "Machine cross-checks of Kisumu values (independent second reading; county not yet on pages)",
+  "title": "Machine cross-checks of Kisumu values (independent second reading)",
   "rule": "A machine reading by a different method from the original extraction. It is not editorial review: it never approves a value, it is shown on pages only as \"machine cross-checked\", and no record in data/reviews.json may cite it. Values where the check disagrees go to the top of docs/editorial/REVIEW_QUEUE.md.",
   "methods": {
    "tesseract-600dpi-psm6": "Page rendered at 600 dpi greyscale (pdftoppm) and read by tesseract 5, page segmentation mode 6, for values first read from the PDF text layer.",

@@ -7,7 +7,7 @@
 //   value, the bound ("<1" is kept as relation less_than, limit 1, value null; never 0 or 1);
 // - claims and targets are labelled (kind) and never sit in a conflict as if they were observed estimates;
 // - a county file holds only its own county (code) or the lake/national rows the Siaya file may carry;
-// - the Kisumu file is marked held, and the Siaya file holds no Kisumu row (Kisumu stays off the site);
+// - meta.held matches the registry (a kind outside the county's public_kinds is held), and the Siaya file holds no Kisumu row;
 // - every conflict names existing values; ids are unique. Run: node scripts/test-indicators.js
 const fs = require('fs');
 const path = require('path');
@@ -28,7 +28,7 @@ counties.withKind('indicators').forEach((slug) => {
   ok(out.length === 0, tag(`schema: ${out.slice(0, 5).join('; ')}`));
   const code = counties.COUNTY_DATA[slug].code;
   ok(d.meta.county_code === code, tag('meta.county_code'));
-  const held = counties.NOT_YET_ON_PAGES.includes(slug);
+  const held = !counties.isPublicKind(slug, 'indicators');
   ok(Boolean(d.meta.held) === held, tag(`meta.held must be ${held}`));
   const research = counties.COUNTY_DATA[slug].research ? new Set((JSON.parse(fs.readFileSync(counties.abs(counties.COUNTY_DATA[slug].research), 'utf8')).sources || []).map((r) => r.sha256).filter(Boolean)) : new Set();
   const src = Object.fromEntries(d.sources.map((s) => [s.source_id, s]));

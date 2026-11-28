@@ -1,6 +1,6 @@
 {
  "meta": {
-  "title": "Review packs: every Kisumu value with what a reviewer needs to check it (county not yet on pages)",
+  "title": "Review packs: every Kisumu value with what a reviewer needs to check it (county published)",
   "rule": "Preparation for editorial review, not review. The template's decision and reviewer_role are blank and must be filled by an independent reviewer (not the extractor) following docs/editorial/review-sop.md; nothing here is copied into data/reviews.json by a script. A machine cross-check result is not a basis for a review decision.",
   "generated_by": "scripts/review-packs.js",
   "scope": "Every value in data/counties/kisumu/ (fiscal ledger, audit opinions, population); the county's rows of data/counties-cob.json are reused inside its ledger.",

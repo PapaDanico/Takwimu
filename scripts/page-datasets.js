@@ -11,7 +11,9 @@ const root = path.join(__dirname, '..');
 const app = path.join(root, 'app');
 // Not followed: the review register (reads every data file to keep the register), and the catalogue status and source
 // lists, which read data files for counts, versions and document titles, not to show values.
-const SKIP = new Set(['review-status.js', 'dataset-status.js', 'siaya-sources.js'].map((f) => path.join(root, 'lib', f)));
+// lib/county-pages.js builds other counties' pages with Siaya's ledger builder; it shows none of Siaya's values
+// (scripts/test-unpublished-counties.js checks the label on those pages).
+const SKIP = new Set(['review-status.js', 'dataset-status.js', 'siaya-sources.js', 'county-pages.js'].map((f) => path.join(root, 'lib', f)));
 const CALL = /\b(?:masked|badge|counts|review|observations|publishedCopy|original|catalogueCounts|stateOf)\(\s*['"]([a-z-]+)['"]|\bdatasets?=\{?\s*\[?['"]([a-z-]+)['"]/g;
 const SPEC = /(?:\bfrom\s*|\brequire\(\s*|\bimport\(\s*)['"](\.{1,2}\/[^'"]+)['"]/g;
 
