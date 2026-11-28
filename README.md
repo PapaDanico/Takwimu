@@ -77,7 +77,7 @@ Monitoring (not part of the build; see `docs/ops/monitoring.md`): `npm run ops:c
 - Corrections: 17 corrections footnoted beside 26 values, 14 source-error records flagged beside theirs (kept as published, e.g. "31st June 2025", and the Economic Survey 2026 printing Siaya's OSR budget as FY 2025/26 revenue); no register page, `/corrections/` redirects to `/method/#corrections` (owner, 27 Nov 2026).
 - Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked "Needs page check", 0 approved (all labelled "Provisional: awaiting editorial review"). Sector pages follow one domain per release.
 - County release states (`lib/county-states.js`): draft / reviewable / published, set by hand. `scripts/test-unpublished-counties.js` checks states against routes, the per-county `public_kinds` allowlist, and scans dist/ (HTML, RSC payloads, CSV, JSON, PDF text) for held records by dataset and record id, with a deliberately leaked fixture; it fails closed.
-- Site: 110 pages, 92 downloadable datasets, a three-page fiscal brief and 5 draft reports. Layers B1, B2, B4, B5 on /counties/siaya/analysis/; B3 and own-source revenue by publisher on /counties/siaya/ledger/.
+- Site: 114 pages, 92 downloadable datasets, a three-page fiscal brief and 5 draft reports. Layers B1, B2, B4, B5 on /counties/siaya/analysis/; B3 and own-source revenue by publisher on /counties/siaya/ledger/.
 
 ## Deploying
 
