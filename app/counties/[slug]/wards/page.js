@@ -5,6 +5,7 @@ import TableWrap from '../../../../components/TableWrap';
 import WardMap from '../../../../components/WardMap';
 import CountyNav from '../../../../components/county/CountyNav';
 import CountyProvisional from '../../../../components/county/CountyProvisional';
+import AbstractTables from '../../../../components/county/AbstractTables';
 import { paramsFor } from '../../../../components/county/params';
 import { pageMeta } from '../../../../lib/page-meta';
 import { fmtNum } from '../../../../lib/format';
@@ -22,6 +23,9 @@ export default function CountyWards({ params }) {
   const { slug } = params;
   const m = cp.meta(slug);
   const { g, wardsGeo, consGeo, census, voters } = cp.wards(slug);
+  const wv = cp.wardVoters(slug, 2022);
+  const wvTable = wv ? cp.abstractTables(slug, ['csa24-1.7.1']) : [];
+  const missing = wv ? g.wards.filter((w) => !(w.id in wv.values)) : [];
   const base = `/counties/${slug}/wards/`;
   const conName = Object.fromEntries(g.constituencies.map((c) => [c.id, c.name]));
   const ck = g.checks;
@@ -30,13 +34,13 @@ export default function CountyWards({ params }) {
       <PageHead county={{ slug, name: m.name }} eyebrow="Geography" title="Wards and constituencies"
         sub={`${m.name} County's ${g.constituencies.length} IEBC constituencies and ${g.wards.length} county assembly wards, and the KNBS sub-counties, with the figures sources publish for each. Nothing reported for the county as a whole is shared out to wards.`}
         path={base} shareText={`${m.name}: wards and constituencies`} />
-      <PageToc items={[['geo-sub', 'Constituencies'], ['geo-knbs', 'KNBS sub-counties'], ['geo-wards', 'Wards'], ['geo-reg', 'IEBC ward register'], ['geo-checks', 'Boundary checks'], ['geo-scope', 'What these boundaries are']]} />
+      <PageToc items={[['geo-sub', 'Constituencies'], ['geo-knbs', 'KNBS sub-counties'], ['geo-wards', 'Wards'], ...(wvTable.length ? [[`t-${wvTable[0].id}`, 'Registered voters by ward']] : []), ['geo-reg', 'IEBC ward register'], ['geo-checks', 'Boundary checks'], ['geo-scope', 'What these boundaries are']]} />
       <section className="card gold" aria-labelledby="geo-read">
         <h2 id="geo-read">How to read this page</h2>
         <CountyProvisional counts={cp.counts(slug)} datasets={cp.datasets(slug)} />
         <ul className="how">
           <li>Two hierarchies are kept apart. The IEBC divides the county into {g.constituencies.length} constituencies and {g.wards.length} wards; those are the boundaries drawn here. KNBS reports some statistics by administrative sub-county ({g.knbs_sub_counties.length}, including Kadibo, which has no constituency). Figures are joined only to the hierarchy their source uses. The City of Kisumu is a different area and is not drawn.</li>
-          <li>A value appears on a map only where a source reports it for that unit and hierarchy. No ward-level figure is published here yet; ward values will be added only from sources that report them by ward.</li>
+          <li>A value appears on a map only where a source reports it for that unit and hierarchy. Ward values come only from tables printed by ward.</li>
           <li>The boundaries are simplified for display and are not for measuring area or distance; the areas below are computed on the original polygons.</li>
         </ul>
       </section>
@@ -76,9 +80,18 @@ export default function CountyWards({ params }) {
 
       <section className="card" aria-labelledby="geo-wards">
         <h2 id="geo-wards">Wards</h2>
-        <p className="lead">The {g.wards.length} county assembly wards. Select a ward for its constituency and IEBC code; the table view lists every ward.</p>
-        <WardMap geo={wardsGeo} countyName={m.name} mapId="wmap" ariaLabel={`Map of the ${g.wards.length} county assembly wards of ${m.name} County`} />
+        <p className="lead">The {g.wards.length} county assembly wards{wv ? ', shaded by registered voters in 2022 as reproduced in the county statistical abstract' : ''}. Select a ward for its constituency, IEBC code{wv ? ' and value' : ''}; the table view lists every ward.</p>
+        <WardMap geo={wardsGeo} countyName={m.name} mapId="wmap" ariaLabel={`Map of the ${g.wards.length} county assembly wards of ${m.name} County${wv ? ', shaded by registered voters in 2022' : ''}`}
+          {...(wv ? { values: wv.values, valueLabel: wv.label, valueUnit: wv.unit, valueNotes: Object.fromEntries(missing.map((w) => [w.id, 'not printed in Table 1.7.1'])), caption: 'Shading: registered voters, 2022, KNBS Kisumu County Statistical Abstract 2024 Table 1.7.1 (figures credited to the IEBC).' } : {})} />
+        {wv ? <ul className="how">
+          <li><b>Source:</b> <a href={wv.src_url} rel="noopener">{wv.src_title}</a>, {wv.table}, PDF p. {wv.pdf_page}{wv.printed_page ? ` (printed p. ${wv.printed_page})` : ''}; published {wv.published}; unit persons (registered voters); confidence 3 of 5. The abstract credits the figures to the IEBC; this is KNBS&rsquo;s reproduction, not the IEBC&rsquo;s own ward file.</li>
+          {missing.length ? <li>Not printed in the table: {missing.map((w) => `${w.name} (${w.iebc_ward_code})`).join(', ')}. {missing.length === 1 ? 'It is' : 'They are'} hatched on the map as not available.</li> : null}
+          {wv.unmatched.length ? <li>Printed but not placed on the map: {wv.unmatched.map((u) => `${u.row} (${u.value})`).join('; ')}. The abstract prints this row under Kadibo; Kobura is also an IEBC ward of Nyando, so which ward it is cannot be told from the table.</li> : null}
+          <li>The constituency totals above (IEBC&rsquo;s own 2022 file) and the ward figures here come from different publications and are not added together or compared here.</li>
+        </ul> : null}
       </section>
+
+      {wvTable.length ? <AbstractTables tables={wvTable} /> : null}
 
       <section className="card" aria-labelledby="geo-reg">
         <h2 id="geo-reg">IEBC ward register and name crosswalk</h2>
