@@ -169,3 +169,9 @@ Conclusion: the `licence_check_needed` flags for KNBS GCP, the Siaya abstract 20
   - the 115 tables whose layout could not be verified automatically (merged or wrapped headers). These stay pending, each listed in `abstract-dispositions-kisumu-2024.md`.
 - One likely source error seen on the page image (kept as printed): Table 1.3.4, Muhoroni / Masogo-Nyang'oma 2020, public 10,672 + private 10,496 = total 21,168, about ten times the neighbouring wards.
 - Count after this release: Kisumu 6,496 values (331 ledger, audits and population; 176 indicators; 5,989 abstract) against Siaya's 4,122.
+- Ward register (follow-up): Table 1.7.1 registered voters by sub-county, ward and sex for 2013, 2017 and 2022. That is 315 values for 35 printed rows, all in `abstract.json` (table_id `csa24-1.7.1`).
+  - Groups come from the page image; every row checks (male + female = total).
+  - Each value is keyed to the IEBC ward slug and code from the pages session's `geography.json` (Gazette Notice 13904 of 2025). Two names differ from IEBC's: "Chemelil/ Tamu" is IEBC's chemelil, and "Muhoroni" is IEBC's muhoroni-koru.
+  - Printed oddities are kept as printed: "Kobura" appears under both Nyando and Kadibo (the Kadibo row is not matched to an IEBC ward), and only four Nyakach wards are printed (north-nyakach, 1217, is absent).
+  - The ward-to-sub-county map also filled `sub_county` on 2,315 other abstract ward rows. 3,257 abstract values now carry an IEBC ward slug. All 315 new values agree with the OCR second reading.
+- Count: Kisumu 6,811 values (331 + 176 + 6,304) against Siaya's 4,122.

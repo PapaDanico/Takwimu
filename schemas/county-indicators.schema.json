@@ -97,6 +97,8 @@
           "sector": { "type": "string", "enum": ["health", "education", "agriculture/fisheries", "water/environment", "social", "governance", "justice/ICT", "population", "economy", "transport"] },
           "sub_county": { "type": ["string", "null"], "pattern": "^[a-z-]+$" },
           "ward": { "type": ["string", "null"] },
+          "ward_slug": { "type": ["string", "null"], "pattern": "^[a-z-]+$" },
+          "ward_code_iebc": { "type": ["integer", "null"] },
           "table_id": { "type": "string", "pattern": "^[a-z0-9.-]+$" },
           "note": { "type": ["string", "null"] }
         }
