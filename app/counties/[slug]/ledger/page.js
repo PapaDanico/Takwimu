@@ -38,7 +38,7 @@ export default function CountyLedger({ params }) {
         <ul className="how">
           <li><b>No averaging and no verdicts.</b> Every value is shown as its source printed it, with the page it was read from. None is averaged, preferred or corrected here, and a missing value is never shown as zero.</li>
           <li>A discrepancy case is any pair of values for the same measure and year that differ by more than {l.threshold} per cent of the smaller one. Every case stays open until a specialist reviews it.</li>
-          <li>Each value is labelled with its review state, and &ldquo;Needs page check&rdquo; where it was read by machine from a scan and not yet compared with the page image. &ldquo;Machine cross-checked&rdquo; means a second machine reading found the same figure on the page; it is not editorial review.</li>
+          <li>The label above applies to every value; a value carries a label of its own once a review record moves it on, and &ldquo;Needs page check&rdquo; where it was read by machine from a scan and not yet compared with the page image. &ldquo;Machine cross-checked&rdquo; means a second machine reading found the same figure on the page; it is not editorial review.</li>
           <li>Own-source revenue, FIF and appropriations-in-aid are counted differently by each publisher: see <Link href="/learn/#own-source-revenue">own-source revenue, FIF and A-i-A explained</Link>.</li>
           <li>Values are in KSh million unless marked as KSh billion.</li>
         </ul>

@@ -20,4 +20,4 @@ Civic education platform for Kenyan public finance and statistics, focused on tr
 
 # Rules
 Concise responses. Grep before Read. No unrequested extras.
-- Multi-county (27 Nov 2026, docs/adr-0001-multi-county-data.md): new counties live in data/counties/<slug>/ via lib/county-registry.js; Siaya keeps its paths. Kisumu (042) phase 1 data is in, unpublished (scripts/test-unpublished-counties.js blocks it from dist until its pages pass review).
+- Multi-county (27 Nov 2026, docs/adr-0001-multi-county-data.md): new counties live in data/counties/<slug>/ via lib/county-registry.js; Siaya keeps its paths. Kisumu (042) published 28 Nov 2026 (hub, ledger, audits, people, sources) from app/counties/[slug]/ via lib/county-pages.js; release state per county in lib/county-states.js (draft/reviewable/published); scripts/test-unpublished-counties.js enforces states, per-county public_kinds and a record-level leak scan of dist/. Work branch for Kisumu: claude/kisumu-phase2.

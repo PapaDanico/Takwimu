@@ -45,3 +45,10 @@ Option C.
 - When Kisumu gets pages, it leaves `NOT_YET_ON_PAGES`: `lib/counties.js` marks it published, the pages read through the registry, and `scripts/build-data.js` publishes its files through `lib/county-review.js`. At that point a published-copy mask for rejected values, as Siaya's `publishedCopy` provides, must be added. That is deliberately not built in Phase 1.
 - Siaya's paths stay a special case in the registry. Moving them under `data/counties/siaya/` is possible later, but only together with redirects for the published `/data/` files.
 - The schema file names still say "siaya" because pages and docs cite them. Their titles now say they are county schemas.
+
+## Update, 28 Nov 2026: release states and generic pages
+
+- Release state is explicit per county in `lib/county-states.js` (draft / reviewable / published), never derived from another flag; `lib/counties.js` reads it. Approval of a value (a record in `data/reviews.json`) and publication of a county are separate events: a reviewable county may receive review records while nothing of it is built.
+- Published registry counties get their pages from `app/counties/[slug]/` (hub, ledger, audits, people, sources), listed per county in `lib/county-registry.js` (`pages`), with a per-county `public_kinds` allowlist of file kinds. Pages read county data only through `lib/county-pages.js`, which refuses held counties and kinds outside the allowlist. Siaya keeps its own routes and libraries; `lib/ledger.js` became a builder with per-county hooks and Siaya's output is unchanged.
+- `scripts/test-unpublished-counties.js` (with `scripts/county-leaks.js`) checks states against routes and code, and scans dist/ for held records by dataset and record id (record keys, distinctive printed text, county-only source and case ids) across HTML, RSC payloads, CSV, JSON and PDF text, with a deliberately leaked fixture in each file type. It fails closed (an unreadable PDF fails the run).
+- Kisumu moved to published on 28 Nov 2026 with its four existing kinds; sector kinds will be added to the registry and to `public_kinds` one domain at a time.
