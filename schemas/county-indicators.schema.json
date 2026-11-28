@@ -100,6 +100,7 @@
           "ward_slug": { "type": ["string", "null"], "pattern": "^[a-z-]+$" },
           "ward_code_iebc": { "type": ["integer", "null"] },
           "table_id": { "type": "string", "pattern": "^[a-z0-9.-]+$" },
+          "age_group": { "type": ["string", "null"], "description": "Age block as printed when a table repeats the same row labels under an Age column (e.g. Under 5 years / Over 5 years)." },
           "note": { "type": ["string", "null"] }
         }
       }
