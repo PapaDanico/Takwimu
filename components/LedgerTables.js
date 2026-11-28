@@ -12,13 +12,14 @@ const num = (v) => fmtNum(v, { dp: 2 });
 const amount = (o) => (o.unit === 'KSh billion' ? `KSh ${num(o.value)} billion` : `KSh ${num(o.value)} million`);
 const pages = (o) => `PDF p. ${o.pdf_page}${o.printed_page ? ` (printed p. ${o.printed_page})` : ''}`;
 
-// Labels each value carries on a county page from the registry (lib/county-pages.js): the public review label,
+// Labels each value carries on a county page from the registry (lib/county-pages.js): its review label once a record
+// has moved it on (the page states the provisional label once),
 // a disputed value's link to the side-by-side case, and a visible "needs page check". Siaya's values do not carry
 // state_label, so its tables are unchanged.
 export function CountyFlags({ o }) {
   return (
     <small className="county-flags">
-      {' '}<span className="tag warn" data-review-label>{o.state_label}</span>
+      {o.state_label !== 'Provisional: awaiting editorial review' ? <> <span className="tag warn" data-review-label>{o.state_label}</span></> : null}
       {o.disputed ? <> <a className="tag warn" href={o.conflictHref} data-disputed>Disputed: both values shown</a></> : null}
       {o.needs_page_check ? <> <span className="tag warn" data-needs-page-check>Needs page check</span></> : null}
     </small>

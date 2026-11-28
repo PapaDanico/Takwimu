@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageToc from '../../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import CountyProvisional from '../../../../components/county/CountyProvisional';
@@ -37,6 +38,7 @@ export default function CountyAudits({ params }) {
         sub={`What the Auditor-General concluded about the financial statements of ${m.name} County's executive, assembly and separately audited bodies, year by year, quoted as printed.`}
         path={`/counties/${slug}/audits/`} shareText={`${m.name}: Auditor-General audit opinions`} />
 
+      <PageToc items={[['aud-op', 'Opinions by year'], ['aud-gaps', 'Reports not held'], ['aud-cav', 'Caveats']]} />
       <section className="card gold" aria-labelledby="aud-read">
         <h2 id="aud-read">How to read this page</h2>
         <CountyProvisional counts={cp.counts(slug)} datasets={[a.dataset]} />
@@ -44,7 +46,7 @@ export default function CountyAudits({ params }) {
           <li><b>An opinion is a finding about financial statements, not a verdict on any person.</b> No individual is named on this page.</li>
           <li>An unqualified opinion means the accounts give a fair view. A qualified opinion means they do, except for the matters listed. An adverse opinion means they do not. A disclaimer means the auditor could not obtain enough evidence to form an opinion.</li>
           <li>Where the Auditor-General&rsquo;s own report is not held, an opinion reproduced by an official compilation or a civil-society summary is shown with the label &ldquo;Secondary source&rdquo;. It is never promoted to a primary reading.</li>
-          <li>Each body is audited separately and shown separately. Audit findings and amounts are not yet coded for {m.name}; only opinions are shown.</li>
+          <li>Each body is audited separately and shown separately; the statements of own-source revenue collected are audited on their own (see <Link href="/learn/#own-source-revenue">own-source revenue explained</Link>). Audit findings and amounts are not yet coded for {m.name}; only opinions are shown.</li>
         </ul>
       </section>
 

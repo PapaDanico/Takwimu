@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageToc from '../../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import CountyProvisional from '../../../../components/county/CountyProvisional';
@@ -27,6 +28,7 @@ export default function CountyPeople({ params }) {
         sub={`How many people live in ${m.name} County: the 2019 census count and the Kenya National Bureau of Statistics projections for the years after it. A projection is never shown as a count.`}
         path={`/counties/${slug}/people/`} shareText={`${m.name}: population`} />
 
+      <PageToc items={[['pop-pts', 'Census count and projections'], ...(p.sub ? [['pop-sub', 'By sub-county']] : []), ...(p.print_differences.length ? [['pop-diff', 'Where printed figures differ']] : []), ['pop-gaps', 'Gaps']]} />
       <section className="card gold" aria-labelledby="pop-read">
         <h2 id="pop-read">How to read this page</h2>
         <CountyProvisional counts={cp.counts(slug)} datasets={[p.dataset]} />
@@ -71,7 +73,6 @@ export default function CountyPeople({ params }) {
               <tfoot><tr><th scope="row">Sum of the sub-counties</th><td>{fmtNum(Object.values(p.sub.values).reduce((s, v) => s + v, 0))}</td></tr></tfoot>
             </table>
           </TableWrap>
-          <p className="provisional"><span className="tag warn">Provisional: awaiting editorial review</span></p>
           <CountyCite title={p.sub.src_title} url={p.sub.src_url} published={p.sub.published} period={String(p.sub.year)} unit="persons" pdf={p.sub.source.pdf_page} printed={p.sub.source.printed_page} table={p.sub.source.table} />
           {p.sub.note ? <p className="how">{p.sub.note}</p> : null}
         </section>

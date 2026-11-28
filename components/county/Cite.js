@@ -5,10 +5,13 @@ import { MachineTag } from '../SourceErrorFlag';
 
 export const pageRef = (pdf, printed) => (pdf ? `PDF p. ${pdf}${printed ? ` (printed p. ${printed})` : ''}` : 'page not recorded');
 
+// The page states "Provisional: awaiting editorial review" once (components/county/CountyProvisional.js); a value
+// carries its own review label only when a record has moved it on (approved, withdrawn, disputed, superseded).
+export const PENDING = 'Provisional: awaiting editorial review';
 export function ValueFlags({ label, needsCheck, machine, tier }) {
   return (
     <>
-      {' '}<span className="tag warn" data-review-label>{label}</span>
+      {label && label !== PENDING ? <> <span className="tag warn" data-review-label>{label}</span></> : null}
       {tier === 'secondary' ? <> <span className="tag warn" data-tier="secondary">Secondary source</span></> : null}
       {needsCheck ? <> <span className="tag warn" data-needs-page-check>Needs page check</span></> : null}
       {machine ? <> <MachineTag m={machine} /></> : null}

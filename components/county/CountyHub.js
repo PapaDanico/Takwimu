@@ -37,10 +37,11 @@ export default function CountyHub({ slug }) {
         <h2 id="hub-read">How to read these pages</h2>
         <CountyProvisional counts={counts} datasets={cp.datasets(slug)} />
         <ul className="how">
-          <li>Every value carries its source, publication date, period, unit, confidence (1 to 5) and the page it was read from. Until an independent reviewer has checked a value against its page, it is labelled &ldquo;Provisional: awaiting editorial review&rdquo;.</li>
+          <li>Every value carries its source, publication date, period, unit, confidence (1 to 5) and the page it was read from. Until an independent reviewer has checked a value against its page, it stays provisional (the label above).</li>
           <li>Where two official documents give different figures for the same thing, both are shown side by side with their definitions; none is averaged, preferred or corrected here.</li>
           <li>A missing value is listed as a gap with its reason, never filled and never shown as zero.</li>
           <li>Values marked &ldquo;Needs page check&rdquo; were read by machine from a scan and have not yet been compared with the page image.</li>
+          <li>Own-source revenue is reported with and without hospital income (FIF) depending on the publisher: see <Link href="/learn/#own-source-revenue">own-source revenue, FIF and A-i-A explained</Link>.</li>
           <li>No individual is named. Audit opinions are findings about financial statements, not verdicts on any person.</li>
         </ul>
       </section>
