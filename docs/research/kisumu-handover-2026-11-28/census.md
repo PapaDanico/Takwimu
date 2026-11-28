@@ -46,8 +46,10 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | data/conflicts.json | conflict register | 2026-2026 | conflicts 53 |
 | data/corrections.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2026-2026 | entries 7 |
 | data/counties/kisumu/abstract.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2013-2024 | sources 1, observations 6304, conflicts 0, gaps 0 |
+| data/counties/kisumu/audit-findings.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2013-2024 | findings 104, same_items 0, gaps 21 |
 | data/counties/kisumu/conflicts.json | conflict register |  | conflicts 38 |
 | data/counties/kisumu/constituencies-geo.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) |  | features 7 |
+| data/counties/kisumu/departments.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2021-2024 | records 58, checks 242, comparisons 24, gaps 2 |
 | data/counties/kisumu/geography.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2022-2022 | sources 5, constituencies 7, knbs_sub_counties 8, wards 35, crosswalk 35 |
 | data/counties/kisumu/indicators.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2013-2029 | sources 8, observations 176, conflicts 4, gaps 4 |
 | data/counties/kisumu/machine-checks.json | machine cross-check results |  | checks 6811 |
@@ -312,9 +314,11 @@ data/counties/kisumu/machine-checks.json: 6811 checks; agree 2786, disagree 6, n
 - data/corrections.json: f06dced7faf20c73a2770b278261459d515307d605658406ac5d350450c032c5
 - data/counties-cob.json: cb4c26d09550a90eb161e064fb5bec51cc26c87c35faa314731488acb40e7907
 - data/counties/kisumu/abstract.json: ebf513649470829d8aca2333f39ce7cccbf62d442ea6cf4e88b990688818cbd2
+- data/counties/kisumu/audit-findings.json: db62d206bdae030b7efcef29b7f31934b2679be712563a06fc8510e630f8cd99
 - data/counties/kisumu/audits.json: 14ae1130ef8241dcb7f4fce1a1b6e77d21b9b6efd7e19c6cd82582c857e64f2f
 - data/counties/kisumu/conflicts.json: b49f7faf3bc31234f6fd9f7bb1d6e828c8d548533659ebf74d6ce1cb4bd5502c
 - data/counties/kisumu/constituencies-geo.json: 1dd5d40740e3438e91ef9d2c0ce61e4e7105398c04b283e8c4ac3f85acbc7496
+- data/counties/kisumu/departments.json: 4edbdbb48324002c2c6be3192e5f5cd56f8166bc93034f4e3e9ceda42c430c23
 - data/counties/kisumu/fiscal-ledger.json: 7e44267ad9ee8cdd38c878e0ff6d22ea664652ffda39be0c3a1292dd4c2fe590
 - data/counties/kisumu/geography.json: 43ea031c26cbd3cc1f54d523f9400223bcdf0d2c51c804e0cb73baa8f9bcc552
 - data/counties/kisumu/indicators.json: d03bdbc3745065953cfb456a5af96fdbd23778680ae0b767ca3b69b6311dfd89
@@ -333,7 +337,7 @@ data/counties/kisumu/machine-checks.json: 6811 checks; agree 2786, disagree 6, n
 - data/machine-checks.json: d333bc59407cfc8e6e9a3f5329b417bf7ab937da16cf3838da2e873087d0d7a7
 - data/national.json: fda96171ab8130dbdb38299e9b4ac6e3eb7c3689d070d88168f86f35f6ca6701
 - data/ngo.json: fb9624766ee6d608c95fcefb65d0777a12fae30dc5f92a8a41b081b9b25c8c49
-- data/pdf-leak-scan.json: b2bd89a51f696cd279e65e6e1d5166705617503d8f83eca090f61cfb710ad562
+- data/pdf-leak-scan.json: 04119c46e14bdec520b28dad862a97eeb7389439ed58d1accefa14439ba07e9c
 - data/political.json: d8345a13f1238abafe27c573151789c5f47d8a0b6e52a0300d84637711fd6345
 - data/review-packs.json: 98e2596b61f04bf18e2b8654d9ec08d369b77fe84aab70489956e6f8a67a6075
 - data/reviews.json: c9d511495ad60dfa3ea068a7c29087763cfd4b661f9b099d7fd323d3b672e72d
