@@ -1,8 +1,8 @@
 {
  "claims": [
   {
-   "actual": "1, 47, Siaya",
-   "claim": "Counties: 1 of 47 published (Siaya)",
+   "actual": "2, 47, Siaya, Kisumu",
+   "claim": "Counties: 2 of 47 published (Siaya, Kisumu)",
    "how": "lib/counties.js",
    "match": true,
    "where": "README Status"
@@ -65,14 +65,14 @@
   },
   {
    "actual": "331, 291, 35, 5, 38, 0",
-   "claim": "Kisumu (unpublished, data layer only): 331 values (291 ledger, 35 audit opinions, 5 population), 38 conflict cases, 0 approved",
+   "claim": "Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked \"Needs page check\", 0 approved",
    "how": "lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "110",
-   "claim": "Site: 110 pages",
+   "actual": "114",
+   "claim": "Site: 114 pages",
    "how": ".html files under dist/",
    "match": true,
    "where": "README Status"
@@ -92,8 +92,8 @@
    "where": "README Status"
   },
   {
-   "actual": "47, Siaya",
-   "claim": "lib/counties.js lists 47 counties; only Siaya is published",
+   "actual": "47, Siaya, Kisumu",
+   "claim": "lib/counties.js lists 47 counties; Siaya (/counties/siaya/ hub, old URLs kept) and Kisumu (from 28 Nov 2026) are published",
    "how": "lib/counties.js",
    "match": true,
    "where": "CLAUDE.md"
@@ -113,8 +113,8 @@
    "where": "CLAUDE.md"
   },
   {
-   "actual": "42, unpublished",
-   "claim": "Kisumu (042) phase 1 data is in, unpublished",
+   "actual": "42, published",
+   "claim": "Kisumu (042) published",
    "how": "lib/county-registry.js",
    "match": true,
    "where": "CLAUDE.md"
@@ -415,7 +415,7 @@
    "dataset": null,
    "file": "data/counties/kisumu/machine-checks.json",
    "observations": null,
-   "title": "Machine cross-checks of Kisumu values (independent second reading; county not yet on pages)",
+   "title": "Machine cross-checks of Kisumu values (independent second reading)",
    "top_level_arrays": {
     "checks": 331
    },
@@ -484,7 +484,7 @@
    "dataset": null,
    "file": "data/counties/kisumu/review-packs.json",
    "observations": null,
-   "title": "Review packs: every Kisumu value with what a reviewer needs to check it (county not yet on pages)",
+   "title": "Review packs: every Kisumu value with what a reviewer needs to check it (county published)",
    "top_level_arrays": {
     "entries": 331
    },
@@ -1875,8 +1875,8 @@
  ],
  "generated_by": "scripts/census.js",
  "inputs": {
-  ".claude/CLAUDE.md": "be9cfd3bb9fb54354db55c3415d73e9f9956ffc5876aed66004952655945e0db",
-  "README.md": "2f6945a2fcd8933e73d61394fb9c640fe800ed116ed0ca1f5e1c1a2b5cc769e4",
+  ".claude/CLAUDE.md": "b628e0616b09dfd3814c8747065ef7009ae34061b09347fbb989859dd0fec325",
+  "README.md": "1b7dcdcf5554d909bc584a62b46f6c6e59b83a807e4324c25e15882a97b838b0",
   "components/report/reports.json": "af38ebeb395f6af7d863f47bc9a08de0ada926f67d01cfb202052896243738a7",
   "data/cbk.json": "6c47b668a4baa2f6202e3b44dfe969a40f83ca40744cf82cb1597a6b750dca86",
   "data/conflicts.json": "5e7357a5c5a01a3c7f49b9ee086dd646fc96ba447193c9f54ae4f1931b4994d8",
@@ -1885,9 +1885,9 @@
   "data/counties/kisumu/audits.json": "14ae1130ef8241dcb7f4fce1a1b6e77d21b9b6efd7e19c6cd82582c857e64f2f",
   "data/counties/kisumu/conflicts.json": "b49f7faf3bc31234f6fd9f7bb1d6e828c8d548533659ebf74d6ce1cb4bd5502c",
   "data/counties/kisumu/fiscal-ledger.json": "7e44267ad9ee8cdd38c878e0ff6d22ea664652ffda39be0c3a1292dd4c2fe590",
-  "data/counties/kisumu/machine-checks.json": "ab36bdc63ad60aaa5568db1304434922755352db26b15a610f2417bf618f9256",
+  "data/counties/kisumu/machine-checks.json": "914fd5c57a84a3db86980d73327d1c656b1878b4183c4692bc1bc6d0700756df",
   "data/counties/kisumu/population.json": "45a0ba3bb5e7187a1f2314cc7e869e2c335f3fa183f45a5563dc6b4f8d4e59d6",
-  "data/counties/kisumu/review-packs.json": "c35f02677bff55ee9c8b5877efca6a50554e3685276a325210fedcd4802b744e",
+  "data/counties/kisumu/review-packs.json": "098d7affbf8ba0b1ef43d946e646826c9c59ee607d81ef63431fe031e0a92357",
   "data/county.json": "d362d6fb4804fbe921db3ea484f4690804bb78b5b798f9bd37a13f1c0706f5b5",
   "data/cpi.json": "3c91c889abaecd66ab7ad17e96ad2aa81a31f943a585484e6b257e361c4924e1",
   "data/derived.json": "885896b669df6867c71b21b5957e67428c9d2956fb5c1ddbbd484b135343b513",

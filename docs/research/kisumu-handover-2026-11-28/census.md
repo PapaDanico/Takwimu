@@ -9,7 +9,7 @@ Rules: "provisional" is every value with no review record in force (values the d
 | Scope | Values | Provisional | Approved | Rejected | Disputed | Missing any metadata | Distinct source hashes | Nulls with reason | Nulls without reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Siaya review scope (16 datasets) | 4005 | 4005 | 0 | 0 | 235 | 466 | 86 | 185 | 57 |
-| Kisumu (unpublished) | 331 | 331 | 0 | 0 | 74 | 0 | 54 | 0 | 1 |
+| Kisumu (published) | 331 | 331 | 0 | 0 | 74 | 0 | 54 | 0 | 1 |
 | All itemised values | 8998 | 8998 | 0 | 0 | 309 | 5128 | 128 | 934 | 58 |
 
 ## 2. Datasets
@@ -70,7 +70,7 @@ Files that hold no itemised values (not enumerated by either library, so outside
 
 | Where | Claim | Actual | Match | Counted with |
 | --- | --- | --- | --- | --- |
-| README Status | Counties: 1 of 47 published (Siaya) | 1, 47, Siaya | yes | lib/counties.js |
+| README Status | Counties: 2 of 47 published (Siaya, Kisumu) | 2, 47, Siaya, Kisumu | yes | lib/counties.js |
 | README Status | Siaya values: 4,005 across 16 datasets, each with a review pack. 0 approved | 4005, 16, 0 | yes | lib/review-pack.js all() over lib/review-status.js; lib/review-status.js stateOf |
 | README Status | each with a review pack. 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty | empty | yes | data/review-packs.json entries; data/reviews.json |
 | README Status | Machine cross-checks (second reading of the cited page): 2,363 agree, 80 disagree (need a person to read the page image), 1,562 not checkable | 2363, 80, 1562 | yes | data/machine-checks.json checks[].result |
@@ -79,14 +79,14 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | README Status | Conflict register: 53 cases | 53 | yes | data/conflicts.json |
 | README Status | Ten-year series: FY 2013/14 to FY 2025/26 | 2013/14, 2025/26 | yes | data/history.json years |
 | README Status | Corrections: 17 corrections footnoted beside 26 values, 14 source-error records | 17, 26, 14 | yes | lib/correction-notes.js; lib/editorial.js sourceErrors() |
-| README Status | Kisumu (unpublished, data layer only): 331 values (291 ledger, 35 audit opinions, 5 population), 38 conflict cases, 0 approved | 331, 291, 35, 5, 38, 0 | yes | lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json |
-| README Status | Site: 110 pages | 110 | yes | .html files under dist/ |
+| README Status | Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked "Needs page check", 0 approved | 331, 291, 35, 5, 38, 0 | yes | lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json |
+| README Status | Site: 114 pages | 114 | yes | .html files under dist/ |
 | README Status | 91 downloadable datasets plus 1 link-only (IMF) | 91, 1, IMF | yes | lib/explore.js catalogue() files.csv |
 | README Status | 5 draft reports | 5 | yes | components/report/reports.json |
-| CLAUDE.md | lib/counties.js lists 47 counties; only Siaya is published | 47, Siaya | yes | lib/counties.js |
+| CLAUDE.md | lib/counties.js lists 47 counties; Siaya (/counties/siaya/ hub, old URLs kept) and Kisumu (from 28 Nov 2026) are published | 47, Siaya, Kisumu | yes | lib/counties.js |
 | CLAUDE.md | data/counties-cob.json (47 counties, FY 2021/22-2024/25 | 47, 2021/22, 2024/25 | yes | data/counties-cob.json years |
 | CLAUDE.md | Series must go back 10 years | 10 | yes | data/history.json years, data/cpi.json fiscal_year |
-| CLAUDE.md | Kisumu (042) phase 1 data is in, unpublished | 42, unpublished | yes | lib/county-registry.js |
+| CLAUDE.md | Kisumu (042) published | 42, published | yes | lib/county-registry.js |
 | kisumu-coverage.md (current status) | register holds 453 records (166 distinct files, 11 duplicates) | 453, 166, 11 | yes | docs/research/kisumu-2026-11-27/kisumu-sources.json |
 | kisumu-coverage.md (current status) | the generated section is current | current | yes | docs/research/kisumu-2026-11-27/kisumu-coverage.md after "## Current status (generated)" |
 
@@ -292,8 +292,8 @@ data/counties/kisumu/machine-checks.json: 331 checks; agree 273, disagree 5, not
 
 ## Inputs (SHA-256)
 
-- .claude/CLAUDE.md: be9cfd3bb9fb54354db55c3415d73e9f9956ffc5876aed66004952655945e0db
-- README.md: 2f6945a2fcd8933e73d61394fb9c640fe800ed116ed0ca1f5e1c1a2b5cc769e4
+- .claude/CLAUDE.md: b628e0616b09dfd3814c8747065ef7009ae34061b09347fbb989859dd0fec325
+- README.md: 1b7dcdcf5554d909bc584a62b46f6c6e59b83a807e4324c25e15882a97b838b0
 - components/report/reports.json: af38ebeb395f6af7d863f47bc9a08de0ada926f67d01cfb202052896243738a7
 - data/cbk.json: 6c47b668a4baa2f6202e3b44dfe969a40f83ca40744cf82cb1597a6b750dca86
 - data/conflicts.json: 5e7357a5c5a01a3c7f49b9ee086dd646fc96ba447193c9f54ae4f1931b4994d8
@@ -302,9 +302,9 @@ data/counties/kisumu/machine-checks.json: 331 checks; agree 273, disagree 5, not
 - data/counties/kisumu/audits.json: 14ae1130ef8241dcb7f4fce1a1b6e77d21b9b6efd7e19c6cd82582c857e64f2f
 - data/counties/kisumu/conflicts.json: b49f7faf3bc31234f6fd9f7bb1d6e828c8d548533659ebf74d6ce1cb4bd5502c
 - data/counties/kisumu/fiscal-ledger.json: 7e44267ad9ee8cdd38c878e0ff6d22ea664652ffda39be0c3a1292dd4c2fe590
-- data/counties/kisumu/machine-checks.json: ab36bdc63ad60aaa5568db1304434922755352db26b15a610f2417bf618f9256
+- data/counties/kisumu/machine-checks.json: 914fd5c57a84a3db86980d73327d1c656b1878b4183c4692bc1bc6d0700756df
 - data/counties/kisumu/population.json: 45a0ba3bb5e7187a1f2314cc7e869e2c335f3fa183f45a5563dc6b4f8d4e59d6
-- data/counties/kisumu/review-packs.json: c35f02677bff55ee9c8b5877efca6a50554e3685276a325210fedcd4802b744e
+- data/counties/kisumu/review-packs.json: 098d7affbf8ba0b1ef43d946e646826c9c59ee607d81ef63431fe031e0a92357
 - data/county.json: d362d6fb4804fbe921db3ea484f4690804bb78b5b798f9bd37a13f1c0706f5b5
 - data/cpi.json: 3c91c889abaecd66ab7ad17e96ad2aa81a31f943a585484e6b257e361c4924e1
 - data/derived.json: 885896b669df6867c71b21b5957e67428c9d2956fb5c1ddbbd484b135343b513

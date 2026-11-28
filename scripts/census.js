@@ -24,6 +24,8 @@ const DIST = argDist > 0 ? path.resolve(CWD, process.argv[argDist + 1]) : null;
 const rs = require('../lib/review-status');
 const rp = require('../lib/review-pack');
 const reg = require('../lib/county-registry');
+// Counties held in the registry outside Siaya's legacy files (published or not).
+const REG_COUNTIES = reg.slugs().filter((x) => !reg.legacy(x));
 const cr = require('../lib/county-review');
 const { COUNTIES, bySlug } = require('../lib/counties');
 
@@ -253,10 +255,10 @@ function summarise(rows) {
 const packed = {}; rp.all().forEach((e) => { packed[`${e.dataset}|${e.id}`] = e; });
 const ROWS = {};
 rs.DATASET_IDS.forEach((ds) => { ROWS[ds] = rs.observations(ds).map((i) => siayaRow(ds, i, packed[`${ds}|${i.id}`])); });
-reg.NOT_YET_ON_PAGES.forEach((slug) => cr.entries(slug).forEach((e) => { (ROWS[e.dataset] = ROWS[e.dataset] || []).push(countyRow(slug, e)); }));
+REG_COUNTIES.forEach((slug) => cr.entries(slug).forEach((e) => { (ROWS[e.dataset] = ROWS[e.dataset] || []).push(countyRow(slug, e)); }));
 const DS_FILE = {};
 rs.DATASET_IDS.forEach((ds) => { DS_FILE[ds] = `data/${ds}.json`; });
-reg.NOT_YET_ON_PAGES.forEach((slug) => ['ledger', 'audits', 'population'].filter((k) => reg.has(slug, k)).forEach((k) => { DS_FILE[cr.datasetName(slug, k)] = reg.file(slug, k); }));
+REG_COUNTIES.forEach((slug) => ['ledger', 'audits', 'population'].filter((k) => reg.has(slug, k)).forEach((k) => { DS_FILE[cr.datasetName(slug, k)] = reg.file(slug, k); }));
 
 const FILES = [
   ...fs.readdirSync(path.join(ROOT, 'data')).filter((f) => f.endsWith('.json')).map((f) => `data/${f}`),
@@ -315,10 +317,10 @@ function disagreements(file, rowsOf) {
   }).sort((a, b) => byStr(`${a.dataset}|${a.id}`, `${b.dataset}|${b.id}`));
   return { file, meta_counts: M.meta && M.meta.counts ? M.meta.counts : null, actual_counts: t, checks: M.checks.length, disagreements: list };
 }
-const kEntries = {}; reg.NOT_YET_ON_PAGES.forEach((slug) => cr.entries(slug).forEach((e) => { kEntries[`${e.dataset}|${e.id}`] = e; }));
+const kEntries = {}; REG_COUNTIES.forEach((slug) => cr.entries(slug).forEach((e) => { kEntries[`${e.dataset}|${e.id}`] = e; }));
 const machine = {
   siaya: disagreements('data/machine-checks.json', (d, id) => packed[`${d}|${id}`]),
-  ...Object.fromEntries(reg.NOT_YET_ON_PAGES.map((slug) => [slug, disagreements(reg.COUNTY_DATA[slug].review.machine_checks, (d, id) => kEntries[`${d}|${id}`])])),
+  ...Object.fromEntries(REG_COUNTIES.map((slug) => [slug, disagreements(reg.COUNTY_DATA[slug].review.machine_checks, (d, id) => kEntries[`${d}|${id}`])])),
 };
 
 // ---------------------------------------------------------------- claims
@@ -338,7 +340,7 @@ const ledgerStatus = {}; ledger.discrepancies.forEach((d) => inc(ledgerStatus, d
 const notes = cn.correctionNotes();
 const cat = explore.catalogue();
 const kis = {};
-reg.NOT_YET_ON_PAGES.forEach((slug) => { kis[slug] = { counts: cr.counts(slug), by_dataset: {} }; cr.entries(slug).forEach((e) => inc(kis[slug].by_dataset, e.dataset)); });
+REG_COUNTIES.forEach((slug) => { kis[slug] = { counts: cr.counts(slug), by_dataset: {} }; cr.entries(slug).forEach((e) => inc(kis[slug].by_dataset, e.dataset)); });
 const kc = reg.has('kisumu', 'conflicts') ? reg.load('kisumu', 'conflicts').conflicts.length : null;
 const y1920 = H.years.find((y) => y.fy === '2019/20') || {};
 const y1920vals = Object.entries(y1920).filter(([k, v]) => typeof v === 'number').map(([k]) => k).sort();
@@ -379,14 +381,14 @@ const claims = [
   C('README Status', 'conflict register', STATUS, /Conflict register: ([\d,]+) cases/, [conflicts.conflicts.length], 'data/conflicts.json'),
   C('README Status', 'ten-year series', STATUS, /Ten-year series: FY (\d{4}\/\d{2}) to FY (\d{4}\/\d{2})/, [H.years[0].fy, H.years[H.years.length - 1].fy], 'data/history.json years'),
   C('README Status', 'corrections', STATUS, /Corrections: ([\d,]+) corrections footnoted beside ([\d,]+) values, ([\d,]+) source-error records/, [new Set(notes.map((n) => n.id)).size, new Set(notes.map((n) => n.ref)).size, ed.sourceErrors().length], 'lib/correction-notes.js; lib/editorial.js sourceErrors()'),
-  C('README Status', 'Kisumu values', STATUS, /Kisumu \(unpublished, data layer only\): ([\d,]+) values \(([\d,]+) ledger, ([\d,]+) audit opinions, ([\d,]+) population\), ([\d,]+) conflict cases, ([\d,]+) approved/, kis.kisumu ? [kis.kisumu.counts.total, kis.kisumu.by_dataset['kisumu-fiscal-ledger'] || 0, kis.kisumu.by_dataset['kisumu-audits'] || 0, kis.kisumu.by_dataset['kisumu-population'] || 0, kc, kis.kisumu.counts.approved] : [], 'lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json'),
+  C('README Status', 'Kisumu values', STATUS, /Kisumu \(published [^)]*\): ([\d,]+) values \(([\d,]+) ledger, ([\d,]+) audit opinions, ([\d,]+) population\), [\d,]+ ledger discrepancy cases, ([\d,]+) explained conflict cases, [^,]*, ([\d,]+) approved/, kis.kisumu ? [kis.kisumu.counts.total, kis.kisumu.by_dataset['kisumu-fiscal-ledger'] || 0, kis.kisumu.by_dataset['kisumu-audits'] || 0, kis.kisumu.by_dataset['kisumu-population'] || 0, kc, kis.kisumu.counts.approved] : [], 'lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json'),
   C('README Status', 'site pages', STATUS, /Site: ([\d,]+) pages/, [distPages === null ? 'not counted (run with --dist dist)' : distPages], '.html files under dist/'),
   C('README Status', 'datasets', STATUS, /([\d,]+) downloadable datasets plus ([\d,]+) link-only \(([^)]+)\)/, [csvN, linkOnly.length, linkOnly.map((d) => (/^imf/.test(d.id) ? 'IMF' : d.id)).join(', ')], 'lib/explore.js catalogue() files.csv'),
   C('README Status', 'reports', STATUS, /(\d+) draft reports/, [reportsReg.reports.length], 'components/report/reports.json'),
-  C('CLAUDE.md', 'counties', CLAUDE, /lib\/counties\.js lists (\d+) counties; only (\w+) is published/, [COUNTIES.length, published.length === 1 ? published[0].name : published.map((c) => c.name).join(', ')], 'lib/counties.js'),
+  C('CLAUDE.md', 'counties', CLAUDE, /lib\/counties\.js lists (\d+) counties; (\w+) \([^)]*\) and (\w+) \(from [^)]*\) are published/, [COUNTIES.length, ...published.map((c) => c.name)], 'lib/counties.js'),
   C('CLAUDE.md', 'counties-cob', CLAUDE, /data\/counties-cob\.json \((\d+) counties, FY (\d{4}\/\d{2})-(\d{4}\/\d{2})/, [[...new Set(cob.years.map((y) => y.counties.length))].join('/'), cobFys[0], `${cobFys[cobFys.length - 1]}`], 'data/counties-cob.json years'),
   C('CLAUDE.md', 'ten-year series', CLAUDE, /Series must go back (\d+) years/, [Math.min(H.years.length, Object.keys(cpi.fiscal_year).length) >= 10 ? 10 : Math.min(H.years.length, Object.keys(cpi.fiscal_year).length)], 'data/history.json years, data/cpi.json fiscal_year'),
-  C('CLAUDE.md', 'Kisumu', CLAUDE, /Kisumu \((\d{3})\) phase 1 data is in, (unpublished)/, [String(reg.COUNTY_DATA.kisumu.code).padStart(3, '0'), reg.NOT_YET_ON_PAGES.includes('kisumu') ? 'unpublished' : 'published'], 'lib/county-registry.js'),
+  C('CLAUDE.md', 'Kisumu', CLAUDE, /Kisumu \((\d{3})\) (published|unpublished)/, [String(reg.COUNTY_DATA.kisumu.code).padStart(3, '0'), reg.NOT_YET_ON_PAGES.includes('kisumu') ? 'unpublished' : 'published'], 'lib/county-registry.js'),
 ];
 
 // ---------------------------------------------------------------- source reconciliation
@@ -559,7 +561,7 @@ md.push('# Source and data census (WO01)', '', 'Generated by `node scripts/censu
 md.push('Rules: "provisional" is every value with no review record in force (values the data file itself marks as disputed are included and also counted under "disputed"). Source tier: the observation\'s own field, else the cited source\'s recorded tier, else a rule on publisher, title and address (`TIER_RULES` in `scripts/census.js`; counted under "inferred" in the basis column). Missing metadata counts a value once per field; "pub. date" is missing when no cited source records a date, and "not stated" (the document prints none) is shown separately. Nulls count values that are null (not empty lists).', '');
 md.push('## 1. Totals', '');
 md.push(row(['Scope', 'Values', 'Provisional', 'Approved', 'Rejected', 'Disputed', 'Missing any metadata', 'Distinct source hashes', 'Nulls with reason', 'Nulls without reason']), row(Array(10).fill('---')));
-[['Siaya review scope (16 datasets)', totals.siaya_review_scope], ['Kisumu (unpublished)', totals.kisumu], ['All itemised values', totals.all_itemised]].forEach(([n, t]) => md.push(row([n, t.observations, t.by_state.provisional, t.by_state.approved, t.by_state.rejected, t.by_state.disputed, t.missing_any, t.distinct_source_hashes, t.nulls_with_reason, t.nulls_without_reason])));
+[['Siaya review scope (16 datasets)', totals.siaya_review_scope], [`Kisumu (${reg.state('kisumu')})`, totals.kisumu], ['All itemised values', totals.all_itemised]].forEach(([n, t]) => md.push(row([n, t.observations, t.by_state.provisional, t.by_state.approved, t.by_state.rejected, t.by_state.disputed, t.missing_any, t.distinct_source_hashes, t.nulls_with_reason, t.nulls_without_reason])));
 md.push('', '## 2. Datasets', '');
 md.push(row(['File', 'Dataset', 'Type', 'First period', 'Last period', 'Values', ...TIERS, 'Tier basis', 'Prov.', 'Appr.', 'Rej.', 'Disp.', 'No source', 'Source unresolved', 'No pub. date', 'Pub. date "not stated"', 'No period', 'No unit', 'No confidence', 'No page', 'Page: derived from', 'Page: n/a (gap)', 'Pub. date null with reason', 'Missing any', 'Source ids', 'Source hashes', 'Nulls w/ reason', 'Nulls w/o reason']), row(Array(40).fill('---')));
 datasets.filter((d) => d.dataset).forEach((d) => md.push(row([d.file, d.dataset, d.type.replace(/^observations /, ''), d.first_period, d.last_period, d.observations, ...TIERS.map((t) => d.by_tier[t]), Object.entries(d.tier_basis).sort().map(([k, v]) => `${k} ${v}`).join('; '), d.by_state.provisional, d.by_state.approved, d.by_state.rejected, d.by_state.disputed, d.missing.source, d.missing.source_unresolved, d.missing.publication_date, d.missing.publication_date_not_stated, d.missing.period, d.missing.unit, d.missing.confidence, d.missing.page, d.page_by_derived_from, d.page_not_applicable, d.publication_date_null_with_reason, d.missing_any, d.distinct_source_ids, d.distinct_source_hashes, d.nulls_with_reason, d.nulls_without_reason])));
