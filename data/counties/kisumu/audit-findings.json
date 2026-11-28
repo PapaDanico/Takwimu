@@ -3517,6 +3517,498 @@
     "quoted": true
    },
    "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-01",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 46,
+   "paragraph": "Basis for Qualified Opinion 1",
+   "section": "financial_statements",
+   "title": "Reimbursements to members of the Assembly recorded as acquisition of assets",
+   "category": "financial_reporting",
+   "amounts": [
+    {
+     "value": 115066771,
+     "unit": "KSh",
+     "label": "acquisition of assets"
+    },
+    {
+     "value": 106431771,
+     "unit": "KSh",
+     "label": "reimbursements to members recorded as acquisition of assets (misstatement)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Misclassified Payments on Reimbursement to Members of County Assembly",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-02",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 46,
+   "paragraph": "Basis for Qualified Opinion 2",
+   "section": "financial_statements",
+   "title": "Car loan and mortgage deductions and contractor retention in pending payables not supported",
+   "category": "pending_bills",
+   "amounts": [
+    {
+     "value": 52689784,
+     "unit": "KSh",
+     "label": "other pending payables"
+    },
+    {
+     "value": 30760521,
+     "unit": "KSh",
+     "label": "unremitted car loan and mortgage deductions (from 2016/17)"
+    },
+    {
+     "value": 21929263,
+     "unit": "KSh",
+     "label": "retention to contractors"
+    },
+    {
+     "value": 18729354,
+     "unit": "KSh",
+     "label": "retention for the assembly building, without certificates or contracts"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unconfirmed Other Pending Payables",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 47. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-03",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 47,
+   "paragraph": "Basis for Qualified Opinion 3",
+   "section": "financial_statements",
+   "title": "Training payments without participant lists, programmes or attendance registers",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 394844450,
+     "unit": "KSh",
+     "label": "use of goods and services"
+    },
+    {
+     "value": 24736556,
+     "unit": "KSh",
+     "label": "training expenses"
+    },
+    {
+     "value": 9432158,
+     "unit": "KSh",
+     "label": "paid to a public training institution"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unsupported Training Expenses",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-04",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 47,
+   "paragraph": "Emphasis of Matter",
+   "section": "emphasis_of_matter",
+   "title": "Receipts fell short of the final budget by 27%",
+   "category": "budget_control",
+   "amounts": [
+    {
+     "value": 1140311910,
+     "unit": "KSh",
+     "label": "final receipts budget"
+    },
+    {
+     "value": 836065890,
+     "unit": "KSh",
+     "label": "actual receipts"
+    },
+    {
+     "value": 304246020,
+     "unit": "KSh",
+     "label": "under-funding (27% of the budget)"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Budgetary Control and Performance",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-05",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 47,
+   "paragraph": "Other Matter",
+   "section": "other_matter",
+   "title": "Prior-year audit matters not resolved",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": true,
+    "basis": "Other Matter paragraph: issues raised in the previous year's report were not resolved as at 30 June 2024."
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Unresolved Prior Year Matters",
+    "quoted": true
+   },
+   "note": "A general statement; the report does not list the paragraphs. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-06",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 48,
+   "paragraph": "Basis for Conclusion (lawfulness) 1",
+   "section": "lawfulness",
+   "title": "288 employees with net pay below one third of basic salary",
+   "category": "payroll",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Non-Compliance with the One Third of Basic Salary Rule",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-07",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 48,
+   "paragraph": "Basis for Conclusion (lawfulness) 2",
+   "section": "lawfulness",
+   "title": "Salaries paid through a manual payroll outside the integrated payroll system",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 8069346,
+     "unit": "KSh",
+     "label": "salaries paid through the manual payroll"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Payment of Salaries Outside the IPPD System",
+    "quoted": true
+   },
+   "note": "The paragraph continues on PDF page 49. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-08",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 49,
+   "paragraph": "Basis for Conclusion (lawfulness) 3",
+   "section": "lawfulness",
+   "title": "Statutory deductions remitted after the deadlines",
+   "category": "payroll",
+   "amounts": [
+    {
+     "value": 66288787,
+     "unit": "KSh",
+     "label": "statutory deductions remitted late"
+    },
+    {
+     "value": 36845601,
+     "unit": "KSh",
+     "label": "income tax (PAYE)"
+    },
+    {
+     "value": 7609037,
+     "unit": "KSh",
+     "label": "pension deductions"
+    },
+    {
+     "value": 4818447,
+     "unit": "KSh",
+     "label": "loan recoveries"
+    },
+    {
+     "value": 17015702,
+     "unit": "KSh",
+     "label": "car loan and mortgage deductions"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Delays in Remittance of Statutory Deductions",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-09",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 49,
+   "paragraph": "Basis for Conclusion (lawfulness) 4",
+   "section": "lawfulness",
+   "title": "83 of 95 employees (87%) from one community, above the one-third limit in the cohesion law",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Non-Compliance with Law on Ethnic Composition",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-10",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 49,
+   "paragraph": "Basis for Conclusion (lawfulness) 5",
+   "section": "lawfulness",
+   "title": "Assembly chambers about 48% complete after the contract period, site abandoned",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 418356349,
+     "unit": "KSh",
+     "label": "contract sum"
+    },
+    {
+     "value": 187293539,
+     "unit": "KSh",
+     "label": "paid to the contractor (four certificates)"
+    },
+    {
+     "value": 72340498,
+     "unit": "KSh",
+     "label": "certificate 1"
+    },
+    {
+     "value": 40150737,
+     "unit": "KSh",
+     "label": "certificate 2"
+    },
+    {
+     "value": 24363147,
+     "unit": "KSh",
+     "label": "certificate 3"
+    },
+    {
+     "value": 50439158,
+     "unit": "KSh",
+     "label": "certificate 4"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Delayed Completion of the Proposed Ultra-Modern Assembly Chambers Office and Associated Works",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-11",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 50,
+   "paragraph": "Basis for Conclusion (lawfulness) 6",
+   "section": "lawfulness",
+   "title": "Speaker's residence 95% paid, contract expired and site abandoned",
+   "category": "projects",
+   "amounts": [
+    {
+     "value": 34098539,
+     "unit": "KSh",
+     "label": "contract sum"
+    },
+    {
+     "value": 31999583,
+     "unit": "KSh",
+     "label": "paid to the contractor"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Delayed Construction of Speaker's Residence",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-12",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 50,
+   "paragraph": "Basis for Conclusion (lawfulness) 7",
+   "section": "lawfulness",
+   "title": "Foreign trips longer than allowed or during the suspension of non-essential travel",
+   "category": "unsupported_expenditure",
+   "amounts": [
+    {
+     "value": 33764928,
+     "unit": "KSh",
+     "label": "foreign travel and subsistence"
+    },
+    {
+     "value": 1397400,
+     "unit": "KSh",
+     "label": "nine-day trip by three members (limit seven days)"
+    },
+    {
+     "value": 3529639,
+     "unit": "KSh",
+     "label": "committee study tour during the travel suspension"
+    },
+    {
+     "value": 4004917,
+     "unit": "KSh",
+     "label": "committee study tour during the travel suspension"
+    },
+    {
+     "value": 1010655,
+     "unit": "KSh",
+     "label": "familiarisation tour by three members during the travel suspension"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Foreign Travel and Subsistence",
+    "quoted": true
+   },
+   "note": "Sub-items 7.1 to 7.3 are kept in this record. The paragraph continues on PDF page 51. Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-13",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 51,
+   "paragraph": "Basis for Conclusion (internal controls) 1",
+   "section": "internal_controls",
+   "title": "50 tablets bought in 2017/18 still in the asset register but not traced",
+   "category": "assets",
+   "amounts": [
+    {
+     "value": 7975000,
+     "unit": "KSh",
+     "label": "value of 50 tablets"
+    }
+   ],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Failure to Maintain an Updated the Assets Register",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
+  },
+  {
+   "id": "audit-kisumu-assembly-2023-24-14",
+   "entity": "county_assembly",
+   "fy": "2023/24",
+   "doc_id": "audit-kisumu-assembly-2023-24",
+   "page": 51,
+   "paragraph": "Basis for Conclusion (internal controls) 2",
+   "section": "internal_controls",
+   "title": "Audit committee met three times, below the quarterly minimum",
+   "category": "governance",
+   "amounts": [],
+   "unresolved_prior_year": {
+    "flag": false,
+    "basis": "Not stated in the report"
+   },
+   "listed_unresolved_next_year": false,
+   "same_item": null,
+   "report_heading": {
+    "text": "Effectiveness of the Audit Committee",
+    "quoted": true
+   },
+   "note": "Read from the report text layer (Parliament library OCR); page is the PDF page. Heading as printed, with OCR letter errors corrected."
   }
  ],
  "same_items": [],
@@ -3576,6 +4068,32 @@
    "assets": {
     "2022/23": 2
    }
+  },
+  "county_assembly": {
+   "financial_reporting": {
+    "2023/24": 1
+   },
+   "pending_bills": {
+    "2023/24": 1
+   },
+   "unsupported_expenditure": {
+    "2023/24": 2
+   },
+   "budget_control": {
+    "2023/24": 1
+   },
+   "governance": {
+    "2023/24": 3
+   },
+   "payroll": {
+    "2023/24": 3
+   },
+   "projects": {
+    "2023/24": 2
+   },
+   "assets": {
+    "2023/24": 1
+   }
   }
  },
  "gaps": [
@@ -3625,13 +4143,6 @@
    "entity": "county_assembly",
    "fy": "2022/23",
    "doc_id": "audit-kisumu-assembly-2022-23",
-   "status": "not yet coded",
-   "reason": "Report held (hash in audits.json); findings not yet coded."
-  },
-  {
-   "entity": "county_assembly",
-   "fy": "2023/24",
-   "doc_id": "audit-kisumu-assembly-2023-24",
    "status": "not yet coded",
    "reason": "Report held (hash in audits.json); findings not yet coded."
   },
