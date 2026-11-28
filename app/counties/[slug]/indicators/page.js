@@ -34,6 +34,7 @@ export default function CountyIndicators({ params }) {
           <li>Each value is shown as printed, with its kind. A survey estimate has a sampling error and a survey population; an official statistic counts something recorded; a publisher claim is what an organisation says about itself and has not been checked independently; a proposed target is a plan, not a result.</li>
           <li>Each value carries its denominator: persons, households, connections or land area are not interchangeable, and figures with different denominators are not compared here.</li>
           <li>A figure for Lake Victoria or a region is not a county figure; where a value covers more than {m.name}, the area is named under it.</li>
+          <li>&ldquo;Needs page check&rdquo; marks a value read from the PDF text layer or a web page and not yet compared with the page image. &ldquo;Source error flagged&rdquo; marks a value kept exactly as printed although the document itself appears wrong (the note says why); such values are never charted.</li>
           <li>Where publishers differ, both values are shown side by side with a possible explanation; none is averaged or preferred.</li>
         </ul>
       </section>

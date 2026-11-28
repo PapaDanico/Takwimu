@@ -33,7 +33,10 @@ export default function IndicatorTables({ domains, conflictBase }) {
                 <th scope="row">{r.label}{r.area && !/County$/.test(r.area) ? <><br /><small>{r.area}</small></> : null}</th>
                 <td>
                   <Value r={r} />{r.unit && r.unit !== '%' ? <small> {r.unit}</small> : null}
-                  <ValueFlags label={r.state_label} machine={r.machine} />
+                  <ValueFlags label={r.state_label} machine={r.machine} needsCheck={!/checked against the page image/.test(r.read_method || '')} />
+                  {r.kind === 'publisher claim' ? <> <span className="tag warn" data-kind="claim">Claim, not verified</span></> : null}
+                  {r.kind === 'proposed target' || r.kind === 'baseline in a target table' ? <> <span className="tag warn" data-kind="target">{r.kind === 'proposed target' ? 'Target, not an actual' : 'Baseline in a target table'}</span></> : null}
+                  {r.confidence === 1 ? <> <span className="tag warn" data-source-error-flag={r.id}>Source error flagged</span></> : null}
                   {r.conflicts.length ? <> <a className="tag warn" href={`${conflictBase}#${r.conflicts[0]}`} data-disputed>Sources differ: both shown</a></> : null}
                   {r.comparator ? <><br /><small>{r.comparator.label}: {r.comparator.value_as_printed ?? r.comparator.value}{r.unit === '%' ? '%' : ''}</small></> : null}
                   {r.standard_error != null ? <><br /><small>Standard error {r.standard_error}</small></> : null}
@@ -41,7 +44,7 @@ export default function IndicatorTables({ domains, conflictBase }) {
                 <td>{r.period}</td>
                 <td><small>{KIND_NOTE[r.kind] || r.kind}{r.denominator ? `. ${r.denominator}` : ''}{r.provisional_in_source ? '. Marked provisional by the publisher' : ''}</small></td>
                 <td>
-                  <CountyCite title={r.src_title} url={r.src_url} published={r.published} period={r.period} unit={r.unit || 'as printed'} confidence={r.confidence} pdf={r.pdf_page} printed={r.printed_page} table={[r.table, r.row && `row ${r.row}`, r.column && `column ${r.column}`].filter(Boolean).join(', ')} />
+                  <CountyCite title={r.src_title} url={r.src_url} published={r.published} period={r.period} unit={r.unit || 'as printed'} confidence={r.confidence} pdf={r.pdf_page} printed={r.printed_page} table={[r.table, r.row && `row ${r.row}`, r.column && `column ${r.column}`].filter(Boolean).join(', ')} read={r.read_method} />
                   {r.note ? <><br /><small>{r.note}</small></> : null}
                 </td>
               </tr>

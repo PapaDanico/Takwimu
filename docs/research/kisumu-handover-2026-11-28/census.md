@@ -309,10 +309,10 @@ data/counties/kisumu/machine-checks.json: 507 checks; agree 376, disagree 5, not
 - data/counties/kisumu/audits.json: 14ae1130ef8241dcb7f4fce1a1b6e77d21b9b6efd7e19c6cd82582c857e64f2f
 - data/counties/kisumu/conflicts.json: b49f7faf3bc31234f6fd9f7bb1d6e828c8d548533659ebf74d6ce1cb4bd5502c
 - data/counties/kisumu/fiscal-ledger.json: 7e44267ad9ee8cdd38c878e0ff6d22ea664652ffda39be0c3a1292dd4c2fe590
-- data/counties/kisumu/indicators.json: 2608141d1b027622ad86fe793fac994c105308c2617b47d4c7773aedf58db90c
+- data/counties/kisumu/indicators.json: d03bdbc3745065953cfb456a5af96fdbd23778680ae0b767ca3b69b6311dfd89
 - data/counties/kisumu/machine-checks.json: a6c72f32f120b9173eae9917b9ef177cdb4c73029f7c29f35f87f65a2186dfea
 - data/counties/kisumu/population.json: 45a0ba3bb5e7187a1f2314cc7e869e2c335f3fa183f45a5563dc6b4f8d4e59d6
-- data/counties/kisumu/review-packs.json: ea7a98653bad342ee6f1f68bd6742ab207dc99b8667e7fbc32520076b0111a37
+- data/counties/kisumu/review-packs.json: 3b606767b5d487471045bac1831a5fae121b4c97b91bb47fc816decf64f2411a
 - data/county.json: d362d6fb4804fbe921db3ea484f4690804bb78b5b798f9bd37a13f1c0706f5b5
 - data/cpi.json: 3c91c889abaecd66ab7ad17e96ad2aa81a31f943a585484e6b257e361c4924e1
 - data/derived.json: 885896b669df6867c71b21b5957e67428c9d2956fb5c1ddbbd484b135343b513
