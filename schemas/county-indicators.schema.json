@@ -63,7 +63,7 @@
           "indicator": { "type": "string", "pattern": "^[a-z0-9_]+$" },
           "label": { "type": "string" },
           "area": { "type": "string" },
-          "geography": { "type": "string", "enum": ["county", "national", "lake", "utility service area", "low-income areas of utility service areas in the county"] },
+          "geography": { "type": "string", "enum": ["county", "sub-county", "county breakdown row (ward, category or group as printed)", "national", "lake", "utility service area", "low-income areas of utility service areas in the county"] },
           "county_code": { "type": ["integer", "null"] },
           "value": { "type": ["number", "null"] },
           "value_as_printed": { "type": "string" },
@@ -94,6 +94,8 @@
             "properties": { "label": { "type": "string" }, "value": { "type": ["number", "null"] }, "value_as_printed": { "type": "string" } }
           },
           "duplicate_of": { "type": ["string", "null"] },
+          "sector": { "type": "string", "enum": ["health", "education", "agriculture/fisheries", "water/environment", "social", "governance", "justice/ICT", "population", "economy", "transport"] },
+          "sub_county": { "type": ["string", "null"] },
           "note": { "type": ["string", "null"] }
         }
       }
