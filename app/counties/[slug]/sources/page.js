@@ -13,8 +13,8 @@ export function generateMetadata({ params }) {
   return pageMeta(`/counties/${params.slug}/sources/`, { title: `${m.name}: sources`, description: `Every document cited on the ${m.name} County pages: publisher, publication date, period, link, licence and SHA-256 hash where held.` });
 }
 
-const USED = { ledger: 'Fiscal reconciliation', audits: 'Audit opinions', people: 'Population' };
-const HREF = { ledger: 'ledger', audits: 'audits', people: 'people' };
+const USED = { ledger: 'Fiscal reconciliation', audits: 'Audit opinions', people: 'Population', indicators: 'Indicators' };
+const HREF = { ledger: 'ledger', audits: 'audits', people: 'people', indicators: 'indicators' };
 
 export default function CountySources({ params }) {
   const { slug } = params;

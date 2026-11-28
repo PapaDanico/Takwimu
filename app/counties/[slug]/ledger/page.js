@@ -5,6 +5,7 @@ import TableWrap from '../../../../components/TableWrap';
 import LedgerView from '../../../../components/LedgerView';
 import { ledgerTables } from '../../../../components/LedgerTables';
 import CountyProvisional from '../../../../components/county/CountyProvisional';
+import CountyTrends from '../../../../components/county/CountyTrends';
 import { paramsFor } from '../../../../components/county/params';
 import { fmtNum } from '../../../../lib/format';
 import * as cp from '../../../../lib/county-pages';
@@ -47,8 +48,10 @@ export default function CountyLedger({ params }) {
       </section>
 
       <nav aria-label="Sections on this page"><ul className="toc">
-        <li><a href="#led-comp">Completeness</a></li><li><a href="#led-side">Every source side by side</a></li><li><a href="#conflicts">Explained conflicts</a></li><li><a href="#led-sum">Open cases</a></li><li><a href="#led-cav">Not used</a></li>
+        <li><a href="#led-trend">Ten-year trends</a></li><li><a href="#led-comp">Completeness</a></li><li><a href="#led-side">Every source side by side</a></li><li><a href="#conflicts">Explained conflicts</a></li><li><a href="#led-sum">Open cases</a></li><li><a href="#led-cav">Not used</a></li>
       </ul></nav>
+
+      <CountyTrends l={l} name={m.name} />
 
       <section className="card" aria-labelledby="led-comp">
         <h2 id="led-comp">Which values exist: completeness by measure and year</h2>
