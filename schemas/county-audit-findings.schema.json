@@ -1,0 +1,315 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "County coded Auditor-General findings (held kind \"findings\")",
+  "description": "One record per numbered paragraph of an Auditor-General report, for a county whose opinions and documents live in its audits file. Same finding structure as schemas/siaya-audits.schema.json. Offices and entities only; amounts as printed; page is the PDF page. Provisional until reviewed.",
+  "type": "object",
+  "required": [
+    "meta",
+    "findings",
+    "same_items",
+    "recurrence_by_category",
+    "gaps"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "title",
+        "county",
+        "county_code",
+        "scope",
+        "rule",
+        "extracted",
+        "status",
+        "held"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "county": {
+          "type": "string"
+        },
+        "county_code": {
+          "type": "integer"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "rule": {
+          "type": "string"
+        },
+        "extracted": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Provisional: awaiting editorial review"
+          ]
+        },
+        "held": {
+          "type": "boolean"
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "entity",
+          "fy",
+          "doc_id",
+          "page",
+          "paragraph",
+          "section",
+          "title",
+          "category",
+          "amounts",
+          "unresolved_prior_year",
+          "listed_unresolved_next_year",
+          "same_item",
+          "note"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^audit-[a-z0-9-]+-[0-9]{2}$"
+          },
+          "entity": {
+            "$ref": "#/$defs/entity"
+          },
+          "fy": {
+            "$ref": "#/$defs/fy"
+          },
+          "doc_id": {
+            "type": "string"
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "paragraph": {
+            "type": "string",
+            "minLength": 1
+          },
+          "section": {
+            "type": "string",
+            "enum": [
+              "financial_statements",
+              "basis_for_disclaimer",
+              "emphasis_of_matter",
+              "other_matter",
+              "lawfulness",
+              "internal_controls",
+              "financial_operations"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 5
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "pending_bills",
+              "revenue",
+              "assets",
+              "procurement",
+              "payroll",
+              "budget_control",
+              "ict",
+              "projects",
+              "unsupported_expenditure",
+              "financial_reporting",
+              "cash_and_bank",
+              "imprest",
+              "transfers",
+              "governance",
+              "other"
+            ]
+          },
+          "amounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/amount"
+            }
+          },
+          "unresolved_prior_year": {
+            "type": "object",
+            "required": [
+              "flag",
+              "basis"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "flag": {
+                "type": "boolean"
+              },
+              "basis": {
+                "type": "string"
+              }
+            }
+          },
+          "listed_unresolved_next_year": {
+            "type": "boolean"
+          },
+          "same_item": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "report_heading": {
+            "type": "object",
+            "required": [
+              "text",
+              "quoted"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "quoted": {
+                "type": "boolean",
+                "enum": [
+                  true
+                ]
+              }
+            }
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "same_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "entity",
+          "basis",
+          "finding_ids",
+          "years"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "entity": {
+            "$ref": "#/$defs/entity"
+          },
+          "finding_ids": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "years": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "$ref": "#/$defs/fy"
+            }
+          },
+          "key": {
+            "type": "string"
+          },
+          "basis": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "recurrence_by_category": {
+      "type": "object"
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "entity",
+          "fy",
+          "status",
+          "reason"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "entity": {
+            "$ref": "#/$defs/entity"
+          },
+          "fy": {
+            "$ref": "#/$defs/fy"
+          },
+          "doc_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "not yet coded",
+              "not held"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "entity": {
+      "type": "string",
+      "enum": [
+        "county_executive",
+        "county_assembly",
+        "county_government",
+        "county_revenue_fund",
+        "receiver_of_revenue",
+        "water_company"
+      ],
+      "description": "Separately audited entities are never merged into the county: county_revenue_fund (County Revenue Fund statements), receiver_of_revenue (Receiver of Revenue statements of own-source revenue), water_company (a county-owned water and sanitation company)."
+    },
+    "fy": {
+      "type": "string",
+      "pattern": "^20[0-9]{2}/[0-9]{2}$"
+    },
+    "amount": {
+      "type": "object",
+      "required": [
+        "value",
+        "unit",
+        "label"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "KSh"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 2
+        }
+      }
+    }
+  }
+}

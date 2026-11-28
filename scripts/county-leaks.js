@@ -47,6 +47,14 @@ function sentinelsFor(slug, kinds, only = null) {
       const ds = cr.datasetName(slug, 'population');
       d.points.forEach((p) => rec(ds, p.id, p));
       if (!only) add(d.meta.title, 'population title');
+    } else if (kind === 'findings') {
+      const ds = cr.datasetName(slug, 'findings');
+      d.findings.forEach((f) => rec(ds, f.id, f));
+      if (!only) add(d.meta.title, 'findings title');
+    } else if (kind === 'departments') {
+      const ds = cr.datasetName(slug, 'departments');
+      d.records.forEach((r) => rec(ds, r.id, r));
+      if (!only) add(d.meta.title, 'departments title');
     } else if (kind === 'conflicts') {
       if (!only) d.conflicts.forEach((x) => add(x.id, `conflict case ${x.id}`));
     } else if (kind === 'indicators' || kind === 'abstract') {
