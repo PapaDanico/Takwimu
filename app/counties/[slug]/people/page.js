@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import PageToc from '../../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
+import CountyNav from '../../../../components/county/CountyNav';
 import TableWrap from '../../../../components/TableWrap';
 import CountyProvisional from '../../../../components/county/CountyProvisional';
 import CountyCite, { ValueFlags } from '../../../../components/county/Cite';
@@ -23,7 +24,7 @@ export default function CountyPeople({ params }) {
   const { slug } = params;
   const m = cp.meta(slug);
   const p = cp.people(slug);
-  return (
+  return (<>
     <main id="main" className="wrap page">
       <PageHead county={{ slug, name: m.name }} eyebrow="People" title="Population"
         sub={`How many people live in ${m.name} County: the 2019 census count and the Kenya National Bureau of Statistics projections for the years after it. A projection is never shown as a count.`}
@@ -93,5 +94,6 @@ export default function CountyPeople({ params }) {
         <p className="src">See also the <Link href={`/counties/${slug}/sources/`}>{m.name} sources</Link> and the <Link href={`/counties/${slug}/`}>{m.name} County hub</Link>.</p>
       </section>
     </main>
-  );
+    <CountyNav name={m.name} links={cp.nav(slug)} current={`/counties/${slug}/people/`} />
+  </>);
 }

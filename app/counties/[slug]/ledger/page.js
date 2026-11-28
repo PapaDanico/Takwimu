@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
+import CountyNav from '../../../../components/county/CountyNav';
 import TableWrap from '../../../../components/TableWrap';
 import LedgerView from '../../../../components/LedgerView';
 import { ledgerTables } from '../../../../components/LedgerTables';
@@ -26,7 +27,7 @@ export default function CountyLedger({ params }) {
   const reg = cp.conflicts(slug);
   const openByMeasure = l.measures.map((x) => ({ ...x, open: l.cases.filter((c) => c.measure === x.key && c.status === 'open').length }));
   const initial = l.measures.find((x) => x.key === 'osr_total_actual') ? 'osr_total_actual' : l.measures[0].key;
-  return (
+  return (<>
     <main id="main" className="wrap page">
       <PageHead county={{ slug, name: m.name }} eyebrow="Reconciliation" title="Fiscal reconciliation"
         sub={`${m.name} County's budget, revenue, spending, pending bills and wage bill as each official source reports them, side by side, so that you can see where the documents agree and where they differ.`}
@@ -114,5 +115,6 @@ export default function CountyLedger({ params }) {
         <p className="src">Every document cited here, with its link and hash, is on the <Link href={`/counties/${slug}/sources/`}>{m.name} sources</Link> page. See also <Link href={`/counties/${slug}/audits/`}>audit opinions</Link> and the <Link href={`/counties/${slug}/`}>{m.name} County hub</Link>.</p>
       </section>
     </main>
-  );
+    <CountyNav name={m.name} links={cp.nav(slug)} current={`/counties/${slug}/ledger/`} />
+  </>);
 }
