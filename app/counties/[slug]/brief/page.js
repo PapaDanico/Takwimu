@@ -195,7 +195,7 @@ export default function CountyBrief({ params }) {
             <h2 id="brief-src-h">Sources and how to read</h2>
             <ul className="brief-list brief-how">
               <li><b>Every figure</b> carries its source, period and unit here, and its page and confidence on the site. Confidence (1 to 5) grades source quality and extraction, not the chance a figure is right. Many figures were read by OCR from scanned pages.</li>
-              <li><b>Review.</b> {counts.total ? `All ${fmtNum(counts.total)} ${m.name} values are` : 'All values are'} provisional: awaiting editorial review. None has been approved.</li>
+              <li><b>Review.</b> {counts.total ? `All ${fmtNum(counts.total)} ${m.name} values are` : 'All values are'} still waiting for editorial review; none has been approved.</li>
               <li><b>Conflicting figures</b> are shown side by side, never averaged: {host}{base}ledger/.</li>
               <li><b>Our calculations</b> (shares, spending per person, positions) show their formula and inputs: {host}{base}analysis/.</li>
               <li><b>How to read our reports</b>, marks and review states: {host}/reports/method/.</li>
