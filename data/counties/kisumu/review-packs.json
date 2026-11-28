@@ -5,14 +5,14 @@
   "generated_by": "scripts/review-packs.js",
   "scope": "Every value in data/counties/kisumu/ (fiscal ledger, audit opinions, population); the county's rows of data/counties-cob.json are reused inside its ledger.",
   "counts": {
-   "total": 349,
+   "total": 421,
    "approved": 0,
-   "pending": 349,
+   "pending": 421,
    "disputed": 74,
    "rejected": 0,
    "needs_page_check": 51
   },
-  "total": 349
+  "total": 421
  },
  "entries": [
   {
@@ -18413,6 +18413,3514 @@
     "pages_checked": [
      55
     ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-basic-drinking-water-kisumu",
+   "label": "Household population with access to at least basic drinking water service, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 72,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "72",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-basic-drinking-water-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-basic-sanitation-kisumu",
+   "label": "Household population with at least basic sanitation service, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 35,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "35",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-basic-sanitation-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-clean-fuels-kisumu",
+   "label": "Household population relying on clean fuels and technologies for cooking, space heating and lighting, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 15,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "15",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-clean-fuels-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-women-no-education-kisumu",
+   "label": "Women age 15-49 with no formal education, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "1",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-women-no-education-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-men-no-education-kisumu",
+   "label": "Men age 15-49 with no formal education, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": "<1",
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "<1",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it. Printed as \"<1\": below one per cent, kept as a bound (not zero, not one). Obtain the exact estimate and confidence interval from the main report before any comparison.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Not a single number (text, a list of amounts or a series)."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-men-no-education-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-total-fertility-rate-kisumu",
+   "label": "Total fertility rate, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3.5,
+   "unit": "children per woman",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "3.5",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-total-fertility-rate-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-teenage-pregnancy-kisumu",
+   "label": "Women age 15-19 who have ever been pregnant, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 11,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "11",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-teenage-pregnancy-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-modern-fp-use-kisumu",
+   "label": "Married women age 15-49 using a modern method of family planning, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 57,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "57",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-modern-fp-use-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-unmet-fp-need-kisumu",
+   "label": "Unmet need for family planning (married women age 15-49), Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 16,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "16",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-unmet-fp-need-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-fp-demand-satisfied-modern-kisumu",
+   "label": "Demand for family planning satisfied by modern methods (married women age 15-49), Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 74,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "74",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-fp-demand-satisfied-modern-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-skilled-birth-kisumu",
+   "label": "Births delivered by a skilled provider, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 98,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "98",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it. KDHS 2022 Key Indicators Report Table 10C prints 97.9 for Kisumu (gap-D sweep): same survey, more decimals.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-skilled-birth-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-anc4-kisumu",
+   "label": "Women age 15-49 with a live birth who had 4+ antenatal visits, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 63,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "63",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-anc4-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-pnc-mother-2days-kisumu",
+   "label": "Women age 15-49 with a postnatal check during the first 2 days after birth, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 90,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "90",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-pnc-mother-2days-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-pnc-newborn-2days-kisumu",
+   "label": "Births with a postnatal check during the first 2 days after birth, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 90,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "90",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-pnc-newborn-2days-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-basic-vaccination-kisumu",
+   "label": "Children age 12-23 months fully vaccinated (basic antigens), Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 79,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "79",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it. KIR Table 11C prints 78.9 (gap-D sweep): same survey.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-basic-vaccination-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-neonatal-mortality-kisumu",
+   "label": "Neonatal mortality, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 21,
+   "unit": "deaths per 1,000 live births",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "21",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it. The county rate covers 10 years before the survey and the Kenya rate 5 years (footnote 4): the two are not directly comparable.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-neonatal-mortality-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-infant-mortality-kisumu",
+   "label": "Infant mortality, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 40,
+   "unit": "deaths per 1,000 live births",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "40",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it. The county rate covers 10 years before the survey and the Kenya rate 5 years (footnote 4): the two are not directly comparable.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-infant-mortality-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-under5-mortality-kisumu",
+   "label": "Under-5 mortality, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 45,
+   "unit": "deaths per 1,000 live births",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "45",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it. The county rate covers 10 years before the survey and the Kenya rate 5 years (footnote 4): the two are not directly comparable.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-under5-mortality-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-stunting-kisumu",
+   "label": "Children under 5 who are stunted, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 9,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "9",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it. KIR Table 14C prints 9.1 (gap-D sweep): same survey.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-stunting-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-wasting-kisumu",
+   "label": "Children under 5 who are wasted, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "3",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-wasting-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-underweight-kisumu",
+   "label": "Children under 5 who are underweight, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 4,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "4",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-underweight-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-overweight-kisumu",
+   "label": "Children under 5 who are overweight, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 2,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "2",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-overweight-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-itn-access-kisumu",
+   "label": "Household population with access to an insecticide-treated net, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 62,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "62",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-itn-access-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-itn-slept-under-kisumu",
+   "label": "Household population who slept under an ITN the night before the survey, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 62,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "62",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-itn-slept-under-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-iptp3-kisumu",
+   "label": "Women age 15-49 who received 3 or more doses of SP/Fansidar during pregnancy, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 26,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "26",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it. Kenya figure is the total among counties where IPTp is implemented (footnote a). KIR Table 20C prints 25.5 (gap-D sweep): same survey.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-iptp3-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-physical-violence-ever-kisumu",
+   "label": "Women age 15-49 who have ever experienced physical violence since age 15, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 36,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "36",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-physical-violence-ever-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-physical-violence-12m-kisumu",
+   "label": "Women age 15-49 who experienced physical violence in the last 12 months (often or sometimes), Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 26,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "26",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-physical-violence-12m-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-sexual-violence-ever-kisumu",
+   "label": "Women age 15-49 who have ever experienced sexual violence, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 11,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "11",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-sexual-violence-ever-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-sexual-violence-12m-kisumu",
+   "label": "Women age 15-49 who experienced sexual violence in the last 12 months, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 7,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "7",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-sexual-violence-12m-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-ipv-ever-kisumu",
+   "label": "Ever-partnered women age 15-49 who ever experienced physical, sexual or psychological violence by their most recent husband or partner, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 41,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "41",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-ipv-ever-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kdhs22fs-ipv-12m-kisumu",
+   "label": "Ever-partnered women age 15-49 who experienced physical, sexual or psychological violence by any husband or partner in the last 12 months, Kisumu County, 2022",
+   "kind": "household survey (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 35,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KDHS-2022-FS-KISUMU",
+     "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+     "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+     "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "35",
+   "note": "KDHS 2022 county fact sheet, rounded as printed. Survey estimate for the county; no ward or sub-county estimate can be drawn from it.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kdhs22fs-ipv-12m-kisumu"
+    ],
+    "source_document_id": "KNBS-KDHS-2022-FS-KISUMU",
+    "source_sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-lia-population-kisumu",
+   "label": "Population in low-income areas of utility service areas, Kisumu County (utility low-income areas), FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 304229,
+   "unit": "persons",
+   "period": "FY 2024/25",
+   "scope": "Kisumu County (utility low-income areas)",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 91,
+   "printed_page": 74,
+   "read": "text layer, checked against the page image",
+   "printed_text": "304,229",
+   "note": "Low-income areas (LIA) inside the service areas of the county's water service providers; not the county population and not a coverage rate for the county.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "304,229",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-lia-population-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     91
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-lia-population-served-kisumu",
+   "label": "Population served with water services in low-income areas, Kisumu County (utility low-income areas), FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 279212,
+   "unit": "persons",
+   "period": "FY 2024/25",
+   "scope": "Kisumu County (utility low-income areas)",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 91,
+   "printed_page": 74,
+   "read": "text layer, checked against the page image",
+   "printed_text": "279,212",
+   "note": "Low-income areas (LIA) inside the service areas of the county's water service providers; not the county population and not a coverage rate for the county. Served / population = 91.8% within the reported LIA denominator only (Takwimu arithmetic, not a WASREB figure).",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "279,212",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-lia-population-served-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     91
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-lia-utility-budget-kisumu",
+   "label": "Utility budget for low-income areas, Kisumu County (utility low-income areas), FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 321203208,
+   "unit": "KSh",
+   "period": "FY 2024/25",
+   "scope": "Kisumu County (utility low-income areas)",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 91,
+   "printed_page": 74,
+   "read": "text layer, checked against the page image",
+   "printed_text": "321,203,208",
+   "note": "Low-income areas (LIA) inside the service areas of the county's water service providers; not the county population and not a coverage rate for the county.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "321,203,208",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-lia-utility-budget-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     91
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-dwq-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Drinking water quality (DWQ), KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 100,
+   "unit": "%",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "100",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "100",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-dwq-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-nrw-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Non-revenue water, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 32,
+   "unit": "%",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "32",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-nrw-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-water-coverage-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Water coverage in the utility service area, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 93,
+   "unit": "%",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "93",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-water-coverage-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-hours-of-supply-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Hours of supply, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 24,
+   "unit": "hours per day",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "24",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-hours-of-supply-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-staff-productivity-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Staff productivity, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 5,
+   "unit": "staff per 1,000 connections",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "5",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-staff-productivity-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-collection-efficiency-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Revenue collection efficiency, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 100,
+   "unit": "%",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "100",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate. In an open conflict case in the indicators file.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "100",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-collection-efficiency-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-personnel-cost-share-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Personnel expenditure as % of total O&M costs, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 30,
+   "unit": "%",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "30",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-personnel-cost-share-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-om-cost-coverage-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): O&M cost coverage, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 105,
+   "unit": "%",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "105",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "105",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-om-cost-coverage-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-metering-ratio-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Metering ratio, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 100,
+   "unit": "%",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "100",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "100",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-metering-ratio-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-total-score-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Total score (WASREB ranking), KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 158,
+   "unit": "points",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 38,
+   "read": "text layer, checked against the page image",
+   "printed_text": "158",
+   "note": "Utility service area only (a utility covers part of the county and can cross county lines); not a county-wide rate.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "158",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-total-score-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-population-service-area-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Total population in service area, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 503846,
+   "unit": "persons",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "503,846",
+   "note": "Utility service area only; not a county-wide figure.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "503,846",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-population-service-area-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-population-served-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Total population served, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 470118,
+   "unit": "persons",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "470,118",
+   "note": "Utility service area only; not a county-wide figure.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "470,118",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-population-served-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-connections-total-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Total connections (active and inactive), KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 65697,
+   "unit": "connections",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "65,697",
+   "note": "Utility service area only; not a county-wide figure. In an open conflict case in the indicators file.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "65,697",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-connections-total-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-connections-active-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Total active connections, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 65697,
+   "unit": "connections",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "65,697",
+   "note": "Utility service area only; not a county-wide figure.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "65,697",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-connections-active-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-water-produced-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Total water produced, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 11769,
+   "unit": "'000 m3",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "11,769",
+   "note": "Utility service area only; not a county-wide figure.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "11,769",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-water-produced-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-water-billed-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Total billed volume, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 8011,
+   "unit": "'000 m3",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "8,011",
+   "note": "Utility service area only; not a county-wide figure.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "8,011",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-water-billed-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "wasreb18-utility-staff-total-kisumu",
+   "label": "KIWASCO (Kisumu Water and Sanitation Company): Total staff, KIWASCO (Kisumu Water and Sanitation Company) service area, FY 2024/25",
+   "kind": "water utility (administrative statistic)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 301,
+   "unit": "staff",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO (Kisumu Water and Sanitation Company) service area",
+   "source": [
+    {
+     "id": "WASREB-IMPACT-18",
+     "title": "Impact: A Performance Report of Kenya's Water Services Sector 2024/2025 (Impact 18)",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+     "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720"
+    }
+   ],
+   "pdf_page": 53,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "301",
+   "note": "Utility service area only; not a county-wide figure.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "301",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "wasreb18-utility-staff-total-kisumu"
+    ],
+    "source_document_id": "WASREB-IMPACT-18",
+    "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "pages_checked": [
+     53
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-water-coverage-2024",
+   "label": "KIWASCO Water coverage (proposed tariff target table), KIWASCO service area, FY 2024/2025",
+   "kind": "water utility (baseline in a target table)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 93,
+   "unit": "%",
+   "period": "FY 2024/2025",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "93%",
+   "note": "First column of the target table. It equals the IMPACT 18 actual where IMPACT 18 prints one (water coverage 93, NRW 32); treat it as the utility's baseline as printed, not as a target.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-water-coverage-2024"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-water-coverage-2026",
+   "label": "KIWASCO Water coverage (proposed tariff target table), KIWASCO service area, FY 2026/2027",
+   "kind": "water utility (proposed target)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 95,
+   "unit": "%",
+   "period": "FY 2026/2027",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "95%",
+   "note": "A proposed target. The table is headed \"Service Delivery Conditions attached to the Tariff\" and says the conditions \"shall form part of the license conditions\" once approved, but this is the public-consultation version: not an actual, and not shown to be approved (final gazetted tariff not found).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-water-coverage-2026"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-water-coverage-2029",
+   "label": "KIWASCO Water coverage (proposed tariff target table), KIWASCO service area, FY 2029/2030",
+   "kind": "water utility (proposed target)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 98,
+   "unit": "%",
+   "period": "FY 2029/2030",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "98%",
+   "note": "A proposed target. The table is headed \"Service Delivery Conditions attached to the Tariff\" and says the conditions \"shall form part of the license conditions\" once approved, but this is the public-consultation version: not an actual, and not shown to be approved (final gazetted tariff not found).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-water-coverage-2029"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-sewerage-coverage-2024",
+   "label": "KIWASCO Sewerage coverage (proposed tariff target table), KIWASCO service area, FY 2024/2025",
+   "kind": "water utility (baseline in a target table)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 19,
+   "unit": "%",
+   "period": "FY 2024/2025",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "19%",
+   "note": "First column of the target table. It equals the IMPACT 18 actual where IMPACT 18 prints one (water coverage 93, NRW 32); treat it as the utility's baseline as printed, not as a target.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-sewerage-coverage-2024"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-sewerage-coverage-2026",
+   "label": "KIWASCO Sewerage coverage (proposed tariff target table), KIWASCO service area, FY 2026/2027",
+   "kind": "water utility (proposed target)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 23,
+   "unit": "%",
+   "period": "FY 2026/2027",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "23%",
+   "note": "A proposed target. The table is headed \"Service Delivery Conditions attached to the Tariff\" and says the conditions \"shall form part of the license conditions\" once approved, but this is the public-consultation version: not an actual, and not shown to be approved (final gazetted tariff not found).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-sewerage-coverage-2026"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-sewerage-coverage-2029",
+   "label": "KIWASCO Sewerage coverage (proposed tariff target table), KIWASCO service area, FY 2029/2030",
+   "kind": "water utility (proposed target)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 29,
+   "unit": "%",
+   "period": "FY 2029/2030",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "29%",
+   "note": "A proposed target. The table is headed \"Service Delivery Conditions attached to the Tariff\" and says the conditions \"shall form part of the license conditions\" once approved, but this is the public-consultation version: not an actual, and not shown to be approved (final gazetted tariff not found).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-sewerage-coverage-2029"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-nrw-2024",
+   "label": "KIWASCO Non-revenue water (proposed tariff target table), KIWASCO service area, FY 2024/2025",
+   "kind": "water utility (baseline in a target table)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 32,
+   "unit": "%",
+   "period": "FY 2024/2025",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "32%",
+   "note": "First column of the target table. It equals the IMPACT 18 actual where IMPACT 18 prints one (water coverage 93, NRW 32); treat it as the utility's baseline as printed, not as a target.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-nrw-2024"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-nrw-2026",
+   "label": "KIWASCO Non-revenue water (proposed tariff target table), KIWASCO service area, FY 2026/2027",
+   "kind": "water utility (proposed target)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 31,
+   "unit": "%",
+   "period": "FY 2026/2027",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "31%",
+   "note": "A proposed target. The table is headed \"Service Delivery Conditions attached to the Tariff\" and says the conditions \"shall form part of the license conditions\" once approved, but this is the public-consultation version: not an actual, and not shown to be approved (final gazetted tariff not found).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-nrw-2026"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-nrw-2029",
+   "label": "KIWASCO Non-revenue water (proposed tariff target table), KIWASCO service area, FY 2029/2030",
+   "kind": "water utility (proposed target)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 27,
+   "unit": "%",
+   "period": "FY 2029/2030",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "27%",
+   "note": "A proposed target. The table is headed \"Service Delivery Conditions attached to the Tariff\" and says the conditions \"shall form part of the license conditions\" once approved, but this is the public-consultation version: not an actual, and not shown to be approved (final gazetted tariff not found).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-nrw-2029"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-target-collection-efficiency-2024",
+   "label": "KIWASCO collection efficiency (proposed tariff target table), KIWASCO service area, FY 2024/2025",
+   "kind": "water utility (baseline in a target table)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 102,
+   "unit": "%",
+   "period": "FY 2024/2025",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 4,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "102%",
+   "note": "First column of the target table (later years 95%). Differs from 105% in the cost table of the same document and from IMPACT 18 (100): see conflict kiwasco-collection-efficiency-2024-25. In an open conflict case in the indicators file.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm4",
+    "matched": "102",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-target-collection-efficiency-2024"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     4
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-tariff-collection-efficiency-2024",
+   "label": "KIWASCO collection efficiency in the tariff cost and revenue table, KIWASCO service area, FY 2024/25",
+   "kind": "water utility (baseline in a target table)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 105,
+   "unit": "%",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+     "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff for the period 2025/2026-2029/2030",
+     "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+     "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f"
+    }
+   ],
+   "pdf_page": 1,
+   "printed_page": null,
+   "read": "text layer, checked against the page image",
+   "printed_text": "105%",
+   "note": "Printed in the tariff cost table beside 95% for each later year (projections). Not a target for FY 2024/25; set beside the IMPACT 18 actual and the KIWASCO web claim (conflict kiwasco-collection-efficiency-2024-25). In an open conflict case in the indicators file.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "105",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-tariff-collection-efficiency-2024"
+    ],
+    "source_document_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+    "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+    "pages_checked": [
+     1
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-home-water-coverage",
+   "label": "KIWASCO claim: water coverage, KIWASCO service area, not stated",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 93,
+   "unit": "%",
+   "period": "not stated",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-HOME-2026-11-28",
+     "title": "KIWASCO website home page (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/",
+     "sha256": "a287e800ff6106f2b1c9c059cefbfe5441b5ab6298e4d5cedd319d3c71182ae8"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "93",
+   "note": "A claim by the utility about itself, not an independent statistic. No reference period on the page. Equals IMPACT 18 FY 2024/25 (93).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-home-water-coverage"
+    ],
+    "source_document_id": "KIWASCO-WEB-HOME-2026-11-28",
+    "source_sha256": "a287e800ff6106f2b1c9c059cefbfe5441b5ab6298e4d5cedd319d3c71182ae8",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-home-sanitation-coverage",
+   "label": "KIWASCO claim: sanitation coverage, KIWASCO service area, not stated",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 96.03,
+   "unit": "%",
+   "period": "not stated",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-HOME-2026-11-28",
+     "title": "KIWASCO website home page (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/",
+     "sha256": "a287e800ff6106f2b1c9c059cefbfe5441b5ab6298e4d5cedd319d3c71182ae8"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "96.03",
+   "note": "A claim by the utility about itself, not an independent statistic. Sanitation is not sewerage: the company's own Our story page and the tariff proposal give sewer coverage of about 19%. No reference period or definition stated.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-home-sanitation-coverage"
+    ],
+    "source_document_id": "KIWASCO-WEB-HOME-2026-11-28",
+    "source_sha256": "a287e800ff6106f2b1c9c059cefbfe5441b5ab6298e4d5cedd319d3c71182ae8",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-home-nrw",
+   "label": "KIWASCO claim: non-revenue water, KIWASCO service area, not stated",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 32,
+   "unit": "%",
+   "period": "not stated",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-HOME-2026-11-28",
+     "title": "KIWASCO website home page (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/",
+     "sha256": "a287e800ff6106f2b1c9c059cefbfe5441b5ab6298e4d5cedd319d3c71182ae8"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "32",
+   "note": "A claim by the utility about itself, not an independent statistic. No reference period on the page. Equals IMPACT 18 FY 2024/25 (32).",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-home-nrw"
+    ],
+    "source_document_id": "KIWASCO-WEB-HOME-2026-11-28",
+    "source_sha256": "a287e800ff6106f2b1c9c059cefbfe5441b5ab6298e4d5cedd319d3c71182ae8",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-home-collection-efficiency",
+   "label": "KIWASCO claim: revenue collection efficiency, KIWASCO service area, not stated",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 100,
+   "unit": "%",
+   "period": "not stated",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-HOME-2026-11-28",
+     "title": "KIWASCO website home page (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/",
+     "sha256": "a287e800ff6106f2b1c9c059cefbfe5441b5ab6298e4d5cedd319d3c71182ae8"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "100",
+   "note": "A claim by the utility about itself, not an independent statistic. No reference period on the page.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-home-collection-efficiency"
+    ],
+    "source_document_id": "KIWASCO-WEB-HOME-2026-11-28",
+    "source_sha256": "a287e800ff6106f2b1c9c059cefbfe5441b5ab6298e4d5cedd319d3c71182ae8",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-story-nrw-impact17",
+   "label": "KIWASCO claim: non-revenue water (citing WASREB IMPACT 17), KIWASCO service area, FY 2023/24 (as attributed to IMPACT 17)",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 37.03,
+   "unit": "%",
+   "period": "FY 2023/24 (as attributed to IMPACT 17)",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-STORY-2026-11-28",
+     "title": "KIWASCO website, About us: Our story (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/about-us/our-story/",
+     "sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "37.03",
+   "note": "A claim by the utility about itself, not an independent statistic. Attributed by the company to IMPACT 17 (FY 2023/24); IMPACT 17 itself not read here.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-story-nrw-impact17"
+    ],
+    "source_document_id": "KIWASCO-WEB-STORY-2026-11-28",
+    "source_sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-story-water-coverage-impact17",
+   "label": "KIWASCO claim: water supply coverage (citing WASREB IMPACT 17), KIWASCO service area, FY 2023/24 (as attributed to IMPACT 17)",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 93.19,
+   "unit": "%",
+   "period": "FY 2023/24 (as attributed to IMPACT 17)",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-STORY-2026-11-28",
+     "title": "KIWASCO website, About us: Our story (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/about-us/our-story/",
+     "sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "93.19",
+   "note": "A claim by the utility about itself, not an independent statistic. Attributed by the company to IMPACT 17; not read here.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-story-water-coverage-impact17"
+    ],
+    "source_document_id": "KIWASCO-WEB-STORY-2026-11-28",
+    "source_sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-story-sewer-coverage-impact17",
+   "label": "KIWASCO claim: sewer coverage (citing WASREB IMPACT 17), KIWASCO service area, FY 2023/24 (as attributed to IMPACT 17)",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 18.67,
+   "unit": "%",
+   "period": "FY 2023/24 (as attributed to IMPACT 17)",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-STORY-2026-11-28",
+     "title": "KIWASCO website, About us: Our story (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/about-us/our-story/",
+     "sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "18.67",
+   "note": "A claim by the utility about itself, not an independent statistic. Attributed by the company to IMPACT 17; not read here.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-story-sewer-coverage-impact17"
+    ],
+    "source_document_id": "KIWASCO-WEB-STORY-2026-11-28",
+    "source_sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-story-collection-efficiency",
+   "label": "KIWASCO claim: average collection efficiency, KIWASCO service area, FY 2024/25",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 98,
+   "unit": "%",
+   "period": "FY 2024/25",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-STORY-2026-11-28",
+     "title": "KIWASCO website, About us: Our story (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/about-us/our-story/",
+     "sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "98",
+   "note": "A claim by the utility about itself, not an independent statistic. IMPACT 18 prints 100 for the same year (conflict kiwasco-collection-efficiency-2024-25). In an open conflict case in the indicators file.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-story-collection-efficiency"
+    ],
+    "source_document_id": "KIWASCO-WEB-STORY-2026-11-28",
+    "source_sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-story-connections",
+   "label": "KIWASCO claim: connections, KIWASCO service area, not stated (\"currently\")",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 50053,
+   "unit": "connections",
+   "period": "not stated (\"currently\")",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-STORY-2026-11-28",
+     "title": "KIWASCO website, About us: Our story (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/about-us/our-story/",
+     "sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "50,053",
+   "note": "A claim by the utility about itself, not an independent statistic. IMPACT 18 prints 65,697 connections for FY 2024/25 (conflict kiwasco-connections). In an open conflict case in the indicators file.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-story-connections"
+    ],
+    "source_document_id": "KIWASCO-WEB-STORY-2026-11-28",
+    "source_sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910",
+    "pages_checked": [],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kiwasco-claim-story-employees",
+   "label": "KIWASCO claim: employees, KIWASCO service area, not stated (\"currently\")",
+   "kind": "water utility (publisher claim)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 299,
+   "unit": "staff",
+   "period": "not stated (\"currently\")",
+   "scope": "KIWASCO service area",
+   "source": [
+    {
+     "id": "KIWASCO-WEB-STORY-2026-11-28",
+     "title": "KIWASCO website, About us: Our story (snapshot 28 Nov 2026)",
+     "url": "https://kiwasco.co.ke/about-us/our-story/",
+     "sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910"
+    }
+   ],
+   "pdf_page": null,
+   "printed_page": null,
+   "read": "HTML text",
+   "printed_text": "299",
+   "note": "A claim by the utility about itself, not an independent statistic. IMPACT 18 prints 301 staff for FY 2024/25; dates differ, not treated as a conflict.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "The stored copy was not available to the check."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kiwasco-claim-story-employees"
+    ],
+    "source_document_id": "KIWASCO-WEB-STORY-2026-11-28",
+    "source_sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910",
+    "pages_checked": [],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,
     "decision": "",

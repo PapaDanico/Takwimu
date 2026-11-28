@@ -2,7 +2,7 @@
 // Checks every indicators file in lib/county-registry.js (data/indicators.json for Siaya and regional rows,
 // data/counties/<slug>/indicators.json for an unpublished county) against schemas/county-indicators.schema.json, and:
 // - every value cites a source in the file with a SHA-256, a PDF page (for a PDF), table, row and column;
-// - a PDF source's hash is in data/source-manifest.json or the county's research register (no unanchored PDF);
+// - a PDF source's hash is in data/source-manifest.json, data/source-library.json or the county's research register;
 // - value_as_printed carries the printed figure: the number (commas and trailing zeros aside) or, for a bounded
 //   value, the bound ("<1" is kept as relation less_than, limit 1, value null; never 0 or 1);
 // - claims and targets are labelled (kind) and never sit in a conflict as if they were observed estimates;
@@ -17,8 +17,9 @@ const { check } = require('./lib-schema-check');
 const errors = [];
 let n = 0;
 const ok = (c, m) => { n += 1; if (!c) errors.push(m); };
-const manifest = new Set(JSON.parse(fs.readFileSync(path.join(counties.ROOT, 'data', 'source-manifest.json'), 'utf8')).documents.map((d) => d.sha256).filter(Boolean));
-const numOf = (s) => Number(String(s).replace(/,/g, ''));
+const readData = (f) => JSON.parse(fs.readFileSync(path.join(counties.ROOT, 'data', f), 'utf8'));
+const manifest = new Set([...readData('source-manifest.json').documents, ...readData('source-library.json').documents].map((d) => d.sha256).filter(Boolean));
+const numOf = (s) => Number(String(s).replace(/,/g, '').replace(/%$/, ''));
 
 counties.withKind('indicators').forEach((slug) => {
   const d = counties.load(slug, 'indicators');
@@ -34,7 +35,7 @@ counties.withKind('indicators').forEach((slug) => {
   ok(Object.keys(src).length === d.sources.length, tag('duplicate source_id'));
   d.sources.forEach((s) => {
     if (s.file_type === 'PDF') {
-      ok(manifest.has(s.sha256) || research.has(s.sha256), tag(`${s.source_id}: PDF hash not in data/source-manifest.json or the research register`));
+      ok(manifest.has(s.sha256) || research.has(s.sha256), tag(`${s.source_id}: PDF hash not in data/source-manifest.json, data/source-library.json or the research register`));
       ok(Number.isInteger(s.pdf_pages) && s.pdf_pages > 0, tag(`${s.source_id}: pdf_pages`));
     }
     ok(s.licence && s.commercial_reuse, tag(`${s.source_id}: licence and commercial_reuse`));

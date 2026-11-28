@@ -6416,6 +6416,33 @@
    "data_reuse": "figures may be reused with citation",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed."
+  },
+  {
+   "review_status": "not reviewed",
+   "last_checked_at": "2026-11-28",
+   "licence": "CC BY-NC 4.0 (KNBS repository record): figures may be reused with the body and report named; non-commercial; the document is not redistributed",
+   "redistribution_allowed": false,
+   "document_id": "knbs-kdhs-2022-factsheet-siaya",
+   "origin": "cited by the site",
+   "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Siaya County",
+   "publisher": "Kenya National Bureau of Statistics",
+   "document_type": "Survey fact sheet (KNBS and ICF)",
+   "publication_date": "2023",
+   "reference_period": "KDHS 2022 (fieldwork Feb-Jul 2022)",
+   "source_url": "https://repository.knbs.or.ke/items/eaf54dcf-c06d-4e57-8ddc-f1fbd51304bd",
+   "file_url": "https://repository.knbs.or.ke/server/api/core/bitstreams/6e655bb6-a0a2-497a-b330-92e016807353/content",
+   "cited_by": "indicators.json",
+   "geographic_coverage": "Siaya",
+   "siaya_relevance": "Siaya county fact sheet",
+   "research_use": "25 county indicators with Kenya comparators (data/indicators.json); six indicators already held from the KDHS 2022 Key Indicators Report and main report are not re-entered",
+   "sha256": "2833644fc3e7c9a02679735b0b79f0d91bc2dfe33233bc40d84786463cba2e52",
+   "bytes": 416902,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "retrieval_note": "Downloaded from the KNBS repository; its MD5 matched the checksum the repository publishes.",
+   "data_reuse": "figures may be reused with citation",
+   "document_redistribution": false,
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed."
   }
  ]
 }

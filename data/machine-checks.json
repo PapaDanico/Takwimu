@@ -13,8 +13,8 @@
   "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way (\"Kshs.2.4 billion\") is not checkable.",
   "checked_on": "2026-11-28",
   "counts": {
-   "agree": 2389,
-   "not checkable": 1574,
+   "agree": 2396,
+   "not checkable": 1607,
    "disagree": 80
   }
  },
@@ -40209,6 +40209,321 @@
    "result": "not checkable",
    "method": null,
    "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-clean-fuels-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-women-no-education-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-men-no-education-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-total-fertility-rate-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-teenage-pregnancy-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-modern-fp-use-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-unmet-fp-need-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-fp-demand-satisfied-modern-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-anc4-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-pnc-mother-2days-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-pnc-newborn-2days-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-neonatal-mortality-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-infant-mortality-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-under5-mortality-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-wasting-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-underweight-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-overweight-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-itn-access-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-itn-slept-under-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-physical-violence-ever-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-physical-violence-12m-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-sexual-violence-ever-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-sexual-violence-12m-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-ipv-ever-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kdhs22fs-ipv-12m-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-lia-utility-budget-siaya",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 92,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "44,870,000"
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-dwq-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-nrw-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-hours-of-supply-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-staff-productivity-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-collection-efficiency-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-personnel-cost-share-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-om-cost-coverage-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-metering-ratio-siaya",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "100"
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-total-score-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-connections-total-siaya",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "20,570"
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-connections-active-siaya",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "16,692"
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-water-produced-siaya",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "2,079"
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-water-billed-siaya",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,068"
+  },
+  {
+   "dataset": "indicators",
+   "id": "wasreb18-utility-staff-total-siaya",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "133"
   },
   {
    "dataset": "siaya-programmes",

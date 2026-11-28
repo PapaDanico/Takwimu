@@ -13,8 +13,8 @@
   "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way (\"Kshs.2.4 billion\") is not checkable.",
   "checked_on": "2026-11-28",
   "counts": {
-   "agree": 279,
-   "not checkable": 65,
+   "agree": 296,
+   "not checkable": 120,
    "disagree": 5
   }
  },
@@ -3886,6 +3886,595 @@
    "result": "not checkable",
    "method": null,
    "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-basic-drinking-water-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-basic-sanitation-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-clean-fuels-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-women-no-education-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-men-no-education-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-total-fertility-rate-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-teenage-pregnancy-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-modern-fp-use-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-unmet-fp-need-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-fp-demand-satisfied-modern-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-skilled-birth-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-anc4-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-pnc-mother-2days-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-pnc-newborn-2days-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-basic-vaccination-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-neonatal-mortality-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-infant-mortality-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-under5-mortality-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-stunting-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-wasting-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-underweight-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-overweight-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-itn-access-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-itn-slept-under-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-iptp3-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-physical-violence-ever-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-physical-violence-12m-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-sexual-violence-ever-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-sexual-violence-12m-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-ipv-ever-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-ipv-12m-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-lia-population-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 91,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "304,229"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-lia-population-served-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 91,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "279,212"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-lia-utility-budget-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 91,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "321,203,208"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-dwq-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "100"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-nrw-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-water-coverage-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-hours-of-supply-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-staff-productivity-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-collection-efficiency-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "100"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-personnel-cost-share-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-om-cost-coverage-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "105"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-metering-ratio-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "100"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-total-score-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "158"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-population-service-area-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "503,846"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-population-served-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "470,118"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-connections-total-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "65,697"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-connections-active-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "65,697"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-water-produced-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "11,769"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-water-billed-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "8,011"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-staff-total-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "301"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-water-coverage-2024",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-water-coverage-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-water-coverage-2029",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-sewerage-coverage-2024",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-sewerage-coverage-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-sewerage-coverage-2029",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-nrw-2024",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-nrw-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-nrw-2029",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-collection-efficiency-2024",
+   "source_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+   "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+   "pdf_page": 4,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "102"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-collection-efficiency-2024",
+   "source_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+   "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+   "pdf_page": 1,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "105"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-home-water-coverage",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-home-sanitation-coverage",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-home-nrw",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-home-collection-efficiency",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-nrw-impact17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-water-coverage-impact17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-sewer-coverage-impact17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-collection-efficiency",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-connections",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-employees",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
   }
  ]
 }
