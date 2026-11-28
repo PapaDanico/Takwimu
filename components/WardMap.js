@@ -1,12 +1,13 @@
 'use client';
-// Map of Siaya County's 30 county assembly wards (data/siaya-wards-geo.json), drawn as inline SVG.
+// Map of a county's county assembly wards (Siaya's data/siaya-wards-geo.json by default, or `geo` for another
+// county), drawn as inline SVG.
 // Zoom with the buttons or +/- keys, pan by dragging (mouse, pen or touch) or with the arrow keys, 0 resets.
 // Each ward is focusable and names itself (ward, constituency, IEBC code, and the value when `values` is given).
 // With `values` ({ ward_id or ward_code: number | null }) the wards are shaded on a single-hue scale of five equal
 // steps with a legend; wards without a value are hatched and say "not available". "View as table" lists all 30.
 // No network requests, no cookies or storage. Colour is never the only signal: values are in labels and the table.
 import { useCallback, useMemo, useRef, useState } from 'react';
-import geo from '../data/siaya-wards-geo.json';
+import siayaGeo from '../data/siaya-wards-geo.json';
 import { fmtFixed } from '../lib/format';
 import { equalSteps, legendItems, STEPS_NOTE } from '../lib/scale';
 
@@ -17,36 +18,39 @@ const K_MAX = 8;
 const LABEL_K = 2; // labels appear at this zoom and above
 
 // ---- Projection (equirectangular scaled by cos(latitude of centre), as in scripts/make-siaya-map.js) ----
-const [BX0, BY0, BX1, BY1] = (() => {
-  let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
-  geo.features.forEach((f) => f.geometry.coordinates.forEach((p) => p.forEach((r) => r.forEach(([x, y]) => {
-    if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
-  }))));
-  return [x0, y0, x1, y1];
-})();
-const KCOS = Math.cos((((BY0 + BY1) / 2) * Math.PI) / 180);
-const SCALE = (W - 2 * PAD) / ((BX1 - BX0) * KCOS);
-const H = Math.ceil(2 * PAD + (BY1 - BY0) * SCALE);
-const px = (x) => PAD + (x - BX0) * KCOS * SCALE;
-const py = (y) => PAD + (BY1 - y) * SCALE;
-
-const WARDS = geo.features.map((f) => {
-  const p = f.properties;
-  const d = f.geometry.coordinates.map((poly) => poly.map((ring) => `M${ring.slice(0, -1).map(([x, y]) => `${px(x).toFixed(1)},${py(y).toFixed(1)}`).join('L')}Z`).join('')).join('');
-  return { id: p.ward_id, code: p.ward_code, name: p.ward_name, con: p.constituency_name, conCode: p.constituency_code, d, lx: px(p.label[0]), ly: py(p.label[1]) };
-});
-const BY_CODE = [...WARDS].sort((a, b) => a.code.localeCompare(b.code));
+// Computed per ward file: Siaya's by default (data/siaya-wards-geo.json); another county passes its own `geo`.
+function projectOf(geo) {
+  const [BX0, BY0, BX1, BY1] = (() => {
+    let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
+    geo.features.forEach((f) => f.geometry.coordinates.forEach((p) => p.forEach((r) => r.forEach(([x, y]) => {
+      if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
+    }))));
+    return [x0, y0, x1, y1];
+  })();
+  const KCOS = Math.cos((((BY0 + BY1) / 2) * Math.PI) / 180);
+  const SCALE = (W - 2 * PAD) / ((BX1 - BX0) * KCOS);
+  const H = Math.ceil(2 * PAD + (BY1 - BY0) * SCALE);
+  const px = (x) => PAD + (x - BX0) * KCOS * SCALE;
+  const py = (y) => PAD + (BY1 - y) * SCALE;
+  const WARDS = geo.features.map((f) => {
+    const p = f.properties;
+    const d = f.geometry.coordinates.map((poly) => poly.map((ring) => `M${ring.slice(0, -1).map(([x, y]) => `${px(x).toFixed(1)},${py(y).toFixed(1)}`).join('L')}Z`).join('')).join('');
+    return { id: p.ward_id, code: p.ward_code, name: p.ward_name, con: p.constituency_name, conCode: p.constituency_code, d, lx: px(p.label[0]), ly: py(p.label[1]) };
+  });
+  const BY_CODE = [...WARDS].sort((a, b) => a.code.localeCompare(b.code));
+  return { H, WARDS, BY_CODE, HOME: { k: 1, cx: W / 2, cy: H / 2 }, attribution: geo.meta.attribution };
+}
+const SIAYA = projectOf(siayaGeo);
 
 const show = (v, dec) => fmtFixed(v, dec);
 
 const scaleOf = (vals) => equalSteps(vals);
 
-const clampView = (v) => {
+const clampView = (v, H) => {
   const k = Math.min(K_MAX, Math.max(K_MIN, v.k));
   const hw = W / (2 * k); const hh = H / (2 * k);
   return { k, cx: Math.min(W - hw, Math.max(hw, v.cx)), cy: Math.min(H - hh, Math.max(hh, v.cy)) };
 };
-const HOME = { k: 1, cx: W / 2, cy: H / 2 };
 
 const CSS = `
 .wmap{margin:0}
@@ -88,7 +92,13 @@ export default function WardMap({
   ariaLabel = 'Map of the 30 county assembly wards of Siaya County',
   caption,
   mapId = 'wmap',
+  geo = null,
+  countyName = 'Siaya',
+  // 'constituency': the units are IEBC constituencies, not wards; wording and table columns follow.
+  unit = 'ward',
 }) {
+  const sub = unit === 'constituency';
+  const { H, WARDS, BY_CODE, HOME, attribution } = useMemo(() => (geo ? projectOf(geo) : SIAYA), [geo]);
   const svgRef = useRef(null);
   const ptrs = useRef(new Map());
   const gesture = useRef(null);
@@ -108,7 +118,7 @@ export default function WardMap({
   const unitSfx = valueUnit === '%' ? '%' : valueUnit ? ` ${valueUnit}` : '';
   const fmtV = (v) => (typeof v === 'number' && Number.isFinite(v) ? `${show(v, valueDec)}${unitSfx}` : 'not available');
   const describe = (w) => {
-    let s = `${w.name} ward, ${w.con} constituency, IEBC ward code ${w.code}`;
+    let s = sub ? `${w.name} constituency, IEBC constituency code ${w.code}` : `${w.name} ward, ${w.con} constituency, IEBC ward code ${w.code}`;
     if (values) s += `. ${valueLabel ? `${valueLabel}: ` : ''}${fmtV(valOf(w))}`;
     if (valueNotes[w.id] || valueNotes[w.code]) s += `. Note: ${valueNotes[w.id] || valueNotes[w.code]}`;
     return s;
@@ -116,8 +126,8 @@ export default function WardMap({
 
   const vbW = W / view.k; const vbH = H / view.k;
   const vbX = view.cx - vbW / 2; const vbY = view.cy - vbH / 2;
-  const zoom = (f) => setView((v) => clampView({ ...v, k: v.k * f }));
-  const pan = (dx, dy) => setView((v) => clampView({ ...v, cx: v.cx + dx / v.k, cy: v.cy + dy / v.k }));
+  const zoom = (f) => setView((v) => clampView({ ...v, k: v.k * f }, H));
+  const pan = (dx, dy) => setView((v) => clampView({ ...v, cx: v.cx + dx / v.k, cy: v.cy + dy / v.k }, H));
   const reset = () => setView(HOME);
 
   // Pixels on screen to SVG units at the current zoom.
@@ -141,14 +151,14 @@ export default function WardMap({
       const other = pts.find(([id]) => id !== e.pointerId)[1];
       const d0 = Math.hypot(prev.x - other.x, prev.y - other.y);
       const d1 = Math.hypot(cur.x - other.x, cur.y - other.y);
-      if (d0 > 0) setView((v) => clampView({ ...v, k: v.k * (d1 / d0) }));
+      if (d0 > 0) setView((v) => clampView({ ...v, k: v.k * (d1 / d0) }, H));
     } else {
       const u = unitsPerPx();
       const dx = cur.x - prev.x; const dy = cur.y - prev.y;
       if (!gesture.current && Math.hypot(dx, dy) < 3) return; // ignore jitter so taps still focus a ward
       gesture.current = 'pan';
       setDragging(true);
-      setView((v) => clampView({ ...v, cx: v.cx - dx * u, cy: v.cy - dy * u }));
+      setView((v) => clampView({ ...v, cx: v.cx - dx * u, cy: v.cy - dy * u }, H));
     }
     ptrs.current.set(e.pointerId, cur);
   };
@@ -173,7 +183,7 @@ export default function WardMap({
     setView((v) => {
       const hw = W / (2 * v.k); const hh = H / (2 * v.k);
       const inside = Math.abs(w.lx - v.cx) < hw * 0.85 && Math.abs(w.ly - v.cy) < hh * 0.85;
-      return inside ? v : clampView({ ...v, cx: w.lx, cy: w.ly });
+      return inside ? v : clampView({ ...v, cx: w.lx, cy: w.ly }, H);
     });
   };
 
@@ -188,7 +198,7 @@ export default function WardMap({
     <figure className="wmap">
       <style>{CSS}</style>
       <p id={helpId} className="wmap-help">
-        Drag to move the map, or use the arrow keys when it is selected. Zoom with the buttons or the + and − keys; 0 resets. Ward names appear when zoomed in. Tab moves between wards; click a ward or press Enter to see its details below the map.
+        {sub ? 'Drag to move the map, or use the arrow keys when it is selected. Zoom with the buttons or the + and − keys; 0 resets. Constituency names appear when zoomed in. Tab moves between constituencies; click a constituency or press Enter to see its details below the map.' : 'Drag to move the map, or use the arrow keys when it is selected. Zoom with the buttons or the + and − keys; 0 resets. Ward names appear when zoomed in. Tab moves between wards; click a ward or press Enter to see its details below the map.'}
       </p>
 
       <div className="wmap-stage">
@@ -259,7 +269,7 @@ export default function WardMap({
         ) : null}
       </div>
       <div className="wmap-detail" role="status" aria-live="polite">
-        {(() => { const w = WARDS.find((x) => x.id === sel); return w ? <><b>{w.name}</b> ward, {w.con} constituency, IEBC code {w.code}{values ? <>. {valueLabel ? `${valueLabel}: ` : ''}{fmtV(valOf(w))}</> : null}.</> : 'Select a ward to see its name, constituency and IEBC code here.'; })()}
+        {(() => { const w = WARDS.find((x) => x.id === sel); return w ? <><b>{w.name}</b>{sub ? ' constituency' : <> ward, {w.con} constituency</>}, IEBC code {w.code}{values ? <>. {valueLabel ? `${valueLabel}: ` : ''}{fmtV(valOf(w))}</> : null}.</> : `Select a ${sub ? 'constituency' : 'ward'} to see its name${sub ? '' : ', constituency'} and IEBC code here.`; })()}
       </div>
       {values ? (
         <div className="wmap-legend">
@@ -275,12 +285,12 @@ export default function WardMap({
         <summary>View as table</summary>
         <div className="tablewrap">
           <table className="data">
-            <caption className="sr-only">{`Siaya County wards${values && valueLabel ? `: ${valueLabel}` : ''}`}</caption>
+            <caption className="sr-only">{`${countyName} County ${sub ? 'constituencies' : 'wards'}${values && valueLabel ? `: ${valueLabel}` : ''}`}</caption>
             <thead>
               <tr>
                 <th scope="col">IEBC code</th>
-                <th scope="col">Ward</th>
-                <th scope="col">Constituency</th>
+                <th scope="col">{sub ? 'Constituency' : 'Ward'}</th>
+                {sub ? null : <th scope="col">Constituency</th>}
                 {values ? <th scope="col">{valueLabel || 'Value'}{unitSfx ? ` (${valueUnit})` : ''}</th> : null}
               </tr>
             </thead>
@@ -289,7 +299,7 @@ export default function WardMap({
                 <tr key={w.id}>
                   <td>{w.code}</td>
                   <th scope="row">{w.name}</th>
-                  <td>{w.con} ({w.conCode})</td>
+                  {sub ? null : <td>{w.con} ({w.conCode})</td>}
                   {values ? <td>{typeof valOf(w) === 'number' ? show(valOf(w), valueDec) : 'Not available'}{valueNotes[w.id] || valueNotes[w.code] ? ` (${valueNotes[w.id] || valueNotes[w.code]})` : ''}</td> : null}
                 </tr>
               ))}
@@ -299,7 +309,7 @@ export default function WardMap({
       </details>
       <figcaption className="wmap-attr">
         {caption ? <>{caption} </> : null}
-        {geo.meta.attribution}. Simplified for display; not for measuring area or distance.
+        {attribution}. Simplified for display; not for measuring area or distance.
       </figcaption>
     </figure>
   );
