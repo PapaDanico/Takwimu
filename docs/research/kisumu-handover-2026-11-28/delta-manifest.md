@@ -2,7 +2,7 @@
 
 What the owner's 28 Nov handovers (`consolidated-siaya-kisumu.md`, `kisumu-complementary-evidence.md`, `handover.md`) added to the data layer, deduplicated against `census.md`, the Kisumu register (`docs/research/kisumu-2026-11-27/kisumu-sources.json`), `data/source-library.json` and `data/source-manifest.json`. Branch `claude/evidence-siaya-kisumu`.
 
-Rules applied: every value comes from original PDF bytes with a SHA-256, the PDF page (not the printed page), table, row and column, read by Takwimu from the text layer and, where `read_method` says so, checked against the rendered page image. Every value is "Provisional: awaiting editorial review". Conflicts sit side by side, never averaged. No review records were written (`data/reviews.json` unchanged). Kisumu rows stay held in `data/counties/kisumu/indicators.json` (not on the site).
+Rules applied: every value comes from original PDF bytes with a SHA-256, the PDF page (not the printed page), table, row and column, read by Takwimu from the text layer and, where `read_method` says so, checked against the rendered page image. Every value is "Provisional: awaiting editorial review". Conflicts sit side by side, never averaged. No review records were written (`data/reviews.json` unchanged). Kisumu rows stay held in `data/counties/kisumu/indicators.json`: Kisumu was published by Release 8 (merged into this branch), but the `indicators` kind is not in its `public_kinds`, so these records stay off the site and the leak guard now scans for them.
 
 ## 1. Totals
 
@@ -20,7 +20,7 @@ Rules applied: every value comes from original PDF bytes with a SHA-256, the PDF
 | Gaps recorded in the file | 3 | 4 |
 | Machine cross-check (second reading) | 72 agree, 45 not checkable, 0 disagree | 103 agree, 73 not checkable, 0 disagree |
 
-After this delta: Siaya 4,122 values in 17 datasets; Kisumu 507 values. 0 approved.
+After this delta: Siaya 4,122 values in 17 datasets; Kisumu 507 values (331 published, 176 held). 0 approved.
 
 ## 2. New sources (original bytes held outside git; hashes recorded)
 
@@ -132,6 +132,6 @@ Status words: held, partial, blocked, lead (URL recorded, document not read), no
 ## 10. Files changed
 
 - New: `schemas/county-indicators.schema.json`, `data/indicators.json`, `data/counties/kisumu/indicators.json`, `scripts/test-indicators.js` (in `npm run validate` and `npm run build`), `docs/research/kisumu-handover-2026-11-28/abstract-dispositions-kisumu-2024.md`, this file.
-- Wired: `lib/county-registry.js` (kind `indicators`), `lib/county-review.js`, `lib/review-status.js`, `lib/review-pack.js`, `lib/siaya-topics.js` (catalogue `siaya-indicators`), `scripts/build-data.js` (publishes `indicators.json`), `scripts/test-reviews.js`, `schemas/reviews.schema.json`.
+- Wired: `lib/county-registry.js` (kind `indicators`), `lib/county-review.js`, `lib/county-pages.js` (page counts cover public kinds only), `scripts/county-leaks.js` and `scripts/test-unpublished-counties.js` (sentinels for held indicator records), `lib/review-status.js`, `lib/review-pack.js`, `lib/siaya-topics.js` (catalogue `siaya-indicators`), `scripts/build-data.js` (publishes `indicators.json`), `scripts/test-reviews.js`, `schemas/reviews.schema.json`.
 - Page: `app/counties/siaya/people/` poverty section shows the 2022 estimates through the review mask (the old "no recent figure" line was wrong after this delta); `data/history.json` poverty gap text updated without values.
 - Regenerated: review packs, machine checks, review queue, research deliverables, report PDFs.

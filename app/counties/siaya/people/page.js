@@ -121,7 +121,7 @@ export default function SiayaPeople() {
             </tbody>
           </table>
         </TableWrap>
-        <p className="how">Individuals, from the Kenya Continuous Household Survey 2022: {kpr ? <a href={kpr.url} rel="noopener">{kpr.title}</a> : 'KNBS Kenya Poverty Report 2022'}, Tables 4.3 to 4.5 (PDF pages 46, 50 and 55) and Annex Table A1 (standard errors). Food and hardcore poverty use different poverty lines from overall poverty. Counts are printed in thousands and rounded separately from the rates. Survey estimates with sampling error (standard errors as printed in Annex A1 for overall poverty); no test of a difference from Kenya is made here. Provisional: awaiting editorial review. All values, with the survey population: <Link href="/datasets/">Siaya indicators dataset</Link>.</p>
+        <p className="how">Individuals, from the Kenya Continuous Household Survey 2022: {kpr ? <a href={kpr.url} rel="noopener">{kpr.title}</a> : 'KNBS Kenya Poverty Report 2022'}, Tables 4.3 to 4.5 (PDF pages 46, 50 and 55) and Annex Table A1 (standard errors). Food and hardcore poverty use different poverty lines from overall poverty. Counts are printed in thousands and rounded separately from the rates. Survey estimates with sampling error (standard errors as printed in Annex A1 for overall poverty); no test of a difference from Kenya is made here. All values, with the survey population: <Link href="/datasets/">Siaya indicators dataset</Link>.</p>
       </section>
 
       <section id="sources" className="card" aria-labelledby="sr-h">
