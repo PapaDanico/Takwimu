@@ -148,18 +148,25 @@ if (dist) {
       // Every value of a public kind is on a page, with its review label.
       const html = counties.pages(slug).map((p) => { const f = path.join(dist, 'counties', slug, p, 'index.html'); return fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : ''; }).join('\n');
       const shown = new Set([...html.matchAll(/data-obs="([^"]+)"/g)].map((x) => x[1]));
-      cr.entries(slug).filter((e) => counties.isPublicKind(slug, (Object.entries({ ledger: 'fiscal-ledger', audits: 'audits', population: 'population', indicators: 'indicators', abstract: 'abstract' }).find(([, v]) => e.dataset === `${slug}-${v}`) || [null])[0])).forEach((e) => ok(shown.has(`${e.dataset}:${e.id}`), `${slug}: ${e.dataset}|${e.id} is not shown on any of its pages`));
+      cr.entries(slug).filter((e) => counties.isPublicRecord(slug, (Object.entries({ ledger: 'fiscal-ledger', audits: 'audits', population: 'population', indicators: 'indicators', abstract: 'abstract' }).find(([, v]) => e.dataset === `${slug}-${v}`) || [null])[0], e.id)).forEach((e) => ok(shown.has(`${e.dataset}:${e.id}`), `${slug}: ${e.dataset}|${e.id} is not shown on any of its pages`));
       // The page label exactly once on each page that shows values while any is unreviewed (smoke-test rule N3).
       const pending = cr.counts(slug).approved < cr.counts(slug).total;
       counties.pages(slug).forEach((p) => { const f = path.join(dist, 'counties', slug, p, 'index.html'); if (!fs.existsSync(f)) return; const t = fs.readFileSync(f, 'utf8').replace(/<script[\s\S]*?<\/script>/g, ''); const k = (t.match(/Provisional: awaiting editorial review/g) || []).length; ok(p === 'sources' ? k === 0 : k === (pending ? 1 : 0), `${slug}/${p}: the provisional label appears ${k} times`); });
       const kindOfDs = (e) => (Object.entries({ ledger: 'fiscal-ledger', audits: 'audits', population: 'population', indicators: 'indicators', abstract: 'abstract' }).find(([, v]) => e.dataset === `${slug}-${v}`) || [null])[0];
-      const npc = cr.entries(slug).filter((e) => e.needs_page_check && counties.isPublicKind(slug, kindOfDs(e))).length;
+      const npc = cr.entries(slug).filter((e) => e.needs_page_check && counties.isPublicRecord(slug, kindOfDs(e), e.id)).length;
       const npcShown = (html.match(/data-needs-page-check/g) || []).length;
       ok(npcShown >= npc, `${slug}: ${npc} values need a page check but only ${npcShown} labels are shown`);
     }
     // Record-level scan of everything that must stay off the site.
     const kinds = heldKinds(slug);
-    const S = new Map([...leaks.sentinelsFor(slug, kinds), ...leaks.sentinelsFor(slug, Object.keys(counties.KINDS), rejectedKeys(slug).size ? rejectedKeys(slug) : new Set(['none|none']))]);
+    // Records of a public kind outside its table allowlist (public_tables) are held too, record by record.
+    const partHeld = new Set();
+    Object.keys(counties.KINDS).filter((k) => counties.isPublicKind(slug, k) && counties.publicIds(slug, k) !== null).forEach((k) => {
+      const ds = cr.datasetName(slug, k);
+      counties.load(slug, k).observations.filter((o) => !counties.isPublicRecord(slug, k, o.id)).forEach((o) => partHeld.add(`${ds}|${o.id}`));
+    });
+    const S = new Map([...leaks.sentinelsFor(slug, kinds), ...leaks.sentinelsFor(slug, Object.keys(counties.KINDS), rejectedKeys(slug).size ? rejectedKeys(slug) : new Set(['none|none'])), ...(partHeld.size ? leaks.sentinelsFor(slug, Object.keys(counties.KINDS), partHeld) : [])]);
+    if (partHeld.size) ok(S.size > 100, `${slug}: ${partHeld.size} held records of public kinds give only ${S.size} sentinels`);
     const sh = leaks.sentinelsHash(S);
     const rec = (scanRecord.scans[slug] && scanRecord.scans[slug].sentinels_sha256 === sh) ? scanRecord.scans[slug].pdfs : null;
     const r = leaks.scan(dist, S, rec);

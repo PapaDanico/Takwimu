@@ -1,13 +1,13 @@
 {
  "meta": {
-  "title": "Kisumu County Statistical Abstract 2024: tables by sub-county and ward (held until its page exists)",
+  "title": "Kisumu County Statistical Abstract 2024: tables by sub-county and ward (published table by table: only the tables listed in lib/county-registry.js public_tables are on the site; the rest are held)",
   "scope": "Kisumu County (042): every row and column of the KNBS Kisumu County Statistical Abstract 2024 tables whose layout parses cleanly, with sub-county sum checks. Excluded tables and reasons: docs/research/kisumu-handover-2026-11-28/abstract-dispositions-kisumu-2024.md.",
   "county": "Kisumu",
   "county_code": 42,
   "rule": "Values as printed, each with source, period, unit, confidence, table, row, column and PDF page. Machine-parsed from the PDF text layer with structural checks (every data line parsed, one cell per column) and a sum check of sub-county rows against the printed Total; sampled tables checked against the page image. \"..\" (not available) cells are not entered. Every value is provisional until a reviewer approves it.",
   "extracted": "2026-11-28",
   "status": "Provisional: awaiting editorial review",
-  "held": true
+  "held": false
  },
  "sources": [
   {
