@@ -5,12 +5,13 @@ import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
 import { masked } from '../../../../lib/review-status';
+import { pageMeta } from '../../../../lib/page-meta';
 const a = masked('siaya-agriculture');
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/agriculture/', {
   title: 'Agriculture in Siaya',
   description: 'Siaya crops, livestock, fisheries and irrigation as printed by KNBS and the county plan: observed values kept apart from plan targets, unit problems shown side by side, gaps listed.',
-};
+});
 
 const obs = a.observations;
 const byId = Object.fromEntries(obs.map((o) => [o.id, o]));

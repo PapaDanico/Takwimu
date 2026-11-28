@@ -211,6 +211,8 @@ COB_FYS.forEach((fy) => {
 });
 
 records.sort((a, b) => (a.family + a.calc_id < b.family + b.calc_id ? -1 : 1));
+// A calculation has no page: derived_from names the records it is computed from (lib/derived-from.js).
+records.forEach((r) => { r.derived_from = require('../lib/derived-from').derivedFrom(r); });
 const counts = {};
 records.forEach((r) => { const c = counts[r.family] || (counts[r.family] = { values: 0, gaps: 0 }); c[r.status === 'value' ? 'values' : 'gaps'] += 1; });
 const out = {

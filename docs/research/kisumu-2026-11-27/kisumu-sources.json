@@ -26,8 +26,11 @@
     "media claim": 17,
     "official mirror": 3,
     "official compilation": 1
-   }
-  }
+   },
+   "duplicate_records": 11,
+   "distinct_files": 166
+  },
+  "duplicates_rule": "duplicate_of names the first record (register order) holding the same SHA-256; the duplicate stays listed because its address differs (added 28 Nov 2026)."
  },
  "sources": [
   {
@@ -3760,7 +3763,7 @@
   },
   {
    "id": "KIPPRA-CBROP-2014",
-   "title": "Kisumu City County Budget Review and Outlook Paper 2014",
+   "title": "Kisumu City County Budget Review and Outlook Paper 2015",
    "publisher": "County Government of Kisumu (Treasury / Finance, Economic Planning and ICT) (hosted by KIPPRA repository)",
    "date": "2015",
    "period": "CBROP September 2015, reviews FY 2014/15",
@@ -3774,14 +3777,15 @@
     "fiscal-ledger"
    ],
    "kisumu_location": "whole document (county document)",
-   "note": "KIPPRA title says \"2014\" but the file is the September 2015 CBROP (duplicate of kippra-cbrop-2015 content, different file)",
+   "note": "KIPPRA title says \"2014\" but the file is the September 2015 CBROP (duplicate of kippra-cbrop-2015 content, different file); title corrected 28 Nov 2026 from the content (the paper reviews FY 2014/15, so it is the 2015 CBROP); catalogue_title keeps the KIPPRA title",
    "status": "held",
    "download_path": "/tmp/claude-0/-home-user-Takwimu/cf675d94-28fc-5021-bd53-7a6eed630ee6/scratchpad/kisumu/dl/kippra-cbrop-2014/file.pdf",
    "sha256": "476b31500dc474ec4809d138c0fdd75925ca6e0a24eb4bbe5a5a16d1af0a3e85",
    "bytes": 1606764,
    "pages": "28",
    "machine_readable": "text layer",
-   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/ad240364-8cd2-4f99-ba1b-53c1b3eaaf37/content"
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/ad240364-8cd2-4f99-ba1b-53c1b3eaaf37/content",
+   "catalogue_title": "Kisumu City County Budget Review and Outlook Paper 2014"
   },
   {
    "id": "KIPPRA-CBROP-2015",
@@ -3835,9 +3839,9 @@
   },
   {
    "id": "KIPPRA-CBROP-2018-V2",
-   "title": "Kisumu City County Budget review and Outlook Paper 2018",
+   "title": "Kisumu City County Budget Review and Outlook Paper 2019",
    "publisher": "County Government of Kisumu (Treasury / Finance, Economic Planning and ICT) (hosted by KIPPRA repository)",
-   "date": "2018",
+   "date": "2019",
    "period": "CBROP September 2019, reviews FY 2018/19",
    "landing": "https://repository.kippra.or.ke/items/c8bf81dd-4a32-496e-9d71-69b053353dd0",
    "licence": "County document hosted by the KIPPRA repository; no reuse licence stated. Cite with body and page; do not redistribute the PDF.",
@@ -3849,14 +3853,16 @@
     "fiscal-ledger"
    ],
    "kisumu_location": "whole document (county document)",
-   "note": "KIPPRA lists it as a second \"2018\" record; content is CBROP 2019 (same as kippra-cbrop-2019)",
+   "note": "KIPPRA lists it as a second \"2018\" record; content is CBROP 2019 (same as kippra-cbrop-2019); title corrected 28 Nov 2026 from the content (the paper reviews FY 2018/19, so it is the 2019 CBROP); catalogue_title keeps the KIPPRA title",
    "status": "held",
    "download_path": "/tmp/claude-0/-home-user-Takwimu/cf675d94-28fc-5021-bd53-7a6eed630ee6/scratchpad/kisumu/dl/kippra-cbrop-2018-v2/file.pdf",
    "sha256": "517edac7b259ed08603c84a70c7eeb59944aafa7e4cddb6e8e09f3512a0343b2",
    "bytes": 1456334,
    "pages": "88",
    "machine_readable": "text layer",
-   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/e30368f2-c3b2-42e8-add5-ab7dceb19760/content"
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/e30368f2-c3b2-42e8-add5-ab7dceb19760/content",
+   "catalogue_title": "Kisumu City County Budget review and Outlook Paper 2018",
+   "catalogue_date": "2018"
   },
   {
    "id": "KIPPRA-CBROP-2019",
@@ -3885,9 +3891,9 @@
   },
   {
    "id": "KIPPRA-CBROP-2020",
-   "title": "Kisumu City County Budget Review and Outlook Paper 2020",
+   "title": "Kisumu City County Budget Review and Outlook Paper 2021",
    "publisher": "County Government of Kisumu (Treasury / Finance, Economic Planning and ICT) (hosted by KIPPRA repository)",
-   "date": "2020",
+   "date": "2021",
    "period": "CBROP September 2021, reviews FY 2020/21",
    "landing": "https://repository.kippra.or.ke/items/658f3705-21bc-4eb0-a689-e563f2bd04bf",
    "licence": "County document hosted by the KIPPRA repository; no reuse licence stated. Cite with body and page; do not redistribute the PDF.",
@@ -3899,20 +3905,22 @@
     "fiscal-ledger"
    ],
    "kisumu_location": "whole document (county document)",
-   "note": "KIPPRA title \"2020\" is wrong: text \"reviews the fiscal outcome for FY 2020/2021\"",
+   "note": "KIPPRA title \"2020\" is wrong: text \"reviews the fiscal outcome for FY 2020/2021\"; title corrected 28 Nov 2026 from the content (the paper reviews FY 2020/21, so it is the 2021 CBROP); catalogue_title keeps the KIPPRA title",
    "status": "held",
    "download_path": "/tmp/claude-0/-home-user-Takwimu/cf675d94-28fc-5021-bd53-7a6eed630ee6/scratchpad/kisumu/dl/kippra-cbrop-2020/file.pdf",
    "sha256": "5d5f64c4228c24baf19e36dc5256215b1801f36a189974e9517bce41060c7a9c",
    "bytes": 1711419,
    "pages": "109",
    "machine_readable": "text layer",
-   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/57d1d300-d07a-4172-bd48-ca05e845d1b3/content"
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/57d1d300-d07a-4172-bd48-ca05e845d1b3/content",
+   "catalogue_title": "Kisumu City County Budget Review and Outlook Paper 2020",
+   "catalogue_date": "2020"
   },
   {
    "id": "KIPPRA-CBROP-2021",
-   "title": "Kisumu City  County Budget Review  and Outlook  Paper 2021",
+   "title": "Kisumu City County Budget Review and Outlook Paper 2022",
    "publisher": "County Government of Kisumu (Treasury / Finance, Economic Planning and ICT) (hosted by KIPPRA repository)",
-   "date": "2021",
+   "date": "2022",
    "period": "CBROP 2022, reviews FY 2021/22",
    "landing": "https://repository.kippra.or.ke/items/bda75046-90fa-4a07-b591-cab46a52288b",
    "licence": "County document hosted by the KIPPRA repository; no reuse licence stated. Cite with body and page; do not redistribute the PDF.",
@@ -3924,20 +3932,22 @@
     "fiscal-ledger"
    ],
    "kisumu_location": "whole document (county document)",
-   "note": "KIPPRA title \"2021\"; text reviews FY 2021/22",
+   "note": "KIPPRA title \"2021\"; text reviews FY 2021/22; title corrected 28 Nov 2026 from the content (the paper reviews FY 2021/22, so it is the 2022 CBROP); catalogue_title keeps the KIPPRA title",
    "status": "held",
    "download_path": "/tmp/claude-0/-home-user-Takwimu/cf675d94-28fc-5021-bd53-7a6eed630ee6/scratchpad/kisumu/dl/kippra-cbrop-2021/file.pdf",
    "sha256": "ebb82d50d3427e00285c036f039594e0332c506815e68df8cac38b6e20f6374b",
    "bytes": 1726880,
    "pages": "112",
    "machine_readable": "text layer",
-   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/c6c44fda-c478-4e44-91bc-3e91c3c986a5/content"
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/c6c44fda-c478-4e44-91bc-3e91c3c986a5/content",
+   "catalogue_title": "Kisumu City  County Budget Review  and Outlook  Paper 2021",
+   "catalogue_date": "2021"
   },
   {
    "id": "KIPPRA-CBROP-2022",
-   "title": "Kisumu City County Budget Review and Outlook Paper 2022",
+   "title": "Kisumu City County Budget Review and Outlook Paper 2023",
    "publisher": "County Government of Kisumu (Treasury / Finance, Economic Planning and ICT) (hosted by KIPPRA repository)",
-   "date": "2022",
+   "date": "2023",
    "period": "CBROP 2023, reviews FY 2022/23",
    "landing": "https://repository.kippra.or.ke/items/a34c0404-e329-4a40-ad8e-e89795994f93",
    "licence": "County document hosted by the KIPPRA repository; no reuse licence stated. Cite with body and page; do not redistribute the PDF.",
@@ -3949,20 +3959,22 @@
     "fiscal-ledger"
    ],
    "kisumu_location": "whole document (county document)",
-   "note": "KIPPRA title \"2022\"",
+   "note": "KIPPRA title \"2022\"; title corrected 28 Nov 2026 from the content (the paper reviews FY 2022/23, so it is the 2023 CBROP); catalogue_title keeps the KIPPRA title",
    "status": "held",
    "download_path": "/tmp/claude-0/-home-user-Takwimu/cf675d94-28fc-5021-bd53-7a6eed630ee6/scratchpad/kisumu/dl/kippra-cbrop-2022/file.pdf",
    "sha256": "031b0309408d7c4399390348fbe14d36277229ca887e5fef300c9f34a628f025",
    "bytes": 1911950,
    "pages": "92",
    "machine_readable": "text layer",
-   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/a5b2640a-bff5-44ac-9dc8-4446bc338f06/content"
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/a5b2640a-bff5-44ac-9dc8-4446bc338f06/content",
+   "catalogue_title": "Kisumu City County Budget Review and Outlook Paper 2022",
+   "catalogue_date": "2022"
   },
   {
    "id": "KIPPRA-CBROP-2023",
-   "title": "Kisumu City County Budget Review and Outlook Paper 2023",
+   "title": "Kisumu City County Budget Review and Outlook Paper 2024",
    "publisher": "County Government of Kisumu (Treasury / Finance, Economic Planning and ICT) (hosted by KIPPRA repository)",
-   "date": "2023",
+   "date": "2024",
    "period": "CBROP 2024, reviews FY 2023/24",
    "landing": "https://repository.kippra.or.ke/items/cf9a3259-6ce0-47dc-a4df-8c8a7a3528d1",
    "licence": "County document hosted by the KIPPRA repository; no reuse licence stated. Cite with body and page; do not redistribute the PDF.",
@@ -3974,20 +3986,22 @@
     "fiscal-ledger"
    ],
    "kisumu_location": "whole document (county document)",
-   "note": "KIPPRA title \"2023\"; same file as county site scanned copy",
+   "note": "KIPPRA title \"2023\"; same file as county site scanned copy; title corrected 28 Nov 2026 from the content (the paper reviews FY 2023/24, so it is the 2024 CBROP); catalogue_title keeps the KIPPRA title",
    "status": "held",
    "download_path": "/tmp/claude-0/-home-user-Takwimu/cf675d94-28fc-5021-bd53-7a6eed630ee6/scratchpad/kisumu/dl/kippra-cbrop-2023/file.pdf",
    "sha256": "036a9103156ea7a9d2d9817af61b30304e4ae11ba509782ec190dcd4c9b10d46",
    "bytes": 1901772,
    "pages": "104",
    "machine_readable": "text layer",
-   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/123a2ce7-7052-4738-a3a0-1ac26e8c53c3/content"
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/123a2ce7-7052-4738-a3a0-1ac26e8c53c3/content",
+   "catalogue_title": "Kisumu City County Budget Review and Outlook Paper 2023",
+   "catalogue_date": "2023"
   },
   {
    "id": "KIPPRA-CBROP-2024",
-   "title": "Kisumu City County Budget Review and Outlook Paper 2024",
+   "title": "Kisumu City County Budget Review and Outlook Paper 2025",
    "publisher": "County Government of Kisumu (Treasury / Finance, Economic Planning and ICT) (hosted by KIPPRA repository)",
-   "date": "2024",
+   "date": "2025",
    "period": "CBROP 2025, reviews FY 2024/25",
    "landing": "https://repository.kippra.or.ke/items/cec1e722-ce76-4894-ad78-e8ca7d961744",
    "licence": "County document hosted by the KIPPRA repository; no reuse licence stated. Cite with body and page; do not redistribute the PDF.",
@@ -3999,14 +4013,16 @@
     "fiscal-ledger"
    ],
    "kisumu_location": "whole document (county document)",
-   "note": "KIPPRA title \"2024\"; OSR 2,463,027,946 matches CoB 2,463.03m",
+   "note": "KIPPRA title \"2024\"; OSR 2,463,027,946 matches CoB 2,463.03m; title corrected 28 Nov 2026 from the content (the paper reviews FY 2024/25, so it is the 2025 CBROP); catalogue_title keeps the KIPPRA title",
    "status": "held",
    "download_path": "/tmp/claude-0/-home-user-Takwimu/cf675d94-28fc-5021-bd53-7a6eed630ee6/scratchpad/kisumu/dl/kippra-cbrop-2024/file.pdf",
    "sha256": "776e44f89d945885d44d31192e477e47c38ede441b8f182d5c4752384fad2608",
    "bytes": 2188085,
    "pages": "115",
    "machine_readable": "text layer",
-   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/e8c74ebd-7729-4121-b3a9-1fce51ec1bb8/content"
+   "url": "https://repository.kippra.or.ke/server/api/core/bitstreams/e8c74ebd-7729-4121-b3a9-1fce51ec1bb8/content",
+   "catalogue_title": "Kisumu City County Budget Review and Outlook Paper 2024",
+   "catalogue_date": "2024"
   },
   {
    "id": "COUNTY-CBROP-2015-SITE",
@@ -4031,7 +4047,8 @@
    "bytes": 1606764,
    "pages": "28",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/2018/11/Kisumu-County-CBROP-2015.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/2018/11/Kisumu-County-CBROP-2015.pdf",
+   "duplicate_of": "KIPPRA-CBROP-2014"
   },
   {
    "id": "COUNTY-CBROP-2020-FY2019-20",
@@ -4081,7 +4098,8 @@
    "bytes": 1711419,
    "pages": "109",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/2022/10/COMPILED-FINAL-CBROP-REPORT-FY-2021.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/2022/10/COMPILED-FINAL-CBROP-REPORT-FY-2021.pdf",
+   "duplicate_of": "KIPPRA-CBROP-2020"
   },
   {
    "id": "COUNTY-CBROP-FY2021-22",
@@ -4131,7 +4149,8 @@
    "bytes": 1726880,
    "pages": "112",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/CBROP-FY-2021-2022-DOCUMENT.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/CBROP-FY-2021-2022-DOCUMENT.pdf",
+   "duplicate_of": "KIPPRA-CBROP-2021"
   },
   {
    "id": "COUNTY-CBROP-FY2022-23-DOCX",
@@ -4206,7 +4225,8 @@
    "bytes": 1901772,
    "pages": "104",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/CBROP-FY-2023-2024.pdf-Scanned.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/CBROP-FY-2023-2024.pdf-Scanned.pdf",
+   "duplicate_of": "KIPPRA-CBROP-2023"
   },
   {
    "id": "COUNTY-CBROP-2025-FY2024-25",
@@ -4556,7 +4576,8 @@
    "bytes": 842825,
    "pages": "57",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/2019/09/APPROVED-CFSP-2018-2019.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/2019/09/APPROVED-CFSP-2018-2019.pdf",
+   "duplicate_of": "KIPPRA-CFSP-2018"
   },
   {
    "id": "COUNTY-CFSP-2019-APPROVED",
@@ -4581,7 +4602,8 @@
    "bytes": 1031210,
    "pages": "57",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/2019/09/APPROVED-CFSP-2019.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/2019/09/APPROVED-CFSP-2019.pdf",
+   "duplicate_of": "KIPPRA-CFSP-2019"
   },
   {
    "id": "COUNTY-CFSP-2021-22-DRAFT",
@@ -4631,7 +4653,8 @@
    "bytes": 1829107,
    "pages": "59",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/KISUMU-COUNTY-FISCAL-STRATEGY-PAPER-KCFSP-FY-2023-2024.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/KISUMU-COUNTY-FISCAL-STRATEGY-PAPER-KCFSP-FY-2023-2024.pdf",
+   "duplicate_of": "KIPPRA-CFSP-2023"
   },
   {
    "id": "COUNTY-CFSP-2024-25",
@@ -5456,7 +5479,8 @@
    "bytes": 537569,
    "pages": "18",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/Full-Year-Budget-Implementation-Report-1.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/Full-Year-Budget-Implementation-Report-1.pdf",
+   "duplicate_of": "COUNTY-BIRR-FULL-2022-10"
   },
   {
    "id": "COUNTY-BIRR-Q3-2022-10",
@@ -5581,7 +5605,8 @@
    "bytes": 555650,
    "pages": "36",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/Quarter-One-County-Budget-Review-Implementation-Report.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/Quarter-One-County-Budget-Review-Implementation-Report.pdf",
+   "duplicate_of": "COUNTY-BIRR-Q1-2023"
   },
   {
    "id": "COUNTY-BIRR-3Q-2024",
@@ -6030,7 +6055,8 @@
    "bytes": 3111240,
    "pages": "217",
    "machine_readable": "text layer",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/2019/09/APPROVED-ADP-2019-2020.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/2019/09/APPROVED-ADP-2019-2020.pdf",
+   "duplicate_of": "KIPPRA-ADP-2019-2020"
   },
   {
    "id": "KIPPRA-ADP-2020-2021",
@@ -6230,7 +6256,8 @@
    "bytes": 13245015,
    "pages": null,
    "machine_readable": "not a valid document (server returned data)",
-   "url": "https://www.kisumu.go.ke/wp-content/uploads/KISUMU-ADP-2026-2027.pdf"
+   "url": "https://www.kisumu.go.ke/wp-content/uploads/KISUMU-ADP-2026-2027.pdf",
+   "duplicate_of": "COUNTY-ADP-2026-2027"
   },
   {
    "id": "KIPPRA-CIDP-2013-2017",

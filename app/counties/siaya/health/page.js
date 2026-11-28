@@ -5,12 +5,13 @@ import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
 import { masked } from '../../../../lib/review-status';
+import { pageMeta } from '../../../../lib/page-meta';
 const h = masked('siaya-health');
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/health/', {
   title: 'Health in Siaya',
   description: 'Siaya health indicators by source: HIV estimates by model round, TB, malaria, maternal care, immunisation, stunting and health workforce, with page, period and confidence for every value and disagreements side by side.',
-};
+});
 
 const obs = h.observations;
 const byId = Object.fromEntries(obs.map((o) => [o.id, o]));

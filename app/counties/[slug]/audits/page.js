@@ -1,17 +1,19 @@
 import Link from 'next/link';
 import PageToc from '../../../../components/PageToc';
 import PageHead from '../../../../components/PageHead';
+import CountyNav from '../../../../components/county/CountyNav';
 import TableWrap from '../../../../components/TableWrap';
 import CountyProvisional from '../../../../components/county/CountyProvisional';
 import CountyCite, { ValueFlags } from '../../../../components/county/Cite';
 import { paramsFor } from '../../../../components/county/params';
 import * as cp from '../../../../lib/county-pages';
+import { pageMeta } from '../../../../lib/page-meta';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => paramsFor('audits');
 export function generateMetadata({ params }) {
   const m = cp.meta(params.slug);
-  return { title: `${m.name}: audit opinions`, description: `Auditor-General opinions on the accounts of ${m.name} County's executive, assembly and separately audited bodies, by year, each quoted as printed with the report and page; years with no primary report listed.` };
+  return pageMeta(`/counties/${params.slug}/audits/`, { title: `${m.name}: audit opinions`, description: `Auditor-General opinions on the accounts of ${m.name} County's executive, assembly and separately audited bodies, by year, each quoted as printed with the report and page; years with no primary report listed.` });
 }
 
 function Opinion({ o }) {
@@ -33,7 +35,7 @@ export default function CountyAudits({ params }) {
   const a = cp.audits(slug);
   const cell = (fy, entity) => a.opinions.filter((o) => o.fy === fy && o.entity === entity);
   const gap = (fy, entity) => a.gaps.find((g) => g.fy === fy && g.entity === entity);
-  return (
+  return (<>
     <main id="main" className="wrap page">
       <PageHead county={{ slug, name: m.name }} eyebrow="Audit" title="Audit opinions"
         sub={`What the Auditor-General concluded about the financial statements of ${m.name} County's executive, assembly and separately audited bodies, year by year, quoted as printed.`}
@@ -84,5 +86,6 @@ export default function CountyAudits({ params }) {
         <p className="src">Every report cited here is on the <Link href={`/counties/${slug}/sources/`}>{m.name} sources</Link> page. See also the <Link href={`/counties/${slug}/ledger/`}>fiscal reconciliation</Link>.</p>
       </section>
     </main>
-  );
+    <CountyNav name={m.name} links={cp.nav(slug)} current={`/counties/${slug}/audits/`} />
+  </>);
 }

@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Report from '../../../components/report/Report';
 import { buildReport, SLUGS } from '../../../components/report/build';
 import { buildWebReport } from '../../../components/report/web';
+import { pageMeta } from '../../../lib/page-meta';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -11,11 +12,10 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const r = buildReport(params.slug);
   if (!r) return {};
-  return {
+  return pageMeta(`/reports/${r.meta.slug}/`, {
     title: `Report ${r.meta.letter}: ${r.meta.title}${r.draft ? ' (draft)' : ''}`,
     description: `${r.meta.subtitle}. Print-ready report built only from the Takwimu data files; snapshot ${r.snapshot.id}.`,
-    alternates: { canonical: `/reports/${r.meta.slug}/` },
-  };
+  });
 }
 
 export default function ReportPage({ params }) {

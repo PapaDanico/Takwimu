@@ -9,13 +9,14 @@ import { source } from '../../../../lib/siaya-sources';
 import { masked, badge } from '../../../../lib/review-status';
 import Reviewed from '../../../../components/Reviewed';
 import { fmtMaybe } from '../../../../lib/format';
+import { pageMeta } from '../../../../lib/page-meta';
 
 const g = masked('siaya-programmes');
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/programmes/', {
   title: 'NGO and development partner atlas',
   description: 'Development partner, NGO and donor programmes in Siaya since 2016: Siaya-specific programmes with county-booked amounts kept apart from multi-county and national programmes whose pooled amounts are never added to Siaya.',
-};
+});
 
 const EVIDENCE = { planned: 'Planned', self_reported: 'Self-reported', independently_evaluated: 'Independently evaluated' };
 const EV_DEF = {

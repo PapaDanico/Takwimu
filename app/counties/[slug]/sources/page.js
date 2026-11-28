@@ -1,14 +1,16 @@
 import Link from 'next/link';
 import PageHead from '../../../../components/PageHead';
+import CountyNav from '../../../../components/county/CountyNav';
 import TableWrap from '../../../../components/TableWrap';
 import { paramsFor } from '../../../../components/county/params';
 import * as cp from '../../../../lib/county-pages';
+import { pageMeta } from '../../../../lib/page-meta';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => paramsFor('sources');
 export function generateMetadata({ params }) {
   const m = cp.meta(params.slug);
-  return { title: `${m.name}: sources`, description: `Every document cited on the ${m.name} County pages: publisher, publication date, period, link, licence and SHA-256 hash where held.` };
+  return pageMeta(`/counties/${params.slug}/sources/`, { title: `${m.name}: sources`, description: `Every document cited on the ${m.name} County pages: publisher, publication date, period, link, licence and SHA-256 hash where held.` });
 }
 
 const USED = { ledger: 'Fiscal reconciliation', audits: 'Audit opinions', people: 'Population' };
@@ -18,7 +20,7 @@ export default function CountySources({ params }) {
   const { slug } = params;
   const m = cp.meta(slug);
   const list = cp.sources(slug);
-  return (
+  return (<>
     <main id="main" className="wrap page">
       <PageHead county={{ slug, name: m.name }} eyebrow="Sources" title="Sources"
         sub={`Every document cited on the ${m.name} County pages, with its publisher, date, link, licence and, where the file is held, its SHA-256 hash so that anyone can check they have the same copy.`}
@@ -45,5 +47,6 @@ export default function CountySources({ params }) {
         </TableWrap>
       </section>
     </main>
-  );
+    <CountyNav name={m.name} links={cp.nav(slug)} current={`/counties/${slug}/sources/`} />
+  </>);
 }

@@ -83,6 +83,15 @@ ok(JSON.stringify(cnt) === JSON.stringify(data.meta.counts), 'meta.counts do not
 data.records.forEach((r) => ok(!r.inputs.some((i) => /siaya-audits/.test(i.dataset)), `${r.calc_id}: an audit finding may only be beside a result`));
 ok(data.records.some((r) => r.family === 'B1' && r.beside.length) && data.records.some((r) => r.family === 'B5' && r.beside.length), 'the Auditor-General\'s wage-bill and liabilities ratios must be shown beside');
 
+// ---- derived_from: a calculation names its input records in place of a page (lib/derived-from.js) ----
+{
+  const { derivedFromProblems } = require('../lib/derived-from');
+  const rsx = require('../lib/review-status');
+  const items = Object.fromEntries(rsx.DATASET_IDS.map((d) => [d, new Set(rsx.observations(d).map((i) => i.id))]));
+  data.records.forEach((r) => derivedFromProblems(r, items).forEach((p) => ok(false, `${r.calc_id}: ${p}`)));
+  ok(derivedFromProblems({ ...data.records.find((r) => r.derived_from.length), derived_from: [] }, items).length > 0, 'derived_from check is vacuous: an emptied list must fail');
+}
+
 if (errors.length) {
   console.error(`test-analysis-layers: ${errors.length} of ${checks} checks failed:\n- ${errors.slice(0, 40).join('\n- ')}`);
   process.exit(1);

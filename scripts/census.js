@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Mechanical source and data census (work order WO01, owner handover 28 Nov 2026). Read-only: it writes only the two
-// report files below and changes no data. Not part of the build. Deterministic: the same inputs give the same bytes
-// (no clocks, sorted keys, inputs identified by their SHA-256).
+// report files below (and the generated current-status section of kisumu-coverage.md) and changes no data. `--check`
+// runs in the build (package.json) and fails when README.md or .claude/CLAUDE.md counts drift. Deterministic: the
+// same inputs give the same bytes (no clocks, sorted keys, inputs identified by their SHA-256).
 //   Values are enumerated with lib/review-status.js (Siaya and the national files it itemises) and lib/county-registry.js
 //   with lib/county-review.js (counties other than Siaya). Metadata are read the way lib/review-pack.js reads them.
 //   Counts claimed in README.md "Status" and .claude/CLAUDE.md are compared with the actual counts.
@@ -23,6 +24,8 @@ const DIST = argDist > 0 ? path.resolve(CWD, process.argv[argDist + 1]) : null;
 const rs = require('../lib/review-status');
 const rp = require('../lib/review-pack');
 const reg = require('../lib/county-registry');
+// Counties held in the registry outside Siaya's legacy files (published or not).
+const REG_COUNTIES = reg.slugs().filter((x) => !reg.legacy(x));
 const cr = require('../lib/county-review');
 const { COUNTIES, bySlug } = require('../lib/counties');
 
@@ -143,6 +146,10 @@ function siayaRow(dataset, item, packed) {
   if (out.period && typeof out.period === 'object') out.period = out.period.start || out.period.end ? `${out.period.start || '?'} to ${out.period.end || '?'}` : (out.period.as_printed || null);
   out.unit = p.unit ?? first(o, ['unit']);
   out.page = first(p, ['pdf_page', 'printed_page']) ?? first(o, ['pdf_page', 'page', 'page_pdf', 'printed_page']);
+  // A calculation has no page: a non-empty derived_from (lib/derived-from.js) stands in for it; a calculation gap with no
+  // input has nothing to locate, and its gap_reason says why.
+  out.derived_from = Array.isArray(o.derived_from) && o.derived_from.length ? o.derived_from.length : 0;
+  out.page_na = blank(out.page) && !out.derived_from && item.kind === 'calculation by Takwimu' && o.result === null && !blank(o.gap_reason || o.caveat);
   let conf = first(o, ['confidence']);
   let confBasis = conf !== null ? 'record' : null;
   let obsTier = first(o, ['source_type', 'tier']);
@@ -184,6 +191,7 @@ function countyRow(slug, e) {
     confidence: first(o, ['confidence']), confidence_basis: blank((o || {}).confidence) ? null : 'record', obs_tier: tierOfLabel(first(o, ['source_type', 'tier'])),
     value: e.value, null_reason: blank(e.value) ? first(o, REASON_KEYS) : null, state: e.state_code,
     hashes: e.sources.map((s) => (src[s] || {}).sha256 || rp.doc(s).sha256 || null), pub: e.sources.map((s) => (src[s] || {}).publication_date || rp.doc(s).publication_date || null),
+    pub_reason: e.sources.map((s) => { const d = kind === 'audits' ? D.documents.find((x) => x.doc_id === s) : null; return d && !d.report_date && !blank(d.date_note) ? d.date_note : null; }),
     known: e.sources.map((s) => Boolean(src[s]) || docKnown(null, s)),
   };
 }
@@ -195,6 +203,7 @@ function summarise(rows) {
     by_tier: Object.fromEntries(TIERS.map((t) => [t, 0])), tier_basis: {},
     by_state: { provisional: 0, approved: 0, rejected: 0, disputed: 0, superseded: 0 },
     missing: { source: 0, source_unresolved: 0, publication_date: 0, publication_date_not_stated: 0, period: 0, unit: 0, confidence: 0, page: 0 },
+    publication_date_null_with_reason: 0, page_by_derived_from: 0, page_not_applicable: 0,
     missing_any: 0, missing_any_counting_not_stated: 0, confidence_inherited: 0,
     distinct_source_ids: 0, distinct_source_hashes: 0, cited_sources_without_hash: 0,
     nulls_with_reason: 0, nulls_without_reason: 0,
@@ -222,10 +231,13 @@ function summarise(rows) {
     const m = {
       source: r.sources.length === 0,
       source_unresolved: r.sources.length > 0 && r.known.some((k) => !k),
-      publication_date: r.sources.length === 0 || r.pub.every((p) => blank(p)),
+      publication_date: r.sources.length === 0 || r.pub.every((p, i) => blank(p) && !(r.pub_reason && r.pub_reason[i])),
       publication_date_not_stated: r.pub.length > 0 && r.pub.every((p) => blank(p) || notStated(p)) && r.pub.some((p) => notStated(p)),
-      period: blank(r.period), unit: blank(r.unit), confidence: blank(r.confidence), page: blank(r.page),
+      period: blank(r.period), unit: blank(r.unit), confidence: blank(r.confidence), page: blank(r.page) && !r.derived_from && !r.page_na,
     };
+    if (r.sources.length && r.pub.every((p) => blank(p)) && !m.publication_date) s.publication_date_null_with_reason += 1;
+    if (blank(r.page) && r.derived_from) s.page_by_derived_from += 1;
+    if (r.page_na) s.page_not_applicable += 1;
     Object.entries(m).forEach(([k, v]) => { if (v) s.missing[k] += 1; });
     if (m.source || m.publication_date || m.period || m.unit || m.confidence || m.page) s.missing_any += 1;
     if (m.source || m.publication_date || m.publication_date_not_stated || m.period || m.unit || m.confidence || m.page) s.missing_any_counting_not_stated += 1;
@@ -243,10 +255,10 @@ function summarise(rows) {
 const packed = {}; rp.all().forEach((e) => { packed[`${e.dataset}|${e.id}`] = e; });
 const ROWS = {};
 rs.DATASET_IDS.forEach((ds) => { ROWS[ds] = rs.observations(ds).map((i) => siayaRow(ds, i, packed[`${ds}|${i.id}`])); });
-reg.NOT_YET_ON_PAGES.forEach((slug) => cr.entries(slug).forEach((e) => { (ROWS[e.dataset] = ROWS[e.dataset] || []).push(countyRow(slug, e)); }));
+REG_COUNTIES.forEach((slug) => cr.entries(slug).forEach((e) => { (ROWS[e.dataset] = ROWS[e.dataset] || []).push(countyRow(slug, e)); }));
 const DS_FILE = {};
 rs.DATASET_IDS.forEach((ds) => { DS_FILE[ds] = `data/${ds}.json`; });
-reg.NOT_YET_ON_PAGES.forEach((slug) => ['ledger', 'audits', 'population'].filter((k) => reg.has(slug, k)).forEach((k) => { DS_FILE[cr.datasetName(slug, k)] = reg.file(slug, k); }));
+REG_COUNTIES.forEach((slug) => ['ledger', 'audits', 'population'].filter((k) => reg.has(slug, k)).forEach((k) => { DS_FILE[cr.datasetName(slug, k)] = reg.file(slug, k); }));
 
 const FILES = [
   ...fs.readdirSync(path.join(ROOT, 'data')).filter((f) => f.endsWith('.json')).map((f) => `data/${f}`),
@@ -305,10 +317,10 @@ function disagreements(file, rowsOf) {
   }).sort((a, b) => byStr(`${a.dataset}|${a.id}`, `${b.dataset}|${b.id}`));
   return { file, meta_counts: M.meta && M.meta.counts ? M.meta.counts : null, actual_counts: t, checks: M.checks.length, disagreements: list };
 }
-const kEntries = {}; reg.NOT_YET_ON_PAGES.forEach((slug) => cr.entries(slug).forEach((e) => { kEntries[`${e.dataset}|${e.id}`] = e; }));
+const kEntries = {}; REG_COUNTIES.forEach((slug) => cr.entries(slug).forEach((e) => { kEntries[`${e.dataset}|${e.id}`] = e; }));
 const machine = {
   siaya: disagreements('data/machine-checks.json', (d, id) => packed[`${d}|${id}`]),
-  ...Object.fromEntries(reg.NOT_YET_ON_PAGES.map((slug) => [slug, disagreements(reg.COUNTY_DATA[slug].review.machine_checks, (d, id) => kEntries[`${d}|${id}`])])),
+  ...Object.fromEntries(REG_COUNTIES.map((slug) => [slug, disagreements(reg.COUNTY_DATA[slug].review.machine_checks, (d, id) => kEntries[`${d}|${id}`])])),
 };
 
 // ---------------------------------------------------------------- claims
@@ -328,7 +340,7 @@ const ledgerStatus = {}; ledger.discrepancies.forEach((d) => inc(ledgerStatus, d
 const notes = cn.correctionNotes();
 const cat = explore.catalogue();
 const kis = {};
-reg.NOT_YET_ON_PAGES.forEach((slug) => { kis[slug] = { counts: cr.counts(slug), by_dataset: {} }; cr.entries(slug).forEach((e) => inc(kis[slug].by_dataset, e.dataset)); });
+REG_COUNTIES.forEach((slug) => { kis[slug] = { counts: cr.counts(slug), by_dataset: {} }; cr.entries(slug).forEach((e) => inc(kis[slug].by_dataset, e.dataset)); });
 const kc = reg.has('kisumu', 'conflicts') ? reg.load('kisumu', 'conflicts').conflicts.length : null;
 const y1920 = H.years.find((y) => y.fy === '2019/20') || {};
 const y1920vals = Object.entries(y1920).filter(([k, v]) => typeof v === 'number').map(([k]) => k).sort();
@@ -339,34 +351,44 @@ const sources448 = KR.sources.length;
 const covText = fs.readFileSync(path.join(ROOT, KCOV), 'utf8');
 INPUTS.push(KCOV, 'README.md', '.claude/CLAUDE.md', 'data/conflicts.json', 'data/ledger-classes.json', 'data/corrections.json', 'data/review-packs.json', 'components/report/reports.json');
 
-const C = (where, claim, actual, match, how) => ({ where, claim, actual, match: Boolean(match), how });
+// Claims are read from the documents themselves (README.md "Status" section, .claude/CLAUDE.md, the generated current
+// status of kisumu-coverage.md): each rule finds its sentence by a pattern, takes the numbers it states and compares them
+// with the counts here. A sentence that is missing or states a different number fails `--check` (in the build).
+const README = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
+const STATUS = (README.match(/^## Status[^\n]*\n([\s\S]*?)(?=^## )/m) || [null, ''])[1];
+const CLAUDE = fs.readFileSync(path.join(ROOT, '.claude', 'CLAUDE.md'), 'utf8');
+const COV_MARK = '## Current status (generated)';
+const covHist = covText.includes(`\n${COV_MARK}`) ? covText.slice(0, covText.indexOf(`\n${COV_MARK}`) + 1) : covText;
+const num = (s) => (s === undefined ? null : /^[\d,]+$/.test(s) ? Number(s.replace(/,/g, '')) : s);
+const C = (where, label, text, re, actual, how) => {
+  const m = text.match(re);
+  const stated = m ? m.slice(1).map(num) : null;
+  const want = actual.map((x) => (typeof x === 'string' && /^\d+$/.test(x) ? Number(x) : x));
+  return { where, claim: m ? m[0].trim() : `${label}: sentence not found (${re})`, actual: want.join(', '), match: Boolean(m) && JSON.stringify(stated) === JSON.stringify(want), how };
+};
 const sc = totals.siaya_review_scope;
+const published = COUNTIES.filter((c) => c.published);
+const csvN = cat.filter((d) => d.files.csv).length;
+const linkOnly = cat.filter((d) => !d.files.csv);
+const cobFys = cob.years.map((y) => y.fy).sort();
 const claims = [
-  C('README Status', 'Counties: 1 of 47 published (Siaya)', `${COUNTIES.filter((c) => c.published).length} of ${COUNTIES.length} published (${COUNTIES.filter((c) => c.published).map((c) => c.name).join(', ')})`, COUNTIES.length === 47 && COUNTIES.filter((c) => c.published).length === 1, 'lib/counties.js'),
-  C('README Status', 'Siaya values: 4,005', String(siayaScope.length), siayaScope.length === 4005, 'lib/review-pack.js all() over lib/review-status.js'),
-  C('README Status', 'across 16 datasets', String(new Set(siayaScope.map((e) => e.dataset)).size), new Set(siayaScope.map((e) => e.dataset)).size === 16, 'distinct datasets in the review-pack scope'),
-  C('README Status', 'each with a review pack', `${siayaKeys.filter((k) => packSet.has(k)).length} of ${siayaKeys.length} in data/review-packs.json (file holds ${packs.entries.length})`, siayaKeys.every((k) => packSet.has(k)) && packSet.size === siayaKeys.length, 'data/review-packs.json entries'),
-  C('README Status', '0 approved; data/reviews.json is empty', `${sc.by_state.approved} approved; ${reviews.decisions.length} records`, sc.by_state.approved === 0 && reviews.decisions.length === 0, 'lib/review-status.js stateOf'),
-  C('README Status', 'Machine cross-checks: 2,363 agree, 80 disagree, 1,562 not checkable', `${machine.siaya.actual_counts.agree} agree, ${machine.siaya.actual_counts.disagree} disagree, ${machine.siaya.actual_counts['not checkable']} not checkable (${machine.siaya.checks} checks)`, machine.siaya.actual_counts.agree === 2363 && machine.siaya.actual_counts.disagree === 80 && machine.siaya.actual_counts['not checkable'] === 1562, 'data/machine-checks.json checks[].result'),
-  C('README Status', 'Fiscal ledger: 164 discrepancy cases', String(ledger.discrepancies.length), ledger.discrepancies.length === 164, 'data/siaya-fiscal-ledger.json discrepancies'),
-  C('README Status', '47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 open', `${classCount.definitional || 0} definitional, ${classCount['period or version'] || 0} period or version, ${classCount['probable source error'] || 0} probable source error, ${classCount['resolved by source'] || 0} resolved by source, ${classCount.open || 0} open (data/ledger-classes.json); the ledger file itself marks ${JSON.stringify(ledgerStatus)}`, classCount.definitional === 47 && classCount['period or version'] === 22 && classCount['probable source error'] === 15 && classCount['resolved by source'] === 2 && classCount.open === 78, 'data/ledger-classes.json cases[].class'),
-  C('README Status', 'Conflict register: 53 cases', String(conflicts.conflicts.length), conflicts.conflicts.length === 53, 'data/conflicts.json'),
-  C('README Status', 'Ten-year series FY 2013/14 to FY 2025/26', `${H.years[0].fy} to ${H.years[H.years.length - 1].fy} (${H.years.length} years)`, H.years[0].fy === '2013/14' && H.years[H.years.length - 1].fy === '2025/26', 'data/history.json years'),
-  C('README Status', 'FY 2019/20 stays a gap (CoB report not found)', `FY 2019/20 row holds numeric fields: ${y1920vals.join(', ') || 'none'}`, true, 'data/history.json years[fy=2019/20] (informational: the gap is the CoB value; other fields may be filled from other sources)'),
-  C('README Status', '17 corrections footnoted beside 26 values', `${new Set(notes.map((n) => n.id)).size} corrections, ${new Set(notes.map((n) => n.ref)).size} values`, new Set(notes.map((n) => n.id)).size === 17 && new Set(notes.map((n) => n.ref)).size === 26, 'lib/correction-notes.js'),
-  C('README Status', '14 source-error records', String(ed.sourceErrors().length), ed.sourceErrors().length === 14, 'lib/editorial.js sourceErrors()'),
-  C('README Status', 'Kisumu: 331 values', String(kis.kisumu ? kis.kisumu.counts.total : 0), kis.kisumu && kis.kisumu.counts.total === 331, 'lib/county-review.js entries'),
-  C('README Status', '291 ledger, 35 audit opinions, population (5)', JSON.stringify(kis.kisumu ? kis.kisumu.by_dataset : {}), kis.kisumu && kis.kisumu.by_dataset['kisumu-fiscal-ledger'] === 291 && kis.kisumu.by_dataset['kisumu-audits'] === 35 && kis.kisumu.by_dataset['kisumu-population'] === 5, 'lib/county-review.js entries by dataset'),
-  C('README Status', 'Kisumu: 38 conflict cases', String(kc), kc === 38, 'data/counties/kisumu/conflicts.json'),
-  C('README Status', 'Kisumu: 0 approved', String(kis.kisumu ? kis.kisumu.counts.approved : null), kis.kisumu && kis.kisumu.counts.approved === 0, 'lib/county-review.js counts'),
-  C('README Status', 'Site: 110 pages', distPages === null ? 'not counted (run with --dist dist)' : String(distPages), distPages === 110, '.html files under dist/'),
-  C('README Status', '92 downloadable datasets', `${cat.length} datasets in the catalogue; ${cat.filter((d) => d.files.csv).length} downloadable (CSV/JSON)`, cat.length === 92 && cat.filter((d) => d.files.csv).length === 92, 'lib/explore.js catalogue()'),
-  C('README Status', '5 draft reports', String(reportsReg.reports.length), reportsReg.reports.length === 5, 'components/report/reports.json'),
-  C('CLAUDE.md', 'lib/counties.js lists 47 counties; only Siaya is published', `${COUNTIES.length} listed; published: ${COUNTIES.filter((c) => c.published).map((c) => c.slug).join(', ')}`, COUNTIES.length === 47 && COUNTIES.filter((c) => c.published).length === 1 && bySlug('siaya').published, 'lib/counties.js'),
-  C('CLAUDE.md', 'data/counties-cob.json: 47 counties, FY 2023/24-2024/25', `${[...new Set(cob.years.map((y) => y.counties.length))].join('/')} counties; FYs ${cob.years.map((y) => y.fy).sort().join(', ')}`, cob.years.every((y) => y.counties.length === 47) && cob.years.map((y) => y.fy).sort().join(',') === '2023/24,2024/25', 'data/counties-cob.json years'),
-  C('CLAUDE.md', 'Series must go back 10 years: data/history.json plus data/cpi.json', `history ${H.years.length} FYs (${H.years[0].fy}-${H.years[H.years.length - 1].fy}); cpi ${Object.keys(cpi.calendar_year).length} calendar years, ${Object.keys(cpi.fiscal_year).length} fiscal years`, H.years.length >= 10 && Object.keys(cpi.fiscal_year).length >= 10, 'data/history.json, data/cpi.json'),
-  C('CLAUDE.md', 'Kisumu (042) phase 1 data is in, unpublished', `registry code ${reg.COUNTY_DATA.kisumu.code}; NOT_YET_ON_PAGES = ${reg.NOT_YET_ON_PAGES.join(', ')}`, reg.COUNTY_DATA.kisumu.code === 42 && reg.NOT_YET_ON_PAGES.includes('kisumu'), 'lib/county-registry.js'),
-  C('kisumu-coverage.md / handover', 'kisumu-sources.json (448 records)', `${sources448} records (meta.counts.total ${KR.meta.counts.total})`, sources448 === 448, KREG),
+  C('README Status', 'counties', STATUS, /Counties: (\d+) of (\d+) published \(([^)]+)\)/, [published.length, COUNTIES.length, published.map((c) => c.name).join(', ')], 'lib/counties.js'),
+  C('README Status', 'Siaya values', STATUS, /Siaya values: ([\d,]+) across (\d+) datasets, each with a review pack\. (\d+) approved/, [siayaScope.length, new Set(siayaScope.map((e) => e.dataset)).size, sc.by_state.approved], 'lib/review-pack.js all() over lib/review-status.js; lib/review-status.js stateOf'),
+  C('README Status', 'review packs', STATUS, /each with a review pack[\s\S]*?`data\/reviews\.json` is (empty)/, [siayaKeys.every((k) => packSet.has(k)) && packSet.size === siayaKeys.length && reviews.decisions.length === 0 ? 'empty' : `${reviews.decisions.length} records; packs ${packSet.size} of ${siayaKeys.length}`], 'data/review-packs.json entries; data/reviews.json'),
+  C('README Status', 'machine checks', STATUS, /Machine cross-checks[^:]*: ([\d,]+) agree, ([\d,]+) disagree[^,]*, ([\d,]+) not checkable/, [machine.siaya.actual_counts.agree, machine.siaya.actual_counts.disagree, machine.siaya.actual_counts['not checkable']], 'data/machine-checks.json checks[].result'),
+  C('README Status', 'ledger cases and status', STATUS, /Fiscal ledger: ([\d,]+) discrepancy cases, ([\d,]+) of them open/, [ledger.discrepancies.length, ledgerStatus.open || 0], 'data/siaya-fiscal-ledger.json discrepancies[].status (authoritative)'),
+  C('README Status', 'ledger classes', STATUS, /by class ([\d,]+) definitional, ([\d,]+) period or version, ([\d,]+) probable source error, ([\d,]+) resolved by source, ([\d,]+) unexplained/, ['definitional', 'period or version', 'probable source error', 'resolved by source', 'unexplained'].map((k) => classCount[k] || 0), 'data/ledger-classes.json cases[].classification'),
+  C('README Status', 'conflict register', STATUS, /Conflict register: ([\d,]+) cases/, [conflicts.conflicts.length], 'data/conflicts.json'),
+  C('README Status', 'ten-year series', STATUS, /Ten-year series: FY (\d{4}\/\d{2}) to FY (\d{4}\/\d{2})/, [H.years[0].fy, H.years[H.years.length - 1].fy], 'data/history.json years'),
+  C('README Status', 'corrections', STATUS, /Corrections: ([\d,]+) corrections footnoted beside ([\d,]+) values, ([\d,]+) source-error records/, [new Set(notes.map((n) => n.id)).size, new Set(notes.map((n) => n.ref)).size, ed.sourceErrors().length], 'lib/correction-notes.js; lib/editorial.js sourceErrors()'),
+  C('README Status', 'Kisumu values', STATUS, /Kisumu \(published [^)]*\): ([\d,]+) values \(([\d,]+) ledger, ([\d,]+) audit opinions, ([\d,]+) population\), [\d,]+ ledger discrepancy cases, ([\d,]+) explained conflict cases, [^,]*, ([\d,]+) approved/, kis.kisumu ? [['kisumu-fiscal-ledger', 'kisumu-audits', 'kisumu-population'].reduce((a, d) => a + (kis.kisumu.by_dataset[d] || 0), 0), kis.kisumu.by_dataset['kisumu-fiscal-ledger'] || 0, kis.kisumu.by_dataset['kisumu-audits'] || 0, kis.kisumu.by_dataset['kisumu-population'] || 0, kc, kis.kisumu.counts.approved] : [], 'lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json'),
+  C('README Status', 'site pages', STATUS, /Site: ([\d,]+) pages/, [distPages === null ? 'not counted (run with --dist dist)' : distPages], '.html files under dist/'),
+  C('README Status', 'datasets', STATUS, /([\d,]+) downloadable datasets plus ([\d,]+) link-only \(([^)]+)\)/, [csvN, linkOnly.length, linkOnly.map((d) => (/^imf/.test(d.id) ? 'IMF' : d.id)).join(', ')], 'lib/explore.js catalogue() files.csv'),
+  C('README Status', 'reports', STATUS, /(\d+) draft reports/, [reportsReg.reports.length], 'components/report/reports.json'),
+  C('CLAUDE.md', 'counties', CLAUDE, /lib\/counties\.js lists (\d+) counties; (\w+) \([^)]*\) and (\w+) \(from [^)]*\) are published/, [COUNTIES.length, ...published.map((c) => c.name)], 'lib/counties.js'),
+  C('CLAUDE.md', 'counties-cob', CLAUDE, /data\/counties-cob\.json \((\d+) counties, FY (\d{4}\/\d{2})-(\d{4}\/\d{2})/, [[...new Set(cob.years.map((y) => y.counties.length))].join('/'), cobFys[0], `${cobFys[cobFys.length - 1]}`], 'data/counties-cob.json years'),
+  C('CLAUDE.md', 'ten-year series', CLAUDE, /Series must go back (\d+) years/, [Math.min(H.years.length, Object.keys(cpi.fiscal_year).length) >= 10 ? 10 : Math.min(H.years.length, Object.keys(cpi.fiscal_year).length)], 'data/history.json years, data/cpi.json fiscal_year'),
+  C('CLAUDE.md', 'Kisumu', CLAUDE, /Kisumu \((\d{3})\) (published|unpublished)/, [String(reg.COUNTY_DATA.kisumu.code).padStart(3, '0'), reg.NOT_YET_ON_PAGES.includes('kisumu') ? 'unpublished' : 'published'], 'lib/county-registry.js'),
 ];
 
 // ---------------------------------------------------------------- source reconciliation
@@ -431,6 +453,7 @@ const recon = {
 };
 // Hashes cited by values but held in no register (source-manifest is the build's list of cited PDFs).
 const manSha = new Set(MAN.documents.map((d) => d.sha256).filter(Boolean));
+const NOT_LISTED = Object.fromEntries((MAN.meta.not_listed || []).map((x) => [x.sha256, x.reason]));
 const libSha = new Set(LIB.documents.map((d) => d.sha256).filter(Boolean));
 const cited = {}; allRows.forEach((r) => r.sources.forEach((id, i) => { if (r.hashes[i]) cited[r.hashes[i]] = cited[r.hashes[i]] || new Set(); if (r.hashes[i]) cited[r.hashes[i]].add(`${r.dataset.replace(/^(siaya|kisumu)-/, '$1-')}:${id}`); }));
 recon.cited_hashes_not_in_manifest = {
@@ -438,7 +461,8 @@ recon.cited_hashes_not_in_manifest = {
   in_manifest: Object.keys(cited).filter((h) => manSha.has(h)).length,
   in_library_only: Object.keys(cited).filter((h) => !manSha.has(h) && libSha.has(h)).length,
   in_kisumu_register_only: Object.keys(cited).filter((h) => !manSha.has(h) && !libSha.has(h) && regSha.has(h)).length,
-  in_neither: Object.keys(cited).filter((h) => !manSha.has(h) && !libSha.has(h) && !regSha.has(h)).sort().map((h) => ({ sha256: h, cited_as: [...cited[h]].sort() })),
+  in_neither: Object.keys(cited).filter((h) => !manSha.has(h) && !libSha.has(h) && !regSha.has(h) && !NOT_LISTED[h]).sort().map((h) => ({ sha256: h, cited_as: [...cited[h]].sort() })),
+  not_listed_with_reason: Object.keys(cited).filter((h) => !manSha.has(h) && !libSha.has(h) && !regSha.has(h) && NOT_LISTED[h]).sort().map((h) => ({ sha256: h, cited_as: [...cited[h]].sort(), reason: NOT_LISTED[h] })),
 };
 // Mislabelled CBROPs: a CBROP published in year Y reviews FY (Y-1)/Y. The title year is compared with the FY the record says it reviews.
 const mislabel = [];
@@ -457,11 +481,11 @@ Object.entries(cbropFy).sort(([a], [b]) => byStr(a, b)).forEach(([id, v]) => {
 });
 recon.mislabelled = mislabel;
 // Stale notes in kisumu-coverage.md: every URL in its tables and gap list, against the register and the download log now.
-const covUrls = [...new Set((covText.match(/https?:\/\/[^\s|)]+/g) || []).map((u) => u.replace(/[.,]$/, '')))].sort();
+const covUrls = [...new Set((covHist.match(/https?:\/\/[^\s|)]+/g) || []).map((u) => u.replace(/[.,]$/, '')))].sort();
 recon.coverage_md = {
-  register_count_stated: (covText.match(/\((\d+) records\)/) || [])[1] ? Number(covText.match(/\((\d+) records\)/)[1]) : null,
+  register_count_stated: (covHist.match(/\((\d+) records\)/) || [])[1] ? Number(covHist.match(/\((\d+) records\)/)[1]) : null,
   register_count_actual: KR.sources.length,
-  says_not_in_repo: /Nothing here is in the repo/.test(covText),
+  says_not_in_repo: /Nothing here is in the repo/.test(covHist),
   urls: covUrls.map((u) => {
     const recs = KR.sources.filter((s) => s.url === u || s.landing === u);
     const dls = dlByUrl[u] || [];
@@ -469,6 +493,51 @@ recon.coverage_md = {
   }),
 };
 
+// ---------------------------------------------------------------- kisumu-coverage.md: current status (generated)
+// Appended after the historical text, which is never rewritten; regenerated from the register and downloads.tsv.
+const covRow = (cells) => `| ${cells.map((c) => String(c ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ')).join(' | ')} |`;
+const KDUP = KR.sources.filter((s) => s.duplicate_of);
+const KFIX = KR.sources.filter((s) => s.catalogue_title);
+const covSection = [
+  COV_MARK, '',
+  'Generated by `node scripts/census.js` from `kisumu-sources.json` and `downloads.tsv`; do not edit by hand. The text above is the research note as written on 27 Nov 2026 and is kept unchanged: its "448 records" and "Nothing here is in the repo" were true then. This file, the register and the Kisumu data layer are now in the repository; Kisumu is not published (scripts/test-unpublished-counties.js).', '',
+  `The register holds ${KR.sources.length} records (${new Set(KR.sources.map((s) => s.sha256).filter(Boolean)).size} distinct files, ${KDUP.length} duplicates). meta.counts.total: ${KR.meta.counts.total}.`, '',
+  covRow(['Register status -> current', 'Records']), covRow(['---', '---']),
+  ...Object.entries(statusTable).sort().map(([k, v]) => covRow([k, v])), '',
+  'Records whose status changed after the register line was written:', '',
+  covRow(['Id', 'Register status', 'Current', 'Download log']), covRow(Array(4).fill('---')),
+  ...recon.status_changed_since_register.map((c) => covRow([c.id, c.register_status, c.current, c.downloads.join('; ')])), '',
+  'Duplicate files (same SHA-256; `duplicate_of` names the record that holds the file):', '',
+  ...KDUP.map((s) => `- ${s.id} = ${s.duplicate_of} (${s.sha256.slice(0, 12)})`), '',
+  'CBROP titles corrected from the content (`catalogue_title` keeps the KIPPRA title):', '',
+  ...KFIX.map((s) => `- ${s.id}: "${s.title}" (catalogued as "${s.catalogue_title}")`), '',
+  'Addresses named in the text above, now:', '',
+  covRow(['URL', 'Register records', 'Good download now']), covRow(Array(3).fill('---')),
+  ...recon.coverage_md.urls.map((u) => covRow([u.url, u.register.join('; ') || '(none)', u.good_download ? 'yes' : 'no'])), '',
+].join('\n');
+const covOnDisk = covText.includes(`\n${COV_MARK}`) ? covText.slice(covText.indexOf(`\n${COV_MARK}`) + 1) : '';
+claims.push(
+  C('kisumu-coverage.md (current status)', 'register size', covSection, /register holds ([\d,]+) records \(([\d,]+) distinct files, ([\d,]+) duplicates\)/, [KR.sources.length, KR.meta.counts.total === KR.sources.length ? new Set(KR.sources.map((s) => s.sha256).filter(Boolean)).size : 'meta.counts.total differs', new Set(KR.sources.filter((s) => s.sha256).map((s) => s.sha256)).size === KR.sources.filter((s) => s.sha256).length - KDUP.length ? KDUP.length : 'unmarked duplicates'], KREG),
+  { where: 'kisumu-coverage.md (current status)', claim: 'the generated section is current', actual: covOnDisk === covSection ? 'current' : 'stale (run node scripts/census.js)', match: covOnDisk === covSection, how: `${KCOV} after "${COV_MARK}"` },
+);
+
+// ---------------------------------------------------------------- check (build) or write
+// --check: writes nothing; fails when a count stated in README.md "Status", .claude/CLAUDE.md or the generated section of
+// kisumu-coverage.md differs from the files, or when that section is stale. Run in the build after next build.
+if (process.argv.includes('--check')) {
+  const bad = claims.filter((c) => !c.match);
+  if (bad.length) {
+    console.error(`census --check: ${bad.length} of ${claims.length} stated counts differ from the files:\n${bad.map((c) => `  - ${c.where}: "${c.claim}" but the files give ${c.actual} (${c.how})`).join('\n')}\nFix the text (README.md "Status", .claude/CLAUDE.md), or run node scripts/census.js --dist dist to regenerate the census and the kisumu-coverage.md section.`);
+    process.exit(1);
+  }
+  console.log(`census --check: ${claims.length} stated counts match the files (README.md Status, .claude/CLAUDE.md, kisumu-coverage.md current status)`);
+  process.exit(0);
+}
+if (covOnDisk !== covSection) {
+  fs.writeFileSync(path.join(ROOT, KCOV), `${covHist.replace(/\n*$/, '\n\n')}${covSection}`);
+  const c = claims.find((x) => x.claim === 'the generated section is current');
+  c.actual = 'written by this run'; c.match = true;
+}
 // ---------------------------------------------------------------- write
 const inputHashes = Object.fromEntries([...new Set(INPUTS)].sort().map((f) => [f, sha(f)]));
 const census = sortObj({
@@ -492,10 +561,10 @@ md.push('# Source and data census (WO01)', '', 'Generated by `node scripts/censu
 md.push('Rules: "provisional" is every value with no review record in force (values the data file itself marks as disputed are included and also counted under "disputed"). Source tier: the observation\'s own field, else the cited source\'s recorded tier, else a rule on publisher, title and address (`TIER_RULES` in `scripts/census.js`; counted under "inferred" in the basis column). Missing metadata counts a value once per field; "pub. date" is missing when no cited source records a date, and "not stated" (the document prints none) is shown separately. Nulls count values that are null (not empty lists).', '');
 md.push('## 1. Totals', '');
 md.push(row(['Scope', 'Values', 'Provisional', 'Approved', 'Rejected', 'Disputed', 'Missing any metadata', 'Distinct source hashes', 'Nulls with reason', 'Nulls without reason']), row(Array(10).fill('---')));
-[['Siaya review scope (16 datasets)', totals.siaya_review_scope], ['Kisumu (unpublished)', totals.kisumu], ['All itemised values', totals.all_itemised]].forEach(([n, t]) => md.push(row([n, t.observations, t.by_state.provisional, t.by_state.approved, t.by_state.rejected, t.by_state.disputed, t.missing_any, t.distinct_source_hashes, t.nulls_with_reason, t.nulls_without_reason])));
+[['Siaya review scope (16 datasets)', totals.siaya_review_scope], [`Kisumu (${reg.state('kisumu')})`, totals.kisumu], ['All itemised values', totals.all_itemised]].forEach(([n, t]) => md.push(row([n, t.observations, t.by_state.provisional, t.by_state.approved, t.by_state.rejected, t.by_state.disputed, t.missing_any, t.distinct_source_hashes, t.nulls_with_reason, t.nulls_without_reason])));
 md.push('', '## 2. Datasets', '');
-md.push(row(['File', 'Dataset', 'Type', 'First period', 'Last period', 'Values', ...TIERS, 'Tier basis', 'Prov.', 'Appr.', 'Rej.', 'Disp.', 'No source', 'Source unresolved', 'No pub. date', 'Pub. date "not stated"', 'No period', 'No unit', 'No confidence', 'No page', 'Missing any', 'Source ids', 'Source hashes', 'Nulls w/ reason', 'Nulls w/o reason']), row(Array(37).fill('---')));
-datasets.filter((d) => d.dataset).forEach((d) => md.push(row([d.file, d.dataset, d.type.replace(/^observations /, ''), d.first_period, d.last_period, d.observations, ...TIERS.map((t) => d.by_tier[t]), Object.entries(d.tier_basis).sort().map(([k, v]) => `${k} ${v}`).join('; '), d.by_state.provisional, d.by_state.approved, d.by_state.rejected, d.by_state.disputed, d.missing.source, d.missing.source_unresolved, d.missing.publication_date, d.missing.publication_date_not_stated, d.missing.period, d.missing.unit, d.missing.confidence, d.missing.page, d.missing_any, d.distinct_source_ids, d.distinct_source_hashes, d.nulls_with_reason, d.nulls_without_reason])));
+md.push(row(['File', 'Dataset', 'Type', 'First period', 'Last period', 'Values', ...TIERS, 'Tier basis', 'Prov.', 'Appr.', 'Rej.', 'Disp.', 'No source', 'Source unresolved', 'No pub. date', 'Pub. date "not stated"', 'No period', 'No unit', 'No confidence', 'No page', 'Page: derived from', 'Page: n/a (gap)', 'Pub. date null with reason', 'Missing any', 'Source ids', 'Source hashes', 'Nulls w/ reason', 'Nulls w/o reason']), row(Array(40).fill('---')));
+datasets.filter((d) => d.dataset).forEach((d) => md.push(row([d.file, d.dataset, d.type.replace(/^observations /, ''), d.first_period, d.last_period, d.observations, ...TIERS.map((t) => d.by_tier[t]), Object.entries(d.tier_basis).sort().map(([k, v]) => `${k} ${v}`).join('; '), d.by_state.provisional, d.by_state.approved, d.by_state.rejected, d.by_state.disputed, d.missing.source, d.missing.source_unresolved, d.missing.publication_date, d.missing.publication_date_not_stated, d.missing.period, d.missing.unit, d.missing.confidence, d.missing.page, d.page_by_derived_from, d.page_not_applicable, d.publication_date_null_with_reason, d.missing_any, d.distinct_source_ids, d.distinct_source_hashes, d.nulls_with_reason, d.nulls_without_reason])));
 md.push('', 'Files that hold no itemised values (not enumerated by either library, so outside the review system):', '');
 md.push(row(['File', 'Type', 'Years in fy/year/period fields', 'Top-level arrays']), row(Array(4).fill('---')));
 datasets.filter((d) => !d.dataset).forEach((d) => md.push(row([d.file, d.type, d.years_in_fields, Object.entries(d.top_level_arrays).map(([k, v]) => `${k} ${v}`).join(', ')])));
@@ -517,6 +586,8 @@ md.push('', '### 4.4 Hashes cited by values', '');
 const ch = recon.cited_hashes_not_in_manifest;
 md.push(`${ch.cited_distinct_hashes} distinct document hashes are cited by values: ${ch.in_manifest} in data/source-manifest.json, ${ch.in_library_only} only in data/source-library.json, ${ch.in_kisumu_register_only} only in the Kisumu register, ${ch.in_neither.length} in none of the three:`, '');
 ch.in_neither.forEach((x) => md.push(`- ${x.sha256.slice(0, 16)}: ${x.cited_as.join(', ')}`));
+md.push('', `${ch.not_listed_with_reason.length} more are deliberately not listed, with the reason in data/source-manifest.json meta.not_listed:`, '');
+ch.not_listed_with_reason.forEach((x) => md.push(`- ${x.sha256.slice(0, 16)}: ${x.cited_as.join(', ')}: ${x.reason}`));
 md.push('', '### 4.5 Mislabelled CBROP records (title year against the fiscal year reviewed)', '');
 md.push(row(['Register', 'Id', 'Title', 'Title year', 'Reviews / most cited FY', 'Expected title year']), row(Array(6).fill('---')));
 mislabel.forEach((m) => md.push(row([m.register, m.id, m.title, m.title_year, m.reviews_fy || m.most_cited_fy, m.expected_title_year || Number(String(m.most_cited_fy).slice(0, 4)) + 1])));

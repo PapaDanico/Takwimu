@@ -4,11 +4,12 @@ import TableWrap from '../../components/TableWrap';
 import PageHead from '../../components/PageHead';
 import hist from '../../data/history.json';
 import cpi from '../../data/cpi.json';
+import { pageMeta } from '../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/method/', {
   title: 'Method: sources, confidence and verification',
   description: 'How Takwimu Kenya collects, checks, scores and corrects the numbers it publishes.',
-};
+});
 
 import { ISSUES_URL } from '../../lib/site';
 import { KNOWN_GAPS } from '../../lib/known-gaps';
