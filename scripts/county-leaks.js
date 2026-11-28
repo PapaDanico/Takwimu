@@ -47,6 +47,12 @@ function sentinelsFor(slug, kinds, only = null) {
       if (!only) add(d.meta.title, 'population title');
     } else if (kind === 'conflicts') {
       if (!only) d.conflicts.forEach((x) => add(x.id, `conflict case ${x.id}`));
+    } else if (kind === 'indicators') {
+      // Source ids the published Siaya/regional indicators file also cites (shared documents) are not sentinels.
+      const ds = cr.datasetName(slug, 'indicators');
+      const pub = new Set(JSON.parse(fs.readFileSync(path.join(counties.ROOT, 'data', 'indicators.json'), 'utf8')).sources.map((x) => x.source_id));
+      d.observations.forEach((o) => rec(ds, o.id, o));
+      if (!only) { d.sources.filter((x) => !SHARED.has(x.source_id) && !pub.has(x.source_id)).forEach((x) => add(x.source_id, `indicator source ${x.source_id}`)); add(d.meta.title, 'indicators title'); d.conflicts.forEach((x) => add(x.id, `indicator conflict ${x.id}`)); }
     }
   });
   // Short ids make poor sentinels; drop anything under 8 characters.

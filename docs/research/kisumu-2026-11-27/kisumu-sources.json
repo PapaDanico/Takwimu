@@ -8,22 +8,24 @@
   "rules": "Downloads untrusted, one folder each, never executed; read with pdftotext/tesseract/zipfile. SHA-256 of file as received. No personal data; contractor names withheld; media are claims to verify.",
   "status_values": "held = downloaded here (or held in repo/prov and reused); link-only = URL recorded, not downloaded; manual-download = blocked to automated clients; missing = searched, not found; failed = server returned a broken file",
   "counts": {
-   "total": 453,
-   "held": 184,
+   "total": 458,
+   "held": 190,
    "link-only": 249,
-   "manual-download": 8,
+   "manual-download": 7,
    "missing": 7,
    "failed": 2,
    "not": 3,
    "by_tier": {
-    "primary official": 292,
-    "civil-society secondary": 1,
-    "official claim": 3,
+    "primary official": 293,
+    "civil-society secondary": 2,
+    "official claim": 5,
     "official secondary research": 9,
-    "official statistics": 2,
+    "official statistics": 4,
     "official statistics / official secondary": 22,
     "academic": 102,
-    "media claim": 17
+    "media claim": 17,
+    "official mirror": 3,
+    "official compilation": 1
    }
   }
  },
@@ -6917,18 +6919,24 @@
   },
   {
    "id": "KNBS-POVERTY-2022",
-   "title": "Kenya Poverty Report 2022 (KCHS)",
+   "title": "The Kenya Poverty Report 2022 (KCHS 2022)",
    "publisher": "KNBS",
-   "date": "2022",
+   "date": "2024",
    "period": "2022",
-   "url": "https://www.knbs.or.ke/",
-   "licence": "KNBS/County statistics publication: 'Extracts may be used or published if the source is duly acknowledged'; do not redistribute the PDF.",
+   "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+   "licence": "CC BY-NC 4.0 (KNBS repository record); cite; non-commercial",
    "tier": "official statistics / official secondary",
    "datasets": [
     "history (poverty)"
    ],
    "figures": "Kisumu poverty headcount 2021/2022",
-   "status": "manual-download (KNBS TLS)"
+   "status": "held (KNBS repository copy, 28 Nov 2026; knbs.or.ke TLS not bypassed)",
+   "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "bytes": 4301681,
+   "download_path": "/tmp/claude-0/src/kpr2022/The-Kenya-Poverty-Report-2022.pdf",
+   "machine_readable": "text layer",
+   "kisumu_location": "Table 4.3 PDF p.46, Table 4.4 p.50, Table 4.5 p.55, Annex A1 p.85 (row Kisumu)",
+   "note": "Values in data/counties/kisumu/indicators.json (held). Same file as data/source-manifest.json knbs-kpr-2022."
   },
   {
    "id": "KNBS-KIHBS-2015-16-COUNTY",
@@ -7071,7 +7079,7 @@
    "publisher": "Kenya Fisheries Service",
    "date": "annual",
    "period": "annual",
-   "url": "https://kefs.go.ke/",
+   "url": "https://kefs.go.ke/sites/default/files/2025-07/Fisheries%20Annual%20Statistics%202024.pdf",
    "licence": "official publication; cite",
    "tier": "official statistics / official secondary",
    "datasets": [
@@ -7079,7 +7087,8 @@
     "economy"
    ],
    "figures": "Kisumu fish landings by beach/species (Lake Victoria)",
-   "status": "link-only; to locate"
+   "status": "link-only; blocked 28 Nov 2026 (kefs.go.ke certificate expired 2026-09-14; not bypassed)",
+   "note": "Fisheries Annual Statistics 2024 Table 3 (county landings 2013-2023) and Figure 6 (2024) named in the owner handover; no other copy found (Internet Archive none; web search none). Gap gap-kefs-county-landings-kisumu in data/counties/kisumu/indicators.json."
   },
   {
    "id": "NDMA-KISUMU",
@@ -9367,6 +9376,111 @@
    "machine_readable": "text layer",
    "note": "Address from the publisher's media listing (kiwasco.co.ke); on 27 Nov 2026 the address answered automated clients with an HTML page, so the held copy (gap research B) could not be re-downloaded and compared. Added 27 Nov 2026 (gap research ingest).",
    "status": "held"
+  },
+  {
+   "id": "KNBS-KDHS-2022-FS-KISUMU",
+   "title": "2022 Kenya Demographic and Health Survey Fact Sheet: Kisumu County",
+   "publisher": "Kenya National Bureau of Statistics and ICF",
+   "date": "2023",
+   "period": "2022 (fieldwork Feb-Jul 2022)",
+   "url": "https://repository.knbs.or.ke/items/a33ddaa3-a71d-44af-b04a-f76543a49a04",
+   "licence": "CC BY-NC 4.0 (KNBS repository record); cite; non-commercial",
+   "tier": "official statistics (survey fact sheet)",
+   "datasets": [
+    "indicators"
+   ],
+   "figures": "31 county indicators with Kenya comparators (WASH, education, fertility, FP, maternal and child health, mortality, nutrition, malaria, GBV)",
+   "kisumu_location": "PDF p.1",
+   "status": "held (KNBS repository copy, 28 Nov 2026)",
+   "download_path": "/tmp/claude-0/src/kdhs-fs-kisumu/2022_Kenya_DHS_Factsheet_-_Kisumu.pdf",
+   "sha256": "6d24d6c941751d67d3e0735b8636d2d0c6319e0691a48135d49f342abf958e16",
+   "bytes": 416553,
+   "machine_readable": "text layer",
+   "note": "Values in data/counties/kisumu/indicators.json (held). Same bytes as gap-D sweep copy."
+  },
+  {
+   "id": "KIWASCO-TARIFF-PROPOSAL-2026",
+   "title": "Details of public consultation for Kisumu Water and Sanitation Company Ltd: proposed tariff 2025/2026-2029/2030",
+   "publisher": "WASREB (for KIWASCO)",
+   "date": "2026-03",
+   "period": "FY 2024/25-2029/30",
+   "url": "https://wasreb.go.ke/wp-content/uploads/2026/03/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+   "licence": "Not stated; public consultation notice",
+   "tier": "official claim (proposed tariff targets; not actuals)",
+   "datasets": [
+    "indicators"
+   ],
+   "figures": "cost and revenue table; proposed targets for water coverage, sewerage coverage, NRW and other KPIs",
+   "kisumu_location": "PDF p.1 (cost table), p.4 (targets)",
+   "status": "held (downloaded 28 Nov 2026)",
+   "download_path": "/tmp/claude-0/src/wasreb/KIWASCO-DETAILS-OF-PROPOSED-TARIFF-FOR-PUBLIC-CONSULTATION.pdf",
+   "sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+   "bytes": 276138,
+   "machine_readable": "text layer",
+   "note": "Targets recorded as targets; gazetted final tariff not found."
+  },
+  {
+   "id": "WASREB-IMPACT-18",
+   "title": "Impact 18: A Performance Report of Kenya's Water Services Sector 2024/2025",
+   "publisher": "Water Services Regulatory Board",
+   "date": "2026-06",
+   "period": "FY 2024/25",
+   "url": "https://wasreb.go.ke/wp-content/uploads/2026/06/Impact-18-Report.pdf",
+   "licence": "Not stated; public regulatory report; cite",
+   "tier": "primary official (regulator)",
+   "datasets": [
+    "indicators"
+   ],
+   "figures": "Table 3.2 and 3.4(a) KIWASCO rows; Table 4.1 Kisumu LIA row",
+   "kisumu_location": "PDF p.53, p.55, p.91",
+   "status": "held in repo (data/source-library.json, siaya-climate source); reuse",
+   "download_path": "/tmp/claude-0/src/wasreb/Impact-18-Report.pdf",
+   "sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "bytes": 16496414,
+   "machine_readable": "text layer",
+   "note": "Kisumu values in data/counties/kisumu/indicators.json (held)."
+  },
+  {
+   "id": "KIWASCO-WEB-2026-11-28",
+   "title": "KIWASCO website home and Our story pages (snapshots 28 Nov 2026)",
+   "publisher": "Kisumu Water and Sanitation Company Ltd",
+   "date": null,
+   "period": "not stated",
+   "url": "https://kiwasco.co.ke/about-us/our-story/",
+   "licence": "Not stated; company website",
+   "tier": "official claim (utility self-report)",
+   "datasets": [
+    "indicators"
+   ],
+   "figures": "coverage, sanitation, NRW, collection efficiency, connections, staff claims",
+   "kisumu_location": "home page counters; Our story text",
+   "status": "held (HTML snapshots 28 Nov 2026: home a287e800…, story 44dedfa1…)",
+   "sha256": null,
+   "bytes": null,
+   "machine_readable": "HTML",
+   "note": "Claims, kept beside IMPACT 18; two open conflicts (collection efficiency, connections)."
+  },
+  {
+   "id": "KNBS-CSA-KISUMU-2024",
+   "title": "Kisumu County Statistical Abstract 2024 (KNBS repository copy)",
+   "publisher": "Kenya National Bureau of Statistics",
+   "date": "2025",
+   "period": "2019-2023 (reference year 2024)",
+   "url": "https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f",
+   "licence": "CC BY-SA 4.0 (KNBS repository record, except where otherwise noted)",
+   "tier": "official statistics (county statistical abstract)",
+   "datasets": [
+    "indicators",
+    "population"
+   ],
+   "figures": "219 tables; dispositions in docs/research/kisumu-handover-2026-11-28/abstract-dispositions-kisumu-2024.md",
+   "kisumu_location": "whole document",
+   "status": "held (KNBS repository copy, 28 Nov 2026; MD5 matched)",
+   "download_path": "/tmp/claude-0/src/abs-kisumu-2024/2024-Statistical-Abstract-Kisumu-County.pdf",
+   "sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "bytes": 3417652,
+   "machine_readable": "text layer",
+   "note": "Same edition as KISUMU-CSA-2024 (county-hosted copy d3f38c77...): same 255 pages, same creation date 2025-09-08, identical text layer; bytes differ (re-saved)."
   }
  ]
 }

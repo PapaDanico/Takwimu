@@ -6,7 +6,7 @@ Procedure: [review-sop.md](review-sop.md). Every value below is public and label
 
 ## First: machine cross-check disagrees (80)
 
-A second machine reading of the source page, by a different method from the original extraction (`data/machine-checks.json`, `scripts/machine-check.js`), did not find these values. Check them first. A machine check is not editorial review: it never approves or rejects a value, and no review record may cite it. Results for 4005 Siaya values: 2363 agree, 80 disagree, 1562 not checkable. Review packs: [packs/](packs/).
+A second machine reading of the source page, by a different method from the original extraction (`data/machine-checks.json`, `scripts/machine-check.js`), did not find these values. Check them first. A machine check is not editorial review: it never approves or rejects a value, and no review record may cite it. Results for 4122 Siaya values: 2435 agree, 80 disagree, 1607 not checkable. Review packs: [packs/](packs/).
 
 | Dataset | Record id | Source document | PDF page | Second method |
 |---|---|---|---:|---|
@@ -111,8 +111,9 @@ A second machine reading of the source page, by a different method from the orig
 | siaya-budget-departments | 1240 | 0 | 1240 | 0 | 0 | 0 | 0 |
 | siaya-county-series | 191 | 0 | 191 | 0 | 0 | 0 | 0 |
 | siaya-analysis-layers | 442 | 0 | 442 | 0 | 0 | 0 | 9 |
+| indicators | 117 | 0 | 117 | 0 | 0 | 0 | 0 |
 | siaya-programmes | 73 | 0 | 73 | 0 | 0 | 0 | 0 |
-| **All** | **8667** | **0** | **8667** | **0** | **235** | **0** | **476** |
+| **All** | **8784** | **0** | **8784** | **0** | **235** | **0** | **476** |
 
 Review records in force: 0 (of 0 in the file).
 
@@ -1001,7 +1002,7 @@ Not itemised (registers and map layers, not measured values):
 
 Full list for one dataset: `node scripts/review-queue.js --dataset <dataset>`.
 
-## Priority 5: other statistics and records (1111)
+## Priority 5: other statistics and records (1228)
 
 | Dataset | Pending | Disputed | Unanchored | What |
 |---|---:|---:|---:|---|
@@ -1009,6 +1010,7 @@ Full list for one dataset: `node scripts/review-queue.js --dataset <dataset>`.
 | siaya-education | 215 | 31 | 0 | education statistic |
 | history | 9 | 0 | 9 | population; poverty |
 | imf | 430 | 0 | 430 | IMF WEO value (actual); IMF WEO value (estimate); IMF WEO value (projection) |
+| indicators | 117 | 0 | 0 | fisheries (official statistic); household survey (survey estimate); poverty (survey estimate); agriculture (official statistic); water utility (administrative statistic) |
 | siaya-climate | 87 | 0 | 0 | climate and water statistic |
 | siaya-economy | 154 | 0 | 0 | economic statistic |
 | siaya-governance | 38 | 0 | 0 | governance finding; governance score |

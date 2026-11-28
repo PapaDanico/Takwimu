@@ -11,10 +11,10 @@
    "parts": "A stored total that the source prints only as its parts (recurrent and development pending bills; male and female counts; the Executive and Assembly payables tables) agrees when each part is found on the page by the same method and the parts add up to the stored value at its precision."
   },
   "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way (\"Kshs.2.4 billion\") is not checkable.",
-  "checked_on": "2026-11-27",
+  "checked_on": "2026-11-28",
   "counts": {
-   "agree": 273,
-   "not checkable": 53,
+   "agree": 376,
+   "not checkable": 126,
    "disagree": 5
   }
  },
@@ -3730,6 +3730,1753 @@
    "checked_on": "2026-11-27",
    "result": "agree",
    "matched": "1,248,474"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-headcount-rate-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 46,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "31.5"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-distribution-of-poor-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-poverty-gap-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-severity-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-population-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 46,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,226"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-number-poor-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 46,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "386"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-headcount-rate-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-distribution-of-poor-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-poverty-gap-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-severity-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-population-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 50,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,226"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-number-poor-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 50,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "478"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-headcount-rate-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-distribution-of-poor-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-poverty-gap-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-severity-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-population-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,226"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-number-poor-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-basic-drinking-water-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-basic-sanitation-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-clean-fuels-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-women-no-education-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-men-no-education-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Not a single number (text, a list of amounts or a series)."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-total-fertility-rate-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-teenage-pregnancy-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-modern-fp-use-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-unmet-fp-need-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-fp-demand-satisfied-modern-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-skilled-birth-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-anc4-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-pnc-mother-2days-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-pnc-newborn-2days-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-basic-vaccination-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-neonatal-mortality-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-infant-mortality-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-under5-mortality-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-stunting-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-wasting-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-underweight-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-overweight-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-itn-access-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-itn-slept-under-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-iptp3-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-physical-violence-ever-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-physical-violence-12m-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-sexual-violence-ever-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-sexual-violence-12m-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-ipv-ever-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kdhs22fs-ipv-12m-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-lia-population-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 91,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "304,229"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-lia-population-served-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 91,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "279,212"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-lia-utility-budget-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 91,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "321,203,208"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-dwq-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "100"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-nrw-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-water-coverage-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-hours-of-supply-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-staff-productivity-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-collection-efficiency-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "100"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-personnel-cost-share-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-om-cost-coverage-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "105"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-metering-ratio-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "100"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-total-score-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "158"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-population-service-area-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "503,846"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-population-served-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "470,118"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-connections-total-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "65,697"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-connections-active-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "65,697"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-water-produced-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "11,769"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-water-billed-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "8,011"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "wasreb18-utility-staff-total-kisumu",
+   "source_id": "WASREB-IMPACT-18",
+   "source_sha256": "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+   "pdf_page": 53,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "301"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-water-coverage-2024",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-water-coverage-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-water-coverage-2029",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-sewerage-coverage-2024",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-sewerage-coverage-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-sewerage-coverage-2029",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-nrw-2024",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-nrw-2026",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-nrw-2029",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-target-collection-efficiency-2024",
+   "source_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+   "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+   "pdf_page": 4,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm4",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "102"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-tariff-collection-efficiency-2024",
+   "source_id": "KIWASCO-TARIFF-PROPOSAL-2026",
+   "source_sha256": "6a099e8bfcb021727deaf7604e4aad59fefe0247b7ab9a2aba3adce5cf3b0c0f",
+   "pdf_page": 1,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "105"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-home-water-coverage",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-home-sanitation-coverage",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-home-nrw",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-home-collection-efficiency",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-nrw-impact17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-water-coverage-impact17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-sewer-coverage-impact17",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-collection-efficiency",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-connections",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kiwasco-claim-story-employees",
+   "result": "not checkable",
+   "method": null,
+   "reason": "The stored copy was not available to the check."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-target-2020",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "37,884"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-number-2020",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "32,239"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-rate-2020",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "85.1"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-target-2021",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "37,580"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-number-2021",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "34,874"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-rate-2021",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "92.8"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-target-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "40,341"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-number-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "36,186"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-rate-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "89.70"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-target-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "41,570"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-number-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "36,077"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-immunisation-rate-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 101,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "86.80"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-10-14-2019",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "311"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-15-19-2019",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "7,205"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-10-14-2020",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "402"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-15-19-2020",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "6,106"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-10-14-2021",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "348"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-15-19-2021",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "6,415"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-10-14-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "366"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-15-19-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "5,841"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-10-14-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "295"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-teen-pregnancies-15-19-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 122,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "5,821"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-gcp-per-capita-constant-2019",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 144,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "203,363"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-gcp-per-capita-constant-2020",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 144,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "208,508"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-gcp-per-capita-constant-2021",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 144,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "224,827"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-gcp-per-capita-constant-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 144,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "252,577"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-gcp-per-capita-constant-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 144,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "274,947"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-cage-fish-quantity-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 160,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "135,800"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-cage-fish-value-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 160,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "39,129,660"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-cage-fish-quantity-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 160,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "224,244"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-cage-fish-value-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 160,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "43,732,568"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-bmus-2019",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-bmus-2020",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-bmus-2021",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-bmus-2022",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-bmus-2023",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-fishing-boats-2019",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 166,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "844"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-fishing-boats-2020",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 166,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "828"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-fishing-boats-2021",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 166,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "790"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-fishing-boats-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 166,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "736"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-fishing-boats-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 166,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "737"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-piped-households-2019",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 196,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "223,073"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-piped-households-2020",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 196,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "105,122"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-piped-households-2021",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 196,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "107,233"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-piped-households-2022",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 196,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "109,558"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-piped-households-2023",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 196,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "111,565"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "csa24-piped-households-nyakach-2019",
+   "source_id": "KNBS-CSA-KISUMU-2024",
+   "source_sha256": "96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4",
+   "pdf_page": 196,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "133,408"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-area-2020-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "46,307"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-production-2020-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "67,307"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-area-2021-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "62,600"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-production-2021-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "40,990"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-area-2022-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "54,125"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-production-2022-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "34,513"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-area-2023-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "62,195"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-production-2023-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "105,003"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-area-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "48,400"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-maize-production-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 186,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "58,657"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-area-2020-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "2,365"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-production-2020-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "35,475"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-area-2021-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "2,682"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-production-2021-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "22,500"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-area-2022-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "2,995"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-production-2022-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "26,600"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-area-2023-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "3,174"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-production-2023-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "29,580"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-area-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "2,920"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sweet-potato-production-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 197,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "24,600"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-area-2020-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "2,422"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-production-2020-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "36,171"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-area-2021-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "3,325"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-production-2021-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "37,210"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-area-2022-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "3,520"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-production-2022-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "40,890"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-area-2023-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "3,440"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-production-2023-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "51,660"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-area-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "3,485"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cassava-production-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 199,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm1",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "56,525"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sugar-production-2020-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 99,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "83,420"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sugar-production-2021-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 99,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "90,033"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sugar-production-2022-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 99,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "90,157"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sugar-production-2023-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 99,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "53,874"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-sugar-production-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 99,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "91,190"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cage-farmers-2024-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cages-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 181,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "358"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cage-surface-area-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 181,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "20,780"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "napr25-cage-volume-2024-kisumu",
+   "source_id": "KNBS-NAPR-2025",
+   "source_sha256": "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+   "pdf_page": 181,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "95,265"
   }
  ]
 }
