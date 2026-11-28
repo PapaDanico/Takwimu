@@ -175,7 +175,7 @@ for (code, rec, g0), g in zip(src, simp):
     }, 'geometry': {'type': 'MultiPolygon', 'coordinates': to_coords(g)}})
 wfeat.sort(key=lambda f: f['properties']['ward_code'])
 
-# Sub-county view: each constituency drawn as the union of its own wards (land only, and the same edges as the wards).
+# Constituency view: each constituency drawn as the union of its own wards (land only, and the same edges as the wards).
 # The geoBoundaries constituency polygons are kept as a check only: they extend over Lake Victoria water and differ
 # from the ward edges inland (checks.constituency_vs_wards).
 con_geoms = {c: shapely.union_all([g for code, _, g in src if gn[code]['con_code'] == c]) for c in sorted(cons)}
@@ -201,17 +201,17 @@ SIMP = f'shapely {shapely.__version__} coverage_simplify, tolerance {TOLERANCE} 
 
 json.dump({'type': 'FeatureCollection', 'meta': {'title': 'Kisumu County: 35 county assembly ward boundaries (simplified for display)', **ARC, 'retrieved': '2026-11-28', 'simplification': SIMP}, 'features': wfeat},
           open(os.path.join(OUT, 'wards-geo.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
-json.dump({'type': 'FeatureCollection', 'meta': {'title': 'Kisumu County: 7 constituencies (sub-counties), each the union of its wards (simplified for display)', **ARC, 'derivation': 'Each constituency is the union of its IEBC wards (ward polygons above, joined by IEBC code), then simplified with shared edges kept shared. Land only.', 'retrieved': '2026-11-28', 'simplification': SIMP}, 'features': cfeat},
+json.dump({'type': 'FeatureCollection', 'meta': {'title': 'Kisumu County: 7 IEBC constituencies, each the union of its wards (simplified for display)', **ARC, 'derivation': 'Each constituency is the union of its IEBC wards (ward polygons above, joined by IEBC code), then simplified with shared edges kept shared. Land only.', 'retrieved': '2026-11-28', 'simplification': SIMP}, 'features': cfeat},
           open(os.path.join(OUT, 'constituencies-geo.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
 
 reg = {
     'meta': {
-        'title': 'Kisumu County geographic registry: county, constituencies (sub-counties) and county assembly wards',
+        'title': 'Kisumu County geographic registry: IEBC constituencies and county assembly wards, and the KNBS sub-county list',
         'compiled': '2026-11-28', 'county': COUNTY, 'iebc_county_code': COUNTY_CODE,
         'official_name_rule': 'Ward and constituency names and codes follow IEBC Gazette Notice 13904 of 26 September 2025 (all 35 wards listed). The ward polygons carry the American Red Cross names; the crosswalk records every pair.',
         'boundary_vintage': 'IEBC delimitation of 2012 (in force for the 2013, 2017 and 2022 general elections); the 2025 gazette notice uses the same codes.',
-        'scope': 'County, constituency and ward boundaries only. The City of Kisumu (the city board area) is not drawn: it is not the county, and it is not the Kisumu Central constituency. Sub-county here means the IEBC constituency, which carries the same name as the KNBS 2019 census sub-county; KNBS also lists a Kadibo sub-county with no figures, which has no IEBC equivalent.',
-        'lake_rule': f'The ward polygons cover land only: the 35 wards add to {ward_area:.1f} km2 against the KNBS land area of {LAND_AREA_KM2} km2. The sub-county view joins each constituency\'s wards, so it is land only too. The geoBoundaries constituency polygons are larger ({adm2_area:.0f} km2): they extend over Lake Victoria (Winam Gulf) water off Seme, Kisumu West, Nyando and Kisumu Central and differ from the ward edges inland; they are used only as a check. No lake area is counted in any figure here.',
+        'scope': 'County, constituency and ward boundaries only (the IEBC hierarchy: 7 constituencies, 35 wards). The City of Kisumu (the city board area) is not drawn: it is not the county, and it is not the Kisumu Central constituency. KNBS administrative sub-counties are a separate hierarchy (8, including Kadibo) with no boundary file here; figures reported by KNBS sub-county are shown in tables, not on the constituency map.',
+        'lake_rule': f'The ward polygons cover land only: the 35 wards add to {ward_area:.1f} km2 against the KNBS land area of {LAND_AREA_KM2} km2. The constituency view joins each constituency\'s wards, so it is land only too. The geoBoundaries constituency polygons are larger ({adm2_area:.0f} km2): they extend over Lake Victoria (Winam Gulf) water off Seme, Kisumu West, Nyando and Kisumu Central and differ from the ward edges inland; they are used only as a check. No lake area is counted in any figure here.',
         'build': 'scripts/build-county-geo.py (one-off; outputs committed)',
     },
     'sources': [
@@ -224,8 +224,14 @@ reg = {
         {'id': 'KNBS-KPHC-2019-VOL2', 'title': '2019 Kenya Population and Housing Census Volume II', 'publisher': 'Kenya National Bureau of Statistics', 'used_for': f'official land area {LAND_AREA_KM2} km2 (Table 2.2, Kisumu row; data/counties/kisumu/population.json P01, also_printed_in)'},
     ],
     'county': {'id': 'kisumu', 'name': COUNTY, 'iebc_county_code': COUNTY_CODE, 'constitution_first_schedule_number': 42, 'constituency_ids': [cid[c] for c in sorted(cons)]},
-    'constituencies': [{'id': cid[c], 'name': cons[c], 'iebc_constituency_code': c, 'parent': 'kisumu', 'knbs_sub_county_slug': cid[c], 'ward_ids': [wid[w] for w in sorted(gn) if gn[w]['con_code'] == c],
+    'constituencies': [{'id': cid[c], 'name': cons[c], 'iebc_constituency_code': c, 'parent': 'kisumu', 'same_name_knbs_sub_county': cid[c], 'ward_ids': [wid[w] for w in sorted(gn) if gn[w]['con_code'] == c],
                         'registered_voters_2022': {**voters[c], 'source_id': 'IEBC-ROV-2022', 'unit': 'persons (registered voters)', 'period': '2022 General Election register', 'confidence': 4, 'read_method': 'PDF text layer'}} for c in sorted(cons)],
+    # KNBS administrative sub-counties: a separate hierarchy (KNBS lists 8 for Kisumu, including Kadibo, which has no
+    # IEBC constituency). Figures reported by KNBS sub-county are joined only to this list, never to the constituency map.
+    'knbs_sub_counties': [
+        *[{'slug': cid[c], 'name': cons[c], 'same_name_constituency_id': cid[c], 'rule': 'Same name as the IEBC constituency. That the two cover the same area is not asserted: KNBS also lists Kadibo, so at least one KNBS sub-county differs from its namesake constituency.'} for c in sorted(cons)],
+        {'slug': 'kadibo', 'name': 'Kadibo', 'same_name_constituency_id': None, 'rule': 'Listed by KNBS (County Statistical Abstract 2024, Table 1.1.1, printed with no 2019 figures: ".."). The IEBC has no Kadibo constituency, and the sources held do not state which constituency or wards it covers, so no Kadibo figure is placed on any map.'},
+    ],
     'wards': [{'id': wid[w], 'name': gn[w]['name'], 'iebc_ward_code': w, 'iebc_constituency_code': gn[w]['con_code'], 'parent': cid[gn[w]['con_code']], 'gazette_pages': sorted(gn[w]['pages']),
                'source_names': {'IEBC-GN-13904-2025': gn[w]['name'], 'HDX-ARC-WARDS': next(rec['ward'] for c, rec, _ in src if c == w)}} for w in sorted(gn)],
     'crosswalk': [{'iebc_code': w, 'iebc_name': gn[w]['name'], 'polygon_name': next(rec['ward'] for c, rec, _ in src if c == w), 'polygon_sub_county': next(rec['subcounty'] for c, rec, _ in src if c == w),

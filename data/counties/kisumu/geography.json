@@ -1,13 +1,13 @@
 {
  "meta": {
-  "title": "Kisumu County geographic registry: county, constituencies (sub-counties) and county assembly wards",
+  "title": "Kisumu County geographic registry: IEBC constituencies and county assembly wards, and the KNBS sub-county list",
   "compiled": "2026-11-28",
   "county": "Kisumu",
   "iebc_county_code": "042",
   "official_name_rule": "Ward and constituency names and codes follow IEBC Gazette Notice 13904 of 26 September 2025 (all 35 wards listed). The ward polygons carry the American Red Cross names; the crosswalk records every pair.",
   "boundary_vintage": "IEBC delimitation of 2012 (in force for the 2013, 2017 and 2022 general elections); the 2025 gazette notice uses the same codes.",
-  "scope": "County, constituency and ward boundaries only. The City of Kisumu (the city board area) is not drawn: it is not the county, and it is not the Kisumu Central constituency. Sub-county here means the IEBC constituency, which carries the same name as the KNBS 2019 census sub-county; KNBS also lists a Kadibo sub-county with no figures, which has no IEBC equivalent.",
-  "lake_rule": "The ward polygons cover land only: the 35 wards add to 2086.1 km2 against the KNBS land area of 2085 km2. The sub-county view joins each constituency's wards, so it is land only too. The geoBoundaries constituency polygons are larger (2677 km2): they extend over Lake Victoria (Winam Gulf) water off Seme, Kisumu West, Nyando and Kisumu Central and differ from the ward edges inland; they are used only as a check. No lake area is counted in any figure here.",
+  "scope": "County, constituency and ward boundaries only (the IEBC hierarchy: 7 constituencies, 35 wards). The City of Kisumu (the city board area) is not drawn: it is not the county, and it is not the Kisumu Central constituency. KNBS administrative sub-counties are a separate hierarchy (8, including Kadibo) with no boundary file here; figures reported by KNBS sub-county are shown in tables, not on the constituency map.",
+  "lake_rule": "The ward polygons cover land only: the 35 wards add to 2086.1 km2 against the KNBS land area of 2085 km2. The constituency view joins each constituency's wards, so it is land only too. The geoBoundaries constituency polygons are larger (2677 km2): they extend over Lake Victoria (Winam Gulf) water off Seme, Kisumu West, Nyando and Kisumu Central and differ from the ward edges inland; they are used only as a check. No lake area is counted in any figure here.",
   "build": "scripts/build-county-geo.py (one-off; outputs committed)"
  },
  "sources": [
@@ -92,7 +92,7 @@
    "name": "Kisumu East",
    "iebc_constituency_code": "238",
    "parent": "kisumu",
-   "knbs_sub_county_slug": "kisumu-east",
+   "same_name_knbs_sub_county": "kisumu-east",
    "ward_ids": [
     "kajulu",
     "kolwa-east",
@@ -117,7 +117,7 @@
    "name": "Kisumu West",
    "iebc_constituency_code": "239",
    "parent": "kisumu",
-   "knbs_sub_county_slug": "kisumu-west",
+   "same_name_knbs_sub_county": "kisumu-west",
    "ward_ids": [
     "south-west-kisumu",
     "central-kisumu",
@@ -142,7 +142,7 @@
    "name": "Kisumu Central",
    "iebc_constituency_code": "240",
    "parent": "kisumu",
-   "knbs_sub_county_slug": "kisumu-central",
+   "same_name_knbs_sub_county": "kisumu-central",
    "ward_ids": [
     "railways",
     "migosi",
@@ -168,7 +168,7 @@
    "name": "Seme",
    "iebc_constituency_code": "241",
    "parent": "kisumu",
-   "knbs_sub_county_slug": "seme",
+   "same_name_knbs_sub_county": "seme",
    "ward_ids": [
     "west-seme",
     "central-seme",
@@ -192,7 +192,7 @@
    "name": "Nyando",
    "iebc_constituency_code": "242",
    "parent": "kisumu",
-   "knbs_sub_county_slug": "nyando",
+   "same_name_knbs_sub_county": "nyando",
    "ward_ids": [
     "east-kano-wawidhi",
     "awasi-onjiko",
@@ -217,7 +217,7 @@
    "name": "Muhoroni",
    "iebc_constituency_code": "243",
    "parent": "kisumu",
-   "knbs_sub_county_slug": "muhoroni",
+   "same_name_knbs_sub_county": "muhoroni",
    "ward_ids": [
     "miwani",
     "ombeyi",
@@ -242,7 +242,7 @@
    "name": "Nyakach",
    "iebc_constituency_code": "244",
    "parent": "kisumu",
-   "knbs_sub_county_slug": "nyakach",
+   "same_name_knbs_sub_county": "nyakach",
    "ward_ids": [
     "south-west-nyakach",
     "north-nyakach",
@@ -261,6 +261,56 @@
     "confidence": 4,
     "read_method": "PDF text layer"
    }
+  }
+ ],
+ "knbs_sub_counties": [
+  {
+   "slug": "kisumu-east",
+   "name": "Kisumu East",
+   "same_name_constituency_id": "kisumu-east",
+   "rule": "Same name as the IEBC constituency. That the two cover the same area is not asserted: KNBS also lists Kadibo, so at least one KNBS sub-county differs from its namesake constituency."
+  },
+  {
+   "slug": "kisumu-west",
+   "name": "Kisumu West",
+   "same_name_constituency_id": "kisumu-west",
+   "rule": "Same name as the IEBC constituency. That the two cover the same area is not asserted: KNBS also lists Kadibo, so at least one KNBS sub-county differs from its namesake constituency."
+  },
+  {
+   "slug": "kisumu-central",
+   "name": "Kisumu Central",
+   "same_name_constituency_id": "kisumu-central",
+   "rule": "Same name as the IEBC constituency. That the two cover the same area is not asserted: KNBS also lists Kadibo, so at least one KNBS sub-county differs from its namesake constituency."
+  },
+  {
+   "slug": "seme",
+   "name": "Seme",
+   "same_name_constituency_id": "seme",
+   "rule": "Same name as the IEBC constituency. That the two cover the same area is not asserted: KNBS also lists Kadibo, so at least one KNBS sub-county differs from its namesake constituency."
+  },
+  {
+   "slug": "nyando",
+   "name": "Nyando",
+   "same_name_constituency_id": "nyando",
+   "rule": "Same name as the IEBC constituency. That the two cover the same area is not asserted: KNBS also lists Kadibo, so at least one KNBS sub-county differs from its namesake constituency."
+  },
+  {
+   "slug": "muhoroni",
+   "name": "Muhoroni",
+   "same_name_constituency_id": "muhoroni",
+   "rule": "Same name as the IEBC constituency. That the two cover the same area is not asserted: KNBS also lists Kadibo, so at least one KNBS sub-county differs from its namesake constituency."
+  },
+  {
+   "slug": "nyakach",
+   "name": "Nyakach",
+   "same_name_constituency_id": "nyakach",
+   "rule": "Same name as the IEBC constituency. That the two cover the same area is not asserted: KNBS also lists Kadibo, so at least one KNBS sub-county differs from its namesake constituency."
+  },
+  {
+   "slug": "kadibo",
+   "name": "Kadibo",
+   "same_name_constituency_id": null,
+   "rule": "Listed by KNBS (County Statistical Abstract 2024, Table 1.1.1, printed with no 2019 figures: \"..\"). The IEBC has no Kadibo constituency, and the sources held do not state which constituency or wards it covers, so no Kadibo figure is placed on any map."
   }
  ],
  "wards": [

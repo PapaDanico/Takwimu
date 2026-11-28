@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Checks each registry county's geography (schemas/county-geography.schema.json and the boundary files in
 // lib/county-registry.js geo): IEBC codes unique and nested (wards in constituencies in the county); for Kisumu exactly
-// the 7 sub-counties named by IEBC and 35 wards; every ward polygon joins the registry by IEBC code and id, and every
+// the 7 IEBC constituencies and 35 wards; every ward polygon joins the registry by IEBC code and id, and every
 // constituency polygon by code; the name crosswalk covers every ward; the ward coverage is valid with no overlap and its
-// area is within 1% of the official land area; sub-county slugs match the census rows in population.json; registered
+// area is within 1% of the official land area; KNBS sub-counties are listed apart (Kadibo has no constituency); registered
 // voters are as printed. Run: node scripts/test-county-geography.js
 const fs = require('fs');
 const counties = require('../lib/county-registry');
@@ -33,10 +33,15 @@ counties.withKind('geography').filter((s) => !counties.legacy(s)).forEach((slug)
   // Registered voters as printed.
   g.constituencies.forEach((c) => { const v = c.registered_voters_2022; ok(v.as_printed.replace(/,/g, '').includes(String(v.value)) && v.as_printed.includes(c.iebc_constituency_code), `${slug} ${c.id}: voters not as printed`); ok(g.sources.some((s) => s.id === v.source_id && s.sha256), `${slug} ${c.id}: voters source not hashed`); });
   // Sub-county slugs match the census rows.
+  // KNBS sub-counties are a separate list: every KNBS sub-county with census figures is in it, and a KNBS unit with no
+  // namesake constituency (Kadibo) is never tied to one.
+  const knbs = new Set(g.knbs_sub_counties.map((x) => x.slug));
   if (counties.has(slug, 'population')) {
     const sub = counties.load(slug, 'population').by_sub_county;
-    if (sub) ok(JSON.stringify(Object.keys(sub.values).sort()) === JSON.stringify(g.constituencies.map((c) => c.knbs_sub_county_slug).sort()), `${slug}: sub-county slugs differ from population.json by_sub_county`);
+    if (sub) Object.keys(sub.values).forEach((k) => ok(knbs.has(k), `${slug}: census sub-county ${k} is not in knbs_sub_counties`));
   }
+  g.knbs_sub_counties.forEach((x) => ok(x.same_name_constituency_id === null || con[x.same_name_constituency_id], `${slug} ${x.slug}: same_name_constituency_id does not exist`));
+  if (slug === 'kisumu') ok(g.knbs_sub_counties.some((x) => x.slug === 'kadibo' && x.same_name_constituency_id === null), 'kisumu: Kadibo must be listed as a KNBS sub-county with no constituency');
   // Area and topology (computed by scripts/build-county-geo.py on the unsimplified polygons).
   ok(g.checks.coverage_valid === true && g.checks.ward_overlap_km2 < 0.01, `${slug}: ward coverage invalid or overlapping`);
   ok(Math.abs(g.checks.ward_area_vs_official_pct) <= 1, `${slug}: ward area ${g.checks.ward_area_km2} km2 is more than 1% from the official ${g.checks.official_land_area_km2} km2`);

@@ -94,10 +94,10 @@ export default function WardMap({
   mapId = 'wmap',
   geo = null,
   countyName = 'Siaya',
-  // 'sub-county': the units are constituencies (sub-counties), not wards; wording and table columns follow.
+  // 'constituency': the units are IEBC constituencies, not wards; wording and table columns follow.
   unit = 'ward',
 }) {
-  const sub = unit === 'sub-county';
+  const sub = unit === 'constituency';
   const { H, WARDS, BY_CODE, HOME, attribution } = useMemo(() => (geo ? projectOf(geo) : SIAYA), [geo]);
   const svgRef = useRef(null);
   const ptrs = useRef(new Map());
@@ -118,7 +118,7 @@ export default function WardMap({
   const unitSfx = valueUnit === '%' ? '%' : valueUnit ? ` ${valueUnit}` : '';
   const fmtV = (v) => (typeof v === 'number' && Number.isFinite(v) ? `${show(v, valueDec)}${unitSfx}` : 'not available');
   const describe = (w) => {
-    let s = sub ? `${w.name} sub-county (constituency), IEBC constituency code ${w.code}` : `${w.name} ward, ${w.con} constituency, IEBC ward code ${w.code}`;
+    let s = sub ? `${w.name} constituency, IEBC constituency code ${w.code}` : `${w.name} ward, ${w.con} constituency, IEBC ward code ${w.code}`;
     if (values) s += `. ${valueLabel ? `${valueLabel}: ` : ''}${fmtV(valOf(w))}`;
     if (valueNotes[w.id] || valueNotes[w.code]) s += `. Note: ${valueNotes[w.id] || valueNotes[w.code]}`;
     return s;
@@ -198,7 +198,7 @@ export default function WardMap({
     <figure className="wmap">
       <style>{CSS}</style>
       <p id={helpId} className="wmap-help">
-        {sub ? 'Drag to move the map, or use the arrow keys when it is selected. Zoom with the buttons or the + and − keys; 0 resets. Sub-county names appear when zoomed in. Tab moves between sub-counties; click a sub-county or press Enter to see its details below the map.' : 'Drag to move the map, or use the arrow keys when it is selected. Zoom with the buttons or the + and − keys; 0 resets. Ward names appear when zoomed in. Tab moves between wards; click a ward or press Enter to see its details below the map.'}
+        {sub ? 'Drag to move the map, or use the arrow keys when it is selected. Zoom with the buttons or the + and − keys; 0 resets. Constituency names appear when zoomed in. Tab moves between constituencies; click a constituency or press Enter to see its details below the map.' : 'Drag to move the map, or use the arrow keys when it is selected. Zoom with the buttons or the + and − keys; 0 resets. Ward names appear when zoomed in. Tab moves between wards; click a ward or press Enter to see its details below the map.'}
       </p>
 
       <div className="wmap-stage">
@@ -269,7 +269,7 @@ export default function WardMap({
         ) : null}
       </div>
       <div className="wmap-detail" role="status" aria-live="polite">
-        {(() => { const w = WARDS.find((x) => x.id === sel); return w ? <><b>{w.name}</b>{sub ? ' sub-county (constituency)' : <> ward, {w.con} constituency</>}, IEBC code {w.code}{values ? <>. {valueLabel ? `${valueLabel}: ` : ''}{fmtV(valOf(w))}</> : null}.</> : `Select a ${sub ? 'sub-county' : 'ward'} to see its name${sub ? '' : ', constituency'} and IEBC code here.`; })()}
+        {(() => { const w = WARDS.find((x) => x.id === sel); return w ? <><b>{w.name}</b>{sub ? ' constituency' : <> ward, {w.con} constituency</>}, IEBC code {w.code}{values ? <>. {valueLabel ? `${valueLabel}: ` : ''}{fmtV(valOf(w))}</> : null}.</> : `Select a ${sub ? 'constituency' : 'ward'} to see its name${sub ? '' : ', constituency'} and IEBC code here.`; })()}
       </div>
       {values ? (
         <div className="wmap-legend">
@@ -285,11 +285,11 @@ export default function WardMap({
         <summary>View as table</summary>
         <div className="tablewrap">
           <table className="data">
-            <caption className="sr-only">{`${countyName} County ${sub ? 'sub-counties' : 'wards'}${values && valueLabel ? `: ${valueLabel}` : ''}`}</caption>
+            <caption className="sr-only">{`${countyName} County ${sub ? 'constituencies' : 'wards'}${values && valueLabel ? `: ${valueLabel}` : ''}`}</caption>
             <thead>
               <tr>
                 <th scope="col">IEBC code</th>
-                <th scope="col">{sub ? 'Sub-county (constituency)' : 'Ward'}</th>
+                <th scope="col">{sub ? 'Constituency' : 'Ward'}</th>
                 {sub ? null : <th scope="col">Constituency</th>}
                 {values ? <th scope="col">{valueLabel || 'Value'}{unitSfx ? ` (${valueUnit})` : ''}</th> : null}
               </tr>
