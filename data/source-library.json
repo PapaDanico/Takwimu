@@ -28,6 +28,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. A document page with a download button; the embedded PDF is recorded separately as GOV-01-PDF.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -58,6 +59,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF (215 pages; PDF metadata created 24 Jan 2024). The copy the site already cites on maarifa.cog.go.ke (Council of Governors) was downloaded too and is byte-for-byte the same file (same SHA-256), so it is one record. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -82,6 +84,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The page lists ten quarterly reports; nine distinct files were downloaded and are recorded as GOV-02-FY…, because two links serve the same file.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -108,6 +111,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -134,6 +138,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "The page lists this report twice (download ids 32870 and 31545); both links serve the same file (same SHA-256), so it is one record. Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -160,6 +165,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -186,6 +192,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -212,6 +219,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "The cover prints \"June 31st, 2025\". Gives own-source revenue for FY 2024/25 of KSh 757,570,621 against a target of KSh 1,044,061,306 (Table 4, Total OSR row on PDF page 6; also Table 2, PDF page 3). Read on 2026-11-21 from the text layer (not a scan, no OCR). Used in conflict case osr-2024-25-county-statement and recorded in data/siaya.json beside the Controller of Budget figure and the press statement. Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -238,6 +246,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "The cover prints \"September 31st, 2025\". Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -264,6 +273,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -290,6 +300,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "The cover prints \"March 30th, 2026\". Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -316,6 +327,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF from the link on the GOV-02 page. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -342,6 +354,7 @@
    "file_url": "https://siaya.go.ke/?cgdp_download=30799",
    "file_type": "PDF",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -366,6 +379,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200 for the notice, dated 20 Sep 2024, which says forums were held in all 30 wards and the report was submitted to the County Assembly. The download link on the page shows as unprocessed code, so the report itself was not obtained.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -391,6 +405,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "HTTP 200. The notice lists ward forums by sub-county, date and venue. The hash is of the page as served on 21 Nov 2026; web pages change, so it identifies this snapshot only.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -415,6 +430,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "First attempt: connection reset. Second attempt: HTTP 200, but the page is a bot-verification screen (\"Please wait while your request is being verified\"), not the list. The same reports are held by the Parliament of Kenya library and are recorded under cob-report-… below. Retry on 21 Nov 2026: the TLS connection failed (curl error 35) for cob.go.ke and www.cob.go.ke, so the page could not be read; no other official address for the list was found. The reports themselves remain available from the Parliament of Kenya library (records below).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -439,6 +455,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "HTTP 503 on two attempts: the site shows an \"Under Maintenance\" page. Retry at the next check. Retry on 21 Nov 2026: still HTTP 503 (\"Under Maintenance\").",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -463,6 +480,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "HTTP 503 on two attempts (\"Under Maintenance\"). Several Siaya audit reports are held by the Parliament of Kenya library and are recorded under audit-… below. Retry on 21 Nov 2026: still HTTP 503 (\"Under Maintenance\").",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -488,6 +506,9 @@
    "redistribution_conditions": "Non-commercial use only, with attribution",
    "retrieval_note": "HTTP 200. Record read through the repository API; the report file is recorded as KNBS-01-PDF.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "non-commercial-only",
+   "licence_check_needed": true,
+   "licence_check_note": "Census 28 Nov 2026: recorded CC BY-NC 4.0 may not be the licence KNBS states for this publication (the repository grants it \"except where otherwise noted\"); check with the publisher before commercial reuse.",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed. The publisher states CC BY-NC 4.0."
   },
@@ -515,6 +536,9 @@
    "redistribution_conditions": "Non-commercial use only, with attribution",
    "retrieval_note": "Downloaded as a valid PDF. Its MD5 matched the checksum the repository publishes (ba7fc314fa2abf05f8511a810d32f0a8).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "non-commercial-only",
+   "licence_check_needed": true,
+   "licence_check_note": "Census 28 Nov 2026: recorded CC BY-NC 4.0 may not be the licence KNBS states for this publication (the repository grants it \"except where otherwise noted\"); check with the publisher before commercial reuse.",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed. The publisher states CC BY-NC 4.0."
   },
@@ -540,6 +564,9 @@
    "redistribution_conditions": "Non-commercial use only, with attribution",
    "retrieval_note": "HTTP 200. Record read through the repository API; the report file is recorded as KNBS-02-PDF.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "non-commercial-only",
+   "licence_check_needed": true,
+   "licence_check_note": "Census 28 Nov 2026: recorded CC BY-NC 4.0 may not be the licence KNBS states for this publication (the repository grants it \"except where otherwise noted\"); check with the publisher before commercial reuse.",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed. The publisher states CC BY-NC 4.0."
   },
@@ -567,6 +594,9 @@
    "redistribution_conditions": "Non-commercial use only, with attribution",
    "retrieval_note": "Downloaded as a valid PDF. Its MD5 matched the checksum the repository publishes (ec694362f11c9c1f211d546e1eddd528).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "non-commercial-only",
+   "licence_check_needed": true,
+   "licence_check_note": "Census 28 Nov 2026: recorded CC BY-NC 4.0 may not be the licence KNBS states for this publication (the repository grants it \"except where otherwise noted\"); check with the publisher before commercial reuse.",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed. The publisher states CC BY-NC 4.0."
   },
@@ -591,6 +621,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "Secure connection failed on two attempts: the site's certificate could not be verified (curl error 60, unable to get local issuer certificate). Verification was not turned off. Retry, or ask KNBS for the Siaya abstract. Retry on 21 Nov 2026: https failed again with curl error 60, and the http:// address redirects to https and fails the same way. Verification was not turned off. The KNBS repository (repository.knbs.or.ke, official) holds a Siaya County Statistical Abstract 2015, recorded as KNBS-03-SIAYA-2015; no later Siaya abstract was found there.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -622,6 +653,9 @@
    "redistribution_conditions": "Non-commercial use only, with attribution",
    "retrieval_note": "Found on 21 Nov 2026 through the KNBS repository search because the KNBS portal page (KNBS-03) fails certificate verification; it is not linked from that page as read. Downloaded as a valid PDF; its MD5 matched the checksum the repository publishes (3dfc22912a022806ab83694b3c3354de). Not yet read for figures. Now read for education and agriculture tables (siaya-education.json, siaya-agriculture.json). The Council of Governors Maarifa copy (downloaded 21 Nov 2026) is byte-for-byte the same file (same SHA-256), so it is listed here, not as a new record. The PDF's own page ii reads: \"Extracts may be used or published if the source is duly acknowledged\".",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "non-commercial-only",
+   "licence_check_needed": true,
+   "licence_check_note": "Census 28 Nov 2026: recorded CC BY-NC 4.0 may not be the licence KNBS states for this publication (the repository grants it \"except where otherwise noted\"); check with the publisher before commercial reuse.",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed. The publisher states CC BY-NC 4.0."
   },
@@ -647,6 +681,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "First attempt: HTTP 520 (an error at the site's network provider). Second attempt: downloaded as a valid PDF (PDF metadata created 29 May 2023). No licence or checksum stated.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IBP publishes the Open Budget Survey data for download and states the citation to use (\"International Budget Partnership (2025). Open Budget Survey Dataset.\"); figures may be reused with that citation. No licence for the documents themselves is stated."
   },
@@ -672,6 +707,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "First two attempts: HTTP 520. Third attempt: downloaded as a valid PDF. No licence or checksum stated.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IBP publishes the Open Budget Survey data for download and states the citation to use (\"International Budget Partnership (2025). Open Budget Survey Dataset.\"); figures may be reused with that citation. No licence for the documents themselves is stated."
   },
@@ -697,6 +733,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF (163 pages; PDF metadata created 2 Aug 2024; uploaded July 2025 per the address). No licence or checksum stated.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse terms stated by APRM."
   },
@@ -710,7 +747,7 @@
    "title": "Siaya County Participatory Climate Risk Assessment (PCRA) Report",
    "publisher": "Kenya climate finance programme (climatefinanceken.go.ke) with Siaya County",
    "document_type": "Climate risk assessment report",
-   "publication_date": "not stated",
+   "publication_date": "2023",
    "reference_period": "not stated",
    "source_url": "https://climatefinanceken.go.ke/sites/default/files/2025-05/Siaya%20County%20PCRA%20Report%20%28revised%20nakuru%29%20FINAL.pdf",
    "geographic_coverage": "Siaya",
@@ -719,8 +756,9 @@
    "sha256": null,
    "bytes": null,
    "retrieval_status": "inaccessible",
-   "retrieval_note": "Link and cite only: Annex 1 contains personal data (participant IDs and phone numbers); never republish or extract. Secure connection failed on two attempts: the site's certificate could not be verified (curl error 60). Verification was not turned off. Retry, or ask the county climate change unit for a copy. Retry on 21 Nov 2026: https (with and without www) failed again with curl error 60; the http:// address redirects to https and fails the same way. Verification was not turned off. No other official copy was found. A copy of the same-named file was obtained from the Council of Governors Maarifa portal (record CLIM-01-MAARIFA).",
+   "retrieval_note": "Link and cite only: Annex 1 contains personal data (participant IDs and phone numbers); never republish or extract. Secure connection failed on two attempts: the site's certificate could not be verified (curl error 60). Verification was not turned off. Retry, or ask the county climate change unit for a copy. Retry on 21 Nov 2026: https (with and without www) failed again with curl error 60; the http:// address redirects to https and fails the same way. Verification was not turned off. No other official copy was found. A copy of the same-named file was obtained from the Council of Governors Maarifa portal (record CLIM-01-MAARIFA). Publication date from data/siaya-climate.json, \"2023 (cover)\" (census 28 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -745,6 +783,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "HTTP 404 (page not found) on two attempts. The article may have moved. Retry on 21 Nov 2026: still HTTP 404. The county site's post search (wp-json, by slug and by keywords) returned no matching article, so it was not found at another address.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -770,6 +809,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "HTTP 200. The article cites HIV prevalence 9.8% (2023), malaria 24% and TB incidence 363 per 100,000 without naming the underlying datasets. Hash is of the page as served on 21 Nov 2026.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -794,6 +834,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "HTTP 404 (page not found) on two attempts. The article may have moved. Retry on 21 Nov 2026: still HTTP 404. The county site's post search (wp-json, by slug and by keywords) returned no matching article, so it was not found at another address.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -818,6 +859,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. Portal page; no Siaya PDF linked directly from it.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Research publication with a foreign co-author; no reuse terms stated."
   },
@@ -842,6 +884,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. Project description page; no PDF linked from it.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse terms stated: link and cite only."
   },
@@ -866,6 +909,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The report PDF linked on the page is recorded as NGO-01-PDF.",
    "data_reuse": "permission required",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "The publisher reserves all rights and states no reuse licence: figures are cited with a link; anything beyond that needs the publisher's permission."
   },
@@ -892,6 +936,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF (15 pages). No checksum stated.",
    "data_reuse": "permission required",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "The publisher reserves all rights and states no reuse licence: figures are cited with a link; anything beyond that needs the publisher's permission."
   },
@@ -916,6 +961,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The report PDF linked on the page is recorded as NGO-02-PDF.",
    "data_reuse": "permission required",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "The publisher reserves all rights and states no reuse licence: figures are cited with a link; anything beyond that needs the publisher's permission."
   },
@@ -942,6 +988,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF (15 pages). No checksum stated.",
    "data_reuse": "permission required",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "The publisher reserves all rights and states no reuse licence: figures are cited with a link; anything beyond that needs the publisher's permission."
   },
@@ -966,6 +1013,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The page links one national situation report, not a Siaya one.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse terms stated: link and cite only."
   },
@@ -990,6 +1038,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The report PDF linked on the page is recorded as UN-01-PDF.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse terms stated: link and cite only."
   },
@@ -1016,6 +1065,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF (8 pages). Whether it has Siaya figures is not yet checked.",
    "data_reuse": "permission required",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "The publisher reserves all rights and states no reuse licence: figures are cited with a link; anything beyond that needs the publisher's permission."
   },
@@ -1040,6 +1090,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The report PDF linked on the page is recorded as UN-02-PDF.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse terms stated: link and cite only."
   },
@@ -1067,6 +1118,7 @@
    "redistribution_conditions": "Non-commercial use only, with attribution",
    "retrieval_note": "Downloaded as a valid PDF (126 pages). The page also links a summary; only the full report is recorded.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "non-commercial-only",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed. The publisher states CC BY-NC 4.0."
   },
@@ -1091,6 +1143,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The report PDF linked on the page is recorded as UN-03-PDF.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse terms stated: link and cite only."
   },
@@ -1117,6 +1170,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded as a valid PDF (12 pages).",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse terms stated: link and cite only."
   },
@@ -1142,6 +1196,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "HTTP 200. Reports the county government's statement of KSh 946,893,440.40 own-source revenue for FY 2024/25 against a KSh 1,044,061,306 target; the listed revenue streams add up to the stated total. Hash is of the page as served on 21 Nov 2026.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1169,6 +1224,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (664 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1196,6 +1252,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (179 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1226,6 +1283,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (423 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1256,6 +1314,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (384 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1283,6 +1342,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (294 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1310,6 +1370,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (143 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1337,6 +1398,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Downloaded again on 21 Nov 2026: identical bytes. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1364,6 +1426,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Downloaded again on 21 Nov 2026: identical bytes. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1391,6 +1454,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Downloaded again on 21 Nov 2026: identical bytes. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1418,6 +1482,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (570 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1445,6 +1510,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (23 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1472,6 +1538,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (775 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1499,6 +1566,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (135 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1526,6 +1594,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (239 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1553,6 +1622,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (201 MB) was not downloaded again. Publication date as recorded by the Parliament library (\"12-03-2024\", year kept).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1580,6 +1650,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (106 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1607,6 +1678,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (497 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1634,6 +1706,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (200 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1661,6 +1734,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (454 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1688,6 +1762,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (329 MB) was not downloaded again. Publication date as recorded by the Parliament library.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1715,6 +1790,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21; its MD5 matched the checksum the Parliament of Kenya library publishes. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (22 MB) was not downloaded again. Publication date as recorded by the Parliament library (\"5/11/2021\", year kept).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1728,7 +1804,7 @@
    "title": "Senate County Public Accounts and Investments Committee, Annexes to Fiduciary Report (November 2018)",
    "publisher": "Senate of Kenya",
    "document_type": "Senate committee compilation of Auditor-General opinions",
-   "publication_date": "not stated",
+   "publication_date": "2018-11",
    "reference_period": "FY 2014/15 and 2015/16",
    "source_url": "https://www.parliament.go.ke/sites/default/files/2018-11/Annexes%20to%20Fiduciary%20Report.pdf",
    "cited_by": "history.json audits.points (fy 2014/15, 2015/16)",
@@ -1739,8 +1815,9 @@
    "bytes": 121038,
    "file_type": "PDF",
    "retrieval_status": "downloaded",
-   "retrieval_note": "Not hashed in the manifest because the site publishes no checksum. Downloaded again on 21 Nov 2026 and hashed here; there is still no publisher checksum to verify it against.",
+   "retrieval_note": "Not hashed in the manifest because the site publishes no checksum. Downloaded again on 21 Nov 2026 and hashed here; there is still no publisher checksum to verify it against. Publication date from the title, \"(November 2018)\" (census 28 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1754,7 +1831,7 @@
    "title": "Siaya County Treasury, County Budget Review and Outlook Paper FY 2019/2020 (September 2020)",
    "publisher": "County Government of Siaya (County Treasury)",
    "document_type": "County document (County Treasury)",
-   "publication_date": "not stated",
+   "publication_date": "2020-09",
    "reference_period": "FY 2019/20",
    "source_url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf",
    "cited_by": "history.json supplementary (siaya-brop-2019-20), osr_series 2019/20 alternate; conflicts.json osr-2019-20, final-budget-2019-20",
@@ -1765,8 +1842,9 @@
    "bytes": 754782,
    "file_type": "PDF",
    "retrieval_status": "downloaded",
-   "retrieval_note": "Not hashed in the manifest because the site publishes no checksum. Downloaded again on 21 Nov 2026 and hashed here; there is still no publisher checksum to verify it against. Also held by the KIPPRA repository (same SHA-256, checked 27 Nov 2026).",
+   "retrieval_note": "Not hashed in the manifest because the site publishes no checksum. Downloaded again on 21 Nov 2026 and hashed here; there is still no publisher checksum to verify it against. Also held by the KIPPRA repository (same SHA-256, checked 27 Nov 2026). Publication date from the title, \"(September 2020)\" (census 28 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed.",
    "also_at": [
@@ -1798,6 +1876,7 @@
    "retrieval_note": "A live service, not a file: its responses change when the World Bank revises a series, so they are not hashed. The API answered HTTP 200 on 21 Nov 2026; data/national.json records each indicator's last_updated date.",
    "redistribution_conditions": "CC BY 4.0: credit the World Bank and the indicator, link to the licence, and say if the data were changed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "attribution-required",
    "document_redistribution": true,
    "reuse_basis": "World Development Indicators are published under CC BY 4.0 (World Bank data catalogue); credit \"World Bank, World Development Indicators\"."
   },
@@ -1824,6 +1903,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1850,6 +1930,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1876,6 +1957,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1902,6 +1984,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1928,6 +2011,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1954,6 +2038,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -1980,6 +2065,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2006,6 +2092,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2032,6 +2119,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2058,6 +2146,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2084,6 +2173,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2110,6 +2200,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2136,6 +2227,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2162,6 +2254,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2188,6 +2281,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2214,6 +2308,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2240,6 +2335,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2266,6 +2362,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2292,6 +2389,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2318,6 +2416,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2344,6 +2443,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2370,6 +2470,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2396,6 +2497,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2422,6 +2524,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IBP publishes the Open Budget Survey data for download and states the citation to use (\"International Budget Partnership (2025). Open Budget Survey Dataset.\"); figures may be reused with that citation. No licence for the documents themselves is stated."
   },
@@ -2448,6 +2551,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IBP publishes the Open Budget Survey data for download and states the citation to use (\"International Budget Partnership (2025). Open Budget Survey Dataset.\"); figures may be reused with that citation. No licence for the documents themselves is stated."
   },
@@ -2474,6 +2578,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Hashed 2026-11-21 when the figures were read. Rechecked 21 Nov 2026: the record page answered HTTP 200; the file (100 MB) was not downloaded again.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2487,7 +2592,7 @@
    "title": "Registered Voters per Constituency for the 2022 General Election",
    "publisher": "Independent Electoral and Boundaries Commission",
    "document_type": "Independent Electoral and Boundaries Commission publication",
-   "publication_date": "not stated",
+   "publication_date": "2022",
    "reference_period": "2022",
    "source_url": "https://www.iebc.or.ke/docs/rov_per_constituency.pdf",
    "cited_by": "political.json",
@@ -2498,8 +2603,9 @@
    "bytes": 358431,
    "file_type": "PDF",
    "retrieval_status": "downloaded",
-   "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes.",
+   "retrieval_note": "Hashed 2026-11-21 when the figures were read. Downloaded again on 21 Nov 2026: identical bytes. Publication date from data/siaya-geography.json (IEBC-ROV-2022) (census 28 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2513,7 +2619,7 @@
    "title": "Kenya Demographic and Health Survey 2014",
    "publisher": "Kenya National Bureau of Statistics, Ministry of Health and partners (hosted by The DHS Program)",
    "document_type": "Household survey report",
-   "publication_date": "not stated",
+   "publication_date": "2015-12",
    "reference_period": "Survey 2014",
    "source_url": "https://dhsprogram.com/pubs/pdf/fr308/fr308.pdf",
    "cited_by": "history.json health indicators (2014 values)",
@@ -2524,8 +2630,11 @@
    "bytes": 5080236,
    "file_type": "PDF",
    "retrieval_status": "downloaded",
-   "retrieval_note": "Downloaded as a valid PDF (603 pages; PDF title \"Kenya Demographic and Health Survey 2014 [FR308]\"). No checksum stated. Housekeeping 21 Nov 2026: the local download folder for this file was misnamed SITE-KDHS-2022; the file is the 2014 report, as this record says. The 2022 full report is record KDHS-2022-FR380 and the 2022 key indicators report is record kdhs-2022-kir.",
+   "retrieval_note": "Downloaded as a valid PDF (603 pages; PDF title \"Kenya Demographic and Health Survey 2014 [FR308]\"). No checksum stated. Housekeeping 21 Nov 2026: the local download folder for this file was misnamed SITE-KDHS-2022; the file is the 2014 report, as this record says. The 2022 full report is record KDHS-2022-FR380 and the 2022 key indicators report is record kdhs-2022-kir. Publication date from data/siaya-health.json (KDHS-2014) (census 28 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
+   "licence_check_needed": true,
+   "licence_check_note": "Census 28 Nov 2026: recorded \"Not stated\", but data/siaya-health.json cites The DHS Program terms of use for the same survey; check which terms apply before reuse.",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2539,7 +2648,7 @@
    "title": "Kenya Demographic and Health Survey 2022: Key Indicators Report",
    "publisher": "Kenya National Bureau of Statistics, Ministry of Health and partners (hosted by The DHS Program)",
    "document_type": "Household survey report",
-   "publication_date": "not stated",
+   "publication_date": "2023",
    "reference_period": "Survey 2022",
    "source_url": "https://dhsprogram.com/pubs/pdf/PR143/PR143.pdf",
    "cited_by": "history.json health indicators (2022 values)",
@@ -2550,8 +2659,11 @@
    "bytes": 4651040,
    "file_type": "PDF",
    "retrieval_status": "downloaded",
-   "retrieval_note": "Downloaded as a valid PDF. No checksum stated.",
+   "retrieval_note": "Downloaded as a valid PDF. No checksum stated. Publication date from data/siaya-health.json (KDHS-2022-KIR) (census 28 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
+   "licence_check_needed": true,
+   "licence_check_note": "Census 28 Nov 2026: recorded \"Not stated\", but data/siaya-health.json cites The DHS Program terms of use for the same survey; check which terms apply before reuse.",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2579,6 +2691,7 @@
    "redistribution_conditions": "Non-commercial use only, with the source acknowledged",
    "retrieval_note": "Downloaded as a valid PDF. The file is the Siaya County HIV and AIDS Strategic Plan, not an estimates report; history.json labels were corrected on 2026-11-21 to name it. Checked from the text layer: Table 1 (PDF page 16) prints adult (15-49) prevalence 23.7% (2013) and 24.8% (2015), with Kenya 6.04% and 5.9%, matching history.json, so no figure came from a different document. Flag: the text beside Table 1 gives 21.4% for 2013 and 23.7% for 2014, so the plan is inconsistent about the year of the 23.7% value.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "non-commercial-only",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed. The document states it may be reproduced with acknowledgement, not for sale."
   },
@@ -2605,6 +2718,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "HTTP 200. Hash is of the page as served on 21 Nov 2026.",
    "data_reuse": "permission required",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "The publisher reserves all rights and states no reuse licence: figures are cited with a link; anything beyond that needs the publisher's permission."
   },
@@ -2630,6 +2744,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "HTTP 403: the site served a bot-check page (\"Just a moment...\"). The same series is available through the World Bank API (worldbank-wdi-api). Retry on 21 Nov 2026: HTTP 403 bot check again. The same series was read from the official World Bank API instead (api.worldbank.org/v2/country/KEN/indicator/FP.CPI.TOTL, HTTP 200, 66 observations, lastupdated 2026-11-11), which is covered by record worldbank-wdi-api.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "The figures are the World Development Indicators series FP.CPI.TOTL, read through the API (record worldbank-wdi-api), which is CC BY 4.0. This page itself was not retrieved, so it is not redistributed."
   },
@@ -2657,6 +2772,7 @@
    "redistribution_conditions": "None stated",
    "retrieval_note": "HTTP 200; the hash is of the API record (metadata and download links), not of the boundary file. The API states Public Domain (licence source rcmrd.africageoportal.com; upstream RCMRD GeoPortal, Africa GeoPortal). kenya-counties-map.json recorded CC BY 3.0 IGO via IEBC and OCHA ROSEA, which is the ADM2 layer's licence; corrected to Public Domain on 21 Nov 2026 (conflict kenya-counties-map-licence).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "allowed",
    "document_redistribution": true,
    "reuse_basis": "Licence stated by the publisher: Public Domain (stated in the API record)."
   },
@@ -2684,6 +2800,7 @@
    "redistribution_conditions": "Attribution",
    "retrieval_note": "HTTP 200; the hash is of the API record (metadata and download links), not of the boundary file.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "attribution-required",
    "document_redistribution": true,
    "reuse_basis": "Licence stated by the publisher: CC BY 3.0 IGO (stated in the API record)."
   },
@@ -2709,6 +2826,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200 after a redirect to /open-budget-survey/download. The data files used are recorded as ibp-obs-2006-2025 and ibp-obs-2025-launch.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IBP publishes the Open Budget Survey data for download and states the citation to use (\"International Budget Partnership (2025). Open Budget Survey Dataset.\"); figures may be reused with that citation. No licence for the documents themselves is stated."
   },
@@ -2734,6 +2852,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. A home page, not a document; the register files used are recorded as iebc-rov-2022 and iebc-annual-report-2022-23.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2759,6 +2878,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The files used are recorded under cbk-… above.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2784,6 +2904,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The files used are recorded under cbk-… above.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2809,6 +2930,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The files used are recorded under cbk-… above.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2834,6 +2956,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The files used are recorded under cbk-… above.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2859,6 +2982,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "HTTP 200. The files used are recorded under cbk-… above.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2885,6 +3009,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (35 pages). No checksum stated. The report says estimates from different rounds are not directly comparable.",
    "cited_by": "siaya-health.json (KHE-2015)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2911,6 +3036,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (34 pages). No checksum stated.",
    "cited_by": "siaya-health.json (KHE-2018)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2937,6 +3063,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (47 pages); publication date is the PDF creation date. No checksum stated.",
    "cited_by": "siaya-health.json (NSDCC-POSTER-2022)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2963,6 +3090,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (98.8 MB); publication date is the PDF creation date. No checksum stated. The Siaya page prints 10.3% as \"Overall\", not 15-49 (conflict hiv-2025-age-label).",
    "cited_by": "history.json HIV 2025 point; siaya-health.json",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -2989,6 +3117,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (90 pages; uploaded 19 Mar 2026). No checksum stated.",
    "cited_by": "siaya-health.json (NTLD-AR-2023)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3015,6 +3144,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as the PubMed Central HTML page. An earlier attempt (local folder HDSS-PROFILE-2012) saved only a 151-byte JSON reply, not the article, and is not used.",
    "cited_by": "siaya-health.json (HDSS-2012)",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse terms stated: link and cite only."
   },
@@ -3041,6 +3171,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (copy hosted by SourceAfrica; PDF created 12 Nov 2020). The Ministry's own copy was not found; no checksum stated. Printed page = PDF page minus 17.",
    "cited_by": "siaya-education.json (MOE-BESB-2019)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3067,6 +3198,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (120 pages; copy hosted by KICD; PDF created 23 Jul 2015). No checksum stated. Printed page = PDF page minus 14.",
    "cited_by": "siaya-education.json (MOE-BESB-2014)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3093,6 +3225,9 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (700 pages; PDF created 20 Jul 2023). No checksum stated. This is the full 2022 report; the key indicators report is record kdhs-2022-kir. The local folder named SITE-KDHS-2022 holds the 2014 report (record kdhs-2014), not this one.",
    "cited_by": "siaya-education.json and siaya-climate.json (KDHS-2022)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
+   "licence_check_needed": true,
+   "licence_check_note": "Census 28 Nov 2026: recorded \"Not stated\", but data/siaya-health.json cites The DHS Program terms of use for the same survey; check which terms apply before reuse.",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3117,6 +3252,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "Connection reset by the server on 21 Nov 2026 (curl error 35). Verification was not turned off. Retry later.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3141,6 +3277,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "Connection reset by the same server on 21 Nov 2026 (curl error 35). Retry later.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3165,6 +3302,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Repository record found on 21 Nov 2026; the report itself was not downloaded. Its geography predates the 2013 counties, so it was not extracted.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse terms stated: link and cite only."
   },
@@ -3191,6 +3329,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF. No checksum stated. The notice leaves out areas with ongoing by-elections without naming them; Ugunja (233) and its three wards are absent.",
    "cited_by": "siaya-geography.json (IEBC-GN-13904-2025)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3217,6 +3356,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (685 pages; PDF created 25 May 2020; the report is undated). No checksum stated. Only ward codes and names are used; no results or candidate names.",
    "cited_by": "siaya-geography.json (IEBC-2017-RESULTS)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3241,6 +3381,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "21 Nov 2026: the KNBS server failed TLS verification (incomplete certificate chain, curl error 60); a second attempt returned HTTP 503. Verification was not turned off. KNBS sub-county labels are taken as reproduced in the CIDP 2023-2027 Table 5. 27 Nov 2026: a copy was downloaded from the KNBS repository (https://repository.knbs.or.ke/items/2521aa6d-1c77-4929-b238-f2d4db65ceab); its MD5 matched the checksum the repository publishes (gap research D).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed.",
    "file_url": "https://repository.knbs.or.ke/server/api/core/bitstreams/4ec8e85f-c86c-45b0-bb62-6b926e6b5c45/content",
@@ -3270,6 +3411,7 @@
    "parent_id": "CLIM-01",
    "cited_by": "siaya-climate.json (CLIM-01)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3295,6 +3437,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (79 pages). No checksum stated. Not used for values: its costs are planned, not allocated or spent.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3321,6 +3464,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF (118 pages); publication date from the upload folder. No checksum stated. The 34% county figure is read from a chart label.",
    "cited_by": "siaya-climate.json (WASREB-IMPACT-18)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3346,6 +3490,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 21 Nov 2026 as a valid PDF. No checksum stated. Not used for values: the utility tables are images with no text layer.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3376,6 +3521,7 @@
    "cited_by": "siaya-wards-geo.json",
    "retrieval_note": "Downloaded 21 Nov 2026 (25,164,754 bytes). No checksum published. HDX caveat: abstracted from National Land Commission/IEBC and Survey of Kenya sources and cleaned; not an IEBC publication. All 30 Siaya wards matched the registry (docs/siaya-wards-map-notes.md).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "attribution-required",
    "document_redistribution": true,
    "reuse_basis": "Licence stated by the publisher: Creative Commons Attribution International (CC BY), as stated on HDX."
   },
@@ -3403,6 +3549,7 @@
    "retrieval_note": "Downloaded 21 Nov 2026 (17,402,535 bytes). HDX caveat: \"not an official administrative layer from the authorities\". Disagrees with the primary layer in Bondo and Rarieda; geometry not used or republished.",
    "redistribution_conditions": "As the stated licence requires: credit the publisher and link to the licence.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "attribution-required",
    "document_redistribution": true,
    "reuse_basis": "Licence stated by the publisher: Creative Commons Attribution International (CC BY), as stated on HDX."
   },
@@ -3433,6 +3580,7 @@
    "cited_by": "siaya-projects.json (GOV-04-CADP-PP)",
    "retrieval_note": "Link and cite only: the report includes personal contact details (phone numbers appear in its text); never republish or extract them. Downloaded 21 Nov 2026 from the county documents page as a valid PDF (96 pages; PDF created 22 Sep 2024) because the download link on the GOV-04 notice page does not work. No checksum stated. The ADP 2025/26 itself was not obtained.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3459,6 +3607,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "A live service: the raw SDMX responses retrieved on 21 Nov 2026 are hashed per indicator in data/imf.json (vintages[].raw_files). The DataMapper API and imf.org pages returned HTTP 403 from this environment.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IMF terms (https://www.imf.org/external/terms.htm): link to and cite the IMF; no bulk copy (owner decision, 21 Nov 2026)."
   },
@@ -3489,6 +3638,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "not downloaded: HTTP 403 (access denied by IMF edge/CDN from this environment); sha256 pending",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IMF terms (https://www.imf.org/external/terms.htm): link to and cite the IMF; no bulk copy (owner decision, 21 Nov 2026)."
   },
@@ -3519,6 +3669,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "not downloaded: HTTP 403 (access denied by IMF edge/CDN from this environment); sha256 pending",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IMF terms (https://www.imf.org/external/terms.htm): link to and cite the IMF; no bulk copy (owner decision, 21 Nov 2026)."
   },
@@ -3546,6 +3697,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "not downloaded: HTTP 403 (access denied by IMF edge/CDN from this environment); sha256 pending",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IMF terms (https://www.imf.org/external/terms.htm): link to and cite the IMF; no bulk copy (owner decision, 21 Nov 2026)."
   },
@@ -3573,6 +3725,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "web page only; no PDF",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "IMF terms (https://www.imf.org/external/terms.htm): link to and cite the IMF; no bulk copy (owner decision, 21 Nov 2026)."
   },
@@ -3600,6 +3753,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 40 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Policy research (official secondary): figures are checked against the primary document before use; link and cite only (no reuse licence stated)."
   },
@@ -3627,6 +3781,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 4 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Policy research (official secondary): figures are checked against the primary document before use; link and cite only (no reuse licence stated)."
   },
@@ -3654,6 +3809,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 4 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Policy research (official secondary): figures are checked against the primary document before use; link and cite only (no reuse licence stated)."
   },
@@ -3681,6 +3837,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 12 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Policy research (official secondary): figures are checked against the primary document before use; link and cite only (no reuse licence stated)."
   },
@@ -3708,6 +3865,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 18 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Policy research (official secondary): figures are checked against the primary document before use; link and cite only (no reuse licence stated)."
   },
@@ -3735,6 +3893,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 7 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Policy research (official secondary): figures are checked against the primary document before use; link and cite only (no reuse licence stated)."
   },
@@ -3762,6 +3921,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 8 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Policy research (official secondary): figures are checked against the primary document before use; link and cite only (no reuse licence stated)."
   },
@@ -3789,6 +3949,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 24 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Policy research (official secondary): figures are checked against the primary document before use; link and cite only (no reuse licence stated)."
   },
@@ -3816,6 +3977,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 48 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3843,6 +4005,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 50 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3870,6 +4033,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 78 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3897,6 +4061,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 72 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3924,6 +4089,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 104 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3951,6 +4117,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 120 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -3978,6 +4145,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 142 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4005,6 +4173,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 162 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4032,6 +4201,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 164 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4059,6 +4229,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 140 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4086,6 +4257,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 157 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4113,6 +4285,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 19 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4140,6 +4313,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 35 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4167,6 +4341,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 39 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4194,6 +4369,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 29 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4221,6 +4397,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 34 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4248,6 +4425,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 27 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4275,6 +4453,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 45 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4302,6 +4481,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 46 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4329,6 +4509,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 47 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4356,6 +4537,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 44 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4383,6 +4565,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 40 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4410,6 +4593,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 53 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4437,6 +4621,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 43 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4464,6 +4649,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 50 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4491,6 +4677,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 76 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4518,6 +4705,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 77 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4545,6 +4733,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 72 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4572,6 +4761,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 40 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4599,6 +4789,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 47 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4626,6 +4817,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 40 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4653,6 +4845,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 222 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4680,6 +4873,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 300 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4707,6 +4901,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 268 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4734,6 +4929,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 253 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4761,6 +4957,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 346 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4788,6 +4985,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 143 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4815,6 +5013,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 360 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4842,6 +5041,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 265 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4869,6 +5069,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 248 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4896,6 +5097,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 220 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4923,6 +5125,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 217 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4950,6 +5153,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 250 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -4977,6 +5181,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 266 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5004,6 +5209,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 76 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5017,7 +5223,7 @@
    "title": "Siaya County 2025 Fiscal Strategy Paper (February 2025), County Assemblies Forum copy",
    "publisher": "County Government of Siaya (County Treasury); copy hosted by the County Assemblies Forum repository",
    "document_type": "County Fiscal Strategy Paper (County Treasury)",
-   "publication_date": "not stated",
+   "publication_date": "2025-02",
    "reference_period": "CFSP 2025 (FY 2025/26 ceilings; reviews FY 2023/24 and H1 FY 2024/25)",
    "source_url": "https://repository.org.countyassembliesforum.org/repository/documents/siaya-county-cfsp-2025-41/download/",
    "cited_by": "docs/research/sweep-2026-11-27 (research register)",
@@ -5028,8 +5234,9 @@
    "bytes": 2256439,
    "file_type": "PDF",
    "retrieval_status": "downloaded",
-   "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 54 pages, text layer. The file is held outside the repository and not redistributed.",
+   "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 54 pages, text layer. The file is held outside the repository and not redistributed. Publication date from the title, \"(February 2025)\" (census 28 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5043,7 +5250,7 @@
    "title": "County Annual Development Plan 2025-2026 (August 2024), County Assemblies Forum copy",
    "publisher": "County Government of Siaya (County Treasury); copy hosted by the County Assemblies Forum repository",
    "document_type": "Annual Development Plan (County Treasury)",
-   "publication_date": "not stated",
+   "publication_date": "2024-08",
    "reference_period": "ADP FY 2025/26",
    "source_url": "https://repository.org.countyassembliesforum.org/repository/documents/siaya-county-fy-2025-2026-41/download/",
    "cited_by": "docs/research/sweep-2026-11-27 (research register)",
@@ -5054,8 +5261,9 @@
    "bytes": 14330458,
    "file_type": "PDF",
    "retrieval_status": "downloaded",
-   "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 157 pages, text layer. The file is held outside the repository and not redistributed.",
+   "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 157 pages, text layer. The file is held outside the repository and not redistributed. Publication date from the title, \"(August 2024)\" (census 28 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5082,6 +5290,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 96 pages, text layer. The file is held outside the repository and not redistributed.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5109,6 +5318,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 62 pages, scan; OCR done for key pages (dl/oag-ror-2024-25/ocr/all.txt). The file is held outside the repository and not redistributed. The MD5 the Parliament library publishes for the file matched (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5136,6 +5346,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 46 pages, text layer. The file is held outside the repository and not redistributed. The MD5 the Parliament library publishes for the file matched (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5163,6 +5374,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 42 pages, scan; OCR done for key pages (dl/oag-crf-2024-25/ocr/all.txt). The file is held outside the repository and not redistributed. The MD5 the Parliament library publishes for the file matched (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5176,7 +5388,7 @@
    "title": "Special Audit Report of the Auditor-General on Payroll Management for County Executive of Siaya (July 2025)",
    "publisher": "Office of the Auditor-General",
    "document_type": "Special audit report",
-   "publication_date": "not stated",
+   "publication_date": "2025-07",
    "reference_period": "Payroll (period per report)",
    "source_url": "https://libraryir.parliament.go.ke/items/54aa225a-032c-488a-b37e-3112addfb88f",
    "file_url": "https://libraryir.parliament.go.ke/server/api/core/bitstreams/5ed3ee2e-f0ea-4e39-b6ee-cb22be8d6168/content",
@@ -5188,8 +5400,9 @@
    "bytes": 60466813,
    "file_type": "PDF",
    "retrieval_status": "downloaded",
-   "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 49 pages, text layer. The file is held outside the repository and not redistributed. The MD5 the Parliament library publishes for the file matched (27 Nov 2026).",
+   "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 49 pages, text layer. The file is held outside the repository and not redistributed. The MD5 the Parliament library publishes for the file matched (27 Nov 2026). Publication date from the title, \"(July 2025)\"; the Kisumu register records 2025-07-29 (census 28 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5217,6 +5430,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (research sweep, docs/research/sweep-2026-11-27/downloads.tsv); 68 pages, scan; OCR done for key pages (dl/senate-cpic-siaya-entities-2024-25/ocr/all.txt). The file is held outside the repository and not redistributed. The MD5 the Parliament library publishes for the file matched (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5242,6 +5456,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5267,6 +5482,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5292,6 +5508,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5317,6 +5534,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5342,6 +5560,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5367,6 +5586,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5392,6 +5612,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5417,6 +5638,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5442,6 +5664,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5467,6 +5690,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5492,6 +5716,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5517,6 +5742,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5542,6 +5768,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5567,6 +5794,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5592,6 +5820,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5617,6 +5846,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5642,6 +5872,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "Not downloaded: link only: HTTP 503 from oagkenya.go.ke on 27 Nov 2026 (bot challenge); retry from a browser (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5667,6 +5898,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "Not downloaded: link only: HTTP 503 (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5692,6 +5924,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "Not downloaded: link only: HTTP 503 (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5717,6 +5950,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "Not downloaded: link only: HTTP 503 (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5742,6 +5976,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5767,6 +6002,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (alternate host) (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5792,6 +6028,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "Not downloaded: not retrieved: listed on cob.go.ke publications page; file link not exposed to the crawler (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5817,6 +6054,7 @@
    "retrieval_status": "blocked",
    "retrieval_note": "Not downloaded: link only: knbs.or.ke TLS chain incomplete via proxy and WebFetch 503 (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5842,6 +6080,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "Not downloaded: link only: certificate expired on host (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5867,6 +6106,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Not downloaded: link only (KNBS TLS); Parliament copy not downloaded (330 MB) (27 Nov 2026). 27 Nov 2026: a copy was downloaded from the KNBS repository (https://repository.knbs.or.ke/items/2695b688-8564-4610-9c0b-c50601411eeb); its MD5 matched the checksum the repository publishes (gap research D).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed.",
    "file_url": "https://repository.knbs.or.ke/server/api/core/bitstreams/f240c7f0-873a-4951-aa4e-7a839106384a/content",
@@ -5894,6 +6134,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "Not downloaded: link only (KNBS TLS) (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5919,6 +6160,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "Not downloaded: link only (KNBS TLS) (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5944,6 +6186,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5969,6 +6212,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -5994,6 +6238,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse licence stated; listed for context only."
   },
@@ -6019,6 +6264,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "No reuse licence stated; listed for context only."
   },
@@ -6044,6 +6290,7 @@
    "retrieval_status": "discovered",
    "retrieval_note": "Listed, not downloaded: link only (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -6069,6 +6316,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "Not downloaded: link only (connection reset) (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -6094,6 +6342,7 @@
    "retrieval_status": "inaccessible",
    "retrieval_note": "Not downloaded: link only (404) (27 Nov 2026).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -6107,6 +6356,7 @@
    "redistribution_allowed": false,
    "licence": "Not stated: figures may be reused with the body and report named; the document is not redistributed (Kenyan public statistics, /terms/)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public law and official documents published by a public body (owner decision, 21 Nov 2026): wording may be quoted with the document named; the document itself is not redistributed.",
    "redistribution_conditions": "Quote with the document named; link to the publisher's copy.",
@@ -6134,6 +6384,7 @@
    "redistribution_allowed": false,
    "licence": "Not stated: figures may be reused with the body and report named; the document is not redistributed (Kenyan public statistics, /terms/)",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public law and official documents published by a public body (owner decision, 21 Nov 2026): wording may be quoted with the document named; the document itself is not redistributed.",
    "redistribution_conditions": "Quote with the document named; link to the publisher's copy.",
@@ -6175,6 +6426,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026; its MD5 matched the checksum the Parliament of Kenya library publishes (b0af47c34427ff4916c9e7e38cfaf5d7). Scanned file: figures read by tesseract OCR twice (350/450 dpi and 400 dpi).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -6202,6 +6454,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (gap research, docs/research/gaps-2026-11-27); held outside the repository and not redistributed. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "not-allowed",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -6228,6 +6481,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (gap research, docs/research/gaps-2026-11-27); held outside the repository and not redistributed. No publisher checksum to verify against.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -6255,6 +6509,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded from the KNBS repository; its MD5 matched the checksum the repository publishes (6c693845a4187d375e93aaa937b2828f).",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   },
@@ -6281,6 +6536,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded 27 Nov 2026 (gap research, docs/research/gaps-2026-11-27); held outside the repository and not redistributed. No publisher checksum to verify against.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "unknown",
    "reuse_basis": "Civil-society publication with no licence stated: link and cite only; the document is not redistributed.",
    "document_redistribution": false
   },
@@ -6307,6 +6563,7 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Web page saved 27 Nov 2026 (gap research); held outside the repository and not redistributed.",
    "data_reuse": "link and cite only",
+   "commercial_reuse": "not-allowed",
    "reuse_basis": "Media article: link and cite only; nothing republished.",
    "document_redistribution": false
   },
@@ -6333,6 +6590,169 @@
    "retrieval_status": "downloaded",
    "retrieval_note": "Downloaded from the KNBS repository (gap research D); its MD5 matched the checksum the repository publishes.",
    "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
+   "document_redistribution": false,
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
+  },
+  {
+   "review_status": "figures in use, not specialist-reviewed",
+   "last_checked_at": "2026-11-21",
+   "licence": "Not stated: figures may be reused with the body and report named; the document is not redistributed (Kenyan public statistics, /terms/)",
+   "redistribution_allowed": false,
+   "document_id": "audit-fo-2013-14",
+   "origin": "cited by the site",
+   "title": "Report of the Auditor-General on the Financial Operations of Siaya County Executive and Assembly for the Period 1st July 2013 to 30 June 2014",
+   "publisher": "Office of the Auditor-General",
+   "document_type": "Auditor-General report",
+   "publication_date": "2015-05-25",
+   "reference_period": "FY 2013/14",
+   "source_url": "https://libraryir.parliament.go.ke/items/a9ed06a1-4d51-423e-8a08-2ffaee6171b4",
+   "cited_by": "siaya-audits.json documents (audit-fo-2013-14)",
+   "geographic_coverage": "Siaya",
+   "siaya_relevance": "Direct",
+   "research_use": "Figures already used by the site (siaya-audits.json findings and opinions)",
+   "sha256": "8777dd0be31ece70da63464f04f03d1f0e8a370e6e1e8ee0014c4f3df9d82800",
+   "bytes": 23657347,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "retrieval_note": "Hashed 2026-11-21 when the findings were read (data/siaya-audits.json); the Parliament of Kenya library publishes the MD5 recorded in data/source-manifest.json. Publication date: the report's signature date (PDF p. 17). Listed here 28 Nov 2026 (census).",
+   "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
+   "document_redistribution": false,
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
+  },
+  {
+   "review_status": "figures in use, not specialist-reviewed",
+   "last_checked_at": "2026-11-21",
+   "licence": "Not stated: figures may be reused with the body and report named; the document is not redistributed (Kenyan public statistics, /terms/)",
+   "redistribution_allowed": false,
+   "document_id": "audit-asm-2020-21",
+   "origin": "cited by the site",
+   "title": "Report of the Auditor-General on County Assembly Of Siaya for the Year Ended 30 June 2021",
+   "publisher": "Office of the Auditor-General",
+   "document_type": "Auditor-General report",
+   "publication_date": "2022-06-30",
+   "reference_period": "FY 2020/21",
+   "source_url": "https://libraryir.parliament.go.ke/items/1e24d0bc-cbea-4778-8bb4-204f018830b6",
+   "cited_by": "siaya-audits.json documents (audit-asm-2020-21)",
+   "geographic_coverage": "Siaya",
+   "siaya_relevance": "Direct",
+   "research_use": "Figures already used by the site (siaya-audits.json findings and opinions)",
+   "sha256": "429cf207e32f9fd9ecad1237b144978a15d7e05cf42bcf9ca77c7824459572f9",
+   "bytes": 98363044,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "retrieval_note": "Hashed 2026-11-21 when the findings were read (data/siaya-audits.json); the Parliament of Kenya library publishes the MD5 recorded in data/source-manifest.json. Publication date: the report's signature date (PDF p. 34). Listed here 28 Nov 2026 (census).",
+   "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
+   "document_redistribution": false,
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
+  },
+  {
+   "review_status": "figures in use, not specialist-reviewed",
+   "last_checked_at": "2026-11-21",
+   "licence": "Not stated: figures may be reused with the body and report named; the document is not redistributed (Kenyan public statistics, /terms/)",
+   "redistribution_allowed": false,
+   "document_id": "audit-asm-2022-23",
+   "origin": "cited by the site",
+   "title": "Report of the Auditor-General on County Assembly of Siaya for the Year Ended 30 June 2023",
+   "publisher": "Office of the Auditor-General",
+   "document_type": "Auditor-General report",
+   "publication_date": "2024-02-14",
+   "reference_period": "FY 2022/23",
+   "source_url": "https://libraryir.parliament.go.ke/items/2ffcd198-5520-4407-abcf-a3bba6ebc66e",
+   "cited_by": "siaya-audits.json documents (audit-asm-2022-23)",
+   "geographic_coverage": "Siaya",
+   "siaya_relevance": "Direct",
+   "research_use": "Figures already used by the site (siaya-audits.json findings and opinions)",
+   "sha256": "f29e0ab2e2893169a6c79fbeb9511bd5d089a568936b75dd8a13920c89dfd6ca",
+   "bytes": 73378014,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "retrieval_note": "Hashed 2026-11-21 when the findings were read (data/siaya-audits.json); the Parliament of Kenya library publishes the MD5 recorded in data/source-manifest.json. Publication date: the report's signature date (PDF p. 58). Listed here 28 Nov 2026 (census).",
+   "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
+   "document_redistribution": false,
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
+  },
+  {
+   "review_status": "figures in use, not specialist-reviewed",
+   "last_checked_at": "2026-11-21",
+   "licence": "Not stated: figures may be reused with the body and report named; the document is not redistributed (Kenyan public statistics, /terms/)",
+   "redistribution_allowed": false,
+   "document_id": "audit-asm-2023-24",
+   "origin": "cited by the site",
+   "title": "Report of the Auditor-General on County Assembly of Siaya for the Year Ended 30 June, 2024",
+   "publisher": "Office of the Auditor-General",
+   "document_type": "Auditor-General report",
+   "publication_date": "2024-12-27",
+   "reference_period": "FY 2023/24",
+   "source_url": "https://libraryir.parliament.go.ke/items/d97ee62e-564b-4a6b-a84a-b66cba4b9883",
+   "cited_by": "siaya-audits.json documents (audit-asm-2023-24)",
+   "geographic_coverage": "Siaya",
+   "siaya_relevance": "Direct",
+   "research_use": "Figures already used by the site (siaya-audits.json findings and opinions)",
+   "sha256": "4854ae471a643b06f170b333f383a312e0eb7f77d454b0a03246d32466dac3b5",
+   "bytes": 40122423,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "retrieval_note": "Hashed 2026-11-21 when the findings were read (data/siaya-audits.json); the Parliament of Kenya library publishes the MD5 recorded in data/source-manifest.json. Publication date: the report's signature date (PDF p. 60). Listed here 28 Nov 2026 (census).",
+   "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
+   "document_redistribution": false,
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
+  },
+  {
+   "review_status": "figures in use, not specialist-reviewed",
+   "last_checked_at": "2026-11-21",
+   "licence": "Not stated: figures may be reused with the body and report named; the document is not redistributed (Kenyan public statistics, /terms/)",
+   "redistribution_allowed": false,
+   "document_id": "audit-asm-2024-25",
+   "origin": "cited by the site",
+   "title": "Report of the Auditor-General on County Assembly of Siaya for the Year Ended 30 June 2025",
+   "publisher": "Office of the Auditor-General",
+   "document_type": "Auditor-General report",
+   "publication_date": "2025-12-19",
+   "reference_period": "FY 2024/25",
+   "source_url": "https://libraryir.parliament.go.ke/items/25843839-3e3e-45b6-a5cd-af79d6f80a36",
+   "cited_by": "siaya-audits.json documents (audit-asm-2024-25)",
+   "geographic_coverage": "Siaya",
+   "siaya_relevance": "Direct",
+   "research_use": "Figures already used by the site (siaya-audits.json findings and opinions)",
+   "sha256": "625a8d0dff5cb142020c8c500161611d25a1b8bab5098fb9b2b121ceb458056c",
+   "bytes": 33639942,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "retrieval_note": "Hashed 2026-11-21 when the findings were read (data/siaya-audits.json); the Parliament of Kenya library publishes the MD5 recorded in data/source-manifest.json. Publication date: the report's signature date (PDF p. 60). Listed here 28 Nov 2026 (census).",
+   "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
+   "document_redistribution": false,
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
+  },
+  {
+   "review_status": "figures in use, not specialist-reviewed",
+   "last_checked_at": "2026-11-21",
+   "licence": "Not stated: figures may be reused with the body and report named; the document is not redistributed (Kenyan public statistics, /terms/)",
+   "redistribution_allowed": false,
+   "document_id": "audit-2024-25",
+   "origin": "cited by the site",
+   "title": "Report of the Auditor-General on County Executive of Siaya for the Year Ended 30 June 2025",
+   "publisher": "Office of the Auditor-General",
+   "document_type": "Auditor-General report",
+   "publication_date": "2025-12-09",
+   "reference_period": "FY 2024/25",
+   "source_url": "https://libraryir.parliament.go.ke/items/a8d4bb86-fc16-43f1-b109-97514df5e868",
+   "cited_by": "siaya-audits.json documents (audit-2024-25)",
+   "geographic_coverage": "Siaya",
+   "siaya_relevance": "Direct",
+   "research_use": "Figures already used by the site (siaya-audits.json findings and opinions)",
+   "sha256": "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe",
+   "bytes": 51617536,
+   "file_type": "PDF",
+   "retrieval_status": "downloaded",
+   "retrieval_note": "Hashed 2026-11-21 when the findings were read (data/siaya-audits.json); the Parliament of Kenya library publishes the MD5 recorded in data/source-manifest.json. Publication date: the report's signature date (PDF p. 64). Listed here 28 Nov 2026 (census).",
+   "data_reuse": "figures may be reused with citation",
+   "commercial_reuse": "unknown",
    "document_redistribution": false,
    "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026): figures may be reused with the body and report named; the document itself is not redistributed."
   }

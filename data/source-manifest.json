@@ -3,7 +3,28 @@
     "title": "Source document manifest",
     "note": "Every source document referenced in data/history.json (reports and audits), data/counties-cob.json and data/national.json. sha256 is computed over the exact PDF bytes downloaded from the Parliament of Kenya library (DSpace bitstream). A hash is recorded only when the file was downloaded and its MD5 matched the checksum the library publishes; otherwise sha256 is null and access says why. retrieved is the date the figures were read; hashed_on is the date the file was downloaded and hashed. Documents from sites that publish no checksum (parliament.go.ke, siaya.go.ke) are not hashed even when downloaded: sha256 is null and access says so. The World Bank API (data/national.json) is a live service, not a file: its responses are not hashed; each indicator records the API's last_updated date. Additions of 27 Nov 2026 (research sweep): county documents from the KIPPRA repository and the County Assemblies Forum, and the Parliamentary Budget Office report, are hashed as received (those publishers state no checksum; checksum_note says so); Parliament library files are hashed after their published MD5 matched.",
     "method": "Item resolved through https://libraryir.parliament.go.ke/server/api (items, bundles, ORIGINAL bitstreams); file fetched with curl -L from the bitstream content URL; MD5 compared with the library checkSum; SHA-256 computed locally.",
-    "updated": "2026-11-21"
+    "updated": "2026-11-21",
+    "not_listed": [
+      {
+        "sha256": "20b09604a3346a6a0b56e22ea42dc0cb16d8d834867a76daaeffdcadf00908f9",
+        "source_id": "WB-PROJECTS-API-KE",
+        "cited_by": "data/siaya-programmes.json",
+        "reason": "A snapshot of a live API response (World Bank Projects API, JSON), not a cited document file; the hash of the snapshot is kept with the source in data/siaya-programmes.json, and a new read gives different bytes."
+      },
+      {
+        "sha256": "e18c91d4ed5f3a777fa24031e175facad1b936ed1b4f92a8b6409c7d617399a1",
+        "source_id": "IATI-DPORTAL-SIAYA",
+        "cited_by": "data/siaya-programmes.json",
+        "reason": "A snapshot of a live API response (d-portal IATI search, JSON and XML), not a cited document file; the hash is kept with the source in data/siaya-programmes.json, and a new read gives different bytes."
+      },
+      {
+        "sha256": "8ced749ef66ed0f5187488bdc0fa46044634279d64a1bc171f3ce9dd0d2a9d51",
+        "source_id": "HEALTH-03",
+        "cited_by": "data/siaya-programmes.json",
+        "reason": "A saved copy of a live web page (KEMRI PBIDS home page, HTML), not a document file; the source library records the page as discovered (no copy kept in the repository), so the hash stays with the source in data/siaya-programmes.json."
+      }
+    ],
+    "not_listed_note": "Hashes cited by values but deliberately not listed as manifest documents, each with the reason (census 28 Nov 2026). scripts/census.js reads this list."
   },
   "documents": [
     {
@@ -21,7 +42,8 @@
       "md5_library": "cc2d0306a7095d25ef84dbfa9ce59d81",
       "sha256": "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cob-report-2024-25",
@@ -38,7 +60,8 @@
       "md5_library": "520e5fa967811a8a76f2ea131c8cb375",
       "sha256": "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cob-report-2023-24",
@@ -55,7 +78,8 @@
       "md5_library": "9d0501653945318110c31db362fa71a6",
       "sha256": "7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cob-report-2022-23",
@@ -72,7 +96,8 @@
       "md5_library": "15a6b7416993aad4b30651db263b1076",
       "sha256": "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cob-report-2014-15",
@@ -89,7 +114,8 @@
       "md5_library": "b338876814f7a783c3791ae2f98c9dcf",
       "sha256": "7e215374994c673bf6c4784b664ea7b27cef609197634ece154993a5ab8e37c1",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cob-report-2015-16",
@@ -106,7 +132,8 @@
       "md5_library": "c5aae332682438d62b5b41785f7c0895",
       "sha256": "24cdd9e55166dc4354ebe868e42e1f0c2b0625cbc9d24d6b78b121f0222ce605",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cob-report-2016-17",
@@ -123,7 +150,8 @@
       "md5_library": "a52113a158ae67b6cca2458fe8782525",
       "sha256": "a206f4fe5ea76543d06327e4dc3af6d13a0300abd05a9e637e94798dca6a2b09",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cob-report-2017-18",
@@ -140,7 +168,8 @@
       "md5_library": "c5f35dcb0c366fe13374e070fe2658e7",
       "sha256": "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cob-report-2018-19",
@@ -157,7 +186,8 @@
       "md5_library": "b6d21120bc4acc77ee6de60b2f86e38e",
       "sha256": "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cob-report-2020-21",
@@ -174,7 +204,8 @@
       "md5_library": "9547abd182a69fcf761a04db56619c9e",
       "sha256": "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "audit-2013-14",
@@ -191,7 +222,8 @@
       "md5_library": "7affcc47f8d5e95abe9f63cd55a793ed",
       "sha256": "8e1191c33527c39d7080b97a6661857a002bd6c76e8d04bcc19a22aca7bfa7ed",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "audit-2019-20",
@@ -208,7 +240,8 @@
       "md5_library": "c2cef1bb87dbbac8e04be3a19c82784a",
       "sha256": "487daede734a71897a15185dc90ff179e69196bbd5d249b16ee0057c17e472e4",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "audit-2020-21",
@@ -225,7 +258,8 @@
       "md5_library": "47d2a7172b154098c06a18a13ba696ca",
       "sha256": "45a4bd1d40704369a109a82a02bac38304de0bf2e0b05dfd0632e2391b5e0a6b",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "audit-2021-22",
@@ -242,7 +276,8 @@
       "md5_library": "d74c6d1515e47f1a9734d0139caf5f11",
       "sha256": "5066633d5c1201362b6a8520460b8d64918ea901294066ffb28a4b26142d2be7",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "audit-2022-23",
@@ -259,7 +294,8 @@
       "md5_library": "961b924e5720a9a09ff914fded80c295",
       "sha256": "9eb4ed9e61ac1d512142b0a0d6c0df3f6e10535da9f0f0995f4b58bb4b0101e3",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "audit-2023-24",
@@ -276,12 +312,14 @@
       "md5_library": "29d932f5b718dd2cc989ea97fd692bab",
       "sha256": "d467556765db30e52a70ea38d1cb5ffe0dd56022100ec72d240409571fdfbc48",
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "retrieved": "2026-11-21",
       "hashed_on": "2026-11-21",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "id": "cob-q1-2025-26",
       "kind": "Controller of Budget quarterly county budget implementation review report",
       "fiscal_year": "2025/26",
@@ -299,6 +337,7 @@
       "retrieved": "2026-11-21",
       "hashed_on": "2026-11-21",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "id": "cob-h1-2025-26",
       "kind": "Controller of Budget half-year county budget implementation review report",
       "fiscal_year": "2025/26",
@@ -316,6 +355,7 @@
       "retrieved": "2026-11-21",
       "hashed_on": "2026-11-21",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "id": "cob-h1-2020-21",
       "kind": "Controller of Budget half-year county budget implementation review report",
       "fiscal_year": "2020/21",
@@ -333,6 +373,7 @@
       "retrieved": "2026-11-21",
       "hashed_on": "2026-11-21",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "id": "senate-cpac-2019-20",
       "kind": "Senate committee report quoting Auditor-General reports",
       "fiscal_year": "2019/20",
@@ -350,6 +391,7 @@
       "retrieved": "2026-11-21",
       "hashed_on": "2026-11-21",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "id": "senate-cob-review-2019-20",
       "kind": "Senate report on a Controller of Budget report",
       "fiscal_year": "2019/20",
@@ -374,8 +416,11 @@
       "file_url": "https://www.parliament.go.ke/sites/default/files/2018-11/Annexes%20to%20Fiduciary%20Report.pdf",
       "bytes": 121038,
       "md5_library": null,
-      "sha256": null,
-      "access": "downloaded 2026-11-21; not hashed: parliament.go.ke publishes no checksum to verify the file against"
+      "sha256": "6a9b4bc3bbfab8d6eb2bd8d155ff001bdcd34833ecfbb6d486e360267fdf2837",
+      "access": "downloaded",
+      "commercial_reuse": "unknown",
+      "hashed_on": "2026-11-28",
+      "checksum_note": "Downloaded again on 28 Nov 2026 (121038 bytes, as recorded) and hashed; the SHA-256 equals the one data/source-library.json holds. The site publishes no checksum to verify it against."
     },
     {
       "id": "siaya-brop-2019-20",
@@ -388,8 +433,11 @@
       "file_url": "https://siaya.go.ke/wp-content/uploads/2026/08/County-Budget-Review-and-Outlook-Paper-2019_2020.pdf",
       "bytes": 754782,
       "md5_library": null,
-      "sha256": null,
-      "access": "downloaded 2026-11-21; not hashed: siaya.go.ke publishes no checksum to verify the file against"
+      "sha256": "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+      "access": "downloaded",
+      "commercial_reuse": "unknown",
+      "hashed_on": "2026-11-28",
+      "checksum_note": "Downloaded again on 28 Nov 2026 (754782 bytes, as recorded) and hashed; the SHA-256 equals the one data/source-library.json holds. The site publishes no checksum to verify it against."
     },
     {
       "id": "worldbank-wdi-api",
@@ -403,7 +451,8 @@
       "bytes": null,
       "md5_library": null,
       "sha256": null,
-      "access": "downloaded 2026-11-21; not hashed: a live API whose responses change when the World Bank updates a series (last_updated 2026-11-11 for every indicator used)"
+      "access": "not downloaded: a live API whose responses change when the World Bank updates a series (last_updated 2026-11-11 for every indicator used), so there is no fixed file to hash",
+      "commercial_reuse": "attribution-required"
     },
     {
       "id": "cbk-annual-gdp",
@@ -416,7 +465,8 @@
       "sha256": "f2284e28bc557858c182116ce59805a2064298c5b693205378971811677d7124",
       "bytes": 1157,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-central-bank-rates",
@@ -429,7 +479,8 @@
       "sha256": "1ddfc361bf28defd4eea7e98c8e2885dffd6d028003e259500391e1012b8bef6",
       "bytes": 29117,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-commercial-bank-rates",
@@ -442,7 +493,8 @@
       "sha256": "34b9cc79ca11612446a8971ec5a9d91e0278d1dce79fdc0737ea8cc6de883052",
       "bytes": 12558,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-depository-survey",
@@ -455,7 +507,8 @@
       "sha256": "28573f906e7052d00d77e84dbb6f31aa9ccaaa7918021062d61c7ceb478df27c",
       "bytes": 101791,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-exchange-rates-average",
@@ -468,7 +521,8 @@
       "sha256": "4ad5c928200dfffe27ca8e4d5bf4638b1c7aa597185093a0164b6974306e3f89",
       "bytes": 54461,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-exchange-rates-end",
@@ -481,7 +535,8 @@
       "sha256": "56648c724b179c7b50a1f96db3385523d050ed6874915b805d22fd2f1b03008d",
       "bytes": 54405,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-inflation-page",
@@ -494,7 +549,8 @@
       "sha256": "3ff1bec6688b255dd3513cce8812e805a5bcfdfc5ef3d6947cd81715eb2818cd",
       "bytes": 112792,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-public-debt",
@@ -507,7 +563,8 @@
       "sha256": "a0c389ab296e4dde97cacf63faf24ae7e3a47f4ed793ce413ab39d35dc0ca19c",
       "bytes": 15691,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-remittances-by-source-2026-10",
@@ -520,7 +577,8 @@
       "sha256": "255769207a9535157deb6e4fe1cd9484e9306a666907705a27f43020e2092de6",
       "bytes": 78432,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-remittances-page",
@@ -533,7 +591,8 @@
       "sha256": "cc2471a13ce962c49fab3ebf8753b81e470a6096f29e68dbb54bb94dfc7605ee",
       "bytes": 139146,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-revenue-expenditure",
@@ -546,7 +605,8 @@
       "sha256": "14b225ac0aa7df32572d3be44544867cd7446df026228cf41b6b53eebae43668",
       "bytes": 72382,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2016-12-29",
@@ -559,7 +619,8 @@
       "sha256": "0ff2c820ee77608f9c35dc95158898a9804b4d15e623d080cffe3ab94a020c6a",
       "bytes": 293298,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2017-12-28",
@@ -572,7 +633,8 @@
       "sha256": "c293e1cec6d7cea52f199cb1d09b00f27f9df09906766805a2479a4ec17932d0",
       "bytes": 666748,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2018-12-27",
@@ -585,7 +647,8 @@
       "sha256": "1052bcb34077702bf1545f008894692cc62c159df4654085b14485c0907d519d",
       "bytes": 290575,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2019-12-24",
@@ -598,7 +661,8 @@
       "sha256": "a58670b216c6f63f9ba1b6a7d2de0940d26bfe73384c1f65d2310c93644c45f7",
       "bytes": 527491,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2020-12-31",
@@ -611,7 +675,8 @@
       "sha256": "21f77f4375a15504db327f45d27bbb7ffae704ea91cfb53ae5ddd4b013ca8c03",
       "bytes": 537442,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2021-12-30",
@@ -624,7 +689,8 @@
       "sha256": "3f77008ccbc53f44b315c2cedfa74ef8ed03125321c58c66d4a5bc5b75562d26",
       "bytes": 618278,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2022-12-29",
@@ -637,7 +703,8 @@
       "sha256": "3b44d593c581238c02d41ead3cb17cbd2d03ea5f936cee28a56dcb2f8e5f5ea9",
       "bytes": 648558,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2023-12-28",
@@ -650,7 +717,8 @@
       "sha256": "0bae5df3834e137ff9bbdbdf8e5da70f3b88c1faab88dedc9462fb1535119236",
       "bytes": 596539,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2024-12-24",
@@ -663,7 +731,8 @@
       "sha256": "3b0f5561fc35c76ac319109979723fa955971b4c4659ae9951e1dcc1b447a697",
       "bytes": 353067,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2025-12-23",
@@ -676,7 +745,8 @@
       "sha256": "e8145246325863c0a31f13dff16862569e0fcbb2f8bbb8bc2ac04e432b566c1c",
       "bytes": 442382,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cbk-weekly-bulletin-2026-11-12",
@@ -689,7 +759,8 @@
       "sha256": "730b9fe787d6f7d3ed9a4f1c7c74aa2aeb6ccd7b9c6e3aaba5078f592d1edce9",
       "bytes": 1029628,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "cra-recommendation-2026-27",
@@ -702,7 +773,8 @@
       "sha256": "38189f669f7014cfd11d0cc7d7215332667772b5cc32a7ccb083ad9976b8498a",
       "bytes": 2637688,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "ibp-obs-2006-2025",
@@ -715,7 +787,8 @@
       "sha256": "88add42b35ded7896553c7ebd1d94194cd9307dc7d4cdc5dfa741149e0474fd8",
       "bytes": 8693934,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "ibp-obs-2025-launch",
@@ -728,7 +801,8 @@
       "sha256": "e07170082ca692766d2174cb82806f67740c54dad993fc026b38ec21e1795a1e",
       "bytes": 8056388,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "iebc-annual-report-2022-23",
@@ -741,7 +815,8 @@
       "sha256": "54f715f1e83f2c2d576e3e7b96fd8a017c3037fe677bdf47917c4ef6fdcd39ec",
       "bytes": 99959820,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "iebc-rov-2022",
@@ -754,7 +829,8 @@
       "sha256": "6affa5b6677abea44aaed2d66fe7b4b9165771efe67dd63856c68b1238b0aefb",
       "bytes": 358431,
       "hashed_on": "2026-11-21",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "KIPPRA-DISCUSSION-PAPER-NO-140-OF-2012-ON-AN-EVALUATION-O",
@@ -769,6 +845,7 @@
       "sha256": "c47688688d07c74b6c490807c888292d150532828db569b5c0c0168e36bd2876",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -784,6 +861,7 @@
       "sha256": "609bb009c2dca9da73479fe017e6c22c4a2ab6de24cf305cc73f22945826a775",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -799,6 +877,7 @@
       "sha256": "fc4bb46a8cb09f319480c99d8853b566a81bcd14b9a9742e9751e4c10313481e",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -814,6 +893,7 @@
       "sha256": "a6030e5e271491c775434c8df05ae7eda2164916bd19f78a3f16b2d8146a043d",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -829,6 +909,7 @@
       "sha256": "89a9d83d36b0e3e76ce62fb70e2cd4798d6112a3fa951c20e15ce97d1c2b2c6a",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -844,6 +925,7 @@
       "sha256": "1e56e922827a139ffb2b5a8e3ad7d36b8813fd4065b48fe513aee75546d6b330",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -859,6 +941,7 @@
       "sha256": "12eb8c3b864fe8463b0a55b5a53f4a2730dfbf5b77a06766879a5bd74f618742",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -874,6 +957,7 @@
       "sha256": "8e774c1ccec31287b6f31fdeaff93ac170f17c83ed6803811ab3335ed07d3d33",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -889,6 +973,7 @@
       "sha256": "d7339949e0a74ca03119341c98b4b13f4acb622d4e2523d548fbb3e2a144231a",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -904,6 +989,7 @@
       "sha256": "e8df3b83b93ab0bbc3d2cb610503da65cda56ec2a49bf12a867bf5118d171383",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -919,6 +1005,7 @@
       "sha256": "1191c39f40565442d6c0930acdb33f2b4d7acefd595096785f9dc4d09f92e16d",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -934,6 +1021,7 @@
       "sha256": "61b75d872bb926b13ea968afd94cf22a8cdab086201f72d8d715bf2e36529fc0",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -949,6 +1037,7 @@
       "sha256": "5515fe4a4699b4bb2a14a377b79d12525aeb8cf591e8982f824abe4ae91eed9d",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -964,6 +1053,7 @@
       "sha256": "230a3e32b740eabe8cb01d943d30a30d9fb3be8c1d3361cd5bd82e36913e0b31",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -979,6 +1069,7 @@
       "sha256": "47e2ca818f6074f8c979c6b89920645811c40361648a529d8a84f9f6e9ca1fc9",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -994,6 +1085,7 @@
       "sha256": "bc13beabfb5788be050db7a40951a18448cb172890c8a221233d62cc4c9287d8",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1009,6 +1101,7 @@
       "sha256": "9fc4bcbd92c2958e9ca2c8c924baaa79ce6052c9ff662e677276e3581fe7a652",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1024,6 +1117,7 @@
       "sha256": "9c5955155370208a50b79ca8b086735302a7afe01ac00d75e734ca2880b7623e",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1039,6 +1133,7 @@
       "sha256": "6262ec33faf811bc4e6fa7997e6e6ada181c6886f4b8dfd7e6dfafe31b3a75b2",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1054,6 +1149,7 @@
       "sha256": "3e8311720983f584fefea75fbf93f792b4b89fe2882d3c1585e0e1c4bad3fd2a",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1069,6 +1165,7 @@
       "sha256": "a403ed686551f035da97c3fd4bc655a61b9e6e206d64d511b303aa720f93769b",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1084,6 +1181,7 @@
       "sha256": "b961ff304d55392c22e76c5179aafa8218e7bb2c5c0310caa8c84ba0d89e81cb",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1099,6 +1197,7 @@
       "sha256": "112173f6581ac5c3cfc6ff95819354406b1abfa7a52719246a8e7511f8f5ed59",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1114,6 +1213,7 @@
       "sha256": "df75d8fccbdb2ba205d260fb267eadcc8dccf9557e2fd835ca85c10f9e3f12a9",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1129,6 +1229,7 @@
       "sha256": "0f3b8a91410c27c9ba89ee7f3e692e11297ff95db82ff4f5669a6ca4a130c959",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1144,6 +1245,7 @@
       "sha256": "2fbfc4d1b2d910993f38498b85e25da794a810474ff2dcc89291c7c13bf48173",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1159,6 +1261,7 @@
       "sha256": "d71fd5f59f526d78171f6d746f49c3552230df2fd799a0e44e38ff8c64350fbc",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1174,6 +1277,7 @@
       "sha256": "5e8f30000d903a5d505ccc8e7e5d5e548d1055577bed2cf4c978d68256d1de33",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1189,6 +1293,7 @@
       "sha256": "9d8724761d791e17db173fe380477a3fc3d0e1063333ecfb4b71c104b86917df",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1204,6 +1309,7 @@
       "sha256": "b4400154c099a33c2a8133768842925c6a7584ead2884f1a08f8359bbf5e226c",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1219,6 +1325,7 @@
       "sha256": "c099171835d6fa5c16bdc8005bdb53beaee71909ebfa179dfb7abdec77605648",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1234,6 +1341,7 @@
       "sha256": "11ab614c1f5ca9da1c17279d90ac804cfbd4a015704abc479a28e40cc8957d1a",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1249,6 +1357,7 @@
       "sha256": "fcb3dcd65365eb00d0a786b1e8dc164a92e2e9f15c524d11c086eacb7341d26e",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1264,6 +1373,7 @@
       "sha256": "0f1e8863fdcf65735e2d3aaeaee6e7d4c07965b52aa3a1ae4cd3a068996c691f",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1279,6 +1389,7 @@
       "sha256": "04f06350be69b1e93e46716f6195f3ac93185296aa8f54bbb44cb62224516f32",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1294,6 +1405,7 @@
       "sha256": "2304113cda2a7332cd20677f6efd698542bdb780bfe84fe4809ebf2200b788d3",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1309,6 +1421,7 @@
       "sha256": "4e72e5958fe3ad558e33aa63d9fb1e87c1e251944d34719419878cdd55ae5b3d",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1324,6 +1437,7 @@
       "sha256": "348e7bd6435a7a8b519c37e6f5d8c4c3f30ec05b7872c79f85a1742337517399",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1339,6 +1453,7 @@
       "sha256": "9979777ae11e29b1e2f213af7a7b7d80320f8e0d23dfb973e48be731e523e000",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1354,6 +1469,7 @@
       "sha256": "78b42730ea0da80f3bcb6097ec34227fd44c772b0078dfb5cbf3b3e2251e3952",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1369,6 +1485,7 @@
       "sha256": "331c3b6a08dbd6c8aa16f06d53e2157c28d256c7a6283bb2dc2f73fe52b368ba",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1384,6 +1501,7 @@
       "sha256": "6db1558c418725e07286c32bd50880ed00d682481f94f1af9f1301d5445ffdad",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1399,6 +1517,7 @@
       "sha256": "a93ff808ceb7b6943764b2aec758d6c22b7c167a0d5fe36348a7454e6f33b734",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1414,6 +1533,7 @@
       "sha256": "df3eba4f1dfce1be4bc984b4f7799db46055253e7707bf386c926c948a578730",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1429,6 +1549,7 @@
       "sha256": "ab82cfd1a6be37b113c1c5c0492b1787df6bf9a2dce1298b1e40773cc19903ee",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1444,6 +1565,7 @@
       "sha256": "9d98d36d432c61fafaa3e6eb51329e060526ac75b8ee42f1fe8fafee9063cd8d",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1459,6 +1581,7 @@
       "sha256": "06a40538f66a09238d8ace1ad4591c253d14d4ed257859b8cfda9f82483ba0b0",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1474,6 +1597,7 @@
       "sha256": "cd5d767dc0edc2c01bbe60c03f946d25f6465126d7cf2f6f11f1974bda9f0eff",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1489,6 +1613,7 @@
       "sha256": "173c087fb7ba304521488b19f4b89b5f7ea881ede907f58ffd701257a19818e6",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1504,6 +1629,7 @@
       "sha256": "8cce8716236cd39464d98bbae0ecf1c2b3b087cc12da4eaecc74b1f86d1f3231",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1519,6 +1645,7 @@
       "sha256": "52368fc5654a54c6120bf59c166c4a94e14c230c998ed8858a36ecae238d6c74",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1534,6 +1661,7 @@
       "sha256": "c8afbdbcf845e9eb3c62820a83659a7bcd3d064b5ebb2f3bcba8c16bc51dfd33",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1549,6 +1677,7 @@
       "sha256": "143c92179c4ebb89feab6b6c45b8c8d6240278403ff0e5167a1ce70f9f225fbf",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1564,6 +1693,7 @@
       "sha256": "11aabb8f7d9bf454af6c0464f6bbee32807059a39a36c93d82c81bbc1dfe5093",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1579,6 +1709,7 @@
       "sha256": "2a188d0d6ff3d4d1140c916e4dc25e41a74290c7424bd8ff07abfbddcc09ef56",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1594,6 +1725,7 @@
       "sha256": "44aaf18cf270994c99de1628b97f4579d598acd1fab4f267fe9e74c063191c09",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received on 27 Nov 2026."
     },
     {
@@ -1609,6 +1741,7 @@
       "sha256": "d7488d6b9136926b15e55494b09ebc84778d91e3069fd898adc85c82a36c5037",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "md5_library": "3f0db32f2f0fd98a74a7f4245e062dbb"
     },
     {
@@ -1624,6 +1757,7 @@
       "sha256": "91bd04bfe9f240dca0be8f43d8b5caa7487ea8682c485f10fbbf4e09cb40cbf2",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "md5_library": "de1630757a8981f7c2dd69789d0338be"
     },
     {
@@ -1639,6 +1773,7 @@
       "sha256": "f6e04db51eb338b7d68458d4759af06be76215b481ac3abe503de0f5b6871285",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "md5_library": "42eaba0dfc54b52f54d8c201bc29369b"
     },
     {
@@ -1654,6 +1789,7 @@
       "sha256": "546b67859b77dfe9c0b6076557289a5188ef27146e15b8bfe4b22c101439ac57",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "md5_library": "bc146ec150971a8587bbeaf29dbae4c4"
     },
     {
@@ -1669,6 +1805,7 @@
       "sha256": "beb98dfb92d26b189461a4348e67cc6c0b13bfe69478560dff65f2641eff96d3",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "md5_library": "f88842240da718e7d4dbbab98857320e"
     },
     {
@@ -1686,7 +1823,8 @@
       "md5_library": "b0af47c34427ff4916c9e7e38cfaf5d7",
       "sha256": "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
       "hashed_on": "2026-11-27",
-      "access": "downloaded"
+      "access": "downloaded",
+      "commercial_reuse": "unknown"
     },
     {
       "id": "siaya-cbrop-2025-26",
@@ -1701,6 +1839,7 @@
       "sha256": "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "not-allowed",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received (gap research, docs/research/gaps-2026-11-27)."
     },
     {
@@ -1716,6 +1855,7 @@
       "sha256": "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The publisher states no checksum; the SHA-256 is of the file as received (gap research, docs/research/gaps-2026-11-27)."
     },
     {
@@ -1731,7 +1871,104 @@
       "sha256": "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
       "hashed_on": "2026-11-27",
       "access": "downloaded",
+      "commercial_reuse": "unknown",
       "checksum_note": "The KNBS repository publishes an MD5 (6c693845a4187d375e93aaa937b2828f); it matched the file. SHA-256 computed locally."
+    },
+    {
+      "id": "audit-fo-2013-14",
+      "kind": "Auditor-General report",
+      "fiscal_year": "2013/14",
+      "title": "Report of the Auditor-General on the Financial Operations of Siaya County Executive and Assembly for the Period 1st July 2013 to 30 June 2014",
+      "url": "https://libraryir.parliament.go.ke/items/a9ed06a1-4d51-423e-8a08-2ffaee6171b4",
+      "referenced_by": "siaya-audits.json documents (audit-fo-2013-14)",
+      "retrieved": "2026-11-21",
+      "bytes": 23657347,
+      "md5_library": "6644fa0fa20f91cc8432694539196bbc",
+      "sha256": "8777dd0be31ece70da63464f04f03d1f0e8a370e6e1e8ee0014c4f3df9d82800",
+      "hashed_on": "2026-11-21",
+      "access": "downloaded",
+      "commercial_reuse": "unknown",
+      "checksum_note": "Added 28 Nov 2026 (census): cited by values in data/siaya-audits.json, which holds this hash and the library MD5; figures read 2026-11-21."
+    },
+    {
+      "id": "audit-asm-2020-21",
+      "kind": "Auditor-General report",
+      "fiscal_year": "2020/21",
+      "title": "Report of the Auditor-General on County Assembly Of Siaya for the Year Ended 30 June 2021",
+      "url": "https://libraryir.parliament.go.ke/items/1e24d0bc-cbea-4778-8bb4-204f018830b6",
+      "referenced_by": "siaya-audits.json documents (audit-asm-2020-21)",
+      "retrieved": "2026-11-21",
+      "bytes": 98363044,
+      "md5_library": "e6969dd0af22f0599542d8150fb8d635",
+      "sha256": "429cf207e32f9fd9ecad1237b144978a15d7e05cf42bcf9ca77c7824459572f9",
+      "hashed_on": "2026-11-21",
+      "access": "downloaded",
+      "commercial_reuse": "unknown",
+      "checksum_note": "Added 28 Nov 2026 (census): cited by values in data/siaya-audits.json, which holds this hash and the library MD5; figures read 2026-11-21."
+    },
+    {
+      "id": "audit-asm-2022-23",
+      "kind": "Auditor-General report",
+      "fiscal_year": "2022/23",
+      "title": "Report of the Auditor-General on County Assembly of Siaya for the Year Ended 30 June 2023",
+      "url": "https://libraryir.parliament.go.ke/items/2ffcd198-5520-4407-abcf-a3bba6ebc66e",
+      "referenced_by": "siaya-audits.json documents (audit-asm-2022-23)",
+      "retrieved": "2026-11-21",
+      "bytes": 73378014,
+      "md5_library": "7a49d8ff25a9cd12e0199abfa0d0b16f",
+      "sha256": "f29e0ab2e2893169a6c79fbeb9511bd5d089a568936b75dd8a13920c89dfd6ca",
+      "hashed_on": "2026-11-21",
+      "access": "downloaded",
+      "commercial_reuse": "unknown",
+      "checksum_note": "Added 28 Nov 2026 (census): cited by values in data/siaya-audits.json, which holds this hash and the library MD5; figures read 2026-11-21."
+    },
+    {
+      "id": "audit-asm-2023-24",
+      "kind": "Auditor-General report",
+      "fiscal_year": "2023/24",
+      "title": "Report of the Auditor-General on County Assembly of Siaya for the Year Ended 30 June, 2024",
+      "url": "https://libraryir.parliament.go.ke/items/d97ee62e-564b-4a6b-a84a-b66cba4b9883",
+      "referenced_by": "siaya-audits.json documents (audit-asm-2023-24)",
+      "retrieved": "2026-11-21",
+      "bytes": 40122423,
+      "md5_library": "2c1c6338048e86ceb7be61942cfa1c96",
+      "sha256": "4854ae471a643b06f170b333f383a312e0eb7f77d454b0a03246d32466dac3b5",
+      "hashed_on": "2026-11-21",
+      "access": "downloaded",
+      "commercial_reuse": "unknown",
+      "checksum_note": "Added 28 Nov 2026 (census): cited by values in data/siaya-audits.json, which holds this hash and the library MD5; figures read 2026-11-21."
+    },
+    {
+      "id": "audit-asm-2024-25",
+      "kind": "Auditor-General report",
+      "fiscal_year": "2024/25",
+      "title": "Report of the Auditor-General on County Assembly of Siaya for the Year Ended 30 June 2025",
+      "url": "https://libraryir.parliament.go.ke/items/25843839-3e3e-45b6-a5cd-af79d6f80a36",
+      "referenced_by": "siaya-audits.json documents (audit-asm-2024-25)",
+      "retrieved": "2026-11-21",
+      "bytes": 33639942,
+      "md5_library": "096d1356e567a7986b10402db329f120",
+      "sha256": "625a8d0dff5cb142020c8c500161611d25a1b8bab5098fb9b2b121ceb458056c",
+      "hashed_on": "2026-11-21",
+      "access": "downloaded",
+      "commercial_reuse": "unknown",
+      "checksum_note": "Added 28 Nov 2026 (census): cited by values in data/siaya-audits.json, which holds this hash and the library MD5; figures read 2026-11-21."
+    },
+    {
+      "id": "audit-2024-25",
+      "kind": "Auditor-General report",
+      "fiscal_year": "2024/25",
+      "title": "Report of the Auditor-General on County Executive of Siaya for the Year Ended 30 June 2025",
+      "url": "https://libraryir.parliament.go.ke/items/a8d4bb86-fc16-43f1-b109-97514df5e868",
+      "referenced_by": "siaya-audits.json documents (audit-2024-25)",
+      "retrieved": "2026-11-21",
+      "bytes": 51617536,
+      "md5_library": "e3e910ded9b5d3a222e229e517f60e0d",
+      "sha256": "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe",
+      "hashed_on": "2026-11-21",
+      "access": "downloaded",
+      "commercial_reuse": "unknown",
+      "checksum_note": "Added 28 Nov 2026 (census): cited by values in data/siaya-audits.json, which holds this hash and the library MD5; figures read 2026-11-21."
     }
   ]
 }

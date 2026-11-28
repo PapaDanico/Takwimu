@@ -12,12 +12,12 @@ import hist from '../../../../data/history.json';
 import { Provisional } from '../../../../components/ObsTable';
 import SourceErrorFlag from '../../../../components/SourceErrorFlag';
 import { COUNTY_POP_SE } from '../../../../lib/editorial';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/people/', {
   title: 'Siaya people: population, households and poverty',
   description: 'Siaya County population since 2009, men and women, households, age structure and poverty, with sources and confidence.',
-  alternates: { canonical: '/counties/siaya/people/' },
-};
+});
 
 const n = (v) => fmtNum(v);
 const pop = hist.population.points;

@@ -4,11 +4,12 @@ import { COUNTIES } from '../../lib/counties';
 import KenyaMap from '../../components/KenyaMap';
 import { notesFor } from '../../lib/correction-notes';
 import CountyFinder from '../../components/CountyFinder';
+import { pageMeta } from '../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/', {
   title: 'All 47 counties',
   description: 'Public finance and statistics for Kenya’s 47 counties. Find any county; each is published once its data meets the same evidence standard.',
-};
+});
 
 export default function Counties() {
   const live = COUNTIES.filter((c) => c.published);

@@ -635,6 +635,8 @@ L.years.forEach((fy) => {
 
 // ---------- assemble ----------
 records.sort((a, b) => a.calc_id.localeCompare(b.calc_id));
+// A calculation has no page: derived_from names the records it is computed from (lib/derived-from.js).
+records.forEach((r) => { r.derived_from = require('../lib/derived-from').derivedFrom(r); });
 const out = {
   meta: {
     title: 'Siaya County: analytical measures calculated from published figures',

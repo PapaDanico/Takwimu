@@ -6,12 +6,12 @@ import TableWrap from '../../../components/TableWrap';
 import registry from '../../../components/report/reports.json';
 import { REVIEW_FILES, REVIEW_STATE } from '../../../components/report/snapshot';
 import { PROVISIONAL } from '../../../components/report/model';
+import { pageMeta } from '../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/reports/method/', {
   title: 'How to read these reports',
   description: 'Shared method, confidence scales, bibliography conventions and licence for the five Siaya evidence reports.',
-  alternates: { canonical: '/reports/method/' },
-};
+});
 
 const SCALES = [
   { scale: 'confidence N of 5', where: 'Most figures (fiscal ledger, economy, health, education, agriculture, climate, audits, projects)', meaning: <>The Takwimu rubric on the <Link href="/method/#confidence">method page</Link>: 5 read from the primary document and confirmed a second way; 4 read from the primary document and passes arithmetic checks (scanned pages are capped here); 3 secondary reproduction, projection or noisy scan; 2 press report of an official figure not seen; 1 not verified.</> },

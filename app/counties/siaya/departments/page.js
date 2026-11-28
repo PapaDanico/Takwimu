@@ -8,11 +8,12 @@ import { badge } from '../../../../lib/review-status';
 import { departments } from '../../../../lib/layers';
 import { source, pageRef } from '../../../../lib/siaya-sources';
 import { fmtFixed, fmtNum } from '../../../../lib/format';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/departments/', {
   title: 'Siaya department budgets',
   description: 'Siaya County budgets by department from ten programme-based budgets, and final budget against actual spending by department from seven County Budget Review and Outlook Papers, with the name crosswalk and the printed totals that do not add up.',
-};
+});
 
 // Department budgets as the County Treasury printed them (data/siaya-budget-departments.json). Canonical home of the
 // department figures and of the name crosswalk; absorption ratios by department are on /counties/siaya/analysis/spending/#an-b4.

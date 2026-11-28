@@ -7,12 +7,13 @@ import CountyCite, { ValueFlags } from '../../../../components/county/Cite';
 import { paramsFor } from '../../../../components/county/params';
 import { fmtNum } from '../../../../lib/format';
 import * as cp from '../../../../lib/county-pages';
+import { pageMeta } from '../../../../lib/page-meta';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => paramsFor('people');
 export function generateMetadata({ params }) {
   const m = cp.meta(params.slug);
-  return { title: `${m.name}: population`, description: `${m.name} County population: the 2019 census count by sex and sub-county and the KNBS projections for later years, each labelled count or projection, with source and page.` };
+  return pageMeta(`/counties/${params.slug}/people/`, { title: `${m.name}: population`, description: `${m.name} County population: the 2019 census count by sex and sub-county and the KNBS projections for later years, each labelled count or projection, with source and page.` });
 }
 
 const nameOf = (s) => s.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');

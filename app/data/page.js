@@ -15,6 +15,7 @@ import manifest from '../../data/source-manifest.json';
 import { Provisional } from '../../components/ObsTable';
 import { fmtMaybe, fmtNum } from '../../lib/format';
 import siaya from '../../data/siaya.json';
+import { pageMeta } from '../../lib/page-meta';
 
 // Duplication sweep D10: the figures of this question come from data/siaya.json, not page text.
 const OSR = siaya.own_source_revenue;
@@ -57,10 +58,10 @@ function RefRows({ rows }) {
 }
 const REF_HEAD = <thead><tr><th scope="col">Figure</th><th scope="col">Value</th><th scope="col">Document</th><th scope="col">Page</th><th scope="col">How read, note</th></tr></thead>;
 
-export const metadata = {
+export const metadata = pageMeta('/data/', {
   title: 'Siaya ten-year series: sources and conflicts',
   description: 'The Siaya ten-year series: where each figure was read, documents outside the series and the register of conflicts between sources.',
-};
+});
 
 // Files that /datasets/ offers (duplication sweep D09): downloaded there, not listed again here.
 const IN_CATALOGUE = new Set(['history.json', 'history.csv', 'conflicts.json', 'cpi.json', 'subcounties.json']);

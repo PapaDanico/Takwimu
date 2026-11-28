@@ -7,11 +7,12 @@ import { STATUS, COVERAGE } from '../../../../lib/source-library';
 import lib from '../../../../data/source-library.json';
 import { shortDate } from '../../../../lib/format';
 import { bySource } from '../../../../lib/review-status';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/sources/', {
   title: 'Siaya Source Library',
   description: 'Every document Takwimu Kenya uses or plans to consult for Siaya County: publisher, period, relevance, licence, whether a copy was retrieved, and a link to the original.',
-};
+});
 
 // Each document carries the editorial review state of the values that cite it (lib/review-status.js), with any value
 // withdrawn after review listed with its rationale.

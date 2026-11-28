@@ -1,58 +1,44 @@
 {
  "claims": [
   {
-   "actual": "1 of 47 published (Siaya)",
+   "actual": "1, 47, Siaya",
    "claim": "Counties: 1 of 47 published (Siaya)",
    "how": "lib/counties.js",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "4005",
-   "claim": "Siaya values: 4,005",
-   "how": "lib/review-pack.js all() over lib/review-status.js",
+   "actual": "4005, 16, 0",
+   "claim": "Siaya values: 4,005 across 16 datasets, each with a review pack. 0 approved",
+   "how": "lib/review-pack.js all() over lib/review-status.js; lib/review-status.js stateOf",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "16",
-   "claim": "across 16 datasets",
-   "how": "distinct datasets in the review-pack scope",
+   "actual": "empty",
+   "claim": "each with a review pack. 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty",
+   "how": "data/review-packs.json entries; data/reviews.json",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "4005 of 4005 in data/review-packs.json (file holds 4005)",
-   "claim": "each with a review pack",
-   "how": "data/review-packs.json entries",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "0 approved; 0 records",
-   "claim": "0 approved; data/reviews.json is empty",
-   "how": "lib/review-status.js stateOf",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "2363 agree, 80 disagree, 1562 not checkable (4005 checks)",
-   "claim": "Machine cross-checks: 2,363 agree, 80 disagree, 1,562 not checkable",
+   "actual": "2363, 80, 1562",
+   "claim": "Machine cross-checks (second reading of the cited page): 2,363 agree, 80 disagree (need a person to read the page image), 1,562 not checkable",
    "how": "data/machine-checks.json checks[].result",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "164",
-   "claim": "Fiscal ledger: 164 discrepancy cases",
-   "how": "data/siaya-fiscal-ledger.json discrepancies",
+   "actual": "164, 164",
+   "claim": "Fiscal ledger: 164 discrepancy cases, 164 of them open",
+   "how": "data/siaya-fiscal-ledger.json discrepancies[].status (authoritative)",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 open (data/ledger-classes.json); the ledger file itself marks {\"open\":164}",
-   "claim": "47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 open",
-   "how": "data/ledger-classes.json cases[].class",
+   "actual": "47, 22, 15, 2, 78",
+   "claim": "by class 47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 unexplained",
+   "how": "data/ledger-classes.json cases[].classification",
    "match": true,
    "where": "README Status"
   },
@@ -64,58 +50,23 @@
    "where": "README Status"
   },
   {
-   "actual": "2013/14 to 2025/26 (13 years)",
-   "claim": "Ten-year series FY 2013/14 to FY 2025/26",
+   "actual": "2013/14, 2025/26",
+   "claim": "Ten-year series: FY 2013/14 to FY 2025/26",
    "how": "data/history.json years",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "FY 2019/20 row holds numeric fields: osr_m",
-   "claim": "FY 2019/20 stays a gap (CoB report not found)",
-   "how": "data/history.json years[fy=2019/20] (informational: the gap is the CoB value; other fields may be filled from other sources)",
+   "actual": "17, 26, 14",
+   "claim": "Corrections: 17 corrections footnoted beside 26 values, 14 source-error records",
+   "how": "lib/correction-notes.js; lib/editorial.js sourceErrors()",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "17 corrections, 26 values",
-   "claim": "17 corrections footnoted beside 26 values",
-   "how": "lib/correction-notes.js",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "14",
-   "claim": "14 source-error records",
-   "how": "lib/editorial.js sourceErrors()",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "331",
-   "claim": "Kisumu: 331 values",
-   "how": "lib/county-review.js entries",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "{\"kisumu-fiscal-ledger\":291,\"kisumu-audits\":35,\"kisumu-population\":5}",
-   "claim": "291 ledger, 35 audit opinions, population (5)",
-   "how": "lib/county-review.js entries by dataset",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "38",
-   "claim": "Kisumu: 38 conflict cases",
-   "how": "data/counties/kisumu/conflicts.json",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "0",
-   "claim": "Kisumu: 0 approved",
-   "how": "lib/county-review.js counts",
+   "actual": "331, 291, 35, 5, 38, 0",
+   "claim": "Kisumu (unpublished, data layer only): 331 values (291 ledger, 35 audit opinions, 5 population), 38 conflict cases, 0 approved",
+   "how": "lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json",
    "match": true,
    "where": "README Status"
   },
@@ -127,10 +78,10 @@
    "where": "README Status"
   },
   {
-   "actual": "92 datasets in the catalogue; 91 downloadable (CSV/JSON)",
-   "claim": "92 downloadable datasets",
-   "how": "lib/explore.js catalogue()",
-   "match": false,
+   "actual": "91, 1, IMF",
+   "claim": "91 downloadable datasets plus 1 link-only (IMF)",
+   "how": "lib/explore.js catalogue() files.csv",
+   "match": true,
    "where": "README Status"
   },
   {
@@ -141,39 +92,46 @@
    "where": "README Status"
   },
   {
-   "actual": "47 listed; published: siaya",
+   "actual": "47, Siaya",
    "claim": "lib/counties.js lists 47 counties; only Siaya is published",
    "how": "lib/counties.js",
    "match": true,
    "where": "CLAUDE.md"
   },
   {
-   "actual": "47 counties; FYs 2021/22, 2022/23, 2023/24, 2024/25",
-   "claim": "data/counties-cob.json: 47 counties, FY 2023/24-2024/25",
+   "actual": "47, 2021/22, 2024/25",
+   "claim": "data/counties-cob.json (47 counties, FY 2021/22-2024/25",
    "how": "data/counties-cob.json years",
-   "match": false,
-   "where": "CLAUDE.md"
-  },
-  {
-   "actual": "history 13 FYs (2013/14-2025/26); cpi 16 calendar years, 12 fiscal years",
-   "claim": "Series must go back 10 years: data/history.json plus data/cpi.json",
-   "how": "data/history.json, data/cpi.json",
    "match": true,
    "where": "CLAUDE.md"
   },
   {
-   "actual": "registry code 42; NOT_YET_ON_PAGES = kisumu",
+   "actual": "10",
+   "claim": "Series must go back 10 years",
+   "how": "data/history.json years, data/cpi.json fiscal_year",
+   "match": true,
+   "where": "CLAUDE.md"
+  },
+  {
+   "actual": "42, unpublished",
    "claim": "Kisumu (042) phase 1 data is in, unpublished",
    "how": "lib/county-registry.js",
    "match": true,
    "where": "CLAUDE.md"
   },
   {
-   "actual": "453 records (meta.counts.total 453)",
-   "claim": "kisumu-sources.json (448 records)",
+   "actual": "453, 166, 11",
+   "claim": "register holds 453 records (166 distinct files, 11 duplicates)",
    "how": "docs/research/kisumu-2026-11-27/kisumu-sources.json",
-   "match": false,
-   "where": "kisumu-coverage.md / handover"
+   "match": true,
+   "where": "kisumu-coverage.md (current status)"
+  },
+  {
+   "actual": "current",
+   "claim": "the generated section is current",
+   "how": "docs/research/kisumu-2026-11-27/kisumu-coverage.md after \"## Current status (generated)\"",
+   "match": true,
+   "where": "kisumu-coverage.md (current status)"
   }
  ],
  "datasets": [
@@ -261,7 +219,10 @@
    "nulls_with_reason": 765,
    "nulls_without_reason": 0,
    "observations": 4324,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 92,
    "tier_basis": {
     "recorded (Kisumu register)": 4324
@@ -336,18 +297,21 @@
     "confidence": 0,
     "page": 0,
     "period": 0,
-    "publication_date": 35,
+    "publication_date": 0,
     "publication_date_not_stated": 0,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
-   "missing_any": 35,
-   "missing_any_counting_not_stated": 35,
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 0,
    "nulls_with_reason": 0,
    "nulls_without_reason": 1,
    "observations": 35,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 35,
    "siaya_review_pack_scope": null,
    "tier_basis": {
     "recorded (observation)": 35
@@ -435,7 +399,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 291,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": null,
    "tier_basis": {
     "recorded (Kisumu register)": 271,
@@ -502,7 +469,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 5,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": null,
    "tier_basis": {
     "recorded (Kisumu register)": 5
@@ -619,7 +589,7 @@
     "page": 11,
     "period": 22,
     "publication_date": 10,
-    "publication_date_not_stated": 8,
+    "publication_date_not_stated": 2,
     "source": 9,
     "source_unresolved": 1,
     "unit": 37
@@ -629,7 +599,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 193,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 22,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 193,
    "tier_basis": {
     "inferred (TIER_RULES)": 11,
@@ -690,7 +663,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 430,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 0,
    "tier_basis": {
     "inferred (TIER_RULES)": 430
@@ -834,7 +810,10 @@
    "nulls_with_reason": 1,
    "nulls_without_reason": 0,
    "observations": 105,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 105,
    "tier_basis": {
     "inferred (TIER_RULES)": 75,
@@ -911,20 +890,23 @@
    "last_period": "FY 2025/26",
    "missing": {
     "confidence": 9,
-    "page": 442,
+    "page": 0,
     "period": 0,
     "publication_date": 9,
-    "publication_date_not_stated": 85,
+    "publication_date_not_stated": 55,
     "source": 9,
     "source_unresolved": 0,
     "unit": 0
    },
-   "missing_any": 442,
-   "missing_any_counting_not_stated": 442,
+   "missing_any": 9,
+   "missing_any_counting_not_stated": 64,
    "nulls_with_reason": 45,
    "nulls_without_reason": 0,
    "observations": 442,
+   "page_by_derived_from": 433,
+   "page_not_applicable": 9,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 442,
    "tier_basis": {
     "inferred (TIER_RULES)": 345,
@@ -1006,20 +988,23 @@
    "last_period": "stock at 2026-06-30",
    "missing": {
     "confidence": 24,
-    "page": 372,
+    "page": 0,
     "period": 0,
     "publication_date": 24,
-    "publication_date_not_stated": 49,
+    "publication_date_not_stated": 39,
     "source": 24,
     "source_unresolved": 4,
     "unit": 0
    },
-   "missing_any": 372,
-   "missing_any_counting_not_stated": 372,
+   "missing_any": 24,
+   "missing_any_counting_not_stated": 63,
    "nulls_with_reason": 97,
    "nulls_without_reason": 0,
    "observations": 372,
+   "page_by_derived_from": 351,
+   "page_not_applicable": 21,
    "periods_unparsed": 1,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 372,
    "tier_basis": {
     "inferred (TIER_RULES)": 178,
@@ -1082,17 +1067,20 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 2,
+    "publication_date_not_stated": 0,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
    "missing_any": 0,
-   "missing_any_counting_not_stated": 2,
+   "missing_any_counting_not_stated": 0,
    "nulls_with_reason": 0,
    "nulls_without_reason": 1,
    "observations": 282,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 282,
    "tier_basis": {
     "inferred (TIER_RULES)": 276,
@@ -1167,17 +1155,20 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 48,
+    "publication_date_not_stated": 0,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
    "missing_any": 0,
-   "missing_any_counting_not_stated": 48,
+   "missing_any_counting_not_stated": 0,
    "nulls_with_reason": 2,
    "nulls_without_reason": 0,
    "observations": 1240,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 1240,
    "tier_basis": {
     "inferred (TIER_RULES)": 1240
@@ -1227,7 +1218,7 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 65,
+    "publication_date_not_stated": 16,
     "source": 0,
     "source_unresolved": 0,
     "unit": 49
@@ -1237,7 +1228,10 @@
    "nulls_with_reason": 12,
    "nulls_without_reason": 37,
    "observations": 87,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 87,
    "tier_basis": {
     "inferred (TIER_RULES)": 55,
@@ -1297,17 +1291,20 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 88,
+    "publication_date_not_stated": 76,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
    "missing_any": 0,
-   "missing_any_counting_not_stated": 88,
+   "missing_any_counting_not_stated": 76,
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 191,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 191,
    "tier_basis": {
     "inferred (TIER_RULES)": 191
@@ -1363,7 +1360,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 154,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 154,
    "tier_basis": {
     "inferred (TIER_RULES)": 154
@@ -1425,7 +1425,10 @@
    "nulls_with_reason": 1,
    "nulls_without_reason": 0,
    "observations": 215,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 1,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 215,
    "tier_basis": {
     "inferred (TIER_RULES)": 69,
@@ -1497,17 +1500,20 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 69,
+    "publication_date_not_stated": 59,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
    "missing_any": 0,
-   "missing_any_counting_not_stated": 69,
+   "missing_any_counting_not_stated": 59,
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 325,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 325,
    "tier_basis": {
     "inferred (TIER_RULES)": 21,
@@ -1584,7 +1590,10 @@
    "nulls_with_reason": 11,
    "nulls_without_reason": 19,
    "observations": 38,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 38,
    "tier_basis": {
     "inferred (TIER_RULES)": 30,
@@ -1652,7 +1661,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 78,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 78,
    "tier_basis": {
     "inferred (TIER_RULES)": 68,
@@ -1714,7 +1726,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 73,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 73,
    "tier_basis": {
     "recorded (observation)": 73
@@ -1788,7 +1803,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 118,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 118,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 118,
    "tier_basis": {
     "inferred (TIER_RULES)": 47,
@@ -1827,7 +1845,7 @@
    "observations": null,
    "title": "Siaya Source Library",
    "top_level_arrays": {
-    "documents": 242
+    "documents": 248
    },
    "type": "source register",
    "years_in_fields": null
@@ -1838,7 +1856,7 @@
    "observations": null,
    "title": "Source document manifest",
    "top_level_arrays": {
-    "documents": 116
+    "documents": 122
    },
    "type": "source register",
    "years_in_fields": "2006-2026"
@@ -1857,8 +1875,8 @@
  ],
  "generated_by": "scripts/census.js",
  "inputs": {
-  ".claude/CLAUDE.md": "d71574e3439582ef88df5bbab1743915cd6523be0c9d49baa32f9a8bc74fd8c9",
-  "README.md": "5200c7ea18a7a814368b6f0e140a7dae27348d2c37b93f8e39a385857fe6d5b5",
+  ".claude/CLAUDE.md": "be9cfd3bb9fb54354db55c3415d73e9f9956ffc5876aed66004952655945e0db",
+  "README.md": "2f6945a2fcd8933e73d61394fb9c640fe800ed116ed0ca1f5e1c1a2b5cc769e4",
   "components/report/reports.json": "af38ebeb395f6af7d863f47bc9a08de0ada926f67d01cfb202052896243738a7",
   "data/cbk.json": "6c47b668a4baa2f6202e3b44dfe969a40f83ca40744cf82cb1597a6b750dca86",
   "data/conflicts.json": "5e7357a5c5a01a3c7f49b9ee086dd646fc96ba447193c9f54ae4f1931b4994d8",
@@ -1876,7 +1894,7 @@
   "data/history.json": "914425b67fbc6652974f1ed395ce221e0f80c00fc51cd3b6dbee9ee9431e341f",
   "data/imf.json": "ebc170956999a440bcc1b6135643113aab31b9b89fca8d014921832b6d3c427f",
   "data/kenya-counties-map.json": "d8aea762e7bc877f443b2bcea346c795cbcaf9d5ac63ffbe42233ed01ad55453",
-  "data/ledger-classes.json": "dddd127ed4c25395152ce017be7632ee5ce4dadda6eb9c73aab28063204a5cd2",
+  "data/ledger-classes.json": "9e538c178917dd9a7d51d23bb0ad6af3a06f8956327c59a3375721b3115b7dff",
   "data/machine-checks.json": "ba8e6f8678faf3d32e0645b11b721655f660881367311d190b12e50e355233c7",
   "data/national.json": "fda96171ab8130dbdb38299e9b4ac6e3eb7c3689d070d88168f86f35f6ca6701",
   "data/ngo.json": "fb9624766ee6d608c95fcefb65d0777a12fae30dc5f92a8a41b081b9b25c8c49",
@@ -1884,9 +1902,9 @@
   "data/review-packs.json": "48b34b23ecd8d1de1f9cf9769abc8a16164c30f8202a90a1c80c9d0d135bfa0f",
   "data/reviews.json": "c9d511495ad60dfa3ea068a7c29087763cfd4b661f9b099d7fd323d3b672e72d",
   "data/siaya-agriculture.json": "107bcb546b0ee746230832cf58872cfa053db7543e7b012f5e55a7ef7f708082",
-  "data/siaya-analysis-layers.json": "ff542d2208ecb123d5601522386e923bec1beca33185406b22685738a2539308",
-  "data/siaya-analysis.json": "c73bad4b054873c66d3c567e1a0f89f735edf908c985958b03352113b8ffd014",
-  "data/siaya-audits.json": "62803241adca3d705fed1b14df36d37b7bb2cdc7367c2beac495dd2025c2715e",
+  "data/siaya-analysis-layers.json": "876954edd64d8a9f5a74d9b6db7204047a9179faf0d09d86c763519d3f1e159a",
+  "data/siaya-analysis.json": "97d229616d0a41d0576f200713fa63794b2b3d69a6d0d2c2713d97b3ccec4f72",
+  "data/siaya-audits.json": "f4a0f6850ceb703423a717aa34dd4d64c282464b8d6551ee4de489902744d5bb",
   "data/siaya-boundaries.json": "7357bad6f69cca7c014179b60d0eaa06057123249c126b8264808581b5855857",
   "data/siaya-budget-departments.json": "257392e1667f3d9443712d79197707b2a42cfe73e902a20e0adfbe27f9102652",
   "data/siaya-climate.json": "241d781daa2579da92ec5c92494d46f56a94f8797f8df980305f5fc0c8ff6e6a",
@@ -1901,16 +1919,16 @@
   "data/siaya-projects.json": "5e9124b9507bcc1279d671881177911fafbf8134ef520ae677f5f19d2ef85023",
   "data/siaya-wards-geo.json": "c10cc47e85fa4aa42e07c0bef7e968c69d9a2e676b824994a7e008910e9567be",
   "data/siaya.json": "534682b64ee16a527344709854f8224891710be7bf2e4b60d59be1f897e60ef3",
-  "data/source-library.json": "3504c8e0b46ea08561b9eaf3e4de380fb86b8f3cc8dfb52de64f197cd15f4061",
-  "data/source-manifest.json": "297f4e588ef28ba71ce68960b2c4f476bb143f678c85e8edf12c50efa4bbe8cd",
+  "data/source-library.json": "3f3f839ca0e58ddaab86aad9789cae7bbf4c5b475566cd94519f8c4fd6c235c4",
+  "data/source-manifest.json": "27fe92f69fdbb87c44e1e53e7ef92bce4ed5dfa01382bc666f29ccf6a49c97ea",
   "data/subcounties.json": "a54bcb00421e8e316227a17597214d29e6218a4016560623731c0f61d6a9e06a",
   "docs/research/gaps-2026-11-27/A-fy2019-20-files.tsv": "6fba82e2a19507bf0ce92309fdf2dc1eae8a3dc15e99b7b346045fa0ef192eed",
   "docs/research/gaps-2026-11-27/B-audits-files.tsv": "d0600970a646c51964469c6fc969fd3a694ab460d2b92c05078ca2b99e0068bc",
   "docs/research/gaps-2026-11-27/D-knbs-files.tsv": "35f02715cd789622aa3c71eab3aabf7865f5f5d39344f03c79b6137360f85c8d",
   "docs/research/gaps-2026-11-27/E-files.tsv": "c8cd18a86e31846e8c8fbbf49574c814daaa3905f401262d7fa9d7e16edf659c",
   "docs/research/kisumu-2026-11-27/downloads.tsv": "6f202aec02ad58f5fffb34aa3824b47ad71c5046dd3f212efc5203ec2dd5df8e",
-  "docs/research/kisumu-2026-11-27/kisumu-coverage.md": "76b73f3ff2513dc6604b5cb6071525c8a7bc15627f442db52a03e768529863fb",
-  "docs/research/kisumu-2026-11-27/kisumu-sources.json": "e4ef59b2aeaeadc57c8280cef89907b3642567daf50a6d0c1017776518f72849"
+  "docs/research/kisumu-2026-11-27/kisumu-coverage.md": "149dd84b0838acf1e46fca2fa221e7eb87065ef3965014ebf180e5036f602ad5",
+  "docs/research/kisumu-2026-11-27/kisumu-sources.json": "3d4a3365dc2ef3c12967273e54e87f1fa4a27cbfd656e6f2ccacb7e0ccb366ba"
  },
  "machine_checks": {
   "kisumu": {
@@ -3566,71 +3584,30 @@
   "cited_hashes_not_in_manifest": {
    "cited_distinct_hashes": 128,
    "in_kisumu_register_only": 42,
-   "in_library_only": 32,
-   "in_manifest": 45,
-   "in_neither": [
+   "in_library_only": 30,
+   "in_manifest": 53,
+   "in_neither": [],
+   "not_listed_with_reason": [
     {
      "cited_as": [
       "siaya-programmes:WB-PROJECTS-API-KE"
      ],
+     "reason": "A snapshot of a live API response (World Bank Projects API, JSON), not a cited document file; the hash of the snapshot is kept with the source in data/siaya-programmes.json, and a new read gives different bytes.",
      "sha256": "20b09604a3346a6a0b56e22ea42dc0cb16d8d834867a76daaeffdcadf00908f9"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-asm-2020-21",
-      "siaya-audits:audit-asm-2020-21"
-     ],
-     "sha256": "429cf207e32f9fd9ecad1237b144978a15d7e05cf42bcf9ca77c7824459572f9"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-asm-2023-24",
-      "siaya-audits:audit-asm-2023-24",
-      "siaya-projects:audit-asm-2023-24"
-     ],
-     "sha256": "4854ae471a643b06f170b333f383a312e0eb7f77d454b0a03246d32466dac3b5"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-asm-2024-25",
-      "siaya-audits:audit-asm-2024-25"
-     ],
-     "sha256": "625a8d0dff5cb142020c8c500161611d25a1b8bab5098fb9b2b121ceb458056c"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-fo-2013-14",
-      "siaya-audits:audit-fo-2013-14"
-     ],
-     "sha256": "8777dd0be31ece70da63464f04f03d1f0e8a370e6e1e8ee0014c4f3df9d82800"
     },
     {
      "cited_as": [
       "siaya-programmes:HEALTH-03"
      ],
+     "reason": "A saved copy of a live web page (KEMRI PBIDS home page, HTML), not a document file; the source library records the page as discovered (no copy kept in the repository), so the hash stays with the source in data/siaya-programmes.json.",
      "sha256": "8ced749ef66ed0f5187488bdc0fa46044634279d64a1bc171f3ce9dd0d2a9d51"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-2024-25",
-      "siaya-audits:audit-2024-25",
-      "siaya-projects:audit-2024-25"
-     ],
-     "sha256": "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe"
     },
     {
      "cited_as": [
       "siaya-programmes:IATI-DPORTAL-SIAYA"
      ],
+     "reason": "A snapshot of a live API response (d-portal IATI search, JSON and XML), not a cited document file; the hash is kept with the source in data/siaya-programmes.json, and a new read gives different bytes.",
      "sha256": "e18c91d4ed5f3a777fa24031e175facad1b936ed1b4f92a8b6409c7d617399a1"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-asm-2022-23",
-      "siaya-audits:audit-asm-2022-23",
-      "siaya-projects:audit-asm-2022-23"
-     ],
-     "sha256": "f29e0ab2e2893169a6c79fbeb9511bd5d089a568936b75dd8a13920c89dfd6ca"
     }
    ]
   },
@@ -3640,8 +3617,8 @@
    "gap_file_rows_with_hash": 53,
    "kisumu_register": 453,
    "kisumu_register_meta_total": 453,
-   "source_library": 242,
-   "source_manifest": 116
+   "source_library": 248,
+   "source_manifest": 122
   },
   "coverage_md": {
    "register_count_actual": 453,
@@ -3892,64 +3869,7 @@
     "E-files.tsv:kenyatimes-counties-topping-revenue-2026-07.html"
    ]
   },
-  "mislabelled": [
-   {
-    "expected_title_year": 2015,
-    "id": "KIPPRA-CBROP-2014",
-    "register": "kisumu-sources",
-    "reviews_fy": "2014/15",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2014",
-    "title_year": 2014
-   },
-   {
-    "expected_title_year": 2019,
-    "id": "KIPPRA-CBROP-2018-V2",
-    "register": "kisumu-sources",
-    "reviews_fy": "2018/19",
-    "title": "Kisumu City County Budget review and Outlook Paper 2018",
-    "title_year": 2018
-   },
-   {
-    "expected_title_year": 2021,
-    "id": "KIPPRA-CBROP-2020",
-    "register": "kisumu-sources",
-    "reviews_fy": "2020/21",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2020",
-    "title_year": 2020
-   },
-   {
-    "expected_title_year": 2022,
-    "id": "KIPPRA-CBROP-2021",
-    "register": "kisumu-sources",
-    "reviews_fy": "2021/22",
-    "title": "Kisumu City  County Budget Review  and Outlook  Paper 2021",
-    "title_year": 2021
-   },
-   {
-    "expected_title_year": 2023,
-    "id": "KIPPRA-CBROP-2022",
-    "register": "kisumu-sources",
-    "reviews_fy": "2022/23",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2022",
-    "title_year": 2022
-   },
-   {
-    "expected_title_year": 2024,
-    "id": "KIPPRA-CBROP-2023",
-    "register": "kisumu-sources",
-    "reviews_fy": "2023/24",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2023",
-    "title_year": 2023
-   },
-   {
-    "expected_title_year": 2025,
-    "id": "KIPPRA-CBROP-2024",
-    "register": "kisumu-sources",
-    "reviews_fy": "2024/25",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2024",
-    "title_year": 2024
-   }
-  ],
+  "mislabelled": [],
   "records_with_no_file": {
    "kisumu_held_with_hash_but_no_downloads_row": [
     "KIWASCO-ANNUAL-REPORT-2017",
@@ -3958,11 +3878,7 @@
    ],
    "kisumu_held_without_hash_or_download": [],
    "source_library_downloaded_without_hash": [],
-   "source_manifest_downloaded_without_hash": [
-    "senate-fiduciary-annexes-2018",
-    "siaya-brop-2019-20",
-    "worldbank-wdi-api"
-   ]
+   "source_manifest_downloaded_without_hash": []
   },
   "sha_differs_between_register_and_downloads": [],
   "status_changed_since_register": [
@@ -4060,20 +3976,23 @@
    "last_period": "2031",
    "missing": {
     "confidence": 5014,
-    "page": 1262,
+    "page": 448,
     "period": 140,
-    "publication_date": 78,
-    "publication_date_not_stated": 692,
+    "publication_date": 43,
+    "publication_date_not_stated": 525,
     "source": 42,
     "source_unresolved": 5,
     "unit": 109
    },
-   "missing_any": 5944,
-   "missing_any_counting_not_stated": 6373,
+   "missing_any": 5128,
+   "missing_any_counting_not_stated": 5579,
    "nulls_with_reason": 934,
    "nulls_without_reason": 58,
    "observations": 8998,
+   "page_by_derived_from": 784,
+   "page_not_applicable": 30,
    "periods_unparsed": 142,
+   "publication_date_null_with_reason": 35,
    "tier_basis": {
     "inferred (TIER_RULES)": 3190,
     "no source": 42,
@@ -4117,18 +4036,21 @@
     "confidence": 0,
     "page": 0,
     "period": 0,
-    "publication_date": 35,
+    "publication_date": 0,
     "publication_date_not_stated": 118,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
-   "missing_any": 35,
-   "missing_any_counting_not_stated": 153,
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 118,
    "nulls_with_reason": 0,
    "nulls_without_reason": 1,
    "observations": 331,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 35,
    "tier_basis": {
     "recorded (Kisumu register)": 276,
     "recorded (observation)": 55
@@ -4184,20 +4106,23 @@
    "last_period": "2027",
    "missing": {
     "confidence": 352,
-    "page": 832,
+    "page": 18,
     "period": 140,
     "publication_date": 43,
-    "publication_date_not_stated": 574,
+    "publication_date_not_stated": 407,
     "source": 42,
     "source_unresolved": 5,
     "unit": 109
    },
-   "missing_any": 1247,
-   "missing_any_counting_not_stated": 1558,
+   "missing_any": 466,
+   "missing_any_counting_not_stated": 799,
    "nulls_with_reason": 185,
    "nulls_without_reason": 57,
    "observations": 4005,
+   "page_by_derived_from": 784,
+   "page_not_applicable": 30,
    "periods_unparsed": 142,
+   "publication_date_null_with_reason": 0,
    "tier_basis": {
     "inferred (TIER_RULES)": 2760,
     "no source": 42,

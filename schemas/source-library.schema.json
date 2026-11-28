@@ -29,7 +29,7 @@
     "url": { "type": "string", "pattern": "^https://[^\\s]+$" },
     "document": {
       "type": "object",
-      "required": ["document_id", "title", "publisher", "document_type", "publication_date", "reference_period", "source_url", "sha256", "bytes", "licence", "redistribution_allowed", "data_reuse", "document_redistribution", "geographic_coverage", "siaya_relevance", "research_use", "retrieval_status", "retrieval_note", "review_status", "last_checked_at", "origin"],
+      "required": ["document_id", "title", "publisher", "document_type", "publication_date", "reference_period", "source_url", "sha256", "bytes", "licence", "redistribution_allowed", "data_reuse", "commercial_reuse", "document_redistribution", "geographic_coverage", "siaya_relevance", "research_use", "retrieval_status", "retrieval_note", "review_status", "last_checked_at", "origin"],
       "additionalProperties": false,
       "properties": {
         "document_id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*$" },
@@ -51,6 +51,9 @@
         "redistribution_allowed": { "type": "boolean" },
         "redistribution_conditions": { "type": "string" },
         "data_reuse": { "type": "string", "enum": ["figures may be reused with citation", "link and cite only", "permission required"], "description": "What may be done with the figures (owner decision, 21 Nov 2026)" },
+        "commercial_reuse": { "type": "string", "enum": ["allowed", "attribution-required", "non-commercial-only", "unknown", "not-allowed"], "description": "Commercial reuse of the figures, derived from licence and data_reuse by lib/licence.js (owner, 28 Nov 2026); never allowed without a stated licence; data/source-manifest.json copies it" },
+        "licence_check_needed": { "type": "boolean", "enum": [true], "description": "Present only when the recorded licence may differ from the publisher's stated licence; the recorded value is kept" },
+        "licence_check_note": { "type": "string", "pattern": "^[^\\n]{20,400}$" },
         "document_redistribution": { "type": "boolean", "description": "Whether the document itself may be republished; replaces and equals redistribution_allowed" },
         "reuse_basis": { "type": "string", "description": "Why the reuse fields have these values" },
         "geographic_coverage": { "type": "string", "enum": ["Siaya", "multi-county including Siaya", "national"] },

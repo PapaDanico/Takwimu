@@ -12,11 +12,12 @@ import { OsrSeries, OSR_SERIES_TOC } from '../../../../components/siaya/Layers';
 import PendingAtDate from '../../../../components/siaya/PendingAtDate';
 import { ClassBadge } from '../../../../components/LedgerView';
 import reg from '../../../../data/conflicts.json';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/ledger/', {
   title: 'Fiscal reconciliation',
   description: 'Siaya County fiscal figures from the Controller of Budget, the County Government, the Auditor-General and the Senate, side by side by year with page links, FY 2013/14 to FY 2025/26: which values exist, and where the sources differ.',
-};
+});
 
 // Reader wording (own-source revenue, share of budget spent) for text from the data file; values unchanged.
 const l = plainDeep(ledger());

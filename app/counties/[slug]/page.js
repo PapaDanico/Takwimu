@@ -2,6 +2,7 @@ import Link from 'next/link';
 import PageHead from '../../../components/PageHead';
 import { COUNTIES, bySlug } from '../../../lib/counties';
 import KenyaMap from '../../../components/KenyaMap';
+import { pageMeta } from '../../../lib/page-meta';
 import CountyHub from '../../../components/county/CountyHub';
 import { ON_PAGES } from '../../../lib/county-pages';
 
@@ -13,8 +14,8 @@ export function generateStaticParams() {
 }
 export function generateMetadata({ params }) {
   const c = bySlug(params.slug);
-  if (ON_PAGES.includes(params.slug)) return { title: `${c.name} County`, description: `${c.name} County public finance: budget, spending, own-source revenue, pending bills, audit opinions and population, every figure with its official source and page, conflicting sources side by side.` };
-  return { title: `${c ? c.name : 'County'} County`, description: `Status of ${c ? c.name : 'this county'} on Takwimu Kenya: what is published and what is still needed.` };
+  if (ON_PAGES.includes(params.slug)) return pageMeta(`/counties/${params.slug}/`, { title: `${c.name} County`, description: `${c.name} County public finance: budget, spending, own-source revenue, pending bills, audit opinions and population, every figure with its official source and page, conflicting sources side by side.` });
+  return pageMeta(`/counties/${params.slug}/`, { title: `${c ? c.name : 'County'} County`, description: `Status of ${c ? c.name : 'this county'} on Takwimu Kenya: what is published and what is still needed.` });
 }
 
 const NEEDED = [

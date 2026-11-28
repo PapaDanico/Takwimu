@@ -5,12 +5,13 @@ import { ColumnChart } from '../../../../components/Charts';
 import ObsTable, { Provisional } from '../../../../components/ObsTable';
 import { source } from '../../../../lib/siaya-sources';
 import { masked } from '../../../../lib/review-status';
+import { pageMeta } from '../../../../lib/page-meta';
 const e = masked('siaya-education');
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/education/', {
   title: 'Education in Siaya',
   description: 'Siaya education by source: pre-primary (ECDE), vocational training and county bursaries (county functions) kept apart from primary, secondary and teachers (national functions), with ten source inconsistencies side by side.',
-};
+});
 
 const obs = e.observations;
 const byId = Object.fromEntries(obs.map((o) => [o.id, o]));

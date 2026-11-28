@@ -3,12 +3,13 @@ import PageHead from '../../../../components/PageHead';
 import TableWrap from '../../../../components/TableWrap';
 import { paramsFor } from '../../../../components/county/params';
 import * as cp from '../../../../lib/county-pages';
+import { pageMeta } from '../../../../lib/page-meta';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => paramsFor('sources');
 export function generateMetadata({ params }) {
   const m = cp.meta(params.slug);
-  return { title: `${m.name}: sources`, description: `Every document cited on the ${m.name} County pages: publisher, publication date, period, link, licence and SHA-256 hash where held.` };
+  return pageMeta(`/counties/${params.slug}/sources/`, { title: `${m.name}: sources`, description: `Every document cited on the ${m.name} County pages: publisher, publication date, period, link, licence and SHA-256 hash where held.` });
 }
 
 const USED = { ledger: 'Fiscal reconciliation', audits: 'Audit opinions', people: 'Population' };

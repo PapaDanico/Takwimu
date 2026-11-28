@@ -6,11 +6,12 @@ import TableWrap from '../../../../components/TableWrap';
 import { governance, aprmPage } from '../../../../lib/governance';
 import Reviewed from '../../../../components/Reviewed';
 import { Provisional } from '../../../../components/ObsTable';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/governance/', {
   title: 'Budget transparency and public participation',
   description: 'Siaya County in the IBP Kenya County Budget Transparency Survey 2021 and 2022, shown as separate editions, and the APRM Siaya County Review Report 2024 findings on public participation, civic education and feedback, each with its page.',
-};
+});
 
 const g = governance();
 const Src = ({ item, doc }) => (

@@ -3,15 +3,16 @@ import PageHead from '../../components/PageHead';
 import ledger from '../../data/siaya-fiscal-ledger.json';
 import { Provisional } from '../../components/ObsTable';
 import { fmtFixed } from '../../lib/format';
+import { pageMeta } from '../../lib/page-meta';
 
 // Duplication sweep D10: the FY 2024/25 own-source revenue figures quoted below are read from the fiscal ledger
 // (observation ids), so the text cannot drift from the data.
 const LV = (id) => fmtFixed(ledger.observations.find((o) => o.id === id).value, 2);
 
-export const metadata = {
+export const metadata = pageMeta('/learn/', {
   title: 'Learn: budget, audit and statistics terms in plain English',
   description: 'Plain-language explainers for the budget, audit and statistics terms used on Takwimu Kenya.',
-};
+});
 
 const GROUPS = [
   {
