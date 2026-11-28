@@ -1983,7 +1983,8 @@
       "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
       "hashed_on": "2026-11-28",
       "access": "downloaded",
-      "checksum_note": "The KNBS repository publishes an MD5 for the file; it matched. SHA-256 computed locally."
+      "checksum_note": "The KNBS repository publishes an MD5 for the file; it matched. SHA-256 computed locally.",
+      "commercial_reuse": "non-commercial-only"
     },
     {
       "id": "knbs-economic-survey-2024",
@@ -1998,7 +1999,8 @@
       "sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
       "hashed_on": "2026-11-28",
       "access": "downloaded",
-      "checksum_note": "The KNBS repository publishes an MD5 for the file; it matched. SHA-256 computed locally."
+      "checksum_note": "The KNBS repository publishes an MD5 for the file; it matched. SHA-256 computed locally.",
+      "commercial_reuse": "non-commercial-only"
     },
     {
       "id": "knbs-economic-survey-2025",
@@ -2013,7 +2015,8 @@
       "sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
       "hashed_on": "2026-11-28",
       "access": "downloaded",
-      "checksum_note": "The KNBS repository publishes an MD5 for the file; it matched. SHA-256 computed locally."
+      "checksum_note": "The KNBS repository publishes an MD5 for the file; it matched. SHA-256 computed locally.",
+      "commercial_reuse": "non-commercial-only"
     }
   ]
 }

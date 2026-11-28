@@ -6781,7 +6781,8 @@
    "retrieval_note": "Downloaded from the KNBS repository (knbs.or.ke fails TLS from here and was not bypassed); its MD5 matched the checksum the repository publishes.",
    "data_reuse": "figures may be reused with citation",
    "document_redistribution": false,
-   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed."
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed.",
+   "commercial_reuse": "non-commercial-only"
   },
   {
    "review_status": "not reviewed",
@@ -6808,7 +6809,8 @@
    "retrieval_note": "Downloaded from the KNBS repository (knbs.or.ke fails TLS from here and was not bypassed); its MD5 matched the checksum the repository publishes.",
    "data_reuse": "figures may be reused with citation",
    "document_redistribution": false,
-   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed."
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed.",
+   "commercial_reuse": "non-commercial-only"
   },
   {
    "review_status": "not reviewed",
@@ -6835,7 +6837,8 @@
    "retrieval_note": "Downloaded from the KNBS repository (knbs.or.ke fails TLS from here and was not bypassed); its MD5 matched the checksum the repository publishes.",
    "data_reuse": "figures may be reused with citation",
    "document_redistribution": false,
-   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed."
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed.",
+   "commercial_reuse": "non-commercial-only"
   },
   {
    "review_status": "not reviewed",
@@ -6862,7 +6865,8 @@
    "retrieval_note": "Downloaded from the KNBS repository; its MD5 matched the checksum the repository publishes.",
    "data_reuse": "figures may be reused with citation",
    "document_redistribution": false,
-   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed."
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed.",
+   "commercial_reuse": "non-commercial-only"
   },
   {
    "review_status": "not reviewed",
@@ -6889,7 +6893,8 @@
    "retrieval_note": "Downloaded from the KNBS repository; its MD5 matched the checksum the repository publishes.",
    "data_reuse": "figures may be reused with citation",
    "document_redistribution": false,
-   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed."
+   "reuse_basis": "Kenyan public statistics published by a public body (owner decision, 21 Nov 2026), under the repository's CC BY-NC 4.0 record: figures may be reused with the body and report named; the document itself is not redistributed.",
+   "commercial_reuse": "non-commercial-only"
   }
  ]
 }
