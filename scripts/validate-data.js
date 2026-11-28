@@ -287,6 +287,26 @@ const manifest0 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 
   manifest0.documents.forEach((d) => { if (!ids.has(d.id)) fail(`source-library: manifest document ${d.id} is missing`); });
   // A manifest document keeps the hash recorded when its figures were read.
   manifest0.documents.forEach((d) => { const r = docs.find((x) => x.document_id === d.id); if (r && d.sha256 && r.sha256 !== d.sha256) fail(`source-library ${d.id}: sha256 differs from source-manifest.json`); });
+  // Commercial reuse (owner, 28 Nov 2026): derived from licence and data_reuse by lib/licence.js, never typed by hand;
+  // never "allowed" without a stated licence. A licence the census found disputed keeps its recorded text and is flagged
+  // with a one-line note. The manifest copies the library's value for the same document.
+  const { COMMERCIAL_REUSE, commercialReuse } = require('../lib/licence');
+  docs.forEach((d) => {
+    const tag = `source-library ${d.document_id}`;
+    if (!COMMERCIAL_REUSE.includes(d.commercial_reuse)) fail(`${tag}: commercial_reuse must be one of ${COMMERCIAL_REUSE.join(', ')}`);
+    else if (d.commercial_reuse !== commercialReuse(d.licence, d.data_reuse)) fail(`${tag}: commercial_reuse "${d.commercial_reuse}" is not what the licence gives ("${commercialReuse(d.licence, d.data_reuse)}")`);
+    if (d.commercial_reuse === 'allowed' && /not stated|no (reuse )?licence|not confirmed/i.test(d.licence)) fail(`${tag}: "allowed" needs a stated licence`);
+    if (/CC BY-NC/.test(d.licence) && d.commercial_reuse !== 'non-commercial-only') fail(`${tag}: CC BY-NC is non-commercial-only`);
+    if ('licence_check_needed' in d && (d.licence_check_needed !== true || !/^[^\n]{20,400}$/.test(d.licence_check_note || ''))) fail(`${tag}: licence_check_needed is true with a one-line licence_check_note, or absent`);
+    if ('licence_check_note' in d && d.licence_check_needed !== true) fail(`${tag}: licence_check_note without licence_check_needed`);
+  });
+  if (docs.filter((d) => d.licence_check_needed).length < 1) fail('source-library: expected the licence cases the census flagged (KNBS GCP, Siaya abstract 2015, KDHS)');
+  manifest0.documents.forEach((d) => {
+    const r = docs.find((x) => x.document_id === d.id);
+    if (!r) return;
+    if (d.commercial_reuse !== r.commercial_reuse) fail(`source-manifest ${d.id}: commercial_reuse "${d.commercial_reuse}" differs from source-library ("${r.commercial_reuse}")`);
+    if (Boolean(d.licence_check_needed) !== Boolean(r.licence_check_needed) || (d.licence_check_note || null) !== (r.licence_check_note || null)) fail(`source-manifest ${d.id}: licence check flag differs from source-library`);
+  });
 }
 
 // Bulk downloads only where the publisher's terms allow figure reuse (sweep D2/D1): a catalogue dataset with CSV or JSON
@@ -355,8 +375,9 @@ const mids = new Set();
   ['id', 'kind', 'fiscal_year', 'title', 'url', 'retrieved', 'access'].forEach((k) => { if (!d[k]) fail(`${tag}: missing ${k}`); });
   if (!/^https:\/\//.test(d.url || '')) fail(`${tag}: url must be https`);
   if (d.sha256 === null) {
-    // Null hash: either the file could not be fetched, or it was fetched from a site that publishes no checksum to verify it against.
-    if (!/^unavailable on \d{4}-\d{2}-\d{2}$|^downloaded \d{4}-\d{2}-\d{2}; not hashed: .{10,}$/.test(d.access || '')) fail(`${tag}: a null sha256 needs access "unavailable on <date>" or "downloaded <date>; not hashed: <reason>"`);
+    // Null hash: the file could not be fetched, or there is no fixed file to hash (a live API). A downloaded file is always
+    // hashed (census 28 Nov 2026: "downloaded; not hashed" is no longer accepted).
+    if (!/^unavailable on \d{4}-\d{2}-\d{2}$|^not downloaded: .{10,}$/.test(d.access || '')) fail(`${tag}: a null sha256 needs access "unavailable on <date>" or "not downloaded: <reason>"`);
   } else {
     if (!/^[0-9a-f]{64}$/.test(d.sha256 || '')) fail(`${tag}: sha256 must be 64 hex characters or null`);
     // The Parliament library publishes an MD5 for each file; other publishers do not, so md5_library is required only there.

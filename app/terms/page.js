@@ -2,7 +2,7 @@ import PageHead from '../../components/PageHead';
 import { SITE_URL, SITE_HOST, ISSUES_URL } from '../../lib/site';
 import TableWrap from '../../components/TableWrap';
 import library from '../../data/source-library.json';
-import { CLASSES } from '../../lib/licence';
+import { CLASSES, COMMERCIAL_REUSE } from '../../lib/licence';
 import { pageMeta } from '../../lib/page-meta';
 
 export const metadata = pageMeta('/terms/', {
@@ -126,6 +126,7 @@ export default function Terms() {
               <h3>Licence classes</h3>
               <p>Source lists and report bibliographies print a short licence label for each document; the label names one of these classes. The full licence text of every document stays in the data files.</p>
               <dl className="licence-classes">{CLASSES.map((c) => <div key={c.id} id={`licence-${c.id}`}><dt>{c.name} (&ldquo;{c.label}&rdquo;)</dt><dd>{c.text}</dd></div>)}<div id="licence-open"><dt>Open licences</dt><dd>Creative Commons (CC BY, CC BY-NC, CC BY 3.0 IGO) and public-domain documents are labelled with their own licence, as the publisher states it.</dd></div></dl>
+              <p id="commercial-reuse">Each source record also states commercial reuse ({COMMERCIAL_REUSE.join(', ')}), worked out from its stated licence: never &ldquo;allowed&rdquo; without one, and flagged where the licence is still to be checked.</p>
             </div>
           ) : null}
           {s.table ? (
