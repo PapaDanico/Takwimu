@@ -87654,7 +87654,7 @@
    "column": "2019: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87663,9 +87663,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2019: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2019-private",
@@ -87686,7 +87684,7 @@
    "column": "2019: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87695,9 +87693,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2019: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2019-total",
@@ -87718,7 +87714,7 @@
    "column": "2019: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87727,9 +87723,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2019: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2020-public",
@@ -87750,7 +87744,7 @@
    "column": "2020: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87759,9 +87753,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2020: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2020-private",
@@ -87782,7 +87774,7 @@
    "column": "2020: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87791,9 +87783,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2020: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2020-total",
@@ -87814,7 +87804,7 @@
    "column": "2020: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87823,9 +87813,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2020: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2021-public",
@@ -87846,7 +87834,7 @@
    "column": "2021: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87855,9 +87843,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2021: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2021-private",
@@ -87878,7 +87864,7 @@
    "column": "2021: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87887,9 +87873,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2021: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2021-total",
@@ -87910,7 +87894,7 @@
    "column": "2021: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87919,9 +87903,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2021: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2022-public",
@@ -87942,7 +87924,7 @@
    "column": "2022: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87951,9 +87933,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2022: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2022-private",
@@ -87974,7 +87954,7 @@
    "column": "2022: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -87983,9 +87963,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2022: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2022-total",
@@ -88006,7 +87984,7 @@
    "column": "2022: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -88015,9 +87993,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2022: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2023-public",
@@ -88038,7 +88014,7 @@
    "column": "2023: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -88047,9 +88023,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2023: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2023-private",
@@ -88070,7 +88044,7 @@
    "column": "2023: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -88079,9 +88053,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2023: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-muhoroni-2023-total",
@@ -88102,7 +88074,7 @@
    "column": "2023: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.10",
    "pdf_page": 64,
    "printed_page": 39,
@@ -88111,9 +88083,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2023: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-10-nyando-2019-public",
@@ -91284,7 +91254,7 @@
    "column": "2019: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91293,9 +91263,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2019: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2019-private",
@@ -91316,7 +91284,7 @@
    "column": "2019: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91325,9 +91293,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2019: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2019-total",
@@ -91348,7 +91314,7 @@
    "column": "2019: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91357,9 +91323,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2019: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2020-public",
@@ -91380,7 +91344,7 @@
    "column": "2020: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91389,9 +91353,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2020: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2020-private",
@@ -91412,7 +91374,7 @@
    "column": "2020: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91421,9 +91383,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2020: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2020-total",
@@ -91444,7 +91404,7 @@
    "column": "2020: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91453,9 +91413,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2020: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2021-public",
@@ -91476,7 +91434,7 @@
    "column": "2021: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91485,9 +91443,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2021: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2021-private",
@@ -91508,7 +91464,7 @@
    "column": "2021: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91517,9 +91473,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2021: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2021-total",
@@ -91540,7 +91494,7 @@
    "column": "2021: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91549,9 +91503,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2021: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2022-public",
@@ -91572,7 +91524,7 @@
    "column": "2022: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91581,9 +91533,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2022: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2022-private",
@@ -91604,7 +91554,7 @@
    "column": "2022: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91613,9 +91563,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2022: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2022-total",
@@ -91636,7 +91584,7 @@
    "column": "2022: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91645,9 +91593,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2022: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2023-public",
@@ -91668,7 +91614,7 @@
    "column": "2023: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91677,9 +91623,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2023: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2023-private",
@@ -91700,7 +91644,7 @@
    "column": "2023: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91709,9 +91653,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2023: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-muhoroni-2023-total",
@@ -91732,7 +91674,7 @@
    "column": "2023: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.15",
    "pdf_page": 74,
    "printed_page": 49,
@@ -91741,9 +91683,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education, Kisumu County. Sum check for column 2023: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-15-nyando-2019-public",
@@ -94914,7 +94854,7 @@
    "column": "2019: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -94923,9 +94863,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2019: Male: sub-county rows add to 1702, the printed Total is 1859; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2019-female",
@@ -94946,7 +94884,7 @@
    "column": "2019: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -94955,9 +94893,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2019: Female: sub-county rows add to 1275, the printed Total is 1486; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2019-total",
@@ -94978,7 +94914,7 @@
    "column": "2019: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -94987,9 +94923,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2019: Total: sub-county rows add to 2977, the printed Total is 3345; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2020-male",
@@ -95010,7 +94944,7 @@
    "column": "2020: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95019,9 +94953,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2020: Male: sub-county rows add to 1736, the printed Total is 1904; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2020-female",
@@ -95042,7 +94974,7 @@
    "column": "2020: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95051,9 +94983,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2020: Female: sub-county rows add to 1348, the printed Total is 1566; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2020-total",
@@ -95074,7 +95004,7 @@
    "column": "2020: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95083,9 +95013,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2020: Total: sub-county rows add to 3084, the printed Total is 3470; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2021-male",
@@ -95106,7 +95034,7 @@
    "column": "2021: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95115,9 +95043,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2021: Male: sub-county rows add to 1806, the printed Total is 1992; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2021-female",
@@ -95138,7 +95064,7 @@
    "column": "2021: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95147,9 +95073,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2021: Female: sub-county rows add to 1398, the printed Total is 1623; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2021-total",
@@ -95170,7 +95094,7 @@
    "column": "2021: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95179,9 +95103,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2021: Total: sub-county rows add to 3204, the printed Total is 3615; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2022-male",
@@ -95202,7 +95124,7 @@
    "column": "2022: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95211,9 +95133,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2022: Male: sub-county rows add to 1868, the printed Total is 2064; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2022-female",
@@ -95234,7 +95154,7 @@
    "column": "2022: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95243,9 +95163,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2022: Female: sub-county rows add to 1437, the printed Total is 1680; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2022-total",
@@ -95266,7 +95184,7 @@
    "column": "2022: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95275,9 +95193,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2022: Total: sub-county rows add to 3305, the printed Total is 3744; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2023-male",
@@ -95298,7 +95214,7 @@
    "column": "2023: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95307,9 +95223,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2023: Male: sub-county rows add to 1922, the printed Total is 2125; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2023-female",
@@ -95330,7 +95244,7 @@
    "column": "2023: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95339,9 +95253,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2023: Female: sub-county rows add to 1491, the printed Total is 1760; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-muhoroni-2023-total",
@@ -95362,7 +95274,7 @@
    "column": "2023: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.19",
    "pdf_page": 80,
    "printed_page": 55,
@@ -95371,9 +95283,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2023: Total: sub-county rows add to 3413, the printed Total is 3885; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-19-nyando-2019-male",
@@ -97794,7 +97704,7 @@
    "column": "2019",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.21",
    "pdf_page": 84,
    "printed_page": 59,
@@ -97803,9 +97713,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2019: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-21-muhoroni-2020",
@@ -97826,7 +97734,7 @@
    "column": "2020",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.21",
    "pdf_page": 84,
    "printed_page": 59,
@@ -97835,9 +97743,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2020: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-21-muhoroni-2021",
@@ -97858,7 +97764,7 @@
    "column": "2021",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.21",
    "pdf_page": 84,
    "printed_page": 59,
@@ -97867,9 +97773,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2021: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-21-muhoroni-2022",
@@ -97890,7 +97794,7 @@
    "column": "2022",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.21",
    "pdf_page": 84,
    "printed_page": 59,
@@ -97899,9 +97803,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2022: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-21-muhoroni-2023",
@@ -97922,7 +97824,7 @@
    "column": "2023",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.21",
    "pdf_page": 84,
    "printed_page": 59,
@@ -97931,9 +97833,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2023: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-21-nyando-2019",
@@ -100204,7 +100104,7 @@
    "column": "2019: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100213,9 +100113,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2019: Male: sub-county rows add to 155, the printed Total is 228; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2019-female",
@@ -100236,7 +100134,7 @@
    "column": "2019: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100245,9 +100143,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2019: Female: sub-county rows add to 451, the printed Total is 479; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2019-total",
@@ -100268,7 +100164,7 @@
    "column": "2019: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100277,9 +100173,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2019: Total: sub-county rows add to 606, the printed Total is 707; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2020-male",
@@ -100300,7 +100194,7 @@
    "column": "2020: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100309,9 +100203,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2020: Male: sub-county rows add to 203, the printed Total is 212; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2020-female",
@@ -100332,7 +100224,7 @@
    "column": "2020: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100341,9 +100233,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2020: Female: sub-county rows add to 289, the printed Total is 303; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2020-total",
@@ -100364,7 +100254,7 @@
    "column": "2020: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100373,9 +100263,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2020: Total: sub-county rows add to 492, the printed Total is 515; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2021-male",
@@ -100396,7 +100284,7 @@
    "column": "2021: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100405,9 +100293,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2021: Male: sub-county rows add to 79, the printed Total is 119; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2021-female",
@@ -100428,7 +100314,7 @@
    "column": "2021: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100437,9 +100323,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2021: Female: sub-county rows add to 29, the printed Total is 46; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2021-total",
@@ -100460,7 +100344,7 @@
    "column": "2021: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100469,9 +100353,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2021: Total: sub-county rows add to 108, the printed Total is 165; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2022-male",
@@ -100492,7 +100374,7 @@
    "column": "2022: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100501,9 +100383,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2022: Male: sub-county rows add to 82, the printed Total is 125; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2022-female",
@@ -100524,7 +100404,7 @@
    "column": "2022: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100533,9 +100413,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2022: Female: sub-county rows add to 36, the printed Total is 67; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2022-total",
@@ -100556,7 +100434,7 @@
    "column": "2022: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100565,9 +100443,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2022: Total: sub-county rows add to 118, the printed Total is 192; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2023-male",
@@ -100588,7 +100464,7 @@
    "column": "2023: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100597,9 +100473,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2023: Male: sub-county rows add to 124, the printed Total is 165; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2023-female",
@@ -100620,7 +100494,7 @@
    "column": "2023: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100629,9 +100503,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2023: Female: sub-county rows add to 34, the printed Total is 61; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-muhoroni-2023-total",
@@ -100652,7 +100524,7 @@
    "column": "2023: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.22",
    "pdf_page": 84,
    "printed_page": 59,
@@ -100661,9 +100533,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment Adult and Continuing Education, Kisumu County. Sum check for column 2023: Total: sub-county rows add to 158, the printed Total is 226; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-22-nyando-2019-male",
@@ -103834,7 +103704,7 @@
    "column": "2019: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -103843,9 +103713,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2019: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2019-private",
@@ -103866,7 +103734,7 @@
    "column": "2019: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -103875,9 +103743,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2019: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2019-total",
@@ -103898,7 +103764,7 @@
    "column": "2019: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -103907,9 +103773,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2019: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2020-public",
@@ -103930,7 +103794,7 @@
    "column": "2020: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -103939,9 +103803,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2020: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2020-private",
@@ -103962,7 +103824,7 @@
    "column": "2020: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -103971,9 +103833,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2020: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2020-total",
@@ -103994,7 +103854,7 @@
    "column": "2020: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104003,9 +103863,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2020: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2021-public",
@@ -104026,7 +103884,7 @@
    "column": "2021: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104035,9 +103893,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2021: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2021-private",
@@ -104058,7 +103914,7 @@
    "column": "2021: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104067,9 +103923,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2021: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2021-total",
@@ -104090,7 +103944,7 @@
    "column": "2021: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104099,9 +103953,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2021: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2022-public",
@@ -104122,7 +103974,7 @@
    "column": "2022: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104131,9 +103983,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2022: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2022-private",
@@ -104154,7 +104004,7 @@
    "column": "2022: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104163,9 +104013,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2022: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2022-total",
@@ -104186,7 +104034,7 @@
    "column": "2022: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104195,9 +104043,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2022: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2023-public",
@@ -104218,7 +104064,7 @@
    "column": "2023: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104227,9 +104073,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2023: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2023-private",
@@ -104250,7 +104094,7 @@
    "column": "2023: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104259,9 +104103,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2023: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-muhoroni-2023-total",
@@ -104282,7 +104124,7 @@
    "column": "2023: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.27",
    "pdf_page": 87,
    "printed_page": 62,
@@ -104291,9 +104133,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2023: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-27-nyando-2019-public",
@@ -107914,7 +107754,7 @@
    "column": "2019: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -107923,9 +107763,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2019: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2019-private",
@@ -107946,7 +107784,7 @@
    "column": "2019: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -107955,9 +107793,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2019: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2019-total",
@@ -107978,7 +107814,7 @@
    "column": "2019: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -107987,9 +107823,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2019: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2020-public",
@@ -108010,7 +107844,7 @@
    "column": "2020: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108019,9 +107853,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2020: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2020-private",
@@ -108042,7 +107874,7 @@
    "column": "2020: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108051,9 +107883,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2020: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2020-total",
@@ -108074,7 +107904,7 @@
    "column": "2020: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108083,9 +107913,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2020: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2021-public",
@@ -108106,7 +107934,7 @@
    "column": "2021: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108115,9 +107943,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2021: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2021-private",
@@ -108138,7 +107964,7 @@
    "column": "2021: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108147,9 +107973,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2021: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2021-total",
@@ -108170,7 +107994,7 @@
    "column": "2021: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108179,9 +108003,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2021: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2022-public",
@@ -108202,7 +108024,7 @@
    "column": "2022: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108211,9 +108033,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2022: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2022-private",
@@ -108234,7 +108054,7 @@
    "column": "2022: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108243,9 +108063,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2022: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2022-total",
@@ -108266,7 +108084,7 @@
    "column": "2022: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108275,9 +108093,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2022: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2023-public",
@@ -108298,7 +108114,7 @@
    "column": "2023: Public",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108307,9 +108123,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2023: Public: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2023-private",
@@ -108330,7 +108144,7 @@
    "column": "2023: Private",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108339,9 +108153,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2023: Private: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-muhoroni-2023-total",
@@ -108362,7 +108174,7 @@
    "column": "2023: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.28",
    "pdf_page": 87,
    "printed_page": 62,
@@ -108371,9 +108183,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: StateDepartment for Basic Education and Education Assessment and ResourceCentre, Kisumu County. Sum check for column 2023: Total: sub-county rows add to the printed Total. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-28-nyando-2019-public",
@@ -111994,7 +111804,7 @@
    "column": "2019: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112003,9 +111813,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2019: Male: sub-county rows add to 191, the printed Total is 224; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2019-female",
@@ -112026,7 +111834,7 @@
    "column": "2019: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112035,9 +111843,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2019: Female: sub-county rows add to 263, the printed Total is 313; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2019-total",
@@ -112058,7 +111864,7 @@
    "column": "2019: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112067,9 +111873,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2019: Total: sub-county rows add to 454, the printed Total is 537; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2020-male",
@@ -112090,7 +111894,7 @@
    "column": "2020: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112099,9 +111903,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2020: Male: sub-county rows add to 190, the printed Total is 225; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2020-female",
@@ -112122,7 +111924,7 @@
    "column": "2020: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112131,9 +111933,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2020: Female: sub-county rows add to 257, the printed Total is 307; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2020-total",
@@ -112154,7 +111954,7 @@
    "column": "2020: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112163,9 +111963,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2020: Total: sub-county rows add to 447, the printed Total is 532; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2021-male",
@@ -112186,7 +111984,7 @@
    "column": "2021: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112195,9 +111993,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2021: Male: sub-county rows add to 195, the printed Total is 232; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2021-female",
@@ -112218,7 +112014,7 @@
    "column": "2021: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112227,9 +112023,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2021: Female: sub-county rows add to 272, the printed Total is 322; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2021-total",
@@ -112250,7 +112044,7 @@
    "column": "2021: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112259,9 +112053,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2021: Total: sub-county rows add to 467, the printed Total is 554; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2022-male",
@@ -112282,7 +112074,7 @@
    "column": "2022: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112291,9 +112083,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2022: Male: sub-county rows add to 210, the printed Total is 240; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2022-female",
@@ -112314,7 +112104,7 @@
    "column": "2022: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112323,9 +112113,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2022: Female: sub-county rows add to 280, the printed Total is 337; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2022-total",
@@ -112346,7 +112134,7 @@
    "column": "2022: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112355,9 +112143,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2022: Total: sub-county rows add to 490, the printed Total is 577; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2023-male",
@@ -112378,7 +112164,7 @@
    "column": "2023: Male",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112387,9 +112173,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2023: Male: sub-county rows add to 240, the printed Total is 285; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2023-female",
@@ -112410,7 +112194,7 @@
    "column": "2023: Female",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112419,9 +112203,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2023: Female: sub-county rows add to 331, the printed Total is 391; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-muhoroni-2023-total",
@@ -112442,7 +112224,7 @@
    "column": "2023: Total",
    "sector": "education",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.3.30",
    "pdf_page": 88,
    "printed_page": 63,
@@ -112451,9 +112233,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Teachers ServiceCommission, Kisumu County. Sum check for column 2023: Total: sub-county rows add to 571, the printed Total is 676; both kept as printed. Domain: education.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-3-30-nyando-2019-male",
@@ -128274,7 +128054,7 @@
    "column": "2020",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.8",
    "pdf_page": 118,
    "printed_page": 93,
@@ -128283,9 +128063,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-8-muhoroni-2021",
@@ -128306,7 +128084,7 @@
    "column": "2021",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.8",
    "pdf_page": 118,
    "printed_page": 93,
@@ -128315,9 +128093,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-8-muhoroni-2022",
@@ -128338,7 +128114,7 @@
    "column": "2022",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.8",
    "pdf_page": 118,
    "printed_page": 93,
@@ -128347,9 +128123,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-8-muhoroni-2023",
@@ -128370,7 +128144,7 @@
    "column": "2023",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.8",
    "pdf_page": 118,
    "printed_page": 93,
@@ -128379,9 +128153,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-8-nyando-2020",
@@ -130682,7 +130454,7 @@
    "column": "2020: Male",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -130691,9 +130463,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2020: Male: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2020-female",
@@ -130714,7 +130484,7 @@
    "column": "2020: Female",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -130723,9 +130493,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2020: Female: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2021-male",
@@ -130746,7 +130514,7 @@
    "column": "2021: Male",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -130755,9 +130523,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2021: Male: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2021-female",
@@ -130778,7 +130544,7 @@
    "column": "2021: Female",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -130787,9 +130553,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2021: Female: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2022-male",
@@ -130810,7 +130574,7 @@
    "column": "2022: Male",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -130819,9 +130583,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2022: Male: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2022-female",
@@ -130842,7 +130604,7 @@
    "column": "2022: Female",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -130851,9 +130613,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2022: Female: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2023-male",
@@ -130874,7 +130634,7 @@
    "column": "2023: Male",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -130883,9 +130643,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2023: Male: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2023-female",
@@ -130906,7 +130664,7 @@
    "column": "2023: Female",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -130915,9 +130673,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2023: Female: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-nyando-2020-male",
@@ -132378,7 +132134,7 @@
    "column": "2020: Male",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -132387,9 +132143,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2020: Male: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2-2020-female",
@@ -132410,7 +132164,7 @@
    "column": "2020: Female",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -132419,9 +132173,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2020: Female: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2-2021-male",
@@ -132442,7 +132194,7 @@
    "column": "2021: Male",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -132451,9 +132203,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2021: Male: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2-2021-female",
@@ -132474,7 +132224,7 @@
    "column": "2021: Female",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -132483,9 +132233,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2021: Female: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2-2022-male",
@@ -132506,7 +132254,7 @@
    "column": "2022: Male",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -132515,9 +132263,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2022: Male: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2-2022-female",
@@ -132538,7 +132284,7 @@
    "column": "2022: Female",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -132547,9 +132293,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2022: Female: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2-2023-male",
@@ -132570,7 +132314,7 @@
    "column": "2023: Male",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -132579,9 +132323,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2023: Male: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-muhoroni-2-2023-female",
@@ -132602,7 +132344,7 @@
    "column": "2023: Female",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.11",
    "pdf_page": 121,
    "printed_page": 96,
@@ -132611,9 +132353,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services,Public Health and Sanitation, County Government of Kisumu. Sum check for column 2023: Female: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-11-nyando-2-2020-male",
@@ -134554,7 +134294,7 @@
    "column": "2019",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -134563,9 +134303,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-muhoroni-2020",
@@ -134586,7 +134324,7 @@
    "column": "2020",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -134595,9 +134333,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-muhoroni-2021",
@@ -134618,7 +134354,7 @@
    "column": "2021",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -134627,9 +134363,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-muhoroni-2022",
@@ -134650,7 +134384,7 @@
    "column": "2022",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -134659,9 +134393,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-muhoroni-2023",
@@ -134682,7 +134414,7 @@
    "column": "2023",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -134691,9 +134423,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-nyando-2019",
@@ -135614,7 +135344,7 @@
    "column": "2019",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -135623,9 +135353,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-muhoroni-2-2020",
@@ -135646,7 +135374,7 @@
    "column": "2020",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -135655,9 +135383,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-muhoroni-2-2021",
@@ -135678,7 +135404,7 @@
    "column": "2021",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -135687,9 +135413,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-muhoroni-2-2022",
@@ -135710,7 +135434,7 @@
    "column": "2022",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -135719,9 +135443,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-muhoroni-2-2023",
@@ -135742,7 +135464,7 @@
    "column": "2023",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.14",
    "pdf_page": 123,
    "printed_page": 98,
@@ -135751,9 +135473,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services and Public Health and Sanitation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-14-nyando-2-2019",
@@ -136764,7 +136484,7 @@
    "column": "2020",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.15",
    "pdf_page": 124,
    "printed_page": 99,
@@ -136773,9 +136493,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-15-muhoroni-2021",
@@ -136796,7 +136514,7 @@
    "column": "2021",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.15",
    "pdf_page": 124,
    "printed_page": 99,
@@ -136805,9 +136523,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to 107, the printed Total is 106; both kept as printed. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-15-muhoroni-2022",
@@ -136828,7 +136544,7 @@
    "column": "2022",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.15",
    "pdf_page": 124,
    "printed_page": 99,
@@ -136837,9 +136553,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to 66, the printed Total is 63; both kept as printed. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-15-muhoroni-2023",
@@ -136860,7 +136574,7 @@
    "column": "2023",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.15",
    "pdf_page": 124,
    "printed_page": 99,
@@ -136869,9 +136583,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to 42, the printed Total is 36; both kept as printed. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-15-nyando-2019",
@@ -137912,7 +137624,7 @@
    "column": "2019",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.21",
    "pdf_page": 127,
    "printed_page": 102,
@@ -137921,9 +137633,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-21-muhoroni-2020",
@@ -137944,7 +137654,7 @@
    "column": "2020",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.21",
    "pdf_page": 127,
    "printed_page": 102,
@@ -137953,9 +137663,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-21-muhoroni-2021",
@@ -137976,7 +137684,7 @@
    "column": "2021",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.21",
    "pdf_page": 127,
    "printed_page": 102,
@@ -137985,9 +137693,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-21-muhoroni-2022",
@@ -138008,7 +137714,7 @@
    "column": "2022",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.21",
    "pdf_page": 127,
    "printed_page": 102,
@@ -138017,9 +137723,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-21-muhoroni-2023",
@@ -138040,7 +137744,7 @@
    "column": "2023",
    "sector": "health",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.4.21",
    "pdf_page": 127,
    "printed_page": 102,
@@ -138049,9 +137753,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Medical Services, Public Health and Sanitation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to 383.31, the printed Total is 10.08; both kept as printed. Domain: health.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-4-21-nyando-2019",
@@ -142062,7 +141764,7 @@
    "column": "2019",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.12",
    "pdf_page": 135,
    "printed_page": 110,
@@ -142071,9 +141773,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-12-muhoroni-2020",
@@ -142094,7 +141794,7 @@
    "column": "2020",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.12",
    "pdf_page": 135,
    "printed_page": 110,
@@ -142103,9 +141803,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-12-muhoroni-2021",
@@ -142126,7 +141824,7 @@
    "column": "2021",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.12",
    "pdf_page": 135,
    "printed_page": 110,
@@ -142135,9 +141833,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-12-muhoroni-2022",
@@ -142158,7 +141854,7 @@
    "column": "2022",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.12",
    "pdf_page": 135,
    "printed_page": 110,
@@ -142167,9 +141863,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-12-muhoroni-2023",
@@ -142190,7 +141884,7 @@
    "column": "2023",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.12",
    "pdf_page": 135,
    "printed_page": 110,
@@ -142199,9 +141893,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-12-nyando-2019",
@@ -143422,7 +143114,7 @@
    "column": "2019",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.13",
    "pdf_page": 135,
    "printed_page": 110,
@@ -143431,9 +143123,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, Department of Sports, Culture, Gender and Youth Affairs, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-13-muhoroni-2020",
@@ -143454,7 +143144,7 @@
    "column": "2020",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.13",
    "pdf_page": 135,
    "printed_page": 110,
@@ -143463,9 +143153,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, Department of Sports, Culture, Gender and Youth Affairs, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-13-muhoroni-2021",
@@ -143486,7 +143174,7 @@
    "column": "2021",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.13",
    "pdf_page": 135,
    "printed_page": 110,
@@ -143495,9 +143183,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, Department of Sports, Culture, Gender and Youth Affairs, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-13-muhoroni-2022",
@@ -143518,7 +143204,7 @@
    "column": "2022",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.13",
    "pdf_page": 135,
    "printed_page": 110,
@@ -143527,9 +143213,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, Department of Sports, Culture, Gender and Youth Affairs, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-13-muhoroni-2023",
@@ -143550,7 +143234,7 @@
    "column": "2023",
    "sector": "social",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-1.5.13",
    "pdf_page": 135,
    "printed_page": 110,
@@ -143559,9 +143243,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Education, Technical Training, Innovation and Social Services, Department of Sports, Culture, Gender and Youth Affairs, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: gender and social protection.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t1-5-13-nyando-2019",
@@ -150032,7 +149714,7 @@
    "column": "2021: Completed",
    "sector": "economy",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.2.2",
    "pdf_page": 153,
    "printed_page": 128,
@@ -150041,9 +149723,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Trade, Tourism, Industry and Marketing, County Government of Kisumu. Sum check for column 2021: Completed: sub-county rows add to the printed Total. Domain: trade.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-2-2-muhoroni-2022-completed",
@@ -150064,7 +149744,7 @@
    "column": "2022: Completed",
    "sector": "economy",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.2.2",
    "pdf_page": 153,
    "printed_page": 128,
@@ -150073,9 +149753,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Trade, Tourism, Industry and Marketing, County Government of Kisumu. Sum check for column 2022: Completed: sub-county rows add to the printed Total. Domain: trade.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-2-2-nyando-2020-completed",
@@ -151086,7 +150764,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.3",
    "pdf_page": 156,
    "printed_page": 131,
@@ -151095,9 +150773,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-3-muhoroni-2020",
@@ -151118,7 +150794,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.3",
    "pdf_page": 156,
    "printed_page": 131,
@@ -151127,9 +150803,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-3-muhoroni-2021",
@@ -151150,7 +150824,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.3",
    "pdf_page": 156,
    "printed_page": 131,
@@ -151159,9 +150833,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-3-muhoroni-2022",
@@ -151182,7 +150854,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.3",
    "pdf_page": 156,
    "printed_page": 131,
@@ -151191,9 +150863,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-3-muhoroni-2023",
@@ -151214,7 +150884,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.3",
    "pdf_page": 156,
    "printed_page": 131,
@@ -151223,9 +150893,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-3-nyando-2019",
@@ -159796,7 +159464,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.12",
    "pdf_page": 163,
    "printed_page": 138,
@@ -159805,9 +159473,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-12-muhoroni-2020",
@@ -159828,7 +159494,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.12",
    "pdf_page": 163,
    "printed_page": 138,
@@ -159837,9 +159503,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-12-muhoroni-2021",
@@ -159860,7 +159524,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.12",
    "pdf_page": 163,
    "printed_page": 138,
@@ -159869,9 +159533,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-12-muhoroni-2022",
@@ -159892,7 +159554,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.12",
    "pdf_page": 163,
    "printed_page": 138,
@@ -159901,9 +159563,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-12-muhoroni-2023",
@@ -159924,7 +159584,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.12",
    "pdf_page": 163,
    "printed_page": 138,
@@ -159933,9 +159593,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-12-nyando-2019",
@@ -161006,7 +160664,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.13",
    "pdf_page": 163,
    "printed_page": 138,
@@ -161015,9 +160673,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-13-muhoroni-2020",
@@ -161038,7 +160694,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.13",
    "pdf_page": 163,
    "printed_page": 138,
@@ -161047,9 +160703,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-13-muhoroni-2021",
@@ -161070,7 +160724,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.13",
    "pdf_page": 163,
    "printed_page": 138,
@@ -161079,9 +160733,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-13-muhoroni-2022",
@@ -161102,7 +160754,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.13",
    "pdf_page": 163,
    "printed_page": 138,
@@ -161111,9 +160763,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-13-muhoroni-2023",
@@ -161134,7 +160784,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.13",
    "pdf_page": 163,
    "printed_page": 138,
@@ -161143,9 +160793,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-13-nyando-2019",
@@ -162966,7 +162614,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.17",
    "pdf_page": 166,
    "printed_page": 141,
@@ -162975,9 +162623,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture,Fisheries,Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-17-muhoroni-2020",
@@ -162998,7 +162644,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.17",
    "pdf_page": 166,
    "printed_page": 141,
@@ -163007,9 +162653,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture,Fisheries,Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-17-muhoroni-2021",
@@ -163030,7 +162674,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.17",
    "pdf_page": 166,
    "printed_page": 141,
@@ -163039,9 +162683,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture,Fisheries,Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-17-muhoroni-2022",
@@ -163062,7 +162704,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.17",
    "pdf_page": 166,
    "printed_page": 141,
@@ -163071,9 +162713,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture,Fisheries,Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-17-muhoroni-2023",
@@ -163094,7 +162734,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.17",
    "pdf_page": 166,
    "printed_page": 141,
@@ -163103,9 +162743,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture,Fisheries,Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-17-nyando-2019",
@@ -164176,7 +163814,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.18",
    "pdf_page": 166,
    "printed_page": 141,
@@ -164185,9 +163823,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-18-muhoroni-2020",
@@ -164208,7 +163844,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.18",
    "pdf_page": 166,
    "printed_page": 141,
@@ -164217,9 +163853,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-18-muhoroni-2021",
@@ -164240,7 +163874,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.18",
    "pdf_page": 166,
    "printed_page": 141,
@@ -164249,9 +163883,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-18-muhoroni-2022",
@@ -164272,7 +163904,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.18",
    "pdf_page": 166,
    "printed_page": 141,
@@ -164281,9 +163913,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-18-muhoroni-2023",
@@ -164304,7 +163934,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.18",
    "pdf_page": 166,
    "printed_page": 141,
@@ -164313,9 +163943,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-18-nyando-2019",
@@ -165536,7 +165164,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.20",
    "pdf_page": 167,
    "printed_page": 142,
@@ -165545,9 +165173,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-20-muhoroni-2020",
@@ -165568,7 +165194,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.20",
    "pdf_page": 167,
    "printed_page": 142,
@@ -165577,9 +165203,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-20-muhoroni-2021",
@@ -165600,7 +165224,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.20",
    "pdf_page": 167,
    "printed_page": 142,
@@ -165609,9 +165233,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-20-muhoroni-2022",
@@ -165632,7 +165254,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.20",
    "pdf_page": 167,
    "printed_page": 142,
@@ -165641,9 +165263,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-20-muhoroni-2023",
@@ -165664,7 +165284,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.20",
    "pdf_page": 167,
    "printed_page": 142,
@@ -165673,9 +165293,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-20-nyando-2019",
@@ -166896,7 +166514,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.21",
    "pdf_page": 167,
    "printed_page": 142,
@@ -166905,9 +166523,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-21-muhoroni-2020",
@@ -166928,7 +166544,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.21",
    "pdf_page": 167,
    "printed_page": 142,
@@ -166937,9 +166553,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-21-muhoroni-2021",
@@ -166960,7 +166574,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.21",
    "pdf_page": 167,
    "printed_page": 142,
@@ -166969,9 +166583,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-21-muhoroni-2022",
@@ -166992,7 +166604,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.21",
    "pdf_page": 167,
    "printed_page": 142,
@@ -167001,9 +166613,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-21-muhoroni-2023",
@@ -167024,7 +166634,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.21",
    "pdf_page": 167,
    "printed_page": 142,
@@ -167033,9 +166643,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-21-nyando-2019",
@@ -168256,7 +167864,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.22",
    "pdf_page": 167,
    "printed_page": 142,
@@ -168265,9 +167873,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-22-muhoroni-2020",
@@ -168288,7 +167894,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.22",
    "pdf_page": 167,
    "printed_page": 142,
@@ -168297,9 +167903,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-22-muhoroni-2021",
@@ -168320,7 +167924,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.22",
    "pdf_page": 167,
    "printed_page": 142,
@@ -168329,9 +167933,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-22-muhoroni-2022",
@@ -168352,7 +167954,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.22",
    "pdf_page": 167,
    "printed_page": 142,
@@ -168361,9 +167963,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-22-muhoroni-2023",
@@ -168384,7 +167984,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.22",
    "pdf_page": 167,
    "printed_page": 142,
@@ -168393,9 +167993,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-22-nyando-2019",
@@ -169616,7 +169214,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.24",
    "pdf_page": 168,
    "printed_page": 143,
@@ -169625,9 +169223,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-24-muhoroni-2020",
@@ -169648,7 +169244,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.24",
    "pdf_page": 168,
    "printed_page": 143,
@@ -169657,9 +169253,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-24-muhoroni-2021",
@@ -169680,7 +169274,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.24",
    "pdf_page": 168,
    "printed_page": 143,
@@ -169689,9 +169283,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-24-muhoroni-2022",
@@ -169712,7 +169304,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.24",
    "pdf_page": 168,
    "printed_page": 143,
@@ -169721,9 +169313,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-24-muhoroni-2023",
@@ -169744,7 +169334,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.24",
    "pdf_page": 168,
    "printed_page": 143,
@@ -169753,9 +169343,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-24-nyando-2019",
@@ -170976,7 +170564,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.25",
    "pdf_page": 169,
    "printed_page": 144,
@@ -170985,9 +170573,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kenya. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-25-muhoroni-2020",
@@ -171008,7 +170594,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.25",
    "pdf_page": 169,
    "printed_page": 144,
@@ -171017,9 +170603,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kenya. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-25-muhoroni-2021",
@@ -171040,7 +170624,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.25",
    "pdf_page": 169,
    "printed_page": 144,
@@ -171049,9 +170633,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kenya. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-25-muhoroni-2022",
@@ -171072,7 +170654,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.25",
    "pdf_page": 169,
    "printed_page": 144,
@@ -171081,9 +170663,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kenya. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-25-muhoroni-2023",
@@ -171104,7 +170684,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.25",
    "pdf_page": 169,
    "printed_page": 144,
@@ -171113,9 +170693,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kenya. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-25-nyando-2019",
@@ -172336,7 +171914,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.26",
    "pdf_page": 169,
    "printed_page": 144,
@@ -172345,9 +171923,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-26-muhoroni-2020",
@@ -172368,7 +171944,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.26",
    "pdf_page": 169,
    "printed_page": 144,
@@ -172377,9 +171953,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-26-muhoroni-2021",
@@ -172400,7 +171974,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.26",
    "pdf_page": 169,
    "printed_page": 144,
@@ -172409,9 +171983,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-26-muhoroni-2022",
@@ -172432,7 +172004,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.26",
    "pdf_page": 169,
    "printed_page": 144,
@@ -172441,9 +172013,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-26-muhoroni-2023",
@@ -172464,7 +172034,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.26",
    "pdf_page": 169,
    "printed_page": 144,
@@ -172473,9 +172043,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-26-nyando-2019",
@@ -173696,7 +173264,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.27",
    "pdf_page": 169,
    "printed_page": 144,
@@ -173705,9 +173273,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-27-muhoroni-2020",
@@ -173728,7 +173294,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.27",
    "pdf_page": 169,
    "printed_page": 144,
@@ -173737,9 +173303,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-27-muhoroni-2021",
@@ -173760,7 +173324,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.27",
    "pdf_page": 169,
    "printed_page": 144,
@@ -173769,9 +173333,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-27-muhoroni-2022",
@@ -173792,7 +173354,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.27",
    "pdf_page": 169,
    "printed_page": 144,
@@ -173801,9 +173363,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-27-muhoroni-2023",
@@ -173824,7 +173384,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.27",
    "pdf_page": 169,
    "printed_page": 144,
@@ -173833,9 +173393,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-27-nyando-2019",
@@ -175056,7 +174614,7 @@
    "column": "2019",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.28",
    "pdf_page": 170,
    "printed_page": 145,
@@ -175065,9 +174623,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-28-muhoroni-2020",
@@ -175088,7 +174644,7 @@
    "column": "2020",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.28",
    "pdf_page": 170,
    "printed_page": 145,
@@ -175097,9 +174653,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-28-muhoroni-2021",
@@ -175120,7 +174674,7 @@
    "column": "2021",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.28",
    "pdf_page": 170,
    "printed_page": 145,
@@ -175129,9 +174683,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-28-muhoroni-2022",
@@ -175152,7 +174704,7 @@
    "column": "2022",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.28",
    "pdf_page": 170,
    "printed_page": 145,
@@ -175161,9 +174713,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-28-muhoroni-2023",
@@ -175184,7 +174734,7 @@
    "column": "2023",
    "sector": "agriculture/fisheries",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-2.3.28",
    "pdf_page": 170,
    "printed_page": 145,
@@ -175193,9 +174743,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Agriculture, Fisheries, Livestock Development and Irrigation, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: agriculture, fisheries and forestry.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t2-3-28-nyando-2019",
@@ -176566,7 +176114,7 @@
    "column": "2019",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.4",
    "pdf_page": 196,
    "printed_page": 171,
@@ -176575,9 +176123,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: KIWASCO, Depatrtment of Water, Environment, Natural Resources and Climate Change, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-4-muhoroni-2020",
@@ -176598,7 +176144,7 @@
    "column": "2020",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.4",
    "pdf_page": 196,
    "printed_page": 171,
@@ -176607,9 +176153,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: KIWASCO, Depatrtment of Water, Environment, Natural Resources and Climate Change, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-4-muhoroni-2021",
@@ -176630,7 +176174,7 @@
    "column": "2021",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.4",
    "pdf_page": 196,
    "printed_page": 171,
@@ -176639,9 +176183,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: KIWASCO, Depatrtment of Water, Environment, Natural Resources and Climate Change, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-4-muhoroni-2022",
@@ -176662,7 +176204,7 @@
    "column": "2022",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.4",
    "pdf_page": 196,
    "printed_page": 171,
@@ -176671,9 +176213,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: KIWASCO, Depatrtment of Water, Environment, Natural Resources and Climate Change, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-4-muhoroni-2023",
@@ -176694,7 +176234,7 @@
    "column": "2023",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.4",
    "pdf_page": 196,
    "printed_page": 171,
@@ -176703,9 +176243,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: KIWASCO, Depatrtment of Water, Environment, Natural Resources and Climate Change, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-4-nyando-2019",
@@ -178376,7 +177914,7 @@
    "column": "2019",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.10",
    "pdf_page": 203,
    "printed_page": 178,
@@ -178385,9 +177923,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: NEMA, Department of Water, Environment, Natural Resources & Climate Change, Department of Medical Services, Public Health and Sanitation, County Government. Sum check for column 2019: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-10-muhoroni-2020",
@@ -178408,7 +177944,7 @@
    "column": "2020",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.10",
    "pdf_page": 203,
    "printed_page": 178,
@@ -178417,9 +177953,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: NEMA, Department of Water, Environment, Natural Resources & Climate Change, Department of Medical Services, Public Health and Sanitation, County Government. Sum check for column 2020: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-10-muhoroni-2021",
@@ -178440,7 +177974,7 @@
    "column": "2021",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.10",
    "pdf_page": 203,
    "printed_page": 178,
@@ -178449,9 +177983,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: NEMA, Department of Water, Environment, Natural Resources & Climate Change, Department of Medical Services, Public Health and Sanitation, County Government. Sum check for column 2021: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-10-muhoroni-2022",
@@ -178472,7 +178004,7 @@
    "column": "2022",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.10",
    "pdf_page": 203,
    "printed_page": 178,
@@ -178481,9 +178013,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: NEMA, Department of Water, Environment, Natural Resources & Climate Change, Department of Medical Services, Public Health and Sanitation, County Government. Sum check for column 2022: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-10-muhoroni-2023",
@@ -178504,7 +178034,7 @@
    "column": "2023",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.10",
    "pdf_page": 203,
    "printed_page": 178,
@@ -178513,9 +178043,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: NEMA, Department of Water, Environment, Natural Resources & Climate Change, Department of Medical Services, Public Health and Sanitation, County Government. Sum check for column 2023: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-10-nyando-2019",
@@ -180546,7 +180074,7 @@
    "column": "2019",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.13",
    "pdf_page": 204,
    "printed_page": 179,
@@ -180555,9 +180083,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Water, Environment, Natural Resources & Climate Change, City of Kisumu, County Government of Kisumu. Sum check for column 2019: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-13-muhoroni-2020",
@@ -180578,7 +180104,7 @@
    "column": "2020",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.13",
    "pdf_page": 204,
    "printed_page": 179,
@@ -180587,9 +180113,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Water, Environment, Natural Resources & Climate Change, City of Kisumu, County Government of Kisumu. Sum check for column 2020: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-13-muhoroni-2021",
@@ -180610,7 +180134,7 @@
    "column": "2021",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.13",
    "pdf_page": 204,
    "printed_page": 179,
@@ -180619,9 +180143,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Water, Environment, Natural Resources & Climate Change, City of Kisumu, County Government of Kisumu. Sum check for column 2021: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-13-muhoroni-2022",
@@ -180642,7 +180164,7 @@
    "column": "2022",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.13",
    "pdf_page": 204,
    "printed_page": 179,
@@ -180651,9 +180173,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Water, Environment, Natural Resources & Climate Change, City of Kisumu, County Government of Kisumu. Sum check for column 2022: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-13-muhoroni-2023",
@@ -180674,7 +180194,7 @@
    "column": "2023",
    "sector": "water/environment",
    "sub_county": "muhoroni",
-   "ward": "Muhoroni",
+   "ward": null,
    "table_id": "csa24-3.1.13",
    "pdf_page": 204,
    "printed_page": 179,
@@ -180683,9 +180203,7 @@
    "standard_error": null,
    "note": "Machine-parsed from the PDF text layer (table layout checked: every data line parsed, one cell per column); not image-checked. Table source line: Department of Water, Environment, Natural Resources & Climate Change, City of Kisumu, County Government of Kisumu. Sum check for column 2023: sub-county rows add to the printed Total. Domain: water, environment and climate.",
    "bound": null,
-   "comparator": null,
-   "ward_slug": "muhoroni-koru",
-   "ward_code_iebc": 1215
+   "comparator": null
   },
   {
    "id": "csa24-t3-1-13-nyando-2020",
