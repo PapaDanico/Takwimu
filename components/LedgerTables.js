@@ -12,16 +12,30 @@ const num = (v) => fmtNum(v, { dp: 2 });
 const amount = (o) => (o.unit === 'KSh billion' ? `KSh ${num(o.value)} billion` : `KSh ${num(o.value)} million`);
 const pages = (o) => `PDF p. ${o.pdf_page}${o.printed_page ? ` (printed p. ${o.printed_page})` : ''}`;
 
+// Labels each value carries on a county page from the registry (lib/county-pages.js): the public review label,
+// a disputed value's link to the side-by-side case, and a visible "needs page check". Siaya's values do not carry
+// state_label, so its tables are unchanged.
+export function CountyFlags({ o }) {
+  return (
+    <small className="county-flags">
+      {' '}<span className="tag warn" data-review-label>{o.state_label}</span>
+      {o.disputed ? <> <a className="tag warn" href={o.conflictHref} data-disputed>Disputed: both values shown</a></> : null}
+      {o.needs_page_check ? <> <span className="tag warn" data-needs-page-check>Needs page check</span></> : null}
+    </small>
+  );
+}
+
 // One value. A value withheld after editorial review takes its correction footnote with it.
 function Value({ o }) {
   return (
     <div className="lv">
       <Reviewed b={o.review}>{() => <><b>{amount(o)}</b><CorrectionMark notes={o.cor} /></>}</Reviewed>{o.machine ? <> <MachineTag m={o.machine} /></> : null}
-      <small className="cite"> <a href={o.url} rel="noopener">{o.source}</a>, {pages(o)}{o.table ? `, ${o.table}` : ''}. {o.read}, confidence {o.confidence}.</small>
+      {o.state_label ? <CountyFlags o={o} /> : null}
+      <small className="cite"> <a href={o.url} rel="noopener">{o.source}</a>, {pages(o)}{o.table ? `, ${o.table}` : ''}. {o.read}, confidence {o.confidence}.{o.state_label ? ` Published ${o.published}; period ${o.period}; unit ${o.unit}.` : ''}</small>
       {o.version ? <small> Budget version: {o.version}.</small> : null}
       {o.basis ? <small> Basis: {o.basis}.</small> : null}
       {o.as_at ? <small> Stock at {o.as_at}; scope {o.scope || 'not stated'}; accounting basis {o.accounting_basis}.</small> : null}
-      <SourceErrorFlag e={o.source_error} id={o.id} refId={`siaya-fiscal-ledger:${o.id}`} />
+      <SourceErrorFlag e={o.source_error} id={o.id} refId={`${o.refDataset || 'siaya-fiscal-ledger'}:${o.id}`} />
       <CorrectionNote notes={o.cor} b={o.review} />
     </div>
   );

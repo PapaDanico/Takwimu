@@ -228,7 +228,7 @@ async function main() {
   const counts = results.reduce((c, r) => { c[r.result] = (c[r.result] || 0) + 1; return c; }, {});
   const out = {
     meta: {
-      title: COUNTY ? `Machine cross-checks of ${COUNTY[0].toUpperCase()}${COUNTY.slice(1)} values (independent second reading; county not yet on pages)` : 'Machine cross-checks of Siaya values (independent second reading)',
+      title: COUNTY ? `Machine cross-checks of ${COUNTY[0].toUpperCase()}${COUNTY.slice(1)} values (independent second reading)` : 'Machine cross-checks of Siaya values (independent second reading)',
       rule: 'A machine reading by a different method from the original extraction. It is not editorial review: it never approves a value, it is shown on pages only as "machine cross-checked", and no record in data/reviews.json may cite it. Values where the check disagrees go to the top of docs/editorial/REVIEW_QUEUE.md.',
       methods: {
         'tesseract-600dpi-psm6': 'Page rendered at 600 dpi greyscale (pdftoppm) and read by tesseract 5, page segmentation mode 6, for values first read from the PDF text layer.',

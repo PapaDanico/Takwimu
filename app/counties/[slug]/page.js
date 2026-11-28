@@ -2,13 +2,18 @@ import Link from 'next/link';
 import PageHead from '../../../components/PageHead';
 import { COUNTIES, bySlug } from '../../../lib/counties';
 import KenyaMap from '../../../components/KenyaMap';
+import CountyHub from '../../../components/county/CountyHub';
+import { ON_PAGES } from '../../../lib/county-pages';
 
+// Every county except Siaya (its own routes under app/counties/siaya/). A county published from the registry
+// (lib/county-states.js, lib/county-registry.js) gets its hub; every other county the "in preparation" page.
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return COUNTIES.filter((c) => !c.published).map((c) => ({ slug: c.slug }));
+  return COUNTIES.filter((c) => c.slug !== 'siaya' && (!c.published || ON_PAGES.includes(c.slug))).map((c) => ({ slug: c.slug }));
 }
 export function generateMetadata({ params }) {
   const c = bySlug(params.slug);
+  if (ON_PAGES.includes(params.slug)) return { title: `${c.name} County`, description: `${c.name} County public finance: budget, spending, own-source revenue, pending bills, audit opinions and population, every figure with its official source and page, conflicting sources side by side.` };
   return { title: `${c ? c.name : 'County'} County`, description: `Status of ${c ? c.name : 'this county'} on Takwimu Kenya: what is published and what is still needed.` };
 }
 
@@ -22,6 +27,7 @@ const NEEDED = [
 ];
 
 export default function CountyPending({ params }) {
+  if (ON_PAGES.includes(params.slug)) return <CountyHub slug={params.slug} />;
   const c = bySlug(params.slug);
   return (
     <main id="main" className="wrap page">
