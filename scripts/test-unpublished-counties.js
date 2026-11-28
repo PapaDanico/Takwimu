@@ -110,20 +110,22 @@ const rejectedKeys = (slug) => new Set(cr.entries(slug).filter((e) => e.state_co
   const clean = path.join(tmp, 'clean'); const dirty = path.join(tmp, 'dirty');
   [clean, dirty, path.join(dirty, 'x')].forEach((d) => fs.mkdirSync(d, { recursive: true }));
   fs.writeFileSync(path.join(clean, 'index.html'), '<p>K001 KSh 7.94 billion, nothing held here</p>');
-  fs.writeFileSync(path.join(clean, 'r.pdf'), leaks.makePdf('Public text only, FY 2014/15'));
+  const PDF = leaks.hasPdftotext();
+  if (PDF) fs.writeFileSync(path.join(clean, 'r.pdf'), leaks.makePdf('Public text only, FY 2014/15'));
   fs.writeFileSync(path.join(dirty, 'index.html'), `<p>${printed.replace(/&/g, '&amp;')}</p>`);
   fs.writeFileSync(path.join(dirty, 'x', 'index.txt'), `1:["$","div",null,{"data-obs":"${recKey.replace('|', ':')}"}]`);
   fs.writeFileSync(path.join(dirty, 'x', 'rows.csv'), `id,value\n${recKey},1\n`);
   fs.writeFileSync(path.join(dirty, 'x', 'data.json'), JSON.stringify({ text: printed }));
-  fs.writeFileSync(path.join(dirty, 'x', 'report.pdf'), leaks.makePdf(`Annex: ${recKey}`));
+  if (PDF) fs.writeFileSync(path.join(dirty, 'x', 'report.pdf'), leaks.makePdf(`Annex: ${recKey}`));
   const c = leaks.scan(clean, S);
-  ok(c.hits.length === 0 && c.errors.length === 0 && c.pdfs === 1, `fixture: clean files flagged or PDF unread (${JSON.stringify(c.hits.slice(0, 3))} ${c.errors.join('; ')})`);
+  ok(c.hits.length === 0 && c.errors.length === 0 && c.pdfs === (PDF ? 1 : 0), `fixture: clean files flagged or PDF unread (${JSON.stringify(c.hits.slice(0, 3))} ${c.errors.join('; ')})`);
   const d = leaks.scan(dirty, S);
-  ['index.html', 'x/index.txt', 'x/rows.csv', 'x/data.json', 'x/report.pdf'].forEach((f) => ok(d.hits.some((h) => h.file === f), `fixture: leaked record in ${f} was not caught`));
+  ['index.html', 'x/index.txt', 'x/rows.csv', 'x/data.json', ...(PDF ? ['x/report.pdf'] : [])].forEach((f) => ok(d.hits.some((h) => h.file === f), `fixture: leaked record in ${f} was not caught`));
   ok(d.errors.length === 0, `fixture: scanner errors ${d.errors.join('; ')}`);
-  // Fail closed: an unreadable PDF is an error, not a pass.
+  // Fail closed: an unreadable PDF (or none can be read: no pdftotext) is an error, not a pass.
   fs.writeFileSync(path.join(dirty, 'broken.pdf'), 'not a pdf');
   ok(leaks.scan(dirty, S).errors.length === 1, 'fixture: an unreadable PDF did not fail the scan');
+  if (!PDF) console.log('test-unpublished-counties: pdftotext not installed: the PDF leak fixture is skipped here (it runs in the local release gates); any held record would still fail this run, because PDFs in dist/ cannot be read');
   fs.rmSync(tmp, { recursive: true, force: true });
 })();
 
@@ -160,4 +162,4 @@ if (dist) {
 }
 
 if (errors.length) { errors.slice(0, 40).forEach((e) => console.error(`  - ${e}`)); console.error(`test-unpublished-counties: ${errors.length} of ${n} checks failed`); process.exit(1); }
-console.log(`test-unpublished-counties: ${n} checks passed (published from the registry: ${counties.ON_PAGES.join(', ') || 'none'}; held: ${counties.HELD.join(', ') || 'none'}; leak fixture caught in HTML, RSC, CSV, JSON and PDF${dist ? `; built site ${path.relative(ROOT, dist) || dist} checked` : ''})`);
+console.log(`test-unpublished-counties: ${n} checks passed (published from the registry: ${counties.ON_PAGES.join(', ') || 'none'}; held: ${counties.HELD.join(', ') || 'none'}; leak fixture caught in HTML, RSC, CSV, JSON${leaks.hasPdftotext() ? ' and PDF' : ' (PDF skipped: no pdftotext)'}${dist ? `; built site ${path.relative(ROOT, dist) || dist} checked` : ''})`);

@@ -7,7 +7,8 @@
 //   - source ids, conflict ids and file titles that no shared all-county file holds.
 // Generic record ids alone ("K001") are never sentinels: they would match unrelated text.
 // scan() reads every text file in a directory (HTML, RSC payloads, JSON, CSV, JS, XML, Markdown, SVG) and the text
-// layer of every PDF (pdftotext). It fails closed: a PDF it cannot read is reported as a failure, not skipped.
+// layer of every PDF (pdftotext). It fails closed: when anything is held, a PDF it cannot read (or no pdftotext) is a
+// failure, not a skip. With nothing held there is nothing to find, so a build host without pdftotext (Netlify) passes.
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
@@ -55,9 +56,9 @@ function sentinelsFor(slug, kinds, only = null) {
 }
 
 let PDFTOTEXT = null;
+const hasPdftotext = () => { if (PDFTOTEXT === null) { try { execFileSync('pdftotext', ['-v'], { stdio: 'ignore' }); PDFTOTEXT = true; } catch (e) { PDFTOTEXT = false; } } return PDFTOTEXT; };
 function pdfText(f) {
-  if (PDFTOTEXT === null) { try { execFileSync('pdftotext', ['-v'], { stdio: 'ignore' }); PDFTOTEXT = true; } catch (e) { PDFTOTEXT = false; } }
-  if (!PDFTOTEXT) throw new Error('pdftotext is not installed: PDFs cannot be checked (fail closed)');
+  if (!hasPdftotext()) throw new Error('pdftotext is not installed: PDFs cannot be checked (fail closed)');
   return execFileSync('pdftotext', ['-layout', f, '-'], { maxBuffer: 1 << 28, stdio: ['ignore', 'pipe', 'ignore'] }).toString('utf8');
 }
 
@@ -94,4 +95,4 @@ function makePdf(text) {
   return Buffer.from(body, 'latin1');
 }
 
-module.exports = { sentinelsFor, scan, makePdf, walk, norm, distinctive };
+module.exports = { sentinelsFor, scan, makePdf, walk, norm, distinctive, hasPdftotext };
