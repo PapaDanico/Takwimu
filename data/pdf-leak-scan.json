@@ -4,7 +4,7 @@
  },
  "scans": {
   "kisumu": {
-   "sentinels_sha256": "6b36dd200462b17df1027539c5689c44f7f0235dedfd47c58d74150f971aa58b",
+   "sentinels_sha256": "e9778be684fa51a55e11c21ff621b7decabc0814416e917d0cf65fa510f06762",
    "pdfs": {
     "briefs/siaya-fiscal-brief.pdf": "6d2c728bfde73fd9a63b09a84e6707687ecc19d50667999ff572efe7776581cf",
     "reports/siaya-development-opportunities.pdf": "479d1cb26b09da623a457cb0e908485125ee8a289079c594468aaee6cede556e",
