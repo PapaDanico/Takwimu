@@ -1,0 +1,4212 @@
+{
+ "claims": [
+  {
+   "actual": "1 of 47 published (Siaya)",
+   "claim": "Counties: 1 of 47 published (Siaya)",
+   "how": "lib/counties.js",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "4005",
+   "claim": "Siaya values: 4,005",
+   "how": "lib/review-pack.js all() over lib/review-status.js",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "16",
+   "claim": "across 16 datasets",
+   "how": "distinct datasets in the review-pack scope",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "4005 of 4005 in data/review-packs.json (file holds 4005)",
+   "claim": "each with a review pack",
+   "how": "data/review-packs.json entries",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "0 approved; 0 records",
+   "claim": "0 approved; data/reviews.json is empty",
+   "how": "lib/review-status.js stateOf",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "2363 agree, 80 disagree, 1562 not checkable (4005 checks)",
+   "claim": "Machine cross-checks: 2,363 agree, 80 disagree, 1,562 not checkable",
+   "how": "data/machine-checks.json checks[].result",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "164",
+   "claim": "Fiscal ledger: 164 discrepancy cases",
+   "how": "data/siaya-fiscal-ledger.json discrepancies",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 open (data/ledger-classes.json); the ledger file itself marks {\"open\":164}",
+   "claim": "47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 open",
+   "how": "data/ledger-classes.json cases[].class",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "53",
+   "claim": "Conflict register: 53 cases",
+   "how": "data/conflicts.json",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "2013/14 to 2025/26 (13 years)",
+   "claim": "Ten-year series FY 2013/14 to FY 2025/26",
+   "how": "data/history.json years",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "FY 2019/20 row holds numeric fields: osr_m",
+   "claim": "FY 2019/20 stays a gap (CoB report not found)",
+   "how": "data/history.json years[fy=2019/20] (informational: the gap is the CoB value; other fields may be filled from other sources)",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "17 corrections, 26 values",
+   "claim": "17 corrections footnoted beside 26 values",
+   "how": "lib/correction-notes.js",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "14",
+   "claim": "14 source-error records",
+   "how": "lib/editorial.js sourceErrors()",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "331",
+   "claim": "Kisumu: 331 values",
+   "how": "lib/county-review.js entries",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "{\"kisumu-fiscal-ledger\":291,\"kisumu-audits\":35,\"kisumu-population\":5}",
+   "claim": "291 ledger, 35 audit opinions, population (5)",
+   "how": "lib/county-review.js entries by dataset",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "38",
+   "claim": "Kisumu: 38 conflict cases",
+   "how": "data/counties/kisumu/conflicts.json",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "0",
+   "claim": "Kisumu: 0 approved",
+   "how": "lib/county-review.js counts",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "110",
+   "claim": "Site: 110 pages",
+   "how": ".html files under dist/",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "92 datasets in the catalogue; 91 downloadable (CSV/JSON)",
+   "claim": "92 downloadable datasets",
+   "how": "lib/explore.js catalogue()",
+   "match": false,
+   "where": "README Status"
+  },
+  {
+   "actual": "5",
+   "claim": "5 draft reports",
+   "how": "components/report/reports.json",
+   "match": true,
+   "where": "README Status"
+  },
+  {
+   "actual": "47 listed; published: siaya",
+   "claim": "lib/counties.js lists 47 counties; only Siaya is published",
+   "how": "lib/counties.js",
+   "match": true,
+   "where": "CLAUDE.md"
+  },
+  {
+   "actual": "47 counties; FYs 2021/22, 2022/23, 2023/24, 2024/25",
+   "claim": "data/counties-cob.json: 47 counties, FY 2023/24-2024/25",
+   "how": "data/counties-cob.json years",
+   "match": false,
+   "where": "CLAUDE.md"
+  },
+  {
+   "actual": "history 13 FYs (2013/14-2025/26); cpi 16 calendar years, 12 fiscal years",
+   "claim": "Series must go back 10 years: data/history.json plus data/cpi.json",
+   "how": "data/history.json, data/cpi.json",
+   "match": true,
+   "where": "CLAUDE.md"
+  },
+  {
+   "actual": "registry code 42; NOT_YET_ON_PAGES = kisumu",
+   "claim": "Kisumu (042) phase 1 data is in, unpublished",
+   "how": "lib/county-registry.js",
+   "match": true,
+   "where": "CLAUDE.md"
+  },
+  {
+   "actual": "453 records (meta.counts.total 453)",
+   "claim": "kisumu-sources.json (448 records)",
+   "how": "docs/research/kisumu-2026-11-27/kisumu-sources.json",
+   "match": false,
+   "where": "kisumu-coverage.md / handover"
+  }
+ ],
+ "datasets": [
+  {
+   "dataset": null,
+   "file": "data/cbk.json",
+   "observations": null,
+   "title": "Kenya: Central Bank of Kenya statistics (exchange rates, interest rates, public debt, government finance, money, GDP, inflation, remittances, reserves)",
+   "top_level_arrays": {
+    "checks": 2
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": "2010-2026"
+  },
+  {
+   "dataset": null,
+   "file": "data/conflicts.json",
+   "observations": null,
+   "title": "Source conflict register",
+   "top_level_arrays": {
+    "conflicts": 53
+   },
+   "type": "conflict register",
+   "years_in_fields": "2026-2026"
+  },
+  {
+   "dataset": null,
+   "file": "data/corrections.json",
+   "observations": null,
+   "title": "Data corrections log",
+   "top_level_arrays": {
+    "entries": 7
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": "2026-2026"
+  },
+  {
+   "_hashes": [
+    "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
+    "7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
+    "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
+    "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 4324,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 0,
+    "official mirror": 0,
+    "primary": 4324,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "counties-cob",
+   "distinct_source_hashes": 4,
+   "distinct_source_ids": 4,
+   "file": "data/counties-cob.json",
+   "first_period": "FY 2021/22",
+   "kinds": {
+    "county fiscal value (OCR)": 4232,
+    "fiscal discrepancy (Siaya row against data/history.json)": 92
+   },
+   "last_period": "FY 2024/25",
+   "missing": {
+    "confidence": 4324,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 0,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 4324,
+   "missing_any_counting_not_stated": 4324,
+   "nulls_with_reason": 765,
+   "nulls_without_reason": 0,
+   "observations": 4324,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 92,
+   "tier_basis": {
+    "recorded (Kisumu register)": 4324
+   },
+   "title": "Kenya's 47 counties: budget, spending, absorption, own-source revenue and pending bills (Controller of Budget annual reports)",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "1c497713b88b3fab190c9634e20dc79da34823cc705a16d60971df0e513866d1",
+    "20629f1f492a6bc0a435acbf2ead2f481489b8bd6344604997df6ea7ec2c14a8",
+    "20ea7cbda2a7bb6aa85f4a19c25559caaac68a4cace3ebc52f6363b37f9b486d",
+    "2255993d5e7fae1f76fde9a76be19c7d8419d802b14f4d02b71aa0f69111f4f4",
+    "264c9610a6e4449b5127051fe4c49c9e7035c85b2ba4507815a8e3e9e49dff7e",
+    "2b41a3cb2e4e3b1128ce542f9047263b89c8864a2dc6dd1b6d8b9fe182a21dbb",
+    "320b07e663c72577c28f17645a18c983a46806535a94d79c2d2f70c7f1551114",
+    "33f297aded011b29f36cd5b7438ec80ca707ae7c603b568537ab7b4d4d1cb6b1",
+    "3a0f60838a60e0e246ba488abbaa1da0b25a4df15b0f331c9b34319e73d507d6",
+    "490fc60f65121f5937bcb211f61028172d6a122da8c840135604505e569f55cc",
+    "66531fcf3159903efa16a49967906fc7e977d5e0d410052f4c4680b0d70f5875",
+    "6ae0c79993ec842294570b37475afe80f53875fa82536acd713e11c43d0e9df7",
+    "738e0d2df9b6c88f165a42813e62430b8c38be857d245aa2081635fcb07ba201",
+    "7d4592110dbb325051b40f482c249f245952b67c835afd8482fd70338c6abfa9",
+    "8125fec9db0f885963e48ec92b5041aeaebf0b3461eba5ed02ec73b5fbb93d1f",
+    "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "9c8e1c2439fcf9eecc2eb3e60a01526327e99dd766dc4cc78255f9d035021c1d",
+    "a107f4d707c539b5ff08f6c16110234cdc5b374d7f3649232162f813cfb951f2",
+    "a751f4f13927c480c28387ed9dcf567611aac12a2096a3a735cf00e72b2b5c4a",
+    "a8079693bc6888747cf11da479ec7492dedd229ad03d885825a366f79cafd796",
+    "a8dd9a6b1066cfebf4a7904163eccfa09ef201c0ee37788c725e662b017a9095",
+    "ace636e7a5d540b61330a0b4ff8ceb97cb1a0263b38bd634e86eececac0fab29",
+    "ad47a0a2851660a50a02895f0d3813b8f8f1b251564b2eb418a83a2a887b99ad",
+    "bf5b31d423a0a326c6fe33db7d80e083f3c233a558db7b910d0db9a64559300d",
+    "cab6326b76de0c34015dccd0eaaa703bbc0baad2edd8ae331a3390f85b75429f",
+    "d2f36b0e999e47a20ca8661b90581d2ccc8d27a2a5698c7fe695514c22e797e7",
+    "d756df0677346252ec55a634e87a4e4b2cfa91ec84c5a769cd4cbfd252eed1a8",
+    "de362e752c83c9498ac8edc6e5e89ad79e05f00558eb6f96b695ff6f9361514e",
+    "e509f5790c54b3afb665c78ac1de2e37c1442ef53fbfe085dabf98cc9cbd1afc",
+    "ef1839e541c3dd1000a618fb6848cc5198e49a94eabc26def4825d0ae1c065a3",
+    "f78dee4c29cc69c14998628fbff714fb85f5f6990285b7eb4f52d968b9e101a3"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 35,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 4,
+    "official mirror": 2,
+    "primary": 26,
+    "secondary-news": 0,
+    "secondary-ngo": 3,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "kisumu-audits",
+   "distinct_source_hashes": 31,
+   "distinct_source_ids": 35,
+   "file": "data/counties/kisumu/audits.json",
+   "first_period": "FY 2013/14",
+   "kinds": {
+    "audit opinion": 26,
+    "audit opinion (secondary summary)": 9
+   },
+   "last_period": "FY 2024/25",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 35,
+    "publication_date_not_stated": 0,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 35,
+   "missing_any_counting_not_stated": 35,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 1,
+   "observations": 35,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": null,
+   "tier_basis": {
+    "recorded (observation)": 35
+   },
+   "title": "Kisumu County: Auditor-General opinions by entity and year (data layer; not yet on pages)",
+   "type": "observations (lib/county-registry.js + lib/county-review.js)"
+  },
+  {
+   "dataset": null,
+   "file": "data/counties/kisumu/conflicts.json",
+   "observations": null,
+   "title": "Kisumu County source conflict register (data layer; not yet on pages)",
+   "top_level_arrays": {
+    "conflicts": 38
+   },
+   "type": "conflict register",
+   "years_in_fields": null
+  },
+  {
+   "_hashes": [
+    "031b0309408d7c4399390348fbe14d36277229ca887e5fef300c9f34a628f025",
+    "036a9103156ea7a9d2d9817af61b30304e4ae11ba509782ec190dcd4c9b10d46",
+    "20629f1f492a6bc0a435acbf2ead2f481489b8bd6344604997df6ea7ec2c14a8",
+    "24cdd9e55166dc4354ebe868e42e1f0c2b0625cbc9d24d6b78b121f0222ce605",
+    "35595e4482945b84f80700cf50aabb8f8abfd2e398dbe5b3a62a39d763f6a8e5",
+    "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
+    "476b31500dc474ec4809d138c0fdd75925ca6e0a24eb4bbe5a5a16d1af0a3e85",
+    "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
+    "4d16c56f1874adfe0249be9581e6f7030aa6efa00e58e172845bc7c0ebee4541",
+    "5d5f64c4228c24baf19e36dc5256215b1801f36a189974e9517bce41060c7a9c",
+    "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
+    "7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
+    "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
+    "7e215374994c673bf6c4784b664ea7b27cef609197634ece154993a5ab8e37c1",
+    "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "99c0f529a3ed03cdb0ca31c92f84165825445d8829ba1c491a593a414e34b506",
+    "a206f4fe5ea76543d06327e4dc3af6d13a0300abd05a9e637e94798dca6a2b09",
+    "a2479d120f54344089001a81c4c155c9a849e022e95deac5658d36f8be7c60ff",
+    "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
+    "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
+    "e7aae529c67bf6f53e1cffb267846fbb89725d745a32f597fdf242049baf66cc",
+    "ebb82d50d3427e00285c036f039594e0332c506815e68df8cac38b6e20f6374b",
+    "ee9b2381161974e4e3416f92831da4ea4cff57b2562f6a2a5c7850a1f027950b"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 74,
+    "provisional": 291,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 0,
+    "official mirror": 5,
+    "primary": 286,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "kisumu-fiscal-ledger",
+   "distinct_source_hashes": 23,
+   "distinct_source_ids": 23,
+   "file": "data/counties/kisumu/fiscal-ledger.json",
+   "first_period": "FY 2014/15",
+   "kinds": {
+    "fiscal value": 291
+   },
+   "last_period": "FY 2025/26",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 118,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 118,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 291,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": null,
+   "tier_basis": {
+    "recorded (Kisumu register)": 271,
+    "recorded (observation)": 20
+   },
+   "title": "Kisumu County fiscal reconciliation ledger, FY 2014/15 to FY 2025/26 (data layer; not yet on pages)",
+   "type": "observations (lib/county-registry.js + lib/county-review.js)"
+  },
+  {
+   "dataset": null,
+   "file": "data/counties/kisumu/machine-checks.json",
+   "observations": null,
+   "title": "Machine cross-checks of Kisumu values (independent second reading; county not yet on pages)",
+   "top_level_arrays": {
+    "checks": 331
+   },
+   "type": "machine cross-check results",
+   "years_in_fields": null
+  },
+  {
+   "_hashes": [
+    "d3f38c772cbf29e82d7e1c59b06cc2eee3523b2af5e3f76e0cafca345026df7c"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 5,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 0,
+    "official mirror": 0,
+    "primary": 5,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "kisumu-population",
+   "distinct_source_hashes": 1,
+   "distinct_source_ids": 1,
+   "file": "data/counties/kisumu/population.json",
+   "first_period": "2019",
+   "kinds": {
+    "population": 5
+   },
+   "last_period": "2023",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 0,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 0,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 5,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": null,
+   "tier_basis": {
+    "recorded (Kisumu register)": 5
+   },
+   "title": "Kisumu County population: 2019 census and official projections (per-capita denominator; data layer, not yet on pages)",
+   "type": "observations (lib/county-registry.js + lib/county-review.js)"
+  },
+  {
+   "dataset": null,
+   "file": "data/counties/kisumu/review-packs.json",
+   "observations": null,
+   "title": "Review packs: every Kisumu value with what a reviewer needs to check it (county not yet on pages)",
+   "top_level_arrays": {
+    "entries": 331
+   },
+   "type": "review packs (preparation, not review)",
+   "years_in_fields": "2013-2025"
+  },
+  {
+   "dataset": null,
+   "file": "data/county.json",
+   "observations": null,
+   "title": null,
+   "top_level_arrays": {},
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": null
+  },
+  {
+   "dataset": null,
+   "file": "data/cpi.json",
+   "observations": null,
+   "title": "Kenya consumer price index",
+   "top_level_arrays": {},
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": "2010-2025"
+  },
+  {
+   "dataset": null,
+   "file": "data/derived.json",
+   "observations": null,
+   "title": "Kenya: derived measures (Analysis layer)",
+   "top_level_arrays": {
+    "excluded": 1
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": "2010-2026"
+  },
+  {
+   "_hashes": [
+    "1030c623c39a23e49a2272ff39d7b13c7aafe32f28915984eddca35c27cfc37e",
+    "24cdd9e55166dc4354ebe868e42e1f0c2b0625cbc9d24d6b78b121f0222ce605",
+    "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
+    "3bc1885d01caa4c26ec00ba06a4002f7b80bd61ae826bb325c5d5fbf668ab873",
+    "45a4bd1d40704369a109a82a02bac38304de0bf2e0b05dfd0632e2391b5e0a6b",
+    "487daede734a71897a15185dc90ff179e69196bbd5d249b16ee0057c17e472e4",
+    "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
+    "4ae2b47b0fcfcf2361635a4e28fbf6f6d8e2df6c19167acdcdfba92a5aae9936",
+    "5066633d5c1201362b6a8520460b8d64918ea901294066ffb28a4b26142d2be7",
+    "5ac71fce63afa5246cd58c2c3fdf26f6b01f42dd45b16c93b200989335e189cf",
+    "6a9b4bc3bbfab8d6eb2bd8d155ff001bdcd34833ecfbb6d486e360267fdf2837",
+    "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
+    "7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
+    "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
+    "7e215374994c673bf6c4784b664ea7b27cef609197634ece154993a5ab8e37c1",
+    "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "8e1191c33527c39d7080b97a6661857a002bd6c76e8d04bcc19a22aca7bfa7ed",
+    "9eb4ed9e61ac1d512142b0a0d6c0df3f6e10535da9f0f0995f4b58bb4b0101e3",
+    "a206f4fe5ea76543d06327e4dc3af6d13a0300abd05a9e637e94798dca6a2b09",
+    "b1467eaed37838344513981c222e8fac671c9f09cd3458179f4ac46e9da61aaa",
+    "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
+    "d467556765db30e52a70ea38d1cb5ffe0dd56022100ec72d240409571fdfbc48",
+    "e18cd1e9cb5e0fd2daffc4db76c316ee379e3a60ea2563d84e3bc2149e214200",
+    "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0"
+   ],
+   "_noHash": [
+    "undefined"
+   ],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 193,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 8,
+    "official mirror": 0,
+    "primary": 175,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 10
+   },
+   "cited_sources_without_hash": 1,
+   "confidence_inherited": 147,
+   "dataset": "history",
+   "distinct_source_hashes": 25,
+   "distinct_source_ids": 26,
+   "file": "data/history.json",
+   "first_period": "2005/06",
+   "kinds": {
+    "audit opinion": 11,
+    "fiscal value": 13,
+    "fiscal value (in-year)": 22,
+    "fiscal value (ten-year series; register cases)": 130,
+    "health indicator": 8,
+    "population": 6,
+    "poverty": 3
+   },
+   "last_period": "FY 2025/26",
+   "missing": {
+    "confidence": 18,
+    "page": 11,
+    "period": 22,
+    "publication_date": 10,
+    "publication_date_not_stated": 8,
+    "source": 9,
+    "source_unresolved": 1,
+    "unit": 37
+   },
+   "missing_any": 68,
+   "missing_any_counting_not_stated": 68,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 193,
+   "periods_unparsed": 22,
+   "siaya_review_pack_scope": 193,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 11,
+    "no source": 9,
+    "none": 1,
+    "recorded (Kisumu register)": 158,
+    "recorded (observation)": 14
+   },
+   "title": "Siaya County: ten-year fiscal history",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [],
+   "_noHash": [
+    "imf-weo-sdmx"
+   ],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 430,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 430,
+    "official mirror": 0,
+    "primary": 0,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 1,
+   "confidence_inherited": 0,
+   "dataset": "imf",
+   "distinct_source_hashes": 0,
+   "distinct_source_ids": 1,
+   "file": "data/imf.json",
+   "first_period": "2010",
+   "kinds": {
+    "IMF WEO value (actual)": 302,
+    "IMF WEO value (estimate)": 8,
+    "IMF WEO value (projection)": 120
+   },
+   "last_period": "2031",
+   "missing": {
+    "confidence": 430,
+    "page": 430,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 0,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 430,
+   "missing_any_counting_not_stated": 430,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 430,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 0,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 430
+   },
+   "title": "Kenya: IMF World Economic Outlook indicators and IMF staff documents",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "dataset": null,
+   "file": "data/kenya-counties-map.json",
+   "observations": null,
+   "title": null,
+   "top_level_arrays": {
+    "areas": 47
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": null
+  },
+  {
+   "dataset": null,
+   "file": "data/ledger-classes.json",
+   "observations": null,
+   "title": "Classification of the open discrepancy cases in the Siaya fiscal ledger",
+   "top_level_arrays": {
+    "cases": 164
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": "2015-2025"
+  },
+  {
+   "dataset": null,
+   "file": "data/machine-checks.json",
+   "observations": null,
+   "title": "Machine cross-checks of Siaya values (independent second reading)",
+   "top_level_arrays": {
+    "checks": 4005
+   },
+   "type": "machine cross-check results",
+   "years_in_fields": null
+  },
+  {
+   "dataset": null,
+   "file": "data/national.json",
+   "observations": null,
+   "title": "Kenya: national indicators from the World Bank World Development Indicators",
+   "top_level_arrays": {
+    "indicators": 53
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": "2010-2025"
+  },
+  {
+   "dataset": null,
+   "file": "data/ngo.json",
+   "observations": null,
+   "title": "Commission on Revenue Allocation county allocations and revenue sharing; International Budget Partnership Open Budget Survey (Kenya)",
+   "top_level_arrays": {
+    "not_staged": 8
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": null
+  },
+  {
+   "dataset": null,
+   "file": "data/political.json",
+   "observations": null,
+   "title": "Kenya: IEBC registered voters 2022 by constituency and candidates by position (institution and geography level)",
+   "top_level_arrays": {
+    "not_staged": 8
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": null
+  },
+  {
+   "dataset": null,
+   "file": "data/review-packs.json",
+   "observations": null,
+   "title": "Review packs: every Siaya-scope value with what a reviewer needs to check it",
+   "top_level_arrays": {
+    "entries": 4005
+   },
+   "type": "review packs (preparation, not review)",
+   "years_in_fields": "2003-2027"
+  },
+  {
+   "dataset": null,
+   "file": "data/reviews.json",
+   "observations": null,
+   "title": "Editorial review decisions (review_decisions, handover section 6)",
+   "top_level_arrays": {
+    "decisions": 0
+   },
+   "type": "review decision register",
+   "years_in_fields": null
+  },
+  {
+   "_hashes": [
+    "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
+    "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 23,
+    "provisional": 105,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 75,
+    "official mirror": 0,
+    "primary": 30,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-agriculture",
+   "distinct_source_hashes": 2,
+   "distinct_source_ids": 2,
+   "file": "data/siaya-agriculture.json",
+   "first_period": "2013",
+   "kinds": {
+    "agriculture statistic": 105
+   },
+   "last_period": "2027",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 30,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 30,
+   "nulls_with_reason": 1,
+   "nulls_without_reason": 0,
+   "observations": 105,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 105,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 75,
+    "recorded (source record)": 30
+   },
+   "title": "Siaya County agriculture, livestock, fisheries and irrigation (printed values by source)",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "06a40538f66a09238d8ace1ad4591c253d14d4ed257859b8cfda9f82483ba0b0",
+    "0f3b8a91410c27c9ba89ee7f3e692e11297ff95db82ff4f5669a6ca4a130c959",
+    "112173f6581ac5c3cfc6ff95819354406b1abfa7a52719246a8e7511f8f5ed59",
+    "24cdd9e55166dc4354ebe868e42e1f0c2b0625cbc9d24d6b78b121f0222ce605",
+    "2fbfc4d1b2d910993f38498b85e25da794a810474ff2dcc89291c7c13bf48173",
+    "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
+    "3e8311720983f584fefea75fbf93f792b4b89fe2882d3c1585e0e1c4bad3fd2a",
+    "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
+    "52368fc5654a54c6120bf59c166c4a94e14c230c998ed8858a36ecae238d6c74",
+    "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+    "5e8f30000d903a5d505ccc8e7e5d5e548d1055577bed2cf4c978d68256d1de33",
+    "6db1558c418725e07286c32bd50880ed00d682481f94f1af9f1301d5445ffdad",
+    "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
+    "7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
+    "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
+    "7e215374994c673bf6c4784b664ea7b27cef609197634ece154993a5ab8e37c1",
+    "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "8cce8716236cd39464d98bbae0ecf1c2b3b087cc12da4eaecc74b1f86d1f3231",
+    "91bd04bfe9f240dca0be8f43d8b5caa7487ea8682c485f10fbbf4e09cb40cbf2",
+    "9d98d36d432c61fafaa3e6eb51329e060526ac75b8ee42f1fe8fafee9063cd8d",
+    "a206f4fe5ea76543d06327e4dc3af6d13a0300abd05a9e637e94798dca6a2b09",
+    "a403ed686551f035da97c3fd4bc655a61b9e6e206d64d511b303aa720f93769b",
+    "a93ff808ceb7b6943764b2aec758d6c22b7c167a0d5fe36348a7454e6f33b734",
+    "ab82cfd1a6be37b113c1c5c0492b1787df6bf9a2dce1298b1e40773cc19903ee",
+    "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
+    "b961ff304d55392c22e76c5179aafa8218e7bb2c5c0310caa8c84ba0d89e81cb",
+    "c8afbdbcf845e9eb3c62820a83659a7bcd3d064b5ebb2f3bcba8c16bc51dfd33",
+    "cd5d767dc0edc2c01bbe60c03f946d25f6465126d7cf2f6f11f1974bda9f0eff",
+    "d71fd5f59f526d78171f6d746f49c3552230df2fd799a0e44e38ff8c64350fbc",
+    "d7488d6b9136926b15e55494b09ebc84778d91e3069fd898adc85c82a36c5037",
+    "df3eba4f1dfce1be4bc984b4f7799db46055253e7707bf386c926c948a578730",
+    "df75d8fccbdb2ba205d260fb267eadcc8dccf9557e2fd835ca85c10f9e3f12a9",
+    "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0"
+   ],
+   "_noHash": [
+    "worldbank-wdi-api"
+   ],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 442,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 0,
+    "official mirror": 260,
+    "primary": 173,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 9
+   },
+   "cited_sources_without_hash": 1,
+   "confidence_inherited": 0,
+   "dataset": "siaya-analysis-layers",
+   "distinct_source_hashes": 33,
+   "distinct_source_ids": 34,
+   "file": "data/siaya-analysis-layers.json",
+   "first_period": "FY 2013/14",
+   "kinds": {
+    "calculation by Takwimu": 442
+   },
+   "last_period": "FY 2025/26",
+   "missing": {
+    "confidence": 9,
+    "page": 442,
+    "period": 0,
+    "publication_date": 9,
+    "publication_date_not_stated": 85,
+    "source": 9,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 442,
+   "missing_any_counting_not_stated": 442,
+   "nulls_with_reason": 45,
+   "nulls_without_reason": 0,
+   "observations": 442,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 442,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 345,
+    "no source": 9,
+    "recorded (Kisumu register)": 88
+   },
+   "title": "Siaya County: further analytical layers calculated from published figures (wage bill, development share, own-source revenue on three bases, department absorption, pending bills burden)",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "1030c623c39a23e49a2272ff39d7b13c7aafe32f28915984eddca35c27cfc37e",
+    "1c2009713bf862188d75904b94aebdc4d3d687dde33f6bf3133f99b0945804e9",
+    "24cdd9e55166dc4354ebe868e42e1f0c2b0625cbc9d24d6b78b121f0222ce605",
+    "348d0bb6f96e1154e630adf2c0a47ac6c40fe13a2dd37c640234bb9dfee81393",
+    "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
+    "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
+    "4260b70e6878ada577ce2846c675dc1d4ec4eb8f02f80ffc0bea326dc407d6de",
+    "429cf207e32f9fd9ecad1237b144978a15d7e05cf42bcf9ca77c7824459572f9",
+    "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "45a4bd1d40704369a109a82a02bac38304de0bf2e0b05dfd0632e2391b5e0a6b",
+    "4854ae471a643b06f170b333f383a312e0eb7f77d454b0a03246d32466dac3b5",
+    "487daede734a71897a15185dc90ff179e69196bbd5d249b16ee0057c17e472e4",
+    "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
+    "5066633d5c1201362b6a8520460b8d64918ea901294066ffb28a4b26142d2be7",
+    "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+    "625a8d0dff5cb142020c8c500161611d25a1b8bab5098fb9b2b121ceb458056c",
+    "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
+    "7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
+    "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
+    "7e215374994c673bf6c4784b664ea7b27cef609197634ece154993a5ab8e37c1",
+    "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "8777dd0be31ece70da63464f04f03d1f0e8a370e6e1e8ee0014c4f3df9d82800",
+    "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "8dd26cf1995be1a428ff39c9a9609e5339e366a3394b3631cdd6cdcac47b11b0",
+    "8e1191c33527c39d7080b97a6661857a002bd6c76e8d04bcc19a22aca7bfa7ed",
+    "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+    "94ac1729fa29f651b4516ffc35dc676238273f3ef66773249a285111f8898313",
+    "98da764f06681e88027c0045a3c41cc2f59033646fafa9369a482c1f42166f96",
+    "9eb4ed9e61ac1d512142b0a0d6c0df3f6e10535da9f0f0995f4b58bb4b0101e3",
+    "a206f4fe5ea76543d06327e4dc3af6d13a0300abd05a9e637e94798dca6a2b09",
+    "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe",
+    "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
+    "d467556765db30e52a70ea38d1cb5ffe0dd56022100ec72d240409571fdfbc48",
+    "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
+    "f29e0ab2e2893169a6c79fbeb9511bd5d089a568936b75dd8a13920c89dfd6ca"
+   ],
+   "_noHash": [
+    "GOV-01",
+    "WDI FP.CPI.TOTL",
+    "county-ADP"
+   ],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 372,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 7,
+    "official mirror": 0,
+    "primary": 341,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 24
+   },
+   "cited_sources_without_hash": 3,
+   "confidence_inherited": 0,
+   "dataset": "siaya-analysis",
+   "distinct_source_hashes": 35,
+   "distinct_source_ids": 38,
+   "file": "data/siaya-analysis.json",
+   "first_period": "FY 2013/14",
+   "kinds": {
+    "calculation by Takwimu": 372
+   },
+   "last_period": "stock at 2026-06-30",
+   "missing": {
+    "confidence": 24,
+    "page": 372,
+    "period": 0,
+    "publication_date": 24,
+    "publication_date_not_stated": 49,
+    "source": 24,
+    "source_unresolved": 4,
+    "unit": 0
+   },
+   "missing_any": 372,
+   "missing_any_counting_not_stated": 372,
+   "nulls_with_reason": 97,
+   "nulls_without_reason": 0,
+   "observations": 372,
+   "periods_unparsed": 1,
+   "siaya_review_pack_scope": 372,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 178,
+    "no source": 24,
+    "recorded (Kisumu register)": 121,
+    "recorded (source kind)": 25,
+    "recorded (source record)": 24
+   },
+   "title": "Siaya County: analytical measures calculated from published figures",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "429cf207e32f9fd9ecad1237b144978a15d7e05cf42bcf9ca77c7824459572f9",
+    "45a4bd1d40704369a109a82a02bac38304de0bf2e0b05dfd0632e2391b5e0a6b",
+    "4854ae471a643b06f170b333f383a312e0eb7f77d454b0a03246d32466dac3b5",
+    "487daede734a71897a15185dc90ff179e69196bbd5d249b16ee0057c17e472e4",
+    "5066633d5c1201362b6a8520460b8d64918ea901294066ffb28a4b26142d2be7",
+    "625a8d0dff5cb142020c8c500161611d25a1b8bab5098fb9b2b121ceb458056c",
+    "6a9b4bc3bbfab8d6eb2bd8d155ff001bdcd34833ecfbb6d486e360267fdf2837",
+    "8649349c9cd15757abef0a720f2e0aa18dbdf04b57cd2b22f692180edc9b547e",
+    "8777dd0be31ece70da63464f04f03d1f0e8a370e6e1e8ee0014c4f3df9d82800",
+    "8e1191c33527c39d7080b97a6661857a002bd6c76e8d04bcc19a22aca7bfa7ed",
+    "9eb4ed9e61ac1d512142b0a0d6c0df3f6e10535da9f0f0995f4b58bb4b0101e3",
+    "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe",
+    "d467556765db30e52a70ea38d1cb5ffe0dd56022100ec72d240409571fdfbc48",
+    "f29e0ab2e2893169a6c79fbeb9511bd5d089a568936b75dd8a13920c89dfd6ca"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 282,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 6,
+    "official mirror": 0,
+    "primary": 276,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 262,
+   "dataset": "siaya-audits",
+   "distinct_source_hashes": 14,
+   "distinct_source_ids": 14,
+   "file": "data/siaya-audits.json",
+   "first_period": "FY 2013/14",
+   "kinds": {
+    "audit finding": 262,
+    "audit opinion": 20
+   },
+   "last_period": "FY 2024/25",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 2,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 2,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 1,
+   "observations": 282,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 282,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 276,
+    "recorded (observation)": 6
+   },
+   "title": "Siaya County: Auditor-General findings tracker",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "dataset": null,
+   "file": "data/siaya-boundaries.json",
+   "observations": null,
+   "title": null,
+   "top_level_arrays": {
+    "areas": 6
+   },
+   "type": "not itemised: A simplified boundary drawing for the map, not measured values.",
+   "years_in_fields": null
+  },
+  {
+   "_hashes": [
+    "06a40538f66a09238d8ace1ad4591c253d14d4ed257859b8cfda9f82483ba0b0",
+    "0f3b8a91410c27c9ba89ee7f3e692e11297ff95db82ff4f5669a6ca4a130c959",
+    "112173f6581ac5c3cfc6ff95819354406b1abfa7a52719246a8e7511f8f5ed59",
+    "2fbfc4d1b2d910993f38498b85e25da794a810474ff2dcc89291c7c13bf48173",
+    "52368fc5654a54c6120bf59c166c4a94e14c230c998ed8858a36ecae238d6c74",
+    "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+    "5e8f30000d903a5d505ccc8e7e5d5e548d1055577bed2cf4c978d68256d1de33",
+    "6db1558c418725e07286c32bd50880ed00d682481f94f1af9f1301d5445ffdad",
+    "8cce8716236cd39464d98bbae0ecf1c2b3b087cc12da4eaecc74b1f86d1f3231",
+    "9d98d36d432c61fafaa3e6eb51329e060526ac75b8ee42f1fe8fafee9063cd8d",
+    "a403ed686551f035da97c3fd4bc655a61b9e6e206d64d511b303aa720f93769b",
+    "a93ff808ceb7b6943764b2aec758d6c22b7c167a0d5fe36348a7454e6f33b734",
+    "ab82cfd1a6be37b113c1c5c0492b1787df6bf9a2dce1298b1e40773cc19903ee",
+    "b961ff304d55392c22e76c5179aafa8218e7bb2c5c0310caa8c84ba0d89e81cb",
+    "c8afbdbcf845e9eb3c62820a83659a7bcd3d064b5ebb2f3bcba8c16bc51dfd33",
+    "cd5d767dc0edc2c01bbe60c03f946d25f6465126d7cf2f6f11f1974bda9f0eff",
+    "d71fd5f59f526d78171f6d746f49c3552230df2fd799a0e44e38ff8c64350fbc",
+    "df3eba4f1dfce1be4bc984b4f7799db46055253e7707bf386c926c948a578730",
+    "df75d8fccbdb2ba205d260fb267eadcc8dccf9557e2fd835ca85c10f9e3f12a9"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 1240,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 0,
+    "official mirror": 1192,
+    "primary": 48,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-budget-departments",
+   "distinct_source_hashes": 19,
+   "distinct_source_ids": 19,
+   "file": "data/siaya-budget-departments.json",
+   "first_period": "FY 2014/15",
+   "kinds": {
+    "department budget or spending value": 1240
+   },
+   "last_period": "FY 2025/26",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 48,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 48,
+   "nulls_with_reason": 2,
+   "nulls_without_reason": 0,
+   "observations": 1240,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 1240,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 1240
+   },
+   "title": "Siaya County budgets and spending by department, FY 2014/15 to FY 2025/26 (county documents)",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "202dd70451a0bd1d782ddcd104201770e7b17cd25de2719b2191035d2e770111",
+    "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
+    "8dd26cf1995be1a428ff39c9a9609e5339e366a3394b3631cdd6cdcac47b11b0",
+    "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "94ac1729fa29f651b4516ffc35dc676238273f3ef66773249a285111f8898313"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 87,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 8,
+    "official mirror": 0,
+    "primary": 79,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-climate",
+   "distinct_source_hashes": 6,
+   "distinct_source_ids": 6,
+   "file": "data/siaya-climate.json",
+   "first_period": "2022 (baseline year as printed)",
+   "kinds": {
+    "climate and water statistic": 87
+   },
+   "last_period": "FY 2025/26",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 65,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 49
+   },
+   "missing_any": 49,
+   "missing_any_counting_not_stated": 65,
+   "nulls_with_reason": 12,
+   "nulls_without_reason": 37,
+   "observations": 87,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 87,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 55,
+    "recorded (Kisumu register)": 8,
+    "recorded (source record)": 24
+   },
+   "title": "Siaya climate, water and resilience evidence by source",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "0f3b8a91410c27c9ba89ee7f3e692e11297ff95db82ff4f5669a6ca4a130c959",
+    "112173f6581ac5c3cfc6ff95819354406b1abfa7a52719246a8e7511f8f5ed59",
+    "2fbfc4d1b2d910993f38498b85e25da794a810474ff2dcc89291c7c13bf48173",
+    "3e8311720983f584fefea75fbf93f792b4b89fe2882d3c1585e0e1c4bad3fd2a",
+    "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+    "5e8f30000d903a5d505ccc8e7e5d5e548d1055577bed2cf4c978d68256d1de33",
+    "91bd04bfe9f240dca0be8f43d8b5caa7487ea8682c485f10fbbf4e09cb40cbf2",
+    "a403ed686551f035da97c3fd4bc655a61b9e6e206d64d511b303aa720f93769b",
+    "b961ff304d55392c22e76c5179aafa8218e7bb2c5c0310caa8c84ba0d89e81cb",
+    "d71fd5f59f526d78171f6d746f49c3552230df2fd799a0e44e38ff8c64350fbc",
+    "d7488d6b9136926b15e55494b09ebc84778d91e3069fd898adc85c82a36c5037",
+    "df75d8fccbdb2ba205d260fb267eadcc8dccf9557e2fd835ca85c10f9e3f12a9",
+    "f6e04db51eb338b7d68458d4759af06be76215b481ac3abe503de0f5b6871285"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 191,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 0,
+    "official mirror": 103,
+    "primary": 88,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-county-series",
+   "distinct_source_hashes": 13,
+   "distinct_source_ids": 13,
+   "file": "data/siaya-county-series.json",
+   "first_period": "FY 2013/14",
+   "kinds": {
+    "Auditor-General revenue figure (OCR, read twice)": 76,
+    "county fiscal value (County Treasury)": 115
+   },
+   "last_period": "FY 2024/25",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 88,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 88,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 191,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 191,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 191
+   },
+   "title": "Siaya County fiscal series from county documents and the Auditor-General, FY 2013/14 to FY 2024/25",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "412af7c153b065b0e94cd74124274b12fade03554ccccad6ee50789b23661c2c",
+    "fe2dff51a6976cbc60d9aeb35b03c8d3fdc4b927de967bb9ba554c5efe4f8ad8"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 154,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 0,
+    "official mirror": 0,
+    "primary": 154,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-economy",
+   "distinct_source_hashes": 2,
+   "distinct_source_ids": 2,
+   "file": "data/siaya-economy.json",
+   "first_period": "2019",
+   "kinds": {
+    "economic statistic": 154
+   },
+   "last_period": "2024",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 0,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 0,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 154,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 154,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 154
+   },
+   "title": "Siaya County economy: Gross County Product (KNBS GCP 2025 and GCP 2024 editions)",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "202dd70451a0bd1d782ddcd104201770e7b17cd25de2719b2191035d2e770111",
+    "3e7cfa7105a03dc01ef346ad2ea2aea65cd9b9f7c17614cd15fa9f5b56fddb13",
+    "3ebf97e5064f8f0110f4859f4422083e6868ef083c421f1deaaae19751112f7b",
+    "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "5ac71fce63afa5246cd58c2c3fdf26f6b01f42dd45b16c93b200989335e189cf",
+    "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
+    "8dd26cf1995be1a428ff39c9a9609e5339e366a3394b3631cdd6cdcac47b11b0",
+    "a716c61e7f91aff42205cf861e3a5aee81605b3e7e890b9bcb140360a7724a9e"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 31,
+    "provisional": 215,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 187,
+    "official mirror": 0,
+    "primary": 28,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-education",
+   "distinct_source_hashes": 8,
+   "distinct_source_ids": 8,
+   "file": "data/siaya-education.json",
+   "first_period": "2013",
+   "kinds": {
+    "education statistic": 215
+   },
+   "last_period": "2027",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 2,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 2,
+   "nulls_with_reason": 1,
+   "nulls_without_reason": 0,
+   "observations": 215,
+   "periods_unparsed": 1,
+   "siaya_review_pack_scope": 215,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 69,
+    "recorded (Kisumu register)": 146
+   },
+   "title": "Siaya County education and human development: enrolment, teachers, VTCs, bursaries (by source and vintage)",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "1030c623c39a23e49a2272ff39d7b13c7aafe32f28915984eddca35c27cfc37e",
+    "1c2009713bf862188d75904b94aebdc4d3d687dde33f6bf3133f99b0945804e9",
+    "24cdd9e55166dc4354ebe868e42e1f0c2b0625cbc9d24d6b78b121f0222ce605",
+    "348d0bb6f96e1154e630adf2c0a47ac6c40fe13a2dd37c640234bb9dfee81393",
+    "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
+    "4260b70e6878ada577ce2846c675dc1d4ec4eb8f02f80ffc0bea326dc407d6de",
+    "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "45a4bd1d40704369a109a82a02bac38304de0bf2e0b05dfd0632e2391b5e0a6b",
+    "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
+    "5066633d5c1201362b6a8520460b8d64918ea901294066ffb28a4b26142d2be7",
+    "5be47fcfe6c1f5477719258252bfdf9fd03ffe077685c82a701ac595a704efac",
+    "78589c5708b28d04a3ae90b152dfaecf35001da11ee7457503f113f3f09832f1",
+    "7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
+    "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
+    "7e215374994c673bf6c4784b664ea7b27cef609197634ece154993a5ab8e37c1",
+    "7eaee2199ccf71f8373fadb46f0ffa423faa07276399a7bbf7efc614ea0ea12a",
+    "8939f37ba1255ff3b0062a5db01f870c3462a26b9d3addf6e9fa5a027574e4dd",
+    "8dd26cf1995be1a428ff39c9a9609e5339e366a3394b3631cdd6cdcac47b11b0",
+    "8e1191c33527c39d7080b97a6661857a002bd6c76e8d04bcc19a22aca7bfa7ed",
+    "8e26f32b6b7a43250b7c175f24193c00332a0c00244faf0ad050f64dfb14bafc",
+    "98da764f06681e88027c0045a3c41cc2f59033646fafa9369a482c1f42166f96",
+    "9eb4ed9e61ac1d512142b0a0d6c0df3f6e10535da9f0f0995f4b58bb4b0101e3",
+    "a206f4fe5ea76543d06327e4dc3af6d13a0300abd05a9e637e94798dca6a2b09",
+    "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
+    "d467556765db30e52a70ea38d1cb5ffe0dd56022100ec72d240409571fdfbc48",
+    "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 131,
+    "provisional": 325,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 2,
+    "official mirror": 0,
+    "primary": 323,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-fiscal-ledger",
+   "distinct_source_hashes": 26,
+   "distinct_source_ids": 26,
+   "file": "data/siaya-fiscal-ledger.json",
+   "first_period": "FY 2013/14",
+   "kinds": {
+    "fiscal discrepancy (open case in the ledger)": 131,
+    "fiscal value": 194
+   },
+   "last_period": "FY 2025/26",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 69,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 69,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 325,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 325,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 21,
+    "recorded (Kisumu register)": 201,
+    "recorded (observation)": 26,
+    "recorded (source kind)": 38,
+    "recorded (source record)": 39
+   },
+   "title": "Siaya County fiscal reconciliation ledger, FY 2013/14 to FY 2025/26",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "dataset": null,
+   "file": "data/siaya-geography.json",
+   "observations": null,
+   "title": "Siaya County geographic registry: county, constituencies, county assembly wards and sub-county naming systems",
+   "top_level_arrays": {
+    "constituencies": 6,
+    "sources": 5,
+    "spatial_layers": 3,
+    "sub_county_systems": 2,
+    "wards": 30
+   },
+   "type": "not itemised: A register of names and codes (county, constituencies, wards), not measured values.",
+   "years_in_fields": null
+  },
+  {
+   "_hashes": [
+    "78c791c3959279633e8158d37b1ccc2ff9376485c88e17bbf8d65eeba2a1498a",
+    "bf554ddbcdc16d5ac81a1540ef301e0d1d5a21913373faebb187b9d796f8bed1",
+    "ed805122ca8e2894246e59359373ad5916685400115788db51024d24f4413662"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 38,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 26,
+    "official mirror": 0,
+    "primary": 0,
+    "secondary-news": 0,
+    "secondary-ngo": 12,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-governance",
+   "distinct_source_hashes": 3,
+   "distinct_source_ids": 3,
+   "file": "data/siaya-governance.json",
+   "first_period": "2021",
+   "kinds": {
+    "governance finding": 18,
+    "governance score": 20
+   },
+   "last_period": "2024",
+   "missing": {
+    "confidence": 18,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 38,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 23
+   },
+   "missing_any": 26,
+   "missing_any_counting_not_stated": 38,
+   "nulls_with_reason": 11,
+   "nulls_without_reason": 19,
+   "observations": 38,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 38,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 30,
+    "recorded (Kisumu register)": 8
+   },
+   "title": "Siaya budget transparency and public participation: IBP Kenya CBTS 2021 and 2022, APRM Siaya County Review Report 2024",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "1461a650de76bcb4e815f4c34f919750858f55dab55dfc7739e4119b5b48d0d3",
+    "3bc1885d01caa4c26ec00ba06a4002f7b80bd61ae826bb325c5d5fbf668ab873",
+    "5ac71fce63afa5246cd58c2c3fdf26f6b01f42dd45b16c93b200989335e189cf",
+    "5eefc8d08ba4dee895929820c4b137f3cc7a33425905c9a83e089f0f1a9e3a41",
+    "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
+    "87f52b02fbc19537bd5c521c167a44aeb5bf89cdaf381907e54d573e7b05b2ea",
+    "92cbcc81d3f0abe572653d0f3e8504f8fe4e030482fd18f6f0a6bff9b5a7ee4c",
+    "b1467eaed37838344513981c222e8fac671c9f09cd3458179f4ac46e9da61aaa",
+    "d6b5e13ef37d13bb9d6586fdecbd6fb61bc3643c97a9e130cf39bd6792303e46",
+    "e18cd1e9cb5e0fd2daffc4db76c316ee379e3a60ea2563d84e3bc2149e214200",
+    "f2c4b83babce093833b590a81e108bedeb359a7906c9d370ea1d085766b89a91"
+   ],
+   "_noHash": [
+    "HEALTH-02"
+   ],
+   "by_state": {
+    "approved": 0,
+    "disputed": 27,
+    "provisional": 78,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 1,
+    "official compilation": 14,
+    "official mirror": 0,
+    "primary": 57,
+    "secondary-news": 6,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 1,
+   "confidence_inherited": 0,
+   "dataset": "siaya-health",
+   "distinct_source_hashes": 11,
+   "distinct_source_ids": 12,
+   "file": "data/siaya-health.json",
+   "first_period": "2003-04",
+   "kinds": {
+    "health indicator": 78
+   },
+   "last_period": "not stated (article of May 2026)",
+   "missing": {
+    "confidence": 0,
+    "page": 7,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 47,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 7,
+   "missing_any_counting_not_stated": 51,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 78,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 78,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 68,
+    "recorded (Kisumu register)": 7,
+    "recorded (source record)": 3
+   },
+   "title": "Siaya health indicators by source, vintage and geography",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "20b09604a3346a6a0b56e22ea42dc0cb16d8d834867a76daaeffdcadf00908f9",
+    "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
+    "8ced749ef66ed0f5187488bdc0fa46044634279d64a1bc171f3ce9dd0d2a9d51",
+    "8dd26cf1995be1a428ff39c9a9609e5339e366a3394b3631cdd6cdcac47b11b0",
+    "e18c91d4ed5f3a777fa24031e175facad1b936ed1b4f92a8b6409c7d617399a1"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 73,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 1,
+    "official compilation": 0,
+    "official mirror": 0,
+    "primary": 13,
+    "secondary-news": 0,
+    "secondary-ngo": 59,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-programmes",
+   "distinct_source_hashes": 6,
+   "distinct_source_ids": 6,
+   "file": "data/siaya-programmes.json",
+   "first_period": "2006 to ?",
+   "kinds": {
+    "programme record": 73
+   },
+   "last_period": "2025-01-01 to 2026-07-30",
+   "missing": {
+    "confidence": 73,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 3,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 73,
+   "missing_any_counting_not_stated": 73,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 73,
+   "periods_unparsed": 0,
+   "siaya_review_pack_scope": 73,
+   "tier_basis": {
+    "recorded (observation)": 73
+   },
+   "title": "Siaya NGO, CSO and donor programme atlas (WP8)",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "385285d52418d94b8f72379a51dfacbbd4d11f8926840049269fa388dd47d9da",
+    "4260b70e6878ada577ce2846c675dc1d4ec4eb8f02f80ffc0bea326dc407d6de",
+    "4344ce3966b981e0196b1c81b7a209a294239ccaa473d753b7fc5c85170faec3",
+    "45a4bd1d40704369a109a82a02bac38304de0bf2e0b05dfd0632e2391b5e0a6b",
+    "4854ae471a643b06f170b333f383a312e0eb7f77d454b0a03246d32466dac3b5",
+    "498e5e003147fbdb7da09c8a9079a1f940a09aa87076673255da3a2c54937868",
+    "5066633d5c1201362b6a8520460b8d64918ea901294066ffb28a4b26142d2be7",
+    "580c4bbbbd44ed7fcfb503d12967b1d0e0123606c5df902214536a6e697a737a",
+    "650a5bdf71c5d4d43247a837752e0c3f2978d4ef53853033566278e7e6be9d0d",
+    "6673545008e72d675252dfcaf40908f0853c396fc0f2733683ca1c9873874796",
+    "7a9690d049576fa1346a54da71f52c1742cdb01e154b99139cd1d445cbd6102f",
+    "7d8c1a0b35e2ca42b53dfa0b6979b4f37c57db61c60e142e727e7b3f29c19798",
+    "9eb4ed9e61ac1d512142b0a0d6c0df3f6e10535da9f0f0995f4b58bb4b0101e3",
+    "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe",
+    "b69858e28e2c59de961f39e749e9885462e5608e9db2291b807040cc59a35f5c",
+    "d467556765db30e52a70ea38d1cb5ffe0dd56022100ec72d240409571fdfbc48",
+    "e62e1a599503907bea4d7e144d96b3ffcbe810557d542bcf0fd4c224b109feb0",
+    "f29e0ab2e2893169a6c79fbeb9511bd5d089a568936b75dd8a13920c89dfd6ca",
+    "fa62a517b5ecf037a8c0022753bd6946dd0279a62a7fee8d240ff49da86da5f7"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 23,
+    "provisional": 118,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 0,
+    "official mirror": 0,
+    "primary": 118,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "siaya-projects",
+   "distinct_source_hashes": 19,
+   "distinct_source_ids": 19,
+   "file": "data/siaya-projects.json",
+   "first_period": null,
+   "kinds": {
+    "fiscal discrepancy (project amounts differ between documents)": 23,
+    "project record": 95
+   },
+   "last_period": null,
+   "missing": {
+    "confidence": 118,
+    "page": 0,
+    "period": 118,
+    "publication_date": 0,
+    "publication_date_not_stated": 40,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 118,
+   "missing_any_counting_not_stated": 118,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 118,
+   "periods_unparsed": 118,
+   "siaya_review_pack_scope": 118,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 47,
+    "recorded (Kisumu register)": 44,
+    "recorded (source kind)": 2,
+    "recorded (source record)": 25
+   },
+   "title": "Siaya County development project register",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "dataset": null,
+   "file": "data/siaya-wards-geo.json",
+   "observations": null,
+   "title": "Siaya County: 30 county assembly ward boundaries (simplified for display)",
+   "top_level_arrays": {
+    "features": 30
+   },
+   "type": "not itemised: A boundary map layer, checked as one file (resource hash in the file).",
+   "years_in_fields": null
+  },
+  {
+   "dataset": null,
+   "file": "data/siaya.json",
+   "observations": null,
+   "title": null,
+   "top_level_arrays": {
+    "sub_counties": 6
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": "2021-2024"
+  },
+  {
+   "dataset": null,
+   "file": "data/source-library.json",
+   "observations": null,
+   "title": "Siaya Source Library",
+   "top_level_arrays": {
+    "documents": 242
+   },
+   "type": "source register",
+   "years_in_fields": null
+  },
+  {
+   "dataset": null,
+   "file": "data/source-manifest.json",
+   "observations": null,
+   "title": "Source document manifest",
+   "top_level_arrays": {
+    "documents": 116
+   },
+   "type": "source register",
+   "years_in_fields": "2006-2026"
+  },
+  {
+   "dataset": null,
+   "file": "data/subcounties.json",
+   "observations": null,
+   "title": null,
+   "top_level_arrays": {
+    "sub_counties": 6
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": "2019-2027"
+  }
+ ],
+ "generated_by": "scripts/census.js",
+ "inputs": {
+  ".claude/CLAUDE.md": "d71574e3439582ef88df5bbab1743915cd6523be0c9d49baa32f9a8bc74fd8c9",
+  "README.md": "5200c7ea18a7a814368b6f0e140a7dae27348d2c37b93f8e39a385857fe6d5b5",
+  "components/report/reports.json": "af38ebeb395f6af7d863f47bc9a08de0ada926f67d01cfb202052896243738a7",
+  "data/cbk.json": "6c47b668a4baa2f6202e3b44dfe969a40f83ca40744cf82cb1597a6b750dca86",
+  "data/conflicts.json": "5e7357a5c5a01a3c7f49b9ee086dd646fc96ba447193c9f54ae4f1931b4994d8",
+  "data/corrections.json": "f06dced7faf20c73a2770b278261459d515307d605658406ac5d350450c032c5",
+  "data/counties-cob.json": "cb4c26d09550a90eb161e064fb5bec51cc26c87c35faa314731488acb40e7907",
+  "data/counties/kisumu/audits.json": "14ae1130ef8241dcb7f4fce1a1b6e77d21b9b6efd7e19c6cd82582c857e64f2f",
+  "data/counties/kisumu/conflicts.json": "b49f7faf3bc31234f6fd9f7bb1d6e828c8d548533659ebf74d6ce1cb4bd5502c",
+  "data/counties/kisumu/fiscal-ledger.json": "7e44267ad9ee8cdd38c878e0ff6d22ea664652ffda39be0c3a1292dd4c2fe590",
+  "data/counties/kisumu/machine-checks.json": "ab36bdc63ad60aaa5568db1304434922755352db26b15a610f2417bf618f9256",
+  "data/counties/kisumu/population.json": "45a0ba3bb5e7187a1f2314cc7e869e2c335f3fa183f45a5563dc6b4f8d4e59d6",
+  "data/counties/kisumu/review-packs.json": "c35f02677bff55ee9c8b5877efca6a50554e3685276a325210fedcd4802b744e",
+  "data/county.json": "d362d6fb4804fbe921db3ea484f4690804bb78b5b798f9bd37a13f1c0706f5b5",
+  "data/cpi.json": "3c91c889abaecd66ab7ad17e96ad2aa81a31f943a585484e6b257e361c4924e1",
+  "data/derived.json": "885896b669df6867c71b21b5957e67428c9d2956fb5c1ddbbd484b135343b513",
+  "data/history.json": "914425b67fbc6652974f1ed395ce221e0f80c00fc51cd3b6dbee9ee9431e341f",
+  "data/imf.json": "ebc170956999a440bcc1b6135643113aab31b9b89fca8d014921832b6d3c427f",
+  "data/kenya-counties-map.json": "d8aea762e7bc877f443b2bcea346c795cbcaf9d5ac63ffbe42233ed01ad55453",
+  "data/ledger-classes.json": "dddd127ed4c25395152ce017be7632ee5ce4dadda6eb9c73aab28063204a5cd2",
+  "data/machine-checks.json": "ba8e6f8678faf3d32e0645b11b721655f660881367311d190b12e50e355233c7",
+  "data/national.json": "fda96171ab8130dbdb38299e9b4ac6e3eb7c3689d070d88168f86f35f6ca6701",
+  "data/ngo.json": "fb9624766ee6d608c95fcefb65d0777a12fae30dc5f92a8a41b081b9b25c8c49",
+  "data/political.json": "d8345a13f1238abafe27c573151789c5f47d8a0b6e52a0300d84637711fd6345",
+  "data/review-packs.json": "48b34b23ecd8d1de1f9cf9769abc8a16164c30f8202a90a1c80c9d0d135bfa0f",
+  "data/reviews.json": "c9d511495ad60dfa3ea068a7c29087763cfd4b661f9b099d7fd323d3b672e72d",
+  "data/siaya-agriculture.json": "107bcb546b0ee746230832cf58872cfa053db7543e7b012f5e55a7ef7f708082",
+  "data/siaya-analysis-layers.json": "ff542d2208ecb123d5601522386e923bec1beca33185406b22685738a2539308",
+  "data/siaya-analysis.json": "c73bad4b054873c66d3c567e1a0f89f735edf908c985958b03352113b8ffd014",
+  "data/siaya-audits.json": "62803241adca3d705fed1b14df36d37b7bb2cdc7367c2beac495dd2025c2715e",
+  "data/siaya-boundaries.json": "7357bad6f69cca7c014179b60d0eaa06057123249c126b8264808581b5855857",
+  "data/siaya-budget-departments.json": "257392e1667f3d9443712d79197707b2a42cfe73e902a20e0adfbe27f9102652",
+  "data/siaya-climate.json": "241d781daa2579da92ec5c92494d46f56a94f8797f8df980305f5fc0c8ff6e6a",
+  "data/siaya-county-series.json": "3286afa83fb8b5ebbad1cb84d3570ac5ef1b9b9dbdcd762c968c5a535c226a40",
+  "data/siaya-economy.json": "650193fab4a5855218eeb9e41481ef8a26eb7f46289fd895e351d5c8230e7780",
+  "data/siaya-education.json": "39bb1f52fd957ceee08b70a47342a8228af275d97473d4721d3ec627972cbdab",
+  "data/siaya-fiscal-ledger.json": "5b8e1b4b9256c70fc0a92fc8668b9257ecf2f167a0696763f076e67e1d5433b3",
+  "data/siaya-geography.json": "858f92c63dd06dfbd2ae2cf5208401eb1684d4c611cc3d8dbd8e891182d69ded",
+  "data/siaya-governance.json": "e854200d17dc5663d96d161fbc89032fd27a12ed20620a3b26b01af3711cea30",
+  "data/siaya-health.json": "e946ebaa40d3ba3ed86eea356d8a6be22f2514dcb878d44666ab21a20409fafd",
+  "data/siaya-programmes.json": "228a58e5f0aedd7312af4910b3e942192f77442f7b270fce028b1e702eb0757d",
+  "data/siaya-projects.json": "5e9124b9507bcc1279d671881177911fafbf8134ef520ae677f5f19d2ef85023",
+  "data/siaya-wards-geo.json": "c10cc47e85fa4aa42e07c0bef7e968c69d9a2e676b824994a7e008910e9567be",
+  "data/siaya.json": "534682b64ee16a527344709854f8224891710be7bf2e4b60d59be1f897e60ef3",
+  "data/source-library.json": "3504c8e0b46ea08561b9eaf3e4de380fb86b8f3cc8dfb52de64f197cd15f4061",
+  "data/source-manifest.json": "297f4e588ef28ba71ce68960b2c4f476bb143f678c85e8edf12c50efa4bbe8cd",
+  "data/subcounties.json": "a54bcb00421e8e316227a17597214d29e6218a4016560623731c0f61d6a9e06a",
+  "docs/research/gaps-2026-11-27/A-fy2019-20-files.tsv": "6fba82e2a19507bf0ce92309fdf2dc1eae8a3dc15e99b7b346045fa0ef192eed",
+  "docs/research/gaps-2026-11-27/B-audits-files.tsv": "d0600970a646c51964469c6fc969fd3a694ab460d2b92c05078ca2b99e0068bc",
+  "docs/research/gaps-2026-11-27/D-knbs-files.tsv": "35f02715cd789622aa3c71eab3aabf7865f5f5d39344f03c79b6137360f85c8d",
+  "docs/research/gaps-2026-11-27/E-files.tsv": "c8cd18a86e31846e8c8fbbf49574c814daaa3905f401262d7fa9d7e16edf659c",
+  "docs/research/kisumu-2026-11-27/downloads.tsv": "6f202aec02ad58f5fffb34aa3824b47ad71c5046dd3f212efc5203ec2dd5df8e",
+  "docs/research/kisumu-2026-11-27/kisumu-coverage.md": "76b73f3ff2513dc6604b5cb6071525c8a7bc15627f442db52a03e768529863fb",
+  "docs/research/kisumu-2026-11-27/kisumu-sources.json": "e4ef59b2aeaeadc57c8280cef89907b3642567daf50a6d0c1017776518f72849"
+ },
+ "machine_checks": {
+  "kisumu": {
+   "actual_counts": {
+    "agree": 273,
+    "disagree": 5,
+    "not checkable": 53
+   },
+   "checks": 331,
+   "disagreements": [
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "first_reading": {
+      "as_printed": "1,004.04 [chart label, FY 2016/17]",
+      "method": "PDF text layer"
+     },
+     "id": "K060",
+     "pdf_page": 139,
+     "printed_page": 116,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 1004.04 (KSh million) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "cob-report-2018-19",
+     "unit": "KSh million",
+     "value": 1004.04
+    },
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "first_reading": {
+      "as_printed": "Total 7,246 4,629 7,153 3,211 5,703 2,676 79.7 83.3 78.7 57.8",
+      "method": "PDF text layer"
+     },
+     "id": "K089",
+     "pdf_page": 143,
+     "printed_page": 120,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 7246 (KSh million) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "cob-report-2018-19",
+     "unit": "KSh million",
+     "value": 7246
+    },
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "first_reading": {
+      "as_printed": "Total 7,246 4,629 ...",
+      "method": "PDF text layer"
+     },
+     "id": "K090",
+     "pdf_page": 143,
+     "printed_page": 120,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 4629 (KSh million) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "cob-report-2018-19",
+     "unit": "KSh million",
+     "value": 4629
+    },
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "first_reading": {
+      "as_printed": "Total 2,149,130,137 2,149,130,137 1,682,326,354 78.3",
+      "method": "PDF text layer"
+     },
+     "id": "K093",
+     "pdf_page": 140,
+     "printed_page": 117,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 2149.130137 (KSh million) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "cob-report-2018-19",
+     "unit": "KSh million",
+     "value": 2149.130137
+    },
+    {
+     "dataset": "kisumu-fiscal-ledger",
+     "first_reading": {
+      "as_printed": "Total 2,149,130,137 2,149,130,137 1,682,326,354 78.3",
+      "method": "PDF text layer"
+     },
+     "id": "K094",
+     "pdf_page": 140,
+     "printed_page": 117,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 1682.326354 (KSh million) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "cob-report-2018-19",
+     "unit": "KSh million",
+     "value": 1682.326354
+    }
+   ],
+   "file": "data/counties/kisumu/machine-checks.json",
+   "meta_counts": {
+    "agree": 273,
+    "disagree": 5,
+    "not checkable": 53
+   }
+  },
+  "siaya": {
+   "actual_counts": {
+    "agree": 2363,
+    "disagree": 80,
+    "not checkable": 1562
+   },
+   "checks": 4005,
+   "disagreements": [
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "64,457,277",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-AGRICULTURE-budget-om-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 64457277 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 64457277
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "160,904,000",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-AGRICULTURE-budget-pe-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 160904000 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 160904000
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "390,781,194",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-AGRICULTURE-budget-tot-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 390781194 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 390781194
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "89,060,300",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-ASSEMBLY-budget-dev-orig",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 89060300 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 89060300
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "271,989,205",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-ASSEMBLY-budget-om-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 271989205 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 271989205
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "655,923,777",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-ASSEMBLY-budget-tot-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 655923777 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 655923777
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "900,538,109",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-EDUCATION-budget-tot-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 900538109 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 900538109
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "44,479,179",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-EXECUTIVE-budget-dev-orig",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 44479179 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 44479179
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "253,101,156",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-EXECUTIVE-budget-om-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 253101156 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 253101156
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "272,756,852",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-EXECUTIVE-budget-pe-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 272756852 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 272756852
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "666,512,340",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-EXECUTIVE-budget-tot-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 666512340 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 666512340
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "38,000,000",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-FINANCE-budget-dev-orig",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 38000000 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 38000000
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "25,000,000",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-FINANCE-budget-dev-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 25000000 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 25000000
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "243,932,048",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-FINANCE-budget-om-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 243932048 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 243932048
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "228,508,130",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-FINANCE-budget-pe-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 228508130 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 228508130
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "497,440,178",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-FINANCE-budget-tot-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 497440178 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 497440178
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "668,847,012",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-HEALTH-budget-dev-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 668847012 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 668847012
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "511,019,357",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-HEALTH-budget-om-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 511019357 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 511019357
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "89,724,401",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-LANDS-budget-dev-orig",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 89724401 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 89724401
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "77,205,609",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-LANDS-budget-dev-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 77205609 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 77205609
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "129,489,659",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-LANDS-budget-tot-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 129489659 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 129489659
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "20,810,558",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-ROADS-budget-pe-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 20810558 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 20810558
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "917,508,233",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-ROADS-budget-tot-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 917508233 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 917508233
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "2,516,528,033",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-TOTAL-budget-dev-orig",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 2516528033 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 2516528033
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "3,222,084,848",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-TOTAL-budget-dev-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 3222084848 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 3222084848
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "1,586,874,264",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-TOTAL-budget-om-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 1586874264 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 1586874264
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "2,137,368,200",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-TOTAL-budget-pe-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 2137368200 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 2137368200
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "27,909,007",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-TOURISM-budget-om-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 27909007 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 27909007
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "75,162,494",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-TRADE-budget-dev-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 75162494 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 75162494
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "18,396,517",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-TRADE-budget-pe-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 18396517 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 18396517
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "260,999,734",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-WATER-budget-dev-orig",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 260999734 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 260999734
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "313,840,966",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-WATER-budget-dev-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 313840966 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 313840966
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "75,716,375",
+      "method": "PDF text layer"
+     },
+     "id": "BD-1516-PBB-WATER-budget-om-supp-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 75716375 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2015-2016",
+     "unit": "KSh",
+     "value": 75716375
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "390,726,502",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2021-PBB-ASSEMBLY-budget-om-orig-bf",
+     "pdf_page": 15,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 390726502 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2020-2021",
+     "unit": "KSh",
+     "value": 390726502
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "355,582,082",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2021-PBB-ASSEMBLY-budget-pe-orig-bf",
+     "pdf_page": 15,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 355582082 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2020-2021",
+     "unit": "KSh",
+     "value": 355582082
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "746,308,584",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2021-PBB-ASSEMBLY-budget-rec-orig-bf",
+     "pdf_page": 15,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 746308584 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2020-2021",
+     "unit": "KSh",
+     "value": 746308584
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "569,787,017",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2021-PBB-EXECUTIVE-budget-rec-orig-bf",
+     "pdf_page": 15,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 569787017 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2020-2021",
+     "unit": "KSh",
+     "value": 569787017
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "396,909,731",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2021-PBB-HEALTH-budget-dev-orig-bf",
+     "pdf_page": 15,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 396909731 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2020-2021",
+     "unit": "KSh",
+     "value": 396909731
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "34,365,950",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2021-PBB-LANDS-budget-pe-orig-bf",
+     "pdf_page": 15,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 34365950 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2020-2021",
+     "unit": "KSh",
+     "value": 34365950
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "74,745,031",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2021-PBB-LANDS-budget-rec-orig-bf",
+     "pdf_page": 15,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 74745031 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2020-2021",
+     "unit": "KSh",
+     "value": 74745031
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "369,143,601",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2021-PBB-WATER-budget-dev-orig-bf",
+     "pdf_page": 15,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 369143601 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2020-2021",
+     "unit": "KSh",
+     "value": 369143601
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "420,282,518",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2021-PBB-WATER-budget-tot-orig-bf",
+     "pdf_page": 15,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 420282518 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2020-2021",
+     "unit": "KSh",
+     "value": 420282518
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "461,485,733",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-AGRICULTURE-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 461485733 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 461485733
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "628,753,785",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-AGRICULTURE-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 628753785 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 628753785
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "188,893,780",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-ASSEMBLY-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 188893780 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 188893780
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "330,655,931",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-ASSEMBLY-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 330655931 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 330655931
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "249,923,717",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-EDUCATION-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 249923717 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 249923717
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "337,783,920",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-EDUCATION-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 337783920 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 337783920
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "3,350,404",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-EXECUTIVE-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 3350404 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 3350404
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "6,128,430",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-EXECUTIVE-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 6128430 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 6128430
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "5,801,317",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-FINANCE-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 5801317 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 5801317
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "35,768,230",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-FINANCE-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 35768230 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 35768230
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "302,911,551",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-HEALTH-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 302911551 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 302911551
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "368,105,701",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-HEALTH-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 368105701 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 368105701
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "35,104,827",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-LANDS-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 35104827 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 35104827
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "695,116,235",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-ROADS-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 695116235 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 695116235
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "902,308,563",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-ROADS-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 902308563 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 902308563
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "239,253,028",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-TOURISM-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 239253028 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 239253028
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "245,705,870",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-TRADE-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 245705870 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 245705870
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "550,335,342",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-TRADE-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 550335342 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 550335342
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "262,534,955",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-WATER-actual-dev",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 262534955 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 262534955
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "415,022,350",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-CBROP-WATER-budget-dev-fina-bf",
+     "pdf_page": 22,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 415022350 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 415022350
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "808,171,751",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-ASSEMBLY-budget-rec-orig-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 808171751 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 808171751
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "1,084,251,751",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-ASSEMBLY-budget-tot-orig-nobf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 1084251751 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 1084251751
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "569,197,639",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-EDUCATION-budget-tot-orig-nobf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 569197639 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 569197639
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "989,462,161",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-FINANCE-budget-tot-orig-nobf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 989462161 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 989462161
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "2,178,322,298",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-HEALTH-budget-rec-orig-nobf",
+     "pdf_page": 13,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 2178322298 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 2178322298
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "2,574,831,766",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-HEALTH-budget-tot-orig-nobf",
+     "pdf_page": 13,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 2574831766 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 2574831766
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "653,950,122",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-ROADS-budget-tot-orig-nobf",
+     "pdf_page": 13,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 653950122 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 653950122
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "4,713,270,754",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-TOTAL-budget-dev-orig-bf",
+     "pdf_page": 13,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 4713270754 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 4713270754
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "3,182,142,930",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-TOTAL-budget-dev-orig-nobf",
+     "pdf_page": 13,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 3182142930 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 3182142930
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "5,791,082,091",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-TOTAL-budget-rec-orig-nobf",
+     "pdf_page": 13,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 5791082091 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 5791082091
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "319,351,513",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-TOURISM-budget-tot-orig-nobf",
+     "pdf_page": 13,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 319351513 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 319351513
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "109,427,129",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-WATER-budget-rec-orig-bf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 109427129 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 109427129
+    },
+    {
+     "dataset": "siaya-budget-departments",
+     "first_reading": {
+      "as_printed": "415,157,080",
+      "method": "PDF text layer"
+     },
+     "id": "BD-2324-PBB-WATER-budget-tot-orig-nobf",
+     "pdf_page": 12,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 415157080 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-PROGRAMME-BASED-BUDGET-2023-2024",
+     "unit": "KSh",
+     "value": 415157080
+    },
+    {
+     "dataset": "siaya-county-series",
+     "first_reading": {
+      "as_printed": "2,526,428,646",
+      "method": "PDF text layer"
+     },
+     "id": "CS-CBROP-2324-budget-operations",
+     "pdf_page": 21,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 2526428646 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "KIPPRA-BUDGET-REVIEW-AND-OUTLOOK-PAPER-2023",
+     "unit": "KSh",
+     "value": 2526428646
+    },
+    {
+     "dataset": "siaya-county-series",
+     "first_reading": {
+      "as_printed": "199,844,514",
+      "method": "OCR (ocr-tesseract)"
+     },
+     "id": "CS-ROR25-FIF",
+     "pdf_page": 17,
+     "printed_page": null,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm4+more",
+      "reason": "The second method read the page but did not find 199844514 (KSh) in any scale.",
+      "result": "disagree"
+     },
+     "source_id": "OAG-ROR-2024-25",
+     "unit": "KSh",
+     "value": 199844514
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "first_reading": {
+      "as_printed": "Total 844,302,787 844,302,787 392,985,072 46.5",
+      "method": "PDF text layer"
+     },
+     "id": "L077",
+     "pdf_page": 270,
+     "printed_page": 247,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 844.302787 (KSh million) in any scale. Looked into 23 Nov 2026: the Total row of Table 3.110 is printed (an OCR of that row alone reads 844,302,787), but no full-page reading picks the row up; the page also carries a doubled text layer. Needs a look at the page image.",
+      "result": "disagree"
+     },
+     "source_id": "cob-report-2018-19",
+     "unit": "KSh million",
+     "value": 844.302787
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "first_reading": {
+      "as_printed": null,
+      "method": "PDF text layer"
+     },
+     "id": "L142",
+     "pdf_page": 270,
+     "printed_page": 247,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 142.88 (KSh million) in any scale. Looked into 23 Nov 2026: a data label of Figure 3.150 on a dotted chart background; the text layer reads 142.88, OCR reads it as 142.38. Needs a look at the page image.",
+      "result": "disagree"
+     },
+     "source_id": "cob-report-2018-19",
+     "unit": "KSh million",
+     "value": 142.88
+    },
+    {
+     "dataset": "siaya-fiscal-ledger",
+     "first_reading": {
+      "as_printed": null,
+      "method": "PDF text layer"
+     },
+     "id": "L143",
+     "pdf_page": 270,
+     "printed_page": 247,
+     "second_reading": {
+      "matched": null,
+      "method": "tesseract-600dpi-psm6+psm4+more",
+      "reason": "The second method read the page but did not find 113.26 (KSh million) in any scale. Looked into 23 Nov 2026: a data label of Figure 3.150 on a dotted chart background; the text layer reads 113.26, OCR reads it as 1T5.26. Needs a look at the page image.",
+      "result": "disagree"
+     },
+     "source_id": "cob-report-2018-19",
+     "unit": "KSh million",
+     "value": 113.26
+    }
+   ],
+   "file": "data/machine-checks.json",
+   "meta_counts": {
+    "agree": 2363,
+    "disagree": 80,
+    "not checkable": 1562
+   }
+  }
+ },
+ "rule": "Mechanical counts from the data files as held, enumerated with lib/review-status.js and lib/county-registry.js. No value was changed. Tiers marked \"inferred\" come from TIER_RULES in scripts/census.js, not from a recorded field.",
+ "sources": {
+  "cited_hashes_not_in_manifest": {
+   "cited_distinct_hashes": 128,
+   "in_kisumu_register_only": 42,
+   "in_library_only": 32,
+   "in_manifest": 45,
+   "in_neither": [
+    {
+     "cited_as": [
+      "siaya-programmes:WB-PROJECTS-API-KE"
+     ],
+     "sha256": "20b09604a3346a6a0b56e22ea42dc0cb16d8d834867a76daaeffdcadf00908f9"
+    },
+    {
+     "cited_as": [
+      "siaya-analysis:audit-asm-2020-21",
+      "siaya-audits:audit-asm-2020-21"
+     ],
+     "sha256": "429cf207e32f9fd9ecad1237b144978a15d7e05cf42bcf9ca77c7824459572f9"
+    },
+    {
+     "cited_as": [
+      "siaya-analysis:audit-asm-2023-24",
+      "siaya-audits:audit-asm-2023-24",
+      "siaya-projects:audit-asm-2023-24"
+     ],
+     "sha256": "4854ae471a643b06f170b333f383a312e0eb7f77d454b0a03246d32466dac3b5"
+    },
+    {
+     "cited_as": [
+      "siaya-analysis:audit-asm-2024-25",
+      "siaya-audits:audit-asm-2024-25"
+     ],
+     "sha256": "625a8d0dff5cb142020c8c500161611d25a1b8bab5098fb9b2b121ceb458056c"
+    },
+    {
+     "cited_as": [
+      "siaya-analysis:audit-fo-2013-14",
+      "siaya-audits:audit-fo-2013-14"
+     ],
+     "sha256": "8777dd0be31ece70da63464f04f03d1f0e8a370e6e1e8ee0014c4f3df9d82800"
+    },
+    {
+     "cited_as": [
+      "siaya-programmes:HEALTH-03"
+     ],
+     "sha256": "8ced749ef66ed0f5187488bdc0fa46044634279d64a1bc171f3ce9dd0d2a9d51"
+    },
+    {
+     "cited_as": [
+      "siaya-analysis:audit-2024-25",
+      "siaya-audits:audit-2024-25",
+      "siaya-projects:audit-2024-25"
+     ],
+     "sha256": "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe"
+    },
+    {
+     "cited_as": [
+      "siaya-programmes:IATI-DPORTAL-SIAYA"
+     ],
+     "sha256": "e18c91d4ed5f3a777fa24031e175facad1b936ed1b4f92a8b6409c7d617399a1"
+    },
+    {
+     "cited_as": [
+      "siaya-analysis:audit-asm-2022-23",
+      "siaya-audits:audit-asm-2022-23",
+      "siaya-projects:audit-asm-2022-23"
+     ],
+     "sha256": "f29e0ab2e2893169a6c79fbeb9511bd5d089a568936b75dd8a13920c89dfd6ca"
+    }
+   ]
+  },
+  "counts": {
+   "downloads_tsv_http200": 177,
+   "downloads_tsv_rows": 179,
+   "gap_file_rows_with_hash": 53,
+   "kisumu_register": 453,
+   "kisumu_register_meta_total": 453,
+   "source_library": 242,
+   "source_manifest": 116
+  },
+  "coverage_md": {
+   "register_count_actual": 453,
+   "register_count_stated": 448,
+   "says_not_in_repo": true,
+   "urls": [
+    {
+     "downloads": [],
+     "good_download": false,
+     "register": [],
+     "register_says_held": false,
+     "url": "https://cob.go.ke/download/county-governments-budget-implementation-review-report-for-the-fy-2019-20/"
+    },
+    {
+     "downloads": [
+      "ibp-cbts-2022 HTTP 403 HTML document",
+      "ibp-cbts-2022 HTTP 200 PDF"
+     ],
+     "good_download": true,
+     "register": [
+      "IBP-CBTS-2022: manual-download (HTTP 403 to curl)"
+     ],
+     "register_says_held": false,
+     "url": "https://internationalbudget.org/wp-content/uploads/Kenya-County-Budget-Transparency-Survey-2022-web.pdf"
+    },
+    {
+     "downloads": [
+      "nsdcc-county-posters-2022 HTTP 200 PDF"
+     ],
+     "good_download": true,
+     "register": [],
+     "register_says_held": false,
+     "url": "https://nsdcc.go.ke/wp-content/uploads/2024/07/County-Posters_2022.pdf"
+    },
+    {
+     "downloads": [
+      "county-adp-2026-2027 HTTP 200 data",
+      "county-adp-2026-2027-retry HTTP 200 data"
+     ],
+     "good_download": false,
+     "register": [
+      "COUNTY-ADP-2026-2027: failed",
+      "COUNTY-ADP-2026-2027-RETRY: failed"
+     ],
+     "register_says_held": false,
+     "url": "https://www.kisumu.go.ke/wp-content/uploads/KISUMU-ADP-2026-2027.pdf"
+    },
+    {
+     "downloads": [],
+     "good_download": false,
+     "register": [
+      "KNBS-POVERTY-2022: manual-download (KNBS TLS)",
+      "KNBS-KIHBS-2015-16-COUNTY: manual-download (KNBS TLS)"
+     ],
+     "register_says_held": false,
+     "url": "https://www.knbs.or.ke/"
+    },
+    {
+     "downloads": [],
+     "good_download": false,
+     "register": [
+      "OAG-MISSING-EXECUTIVE-2014-15: missing (not in Parliament library; OAG archive behind bot challenge)",
+      "OAG-MISSING-ASSEMBLY-2014-15: missing (not in Parliament library; OAG archive behind bot challenge)",
+      "OAG-MISSING-EXECUTIVE-2015-16: missing (not in Parliament library; OAG archive behind bot challenge)",
+      "OAG-MISSING-ASSEMBLY-2015-16: missing (not in Parliament library; OAG archive behind bot challenge)",
+      "OAG-MISSING-EXECUTIVE-2016-17: missing (not in Parliament library; OAG archive behind bot challenge)",
+      "OAG-MISSING-ASSEMBLY-2016-17: missing (not in Parliament library; OAG archive behind bot challenge)",
+      "OAG-MISSING-ASSEMBLY-2018-19: missing (not in Parliament library; OAG archive behind bot challenge)"
+     ],
+     "register_says_held": false,
+     "url": "https://www.oagkenya.go.ke/county-executives-assemblies-reports/"
+    },
+    {
+     "downloads": [
+      "oagsite-assembly-fy2017-18 HTTP 200 HTML document"
+     ],
+     "good_download": false,
+     "register": [
+      "OAGSITE-ASSEMBLY-FY2017-18: manual-download (oagkenya.go.ke bot challenge / 503)"
+     ],
+     "register_says_held": false,
+     "url": "https://www.oagkenya.go.ke/wp-content/uploads/2021/09/County-Assembly-of-Kisumu-2017-2018.pdf"
+    },
+    {
+     "downloads": [
+      "oagsite-exec-fy2017-18 HTTP 200 HTML document"
+     ],
+     "good_download": false,
+     "register": [
+      "OAGSITE-EXEC-FY2017-18: manual-download (oagkenya.go.ke bot challenge / 503)"
+     ],
+     "register_says_held": false,
+     "url": "https://www.oagkenya.go.ke/wp-content/uploads/2021/09/County-Executive-of-Kisumu-2017-2018.pdf"
+    },
+    {
+     "downloads": [
+      "oagsite-kiwasco-fy2016-17 HTTP 200 HTML document"
+     ],
+     "good_download": false,
+     "register": [
+      "OAGSITE-KIWASCO-FY2016-17: manual-download (oagkenya.go.ke bot challenge / 503)"
+     ],
+     "register_says_held": false,
+     "url": "https://www.oagkenya.go.ke/wp-content/uploads/2021/09/Kisumu-Water-and-Sewerage-Company-Limited-2016-2017.pdf"
+    },
+    {
+     "downloads": [
+      "oagsite-kiwasco-fy2017-18 HTTP 200 HTML document"
+     ],
+     "good_download": false,
+     "register": [
+      "OAGSITE-KIWASCO-FY2017-18: manual-download (oagkenya.go.ke bot challenge / 503)"
+     ],
+     "register_says_held": false,
+     "url": "https://www.oagkenya.go.ke/wp-content/uploads/2021/09/Kisumu-Water-and-Sewerage-Company-Limited-2017-2018.pdf"
+    }
+   ]
+  },
+  "duplicate_hashes": {
+   "across_registers_different_ids": 15,
+   "within_kisumu_register": [
+    {
+     "ids": [
+      "kisumu-sources:KIPPRA-CBROP-2014",
+      "kisumu-sources:COUNTY-CBROP-2015-SITE"
+     ],
+     "sha256": "476b31500dc474ec4809d138c0fdd75925ca6e0a24eb4bbe5a5a16d1af0a3e85"
+    },
+    {
+     "ids": [
+      "kisumu-sources:KIPPRA-CBROP-2020",
+      "kisumu-sources:COUNTY-CBROP-2021-COMPILED"
+     ],
+     "sha256": "5d5f64c4228c24baf19e36dc5256215b1801f36a189974e9517bce41060c7a9c"
+    },
+    {
+     "ids": [
+      "kisumu-sources:KIPPRA-CBROP-2021",
+      "kisumu-sources:COUNTY-CBROP-FY2021-22-DOCUMENT"
+     ],
+     "sha256": "ebb82d50d3427e00285c036f039594e0332c506815e68df8cac38b6e20f6374b"
+    },
+    {
+     "ids": [
+      "kisumu-sources:KIPPRA-CBROP-2023",
+      "kisumu-sources:COUNTY-CBROP-2024-FY2023-24-SCAN"
+     ],
+     "sha256": "036a9103156ea7a9d2d9817af61b30304e4ae11ba509782ec190dcd4c9b10d46"
+    },
+    {
+     "ids": [
+      "kisumu-sources:KIPPRA-CFSP-2018",
+      "kisumu-sources:COUNTY-CFSP-2018-2019-APPROVED"
+     ],
+     "sha256": "3a1cd29a7d66f1de59961fb1f1ec5ef40cadc3ce8a2f0fecc22ec64022082422"
+    },
+    {
+     "ids": [
+      "kisumu-sources:KIPPRA-CFSP-2019",
+      "kisumu-sources:COUNTY-CFSP-2019-APPROVED"
+     ],
+     "sha256": "ae5415fa1aeec34f56f57e64e07072763fc67a117326cfc8713e52ca08e2ea63"
+    },
+    {
+     "ids": [
+      "kisumu-sources:KIPPRA-CFSP-2023",
+      "kisumu-sources:COUNTY-CFSP-2023-24"
+     ],
+     "sha256": "c8641d15c79ec459603ff9f67b2f24aef957c1e233204e8ec8003fd4e7ca0a02"
+    },
+    {
+     "ids": [
+      "kisumu-sources:COUNTY-BIRR-FULL-2022-10",
+      "kisumu-sources:COUNTY-BIRR-FULL-2023"
+     ],
+     "sha256": "384e8748abd1cabdc88e80c3eca3994119cc5af555e86de0f9e85132ac9e1273"
+    },
+    {
+     "ids": [
+      "kisumu-sources:COUNTY-BIRR-Q1-2023",
+      "kisumu-sources:COUNTY-BIRR-Q1-2024"
+     ],
+     "sha256": "ee59509e407a1307d0bb3bb9326c7a0561a45554e74c301016505e4efd6f0484"
+    },
+    {
+     "ids": [
+      "kisumu-sources:KIPPRA-ADP-2019-2020",
+      "kisumu-sources:COUNTY-ADP-2019-2020-APPROVED"
+     ],
+     "sha256": "d5676de2af37eef8dd6f5d78f888f6bb786da06cac5058164e3d77b2e71eba90"
+    },
+    {
+     "ids": [
+      "kisumu-sources:COUNTY-ADP-2026-2027",
+      "kisumu-sources:COUNTY-ADP-2026-2027-RETRY"
+     ],
+     "sha256": "2f38d104a0b424a5b4202ab296aa285768b51251e73f849ca9575ba42cd8a85a"
+    }
+   ],
+   "within_source_library": [],
+   "within_source_manifest": []
+  },
+  "files_with_no_record": {
+   "downloads_rows_matched_only_by_url_or_hash": [
+    "county-csa-2024",
+    "khrc-kisumu-audit-simplified",
+    "nta-chambua-county-executive-audit-summary",
+    "senate-report-on-cgbirr-fy2019-20"
+   ],
+   "downloads_rows_not_in_register": [
+    "kisumu-adp-2026-27-draft (HTTP 200, 217449b47c56)",
+    "knbs-kihbs-2015-16-basic-report-wellbeing-nada (HTTP 200, abbdfb8277cc)",
+    "knbs-kphc-2019-vol1-sourceafrica (HTTP 200, 4d93b465d84b)",
+    "knbs-poverty-report-2021 (HTTP 200, cd0257bc9df0)",
+    "knbs-poverty-report-2022 (HTTP 200, e3298f81209a)",
+    "nsdcc-county-posters-2022 (HTTP 200, d8b6b5cda920)",
+    "nsdcc-county-profiles-2026 (HTTP 200, b1467eaed378)",
+    "oagsite-assembly-fy2016-17 (HTTP 503, b502024e3f8c)",
+    "oagsite-assembly-fy2018-19 (HTTP 200, 8f4a44950b12)",
+    "oagsite-exec-fy2016-17 (HTTP 200, e9ed7a42f310)",
+    "oagsite-exec-fy2018-19 (HTTP 200, f9625109c6cf)"
+   ],
+   "gap_files_not_in_any_register": [
+    "A-fy2019-20-files.tsv:a21.txt",
+    "A-fy2019-20-files.tsv:cob-cbirr-fy2020-21-annual-nairobiassembly.pdf",
+    "A-fy2019-20-files.tsv:kisumu-cbrop-fy2020-21.txt",
+    "A-fy2019-20-files.tsv:kisumu-cfsp-2021-draft.txt",
+    "A-fy2019-20-files.tsv:kisumu-cfsp-2021.txt",
+    "A-fy2019-20-files.tsv:nairobi-book-feb2021.pdf",
+    "A-fy2019-20-files.tsv:nb.txt",
+    "A-fy2019-20-files.tsv:ok.txt",
+    "A-fy2019-20-files.tsv:os.txt",
+    "A-fy2019-20-files.tsv:siaya-cbrop-2020.txt",
+    "A-fy2019-20-files.tsv:siaya-cfsp-2021.txt",
+    "A-fy2019-20-files.tsv:vihiga-cbrop-2020-kippra.pdf",
+    "B-audits-files.tsv:nta-chambua-county-exec-2016-17.pdf",
+    "B-audits-files.tsv:senate-cpaic-fiduciary-risk-2018.pdf",
+    "D-knbs-files.tsv:hdx-knbs-2019-pop-per-county.csv",
+    "D-knbs-files.tsv:hdx-knbs-2019-subcounty-vol2-table.xlsx",
+    "D-knbs-files.tsv:kdhs-2022-main-report-vol1-nada.pdf",
+    "D-knbs-files.tsv:kdhs-2022-v8c-nada.xlsx",
+    "D-knbs-files.tsv:knbs-gender-data-sheet-2025-kisumu.pdf",
+    "D-knbs-files.tsv:knbs-gender-data-sheet-2025-siaya.pdf",
+    "D-knbs-files.tsv:knbs-kdhs-2022-factsheet-kisumu.pdf",
+    "D-knbs-files.tsv:knbs-kdhs-2022-factsheet-siaya.pdf",
+    "D-knbs-files.tsv:knbs-kisumu-statistical-abstract-2024.pdf",
+    "D-knbs-files.tsv:wb-kenya-poverty-gender-assessment-2015-16.pdf",
+    "E-files.tsv:kenyatimes-counties-topping-revenue-2026-07.html"
+   ]
+  },
+  "mislabelled": [
+   {
+    "expected_title_year": 2015,
+    "id": "KIPPRA-CBROP-2014",
+    "register": "kisumu-sources",
+    "reviews_fy": "2014/15",
+    "title": "Kisumu City County Budget Review and Outlook Paper 2014",
+    "title_year": 2014
+   },
+   {
+    "expected_title_year": 2019,
+    "id": "KIPPRA-CBROP-2018-V2",
+    "register": "kisumu-sources",
+    "reviews_fy": "2018/19",
+    "title": "Kisumu City County Budget review and Outlook Paper 2018",
+    "title_year": 2018
+   },
+   {
+    "expected_title_year": 2021,
+    "id": "KIPPRA-CBROP-2020",
+    "register": "kisumu-sources",
+    "reviews_fy": "2020/21",
+    "title": "Kisumu City County Budget Review and Outlook Paper 2020",
+    "title_year": 2020
+   },
+   {
+    "expected_title_year": 2022,
+    "id": "KIPPRA-CBROP-2021",
+    "register": "kisumu-sources",
+    "reviews_fy": "2021/22",
+    "title": "Kisumu City  County Budget Review  and Outlook  Paper 2021",
+    "title_year": 2021
+   },
+   {
+    "expected_title_year": 2023,
+    "id": "KIPPRA-CBROP-2022",
+    "register": "kisumu-sources",
+    "reviews_fy": "2022/23",
+    "title": "Kisumu City County Budget Review and Outlook Paper 2022",
+    "title_year": 2022
+   },
+   {
+    "expected_title_year": 2024,
+    "id": "KIPPRA-CBROP-2023",
+    "register": "kisumu-sources",
+    "reviews_fy": "2023/24",
+    "title": "Kisumu City County Budget Review and Outlook Paper 2023",
+    "title_year": 2023
+   },
+   {
+    "expected_title_year": 2025,
+    "id": "KIPPRA-CBROP-2024",
+    "register": "kisumu-sources",
+    "reviews_fy": "2024/25",
+    "title": "Kisumu City County Budget Review and Outlook Paper 2024",
+    "title_year": 2024
+   }
+  ],
+  "records_with_no_file": {
+   "kisumu_held_with_hash_but_no_downloads_row": [
+    "KIWASCO-ANNUAL-REPORT-2017",
+    "KIWASCO-ANNUAL-REPORT-2019",
+    "PBO-COUNTY-FACT-SHEETS-2024"
+   ],
+   "kisumu_held_without_hash_or_download": [],
+   "source_library_downloaded_without_hash": [],
+   "source_manifest_downloaded_without_hash": [
+    "senate-fiduciary-annexes-2018",
+    "siaya-brop-2019-20",
+    "worldbank-wdi-api"
+   ]
+  },
+  "sha_differs_between_register_and_downloads": [],
+  "status_changed_since_register": [
+   {
+    "current": "held (per downloads.tsv)",
+    "downloads": [
+     "ibp-cbts-2022 403 23f2f67302a4",
+     "ibp-cbts-2022 200 332f734ab3a0"
+    ],
+    "id": "IBP-CBTS-2022",
+    "register_status": "manual-download (HTTP 403 to curl)"
+   },
+   {
+    "current": "held (per downloads.tsv)",
+    "downloads": [
+     "county-birr-q1-fy2025-26 200 006f627fcf74"
+    ],
+    "id": "OFFICIAL-K01",
+    "register_status": "link-only"
+   },
+   {
+    "current": "held (per downloads.tsv)",
+    "downloads": [
+     "county-cbrop-2025-fy2024-25 200 e7aae529c67b"
+    ],
+    "id": "OFFICIAL-K02",
+    "register_status": "link-only"
+   }
+  ],
+  "status_table": {
+   "failed -> failed": 2,
+   "held -> held": 184,
+   "link-only -> held (per downloads.tsv)": 2,
+   "link-only -> link-only": 247,
+   "manual-download -> held (per downloads.tsv)": 1,
+   "manual-download -> manual-download": 7,
+   "missing -> missing": 7,
+   "other -> other": 3
+  }
+ },
+ "title": "Takwimu source and data census (WO01)",
+ "totals": {
+  "all_itemised": {
+   "by_state": {
+    "approved": 0,
+    "disputed": 309,
+    "provisional": 8998,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 2,
+    "official compilation": 767,
+    "official mirror": 1562,
+    "primary": 6544,
+    "secondary-news": 6,
+    "secondary-ngo": 74,
+    "unclassified": 43
+   },
+   "cited_sources_without_hash": 7,
+   "confidence_inherited": 409,
+   "distinct_source_hashes": 128,
+   "distinct_source_ids": 149,
+   "first_period": "2003-04",
+   "kinds": {
+    "Auditor-General revenue figure (OCR, read twice)": 76,
+    "IMF WEO value (actual)": 302,
+    "IMF WEO value (estimate)": 8,
+    "IMF WEO value (projection)": 120,
+    "agriculture statistic": 105,
+    "audit finding": 262,
+    "audit opinion": 57,
+    "audit opinion (secondary summary)": 9,
+    "calculation by Takwimu": 814,
+    "climate and water statistic": 87,
+    "county fiscal value (County Treasury)": 115,
+    "county fiscal value (OCR)": 4232,
+    "department budget or spending value": 1240,
+    "economic statistic": 154,
+    "education statistic": 215,
+    "fiscal discrepancy (Siaya row against data/history.json)": 92,
+    "fiscal discrepancy (open case in the ledger)": 131,
+    "fiscal discrepancy (project amounts differ between documents)": 23,
+    "fiscal value": 498,
+    "fiscal value (in-year)": 22,
+    "fiscal value (ten-year series; register cases)": 130,
+    "governance finding": 18,
+    "governance score": 20,
+    "health indicator": 86,
+    "population": 11,
+    "poverty": 3,
+    "programme record": 73,
+    "project record": 95
+   },
+   "last_period": "2031",
+   "missing": {
+    "confidence": 5014,
+    "page": 1262,
+    "period": 140,
+    "publication_date": 78,
+    "publication_date_not_stated": 692,
+    "source": 42,
+    "source_unresolved": 5,
+    "unit": 109
+   },
+   "missing_any": 5944,
+   "missing_any_counting_not_stated": 6373,
+   "nulls_with_reason": 934,
+   "nulls_without_reason": 58,
+   "observations": 8998,
+   "periods_unparsed": 142,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 3190,
+    "no source": 42,
+    "none": 1,
+    "recorded (Kisumu register)": 5381,
+    "recorded (observation)": 174,
+    "recorded (source kind)": 65,
+    "recorded (source record)": 145
+   }
+  },
+  "kisumu": {
+   "by_state": {
+    "approved": 0,
+    "disputed": 74,
+    "provisional": 331,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 4,
+    "official mirror": 7,
+    "primary": 317,
+    "secondary-news": 0,
+    "secondary-ngo": 3,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "distinct_source_hashes": 54,
+   "distinct_source_ids": 59,
+   "first_period": "FY 2013/14",
+   "kinds": {
+    "audit opinion": 26,
+    "audit opinion (secondary summary)": 9,
+    "fiscal value": 291,
+    "population": 5
+   },
+   "last_period": "FY 2025/26",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 35,
+    "publication_date_not_stated": 118,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 35,
+   "missing_any_counting_not_stated": 153,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 1,
+   "observations": 331,
+   "periods_unparsed": 0,
+   "tier_basis": {
+    "recorded (Kisumu register)": 276,
+    "recorded (observation)": 55
+   }
+  },
+  "siaya_review_scope": {
+   "by_state": {
+    "approved": 0,
+    "disputed": 235,
+    "provisional": 4005,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 2,
+    "official compilation": 333,
+    "official mirror": 1555,
+    "primary": 1995,
+    "secondary-news": 6,
+    "secondary-ngo": 71,
+    "unclassified": 43
+   },
+   "cited_sources_without_hash": 6,
+   "confidence_inherited": 409,
+   "distinct_source_hashes": 86,
+   "distinct_source_ids": 100,
+   "first_period": "2003-04",
+   "kinds": {
+    "Auditor-General revenue figure (OCR, read twice)": 76,
+    "agriculture statistic": 105,
+    "audit finding": 262,
+    "audit opinion": 31,
+    "calculation by Takwimu": 814,
+    "climate and water statistic": 87,
+    "county fiscal value (County Treasury)": 115,
+    "department budget or spending value": 1240,
+    "economic statistic": 154,
+    "education statistic": 215,
+    "fiscal discrepancy (Siaya row against data/history.json)": 92,
+    "fiscal discrepancy (open case in the ledger)": 131,
+    "fiscal discrepancy (project amounts differ between documents)": 23,
+    "fiscal value": 207,
+    "fiscal value (in-year)": 22,
+    "fiscal value (ten-year series; register cases)": 130,
+    "governance finding": 18,
+    "governance score": 20,
+    "health indicator": 86,
+    "population": 6,
+    "poverty": 3,
+    "programme record": 73,
+    "project record": 95
+   },
+   "last_period": "2027",
+   "missing": {
+    "confidence": 352,
+    "page": 832,
+    "period": 140,
+    "publication_date": 43,
+    "publication_date_not_stated": 574,
+    "source": 42,
+    "source_unresolved": 5,
+    "unit": 109
+   },
+   "missing_any": 1247,
+   "missing_any_counting_not_stated": 1558,
+   "nulls_with_reason": 185,
+   "nulls_without_reason": 57,
+   "observations": 4005,
+   "periods_unparsed": 142,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 2760,
+    "no source": 42,
+    "none": 1,
+    "recorded (Kisumu register)": 873,
+    "recorded (observation)": 119,
+    "recorded (source kind)": 65,
+    "recorded (source record)": 145
+   }
+  }
+ }
+}
