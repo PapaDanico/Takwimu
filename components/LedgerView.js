@@ -19,7 +19,9 @@ const pages = (o) => `PDF p. ${o.pdf_page}${o.printed_page ? ` (printed p. ${o.p
 
 // tables: every measure's table, rendered on the server (components/LedgerTables.js ledgerTables()); stats: the
 // number of values and years each one shows. This component only chooses which table is visible.
-export default function LedgerView({ measures, tables, stats, cases, initial }) {
+// curatedBase: where the curated conflict register lives (Siaya: /data/#; another county: its own ledger page).
+// unclassed: the county's cases have no class yet (data/ledger-classes.json covers Siaya only).
+export default function LedgerView({ measures, tables, stats, cases, initial, curatedBase = '/data/#', unclassed = false }) {
   const uid = useId();
   const [m, setM] = useState(initial);
   const measure = measures.find((x) => x.key === m);
@@ -62,8 +64,8 @@ export default function LedgerView({ measures, tables, stats, cases, initial }) 
                 <dt>Claim B</dt><dd><Reviewed b={c.b.review}>{() => amount(c.b)}</Reviewed>, <a href={c.b.url} rel="noopener">{c.b.source}</a>, {pages(c.b)}{c.b.printed ? <> (printed: &ldquo;{c.b.printed}&rdquo;)</> : null}</dd>
                 <dt>Difference</dt><dd>{c.withheld ? `Withheld: ${c.withheld.reason}` : <>KSh {num(c.diff)} million, {num(c.pct)} per cent of the smaller value</>}</dd>
                 <dt>Possible basis mismatch</dt><dd><ul className="plain">{c.basis.map((b) => <li key={b}>{b}</li>)}</ul></dd>
-                <dt>Class</dt><dd><ClassBadge cls={c.cls} /> {c.cls_reason} <small className="cite">Evidence: {c.cls_evidence.join('; ')}</small></dd>
-                {c.curated && c.curated.length ? <><dt>Curated register</dt><dd>Also explained as {c.curated.map((id, i) => <span key={id}>{i ? ', ' : ''}case <a href={`/data/#${id}`}>{id}</a></span>)} in the conflict register.</dd></> : null}
+                {unclassed ? <><dt>Class</dt><dd>Not yet classed. A specialist reads both pages before any class is given.</dd></> : <><dt>Class</dt><dd><ClassBadge cls={c.cls} /> {c.cls_reason} <small className="cite">Evidence: {c.cls_evidence.join('; ')}</small></dd></>}
+                {c.curated && c.curated.length ? <><dt>Curated register</dt><dd>Also explained as {c.curated.map((id, i) => <span key={id}>{i ? ', ' : ''}case <a href={`${curatedBase}${id}`}>{id}</a></span>)} in the conflict register.</dd></> : null}
                 <dt>Status</dt><dd>{c.cls === 'resolved by source' ? 'Settled by the printed source; not yet reviewed. Both values stand as printed.' : 'Open, not yet reviewed. Both values stand.'}</dd>
               </dl>
             </li>

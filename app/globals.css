@@ -763,3 +763,6 @@ svg text.axis-unit { font-family: var(--sans); font-weight: 600; fill: var(--ink
 .ds-foot > .ds-links { margin-top: 0; }
 .ds-foot > .ds-tech { margin-top: 0; flex: 0 1 auto; }
 .ds-foot > .ds-tech[open] { flex-basis: 100%; }
+
+/* County pages from the registry: long SHA-256 hashes wrap instead of widening the table. */
+.hash code { word-break: break-all; }
