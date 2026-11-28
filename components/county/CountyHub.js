@@ -2,6 +2,7 @@ import Link from 'next/link';
 import PageHead from '../PageHead';
 import TableWrap from '../TableWrap';
 import KenyaMap from '../KenyaMap';
+import WardMap from '../WardMap';
 import CountyProvisional from './CountyProvisional';
 import CountyNav from './CountyNav';
 import CountyCite, { ValueFlags } from './Cite';
@@ -20,6 +21,7 @@ export default function CountyHub({ slug }) {
   const p = cp.people(slug);
   const counts = cp.counts(slug);
   const ind = m.pages.includes('indicators') ? cp.indicators(slug) : null;
+  const geo = m.pages.includes('wards') ? cp.wards(slug) : null;
   const census = p.points.find((x) => x.kind === 'census');
   const rows = HEADLINE.filter((k) => l.values[k]).map((k) => {
     const measure = l.measures.find((x) => x.key === k);
@@ -86,6 +88,7 @@ export default function CountyHub({ slug }) {
               <tr><th scope="row"><Link href={`/counties/${slug}/ledger/`}>Fiscal reconciliation</Link></th><td>{l.measures.reduce((s, x) => s + x.n, 0)} values for {l.measures.length} measures, FY {l.years[0]} to FY {l.years[l.years.length - 1]}; {l.cases.length} discrepancy cases; {cp.conflicts(slug).length} explained conflict cases</td><td>{gaps} of {cells} measure-year cells hold no value; each gap has its reason</td></tr>
               <tr><th scope="row"><Link href={`/counties/${slug}/audits/`}>Audit opinions</Link></th><td>{a.opinions.length} Auditor-General opinions from {a.documents} documents, {a.opinions.filter((o) => o.tier === 'secondary').length} of them from secondary summaries (labelled)</td><td>{auditGaps} entity-years with no primary report held; audit findings not yet coded</td></tr>
               <tr><th scope="row"><Link href={`/counties/${slug}/people/`}>Population</Link></th><td>{census ? <>2019 census count <b>{fmtNum(census.value)}</b> persons and {p.points.length - 1} KNBS projections, by sub-county for 2019</> : 'No census count held'}</td><td>{p.gaps.length} listed</td></tr>
+              {geo ? <tr><th scope="row"><Link href={`/counties/${slug}/wards/`}>Wards and constituencies</Link></th><td>{geo.g.constituencies.length} constituencies and {geo.g.wards.length} wards on a map with IEBC codes and registered voters; census population by KNBS sub-county</td><td>No ward-level values yet</td></tr> : null}
               {ind ? <tr><th scope="row"><Link href={`/counties/${slug}/indicators/`}>Social and economic indicators</Link></th><td>{ind.domains.reduce((n, d) => n + d.rows.length, 0)} values: {ind.domains.map((d) => d.title.toLowerCase()).join(', ')}; {ind.conflicts.length} cases where publishers differ</td><td>{ind.gaps.length} listed</td></tr> : null}
               <tr><th scope="row"><Link href={`/counties/${slug}/sources/`}>Sources</Link></th><td>{cp.sources(slug).length} documents cited, with links and SHA-256 hashes where held</td><td>Documents not yet obtained are listed on the pages where they would be used</td></tr>
             </tbody>
@@ -101,6 +104,7 @@ export default function CountyHub({ slug }) {
       <section className="card" aria-labelledby="hub-loc">
         <h2 id="hub-loc">Where {m.name} is</h2>
         <KenyaMap focus={slug} ariaLabel={`Map of Kenya with ${m.name} County highlighted`} />
+        {geo ? <><h3>{m.name}&rsquo;s constituencies</h3><WardMap geo={geo.consGeo} countyName={m.name} unit="constituency" mapId="hubmap" ariaLabel={`Outline of ${m.name} County and its ${geo.g.constituencies.length} IEBC constituencies`} /><p className="how">The {geo.g.wards.length} wards, the KNBS sub-counties and the figures for each are on the <Link href={`/counties/${slug}/wards/`}>wards and constituencies</Link> page.</p></> : null}
       </section>
     </main>
     <CountyNav name={m.name} links={cp.nav(slug)} current={`/counties/${slug}/`} />

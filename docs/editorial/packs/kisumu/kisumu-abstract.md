@@ -89847,7 +89847,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,217"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5217"
 - Current state: Provisional: awaiting editorial review
@@ -89862,7 +89862,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,475"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3475"
 - Current state: Provisional: awaiting editorial review
@@ -89877,7 +89877,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,692"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8,692"
 - Current state: Provisional: awaiting editorial review
@@ -89892,7 +89892,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,663"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6663"
 - Current state: Provisional: awaiting editorial review
@@ -89907,7 +89907,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,606"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6606"
 - Current state: Provisional: awaiting editorial review
@@ -89922,7 +89922,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,269"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,269"
 - Current state: Provisional: awaiting editorial review
@@ -89937,7 +89937,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,250"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7250"
 - Current state: Provisional: awaiting editorial review
@@ -89952,7 +89952,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,044"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8044"
 - Current state: Provisional: awaiting editorial review
@@ -89967,7 +89967,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,294"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15,294"
 - Current state: Provisional: awaiting editorial review
@@ -89982,7 +89982,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,332"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4332"
 - Current state: Provisional: awaiting editorial review
@@ -89997,7 +89997,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,290"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm4), found "3,290"
 - Current state: Provisional: awaiting editorial review
@@ -90012,7 +90012,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,622"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,622"
 - Current state: Provisional: awaiting editorial review
@@ -90027,7 +90027,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,454"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6454"
 - Current state: Provisional: awaiting editorial review
@@ -90042,7 +90042,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,933"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6933"
 - Current state: Provisional: awaiting editorial review
@@ -90057,7 +90057,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,387"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,387"
 - Current state: Provisional: awaiting editorial review
@@ -90072,7 +90072,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,960"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5960"
 - Current state: Provisional: awaiting editorial review
@@ -90087,7 +90087,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,135"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9135"
 - Current state: Provisional: awaiting editorial review
@@ -90102,7 +90102,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,095"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15,095"
 - Current state: Provisional: awaiting editorial review
@@ -90117,7 +90117,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,111"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4111"
 - Current state: Provisional: awaiting editorial review
@@ -90132,7 +90132,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "2,917"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "2917"
 - Current state: Provisional: awaiting editorial review
@@ -90147,7 +90147,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,028"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,028"
 - Current state: Provisional: awaiting editorial review
@@ -90162,7 +90162,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,723"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6723"
 - Current state: Provisional: awaiting editorial review
@@ -90177,7 +90177,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,303"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5303"
 - Current state: Provisional: awaiting editorial review
@@ -90192,7 +90192,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,026"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12,026"
 - Current state: Provisional: awaiting editorial review
@@ -90207,7 +90207,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,453"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6453"
 - Current state: Provisional: awaiting editorial review
@@ -90222,7 +90222,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,312"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,312"
 - Current state: Provisional: awaiting editorial review
@@ -90237,7 +90237,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,765"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,765"
 - Current state: Provisional: awaiting editorial review
@@ -90252,7 +90252,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,219"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7219"
 - Current state: Provisional: awaiting editorial review
@@ -90267,7 +90267,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,090"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5090"
 - Current state: Provisional: awaiting editorial review
@@ -90282,7 +90282,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,309"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12,309"
 - Current state: Provisional: awaiting editorial review
@@ -90297,7 +90297,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,943"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10943"
 - Current state: Provisional: awaiting editorial review
@@ -90312,7 +90312,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,666"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8666"
 - Current state: Provisional: awaiting editorial review
@@ -90327,7 +90327,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "19,609"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "19609"
 - Current state: Provisional: awaiting editorial review
@@ -90342,7 +90342,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,379"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10379"
 - Current state: Provisional: awaiting editorial review
@@ -90357,7 +90357,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,927"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11927"
 - Current state: Provisional: awaiting editorial review
@@ -90372,7 +90372,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "22,306"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "22,306"
 - Current state: Provisional: awaiting editorial review
@@ -90387,7 +90387,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,906"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10906"
 - Current state: Provisional: awaiting editorial review
@@ -90402,7 +90402,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,671"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5671"
 - Current state: Provisional: awaiting editorial review
@@ -90417,7 +90417,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "16,577"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "16,577"
 - Current state: Provisional: awaiting editorial review
@@ -90432,7 +90432,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,577"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13577"
 - Current state: Provisional: awaiting editorial review
@@ -90447,7 +90447,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,670"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9670"
 - Current state: Provisional: awaiting editorial review
@@ -90462,7 +90462,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "23,247"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "23,247"
 - Current state: Provisional: awaiting editorial review
@@ -90477,7 +90477,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,910"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12910"
 - Current state: Provisional: awaiting editorial review
@@ -90492,7 +90492,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,807"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13807"
 - Current state: Provisional: awaiting editorial review
@@ -90507,7 +90507,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "26,717"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "26,717"
 - Current state: Provisional: awaiting editorial review
@@ -90522,7 +90522,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,097"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,097"
 - Current state: Provisional: awaiting editorial review
@@ -90537,7 +90537,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,394"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm4), found "8394"
 - Current state: Provisional: awaiting editorial review
@@ -90552,7 +90552,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "19,491"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "19491"
 - Current state: Provisional: awaiting editorial review
@@ -90567,7 +90567,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,756"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12756"
 - Current state: Provisional: awaiting editorial review
@@ -90582,7 +90582,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,196"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10,196"
 - Current state: Provisional: awaiting editorial review
@@ -90597,7 +90597,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "22,952"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "22,952"
 - Current state: Provisional: awaiting editorial review
@@ -90612,7 +90612,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,512"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15512"
 - Current state: Provisional: awaiting editorial review
@@ -90627,7 +90627,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,853"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9853"
 - Current state: Provisional: awaiting editorial review
@@ -90642,7 +90642,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "25,365"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "25,365"
 - Current state: Provisional: awaiting editorial review
@@ -90657,7 +90657,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,567"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6567"
 - Current state: Provisional: awaiting editorial review
@@ -90672,7 +90672,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,722"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4,722"
 - Current state: Provisional: awaiting editorial review
@@ -90687,7 +90687,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,289"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,289"
 - Current state: Provisional: awaiting editorial review
@@ -90702,7 +90702,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,324"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9324"
 - Current state: Provisional: awaiting editorial review
@@ -90717,7 +90717,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,330"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,330"
 - Current state: Provisional: awaiting editorial review
@@ -90732,7 +90732,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "16,654"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "16,654"
 - Current state: Provisional: awaiting editorial review
@@ -90747,7 +90747,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,699"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8699"
 - Current state: Provisional: awaiting editorial review
@@ -90762,7 +90762,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,494"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9494"
 - Current state: Provisional: awaiting editorial review
@@ -90777,7 +90777,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "18,193"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "18,193"
 - Current state: Provisional: awaiting editorial review
@@ -90792,7 +90792,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,803"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7803"
 - Current state: Provisional: awaiting editorial review
@@ -90807,7 +90807,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,966"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5966"
 - Current state: Provisional: awaiting editorial review
@@ -90822,7 +90822,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,769"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,769"
 - Current state: Provisional: awaiting editorial review
@@ -90837,7 +90837,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,559"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10559"
 - Current state: Provisional: awaiting editorial review
@@ -90852,7 +90852,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,920"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5920"
 - Current state: Provisional: awaiting editorial review
@@ -90867,7 +90867,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "16,479"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "16,479"
 - Current state: Provisional: awaiting editorial review
@@ -90882,7 +90882,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,337"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9337"
 - Current state: Provisional: awaiting editorial review
@@ -90897,7 +90897,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,338"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8338"
 - Current state: Provisional: awaiting editorial review
@@ -90912,7 +90912,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "17,675"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "17,675"
 - Current state: Provisional: awaiting editorial review
@@ -90927,7 +90927,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,666"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15666"
 - Current state: Provisional: awaiting editorial review
@@ -90942,7 +90942,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,253"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10253"
 - Current state: Provisional: awaiting editorial review
@@ -90957,7 +90957,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "25,919"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "25,919"
 - Current state: Provisional: awaiting editorial review
@@ -90972,7 +90972,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "14,502"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "14502"
 - Current state: Provisional: awaiting editorial review
@@ -90987,7 +90987,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "14,490"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "14490"
 - Current state: Provisional: awaiting editorial review
@@ -91002,7 +91002,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "28,992"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "28992"
 - Current state: Provisional: awaiting editorial review
@@ -91017,7 +91017,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "17,197"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "17197"
 - Current state: Provisional: awaiting editorial review
@@ -91032,7 +91032,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,081"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12081"
 - Current state: Provisional: awaiting editorial review
@@ -91047,7 +91047,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "29,278"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "29,278"
 - Current state: Provisional: awaiting editorial review
@@ -91062,7 +91062,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,013"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9013"
 - Current state: Provisional: awaiting editorial review
@@ -91077,7 +91077,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,214"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5214"
 - Current state: Provisional: awaiting editorial review
@@ -91092,7 +91092,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "14,227"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "14,227"
 - Current state: Provisional: awaiting editorial review
@@ -91107,7 +91107,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,246"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9246"
 - Current state: Provisional: awaiting editorial review
@@ -91122,7 +91122,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,006"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,006"
 - Current state: Provisional: awaiting editorial review
@@ -91137,7 +91137,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "20,252"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "20,252"
 - Current state: Provisional: awaiting editorial review
@@ -91152,7 +91152,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,140"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11140"
 - Current state: Provisional: awaiting editorial review
@@ -91167,7 +91167,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,879"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11879"
 - Current state: Provisional: awaiting editorial review
@@ -91182,7 +91182,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "23,019"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "23,019"
 - Current state: Provisional: awaiting editorial review
@@ -91197,7 +91197,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,418"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6418"
 - Current state: Provisional: awaiting editorial review
@@ -91212,7 +91212,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,531"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4531"
 - Current state: Provisional: awaiting editorial review
@@ -91227,7 +91227,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,949"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10,949"
 - Current state: Provisional: awaiting editorial review
@@ -91242,7 +91242,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,548"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6548"
 - Current state: Provisional: awaiting editorial review
@@ -91257,7 +91257,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,146"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8146"
 - Current state: Provisional: awaiting editorial review
@@ -91272,7 +91272,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "14,694"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "14,694"
 - Current state: Provisional: awaiting editorial review
@@ -91287,7 +91287,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,826"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7826"
 - Current state: Provisional: awaiting editorial review
@@ -91302,7 +91302,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,793"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8793"
 - Current state: Provisional: awaiting editorial review
@@ -91317,7 +91317,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "16,619"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "16,619"
 - Current state: Provisional: awaiting editorial review
@@ -91332,7 +91332,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,551"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5551"
 - Current state: Provisional: awaiting editorial review
@@ -91347,7 +91347,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,342"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3342"
 - Current state: Provisional: awaiting editorial review
@@ -91362,7 +91362,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,893"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8,893"
 - Current state: Provisional: awaiting editorial review
@@ -91377,7 +91377,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,580"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6580"
 - Current state: Provisional: awaiting editorial review
@@ -91392,7 +91392,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,348"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7348"
 - Current state: Provisional: awaiting editorial review
@@ -91407,7 +91407,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,928"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,928"
 - Current state: Provisional: awaiting editorial review
@@ -91422,7 +91422,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,485"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7485"
 - Current state: Provisional: awaiting editorial review
@@ -91437,7 +91437,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,107"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8107"
 - Current state: Provisional: awaiting editorial review
@@ -91452,7 +91452,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,592"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15,592"
 - Current state: Provisional: awaiting editorial review
@@ -91467,7 +91467,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,637"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6637"
 - Current state: Provisional: awaiting editorial review
@@ -91482,7 +91482,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,344"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6344"
 - Current state: Provisional: awaiting editorial review
@@ -91497,7 +91497,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,981"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12,981"
 - Current state: Provisional: awaiting editorial review
@@ -91512,7 +91512,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,697"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8697"
 - Current state: Provisional: awaiting editorial review
@@ -91527,7 +91527,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,061"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11061"
 - Current state: Provisional: awaiting editorial review
@@ -91542,7 +91542,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "19,758"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "19,758"
 - Current state: Provisional: awaiting editorial review
@@ -91557,7 +91557,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,769"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10769"
 - Current state: Provisional: awaiting editorial review
@@ -91572,7 +91572,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,060"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11060"
 - Current state: Provisional: awaiting editorial review
@@ -91587,7 +91587,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "21,829"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "21,829"
 - Current state: Provisional: awaiting editorial review
@@ -91602,7 +91602,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,509"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7509"
 - Current state: Provisional: awaiting editorial review
@@ -91617,7 +91617,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,698"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3698"
 - Current state: Provisional: awaiting editorial review
@@ -91632,7 +91632,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,207"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,207"
 - Current state: Provisional: awaiting editorial review
@@ -91647,7 +91647,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,330"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6330"
 - Current state: Provisional: awaiting editorial review
@@ -91662,7 +91662,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,496"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9496"
 - Current state: Provisional: awaiting editorial review
@@ -91677,7 +91677,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,826"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15,826"
 - Current state: Provisional: awaiting editorial review
@@ -91692,7 +91692,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,513"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8513"
 - Current state: Provisional: awaiting editorial review
@@ -91707,7 +91707,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,086"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9086"
 - Current state: Provisional: awaiting editorial review
@@ -91722,7 +91722,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "17,599"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "17,599"
 - Current state: Provisional: awaiting editorial review
@@ -91737,7 +91737,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,322"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4322"
 - Current state: Provisional: awaiting editorial review
@@ -91752,7 +91752,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,600"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3600"
 - Current state: Provisional: awaiting editorial review
@@ -91767,7 +91767,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,922"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,922"
 - Current state: Provisional: awaiting editorial review
@@ -91782,7 +91782,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,456"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5456"
 - Current state: Provisional: awaiting editorial review
@@ -91797,7 +91797,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,084"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,084"
 - Current state: Provisional: awaiting editorial review
@@ -91812,7 +91812,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,540"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12,540"
 - Current state: Provisional: awaiting editorial review
@@ -91827,7 +91827,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,560"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6560"
 - Current state: Provisional: awaiting editorial review
@@ -91842,7 +91842,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,372"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,372"
 - Current state: Provisional: awaiting editorial review
@@ -91857,7 +91857,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,932"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,932"
 - Current state: Provisional: awaiting editorial review
@@ -91872,7 +91872,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,005"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6005"
 - Current state: Provisional: awaiting editorial review
@@ -91887,7 +91887,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,056"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3056"
 - Current state: Provisional: awaiting editorial review
@@ -91902,7 +91902,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,061"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9,061"
 - Current state: Provisional: awaiting editorial review
@@ -91917,7 +91917,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,470"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5470"
 - Current state: Provisional: awaiting editorial review
@@ -91932,7 +91932,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,917"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6917"
 - Current state: Provisional: awaiting editorial review
@@ -91947,7 +91947,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,387"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12,387"
 - Current state: Provisional: awaiting editorial review
@@ -91962,7 +91962,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,859"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6859"
 - Current state: Provisional: awaiting editorial review
@@ -91977,7 +91977,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,116"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,116"
 - Current state: Provisional: awaiting editorial review
@@ -91992,7 +91992,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,975"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,975"
 - Current state: Provisional: awaiting editorial review
@@ -92007,7 +92007,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,300"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6300"
 - Current state: Provisional: awaiting editorial review
@@ -92022,7 +92022,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,733"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4733"
 - Current state: Provisional: awaiting editorial review
@@ -92037,7 +92037,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,033"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,033"
 - Current state: Provisional: awaiting editorial review
@@ -92052,7 +92052,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,545"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7545"
 - Current state: Provisional: awaiting editorial review
@@ -92067,7 +92067,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,219"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8219"
 - Current state: Provisional: awaiting editorial review
@@ -92082,7 +92082,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,764"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15,764"
 - Current state: Provisional: awaiting editorial review
@@ -92097,7 +92097,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,312"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8312"
 - Current state: Provisional: awaiting editorial review
@@ -92112,7 +92112,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,584"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9584"
 - Current state: Provisional: awaiting editorial review
@@ -92127,7 +92127,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "17,896"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "17,896"
 - Current state: Provisional: awaiting editorial review
@@ -92142,7 +92142,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,579"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3579"
 - Current state: Provisional: awaiting editorial review
@@ -92157,7 +92157,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,391"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm4), found "4391"
 - Current state: Provisional: awaiting editorial review
@@ -92172,7 +92172,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,970"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,970"
 - Current state: Provisional: awaiting editorial review
@@ -92187,7 +92187,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,687"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5687"
 - Current state: Provisional: awaiting editorial review
@@ -92202,7 +92202,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,212"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,212"
 - Current state: Provisional: awaiting editorial review
@@ -92217,7 +92217,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,899"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12,899"
 - Current state: Provisional: awaiting editorial review
@@ -92232,7 +92232,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,980"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6980"
 - Current state: Provisional: awaiting editorial review
@@ -92247,7 +92247,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,015"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8015"
 - Current state: Provisional: awaiting editorial review
@@ -92262,7 +92262,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "14,995"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "14,995"
 - Current state: Provisional: awaiting editorial review
@@ -92277,7 +92277,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,031"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4031"
 - Current state: Provisional: awaiting editorial review
@@ -92292,7 +92292,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,011"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4011"
 - Current state: Provisional: awaiting editorial review
@@ -92307,7 +92307,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,042"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8,042"
 - Current state: Provisional: awaiting editorial review
@@ -92322,7 +92322,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,589"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6589"
 - Current state: Provisional: awaiting editorial review
@@ -92337,7 +92337,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,407"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5407"
 - Current state: Provisional: awaiting editorial review
@@ -92352,7 +92352,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,996"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,996"
 - Current state: Provisional: awaiting editorial review
@@ -92367,7 +92367,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,761"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6761"
 - Current state: Provisional: awaiting editorial review
@@ -92382,7 +92382,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,159"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,159"
 - Current state: Provisional: awaiting editorial review
@@ -92397,7 +92397,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,920"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,920"
 - Current state: Provisional: awaiting editorial review
@@ -92412,7 +92412,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,001"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5001"
 - Current state: Provisional: awaiting editorial review
@@ -92427,7 +92427,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,689"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3689"
 - Current state: Provisional: awaiting editorial review
@@ -92442,7 +92442,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,690"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8,690"
 - Current state: Provisional: awaiting editorial review
@@ -92457,7 +92457,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,703"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6703"
 - Current state: Provisional: awaiting editorial review
@@ -92472,7 +92472,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,193"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6193"
 - Current state: Provisional: awaiting editorial review
@@ -92487,7 +92487,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,896"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12,896"
 - Current state: Provisional: awaiting editorial review
@@ -92502,7 +92502,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,215"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7215"
 - Current state: Provisional: awaiting editorial review
@@ -92517,7 +92517,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,019"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8019"
 - Current state: Provisional: awaiting editorial review
@@ -92532,7 +92532,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,234"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15,234"
 - Current state: Provisional: awaiting editorial review
@@ -92547,7 +92547,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,312"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3312"
 - Current state: Provisional: awaiting editorial review
@@ -92562,7 +92562,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,781"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3781"
 - Current state: Provisional: awaiting editorial review
@@ -92577,7 +92577,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,093"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7,093"
 - Current state: Provisional: awaiting editorial review
@@ -92592,7 +92592,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,979"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5979"
 - Current state: Provisional: awaiting editorial review
@@ -92607,7 +92607,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,365"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3365"
 - Current state: Provisional: awaiting editorial review
@@ -92622,7 +92622,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,344"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9,344"
 - Current state: Provisional: awaiting editorial review
@@ -92637,7 +92637,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,849"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5849"
 - Current state: Provisional: awaiting editorial review
@@ -92652,7 +92652,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,997"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4997"
 - Current state: Provisional: awaiting editorial review
@@ -92667,7 +92667,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,846"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10,846"
 - Current state: Provisional: awaiting editorial review
@@ -92682,7 +92682,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,675"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4675"
 - Current state: Provisional: awaiting editorial review
@@ -92697,7 +92697,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,311"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4311"
 - Current state: Provisional: awaiting editorial review
@@ -92712,7 +92712,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,986"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8,986"
 - Current state: Provisional: awaiting editorial review
@@ -92727,7 +92727,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,645"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7645"
 - Current state: Provisional: awaiting editorial review
@@ -92742,7 +92742,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,180"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4180"
 - Current state: Provisional: awaiting editorial review
@@ -92757,7 +92757,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,825"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,825"
 - Current state: Provisional: awaiting editorial review
@@ -92772,7 +92772,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,989"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6989"
 - Current state: Provisional: awaiting editorial review
@@ -92787,7 +92787,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,980"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6980"
 - Current state: Provisional: awaiting editorial review
@@ -92802,7 +92802,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,969"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,969"
 - Current state: Provisional: awaiting editorial review
@@ -92817,7 +92817,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,733"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5733"
 - Current state: Provisional: awaiting editorial review
@@ -92832,7 +92832,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,540"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5540"
 - Current state: Provisional: awaiting editorial review
@@ -92847,7 +92847,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,273"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,273"
 - Current state: Provisional: awaiting editorial review
@@ -92862,7 +92862,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,500"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6500"
 - Current state: Provisional: awaiting editorial review
@@ -92877,7 +92877,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,192"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8192"
 - Current state: Provisional: awaiting editorial review
@@ -92892,7 +92892,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "14,692"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "14,692"
 - Current state: Provisional: awaiting editorial review
@@ -92907,7 +92907,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,843"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8843"
 - Current state: Provisional: awaiting editorial review
@@ -92922,7 +92922,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,090"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8090"
 - Current state: Provisional: awaiting editorial review
@@ -92937,7 +92937,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "16,933"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Chemelil/ Tamu"; IEBC ward "Chemelil" (slug chemelil). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "16,933"
 - Current state: Provisional: awaiting editorial review
@@ -92952,7 +92952,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,221"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7221"
 - Current state: Provisional: awaiting editorial review
@@ -92967,7 +92967,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,263"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6263"
 - Current state: Provisional: awaiting editorial review
@@ -92982,7 +92982,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,484"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,484"
 - Current state: Provisional: awaiting editorial review
@@ -92997,7 +92997,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,821"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7821"
 - Current state: Provisional: awaiting editorial review
@@ -93012,7 +93012,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,635"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9635"
 - Current state: Provisional: awaiting editorial review
@@ -93027,7 +93027,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "17,456"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "17,456"
 - Current state: Provisional: awaiting editorial review
@@ -93042,7 +93042,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,317"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10317"
 - Current state: Provisional: awaiting editorial review
@@ -93057,7 +93057,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,071"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9071"
 - Current state: Provisional: awaiting editorial review
@@ -93072,7 +93072,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "19,388"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). Printed "Muhoroni"; IEBC ward "Muhoroni/Koru" (slug muhoroni-koru). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "19,388"
 - Current state: Provisional: awaiting editorial review
@@ -93087,7 +93087,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,674"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5674"
 - Current state: Provisional: awaiting editorial review
@@ -93102,7 +93102,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,839"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5839"
 - Current state: Provisional: awaiting editorial review
@@ -93117,7 +93117,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,513"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,513"
 - Current state: Provisional: awaiting editorial review
@@ -93132,7 +93132,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,693"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8693"
 - Current state: Provisional: awaiting editorial review
@@ -93147,7 +93147,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,081"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7081"
 - Current state: Provisional: awaiting editorial review
@@ -93162,7 +93162,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,774"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15,774"
 - Current state: Provisional: awaiting editorial review
@@ -93177,7 +93177,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,994"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8994"
 - Current state: Provisional: awaiting editorial review
@@ -93192,7 +93192,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,635"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9635"
 - Current state: Provisional: awaiting editorial review
@@ -93207,7 +93207,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "18,629"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "18,629"
 - Current state: Provisional: awaiting editorial review
@@ -93222,7 +93222,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,397"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3397"
 - Current state: Provisional: awaiting editorial review
@@ -93237,7 +93237,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,208"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3208"
 - Current state: Provisional: awaiting editorial review
@@ -93252,7 +93252,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,605"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6,605"
 - Current state: Provisional: awaiting editorial review
@@ -93267,7 +93267,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,009"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4009"
 - Current state: Provisional: awaiting editorial review
@@ -93282,7 +93282,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,031"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5031"
 - Current state: Provisional: awaiting editorial review
@@ -93297,7 +93297,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,040"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9,040"
 - Current state: Provisional: awaiting editorial review
@@ -93312,7 +93312,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,841"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4841"
 - Current state: Provisional: awaiting editorial review
@@ -93327,7 +93327,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,305"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5305"
 - Current state: Provisional: awaiting editorial review
@@ -93342,7 +93342,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,146"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10,146"
 - Current state: Provisional: awaiting editorial review
@@ -93357,7 +93357,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,522"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6522"
 - Current state: Provisional: awaiting editorial review
@@ -93372,7 +93372,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,583"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4583"
 - Current state: Provisional: awaiting editorial review
@@ -93387,7 +93387,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,105"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,105"
 - Current state: Provisional: awaiting editorial review
@@ -93402,7 +93402,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,544"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6544"
 - Current state: Provisional: awaiting editorial review
@@ -93417,7 +93417,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,024"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9024"
 - Current state: Provisional: awaiting editorial review
@@ -93432,7 +93432,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,568"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15,568"
 - Current state: Provisional: awaiting editorial review
@@ -93447,7 +93447,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,783"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8783"
 - Current state: Provisional: awaiting editorial review
@@ -93462,7 +93462,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,665"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9665"
 - Current state: Provisional: awaiting editorial review
@@ -93477,7 +93477,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "18,448"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "18,448"
 - Current state: Provisional: awaiting editorial review
@@ -93492,7 +93492,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,777"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6777"
 - Current state: Provisional: awaiting editorial review
@@ -93507,7 +93507,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,520"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5520"
 - Current state: Provisional: awaiting editorial review
@@ -93522,7 +93522,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,297"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12,297"
 - Current state: Provisional: awaiting editorial review
@@ -93537,7 +93537,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,540"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7540"
 - Current state: Provisional: awaiting editorial review
@@ -93552,7 +93552,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,139"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9139"
 - Current state: Provisional: awaiting editorial review
@@ -93567,7 +93567,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "16,679"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "16,679"
 - Current state: Provisional: awaiting editorial review
@@ -93582,7 +93582,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,737"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8737"
 - Current state: Provisional: awaiting editorial review
@@ -93597,7 +93597,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,394"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm4), found "9394"
 - Current state: Provisional: awaiting editorial review
@@ -93612,7 +93612,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "18,131"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "18,131"
 - Current state: Provisional: awaiting editorial review
@@ -93627,7 +93627,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,011"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7011"
 - Current state: Provisional: awaiting editorial review
@@ -93642,7 +93642,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,372"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6372"
 - Current state: Provisional: awaiting editorial review
@@ -93657,7 +93657,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,383"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,383"
 - Current state: Provisional: awaiting editorial review
@@ -93672,7 +93672,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,545"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9545"
 - Current state: Provisional: awaiting editorial review
@@ -93687,7 +93687,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,596"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9596"
 - Current state: Provisional: awaiting editorial review
@@ -93702,7 +93702,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "19,141"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "19141"
 - Current state: Provisional: awaiting editorial review
@@ -93717,7 +93717,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,213"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10213"
 - Current state: Provisional: awaiting editorial review
@@ -93732,7 +93732,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,807"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10807"
 - Current state: Provisional: awaiting editorial review
@@ -93747,7 +93747,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "21,020"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "21,020"
 - Current state: Provisional: awaiting editorial review
@@ -93762,7 +93762,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,304"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3304"
 - Current state: Provisional: awaiting editorial review
@@ -93777,7 +93777,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "2,830"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "2830"
 - Current state: Provisional: awaiting editorial review
@@ -93792,7 +93792,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,134"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6,134"
 - Current state: Provisional: awaiting editorial review
@@ -93807,7 +93807,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,903"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5903"
 - Current state: Provisional: awaiting editorial review
@@ -93822,7 +93822,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "2,867"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "2867"
 - Current state: Provisional: awaiting editorial review
@@ -93837,7 +93837,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,770"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8,770"
 - Current state: Provisional: awaiting editorial review
@@ -93852,7 +93852,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,634"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4634"
 - Current state: Provisional: awaiting editorial review
@@ -93867,7 +93867,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,369"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5369"
 - Current state: Provisional: awaiting editorial review
@@ -93882,7 +93882,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,003"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10,003"
 - Current state: Provisional: awaiting editorial review
@@ -93897,7 +93897,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,201"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4201"
 - Current state: Provisional: awaiting editorial review
@@ -93912,7 +93912,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,942"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3942"
 - Current state: Provisional: awaiting editorial review
@@ -93927,7 +93927,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,143"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8,143"
 - Current state: Provisional: awaiting editorial review
@@ -93942,7 +93942,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,648"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5648"
 - Current state: Provisional: awaiting editorial review
@@ -93957,7 +93957,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,742"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6742"
 - Current state: Provisional: awaiting editorial review
@@ -93972,7 +93972,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "12,390"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "12,390"
 - Current state: Provisional: awaiting editorial review
@@ -93987,7 +93987,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,656"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6656"
 - Current state: Provisional: awaiting editorial review
@@ -94002,7 +94002,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,543"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7543"
 - Current state: Provisional: awaiting editorial review
@@ -94017,7 +94017,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "14,199"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "14,199"
 - Current state: Provisional: awaiting editorial review
@@ -94032,7 +94032,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,438"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5438"
 - Current state: Provisional: awaiting editorial review
@@ -94047,7 +94047,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,806"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3806"
 - Current state: Provisional: awaiting editorial review
@@ -94062,7 +94062,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "9,244"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "9,244"
 - Current state: Provisional: awaiting editorial review
@@ -94077,7 +94077,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,900"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6900"
 - Current state: Provisional: awaiting editorial review
@@ -94092,7 +94092,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,346"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6346"
 - Current state: Provisional: awaiting editorial review
@@ -94107,7 +94107,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,246"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,246"
 - Current state: Provisional: awaiting editorial review
@@ -94122,7 +94122,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,002"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7002"
 - Current state: Provisional: awaiting editorial review
@@ -94137,7 +94137,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,898"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7898"
 - Current state: Provisional: awaiting editorial review
@@ -94152,7 +94152,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "14,900"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "14,900"
 - Current state: Provisional: awaiting editorial review
@@ -94167,7 +94167,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,883"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). The table prints four Nyakach wards; IEBC lists five (North Nyakach, code 1217, is not printed).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7883"
 - Current state: Provisional: awaiting editorial review
@@ -94182,7 +94182,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,263"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). The table prints four Nyakach wards; IEBC lists five (North Nyakach, code 1217, is not printed).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3263"
 - Current state: Provisional: awaiting editorial review
@@ -94197,7 +94197,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,146"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). The table prints four Nyakach wards; IEBC lists five (North Nyakach, code 1217, is not printed).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,146"
 - Current state: Provisional: awaiting editorial review
@@ -94212,7 +94212,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,555"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). The table prints four Nyakach wards; IEBC lists five (North Nyakach, code 1217, is not printed).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6555"
 - Current state: Provisional: awaiting editorial review
@@ -94227,7 +94227,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,843"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). The table prints four Nyakach wards; IEBC lists five (North Nyakach, code 1217, is not printed).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8843"
 - Current state: Provisional: awaiting editorial review
@@ -94242,7 +94242,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "15,398"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). The table prints four Nyakach wards; IEBC lists five (North Nyakach, code 1217, is not printed).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "15,398"
 - Current state: Provisional: awaiting editorial review
@@ -94257,7 +94257,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,429"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). The table prints four Nyakach wards; IEBC lists five (North Nyakach, code 1217, is not printed).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8429"
 - Current state: Provisional: awaiting editorial review
@@ -94272,7 +94272,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,965"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). The table prints four Nyakach wards; IEBC lists five (North Nyakach, code 1217, is not printed).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8965"
 - Current state: Provisional: awaiting editorial review
@@ -94287,7 +94287,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "17,394"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). The table prints four Nyakach wards; IEBC lists five (North Nyakach, code 1217, is not printed).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "17,394"
 - Current state: Provisional: awaiting editorial review
@@ -94302,7 +94302,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,005"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4005"
 - Current state: Provisional: awaiting editorial review
@@ -94317,7 +94317,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,636"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4636"
 - Current state: Provisional: awaiting editorial review
@@ -94332,7 +94332,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "8,641"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "8,641"
 - Current state: Provisional: awaiting editorial review
@@ -94347,7 +94347,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,065"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7065"
 - Current state: Provisional: awaiting editorial review
@@ -94362,7 +94362,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "4,187"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "4187"
 - Current state: Provisional: awaiting editorial review
@@ -94377,7 +94377,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "11,252"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "11,252"
 - Current state: Provisional: awaiting editorial review
@@ -94392,7 +94392,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,286"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6286"
 - Current state: Provisional: awaiting editorial review
@@ -94407,7 +94407,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,726"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6726"
 - Current state: Provisional: awaiting editorial review
@@ -94422,7 +94422,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,012"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,012"
 - Current state: Provisional: awaiting editorial review
@@ -94437,7 +94437,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "3,567"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "3567"
 - Current state: Provisional: awaiting editorial review
@@ -94452,7 +94452,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "2,540"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "2540"
 - Current state: Provisional: awaiting editorial review
@@ -94467,7 +94467,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,107"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6,107"
 - Current state: Provisional: awaiting editorial review
@@ -94482,7 +94482,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,655"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5655"
 - Current state: Provisional: awaiting editorial review
@@ -94497,7 +94497,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "5,258"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "5258"
 - Current state: Provisional: awaiting editorial review
@@ -94512,7 +94512,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "10,913"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "10,913"
 - Current state: Provisional: awaiting editorial review
@@ -94527,7 +94527,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "6,697"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "6697"
 - Current state: Provisional: awaiting editorial review
@@ -94542,7 +94542,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "7,001"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "7001"
 - Current state: Provisional: awaiting editorial review
@@ -94557,7 +94557,7 @@ Machine check disagrees (check these first): `csa24-t1-4-21-kisumu-west-2019`.
 - Source: Kisumu County Statistical Abstract 2024 <https://repository.knbs.or.ke/entities/statisticalabstract/a5c06128-678d-4c72-b5a8-2109e70ec87f>; SHA-256 `96ce5eaf9585152f9ff0ab146c6d45a65c4b5f1f82e9d46898ab61284e0b5fa4`
 - Page: PDF p. 142 (printed p. 117); read by text layer, checked against the page image
 - As printed or read: "13,698"
-- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent).
+- Note: Ward and sub-county as printed in KNBS Abstract 2024 Table 1.7.1 (groups read from the page image); figures credited to IEBC in the table source line (KNBS reproduction, not the IEBC primary). "Kobura" is printed twice: under Nyando (13,383 in 2013) and under Kadibo (this row, 6,107). Not matched to an IEBC ward: one of the two rows may be misnamed (KNBS Kadibo sub-county has no IEBC equivalent). North Nyakach (IEBC ward 1217, slug north-nyakach) is not printed in Table 1.7.1: the table prints four Nyakach wards against five in the IEBC list.
 - Other sources, same measure and period: none
 - Machine cross-check: agree (tesseract-600dpi-psm6), found "13,698"
 - Current state: Provisional: awaiting editorial review
