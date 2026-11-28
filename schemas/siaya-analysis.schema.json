@@ -39,7 +39,7 @@
     },
     "record": {
       "type": "object",
-      "required": ["calc_id", "family", "status", "title", "formula", "calc", "inputs", "beside", "result", "unit", "period", "source_ids", "comparability_notes", "caveat", "flags", "checks", "gap_reason", "confidence", "label"],
+      "required": ["calc_id", "family", "status", "title", "formula", "calc", "inputs", "beside", "result", "unit", "period", "source_ids", "derived_from", "comparability_notes", "caveat", "flags", "checks", "gap_reason", "confidence", "label"],
       "additionalProperties": false,
       "properties": {
         "calc_id": { "type": "string", "pattern": "^SIA-A[1-8]-[A-Za-z0-9-]+$" },
@@ -57,6 +57,7 @@
         "unit": { "type": "string", "pattern": "." },
         "period": { "type": "string", "pattern": "." },
         "source_ids": { "type": "array", "items": { "type": "string" } },
+        "derived_from": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+(:.+|\\.json#.+)$" }, "description": "The records this calculation is computed from, in place of a page (lib/derived-from.js)" },
         "comparability_notes": { "type": "array", "items": { "type": "string", "pattern": "." } },
         "caveat": { "type": "string", "pattern": "." },
         "flags": { "type": "object" },

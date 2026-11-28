@@ -13,12 +13,12 @@ import hist from '../../../../data/history.json';
 import cpi from '../../../../data/cpi.json';
 import ledger from '../../../../data/siaya-fiscal-ledger.json';
 import { SIAYA_FYS, SIAYA_FY_SHORT, SIAYA_OSR_BY_FY, pendingTotal as pendOf } from '../../../../lib/siaya-years';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/insights/', {
   title: 'Ten-year insights: Siaya County finances',
   description: 'Siaya County over ten years in plain language: spending with prices adjusted, audit opinions, and links to the canonical pages for share of budget spent, pending bills and own-source revenue.',
-  alternates: { canonical: '/counties/siaya/insights/' },
-};
+});
 
 const BASE = '2024/25';
 const deflator = (fy) => (cpi.fiscal_year[fy] ? cpi.fiscal_year[BASE] / cpi.fiscal_year[fy] : null);

@@ -7,8 +7,8 @@ import Reviewed from './Reviewed';
 import { fmtNum } from '../lib/format';
 
 // Case classes (data/ledger-classes.json): Takwimu's reading of what the documents print, not an editorial decision.
-const CLASS_TONE = { definitional: 'good', 'period or version': 'good', 'probable source error': 'warn', 'resolved by source': 'good', open: 'warn' };
-const CLASS_LABEL = { definitional: 'Definitional', 'period or version': 'Period or version', 'probable source error': 'Probable source error', 'resolved by source': 'Resolved by source', open: 'Open' };
+const CLASS_TONE = { definitional: 'good', 'period or version': 'good', 'probable source error': 'warn', 'resolved by source': 'good', unexplained: 'warn' };
+const CLASS_LABEL = { definitional: 'Definitional', 'period or version': 'Period or version', 'probable source error': 'Probable source error', 'resolved by source': 'Resolved by source', unexplained: 'Unexplained' };
 export function ClassBadge({ cls }) {
   return <span className={`tag ${CLASS_TONE[cls] || 'warn'}`} data-case-class={cls}>{CLASS_LABEL[cls] || cls}</span>;
 }

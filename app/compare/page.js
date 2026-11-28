@@ -8,11 +8,12 @@ import PageToc from '../../components/PageToc';
 import { compareData, extra } from '../../lib/explore';
 import { Provisional } from '../../components/ObsTable';
 import { fmtNum } from '../../lib/format';
+import { pageMeta } from '../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/compare/', {
   title: 'Compare counties',
   description: "Compare Kenya's 47 counties on budget, spending, absorption, own-source revenue and pending bills (FY 2021/22 to 2024/25, Controller of Budget), the CRA's recommended allocations for FY 2026/27 and 2022 registered voters by constituency.",
-};
+});
 
 const data = compareData();
 const fmt = (v) => fmtNum(v);

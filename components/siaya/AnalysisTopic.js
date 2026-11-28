@@ -3,11 +3,12 @@ import PageHead from '../PageHead';
 import Abbrs from '../Abbrs';
 import { Provisional } from '../ObsTable';
 import { LABEL } from './AnalysisCalc';
-import { ANALYSIS_BASE, ANALYSIS_TOPICS, topicOf } from '../../lib/analysis-topics';
+import { ANALYSIS_BASE, ANALYSIS_TOPICS, topicOf, topicHref } from '../../lib/analysis-topics';
+import { pageMeta } from '../../lib/page-meta';
 
 export const topicMetadata = (slug) => {
   const t = topicOf(slug);
-  return { title: `${t.title} | Siaya analysis`, description: `Siaya analysis, ${t.title.toLowerCase()}: ${t.summary}` };
+  return pageMeta(topicHref(slug), { title: `${t.title} | Siaya analysis`, description: `Siaya analysis, ${t.title.toLowerCase()}: ${t.summary}` });
 };
 
 // One Siaya analysis topic page (lib/analysis-topics.js). The full "how to read" note and the limits stay once, on

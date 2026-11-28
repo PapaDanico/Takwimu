@@ -8,11 +8,12 @@ import { economy } from '../../../../lib/economy';
 import Reviewed from '../../../../components/Reviewed';
 import { Provisional } from '../../../../components/ObsTable';
 import { fmtNum } from '../../../../lib/format';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/economy/', {
   title: 'Siaya’s economy',
   description: 'Gross County Product for Siaya from the KNBS GCP 2025 and GCP 2024 editions: total output at current and constant 2016 prices, the activities that make it up, and how the later edition revised the earlier one.',
-};
+});
 
 const e = economy();
 const n = (v) => fmtNum(v);

@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { COUNTIES, PUBLISHED } from '../lib/counties';
 import KenyaMap from '../components/KenyaMap';
 import CountyFinder from '../components/CountyFinder';
+import { pageMeta } from '../lib/page-meta';
+
+export const metadata = pageMeta('/');
 
 export default function Home() {
   return (

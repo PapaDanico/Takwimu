@@ -8,11 +8,12 @@ import TableWrap from '../../../../components/TableWrap';
 import AuditExplorer from '../../../../components/AuditExplorer';
 import { audits, withdrawnText, ENTITY, CATEGORY, YEARS } from '../../../../lib/audits';
 import AUD_DATA from '../../../../data/siaya-audits.json';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/audits/', {
   title: 'Audit findings',
   description: 'Auditor-General opinions and findings for the County Executive and the County Assembly of Siaya, FY 2013/14 to FY 2024/25: each opinion as printed, findings by category with report and page, and the matters later reports list as unresolved.',
-};
+});
 
 const a = audits();
 const years = YEARS.filter((fy) => a.findings.some((f) => f.fy === fy));

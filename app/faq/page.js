@@ -1,9 +1,10 @@
 import PageHead from '../../components/PageHead';
+import { pageMeta } from '../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/faq/', {
   title: 'Frequently asked questions',
   description: 'Answers to common questions about where Takwimu numbers come from, how current they are and how to use them.',
-};
+});
 
 const FAQS = [
   { q: 'Where do the numbers come from?', a: 'From official public documents: the Controller of Budget county reports, Auditor-General reports, the Siaya County Integrated Development Plan and the national census. Every figure on the site shows its source, publication date, period, unit and a confidence score.' },

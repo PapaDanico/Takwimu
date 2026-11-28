@@ -3,6 +3,7 @@ import PageHead from '../PageHead';
 import TableWrap from '../TableWrap';
 import KenyaMap from '../KenyaMap';
 import CountyProvisional from './CountyProvisional';
+import CountyNav from './CountyNav';
 import CountyCite, { ValueFlags } from './Cite';
 import { fmtNum } from '../../lib/format';
 import * as cp from '../../lib/county-pages';
@@ -27,7 +28,7 @@ export default function CountyHub({ slug }) {
   const gaps = l.completeness.reduce((s, r) => s + r.cells.filter((c) => c.missing).length, 0);
   const cells = l.completeness.reduce((s, r) => s + r.cells.length, 0);
   const auditGaps = a.gaps.filter((g) => g.status === 'missing').length;
-  return (
+  return (<>
     <main id="main" className="wrap page">
       <PageHead county={{ slug, name: m.name }} eyebrow={`County ${m.code3}`} title={`${m.name} County`}
         sub={`${m.name} County's budget, spending, own-source revenue, pending bills, audit opinions and population, each figure as its official source printed it, with the page it was read from. Where sources differ, both values are shown side by side.`}
@@ -100,5 +101,6 @@ export default function CountyHub({ slug }) {
         <KenyaMap focus={slug} ariaLabel={`Map of Kenya with ${m.name} County highlighted`} />
       </section>
     </main>
-  );
+    <CountyNav name={m.name} links={cp.nav(slug)} current={`/counties/${slug}/`} />
+  </>);
 }

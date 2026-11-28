@@ -253,6 +253,15 @@ ok(data.records.every((r) => r.family !== 'A6' || r.flags.context_not_causation 
 const ops = new Set(data.records.filter((r) => r.calc).map((r) => r.calc.op));
 ok(![...ops].some((o) => /mean|avg|average/i.test(o)), 'no averaging operation is allowed');
 
+// ---- derived_from: a calculation names its input records in place of a page (lib/derived-from.js) ----
+{
+  const { derivedFromProblems } = require('../lib/derived-from');
+  const rsx = require('../lib/review-status');
+  const items = Object.fromEntries(rsx.DATASET_IDS.map((d) => [d, new Set(rsx.observations(d).map((i) => i.id))]));
+  data.records.forEach((r) => derivedFromProblems(r, items).forEach((p) => ok(false, `${r.calc_id}: ${p}`)));
+  ok(derivedFromProblems({ ...data.records.find((r) => r.derived_from.length), derived_from: [] }, items).length > 0, 'derived_from check is vacuous: an emptied list must fail');
+}
+
 if (errors.length) { console.error(`Siaya analysis tests failed (${errors.length}):\n- ${errors.slice(0, 40).join('\n- ')}`); process.exit(1); }
 const v = data.records.filter((r) => r.status === 'value').length;
 console.log(`Siaya analysis tests passed: ${data.records.length} records (${v} values, ${data.records.length - v} gaps), ${checks} checks; reproducible.`);

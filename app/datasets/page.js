@@ -7,11 +7,12 @@ import DatasetCatalogue from '../../components/DatasetCatalogue';
 import SavedViews from '../../components/SavedViews';
 import { catalogue, SECTORS, nat, STATUS_VOCABULARY } from '../../lib/explore';
 import { shortDate, fmtNum } from '../../lib/format';
+import { pageMeta } from '../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/datasets/', {
   title: 'Datasets',
   description: 'Search and download every dataset behind Takwimu Kenya: national indicators and county budgets, revenue and pending bills, each with its source, unit, coverage and method.',
-};
+});
 
 const datasets = catalogue();
 const sources = [...new Set(datasets.map((d) => d.source))].sort();

@@ -1,58 +1,44 @@
 {
  "claims": [
   {
-   "actual": "1 of 47 published (Siaya)",
-   "claim": "Counties: 1 of 47 published (Siaya)",
+   "actual": "2, 47, Siaya, Kisumu",
+   "claim": "Counties: 2 of 47 published (Siaya, Kisumu)",
    "how": "lib/counties.js",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "4005",
-   "claim": "Siaya values: 4,005",
-   "how": "lib/review-pack.js all() over lib/review-status.js",
+   "actual": "4122, 17, 0",
+   "claim": "Siaya values: 4,122 across 17 datasets, each with a review pack. 0 approved",
+   "how": "lib/review-pack.js all() over lib/review-status.js; lib/review-status.js stateOf",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "16",
-   "claim": "across 16 datasets",
-   "how": "distinct datasets in the review-pack scope",
+   "actual": "empty",
+   "claim": "each with a review pack. 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty",
+   "how": "data/review-packs.json entries; data/reviews.json",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "4005 of 4005 in data/review-packs.json (file holds 4005)",
-   "claim": "each with a review pack",
-   "how": "data/review-packs.json entries",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "0 approved; 0 records",
-   "claim": "0 approved; data/reviews.json is empty",
-   "how": "lib/review-status.js stateOf",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "2363 agree, 80 disagree, 1562 not checkable (4005 checks)",
-   "claim": "Machine cross-checks: 2,363 agree, 80 disagree, 1,562 not checkable",
+   "actual": "2435, 80, 1607",
+   "claim": "Machine cross-checks (second reading of the cited page): 2,435 agree, 80 disagree (need a person to read the page image), 1,607 not checkable",
    "how": "data/machine-checks.json checks[].result",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "164",
-   "claim": "Fiscal ledger: 164 discrepancy cases",
-   "how": "data/siaya-fiscal-ledger.json discrepancies",
+   "actual": "164, 164",
+   "claim": "Fiscal ledger: 164 discrepancy cases, 164 of them open",
+   "how": "data/siaya-fiscal-ledger.json discrepancies[].status (authoritative)",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 open (data/ledger-classes.json); the ledger file itself marks {\"open\":164}",
-   "claim": "47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 open",
-   "how": "data/ledger-classes.json cases[].class",
+   "actual": "47, 22, 15, 2, 78",
+   "claim": "by class 47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 unexplained",
+   "how": "data/ledger-classes.json cases[].classification",
    "match": true,
    "where": "README Status"
   },
@@ -64,73 +50,38 @@
    "where": "README Status"
   },
   {
-   "actual": "2013/14 to 2025/26 (13 years)",
-   "claim": "Ten-year series FY 2013/14 to FY 2025/26",
+   "actual": "2013/14, 2025/26",
+   "claim": "Ten-year series: FY 2013/14 to FY 2025/26",
    "how": "data/history.json years",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "FY 2019/20 row holds numeric fields: osr_m",
-   "claim": "FY 2019/20 stays a gap (CoB report not found)",
-   "how": "data/history.json years[fy=2019/20] (informational: the gap is the CoB value; other fields may be filled from other sources)",
+   "actual": "17, 26, 14",
+   "claim": "Corrections: 17 corrections footnoted beside 26 values, 14 source-error records",
+   "how": "lib/correction-notes.js; lib/editorial.js sourceErrors()",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "17 corrections, 26 values",
-   "claim": "17 corrections footnoted beside 26 values",
-   "how": "lib/correction-notes.js",
+   "actual": "331, 291, 35, 5, 38, 0",
+   "claim": "Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked \"Needs page check\", 0 approved",
+   "how": "lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "14",
-   "claim": "14 source-error records",
-   "how": "lib/editorial.js sourceErrors()",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "331",
-   "claim": "Kisumu: 331 values",
-   "how": "lib/county-review.js entries",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "{\"kisumu-fiscal-ledger\":291,\"kisumu-audits\":35,\"kisumu-population\":5}",
-   "claim": "291 ledger, 35 audit opinions, population (5)",
-   "how": "lib/county-review.js entries by dataset",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "38",
-   "claim": "Kisumu: 38 conflict cases",
-   "how": "data/counties/kisumu/conflicts.json",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "0",
-   "claim": "Kisumu: 0 approved",
-   "how": "lib/county-review.js counts",
-   "match": true,
-   "where": "README Status"
-  },
-  {
-   "actual": "110",
-   "claim": "Site: 110 pages",
+   "actual": "114",
+   "claim": "Site: 114 pages",
    "how": ".html files under dist/",
    "match": true,
    "where": "README Status"
   },
   {
-   "actual": "92 datasets in the catalogue; 91 downloadable (CSV/JSON)",
-   "claim": "92 downloadable datasets",
-   "how": "lib/explore.js catalogue()",
-   "match": false,
+   "actual": "92, 1, IMF",
+   "claim": "92 downloadable datasets plus 1 link-only (IMF)",
+   "how": "lib/explore.js catalogue() files.csv",
+   "match": true,
    "where": "README Status"
   },
   {
@@ -141,39 +92,46 @@
    "where": "README Status"
   },
   {
-   "actual": "47 listed; published: siaya",
-   "claim": "lib/counties.js lists 47 counties; only Siaya is published",
+   "actual": "47, Siaya, Kisumu",
+   "claim": "lib/counties.js lists 47 counties; Siaya (/counties/siaya/ hub, old URLs kept) and Kisumu (from 28 Nov 2026) are published",
    "how": "lib/counties.js",
    "match": true,
    "where": "CLAUDE.md"
   },
   {
-   "actual": "47 counties; FYs 2021/22, 2022/23, 2023/24, 2024/25",
-   "claim": "data/counties-cob.json: 47 counties, FY 2023/24-2024/25",
+   "actual": "47, 2021/22, 2024/25",
+   "claim": "data/counties-cob.json (47 counties, FY 2021/22-2024/25",
    "how": "data/counties-cob.json years",
-   "match": false,
-   "where": "CLAUDE.md"
-  },
-  {
-   "actual": "history 13 FYs (2013/14-2025/26); cpi 16 calendar years, 12 fiscal years",
-   "claim": "Series must go back 10 years: data/history.json plus data/cpi.json",
-   "how": "data/history.json, data/cpi.json",
    "match": true,
    "where": "CLAUDE.md"
   },
   {
-   "actual": "registry code 42; NOT_YET_ON_PAGES = kisumu",
-   "claim": "Kisumu (042) phase 1 data is in, unpublished",
+   "actual": "10",
+   "claim": "Series must go back 10 years",
+   "how": "data/history.json years, data/cpi.json fiscal_year",
+   "match": true,
+   "where": "CLAUDE.md"
+  },
+  {
+   "actual": "42, published",
+   "claim": "Kisumu (042) published",
    "how": "lib/county-registry.js",
    "match": true,
    "where": "CLAUDE.md"
   },
   {
-   "actual": "453 records (meta.counts.total 453)",
-   "claim": "kisumu-sources.json (448 records)",
+   "actual": "458, 171, 11",
+   "claim": "register holds 458 records (171 distinct files, 11 duplicates)",
    "how": "docs/research/kisumu-2026-11-27/kisumu-sources.json",
-   "match": false,
-   "where": "kisumu-coverage.md / handover"
+   "match": true,
+   "where": "kisumu-coverage.md (current status)"
+  },
+  {
+   "actual": "current",
+   "claim": "the generated section is current",
+   "how": "docs/research/kisumu-2026-11-27/kisumu-coverage.md after \"## Current status (generated)\"",
+   "match": true,
+   "where": "kisumu-coverage.md (current status)"
   }
  ],
  "datasets": [
@@ -261,7 +219,10 @@
    "nulls_with_reason": 765,
    "nulls_without_reason": 0,
    "observations": 4324,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 92,
    "tier_basis": {
     "recorded (Kisumu register)": 4324
@@ -336,18 +297,21 @@
     "confidence": 0,
     "page": 0,
     "period": 0,
-    "publication_date": 35,
+    "publication_date": 0,
     "publication_date_not_stated": 0,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
-   "missing_any": 35,
-   "missing_any_counting_not_stated": 35,
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 0,
    "nulls_with_reason": 0,
    "nulls_without_reason": 1,
    "observations": 35,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 35,
    "siaya_review_pack_scope": null,
    "tier_basis": {
     "recorded (observation)": 35
@@ -435,7 +399,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 291,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": null,
    "tier_basis": {
     "recorded (Kisumu register)": 271,
@@ -446,11 +413,25 @@
   },
   {
    "dataset": null,
+   "file": "data/counties/kisumu/indicators.json",
+   "observations": null,
+   "title": "Kisumu County indicators (held: kind not in Kisumu public_kinds; not on the site until released)",
+   "top_level_arrays": {
+    "conflicts": 4,
+    "gaps": 4,
+    "observations": 176,
+    "sources": 8
+   },
+   "type": "support file (not itemised by lib/review-status.js or lib/county-registry.js)",
+   "years_in_fields": "2013-2029"
+  },
+  {
+   "dataset": null,
    "file": "data/counties/kisumu/machine-checks.json",
    "observations": null,
-   "title": "Machine cross-checks of Kisumu values (independent second reading; county not yet on pages)",
+   "title": "Machine cross-checks of Kisumu values (independent second reading)",
    "top_level_arrays": {
-    "checks": 331
+    "checks": 507
    },
    "type": "machine cross-check results",
    "years_in_fields": null
@@ -502,7 +483,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 5,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": null,
    "tier_basis": {
     "recorded (Kisumu register)": 5
@@ -514,12 +498,12 @@
    "dataset": null,
    "file": "data/counties/kisumu/review-packs.json",
    "observations": null,
-   "title": "Review packs: every Kisumu value with what a reviewer needs to check it (county not yet on pages)",
+   "title": "Review packs: every Kisumu value with what a reviewer needs to check it (county published)",
    "top_level_arrays": {
-    "entries": 331
+    "entries": 507
    },
    "type": "review packs (preparation, not review)",
-   "years_in_fields": "2013-2025"
+   "years_in_fields": "2013-2029"
   },
   {
    "dataset": null,
@@ -619,7 +603,7 @@
     "page": 11,
     "period": 22,
     "publication_date": 10,
-    "publication_date_not_stated": 8,
+    "publication_date_not_stated": 2,
     "source": 9,
     "source_unresolved": 1,
     "unit": 37
@@ -629,7 +613,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 193,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 22,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 193,
    "tier_basis": {
     "inferred (TIER_RULES)": 11,
@@ -690,12 +677,83 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 430,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 0,
    "tier_basis": {
     "inferred (TIER_RULES)": 430
    },
    "title": "Kenya: IMF World Economic Outlook indicators and IMF staff documents",
+   "type": "observations (lib/review-status.js)"
+  },
+  {
+   "_hashes": [
+    "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+    "2833644fc3e7c9a02679735b0b79f0d91bc2dfe33233bc40d84786463cba2e52",
+    "72a8a2f73d1206e7b17b930544c667e9f659913db59be694d5a821fcc43be2f0",
+    "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "93c826ddcf57075968f72814dc9e68cf1f141eec080bccfb7090c928d8d09720",
+    "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4"
+   ],
+   "_noHash": [],
+   "by_state": {
+    "approved": 0,
+    "disputed": 0,
+    "provisional": 117,
+    "rejected": 0,
+    "superseded": 0
+   },
+   "by_tier": {
+    "academic": 0,
+    "official compilation": 63,
+    "official mirror": 0,
+    "primary": 54,
+    "secondary-news": 0,
+    "secondary-ngo": 0,
+    "unclassified": 0
+   },
+   "cited_sources_without_hash": 0,
+   "confidence_inherited": 0,
+   "dataset": "indicators",
+   "distinct_source_hashes": 6,
+   "distinct_source_ids": 6,
+   "file": "data/indicators.json",
+   "first_period": "2019",
+   "kinds": {
+    "agriculture (official statistic)": 35,
+    "fisheries (official statistic)": 24,
+    "household survey (survey estimate)": 25,
+    "poverty (survey estimate)": 18,
+    "water utility (administrative statistic)": 15
+   },
+   "last_period": "FY 2024/25",
+   "missing": {
+    "confidence": 0,
+    "page": 0,
+    "period": 0,
+    "publication_date": 0,
+    "publication_date_not_stated": 0,
+    "source": 0,
+    "source_unresolved": 0,
+    "unit": 0
+   },
+   "missing_any": 0,
+   "missing_any_counting_not_stated": 0,
+   "nulls_with_reason": 0,
+   "nulls_without_reason": 0,
+   "observations": 117,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
+   "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
+   "siaya_review_pack_scope": 117,
+   "tier_basis": {
+    "inferred (TIER_RULES)": 84,
+    "recorded (Kisumu register)": 33
+   },
+   "title": "County and regional indicators: Siaya County and Lake Victoria region",
    "type": "observations (lib/review-status.js)"
   },
   {
@@ -726,7 +784,7 @@
    "observations": null,
    "title": "Machine cross-checks of Siaya values (independent second reading)",
    "top_level_arrays": {
-    "checks": 4005
+    "checks": 4122
    },
    "type": "machine cross-check results",
    "years_in_fields": null
@@ -770,7 +828,7 @@
    "observations": null,
    "title": "Review packs: every Siaya-scope value with what a reviewer needs to check it",
    "top_level_arrays": {
-    "entries": 4005
+    "entries": 4122
    },
    "type": "review packs (preparation, not review)",
    "years_in_fields": "2003-2027"
@@ -834,7 +892,10 @@
    "nulls_with_reason": 1,
    "nulls_without_reason": 0,
    "observations": 105,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 105,
    "tier_basis": {
     "inferred (TIER_RULES)": 75,
@@ -911,20 +972,23 @@
    "last_period": "FY 2025/26",
    "missing": {
     "confidence": 9,
-    "page": 442,
+    "page": 0,
     "period": 0,
     "publication_date": 9,
-    "publication_date_not_stated": 85,
+    "publication_date_not_stated": 55,
     "source": 9,
     "source_unresolved": 0,
     "unit": 0
    },
-   "missing_any": 442,
-   "missing_any_counting_not_stated": 442,
+   "missing_any": 9,
+   "missing_any_counting_not_stated": 64,
    "nulls_with_reason": 45,
    "nulls_without_reason": 0,
    "observations": 442,
+   "page_by_derived_from": 433,
+   "page_not_applicable": 9,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 442,
    "tier_basis": {
     "inferred (TIER_RULES)": 345,
@@ -1006,20 +1070,23 @@
    "last_period": "stock at 2026-06-30",
    "missing": {
     "confidence": 24,
-    "page": 372,
+    "page": 0,
     "period": 0,
     "publication_date": 24,
-    "publication_date_not_stated": 49,
+    "publication_date_not_stated": 39,
     "source": 24,
     "source_unresolved": 4,
     "unit": 0
    },
-   "missing_any": 372,
-   "missing_any_counting_not_stated": 372,
+   "missing_any": 24,
+   "missing_any_counting_not_stated": 63,
    "nulls_with_reason": 97,
    "nulls_without_reason": 0,
    "observations": 372,
+   "page_by_derived_from": 351,
+   "page_not_applicable": 21,
    "periods_unparsed": 1,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 372,
    "tier_basis": {
     "inferred (TIER_RULES)": 178,
@@ -1082,17 +1149,20 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 2,
+    "publication_date_not_stated": 0,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
    "missing_any": 0,
-   "missing_any_counting_not_stated": 2,
+   "missing_any_counting_not_stated": 0,
    "nulls_with_reason": 0,
    "nulls_without_reason": 1,
    "observations": 282,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 282,
    "tier_basis": {
     "inferred (TIER_RULES)": 276,
@@ -1167,17 +1237,20 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 48,
+    "publication_date_not_stated": 0,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
    "missing_any": 0,
-   "missing_any_counting_not_stated": 48,
+   "missing_any_counting_not_stated": 0,
    "nulls_with_reason": 2,
    "nulls_without_reason": 0,
    "observations": 1240,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 1240,
    "tier_basis": {
     "inferred (TIER_RULES)": 1240
@@ -1227,7 +1300,7 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 65,
+    "publication_date_not_stated": 16,
     "source": 0,
     "source_unresolved": 0,
     "unit": 49
@@ -1237,11 +1310,14 @@
    "nulls_with_reason": 12,
    "nulls_without_reason": 37,
    "observations": 87,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 87,
    "tier_basis": {
-    "inferred (TIER_RULES)": 55,
-    "recorded (Kisumu register)": 8,
+    "inferred (TIER_RULES)": 49,
+    "recorded (Kisumu register)": 14,
     "recorded (source record)": 24
    },
    "title": "Siaya climate, water and resilience evidence by source",
@@ -1297,17 +1373,20 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 88,
+    "publication_date_not_stated": 76,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
    "missing_any": 0,
-   "missing_any_counting_not_stated": 88,
+   "missing_any_counting_not_stated": 76,
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 191,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 191,
    "tier_basis": {
     "inferred (TIER_RULES)": 191
@@ -1363,7 +1442,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 154,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 154,
    "tier_basis": {
     "inferred (TIER_RULES)": 154
@@ -1425,7 +1507,10 @@
    "nulls_with_reason": 1,
    "nulls_without_reason": 0,
    "observations": 215,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 1,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 215,
    "tier_basis": {
     "inferred (TIER_RULES)": 69,
@@ -1497,17 +1582,20 @@
     "page": 0,
     "period": 0,
     "publication_date": 0,
-    "publication_date_not_stated": 69,
+    "publication_date_not_stated": 59,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
    "missing_any": 0,
-   "missing_any_counting_not_stated": 69,
+   "missing_any_counting_not_stated": 59,
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 325,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 325,
    "tier_basis": {
     "inferred (TIER_RULES)": 21,
@@ -1584,7 +1672,10 @@
    "nulls_with_reason": 11,
    "nulls_without_reason": 19,
    "observations": 38,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 38,
    "tier_basis": {
     "inferred (TIER_RULES)": 30,
@@ -1652,7 +1743,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 78,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 78,
    "tier_basis": {
     "inferred (TIER_RULES)": 68,
@@ -1714,7 +1808,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 73,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 0,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 73,
    "tier_basis": {
     "recorded (observation)": 73
@@ -1788,7 +1885,10 @@
    "nulls_with_reason": 0,
    "nulls_without_reason": 0,
    "observations": 118,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
    "periods_unparsed": 118,
+   "publication_date_null_with_reason": 0,
    "siaya_review_pack_scope": 118,
    "tier_basis": {
     "inferred (TIER_RULES)": 47,
@@ -1827,7 +1927,7 @@
    "observations": null,
    "title": "Siaya Source Library",
    "top_level_arrays": {
-    "documents": 242
+    "documents": 253
    },
    "type": "source register",
    "years_in_fields": null
@@ -1838,7 +1938,7 @@
    "observations": null,
    "title": "Source document manifest",
    "top_level_arrays": {
-    "documents": 116
+    "documents": 125
    },
    "type": "source register",
    "years_in_fields": "2006-2026"
@@ -1857,8 +1957,8 @@
  ],
  "generated_by": "scripts/census.js",
  "inputs": {
-  ".claude/CLAUDE.md": "d71574e3439582ef88df5bbab1743915cd6523be0c9d49baa32f9a8bc74fd8c9",
-  "README.md": "5200c7ea18a7a814368b6f0e140a7dae27348d2c37b93f8e39a385857fe6d5b5",
+  ".claude/CLAUDE.md": "1c74e0d280ec37ec7de491305cbbcc509e69faee4e0ebe3bc8dd665909f499f5",
+  "README.md": "2a087b53ab0b293b573ea177d64ee1fd94f9cb9c3b93edee1faef343879f6fd3",
   "components/report/reports.json": "af38ebeb395f6af7d863f47bc9a08de0ada926f67d01cfb202052896243738a7",
   "data/cbk.json": "6c47b668a4baa2f6202e3b44dfe969a40f83ca40744cf82cb1597a6b750dca86",
   "data/conflicts.json": "5e7357a5c5a01a3c7f49b9ee086dd646fc96ba447193c9f54ae4f1931b4994d8",
@@ -1867,26 +1967,28 @@
   "data/counties/kisumu/audits.json": "14ae1130ef8241dcb7f4fce1a1b6e77d21b9b6efd7e19c6cd82582c857e64f2f",
   "data/counties/kisumu/conflicts.json": "b49f7faf3bc31234f6fd9f7bb1d6e828c8d548533659ebf74d6ce1cb4bd5502c",
   "data/counties/kisumu/fiscal-ledger.json": "7e44267ad9ee8cdd38c878e0ff6d22ea664652ffda39be0c3a1292dd4c2fe590",
-  "data/counties/kisumu/machine-checks.json": "ab36bdc63ad60aaa5568db1304434922755352db26b15a610f2417bf618f9256",
+  "data/counties/kisumu/indicators.json": "2608141d1b027622ad86fe793fac994c105308c2617b47d4c7773aedf58db90c",
+  "data/counties/kisumu/machine-checks.json": "a6c72f32f120b9173eae9917b9ef177cdb4c73029f7c29f35f87f65a2186dfea",
   "data/counties/kisumu/population.json": "45a0ba3bb5e7187a1f2314cc7e869e2c335f3fa183f45a5563dc6b4f8d4e59d6",
-  "data/counties/kisumu/review-packs.json": "c35f02677bff55ee9c8b5877efca6a50554e3685276a325210fedcd4802b744e",
+  "data/counties/kisumu/review-packs.json": "ea7a98653bad342ee6f1f68bd6742ab207dc99b8667e7fbc32520076b0111a37",
   "data/county.json": "d362d6fb4804fbe921db3ea484f4690804bb78b5b798f9bd37a13f1c0706f5b5",
   "data/cpi.json": "3c91c889abaecd66ab7ad17e96ad2aa81a31f943a585484e6b257e361c4924e1",
   "data/derived.json": "885896b669df6867c71b21b5957e67428c9d2956fb5c1ddbbd484b135343b513",
-  "data/history.json": "914425b67fbc6652974f1ed395ce221e0f80c00fc51cd3b6dbee9ee9431e341f",
+  "data/history.json": "963b1eb03264a8fa215341a52dab00e27c06014f9b17f59aaaec7e9049ae3722",
   "data/imf.json": "ebc170956999a440bcc1b6135643113aab31b9b89fca8d014921832b6d3c427f",
+  "data/indicators.json": "15ab6442df4eafa3776ab25990a3b13705b48f4b14278b7446fa81385f932d31",
   "data/kenya-counties-map.json": "d8aea762e7bc877f443b2bcea346c795cbcaf9d5ac63ffbe42233ed01ad55453",
-  "data/ledger-classes.json": "dddd127ed4c25395152ce017be7632ee5ce4dadda6eb9c73aab28063204a5cd2",
-  "data/machine-checks.json": "ba8e6f8678faf3d32e0645b11b721655f660881367311d190b12e50e355233c7",
+  "data/ledger-classes.json": "9e538c178917dd9a7d51d23bb0ad6af3a06f8956327c59a3375721b3115b7dff",
+  "data/machine-checks.json": "d333bc59407cfc8e6e9a3f5329b417bf7ab937da16cf3838da2e873087d0d7a7",
   "data/national.json": "fda96171ab8130dbdb38299e9b4ac6e3eb7c3689d070d88168f86f35f6ca6701",
   "data/ngo.json": "fb9624766ee6d608c95fcefb65d0777a12fae30dc5f92a8a41b081b9b25c8c49",
   "data/political.json": "d8345a13f1238abafe27c573151789c5f47d8a0b6e52a0300d84637711fd6345",
-  "data/review-packs.json": "48b34b23ecd8d1de1f9cf9769abc8a16164c30f8202a90a1c80c9d0d135bfa0f",
+  "data/review-packs.json": "98e2596b61f04bf18e2b8654d9ec08d369b77fe84aab70489956e6f8a67a6075",
   "data/reviews.json": "c9d511495ad60dfa3ea068a7c29087763cfd4b661f9b099d7fd323d3b672e72d",
   "data/siaya-agriculture.json": "107bcb546b0ee746230832cf58872cfa053db7543e7b012f5e55a7ef7f708082",
-  "data/siaya-analysis-layers.json": "ff542d2208ecb123d5601522386e923bec1beca33185406b22685738a2539308",
-  "data/siaya-analysis.json": "c73bad4b054873c66d3c567e1a0f89f735edf908c985958b03352113b8ffd014",
-  "data/siaya-audits.json": "62803241adca3d705fed1b14df36d37b7bb2cdc7367c2beac495dd2025c2715e",
+  "data/siaya-analysis-layers.json": "876954edd64d8a9f5a74d9b6db7204047a9179faf0d09d86c763519d3f1e159a",
+  "data/siaya-analysis.json": "ade83b12ca108eac8319cfda60c886b326d43bfd9cc531c42c88d34f7263a1c1",
+  "data/siaya-audits.json": "f4a0f6850ceb703423a717aa34dd4d64c282464b8d6551ee4de489902744d5bb",
   "data/siaya-boundaries.json": "7357bad6f69cca7c014179b60d0eaa06057123249c126b8264808581b5855857",
   "data/siaya-budget-departments.json": "257392e1667f3d9443712d79197707b2a42cfe73e902a20e0adfbe27f9102652",
   "data/siaya-climate.json": "241d781daa2579da92ec5c92494d46f56a94f8797f8df980305f5fc0c8ff6e6a",
@@ -1901,25 +2003,25 @@
   "data/siaya-projects.json": "5e9124b9507bcc1279d671881177911fafbf8134ef520ae677f5f19d2ef85023",
   "data/siaya-wards-geo.json": "c10cc47e85fa4aa42e07c0bef7e968c69d9a2e676b824994a7e008910e9567be",
   "data/siaya.json": "534682b64ee16a527344709854f8224891710be7bf2e4b60d59be1f897e60ef3",
-  "data/source-library.json": "3504c8e0b46ea08561b9eaf3e4de380fb86b8f3cc8dfb52de64f197cd15f4061",
-  "data/source-manifest.json": "297f4e588ef28ba71ce68960b2c4f476bb143f678c85e8edf12c50efa4bbe8cd",
+  "data/source-library.json": "6063aa03075899047310ae40842708bb66aa396133c45f32dffc1440281c864c",
+  "data/source-manifest.json": "68b8f354f8f3c8fd051ffb7d944347d3518e3b1d2ada7d497e89ec770b2ab4db",
   "data/subcounties.json": "a54bcb00421e8e316227a17597214d29e6218a4016560623731c0f61d6a9e06a",
   "docs/research/gaps-2026-11-27/A-fy2019-20-files.tsv": "6fba82e2a19507bf0ce92309fdf2dc1eae8a3dc15e99b7b346045fa0ef192eed",
   "docs/research/gaps-2026-11-27/B-audits-files.tsv": "d0600970a646c51964469c6fc969fd3a694ab460d2b92c05078ca2b99e0068bc",
   "docs/research/gaps-2026-11-27/D-knbs-files.tsv": "35f02715cd789622aa3c71eab3aabf7865f5f5d39344f03c79b6137360f85c8d",
   "docs/research/gaps-2026-11-27/E-files.tsv": "c8cd18a86e31846e8c8fbbf49574c814daaa3905f401262d7fa9d7e16edf659c",
   "docs/research/kisumu-2026-11-27/downloads.tsv": "6f202aec02ad58f5fffb34aa3824b47ad71c5046dd3f212efc5203ec2dd5df8e",
-  "docs/research/kisumu-2026-11-27/kisumu-coverage.md": "76b73f3ff2513dc6604b5cb6071525c8a7bc15627f442db52a03e768529863fb",
-  "docs/research/kisumu-2026-11-27/kisumu-sources.json": "e4ef59b2aeaeadc57c8280cef89907b3642567daf50a6d0c1017776518f72849"
+  "docs/research/kisumu-2026-11-27/kisumu-coverage.md": "9da471b32f25f59750d971f42c7a39a61ce6074c6ff48def96767c65a54ca949",
+  "docs/research/kisumu-2026-11-27/kisumu-sources.json": "293a8e6bff2fb8c0b601c361eeebfd04b22e2c3dbe6f2494f45ef9fd39495136"
  },
  "machine_checks": {
   "kisumu": {
    "actual_counts": {
-    "agree": 273,
+    "agree": 376,
     "disagree": 5,
-    "not checkable": 53
+    "not checkable": 126
    },
-   "checks": 331,
+   "checks": 507,
    "disagreements": [
     {
      "dataset": "kisumu-fiscal-ledger",
@@ -2019,18 +2121,18 @@
    ],
    "file": "data/counties/kisumu/machine-checks.json",
    "meta_counts": {
-    "agree": 273,
+    "agree": 376,
     "disagree": 5,
-    "not checkable": 53
+    "not checkable": 126
    }
   },
   "siaya": {
    "actual_counts": {
-    "agree": 2363,
+    "agree": 2435,
     "disagree": 80,
-    "not checkable": 1562
+    "not checkable": 1607
    },
-   "checks": 4005,
+   "checks": 4122,
    "disagreements": [
     {
      "dataset": "siaya-budget-departments",
@@ -3555,82 +3657,54 @@
    ],
    "file": "data/machine-checks.json",
    "meta_counts": {
-    "agree": 2363,
+    "agree": 2435,
     "disagree": 80,
-    "not checkable": 1562
+    "not checkable": 1607
    }
   }
  },
  "rule": "Mechanical counts from the data files as held, enumerated with lib/review-status.js and lib/county-registry.js. No value was changed. Tiers marked \"inferred\" come from TIER_RULES in scripts/census.js, not from a recorded field.",
  "sources": {
   "cited_hashes_not_in_manifest": {
-   "cited_distinct_hashes": 128,
-   "in_kisumu_register_only": 42,
+   "cited_distinct_hashes": 138,
+   "in_kisumu_register_only": 45,
    "in_library_only": 32,
-   "in_manifest": 45,
+   "in_manifest": 56,
    "in_neither": [
+    {
+     "cited_as": [
+      "kisumu-indicators:KIWASCO-WEB-STORY-2026-11-28"
+     ],
+     "sha256": "44dedfa1d408c04b59a57c54dc3d2acba3f95bf0996841e15f2357d98149c910"
+    },
+    {
+     "cited_as": [
+      "kisumu-indicators:KIWASCO-WEB-HOME-2026-11-28"
+     ],
+     "sha256": "a287e800ff6106f2b1c9c059cefbfe5441b5ab6298e4d5cedd319d3c71182ae8"
+    }
+   ],
+   "not_listed_with_reason": [
     {
      "cited_as": [
       "siaya-programmes:WB-PROJECTS-API-KE"
      ],
+     "reason": "A snapshot of a live API response (World Bank Projects API, JSON), not a cited document file; the hash of the snapshot is kept with the source in data/siaya-programmes.json, and a new read gives different bytes.",
      "sha256": "20b09604a3346a6a0b56e22ea42dc0cb16d8d834867a76daaeffdcadf00908f9"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-asm-2020-21",
-      "siaya-audits:audit-asm-2020-21"
-     ],
-     "sha256": "429cf207e32f9fd9ecad1237b144978a15d7e05cf42bcf9ca77c7824459572f9"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-asm-2023-24",
-      "siaya-audits:audit-asm-2023-24",
-      "siaya-projects:audit-asm-2023-24"
-     ],
-     "sha256": "4854ae471a643b06f170b333f383a312e0eb7f77d454b0a03246d32466dac3b5"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-asm-2024-25",
-      "siaya-audits:audit-asm-2024-25"
-     ],
-     "sha256": "625a8d0dff5cb142020c8c500161611d25a1b8bab5098fb9b2b121ceb458056c"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-fo-2013-14",
-      "siaya-audits:audit-fo-2013-14"
-     ],
-     "sha256": "8777dd0be31ece70da63464f04f03d1f0e8a370e6e1e8ee0014c4f3df9d82800"
     },
     {
      "cited_as": [
       "siaya-programmes:HEALTH-03"
      ],
+     "reason": "A saved copy of a live web page (KEMRI PBIDS home page, HTML), not a document file; the source library records the page as discovered (no copy kept in the repository), so the hash stays with the source in data/siaya-programmes.json.",
      "sha256": "8ced749ef66ed0f5187488bdc0fa46044634279d64a1bc171f3ce9dd0d2a9d51"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-2024-25",
-      "siaya-audits:audit-2024-25",
-      "siaya-projects:audit-2024-25"
-     ],
-     "sha256": "ac77d76f5df088d5ab1f07d4e0b045abeaa752bf60cc8be693bf20d18bfecabe"
     },
     {
      "cited_as": [
       "siaya-programmes:IATI-DPORTAL-SIAYA"
      ],
+     "reason": "A snapshot of a live API response (d-portal IATI search, JSON and XML), not a cited document file; the hash is kept with the source in data/siaya-programmes.json, and a new read gives different bytes.",
      "sha256": "e18c91d4ed5f3a777fa24031e175facad1b936ed1b4f92a8b6409c7d617399a1"
-    },
-    {
-     "cited_as": [
-      "siaya-analysis:audit-asm-2022-23",
-      "siaya-audits:audit-asm-2022-23",
-      "siaya-projects:audit-asm-2022-23"
-     ],
-     "sha256": "f29e0ab2e2893169a6c79fbeb9511bd5d089a568936b75dd8a13920c89dfd6ca"
     }
    ]
   },
@@ -3638,13 +3712,13 @@
    "downloads_tsv_http200": 177,
    "downloads_tsv_rows": 179,
    "gap_file_rows_with_hash": 53,
-   "kisumu_register": 453,
-   "kisumu_register_meta_total": 453,
-   "source_library": 242,
-   "source_manifest": 116
+   "kisumu_register": 458,
+   "kisumu_register_meta_total": 458,
+   "source_library": 253,
+   "source_manifest": 125
   },
   "coverage_md": {
-   "register_count_actual": 453,
+   "register_count_actual": 458,
    "register_count_stated": 448,
    "says_not_in_repo": true,
    "urls": [
@@ -3693,7 +3767,6 @@
      "downloads": [],
      "good_download": false,
      "register": [
-      "KNBS-POVERTY-2022: manual-download (KNBS TLS)",
       "KNBS-KIHBS-2015-16-COUNTY: manual-download (KNBS TLS)"
      ],
      "register_says_held": false,
@@ -3761,7 +3834,7 @@
    ]
   },
   "duplicate_hashes": {
-   "across_registers_different_ids": 15,
+   "across_registers_different_ids": 16,
    "within_kisumu_register": [
     {
      "ids": [
@@ -3885,84 +3958,23 @@
     "D-knbs-files.tsv:kdhs-2022-v8c-nada.xlsx",
     "D-knbs-files.tsv:knbs-gender-data-sheet-2025-kisumu.pdf",
     "D-knbs-files.tsv:knbs-gender-data-sheet-2025-siaya.pdf",
-    "D-knbs-files.tsv:knbs-kdhs-2022-factsheet-kisumu.pdf",
-    "D-knbs-files.tsv:knbs-kdhs-2022-factsheet-siaya.pdf",
-    "D-knbs-files.tsv:knbs-kisumu-statistical-abstract-2024.pdf",
     "D-knbs-files.tsv:wb-kenya-poverty-gender-assessment-2015-16.pdf",
     "E-files.tsv:kenyatimes-counties-topping-revenue-2026-07.html"
    ]
   },
-  "mislabelled": [
-   {
-    "expected_title_year": 2015,
-    "id": "KIPPRA-CBROP-2014",
-    "register": "kisumu-sources",
-    "reviews_fy": "2014/15",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2014",
-    "title_year": 2014
-   },
-   {
-    "expected_title_year": 2019,
-    "id": "KIPPRA-CBROP-2018-V2",
-    "register": "kisumu-sources",
-    "reviews_fy": "2018/19",
-    "title": "Kisumu City County Budget review and Outlook Paper 2018",
-    "title_year": 2018
-   },
-   {
-    "expected_title_year": 2021,
-    "id": "KIPPRA-CBROP-2020",
-    "register": "kisumu-sources",
-    "reviews_fy": "2020/21",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2020",
-    "title_year": 2020
-   },
-   {
-    "expected_title_year": 2022,
-    "id": "KIPPRA-CBROP-2021",
-    "register": "kisumu-sources",
-    "reviews_fy": "2021/22",
-    "title": "Kisumu City  County Budget Review  and Outlook  Paper 2021",
-    "title_year": 2021
-   },
-   {
-    "expected_title_year": 2023,
-    "id": "KIPPRA-CBROP-2022",
-    "register": "kisumu-sources",
-    "reviews_fy": "2022/23",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2022",
-    "title_year": 2022
-   },
-   {
-    "expected_title_year": 2024,
-    "id": "KIPPRA-CBROP-2023",
-    "register": "kisumu-sources",
-    "reviews_fy": "2023/24",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2023",
-    "title_year": 2023
-   },
-   {
-    "expected_title_year": 2025,
-    "id": "KIPPRA-CBROP-2024",
-    "register": "kisumu-sources",
-    "reviews_fy": "2024/25",
-    "title": "Kisumu City County Budget Review and Outlook Paper 2024",
-    "title_year": 2024
-   }
-  ],
+  "mislabelled": [],
   "records_with_no_file": {
    "kisumu_held_with_hash_but_no_downloads_row": [
     "KIWASCO-ANNUAL-REPORT-2017",
     "KIWASCO-ANNUAL-REPORT-2019",
+    "KIWASCO-TARIFF-PROPOSAL-2026",
     "PBO-COUNTY-FACT-SHEETS-2024"
    ],
-   "kisumu_held_without_hash_or_download": [],
+   "kisumu_held_without_hash_or_download": [
+    "KIWASCO-WEB-2026-11-28"
+   ],
    "source_library_downloaded_without_hash": [],
-   "source_manifest_downloaded_without_hash": [
-    "senate-fiduciary-annexes-2018",
-    "siaya-brop-2019-20",
-    "worldbank-wdi-api"
-   ]
+   "source_manifest_downloaded_without_hash": []
   },
   "sha_differs_between_register_and_downloads": [],
   "status_changed_since_register": [
@@ -3990,15 +4002,22 @@
     ],
     "id": "OFFICIAL-K02",
     "register_status": "link-only"
+   },
+   {
+    "current": "held, no file hash recorded",
+    "downloads": [],
+    "id": "KIWASCO-WEB-2026-11-28",
+    "register_status": "held (HTML snapshots 28 Nov 2026: home a287e800…, story 44dedfa1…)"
    }
   ],
   "status_table": {
    "failed -> failed": 2,
-   "held -> held": 184,
+   "held -> held": 189,
+   "held -> held, no file hash recorded": 1,
    "link-only -> held (per downloads.tsv)": 2,
    "link-only -> link-only": 247,
    "manual-download -> held (per downloads.tsv)": 1,
-   "manual-download -> manual-download": 7,
+   "manual-download -> manual-download": 6,
    "missing -> missing": 7,
    "other -> other": 3
   }
@@ -4009,29 +4028,30 @@
    "by_state": {
     "approved": 0,
     "disputed": 309,
-    "provisional": 8998,
+    "provisional": 9291,
     "rejected": 0,
     "superseded": 0
    },
    "by_tier": {
     "academic": 2,
-    "official compilation": 767,
+    "official compilation": 848,
     "official mirror": 1562,
-    "primary": 6544,
+    "primary": 6752,
     "secondary-news": 6,
     "secondary-ngo": 74,
-    "unclassified": 43
+    "unclassified": 47
    },
    "cited_sources_without_hash": 7,
    "confidence_inherited": 409,
-   "distinct_source_hashes": 128,
-   "distinct_source_ids": 149,
+   "distinct_source_hashes": 138,
+   "distinct_source_ids": 159,
    "first_period": "2003-04",
    "kinds": {
     "Auditor-General revenue figure (OCR, read twice)": 76,
     "IMF WEO value (actual)": 302,
     "IMF WEO value (estimate)": 8,
     "IMF WEO value (projection)": 120,
+    "agriculture (official statistic)": 70,
     "agriculture statistic": 105,
     "audit finding": 262,
     "audit opinion": 57,
@@ -4049,36 +4069,47 @@
     "fiscal value": 498,
     "fiscal value (in-year)": 22,
     "fiscal value (ten-year series; register cases)": 130,
+    "fisheries (official statistic)": 28,
     "governance finding": 18,
     "governance score": 20,
     "health indicator": 86,
+    "household survey (survey estimate)": 56,
     "population": 11,
     "poverty": 3,
+    "poverty (survey estimate)": 36,
     "programme record": 73,
-    "project record": 95
+    "project record": 95,
+    "statistical abstract (administrative statistic)": 47,
+    "water utility (administrative statistic)": 35,
+    "water utility (baseline in a target table)": 5,
+    "water utility (proposed target)": 6,
+    "water utility (publisher claim)": 10
    },
    "last_period": "2031",
    "missing": {
-    "confidence": 5014,
-    "page": 1262,
+    "confidence": 5190,
+    "page": 458,
     "period": 140,
-    "publication_date": 78,
-    "publication_date_not_stated": 692,
+    "publication_date": 43,
+    "publication_date_not_stated": 535,
     "source": 42,
     "source_unresolved": 5,
     "unit": 109
    },
-   "missing_any": 5944,
-   "missing_any_counting_not_stated": 6373,
+   "missing_any": 5304,
+   "missing_any_counting_not_stated": 5755,
    "nulls_with_reason": 934,
    "nulls_without_reason": 58,
-   "observations": 8998,
-   "periods_unparsed": 142,
+   "observations": 9291,
+   "page_by_derived_from": 784,
+   "page_not_applicable": 30,
+   "periods_unparsed": 148,
+   "publication_date_null_with_reason": 35,
    "tier_basis": {
-    "inferred (TIER_RULES)": 3190,
+    "inferred (TIER_RULES)": 3307,
     "no source": 42,
-    "none": 1,
-    "recorded (Kisumu register)": 5381,
+    "none": 5,
+    "recorded (Kisumu register)": 5553,
     "recorded (observation)": 174,
     "recorded (source kind)": 65,
     "recorded (source record)": 145
@@ -4088,49 +4119,63 @@
    "by_state": {
     "approved": 0,
     "disputed": 74,
-    "provisional": 331,
+    "provisional": 507,
     "rejected": 0,
     "superseded": 0
    },
    "by_tier": {
     "academic": 0,
-    "official compilation": 4,
+    "official compilation": 22,
     "official mirror": 7,
-    "primary": 317,
+    "primary": 471,
     "secondary-news": 0,
     "secondary-ngo": 3,
-    "unclassified": 0
+    "unclassified": 4
    },
    "cited_sources_without_hash": 0,
    "confidence_inherited": 0,
-   "distinct_source_hashes": 54,
-   "distinct_source_ids": 59,
+   "distinct_source_hashes": 62,
+   "distinct_source_ids": 67,
    "first_period": "FY 2013/14",
    "kinds": {
+    "agriculture (official statistic)": 35,
     "audit opinion": 26,
     "audit opinion (secondary summary)": 9,
     "fiscal value": 291,
-    "population": 5
+    "fisheries (official statistic)": 4,
+    "household survey (survey estimate)": 31,
+    "population": 5,
+    "poverty (survey estimate)": 18,
+    "statistical abstract (administrative statistic)": 47,
+    "water utility (administrative statistic)": 20,
+    "water utility (baseline in a target table)": 5,
+    "water utility (proposed target)": 6,
+    "water utility (publisher claim)": 10
    },
-   "last_period": "FY 2025/26",
+   "last_period": "FY 2029/2030",
    "missing": {
-    "confidence": 0,
-    "page": 0,
+    "confidence": 176,
+    "page": 10,
     "period": 0,
-    "publication_date": 35,
-    "publication_date_not_stated": 118,
+    "publication_date": 0,
+    "publication_date_not_stated": 128,
     "source": 0,
     "source_unresolved": 0,
     "unit": 0
    },
-   "missing_any": 35,
-   "missing_any_counting_not_stated": 153,
+   "missing_any": 176,
+   "missing_any_counting_not_stated": 294,
    "nulls_with_reason": 0,
    "nulls_without_reason": 1,
-   "observations": 331,
-   "periods_unparsed": 0,
+   "observations": 507,
+   "page_by_derived_from": 0,
+   "page_not_applicable": 0,
+   "periods_unparsed": 6,
+   "publication_date_null_with_reason": 35,
    "tier_basis": {
-    "recorded (Kisumu register)": 276,
+    "inferred (TIER_RULES)": 39,
+    "none": 4,
+    "recorded (Kisumu register)": 409,
     "recorded (observation)": 55
    }
   },
@@ -4138,26 +4183,27 @@
    "by_state": {
     "approved": 0,
     "disputed": 235,
-    "provisional": 4005,
+    "provisional": 4122,
     "rejected": 0,
     "superseded": 0
    },
    "by_tier": {
     "academic": 2,
-    "official compilation": 333,
+    "official compilation": 396,
     "official mirror": 1555,
-    "primary": 1995,
+    "primary": 2049,
     "secondary-news": 6,
     "secondary-ngo": 71,
     "unclassified": 43
    },
    "cited_sources_without_hash": 6,
    "confidence_inherited": 409,
-   "distinct_source_hashes": 86,
-   "distinct_source_ids": 100,
+   "distinct_source_hashes": 91,
+   "distinct_source_ids": 105,
    "first_period": "2003-04",
    "kinds": {
     "Auditor-General revenue figure (OCR, read twice)": 76,
+    "agriculture (official statistic)": 35,
     "agriculture statistic": 105,
     "audit finding": 262,
     "audit opinion": 31,
@@ -4173,36 +4219,43 @@
     "fiscal value": 207,
     "fiscal value (in-year)": 22,
     "fiscal value (ten-year series; register cases)": 130,
+    "fisheries (official statistic)": 24,
     "governance finding": 18,
     "governance score": 20,
     "health indicator": 86,
+    "household survey (survey estimate)": 25,
     "population": 6,
     "poverty": 3,
+    "poverty (survey estimate)": 18,
     "programme record": 73,
-    "project record": 95
+    "project record": 95,
+    "water utility (administrative statistic)": 15
    },
    "last_period": "2027",
    "missing": {
     "confidence": 352,
-    "page": 832,
+    "page": 18,
     "period": 140,
     "publication_date": 43,
-    "publication_date_not_stated": 574,
+    "publication_date_not_stated": 407,
     "source": 42,
     "source_unresolved": 5,
     "unit": 109
    },
-   "missing_any": 1247,
-   "missing_any_counting_not_stated": 1558,
+   "missing_any": 466,
+   "missing_any_counting_not_stated": 799,
    "nulls_with_reason": 185,
    "nulls_without_reason": 57,
-   "observations": 4005,
+   "observations": 4122,
+   "page_by_derived_from": 784,
+   "page_not_applicable": 30,
    "periods_unparsed": 142,
+   "publication_date_null_with_reason": 0,
    "tier_basis": {
-    "inferred (TIER_RULES)": 2760,
+    "inferred (TIER_RULES)": 2838,
     "no source": 42,
     "none": 1,
-    "recorded (Kisumu register)": 873,
+    "recorded (Kisumu register)": 912,
     "recorded (observation)": 119,
     "recorded (source kind)": 65,
     "recorded (source record)": 145

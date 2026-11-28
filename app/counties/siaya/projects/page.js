@@ -6,11 +6,12 @@ import { stateLabel } from '../../../../lib/labels';
 import { Provisional } from '../../../../components/ObsTable';
 import { projectRows, STATES, SECTOR, pub } from '../../../../lib/projects';
 import geo from '../../../../data/siaya-geography.json';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/projects/', {
   title: 'Development project register',
   description: 'Siaya County development projects named in county, Controller of Budget and Auditor-General reports: status from eight states with its source, what the county reported beside what the auditor found, and linked audit findings.',
-};
+});
 
 const rows = projectRows();
 const verified = rows.filter((p) => p.status === 'completed-independently-verified');

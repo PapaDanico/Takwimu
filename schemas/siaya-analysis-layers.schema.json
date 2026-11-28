@@ -25,7 +25,7 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["calc_id", "family", "status", "title", "formula", "calc", "inputs", "beside", "result", "unit", "period", "source_ids", "comparability_notes", "caveat", "threshold", "flags", "confidence", "label"],
+        "required": ["calc_id", "family", "status", "title", "formula", "calc", "inputs", "beside", "result", "unit", "period", "source_ids", "derived_from", "comparability_notes", "caveat", "threshold", "flags", "confidence", "label"],
         "additionalProperties": false,
         "properties": {
           "calc_id": { "type": "string", "pattern": "^SIA-B[1-5]-\\d{4}-\\d{2}-[A-Za-z0-9-]+$" },
@@ -38,6 +38,7 @@
           "result": { "type": ["number", "null"] },
           "unit": { "type": "string" }, "period": { "type": "string" },
           "source_ids": { "type": "array", "items": { "type": "string" } },
+          "derived_from": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+(:.+|\\.json#.+)$" }, "description": "The records this calculation is computed from, in place of a page (lib/derived-from.js)" },
           "comparability_notes": { "type": "array", "items": { "type": "string" } },
           "caveat": { "type": ["string", "null"] },
           "threshold": { "type": ["object", "null"] },
