@@ -8,9 +8,9 @@ Rules: "provisional" is every value with no review record in force (values the d
 
 | Scope | Values | Provisional | Approved | Rejected | Disputed | Missing any metadata | Distinct source hashes | Nulls with reason | Nulls without reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Siaya review scope (16 datasets) | 4005 | 4005 | 0 | 0 | 235 | 466 | 86 | 185 | 57 |
-| Kisumu (published) | 331 | 331 | 0 | 0 | 74 | 0 | 54 | 0 | 1 |
-| All itemised values | 8998 | 8998 | 0 | 0 | 309 | 5128 | 128 | 934 | 58 |
+| Siaya review scope (16 datasets) | 4122 | 4122 | 0 | 0 | 235 | 466 | 91 | 185 | 57 |
+| Kisumu (published) | 507 | 507 | 0 | 0 | 74 | 176 | 62 | 0 | 1 |
+| All itemised values | 9291 | 9291 | 0 | 0 | 309 | 5304 | 138 | 934 | 58 |
 
 ## 2. Datasets
 
@@ -22,12 +22,13 @@ Rules: "provisional" is every value with no review record in force (values the d
 | data/counties/kisumu/population.json | kisumu-population | (lib/county-registry.js + lib/county-review.js) | 2019 | 2023 | 5 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | recorded (Kisumu register) 5 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
 | data/history.json | history | (lib/review-status.js) | 2005/06 | FY 2025/26 | 193 | 175 | 0 | 8 | 0 | 0 | 0 | 10 | inferred (TIER_RULES) 11; no source 9; none 1; recorded (Kisumu register) 158; recorded (observation) 14 | 193 | 0 | 0 | 0 | 9 | 1 | 10 | 2 | 22 | 37 | 18 | 11 | 0 | 0 | 0 | 68 | 26 | 25 | 0 | 0 |
 | data/imf.json | imf | (lib/review-status.js) | 2010 | 2031 | 430 | 0 | 0 | 430 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 430 | 430 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 430 | 430 | 0 | 0 | 0 | 430 | 1 | 0 | 0 | 0 |
+| data/indicators.json | indicators | (lib/review-status.js) | 2019 | FY 2024/25 | 117 | 54 | 0 | 63 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 84; recorded (Kisumu register) 33 | 117 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 6 | 6 | 0 | 0 |
 | data/siaya-agriculture.json | siaya-agriculture | (lib/review-status.js) | 2013 | 2027 | 105 | 30 | 0 | 75 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 75; recorded (source record) 30 | 105 | 0 | 0 | 23 | 0 | 0 | 0 | 30 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 2 | 1 | 0 |
 | data/siaya-analysis-layers.json | siaya-analysis-layers | (lib/review-status.js) | FY 2013/14 | FY 2025/26 | 442 | 173 | 260 | 0 | 0 | 0 | 0 | 9 | inferred (TIER_RULES) 345; no source 9; recorded (Kisumu register) 88 | 442 | 0 | 0 | 0 | 9 | 0 | 9 | 55 | 0 | 0 | 9 | 0 | 433 | 9 | 0 | 9 | 34 | 33 | 45 | 0 |
 | data/siaya-analysis.json | siaya-analysis | (lib/review-status.js) | FY 2013/14 | stock at 2026-06-30 | 372 | 341 | 0 | 7 | 0 | 0 | 0 | 24 | inferred (TIER_RULES) 178; no source 24; recorded (Kisumu register) 121; recorded (source kind) 25; recorded (source record) 24 | 372 | 0 | 0 | 0 | 24 | 4 | 24 | 39 | 0 | 0 | 24 | 0 | 351 | 21 | 0 | 24 | 38 | 35 | 97 | 0 |
 | data/siaya-audits.json | siaya-audits | (lib/review-status.js) | FY 2013/14 | FY 2024/25 | 282 | 276 | 0 | 6 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 276; recorded (observation) 6 | 282 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 14 | 14 | 0 | 1 |
 | data/siaya-budget-departments.json | siaya-budget-departments | (lib/review-status.js) | FY 2014/15 | FY 2025/26 | 1240 | 48 | 1192 | 0 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 1240 | 1240 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 19 | 19 | 2 | 0 |
-| data/siaya-climate.json | siaya-climate | (lib/review-status.js) | 2022 (baseline year as printed) | FY 2025/26 | 87 | 79 | 0 | 8 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 55; recorded (Kisumu register) 8; recorded (source record) 24 | 87 | 0 | 0 | 0 | 0 | 0 | 0 | 16 | 0 | 49 | 0 | 0 | 0 | 0 | 0 | 49 | 6 | 6 | 12 | 37 |
+| data/siaya-climate.json | siaya-climate | (lib/review-status.js) | 2022 (baseline year as printed) | FY 2025/26 | 87 | 79 | 0 | 8 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 49; recorded (Kisumu register) 14; recorded (source record) 24 | 87 | 0 | 0 | 0 | 0 | 0 | 0 | 16 | 0 | 49 | 0 | 0 | 0 | 0 | 0 | 49 | 6 | 6 | 12 | 37 |
 | data/siaya-county-series.json | siaya-county-series | (lib/review-status.js) | FY 2013/14 | FY 2024/25 | 191 | 88 | 103 | 0 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 191 | 191 | 0 | 0 | 0 | 0 | 0 | 0 | 76 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 13 | 13 | 0 | 0 |
 | data/siaya-economy.json | siaya-economy | (lib/review-status.js) | 2019 | 2024 | 154 | 154 | 0 | 0 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 154 | 154 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 2 | 0 | 0 |
 | data/siaya-education.json | siaya-education | (lib/review-status.js) | 2013 | 2027 | 215 | 28 | 0 | 187 | 0 | 0 | 0 | 0 | inferred (TIER_RULES) 69; recorded (Kisumu register) 146 | 215 | 0 | 0 | 31 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 | 8 | 1 | 0 |
@@ -45,25 +46,26 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | data/conflicts.json | conflict register | 2026-2026 | conflicts 53 |
 | data/corrections.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2026-2026 | entries 7 |
 | data/counties/kisumu/conflicts.json | conflict register |  | conflicts 38 |
-| data/counties/kisumu/machine-checks.json | machine cross-check results |  | checks 331 |
-| data/counties/kisumu/review-packs.json | review packs (preparation, not review) | 2013-2025 | entries 331 |
+| data/counties/kisumu/indicators.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2013-2029 | sources 8, observations 176, conflicts 4, gaps 4 |
+| data/counties/kisumu/machine-checks.json | machine cross-check results |  | checks 507 |
+| data/counties/kisumu/review-packs.json | review packs (preparation, not review) | 2013-2029 | entries 507 |
 | data/county.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) |  |  |
 | data/cpi.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2010-2025 |  |
 | data/derived.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2010-2026 | excluded 1 |
 | data/kenya-counties-map.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) |  | areas 47 |
 | data/ledger-classes.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2015-2025 | cases 164 |
-| data/machine-checks.json | machine cross-check results |  | checks 4005 |
+| data/machine-checks.json | machine cross-check results |  | checks 4122 |
 | data/national.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2010-2025 | indicators 53 |
 | data/ngo.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) |  | not_staged 8 |
 | data/political.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) |  | not_staged 8 |
-| data/review-packs.json | review packs (preparation, not review) | 2003-2027 | entries 4005 |
+| data/review-packs.json | review packs (preparation, not review) | 2003-2027 | entries 4122 |
 | data/reviews.json | review decision register |  | decisions 0 |
 | data/siaya-boundaries.json | not itemised: A simplified boundary drawing for the map, not measured values. |  | areas 6 |
 | data/siaya-geography.json | not itemised: A register of names and codes (county, constituencies, wards), not measured values. |  | sources 5, constituencies 6, wards 30, sub_county_systems 2, spatial_layers 3 |
 | data/siaya-wards-geo.json | not itemised: A boundary map layer, checked as one file (resource hash in the file). |  | features 30 |
 | data/siaya.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2021-2024 | sub_counties 6 |
-| data/source-library.json | source register |  | documents 248 |
-| data/source-manifest.json | source register | 2006-2026 | documents 122 |
+| data/source-library.json | source register |  | documents 253 |
+| data/source-manifest.json | source register | 2006-2026 | documents 125 |
 | data/subcounties.json | support file (not itemised by lib/review-status.js or lib/county-registry.js) | 2019-2027 | sub_counties 6 |
 
 ## 3. Claims in README.md "Status" and .claude/CLAUDE.md against the actual counts
@@ -71,9 +73,9 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | Where | Claim | Actual | Match | Counted with |
 | --- | --- | --- | --- | --- |
 | README Status | Counties: 2 of 47 published (Siaya, Kisumu) | 2, 47, Siaya, Kisumu | yes | lib/counties.js |
-| README Status | Siaya values: 4,005 across 16 datasets, each with a review pack. 0 approved | 4005, 16, 0 | yes | lib/review-pack.js all() over lib/review-status.js; lib/review-status.js stateOf |
+| README Status | Siaya values: 4,122 across 17 datasets, each with a review pack. 0 approved | 4122, 17, 0 | yes | lib/review-pack.js all() over lib/review-status.js; lib/review-status.js stateOf |
 | README Status | each with a review pack. 0 approved: approval needs a review record from an independent reviewer (`data/reviews.json` is empty | empty | yes | data/review-packs.json entries; data/reviews.json |
-| README Status | Machine cross-checks (second reading of the cited page): 2,363 agree, 80 disagree (need a person to read the page image), 1,562 not checkable | 2363, 80, 1562 | yes | data/machine-checks.json checks[].result |
+| README Status | Machine cross-checks (second reading of the cited page): 2,435 agree, 80 disagree (need a person to read the page image), 1,607 not checkable | 2435, 80, 1607 | yes | data/machine-checks.json checks[].result |
 | README Status | Fiscal ledger: 164 discrepancy cases, 164 of them open | 164, 164 | yes | data/siaya-fiscal-ledger.json discrepancies[].status (authoritative) |
 | README Status | by class 47 definitional, 22 period or version, 15 probable source error, 2 resolved by source, 78 unexplained | 47, 22, 15, 2, 78 | yes | data/ledger-classes.json cases[].classification |
 | README Status | Conflict register: 53 cases | 53 | yes | data/conflicts.json |
@@ -81,23 +83,23 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | README Status | Corrections: 17 corrections footnoted beside 26 values, 14 source-error records | 17, 26, 14 | yes | lib/correction-notes.js; lib/editorial.js sourceErrors() |
 | README Status | Kisumu (published 28 Nov 2026: hub, fiscal reconciliation, audit opinions, population, sources under `app/counties/[slug]/`, built from `lib/county-registry.js` through `lib/county-pages.js`): 331 values (291 ledger, 35 audit opinions, 5 population), 36 ledger discrepancy cases, 38 explained conflict cases, 51 values marked "Needs page check", 0 approved | 331, 291, 35, 5, 38, 0 | yes | lib/county-review.js entries and counts; data/counties/kisumu/conflicts.json |
 | README Status | Site: 114 pages | 114 | yes | .html files under dist/ |
-| README Status | 91 downloadable datasets plus 1 link-only (IMF) | 91, 1, IMF | yes | lib/explore.js catalogue() files.csv |
+| README Status | 92 downloadable datasets plus 1 link-only (IMF) | 92, 1, IMF | yes | lib/explore.js catalogue() files.csv |
 | README Status | 5 draft reports | 5 | yes | components/report/reports.json |
 | CLAUDE.md | lib/counties.js lists 47 counties; Siaya (/counties/siaya/ hub, old URLs kept) and Kisumu (from 28 Nov 2026) are published | 47, Siaya, Kisumu | yes | lib/counties.js |
 | CLAUDE.md | data/counties-cob.json (47 counties, FY 2021/22-2024/25 | 47, 2021/22, 2024/25 | yes | data/counties-cob.json years |
 | CLAUDE.md | Series must go back 10 years | 10 | yes | data/history.json years, data/cpi.json fiscal_year |
 | CLAUDE.md | Kisumu (042) published | 42, published | yes | lib/county-registry.js |
-| kisumu-coverage.md (current status) | register holds 453 records (166 distinct files, 11 duplicates) | 453, 166, 11 | yes | docs/research/kisumu-2026-11-27/kisumu-sources.json |
+| kisumu-coverage.md (current status) | register holds 458 records (171 distinct files, 11 duplicates) | 458, 171, 11 | yes | docs/research/kisumu-2026-11-27/kisumu-sources.json |
 | kisumu-coverage.md (current status) | the generated section is current | current | yes | docs/research/kisumu-2026-11-27/kisumu-coverage.md after "## Current status (generated)" |
 
 ## 4. Source registers
 
 | Register | Records |
 | --- | --- |
-| source_library | 248 |
-| source_manifest | 122 |
-| kisumu_register | 453 |
-| kisumu_register_meta_total | 453 |
+| source_library | 253 |
+| source_manifest | 125 |
+| kisumu_register | 458 |
+| kisumu_register_meta_total | 458 |
 | downloads_tsv_rows | 179 |
 | downloads_tsv_http200 | 177 |
 | gap_file_rows_with_hash | 53 |
@@ -106,14 +108,14 @@ Files that hold no itemised values (not enumerated by either library, so outside
 
 - source_library_downloaded_without_hash: 0
 - source_manifest_downloaded_without_hash: 0
-- kisumu_held_without_hash_or_download: 0
-- kisumu_held_with_hash_but_no_downloads_row: 3 (KIWASCO-ANNUAL-REPORT-2017, KIWASCO-ANNUAL-REPORT-2019, PBO-COUNTY-FACT-SHEETS-2024)
+- kisumu_held_without_hash_or_download: 1 (KIWASCO-WEB-2026-11-28)
+- kisumu_held_with_hash_but_no_downloads_row: 4 (KIWASCO-ANNUAL-REPORT-2017, KIWASCO-ANNUAL-REPORT-2019, KIWASCO-TARIFF-PROPOSAL-2026, PBO-COUNTY-FACT-SHEETS-2024)
 
 ### 4.2 Files with no record
 
 - downloads_rows_not_in_register: 11 (kisumu-adp-2026-27-draft (HTTP 200, 217449b47c56), knbs-kihbs-2015-16-basic-report-wellbeing-nada (HTTP 200, abbdfb8277cc), knbs-kphc-2019-vol1-sourceafrica (HTTP 200, 4d93b465d84b), knbs-poverty-report-2021 (HTTP 200, cd0257bc9df0), knbs-poverty-report-2022 (HTTP 200, e3298f81209a), nsdcc-county-posters-2022 (HTTP 200, d8b6b5cda920), nsdcc-county-profiles-2026 (HTTP 200, b1467eaed378), oagsite-assembly-fy2016-17 (HTTP 503, b502024e3f8c), oagsite-assembly-fy2018-19 (HTTP 200, 8f4a44950b12), oagsite-exec-fy2016-17 (HTTP 200, e9ed7a42f310), oagsite-exec-fy2018-19 (HTTP 200, f9625109c6cf))
 - downloads_rows_matched_only_by_url_or_hash: 4 (county-csa-2024, khrc-kisumu-audit-simplified, nta-chambua-county-executive-audit-summary, senate-report-on-cgbirr-fy2019-20)
-- gap_files_not_in_any_register: 25 (A-fy2019-20-files.tsv:a21.txt, A-fy2019-20-files.tsv:cob-cbirr-fy2020-21-annual-nairobiassembly.pdf, A-fy2019-20-files.tsv:kisumu-cbrop-fy2020-21.txt, A-fy2019-20-files.tsv:kisumu-cfsp-2021-draft.txt, A-fy2019-20-files.tsv:kisumu-cfsp-2021.txt, A-fy2019-20-files.tsv:nairobi-book-feb2021.pdf, A-fy2019-20-files.tsv:nb.txt, A-fy2019-20-files.tsv:ok.txt, A-fy2019-20-files.tsv:os.txt, A-fy2019-20-files.tsv:siaya-cbrop-2020.txt, A-fy2019-20-files.tsv:siaya-cfsp-2021.txt, A-fy2019-20-files.tsv:vihiga-cbrop-2020-kippra.pdf, B-audits-files.tsv:nta-chambua-county-exec-2016-17.pdf, B-audits-files.tsv:senate-cpaic-fiduciary-risk-2018.pdf, D-knbs-files.tsv:hdx-knbs-2019-pop-per-county.csv, D-knbs-files.tsv:hdx-knbs-2019-subcounty-vol2-table.xlsx, D-knbs-files.tsv:kdhs-2022-main-report-vol1-nada.pdf, D-knbs-files.tsv:kdhs-2022-v8c-nada.xlsx, D-knbs-files.tsv:knbs-gender-data-sheet-2025-kisumu.pdf, D-knbs-files.tsv:knbs-gender-data-sheet-2025-siaya.pdf, D-knbs-files.tsv:knbs-kdhs-2022-factsheet-kisumu.pdf, D-knbs-files.tsv:knbs-kdhs-2022-factsheet-siaya.pdf, D-knbs-files.tsv:knbs-kisumu-statistical-abstract-2024.pdf, D-knbs-files.tsv:wb-kenya-poverty-gender-assessment-2015-16.pdf, E-files.tsv:kenyatimes-counties-topping-revenue-2026-07.html)
+- gap_files_not_in_any_register: 22 (A-fy2019-20-files.tsv:a21.txt, A-fy2019-20-files.tsv:cob-cbirr-fy2020-21-annual-nairobiassembly.pdf, A-fy2019-20-files.tsv:kisumu-cbrop-fy2020-21.txt, A-fy2019-20-files.tsv:kisumu-cfsp-2021-draft.txt, A-fy2019-20-files.tsv:kisumu-cfsp-2021.txt, A-fy2019-20-files.tsv:nairobi-book-feb2021.pdf, A-fy2019-20-files.tsv:nb.txt, A-fy2019-20-files.tsv:ok.txt, A-fy2019-20-files.tsv:os.txt, A-fy2019-20-files.tsv:siaya-cbrop-2020.txt, A-fy2019-20-files.tsv:siaya-cfsp-2021.txt, A-fy2019-20-files.tsv:vihiga-cbrop-2020-kippra.pdf, B-audits-files.tsv:nta-chambua-county-exec-2016-17.pdf, B-audits-files.tsv:senate-cpaic-fiduciary-risk-2018.pdf, D-knbs-files.tsv:hdx-knbs-2019-pop-per-county.csv, D-knbs-files.tsv:hdx-knbs-2019-subcounty-vol2-table.xlsx, D-knbs-files.tsv:kdhs-2022-main-report-vol1-nada.pdf, D-knbs-files.tsv:kdhs-2022-v8c-nada.xlsx, D-knbs-files.tsv:knbs-gender-data-sheet-2025-kisumu.pdf, D-knbs-files.tsv:knbs-gender-data-sheet-2025-siaya.pdf, D-knbs-files.tsv:wb-kenya-poverty-gender-assessment-2015-16.pdf, E-files.tsv:kenyatimes-counties-topping-revenue-2026-07.html)
 
 ### 4.3 Duplicate hashes
 
@@ -131,13 +133,15 @@ Files that hold no itemised values (not enumerated by either library, so outside
   - ee59509e407a1307: COUNTY-BIRR-Q1-2023, COUNTY-BIRR-Q1-2024
   - d5676de2af37eef8: KIPPRA-ADP-2019-2020, COUNTY-ADP-2019-2020-APPROVED
   - 2f38d104a0b424a5: COUNTY-ADP-2026-2027, COUNTY-ADP-2026-2027-RETRY
-- the same file held under different ids in different registers: 15 hashes (listed in census.json only by hash count)
+- the same file held under different ids in different registers: 16 hashes (listed in census.json only by hash count)
 - register hash differs from the downloaded file's hash: 0
 
 ### 4.4 Hashes cited by values
 
-128 distinct document hashes are cited by values: 53 in data/source-manifest.json, 30 only in data/source-library.json, 42 only in the Kisumu register, 0 in none of the three:
+138 distinct document hashes are cited by values: 56 in data/source-manifest.json, 32 only in data/source-library.json, 45 only in the Kisumu register, 2 in none of the three:
 
+- 44dedfa1d408c04b: kisumu-indicators:KIWASCO-WEB-STORY-2026-11-28
+- a287e800ff6106f2: kisumu-indicators:KIWASCO-WEB-HOME-2026-11-28
 
 3 more are deliberately not listed, with the reason in data/source-manifest.json meta.not_listed:
 
@@ -155,11 +159,12 @@ Files that hold no itemised values (not enumerated by either library, so outside
 | Register status -> current | Records |
 | --- | --- |
 | failed -> failed | 2 |
-| held -> held | 184 |
+| held -> held, no file hash recorded | 1 |
+| held -> held | 189 |
 | link-only -> held (per downloads.tsv) | 2 |
 | link-only -> link-only | 247 |
 | manual-download -> held (per downloads.tsv) | 1 |
-| manual-download -> manual-download | 7 |
+| manual-download -> manual-download | 6 |
 | missing -> missing | 7 |
 | other -> other | 3 |
 
@@ -170,10 +175,11 @@ Records whose status has changed since the register line was written:
 | IBP-CBTS-2022 | manual-download (HTTP 403 to curl) | held (per downloads.tsv) | ibp-cbts-2022 403 23f2f67302a4; ibp-cbts-2022 200 332f734ab3a0 |
 | OFFICIAL-K01 | link-only | held (per downloads.tsv) | county-birr-q1-fy2025-26 200 006f627fcf74 |
 | OFFICIAL-K02 | link-only | held (per downloads.tsv) | county-cbrop-2025-fy2024-25 200 e7aae529c67b |
+| KIWASCO-WEB-2026-11-28 | held (HTML snapshots 28 Nov 2026: home a287e800…, story 44dedfa1…) | held, no file hash recorded |  |
 
 ### 4.7 kisumu-coverage.md against the register now
 
-- Register size stated: 448; actual: 453.
+- Register size stated: 448; actual: 458.
 - Says "Nothing here is in the repo": yes (the file and the Kisumu data layer are now in the repo).
 
 | URL named in kisumu-coverage.md | Register records | Download log | Good download now |
@@ -182,7 +188,7 @@ Records whose status has changed since the register line was written:
 | https://internationalbudget.org/wp-content/uploads/Kenya-County-Budget-Transparency-Survey-2022-web.pdf | IBP-CBTS-2022: manual-download (HTTP 403 to curl) | ibp-cbts-2022 HTTP 403 HTML document; ibp-cbts-2022 HTTP 200 PDF | yes |
 | https://nsdcc.go.ke/wp-content/uploads/2024/07/County-Posters_2022.pdf |  | nsdcc-county-posters-2022 HTTP 200 PDF | yes |
 | https://www.kisumu.go.ke/wp-content/uploads/KISUMU-ADP-2026-2027.pdf | COUNTY-ADP-2026-2027: failed; COUNTY-ADP-2026-2027-RETRY: failed | county-adp-2026-2027 HTTP 200 data; county-adp-2026-2027-retry HTTP 200 data | no |
-| https://www.knbs.or.ke/ | KNBS-POVERTY-2022: manual-download (KNBS TLS); KNBS-KIHBS-2015-16-COUNTY: manual-download (KNBS TLS) |  | no |
+| https://www.knbs.or.ke/ | KNBS-KIHBS-2015-16-COUNTY: manual-download (KNBS TLS) |  | no |
 | https://www.oagkenya.go.ke/county-executives-assemblies-reports/ | OAG-MISSING-EXECUTIVE-2014-15: missing (not in Parliament library; OAG archive behind bot challenge); OAG-MISSING-ASSEMBLY-2014-15: missing (not in Parliament library; OAG archive behind bot challenge); OAG-MISSING-EXECUTIVE-2015-16: missing (not in Parliament library; OAG archive behind bot challenge); OAG-MISSING-ASSEMBLY-2015-16: missing (not in Parliament library; OAG archive behind bot challenge); OAG-MISSING-EXECUTIVE-2016-17: missing (not in Parliament library; OAG archive behind bot challenge); OAG-MISSING-ASSEMBLY-2016-17: missing (not in Parliament library; OAG archive behind bot challenge); OAG-MISSING-ASSEMBLY-2018-19: missing (not in Parliament library; OAG archive behind bot challenge) |  | no |
 | https://www.oagkenya.go.ke/wp-content/uploads/2021/09/County-Assembly-of-Kisumu-2017-2018.pdf | OAGSITE-ASSEMBLY-FY2017-18: manual-download (oagkenya.go.ke bot challenge / 503) | oagsite-assembly-fy2017-18 HTTP 200 HTML document | no |
 | https://www.oagkenya.go.ke/wp-content/uploads/2021/09/County-Executive-of-Kisumu-2017-2018.pdf | OAGSITE-EXEC-FY2017-18: manual-download (oagkenya.go.ke bot challenge / 503) | oagsite-exec-fy2017-18 HTTP 200 HTML document | no |
@@ -193,7 +199,7 @@ Records whose status has changed since the register line was written:
 
 ### siaya
 
-data/machine-checks.json: 4005 checks; agree 2363, disagree 80, not checkable 1562.
+data/machine-checks.json: 4122 checks; agree 2435, disagree 80, not checkable 1607.
 
 | Dataset | Id | Value | Unit | Source | PDF page | First reading (method; as printed) | Second reading (method; result) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -280,7 +286,7 @@ data/machine-checks.json: 4005 checks; agree 2363, disagree 80, not checkable 15
 
 ### kisumu
 
-data/counties/kisumu/machine-checks.json: 331 checks; agree 273, disagree 5, not checkable 53.
+data/counties/kisumu/machine-checks.json: 507 checks; agree 376, disagree 5, not checkable 126.
 
 | Dataset | Id | Value | Unit | Source | PDF page | First reading (method; as printed) | Second reading (method; result) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -292,8 +298,8 @@ data/counties/kisumu/machine-checks.json: 331 checks; agree 273, disagree 5, not
 
 ## Inputs (SHA-256)
 
-- .claude/CLAUDE.md: b628e0616b09dfd3814c8747065ef7009ae34061b09347fbb989859dd0fec325
-- README.md: 1b7dcdcf5554d909bc584a62b46f6c6e59b83a807e4324c25e15882a97b838b0
+- .claude/CLAUDE.md: 1c74e0d280ec37ec7de491305cbbcc509e69faee4e0ebe3bc8dd665909f499f5
+- README.md: 2a087b53ab0b293b573ea177d64ee1fd94f9cb9c3b93edee1faef343879f6fd3
 - components/report/reports.json: af38ebeb395f6af7d863f47bc9a08de0ada926f67d01cfb202052896243738a7
 - data/cbk.json: 6c47b668a4baa2f6202e3b44dfe969a40f83ca40744cf82cb1597a6b750dca86
 - data/conflicts.json: 5e7357a5c5a01a3c7f49b9ee086dd646fc96ba447193c9f54ae4f1931b4994d8
@@ -302,25 +308,27 @@ data/counties/kisumu/machine-checks.json: 331 checks; agree 273, disagree 5, not
 - data/counties/kisumu/audits.json: 14ae1130ef8241dcb7f4fce1a1b6e77d21b9b6efd7e19c6cd82582c857e64f2f
 - data/counties/kisumu/conflicts.json: b49f7faf3bc31234f6fd9f7bb1d6e828c8d548533659ebf74d6ce1cb4bd5502c
 - data/counties/kisumu/fiscal-ledger.json: 7e44267ad9ee8cdd38c878e0ff6d22ea664652ffda39be0c3a1292dd4c2fe590
-- data/counties/kisumu/machine-checks.json: 914fd5c57a84a3db86980d73327d1c656b1878b4183c4692bc1bc6d0700756df
+- data/counties/kisumu/indicators.json: 2608141d1b027622ad86fe793fac994c105308c2617b47d4c7773aedf58db90c
+- data/counties/kisumu/machine-checks.json: a6c72f32f120b9173eae9917b9ef177cdb4c73029f7c29f35f87f65a2186dfea
 - data/counties/kisumu/population.json: 45a0ba3bb5e7187a1f2314cc7e869e2c335f3fa183f45a5563dc6b4f8d4e59d6
-- data/counties/kisumu/review-packs.json: 098d7affbf8ba0b1ef43d946e646826c9c59ee607d81ef63431fe031e0a92357
+- data/counties/kisumu/review-packs.json: ea7a98653bad342ee6f1f68bd6742ab207dc99b8667e7fbc32520076b0111a37
 - data/county.json: d362d6fb4804fbe921db3ea484f4690804bb78b5b798f9bd37a13f1c0706f5b5
 - data/cpi.json: 3c91c889abaecd66ab7ad17e96ad2aa81a31f943a585484e6b257e361c4924e1
 - data/derived.json: 885896b669df6867c71b21b5957e67428c9d2956fb5c1ddbbd484b135343b513
-- data/history.json: 914425b67fbc6652974f1ed395ce221e0f80c00fc51cd3b6dbee9ee9431e341f
+- data/history.json: 963b1eb03264a8fa215341a52dab00e27c06014f9b17f59aaaec7e9049ae3722
 - data/imf.json: ebc170956999a440bcc1b6135643113aab31b9b89fca8d014921832b6d3c427f
+- data/indicators.json: 15ab6442df4eafa3776ab25990a3b13705b48f4b14278b7446fa81385f932d31
 - data/kenya-counties-map.json: d8aea762e7bc877f443b2bcea346c795cbcaf9d5ac63ffbe42233ed01ad55453
 - data/ledger-classes.json: 9e538c178917dd9a7d51d23bb0ad6af3a06f8956327c59a3375721b3115b7dff
-- data/machine-checks.json: ba8e6f8678faf3d32e0645b11b721655f660881367311d190b12e50e355233c7
+- data/machine-checks.json: d333bc59407cfc8e6e9a3f5329b417bf7ab937da16cf3838da2e873087d0d7a7
 - data/national.json: fda96171ab8130dbdb38299e9b4ac6e3eb7c3689d070d88168f86f35f6ca6701
 - data/ngo.json: fb9624766ee6d608c95fcefb65d0777a12fae30dc5f92a8a41b081b9b25c8c49
 - data/political.json: d8345a13f1238abafe27c573151789c5f47d8a0b6e52a0300d84637711fd6345
-- data/review-packs.json: 48b34b23ecd8d1de1f9cf9769abc8a16164c30f8202a90a1c80c9d0d135bfa0f
+- data/review-packs.json: 98e2596b61f04bf18e2b8654d9ec08d369b77fe84aab70489956e6f8a67a6075
 - data/reviews.json: c9d511495ad60dfa3ea068a7c29087763cfd4b661f9b099d7fd323d3b672e72d
 - data/siaya-agriculture.json: 107bcb546b0ee746230832cf58872cfa053db7543e7b012f5e55a7ef7f708082
 - data/siaya-analysis-layers.json: 876954edd64d8a9f5a74d9b6db7204047a9179faf0d09d86c763519d3f1e159a
-- data/siaya-analysis.json: 97d229616d0a41d0576f200713fa63794b2b3d69a6d0d2c2713d97b3ccec4f72
+- data/siaya-analysis.json: ade83b12ca108eac8319cfda60c886b326d43bfd9cc531c42c88d34f7263a1c1
 - data/siaya-audits.json: f4a0f6850ceb703423a717aa34dd4d64c282464b8d6551ee4de489902744d5bb
 - data/siaya-boundaries.json: 7357bad6f69cca7c014179b60d0eaa06057123249c126b8264808581b5855857
 - data/siaya-budget-departments.json: 257392e1667f3d9443712d79197707b2a42cfe73e902a20e0adfbe27f9102652
@@ -336,13 +344,13 @@ data/counties/kisumu/machine-checks.json: 331 checks; agree 273, disagree 5, not
 - data/siaya-projects.json: 5e9124b9507bcc1279d671881177911fafbf8134ef520ae677f5f19d2ef85023
 - data/siaya-wards-geo.json: c10cc47e85fa4aa42e07c0bef7e968c69d9a2e676b824994a7e008910e9567be
 - data/siaya.json: 534682b64ee16a527344709854f8224891710be7bf2e4b60d59be1f897e60ef3
-- data/source-library.json: 3f3f839ca0e58ddaab86aad9789cae7bbf4c5b475566cd94519f8c4fd6c235c4
-- data/source-manifest.json: 27fe92f69fdbb87c44e1e53e7ef92bce4ed5dfa01382bc666f29ccf6a49c97ea
+- data/source-library.json: 6063aa03075899047310ae40842708bb66aa396133c45f32dffc1440281c864c
+- data/source-manifest.json: 68b8f354f8f3c8fd051ffb7d944347d3518e3b1d2ada7d497e89ec770b2ab4db
 - data/subcounties.json: a54bcb00421e8e316227a17597214d29e6218a4016560623731c0f61d6a9e06a
 - docs/research/gaps-2026-11-27/A-fy2019-20-files.tsv: 6fba82e2a19507bf0ce92309fdf2dc1eae8a3dc15e99b7b346045fa0ef192eed
 - docs/research/gaps-2026-11-27/B-audits-files.tsv: d0600970a646c51964469c6fc969fd3a694ab460d2b92c05078ca2b99e0068bc
 - docs/research/gaps-2026-11-27/D-knbs-files.tsv: 35f02715cd789622aa3c71eab3aabf7865f5f5d39344f03c79b6137360f85c8d
 - docs/research/gaps-2026-11-27/E-files.tsv: c8cd18a86e31846e8c8fbbf49574c814daaa3905f401262d7fa9d7e16edf659c
 - docs/research/kisumu-2026-11-27/downloads.tsv: 6f202aec02ad58f5fffb34aa3824b47ad71c5046dd3f212efc5203ec2dd5df8e
-- docs/research/kisumu-2026-11-27/kisumu-coverage.md: 149dd84b0838acf1e46fca2fa221e7eb87065ef3965014ebf180e5036f602ad5
-- docs/research/kisumu-2026-11-27/kisumu-sources.json: 3d4a3365dc2ef3c12967273e54e87f1fa4a27cbfd656e6f2ccacb7e0ccb366ba
+- docs/research/kisumu-2026-11-27/kisumu-coverage.md: 9da471b32f25f59750d971f42c7a39a61ce6074c6ff48def96767c65a54ca949
+- docs/research/kisumu-2026-11-27/kisumu-sources.json: 293a8e6bff2fb8c0b601c361eeebfd04b22e2c3dbe6f2494f45ef9fd39495136

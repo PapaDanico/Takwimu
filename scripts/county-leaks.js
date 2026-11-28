@@ -8,7 +8,8 @@
 // Generic record ids alone ("K001") are never sentinels: they would match unrelated text.
 // scan() reads every text file in a directory (HTML, RSC payloads, JSON, CSV, JS, XML, Markdown, SVG) and the text
 // layer of every PDF (pdftotext). It fails closed: when anything is held, a PDF it cannot read (or no pdftotext) is a
-// failure, not a skip. With nothing held there is nothing to find, so a build host without pdftotext (Netlify) passes.
+// failure, not a skip. With nothing held there is nothing to find. A build host without pdftotext (Netlify) accepts a
+// PDF only when data/pdf-leak-scan.json records that exact file as scanned clean against the exact current held set.
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
@@ -68,14 +69,27 @@ function pdfText(f) {
   return execFileSync('pdftotext', ['-layout', f, '-'], { maxBuffer: 1 << 28, stdio: ['ignore', 'pipe', 'ignore'] }).toString('utf8');
 }
 
-// { hits: [{ file, sentinel, why }], files, pdfs, errors }
-function scan(dir, sentinels) {
-  const out = { hits: [], files: 0, pdfs: 0, errors: [] };
+const crypto = require('crypto');
+const sha = (b) => crypto.createHash('sha256').update(b).digest('hex');
+// One hash for a sentinel set: a PDF scanned clean against it stays clean while neither changes.
+const sentinelsHash = (S) => sha([...S.keys()].sort().join('\n'));
+
+// { hits: [{ file, sentinel, why }], files, pdfs, recorded, errors, pdfHashes }
+// recorded: { "<path in dir>": sha256 } of PDFs scanned clean against this sentinel set on a host with pdftotext
+// (data/pdf-leak-scan.json). Without pdftotext a PDF passes only if its hash is recorded; any other PDF is an error.
+function scan(dir, sentinels, recorded = null) {
+  const out = { hits: [], files: 0, pdfs: 0, recorded: 0, errors: [], pdfHashes: {} };
   if (!sentinels.size) return out;
   const list = [...sentinels.entries()];
   walk(dir).forEach((f) => {
     let t = null;
-    if (TEXT.test(f)) { t = fs.readFileSync(f, 'utf8'); out.files += 1; } else if (/\.pdf$/i.test(f)) { try { t = pdfText(f); out.pdfs += 1; } catch (e) { out.errors.push(`${path.relative(dir, f)}: ${e.message}`); return; } } else return;
+    if (TEXT.test(f)) { t = fs.readFileSync(f, 'utf8'); out.files += 1; } else if (/\.pdf$/i.test(f)) {
+      const rel = path.relative(dir, f).split(path.sep).join('/');
+      const h = sha(fs.readFileSync(f));
+      out.pdfHashes[rel] = h;
+      if (!hasPdftotext() && recorded && recorded[rel] === h) { out.recorded += 1; return; }
+      try { t = pdfText(f); out.pdfs += 1; } catch (e) { out.errors.push(`${rel}: ${e.message}${hasPdftotext() ? '' : ' and its hash is not in data/pdf-leak-scan.json for the current held set (run the local gates: node scripts/test-unpublished-counties.js dist --record-pdfs)'}`); return; }
+    } else return;
     const n = norm(t);
     list.forEach(([s, why]) => { if (n.includes(s)) out.hits.push({ file: path.relative(dir, f), sentinel: s, why }); });
   });
@@ -101,4 +115,4 @@ function makePdf(text) {
   return Buffer.from(body, 'latin1');
 }
 
-module.exports = { sentinelsFor, scan, makePdf, walk, norm, distinctive, hasPdftotext };
+module.exports = { sentinelsFor, scan, makePdf, walk, norm, distinctive, hasPdftotext, sentinelsHash };

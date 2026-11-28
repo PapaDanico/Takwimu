@@ -1,0 +1,19 @@
+{
+ "meta": {
+  "rule": "PDFs in dist/ scanned clean with pdftotext against each county's held-record sentinels (scripts/test-unpublished-counties.js --record-pdfs). A build host without pdftotext accepts a PDF only when its SHA-256 is listed here under the same sentinels_sha256; anything else fails the build. The local gates check that this file is current."
+ },
+ "scans": {
+  "kisumu": {
+   "sentinels_sha256": "c89b76dfc76d2113510a08aee90ac34ae68d54eb5c99e684965d1d9805f71f2f",
+   "pdfs": {
+    "briefs/siaya-fiscal-brief.pdf": "6d2c728bfde73fd9a63b09a84e6707687ecc19d50667999ff572efe7776581cf",
+    "reports/siaya-development-opportunities.pdf": "bafb079334e3a73632a8afacbf0e83399832990295cadea65197a4a6c3d923b8",
+    "reports/siaya-evidence-compendium.pdf": "f3bda4c58e36480c721ac02b0630fcf82cd63ba493e690f82a2420272eb38a3b",
+    "reports/siaya-fiscal-accountability.pdf": "9bc22cbc7467e65049cdb19d5739cb418d535a1ec658c6f51404048e0da85a66",
+    "reports/siaya-fiscal-brief.pdf": "6d2c728bfde73fd9a63b09a84e6707687ecc19d50667999ff572efe7776581cf",
+    "reports/siaya-health-community-services.pdf": "897ff5ca5dac652d5edbd54c54360f3f7e94be84501d771443af0839b875bded",
+    "reports/siaya-programme-atlas.pdf": "d4840fa5e9c374725b6bb7a27eabd4fca62a612378edd8d5a8687c793c128155"
+   }
+  }
+ }
+}
