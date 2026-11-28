@@ -6,11 +6,12 @@ import SubCounties from '../../../../components/siaya/SubCounties';
 import { Provisional } from '../../../../components/ObsTable';
 import g from '../../../../data/siaya-geography.json';
 import wgeo from '../../../../data/siaya-wards-geo.json';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/wards/', {
   title: 'Wards, constituencies and sub-counties',
   description: 'The 6 constituencies, 30 county assembly wards and 6 sub-counties of Siaya County (population, density and health access by sub-county) with their IEBC codes, the spelling in each source and known aliases, and a ward map from the 2016 HDX layer (not an official IEBC map).',
-};
+});
 
 const SRC = Object.fromEntries(g.sources.map((s) => [s.id, s]));
 const SrcLink = ({ id }) => (SRC[id] && SRC[id].url ? <a href={SRC[id].url} rel="noopener">{id}</a> : <>{id}</>);

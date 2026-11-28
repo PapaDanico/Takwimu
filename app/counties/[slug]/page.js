@@ -2,6 +2,7 @@ import Link from 'next/link';
 import PageHead from '../../../components/PageHead';
 import { COUNTIES, bySlug } from '../../../lib/counties';
 import KenyaMap from '../../../components/KenyaMap';
+import { pageMeta } from '../../../lib/page-meta';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -9,7 +10,7 @@ export function generateStaticParams() {
 }
 export function generateMetadata({ params }) {
   const c = bySlug(params.slug);
-  return { title: `${c ? c.name : 'County'} County`, description: `Status of ${c ? c.name : 'this county'} on Takwimu Kenya: what is published and what is still needed.` };
+  return pageMeta(`/counties/${params.slug}/`, { title: `${c ? c.name : 'County'} County`, description: `Status of ${c ? c.name : 'this county'} on Takwimu Kenya: what is published and what is still needed.` });
 }
 
 const NEEDED = [

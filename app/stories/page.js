@@ -2,11 +2,12 @@ import Link from 'next/link';
 import ExploreHead from '../../components/ExploreHead';
 import { STORIES } from '../../lib/stories';
 import { Provisional } from '../../components/ObsTable';
+import { pageMeta } from '../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/stories/', {
   title: 'Data stories',
   description: 'Short, plain-language stories built only from the data: county budget absorption, population and towns, and own-source revenue across counties.',
-};
+});
 
 export default function StoriesPage() {
   return (

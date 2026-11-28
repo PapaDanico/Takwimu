@@ -18,16 +18,17 @@ import { Provisional } from '../../components/ObsTable';
 import OpenTarget from '../../components/OpenTarget';
 import CorrectionNote, { CorrectionMark } from '../../components/CorrectionNote';
 import { notesFor } from '../../lib/correction-notes';
+import { pageMeta } from '../../lib/page-meta';
 
 const imfData = imfViewData();
 // IMF against the World Bank: definitional differences, both values side by side (sweep D13).
 const IMF_WB = ['imf-wb-gdp-per-capita-2025', 'imf-wb-gdp-usd-2024', 'imf-wb-revenue-gdp-2023', 'imf-wb-expense-gdp-2023'].map((id) => reg.conflicts.find((c) => c.id === id)).filter(Boolean);
 const imfV0 = imfData.vintages[0];
 
-export const metadata = {
+export const metadata = pageMeta('/kenya/', {
   title: 'Kenya dashboard',
   description: "Kenya's economy, money and banking, public finance, people, health, education, infrastructure, environment and governance from 2010, with sparklines, derived measures, a trend explorer and tables, from the World Bank, the Central Bank of Kenya, the Controller of Budget, the CRA, IBP and the IEBC.",
-};
+});
 
 const series = trendSeries();
 // Phone scanning (live review, 27 Nov 2026): each section shows its first HEAD cards; the rest open from a <details>

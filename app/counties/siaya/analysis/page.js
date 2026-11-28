@@ -4,14 +4,15 @@ import { Provisional } from '../../../../components/ObsTable';
 import { Limits } from '../../../../components/siaya/AnalysisTrends';
 import { LABEL, RECORDS as R, gaps } from '../../../../components/siaya/AnalysisCalc';
 import { ANALYSIS_TOPICS, MOVED_ANCHORS, topicHref } from '../../../../lib/analysis-topics';
+import { pageMeta } from '../../../../lib/page-meta';
 
 // Siaya analysis index (design review P1-2, 27 Nov 2026): the measures are on one page per topic
 // (lib/analysis-topics.js). Old in-page anchors keep working: each section id is still here, as a link to its new page,
 // and the inline script forwards any old anchor (sections and the tables in them) straight to the same anchor there.
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/analysis/', {
   title: 'Siaya analysis',
   description: 'Measures calculated by Takwimu Kenya from published figures for Siaya, one page per topic: the latest year; spending and the share of budget spent; revenue (transfers and own-source revenue); pending bills; audit findings that recur; spending per person, beside services and climate finance; and the gaps with their reasons.',
-};
+});
 
 const forward = `(function(){var m=${JSON.stringify(MOVED_ANCHORS)};var h=decodeURIComponent(location.hash.slice(1));if(h&&m[h])location.replace(m[h]);})();`;
 

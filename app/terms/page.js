@@ -3,11 +3,12 @@ import { SITE_URL, SITE_HOST, ISSUES_URL } from '../../lib/site';
 import TableWrap from '../../components/TableWrap';
 import library from '../../data/source-library.json';
 import { CLASSES } from '../../lib/licence';
+import { pageMeta } from '../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/terms/', {
   title: 'Terms of use',
   description: 'The terms that apply when you use Takwimu Kenya: purpose, accuracy, reuse, acceptable use, liability and governing law.',
-};
+});
 
 const UPDATED = '21 November 2026';
 

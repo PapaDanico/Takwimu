@@ -8,12 +8,13 @@ import { source } from '../../../../lib/siaya-sources';
 import { masked, badge } from '../../../../lib/review-status';
 import Reviewed from '../../../../components/Reviewed';
 import { fmtNum } from '../../../../lib/format';
+import { pageMeta } from '../../../../lib/page-meta';
 const c = masked('siaya-climate');
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/climate/', {
   title: 'Climate, water and resilience',
   description: 'Siaya ward flood and drought hotspots exactly as printed in the PCRA, water and sanitation coverage from KDHS 2022, the CIDP and WASREB with each definition, and climate money with allocation, receipt, transfer and expenditure kept separate.',
-};
+});
 
 const obs = c.observations;
 const byId = Object.fromEntries(obs.map((o) => [o.id, o]));

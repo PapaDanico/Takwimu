@@ -12,11 +12,12 @@ import { counts, isProvisional, PUBLIC_LABEL, badge } from '../../../../lib/revi
 import { latestOpinions } from '../../../../lib/audits';
 import { SIAYA_FYS, SIAYA_OSR_BY_FY, pendingTotal as pendOf } from '../../../../lib/siaya-years';
 import { b1, b2, b5, osrSeries, refBadge, fyOf, gaps as layerGaps } from '../../../../lib/layers';
+import { pageMeta } from '../../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/brief/', {
   title: 'Siaya County fiscal brief',
   description: 'A three-page printable brief on Siaya County finances: headline figures and what they mean; ten-year trends in revenue, spending, the wage bill, development share and pending bills; audit opinions, open questions, data gaps and sources.',
-};
+});
 
 // Every fiscal year in the ten-year window, so missing years show as gaps rather than disappearing.
 const FYS = SIAYA_FYS;

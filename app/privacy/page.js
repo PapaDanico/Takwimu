@@ -1,10 +1,11 @@
 import PageHead from '../../components/PageHead';
 import { SITE_URL, ISSUES_URL } from '../../lib/site';
+import { pageMeta } from '../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/privacy/', {
   title: 'Privacy notice',
   description: 'Takwimu Kenya does not collect, store or ask for personal data: no forms, accounts, analytics, tracking, advertising or cookies.',
-};
+});
 
 const UPDATED = '21 November 2026';
 

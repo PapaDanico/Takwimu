@@ -3,12 +3,12 @@ import { buildReport, SLUGS } from '../../components/report/build';
 import { WHATSAPP_URL } from '../../lib/site';
 import { Provisional } from '../../components/ObsTable';
 import { DATASET_IDS } from '../../lib/review-status';
+import { pageMeta } from '../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/reports/', {
   title: 'Publications',
   description: 'Takwimu Kenya publications for Siaya County: the one-page fiscal brief (HTML and PDF), five print-ready evidence reports, and how to ask for a brief on another county or constituency.',
-  alternates: { canonical: '/reports/' },
-};
+});
 
 // Publications (owner decision U2, 21 Nov 2026): the one-page brief, its PDF, reports A to E and "About our briefs"
 // (moved from /reports/#briefs, which now redirects to /reports/#briefs). No form and no contact address on purpose:

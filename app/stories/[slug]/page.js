@@ -7,12 +7,13 @@ import DownloadView from '../../../components/DownloadView';
 import { STORIES, absorption, population, ownRevenue } from '../../../lib/stories';
 import { Provisional } from '../../../components/ObsTable';
 import { fmtFixed, fmtInt } from '../../../lib/format';
+import { pageMeta } from '../../../lib/page-meta';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return STORIES.map((s) => ({ slug: s.slug })); }
 export function generateMetadata({ params }) {
   const s = STORIES.find((x) => x.slug === params.slug);
-  return s ? { title: s.title, description: s.blurb } : {};
+  return s ? pageMeta(`/stories/${s.slug}/`, { title: s.title, description: s.blurb }) : {};
 }
 
 const n0 = fmtInt;

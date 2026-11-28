@@ -5,11 +5,12 @@ import PageToc from '../../../components/PageToc';
 import { Provisional } from '../../../components/ObsTable';
 import { SIAYA_GROUPS } from '../../../lib/siaya-nav';
 import { b1 } from '../../../lib/layers';
+import { pageMeta } from '../../../lib/page-meta';
 
-export const metadata = {
+export const metadata = pageMeta('/counties/siaya/', {
   title: 'Siaya County',
   description: 'Siaya County public finances: revenue, spending, unpaid bills and audit opinions, with sources and confidence for every figure.',
-};
+});
 import siaya from '../../../data/siaya.json';
 import hist from '../../../data/history.json';
 import { fmt, shortDate, fmtFixed, fmtNum } from '../../../lib/format';
