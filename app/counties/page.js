@@ -25,7 +25,7 @@ export default function Counties() {
         <h2 id="live-h">Published so far</h2>
         <ul className="county-grid">
           {live.map((c) => (
-            <li key={c.slug}><Link href={`/counties/${c.slug}/`} className="county-card live"><span className="county-code">{String(c.code).padStart(2, '0')}</span><b>{c.name}</b><small>Ten-year series, sub-counties, analytics</small></Link></li>
+            <li key={c.slug}><Link href={`/counties/${c.slug}/`} className="county-card live"><span className="county-code">{String(c.code).padStart(2, '0')}</span><b>{c.name}</b><small>{c.slug === 'siaya' ? 'Ten-year series, sub-counties, analytics' : 'Fiscal reconciliation, audit opinions, population'}</small></Link></li>
           ))}
         </ul>
       </section>

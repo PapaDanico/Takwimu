@@ -19,6 +19,7 @@ export default function CountyHub({ slug }) {
   const a = cp.audits(slug);
   const p = cp.people(slug);
   const counts = cp.counts(slug);
+  const ind = m.pages.includes('indicators') ? cp.indicators(slug) : null;
   const census = p.points.find((x) => x.kind === 'census');
   const rows = HEADLINE.filter((k) => l.values[k]).map((k) => {
     const measure = l.measures.find((x) => x.key === k);
@@ -31,7 +32,7 @@ export default function CountyHub({ slug }) {
   return (<>
     <main id="main" className="wrap page">
       <PageHead county={{ slug, name: m.name }} eyebrow={`County ${m.code3}`} title={`${m.name} County`}
-        sub={`${m.name} County's budget, spending, own-source revenue, pending bills, audit opinions and population, each figure as its official source printed it, with the page it was read from. Where sources differ, both values are shown side by side.`}
+        sub={`${m.name} County's budget, spending, own-source revenue, pending bills, audit opinions, population${ind ? ' and social and economic indicators' : ''}, each figure as its official source printed it, with the page it was read from. Where sources differ, both values are shown side by side.`}
         path={`/counties/${slug}/`} shareText={`${m.name} County on Takwimu Kenya`} />
 
       <section className="card gold" aria-labelledby="hub-read">
@@ -85,6 +86,7 @@ export default function CountyHub({ slug }) {
               <tr><th scope="row"><Link href={`/counties/${slug}/ledger/`}>Fiscal reconciliation</Link></th><td>{l.measures.reduce((s, x) => s + x.n, 0)} values for {l.measures.length} measures, FY {l.years[0]} to FY {l.years[l.years.length - 1]}; {l.cases.length} discrepancy cases; {cp.conflicts(slug).length} explained conflict cases</td><td>{gaps} of {cells} measure-year cells hold no value; each gap has its reason</td></tr>
               <tr><th scope="row"><Link href={`/counties/${slug}/audits/`}>Audit opinions</Link></th><td>{a.opinions.length} Auditor-General opinions from {a.documents} documents, {a.opinions.filter((o) => o.tier === 'secondary').length} of them from secondary summaries (labelled)</td><td>{auditGaps} entity-years with no primary report held; audit findings not yet coded</td></tr>
               <tr><th scope="row"><Link href={`/counties/${slug}/people/`}>Population</Link></th><td>{census ? <>2019 census count <b>{fmtNum(census.value)}</b> persons and {p.points.length - 1} KNBS projections, by sub-county for 2019</> : 'No census count held'}</td><td>{p.gaps.length} listed</td></tr>
+              {ind ? <tr><th scope="row"><Link href={`/counties/${slug}/indicators/`}>Social and economic indicators</Link></th><td>{ind.domains.reduce((n, d) => n + d.rows.length, 0)} values: {ind.domains.map((d) => d.title.toLowerCase()).join(', ')}; {ind.conflicts.length} cases where publishers differ</td><td>{ind.gaps.length} listed</td></tr> : null}
               <tr><th scope="row"><Link href={`/counties/${slug}/sources/`}>Sources</Link></th><td>{cp.sources(slug).length} documents cited, with links and SHA-256 hashes where held</td><td>Documents not yet obtained are listed on the pages where they would be used</td></tr>
             </tbody>
           </table>
@@ -93,7 +95,7 @@ export default function CountyHub({ slug }) {
 
       <section className="card" aria-labelledby="hub-not">
         <h2 id="hub-not">Not yet here</h2>
-        <p className="lead">Health, education, agriculture and fisheries, water and sanitation, urban services, climate, wards, projects and development-partner programmes are being researched for {m.name}. They will be added one domain at a time, each to the same standard. Until then nothing is estimated in their place.</p>
+        <p className="lead">{ind ? 'Health facilities and staffing, education, urban services, climate, wards, projects and development-partner programmes' : 'Health, education, agriculture and fisheries, water and sanitation, urban services, climate, wards, projects and development-partner programmes'} are being researched for {m.name}. They will be added one domain at a time, each to the same standard. Until then nothing is estimated in their place.</p>
       </section>
 
       <section className="card" aria-labelledby="hub-loc">

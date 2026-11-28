@@ -1,13 +1,13 @@
 {
  "meta": {
-  "title": "Kisumu County indicators (held: kind not in Kisumu public_kinds; not on the site until released)",
+  "title": "Kisumu County indicators (published on /counties/kisumu/indicators/ from 28 Nov 2026)",
   "scope": "Kisumu County (042): poverty, household survey, water utility, fisheries and statistical-abstract values.",
   "county": "Kisumu",
   "county_code": 42,
   "rule": "Values as printed, each with source, publication date, period, unit, confidence, table, row, column and PDF page, read from the text layer and checked against the rendered page image by Takwimu. Survey estimates, official statistics, publisher claims and proposed targets are kept apart (field kind). Bounded values such as \"<1\" keep the bound. Conflicts sit side by side and are never averaged; gaps are listed, never filled. Every value is provisional until a reviewer approves it.",
   "extracted": "2026-11-28",
   "status": "Provisional: awaiting editorial review",
-  "held": true
+  "held": false
  },
  "sources": [
   {
