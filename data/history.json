@@ -1897,7 +1897,7 @@
         "confidence": 4
       }
     ],
-    "gap": "A later county poverty estimate (the 2021 Kenya Poverty Report) could not be retrieved, so there is no recent monetary poverty figure on the site."
+    "gap": "The 2021 Kenya Poverty Report could not be retrieved. The 2022 county estimates (KNBS Kenya Poverty Report 2022: food, overall and hardcore poverty) are in the Siaya indicators dataset on /datasets/; they are not added to this chart because the survey and method differ from the points above."
   },
   "population": {
     "label": "Siaya County population: census and official projections",

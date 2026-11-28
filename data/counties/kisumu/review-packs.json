@@ -5,14 +5,14 @@
   "generated_by": "scripts/review-packs.js",
   "scope": "Every value in data/counties/kisumu/ (fiscal ledger, audit opinions, population); the county's rows of data/counties-cob.json are reused inside its ledger.",
   "counts": {
-   "total": 331,
+   "total": 349,
    "approved": 0,
-   "pending": 331,
+   "pending": 349,
    "disputed": 74,
    "rejected": 0,
    "needs_page_check": 51
   },
-  "total": 331
+  "total": 349
  },
  "entries": [
   {
@@ -17530,6 +17530,888 @@
     "source_sha256": "d3f38c772cbf29e82d7e1c59b06cc2eee3523b2af5e3f76e0cafca345026df7c",
     "pages_checked": [
      26
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-food-headcount-rate-kisumu",
+   "label": "Food poverty: headcount rate (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 31.5,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 46,
+   "printed_page": 32,
+   "read": "text layer, checked against the page image",
+   "printed_text": "31.5",
+   "note": "Food and hardcore poverty use different poverty lines from overall poverty; they are separate measures, not parts of a total.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "31.5",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-food-headcount-rate-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     46
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-food-distribution-of-poor-kisumu",
+   "label": "Food poverty: share of all poor people in kenya living in the county (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 2.4,
+   "unit": "% of the national poor",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 46,
+   "printed_page": 32,
+   "read": "text layer, checked against the page image",
+   "printed_text": "2.4",
+   "note": null,
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-food-distribution-of-poor-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     46
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-food-poverty-gap-kisumu",
+   "label": "Food poverty: poverty gap (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 5.9,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 46,
+   "printed_page": 32,
+   "read": "text layer, checked against the page image",
+   "printed_text": "5.9",
+   "note": null,
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-food-poverty-gap-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     46
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-food-severity-kisumu",
+   "label": "Food poverty: severity of poverty (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 2,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 46,
+   "printed_page": 32,
+   "read": "text layer, checked against the page image",
+   "printed_text": "2.0",
+   "note": null,
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-food-severity-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     46
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-food-population-kisumu",
+   "label": "Food poverty: population (survey estimate) (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1226,
+   "unit": "thousand persons",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 46,
+   "printed_page": 32,
+   "read": "text layer, checked against the page image",
+   "printed_text": "1,226",
+   "note": "Printed in thousands and rounded independently of the rate: keep as printed. Do not recompute the count from the rounded rate (e.g. 3.1% x 1,226 = 38, but 39 is printed). A 2022 survey estimate; do not apply it to later populations.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "1,226",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-food-population-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     46
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-food-number-poor-kisumu",
+   "label": "Food poverty: number of poor people (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 386,
+   "unit": "thousand persons",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 46,
+   "printed_page": 32,
+   "read": "text layer, checked against the page image",
+   "printed_text": "386",
+   "note": "Printed in thousands and rounded independently of the rate: keep as printed. Do not recompute the count from the rounded rate (e.g. 3.1% x 1,226 = 38, but 39 is printed). A 2022 survey estimate; do not apply it to later populations.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "386",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-food-number-poor-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     46
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-overall-headcount-rate-kisumu",
+   "label": "Overall poverty: headcount rate (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 39,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 50,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "39.0",
+   "note": "Standard error 2.42 percentage points as printed in brackets in Annex Table A1 (PDF p.85, printed p.71), where the point estimate is the same. The printed standard errors repeat across several counties (2.27 also for Nyeri; 2.42 also for Vihiga, Kisii, Nyamira), so they may be computed at a higher level than the county; use them with that caution. No design-based test of a difference between counties is made here.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-overall-headcount-rate-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     50
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-overall-distribution-of-poor-kisumu",
+   "label": "Overall poverty: share of all poor people in kenya living in the county (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 2.4,
+   "unit": "% of the national poor",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 50,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "2.4",
+   "note": null,
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-overall-distribution-of-poor-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     50
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-overall-poverty-gap-kisumu",
+   "label": "Overall poverty: poverty gap (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 7.4,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 50,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "7.4",
+   "note": "Standard error 0.63 percentage points as printed in brackets in Annex Table A1 (PDF p.85, printed p.71), where the point estimate is the same. The printed standard errors repeat across several counties (2.27 also for Nyeri; 2.42 also for Vihiga, Kisii, Nyamira), so they may be computed at a higher level than the county; use them with that caution. No design-based test of a difference between counties is made here.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-overall-poverty-gap-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     50
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-overall-severity-kisumu",
+   "label": "Overall poverty: severity of poverty (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 2.1,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 50,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "2.1",
+   "note": "Standard error 0.27 percentage points as printed in brackets in Annex Table A1 (PDF p.85, printed p.71), where the point estimate is the same. The printed standard errors repeat across several counties (2.27 also for Nyeri; 2.42 also for Vihiga, Kisii, Nyamira), so they may be computed at a higher level than the county; use them with that caution. No design-based test of a difference between counties is made here.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-overall-severity-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     50
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-overall-population-kisumu",
+   "label": "Overall poverty: population (survey estimate) (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1226,
+   "unit": "thousand persons",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 50,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "1,226",
+   "note": "Printed in thousands and rounded independently of the rate: keep as printed. Do not recompute the count from the rounded rate (e.g. 3.1% x 1,226 = 38, but 39 is printed). A 2022 survey estimate; do not apply it to later populations.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "1,226",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-overall-population-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     50
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-overall-number-poor-kisumu",
+   "label": "Overall poverty: number of poor people (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 478,
+   "unit": "thousand persons",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 50,
+   "printed_page": 36,
+   "read": "text layer, checked against the page image",
+   "printed_text": "478",
+   "note": "Printed in thousands and rounded independently of the rate: keep as printed. Do not recompute the count from the rounded rate (e.g. 3.1% x 1,226 = 38, but 39 is printed). A 2022 survey estimate; do not apply it to later populations.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "478",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-overall-number-poor-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     50
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-hardcore-headcount-rate-kisumu",
+   "label": "Hardcore poverty: headcount rate (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 3.1,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 41,
+   "read": "text layer, checked against the page image",
+   "printed_text": "3.1",
+   "note": "Food and hardcore poverty use different poverty lines from overall poverty; they are separate measures, not parts of a total.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-hardcore-headcount-rate-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-hardcore-distribution-of-poor-kisumu",
+   "label": "Hardcore poverty: share of all poor people in kenya living in the county (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1.1,
+   "unit": "% of the national poor",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 41,
+   "read": "text layer, checked against the page image",
+   "printed_text": "1.1",
+   "note": null,
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-hardcore-distribution-of-poor-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-hardcore-poverty-gap-kisumu",
+   "label": "Hardcore poverty: poverty gap (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 0.4,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 41,
+   "read": "text layer, checked against the page image",
+   "printed_text": "0.4",
+   "note": null,
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-hardcore-poverty-gap-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-hardcore-severity-kisumu",
+   "label": "Hardcore poverty: severity of poverty (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 0.1,
+   "unit": "%",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 41,
+   "read": "text layer, checked against the page image",
+   "printed_text": "0.1",
+   "note": null,
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-hardcore-severity-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-hardcore-population-kisumu",
+   "label": "Hardcore poverty: population (survey estimate) (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 1226,
+   "unit": "thousand persons",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 41,
+   "read": "text layer, checked against the page image",
+   "printed_text": "1,226",
+   "note": "Printed in thousands and rounded independently of the rate: keep as printed. Do not recompute the count from the rounded rate (e.g. 3.1% x 1,226 = 38, but 39 is printed). A 2022 survey estimate; do not apply it to later populations.",
+   "others": [],
+   "machine_check": {
+    "result": "agree",
+    "method": "tesseract-600dpi-psm6",
+    "matched": "1,226",
+    "reason": null
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-hardcore-population-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     55
+    ],
+    "reviewer_role": "",
+    "reviewer_is_not_extractor": true,
+    "decision": "",
+    "rationale": "",
+    "date": "",
+    "supersedes": []
+   }
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "record_id": "kpr22-hardcore-number-poor-kisumu",
+   "label": "Hardcore poverty: number of poor people (individuals), Kisumu County, 2022",
+   "kind": "poverty (survey estimate)",
+   "state": "Provisional: awaiting editorial review",
+   "value": 39,
+   "unit": "thousand persons",
+   "period": "2022",
+   "scope": "Kisumu County",
+   "source": [
+    {
+     "id": "KNBS-KPR-2022",
+     "title": "The Kenya Poverty Report 2022: Building Brighter Futures - Data and Evidence to Tackle Poverty in Kenya",
+     "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+     "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44"
+    }
+   ],
+   "pdf_page": 55,
+   "printed_page": 41,
+   "read": "text layer, checked against the page image",
+   "printed_text": "39",
+   "note": "Printed in thousands and rounded independently of the rate: keep as printed. Do not recompute the count from the rounded rate (e.g. 3.1% x 1,226 = 38, but 39 is printed). A 2022 survey estimate; do not apply it to later populations.",
+   "others": [],
+   "machine_check": {
+    "result": "not checkable",
+    "method": null,
+    "matched": null,
+    "reason": "Fewer than three significant digits: too short to match safely on a page."
+   },
+   "template": {
+    "id": "REV-YYYY-NNN",
+    "dataset": "kisumu-indicators",
+    "record_ids": [
+     "kpr22-hardcore-number-poor-kisumu"
+    ],
+    "source_document_id": "KNBS-KPR-2022",
+    "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+    "pages_checked": [
+     55
     ],
     "reviewer_role": "",
     "reviewer_is_not_extractor": true,

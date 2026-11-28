@@ -11,10 +11,10 @@
    "parts": "A stored total that the source prints only as its parts (recurrent and development pending bills; male and female counts; the Executive and Assembly payables tables) agrees when each part is found on the page by the same method and the parts add up to the stored value at its precision."
   },
   "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way (\"Kshs.2.4 billion\") is not checkable.",
-  "checked_on": "2026-11-27",
+  "checked_on": "2026-11-28",
   "counts": {
-   "agree": 273,
-   "not checkable": 53,
+   "agree": 279,
+   "not checkable": 65,
    "disagree": 5
   }
  },
@@ -3730,6 +3730,162 @@
    "checked_on": "2026-11-27",
    "result": "agree",
    "matched": "1,248,474"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-headcount-rate-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 46,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "31.5"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-distribution-of-poor-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-poverty-gap-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-severity-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-population-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 46,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,226"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-food-number-poor-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 46,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "386"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-headcount-rate-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-distribution-of-poor-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-poverty-gap-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-severity-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-population-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 50,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,226"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-overall-number-poor-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 50,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "478"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-headcount-rate-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-distribution-of-poor-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-poverty-gap-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-severity-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-population-kisumu",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,226"
+  },
+  {
+   "dataset": "kisumu-indicators",
+   "id": "kpr22-hardcore-number-poor-kisumu",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
   }
  ]
 }

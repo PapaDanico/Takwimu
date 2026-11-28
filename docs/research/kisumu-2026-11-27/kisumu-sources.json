@@ -9,21 +9,23 @@
   "status_values": "held = downloaded here (or held in repo/prov and reused); link-only = URL recorded, not downloaded; manual-download = blocked to automated clients; missing = searched, not found; failed = server returned a broken file",
   "counts": {
    "total": 453,
-   "held": 184,
+   "held": 185,
    "link-only": 249,
-   "manual-download": 8,
+   "manual-download": 7,
    "missing": 7,
    "failed": 2,
    "not": 3,
    "by_tier": {
     "primary official": 292,
-    "civil-society secondary": 1,
+    "civil-society secondary": 2,
     "official claim": 3,
     "official secondary research": 9,
     "official statistics": 2,
     "official statistics / official secondary": 22,
     "academic": 102,
-    "media claim": 17
+    "media claim": 17,
+    "official mirror": 3,
+    "official compilation": 1
    }
   }
  },
@@ -6917,18 +6919,24 @@
   },
   {
    "id": "KNBS-POVERTY-2022",
-   "title": "Kenya Poverty Report 2022 (KCHS)",
+   "title": "The Kenya Poverty Report 2022 (KCHS 2022)",
    "publisher": "KNBS",
-   "date": "2022",
+   "date": "2024",
    "period": "2022",
-   "url": "https://www.knbs.or.ke/",
-   "licence": "KNBS/County statistics publication: 'Extracts may be used or published if the source is duly acknowledged'; do not redistribute the PDF.",
+   "url": "https://repository.knbs.or.ke/items/0e342f1c-f484-4b4c-8bb1-713ff62af954",
+   "licence": "CC BY-NC 4.0 (KNBS repository record); cite; non-commercial",
    "tier": "official statistics / official secondary",
    "datasets": [
     "history (poverty)"
    ],
    "figures": "Kisumu poverty headcount 2021/2022",
-   "status": "manual-download (KNBS TLS)"
+   "status": "held (KNBS repository copy, 28 Nov 2026; knbs.or.ke TLS not bypassed)",
+   "sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "bytes": 4301681,
+   "download_path": "/tmp/claude-0/src/kpr2022/The-Kenya-Poverty-Report-2022.pdf",
+   "machine_readable": "text layer",
+   "kisumu_location": "Table 4.3 PDF p.46, Table 4.4 p.50, Table 4.5 p.55, Annex A1 p.85 (row Kisumu)",
+   "note": "Values in data/counties/kisumu/indicators.json (held). Same file as data/source-manifest.json knbs-kpr-2022."
   },
   {
    "id": "KNBS-KIHBS-2015-16-COUNTY",

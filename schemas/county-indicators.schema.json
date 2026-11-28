@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "County and regional indicators (poverty, household surveys, water utilities, lake fisheries, statistical abstracts)",
+  "description": "One file per county under the county registry (data/indicators.json holds Siaya and regional rows; data/counties/<slug>/indicators.json holds an unpublished county's rows). Every value is Provisional with its source, publication date, period, unit, confidence and PDF page. Claims and targets are kept apart from observed estimates; bounded values ('<1') are kept as printed with their bound, never as zero or one. Conflicts sit side by side; gaps are listed, never filled.",
+  "type": "object",
+  "required": ["meta", "sources", "observations", "conflicts", "gaps"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "scope", "rule", "extracted", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "scope": { "type": "string" },
+        "county": { "type": ["string", "null"] },
+        "county_code": { "type": ["integer", "null"] },
+        "rule": { "type": "string" },
+        "extracted": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "status": { "type": "string", "enum": ["Provisional: awaiting editorial review"] },
+        "held": { "type": "boolean" },
+        "note": { "type": "string" }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "title", "publisher", "publication_date", "url", "retrieved", "sha256", "bytes", "file_type", "licence", "commercial_reuse", "tier", "page_rule"],
+        "additionalProperties": false,
+        "properties": {
+          "source_id": { "type": "string", "pattern": "^[A-Z0-9][A-Z0-9-]+$" },
+          "title": { "type": "string" },
+          "publisher": { "type": "string" },
+          "publication_date": { "type": "string" },
+          "reference_period": { "type": "string" },
+          "url": { "type": "string", "pattern": "^https://" },
+          "retrieval_url": { "type": "string", "pattern": "^https://" },
+          "retrieved": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "md5_matches_repository": { "type": "boolean" },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "pdf_pages": { "type": ["integer", "null"] },
+          "file_type": { "type": "string", "enum": ["PDF", "HTML snapshot"] },
+          "licence": { "type": "string" },
+          "commercial_reuse": { "type": "string", "enum": ["permitted", "not_permitted", "not_stated"] },
+          "tier": { "type": "string", "enum": ["primary", "official mirror", "publisher claim"] },
+          "page_rule": { "type": "string" },
+          "also_held_as": { "type": "array", "items": { "type": "string" } },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "domain", "indicator", "label", "area", "geography", "value", "value_as_printed", "bound", "unit", "period", "kind", "source_id", "table", "row", "column", "pdf_page", "printed_page", "read_method", "confidence", "note"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
+          "domain": { "type": "string", "enum": ["poverty", "household survey", "water utility", "fisheries", "statistical abstract"] },
+          "indicator": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "label": { "type": "string" },
+          "area": { "type": "string" },
+          "geography": { "type": "string", "enum": ["county", "national", "lake", "utility service area", "low-income areas of utility service areas in the county"] },
+          "county_code": { "type": ["integer", "null"] },
+          "value": { "type": ["number", "null"] },
+          "value_as_printed": { "type": "string" },
+          "bound": {
+            "type": ["object", "null"],
+            "required": ["relation", "limit"],
+            "additionalProperties": false,
+            "properties": { "relation": { "type": "string", "enum": ["less_than"] }, "limit": { "type": "number" } }
+          },
+          "standard_error": { "type": ["number", "null"] },
+          "unit": { "type": "string" },
+          "period": { "type": "string" },
+          "denominator": { "type": "string" },
+          "kind": { "type": "string", "enum": ["survey estimate", "official statistic", "administrative statistic", "publisher claim", "proposed target", "baseline in a target table"] },
+          "provisional_in_source": { "type": "boolean" },
+          "source_id": { "type": "string" },
+          "table": { "type": "string" },
+          "row": { "type": "string" },
+          "column": { "type": "string" },
+          "pdf_page": { "type": ["integer", "null"] },
+          "printed_page": { "type": ["integer", "string", "null"] },
+          "read_method": { "type": "string", "enum": ["text layer, checked against the page image", "text layer", "HTML text"] },
+          "confidence": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "comparator": {
+            "type": ["object", "null"],
+            "required": ["label", "value", "value_as_printed"],
+            "additionalProperties": false,
+            "properties": { "label": { "type": "string" }, "value": { "type": ["number", "null"] }, "value_as_printed": { "type": "string" } }
+          },
+          "duplicate_of": { "type": ["string", "null"] },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "observations", "status", "summary", "hypothesis"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "observations": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "outside_values": { "type": "array", "items": { "type": "object" } },
+          "status": { "type": "string", "enum": ["open", "explained by definition", "explained by vintage"] },
+          "summary": { "type": "string" },
+          "hypothesis": { "type": "string" }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "what", "reason", "next_action"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "what": { "type": "string" },
+          "area": { "type": "string" },
+          "period": { "type": "string" },
+          "reason": { "type": "string" },
+          "attempts": { "type": "array", "items": { "type": "string" } },
+          "next_action": { "type": "string" }
+        }
+      }
+    }
+  }
+}

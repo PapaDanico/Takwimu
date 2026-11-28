@@ -11,10 +11,10 @@
    "parts": "A stored total that the source prints only as its parts (recurrent and development pending bills; male and female counts; the Executive and Assembly payables tables) agrees when each part is found on the page by the same method and the parts add up to the stored value at its precision."
   },
   "match_rule": "agree: the stored value appears among the numbers read on the page, in the stored unit or scaled to shillings, thousands, millions or billions, to the precision printed or to the precision stored, whichever is coarser (9223.35 KSh million agrees with a printed 9,223,350,139); numbers with fewer than three significant digits are not used, and a value printed only that way (\"Kshs.2.4 billion\") is not checkable.",
-  "checked_on": "2026-11-27",
+  "checked_on": "2026-11-28",
   "counts": {
-   "agree": 2363,
-   "not checkable": 1562,
+   "agree": 2389,
+   "not checkable": 1574,
    "disagree": 80
   }
  },
@@ -39813,6 +39813,402 @@
    "result": "not checkable",
    "method": null,
    "reason": "Calculation by Takwimu: its inputs are checked where they are stored."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-food-headcount-rate-siaya",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 46,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "24.6"
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-food-distribution-of-poor-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-food-poverty-gap-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-food-severity-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-food-population-siaya",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 46,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,062"
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-food-number-poor-siaya",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 46,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "261"
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-overall-headcount-rate-siaya",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 50,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "38.3"
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-overall-distribution-of-poor-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-overall-poverty-gap-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-overall-severity-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-overall-population-siaya",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 50,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,062"
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-overall-number-poor-siaya",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 50,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "407"
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-hardcore-headcount-rate-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-hardcore-distribution-of-poor-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-hardcore-poverty-gap-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-hardcore-severity-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-hardcore-population-siaya",
+   "source_id": "KNBS-KPR-2022",
+   "source_sha256": "89bd399537c87627ca4134232be9a4c838024e40cd45c7a469f082e73b247f44",
+   "pdf_page": 55,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "1,062"
+  },
+  {
+   "dataset": "indicators",
+   "id": "kpr22-hardcore-number-poor-siaya",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-victoria-2019",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "90,743.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-victoria-2020",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "88,223.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-victoria-2021",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "94,349.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-victoria-2022",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "86,394.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-victoria-2023",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "70,313.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-kanyaboli-2019",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-300dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "300.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-kanyaboli-2020",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "264.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-kanyaboli-2021",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "286.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-kanyaboli-2022",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "387.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2024-fish-landed-lake-kanyaboli-2023",
+   "source_id": "KNBS-ES-2024",
+   "source_sha256": "0d07e095289c2227b5d6e03ebc3e152a1462b9c4e16a1f26c885c0ef4c5148cd",
+   "pdf_page": 246,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "84.3"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-victoria-2020",
+   "source_id": "KNBS-ES-2025",
+   "source_sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
+   "pdf_page": 264,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "88,223.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-victoria-2021",
+   "source_id": "KNBS-ES-2025",
+   "source_sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
+   "pdf_page": 264,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "94,349.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-victoria-2022",
+   "source_id": "KNBS-ES-2025",
+   "source_sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
+   "pdf_page": 264,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "86,394.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-victoria-2023",
+   "source_id": "KNBS-ES-2025",
+   "source_sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
+   "pdf_page": 264,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "70,313.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-victoria-2024",
+   "source_id": "KNBS-ES-2025",
+   "source_sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
+   "pdf_page": 264,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "67,575.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-kanyaboli-2020",
+   "source_id": "KNBS-ES-2025",
+   "source_sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
+   "pdf_page": 264,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "264.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-kanyaboli-2021",
+   "source_id": "KNBS-ES-2025",
+   "source_sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
+   "pdf_page": 264,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "286.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-kanyaboli-2022",
+   "source_id": "KNBS-ES-2025",
+   "source_sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
+   "pdf_page": 264,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "387.0"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-kanyaboli-2023",
+   "source_id": "KNBS-ES-2025",
+   "source_sha256": "c37245d6eb13535529559ee2c9e545a39d5dc6d6609db0819546e5fcc2e149d4",
+   "pdf_page": 264,
+   "original_method": "PDF text layer",
+   "method": "tesseract-600dpi-psm6",
+   "checked_on": "2026-11-28",
+   "result": "agree",
+   "matched": "84.3"
+  },
+  {
+   "dataset": "indicators",
+   "id": "es2025-fish-landed-lake-kanyaboli-2024",
+   "result": "not checkable",
+   "method": null,
+   "reason": "Fewer than three significant digits: too short to match safely on a page."
   },
   {
    "dataset": "siaya-programmes",
