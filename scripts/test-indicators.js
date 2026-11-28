@@ -41,7 +41,7 @@ const numOf = (s) => Number(String(s).replace(/,/g, '').replace(/%$/, ''));
     ok(s.licence && s.commercial_reuse, tag(`${s.source_id}: licence and commercial_reuse`));
     if (/NC|NonCommercial/i.test(s.licence)) ok(s.commercial_reuse === 'not_permitted', tag(`${s.source_id}: a non-commercial licence must set commercial_reuse not_permitted`));
   });
-  const ids = new Set();
+  const ids = new Set(); const rowKeys = new Map();
   d.observations.forEach((o) => {
     const w = tag(o.id);
     ok(!ids.has(o.id), `${w}: duplicate id`); ids.add(o.id);
@@ -58,6 +58,7 @@ const numOf = (s) => Number(String(s).replace(/,/g, '').replace(/%$/, ''));
     if (o.geography === 'county') ok(o.county_code === code, `${w}: county row of another county`);
     if (slug !== 'siaya') ok(o.geography !== 'lake' && o.geography !== 'national', `${w}: lake and national rows belong in data/indicators.json`);
     if (slug === 'siaya') ok(o.county_code !== 42 && !/kisumu/i.test(o.area), `${w}: a Kisumu row in the published file`);
+    { const k = [o.table_id, o.row, o.column, o.age_group || '', o.sub_county || '', o.ward || ''].join('|'); if (o.table_id) { ok(!rowKeys.has(k), `${w}: same table, row and column as ${rowKeys.get(k)} with no dimension (age_group, sub_county or ward) to tell them apart`); rowKeys.set(k, o.id); } }
     if (o.geography === 'sub-county') ok(!o.ward && !o.ward_slug && o.ward_code_iebc == null, `${w}: a sub-county row is never joined to a ward (ward, ward_slug, ward_code_iebc must be empty)`);
     if (/target/.test(o.kind)) ok(/target/i.test(o.label + o.note), `${w}: a target must say so in its label or note`);
     if (o.kind === 'publisher claim') ok(/claim/i.test(o.note || ''), `${w}: a publisher claim must say so in its note`);
