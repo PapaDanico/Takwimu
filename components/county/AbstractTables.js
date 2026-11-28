@@ -6,7 +6,11 @@ import CountyCite from './Cite';
 
 export default function AbstractTables({ tables, headingLevel = 'h2' }) {
   const H = headingLevel;
-  return tables.map((t) => {
+  // A note printed under more than one table is said once, after the tables (smoke-test repetition guard).
+  const seen = {};
+  tables.forEach((t) => t.notes.forEach((n) => { seen[n] = (seen[n] || 0) + 1; }));
+  const shared = Object.keys(seen).filter((n) => seen[n] > 1);
+  return [...tables.map((t) => {
     const npc = Object.values(t.cell).filter((c) => c.needs_page_check).length;
     return (
       <section key={t.id} className="card" aria-labelledby={`t-${t.id}`}>
@@ -27,8 +31,13 @@ export default function AbstractTables({ tables, headingLevel = 'h2' }) {
           </table>
         </TableWrap>
         <p className="how"><CountyCite title={t.src_title} url={t.src_url} published={t.published} period={t.cols.length ? `${t.cols[0].split(':')[0]} to ${t.cols[t.cols.length - 1].split(':')[0]}` : 'as printed'} unit={t.unit} confidence={t.confidence} pdf={t.pages.join(', ')} printed={t.printed.join(', ') || null} table={t.title.match(/^Table [\d.]+/) ? t.title.match(/^Table [\d.]+/)[0] : null} read={t.read} />{npc ? <> <span className="tag warn">Needs page check</span></> : null}</p>
-        {t.notes.length ? <ul className="how">{t.notes.map((n) => <li key={n}><small>{n}</small></li>)}</ul> : null}
+        {t.notes.filter((n) => !shared.includes(n)).length ? <ul className="how">{t.notes.filter((n) => !shared.includes(n)).map((n) => <li key={n}><small>{n}</small></li>)}</ul> : null}
       </section>
     );
-  });
+  }), shared.length ? (
+    <section key="shared-notes" className="card" aria-labelledby="abstract-notes">
+      <H id="abstract-notes">Notes that apply to several tables above</H>
+      <ul className="how">{shared.map((n) => <li key={n}><small>{n}</small> <small className="muted">({seen[n]} tables)</small></li>)}</ul>
+    </section>
+  ) : null];
 }
