@@ -14,7 +14,7 @@ export function generateMetadata({ params }) {
 }
 
 const USED = { ledger: 'Fiscal reconciliation', audits: 'Audit opinions', people: 'Population', indicators: 'Indicators', wards: 'Wards and sub-counties' };
-const HREF = { ledger: 'ledger', audits: 'audits', people: 'people', indicators: 'indicators', wards: 'wards', health: 'health', education: 'education' };
+const HREF = { ledger: 'ledger', audits: 'audits', people: 'people', indicators: 'indicators', wards: 'wards', health: 'health', education: 'education', economy: 'economy', governance: 'governance' };
 
 export default function CountySources({ params }) {
   const { slug } = params;
